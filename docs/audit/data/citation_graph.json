@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T11:26:06.832487+00:00",
+  "generated_at": "2026-05-06T11:37:44.916645+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41958,6 +41958,16 @@
       "runner_path": "scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py",
       "title": "PR230 Action-First O_H Artifact Attempt"
     },
+    "yt_pr230_action_first_route_completion_note_2026-05-06": {
+      "claim_id": "yt_pr230_action_first_route_completion_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / action-first `O_H/C_sH/C_HH` route not complete on current PR230 surface",
+      "deps": [],
+      "note_hash": "79e5005d405e99b0f9419b3023578d40566af5463b4cbd6c0cec0516c22ae2c3",
+      "path": "docs/YT_PR230_ACTION_FIRST_ROUTE_COMPLETION_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_action_first_route_completion.py",
+      "title": "PR230 Action-First Route Completion"
+    },
     "yt_pr230_assumption_import_stress_note_2026-05-01": {
       "claim_id": "yt_pr230_assumption_import_stress_note_2026-05-01",
       "current_status": "open",
@@ -42147,6 +42157,16 @@
       "path": "docs/YT_PR230_NEGATIVE_ROUTE_APPLICABILITY_REVIEW_NOTE_2026-05-06.md",
       "runner_path": null,
       "title": "PR230 Negative-Route Applicability Review"
+    },
+    "yt_pr230_neutral_primitive_route_completion_note_2026-05-06": {
+      "claim_id": "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+      "deps": [],
+      "note_hash": "146075b0f1232525e81f138e515f0cdc7c29f5f0a2785ba9bd2fd06f8670fbeb",
+      "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py",
+      "title": "PR230 Neutral Primitive Route Completion"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "claim_id": "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
@@ -42443,7 +42463,7 @@
       "current_status": "open",
       "current_status_raw": "open / first-principles `O_H` bridge positive-candidate portfolio",
       "deps": [],
-      "note_hash": "2d3416de8b41f1fb22d4350ba1a6413e3fa78a00c4fddbbde43e2379f1d5bc80",
+      "note_hash": "9c6ef27d1c16978d45f2e75848bab6be6a83bf242314fca5564ed51d9f8dbfbf",
       "path": "docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py",
       "title": "PR230 O_H Bridge First-Principles Candidate Portfolio"
@@ -42538,6 +42558,26 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py",
       "title": "PR #230 Schur A/B/C Definition Derivation Attempt Note"
     },
+    "yt_pr230_schur_route_completion_note_2026-05-06": {
+      "claim_id": "yt_pr230_schur_route_completion_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / Schur `A/B/C` route not complete on current PR230 surface",
+      "deps": [],
+      "note_hash": "6ced823d4bcf3a0d4a663bfca0042b3d47e52e9f2f16a4f49da9968ab0472b97",
+      "path": "docs/YT_PR230_SCHUR_ROUTE_COMPLETION_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_route_completion.py",
+      "title": "PR230 Schur Route Completion"
+    },
+    "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06": {
+      "claim_id": "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
+      "deps": [],
+      "note_hash": "a98c50feb072acdf3e634218f2bef53a4efa377d51b4f8c9a719ee60a95380c1",
+      "path": "docs/YT_PR230_SOURCE_COORDINATE_TRANSPORT_COMPLETION_ATTEMPT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_source_coordinate_transport_completion_attempt.py",
+      "title": "PR230 Source-Coordinate Transport Completion Attempt"
+    },
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06": {
       "claim_id": "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
       "current_status": "unknown",
@@ -42597,6 +42637,16 @@
       "path": "docs/YT_PR230_WZ_HARNESS_SMOKE_SCHEMA_GATE_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "PR230 W/Z Harness Smoke-Schema Gate Note"
+    },
+    "yt_pr230_wz_response_route_completion_note_2026-05-06": {
+      "claim_id": "yt_pr230_wz_response_route_completion_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / WZ same-source response route not complete on current PR230 surface",
+      "deps": [],
+      "note_hash": "506d05cb9f0d23dcc8e72ac74be65db5cd2c702320ce928abdf40e61b3ede99f",
+      "path": "docs/YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_wz_response_route_completion.py",
+      "title": "PR230 W/Z Response Route Completion"
     },
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05": {
       "claim_id": "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
@@ -45272,6 +45322,7 @@
     "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
     "yt_positivity_improving_neutral_scalar_rank_one_support_note_2026-05-03",
     "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05",
+    "yt_pr230_action_first_route_completion_note_2026-05-06",
     "yt_pr230_assumption_import_stress_note_2026-05-01",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -45291,6 +45342,7 @@
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
     "yt_pr230_negative_route_applicability_review_note_2026-05-06",
+    "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle14_route_selector_gate_note_2026-05-05",
@@ -45330,12 +45382,15 @@
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
     "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
+    "yt_pr230_schur_route_completion_note_2026-05-06",
+    "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
     "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
+    "yt_pr230_wz_response_route_completion_note_2026-05-06",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
     "yt_production_resource_projection_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
@@ -45455,17 +45510,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1073,
-    "node_count": 2026,
-    "root_count": 1539,
-    "runners_with_path": 1522,
+    "leaf_count": 1078,
+    "node_count": 2031,
+    "root_count": 1544,
+    "runners_with_path": 1527,
     "status_counts": {
       "bounded": 555,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 433,
-      "unknown": 561
+      "unknown": 566
     }
   }
 }

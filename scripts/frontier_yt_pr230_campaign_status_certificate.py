@@ -578,6 +578,21 @@ def main() -> int:
         "pr230_source_coordinate_transport_gate": load(
             "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json"
         ),
+        "pr230_source_coordinate_transport_completion": load(
+            "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
+        ),
+        "pr230_action_first_route_completion": load(
+            "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
+        ),
+        "pr230_wz_response_route_completion": load(
+            "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json"
+        ),
+        "pr230_schur_route_completion": load(
+            "outputs/yt_pr230_schur_route_completion_2026-05-06.json"
+        ),
+        "pr230_neutral_primitive_route_completion": load(
+            "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
+        ),
         "pr230_oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
@@ -2377,6 +2392,59 @@ def main() -> int:
         is False,
         statuses["pr230_source_coordinate_transport_gate"],
     )
+    source_transport_completion = certificates["pr230_source_coordinate_transport_completion"]
+    report(
+        "pr230-source-coordinate-transport-current-surface-closed",
+        "source-coordinate transport not derivable from current PR230 surface"
+        in str(statuses["pr230_source_coordinate_transport_completion"])
+        and source_transport_completion.get("proposal_allowed") is False
+        and source_transport_completion.get("source_coordinate_transport_completion_passed")
+        is True,
+        statuses["pr230_source_coordinate_transport_completion"],
+    )
+    action_first_route_completion = certificates["pr230_action_first_route_completion"]
+    report(
+        "pr230-action-first-route-current-surface-closed",
+        "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
+        in str(statuses["pr230_action_first_route_completion"])
+        and action_first_route_completion.get("proposal_allowed") is False
+        and action_first_route_completion.get("action_first_route_completion_passed")
+        is True,
+        statuses["pr230_action_first_route_completion"],
+    )
+    wz_response_route_completion = certificates["pr230_wz_response_route_completion"]
+    report(
+        "pr230-wz-response-route-current-surface-closed",
+        "WZ same-source response route not complete on current PR230 surface"
+        in str(statuses["pr230_wz_response_route_completion"])
+        and wz_response_route_completion.get("proposal_allowed") is False
+        and wz_response_route_completion.get("wz_response_route_completion_passed")
+        is True,
+        statuses["pr230_wz_response_route_completion"],
+    )
+    schur_route_completion = certificates["pr230_schur_route_completion"]
+    report(
+        "pr230-schur-route-current-surface-closed",
+        "Schur A/B/C route not complete on current PR230 surface"
+        in str(statuses["pr230_schur_route_completion"])
+        and schur_route_completion.get("proposal_allowed") is False
+        and schur_route_completion.get("schur_route_completion_passed") is True,
+        statuses["pr230_schur_route_completion"],
+    )
+    neutral_primitive_route_completion = certificates[
+        "pr230_neutral_primitive_route_completion"
+    ]
+    report(
+        "pr230-neutral-primitive-route-current-surface-closed",
+        "neutral primitive-rank-one route not complete on current PR230 surface"
+        in str(statuses["pr230_neutral_primitive_route_completion"])
+        and neutral_primitive_route_completion.get("proposal_allowed") is False
+        and neutral_primitive_route_completion.get(
+            "neutral_primitive_route_completion_passed"
+        )
+        is True,
+        statuses["pr230_neutral_primitive_route_completion"],
+    )
     oh_bridge_candidate_portfolio = certificates["pr230_oh_bridge_candidate_portfolio"]
     report(
         "pr230-oh-bridge-first-principles-candidate-portfolio-open",
@@ -3976,13 +4044,40 @@ def main() -> int:
         "not a PR230 O_H bridge on the current source surface: the uniform "
         "mass source has zero projection onto the trace-zero taste-axis Higgs "
         "operators, so that route requires source-coordinate transport or "
-        "C_sH/C_HH pole rows before it can reopen.  The first-principles "
+        "C_sH/C_HH pole rows before it can reopen.  The Schur and neutral "
+        "primitive route completions add the same scoped boundary for two "
+        "hard theorem routes: current Schur machinery lacks the neutral kernel "
+        "basis plus same-surface A/B/C rows, and current conditional Perron/"
+        "positivity support lacks a primitive transfer or off-diagonal "
+        "generator theorem.  The first-principles "
         "O_H bridge candidate portfolio records the surviving positive "
         "candidate routes and keeps them open without authorizing closure."
     )
     result["oh_bridge_candidate_portfolio_open"] = (
         oh_bridge_candidate_portfolio.get("candidate_portfolio_passed") is True
         and oh_bridge_candidate_portfolio.get("candidate_count") == 5
+    )
+    result["source_coordinate_transport_completion_blocks"] = (
+        source_transport_completion.get("source_coordinate_transport_completion_passed")
+        is True
+        and source_transport_completion.get("proposal_allowed") is False
+    )
+    result["action_first_route_completion_blocks"] = (
+        action_first_route_completion.get("action_first_route_completion_passed") is True
+        and action_first_route_completion.get("proposal_allowed") is False
+    )
+    result["wz_response_route_completion_blocks"] = (
+        wz_response_route_completion.get("wz_response_route_completion_passed") is True
+        and wz_response_route_completion.get("proposal_allowed") is False
+    )
+    result["schur_route_completion_blocks"] = (
+        schur_route_completion.get("schur_route_completion_passed") is True
+        and schur_route_completion.get("proposal_allowed") is False
+    )
+    result["neutral_primitive_route_completion_blocks"] = (
+        neutral_primitive_route_completion.get("neutral_primitive_route_completion_passed")
+        is True
+        and neutral_primitive_route_completion.get("proposal_allowed") is False
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
@@ -4005,6 +4100,8 @@ def main() -> int:
         "does not treat post-cycle-32 origin/main audit/effective-status/runner-cache drift as same-surface physics evidence",
         "does not treat Burnside/double-commutant theorem names as proof without same-surface neutral generators",
         "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
+        "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
+        "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")

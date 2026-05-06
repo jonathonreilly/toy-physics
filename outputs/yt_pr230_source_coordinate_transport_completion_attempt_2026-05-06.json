@@ -1,0 +1,160 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
+  "algebra": {
+    "Tr_I": 8.0,
+    "Tr_S_i": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flip_identity_errors": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flip_sign_errors_for_target_axes": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "identity_spectrum": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "source_axis_overlaps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_operator": "I_8 uniform additive scalar mass source",
+    "source_projection_norm_onto_taste_axis_span": 0.0,
+    "source_relative_projection_onto_taste_axis_span": 0.0,
+    "target_operators": "S_i = sigma_x on taste tensor factor i",
+    "taste_axis_spectra": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "The route can reopen with a non-shortcut same-surface transport certificate, a certified symmetry-breaking tangent/axis, production C_sH/C_HH rows for a canonical O_H, or an equivalent neutral primitive/rank-one theorem.",
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Treat the source-coordinate lane as closed on the current surface. Move next to the action-first O_H/C_sH/C_HH route or to a genuine neutral primitive/rank-one theorem unless a new transport certificate appears.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "selected_taste_axis_by_fiat": false,
+    "set_kappa_s_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets": false,
+    "used_yt_ward_identity": false
+  },
+  "future_reopen_file_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_primitive_certificate": false,
+    "source_higgs_rows": false,
+    "source_to_taste_axis_transport_certificate": false
+  },
+  "future_transport_certificate": "outputs/yt_pr230_source_to_taste_axis_transport_certificate_2026-05-06.json",
+  "future_transport_certificate_present": false,
+  "future_transport_certificate_valid": false,
+  "future_transport_certificate_validation": {
+    "failed_checks": [
+      "source-to-taste-axis transport certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "parent_certificates": {
+    "candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
+    "cl3_automorphism_source_identity": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
+    "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
+    "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
+    "source_functional_lsz": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_sector_pattern_transfer": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json",
+    "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "candidate_portfolio": "open / first-principles O_H bridge positive-candidate portfolio",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "canonical_oh_premise_stretch": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
+    "cl3_automorphism_source_identity": "exact negative boundary / Cl3 automorphism data not source-Higgs identity",
+    "cl3_source_unit": "exact negative boundary / Cl3 source-unit normalization no-go",
+    "negative_route_applicability_review": "exact support / selected PR230 negative-route applicability review passed",
+    "source_functional_lsz": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_sector_pattern_transfer": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure",
+    "source_to_higgs_lsz": "open / source-to-Higgs LSZ closure attempt blocked",
+    "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge"
+  },
+  "pass_count": 20,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The PR230 source is the central taste-singlet identity direction, while the Higgs/taste axes are trace-zero sign-vector directions. Current unit-preserving, trace-preserving, and taste-equivariant maps cannot transport I_8 into S_i; a non-equivariant map would be a new uncertified source choice.",
+  "rejected_current_surface_maps": [
+    {
+      "map_class": "unit-preserving algebra automorphism",
+      "rejection": "unital algebra maps send identity to identity, not to trace-zero S_i"
+    },
+    {
+      "map_class": "unitary or similarity transport",
+      "rejection": "trace and spectrum are preserved; I_8 and S_i have different trace and spectrum"
+    },
+    {
+      "map_class": "linear Hilbert-Schmidt projection",
+      "rejection": "I_8 has zero projection onto span{S_i}"
+    },
+    {
+      "map_class": "taste-equivariant scalar-to-vector source map",
+      "rejection": "taste flips fix the scalar source and negate target axes, forcing zero tangent"
+    },
+    {
+      "map_class": "non-equivariant axis selection",
+      "rejection": "would introduce a new source-axis/Jacobian certificate, currently absent"
+    }
+  ],
+  "source_coordinate_transport_completion_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not rule out future same-surface source-coordinate transport after a new certificate",
+    "does not demote the retained/conditional Higgs/taste structural stack",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s = 1 or choose a taste axis by fiat"
+  ]
+}

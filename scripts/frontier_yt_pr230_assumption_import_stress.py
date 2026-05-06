@@ -134,6 +134,21 @@ def main() -> int:
         "source_coordinate_transport_gate": load(
             "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json"
         ),
+        "source_coordinate_transport_completion_attempt": load(
+            "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
+        ),
+        "action_first_route_completion": load(
+            "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
+        ),
+        "wz_response_route_completion": load(
+            "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json"
+        ),
+        "schur_route_completion": load(
+            "outputs/yt_pr230_schur_route_completion_2026-05-06.json"
+        ),
+        "neutral_primitive_route_completion": load(
+            "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
+        ),
         "oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
@@ -240,6 +255,17 @@ def main() -> int:
         "not proof selectors until source-coordinate transport or C_sH/C_HH rows exist",
         "Source-coordinate transport to O_H",
         "not proof selectors until a same-surface transport certificate exists",
+        "Source-coordinate transport completion",
+        "unit-preserving/trace-preserving/taste-equivariant maps cannot send I_8 to trace-zero S_i",
+        "not proof selectors until source-to-taste-axis certificate, canonical O_H rows, or neutral rank-one theorem exists",
+        "Action-first O_H/C_sH/C_HH route completion",
+        "not proof selectors until same-source EW/Higgs action, canonical O_H, source-Higgs rows, and Gram-purity certificate exist",
+        "W/Z same-source response route completion",
+        "not proof selectors until same-source EW action, W/Z response rows, matched covariance, strict g2, and delta_perp control exist",
+        "Schur A/B/C route completion",
+        "not proof selectors until neutral kernel basis plus Schur A/B/C rows or equivalent row theorem exists",
+        "Neutral primitive/rank-one route completion",
+        "not proof selectors until same-surface primitive transfer, off-diagonal generator, or irreducibility certificate exists",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -702,6 +728,57 @@ def main() -> int:
         is False,
         source_coordinate_transport.get("actual_current_surface_status"),
     )
+    source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
+    report(
+        "source-coordinate-transport-current-surface-closed",
+        "source-coordinate transport not derivable from current PR230 surface"
+        in str(source_transport_completion.get("actual_current_surface_status"))
+        and source_transport_completion.get("proposal_allowed") is False
+        and source_transport_completion.get("source_coordinate_transport_completion_passed")
+        is True
+        and source_transport_completion.get("algebra", {}).get(
+            "source_relative_projection_onto_taste_axis_span"
+        )
+        == 0.0,
+        source_transport_completion.get("actual_current_surface_status"),
+    )
+    action_first_completion = certificates["action_first_route_completion"]
+    report(
+        "action-first-route-current-surface-closed",
+        "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
+        in str(action_first_completion.get("actual_current_surface_status"))
+        and action_first_completion.get("proposal_allowed") is False
+        and action_first_completion.get("action_first_route_completion_passed") is True,
+        action_first_completion.get("actual_current_surface_status"),
+    )
+    wz_response_completion = certificates["wz_response_route_completion"]
+    report(
+        "wz-response-route-current-surface-closed",
+        "WZ same-source response route not complete on current PR230 surface"
+        in str(wz_response_completion.get("actual_current_surface_status"))
+        and wz_response_completion.get("proposal_allowed") is False
+        and wz_response_completion.get("wz_response_route_completion_passed") is True,
+        wz_response_completion.get("actual_current_surface_status"),
+    )
+    schur_route_completion = certificates["schur_route_completion"]
+    report(
+        "schur-route-current-surface-closed",
+        "Schur A/B/C route not complete on current PR230 surface"
+        in str(schur_route_completion.get("actual_current_surface_status"))
+        and schur_route_completion.get("proposal_allowed") is False
+        and schur_route_completion.get("schur_route_completion_passed") is True,
+        schur_route_completion.get("actual_current_surface_status"),
+    )
+    neutral_primitive_route_completion = certificates["neutral_primitive_route_completion"]
+    report(
+        "neutral-primitive-route-current-surface-closed",
+        "neutral primitive-rank-one route not complete on current PR230 surface"
+        in str(neutral_primitive_route_completion.get("actual_current_surface_status"))
+        and neutral_primitive_route_completion.get("proposal_allowed") is False
+        and neutral_primitive_route_completion.get("neutral_primitive_route_completion_passed")
+        is True,
+        neutral_primitive_route_completion.get("actual_current_surface_status"),
+    )
     candidate_portfolio = certificates["oh_bridge_candidate_portfolio"]
     report(
         "oh-bridge-first-principles-candidate-portfolio-open",
@@ -810,6 +887,13 @@ def main() -> int:
             "or C_sH/C_HH rows exist.  The first-principles O_H bridge "
             "candidate portfolio keeps five positive candidates open while "
             "recording that no candidate currently supplies closure authority.  "
+            "The source-coordinate, action-first, W/Z response, Schur, and "
+            "neutral-primitive completion gates close only current shortcut "
+            "surfaces: they require, respectively, a real source-axis "
+            "transport certificate, a same-source EW/Higgs action plus O_H and "
+            "C_sH/C_HH rows, production W/Z rows with strict g2/covariance/"
+            "delta_perp, neutral-kernel A/B/C rows, or a primitive transfer/"
+            "off-diagonal-generator theorem.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

@@ -147,6 +147,11 @@ def main() -> int:
         "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
         "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
         "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
+        "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+        "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
+        "pr230_wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
+        "pr230_schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
+        "pr230_neutral_primitive_route_completion": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
         "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
@@ -1153,6 +1158,74 @@ def main() -> int:
             "future_transport_certificate_present"
         )
         is False
+    )
+    source_coordinate_transport_completion_blocks = (
+        "source-coordinate transport not derivable from current PR230 surface"
+        in certificates["pr230_source_coordinate_transport_completion"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_source_coordinate_transport_completion"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_source_coordinate_transport_completion"].get(
+            "source_coordinate_transport_completion_passed"
+        )
+        is True
+        and certificates["pr230_source_coordinate_transport_completion"].get(
+            "algebra", {}
+        ).get("source_relative_projection_onto_taste_axis_span")
+        == 0.0
+    )
+    action_first_route_completion_blocks = (
+        "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
+        in certificates["pr230_action_first_route_completion"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_action_first_route_completion"].get("proposal_allowed")
+        is False
+        and certificates["pr230_action_first_route_completion"].get(
+            "action_first_route_completion_passed"
+        )
+        is True
+    )
+    wz_response_route_completion_blocks = (
+        "WZ same-source response route not complete on current PR230 surface"
+        in certificates["pr230_wz_response_route_completion"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_wz_response_route_completion"].get("proposal_allowed")
+        is False
+        and certificates["pr230_wz_response_route_completion"].get(
+            "wz_response_route_completion_passed"
+        )
+        is True
+    )
+    schur_route_completion_blocks = (
+        "Schur A/B/C route not complete on current PR230 surface"
+        in certificates["pr230_schur_route_completion"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_schur_route_completion"].get("proposal_allowed")
+        is False
+        and certificates["pr230_schur_route_completion"].get(
+            "schur_route_completion_passed"
+        )
+        is True
+    )
+    neutral_primitive_route_completion_blocks = (
+        "neutral primitive-rank-one route not complete on current PR230 surface"
+        in certificates["pr230_neutral_primitive_route_completion"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_neutral_primitive_route_completion"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_neutral_primitive_route_completion"].get(
+            "neutral_primitive_route_completion_passed"
+        )
+        is True
     )
     oh_bridge_candidate_portfolio_open = (
         "first-principles O_H bridge positive-candidate portfolio"
@@ -3462,6 +3535,41 @@ def main() -> int:
         ),
     )
     report(
+        "source-coordinate-transport-current-surface-closed",
+        source_coordinate_transport_completion_blocks,
+        certificates["pr230_source_coordinate_transport_completion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "action-first-route-current-surface-closed",
+        action_first_route_completion_blocks,
+        certificates["pr230_action_first_route_completion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "wz-response-route-current-surface-closed",
+        wz_response_route_completion_blocks,
+        certificates["pr230_wz_response_route_completion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "schur-route-current-surface-closed",
+        schur_route_completion_blocks,
+        certificates["pr230_schur_route_completion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "neutral-primitive-route-current-surface-closed",
+        neutral_primitive_route_completion_blocks,
+        certificates["pr230_neutral_primitive_route_completion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "oh-bridge-first-principles-candidate-portfolio-open",
         oh_bridge_candidate_portfolio_open,
         certificates["pr230_oh_bridge_candidate_portfolio"].get(
@@ -4774,6 +4882,11 @@ def main() -> int:
             "same-surface artifact."
         ),
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
+        "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
+        "action_first_route_completion_blocks": action_first_route_completion_blocks,
+        "wz_response_route_completion_blocks": wz_response_route_completion_blocks,
+        "schur_route_completion_blocks": schur_route_completion_blocks,
+        "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

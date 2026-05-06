@@ -36,6 +36,11 @@ CERTS = {
     "neutral_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "positivity_improving_rank_one_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
     "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
+    "source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+    "action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
+    "wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
+    "schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
+    "neutral_primitive_route_completion": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
     "assumption_import_stress": "outputs/yt_pr230_assumption_import_stress_2026-05-01.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
@@ -162,6 +167,53 @@ def main() -> int:
         present("negative_route_applicability_review", certs)
         and certs["negative_route_applicability_review"].get("proposal_allowed") is False
     )
+    source_transport_current_surface_closed = (
+        "source-coordinate transport not derivable from current PR230 surface"
+        in status(certs["source_coordinate_transport_completion"])
+        and certs["source_coordinate_transport_completion"].get("proposal_allowed") is False
+        and certs["source_coordinate_transport_completion"].get(
+            "source_coordinate_transport_completion_passed"
+        )
+        is True
+        and certs["source_coordinate_transport_completion"].get("algebra", {}).get(
+            "source_relative_projection_onto_taste_axis_span"
+        )
+        == 0.0
+    )
+    action_first_current_surface_closed = (
+        "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
+        in status(certs["action_first_route_completion"])
+        and certs["action_first_route_completion"].get("proposal_allowed") is False
+        and certs["action_first_route_completion"].get(
+            "action_first_route_completion_passed"
+        )
+        is True
+    )
+    wz_response_current_surface_closed = (
+        "WZ same-source response route not complete on current PR230 surface"
+        in status(certs["wz_response_route_completion"])
+        and certs["wz_response_route_completion"].get("proposal_allowed") is False
+        and certs["wz_response_route_completion"].get(
+            "wz_response_route_completion_passed"
+        )
+        is True
+    )
+    schur_current_surface_closed = (
+        "Schur A/B/C route not complete on current PR230 surface"
+        in status(certs["schur_route_completion"])
+        and certs["schur_route_completion"].get("proposal_allowed") is False
+        and certs["schur_route_completion"].get("schur_route_completion_passed")
+        is True
+    )
+    neutral_current_surface_closed = (
+        "neutral primitive-rank-one route not complete on current PR230 surface"
+        in status(certs["neutral_primitive_route_completion"])
+        and certs["neutral_primitive_route_completion"].get("proposal_allowed") is False
+        and certs["neutral_primitive_route_completion"].get(
+            "neutral_primitive_route_completion_passed"
+        )
+        is True
+    )
     assembly_still_open = (
         certs["full_positive_assembly"].get("proposal_allowed") is False
         and certs["retained_route"].get("proposal_allowed") is False
@@ -183,13 +235,17 @@ def main() -> int:
             exact_current_blockers=[
                 "no theorem transports the uniform additive mass source into the taste-axis Higgs source",
                 "taste isotropy gives scalar/taste support but not the PR230 source coordinate",
+                "unit-preserving, trace-preserving, and taste-equivariant maps cannot send I_8 to trace-zero S_i on the current surface",
             ],
             next_artifacts=[
                 "source-coordinate transport theorem with explicit linear/nonlinear map",
                 "runner checking trace, norm, Jacobian, LSZ normalization, and forbidden-import firewall",
                 "if transport is nonlinear, a proof that the pole residue uses the transported radial tangent",
             ],
-            current_boundaries=["taste_condensate_oh_bridge"],
+            current_boundaries=[
+                "taste_condensate_oh_bridge",
+                "source_coordinate_transport_completion",
+            ],
             blocked_shortcuts_not_global_closure=[
                 "existing Higgs/taste theorem names alone",
                 "setting the uniform-source projection onto taste axes to one",
@@ -210,6 +266,7 @@ def main() -> int:
                 "canonical O_H identity/normalization certificate is absent",
                 "source-Higgs production rows are guarded off in current chunks",
                 "finite rows still need isolated-pole residue, FV/IR, and contact control",
+                "same-source EW/Higgs action and Gram-purity certificates are absent on the current PR230 surface",
             ],
             next_artifacts=[
                 "canonical O_H certificate with same_surface_cl3_z3=true and LSZ normalization",
@@ -219,6 +276,7 @@ def main() -> int:
             current_boundaries=[
                 "canonical_higgs_repo_authority",
                 "source_higgs_production_readiness",
+                "action_first_route_completion",
             ],
             blocked_shortcuts_not_global_closure=[
                 "unratified source-Higgs smoke operator",
@@ -241,6 +299,7 @@ def main() -> int:
                 "same-source top response certificate required by the W/Z builder is absent",
                 "strict non-observed g2 certificate is absent",
                 "response-only self-normalization cannot determine absolute g2",
+                "matched top/W covariance and delta_perp/orthogonal control are absent",
             ],
             next_artifacts=[
                 "outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json",
@@ -253,6 +312,7 @@ def main() -> int:
                 "wz_mass_fit_response_row_builder",
                 "electroweak_g2_certificate_builder",
                 "wz_g2_response_self_normalization_no_go",
+                "wz_response_route_completion",
             ],
             blocked_shortcuts_not_global_closure=[
                 "using observed g2 or package g2",
@@ -274,6 +334,7 @@ def main() -> int:
                 "compressed source denominator does not determine A/B/C rows",
                 "neutral scalar kernel basis and source/orthogonal projector are absent",
                 "pole-derivative and FV/IR/contact authority are still needed",
+                "same-surface Schur A/B/C row artifacts are absent",
             ],
             next_artifacts=[
                 "same-surface neutral scalar kernel basis certificate",
@@ -283,6 +344,7 @@ def main() -> int:
             current_boundaries=[
                 "schur_kprime_sufficiency",
                 "schur_abc_definition_attempt",
+                "schur_route_completion",
             ],
             blocked_shortcuts_not_global_closure=[
                 "inferring block rows from the compressed denominator",
@@ -304,6 +366,7 @@ def main() -> int:
                 "same-surface neutral transfer matrix/operator is not certified",
                 "current source-only data admit reducible completions",
                 "off-diagonal neutral generator and primitive positive power are absent",
+                "strict neutral primitive-cone/rank-one certificate is absent",
             ],
             next_artifacts=[
                 "neutral scalar basis and transfer matrix/operator certificate",
@@ -315,6 +378,7 @@ def main() -> int:
                 "neutral_primitive_cone_gate",
                 "neutral_primitive_cone_stretch_no_go",
                 "positivity_improving_rank_one_support",
+                "neutral_primitive_route_completion",
             ],
             blocked_shortcuts_not_global_closure=[
                 "reflection positivity alone",
@@ -341,6 +405,11 @@ def main() -> int:
     report("neutral-primitive-contract-present", neutral_contract, status(certs["neutral_primitive_cone_gate"]))
     report("rank-one-conditional-support-present", rank_one_support, status(certs["positivity_improving_rank_one_support"]))
     report("negative-boundaries-scoped", negative_boundaries_scoped, status(certs["negative_route_applicability_review"]))
+    report("source-coordinate-current-surface-closed", source_transport_current_surface_closed, status(certs["source_coordinate_transport_completion"]))
+    report("action-first-current-surface-closed", action_first_current_surface_closed, status(certs["action_first_route_completion"]))
+    report("wz-response-current-surface-closed", wz_response_current_surface_closed, status(certs["wz_response_route_completion"]))
+    report("schur-current-surface-closed", schur_current_surface_closed, status(certs["schur_route_completion"]))
+    report("neutral-primitive-current-surface-closed", neutral_current_surface_closed, status(certs["neutral_primitive_route_completion"]))
     report("assembly-still-open", assembly_still_open, "proposal_allowed=false across assembly/retained/campaign gates")
     report("candidate-routes-unique", unique_routes, f"routes={route_ids}")
     report("candidate-routes-open-not-closure", all_open_positive, "all routes are positive_candidate_open")
@@ -368,11 +437,11 @@ def main() -> int:
             "campaign_status_fail_count": certs["campaign_status"].get("fail_count"),
         },
         "synthesis": [
-            "The fastest positive lane is likely action-first O_H plus C_sH/C_HH rows if a canonical O_H certificate can be written.",
-            "The cleanest physical-observable bypass is W/Z response, but it now concentrates on strict g2 and matched W/Z rows.",
-            "The cleanest derivation-native lane is neutral primitive/rank-one, but it needs an actual neutral transfer certificate.",
-            "Schur is a good algebraic row-compression route after a neutral kernel basis exists; it is not a source-only shortcut.",
-            "Source-coordinate transport is the sharpest pure algebra problem because the taste shortcut failed by exact orthogonality.",
+            "Action-first O_H plus C_sH/C_HH rows remains a future physical route, but the current surface lacks the same-source EW/Higgs action, canonical O_H, rows, and Gram-purity certificates.",
+            "The W/Z physical-observable bypass remains a future route, but the current surface lacks same-source EW action, W/Z rows, matched covariance, strict g2, and delta_perp control.",
+            "The derivation-native neutral primitive/rank-one lane remains future-open but needs an actual same-surface primitive transfer or off-diagonal generator certificate.",
+            "Schur is a good algebraic row-compression route after a neutral kernel basis exists; current source-only rows cannot define A/B/C.",
+            "Source-coordinate transport now has an exact current-surface boundary: I_8 cannot be transported to trace-zero S_i by current algebraic/symmetry maps, but a future non-shortcut transport certificate could reopen it.",
         ],
         "negative_boundary_interpretation": {
             "blocks_only": ["shortcut", "current_surface"],

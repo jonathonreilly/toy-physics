@@ -25,6 +25,22 @@ Open imports after this block:
   exact taste-block Hilbert-Schmidt algebra.
 - Higgs/taste-stack theorem names are not proof selectors until source-coordinate transport or C_sH/C_HH rows exist.
 - Source-coordinate transport to O_H is not proof selectors until a same-surface transport certificate exists.
+- Source-coordinate transport completion is a current-surface boundary, not a
+  global theorem against future transport.
+- unit-preserving/trace-preserving/taste-equivariant maps cannot send I_8 to trace-zero S_i.
+- source-coordinate transport is not proof selectors until source-to-taste-axis certificate, canonical O_H rows, or neutral rank-one theorem exists.
+- Action-first O_H/C_sH/C_HH route completion is a current-surface boundary,
+  not a global theorem against the future FMS route.
+- action-first O_H/C_sH/C_HH is not proof selectors until same-source EW/Higgs action, canonical O_H, source-Higgs rows, and Gram-purity certificate exist.
+- W/Z same-source response route completion is a current-surface boundary, not
+  a global theorem against the future physical-response bypass.
+- W/Z same-source response is not proof selectors until same-source EW action, W/Z response rows, matched covariance, strict g2, and delta_perp control exist.
+- Schur A/B/C route completion is a current-surface boundary, not a global
+  theorem against future neutral-kernel row derivation.
+- Schur A/B/C route completion is not proof selectors until neutral kernel basis plus Schur A/B/C rows or equivalent row theorem exists.
+- Neutral primitive/rank-one route completion is a current-surface boundary,
+  not a global theorem against future primitive neutral transfer derivation.
+- Neutral primitive/rank-one route completion is not proof selectors until same-surface primitive transfer, off-diagonal generator, or irreducibility certificate exists.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

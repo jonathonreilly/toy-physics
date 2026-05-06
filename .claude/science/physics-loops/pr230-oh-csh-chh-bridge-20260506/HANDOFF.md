@@ -23,6 +23,20 @@ analytic reparametrization keeps that tangent proportional to `I_8`, and
 Cl/taste automorphisms fix the identity.  A trace-zero taste/Higgs tangent is a
 new source axis, not a current-surface derivation.
 
+The latest completion artifacts close the five positive route families only on
+the current surface:
+
+- source-coordinate transport needs a real source-axis/Jacobian certificate,
+  canonical `O_H` rows, or a neutral rank-one theorem;
+- action-first `O_H/C_sH/C_HH` needs a same-source EW/Higgs action, canonical
+  `O_H`, production rows, and Gram-purity certificate;
+- W/Z response needs production W/Z rows, strict non-observed `g2`, matched
+  covariance, and `delta_perp` control;
+- Schur rows need a neutral kernel basis plus A/B/C rows or an equivalent row
+  theorem;
+- neutral primitive/rank-one needs a same-surface primitive transfer,
+  off-diagonal generator, or irreducibility certificate.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then

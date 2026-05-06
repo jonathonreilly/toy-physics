@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T11:26:09.321580+00:00",
+  "generated_at": "2026-05-06T11:37:47.487478+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16513,6 +16513,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py"
     },
+    "yt_pr230_action_first_route_completion_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_action_first_route_completion.py"
+    },
     "yt_pr230_assumption_import_stress_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -16716,6 +16728,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py"
+    },
+    "yt_pr230_neutral_primitive_route_completion_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "assert_count": 1,
@@ -16993,6 +17017,30 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py"
     },
+    "yt_pr230_schur_route_completion_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_route_completion.py"
+    },
+    "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_source_coordinate_transport_completion_attempt.py"
+    },
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06": {
       "assert_count": 1,
       "counts": {
@@ -17052,6 +17100,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py"
+    },
+    "yt_pr230_wz_response_route_completion_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_wz_response_route_completion.py"
     },
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05": {
       "assert_count": 1,
@@ -34365,6 +34425,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_action_first_route_completion.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_action_first_route_completion_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_assumption_import_stress.py": {
       "assert_count": 1,
       "claims": [
@@ -34618,6 +34693,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_neutral_primitive_route_completion_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py": {
@@ -34965,6 +35055,36 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_schur_route_completion.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_schur_route_completion_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_source_coordinate_transport_completion_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_source_coordinate_transport_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -35035,6 +35155,21 @@
         "B": 2,
         "C": 4,
         "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_wz_response_route_completion.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_wz_response_route_completion_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -40205,13 +40340,13 @@
     "decoration_candidates": 107,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 225,
-      "C": 503,
-      "D": 302,
+      "B": 226,
+      "C": 506,
+      "D": 303,
       "none": 404
     },
-    "runners_classified": 1443,
-    "runners_with_C": 756,
-    "runners_with_D": 537
+    "runners_classified": 1448,
+    "runners_with_C": 761,
+    "runners_with_D": 542
   }
 }

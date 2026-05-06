@@ -64,24 +64,38 @@ supplied.
 1. **Source-coordinate transport.**  Derive a same-surface source-coordinate
    transport theorem from the PR230 uniform mass source to a canonical
    Higgs/taste source, including LSZ normalization and a forbidden-import
-   firewall.
+   firewall.  The current-surface shortcut is now closed by
+   `YT_PR230_SOURCE_COORDINATE_TRANSPORT_COMPLETION_ATTEMPT`: `I_8` cannot be
+   transported to trace-zero `S_i` by unit-preserving, trace-preserving, or
+   taste-equivariant maps without a new source-axis/Jacobian certificate.
 
 2. **Action-first canonical `O_H` rows.**  Derive a same-source EW/Higgs action
    on the PR230 `Cl(3)/Z^3` source surface, certify canonical `O_H`, then run
-   production `C_ss/C_sH/C_HH` rows and Gram purity.
+   production `C_ss/C_sH/C_HH` rows and Gram purity.  The current-surface route
+   is now explicitly closed by `YT_PR230_ACTION_FIRST_ROUTE_COMPLETION`: the
+   same-source EW/Higgs action, canonical `O_H`, production rows, and
+   Gram-purity certificate are all absent.
 
 3. **W/Z same-source response.**  Bypass direct `O_H` by measuring matched
    top/W/Z source-response slopes.  This requires W/Z mass-fit rows, matched
-   top/W covariance, `delta_perp` control, and strict non-observed `g2`.
+   top/W covariance, `delta_perp` control, and strict non-observed `g2`.  The
+   current-surface route is now closed by `YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION`:
+   those rows/certificates are all absent.
 
 4. **Schur `A/B/C` neutral-kernel rows.**  Define the same-surface neutral
    scalar kernel basis and source/orthogonal projector, then emit Schur block
-   rows and pole derivatives or direct two-source residue rows.
+   rows and pole derivatives or direct two-source residue rows.  The
+   current-surface route is now closed by `YT_PR230_SCHUR_ROUTE_COMPLETION`:
+   sufficiency and row-definition machinery exist, but the neutral kernel
+   basis, projectors, A/B/C rows, and equivalent row theorem are absent.
 
 5. **Neutral primitive/rank-one theorem.**  Certify a same-surface neutral
    transfer operator that is nonnegative, strongly connected, and primitive,
    with an isolated lowest neutral pole and positive source/canonical-Higgs
-   overlaps.
+   overlaps.  The current-surface route is now closed by
+   `YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION`: conditional Perron support
+   and positivity inputs are not yet a primitive transfer, off-diagonal
+   generator, or irreducibility certificate.
 
 ## Non-Claims
 
@@ -94,15 +108,15 @@ not define `y_t` through `H_unit`, `yt_ward_identity`, observed targets,
 
 ```bash
 python3 scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
-# SUMMARY: PASS=16 FAIL=0
+# SUMMARY: PASS=21 FAIL=0
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=45 FAIL=0
+# SUMMARY: PASS=51 FAIL=0
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=99 FAIL=0
+# SUMMARY: PASS=107 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=247 FAIL=0
+# SUMMARY: PASS=253 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=279 FAIL=0
+# SUMMARY: PASS=285 FAIL=0
 ```
 
 Strict audit lint reports only the existing warning baseline after the audit

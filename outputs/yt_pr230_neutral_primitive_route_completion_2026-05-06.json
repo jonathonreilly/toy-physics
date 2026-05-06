@@ -1,0 +1,61 @@
+{
+  "actual_current_surface_status": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "The route remains hard-physics open if a same-surface primitive neutral transfer, off-diagonal generator, or irreducibility/rank-one certificate is supplied.",
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "A positive theorem must construct the missing same-surface neutral off-diagonal/primitive transfer certificate; otherwise use future physical rows.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_commutant_rank_as_rank_one_purity": false,
+    "used_hunit_or_ward": false,
+    "used_observed_targets": false,
+    "used_positivity_without_irreducibility": false,
+    "used_source_only_rows_as_neutral_transfer": false
+  },
+  "future_artifact_presence": {
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "neutral_scalar_irreducibility_certificate": false,
+    "neutral_scalar_rank_one_purity_certificate": false
+  },
+  "neutral_primitive_route_completion_passed": true,
+  "parent_certificates": {
+    "neutral_burnside_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
+    "neutral_commutant_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_dynamical_rank_one": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "neutral_offdiagonal_generator": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
+    "neutral_rank_one_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "orthogonal_neutral_decoupling": "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json",
+    "positivity_rank_one_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "primitive_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "primitive_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "neutral_burnside_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
+    "neutral_commutant_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
+    "neutral_dynamical_rank_one": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+    "neutral_irreducibility_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
+    "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "neutral_rank_one_gate": "open / neutral scalar rank-one purity gate not passed",
+    "no_orthogonal_top_coupling_import": "exact negative boundary / no-orthogonal-top-coupling import audit",
+    "no_orthogonal_top_coupling_selection_rule": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+    "orthogonal_neutral_decoupling": "exact negative boundary / orthogonal neutral decoupling shortcut not derived",
+    "positivity_rank_one_support": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+    "primitive_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "primitive_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Conditional Perron support exists, but the current surface has no primitive-cone/irreducibility/off-diagonal-generator certificate.",
+  "strict_non_claims": [
+    "does not treat positivity alone as rank-one purity",
+    "does not treat commutant rank, source-only rows, or decoupling shortcuts as irreducibility",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not claim retained or proposed_retained closure"
+  ]
+}
