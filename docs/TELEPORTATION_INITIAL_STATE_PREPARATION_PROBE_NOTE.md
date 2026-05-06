@@ -55,6 +55,75 @@ single-species `H1` ground states:
 | `1d_null_initial` | `1.000000` | `1.000000` |
 | `2d_null_initial` | `1.000000` | `1.000000` |
 
+## Derivation Closure
+
+For the two default cases the runner uses `mass=0` and `G=0`. The
+single-species Hamiltonian is therefore the negative adjacency operator on the
+periodic lattice,
+
+```text
+H1 = -A,
+```
+
+with `t_hop=1`. The `1D N=8` cycle is connected and degree `2`; the `2D 4x4`
+torus is connected and degree `4`. For a connected regular graph, the constant
+vector is the Perron eigenvector of `A` with eigenvalue equal to the degree, and
+that top eigenvalue is simple. Hence the `H1=-A` ground state is the unique
+uniform native-site vector
+
+```text
+|u_N> = N^(-1/2) sum_i |i>,
+```
+
+with energies `-2` and `-4` in the two audited cases. The finite gaps in the
+table are the runner-computed differences from this simple ground eigenspace to
+the next `H1` eigenspace.
+
+At `G=0`, `build_H2_tensor` drops the Poisson diagonal term and the
+two-species Hamiltonian is the Kronecker sum
+
+```text
+H(G=0) = H1 x I + I x H1.
+```
+
+If `H1 |phi_k> = E_k |phi_k>`, then
+`|phi_a> x |phi_b>` is an eigenvector of `H(G=0)` with energy `E_a + E_b`.
+Because the `H1` ground vector is simple in both default cases, the unique
+two-species ground vector is
+
+```text
+|g_G0> = |u_N>_A x |u_N>_B,
+```
+
+with energy `2 E0` and gap `E1 - E0`. This is the analytic reason the runner
+finds fidelity `1.000000` against both the `H1`-ground tensor product and the
+uniform-site tensor product.
+
+The same formula also closes the separability and delocalization chain. As a
+species state, `|g_G0>` is a single tensor product. In the `factor_sites`
+logical/environment split used by the teleportation runners, each default even
+lattice decomposes each native site as one logical taste bit plus an
+environment label, and the uniform site vector factors as
+`|+>_logical x |u_env>`. Therefore
+
+```text
+|g_G0> =
+  (|+>_A x |u_env>_A) x (|+>_B x |u_env>_B)
+  = (|+>_A x |+>_B) x (|u_env>_A x |u_env>_B),
+```
+
+so the audited species and logical/environment Schmidt ranks are exactly one up
+to numerical tolerance. The traced logical state is the separable product
+`|++><++|`, explaining the non-entangled logical diagnostics: Bell overlap
+`0.5`, CHSH `2.0`, and negativity `0.0`.
+
+Finally, because `|g_G0>` has equal amplitude on every native site pair, every
+native site-pair probability is `1/N^2`. Its support is the whole `N^2`
+site-pair basis, its participation ratio is `N^2`, and `PR/dim = 1`. The
+single-species factor has the analogous full support, participation ratio `N`,
+and `PR/dim = 1`. Thus the state is maximally delocalized in the native basis
+even though it is unique, exactly product, and separable.
+
 ## Separability Diagnostics
 
 The state is product-like on the audited partitions. Entropies are numerical
