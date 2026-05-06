@@ -55,6 +55,10 @@ Local verification completed:
   FAIL=0; records `ready=6/63`, no bad chunk audits, and
   `combined_rows_written=false`, so it remains support-only aggregation
   infrastructure;
+- `frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py`: PASS=13
+  FAIL=0 after adding finite-mode `rho_sx` and `Delta_sx` scouts for
+  chunks001-006; combined rows remain unwritten and the diagnostics are
+  explicitly non-evidence;
 - `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
   FAIL=0;
 - `frontier_yt_pr230_degree_one_higgs_action_premise_gate.py`: PASS=15
@@ -77,6 +81,11 @@ Local verification completed:
   no physical Yukawa readout;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata regenerated after source-Higgs readiness alias-firewall hardening;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated after finite-mode taste-radial combiner scout
+  hardening;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;

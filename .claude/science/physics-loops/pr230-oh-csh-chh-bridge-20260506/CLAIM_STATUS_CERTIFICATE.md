@@ -88,3 +88,7 @@ two-source taste-radial chunks and records their source-Higgs-shaped timeseries
 fields as `C_sx/C_xx` aliases, not canonical `C_sH/C_HH` rows.  The scan
 requires alias metadata, zero pole-residue rows, canonical `O_H` identity
 false, and no physical Yukawa readout; it is a firewall, not evidence.
+The row-combiner gate now carries finite-mode `rho_sx` and `Delta_sx` scouts
+for the partial chunks001-006 set.  Those scouts are not isolated-pole
+residues, not canonical `C_sH/C_HH`, not scalar-LSZ authority, and not
+retained/proposed-retained `y_t` evidence.

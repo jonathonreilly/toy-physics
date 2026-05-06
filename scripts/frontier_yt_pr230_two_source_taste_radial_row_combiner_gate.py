@@ -164,7 +164,14 @@ def chunk_audit(manifest_row: dict[str, Any]) -> dict[str, Any]:
 
 def partial_mode_diagnostics(chunk_audits: list[dict[str, Any]]) -> dict[str, Any]:
     rows: dict[str, dict[str, list[float]]] = {
-        mode: {"C_ss_real": [], "C_sx_real": [], "C_xx_real": [], "configuration_count": []}
+        mode: {
+            "C_ss_real": [],
+            "C_sx_real": [],
+            "C_xx_real": [],
+            "rho_sx_real": [],
+            "finite_row_gram_determinant_real": [],
+            "configuration_count": [],
+        }
         for mode in sorted(EXPECTED_MODES)
     }
     for audit in chunk_audits:
@@ -178,6 +185,16 @@ def partial_mode_diagnostics(chunk_audits: list[dict[str, Any]]) -> dict[str, An
             for key in ("C_ss_real", "C_sx_real", "C_xx_real"):
                 if finite_number(row.get(key)):
                     rows[mode][key].append(float(row[key]))
+            c_ss = row.get("C_ss_real")
+            c_sx = row.get("C_sx_real")
+            c_xx = row.get("C_xx_real")
+            if finite_number(c_ss) and finite_number(c_sx) and finite_number(c_xx):
+                product = float(c_ss) * float(c_xx)
+                if product > 0.0:
+                    rows[mode]["rho_sx_real"].append(float(c_sx) / math.sqrt(product))
+                    rows[mode]["finite_row_gram_determinant_real"].append(
+                        product - float(c_sx) * float(c_sx)
+                    )
             if finite_number(row.get("configuration_count")):
                 rows[mode]["configuration_count"].append(float(row["configuration_count"]))
 
@@ -193,6 +210,11 @@ def partial_mode_diagnostics(chunk_audits: list[dict[str, Any]]) -> dict[str, An
                 "mean": statistics.fmean(series),
                 "stdev": statistics.stdev(series) if len(series) > 1 else 0.0,
             }
+        mode_summary["strict_limit"] = (
+            "rho_sx_real and finite_row_gram_determinant_real are finite-mode "
+            "C_sx/C_xx diagnostics on partial chunks. They are not isolated-pole "
+            "residues, not canonical C_sH/C_HH rows, and not y_t evidence."
+        )
         summary[mode] = mode_summary
     return summary
 
@@ -254,6 +276,11 @@ def main() -> int:
     report("partial-set-does-not-write-combined-rows", partial_did_not_write or all_ready, rel(COMBINED_ROWS))
     report("all-ready-required-before-combined-output", all_ready or partial_set, f"ready={len(ready)}/{expected_count}")
     report("combined-output-written-only-if-all-ready", combined_written == all_ready, f"combined_written={combined_written}")
+    report(
+        "partial-finite-overlap-diagnostics-non-evidence",
+        partial_set and all("rho_sx_real" in row for row in summary.values()),
+        "rho_sx/Gram diagnostics are finite-mode scout fields only",
+    )
     report("does-not-authorize-retained-proposal", proposal_allowed is False, "row combiner support only")
 
     result = {

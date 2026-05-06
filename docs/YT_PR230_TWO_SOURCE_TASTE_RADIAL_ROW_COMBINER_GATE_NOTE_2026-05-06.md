@@ -21,10 +21,22 @@ seed control, selected-mass-only source/FH/LSZ policy, and `C_sx/C_xx`
 timeseries.  It deliberately refuses to write the combined measurement-row
 file until all 63 manifest chunks are present and schema-clean.
 
+The partial diagnostics now also include finite-mode normalized overlap
+scouts,
+
+```text
+rho_sx = C_sx / sqrt(C_ss C_xx)
+Delta_sx = C_ss C_xx - C_sx^2
+```
+
+computed only from completed chunk-level finite rows.  These fields are route
+diagnostics, not pole residues and not canonical source-Higgs evidence.
+
 ## Current Result
 
 Chunks001-006 are present and schema-clean.  The set is still partial:
-`ready=6/63`, so no combined row packet is written.
+`ready=6/63`, so no combined row packet is written.  The finite-mode
+`rho_sx`/`Delta_sx` scouts are recorded for the ready chunks only.
 
 Chunks007-008 are active under the row-wave supervisor's two-worker cap.  Live
 status and logs are run-control state only.
@@ -46,5 +58,5 @@ python3 -m py_compile \
   scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
 
 python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
 ```

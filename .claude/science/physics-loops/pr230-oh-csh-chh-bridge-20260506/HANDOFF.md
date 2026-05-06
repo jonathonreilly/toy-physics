@@ -210,6 +210,12 @@ Current result is `ready=6/63`, no bad chunk audits, and
 `combined_rows_written=false`.  The combiner is an aggregation boundary, not
 physics evidence: partial diagnostics are not combined L12 pole evidence,
 canonical `O_H`, scalar LSZ normalization, `kappa_s`, or top-Yukawa closure.
+The combiner now also records finite-mode `rho_sx = C_sx/sqrt(C_ss C_xx)` and
+`Delta_sx = C_ss C_xx - C_sx^2` scouts for each ready mode.  On chunks001-006
+the mean finite-mode `rho_sx` values are near zero at the recorded finite row
+level, while `Delta_sx` is positive.  These are route diagnostics only:
+finite-mode, partial-chunk `C_sx/C_xx` rows are not isolated-pole residues,
+not canonical `C_sH/C_HH`, and not physical Yukawa evidence.
 
 The source-Higgs production-readiness gate has been hardened against a subtle
 schema overread.  Completed two-source taste-radial row artifacts populate
@@ -273,3 +279,5 @@ Do not close it by treating source-Higgs schema field names in completed
 taste-radial chunks as physical `C_sH/C_HH`; the readiness gate now records
 those rows as `C_sx/C_xx` aliases with canonical `O_H` identity false and no
 Yukawa readout.
+Do not close it by treating finite-mode `rho_sx` or `Delta_sx` scouts from the
+partial combiner as pole-residue Gram purity.

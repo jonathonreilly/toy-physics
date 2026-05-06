@@ -175,6 +175,9 @@ Open imports after this block:
   manifest chunks are present and schema-clean, and even a complete packet
   still requires pole/FV/IR authority plus canonical `O_H`/source-overlap or
   physical-response authority.
+- Finite-mode `rho_sx` and `Delta_sx` diagnostics in the partial combiner are
+  not proof selectors; they are not isolated-pole residues and do not certify
+  Gram purity, scalar LSZ normalization, canonical `C_sH/C_HH`, or `y_t`.
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.

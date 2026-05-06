@@ -31,8 +31,9 @@
    completed chunks001-006 and currently records active chunks007-008 under a
    two-worker cap.  The completed chunks001-006 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
-   gate now records `ready=6/63`, no bad chunk audits, and writes no combined
-   row packet until all 63 chunks are schema-clean.  Chunks007-008 remain
+   gate now records `ready=6/63`, no bad chunk audits, finite-mode
+   `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
+   chunks are schema-clean.  Chunks007-008 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row
