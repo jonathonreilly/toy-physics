@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `su3_wigner_intertwiner_block3_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 556 | 9.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_wigner_l3_cube_geometry.py` |
+| 1 | `su3_wigner_intertwiner_block3_theorem_note_2026-05-03` | bounded_theorem | audit_in_progress | critical | 556 | 9.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_wigner_l3_cube_geometry.py` |
 | 2 | `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | unaudited | critical | 516 | 14.51 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 3 | `universal_gr_constraint_action_stationarity_note` | positive_theorem | unaudited | critical | 512 | 9.50 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 4 | `universal_qg_smooth_gravitational_global_atlas_note` | positive_theorem | unaudited | critical | 511 | 13.50 | Y | fresh_context_or_stronger_with_cross_confirmation | - |

@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_l3_cube_geometry.py
+runner_sha256: 27c42cf0cf93c8c26aa8ea56cf6cc7798346f5c3d2afdb7bb18a78a6c657e600
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wigner Engine — Block 3: L_s=3 PBC Cube Geometry + Tensor-Net
+==============================================================================
+
+--- Section A: L_s=3 PBC spatial cube geometry ---
+  Sites: 27 (expected 27 = 3^3)
+  Directed links: 81 (expected 81 = 3 * 27)
+  Unique unoriented plaquettes: 81 (expected 81 = 3 planes * 27 starts)
+  PASS: site/link/plaquette counts match expected.
+
+  First 3 plaquettes:
+    plaq[0]: start=(0, 0, 0), plane=(+x, +y)
+      links: [(0, 0, 0, 0), (1, 0, 0, 1), (0, 1, 0, 0), (0, 0, 0, 1)]
+    plaq[1]: start=(0, 0, 1), plane=(+x, +y)
+      links: [(0, 0, 1, 0), (1, 0, 1, 1), (0, 1, 1, 0), (0, 0, 1, 1)]
+    plaq[2]: start=(0, 0, 2), plane=(+x, +y)
+      links: [(0, 0, 2, 0), (1, 0, 2, 1), (0, 1, 2, 0), (0, 0, 2, 1)]
+
+--- Section B: link-plaquette incidence verification ---
+  Links in exactly 4 plaquettes: 81 (expected 81)
+  Links in exactly 2 plaquettes: 0 (expected 0 at L=3)
+  PASS: each of 81 directed links is in exactly 4 plaquettes (standard 3D lattice geometry, no L=2 collapse).
+
+  Total link-plaquette incidences: 324 (expected 324)
+  PASS: total incidence count matches 81 plaquettes * 4 boundary links.
+
+--- Section C: plaquette adjacency graph ---
+  Total adjacency edges: 486 (expected 486 = 81 plaquettes * 6 pairs/link)
+  Plaquette degrees observed: [12] (expected {12})
+  PASS: every plaquette has degree 12.
+
+  PASS: 81 * 12 / 2 = 486 edges matches L=3 PBC.
+
+--- Section D: tensor-network index structure ---
+  Total tensor indices (= 4 * n_plaq): 324 (expected 324)
+  Per-plaquette slot map size: 81 (expected 81)
+  Per-link contraction map size: 81 (expected 81)
+  PASS: tensor-network index structure consistent.
+
+  PASS: each link contracts exactly 4 plaquette-slot pairs (matches link incidence).
+
+--- Section E: memory + scaling estimates for Block 4 ---
+  Per-plaquette tensor (d=8, rank-4): 5.1 MB total for 81 plaquettes
+  Per-link projector (dense d^8 = 16M entries x 81): 20736.0 MB = 20.3 GB total
+  Per-link projector (rank-8 decomposed = 8 * d^4 entries x 81): 40.5 MB = 0.044 GB total
+
+  Memory recommendation for Block 4:
+  - Use rank-8 decomposed projectors (P^G = sum_alpha |s_a><s_a|)
+  - Total tensor-network memory: ~0.044 GB
+  - Intermediate tensor sizes during contraction will depend on
+    contraction order; need careful path optimization to avoid blowup.
+
+--- Section F: contraction order analysis (sketch for Block 4) ---
+  Recommended Block 4 contraction strategy:
+  1. For each (plaquette, link) slot, decompose plaquette tensor
+     in the link's singlet-basis reduction:
+       T_p = sum_{a,b,c,d} T_p_{abcd} |a> |b> |c> |d>
+     with one of {a,b,c,d} corresponding to the link's slot.
+  2. Apply P^G singlet basis at each link to convert per-link
+     4-index sum to a sum over 8 singlet basis vectors.
+  3. Contract reduced indices via the cube graph topology.
+
+  Expected contraction complexity: O(8^k) where k depends on the
+  specific contraction path. Optimal path requires solving a
+  graph-partitioning problem on the 81-plaquette adjacency graph;
+  Block 4 will use either heuristic ordering (e.g., greedy by
+  smallest-intermediate-tensor) or commercial solver libraries
+  (e.g., opt_einsum, ncon, jax+optax) if needed.
+
+==============================================================================
+SUMMARY: THEOREM PASS=7 FAIL=0
+==============================================================================
+
+Headline:
+  L_s=3 PBC spatial cube geometry encoded:
+    27 sites, 81 directed links, 81 unique unoriented plaquettes
+    Each link in exactly 4 plaquettes (no L=2 PBC collapse)
+    Plaquette adjacency graph: 486 edges, every plaquette degree 12
+  Tensor-network index structure built for Block 4 consumption.
+  Memory estimate (decomposed projectors): ~0.044 GB total tensor-network state.
+
+Block 3 deliverable: cube geometry + tensor-network index structure
+ready for Block 4 (partition function computation using Block 2's
+P^G_((1,1)^4) projector).
+
+----- stderr -----
+
