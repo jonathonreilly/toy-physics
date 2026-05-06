@@ -31,8 +31,8 @@
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 34.101,
-      "transitive_descendants": 548
+      "load_bearing_score": 33.582,
+      "transitive_descendants": 541
     },
     {
       "claim_id": "alpha_s_derived_note",
@@ -71,6 +71,12 @@
       "transitive_descendants": 389
     },
     {
+      "claim_id": "minimal_axioms_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 25.753,
+      "transitive_descendants": 609
+    },
+    {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
       "load_bearing_score": 25.729,
@@ -87,12 +93,6 @@
       "criticality": "critical",
       "load_bearing_score": 25.469,
       "transitive_descendants": 500
-    },
-    {
-      "claim_id": "minimal_axioms_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 25.253,
-      "transitive_descendants": 609
     },
     {
       "claim_id": "three_generation_observable_theorem_note",

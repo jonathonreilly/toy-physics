@@ -6162,7 +6162,7 @@
       "blocker": null,
       "claim_id": "yt_ward_identity_derivation_theorem",
       "claim_scope": null,
-      "claim_type": "open_gate",
+      "claim_type": "bounded_theorem",
       "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
@@ -6173,7 +6173,7 @@
         "yukawa_color_projection_theorem",
         "yt_ew_color_projection_theorem",
         "yt_vertex_power_derivation",
-        "minimal_axioms_2026-04-11"
+        "minimal_axioms_2026-05-03"
       ],
       "direct_in_degree": 42,
       "effective_status": "unaudited",

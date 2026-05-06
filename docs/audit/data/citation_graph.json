@@ -15954,7 +15954,7 @@
     },
     {
       "from": "yt_ward_identity_derivation_theorem",
-      "to": "minimal_axioms_2026-04-11"
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "yt_zero_import_authority_note",
@@ -54964,18 +54964,18 @@
     },
     "yt_ward_identity_derivation_theorem": {
       "claim_id": "yt_ward_identity_derivation_theorem",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate author hint; independent audit lane sets the actual",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem author hint; independent audit lane sets the",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "native_gauge_closure_note",
         "left_handed_charge_matching_note",
         "yukawa_color_projection_theorem",
         "yt_ew_color_projection_theorem",
         "yt_vertex_power_derivation",
-        "minimal_axioms_2026-04-11"
+        "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "1fe82661fe62c41b584b66168afbc1261b235287982cc66298fe66bc0da946a0",
+      "note_hash": "96d05a5a616afcbac1ecea85d13472ed12df40d0aab0ae8506aca2190ac4be23",
       "path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
@@ -55915,19 +55915,19 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 75,
+      "bounded_theorem": 76,
       "meta": 10,
       "no_go": 12,
       "none": 1710,
-      "open_gate": 12,
+      "open_gate": 11,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 572,
+      "bounded_theorem": 573,
       "meta": 10,
       "no_go": 116,
       "none": 456,
-      "open_gate": 118,
+      "open_gate": 117,
       "positive_theorem": 634
     },
     "edge_count": 6607,
