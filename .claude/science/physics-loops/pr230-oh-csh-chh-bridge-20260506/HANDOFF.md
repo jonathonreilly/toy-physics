@@ -143,6 +143,14 @@ Hermitian/source-orthogonal/Z3 filters.  A same-surface EW/Higgs action,
 canonical-operator theorem, production source-overlap rows, or physical
 response bypass is still required before `x = O_H`.
 
+The degree-one premise shortcut is now checked directly.  The implemented
+taste-radial source is degree-one, and adding a degree-one filter selects the
+`E1` radial line; however odd parity still leaves `E1/E3`, and the current
+surface has no EW/Higgs action, canonical-operator theorem, completed
+`C_sx/C_xx` row bridge, or same-source physical-response bridge that authorizes
+degree as canonical `O_H` identity.  Degree-one filtering is a useful target
+selector, not proof authority.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -161,7 +169,8 @@ Best next work:
    next bounded wave, then
    prove/reject its canonical-`O_H` identity or supply another bridge; the
    selector gate reduces the identity route to deriving the degree-one
-   Higgs-action premise, not merely citing `Z3` symmetry;
+   Higgs-action premise from a same-surface EW/Higgs action or
+   canonical-operator theorem, not merely citing `Z3`, odd parity, or degree;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
    with a neutral transfer row, off-diagonal generator, or primitive-cone
    theorem;
@@ -177,3 +186,4 @@ selectors unless the same-surface PR230 action derives that selector.
 Do not close it by treating degree-one taste-radial uniqueness as canonical
 `O_H`; that uniqueness is conditional on a missing same-surface degree-one
 Higgs-action premise.
+Do not close it by treating the degree-one filter itself as that premise.

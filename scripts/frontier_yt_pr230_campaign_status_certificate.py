@@ -617,6 +617,9 @@ def main() -> int:
         "pr230_taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
+        "pr230_degree_one_higgs_action_premise_gate": load(
+            "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2627,6 +2630,26 @@ def main() -> int:
         and taste_radial_selector_gate.get("canonical_oh_selector_absent") is True,
         statuses["pr230_taste_radial_canonical_oh_selector_gate"],
     )
+    degree_one_higgs_action_premise_gate = certificates[
+        "pr230_degree_one_higgs_action_premise_gate"
+    ]
+    report(
+        "pr230-degree-one-higgs-action-premise-not-derived",
+        "degree-one Higgs-action premise not derived"
+        in str(statuses["pr230_degree_one_higgs_action_premise_gate"])
+        and degree_one_higgs_action_premise_gate.get("proposal_allowed") is False
+        and degree_one_higgs_action_premise_gate.get(
+            "degree_one_higgs_action_premise_gate_passed"
+        )
+        is True
+        and degree_one_higgs_action_premise_gate.get(
+            "degree_one_premise_authorized_on_current_surface"
+        )
+        is False
+        and degree_one_higgs_action_premise_gate.get("degree_one_filter_selects_e1")
+        is True,
+        statuses["pr230_degree_one_higgs_action_premise_gate"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4338,6 +4361,19 @@ def main() -> int:
         and taste_radial_selector_gate.get("full_invariant_selector_nonunique")
         is True
         and taste_radial_selector_gate.get("canonical_oh_selector_absent") is True
+    )
+    result["degree_one_higgs_action_premise_not_derived"] = (
+        degree_one_higgs_action_premise_gate.get(
+            "degree_one_higgs_action_premise_gate_passed"
+        )
+        is True
+        and degree_one_higgs_action_premise_gate.get("proposal_allowed") is False
+        and degree_one_higgs_action_premise_gate.get("degree_one_filter_selects_e1")
+        is True
+        and degree_one_higgs_action_premise_gate.get(
+            "degree_one_premise_authorized_on_current_surface"
+        )
+        is False
     )
     result["origin_main_composite_higgs_intake_not_closure"] = (
         origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")

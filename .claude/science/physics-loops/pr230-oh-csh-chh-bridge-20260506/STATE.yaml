@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: taste_radial_canonical_oh_selector_gate_plus_chunk_checkpoint
+active_route: degree_one_higgs_action_premise_gate
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support with chunks001-002 active under a two-worker cap, open active-pending chunk001/chunk002 checkpoints with no completed row JSON, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support with chunks001-002 active under a two-worker cap, open active-pending chunk001/chunk002 checkpoints with no completed row JSON, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -43,6 +43,13 @@ hard_residual: >
   leave a three-dimensional trace-zero invariant taste algebra, so degree-one
   uniqueness is not canonical O_H authority without a same-surface
   Higgs-action premise.
+  The degree-one Higgs-action premise gate now checks that shortcut directly:
+  the implemented source vertex is degree-one and an explicit degree-one filter
+  selects E1, but odd parity still leaves E1/E3 and the current PR230 surface
+  has no same-surface EW/Higgs action, canonical-operator theorem, completed
+  C_sx/C_xx row bridge, or physical-response bridge that authorizes degree as
+  canonical O_H identity.  Degree-one filtering is therefore support only, not
+  retained/proposed-retained closure.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -71,6 +78,7 @@ files_touched:
   - scripts/frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py
   - scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py
   - scripts/frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py
+  - scripts/frontier_yt_pr230_degree_one_higgs_action_premise_gate.py
   - scripts/yt_direct_lattice_correlator_production.py
   - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - scripts/frontier_yt_pr230_positive_closure_completion_audit.py
@@ -97,6 +105,7 @@ files_touched:
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_WAVE_LAUNCHER_NOTE_2026-05-06.md
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md
   - docs/YT_PR230_TASTE_RADIAL_CANONICAL_OH_SELECTOR_GATE_NOTE_2026-05-06.md
+  - docs/YT_PR230_DEGREE_ONE_HIGGS_ACTION_PREMISE_GATE_NOTE_2026-05-06.md
   - docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
@@ -126,6 +135,7 @@ files_touched:
   - outputs/yt_pr230_two_source_taste_radial_chunk001_pending_checkpoint_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chunk002_pending_checkpoint_2026-05-06.json
   - outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json
+  - outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json
   - outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
@@ -148,17 +158,18 @@ verification:
   two_source_taste_radial_chunk001_pending_checkpoint_pass_fail: "2/0"
   two_source_taste_radial_chunk002_pending_checkpoint_pass_fail: "2/0"
   taste_radial_canonical_oh_selector_gate_pass_fail: "17/0"
+  degree_one_higgs_action_premise_gate_pass_fail: "15/0"
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
   source_higgs_production_readiness_pass_fail: "21/0"
-  completion_audit_pass_fail: "35/0"
+  completion_audit_pass_fail: "36/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "61/0"
-  full_positive_assembly_pass_fail: "121/0"
-  retained_route_certificate_pass_fail: "267/0"
-  campaign_status_certificate_pass_fail: "297/0"
+  assumption_import_stress_pass_fail: "62/0"
+  full_positive_assembly_pass_fail: "122/0"
+  retained_route_certificate_pass_fail: "268/0"
+  campaign_status_certificate_pass_fail: "298/0"
   audit_pipeline: "complete; audit metadata intentionally regenerated for the taste-radial canonical-O_H selector and active-pending chunk checkpoint note rows plus current note hashes"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
@@ -170,9 +181,11 @@ next_exact_action: >
   chunks001-002 row workers finish under the two-worker cap, rerun the
   per-chunk checkpoint without --allow-pending-active after the JSONs exist,
   then launch the next safe bounded wave and verify
-  measured production C_sx/C_xx rows for that vertex,
-  then derive the missing degree-one Higgs-action premise or bridge the
-  taste-radial source by same-source physical response.
+  measured production C_sx/C_xx rows for that vertex, then derive a
+  same-surface EW/Higgs action or canonical-operator theorem that supplies the
+  missing degree-one Higgs-action premise, or bridge the taste-radial source by
+  same-source physical response.  Do not use degree, odd parity, or Z3
+  invariance alone as canonical O_H authority.
   Other live positive artifacts remain certified canonical O_H plus C_sH/C_HH
   pole rows, neutral primitive/rank-one, Schur A/B/C rows, or W/Z response with
   strict g2/covariance/delta_perp.  Do not spend closure wording on the
@@ -216,5 +229,6 @@ stop_condition: >
   per-chunk checkpoint runner plus active-pending chunk001/chunk002
   certificates that intentionally record no completed row JSON, then proving
   degree-one taste-radial uniqueness while blocking symmetry-only canonical
-  O_H selection, leaving canonical O_H, completed measured production rows,
-  and closure open.
+  O_H selection, then directly checking and rejecting the degree-one
+  Higgs-action premise shortcut on the current surface, leaving canonical O_H,
+  completed measured production rows, and closure open.

@@ -18,7 +18,10 @@
    proves uniqueness inside the degree-one taste-axis subspace, but also
    proves that current `Z3` symmetry filters leave higher-degree trace-zero
    invariants unless a same-surface degree-one Higgs-action premise is
-   derived.
+   derived.  The follow-on degree-one premise gate also blocks using degree or
+   odd parity as canonical `O_H` authority; the route now needs a same-surface
+   EW/Higgs action or canonical-operator theorem, completed row bridge, or
+   physical-response bridge.
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
    matrix step is now conditionally solved, and direct promotion from cyclic
    symmetry `P` to lazy physical transfer `L=(I+P)/2` is blocked.  The missing

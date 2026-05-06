@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 666,
+    "leaf": 667,
     "medium": 301
   },
-  "generated_at": "2026-05-06T15:30:19.736734+00:00",
+  "generated_at": "2026-05-06T15:46:57.559998+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20208,6 +20208,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_DEGREE_ONE_HIGGS_ACTION_PREMISE_GATE_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_degree_one_higgs_action_premise_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24891,6 +24908,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 813,
-  "total_pending": 1204
+  "ready_count": 814,
+  "total_pending": 1205
 }

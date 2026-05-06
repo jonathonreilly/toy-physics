@@ -259,6 +259,7 @@
     "pr230_action_first_oh_artifact_attempt": "exact negative boundary / action-first O_H artifact not constructible from current PR230 surface",
     "pr230_action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
     "pr230_clean_source_higgs_math_tool_route_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "pr230_degree_one_higgs_action_premise_gate": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
     "pr230_derived_bridge_rank_one_closure_attempt": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
     "pr230_det_positivity_bridge_intake_gate": "bounded-support / staggered-Wilson determinant positivity is useful positivity-preservation support, not PR230 y_t closure",
     "pr230_exact_tensor_schur_row_feasibility_attempt": "exact negative boundary / exact tensor Schur A/B/C row feasibility blocked on current PR230 surface",
@@ -411,12 +412,13 @@
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected",
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
+  "degree_one_higgs_action_premise_not_derived": true,
   "fail_count": 0,
   "neutral_primitive_route_completion_blocks": true,
   "oh_bridge_candidate_portfolio_open": true,
   "origin_main_composite_higgs_intake_not_closure": true,
   "origin_main_ew_m_residual_intake_not_closure": true,
-  "pass_count": 297,
+  "pass_count": 298,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

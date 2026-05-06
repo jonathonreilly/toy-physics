@@ -103,6 +103,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
     "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
+    "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -726,6 +727,30 @@ def main() -> int:
         is True
         and certs["pr230_taste_radial_canonical_oh_selector_gate"].get(
             "canonical_oh_selector_absent"
+        )
+        is True
+    )
+    degree_one_higgs_action_premise_not_derived = (
+        "degree-one Higgs-action premise not derived"
+        in statuses["pr230_degree_one_higgs_action_premise_gate"]
+        and certs["pr230_degree_one_higgs_action_premise_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_degree_one_higgs_action_premise_gate"].get(
+            "degree_one_higgs_action_premise_gate_passed"
+        )
+        is True
+        and certs["pr230_degree_one_higgs_action_premise_gate"].get(
+            "degree_one_filter_selects_e1"
+        )
+        is True
+        and certs["pr230_degree_one_higgs_action_premise_gate"].get(
+            "degree_one_premise_authorized_on_current_surface"
+        )
+        is False
+        and certs["pr230_degree_one_higgs_action_premise_gate"].get(
+            "odd_parity_filter_nonunique"
         )
         is True
     )
@@ -1494,6 +1519,11 @@ def main() -> int:
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         statuses["pr230_taste_radial_canonical_oh_selector_gate"],
+    )
+    report(
+        "degree-one-higgs-action-premise-not-derived",
+        degree_one_higgs_action_premise_not_derived,
+        statuses["pr230_degree_one_higgs_action_premise_gate"],
     )
     report(
         "kinetic-taste-mixing-shortcut-closed",
@@ -2447,6 +2477,7 @@ def main() -> int:
         "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
+        "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

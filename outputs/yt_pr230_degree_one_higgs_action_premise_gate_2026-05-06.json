@@ -1,0 +1,146 @@
+{
+  "actual_current_surface_status": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "candidate_summaries": [
+    {
+      "clifford_character_degree": 1,
+      "hermiticity_error": 0.0,
+      "name": "E1_degree_one_radial",
+      "norm": 1.0,
+      "parity": "odd",
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.6123724356957945,
+        -0.20412414523193165,
+        -0.2041241452319315,
+        -0.20412414523193145,
+        0.2041241452319315,
+        0.2041241452319316,
+        0.2041241452319316,
+        0.6123724356957946
+      ],
+      "trace": 0.0,
+      "z3_error": 0.0
+    },
+    {
+      "clifford_character_degree": 2,
+      "hermiticity_error": 0.0,
+      "name": "E2_degree_two_pair",
+      "norm": 1.0,
+      "parity": "even",
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.20412414523193168,
+        -0.20412414523193156,
+        -0.20412414523193154,
+        -0.20412414523193154,
+        -0.20412414523193148,
+        -0.20412414523193145,
+        0.6123724356957947,
+        0.6123724356957947
+      ],
+      "trace": 0.0,
+      "z3_error": 0.0
+    },
+    {
+      "clifford_character_degree": 3,
+      "hermiticity_error": 0.0,
+      "name": "E3_degree_three_triple",
+      "norm": 0.9999999999999999,
+      "parity": "odd",
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.35355339059327373,
+        -0.35355339059327373,
+        -0.35355339059327373,
+        -0.35355339059327373,
+        0.35355339059327373,
+        0.35355339059327373,
+        0.35355339059327373,
+        0.35355339059327373
+      ],
+      "trace": 0.0,
+      "z3_error": 0.0
+    },
+    {
+      "clifford_character_degree": -1,
+      "hermiticity_error": 0.0,
+      "name": "mixed_E1_E2",
+      "norm": 1.0,
+      "parity": "odd",
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.2886751345948129,
+        -0.2886751345948129,
+        -0.2886751345948128,
+        -9.866404196230474e-17,
+        -1.2693246267462229e-17,
+        1.3877787807814457e-17,
+        1.3153713681131544e-16,
+        0.8660254037844386
+      ],
+      "trace": 0.0,
+      "z3_error": 0.0
+    }
+  ],
+  "canonical_oh_absent": true,
+  "conditional_surface_status": "conditional-support if a future same-surface EW/Higgs action or canonical-operator theorem proves canonical O_H is the degree-one radial fluctuation coupled to the taste-radial source",
+  "current_filter_candidate_names": [
+    "E1_degree_one_radial",
+    "E2_degree_two_pair",
+    "E3_degree_three_triple",
+    "mixed_E1_E2"
+  ],
+  "current_filters_nonunique": true,
+  "degree_one_filter_candidate_names": [
+    "E1_degree_one_radial"
+  ],
+  "degree_one_filter_selects_e1": true,
+  "degree_one_higgs_action_premise_gate_passed": true,
+  "degree_one_premise_authorized_on_current_surface": false,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "identified_degree_one_filter_as_canonical_oh_authority": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_or_plaquette": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_reduced_pilot_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_higgs_rows": false,
+    "taste_radial_combined_rows": false,
+    "wz_response_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "odd_filter_candidate_names": [
+    "E1_degree_one_radial",
+    "E3_degree_three_triple"
+  ],
+  "odd_parity_filter_nonunique": true,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "completion_audit": "open / positive closure completion audit: retained closure not achieved",
+    "retained_route": "open / retained closure not yet reached",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "taste_radial_selector": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+    "two_source_row_manifest": "bounded-support / two-source taste-radial C_sx/C_xx production manifest; rows absent",
+    "wz_same_source_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 15,
+  "production_bridge_absent": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The finite algebra shows that a degree-one filter would select the implemented taste-radial source, but the filter is not a current PR230 authority.  Current Z3/source filters are nonunique, odd parity still leaves E1 and E3, and no same-surface EW/Higgs action, canonical-O_H theorem, production source-overlap row, or W/Z physical-response bridge supplies the missing premise.",
+  "same_surface_ew_higgs_action_absent": true,
+  "selector_support_loaded": true,
+  "source_vertex_is_degree_one_support": true
+}

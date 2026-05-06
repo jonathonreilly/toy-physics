@@ -67,6 +67,10 @@ Allowed context:
   only: it proves the cyclic degree-one radial source is unique in
   `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
   select it from the full trace-zero invariant taste algebra.
+- the Degree-one Higgs-action premise gate as an exact current-surface
+  boundary only: degree-one filtering selects the implemented taste-radial
+  `E1` source, but degree is not proof selectors until a same-surface EW/Higgs
+  action or canonical-operator theorem derives the degree-one premise.
 
 Open imports after this block:
 
@@ -126,6 +130,7 @@ Open imports after this block:
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.
+- Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

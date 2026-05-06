@@ -36,6 +36,7 @@
   "parent_certificates": {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "fh_lsz_pade_stieltjes": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "fh_lsz_stieltjes_moment": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
@@ -70,6 +71,7 @@
   "parent_statuses": {
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
     "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "degree_one_higgs_action_premise_gate": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
     "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
     "fh_lsz_pade_stieltjes": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
     "fh_lsz_stieltjes_moment": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
@@ -101,9 +103,10 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 35,
+  "pass_count": 36,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
+    "degree_one_higgs_action_premise_not_derived": true,
     "future_bridge_file_presence": {
       "canonical_higgs_operator_certificate": false,
       "carleman_tauberian_certificate": false,

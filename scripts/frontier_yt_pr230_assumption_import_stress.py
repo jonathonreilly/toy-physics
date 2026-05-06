@@ -167,6 +167,9 @@ def main() -> int:
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
+        "degree_one_higgs_action_premise_gate": load(
+            "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -306,6 +309,8 @@ def main() -> int:
         "not proof selectors until production C_sx/C_xx rows, pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority exist",
         "Two-source taste-radial row production manifest",
         "not proof selectors until the planned chunks are actually run, combined, pole-tested, and bridged to canonical O_H or physical response",
+        "Degree-one Higgs-action premise",
+        "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -922,6 +927,21 @@ def main() -> int:
         and taste_radial_selector.get("canonical_oh_selector_absent") is True,
         taste_radial_selector.get("actual_current_surface_status"),
     )
+    degree_one_premise = certificates["degree_one_higgs_action_premise_gate"]
+    report(
+        "degree-one-higgs-action-premise-not-derived",
+        "degree-one Higgs-action premise not derived"
+        in str(degree_one_premise.get("actual_current_surface_status"))
+        and degree_one_premise.get("proposal_allowed") is False
+        and degree_one_premise.get("degree_one_higgs_action_premise_gate_passed")
+        is True
+        and degree_one_premise.get("degree_one_filter_selects_e1") is True
+        and degree_one_premise.get("degree_one_premise_authorized_on_current_surface")
+        is False
+        and degree_one_premise.get("odd_parity_filter_nonunique") is True
+        and degree_one_premise.get("production_bridge_absent") is True,
+        degree_one_premise.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -1109,7 +1129,10 @@ def main() -> int:
             "The taste-radial canonical-O_H selector gate proves the degree-one "
             "radial axis is unique only after a degree-one Higgs-action premise "
             "is supplied; current Z3/trace/source filters leave a three-dimensional "
-            "trace-zero invariant taste algebra.  "
+            "trace-zero invariant taste algebra.  The degree-one Higgs-action "
+            "premise gate blocks the next shortcut too: degree-one filtering "
+            "selects E1, but current PR230 artifacts do not authorize using "
+            "degree as canonical O_H identity.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
