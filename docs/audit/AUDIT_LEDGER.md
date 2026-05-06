@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 63 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 223 |
+| **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 778 |
+| unaudited | 777 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 381 |
+| `audited_clean` | 382 |
 | `audited_conditional` | 471 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 827 |
+| `unaudited` | 826 |
 
 | claim_type | count |
 |---|---:|
@@ -375,6 +375,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_exact_green_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `source_resolved_exact_green_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | B | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_bridge_failure_audit` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_discriminator_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -11701,6 +11702,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The runner computes the Green field, instantaneous comparison field, propagated centroids, ratios, zero-source reduction, and fitted exponents rather than printing hard-coded target values. The conclusion is bounded to the explicit finite lattice family and selected source-resolved kernel.
 - **rationale:** The cited upstream pocket is retained_bounded, and the new load-bearing size-transfer result is produced by a finite runner computation with no completed-output mismatch. The code constructs the source cluster and Green field, calibrates the explicitly declared weak-field amplitude, propagates both fields, and derives the reported signs, ratios, and exponents from those arrays. The clean result is narrow: it does not establish a self-consistent field theory, generated-geometry transfer, or robustness beyond this fixed kernel and lattice family.
 - **auditor confidence:** medium
+
+### `source_resolved_exact_green_self_consistent_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Fixed compact exact lattice h=0.25, W=3, L=6; fixed clipped source cluster, source strengths, Green-like kernel, admitted calibrated gain input, one self-consistency update, zero-source reduction, TOWARD sign, near-linear response, and frozen table reproduction only.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-source-green-self-consistent-2026-05-06`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the fixed h=0.25, W=3, L=6 lattice with boundary-clipped 4-node source cluster, kernel exp(-0.08 r)/(r+0.5), calibrated gain 1.7578903308081324, and one source-amplitude reweighting update, the runner computes zero_delta=0, TOWARD green deflections in all 4 source rows, near-unit source-strength exponents, and reproduces the frozen table.  _(class `B`)_
+- **chain closes:** True — The note states the calibration as an input and does not promote the amplitude ratio to an independent physical observable; the cached runner exits 0 and its six assertions cover the bounded finite computation and residual exclusions.
+- **rationale:** Clean within the stated finite computational boundary: the runner constructs the fixed source-resolved Green field, performs one source-cluster reweighting update, checks exact zero-source reduction, confirms TOWARD sign and near-linear source response, and reproduces the frozen numerical table. Residual risk is explicitly outside scope: no uncalibrated amplitude theorem, no fully converged self-consistent field theory, and no continuum or large-lattice claim.
+- **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`
 
