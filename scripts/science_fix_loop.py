@@ -126,7 +126,28 @@ def parse_prompts():
     return rows
 
 
-def load_state() -> dict:
+import fcntl
+from contextlib import contextmanager
+
+
+@contextmanager
+def state_lock():
+    """Acquire an exclusive flock on the state file for the duration of the
+    block. Multiple workers running this loop on the same host will queue
+    on this lock, so they won't pick the same rows or clobber each other's
+    outcome writes. The lockfile lives next to the state file.
+    """
+    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    lock_path = STATE_FILE.with_suffix(STATE_FILE.suffix + ".lock")
+    with open(lock_path, "a+", encoding="utf-8") as fh:
+        fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+
+
+def _read_state_unlocked() -> dict:
     if not STATE_FILE.exists():
         return {"attempts": {}}
     try:
@@ -135,10 +156,80 @@ def load_state() -> dict:
         return {"attempts": {}}
 
 
-def save_state(state: dict) -> None:
+def _write_state_unlocked(state: dict) -> None:
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n",
                           encoding="utf-8")
+
+
+def claim_targets(candidates: list[dict], n: int, retry_failed: bool,
+                  worker_id: str) -> list[dict]:
+    """Atomically reserve up to N candidates by marking them
+    `outcome=in_progress` in the state file. Other workers running the
+    loop will then skip these rows and pick from what's left.
+    """
+    with state_lock():
+        state = _read_state_unlocked()
+        attempts = state.get("attempts", {})
+        if retry_failed:
+            eligible = [
+                r for r in candidates
+                if attempts.get(r["claim_id"], {}).get("outcome") not in
+                ("pr_opened", "in_progress")
+            ]
+        else:
+            eligible = [r for r in candidates if r["claim_id"] not in attempts]
+        targets = eligible[:n]
+        now = datetime.now(timezone.utc).isoformat()
+        for r in targets:
+            attempts[r["claim_id"]] = {
+                "attempted_at": now,
+                "outcome": "in_progress",
+                "worker_id": worker_id,
+                "category": r["category"],
+                "descendants": r["descendants"],
+            }
+        state["attempts"] = attempts
+        _write_state_unlocked(state)
+    return targets
+
+
+def record_outcome(claim_id: str, outcome: dict) -> None:
+    """Atomically write the final outcome for one claim, overwriting the
+    in-progress marker. Other workers' state is preserved."""
+    with state_lock():
+        state = _read_state_unlocked()
+        state.setdefault("attempts", {})[claim_id] = outcome
+        _write_state_unlocked(state)
+
+
+def reclaim_stale_in_progress(stale_after_sec: int = 1800) -> int:
+    """Sweep state for `outcome=in_progress` markers older than the cutoff
+    (default 30 min) and demote them to `outcome=stale_in_progress` so a
+    later --retry-failed run picks them up. Crashes leave in-progress
+    markers that would otherwise block the row forever; this is the
+    recovery path."""
+    cutoff_iso = (
+        datetime.now(timezone.utc).timestamp() - stale_after_sec
+    )
+    reclaimed = 0
+    with state_lock():
+        state = _read_state_unlocked()
+        for cid, a in state.get("attempts", {}).items():
+            if a.get("outcome") != "in_progress":
+                continue
+            try:
+                ts = datetime.fromisoformat(
+                    a.get("attempted_at", "").replace("Z", "+00:00")
+                ).timestamp()
+            except Exception:
+                continue
+            if ts < cutoff_iso:
+                a["outcome"] = "stale_in_progress"
+                reclaimed += 1
+        if reclaimed:
+            _write_state_unlocked(state)
+    return reclaimed
 
 
 def git(*args, cwd=None, check=True):
@@ -313,6 +404,13 @@ def main() -> int:
                    help="Show targets and exit without invoking codex")
     p.add_argument("--keep-worktrees", action="store_true",
                    help="Don't remove worktrees after each attempt (for debugging)")
+    p.add_argument("--reclaim-stale-sec", type=int, default=1800,
+                   help="Sweep `outcome=in_progress` markers older than this "
+                        "many seconds and demote them to `stale_in_progress` "
+                        "before the run starts, so a crashed worker's "
+                        "abandoned rows can be retried via --retry-failed. "
+                        "Default 1800s (30 min). Set to a negative value to "
+                        "disable the sweep.")
     args = p.parse_args()
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -326,27 +424,41 @@ def main() -> int:
         print(f"No prompts found in {PROMPTS_FILE.relative_to(REPO_ROOT)}")
         return 1
 
-    state = load_state()
-    attempts = state.get("attempts", {})
+    # Optional: sweep stale in-progress markers from prior crashed runs.
+    if args.reclaim_stale_sec >= 0:
+        n_reclaim = reclaim_stale_in_progress(args.reclaim_stale_sec)
+        if n_reclaim:
+            print(f"Reclaimed {n_reclaim} stale in-progress marker(s) (older than "
+                  f"{args.reclaim_stale_sec}s) -> outcome=stale_in_progress")
 
-    # Filter
+    # Filter pre-claim (non-locking, just for messaging).
     candidates = rows
     if args.category:
         candidates = [r for r in candidates if r["category"] == args.category]
     if args.claim_id:
         candidates = [r for r in candidates if r["claim_id"] == args.claim_id]
-    if not args.retry_failed:
-        # Skip rows already attempted in any way
-        candidates = [r for r in candidates if r["claim_id"] not in attempts]
-    else:
-        # Skip only rows that opened a PR; re-attempt the rest
-        candidates = [
-            r for r in candidates
-            if attempts.get(r["claim_id"], {}).get("outcome") != "pr_opened"
-        ]
 
-    targets = candidates[: args.n]
-    print(f"Total prompts: {len(rows)}; eligible: {len(candidates)}; selected: {len(targets)}")
+    # Atomic claim: takes the lock, marks N rows as in_progress, and
+    # returns them. Other workers running this loop in parallel will skip
+    # rows we've claimed (and we'll skip theirs).
+    worker_id = f"pid{os.getpid()}-{run_id}"
+    if args.dry_run:
+        # Dry-run reads state but does not claim — just shows what WOULD
+        # be picked up.
+        with state_lock():
+            state = _read_state_unlocked()
+        attempts = state.get("attempts", {})
+        if args.retry_failed:
+            eligible = [r for r in candidates if attempts.get(r["claim_id"], {}).get("outcome") not in ("pr_opened", "in_progress")]
+        else:
+            eligible = [r for r in candidates if r["claim_id"] not in attempts]
+        targets = eligible[: args.n]
+    else:
+        targets = claim_targets(candidates, args.n, args.retry_failed, worker_id)
+
+    print(f"Total prompts: {len(rows)}; selected: {len(targets)}")
+    if targets:
+        print(f"Worker id: {worker_id}")
 
     if not targets:
         print("Nothing to do.")
@@ -373,9 +485,8 @@ def main() -> int:
             print(f"  ! worktree create failed: {e!r}")
             outcome["outcome"] = "error"
             outcome["error"] = f"worktree create: {e!r}"
-            attempts[cid] = outcome
             errored += 1
-            save_state({"attempts": attempts})
+            record_outcome(cid, outcome)
             continue
 
         try:
@@ -437,8 +548,7 @@ def main() -> int:
         finally:
             with run_log.open("a", encoding="utf-8") as f:
                 f.write(json.dumps({"claim_id": cid, **outcome}) + "\n")
-            attempts[cid] = outcome
-            save_state({"attempts": attempts})
+            record_outcome(cid, outcome)
             if not args.keep_worktrees:
                 cleanup_worktree(worktree)
 
