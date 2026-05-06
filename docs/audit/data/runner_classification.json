@@ -8728,7 +8728,7 @@
       "assert_count": 0,
       "counts": {
         "A": 0,
-        "B": 2,
+        "B": 1,
         "C": 0,
         "D": 0
       },
@@ -13168,12 +13168,12 @@
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "runner": "scripts/frontier_radial_scaling_protected_angle_narrow.py"
     },
     "rconn_derived_note": {
@@ -14310,7 +14310,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 1
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -27531,7 +27531,7 @@
       ],
       "counts": {
         "A": 0,
-        "B": 2,
+        "B": 1,
         "C": 0,
         "D": 0
       },
@@ -31022,12 +31022,12 @@
       ],
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_retained_cross_lane_consistency.py": {
@@ -37560,7 +37560,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 1
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -38695,13 +38695,13 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 116,
+    "decoration_candidates": 117,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 165,
+      "B": 166,
       "C": 573,
       "D": 211,
-      "none": 421
+      "none": 420
     },
     "runners_classified": 1380,
     "runners_with_C": 682,

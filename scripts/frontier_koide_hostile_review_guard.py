@@ -11,7 +11,9 @@ forbidden target as a theorem.
 from __future__ import annotations
 
 import re
+import subprocess
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 
@@ -29,6 +31,7 @@ SCRIPT_GLOBS = [
     "scripts/frontier_koide_dimensionless_objection_closure_review.py",
     "scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py",
 ]
+SCRIPT_TIMEOUT_SECONDS = 30
 
 FORBIDDEN_PROMOTION_PATTERNS = [
     re.compile(r"\bKOIDE(?:[_ -]Q)?(?:[_ -]CLOS(?:URE|ES)|[_ -]CLOSES[_ -]Q)\s*=\s*TRUE\b", re.I),
@@ -47,9 +50,48 @@ FORBIDDEN_INPUT_PATTERNS = [
     re.compile(r"\bH_\*\b.*\b(input|assumption|pin)\b", re.I),
 ]
 
+NEGATIVE_CLOSEOUT_EMISSION_PATTERN = re.compile(
+    r"^[A-Z0-9_]*CLOSES[A-Z0-9_]*\s*=\s*FALSE\s*$",
+    re.I,
+)
+RESIDUAL_EMISSION_PATTERN = re.compile(r"^RESIDUAL[A-Z0-9_]*\s*=", re.I)
+
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+
+
+@dataclass(frozen=True)
+class ScriptEmission:
+    path: Path
+    returncode: int | None
+    stdout: str
+    stderr: str
+    timed_out: bool = False
+
+    @property
+    def rel(self) -> str:
+        return str(self.path.relative_to(ROOT))
+
+    @property
+    def lines(self) -> list[str]:
+        return [line.strip() for line in self.stdout.splitlines() if line.strip()]
+
+    @property
+    def negative_closeouts(self) -> list[str]:
+        return [
+            line
+            for line in self.lines
+            if NEGATIVE_CLOSEOUT_EMISSION_PATTERN.search(line)
+        ]
+
+    @property
+    def residuals(self) -> list[str]:
+        return [line for line in self.lines if RESIDUAL_EMISSION_PATTERN.search(line)]
+
+    @property
+    def promotion_hits(self) -> list[str]:
+        return pattern_hits("\n".join(self.lines), FORBIDDEN_PROMOTION_PATTERNS)
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -61,7 +103,8 @@ def check(name: str, condition: bool, detail: str = "") -> bool:
         FAIL_COUNT += 1
     print(f"  [{status}] {name}")
     if detail:
-        print(f"       {detail}")
+        for line in detail.splitlines():
+            print(f"       {line}")
     return condition
 
 
@@ -86,6 +129,52 @@ def pattern_hits(text: str, patterns: list[re.Pattern[str]]) -> list[str]:
         if match:
             hits.append(match.group(0))
     return hits
+
+
+def run_script_for_emissions(path: Path) -> ScriptEmission:
+    rel = str(path.relative_to(ROOT))
+    try:
+        result = subprocess.run(
+            [sys.executable, rel],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=SCRIPT_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as exc:
+        return ScriptEmission(
+            path=path,
+            returncode=None,
+            stdout=exc.stdout or "",
+            stderr=exc.stderr or "",
+            timed_out=True,
+        )
+    return ScriptEmission(
+        path=path,
+        returncode=result.returncode,
+        stdout=result.stdout,
+        stderr=result.stderr,
+    )
+
+
+def format_emission_lines(
+    emissions: list[ScriptEmission],
+    attr: str,
+    *,
+    missing_label: str,
+) -> str:
+    lines: list[str] = []
+    for emission in emissions:
+        values = getattr(emission, attr)
+        if values:
+            lines.append(
+                f"{emission.rel} (returncode={emission.returncode}): "
+                + "; ".join(values)
+            )
+        else:
+            lines.append(f"{emission.rel}: {missing_label}")
+    return "\n".join(lines)
 
 
 def audit_no_go_docs() -> None:
@@ -142,34 +231,42 @@ def audit_no_go_scripts() -> None:
         detail=f"scripts={len(scripts)}",
     )
 
+    emissions = [run_script_for_emissions(path) for path in scripts]
+    timed_out = [emission.rel for emission in emissions if emission.timed_out]
     missing_false_flag: list[str] = []
     promotion_hits: list[str] = []
     missing_residual: list[str] = []
-    for path in scripts:
-        text = path.read_text(encoding="utf-8")
-        rel = str(path.relative_to(ROOT))
-        if "CLOSES" in text and "FALSE" not in text:
-            missing_false_flag.append(rel)
-        if "CLOSES" not in text:
-            missing_false_flag.append(rel)
-        if "RESIDUAL" not in text:
-            missing_residual.append(rel)
-        hits = pattern_hits(text, FORBIDDEN_PROMOTION_PATTERNS)
+    for emission in emissions:
+        if emission.timed_out or not emission.negative_closeouts:
+            missing_false_flag.append(emission.rel)
+        if emission.timed_out or not emission.residuals:
+            missing_residual.append(emission.rel)
+        hits = emission.promotion_hits
         if hits:
-            promotion_hits.append(f"{rel}: {hits}")
+            promotion_hits.append(f"{emission.rel}: {hits}")
 
     check(
-        "B.2 every no-go script prints an explicit negative CLOSES flag",
-        not missing_false_flag,
-        detail="\n".join(missing_false_flag),
+        "B.2 every no-go script emits an explicit negative CLOSES flag",
+        not timed_out and not missing_false_flag,
+        detail="\n".join(timed_out)
+        or format_emission_lines(
+            emissions,
+            "negative_closeouts",
+            missing_label="MISSING_EMITTED_NEGATIVE_CLOSEOUT",
+        ),
     )
     check(
-        "B.3 every no-go script prints an explicit residual label",
-        not missing_residual,
-        detail="\n".join(missing_residual),
+        "B.3 every no-go script emits an explicit residual label",
+        not timed_out and not missing_residual,
+        detail="\n".join(timed_out)
+        or format_emission_lines(
+            emissions,
+            "residuals",
+            missing_label="MISSING_EMITTED_RESIDUAL",
+        ),
     )
     check(
-        "B.4 no no-go script promotes closure with a TRUE closeout flag",
+        "B.4 no no-go script output promotes closure with a TRUE closeout flag",
         not promotion_hits,
         detail="\n".join(promotion_hits),
     )

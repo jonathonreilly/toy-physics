@@ -1,0 +1,55 @@
+====================================================================================
+SOURCE-RESOLVED EXACT GREEN SELF-CONSISTENT
+  compact exact h=0.25 refinement family, one self-consistency update
+  comparison: self-consistent field vs instantaneous 1/r field
+====================================================================================
+h=0.25, W=3, L=6, source_cluster=4 nodes
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: (0.001, 0.002, 0.004, 0.008)
+target max |f|: 0.02
+calibrated gain input: 1.757890330808e+00
+calibration boundary: gain is a frozen input, not an independent amplitude prediction
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  calibration gain: 1.757890e+00
+  calibrated base-field cap: 2.000000e-02
+
+       s         inst        green  green/inst       max|f|
+----------------------------------------------------------------------
+  0.0010 +1.410541e-03 +1.873799e-03       1.328 2.500245e-03
+  0.0020 +2.821591e-03 +3.749686e-03       1.329 5.000223e-03
+  0.0040 +5.645274e-03 +7.507807e-03       1.330 9.999374e-03
+  0.0080 +1.129975e-02 +1.505023e-02       1.332 1.999447e-02
+
+SAFE READ
+  instantaneous F~M exponent: 1.00
+  self-consistent Green F~M exponent: 1.00
+  TOWARD rows: 4/4
+  mean |green/inst| ratio: 1.330
+  this is a refinement-positive pocket, not yet a self-consistent
+  field theory
+
+ASSERTION SUMMARY
+------------------------------------------------------------------------------------
+[PASS] zero-source exactness is preserved
+       zero_delta=+0.000000000000e+00; tolerance=1.0e-12
+[PASS] calibrated gain is the frozen input that sets the base-field cap
+       gain=1.757890330808e+00; base_cap=2.000000000000e-02; target=2.000000000000e-02
+[PASS] self-consistent Green deflection has TOWARD sign in every source row
+       toward=4/4; green_deltas=['+1.873799e-03', '+3.749686e-03', '+7.507807e-03', '+1.505023e-02']
+[PASS] instantaneous comparator remains linear in source strength
+       alpha=1.000645; target=1.000000; tolerance=5.0e-03
+[PASS] self-consistent Green response remains linear in source strength
+       alpha=1.001886; target=1.000000; tolerance=5.0e-03
+[PASS] frozen numerical table is reproduced within declared tolerances
+       s=0.0010: inst=+1.410541e-03, green=+1.873799e-03, ratio=1.328, max|f|=2.500245e-03
+       s=0.0020: inst=+2.821591e-03, green=+3.749686e-03, ratio=1.329, max|f|=5.000223e-03
+       s=0.0040: inst=+5.645274e-03, green=+7.507807e-03, ratio=1.330, max|f|=9.999374e-03
+       s=0.0080: inst=+1.129975e-02, green=+1.505023e-02, ratio=1.332, max|f|=1.999447e-02
+
+PASSED: 6/6
+SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_ASSERTIONS=TRUE
+CALIBRATED_GAIN_IS_INPUT=TRUE
+SOURCE_RESOLVED_GREEN_FULL_SELF_CONSISTENT_FIELD_THEORY=FALSE
+RESIDUAL_SCOPE=fully_converged_self_consistent_field_theory_and_uncalibrated_amplitude

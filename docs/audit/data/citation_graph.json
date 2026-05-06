@@ -7661,6 +7661,26 @@
       "to": "higher_order_structural_theorems_note"
     },
     {
+      "from": "hypercharge_identification_note",
+      "to": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    },
+    {
+      "from": "hypercharge_identification_note",
+      "to": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "hypercharge_identification_note",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "hypercharge_identification_note",
+      "to": "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
+    },
+    {
+      "from": "hypercharge_identification_note",
+      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
       "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
       "to": "hypercharge_identification_note"
     },
@@ -37991,11 +38011,17 @@
     },
     "hypercharge_identification_note": {
       "claim_id": "hypercharge_identification_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "3d90ebe6897287a712103e2d98f267043038c83d57c6b5c7f8ec0687d435bf0f",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+        "graph_first_su3_integration_note",
+        "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
+        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
+      ],
+      "note_hash": "68a56ae998229ce743e71f7c73a844a52ecca696a96bdaa3d1abcb55b35f5e94",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
       "runner_path": "scripts/frontier_hypercharge_identification.py",
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
@@ -38806,11 +38832,11 @@
     },
     "koide_hostile_review_guard_note_2026-04-24": {
       "claim_id": "koide_hostile_review_guard_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "no_go",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "c3536063039b40ebf321b289152c201861356707ab023ebe0456c2ccf14eab0d",
+      "note_hash": "2995ad58ec60bba9ddb64f67f7eefbbbb25e1a807317dae6844ffc0a58f69292",
       "path": "docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_hostile_review_guard.py",
       "title": "Koide Hostile-Review Guard"
@@ -47662,7 +47688,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f960cf8c78782a87f96501a9e4a2b261232ac482ee5fea7e11a2fbde4d679b6e",
+      "note_hash": "659c721b903772ac02ca6476593157fdd72e290a1fffa780cec7aca974c2f293",
       "path": "docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
       "title": "Radial-Scaling Protected-Angle Narrow Theorem"
@@ -49389,7 +49415,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e0fe47e8229bc47f997510c7a6434e2f1fd31266f81b09c27ef010d78b7a0a70",
+      "note_hash": "faece255529380aacb593d95b9fb744c925bd0fb97520812ae23d1ec6e90c420",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md",
       "runner_path": "scripts/source_resolved_exact_green_self_consistent.py",
       "title": "Source-Resolved Exact Green Self-Consistent Pocket"
@@ -50595,7 +50621,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0cc52b5ef5ee97dedf40a1d9bf431da9a186d4fab4f895256c6324a132c8eabc",
+      "note_hash": "bf07080aef58187f0293b2bfa7b848ee151294ead34c46c196c3812c7cd561b6",
       "path": "docs/TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_acceptance_suite.py",
       "title": "Teleportation Acceptance Suite Note"
@@ -55180,7 +55206,6 @@
     "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
     "hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29",
     "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
-    "hypercharge_identification_note",
     "i3_zero_exact_theorem_note",
     "independent_generators_heldout_note",
     "interest_map",
@@ -55624,25 +55649,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 70,
-      "meta": 9,
+      "bounded_theorem": 71,
+      "meta": 10,
       "no_go": 12,
-      "none": 1713,
+      "none": 1711,
       "open_gate": 12,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 567,
-      "meta": 9,
-      "no_go": 117,
+      "bounded_theorem": 568,
+      "meta": 10,
+      "no_go": 116,
       "none": 456,
       "open_gate": 118,
-      "positive_theorem": 636
+      "positive_theorem": 635
     },
-    "edge_count": 6556,
+    "edge_count": 6561,
     "leaf_count": 552,
     "node_count": 1903,
-    "root_count": 874,
+    "root_count": 873,
     "runners_with_path": 1477
   }
 }

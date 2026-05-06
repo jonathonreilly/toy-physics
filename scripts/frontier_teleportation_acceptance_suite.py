@@ -1211,7 +1211,7 @@ def print_report(
 
     print("NATIVE TASTE-QUBIT TELEPORTATION ACCEPTANCE SUITE")
     print("Status: bounded planning artifact; ordinary quantum state teleportation only")
-    print(f"Repository root: {ROOT}")
+    print("Repository root: <repo-root>")
     if strict_lane:
         print(
             "Profile: strict-lane; default required probes plus present-gated "
@@ -1277,7 +1277,7 @@ def parse_args() -> argparse.Namespace:
             "present-gated finite-time 2D smoothstep, taste-readout operator, "
             "Bell-measurement circuit, three-register cross-encoding, and "
             "native record-apparatus / record-field / dynamics / microscopic "
-            "closure checks"
+            "closure / blocker-reduction / conclusion-boundary checks"
         ),
     )
     parser.add_argument(

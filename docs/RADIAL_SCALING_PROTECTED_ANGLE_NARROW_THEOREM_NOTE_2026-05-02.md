@@ -51,15 +51,27 @@ sqrt(rho_bar^2 + eta_bar^2)  =  mu * sqrt(rho^2 + eta^2).                 (5)
 ```
 
 **Conclusion (T4) (counter-protection).** The angle at the point `(1, 0)`
-is **not** in general preserved by the radial scaling. Concretely,
+is **not** in general preserved by the radial scaling on the domain where
+both affine-base tangent readouts are defined. Concretely, assume in addition
+that
+
+```text
+rho != 1,        mu*rho != 1.
+```
+
+Then
 
 ```text
 tan(beta_bar)  =  eta_bar / (1 - rho_bar)  =  mu eta / (1 - mu rho)
 ```
 
-is **not equal** to `eta / (1 - rho)` whenever `mu != 1` and
-`(rho, eta) != (0, 0)`. Only the origin-angle and the radial distance
-have the canonical scaling behavior.
+is equal to `tan(beta) = eta / (1 - rho)` if and only if `mu = 1`. Hence
+for every defined case with `mu != 1`, the `(1,0)`-based tangent readout is
+not preserved. If `rho = 1` or `mu*rho = 1`, one of the two tangent
+denominators vanishes; that vertical-boundary case is outside the finite
+tangent equality statement. Only the origin-angle and the radial distance
+have the canonical scaling behavior on the whole open first-quadrant radial
+scaling domain.
 
 ## Proof
 
@@ -81,12 +93,21 @@ is preserved by `(T1)`.
 `(T3)` `sqrt(rho_bar^2 + eta_bar^2) = sqrt(mu^2 rho^2 + mu^2 eta^2)
 = mu sqrt(rho^2 + eta^2)`.
 
-`(T4)` By substitution: `tan(beta_bar) = mu eta / (1 - mu rho)`, which
-depends on `mu` through both the numerator scaling and the affine
-denominator shift. Setting `tan(beta_bar) = tan(beta) = eta / (1 - rho)`
-gives `mu eta (1 - rho) = eta (1 - mu rho)`, i.e.
-`mu (1 - rho) = 1 - mu rho`, i.e. `mu - mu rho + mu rho = 1`, i.e. `mu = 1`.
-So `tan(beta_bar) = tan(beta)` iff `mu = 1`. ∎
+`(T4)` On the subdomain `rho != 1` and `mu*rho != 1`, both finite tangent
+readouts are defined. By substitution:
+
+```text
+tan(beta_bar) - tan(beta)
+  =  mu eta / (1 - mu rho) - eta / (1 - rho)
+  =  eta (mu - 1) / ((1 - mu rho)(1 - rho)).
+```
+
+Since `eta > 0` and the two denominators are nonzero on this subdomain, the
+difference vanishes if and only if `mu - 1 = 0`. Thus
+`tan(beta_bar) = tan(beta)` iff `mu = 1`, and every defined case with
+`mu != 1` is counter-protected. If either denominator vanishes, the tangent
+readout from `(1,0)` is vertical/undefined rather than an exception to this
+finite-tangent equality. ∎
 
 ## What this claims
 
@@ -94,7 +115,8 @@ So `tan(beta_bar) = tan(beta)` iff `mu = 1`. ∎
 - `(T2)`: origin-angle preservation exactly.
 - `(4)`: doubled-angle preservation exactly.
 - `(T3)`: radial distance scales linearly as `mu`.
-- `(T4)`: angle at `(1, 0)` is **not** preserved unless `mu = 1`.
+- `(T4)`: on the finite-tangent subdomain `rho != 1` and `mu*rho != 1`,
+  the angle at `(1, 0)` is **not** preserved unless `mu = 1`.
 
 ## What this does NOT claim
 
@@ -149,16 +171,20 @@ real symbols.
 ## Validation
 
 Primary runner: [`scripts/frontier_radial_scaling_protected_angle_narrow.py`](./../scripts/frontier_radial_scaling_protected_angle_narrow.py)
-verifies (PASS=9/0):
+verifies (PASS=11/0):
 
 1. Slope preservation `eta_bar / rho_bar = eta / rho` symbolic.
 2. `arctan(eta_bar / rho_bar) = arctan(eta / rho)` symbolic.
 3. Doubled-angle preservation `sin(2 gamma_bar) = sin(2 gamma)` and
    `cos(2 gamma_bar) = cos(2 gamma)` symbolic.
 4. Radial distance scales as `mu` symbolic.
-5. Counter-protection at `(1, 0)`: `tan(beta_bar) != tan(beta)` at
+5. Counter-protection at `(1, 0)`: symbolic factorization of
+   `tan(beta_bar) - tan(beta)` as
+   `eta*(mu - 1)/((1 - mu*rho)*(1 - rho))`, with explicit finite-tangent
+   domain exclusions `rho != 1` and `mu*rho != 1`.
+6. Counter-protection at `(1, 0)`: `tan(beta_bar) != tan(beta)` at
    `(rho, eta) = (1/6, sqrt(5)/6), mu = 99/100`.
-6. Framework instance `(rho, eta) = (1/6, sqrt(5)/6)` at any `mu = 1 - x`:
+7. Framework instance `(rho, eta) = (1/6, sqrt(5)/6)` at any `mu = 1 - x`:
    `eta_bar / rho_bar = sqrt(5)` exact.
-7. Doubled-angle catalog `sin(2 gamma) = sqrt(5)/3`, `cos(2 gamma) = -2/3`
+8. Doubled-angle catalog `sin(2 gamma) = sqrt(5)/3`, `cos(2 gamma) = -2/3`
    at framework instance.
