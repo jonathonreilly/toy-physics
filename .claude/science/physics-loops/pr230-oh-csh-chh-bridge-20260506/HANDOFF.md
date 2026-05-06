@@ -101,6 +101,12 @@ zero source overlap, and finite one-mode smoke schema.  This retires only the
 source-vertex absence; it is not canonical `O_H`, not `kappa_s`, and not
 measured production `C_sx/C_xx` rows.
 
+The row-schema ambiguity is also now retired.  The
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_CONTRACT` runner verifies that this
+second source emits explicit `C_sx/C_xx` aliases while preserving legacy
+`C_sH/C_HH` fields for compatibility.  It is a finite smoke/schema contract,
+not production rows, pole residues, or canonical-Higgs authority.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -112,8 +118,9 @@ Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows;
-2. run measured `C_sx/C_xx` rows for the exact two-source taste-radial source,
-   then prove/reject its canonical-`O_H` identity or supply another bridge;
+2. run production `C_sx/C_xx` rows for the exact two-source taste-radial
+   source using the new row contract, then prove/reject its canonical-`O_H`
+   identity or supply another bridge;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
    with a neutral transfer row, off-diagonal generator, or primitive-cone
    theorem;

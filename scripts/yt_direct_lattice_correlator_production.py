@@ -913,6 +913,14 @@ def source_higgs_firewall_from_certificate(cert: dict[str, Any]) -> dict[str, An
     }
 
 
+def source_higgs_operator_is_taste_radial_second_source(cert: dict[str, Any]) -> bool:
+    sparse_vertex = cert.get("sparse_vertex", {}) if isinstance(cert.get("sparse_vertex", {}), dict) else {}
+    return (
+        sparse_vertex.get("kind") == "taste_radial_spatial_hypercube_flip"
+        and cert.get("canonical_higgs_operator_identity_passed") is not True
+    )
+
+
 def source_higgs_operator_weights(geom: Geometry, cert: dict[str, Any]) -> np.ndarray:
     vertex = cert.get("diagonal_vertex", {}) if isinstance(cert.get("diagonal_vertex", {}), dict) else {}
     kind = str(vertex.get("kind", ""))
@@ -1119,12 +1127,15 @@ def stochastic_source_higgs_cross_correlator(
     operator_certificate_path: Path | None,
     normal_system: NormalEquationSystem | None = None,
 ) -> dict[str, Any]:
-    """Estimate C_ss, C_sH, and C_HH for a supplied diagonal O_H vertex.
+    """Estimate source/source-operator stochastic trace rows.
 
     This is an instrumentation path only.  It accepts an external
-    same-surface canonical-Higgs operator certificate and measures the
-    corresponding diagonal-vertex stochastic traces.  The certificate, not this
-    estimator, carries the burden of proving that the vertex is canonical O_H.
+    same-surface operator certificate and measures the corresponding
+    source/operator stochastic traces.  The certificate, not this estimator,
+    carries the burden of proving that the vertex is canonical O_H.  If the
+    operator is the PR230 taste-radial second source rather than canonical O_H,
+    downstream analysis emits C_sx/C_xx aliases while preserving the legacy
+    C_sH/C_HH schema fields.
     """
     system = normal_system if normal_system is not None else build_normal_equation_system(gauge, mass)
     geom = gauge.geom
@@ -1194,16 +1205,20 @@ def stochastic_source_higgs_cross_correlator(
         "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
         "operator": source_higgs_operator_summary(operator_certificate, operator_certificate_path),
         "firewall": source_higgs_firewall_from_certificate(operator_certificate),
-        "measurement_object": "C_ss/C_sH/C_HH diagonal-vertex stochastic traces on the same gauge ensemble",
+        "measurement_object": (
+            "C_ss/C_sx/C_xx sparse taste-radial second-source stochastic traces on the same gauge ensemble"
+            if source_higgs_operator_is_taste_radial_second_source(operator_certificate)
+            else "C_ss/C_sH/C_HH operator stochastic traces on the same gauge ensemble"
+        ),
         "estimator": "Z2 stochastic trace for Tr[S V_A(q) S V_B(-q)] normalized by volume*colors",
         "mode_rows": mode_rows,
         "cg_infos": infos,
         "cg_residuals": residuals,
         "max_cg_residual": max(residuals) if residuals else None,
         "strict_limit": (
-            "These are source-Higgs measurement rows only; they are not physical "
-            "y_t evidence until isolated-pole, FV/IR, canonical-Higgs identity, "
-            "and retained-route gates pass."
+            "These are source/operator measurement rows only; they are not "
+            "physical y_t evidence until isolated-pole, FV/IR, source-overlap "
+            "or physical-response, and retained-route gates pass."
         ),
     }
 
@@ -1723,6 +1738,7 @@ def fit_source_higgs_cross_correlator(
     operator_certificate_path: Path | None,
 ) -> dict[str, Any]:
     mode_rows = {}
+    taste_radial_second_source = source_higgs_operator_is_taste_radial_second_source(operator_certificate)
     for key, rows in source_higgs_measurements.items():
         if not rows:
             continue
@@ -1757,6 +1773,31 @@ def fit_source_higgs_cross_correlator(
                 }
                 for i, row in enumerate(rows)
             ]
+        if taste_radial_second_source:
+            out["C_sx_real"] = out["C_sH_real"]
+            out["C_sx_imag"] = out["C_sH_imag"]
+            out["C_sx_real_config_stderr"] = out["C_sH_real_config_stderr"]
+            out["C_sx_imag_config_stderr"] = out["C_sH_imag_config_stderr"]
+            out["C_sx_timeseries"] = [
+                {
+                    "configuration_index": int(item["configuration_index"]),
+                    "C_sx_real": float(item["C_sH_real"]),
+                    "C_sx_imag": float(item["C_sH_imag"]),
+                }
+                for item in out["C_sH_timeseries"]
+            ]
+            out["C_xx_real"] = out["C_HH_real"]
+            out["C_xx_imag"] = out["C_HH_imag"]
+            out["C_xx_real_config_stderr"] = out["C_HH_real_config_stderr"]
+            out["C_xx_imag_config_stderr"] = out["C_HH_imag_config_stderr"]
+            out["C_xx_timeseries"] = [
+                {
+                    "configuration_index": int(item["configuration_index"]),
+                    "C_xx_real": float(item["C_HH_real"]),
+                    "C_xx_imag": float(item["C_HH_imag"]),
+                }
+                for item in out["C_HH_timeseries"]
+            ]
         c_ss = float(out.get("C_ss_real", float("nan")))
         c_sh = float(out.get("C_sH_real", float("nan")))
         c_hh = float(out.get("C_HH_real", float("nan")))
@@ -1775,13 +1816,28 @@ def fit_source_higgs_cross_correlator(
 
     return {
         "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
-        "measurement_object": "same-ensemble C_ss/C_sH/C_HH(q) rows for a supplied canonical-Higgs operator certificate",
+        "measurement_object": (
+            "same-ensemble C_ss/C_sx/C_xx(q) rows for the supplied taste-radial second-source certificate"
+            if taste_radial_second_source
+            else "same-ensemble C_ss/C_sH/C_HH(q) rows for a supplied canonical-Higgs operator certificate"
+        ),
         "operator": source_higgs_operator_summary(operator_certificate, operator_certificate_path),
         "firewall": source_higgs_firewall_from_certificate(operator_certificate),
         "mode_rows": mode_rows,
         "pole_residue_rows": [],
         "same_ensemble": True,
         "same_source_coordinate": True,
+        "two_source_taste_radial_row_aliases": {
+            "available": taste_radial_second_source,
+            "source_operator_symbol": "x",
+            "C_sx_aliases_C_sH_schema_field": taste_radial_second_source,
+            "C_xx_aliases_C_HH_schema_field": taste_radial_second_source,
+            "strict_limit": (
+                "C_sx/C_xx aliases are second-source taste-radial rows.  They "
+                "are not canonical-Higgs C_sH/C_HH rows unless a separate "
+                "canonical O_H/source-overlap bridge passes."
+            ),
+        },
         "canonical_higgs_operator_identity_passed": operator_certificate.get(
             "canonical_higgs_operator_identity_passed"
         )

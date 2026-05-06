@@ -608,6 +608,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_action": load(
             "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_row_contract": load(
+            "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2570,6 +2573,22 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_action"],
     )
+    two_source_taste_radial_row_contract = certificates["pr230_two_source_taste_radial_row_contract"]
+    report(
+        "pr230-two-source-taste-radial-row-contract-support-not-closure",
+        "two-source taste-radial C_sx/C_xx row contract"
+        in str(statuses["pr230_two_source_taste_radial_row_contract"])
+        and two_source_taste_radial_row_contract.get("proposal_allowed") is False
+        and two_source_taste_radial_row_contract.get(
+            "two_source_taste_radial_row_contract_passed"
+        )
+        is True
+        and two_source_taste_radial_row_contract.get("future_file_presence", {}).get(
+            "taste_radial_production_rows"
+        )
+        is False,
+        statuses["pr230_two_source_taste_radial_row_contract"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4252,6 +4271,17 @@ def main() -> int:
         and two_source_taste_radial_action.get("proposal_allowed") is False
         and two_source_taste_radial_action.get("operator_certificate_payload", {}).get(
             "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
+    result["two_source_taste_radial_row_contract_support_not_closure"] = (
+        two_source_taste_radial_row_contract.get(
+            "two_source_taste_radial_row_contract_passed"
+        )
+        is True
+        and two_source_taste_radial_row_contract.get("proposal_allowed") is False
+        and two_source_taste_radial_row_contract.get("future_file_presence", {}).get(
+            "taste_radial_production_rows"
         )
         is False
     )

@@ -28,8 +28,33 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=294 FAIL=0
+# SUMMARY: PASS=295 FAIL=0
 ```
+
+## 2026-05-06 Two-Source Taste-Radial Row-Contract Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json`.
+The production harness preserves the legacy `C_sH/C_HH` fields but now also
+emits explicit `C_sx/C_xx` aliases for the taste-radial second source.  This
+removes a schema ambiguity before production and keeps the canonical-Higgs
+firewall visible in metadata.
+
+This is bounded support only.  The row-contract runner uses a tiny finite smoke
+to validate schema behavior; it does not write production
+`outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json`,
+does not extract pole residues, and does not identify `x` with canonical
+`O_H`.
+
+Validation: row contract `PASS=12 FAIL=0`; assumption/import stress `PASS=59
+FAIL=0`; full positive closure assembly gate `PASS=119 FAIL=0`;
+retained-route `PASS=265 FAIL=0`; campaign status `PASS=295 FAIL=0`;
+completion audit `PASS=33 FAIL=0`.
+
+The campaign target remains open.  The next source-coordinate action is now a
+production `C_sx/C_xx` row campaign for the taste-radial source, followed by a
+canonical `O_H`/source-overlap proof or a genuine same-source physical-response
+bypass.
 
 ## 2026-05-06 Two-Source Taste-Radial Action/Source Support Update
 

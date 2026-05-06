@@ -16,6 +16,9 @@ This block lands:
 - an executable two-source taste-radial action/source-vertex certificate plus
   harness sparse-vertex support for the blocked-hypercube source
   `X=(X_1+X_2+X_3)/sqrt(3)`;
+- an executable two-source taste-radial row-contract certificate that emits
+  explicit `C_sx/C_xx` aliases for the sparse source path while preserving
+  legacy schema fields and the production-row firewall;
 - a refreshed FH/LSZ production postprocess gate that recognizes completed L12
   chunked support while preserving all no-closure firewalls;
 - a paired JSON certificate;

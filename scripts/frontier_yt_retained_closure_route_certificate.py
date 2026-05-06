@@ -157,6 +157,7 @@ def main() -> int:
         "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
         "pr230_two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+        "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1367,6 +1368,24 @@ def main() -> int:
         and certificates["pr230_two_source_taste_radial_action"].get(
             "operator_certificate_payload", {}
         ).get("canonical_higgs_operator_identity_passed")
+        is False
+    )
+    two_source_taste_radial_row_contract_support_not_closure = (
+        "two-source taste-radial C_sx/C_xx row contract"
+        in certificates["pr230_two_source_taste_radial_row_contract"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_row_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_row_contract"].get(
+            "two_source_taste_radial_row_contract_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_row_contract"].get(
+            "future_file_presence", {}
+        ).get("taste_radial_production_rows")
         is False
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
@@ -3831,6 +3850,13 @@ def main() -> int:
         ),
     )
     report(
+        "two-source-taste-radial-row-contract-support-not-closure",
+        two_source_taste_radial_row_contract_support_not_closure,
+        certificates["pr230_two_source_taste_radial_row_contract"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "kinetic-taste-mixing-shortcut-closed",
         kinetic_taste_mixing_bridge_blocks_shortcut,
         certificates["pr230_kinetic_taste_mixing_bridge"].get(
@@ -5203,6 +5229,7 @@ def main() -> int:
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "two_source_taste_radial_chart_support_not_closure": two_source_taste_radial_chart_support_not_closure,
         "two_source_taste_radial_action_support_not_closure": two_source_taste_radial_action_support_not_closure,
+        "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

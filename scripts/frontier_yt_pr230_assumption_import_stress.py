@@ -158,6 +158,9 @@ def main() -> int:
         "two_source_taste_radial_action_certificate": load(
             "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json"
         ),
+        "two_source_taste_radial_row_contract": load(
+            "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -293,6 +296,8 @@ def main() -> int:
         "CMT/u0/Fierz channel bookkeeping is not proof selectors",
         "Two-source taste-radial action source vertex",
         "not proof selectors until measured C_sx/C_xx rows and canonical O_H/source-overlap or physical-response authority exist",
+        "Two-source taste-radial row contract",
+        "not proof selectors until production C_sx/C_xx rows, pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority exist",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -869,6 +874,20 @@ def main() -> int:
         is False,
         two_source_action.get("actual_current_surface_status"),
     )
+    two_source_row_contract = certificates["two_source_taste_radial_row_contract"]
+    report(
+        "two-source-taste-radial-row-contract-support-not-closure",
+        "two-source taste-radial C_sx/C_xx row contract"
+        in str(two_source_row_contract.get("actual_current_surface_status"))
+        and two_source_row_contract.get("proposal_allowed") is False
+        and two_source_row_contract.get("two_source_taste_radial_row_contract_passed")
+        is True
+        and two_source_row_contract.get("future_file_presence", {}).get(
+            "taste_radial_production_rows"
+        )
+        is False,
+        two_source_row_contract.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -1045,6 +1064,10 @@ def main() -> int:
             "as a gauge-covariant blocked-hypercube harness source vertex, but "
             "it is still support only until measured C_sx/C_xx rows and a "
             "canonical O_H/source-overlap or physical-response bridge land.  "
+            "The two-source taste-radial row-contract certificate removes the "
+            "schema ambiguity by emitting explicit C_sx/C_xx aliases for that "
+            "second source, but it is a finite smoke/schema contract only, not "
+            "production rows or pole evidence.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1076,6 +1099,7 @@ def main() -> int:
             "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
             "does not treat the two-source taste-radial chart as canonical O_H or as production source-Higgs rows",
             "does not treat the two-source taste-radial action source vertex as canonical O_H or measured C_sx/C_xx rows",
+            "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

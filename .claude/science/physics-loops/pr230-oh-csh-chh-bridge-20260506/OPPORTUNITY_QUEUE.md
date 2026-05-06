@@ -5,8 +5,9 @@
 2. Genuine two-source source-coordinate transport theorem from the uniform mass
    source to canonical Higgs/taste radial source; scalar reparametrization of
    the current source line is blocked.  The exact two-source taste-radial chart
-   and gauge-covariant action/source vertex now exist as support, so the
-   remaining work is measured `C_sx/C_xx` rows plus either canonical-`O_H`
+   and gauge-covariant action/source vertex now exist as support, and the
+   row contract now labels `C_sx/C_xx` explicitly.  The remaining work is
+   production `C_sx/C_xx` rows plus either canonical-`O_H`
    identity/source-overlap authority or a physical-response bypass.
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
    matrix step is now conditionally solved, and direct promotion from cyclic

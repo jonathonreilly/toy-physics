@@ -1,0 +1,183 @@
+{
+  "actual_current_surface_status": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if production rows are run with this schema and a separate canonical O_H/source-overlap or physical-response bridge closes",
+  "contract_smoke_analysis": {
+    "canonical_higgs_operator_identity_passed": false,
+    "firewall": {
+      "used_alpha_lm_or_plaquette": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_targets_as_selectors": false,
+      "used_taste_radial_axis_as_canonical_oh": false,
+      "used_yt_ward_identity": false
+    },
+    "measurement_object": "same-ensemble C_ss/C_sx/C_xx(q) rows for the supplied taste-radial second-source certificate",
+    "mode_rows": {
+      "0,0,0": {
+        "C_HH_imag": 0.20299884659746248,
+        "C_HH_imag_config_stderr": 0.05536332179930797,
+        "C_HH_real": 0.05690119184928873,
+        "C_HH_real_config_stderr": 0.003844675124951936,
+        "C_HH_timeseries": [
+          {
+            "C_HH_imag": 0.1476355247981545,
+            "C_HH_real": 0.0530565167243368,
+            "configuration_index": 0
+          },
+          {
+            "C_HH_imag": 0.25836216839677045,
+            "C_HH_real": 0.06074586697424067,
+            "configuration_index": 1
+          }
+        ],
+        "C_sH_imag": 0.007991007186015578,
+        "C_sH_imag_config_stderr": 0.007991007186015564,
+        "C_sH_real": -0.0019977517965038814,
+        "C_sH_real_config_stderr": 0.0013318345310026009,
+        "C_sH_timeseries": [
+          {
+            "C_sH_imag": 1.2432184911167116e-17,
+            "C_sH_real": -0.0006659172655012803,
+            "configuration_index": 0
+          },
+          {
+            "C_sH_imag": 0.01598201437203114,
+            "C_sH_real": -0.0033295863275064827,
+            "configuration_index": 1
+          }
+        ],
+        "C_ss_imag": 0.05536332179930792,
+        "C_ss_imag_config_stderr": 0.05536332179930791,
+        "C_ss_real": 0.05536332179930792,
+        "C_ss_real_config_stderr": 4.906538933386797e-18,
+        "C_ss_timeseries": [
+          {
+            "C_ss_imag": 6.938893903907228e-18,
+            "C_ss_real": 0.055363321799307925,
+            "configuration_index": 0
+          },
+          {
+            "C_ss_imag": 0.11072664359861584,
+            "C_ss_real": 0.05536332179930792,
+            "configuration_index": 1
+          }
+        ],
+        "C_sx_imag": 0.007991007186015578,
+        "C_sx_imag_config_stderr": 0.007991007186015564,
+        "C_sx_real": -0.0019977517965038814,
+        "C_sx_real_config_stderr": 0.0013318345310026009,
+        "C_sx_timeseries": [
+          {
+            "C_sx_imag": 1.2432184911167116e-17,
+            "C_sx_real": -0.0006659172655012803,
+            "configuration_index": 0
+          },
+          {
+            "C_sx_imag": 0.01598201437203114,
+            "C_sx_real": -0.0033295863275064827,
+            "configuration_index": 1
+          }
+        ],
+        "C_xx_imag": 0.20299884659746248,
+        "C_xx_imag_config_stderr": 0.05536332179930797,
+        "C_xx_real": 0.05690119184928873,
+        "C_xx_real_config_stderr": 0.003844675124951936,
+        "C_xx_timeseries": [
+          {
+            "C_xx_imag": 0.1476355247981545,
+            "C_xx_real": 0.0530565167243368,
+            "configuration_index": 0
+          },
+          {
+            "C_xx_imag": 0.25836216839677045,
+            "C_xx_real": 0.06074586697424067,
+            "configuration_index": 1
+          }
+        ],
+        "configuration_count": 2,
+        "finite_row_gram": {
+          "available": true,
+          "gram_determinant_real": 0.0031462479828758944,
+          "rho_sH_real": -0.03559342484071848,
+          "strict_limit": "Finite-mode rows are not pole residues.  Gram purity can only be evaluated after isolated-pole residue extraction and FV/IR/model-class gates."
+        },
+        "momentum_mode": [
+          0,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.0
+      }
+    },
+    "operator": {
+      "canonical_higgs_operator_identity_passed": false,
+      "certificate_path": "/private/tmp/pr230-wroute-build/outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+      "diagonal_vertex": null,
+      "hunit_used_as_operator": false,
+      "identity_certificate": "same-surface source-vertex certificate only; canonical O_H identity absent",
+      "normalization_certificate": "source_norm_matched: on the cold Cl(3)/Z^3 surface Tr X^dagger X equals Tr I^dagger I over site-color degrees of freedom.  This is not scalar LSZ or canonical Higgs normalization.",
+      "operator_definition": "Gauge-covariant blocked-hypercube taste-radial source X=(X_1+X_2+X_3)/sqrt(3), where X_i flips the spatial parity bit inside each 2^3 Cl(3)/Z^3 block using the connecting SU(3) link.",
+      "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+      "sparse_vertex": {
+        "directions": [
+          1,
+          2,
+          3
+        ],
+        "gauge_covariant_links": true,
+        "kind": "taste_radial_spatial_hypercube_flip",
+        "normalization": "source_norm_matched",
+        "requires_even_spatial_l": true
+      },
+      "static_ew_algebra_used_as_operator": false
+    },
+    "pole_residue_rows": [],
+    "same_ensemble": true,
+    "same_source_coordinate": true,
+    "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+    "strict_limit": "This analysis emits finite-momentum cross-correlator rows.  It does not supply pole residues, Gram-purity closure, or retained y_t authorization without the source-Higgs certificate builder and postprocessor gates.",
+    "two_source_taste_radial_row_aliases": {
+      "C_sx_aliases_C_sH_schema_field": true,
+      "C_xx_aliases_C_HH_schema_field": true,
+      "available": true,
+      "source_operator_symbol": "x",
+      "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
+    },
+    "used_as_physical_yukawa_readout": false
+  },
+  "exact_next_action": "Run production C_sx/C_xx rows using this schema, then supply a canonical O_H/source-overlap bridge or genuine physical-response bypass before retained-route gates can pass.",
+  "fail_count": 0,
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_higgs_rows": false,
+    "taste_radial_production_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "two_source_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+    "two_source_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "retained_route": "open / retained closure not yet reached",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+    "two_source_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The runner certifies only the C_sx/C_xx row schema contract for the taste-radial second source.  It does not provide production rows, pole residues, canonical O_H identity, kappa_s, or retained-route authorization.",
+  "row_contract_schema_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat C_sx/C_xx aliases as canonical-Higgs C_sH/C_HH rows",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not provide production C_sx/C_xx rows or pole residues"
+  ],
+  "two_source_taste_radial_row_contract_passed": true
+}

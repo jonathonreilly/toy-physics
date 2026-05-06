@@ -45,6 +45,10 @@ Allowed context:
   only: the blocked-hypercube source `X=(X_1+X_2+X_3)/sqrt(3)` is now a
   gauge-covariant source vertex, but it is not a canonical `O_H` identity,
   scalar LSZ normalization, or measured production row.
+- the two-source taste-radial `C_sx/C_xx` row contract as bounded harness
+  support only: the schema now names second-source rows explicitly, but the
+  current artifact is not production evidence, pole residue extraction,
+  canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
 
 Open imports after this block:
 
@@ -94,6 +98,7 @@ Open imports after this block:
   measured C_sx/C_xx rows and canonical O_H/source-overlap or
   physical-response authority exist.
 - Two-source taste-radial action source vertex is not proof selectors until measured C_sx/C_xx rows and canonical O_H/source-overlap or physical-response authority exist.
+- Two-source taste-radial row contract is not proof selectors until production C_sx/C_xx rows, pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority exist.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

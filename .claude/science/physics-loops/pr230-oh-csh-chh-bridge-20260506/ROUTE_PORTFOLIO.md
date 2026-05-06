@@ -46,6 +46,12 @@ source as a gauge-covariant blocked-hypercube harness vertex
 blocker for the two-source lane, but it still does not identify `X` with
 canonical `O_H`, derive `kappa_s`, or write production `C_sx/C_xx` rows.
 
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_CONTRACT` removes the next schema
+ambiguity: the harness now emits explicit `C_sx/C_xx` aliases for the
+taste-radial second source while preserving legacy `C_sH/C_HH` fields.  This is
+bounded row-contract support only.  Production rows, pole residues, and
+canonical `O_H`/source-overlap authority are still absent.
+
 ## Route D: Equivalent Physical Response
 
 Use same-source W/Z rows, Schur A/B/C rows, or a neutral rank-one theorem to
