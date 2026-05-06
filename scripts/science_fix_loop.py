@@ -313,7 +313,7 @@ def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
         terminated. Captured cleanly so the partial diff (if any) is
         preserved.
       - Poll every `poll_interval_sec` seconds (default 30s).
-      - `progress_callback(elapsed, stale_for)` is called on each poll
+      - `progress_callback(elapsed, stale_for, last_kind, stream_bytes)` is called on each poll
         if provided, for live-status output.
 
     `stop_reason` values:
@@ -332,7 +332,9 @@ def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
     ]
     t0 = time.time()
     baseline_mtime = _newest_mtime(worktree)
-    last_progress_time = t0  # wall time of last detected mtime change
+    last_progress_time = t0  # wall time of last detected progress signal
+    last_progress_kind = "init"  # "mtime" | "stream" — which signal moved last
+    last_stream_bytes = 0
     stop_reason = "ok"
     stale_enabled = stale_after_sec > 0 and stale_after_sec < timeout_sec
 
@@ -369,14 +371,34 @@ def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
 
                 now = time.time()
                 elapsed = now - t0
+
+                # Progress signal #1: any tracked file in the worktree
+                # touched since last poll.
                 cur_mtime = _newest_mtime(worktree)
                 if cur_mtime > baseline_mtime:
                     last_progress_time = now
+                    last_progress_kind = "mtime"
                     baseline_mtime = cur_mtime
+
+                # Progress signal #2: codex's combined stdout+stderr
+                # stream grew since last poll. This catches the case
+                # where codex is THINKING (emitting reasoning text /
+                # tool-call traces) but hasn't yet produced a file
+                # edit — that's still real progress, not a stall.
+                try:
+                    cur_stream_bytes = stdout_fh.tell() + stderr_fh.tell()
+                except Exception:
+                    cur_stream_bytes = last_stream_bytes
+                if cur_stream_bytes > last_stream_bytes:
+                    last_progress_time = now
+                    last_progress_kind = "stream"
+                    last_stream_bytes = cur_stream_bytes
+
                 stale_for = now - last_progress_time
 
                 if progress_callback:
-                    progress_callback(elapsed, stale_for)
+                    progress_callback(elapsed, stale_for, last_progress_kind,
+                                       cur_stream_bytes)
 
                 if stale_enabled and stale_for >= stale_after_sec:
                     stop_reason = "stalled"
@@ -635,11 +657,14 @@ def main() -> int:
             continue
 
         try:
-            def _progress(elapsed_, stale_):
+            def _progress(elapsed_, stale_, last_kind, stream_bytes):
                 # Live status to stdout so the operator can see progress
-                # without having to tail the codex stderr.
+                # without having to tail the codex stderr. last_kind is
+                # "init" / "mtime" / "stream" — telling them whether codex
+                # is editing files or just thinking.
                 print(f"    [progress] elapsed={elapsed_:5.0f}s  "
-                      f"stalled_for={stale_:5.0f}s "
+                      f"stalled_for={stale_:5.0f}s  "
+                      f"last={last_kind}  bytes={stream_bytes}  "
                       f"(stale_kill@{args.stale_after_sec}s, hard@{args.codex_timeout_sec}s)",
                       flush=True)
 
