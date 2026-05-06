@@ -23,6 +23,10 @@ Allowed context:
 - the exact lazy-Z3 primitive matrix theorem as conditional mathematics only:
   if a same-surface PR230 action supplies a positive lazy cyclic transfer on
   the triplet, Perron-Frobenius gives rank-one triplet support.
+- the H1 Z3 generation-action lift attempt as an exact current-surface
+  boundary: Koide/lepton Z3 can be held fixed while quark-bilinear generation
+  action is trivial or cyclic, and current PR230 source/action data do not
+  select between them.
 
 Open imports after this block:
 
@@ -53,6 +57,9 @@ Open imports after this block:
 - The conditional lazy-Z3 theorem is not a proof selector until the PR230
   surface supplies the positive transfer/action, off-diagonal neutral
   generator, or strict primitive-cone certificate.
+- Koide/lepton Z3 is not a quark-bilinear generation-action proof selector
+  until a same-surface H1 certificate selects the cyclic action and ties it to
+  the PR230 source/action surface.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;
@@ -66,6 +73,8 @@ Open imports after this block:
 - neutral primitive-cone / off-diagonal-generator theorem;
 - same-surface lazy positive Z3/triplet transfer if the conditional primitive
   theorem is to become load-bearing;
+- same-surface H1 quark-bilinear Z3 action certificate, if the origin/main
+  composite-Higgs packet is to become load-bearing;
 - scalar-LSZ, FV/IR, and matching gates.
 
 Negative-route interpretation:

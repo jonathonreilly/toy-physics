@@ -9,3 +9,7 @@ The conditional lazy-Z3 theorem uses finite-dimensional Perron-Frobenius
 reasoning only after a positive same-surface transfer operator is supplied.
 That mathematics is a certificate engine, not an external physics import and
 not a source-overlap selector.
+
+The H1 lift attempt uses only finite Z3 representation bookkeeping and local
+repo authority scans.  No external literature is load-bearing for the
+generation-action boundary.

@@ -51,12 +51,21 @@ primitive, and this theorem still needs a same-surface PR230 positive transfer,
 action, or off-diagonal generator before it can become a neutral primitive
 certificate.
 
+The H1 lift attempt now attacks the first origin/main residual directly.  With
+the lepton/Koide cyclic action fixed, the quark-bilinear generation action can
+be trivial or cyclic while preserving the current generation-blind PR230
+source/action checks.  H1 requires the cyclic action, but the current surface
+has no selector for it.  Future composite-Higgs work must supply a
+same-surface quark-bilinear Z3 action certificate, not just cite Koide/lepton
+Z3.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows;
 2. derive a genuine two-source source-coordinate transport certificate;
-3. derive a neutral off-diagonal generator / primitive-cone theorem;
+3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
+   with a neutral off-diagonal generator / primitive-cone theorem;
 4. produce Schur A/B/C rows from a real neutral kernel basis;
 5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`
    authority are also supplied.

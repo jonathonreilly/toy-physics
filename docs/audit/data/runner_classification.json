@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T12:13:12.490493+00:00",
+  "generated_at": "2026-05-06T12:32:05.183838+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16669,6 +16669,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py"
     },
+    "yt_pr230_kinetic_taste_mixing_bridge_attempt_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_kinetic_taste_mixing_bridge_attempt.py"
+    },
     "yt_pr230_l12_chunk_compute_status_note_2026-05-06": {
       "assert_count": 1,
       "counts": {
@@ -16933,6 +16945,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py"
     },
+    "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_one_higgs_taste_axis_completeness_attempt.py"
+    },
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06": {
       "assert_count": 4,
       "counts": {
@@ -17136,6 +17160,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py"
+    },
+    "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py"
     },
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06": {
       "assert_count": 1,
@@ -34644,6 +34680,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_kinetic_taste_mixing_bridge_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_kinetic_taste_mixing_bridge_attempt_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_l12_chunk_compute_status.py": {
       "assert_count": 1,
       "claims": [
@@ -34974,6 +35025,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_one_higgs_taste_axis_completeness_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_origin_main_composite_higgs_intake_guard.py": {
       "assert_count": 4,
       "claims": [
@@ -35227,6 +35293,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py": {
@@ -40394,13 +40475,13 @@
     "decoration_candidates": 107,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 228,
-      "C": 506,
+      "B": 230,
+      "C": 507,
       "D": 303,
       "none": 404
     },
-    "runners_classified": 1450,
-    "runners_with_C": 763,
-    "runners_with_D": 544
+    "runners_classified": 1453,
+    "runners_with_C": 766,
+    "runners_with_D": 547
   }
 }

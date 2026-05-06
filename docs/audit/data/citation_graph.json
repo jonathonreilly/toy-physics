@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T12:13:09.749916+00:00",
+  "generated_at": "2026-05-06T12:32:02.681213+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42098,6 +42098,16 @@
       "runner_path": "scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py",
       "title": "PR230 Invariant-Ring O_H Certificate Attempt"
     },
+    "yt_pr230_kinetic_taste_mixing_bridge_attempt_note_2026-05-06": {
+      "claim_id": "yt_pr230_kinetic_taste_mixing_bridge_attempt_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / current staggered kinetic taste symmetry",
+      "deps": [],
+      "note_hash": "d8eca6044bc887d5a1f135be7601e8b5741e045166c1ded6fa11a7de82b2fcc7",
+      "path": "docs/YT_PR230_KINETIC_TASTE_MIXING_BRIDGE_ATTEMPT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_kinetic_taste_mixing_bridge_attempt.py",
+      "title": "PR230 Kinetic Taste-Mixing Bridge Attempt"
+    },
     "yt_pr230_l12_chunk_compute_status_note_2026-05-06": {
       "claim_id": "yt_pr230_l12_chunk_compute_status_note_2026-05-06",
       "current_status": "bounded",
@@ -42463,7 +42473,7 @@
       "current_status": "open",
       "current_status_raw": "open / first-principles `O_H` bridge positive-candidate portfolio",
       "deps": [],
-      "note_hash": "9c6ef27d1c16978d45f2e75848bab6be6a83bf242314fca5564ed51d9f8dbfbf",
+      "note_hash": "d0f8a4834713493d40e0cb02a7f11df0da53fe5d7e17180bef4efd96cc621b40",
       "path": "docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py",
       "title": "PR230 O_H Bridge First-Principles Candidate Portfolio"
@@ -42477,6 +42487,16 @@
       "path": "docs/YT_PR230_OH_SOURCE_HIGGS_AUTHORITY_RESCAN_GATE_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "PR230 O_H / Source-Higgs Authority Rescan Gate"
+    },
+    "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06": {
+      "claim_id": "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / one-Higgs taste-axis completeness not",
+      "deps": [],
+      "note_hash": "d24a628bd236fa45f7f16d10bfb38f90366fb6621343d7e10dd31d00d6c267fe",
+      "path": "docs/YT_PR230_ONE_HIGGS_TASTE_AXIS_COMPLETENESS_ATTEMPT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_one_higgs_taste_axis_completeness_attempt.py",
+      "title": "PR230 One-Higgs Taste-Axis Completeness Attempt"
     },
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06": {
       "claim_id": "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06",
@@ -42668,6 +42688,16 @@
       "runner_path": "scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py",
       "title": "PR230 W/Z Smoke-To-Production Promotion No-Go Note"
     },
+    "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06": {
+      "claim_id": "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface.",
+      "deps": [],
+      "note_hash": "06518b599a76eb3f21ef8e867c91bb85eaeb47cf5927902e5e8be4f3fe506871",
+      "path": "docs/YT_PR230_Z3_GENERATION_ACTION_LIFT_ATTEMPT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py",
+      "title": "PR230 Z3 Generation-Action Lift Attempt"
+    },
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06": {
       "claim_id": "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
       "current_status": "support",
@@ -42725,7 +42755,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "2072ac9b81bc61e9222aed38f344532c4a4ec21d870caca748642fb4be076f5f",
+      "note_hash": "76e902ea2ca5ce537dc7e48c8176d40e4fb28fc7007bd9e27e383f158eec203c",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -45356,6 +45386,7 @@
     "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05",
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
+    "yt_pr230_kinetic_taste_mixing_bridge_attempt_note_2026-05-06",
     "yt_pr230_l12_chunk_compute_status_note_2026-05-06",
     "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
@@ -45394,6 +45425,7 @@
     "yt_pr230_nonchunk_terminal_route_exhaustion_gate_note_2026-05-05",
     "yt_pr230_oh_bridge_first_principles_candidate_portfolio_note_2026-05-06",
     "yt_pr230_oh_source_higgs_authority_rescan_gate_note_2026-05-05",
+    "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06",
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
@@ -45413,6 +45445,7 @@
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
     "yt_pr230_wz_response_route_completion_note_2026-05-06",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
+    "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06",
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
     "yt_production_resource_projection_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
@@ -45532,17 +45565,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1080,
-    "node_count": 2033,
-    "root_count": 1546,
-    "runners_with_path": 1529,
+    "leaf_count": 1083,
+    "node_count": 2036,
+    "root_count": 1549,
+    "runners_with_path": 1532,
     "status_counts": {
       "bounded": 555,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 434,
-      "unknown": 567
+      "support": 435,
+      "unknown": 569
     }
   }
 }

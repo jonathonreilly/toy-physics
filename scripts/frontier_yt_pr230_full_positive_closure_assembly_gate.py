@@ -92,6 +92,7 @@ PARENTS = {
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+    "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
@@ -521,6 +522,26 @@ def main() -> int:
         )
         is False
     )
+    z3_generation_action_lift_not_derived = (
+        "Z3 generation-action lift"
+        in statuses["pr230_z3_generation_action_lift_attempt"]
+        and certs["pr230_z3_generation_action_lift_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_z3_generation_action_lift_attempt"].get(
+            "h1_generation_action_lift_attempt_passed"
+        )
+        is True
+        and certs["pr230_z3_generation_action_lift_attempt"].get(
+            "same_surface_h1_derived"
+        )
+        is False
+        and certs["pr230_z3_generation_action_lift_attempt"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+    )
     source_coordinate_transport_completion_blocks = (
         "source-coordinate transport not derivable from current PR230 surface"
         in statuses["pr230_source_coordinate_transport_completion"]
@@ -770,6 +791,7 @@ def main() -> int:
         and source_coordinate_transport_blocks_current_shortcut
         and origin_main_composite_higgs_not_closure
         and z3_triplet_conditional_primitive_not_closure
+        and z3_generation_action_lift_not_derived
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1241,6 +1263,11 @@ def main() -> int:
         "z3-triplet-conditional-primitive-support-not-closure",
         z3_triplet_conditional_primitive_not_closure,
         statuses["pr230_z3_triplet_conditional_primitive_cone"],
+    )
+    report(
+        "z3-generation-action-lift-not-derived",
+        z3_generation_action_lift_not_derived,
+        statuses["pr230_z3_generation_action_lift_attempt"],
     )
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -2098,6 +2125,9 @@ def main() -> int:
             "support for a lazy cyclic neutral transfer, but it does not supply "
             "the missing same-surface PR230 action/off-diagonal generator or "
             "strict primitive certificate."
+            " The H1 generation-action lift attempt shows that Koide/lepton Z3 "
+            "does not yet select cyclic quark-bilinear action over the trivial "
+            "action on the PR230 surface."
             " A separate kinetic taste-mixing check now closes the adjacent "
             "shortcut: taste-even Wilson-staggered dynamics also gives zero "
             "C_sH against one trace-zero taste-axis insertion unless a real "
@@ -2182,6 +2212,7 @@ def main() -> int:
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
+        "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
@@ -2221,6 +2252,7 @@ def main() -> int:
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
+            "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",

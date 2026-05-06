@@ -80,3 +80,9 @@ given the triplet cyclic permutation `P`, `L=(I+P)/2` is primitive because
 `L^2` is strictly positive.  This is useful only after the PR230 surface
 derives the positive neutral transfer/action that realizes `L`; it does not
 replace the missing transfer or source-Higgs bridge.
+
+The H1 generation-action lift attempt closes the shortcut from retained
+Koide/lepton Z3 to the PR230 quark-bilinear triplet.  Current generation-blind
+source/action checks cannot choose between trivial and cyclic quark actions.
+This route reopens only with a same-surface quark-bilinear Z3 action
+certificate or with a bypassing non-source bridge.

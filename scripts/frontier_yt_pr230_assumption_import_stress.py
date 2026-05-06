@@ -140,6 +140,9 @@ def main() -> int:
         "z3_triplet_conditional_primitive_cone_theorem": load(
             "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
         ),
+        "z3_generation_action_lift_attempt": load(
+            "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json"
+        ),
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -757,6 +760,18 @@ def main() -> int:
         and z3_primitive.get("pr230_closure_authorized") is False,
         z3_primitive.get("actual_current_surface_status"),
     )
+    z3_generation_lift = certificates["z3_generation_action_lift_attempt"]
+    report(
+        "z3-generation-action-lift-not-derived",
+        "Z3 generation-action lift"
+        in str(z3_generation_lift.get("actual_current_surface_status"))
+        and z3_generation_lift.get("proposal_allowed") is False
+        and z3_generation_lift.get("h1_generation_action_lift_attempt_passed")
+        is True
+        and z3_generation_lift.get("same_surface_h1_derived") is False
+        and z3_generation_lift.get("pr230_closure_authorized") is False,
+        z3_generation_lift.get("actual_current_surface_status"),
+    )
     source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -921,7 +936,10 @@ def main() -> int:
             "authority, or C_sH/C_HH pole-row evidence.  The Z3-triplet "
             "primitive-cone theorem adds exact conditional neutral-rank-one "
             "support for a lazy cyclic transfer, but the same-surface PR230 "
-            "action/off-diagonal generator premise remains absent.  The first-principles O_H bridge "
+            "action/off-diagonal generator premise remains absent.  The H1 "
+            "Z3 generation-action lift attempt shows that the current surface "
+            "does not distinguish trivial from cyclic quark-bilinear Z3 action, "
+            "so the origin/main H1 premise is still not derived.  The first-principles O_H bridge "
             "candidate portfolio keeps five positive candidates open while "
             "recording that no candidate currently supplies closure authority.  "
             "The source-coordinate, action-first, W/Z response, Schur, and "
@@ -958,6 +976,7 @@ def main() -> int:
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
             "does not treat conditional Z3-triplet primitive-cone support as a PR230 primitive certificate",
+            "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

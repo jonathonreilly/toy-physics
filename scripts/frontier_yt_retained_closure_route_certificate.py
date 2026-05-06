@@ -149,6 +149,7 @@ def main() -> int:
         "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
         "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
         "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+        "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
         "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
@@ -1200,6 +1201,28 @@ def main() -> int:
         is False
         and certificates["pr230_z3_triplet_conditional_primitive_cone"].get(
             "writes_strict_future_certificate"
+        )
+        is False
+    )
+    z3_generation_action_lift_not_derived = (
+        "Z3 generation-action lift"
+        in certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "h1_generation_action_lift_attempt_passed"
+        )
+        is True
+        and certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "same_surface_h1_derived"
+        )
+        is False
+        and certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "pr230_closure_authorized"
         )
         is False
     )
@@ -3627,6 +3650,13 @@ def main() -> int:
         ),
     )
     report(
+        "z3-generation-action-lift-not-derived",
+        z3_generation_action_lift_not_derived,
+        certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "source-coordinate-transport-current-surface-closed",
         source_coordinate_transport_completion_blocks,
         certificates["pr230_source_coordinate_transport_completion"].get(
@@ -4990,6 +5020,7 @@ def main() -> int:
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "origin_main_composite_higgs_intake_not_closure": origin_main_composite_higgs_intake_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
+        "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,

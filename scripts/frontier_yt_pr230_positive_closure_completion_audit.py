@@ -28,6 +28,7 @@ PARENTS = {
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+    "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -258,6 +259,20 @@ def main() -> int:
         and "same-surface PR230 primitive premise absent"
         in parent_statuses["z3_triplet_conditional_primitive_cone"]
     )
+    z3_generation_action_lift_not_derived = (
+        certs["z3_generation_action_lift_attempt"].get(
+            "h1_generation_action_lift_attempt_passed"
+        )
+        is True
+        and certs["z3_generation_action_lift_attempt"].get("proposal_allowed")
+        is False
+        and certs["z3_generation_action_lift_attempt"].get(
+            "same_surface_h1_derived"
+        )
+        is False
+        and "Z3 generation-action lift"
+        in parent_statuses["z3_generation_action_lift_attempt"]
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -314,6 +329,7 @@ def main() -> int:
     report("source-coordinate-transport-blocked", source_coordinate_transport_blocked, parent_statuses["source_coordinate_transport_gate"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
+    report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("future-bridge-artifact-files-absent", no_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
@@ -450,6 +466,7 @@ def main() -> int:
             "source_coordinate_transport_blocked": source_coordinate_transport_blocked,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
+            "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
             "future_bridge_file_presence": future_bridge_presence,
         },
         "bare_retained_allowed": False,
