@@ -238,24 +238,24 @@ postprocessor records the same contract and computes
 before checking `|kappa_spH| = 1`/Gram purity.  Current status is still rows
 absent, proposal disallowed, and no `kappa_s = 1`.
 
-Chunks001-014 of the two-source taste-radial production wave have completed.
+Chunks001-016 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for
-chunks001-014, including production metadata, `numba_gauge_seed_v1`, the
+chunks001-016, including production metadata, `numba_gauge_seed_v1`, the
 preserved three-mass scan, selected-mass-only FH/LSZ/source rows, and
-`C_sx/C_xx` timeseries.  Chunks015-016 are active under the supervisor's
-two-worker cap.  Completed chunks001-014 are still bounded row support only:
+`C_sx/C_xx` timeseries.  Chunks017-018 are active under the supervisor's
+two-worker cap.  Completed chunks001-016 are still bounded row support only:
 they are not combined L12 evidence, pole/FV/IR evidence, canonical `O_H`,
 `kappa_s`, or top-Yukawa closure.
 
 The two-source row-combiner gate is now packaged.  It audits completed chunk
 JSON against the 63-chunk manifest and refuses to write the future combined
 measurement-row packet until every manifest chunk is present and schema-clean.
-Current result is `ready=14/63`, no bad chunk audits, and
+Current result is `ready=16/63`, no bad chunk audits, and
 `combined_rows_written=false`.  The combiner is an aggregation boundary, not
 physics evidence: partial diagnostics are not combined L12 pole evidence,
 canonical `O_H`, scalar LSZ normalization, `kappa_s`, or top-Yukawa closure.
 The combiner now also records finite-mode `rho_sx = C_sx/sqrt(C_ss C_xx)` and
-`Delta_sx = C_ss C_xx - C_sx^2` scouts for each ready mode.  On chunks001-014
+`Delta_sx = C_ss C_xx - C_sx^2` scouts for each ready mode.  On chunks001-016
 the mean finite-mode `rho_sx` values are near zero at the recorded finite row
 level, while `Delta_sx` is positive.  These are route diagnostics only:
 finite-mode, partial-chunk `C_sx/C_xx` rows are not isolated-pole residues,
@@ -264,7 +264,7 @@ not canonical `C_sH/C_HH`, and not physical Yukawa evidence.
 The Schur route now has a genuine bounded support artifact built from those
 completed rows.  `YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_SUBBLOCK_WITNESS`
 packages the finite same-ensemble source/complement block
-`G(q)=[[C_ss,C_sx],[C_sx,C_xx]]` for chunks001-014, verifies production seed
+`G(q)=[[C_ss,C_sx],[C_sx,C_xx]]` for chunks001-016, verifies production seed
 control and the non-readout alias metadata, and records positive finite
 `Delta_sx`, `C_{s|x}`, and `rho_sx` diagnostics for all ready modes.  This is
 not source-only data, so it is real Schur-route progress.  It is still not
@@ -275,7 +275,7 @@ The follow-on finite-shell Schur scout is packaged too.
 `YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_KPRIME_FINITE_SHELL_SCOUT` inverts the
 same measured 2x2 block and compares the zero mode with the first nonzero
 momentum shell.  It records a real finite-shell inverse-block slope from
-chunks001-014.  This sharpens the Schur worklist but is still support only:
+chunks001-016.  This sharpens the Schur worklist but is still support only:
 a zero-to-first-shell finite difference is not an isolated-pole `K'(pole)`
 derivative, not strict A/B/C kernel-row evidence, not FV/IR authority, not
 canonical `O_H`, and not `kappa_s`.
@@ -288,7 +288,7 @@ aliases, not canonical `C_sH/C_HH` pole rows.  The gate scans completed row
 chunks, requires finite mode rows plus alias metadata, requires zero pole
 residue rows, requires `canonical_higgs_operator_identity_passed=false`, and
 requires `used_as_physical_yukawa_readout=false`.  The current readiness result
-is `PASS=25 FAIL=0` with fourteen completed taste-radial chunks scanned; it remains
+is `PASS=25 FAIL=0` with sixteen completed taste-radial chunks scanned; it remains
 a firewall/infrastructure check only.
 
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
@@ -348,9 +348,9 @@ Best next work:
 	   top-source rows.  The row builder/postprocessor are now ready to consume
 	   the overlap/kappa contract when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
-   source using the no-resume manifest and row contract; chunks001-014 are
-   complete and checkpointed, the combiner gate records `ready=14/63` and writes
-   no combined packet, chunks015-016 are active under the two-worker launcher
+   source using the no-resume manifest and row contract; chunks001-016 are
+   complete and checkpointed, the combiner gate records `ready=16/63` and writes
+   no combined packet, chunks017-018 are active under the two-worker launcher
    cap, and after they complete the next action is rerunning the per-chunk
    checkpoint without pending mode, rerunning the combiner, then the next
    bounded wave, then prove/reject its canonical-`O_H` identity or supply

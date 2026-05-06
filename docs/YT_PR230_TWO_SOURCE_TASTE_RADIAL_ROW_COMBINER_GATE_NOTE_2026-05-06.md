@@ -34,11 +34,11 @@ diagnostics, not pole residues and not canonical source-Higgs evidence.
 
 ## Current Result
 
-Chunks001-014 are present and schema-clean.  The set is still partial:
-`ready=14/63`, so no combined row packet is written.  The finite-mode
+Chunks001-016 are present and schema-clean.  The set is still partial:
+`ready=16/63`, so no combined row packet is written.  The finite-mode
 `rho_sx`/`Delta_sx` scouts are recorded for the ready chunks only.
 
-Chunks015-016 are active under the row-wave supervisor's two-worker cap.  Live
+Chunks017-018 are active under the row-wave supervisor's two-worker cap.  Live
 status and logs are run-control state only.
 
 ## Claim Boundary

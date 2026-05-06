@@ -53,19 +53,19 @@
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   completed chunks001-014 and currently records active chunks015-016 under a
-   two-worker cap.  The completed chunks001-014 certificates pass
+   completed chunks001-016 and currently records active chunks017-018 under a
+   two-worker cap.  The completed chunks001-016 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
-   gate now records `ready=14/63`, no bad chunk audits, finite-mode
+   gate now records `ready=16/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  The Schur-subblock witness packages chunks001-014
+   chunks are schema-clean.  The Schur-subblock witness packages chunks001-016
    as a real finite same-ensemble `C_ss/C_sx/C_xx` source/complement block with
    positive finite Gram determinants, but still lacks strict `K'(pole)` A/B/C
    rows, pole derivatives, FV/IR authority, canonical `O_H`, and `kappa_s`.
    The finite-shell Schur inverse-slope scout now computes the zero-to-first-
    shell inverse-block slope from those rows.  It is a useful diagnostic for
    the Schur route, but it is not isolated-pole `K'(pole)` authority.
-   Chunks015-016 remain
+   Chunks017-018 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row

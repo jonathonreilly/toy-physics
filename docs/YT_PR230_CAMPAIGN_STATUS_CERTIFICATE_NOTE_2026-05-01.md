@@ -35,7 +35,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json`.
-Completed chunks001-014 provide a real finite same-ensemble
+Completed chunks001-016 provide a real finite same-ensemble
 source/complement correlator block for the certified taste-radial chart:
 
 ```text
@@ -55,7 +55,7 @@ closure assembly gate `PASS=133 FAIL=0`; retained-route `PASS=287 FAIL=0`;
 campaign status `PASS=320 FAIL=0`; completion audit `PASS=44 FAIL=0`.
 
 The campaign target remains open.  Chunks013-014 have completed and passed
-completed-mode checkpoints; chunks015-016 are active under the two-worker cap
+completed-mode checkpoints; chunks017-018 are active under the two-worker cap
 and remain non-evidence until completed JSON exists and completed-mode
 checkpoints pass.
 
@@ -64,7 +64,7 @@ checkpoints pass.
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json`.
 The scout inverts the finite 2x2 `C_ss/C_sx/C_xx` correlator block from
-chunks001-014 and compares the zero mode with the first nonzero momentum shell:
+chunks001-016 and compares the zero mode with the first nonzero momentum shell:
 
 ```text
 K_{s|x}(q) = C_xx(q) / (C_ss(q) C_xx(q) - C_sx(q)^2)
@@ -1644,12 +1644,12 @@ response ratios.  It also blocks using the current additive top mass FH source
 as that radial spurion.  This is support only; no retained/proposed-retained
 wording is authorized.
 
-Latest two-source taste-radial chunks013-014 checkpoint: completed-mode
-chunk checkpoints now pass `PASS=15 FAIL=0` for chunks013 and 014.  The
-row-combiner gate now records `ready=14/63`, no bad chunk audits, and
+Latest two-source taste-radial chunks015-016 checkpoint: completed-mode
+chunk checkpoints now pass `PASS=15 FAIL=0` for chunks015 and 016.  The
+row-combiner gate now records `ready=16/63`, no bad chunk audits, and
 `combined_rows_written=false`; it still writes no combined row packet.  The
-source-Higgs readiness gate scans fourteen completed taste-radial chunks and
+source-Higgs readiness gate scans sixteen completed taste-radial chunks and
 continues to classify their schema fields as explicit `C_sx/C_xx` aliases, not
-canonical `C_sH/C_HH` pole rows.  Chunks015-016 are active under the
+canonical `C_sH/C_HH` pole rows.  Chunks017-018 are active under the
 two-worker supervisor cap.  This is bounded production-row support only; no
 retained/proposed-retained wording is authorized.

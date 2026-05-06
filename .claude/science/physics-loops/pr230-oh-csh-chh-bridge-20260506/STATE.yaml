@@ -3,8 +3,8 @@ branch: codex/pr230-wroute-build
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
 active_route: two_source_taste_radial_schur_kprime_finite_shell_scout
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-014 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=14/63, finite-mode rho_sx/Delta_sx scouts, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks015-016 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
-latest_support_artifact: bounded-support / finite-shell Schur inverse-slope scout; completed chunks001-014 supply a finite zero-to-first-shell inverse-block slope for the measured C_ss/C_sx/C_xx source/complement correlator block, while strict K-prime pole rows, pole derivatives, FV/IR authority, canonical O_H authority, kappa_s, and y_t closure remain absent
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-016 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=16/63, finite-mode rho_sx/Delta_sx scouts, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks017-018 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+latest_support_artifact: bounded-support / finite-shell Schur inverse-slope scout; completed chunks001-016 supply a finite zero-to-first-shell inverse-block slope for the measured C_ss/C_sx/C_xx source/complement correlator block, while strict K-prime pole rows, pole derivatives, FV/IR authority, canonical O_H authority, kappa_s, and y_t closure remain absent
 latest_route_gate_refresh: bounded-support plus boundary / Schur route completion, assumption/import stress, full assembly, campaign, and retained-route gates now consume the finite-shell scout while preserving proposal_allowed=false
 proposal_allowed: false
 bare_retained_allowed: false
@@ -52,23 +52,23 @@ hard_residual: >
   C_sx/C_xx row bridge, or physical-response bridge that authorizes degree as
   canonical O_H identity.  Degree-one filtering is therefore support only, not
   retained/proposed-retained closure.
-  The first fourteen taste-radial row chunks have now completed and pass the
+  The first sixteen taste-radial row chunks have now completed and pass the
   completed-mode chunk checkpoint as bounded row support.  They preserve
   production metadata, numba_gauge_seed_v1 seed control, the three-mass scan,
   selected-mass-only FH/LSZ/source rows, and C_sx/C_xx timeseries.  They still
   are not combined L12 evidence, pole/FV/IR evidence, canonical O_H authority,
-  kappa_s, or y_t closure.  Chunks015-016 are currently active under the same
+  kappa_s, or y_t closure.  Chunks017-018 are currently active under the same
   two-worker supervisor and remain non-evidence until completed JSON exists and
   the completed-mode checkpoint passes.
   The row-combiner gate now audits completed chunk JSON against the manifest
   and refuses to write the future combined measurement-row packet until all 63
-  chunks are present and schema-clean.  It currently records ready=14/63
+  chunks are present and schema-clean.  It currently records ready=16/63
   chunks, no bad chunk audits, finite-mode rho_sx/Delta_sx scouts, and
   combined_rows_written=false.  This is an aggregation boundary only: partial
   diagnostics are not combined L12 pole evidence, isolated-pole Gram purity,
   canonical O_H authority, scalar LSZ normalization, kappa_s, or y_t closure.
   The two-source taste-radial Schur-subblock witness now packages completed
-  chunks001-014 into a finite same-ensemble source/complement correlator
+  chunks001-016 into a finite same-ensemble source/complement correlator
   subblock G(q)=[[C_ss,C_sx],[C_sx,C_xx]].  All ready finite rows have positive
   Delta_sx=C_ss*C_xx-C_sx^2, and the runner records C_{s|x} and rho_sx
   diagnostics.  This is a genuine Schur-route support artifact because it is
@@ -84,7 +84,7 @@ hard_residual: >
   The source-Higgs production-readiness gate now scans completed two-source
   taste-radial chunks and treats source-Higgs-shaped timeseries fields there as
   explicit C_sx/C_xx aliases unless a canonical O_H identity, pole-residue
-  packet, and physical-readout certificate exist.  The current scan sees fourteen
+  packet, and physical-readout certificate exist.  The current scan sees sixteen
   completed taste-radial chunks, finite mode rows, zero pole-residue rows,
   canonical_higgs_operator_identity_passed=false, and
   used_as_physical_yukawa_readout=false.  This prevents schema reuse from being
@@ -326,6 +326,8 @@ files_touched:
   - outputs/yt_pr230_two_source_taste_radial_chunk012_checkpoint_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chunk013_checkpoint_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chunk014_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_chunk015_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_chunk016_checkpoint_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk001_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk002_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk003_2026-05-06.json
@@ -340,6 +342,8 @@ files_touched:
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk012_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk013_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk014_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk015_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk016_2026-05-06.json
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk001/L12xT24/ensemble_measurement.json
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk002/L12xT24/ensemble_measurement.json
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk003/L12xT24/ensemble_measurement.json
@@ -354,6 +358,8 @@ files_touched:
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk012/L12xT24/ensemble_measurement.json
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk013/L12xT24/ensemble_measurement.json
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk014/L12xT24/ensemble_measurement.json
+  - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk015/L12xT24/ensemble_measurement.json
+  - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk016/L12xT24/ensemble_measurement.json
   - outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
@@ -389,6 +395,8 @@ verification:
   two_source_taste_radial_chunk012_completed_checkpoint_pass_fail: "15/0"
   two_source_taste_radial_chunk013_completed_checkpoint_pass_fail: "15/0"
   two_source_taste_radial_chunk014_completed_checkpoint_pass_fail: "15/0"
+  two_source_taste_radial_chunk015_completed_checkpoint_pass_fail: "15/0"
+  two_source_taste_radial_chunk016_completed_checkpoint_pass_fail: "15/0"
   two_source_taste_radial_row_combiner_gate_pass_fail: "13/0"
   two_source_taste_radial_schur_subblock_witness_pass_fail: "16/0"
   two_source_taste_radial_schur_kprime_finite_shell_scout_pass_fail: "14/0"
@@ -421,12 +429,12 @@ next_exact_action: >
   The genuine two-source source-coordinate lane now has an exact taste-radial
   chart, a concrete gauge-covariant taste-radial action/source vertex, an
   explicit C_sx/C_xx row contract, a no-resume production manifest,
-  completed-mode checkpoints for chunks001-014, and a combiner gate that
+  completed-mode checkpoints for chunks001-016, and a combiner gate that
   refuses to write the future combined row packet until all 63 chunks are
   schema-clean while recording finite-mode rho_sx/Delta_sx scouts as
   non-evidence diagnostics only.  The Schur-subblock witness now records the
   finite same-ensemble G(q)=[[C_ss,C_sx],[C_sx,C_xx]] subblock and positive
-  finite Delta_sx for chunks001-014, but strict K-prime pole rows, A/B/C
+  finite Delta_sx for chunks001-016, but strict K-prime pole rows, A/B/C
   derivatives, canonical O_H authority, scalar LSZ/FV/IR authority, and
   kappa_s remain absent.  The finite-shell Schur inverse-slope scout now
   computes the corresponding zero-to-first-shell inverse-block slope, but this
@@ -434,7 +442,7 @@ next_exact_action: >
   authority.  The source-Higgs readiness gate now also scans completed
   taste-radial chunks and records their source-Higgs-shaped fields as C_sx/C_xx
   aliases, not canonical C_sH/C_HH rows, with canonical O_H identity false and
-  no physical readout.  Chunks015-016 are active under the two-worker cap and remain
+  no physical readout.  Chunks017-018 are active under the two-worker cap and remain
   non-evidence until completed JSON exists and completed-mode checkpoints pass.
   After each active chunk finishes, rerun the per-chunk checkpoint without
   --allow-pending-active, then launch the next safe bounded wave and rerun the
@@ -513,7 +521,8 @@ stop_condition: >
   and refreshing that combiner to ready=10/63 while leaving canonical O_H,
   scalar-LSZ normalization, combined pole rows, and closure open, then packaging
   completed chunks011-012 and refreshing that combiner to ready=12/63, then
-  packaging completed chunks013-014 and refreshing that combiner to ready=14/63 while
+  packaging completed chunks013-014 and refreshing that combiner to ready=14/63,
+  then packaging completed chunks015-016 and refreshing that combiner to ready=16/63 while
   leaving canonical O_H, scalar-LSZ normalization, combined pole rows, and
   closure open, then packaging the finite two-source Schur-subblock witness as
   bounded support while leaving strict K-prime pole rows, A/B/C derivatives,
