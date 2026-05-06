@@ -70,6 +70,11 @@
    `C_f=K_xx` for the same chunks001-016.  This is bounded row support for
    the Schur contract only; it is not strict neutral-kernel pole-row
    authority, not FV/IR authority, and not canonical `O_H`.
+   The finite-to-pole lift gate now blocks the endpoint-promotion shortcut:
+   finite zero/shell `A_f/B_f/C_f` endpoint rows do not determine pole
+   derivatives, because endpoint-preserving interpolation changes `f'(0)`.
+   The strict Schur path therefore needs a real model-class/pole/FV/IR theorem
+   or direct strict neutral-kernel pole rows, not just finite endpoint secants.
    Chunks017-018 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
@@ -95,10 +100,11 @@
    sector.  Do not treat H2 cone support as H3/H4.
 4. Schur A/B/C row production from a real neutral kernel basis, now informed by
    the bounded `C_ss/C_sx/C_xx` source/complement subblock witness, finite-
-   shell inverse-slope scout, and finite inverse `A_f/B_f/C_f` rows.  The next
-   Schur artifact must turn finite inverse-correlator rows into strict
-   neutral-kernel pole-row authority with FV/IR control, or prove that the
-   source/complement block cannot saturate the required scalar pole.
+   shell inverse-slope scout, finite inverse `A_f/B_f/C_f` rows, and the
+   finite-to-pole endpoint nonidentifiability gate.  The next Schur artifact
+   must supply a model-class/pole/FV/IR theorem or direct strict neutral-kernel
+   pole-row authority, or prove that the source/complement block cannot
+   saturate the required scalar pole.
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
    authority, strict non-observed `g2`, and the radial-spurion/no-independent-
    top-source action contract if the route uses response ratios to cancel the

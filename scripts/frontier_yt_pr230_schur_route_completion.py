@@ -22,6 +22,7 @@ PARENTS = {
     "two_source_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json",
     "two_source_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
     "two_source_schur_abc_finite_rows": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
+    "two_source_schur_pole_lift_gate": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
     "neutral_offdiagonal_generator": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
     "candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
 }
@@ -175,6 +176,21 @@ def main() -> int:
         is False
         and certs["two_source_schur_abc_finite_rows"].get("proposal_allowed") is False
     )
+    two_source_pole_lift_blocks = (
+        "finite Schur A/B/C rows do not lift to strict pole-row authority"
+        in statuses["two_source_schur_pole_lift_gate"]
+        and certs["two_source_schur_pole_lift_gate"].get(
+            "two_source_taste_radial_schur_pole_lift_gate_passed"
+        )
+        is True
+        and certs["two_source_schur_pole_lift_gate"].get("strict_pole_lift_passed")
+        is False
+        and certs["two_source_schur_pole_lift_gate"].get(
+            "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True
+        and certs["two_source_schur_pole_lift_gate"].get("proposal_allowed") is False
+    )
     neutral_basis_absent = (
         certs["neutral_offdiagonal_generator"].get("offdiagonal_generator_written") is False
         and not any(futures.values())
@@ -205,6 +221,11 @@ def main() -> int:
         two_source_abc_finite_rows_support,
         statuses["two_source_schur_abc_finite_rows"],
     )
+    report(
+        "two-source-schur-pole-lift-blocks-finite-endpoint-promotion",
+        two_source_pole_lift_blocks,
+        statuses["two_source_schur_pole_lift_gate"],
+    )
     report("strict-neutral-kernel-rows-still-absent", neutral_basis_absent, str(futures))
     report("forbidden-firewall-clean", clean_firewall, str(firewall()))
 
@@ -221,11 +242,12 @@ def main() -> int:
         and two_source_subblock_support
         and two_source_kprime_finite_shell_scout
         and two_source_abc_finite_rows_support
+        and two_source_pole_lift_blocks
         and neutral_basis_absent
         and clean_firewall
     )
     result = {
-        "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock, finite inverse A/B/C rows, and finite-shell inverse-slope support present",
+        "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock, finite inverse A/B/C rows, finite-shell inverse-slope support, and finite-to-pole lift boundary present",
         "conditional_surface_status": "The Schur route remains hard-physics open if a same-surface neutral kernel basis plus A/B/C rows or equivalent row theorem is supplied.",
         "proposal_allowed": False,
         "proposal_allowed_reason": "The two-source taste-radial chunks now supply finite C_ss/C_sx/C_xx correlator subblocks, finite inverse A/B/C rows, and a finite-shell inverse-block slope scout for a certified s/x chart, but strict Schur K-prime closure still lacks neutral-kernel pole rows, derivatives, isolated-pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority.",
@@ -235,6 +257,7 @@ def main() -> int:
         "two_source_correlator_subblock_support_loaded": two_source_subblock_support,
         "two_source_finite_shell_kprime_scout_loaded": two_source_kprime_finite_shell_scout,
         "two_source_finite_schur_abc_rows_loaded": two_source_abc_finite_rows_support,
+        "two_source_schur_pole_lift_boundary_loaded": two_source_pole_lift_blocks,
         "strict_schur_kernel_rows_present": False,
         "future_artifact_presence": futures,
         "parent_certificates": PARENTS,

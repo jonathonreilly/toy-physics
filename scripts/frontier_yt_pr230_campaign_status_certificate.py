@@ -629,6 +629,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_schur_abc_finite_rows": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_schur_pole_lift_gate": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2805,6 +2808,26 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_schur_abc_finite_rows"],
     )
+    two_source_taste_radial_schur_pole_lift_gate = certificates[
+        "pr230_two_source_taste_radial_schur_pole_lift_gate"
+    ]
+    report(
+        "pr230-two-source-taste-radial-schur-pole-lift-gate-blocks-endpoint-promotion",
+        "finite Schur A/B/C rows do not lift to strict pole-row authority"
+        in str(statuses["pr230_two_source_taste_radial_schur_pole_lift_gate"])
+        and two_source_taste_radial_schur_pole_lift_gate.get("proposal_allowed") is False
+        and two_source_taste_radial_schur_pole_lift_gate.get(
+            "two_source_taste_radial_schur_pole_lift_gate_passed"
+        )
+        is True
+        and two_source_taste_radial_schur_pole_lift_gate.get("strict_pole_lift_passed")
+        is False
+        and two_source_taste_radial_schur_pole_lift_gate.get(
+            "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True,
+        statuses["pr230_two_source_taste_radial_schur_pole_lift_gate"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -4804,6 +4827,21 @@ def main() -> int:
             "canonical_higgs_operator_identity_passed"
         )
         is False
+    )
+    result[
+        "two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion"
+    ] = (
+        two_source_taste_radial_schur_pole_lift_gate.get(
+            "two_source_taste_radial_schur_pole_lift_gate_passed"
+        )
+        is True
+        and two_source_taste_radial_schur_pole_lift_gate.get("proposal_allowed") is False
+        and two_source_taste_radial_schur_pole_lift_gate.get("strict_pole_lift_passed")
+        is False
+        and two_source_taste_radial_schur_pole_lift_gate.get(
+            "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True
     )
     result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
         taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")

@@ -1,0 +1,138 @@
+{
+  "actual_current_surface_status": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support only after complete combined rows, a certified neutral scalar kernel basis, isolated-pole derivative rows or an accepted model class, FV/IR zero-mode limiting order, and canonical O_H/source-overlap or same-source W/Z response authority are supplied",
+  "endpoint_derivative_nonidentifiability_witness_passed": true,
+  "exact_next_action": "Complete and combine the row packet, then supply either an accepted model-class/pole-derivative theorem with FV/IR control or direct strict neutral-kernel A/B/C pole rows.  Without that, pivot to O_H/C_sH/C_HH rows or same-source W/Z response.",
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_endpoint_secant_as_kprime_pole": false,
+    "treated_finite_abc_rows_as_strict_pole_rows": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_reduced_cold_pilots_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "interpolation_witness": {
+    "assumption_for_strongest_possible_current_lift": "Treat the zero-mode point as if it were the pole.  The derivative is still not fixed by two endpoint values without a model class.",
+    "p_hat_sq_shell_mean": 0.26794919243112264,
+    "p_hat_sq_zero": 0.0,
+    "rows": {
+      "A": {
+        "derivative_spread": 0.2679491924311227,
+        "endpoint_preserving_variants": [
+          {
+            "derivative_at_zero_if_zero_is_pole": -0.7174363902244038,
+            "endpoint_residual_max": 0.0,
+            "f_shell": 7.976942898556095,
+            "f_zero": 8.169179399937423,
+            "lambda": 0.0
+          },
+          {
+            "derivative_at_zero_if_zero_is_pole": -0.9853855826555264,
+            "endpoint_residual_max": 0.0,
+            "f_shell": 7.976942898556095,
+            "f_zero": 8.169179399937423,
+            "lambda": 1.0
+          }
+        ],
+        "shell_minus_zero_over_dp": -0.7174363902244038,
+        "shell_value": 7.976942898556095,
+        "zero_value": 8.169179399937423
+      },
+      "B": {
+        "derivative_spread": 0.26794919243112264,
+        "endpoint_preserving_variants": [
+          {
+            "derivative_at_zero_if_zero_is_pole": -0.00014531310128580488,
+            "endpoint_residual_max": 0.0,
+            "f_shell": 0.00024130018536742395,
+            "f_zero": 0.0002802367135066173,
+            "lambda": 0.0
+          },
+          {
+            "derivative_at_zero_if_zero_is_pole": -0.26809450553240843,
+            "endpoint_residual_max": 0.0,
+            "f_shell": 0.00024130018536742395,
+            "f_zero": 0.0002802367135066173,
+            "lambda": 1.0
+          }
+        ],
+        "shell_minus_zero_over_dp": -0.00014531310128580488,
+        "shell_value": 0.00024130018536742395,
+        "zero_value": 0.0002802367135066173
+      },
+      "C": {
+        "derivative_spread": 0.26794919243112264,
+        "endpoint_preserving_variants": [
+          {
+            "derivative_at_zero_if_zero_is_pole": 0.5571074326137716,
+            "endpoint_residual_max": 0.0,
+            "f_shell": 3.7101133242404662,
+            "f_zero": 3.56083683757423,
+            "lambda": 0.0
+          },
+          {
+            "derivative_at_zero_if_zero_is_pole": 0.28915824018264896,
+            "endpoint_residual_max": 0.0,
+            "f_shell": 3.7101133242404662,
+            "f_zero": 3.56083683757423,
+            "lambda": 1.0
+          }
+        ],
+        "shell_minus_zero_over_dp": 0.5571074326137716,
+        "shell_value": 3.7101133242404662,
+        "zero_value": 3.56083683757423
+      }
+    }
+  },
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "finite_abc_rows": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "schur_kernel_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "finite_abc_rows": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
+    "retained_route": "open / retained closure not yet reached",
+    "schur_kernel_contract": "open / Schur kernel row contract gate not passed; current rows absent",
+    "schur_route_completion": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock, finite inverse A/B/C rows, finite-shell inverse-slope support, and finite-to-pole lift boundary present",
+    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite inverse rows are endpoint data.  The interpolation witness keeps the endpoint rows fixed while changing the derivative, so the strict K'(pole)/A'B'C' authority is not present on the current surface.",
+  "ready_chunks": 16,
+  "strict_blockers": {
+    "canonical_higgs_identity_absent": true,
+    "combined_rows_packet_written_absent": true,
+    "complete_63_of_63_combined_packet_absent": true,
+    "endpoint_values_do_not_fix_derivative": true,
+    "fv_ir_zero_mode_authority_absent": true,
+    "isolated_pole_derivative_rows_absent": true,
+    "strict_neutral_kernel_abc_rows_absent": true,
+    "strict_schur_contract_gate_not_passed": true
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat finite A_f/B_f/C_f rows as strict pole rows",
+    "does not treat endpoint secants as K'(pole)",
+    "does not provide FV/IR or scalar threshold authority",
+    "does not identify taste-radial x with canonical O_H",
+    "does not set kappa_s = 1, c2 = 1, or Z_match = 1"
+  ],
+  "strict_pole_lift_passed": false,
+  "two_source_taste_radial_schur_pole_lift_gate_passed": true
+}

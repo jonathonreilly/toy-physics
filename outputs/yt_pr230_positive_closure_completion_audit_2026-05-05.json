@@ -352,6 +352,7 @@
               "compressed scalar denominator and pole derivative do not reconstruct A/B/C rows",
               "outside-math row-definition machinery still lacks a same-surface neutral kernel basis and projector",
               "finite inverse A/B/C rows from C_ss/C_sx/C_xx are bounded support, not strict pole rows",
+              "finite endpoint inverse rows do not determine K'(pole) without a model class and FV/IR authority",
               "canonical bridge still required after K-prime sufficiency"
             ],
             "parents": [
@@ -360,6 +361,7 @@
               "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
               "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
               "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
+              "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
               "outputs/yt_pr230_schur_route_completion_2026-05-06.json"
             ],
             "passes_current_surface": false

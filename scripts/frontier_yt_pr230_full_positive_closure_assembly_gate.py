@@ -106,6 +106,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_abc_finite_rows": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
+    "pr230_two_source_taste_radial_schur_pole_lift_gate": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -358,6 +359,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "compressed scalar denominator and pole derivative do not reconstruct A/B/C rows",
                 "outside-math row-definition machinery still lacks a same-surface neutral kernel basis and projector",
                 "finite inverse A/B/C rows from C_ss/C_sx/C_xx are bounded support, not strict pole rows",
+                "finite endpoint inverse rows do not determine K'(pole) without a model class and FV/IR authority",
                 "canonical bridge still required after K-prime sufficiency",
             ],
             "parents": [
@@ -366,6 +368,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["schur_compressed_bootstrap_no_go"],
                 PARENTS["schur_abc_definition_derivation"],
                 PARENTS["pr230_two_source_taste_radial_schur_abc_finite_rows"],
+                PARENTS["pr230_two_source_taste_radial_schur_pole_lift_gate"],
                 PARENTS["pr230_schur_route_completion"],
             ],
         },
@@ -813,6 +816,26 @@ def main() -> int:
             "canonical_higgs_operator_identity_passed"
         )
         is False
+    )
+    two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion = (
+        "finite Schur A/B/C rows do not lift to strict pole-row authority"
+        in statuses["pr230_two_source_taste_radial_schur_pole_lift_gate"]
+        and certs["pr230_two_source_taste_radial_schur_pole_lift_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_schur_pole_lift_gate"].get(
+            "two_source_taste_radial_schur_pole_lift_gate_passed"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_schur_pole_lift_gate"].get(
+            "strict_pole_lift_passed"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_schur_pole_lift_gate"].get(
+            "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
         "degree-one taste-radial uniqueness"
@@ -1803,6 +1826,11 @@ def main() -> int:
         "two-source-taste-radial-schur-abc-finite-rows-not-closure",
         two_source_taste_radial_schur_abc_finite_rows_not_closure,
         statuses["pr230_two_source_taste_radial_schur_abc_finite_rows"],
+    )
+    report(
+        "two-source-taste-radial-schur-pole-lift-gate-blocks-endpoint-promotion",
+        two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion,
+        statuses["pr230_two_source_taste_radial_schur_pole_lift_gate"],
     )
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -2813,6 +2841,7 @@ def main() -> int:
         "two_source_taste_radial_schur_subblock_support_not_closure": two_source_taste_radial_schur_subblock_support_not_closure,
         "two_source_taste_radial_kprime_finite_shell_scout_not_closure": two_source_taste_radial_kprime_scout_not_closure,
         "two_source_taste_radial_schur_abc_finite_rows_not_closure": two_source_taste_radial_schur_abc_finite_rows_not_closure,
+        "two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion": two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

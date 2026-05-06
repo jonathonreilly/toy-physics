@@ -361,3 +361,28 @@ Local verification completed:
   assumption/import stress PASS=75 FAIL=0, full assembly PASS=134 FAIL=0,
   campaign status PASS=321 FAIL=0, retained route PASS=288 FAIL=0, and
   positive-closure completion audit PASS=44 FAIL=0.
+- finite-to-pole Schur lift gate packaged:
+  `frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py`
+  PASS=13 FAIL=0.  The gate proves finite zero/shell endpoint rows and
+  endpoint secants do not determine `K'(pole)`: the endpoint-preserving
+  interpolation witness keeps finite `A_f/B_f/C_f` values fixed while changing
+  the derivative, preserving the model-class, isolated-pole, FV/IR, canonical
+  `O_H`, `kappa_s`, and closure firewalls;
+- Schur route completion refreshed to consume the pole-lift boundary:
+  `frontier_yt_pr230_schur_route_completion.py` PASS=15 FAIL=0 and still
+  records strict pole rows absent plus proposal disallowed;
+- aggregate gates after the pole-lift block:
+  assumption/import stress PASS=76 FAIL=0, full assembly PASS=135 FAIL=0,
+  campaign status PASS=322 FAIL=0, retained route PASS=289 FAIL=0, and
+  positive-closure completion audit PASS=44 FAIL=0.
+- final pole-lift validation: `python3 -m py_compile` for the pole-lift,
+  Schur, assumption/import, full assembly, campaign, retained-route, and
+  completion-audit runners was clean; pole-lift PASS=13 FAIL=0, Schur route
+  PASS=15 FAIL=0, assumption/import stress PASS=76 FAIL=0, full assembly
+  PASS=135 FAIL=0, campaign status PASS=322 FAIL=0, retained route PASS=289
+  FAIL=0, and completion audit PASS=44 FAIL=0; `git diff --check` and
+  anchored conflict-marker scan were clean; `bash docs/audit/scripts/run_pipeline.sh`
+  completed with no errors; `python3 docs/audit/scripts/audit_lint.py --strict`
+  reported no errors and the same five pre-existing warnings.  Audit metadata
+  was kept intentionally because edited PR230 note hashes must be seeded for
+  strict lint in the committed state.

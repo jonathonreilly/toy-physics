@@ -288,6 +288,14 @@ This is real finite row support for the Schur contract, but it is not strict
 neutral-kernel A/B/C pole-row authority, not isolated-pole `K'(pole)`, not
 FV/IR authority, not canonical `O_H`, not `kappa_s`, and not closure.
 
+The finite-to-pole lift gate is now packaged as the matching strict boundary.
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_POLE_LIFT_GATE` proves that finite
+zero/shell endpoint rows cannot determine the pole derivative.  The witness
+`f_lambda(x)=f(0)+((f(dp)-f(0))/dp)x+lambda x(x-dp)` preserves both endpoint
+values while changing `f_lambda'(0)`.  This blocks treating finite
+`A_f/B_f/C_f` rows or endpoint secants as strict `K'(pole)` authority without a
+model-class, isolated-pole, and FV/IR theorem.
+
 The source-Higgs production-readiness gate has been hardened against a subtle
 schema overread.  Completed two-source taste-radial row artifacts populate
 legacy source-Higgs-shaped fields for finite timeseries transport, but the row
@@ -359,7 +367,8 @@ Best next work:
    source using the no-resume manifest and row contract; chunks001-016 are
    complete and checkpointed, the combiner gate records `ready=16/63` and writes
    no combined packet, the Schur subblock, finite-shell slope, and finite
-   `A_f/B_f/C_f` inverse rows are support-only diagnostics, chunks017-018 are
+   `A_f/B_f/C_f` inverse rows are support-only diagnostics, the pole-lift gate
+   blocks endpoint secants as derivative authority, chunks017-018 are
    active under the two-worker launcher cap, and after they complete the next
    action is rerunning the per-chunk checkpoint without pending mode, rerunning
    the combiner, then the next bounded wave, then prove/reject its
@@ -371,9 +380,9 @@ Best next work:
 3. derive the remaining neutral primitive premises after H1/H2 support:
    a physical lazy positive transfer/action or off-diagonal generator (H3),
    plus coupling to the PR230 source/canonical-Higgs sector (H4);
-4. turn the finite `A_f/B_f/C_f` inverse rows into strict neutral-kernel
-   A/B/C pole rows with FV/IR control, or prove that the current
-   source/complement block cannot saturate the required scalar pole;
+4. supply a model-class/pole/FV/IR theorem or direct strict neutral-kernel
+   A/B/C pole rows for the finite `A_f/B_f/C_f` block, or prove that the
+   current source/complement block cannot saturate the required scalar pole;
 5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`
    authority are also supplied.
 
@@ -399,6 +408,9 @@ Do not close it by treating finite-mode `rho_sx` or `Delta_sx` scouts from the
 partial combiner as pole-residue Gram purity.
 Do not close it by treating finite Schur `A_f/B_f/C_f` inverse rows as strict
 neutral-kernel A/B/C pole rows or isolated-pole `K'(pole)` authority.
+Do not close it by treating finite endpoint secants as pole derivatives; the
+pole-lift gate constructs endpoint-preserving functions with different
+derivatives.
 Do not close it by treating Z3 positive-cone H2 support as a physical neutral
 transfer, primitive irreducibility theorem, source-Higgs coupling, or
 canonical-Higgs authority.

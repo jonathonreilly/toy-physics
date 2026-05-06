@@ -89,6 +89,12 @@ Allowed context:
   but finite inverse-correlator rows are not strict neutral-kernel A/B/C
   pole rows, are not isolated-pole `K'(pole)` derivatives, do not provide
   FV/IR authority, and do not identify `x` with canonical `O_H`.
+- the two-source taste-radial Schur pole-lift gate as an exact current-surface
+  boundary only: it proves finite endpoint rows do not determine the pole
+  derivative even if the zero-mode endpoint is treated as the pole, so finite
+  `A_f/B_f/C_f` rows and endpoint secants cannot be promoted to strict
+  `K'(pole)` or neutral-kernel pole-row authority without a model-class,
+  isolated-pole, and FV/IR theorem.
 - the taste-radial canonical-`O_H` selector gate as exact conditional support
   only: it proves the cyclic degree-one radial source is unique in
   `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
@@ -264,6 +270,12 @@ Open imports after this block:
   not canonical `O_H`, and not `kappa_s`.
 - Exact stress phrase: finite inverse-correlator rows are not strict
   neutral-kernel A/B/C pole rows.
+- Finite endpoint secants are not proof selectors; endpoint-preserving
+  interpolation can keep finite `A_f/B_f/C_f` values fixed while changing the
+  derivative, so a model-class/pole/FV/IR authority is required before using a
+  derivative as `K'(pole)`.
+- Exact stress phrase: finite endpoint values do not determine the pole
+  derivative.
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.

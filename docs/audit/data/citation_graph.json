@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T19:39:51.051412+00:00",
+  "generated_at": "2026-05-06T23:51:10.425444+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "b1f94b1eae8d89661257803f3bdb965baae21f9c220156215ff148416ae5467f",
+      "note_hash": "d0512ec23b4b371e67ce464a4e09c8ec1f9c5f22e0f589d4299bd0dbfd928c45",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -42073,7 +42073,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "a79c0178b7d7306fdaadb3fdd948888791272ced0f07603b733d0ecf911bdafb",
+      "note_hash": "de1b5d10ee92407a472d8a004211b7748c4ef49c79e48c47261843789151ed27",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -42213,7 +42213,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
       "deps": [],
-      "note_hash": "146075b0f1232525e81f138e515f0cdc7c29f5f0a2785ba9bd2fd06f8670fbeb",
+      "note_hash": "957d090d71c1ff3293031f8febdf57dcb7bada2e080b2d5d3f691866bdbc2095",
       "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py",
       "title": "PR230 Neutral Primitive Route Completion"
@@ -42598,6 +42598,16 @@
       "runner_path": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py",
       "title": "YT PR230 Queue Exhaustion Certificate Note"
     },
+    "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06": {
+      "claim_id": "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "exact-support / conditional theorem; current additive-source shortcut blocked",
+      "deps": [],
+      "note_hash": "26f0a487690cafb490e90f409ea3b4d568452498dd17ec248af7740984b59fdb",
+      "path": "docs/YT_PR230_RADIAL_SPURION_SECTOR_OVERLAP_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_radial_spurion_sector_overlap_theorem.py",
+      "title": "PR230 Radial-Spurion Sector-Overlap Theorem"
+    },
     "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05",
       "current_status": "unknown",
@@ -42617,6 +42627,26 @@
       "path": "docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md",
       "runner_path": null,
       "title": "YT PR230 Review-Backpressure Pass Note"
+    },
+    "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06": {
+      "claim_id": "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / ansatz-only action-adoption shortcut blocked.",
+      "deps": [],
+      "note_hash": "909c08b897e54c3d7dae942a06126f4f064c3d7cbda558d50ac80191c2d90233",
+      "path": "docs/YT_PR230_SAME_SOURCE_EW_ACTION_ADOPTION_ATTEMPT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_same_source_ew_action_adoption_attempt.py",
+      "title": "YT PR230 Same-Source EW Action Adoption Attempt Note"
+    },
+    "yt_pr230_same_source_ew_higgs_action_ansatz_gate_note_2026-05-06": {
+      "claim_id": "yt_pr230_same_source_ew_higgs_action_ansatz_gate_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "conditional support only.  No top-Yukawa closure proposal is",
+      "deps": [],
+      "note_hash": "8114b45a905db3465cb4383e7be308fa83929d6f23b39cb1d11d505c2e890500",
+      "path": "docs/YT_PR230_SAME_SOURCE_EW_HIGGS_ACTION_ANSATZ_GATE_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py",
+      "title": "YT PR230 Same-Source EW/Higgs Action Ansatz Gate Note"
     },
     "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06": {
       "claim_id": "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
@@ -42661,9 +42691,9 @@
     "yt_pr230_schur_route_completion_note_2026-05-06": {
       "claim_id": "yt_pr230_schur_route_completion_note_2026-05-06",
       "current_status": "unknown",
-      "current_status_raw": "exact negative boundary / Schur `A/B/C` route not complete on current PR230 surface",
+      "current_status_raw": "exact negative boundary / strict Schur `A/B/C` route not complete;",
       "deps": [],
-      "note_hash": "6ced823d4bcf3a0d4a663bfca0042b3d47e52e9f2f16a4f49da9968ab0472b97",
+      "note_hash": "b7eb37f70f72493320d2494b6f3221b8ab3a31e2b4a5ad0d44b7200aec6b11a8",
       "path": "docs/YT_PR230_SCHUR_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_schur_route_completion.py",
       "title": "PR230 Schur Route Completion"
@@ -42763,7 +42793,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / row-chunk schema checkpoint infrastructure.",
       "deps": [],
-      "note_hash": "63803adef1651866eb9536620bf123effe46c9899e8a264d86f72f6657fc4af1",
+      "note_hash": "b2b46ac62fea255870a1cb5e7adc73c9730896b1ddeb007066198d362deb6ebe",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"
@@ -42773,7 +42803,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / partial `C_sx/C_xx` row combiner gate.",
       "deps": [],
-      "note_hash": "8fc9c3054f6a67b4018c101ae7803bc3f8952a3f4fe71a50d218590c2d10caba",
+      "note_hash": "c168ae4a124a9d7fbc1773cd16d2b6a1ce236d564cdf3a6129ac0ed9d4ad5e11",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_COMBINER_GATE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py",
       "title": "PR230 Two-Source Taste-Radial Row Combiner Gate"
@@ -42807,6 +42837,46 @@
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_WAVE_LAUNCHER_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py",
       "title": "PR230 Two-Source Taste-Radial Row Wave Launcher Note"
+    },
+    "yt_pr230_two_source_taste_radial_schur_abc_finite_rows_note_2026-05-06": {
+      "claim_id": "yt_pr230_two_source_taste_radial_schur_abc_finite_rows_note_2026-05-06",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / finite Schur A/B/C inverse-block rows from",
+      "deps": [],
+      "note_hash": "477d41bb70f02ad3e6144b3bce01cd091fbe8bab414a5c5311a85030d1a105ec",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_ABC_FINITE_ROWS_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py",
+      "title": "PR230 Two-Source Taste-Radial Schur A/B/C Finite Rows"
+    },
+    "yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_note_2026-05-06": {
+      "claim_id": "yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_note_2026-05-06",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / finite-shell Schur inverse-slope scout from",
+      "deps": [],
+      "note_hash": "01853e05d4d8002810af1b6a6ebd26ff4384c635fe638b0033f613ebee2e2a44",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_KPRIME_FINITE_SHELL_SCOUT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py",
+      "title": "PR230 Two-Source Taste-Radial Schur K-Prime Finite-Shell Scout"
+    },
+    "yt_pr230_two_source_taste_radial_schur_pole_lift_gate_note_2026-05-06": {
+      "claim_id": "yt_pr230_two_source_taste_radial_schur_pole_lift_gate_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / finite Schur A/B/C rows do not lift to",
+      "deps": [],
+      "note_hash": "b3aabbbe3f571e07b4d3837d8992249d7a9bab04bacc5e9a5515c9845ce42b93",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_POLE_LIFT_GATE_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py",
+      "title": "PR230 Two-Source Taste-Radial Schur Pole-Lift Gate"
+    },
+    "yt_pr230_two_source_taste_radial_schur_subblock_witness_note_2026-05-06": {
+      "claim_id": "yt_pr230_two_source_taste_radial_schur_subblock_witness_note_2026-05-06",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / two-source taste-radial Schur-subblock witness; strict Schur `K'(pole)` rows and canonical `O_H` authority absent",
+      "deps": [],
+      "note_hash": "3dc3ee9d4113b54fa31f682db841e560dbc64bc90b69ac59e2d639ec40beebde",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_SUBBLOCK_WITNESS_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py",
+      "title": "PR230 Two-Source Taste-Radial Schur-Subblock Witness"
     },
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05": {
       "claim_id": "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
@@ -42883,10 +42953,20 @@
       "current_status": "support",
       "current_status_raw": "conditional-support / exact Z3-triplet primitive-cone theorem;",
       "deps": [],
-      "note_hash": "a3fba0392d2539b3a3567b3e5a10e8160d8a5c22cb358f5d806eef241ad68648",
+      "note_hash": "280e9c1895d3c448023bb70666d1b1736d0714d81ca70bd90aa5cd03de88364d",
       "path": "docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py",
       "title": "PR230 Z3-Triplet Conditional Primitive-Cone Theorem"
+    },
+    "yt_pr230_z3_triplet_positive_cone_support_certificate_note_2026-05-06": {
+      "claim_id": "yt_pr230_z3_triplet_positive_cone_support_certificate_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
+      "deps": [],
+      "note_hash": "ae6c2445ec64e6be188ca36788427a3917a2e3bac2f16f8ef363a878db648a64",
+      "path": "docs/YT_PR230_Z3_TRIPLET_POSITIVE_CONE_SUPPORT_CERTIFICATE_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_z3_triplet_positive_cone_support_certificate.py",
+      "title": "PR230 Z3 Triplet Positive-Cone Support Certificate"
     },
     "yt_production_resource_projection_note_2026-05-01": {
       "claim_id": "yt_production_resource_projection_note_2026-05-01",
@@ -43589,7 +43669,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "d5355ab2dc1431ddb7c1dd1bf97f4bffa4cbe9329758564e59ac17327db60dae",
+      "note_hash": "c0eb055ba5e73f87d53af478102ce253106486d4b8c8a8bffd2e300ed1d6d6ce",
       "path": "docs/YT_SOURCE_HIGGS_PRODUCTION_READINESS_GATE_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_source_higgs_production_readiness_gate.py",
       "title": "PR #230 Source-Higgs Production Readiness Gate"
@@ -45616,8 +45696,11 @@
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
     "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
+    "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06",
     "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
+    "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06",
+    "yt_pr230_same_source_ew_higgs_action_ansatz_gate_note_2026-05-06",
     "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
     "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
@@ -45637,6 +45720,10 @@
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_production_manifest_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_wave_launcher_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_schur_abc_finite_rows_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_schur_pole_lift_gate_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_schur_subblock_witness_note_2026-05-06",
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
     "yt_pr230_wz_response_route_completion_note_2026-05-06",
@@ -45645,6 +45732,7 @@
     "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06",
     "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
+    "yt_pr230_z3_triplet_positive_cone_support_certificate_note_2026-05-06",
     "yt_production_resource_projection_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
     "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02",
@@ -45763,17 +45851,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1101,
-    "node_count": 2054,
-    "root_count": 1567,
-    "runners_with_path": 1550,
+    "leaf_count": 1109,
+    "node_count": 2062,
+    "root_count": 1575,
+    "runners_with_path": 1558,
     "status_counts": {
-      "bounded": 562,
+      "bounded": 565,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 442,
-      "unknown": 574
+      "support": 445,
+      "unknown": 576
     }
   }
 }

@@ -28,8 +28,36 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=321 FAIL=0
+# SUMMARY: PASS=322 FAIL=0
 ```
+
+## 2026-05-06 Two-Source Taste-Radial Schur Pole-Lift Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json`.
+The gate blocks the finite-endpoint promotion shortcut for the measured
+finite `A_f/B_f/C_f` rows from chunks001-016.
+
+Even granting the favorable assumption that the zero-mode point is the pole,
+two endpoint values do not determine the pole derivative:
+
+```text
+f_lambda(x) = f(0) + ((f(dp)-f(0))/dp) x + lambda x (x-dp)
+```
+
+This family preserves `f(0)` and `f(dp)` while changing `f_lambda'(0)`.
+Therefore finite inverse rows and finite shell secants are not strict
+neutral-kernel A/B/C pole-row authority, not isolated-pole `K'(pole)`, not
+FV/IR authority, not canonical `O_H`, and not `kappa_s`.
+
+Validation: pole-lift gate `PASS=13 FAIL=0`; Schur route completion
+`PASS=15 FAIL=0`; assumption/import stress `PASS=76 FAIL=0`; full positive
+closure assembly gate `PASS=135 FAIL=0`; retained-route `PASS=289 FAIL=0`;
+campaign status `PASS=322 FAIL=0`.
+
+The campaign target remains open.  The next strict Schur action is complete
+row production plus either a model-class/pole-derivative theorem with FV/IR
+control or direct strict neutral-kernel A/B/C pole rows.
 
 ## 2026-05-06 Two-Source Taste-Radial Schur A/B/C Finite-Row Update
 

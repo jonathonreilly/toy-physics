@@ -179,6 +179,9 @@ def main() -> int:
         "two_source_taste_radial_schur_abc_finite_rows": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json"
         ),
+        "two_source_taste_radial_schur_pole_lift_gate": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -1068,6 +1071,29 @@ def main() -> int:
         )
         is False,
         two_source_abc_finite_rows.get("actual_current_surface_status"),
+    )
+    two_source_pole_lift_gate = certificates[
+        "two_source_taste_radial_schur_pole_lift_gate"
+    ]
+    report(
+        "two-source-taste-radial-schur-pole-lift-gate-blocks-endpoint-promotion",
+        "finite Schur A/B/C rows do not lift to strict pole-row authority"
+        in str(two_source_pole_lift_gate.get("actual_current_surface_status"))
+        and two_source_pole_lift_gate.get("proposal_allowed") is False
+        and two_source_pole_lift_gate.get(
+            "two_source_taste_radial_schur_pole_lift_gate_passed"
+        )
+        is True
+        and two_source_pole_lift_gate.get("strict_pole_lift_passed") is False
+        and two_source_pole_lift_gate.get(
+            "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True
+        and two_source_pole_lift_gate.get("forbidden_firewall", {}).get(
+            "treated_endpoint_secant_as_kprime_pole"
+        )
+        is False,
+        two_source_pole_lift_gate.get("actual_current_surface_status"),
     )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
