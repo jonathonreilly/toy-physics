@@ -94,6 +94,11 @@ Allowed context:
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an
   orthogonal neutral top coupling.  It does not close PR230; it names the
   missing row/theorem more sharply.
+- the source-Higgs overlap/kappa contract as exact support only: it derives
+  the future measured overlap
+  `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` and proves source-scale
+  invariance, but the current surface has no certified `O_H` row packet and
+  does not set `kappa_s = 1`.
 
 Open imports after this block:
 
@@ -120,6 +125,9 @@ Open imports after this block:
 - Post-FMS `C_HH` support is not a source-overlap proof selector until a
   same-surface `Res C_sH` row, Gram-purity theorem, or physical-response
   bypass exists on PR230.
+- Source-Higgs overlap/kappa formula rows are not proof selectors until a
+  same-surface certified `O_H/C_sH/C_HH` pole-row packet exists and passes
+  Gram/FV/IR/model-class and retained-route gates.
 - W/Z same-source response route completion is a current-surface boundary, not
   a global theorem against the future physical-response bypass.
 - W/Z same-source response is not proof selectors until same-source EW action, W/Z response rows, matched covariance, strict g2, and delta_perp control exist.

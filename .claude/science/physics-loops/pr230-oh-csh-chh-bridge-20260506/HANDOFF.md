@@ -176,6 +176,15 @@ measured source response fixed while changing canonical `y_t`.  The route now
 needs a same-surface `C_ss/C_sH/C_HH` pole row packet with Gram/FV/IR checks or
 a physical-response bypass.
 
+The source-Higgs overlap/kappa contract is now explicit.  It derives the
+future measured overlap
+`kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` after the genuine `O_sp`
+source-side normalization, proves the formula is source-scale invariant, and
+shows that a mixed neutral witness can keep the source readout fixed while
+changing canonical `y_t` unless the row packet passes Gram purity.  The current
+surface still has no certified `O_H/C_sH/C_HH` pole-row packet, so this is
+exact support only and not `kappa_s = 1` or closure.
+
 Chunks001-004 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for
 chunks001-004, including production metadata, `numba_gauge_seed_v1`, the

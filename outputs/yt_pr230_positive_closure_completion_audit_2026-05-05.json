@@ -54,6 +54,7 @@
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
@@ -92,6 +93,7 @@
     "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
     "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
     "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
@@ -109,7 +111,7 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 39,
+  "pass_count": 40,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -180,6 +182,7 @@
         "origin_main_composite_higgs_not_closure": true,
         "origin_main_ew_m_residual_not_closure": true,
         "osp_higgs_rows_absent": true,
+        "source_higgs_overlap_kappa_contract_not_closure": true,
         "taste_condensate_oh_bridge_blocked": true
       },
       "evidence": [

@@ -1,0 +1,137 @@
+{
+  "actual_current_surface_status": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface certified O_H row packet supplies Res_C_ss, Res_C_sH, Res_C_HH at a nondegenerate isolated pole and passes O_sp-Higgs Gram purity, FV/IR/model-class, and retained-route gates",
+  "current_blockers": {
+    "aggregate_retained_route_open": true,
+    "fms_c_hh_and_c_sx_proxy_blocked": true,
+    "gram_postprocessor_waits": true,
+    "source_higgs_row_packet_absent": true,
+    "source_only_identifiability_blocked": true
+  },
+  "exact_next_action": "Produce a same-surface certified O_H/C_sH/C_HH pole-row packet, compute kappa_spH from the normalized cross residue, then rerun the source-Higgs builder, Gram postprocessor, full assembly, retained-route, and campaign gates.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_c_sx_c_xx_as_c_sh_c_hh": false,
+    "treated_fms_c_hh_as_source_overlap": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_reduced_pilot_as_production": false,
+    "used_yt_ward_identity": false
+  },
+  "future_candidate_overlap": {
+    "candidate_present": false,
+    "computed": false
+  },
+  "future_candidate_present": false,
+  "overlap_formula": {
+    "equivalent_raw_rows": "Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
+    "impure_decomposition": "y_source_pole = kappa_spH*y_H + sqrt(1-kappa_spH^2)*y_chi for a normalized two-component witness",
+    "kappa_spH": "Res(C_sp,H) / sqrt(Res(C_HH))",
+    "pure_bridge_condition": "abs(kappa_spH) = 1 with same-pole O_sp-Higgs Gram purity",
+    "source_pole_normalization": "O_sp = O_s / sqrt(Res(C_ss)) = sqrt(Dprime_ss_at_pole) O_s"
+  },
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "isolated_pole_gram_factorization": "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json",
+    "post_fms_source_overlap_necessity": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_gram_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The contract derives the overlap object but current PR230 has no canonical O_H certificate or source-Higgs C_sH/C_HH production rows.",
+  "source_higgs_overlap_kappa_contract_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not identify O_sp with O_H without measured C_spH/C_HH and Gram purity",
+    "does not treat FMS C_HH, C_sx/C_xx chunks, or source-only rows as Res C_sH",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "witness": {
+    "mixed_counterfamily_same_source_y": [
+      {
+        "canonical_y_H": 0.25,
+        "orthogonal_y_chi_required": 1.3333333333333337,
+        "same_source_y": 1.0,
+        "source_higgs_overlap_kappa_spH": 0.8,
+        "source_readout_reconstructed": 1.0
+      },
+      {
+        "canonical_y_H": 1.0,
+        "orthogonal_y_chi_required": 0.3333333333333333,
+        "same_source_y": 1.0,
+        "source_higgs_overlap_kappa_spH": 0.8,
+        "source_readout_reconstructed": 1.0
+      },
+      {
+        "canonical_y_H": 1.75,
+        "orthogonal_y_chi_required": -0.6666666666666671,
+        "same_source_y": 1.0,
+        "source_higgs_overlap_kappa_spH": 0.8,
+        "source_readout_reconstructed": 1.0
+      }
+    ],
+    "pure_rescaling_rows": [
+      {
+        "Res_C_HH": 0.81,
+        "Res_C_sH": 0.3825,
+        "Res_C_spH": 0.9,
+        "Res_C_ss": 0.18062499999999998,
+        "osp_higgs_gram_determinant": 0.0,
+        "pure_one_pole_overlap": true,
+        "source_higgs_overlap_kappa_spH": 1.0,
+        "source_scale": 0.25,
+        "z_higgs": 0.9,
+        "z_source": 1.7
+      },
+      {
+        "Res_C_HH": 0.81,
+        "Res_C_sH": 1.53,
+        "Res_C_spH": 0.9,
+        "Res_C_ss": 2.8899999999999997,
+        "osp_higgs_gram_determinant": 0.0,
+        "pure_one_pole_overlap": true,
+        "source_higgs_overlap_kappa_spH": 1.0,
+        "source_scale": 1.0,
+        "z_higgs": 0.9,
+        "z_source": 1.7
+      },
+      {
+        "Res_C_HH": 0.81,
+        "Res_C_sH": 6.12,
+        "Res_C_spH": 0.9,
+        "Res_C_ss": 46.239999999999995,
+        "osp_higgs_gram_determinant": 0.0,
+        "pure_one_pole_overlap": true,
+        "source_higgs_overlap_kappa_spH": 1.0,
+        "source_scale": 4.0,
+        "z_higgs": 0.9,
+        "z_source": 1.7
+      },
+      {
+        "Res_C_HH": 0.81,
+        "Res_C_sH": -1.53,
+        "Res_C_spH": -0.9,
+        "Res_C_ss": 2.8899999999999997,
+        "osp_higgs_gram_determinant": 0.0,
+        "pure_one_pole_overlap": true,
+        "source_higgs_overlap_kappa_spH": -1.0,
+        "source_scale": 1.0,
+        "z_higgs": -0.9,
+        "z_source": 1.7
+      }
+    ]
+  }
+}

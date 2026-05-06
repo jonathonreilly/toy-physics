@@ -644,6 +644,9 @@ def main() -> int:
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
+        "pr230_source_higgs_overlap_kappa_contract": load(
+            "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2756,6 +2759,28 @@ def main() -> int:
         is True,
         statuses["pr230_post_fms_source_overlap_necessity_gate"],
     )
+    source_higgs_overlap_kappa_contract = certificates[
+        "pr230_source_higgs_overlap_kappa_contract"
+    ]
+    report(
+        "pr230-source-higgs-overlap-kappa-contract-support-not-proof",
+        "source-Higgs overlap-kappa row contract"
+        in str(statuses["pr230_source_higgs_overlap_kappa_contract"])
+        and source_higgs_overlap_kappa_contract.get("proposal_allowed") is False
+        and source_higgs_overlap_kappa_contract.get(
+            "source_higgs_overlap_kappa_contract_passed"
+        )
+        is True
+        and source_higgs_overlap_kappa_contract.get("current_blockers", {}).get(
+            "source_higgs_row_packet_absent"
+        )
+        is True
+        and source_higgs_overlap_kappa_contract.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        statuses["pr230_source_higgs_overlap_kappa_contract"],
+    )
     two_source_chunk001 = certificates[
         "pr230_two_source_taste_radial_chunk001_checkpoint"
     ]
@@ -4595,6 +4620,21 @@ def main() -> int:
             "two_source_rows_are_c_sx_not_c_sH"
         )
         is True
+    )
+    result["source_higgs_overlap_kappa_contract_support_not_proof"] = (
+        source_higgs_overlap_kappa_contract.get(
+            "source_higgs_overlap_kappa_contract_passed"
+        )
+        is True
+        and source_higgs_overlap_kappa_contract.get("proposal_allowed") is False
+        and source_higgs_overlap_kappa_contract.get("current_blockers", {}).get(
+            "source_higgs_row_packet_absent"
+        )
+        is True
+        and source_higgs_overlap_kappa_contract.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False
     )
     result["two_source_taste_radial_chunk001_checkpoint_not_closure"] = (
         two_source_chunk001.get("checkpoint_passed") is True

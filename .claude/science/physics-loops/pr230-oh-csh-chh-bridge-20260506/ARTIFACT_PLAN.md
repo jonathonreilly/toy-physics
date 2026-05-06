@@ -31,6 +31,10 @@ This block lands:
 - an executable post-FMS source-overlap necessity gate proving that current
   source-only rows, conditional FMS `C_HH` support, and taste-radial
   `C_sx/C_xx` chunks still do not determine `Res C_sH` or canonical `y_t`;
+- an executable source-Higgs overlap/kappa contract deriving the future
+  measured overlap
+  `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` while proving that the
+  current row packet is absent and `kappa_s = 1` remains forbidden;
 - a refreshed FH/LSZ production postprocess gate that recognizes completed L12
   chunked support while preserving all no-closure firewalls;
 - a paired JSON certificate;

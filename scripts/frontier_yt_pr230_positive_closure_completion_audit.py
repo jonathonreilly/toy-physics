@@ -40,6 +40,7 @@ PARENTS = {
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
+    "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -411,6 +412,24 @@ def main() -> int:
         )
         is True
     )
+    source_higgs_overlap_kappa_contract_not_closure = (
+        "source-Higgs overlap-kappa row contract"
+        in parent_statuses["source_higgs_overlap_kappa_contract"]
+        and certs["source_higgs_overlap_kappa_contract"].get("proposal_allowed")
+        is False
+        and certs["source_higgs_overlap_kappa_contract"].get(
+            "source_higgs_overlap_kappa_contract_passed"
+        )
+        is True
+        and certs["source_higgs_overlap_kappa_contract"].get(
+            "current_blockers", {}
+        ).get("source_higgs_row_packet_absent")
+        is True
+        and certs["source_higgs_overlap_kappa_contract"].get(
+            "forbidden_firewall", {}
+        ).get("set_kappa_s_equal_one")
+        is False
+    )
     origin_main_composite_higgs_not_closure = (
         certs["origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_intake_guard_passed"
@@ -544,6 +563,7 @@ def main() -> int:
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
     report("post-fms-source-overlap-necessity-blocks-current-inference", post_fms_source_overlap_necessity_blocks_current_inference, parent_statuses["post_fms_source_overlap_necessity_gate"])
+    report("source-higgs-overlap-kappa-contract-not-closure", source_higgs_overlap_kappa_contract_not_closure, parent_statuses["source_higgs_overlap_kappa_contract"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
@@ -597,6 +617,7 @@ def main() -> int:
                 "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
                 "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
                 "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
+                "source_higgs_overlap_kappa_contract_not_closure": source_higgs_overlap_kappa_contract_not_closure,
                 "future_bridge_file_presence": future_bridge_presence,
                 "needed": [
                     "same-surface canonical O_H identity/normalization certificate",

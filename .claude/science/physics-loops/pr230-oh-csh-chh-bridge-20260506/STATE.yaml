@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: two_source_taste_radial_row_combiner_gate_package
+active_route: source_higgs_overlap_kappa_contract_package
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-004 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=4/63 and no combined row packet written, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-004 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=4/63 and no combined row packet written, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support deriving the future measured kappa_spH formula while row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -85,6 +85,13 @@ hard_residual: >
   orthogonal-neutral-top-coupling counterfamily holds the measured source
   response fixed while changing canonical y_t.  This is an exact current-
   surface boundary, not a retained/proposed-retained closure.
+  The source-Higgs overlap/kappa contract now derives the exact future
+  measured overlap formula after the genuine O_sp source-side normalization:
+  kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH)).  The formula is
+  source-scale invariant and names the row object that would retire the
+  kappa_s blocker, but the current surface has no certified O_H/C_sH/C_HH
+  pole-row packet and cannot set kappa_s = 1.  It is exact support only, not
+  closure.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -118,6 +125,8 @@ files_touched:
   - scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py
   - scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py
   - scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py
+  - scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py
+  - docs/YT_PR230_SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT_NOTE_2026-05-06.md
   - scripts/yt_direct_lattice_correlator_production.py
   - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - scripts/frontier_yt_pr230_positive_closure_completion_audit.py

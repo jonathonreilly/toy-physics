@@ -11,6 +11,9 @@
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a
    physical-response bypass.
+   The source-Higgs overlap/kappa contract now fixes the exact future readout
+   formula, `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))`, but records that
+   the current row packet is absent and `kappa_s = 1` is still forbidden.
    FMS/lattice literature is route guidance only, not PR230 proof authority.
 2. Genuine two-source source-coordinate transport theorem from the uniform mass
    source to canonical Higgs/taste radial source; scalar reparametrization of

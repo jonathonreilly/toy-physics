@@ -21,6 +21,13 @@ Supply a certified same-surface `O_H`, run `C_ss/C_sH/C_HH`, extract pole
 residues, and pass Gram purity.  This remains open and is still the cleanest
 positive bridge.
 
+`YT_PR230_SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT` now makes the exact measured
+overlap formula executable:
+`kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` after the genuine `O_sp`
+source-side normalization.  It is exact support for this route and blocks
+`kappa_s = 1` as a shortcut because the current certified `O_H/C_sH/C_HH` row
+packet is absent.
+
 ## Route C: Source-Coordinate Transport
 
 The scalar-reparametrization version is now blocked on the current surface:

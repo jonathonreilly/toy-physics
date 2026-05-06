@@ -107,6 +107,7 @@ PARENTS = {
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
+    "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -818,6 +819,26 @@ def main() -> int:
             "two_source_rows_are_c_sx_not_c_sH"
         )
         is True
+    )
+    source_higgs_overlap_kappa_contract_support_not_closure = (
+        "source-Higgs overlap-kappa row contract"
+        in statuses["pr230_source_higgs_overlap_kappa_contract"]
+        and certs["pr230_source_higgs_overlap_kappa_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_source_higgs_overlap_kappa_contract"].get(
+            "source_higgs_overlap_kappa_contract_passed"
+        )
+        is True
+        and certs["pr230_source_higgs_overlap_kappa_contract"].get(
+            "current_blockers", {}
+        ).get("source_higgs_row_packet_absent")
+        is True
+        and certs["pr230_source_higgs_overlap_kappa_contract"].get(
+            "forbidden_firewall", {}
+        ).get("set_kappa_s_equal_one")
+        is False
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
@@ -1604,6 +1625,11 @@ def main() -> int:
         "post-fms-source-overlap-necessity-blocks-current-inference",
         post_fms_source_overlap_necessity_blocks_current_inference,
         statuses["pr230_post_fms_source_overlap_necessity_gate"],
+    )
+    report(
+        "source-higgs-overlap-kappa-contract-support-not-closure",
+        source_higgs_overlap_kappa_contract_support_not_closure,
+        statuses["pr230_source_higgs_overlap_kappa_contract"],
     )
     report(
         "kinetic-taste-mixing-shortcut-closed",
@@ -2561,6 +2587,7 @@ def main() -> int:
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
+        "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

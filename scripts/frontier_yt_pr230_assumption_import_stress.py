@@ -182,6 +182,9 @@ def main() -> int:
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
+        "source_higgs_overlap_kappa_contract": load(
+            "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -1028,6 +1031,24 @@ def main() -> int:
         )
         is False,
         post_fms_overlap.get("actual_current_surface_status"),
+    )
+    source_higgs_overlap_kappa = certificates["source_higgs_overlap_kappa_contract"]
+    report(
+        "source-higgs-overlap-kappa-contract-support-only",
+        "source-Higgs overlap-kappa row contract"
+        in str(source_higgs_overlap_kappa.get("actual_current_surface_status"))
+        and source_higgs_overlap_kappa.get("proposal_allowed") is False
+        and source_higgs_overlap_kappa.get("source_higgs_overlap_kappa_contract_passed")
+        is True
+        and source_higgs_overlap_kappa.get("current_blockers", {}).get(
+            "source_higgs_row_packet_absent"
+        )
+        is True
+        and source_higgs_overlap_kappa.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        source_higgs_overlap_kappa.get("actual_current_surface_status"),
     )
     action_first_completion = certificates["action_first_route_completion"]
     report(
