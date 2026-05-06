@@ -8873,14 +8873,6 @@
       "to": "lattice_nn_continuum_note"
     },
     {
-      "from": "lattice_nn_light_cone_note",
-      "to": "work_history.repo.backlog.overnight_work_backlog"
-    },
-    {
-      "from": "lattice_nn_light_cone_note",
-      "to": "session_summary_2026-04-01_dimensional"
-    },
-    {
       "from": "lattice_nn_mass_response_note",
       "to": "lattice_nn_continuum_note"
     },
@@ -40515,17 +40507,14 @@
     },
     "lattice_nn_light_cone_note": {
       "claim_id": "lattice_nn_light_cone_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "`positive_theorem`",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "work_history.repo.backlog.overnight_work_backlog",
-        "session_summary_2026-04-01_dimensional"
-      ],
-      "note_hash": "9cec6c11916955e812426449f5743db74883ce225b0a5e9c5438fecf059e1eba",
+      "deps": [],
+      "note_hash": "4357cbb07d5d90fad60e44f180e72aab8e520a45e8c9322c6df3986c1280ae4f",
       "path": "docs/LATTICE_NN_LIGHT_CONE_NOTE.md",
-      "runner_path": "scripts/causal_field_gravity.py",
-      "title": "NN Light-Cone Note"
+      "runner_path": "scripts/lattice_nn_topological_causal_bound_check.py",
+      "title": "NN Topological Causal-Bound Note"
     },
     "lattice_nn_mass_response_note": {
       "claim_id": "lattice_nn_mass_response_note",
@@ -55560,6 +55549,7 @@
     "lattice_nn_continuum_note",
     "lattice_nn_deterministic_rescale_note",
     "lattice_nn_high_precision_note",
+    "lattice_nn_light_cone_note",
     "lattice_nn_rg_gravity_note",
     "lattice_symmetry_unification_decision_note",
     "lattice_synthesis_guard_note",
@@ -55943,9 +55933,9 @@
       "bounded_theorem": 76,
       "meta": 10,
       "no_go": 14,
-      "none": 1708,
+      "none": 1707,
       "open_gate": 10,
-      "positive_theorem": 88
+      "positive_theorem": 89
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 575,
@@ -55955,10 +55945,10 @@
       "open_gate": 113,
       "positive_theorem": 634
     },
-    "edge_count": 6612,
-    "leaf_count": 548,
+    "edge_count": 6610,
+    "leaf_count": 549,
     "node_count": 1906,
-    "root_count": 864,
+    "root_count": 865,
     "runners_with_path": 1481
   }
 }
