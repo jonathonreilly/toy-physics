@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 784 |
+| unaudited | 783 |
 | audit_in_progress | 1 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 467 |
+| ~~audited_conditional~~ | 468 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,19 +41,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 379 |
-| `audited_conditional` | 467 |
+| `audited_conditional` | 468 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 832 |
+| `unaudited` | 831 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 641 |
+| `bounded_theorem` | 640 |
 | `decoration` | 10 |
 | `meta` | 55 |
-| `no_go` | 188 |
+| `no_go` | 189 |
 | `open_gate` | 115 |
 | `positive_theorem` | 789 |
 
@@ -634,6 +634,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4238,6 +4239,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The cubic Z^3 Regge slice has zero edge deficit, hence the homogeneous/isotropic spatial curvature parameter is exactly k = 0.  _(class `A`)_
 - **chain closes:** False — The k = 0 calculation closes as a local algebraic Regge-deficit check, but the full H_rad(T) theorem also imports the flat Friedmann law, radiation density law, g_* and Planck/electroweak normalizations without cited retained authorities in the restricted packet.
 - **rationale:** The runner genuinely computes the cubic-lattice deficit and checks algebraic consequences of an H proportional to T^2 branch, but it imports constants and helper functions from dm_leptogenesis_exact_common that are not included in the audit packet. The note also relies on an 'already-retained Poisson/Newton chain' and the exact radiation density formula without providing those authorities. Therefore the restricted chain does not close as a first-principles theorem from Cl(3) on Z^3 alone.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the currently native N_e PMNS data do not determine the transport-selected active column; distinct active five-real sources with the same native seed/support/branch data can select columns 0, 1, or 2.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-dm-lepto-ne-active-column-boundary`  (codex-current; independence=weak)
+- **load-bearing step:** There exist three charged-lepton-active microscopic samples with the same current-native N_e seed averages, fixed phase, support count, and branch bit, but with distinct active five-real source data that select columns 0, 1, and 2 under the exact transport functional.  _(class `C`)_
+- **chain closes:** False — The completed runner exhibits the finite counterexample family with PASS=15 FAIL=0, but the row has no direct dependencies even though the proof imports the retained-bounded flavor-column selector and active-projector reduction machinery. Until those retained inputs are wired as direct dependencies, the no-go rests on hidden imported authority rather than the ledger packet.
+- **rationale:** Issue: the finite counterexample runner closes the intended boundary computation, but the row's ledger dependencies are empty while the proof uses the exact flavor-column selector and active-projector/current-native-data machinery. Why this blocks: a retained no-go must expose its retained inputs directly; otherwise downstream readers cannot cite the transport selector and active-block definitions that make the counterexample meaningful. Repair target: add direct dependency edges to dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16 and dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16, then re-audit this bounded no-go scope. Claim boundary until fixed: safe to cite as a completed runner-backed conditional boundary diagnostic, not yet as a retained_no_go row.
+- **open / conditional deps cited:**
+  - `DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_PMNS_ACTIVE_PROJECTOR_REDUCTION_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16`
