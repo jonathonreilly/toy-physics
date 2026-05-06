@@ -19,12 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| **retained_no_go** | 119 |
+| **retained_no_go** | 120 |
 | **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 780 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 379 |
+| `audited_clean` | 380 |
 | `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -248,6 +245,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | D | - |
+| `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-current | B | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -7555,6 +7553,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The restricted packet imports lattice-QCD values and then evaluates an explicit closure gate; it does not derive a unique full-QCD sqrt(sigma) observable or close the B5 framework-to-standard-QCD bridge. The missing steps are a declared unique sigma/force-scale bridge and a closed B5 import theorem.
 - **rationale:** The runner performs arithmetic and consistency checks on embedded external lattice-QCD values, plus artifact checks against the note, and its PASS=12 output is consistent with the source code rather than a fabricated printout. However, the load-bearing scientific step is an external comparator/gate assessment, not a first-principles derivation from the axiom, and the note itself explicitly says the sigma convention/window and B5 framework link remain open. Therefore the scout conclusion is properly bounded/open, but it cannot be audited clean as a retained theorem.
 - **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the current-surface no-go that structural SU(3), beta=6 normalization, canonical constants, and the 4^4 check do not close the B5 framework-to-standard-lattice-QCD bridge for importing static-energy/string-tension inputs.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-judicial-third-20260506-f161`  (codex-current; independence=judicial_review)
+- **load-bearing step:** structural SU(3) + beta=6 + 4^4 check != retained framework-to-standard-QCD bridge  _(class `B`)_
+- **chain closes:** True — The restricted packet directly supports the negative claim: the note identifies the missing large-volume framework-side Wilson/Creutz/force-scale ladder with uncertainty, and the runner's gate model independently marks all current candidates non-closing. The single completed-run FAIL is a rendered-ledger text-pattern artifact; the supplied structured extraction shows the relevant confinement/string-tension row remains conditional with chain_closes false, which supports rather than conditions the no-go.
+- **rationale:** The restricted packet directly supports the negative claim: the note identifies the missing large-volume framework-side Wilson/Creutz/force-scale ladder with uncertainty, and the runner's gate model independently marks all current candidates non-closing. The single completed-run FAIL is a rendered-ledger text-pattern artifact; the supplied structured extraction shows the relevant confinement/string-tension row remains conditional with chain_closes false, which supports rather than conditions the no-go.
+- **auditor confidence:** judicial
 
 ### `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02`
 

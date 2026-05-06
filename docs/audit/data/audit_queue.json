@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 508,
+    "critical": 507,
     "high": 15,
     "leaf": 181,
     "medium": 95
@@ -3363,27 +3363,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
       "transitive_descendants": 294
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "cross_confirmation_disagreement",
-      "claim_id": "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30",
-      "claim_scope": "Audited the note's negative claim that structural SU(3), beta=6 normalization, canonical plaquette constants, and a 4^4 check do not close the B5 framework-to-standard-lattice-QCD bridge for importing static-energy/string-tension values.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "disagreement",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.17,
-      "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py",
-      "transitive_descendants": 287
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24600,6 +24579,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 5,
-  "total_pending": 799
+  "ready_count": 4,
+  "total_pending": 798
 }
