@@ -16656,6 +16656,18 @@
       "dominant_class": null,
       "runner": "scripts/wave_direct_dm_h025_point_runner.py"
     },
+    "wave_direct_dm_h025_seed0_crossfamily_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py"
+    },
     "wave_direct_dm_h025_two_point_synthesis_note": {
       "assert_count": 0,
       "counts": {
@@ -38432,6 +38444,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py": {
+      "assert_count": 1,
+      "claims": [
+        "wave_direct_dm_h025_seed0_crossfamily_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/wave_direct_dm_matched_history_probe.py": {
       "assert_count": 0,
       "claims": [
@@ -38722,15 +38749,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 117,
+    "decoration_candidates": 118,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 166,
+      "B": 167,
       "C": 574,
       "D": 211,
       "none": 420
     },
-    "runners_classified": 1381,
+    "runners_classified": 1382,
     "runners_with_C": 683,
     "runners_with_D": 344
   }

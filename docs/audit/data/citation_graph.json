@@ -52777,13 +52777,13 @@
     },
     "wave_direct_dm_h025_seed0_crossfamily_note": {
       "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "011cd531e7269d6d0be5306edf8f264f8d3ada36af1cb085d38de244516a8143",
+      "note_hash": "dc639943fb8a3bcc2bb015767b8f3eab774c9388ba553fd1ef0fd7cd5ea03e6f",
       "path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py",
       "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note"
     },
     "wave_direct_dm_h025_seed1_crossfamily_note": {
@@ -55833,25 +55833,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 73,
+      "bounded_theorem": 74,
       "meta": 10,
       "no_go": 12,
-      "none": 1711,
+      "none": 1710,
       "open_gate": 12,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 570,
+      "bounded_theorem": 571,
       "meta": 10,
       "no_go": 116,
       "none": 456,
       "open_gate": 118,
-      "positive_theorem": 635
+      "positive_theorem": 634
     },
     "edge_count": 6593,
     "leaf_count": 550,
     "node_count": 1905,
     "root_count": 867,
-    "runners_with_path": 1478
+    "runners_with_path": 1479
   }
 }

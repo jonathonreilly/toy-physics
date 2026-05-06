@@ -1,0 +1,42 @@
+loop_slug: wave-direct-h025-crossfamily-assertions
+block_id: block01
+date: 2026-05-06
+branch: physics-loop/wave-direct-h025-crossfamily-assertions-block01-20260506
+base_ref: origin/main
+prompt_id: wave_direct_dm_h025_seed0_crossfamily_note
+current_goal: "Convert the seed-0 H=0.25 cross-family compression note into a bounded, log-backed assertion surface."
+target_status: bounded-support
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+publication_effective_status_after_block: unaudited
+proposal_allowed: false
+proposal_allowed_reason: "The branch certifies a finite two-row compression only; independent audit is still required."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+active_route: "Frozen Fam1/Fam2 control-log assertion runner with explicit portability and amplitude-law exclusions."
+hard_residual: "No family-wide H=0.25 law, Fam3 extension, or stable amplitude law is claimed."
+files_touched:
+  - docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md
+  - scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py
+  - outputs/wave_direct_dm_h025_seed0_crossfamily_assertions_2026-05-06.txt
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/runner_classification.json
+  - .claude/science/physics-loops/wave-direct-h025-crossfamily-assertions/
+verification:
+  runner: "python3 scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py"
+  transcript: outputs/wave_direct_dm_h025_seed0_crossfamily_assertions_2026-05-06.txt
+  py_compile: "python3 -m py_compile scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py"
+  audit_lint: "python3 docs/audit/scripts/audit_lint.py"
+subagents_used: false
+open_imports:
+  - "The source logs are frozen outputs from existing control runners; this branch asserts them but does not recompute the expensive control sweep."
+  - "Fam3 and family-wide portability are outside scope."
+review_findings: []
+pr_status: pending
+pr_url: null
+next_exact_action: "Commit, push, open the review PR, then record the PR URL in HANDOFF.md and PR_BACKLOG.md."
+stop_condition: "Ready PR opened and verified for this bounded-support block."
