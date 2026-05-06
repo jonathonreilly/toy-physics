@@ -1,0 +1,114 @@
+{
+  "actual_current_surface_status": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "If a future same-surface theorem proves neutral-sector irreducibility/primitive positivity improvement, these positivity inputs become useful supporting hypotheses.  They are not the primitive bridge by themselves.",
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Do not use reflection/determinant positivity as the PR230 bridge.  Continue through one actual positive object: a same-surface neutral primitive-cone certificate, canonical O_H with C_sH/C_HH rows, same-source W/Z response rows, Schur A/B/C rows, or strict production FH/LSZ plus matching.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "defines_yt_bare": false,
+    "sets_source_higgs_overlap_to_one": false,
+    "treats_determinant_positivity_as_rank_one": false,
+    "treats_reflection_positivity_as_lsz_closure": false,
+    "uses_alpha_lm_plaquette_u0_or_rconn": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_or_yukawa_targets": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "derived_bridge_rank_one": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
+    "det_positivity_intake": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "neutral_positivity_direct": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "reflection_positivity_lsz_no_go": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_sector_transfer": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "derived_bridge_rank_one": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
+    "det_positivity_intake": "bounded-support / staggered-Wilson determinant positivity is useful positivity-preservation support, not PR230 y_t closure",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_positivity_direct": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+    "primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "primitive_cone_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+    "reflection_positivity_lsz_no_go": "exact negative boundary / reflection positivity not scalar LSZ closure",
+    "retained_route": "open / retained closure not yet reached",
+    "source_sector_transfer": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure"
+  },
+  "pass_count": 14,
+  "primitive_upgrade_passed": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Reflection positivity and determinant positivity preserve positivity but do not exclude a reducible neutral scalar transfer with source-invisible orthogonal top-coupled directions.",
+  "reflection_det_reducible_witness": {
+    "construction_type": "finite neutral-sector countermodel",
+    "euclidean_reflection_positive": true,
+    "fermion_determinant_positive": true,
+    "hidden_orthogonal_correlator": [
+      0.3115,
+      0.277235,
+      0.24673915000000002,
+      0.21959784349999997
+    ],
+    "hidden_orthogonal_vector": [
+      0.0,
+      1.0
+    ],
+    "lesson": "Positive spectral measure and positive fermion determinant are compatible with a block-diagonal positive neutral transfer.  The missing theorem is irreducibility/positivity improvement, not positivity preservation.",
+    "masses": [
+      1.0,
+      1.32
+    ],
+    "neutral_transfer_matrix": [
+      [
+        0.93,
+        0.0
+      ],
+      [
+        0.0,
+        0.89
+      ]
+    ],
+    "neutral_transfer_nonnegative": true,
+    "orthogonal_neutral_top_coupling_can_survive": true,
+    "positive_spectral_weights": [
+      1.0,
+      0.35
+    ],
+    "primitive_power": {
+      "first_positive_power": null,
+      "positive": false
+    },
+    "source_only_correlator": [
+      0.93,
+      0.8649000000000001,
+      0.8043570000000001,
+      0.7480520100000002
+    ],
+    "source_only_rows_do_not_see_hidden_block": true,
+    "source_vector": [
+      1.0,
+      0.0
+    ],
+    "strongly_connected": false,
+    "time_slices": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not define y_t_bare",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top/Yukawa values or alpha_LM/plaquette/u0 inputs",
+    "does not treat positive measure or OS positivity as neutral irreducibility",
+    "does not identify source-only C_ss rows with canonical O_H"
+  ]
+}

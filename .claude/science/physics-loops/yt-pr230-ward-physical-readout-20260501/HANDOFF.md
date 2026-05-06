@@ -3462,6 +3462,41 @@ Result: the same-source W/Z response ratio still needs a strict, non-observed
 current alpha/plaquette/u0 and audit-authority firewalls.  No
 retained/proposed-retained wording is authorized.
 
+## 2026-05-05 - Reflection + Determinant Primitive-Upgrade Gate
+
+The combined positivity shortcut is now explicitly blocked:
+
+```text
+python3 scripts/frontier_yt_pr230_reflection_det_primitive_upgrade_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=35 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=90 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=238 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=270 FAIL=0
+```
+
+OS/reflection positivity and the staggered-Wilson determinant-positivity
+bridge supply positivity preservation only.  The new runner constructs a
+finite reducible positive neutral transfer with positive spectral/fermion
+measure support but no strongly connected graph and no positive primitive
+power.  Thus the combined positivity stack still does not identify source-only
+`C_ss` rows with canonical `O_H`, exclude orthogonal neutral top coupling, or
+authorize retained/proposed-retained PR230 closure.
+
+Next exact action: supply a genuine same-surface bridge artifact: certified
+`O_H/C_sH/C_HH` pole rows, same-source W/Z response rows with identity and
+`g2` authority, Schur `A/B/C` rows, strict scalar-LSZ
+moment/threshold/FV authority, or a neutral off-diagonal generator/primitive
+transfer certificate.
+
 ## 2026-05-05 - Action-First O_H Artifact Attempt
 
 The selected `O_H/C_sH/C_HH` route was tested at its first real artifact:

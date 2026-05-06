@@ -86,6 +86,7 @@ PARENTS = {
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
+    "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -495,6 +496,18 @@ def main() -> int:
             "determinant_bridge_closes_pr230"
         )
         is False
+        and certs["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "primitive_upgrade_passed"
+        )
+        is False
+        and certs["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
         and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
         and certs["canonical_oh_premise_stretch"].get("premise_lattice_stretch_no_go_passed")
         is True
@@ -1019,6 +1032,24 @@ def main() -> int:
         )
         is False,
         statuses["pr230_det_positivity_bridge_intake_gate"],
+    )
+    report(
+        "reflection-det-primitive-upgrade-blocks-combined-positivity-shortcut",
+        "reflection plus determinant positivity"
+        in statuses["pr230_reflection_det_primitive_upgrade_gate"]
+        and certs["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "primitive_upgrade_passed"
+        )
+        is False
+        and certs["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_reflection_det_primitive_upgrade_gate"],
     )
     report(
         "cross-lane-oh-authority-audit-blocks-adjacent-imports",

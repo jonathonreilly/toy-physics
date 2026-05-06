@@ -795,3 +795,13 @@ They may compute `Z(beta,s,h)` derivatives only after the PR230 action/measure,
 source operator, canonical `O_H`, and source coordinates are defined on the
 same current surface.  Source-only `Z(s,0)` does not determine `C_sH`, `C_HH`,
 or source-Higgs Gram purity.
+
+2026-05-05 Reflection plus determinant positivity primitive-upgrade:
+
+Reflection plus determinant positivity primitive-upgrade is now an exact
+negative boundary on the current PR230 surface.  OS/reflection positivity and
+the staggered-Wilson determinant-positivity bridge are not proof selectors
+until a same-surface neutral primitive-cone certificate exists.  They supply
+positivity preservation only; a reducible block-diagonal neutral transfer can
+preserve positive spectral/fermion-measure support while leaving an
+orthogonal neutral top-coupled scalar invisible to source-only rows.

@@ -101,6 +101,9 @@ def main() -> int:
         "det_positivity_bridge_intake_gate": load(
             "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json"
         ),
+        "reflection_det_primitive_upgrade_gate": load(
+            "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -184,6 +187,8 @@ def main() -> int:
         "action-first `O_H/C_sH/C_HH`",
         "PR541-style holonomic source-response route",
         "not proof selectors until a same-current-surface O_H/h-source artifact exists",
+        "Reflection plus determinant positivity primitive-upgrade",
+        "same-surface neutral primitive-cone certificate exists",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -510,6 +515,20 @@ def main() -> int:
         and det_positivity_intake.get("intake_gate_passed") is True,
         det_positivity_intake.get("actual_current_surface_status"),
     )
+    reflection_det_upgrade = certificates["reflection_det_primitive_upgrade_gate"]
+    report(
+        "reflection-det-primitive-upgrade-does-not-certify-rank-one",
+        "reflection plus determinant positivity"
+        in str(reflection_det_upgrade.get("actual_current_surface_status"))
+        and reflection_det_upgrade.get("proposal_allowed") is False
+        and reflection_det_upgrade.get("primitive_upgrade_passed") is False
+        and reflection_det_upgrade.get("exact_negative_boundary_passed") is True
+        and reflection_det_upgrade.get("reflection_det_reducible_witness", {}).get(
+            "orthogonal_neutral_top_coupling_can_survive"
+        )
+        is True,
+        reflection_det_upgrade.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -589,7 +608,11 @@ def main() -> int:
             "determinant-positivity bridge intake adds the same boundary for "
             "the latest staggered-Wilson positivity theorem: positive fermion "
             "measure is useful support, but it is not a primitive neutral "
-            "transfer, canonical O_H identity, source-Higgs row, or y_t value.  No current route "
+            "transfer, canonical O_H identity, source-Higgs row, or y_t value.  The "
+            "reflection-plus-determinant primitive-upgrade gate makes the "
+            "combined positivity shortcut explicit: OS/spectral positivity "
+            "and positive fermion measure still admit a reducible neutral "
+            "transfer with an orthogonal top-coupled scalar.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -613,6 +636,7 @@ def main() -> int:
             "does not treat positivity preservation as a primitive neutral scalar rank-one bridge",
             "does not import SU3 source-sector constants or exponent shifts into y_t",
             "does not treat staggered-Wilson determinant positivity as source-Higgs overlap authority",
+            "does not treat reflection plus determinant positivity as a primitive neutral bridge",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

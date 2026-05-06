@@ -563,6 +563,9 @@ def main() -> int:
         "pr230_det_positivity_bridge_intake_gate": load(
             "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json"
         ),
+        "pr230_reflection_det_primitive_upgrade_gate": load(
+            "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json"
+        ),
         "pr230_invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
@@ -2277,6 +2280,24 @@ def main() -> int:
         )
         is True,
         statuses["pr230_det_positivity_bridge_intake_gate"],
+    )
+    report(
+        "pr230-reflection-det-primitive-upgrade-blocks-combined-positivity-shortcut",
+        "reflection plus determinant positivity"
+        in str(statuses["pr230_reflection_det_primitive_upgrade_gate"])
+        and certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "primitive_upgrade_passed"
+        )
+        is False
+        and certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_reflection_det_primitive_upgrade_gate"],
     )
     report(
         "pr230-invariant-ring-oh-certificate-attempt-blocks-current-surface",

@@ -143,6 +143,7 @@ def main() -> int:
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
+        "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -1068,6 +1069,24 @@ def main() -> int:
             "determinant_bridge_closes_pr230"
         )
         is False
+    )
+    reflection_det_primitive_upgrade_gate_blocks = (
+        "reflection plus determinant positivity"
+        in certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "primitive_upgrade_passed"
+        )
+        is False
+        and certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
     )
     complete_source_spectrum_identity_no_go_blocks = (
         "complete source spectrum not canonical-Higgs closure"
@@ -3224,6 +3243,13 @@ def main() -> int:
         "det-positivity-bridge-intake-gate-relevant-not-closure",
         det_positivity_bridge_intake_gate_not_closure,
         certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "reflection-det-primitive-upgrade-gate-blocks-combined-positivity-shortcut",
+        reflection_det_primitive_upgrade_gate_blocks,
+        certificates["pr230_reflection_det_primitive_upgrade_gate"].get(
             "actual_current_surface_status", ""
         ),
     )
