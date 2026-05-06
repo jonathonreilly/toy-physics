@@ -740,7 +740,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -895,6 +894,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su3_adjoint_casimir_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `synthesis_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
@@ -6974,26 +6974,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `G_BARE_DERIVATION_NOTE.md`
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Explicit finite-NMAX source-sector Perron solves at beta=6 for the structural rho inputs rho=1 and rho=delta_(0,0), plus sensitivity evidence for the narrowed enumerated rho-family no-go; not the physical 3D residual environment rho.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-gauge_vacuum_plaquette_t-032`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Given an explicit input rho, the runner constructs T_src(6)=exp(3J)D_6^loc diag(rho)exp(3J) from Bessel-determinant c_lambda(6) and the SU(3) recurrence, then computes the Perron expectation P(6)=<psi,J psi>.  _(class `C`)_
-- **chain closes:** False — The runner genuinely computes the stated reference Perron numbers once the rho input and factorized source-sector operator are accepted. The full chain does not close to retained grade because the source/environment identification and tensor-transfer carrier pass through non-retained, open, or conditional cited authorities, and the physical rho_(p,q)(6) remains uncomputed.
-- **rationale:** Issue: the bounded computations are real, but the exact source/environment factorization and tensor-transfer carrier are imported through non-retained or explicitly open cited authorities, and the broad no-go must be read only as the note's narrowed one-parameter-family statement. Why this blocks: retained status cannot propagate through audited_conditional, audited_renaming, unaudited, or open-gate dependencies, and the runner chooses rho inputs rather than computing the physical 3D environment. Repair target: ratify the dependency chain and split the narrowed reference-solve/no-go scope from any broad closed-form-rho claim. Claim boundary until fixed: explicit finite-NMAX reference Perron numbers for chosen rho=1/delta and sensitivity families are support-grade, not a physical rho or canonical plaquette closure.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
-  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
-  - `SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md`
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
@@ -12537,6 +12517,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** All quantities are computed by exhaustive enumeration in the runner using finite loops over the declared L_s=3 PBC sites, links, plaquettes, incidence maps, adjacency pairs, and tensor slots; each verification is a deterministic equality/cardinality check.  _(class `A`)_
 - **chain closes:** True — The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
 - **rationale:** The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
+- **auditor confidence:** high
+
+### `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Combined Block 4/5 claim staging the L_s=3 SU(3) Wigner cube partition infrastructure and using L_s=2 orientation checks plus P_candidate=0.4291049969 to conclude the tested L_s=2 PBC surfaces do not close the bridge gap; the full L_s=3 contraction and bridge closure are out of scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-su3-auditor-2026-05-06`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The all-forward L_s=2 PBC convention gives P = 0.4291049969, 543x epsilon_witness below the bridge-support target, while standard Wilson L_s=2 PBC has degenerate link multiplicities, so L_s >= 3 Wigner-Racah engine work is the next required route.  _(class `B`)_
+- **chain closes:** False — The staged L_s=3 infrastructure and standard-Wilson L_s=2 degeneracy checks are bounded finite computations, but the P_candidate bridge-gap limb is imported from the open-gate shortcut rather than computed by the Block 5 runner. The ledger dependency list includes Blocks 1-3 only, so the open-gate P_candidate premise is neither retained nor wired as a direct dependency.
+- **rationale:** Issue: the combined claim's bridge-gap conclusion uses P_candidate=0.4291049969, but the secondary runner hard-codes that reported value and only verifies the all-forward index graph; the computing source is an unaudited open-gate note and is not present in the ledger dependency edge list. Why this blocks: a bounded theorem may retain the staged L_s=3 infrastructure and L_s=2 orientation/multiplicity checks, but it cannot promote the P_candidate comparison or the 'tested L_s=2 surfaces do not close the bridge gap' limb from an unwired, unaudited open-gate premise. Repair target: either add and audit/retain the open-gate dependency or replace the hard-coded P_candidate with a direct retained computation in the Block 5 runner; compute the full L_s=3 contraction before claiming any actual L_s=3 Perron value. Claim boundary until fixed: safe scope is L_s=3 partition staging plus L_s=2 orientation/index-graph diagnostics, with the all-forward P comparison labeled conditional and the full L_s=3 contraction explicitly uncomputed.
+- **open / conditional deps cited:**
+  - `SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `su3_wilson_closed_form_fanout_theorem_note_2026-05-04`

@@ -1,0 +1,119 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_l2_cube_orientation_verification.py
+runner_sha256: 4636e652b500fddc6c8f7279da2cf5eaf89a6dd629cbb2d9564dc7f7c92355ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wigner Engine — Block 5: L_s=2 Cube Orientation Verification
+==============================================================================
+
+--- Section A: candidate all-forward plaquettes (+d1 +d2 +d1 +d2) ---
+  unique plaquettes: 12
+  PASS: 12 unique plaquettes.
+  unique directed links: 24
+  PASS: each directed link in exactly 2 plaquettes.
+  index graph: 48 nodes, 48 edges, 8 components
+  PASS: matches candidate runner (N_components = 8).
+
+--- Section B: standard Wilson plaquettes (+d1 +d2 -d1 -d2) ---
+  unique plaquettes: 12
+  PASS: 12 unique standard Wilson plaquettes.
+  unique directed links: 20
+  multiplicities: [1, 2, 3, 4]
+  SUPPORT: standard Wilson L=2 PBC has higher link multiplicities (see verdict).
+  forward leg occurrences: 24
+  backward leg occurrences: 24
+
+--- Section C: standard Wilson L=2 PBC has degenerate link multiplicities ---
+  In standard Wilson convention, each unique unordered
+  plaquette is traversed +d1+d2-d1-d2; on L=2 PBC, the
+  RETURN legs (-d1 and -d2) point to OTHER directed links,
+  not the same forward links from the FIRST 2 legs.
+
+  Concretely: starting at site (0,0,0) in (x,y) plane,
+  forward +x reaches (1,0,0); +y reaches (1,1,0); then
+  -x reaches (0,1,0); then -y reaches (0,0,0). The 4
+  forward-pointing link IDs are (0,0,0,x), (1,0,0,y),
+  (0,1,0,x), (0,0,0,y). The standard Wilson plaquette
+  at this site uses these 4 link IDs with signs +,+,-,-.
+
+  Now consider plaquette at (1,0,0) in (x,y) plane: forward
+  +x reaches (0,0,0) [PBC]; +y reaches (0,1,0); -x reaches
+  (1,1,0); -y reaches (1,0,0). Forward link IDs: (1,0,0,x),
+  (0,0,0,y), (1,1,0,x), (1,0,0,y) with signs +,+,-,-.
+
+  These TWO plaquettes share NO LINK ID (different sites).
+  But the link (0,0,0,x) appears in plaquette at (0,0,0)
+  (xy plane) AS forward, AND in plaquette at (0,0,0) (xz
+  plane) ALSO as forward. So link (0,0,0,x) is in 2
+  plaquettes, both forward.
+
+  Critical realization: in standard Wilson +d1+d2-d1-d2, the
+  - legs use distinct link IDs (the links one row over), and
+  L_s=2 periodic wrapping makes the link-incidence counts
+  irregular rather than uniformly 2 or uniformly 4.
+  observed link multiplicities: {2: 8, 3: 4, 4: 4, 1: 4}
+
+--- Section E: bridge comparison and verdict ---
+
+  Reference values:
+    P_triv (rho = delta):     0.4225317396
+    P_loc (rho = 1):          0.4524071590
+    P_candidate (reported):   0.4291049969
+    bridge-support target:    0.5935306800
+    epsilon_witness:          3.030e-04
+
+  Standard Wilson convention on L=2 PBC has structural
+  degeneracies that prevent direct application of the
+  same source-sector factorization.
+
+  Verdict on simplest correct path:
+
+  The all-forward traversal (matching the framework's
+  candidate runner, P = 0.4291) lands far
+  below the bridge target 0.5935
+  (gap >> epsilon_witness = 3.030e-04). The
+  standard Wilson +-+- traversal is not a clean source-sector
+  primitive at L_s=2 because its link multiplicities are irregular.
+
+  This is INTRINSIC to the L_s=2 PBC cube: with only 2 sites
+  per spatial direction, the irrep tower truncated at the
+  source-sector level cannot reproduce the full beta=6
+  thermodynamic-limit Wilson plaquette. The correlation length
+  at beta=6 in SU(3) is much larger than 2 lattice spacings.
+
+  CONCLUSION: L_s>=3 Wigner-Racah engine work is the next
+  required route for this exact-cube program. The framework-built
+  Block 1-4 infrastructure
+  (CG decomposition, 4-fold Haar projector, L_s=3 cube geometry,
+  partition-function staging) provides the foundation; Block 5
+  has now CONFIRMED via direct orientation-aware computation
+  that the tested L_s=2 PBC surfaces do not close the bridge gap.
+
+  This finding is consistent with the gauge-scalar temporal
+  observable bridge no-go theorem
+  (docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_
+   NOTE_2026-05-03.md), which establishes that within the
+  current Wilson-framework primitive stack, BRIDGE is not
+  derivable. To escape the no-go, additional independently audited
+  primitives (e.g., the exact L_s>=3 cube Wigner-Racah Perron
+  data) must be added — which is precisely what the Wigner-
+  Racah engine work is ENGINEERED to deliver, at multi-day to
+  multi-week scale.
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
+==============================================================================
+
+Headline:
+  L_s=2 PBC cube — tested surfaces verified:
+    All-forward N_components = 8 (matches candidate runner)
+    P_all-forward = 0.4291, gap = 543x epsilon_witness
+  Verdict: L_s>=3 Wigner-Racah work is the next required route.
+  Framework Blocks 1-4 infrastructure is the correct foundation.
+
+----- stderr -----
+
