@@ -23,10 +23,9 @@ publication tables phrase it.
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 7 |
 | critical | `open_gate` | 2 |
-| critical | `audit_in_progress` | 1 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 544
+**Total non-retained-grade rows in publication tables:** 543
 
 ## Per-row breakdown
 
@@ -447,7 +446,6 @@ publication tables phrase it.
 | critical | `quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
 | critical | `quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
 | critical | `r_base_group_theory_derivation_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
-| critical | `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `rconn_derived_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `restricted_strong_field_closure_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `retained_cross_lane_consistency_support_note_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |

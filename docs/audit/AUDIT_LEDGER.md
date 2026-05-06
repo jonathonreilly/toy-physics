@@ -18,13 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 62 |
+| **retained** | 63 |
 | **retained_no_go** | 120 |
 | **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 779 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 380 |
+| `audited_clean` | 381 |
 | `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -350,6 +347,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -10712,6 +10710,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For fixed a_u in (0,1), the admissible family R_{p,q}(a_u;y_t)=y_t*(a_u^(p+q),a_u^q,1) with p,q>0 gives y_u/y_c=a_u^p and y_c/y_t=a_u^q, so the same scalar supports a continuum of ordered scale-covariant ratio pairs and does not determine p or q.  _(class `A`)_
 - **chain closes:** True — The no-go closes internally: granting the exact scalar, positivity, ordering, top-scale normalization, and scale covariance, the displayed two-parameter power family is an explicit admissible counterfamily. Since different positive p,q values preserve the premises while changing the two ratios, the ratios are underdetermined unless an additional readout theorem fixes the exponents or equivalent functions.
 - **rationale:** This is a negative boundary theorem, not a retained mass-ratio prediction. The load-bearing step is exact algebra over an admissible continuum and the runner directly checks scalar domain, ordering, scale covariance, distinct ratio outputs, fit-capacity versus prediction, and absence of hidden mass/fitting/top-reuse imports. The conclusion follows even after granting the stated premises.
+- **auditor confidence:** high
+
+### `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Abstract Euclidean radial scaling of a first-quadrant point preserves origin slope/angle/doubled angle, scales radius by mu, and does not preserve the finite (1,0)-based tangent readout except at mu=1.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-radial-scaling-auditor-2-2026-05-06`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For mu>0, (mu*eta)/(mu*rho)=eta/rho, sqrt((mu*rho)^2+(mu*eta)^2)=mu*sqrt(rho^2+eta^2), and tan(beta_bar)-tan(beta)=eta*(mu-1)/((1-mu*rho)*(1-rho)) on the finite-tangent subdomain.  _(class `A`)_
+- **chain closes:** True — The theorem is exact algebra over positive real symbols with explicit finite-tangent exclusions for the only denominators that can vanish; no CKM or physical assignment is needed.
+- **rationale:** Clean: the load-bearing statements reduce to direct cancellation by positive mu, standard double-angle identities as functions of the preserved slope, the positive-mu square-root scaling identity, and explicit factorization of the affine-base tangent difference. The runner independently checks these symbolic identities and the stated denominator exclusions; residual risk is only wording drift if future uses re-import CKM-specific meanings, which this narrow note explicitly disclaims.
 - **auditor confidence:** high
 
 ### `rconn_derived_note`
