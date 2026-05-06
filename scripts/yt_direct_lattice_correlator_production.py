@@ -881,6 +881,8 @@ def source_higgs_operator_summary(cert: dict[str, Any], cert_path: Path | None) 
             "operator_definition": None,
             "identity_certificate": None,
             "normalization_certificate": None,
+            "diagonal_vertex": None,
+            "sparse_vertex": None,
             "canonical_higgs_operator_identity_passed": False,
             "hunit_used_as_operator": None,
             "static_ew_algebra_used_as_operator": None,
@@ -891,6 +893,8 @@ def source_higgs_operator_summary(cert: dict[str, Any], cert_path: Path | None) 
         "operator_definition": cert.get("operator_definition"),
         "identity_certificate": cert.get("identity_certificate"),
         "normalization_certificate": cert.get("normalization_certificate"),
+        "diagonal_vertex": cert.get("diagonal_vertex"),
+        "sparse_vertex": cert.get("sparse_vertex"),
         "canonical_higgs_operator_identity_passed": cert.get("canonical_higgs_operator_identity_passed") is True,
         "hunit_used_as_operator": cert.get("hunit_used_as_operator"),
         "static_ew_algebra_used_as_operator": cert.get("static_ew_algebra_used_as_operator"),
@@ -905,6 +909,7 @@ def source_higgs_firewall_from_certificate(cert: dict[str, Any]) -> dict[str, An
         "used_yt_ward_identity": firewall.get("used_yt_ward_identity"),
         "used_alpha_lm_or_plaquette": firewall.get("used_alpha_lm_or_plaquette"),
         "used_hunit_matrix_element_readout": firewall.get("used_hunit_matrix_element_readout"),
+        "used_taste_radial_axis_as_canonical_oh": firewall.get("used_taste_radial_axis_as_canonical_oh"),
     }
 
 
@@ -940,6 +945,81 @@ def source_higgs_operator_weights(geom: Geometry, cert: dict[str, Any]) -> np.nd
     if not math.isfinite(norm) or norm <= 1.0e-30:
         raise ValueError("source-Higgs operator vertex has zero/non-finite norm")
     return weights
+
+
+def _source_higgs_sparse_direction(direction: Any) -> int:
+    if isinstance(direction, str):
+        mapping = {"x": 1, "y": 2, "z": 3, "1": 1, "2": 2, "3": 3}
+        if direction not in mapping:
+            raise ValueError(f"unknown taste-radial spatial direction: {direction!r}")
+        return mapping[direction]
+    mu = int(direction)
+    if mu not in (1, 2, 3):
+        raise ValueError(f"taste-radial hypercube flip directions must be spatial 1,2,3; got {direction!r}")
+    return mu
+
+
+def hypercube_flip_operator(gauge: GaugeField, spatial_mu: int) -> sparse.csr_matrix:
+    """Gauge-covariant blocked-hypercube bit flip for one spatial taste axis."""
+
+    geom = gauge.geom
+    if geom.spatial_l % 2 != 0:
+        raise ValueError("taste-radial hypercube flip source requires even spatial_l")
+    if spatial_mu not in (1, 2, 3):
+        raise ValueError("hypercube flip source only supports spatial directions 1,2,3")
+    n = geom.volume * NC
+    rows: list[int] = []
+    cols: list[int] = []
+    vals: list[complex] = []
+    for site in range(geom.volume):
+        coords = geom.site_coords(site)
+        if coords[spatial_mu] % 2 == 0:
+            target = geom.shifted(coords, spatial_mu, +1)
+            link = gauge.u[coords][spatial_mu]
+        else:
+            target = geom.shifted(coords, spatial_mu, -1)
+            link = gauge.u[target][spatial_mu].conj().T
+        target_site = geom.site_index(target)
+        for a in range(NC):
+            row = site * NC + a
+            for b in range(NC):
+                rows.append(row)
+                cols.append(target_site * NC + b)
+                vals.append(link[a, b])
+    return sparse.csr_matrix((vals, (rows, cols)), shape=(n, n), dtype=np.complex128)
+
+
+def taste_radial_sparse_vertex(gauge: GaugeField, vertex: dict[str, Any]) -> sparse.csr_matrix:
+    directions = [_source_higgs_sparse_direction(d) for d in vertex.get("directions", [1, 2, 3])]
+    if not directions:
+        raise ValueError("taste-radial sparse vertex requires at least one spatial direction")
+    normalization = str(vertex.get("normalization", "source_norm_matched"))
+    if normalization == "source_norm_matched":
+        coefficient = 1.0 / math.sqrt(float(len(directions)))
+    elif normalization == "hs_unit":
+        coefficient = 1.0 / math.sqrt(float(len(directions) * gauge.geom.volume * NC))
+    elif normalization == "none":
+        coefficient = 1.0
+    else:
+        coefficient = float(vertex.get("coefficient", 1.0))
+    pieces = [hypercube_flip_operator(gauge, mu) for mu in directions]
+    out = pieces[0].copy()
+    for piece in pieces[1:]:
+        out = out + piece
+    return (coefficient * out).tocsr()
+
+
+def source_higgs_operator_matrix(
+    geom: Geometry,
+    gauge: GaugeField,
+    cert: dict[str, Any],
+) -> sparse.csr_matrix:
+    sparse_vertex = cert.get("sparse_vertex", {}) if isinstance(cert.get("sparse_vertex", {}), dict) else {}
+    kind = str(sparse_vertex.get("kind", ""))
+    if kind == "taste_radial_spatial_hypercube_flip":
+        return taste_radial_sparse_vertex(gauge, sparse_vertex)
+    weights = source_higgs_operator_weights(geom, cert).astype(np.complex128)
+    return sparse.diags(weights, offsets=0, shape=(weights.size, weights.size), format="csr")
 
 
 def stochastic_scalar_two_point(
@@ -1049,8 +1129,8 @@ def stochastic_source_higgs_cross_correlator(
     system = normal_system if normal_system is not None else build_normal_equation_system(gauge, mass)
     geom = gauge.geom
     n = geom.volume * NC
-    h_weights = source_higgs_operator_weights(geom, operator_certificate).astype(np.complex128)
-    one_weights = np.ones(n, dtype=np.complex128)
+    h_operator = source_higgs_operator_matrix(geom, gauge, operator_certificate).astype(np.complex128)
+    one_operator = sparse.identity(n, dtype=np.complex128, format="csr")
     phases = {momentum_key(mode): phase_vector(geom, mode) for mode in modes}
     accum: dict[str, dict[str, list[complex]]] = {
         momentum_key(mode): {"C_ss": [], "C_sH": [], "C_HH": []} for mode in modes
@@ -1061,12 +1141,12 @@ def stochastic_source_higgs_cross_correlator(
     def estimate_pair(
         eta: np.ndarray,
         phase: np.ndarray,
-        left_weights: np.ndarray,
-        right_weights: np.ndarray,
+        left_operator: sparse.csr_matrix,
+        right_operator: sparse.csr_matrix,
     ) -> tuple[complex, list[int], list[float]]:
-        right = np.conj(phase) * right_weights * eta
+        right = np.conj(phase) * (right_operator @ eta)
         y, info_y, residual_y = solve_vector_normal_eq_cached(system, right, rtol, maxiter)
-        left = phase * left_weights * y
+        left = phase * (left_operator @ y)
         x, info_x, residual_x = solve_vector_normal_eq_cached(system, left, rtol, maxiter)
         return complex(np.vdot(eta, x) / n), [info_y, info_x], [residual_y, residual_x]
 
@@ -1077,9 +1157,9 @@ def stochastic_source_higgs_cross_correlator(
         for mode in modes:
             key = momentum_key(mode)
             phase = phases[key]
-            c_ss, info_ss, residual_ss = estimate_pair(eta, phase, one_weights, one_weights)
-            c_sh, info_sh, residual_sh = estimate_pair(eta, phase, one_weights, h_weights)
-            c_hh, info_hh, residual_hh = estimate_pair(eta, phase, h_weights, h_weights)
+            c_ss, info_ss, residual_ss = estimate_pair(eta, phase, one_operator, one_operator)
+            c_sh, info_sh, residual_sh = estimate_pair(eta, phase, one_operator, h_operator)
+            c_hh, info_hh, residual_hh = estimate_pair(eta, phase, h_operator, h_operator)
             accum[key]["C_ss"].append(c_ss)
             accum[key]["C_sH"].append(c_sh)
             accum[key]["C_HH"].append(c_hh)

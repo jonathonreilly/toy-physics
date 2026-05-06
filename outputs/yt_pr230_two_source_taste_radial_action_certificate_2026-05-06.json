@@ -1,0 +1,183 @@
+{
+  "actual_current_surface_status": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_higgs_operator_identity_passed": false,
+  "certificate_kind": "pr230_two_source_taste_radial_action_source_vertex",
+  "cold_surface_algebra": {
+    "axis_gram_over_source_norm": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "axis_hermitian_errors": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_square_errors": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "radial_hermitian_error": 0.0,
+    "radial_norm_sq": 96.00000000000003,
+    "radial_trace": [
+      0.0,
+      0.0
+    ],
+    "site_color_dimension": 96,
+    "source_norm_sq": 96.0,
+    "source_radial_overlap": [
+      0.0,
+      0.0
+    ],
+    "spatial_cycle_invariance_error": 0.0
+  },
+  "conditional_surface_status": "conditional-support for future measured C_sx/C_xx rows if the taste-radial source is run in production and a separate canonical O_H/source-overlap or physical-response bridge closes",
+  "exact_next_action": "Run a bounded then production two-source measurement wave with this operator certificate to write C_sx/C_xx rows, while separately deriving canonical O_H/source-overlap or using a physical W/Z, Schur, neutral primitive, or strict scalar-LSZ bridge.",
+  "fail_count": 0,
+  "firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_kappa_s_equal_one": false,
+    "used_alpha_lm_or_plaquette": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_kappa_s_equal_one": false,
+    "used_alpha_lm_or_plaquette": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_higgs_rows": false,
+    "taste_radial_measurement_rows": false
+  },
+  "harness_smoke": {
+    "max_cg_residual": 4.559475069868232e-16,
+    "mode": "0,0,0",
+    "noise_vectors": 1,
+    "row": {
+      "C_HH_imag": 0.1476355247981545,
+      "C_HH_imag_noise_stderr": 0.0,
+      "C_HH_real": 0.0530565167243368,
+      "C_HH_real_noise_stderr": 0.0,
+      "C_sH_imag": 1.2432184911167116e-17,
+      "C_sH_imag_noise_stderr": 0.0,
+      "C_sH_real": -0.0006659172655012803,
+      "C_sH_real_noise_stderr": 0.0,
+      "C_ss_imag": 6.938893903907228e-18,
+      "C_ss_imag_noise_stderr": 0.0,
+      "C_ss_real": 0.055363321799307925,
+      "C_ss_real_noise_stderr": 0.0,
+      "momentum_mode": [
+        0,
+        0,
+        0
+      ],
+      "noise_vectors": 1,
+      "p_hat_sq": 0.0
+    },
+    "schema_finite": true,
+    "strict_limit": "finite smoke schema is instrumentation only, not production or pole evidence"
+  },
+  "hunit_used_as_operator": false,
+  "hypothetical_axiom_status": null,
+  "identity_certificate": "same-surface source-vertex certificate only; canonical O_H identity absent",
+  "normalization_certificate": "source_norm_matched: on the cold Cl(3)/Z^3 surface Tr X^dagger X equals Tr I^dagger I over site-color degrees of freedom.  This is not scalar LSZ or canonical Higgs normalization.",
+  "operator_certificate_payload": {
+    "canonical_higgs_operator_identity_passed": false,
+    "firewall": {
+      "claimed_retained_or_proposed_retained": false,
+      "set_kappa_s_equal_one": false,
+      "used_alpha_lm_or_plaquette": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_targets_as_selectors": false,
+      "used_taste_radial_axis_as_canonical_oh": false,
+      "used_yt_ward_identity": false
+    },
+    "hunit_used_as_operator": false,
+    "identity_certificate": "same-surface source-vertex certificate only; canonical O_H identity absent",
+    "normalization_certificate": "source_norm_matched: on the cold Cl(3)/Z^3 surface Tr X^dagger X equals Tr I^dagger I over site-color degrees of freedom.  This is not scalar LSZ or canonical Higgs normalization.",
+    "operator_definition": "Gauge-covariant blocked-hypercube taste-radial source X=(X_1+X_2+X_3)/sqrt(3), where X_i flips the spatial parity bit inside each 2^3 Cl(3)/Z^3 block using the connecting SU(3) link.",
+    "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+    "proposal_allowed": false,
+    "sparse_vertex": {
+      "directions": [
+        1,
+        2,
+        3
+      ],
+      "gauge_covariant_links": true,
+      "kind": "taste_radial_spatial_hypercube_flip",
+      "normalization": "source_norm_matched",
+      "requires_even_spatial_l": true
+    },
+    "static_ew_algebra_used_as_operator": false
+  },
+  "operator_definition": "Gauge-covariant blocked-hypercube taste-radial source X=(X_1+X_2+X_3)/sqrt(3), where X_i flips the spatial parity bit inside each 2^3 Cl(3)/Z^3 block using the connecting SU(3) link.",
+  "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
+    "source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+    "source_higgs_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "two_source_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "source_coordinate_transport_completion": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
+    "source_higgs_harness_extension": "bounded-support / source-Higgs cross-correlator harness extension",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "two_source_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The block realizes the second source as a gauge-covariant harness vertex and validates finite smoke schema only.  It does not prove the vertex is canonical O_H, does not derive kappa_s, and does not write production pole rows.",
+  "sparse_vertex": {
+    "directions": [
+      1,
+      2,
+      3
+    ],
+    "gauge_covariant_links": true,
+    "kind": "taste_radial_spatial_hypercube_flip",
+    "normalization": "source_norm_matched",
+    "requires_even_spatial_l": true
+  },
+  "static_ew_algebra_used_as_operator": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not identify taste-radial X with canonical O_H",
+    "does not derive kappa_s or scalar LSZ normalization",
+    "does not write production C_sx/C_xx rows",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "two_source_taste_radial_action_passed": true
+}

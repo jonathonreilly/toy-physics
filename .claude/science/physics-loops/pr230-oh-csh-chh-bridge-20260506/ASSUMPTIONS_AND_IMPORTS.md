@@ -41,6 +41,10 @@ Allowed context:
   support only: `I_8/sqrt(8)` and `(S0+S1+S2)/sqrt(24)` form an orthonormal
   same-surface chart, but the second coordinate is not a production action,
   canonical `O_H`, or a measured source-Higgs row.
+- the two-source taste-radial action source vertex as exact harness support
+  only: the blocked-hypercube source `X=(X_1+X_2+X_3)/sqrt(3)` is now a
+  gauge-covariant source vertex, but it is not a canonical `O_H` identity,
+  scalar LSZ normalization, or measured production row.
 
 Open imports after this block:
 
@@ -83,6 +87,13 @@ Open imports after this block:
 - Two-source taste-radial chart is not proof selectors until a same-surface
   production/action row turns on the second source and separate authority
   identifies it with canonical `O_H` or supplies measured `C_sx/C_xx` rows.
+- Two-source taste-radial action source vertex is not proof selectors until
+  measured `C_sx/C_xx` rows and canonical `O_H`/source-overlap or
+  physical-response authority exist.
+- Two-source taste-radial action source vertex is not proof selectors until
+  measured C_sx/C_xx rows and canonical O_H/source-overlap or
+  physical-response authority exist.
+- Two-source taste-radial action source vertex is not proof selectors until measured C_sx/C_xx rows and canonical O_H/source-overlap or physical-response authority exist.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

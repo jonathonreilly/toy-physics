@@ -92,6 +92,15 @@ undo the one-source no-go and does not identify the second axis with canonical
 action/row harness and measure `C_sx/C_xx`, or separately prove/reject
 `x = O_H`.
 
+The two-source lane now also has the action/source-vertex support artifact.
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_ACTION_CERTIFICATE` realizes
+`X=(X_1+X_2+X_3)/sqrt(3)` as a gauge-covariant blocked-hypercube source vertex
+accepted by the production harness.  The runner verifies cold-surface
+Hermiticity, taste-axis orthogonality, norm matching to the uniform source,
+zero source overlap, and finite one-mode smoke schema.  This retires only the
+source-vertex absence; it is not canonical `O_H`, not `kappa_s`, and not
+measured production `C_sx/C_xx` rows.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -103,8 +112,8 @@ Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows;
-2. promote the exact two-source taste-radial chart with a production/action row
-   plus measured `C_sx/C_xx`, or prove/reject its canonical-`O_H` identity;
+2. run measured `C_sx/C_xx` rows for the exact two-source taste-radial source,
+   then prove/reject its canonical-`O_H` identity or supply another bridge;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
    with a neutral transfer row, off-diagonal generator, or primitive-cone
    theorem;

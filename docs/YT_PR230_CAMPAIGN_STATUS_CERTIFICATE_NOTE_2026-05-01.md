@@ -28,8 +28,29 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=293 FAIL=0
+# SUMMARY: PASS=294 FAIL=0
 ```
+
+## 2026-05-06 Two-Source Taste-Radial Action/Source Support Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json`.
+The production harness now has an explicit sparse source-Higgs operator path
+and realizes the taste-radial chart axis as the gauge-covariant
+blocked-hypercube source `X=(X_1+X_2+X_3)/sqrt(3)`.  This is infrastructure and
+same-surface exact support only.  It is not a canonical `O_H` identity, does
+not derive `kappa_s`, and does not provide measured `C_sx/C_xx` production
+rows.
+
+Validation: two-source action `PASS=15 FAIL=0`; two-source chart `PASS=22
+FAIL=0`; assumption/import stress `PASS=58 FAIL=0`; full positive closure
+assembly gate `PASS=118 FAIL=0`; retained-route `PASS=264 FAIL=0`; campaign
+status `PASS=294 FAIL=0`; completion audit `PASS=32 FAIL=0`.
+
+The campaign target remains open.  The next action on this route is to run
+measured `C_sx/C_xx` production rows for the new source vertex, then prove or
+reject canonical `O_H`/source-overlap authority or bridge it through a genuine
+same-source physical-response route.
 
 ## 2026-05-06 Two-Source Taste-Radial Chart Support Update
 
@@ -41,10 +62,10 @@ source/taste-radial chart.  It does not identify the second source with
 canonical `O_H`, does not supply a production action, and does not write
 `C_sH/C_HH` rows.
 
-Validation: two-source chart `PASS=21 FAIL=0`; assumption/import stress
-`PASS=57 FAIL=0`; full positive closure assembly gate `PASS=117 FAIL=0`;
-retained-route `PASS=263 FAIL=0`; campaign status `PASS=293 FAIL=0`;
-completion audit `PASS=31 FAIL=0`.
+Validation: two-source chart `PASS=22 FAIL=0`; assumption/import stress
+`PASS=58 FAIL=0`; full positive closure assembly gate `PASS=118 FAIL=0`;
+retained-route `PASS=264 FAIL=0`; campaign status `PASS=294 FAIL=0`;
+completion audit `PASS=32 FAIL=0`.
 
 The campaign target remains open.  The next source-coordinate action is a real
 two-source production/action row for `h_taste` plus measured `C_sx/C_xx`, or a

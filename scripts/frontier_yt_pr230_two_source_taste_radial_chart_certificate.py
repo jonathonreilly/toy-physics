@@ -245,7 +245,27 @@ def main() -> int:
     retained_route_open = parents["retained_route"].get("proposal_allowed") is False
     campaign_open = parents["campaign_status"].get("proposal_allowed") is False
     futures = future_presence()
-    future_rows_absent = not any(futures.values())
+    action_cert = load(FUTURE_FILES["two_source_production_action"])
+    action_absent_or_support_only = (
+        futures["two_source_production_action"] is False
+        or (
+            action_cert.get("two_source_taste_radial_action_passed") is True
+            and action_cert.get("proposal_allowed") is False
+            and action_cert.get("operator_certificate_payload", {}).get(
+                "canonical_higgs_operator_identity_passed"
+            )
+            is False
+            and action_cert.get("forbidden_firewall", {}).get(
+                "used_taste_radial_axis_as_canonical_oh"
+            )
+            is False
+        )
+    )
+    closure_rows_absent = (
+        futures["taste_radial_measurement_rows"] is False
+        and futures["canonical_oh_certificate"] is False
+        and futures["source_higgs_rows"] is False
+    )
     firewall_clean = all(value is False for value in forbidden_firewall().values())
 
     report("parent-certificates-present", not missing, f"missing={missing}")
@@ -265,7 +285,8 @@ def main() -> int:
     report("two-source-normalized-chart-orthonormal", normalized_chart_is_orthonormal, str(normalized_chart_gram))
     report("canonical-oh-still-absent", canonical_oh_absent, statuses["canonical_higgs_operator_gate"])
     report("source-higgs-rows-still-absent", source_higgs_rows_absent, statuses["source_higgs_builder"])
-    report("future-action-and-row-files-absent", future_rows_absent, str(futures))
+    report("future-action-absent-or-support-only", action_absent_or_support_only, str(futures))
+    report("closure-row-files-still-absent", closure_rows_absent, str(futures))
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
     report("forbidden-firewall-clean", firewall_clean, str(forbidden_firewall()))
@@ -288,7 +309,8 @@ def main() -> int:
         and normalized_chart_is_orthonormal
         and canonical_oh_absent
         and source_higgs_rows_absent
-        and future_rows_absent
+        and action_absent_or_support_only
+        and closure_rows_absent
         and retained_route_open
         and campaign_open
         and firewall_clean
@@ -337,6 +359,11 @@ def main() -> int:
             "hs_normalized_s_hat_and_h_taste": normalized_chart_gram,
         },
         "future_file_presence": futures,
+        "future_action_status": (
+            action_cert.get("actual_current_surface_status")
+            if futures["two_source_production_action"]
+            else "absent"
+        ),
         "parent_certificates": PARENTS,
         "parent_statuses": statuses,
         "forbidden_firewall": forbidden_firewall(),

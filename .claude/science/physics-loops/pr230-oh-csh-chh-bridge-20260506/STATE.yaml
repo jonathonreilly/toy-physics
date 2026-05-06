@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: two_source_taste_radial_chart_certificate
+active_route: two_source_taste_radial_action_certificate
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -21,7 +21,10 @@ hard_residual: >
   it is not a PR230 W/Z response or O_H row.
   The new two-source taste-radial chart supplies an exact same-surface
   orthonormal source/taste axis pair, but that second source is not a
-  production action, canonical O_H identity, or C_sH/C_HH row.
+  canonical O_H identity or C_sH/C_HH row.  The harness now realizes that
+  taste-radial axis as a gauge-covariant blocked-hypercube sparse source
+  vertex, but no measured C_sx/C_xx production rows or canonical
+  O_H/source-overlap bridge have landed.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -44,6 +47,8 @@ files_touched:
   - scripts/frontier_yt_pr230_z3_lazy_selector_no_go.py
   - scripts/frontier_yt_pr230_origin_main_ew_m_residual_intake_guard.py
   - scripts/frontier_yt_pr230_two_source_taste_radial_chart_certificate.py
+  - scripts/frontier_yt_pr230_two_source_taste_radial_action_certificate.py
+  - scripts/yt_direct_lattice_correlator_production.py
   - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - scripts/frontier_yt_pr230_positive_closure_completion_audit.py
   - docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md
@@ -63,6 +68,7 @@ files_touched:
   - docs/YT_PR230_Z3_LAZY_SELECTOR_NO_GO_NOTE_2026-05-06.md
   - docs/YT_PR230_ORIGIN_MAIN_EW_M_RESIDUAL_INTAKE_GUARD_NOTE_2026-05-06.md
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHART_CERTIFICATE_NOTE_2026-05-06.md
+  - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ACTION_CERTIFICATE_NOTE_2026-05-06.md
   - docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
@@ -85,6 +91,7 @@ files_touched:
   - outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json
   - outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json
   - outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
@@ -99,26 +106,28 @@ verification:
   z3_lazy_transfer_promotion_pass_fail: "17/0"
   z3_lazy_selector_no_go_pass_fail: "22/0"
   origin_main_ew_m_residual_intake_guard_pass_fail: "18/0"
-  two_source_taste_radial_chart_pass_fail: "21/0"
+  two_source_taste_radial_chart_pass_fail: "22/0"
+  two_source_taste_radial_action_pass_fail: "15/0"
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
   source_higgs_production_readiness_pass_fail: "21/0"
-  completion_audit_pass_fail: "31/0"
+  completion_audit_pass_fail: "32/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "57/0"
-  full_positive_assembly_pass_fail: "117/0"
-  retained_route_certificate_pass_fail: "263/0"
-  campaign_status_certificate_pass_fail: "293/0"
-  audit_pipeline: "complete; audit metadata intentionally regenerated for the EW M-residual intake row and current note hashes"
+  assumption_import_stress_pass_fail: "58/0"
+  full_positive_assembly_pass_fail: "118/0"
+  retained_route_certificate_pass_fail: "264/0"
+  campaign_status_certificate_pass_fail: "294/0"
+  audit_pipeline: "complete; audit metadata intentionally regenerated for the two-source taste-radial action note row and current note hashes"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
 next_exact_action: >
   The genuine two-source source-coordinate lane now has an exact taste-radial
-  chart support artifact, so the next source-coordinate action is not more
-  reparametrization: turn on a real two-source production/action row for
-  h_taste and measure C_sx/C_xx, or prove/reject that h_taste is canonical O_H.
+  chart and a concrete gauge-covariant taste-radial action/source vertex, so
+  the next source-coordinate action is not more reparametrization: run measured
+  C_sx/C_xx production rows for that vertex, then prove/reject that h_taste is
+  canonical O_H or bridge it by same-source physical response.
   Other live positive artifacts remain certified canonical O_H plus C_sH/C_HH
   pole rows, neutral primitive/rank-one, Schur A/B/C rows, or W/Z response with
   strict g2/covariance/delta_perp.  Do not spend closure wording on the
@@ -154,5 +163,6 @@ stop_condition: >
   as support-only rather than closure evidence, then ingesting the origin/main
   EW M-residual CMT/Fierz packet as context-only rather than same-surface
   PR230 W/Z or O_H closure authority, then adding the exact two-source
-  taste-radial chart as support-only source-coordinate progress while leaving
-  canonical O_H, production rows, and closure open.
+  taste-radial chart plus a gauge-covariant action/source vertex as support-only
+  source-coordinate progress while leaving canonical O_H, measured production
+  rows, and closure open.

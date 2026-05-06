@@ -32,6 +32,7 @@ PARENTS = {
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
+    "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -219,7 +220,26 @@ def main() -> int:
         and not future_bridge_presence["source_higgs_cross_correlator_rows"]
         and not future_bridge_presence["source_higgs_production_certificate"]
     )
-    no_future_bridge_files_present = not any(future_bridge_presence.values())
+    two_source_action_support_present = (
+        future_bridge_presence["two_source_taste_radial_action"] is True
+        and certs["two_source_taste_radial_action"].get("proposal_allowed") is False
+        and certs["two_source_taste_radial_action"].get(
+            "two_source_taste_radial_action_passed"
+        )
+        is True
+        and certs["two_source_taste_radial_action"].get(
+            "operator_certificate_payload", {}
+        ).get("canonical_higgs_operator_identity_passed")
+        is False
+    )
+    no_unclosed_future_bridge_files_present = (
+        all(
+            present is False
+            for name, present in future_bridge_presence.items()
+            if name != "two_source_taste_radial_action"
+        )
+        and two_source_action_support_present
+    )
     taste_condensate_bridge_blocked = (
         certs["taste_condensate_oh_bridge"].get("taste_condensate_oh_bridge_audit_passed")
         is True
@@ -248,6 +268,15 @@ def main() -> int:
         is False
         and "two-source taste-radial chart"
         in parent_statuses["two_source_taste_radial_chart"]
+    )
+    two_source_taste_radial_action_not_closure = (
+        "two-source taste-radial action source vertex"
+        in parent_statuses["two_source_taste_radial_action"]
+        and two_source_action_support_present
+        and certs["two_source_taste_radial_action"].get("forbidden_firewall", {}).get(
+            "used_taste_radial_axis_as_canonical_oh"
+        )
+        is False
     )
     origin_main_composite_higgs_not_closure = (
         certs["origin_main_composite_higgs_intake_guard"].get(
@@ -374,12 +403,13 @@ def main() -> int:
     report("taste-condensate-oh-bridge-blocked", taste_condensate_bridge_blocked, parent_statuses["taste_condensate_oh_bridge"])
     report("source-coordinate-transport-blocked", source_coordinate_transport_blocked, parent_statuses["source_coordinate_transport_gate"])
     report("two-source-taste-radial-chart-support-not-closure", two_source_taste_radial_support_not_closure, parent_statuses["two_source_taste_radial_chart"])
+    report("two-source-taste-radial-action-support-not-closure", two_source_taste_radial_action_not_closure, parent_statuses["two_source_taste_radial_action"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
     report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
-    report("future-bridge-artifact-files-absent", no_future_bridge_files_present, str(future_bridge_presence))
+    report("future-bridge-artifact-files-support-only-or-absent", no_unclosed_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
     report("polefit8x8-chunks-complete", polefit["complete_id_set"], f"count={polefit['count']} missing={polefit['missing_ids']}")
@@ -504,6 +534,7 @@ def main() -> int:
         "proposal_allowed_reason": (
             "Chunk production is complete and O_sp supplies exact same-source "
             "source-side support, but canonical O_H/O_sp-Higgs overlap rows, "
+            "taste-radial production rows, "
             "scalar-LSZ authority, an accepted source-overlap or same-source "
             "physical-response bridge, matching/running authority, and retained-"
             "route/campaign proposal authorization remain absent."
@@ -515,6 +546,7 @@ def main() -> int:
             "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
             "source_coordinate_transport_blocked": source_coordinate_transport_blocked,
             "two_source_taste_radial_support_not_closure": two_source_taste_radial_support_not_closure,
+            "two_source_taste_radial_action_not_closure": two_source_taste_radial_action_not_closure,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,

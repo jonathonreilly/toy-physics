@@ -605,6 +605,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_chart": load(
             "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_action": load(
+            "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2553,6 +2556,20 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_chart"],
     )
+    two_source_taste_radial_action = certificates["pr230_two_source_taste_radial_action"]
+    report(
+        "pr230-two-source-taste-radial-action-support-not-closure",
+        "two-source taste-radial action source vertex"
+        in str(statuses["pr230_two_source_taste_radial_action"])
+        and two_source_taste_radial_action.get("proposal_allowed") is False
+        and two_source_taste_radial_action.get("two_source_taste_radial_action_passed")
+        is True
+        and two_source_taste_radial_action.get("operator_certificate_payload", {}).get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False,
+        statuses["pr230_two_source_taste_radial_action"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4226,6 +4243,15 @@ def main() -> int:
         and two_source_taste_radial_chart.get("proposal_allowed") is False
         and two_source_taste_radial_chart.get("forbidden_firewall", {}).get(
             "identified_taste_radial_axis_with_canonical_oh"
+        )
+        is False
+    )
+    result["two_source_taste_radial_action_support_not_closure"] = (
+        two_source_taste_radial_action.get("two_source_taste_radial_action_passed")
+        is True
+        and two_source_taste_radial_action.get("proposal_allowed") is False
+        and two_source_taste_radial_action.get("operator_certificate_payload", {}).get(
+            "canonical_higgs_operator_identity_passed"
         )
         is False
     )

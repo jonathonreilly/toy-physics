@@ -40,6 +40,12 @@ orthogonal to the PR230 source.  This is not canonical `O_H` or a production
 row.  It reopens only the engineering target "turn on a real second source and
 measure rows"; it does not authorize closure.
 
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_ACTION_CERTIFICATE` now realizes that second
+source as a gauge-covariant blocked-hypercube harness vertex
+`X=(X_1+X_2+X_3)/sqrt(3)`.  This retires the pure "action/source vertex absent"
+blocker for the two-source lane, but it still does not identify `X` with
+canonical `O_H`, derive `kappa_s`, or write production `C_sx/C_xx` rows.
+
 ## Route D: Equivalent Physical Response
 
 Use same-source W/Z rows, Schur A/B/C rows, or a neutral rank-one theorem to

@@ -155,6 +155,9 @@ def main() -> int:
         "two_source_taste_radial_chart_certificate": load(
             "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json"
         ),
+        "two_source_taste_radial_action_certificate": load(
+            "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -288,6 +291,8 @@ def main() -> int:
         "same-surface neutral transfer/action or off-diagonal generator",
         "Origin-main EW M-residual CMT packet",
         "CMT/u0/Fierz channel bookkeeping is not proof selectors",
+        "Two-source taste-radial action source vertex",
+        "not proof selectors until measured C_sx/C_xx rows and canonical O_H/source-overlap or physical-response authority exist",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -847,6 +852,23 @@ def main() -> int:
         is False,
         two_source_chart.get("actual_current_surface_status"),
     )
+    two_source_action = certificates["two_source_taste_radial_action_certificate"]
+    report(
+        "two-source-taste-radial-action-support-not-oh-closure",
+        "two-source taste-radial action source vertex"
+        in str(two_source_action.get("actual_current_surface_status"))
+        and two_source_action.get("proposal_allowed") is False
+        and two_source_action.get("two_source_taste_radial_action_passed") is True
+        and two_source_action.get("operator_certificate_payload", {}).get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+        and two_source_action.get("forbidden_firewall", {}).get(
+            "used_taste_radial_axis_as_canonical_oh"
+        )
+        is False,
+        two_source_action.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -1018,8 +1040,11 @@ def main() -> int:
             "certificate is the first positive source-chart support after the "
             "one-source no-go: it gives an exact orthonormal same-surface "
             "`I_8/sqrt(8), (S0+S1+S2)/sqrt(24)` chart, but it is a new second "
-            "source axis until a production action/row certificate lands and "
-            "it does not identify that axis with canonical O_H.  "
+            "source axis and it does not identify that axis with canonical O_H.  "
+            "The two-source taste-radial action certificate realizes that axis "
+            "as a gauge-covariant blocked-hypercube harness source vertex, but "
+            "it is still support only until measured C_sx/C_xx rows and a "
+            "canonical O_H/source-overlap or physical-response bridge land.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1050,6 +1075,7 @@ def main() -> int:
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
             "does not treat the two-source taste-radial chart as canonical O_H or as production source-Higgs rows",
+            "does not treat the two-source taste-radial action source vertex as canonical O_H or measured C_sx/C_xx rows",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

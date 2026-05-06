@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T13:49:27.115319+00:00",
+  "generated_at": "2026-05-06T14:10:11.991656+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "6784243c6692647ea0ef01b817ea4fdd67f7e771d7a2f832dfc4c651bc101137",
+      "note_hash": "518a465150ffaa7fb157164e5604a64b7adcb884b7a9b15292adfcbeaaa570b3",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -42667,6 +42667,16 @@
       "path": "docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py",
       "title": "PR230 Taste-Condensate O_H Bridge Audit"
+    },
+    "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06": {
+      "claim_id": "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical `O_H` and production pole rows absent",
+      "deps": [],
+      "note_hash": "f3386b3f23776866cb7af187fa9385fc0a0eb1c86b1540b850c515e18ecce113",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ACTION_CERTIFICATE_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_action_certificate.py",
+      "title": "PR230 Two-Source Taste-Radial Action Certificate Note"
     },
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
@@ -45493,6 +45503,7 @@
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
     "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
@@ -45620,16 +45631,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1088,
-    "node_count": 2041,
-    "root_count": 1554,
-    "runners_with_path": 1537,
+    "leaf_count": 1089,
+    "node_count": 2042,
+    "root_count": 1555,
+    "runners_with_path": 1538,
     "status_counts": {
       "bounded": 556,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 437,
+      "support": 438,
       "unknown": 572
     }
   }

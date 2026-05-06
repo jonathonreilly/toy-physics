@@ -38,11 +38,12 @@
     "used_observed_targets": false,
     "used_yt_ward_identity": false
   },
+  "future_action_status": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
   "future_file_presence": {
     "canonical_oh_certificate": false,
     "source_higgs_rows": false,
     "taste_radial_measurement_rows": false,
-    "two_source_production_action": false
+    "two_source_production_action": true
   },
   "hypothetical_axiom_status": "Adding the h_taste source as dynamics is a new two-source surface until a production action or measurement-row certificate lands.",
   "new_second_source_axis": {
@@ -75,7 +76,7 @@
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge"
   },
-  "pass_count": 21,
+  "pass_count": 22,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The artifact certifies an exact algebraic two-source chart only. It does not supply a same-source EW/Higgs action, canonical O_H identity/normalization, source-Higgs pole rows, or physical y_t readout.",
   "source_coordinate": {
