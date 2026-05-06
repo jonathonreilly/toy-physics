@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_qg_smooth_gravitational_global_atlas_identification.py
+runner_sha256: 2b92675323da6a524fa4d4e2b018d987daa56895296bf10d3c1de6390bf06a36
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+[EXACT] PASS: the route already has exact local smooth gravitational identification and exact finite-atlas global closure on the direct-universal gravity route
+    this theorem starts from the already-closed local smooth gravitational object and the already-closed finite-atlas global patching law
+[EXACT] PASS: the local smooth gravitational object is overlap-covariant at the operator density level
+    max overlap covariance error=8.327e-17
+[EXACT] PASS: the local smooth gravitational action is chart-independent on overlaps
+    overlap action mismatch=0.000e+00
+[EXACT] PASS: the local stationary representatives patch to the same finite-atlas smooth gravitational stationary family
+    overlap stationary mismatch=1.776e-14
+[EXACT] PASS: the Gaussian covariance patches to the same finite-atlas smooth gravitational family
+    overlap covariance-family mismatch=1.421e-14
+[EXACT] PASS: the remaining stronger issue is therefore not finite-atlas smooth gravitational identification, but only later geometric/action and continuum-gravitational closures already discharged elsewhere on the branch
+    the canonical textbook weak/Gaussian object already patches as the same finite-atlas smooth gravitational stationary family; later notes close the global smooth weak/Gaussian solution class, canonical smooth weak/measure equivalence, the geometric/action comparison, and the continuum gravitational closure built on this step
+UNIVERSAL QG SMOOTH GRAVITATIONAL GLOBAL ATLAS IDENTIFICATION
+==============================================================================
+max overlap covariance error           = 8.327e-17
+overlap action mismatch                = 0.000e+00
+overlap stationary mismatch            = 1.776e-14
+overlap covariance-family mismatch     = 1.421e-14
+
+Verdict:
+The canonical textbook weak/Gaussian object of the direct-universal route already patches as the same smooth finite-atlas gravitational stationary family on the chosen smooth realization.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=6 FAIL=0 TOTAL=6
+
+----- stderr -----
+

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 790 |
+| unaudited | 789 |
 | audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 461 |
+| ~~audited_conditional~~ | 462 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 461 |
+| `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 838 |
+| `unaudited` | 837 |
 
 | claim_type | count |
 |---|---:|
@@ -926,6 +926,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `universal_qg_smooth_gravitational_global_atlas_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -13701,6 +13702,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
   - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_smooth_gravitational_global_atlas_note`
+
+- **Note:** [`UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md`](../../docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Claim that the canonical textbook weak/Gaussian object patches as the same finite-atlas smooth gravitational stationary family on a chosen smooth realization of the project spacetime topology.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-qg-global-atlas`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note imports local smooth gravitational identification plus finite-atlas overlap covariance/stationary patching, then identifies the local K_GR(D)-induced weak/Gaussian representatives as one globally patched smooth finite-atlas stationary family.  _(class `B`)_
+- **chain closes:** False — The matching runner passes finite overlap-covariance checks, but the row is wired only to a metadata hub. The runner and source rely on local smooth gravitational identification, canonical weak/Gaussian carrier, and finite-atlas global closure rows that are unaudited or conditional, so the theorem does not close from retained-grade dependencies.
+- **rationale:** Issue: the smooth finite-atlas gravitational atlas identification is asserted from an already-closed local/global theorem stack, but the ledger wires only universal_qg_optional_textbook_comparison_note, a metadata-only row. The matching runner passes its overlap-covariance/action/stationary/covariance-family checks, yet it explicitly assumes the local smooth identification and finite-atlas global closure are already closed; operational metadata shows those premise rows are unaudited or audited_conditional. Why this blocks: retained status cannot rest on a metadata hub or on non-retained local/global carrier premises. Repair target: wire the actual runner scripts/frontier_universal_qg_smooth_gravitational_global_atlas_identification.py and add direct dependencies for the local smooth gravitational identification, canonical textbook weak-measure carrier, positive-background operator family, and finite-atlas/discrete global closure rows; re-audit after those dependencies are retained-grade. Claim boundary until fixed: the runner supports a finite overlap-covariance diagnostic under stated premises, but this row is not retained proof of a global smooth gravitational atlas identification.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md`
+  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `valley_linear_action_note`
