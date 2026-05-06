@@ -1,8 +1,8 @@
 {
   "by_criticality": {
-    "critical": 506,
+    "critical": 505,
     "high": 15,
-    "leaf": 180,
+    "leaf": 179,
     "medium": 93
   },
   "cycle_break_target_count": 174,
@@ -3100,38 +3100,15 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-04-11"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.833,
-      "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py",
-      "transitive_descendants": 455
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
+      "blocker": "cross_confirmation_disagreement",
       "claim_id": "second_grown_family_complex_note",
       "claim_scope": "The no-restore Gate B grown geometry-sector slice at the tested anchor drift row carries the complex-action companion under the runner's stated gates.",
       "claim_type": "positive_theorem",
       "claim_type_provenance": "audited_pending_cross_confirmation",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
+      "cross_confirmation_status": "disagreement",
       "deps": [
         "second_grown_family_sign_note"
       ],
@@ -19505,29 +19482,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "discrete_einstein_regge_lift_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "oh_schur_boundary_action_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_universal_gr_isotropic_glue_operator.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -24152,6 +24106,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 7,
-  "total_pending": 794
+  "ready_count": 5,
+  "total_pending": 792
 }

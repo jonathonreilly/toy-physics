@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 773 |
+| unaudited | 771 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 471 |
+| ~~audited_conditional~~ | 473 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 471 |
+| `audited_conditional` | 473 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 819 |
+| `unaudited` | 817 |
 
 | claim_type | count |
 |---|---:|
@@ -616,6 +616,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_v4_convergence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dirac_weak_coupling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `discrete_einstein_regge_lift_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dispersion_high_p_tiebreaker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dispersion_relation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `distance_law_definitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -896,6 +897,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -3810,6 +3812,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `discrete_einstein_regge_lift_note`
+
+- **Note:** [`DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md`](../../docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the restricted claim that the exact shell trace on the current strong-field bridge is obtained as the stationary/minimizing solution of the Schur boundary action and thereby supplies the stated static-conformal 3+1 lift.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-025541-5861cacb-discrete_einstein_regge_-007`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Because Lambda_R is symmetric positive definite on the current bridge surface, the bridge trace is the unique global minimizer of the exact microscopic boundary energy, and the same shell trace fixes the local conformal lapse and source data.  _(class `A`)_
+- **chain closes:** False — The Schur-action Euler-Lagrange identity closes algebraically once the upstream Schur authority and actual SPD of Lambda_R are admitted. The advertised 3+1/Einstein-Regge lift also imports a static-conformal bridge/source interpretation that is not closed by the restricted packet, and the runner checks a generic SPD witness plus unprovided note text rather than the actual shell object.
+- **rationale:** Issue: the variational minimizer step is algebraic if the exact SPD Lambda_R and j = Lambda_R f_* are already admitted, but the packet does not provide a retained proof of the static-conformal 3+1 bridge/source interpretation. Why this blocks: the conclusion that the stationary shell law is an Einstein/Regge-style 3+1 lift depends on that bridge rather than following from the one cited authority alone. Repair target: add direct retained dependencies or an in-packet derivation for the static-constraint lift and actual shell DtN SPD, with a runner that checks those actual objects. Claim boundary until fixed: the packet supports the Schur-boundary-action stationarity inherited from the upstream note, not the full stated lift.
 - **auditor confidence:** high
 
 ### `dispersion_high_p_tiebreaker_note`
@@ -12535,6 +12550,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The wave-field hardening still closes the interaction, norm, and bounded-field story cleanly, but it does not close the full state-family battery and it does not give universal contraction on this operating point.  _(class `C`)_
 - **chain closes:** True — The runner directly computes the scalar wave field coupled to staggered matter and reproduces the note's hard scores of 4/5, 5/5, 4/5 plus width ratios 1.0047, 1.0019, and 0.9923. The note's bounded conclusion matches the current corrected output.
 - **rationale:** The claim is scoped to a bounded corrected wave-field prototype, not retained universal robustness. Current output confirms W1-W4 on all three families, W6 only on growing, and width response as a diagnostic rather than a gate. Residual risk is limited to the stated lack of universal contraction, full state-family robustness, larger-graph battery, and retarded-field closure.
+- **auditor confidence:** high
+
+### `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05`
+
+- **Note:** [`STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`](../../docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Algebraic determinant positivity for M = M_KS + M_W + m I on the explicitly restricted symmetric-canonical surface M_W = r d I, balanced sublattices, m > 0, and anti-Hermitian staggered off-diagonal K.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-025541-5861cacb-staggered_wilson_det_pos-002`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** With A = B = alpha I, gamma5 M is unitarily reduced by the SVD of K to 2 x 2 blocks whose determinants give det(M) = product_i (alpha^2 + sigma_i^2) > 0.  _(class `A`)_
+- **chain closes:** False — The block determinant algebra closes under the stated symmetric-canonical assumptions. The restricted packet does not close the imported convention stack D1-D4 from a retained-grade authority, and the only provided cited authority is a superseded meta note.
+- **rationale:** The theorem's core determinant factorisation is a genuine algebraic identity, and the runner source actually constructs finite-volume staggered operators and checks that factorisation numerically rather than merely printing constants. However, the claim imports the parent-note convention stack, especially eps M_W eps = M_W and M_W = r d I, without a retained-grade upstream authority in the packet. The only supplied cited authority, docs/MINIMAL_AXIOMS_2026-04-11.md, is explicitly superseded and meta-status, so clean status cannot propagate.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
 ### `star_supported_bridge_class_note`
