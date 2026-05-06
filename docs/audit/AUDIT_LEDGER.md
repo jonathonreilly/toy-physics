@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 778 |
+| unaudited | 779 |
 | meta | 49 |
-| ~~audited_numerical_match~~ | 21 |
+| ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 32 |
 | ~~audited_conditional~~ | 471 |
 | ~~audited_failed~~ | 13 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 471 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
-| `audited_numerical_match` | 21 |
+| `audited_numerical_match` | 20 |
 | `audited_renaming` | 32 |
-| `unaudited` | 827 |
+| `unaudited` | 828 |
 
 | claim_type | count |
 |---|---:|
@@ -67,7 +67,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1381
+- runners classified: 1382
 - runners with (C) first-principles compute hits: 683
 - runners with (D) external comparator hits: 344
 - decoration candidates (no C, no D): 117
@@ -1041,7 +1041,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
-| `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_bridge_moment_closure_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -14070,19 +14069,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `no_ledger_runner_for_live_wave_direct_dm_family_scout`
   - `multi_seed_family_portability_batch_missing`
   - `null_linearity_and_continuum_control_stack_missing`
-- **auditor confidence:** high
-
-### `wave_direct_dm_h025_seed0_crossfamily_note`
-
-- **Note:** [`WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md`](../../docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Bounded observation: at H=0.25 with seed 0, two selected control rows from Fam1 and Fam2 share negative sign, common ordering, and weak-field control on the seed-0 fine-H surface. Excludes any structural theorem, stable amplitude law, or portability claim beyond the listed two rows; the source rows and runner/log artifacts are not registered as audit dependencies.
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-wave-direct-dm`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** The seed-0 fine-H surface is consistent across families in sign, ordering, and weak-field control, but it still does not define a stable amplitude law or a portability claim beyond Fam1/Fam2.  _(class `G`)_
-- **chain closes:** False — The conclusion compresses two selected H=0.25 seed-0 numerical rows; without registered control deps and runner artifacts, the audit cannot promote it beyond a finite numerical observation.
-- **rationale:** Re-audit confirms the original numerical-match verdict: two-row compression, not a family theorem. Scope narrowed from the migration backfill to the bounded two-row observation.
 - **auditor confidence:** high
 
 ### `wave_direct_dm_h025_two_point_synthesis_note`

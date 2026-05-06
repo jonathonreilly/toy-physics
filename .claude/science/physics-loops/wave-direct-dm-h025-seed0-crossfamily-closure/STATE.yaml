@@ -1,0 +1,21 @@
+loop_slug: wave-direct-dm-h025-seed0-crossfamily-closure
+updated: 2026-05-06
+goal: Close the missing derivation for docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md.
+target_status: audited_clean_after_independent_reaudit
+actual_current_surface_status: open
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+active_route: registered finite-runner closure for the two Fam1/Fam2 seed-0 rows
+hard_residual: none; bounded finite computation and dependency wiring only
+files_touched:
+  - docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md
+  - scripts/wave_direct_dm_h025_seed0_crossfamily_audit.py
+  - logs/runner-cache/wave_direct_dm_h025_seed0_crossfamily_audit.txt
+open_imports: []
+no_go_routes: []
+review_findings: []
+pr_status: not_opened_in_science_fix_worktree
+next_exact_action: Run the audit pipeline and submit the note for fresh re-audit.
+stop_condition: Runner cache fresh, graph registers the primary runner, and audit lint passes.
+

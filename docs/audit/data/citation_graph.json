@@ -52781,9 +52781,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "011cd531e7269d6d0be5306edf8f264f8d3ada36af1cb085d38de244516a8143",
+      "note_hash": "335c6752c5b11bdb9d8d0f08edc00b8ec4d46a4f848ea1e5287ef6863e08fe30",
       "path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_seed0_crossfamily_audit.py",
       "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note"
     },
     "wave_direct_dm_h025_seed1_crossfamily_note": {
@@ -55852,6 +55852,6 @@
     "leaf_count": 550,
     "node_count": 1905,
     "root_count": 867,
-    "runners_with_path": 1478
+    "runners_with_path": 1479
   }
 }
