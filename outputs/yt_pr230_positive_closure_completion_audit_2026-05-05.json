@@ -56,7 +56,8 @@
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
-    "wz_smoke_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json"
+    "wz_smoke_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
+    "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
   },
   "parent_statuses": {
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
@@ -81,9 +82,10 @@
     "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
-    "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
+    "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
+    "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 26,
+  "pass_count": 27,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -100,7 +102,8 @@
     "osp_higgs_rows_absent": true,
     "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
-    "taste_condensate_oh_bridge_blocked": true
+    "taste_condensate_oh_bridge_blocked": true,
+    "z3_triplet_conditional_primitive_not_closure": true
   },
   "prompt_to_artifact_checklist": [
     {

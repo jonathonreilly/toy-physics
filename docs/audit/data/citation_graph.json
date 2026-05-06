@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T11:57:01.701362+00:00",
+  "generated_at": "2026-05-06T12:13:09.749916+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42668,6 +42668,16 @@
       "runner_path": "scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py",
       "title": "PR230 W/Z Smoke-To-Production Promotion No-Go Note"
     },
+    "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06": {
+      "claim_id": "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "conditional-support / exact Z3-triplet primitive-cone theorem;",
+      "deps": [],
+      "note_hash": "c7a1523e1bf193fa1bd1395ecb8d8c3dcfea14e54d62c69507abb020be4aa67a",
+      "path": "docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py",
+      "title": "PR230 Z3-Triplet Conditional Primitive-Cone Theorem"
+    },
     "yt_production_resource_projection_note_2026-05-01": {
       "claim_id": "yt_production_resource_projection_note_2026-05-01",
       "current_status": "bounded",
@@ -45403,6 +45413,7 @@
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
     "yt_pr230_wz_response_route_completion_note_2026-05-06",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
+    "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
     "yt_production_resource_projection_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
     "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02",
@@ -45521,16 +45532,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1079,
-    "node_count": 2032,
-    "root_count": 1545,
-    "runners_with_path": 1528,
+    "leaf_count": 1080,
+    "node_count": 2033,
+    "root_count": 1546,
+    "runners_with_path": 1529,
     "status_counts": {
       "bounded": 555,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 433,
+      "support": 434,
       "unknown": 567
     }
   }

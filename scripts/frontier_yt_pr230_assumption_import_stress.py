@@ -137,6 +137,9 @@ def main() -> int:
         "origin_main_composite_higgs_intake_guard": load(
             "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
         ),
+        "z3_triplet_conditional_primitive_cone_theorem": load(
+            "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
+        ),
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -743,6 +746,17 @@ def main() -> int:
         is False,
         composite_higgs_intake.get("actual_current_surface_status"),
     )
+    z3_primitive = certificates["z3_triplet_conditional_primitive_cone_theorem"]
+    report(
+        "z3-triplet-primitive-theorem-conditional-not-pr230-closure",
+        "Z3-triplet primitive-cone theorem"
+        in str(z3_primitive.get("actual_current_surface_status"))
+        and z3_primitive.get("proposal_allowed") is False
+        and z3_primitive.get("z3_triplet_conditional_primitive_theorem_passed")
+        is True
+        and z3_primitive.get("pr230_closure_authorized") is False,
+        z3_primitive.get("actual_current_surface_status"),
+    )
     source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -904,7 +918,10 @@ def main() -> int:
             "multi-channel Z3 composite-Higgs candidate with branch-local "
             "Z3/equal-condensate/strong-coupling premises is useful context, "
             "but it is not PR230 uniform-source transport, canonical O_H "
-            "authority, or C_sH/C_HH pole-row evidence.  The first-principles O_H bridge "
+            "authority, or C_sH/C_HH pole-row evidence.  The Z3-triplet "
+            "primitive-cone theorem adds exact conditional neutral-rank-one "
+            "support for a lazy cyclic transfer, but the same-surface PR230 "
+            "action/off-diagonal generator premise remains absent.  The first-principles O_H bridge "
             "candidate portfolio keeps five positive candidates open while "
             "recording that no candidate currently supplies closure authority.  "
             "The source-coordinate, action-first, W/Z response, Schur, and "
@@ -940,6 +957,7 @@ def main() -> int:
             "does not treat reflection plus determinant positivity as a primitive neutral bridge",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
+            "does not treat conditional Z3-triplet primitive-cone support as a PR230 primitive certificate",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

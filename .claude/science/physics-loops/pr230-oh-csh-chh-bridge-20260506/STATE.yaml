@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: origin_main_composite_higgs_intake_after_route_completions
+active_route: z3_triplet_conditional_primitive_cone_after_origin_main_intake
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, five current-surface route completions, and origin/main composite-Higgs context-only intake recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, and conditional Z3 primitive-cone support recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -25,6 +25,7 @@ files_touched:
   - scripts/frontier_yt_pr230_schur_route_completion.py
   - scripts/frontier_yt_pr230_neutral_primitive_route_completion.py
   - scripts/frontier_yt_pr230_origin_main_composite_higgs_intake_guard.py
+  - scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
   - docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md
   - docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md
   - docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_CERTIFICATE_BUILDER_NOTE_2026-05-03.md
@@ -36,6 +37,7 @@ files_touched:
   - docs/YT_PR230_SCHUR_ROUTE_COMPLETION_NOTE_2026-05-06.md
   - docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md
   - docs/YT_PR230_ORIGIN_MAIN_COMPOSITE_HIGGS_INTAKE_GUARD_NOTE_2026-05-06.md
+  - docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
   - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
@@ -51,6 +53,7 @@ files_touched:
   - outputs/yt_pr230_schur_route_completion_2026-05-06.json
   - outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json
   - outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json
+  - outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
   source_coordinate_transport_completion_pass_fail: "20/0"
@@ -59,16 +62,17 @@ verification:
   schur_route_completion_pass_fail: "11/0"
   neutral_primitive_route_completion_pass_fail: "12/0"
   origin_main_composite_higgs_intake_guard_pass_fail: "19/0"
+  z3_triplet_conditional_primitive_pass_fail: "13/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
   source_higgs_production_readiness_pass_fail: "21/0"
-  completion_audit_pass_fail: "26/0"
+  completion_audit_pass_fail: "27/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "52/0"
-  full_positive_assembly_pass_fail: "108/0"
-  retained_route_certificate_pass_fail: "254/0"
-  campaign_status_certificate_pass_fail: "286/0"
+  assumption_import_stress_pass_fail: "53/0"
+  full_positive_assembly_pass_fail: "109/0"
+  retained_route_certificate_pass_fail: "255/0"
+  campaign_status_certificate_pass_fail: "287/0"
   audit_pipeline: "complete after rebase; five new audit rows seeded; one row marked re-audit required"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
@@ -77,11 +81,12 @@ next_exact_action: >
   scalar-reparam transport no-go: certified canonical O_H plus C_sH/C_HH pole
   rows, a genuine two-source source-coordinate transport certificate, neutral
   primitive/rank-one, Schur A/B/C rows, or W/Z response with strict
-  g2/covariance/delta_perp.  The origin/main composite-Higgs stretch packet is
-  action-first context only until it emits same-surface PR230 rows or a
-  transport/action certificate.
+  g2/covariance/delta_perp.  The conditional Z3 theorem retires only the
+  finite-matrix primitive step after a same-surface lazy positive transfer is
+  supplied; it does not supply the transfer, source/action rows, or O_H bridge.
 stop_condition: >
   This block stops after preserving the scalar-reparametrization gate and
   recording current-surface completion boundaries for all five surviving
-  non-chunk route families, plus recording the origin/main composite-Higgs
-  packet as non-closing context.
+  non-chunk route families, recording the origin/main composite-Higgs packet as
+  non-closing context, and adding a conditional Z3 primitive-cone theorem as
+  support for a future same-surface neutral primitive artifact.

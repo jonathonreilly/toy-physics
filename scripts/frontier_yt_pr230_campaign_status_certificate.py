@@ -581,6 +581,9 @@ def main() -> int:
         "pr230_origin_main_composite_higgs_intake_guard": load(
             "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
         ),
+        "pr230_z3_triplet_conditional_primitive_cone": load(
+            "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
+        ),
         "pr230_source_coordinate_transport_completion": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -2409,6 +2412,22 @@ def main() -> int:
         is False,
         statuses["pr230_origin_main_composite_higgs_intake_guard"],
     )
+    z3_triplet_conditional_primitive = certificates[
+        "pr230_z3_triplet_conditional_primitive_cone"
+    ]
+    report(
+        "pr230-z3-triplet-conditional-primitive-support-not-closure",
+        "Z3-triplet primitive-cone theorem"
+        in str(statuses["pr230_z3_triplet_conditional_primitive_cone"])
+        and z3_triplet_conditional_primitive.get("proposal_allowed") is False
+        and z3_triplet_conditional_primitive.get(
+            "z3_triplet_conditional_primitive_theorem_passed"
+        )
+        is True
+        and z3_triplet_conditional_primitive.get("pr230_closure_authorized")
+        is False,
+        statuses["pr230_z3_triplet_conditional_primitive_cone"],
+    )
     source_transport_completion = certificates["pr230_source_coordinate_transport_completion"]
     report(
         "pr230-source-coordinate-transport-current-surface-closed",
@@ -4090,6 +4109,15 @@ def main() -> int:
         is False
         and origin_main_composite_higgs.get("proposal_allowed") is False
     )
+    result["z3_triplet_conditional_primitive_not_closure"] = (
+        z3_triplet_conditional_primitive.get(
+            "z3_triplet_conditional_primitive_theorem_passed"
+        )
+        is True
+        and z3_triplet_conditional_primitive.get("pr230_closure_authorized")
+        is False
+        and z3_triplet_conditional_primitive.get("proposal_allowed") is False
+    )
     result["action_first_route_completion_blocks"] = (
         action_first_route_completion.get("action_first_route_completion_passed") is True
         and action_first_route_completion.get("proposal_allowed") is False
@@ -4129,6 +4157,7 @@ def main() -> int:
         "does not treat Burnside/double-commutant theorem names as proof without same-surface neutral generators",
         "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
         "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
+        "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]

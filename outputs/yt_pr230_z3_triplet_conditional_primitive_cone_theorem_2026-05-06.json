@@ -1,0 +1,236 @@
+{
+  "actual_current_surface_status": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "composite_sources": {
+    "assumptions": "origin/main",
+    "note": "origin/main",
+    "runner": "origin/main"
+  },
+  "conditional_premises": [
+    "H1: Z3 cyclic action on the PR230-relevant Higgs-like bilinear triplet is derived on the same surface",
+    "H2: the three bilinear channels sit in one positive cone with nonzero equal-magnitude support",
+    "H3: the same-surface neutral transfer contains a positive lazy term I plus the Z3 cycle P, or an equivalent aperiodic positive connector",
+    "H4: the resulting neutral transfer is the physical scalar transfer coupled to the PR230 source/canonical-Higgs sector"
+  ],
+  "conditional_surface_status": "If the named same-surface Z3 triplet transfer premises are supplied, the neutral primitive/rank-one mathematical premise is satisfied.",
+  "exact_next_action": "Try to derive H1-H4 on the same PR230 surface, or implement a production non-source response row/off-diagonal neutral generator. Only then can this primitive theorem be promoted from conditional support to a strict neutral primitive-cone certificate.",
+  "fail_count": 0,
+  "firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "sets_c2_equal_one": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_z_match_equal_one": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "hypothetical_axiom_status": "would support neutral primitive route under H1-H4; not retained on actual surface",
+  "literature_context": {
+    "fms_role": "motivates gauge-invariant composite Higgs operators only after a same-surface gauge-Higgs/composite action exists",
+    "krein_rutman_role": "infinite-dimensional analogue for future transfer operators; not used as a PR230 source-overlap selector",
+    "perron_frobenius_role": "standard primitive nonnegative matrix theorem; used only after the transfer matrix is explicitly defined"
+  },
+  "missing_current_surface_premises": [
+    "same-surface PR230 EW/Higgs or composite action tying the triplet to the top FH/LSZ source coordinate",
+    "derived off-diagonal neutral generator or production non-source response row",
+    "strict neutral primitive-cone certificate on the PR230 surface",
+    "canonical O_H/source-Higgs pole overlap or accepted physical-response bridge"
+  ],
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "neutral_primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
+    "retained_route": "open / retained closure not yet reached"
+  },
+  "pass_count": 13,
+  "pr230_closure_authorized": false,
+  "primitive_witness": {
+    "L2": [
+      [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/2",
+        "1/4"
+      ]
+    ],
+    "L2_expected": [
+      [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/2",
+        "1/4"
+      ]
+    ],
+    "L2_is_strictly_positive": true,
+    "L2_matches_formula": true,
+    "P2": [
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "P3_equals_identity": true,
+    "basis": [
+      "Phi_1_prime",
+      "Phi_2_prime",
+      "Phi_3_prime"
+    ],
+    "col_sums_L": [
+      "1",
+      "1",
+      "1"
+    ],
+    "cyclic_generator_P": [
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "identity": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "lazy_transfer_L": [
+      [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "1/2"
+      ]
+    ],
+    "pf_rank_one_limit_check": {
+      "matrix_power": [
+        [
+          0.3333333332557231,
+          0.3333333332557231,
+          0.33333333348855376
+        ],
+        [
+          0.33333333348855376,
+          0.3333333332557231,
+          0.3333333332557231
+        ],
+        [
+          0.3333333332557231,
+          0.33333333348855376,
+          0.3333333332557231
+        ]
+      ],
+      "max_abs_error_to_uniform_projector": 1.5522044760629683e-10,
+      "power": 32,
+      "uniform_rank_one_projector": [
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      ]
+    },
+    "primitive_exponent_bound": 2,
+    "pure_cyclic_generator_is_not_primitive": true,
+    "row_sums_L": [
+      "1",
+      "1",
+      "1"
+    ],
+    "theorem_statement": "For the Z3 triplet basis, P^3=I and P alone is irreducible but periodic.  The lazy positive-cone transfer L=(I+P)/2 has L^2=(I+2P+P^2)/4, whose entries are all strictly positive.  Therefore L is primitive.  Perron-Frobenius gives a unique positive eigenvector, here the uniform triplet vector, and the stochastic powers converge to the rank-one uniform projector.",
+    "uniform_vector_is_left_and_right_fixed": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The finite-matrix primitive theorem is exact, but the current PR230 surface still lacks the same-surface action/off-diagonal generator that would instantiate the theorem.",
+  "strict_future_certificate_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "source_higgs_rows": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not write outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+    "does not identify O_sp or O_s with canonical O_H",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, Ward authority, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat the origin/main composite-Higgs stretch packet as PR230 proof authority"
+  ],
+  "writes_strict_future_certificate": false,
+  "z3_triplet_conditional_primitive_theorem_passed": true
+}

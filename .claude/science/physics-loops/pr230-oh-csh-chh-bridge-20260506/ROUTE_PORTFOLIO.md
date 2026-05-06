@@ -74,3 +74,9 @@ positivity improving, with an isolated lowest pole and positive source/Higgs
 overlaps.  The current route is closed by
 `YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION` until a primitive transfer,
 off-diagonal generator, or irreducibility certificate exists.
+
+The new lazy-Z3 theorem solves one finite-matrix subproblem conditionally:
+given the triplet cyclic permutation `P`, `L=(I+P)/2` is primitive because
+`L^2` is strictly positive.  This is useful only after the PR230 surface
+derives the positive neutral transfer/action that realizes `L`; it does not
+replace the missing transfer or source-Higgs bridge.

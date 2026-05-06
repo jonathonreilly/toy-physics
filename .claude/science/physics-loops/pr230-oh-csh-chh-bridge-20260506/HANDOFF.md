@@ -43,6 +43,14 @@ branch-local Z3/equal-condensate/strong-coupling premises and supplies no PR230
 uniform-source transport, canonical `O_H`, or `C_sH/C_HH` rows.  It can inform
 the action-first route only after those same-surface artifacts exist.
 
+The follow-on lazy-Z3 theorem is exact conditional support: for the cyclic
+triplet permutation `P`, the lazy transfer `L=(I+P)/2` satisfies
+`L^2=(I+2P+P^2)/4` with strictly positive entries, so Perron-Frobenius gives a
+uniform rank-one triplet limit.  Pure Z3 cyclicity alone is periodic and not
+primitive, and this theorem still needs a same-surface PR230 positive transfer,
+action, or off-diagonal generator before it can become a neutral primitive
+certificate.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then

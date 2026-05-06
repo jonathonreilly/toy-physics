@@ -20,6 +20,9 @@ Allowed context:
 - the `origin/main` composite-Higgs stretch packet as cross-lane action-first
   context only, not as PR230 `O_H`, source-transport, or `C_sH/C_HH`
   authority.
+- the exact lazy-Z3 primitive matrix theorem as conditional mathematics only:
+  if a same-surface PR230 action supplies a positive lazy cyclic transfer on
+  the triplet, Perron-Frobenius gives rank-one triplet support.
 
 Open imports after this block:
 
@@ -47,6 +50,9 @@ Open imports after this block:
 - Neutral primitive/rank-one route completion is a current-surface boundary,
   not a global theorem against future primitive neutral transfer derivation.
 - Neutral primitive/rank-one route completion is not proof selectors until same-surface primitive transfer, off-diagonal generator, or irreducibility certificate exists.
+- The conditional lazy-Z3 theorem is not a proof selector until the PR230
+  surface supplies the positive transfer/action, off-diagonal neutral
+  generator, or strict primitive-cone certificate.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;
@@ -58,6 +64,8 @@ Open imports after this block:
   `delta_perp` authority;
 - Schur `A/B/C` rows from a real neutral scalar kernel basis;
 - neutral primitive-cone / off-diagonal-generator theorem;
+- same-surface lazy positive Z3/triplet transfer if the conditional primitive
+  theorem is to become load-bearing;
 - scalar-LSZ, FV/IR, and matching gates.
 
 Negative-route interpretation:

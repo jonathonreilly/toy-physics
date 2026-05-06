@@ -91,6 +91,7 @@ PARENTS = {
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+    "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
     "pr230_wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
@@ -498,6 +499,26 @@ def main() -> int:
         )
         is False
     )
+    z3_triplet_conditional_primitive_not_closure = (
+        "Z3-triplet primitive-cone theorem"
+        in statuses["pr230_z3_triplet_conditional_primitive_cone"]
+        and certs["pr230_z3_triplet_conditional_primitive_cone"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_z3_triplet_conditional_primitive_cone"].get(
+            "z3_triplet_conditional_primitive_theorem_passed"
+        )
+        is True
+        and certs["pr230_z3_triplet_conditional_primitive_cone"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+        and certs["pr230_z3_triplet_conditional_primitive_cone"].get(
+            "writes_strict_future_certificate"
+        )
+        is False
+    )
     source_coordinate_transport_completion_blocks = (
         "source-coordinate transport not derivable from current PR230 surface"
         in statuses["pr230_source_coordinate_transport_completion"]
@@ -708,6 +729,7 @@ def main() -> int:
         and taste_condensate_oh_bridge_blocks_shortcut
         and source_coordinate_transport_blocks_current_shortcut
         and origin_main_composite_higgs_not_closure
+        and z3_triplet_conditional_primitive_not_closure
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1174,6 +1196,11 @@ def main() -> int:
         "origin-main-composite-higgs-intake-not-closure",
         origin_main_composite_higgs_not_closure,
         statuses["pr230_origin_main_composite_higgs_intake_guard"],
+    )
+    report(
+        "z3-triplet-conditional-primitive-support-not-closure",
+        z3_triplet_conditional_primitive_not_closure,
+        statuses["pr230_z3_triplet_conditional_primitive_cone"],
     )
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -2017,6 +2044,10 @@ def main() -> int:
             "Z3/equal-condensate/strong-coupling residuals, not a PR230 "
             "uniform-source transport certificate, canonical O_H authority, "
             "or C_sH/C_HH row set."
+            " The Z3-triplet primitive-cone theorem adds exact conditional "
+            "support for a lazy cyclic neutral transfer, but it does not supply "
+            "the missing same-surface PR230 action/off-diagonal generator or "
+            "strict primitive certificate."
             " The first-principles O_H bridge candidate portfolio now ranks "
             "the surviving source-transport, action-first O_H, W/Z response, "
             "Schur-row, and neutral-primitive routes as open positive "
@@ -2090,6 +2121,7 @@ def main() -> int:
         "taste_condensate_oh_bridge_blocks_shortcut": taste_condensate_oh_bridge_blocks_shortcut,
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
+        "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,
@@ -2126,6 +2158,7 @@ def main() -> int:
             "does not treat W/Z smoke-schema rows as production EW response evidence",
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
+            "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",

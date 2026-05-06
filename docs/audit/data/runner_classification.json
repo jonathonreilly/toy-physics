@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T11:57:04.178775+00:00",
+  "generated_at": "2026-05-06T12:13:12.490493+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17136,6 +17136,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py"
+    },
+    "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py"
     },
     "yt_production_resource_projection_note_2026-05-01": {
       "assert_count": 1,
@@ -35217,6 +35229,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_production_resource_projection.py": {
       "assert_count": 1,
       "claims": [
@@ -40367,13 +40394,13 @@
     "decoration_candidates": 107,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 227,
+      "B": 228,
       "C": 506,
       "D": 303,
       "none": 404
     },
-    "runners_classified": 1449,
-    "runners_with_C": 762,
-    "runners_with_D": 543
+    "runners_classified": 1450,
+    "runners_with_C": 763,
+    "runners_with_D": 544
   }
 }

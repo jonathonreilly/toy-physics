@@ -4,9 +4,9 @@
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
   "branch_state": {
-    "local_head": "289516de2f974815a1d405fb4e8247b845ad2c45",
-    "remote_main_head": "fbce7d74822564daa8b4fb48e21d067f9c37d156",
-    "remote_pr_head": "289516de2f974815a1d405fb4e8247b845ad2c45"
+    "local_head": "8f5818de2519ddaedac7b9c6a96e1d8758ac62c9",
+    "remote_main_head": "003991e28f9b2306b769163fdbb9a8d123b1f5bd",
+    "remote_pr_head": "8f5818de2519ddaedac7b9c6a96e1d8758ac62c9"
   },
   "composite_sources": {
     "assumptions": "origin/main",
