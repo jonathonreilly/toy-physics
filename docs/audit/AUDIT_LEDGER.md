@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 790 |
+| unaudited | 791 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 468 |
+| ~~audited_conditional~~ | 467 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 375 |
-| `audited_conditional` | 468 |
+| `audited_conditional` | 467 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 31 |
-| `unaudited` | 839 |
+| `unaudited` | 840 |
 
 | claim_type | count |
 |---|---:|
@@ -791,7 +791,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `left_handed_charge_matching_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lensing_deflection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `lensing_k_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -8771,19 +8770,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `logs/2026-04-07-lensing-deflection-lane-lplus.txt`
   - `scripts/lensing_deflection_fine_single.py`
   - `scripts/lensing_deflection_lane_lplus.py`
-- **auditor confidence:** high
-
-### `lensing_k_sweep_note`
-
-- **Note:** [`LENSING_K_SWEEP_NOTE.md`](../../docs/LENSING_K_SWEEP_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the bounded conditional diagnostic that scripts/lensing_k_sweep.py numerically computes k-dependent fitted slopes for one Fam1 setup with H=0.25, seeds 0-2, b∈{3,4,5,6}, and k·H values 0.5 through 5.0, with no registered kernel/mode proof of the wave-interference mechanism.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-223857-7d3fceeb-lensing_k_sweep_note-002`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The Fam1 k-sweep table shows the fitted lensing slope varying from +0.58 at k·H=0.5 to about −1.43 at k·H=4.0, so the previously used −1.40 at k·H=2.5 is configuration-specific rather than fundamental.  _(class `C`)_
-- **chain closes:** False — The runner source performs a genuine first-principles numerical sweep from the stated lattice/DAG construction, and the partial cached output supports the reported slopes through k·H=4.0. The full chain does not close for the stronger note conclusions because the run timed out before completing k·H=5.0 for all seeds and no registered kernel/mode analysis is supplied for the wave-interference mechanism.
-- **rationale:** The numerical load-bearing step is not a mere printout or imported value; the included runner grows DAGs and computes Kubo responses and power-law fits. However, the provided runner cache is incomplete due to timeout, so the all-seeds k·H=5.0 claim and final summary are not certified by the restricted packet. The note also explicitly bounds itself away from a framework theorem and acknowledges that the wave-interference mechanism is stronger than the table alone without registered kernel/mode evidence.
 - **auditor confidence:** high
 
 ### `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`

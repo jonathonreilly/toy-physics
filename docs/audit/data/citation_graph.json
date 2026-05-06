@@ -40771,7 +40771,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d77d6b69c233c7984ec2eafd448bf73397c6402e2b0de243387a648cf94f41bb",
+      "note_hash": "88955e70dd5762b4806de08989f512d54f3adf3a27337603858c28e7d02e3491",
       "path": "docs/LENSING_K_SWEEP_NOTE.md",
       "runner_path": "scripts/lensing_k_sweep.py",
       "title": "Lensing Slope vs k (Phase Coupling): k-Dependent (Conditional Diagnostic)"

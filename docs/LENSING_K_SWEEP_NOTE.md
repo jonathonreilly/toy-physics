@@ -1,7 +1,7 @@
 # Lensing Slope vs k (Phase Coupling): k-Dependent (Conditional Diagnostic)
 
 **Date:** 2026-04-09 (status line narrowed 2026-04-28 per audit-lane verdict)
-**Status:** bounded conditional diagnostic — the lensing slope oscillates between +0.58 and −1.43 across `k·H ∈ {0.5, ..., 5.0}` on a single Fam1 setup with three seeds per `k·H` value. The k-sweep runner is not registered in the audit ledger; the wave-interference-mechanism inference is stronger than the k-sweep table alone supports without registered kernel/mode analysis. Not a tier-ratifiable framework theorem.
+**Status:** bounded conditional diagnostic — the lensing slope oscillates between +0.58 and −1.43 across `k·H ∈ {0.5, ..., 5.0}` on a single Fam1 setup with three seeds per `k·H` value. The k-sweep runner/cache are named in the artifact chain; the wave-interference-mechanism inference is still stronger than the k-sweep table alone supports without registered kernel/mode analysis. Not a tier-ratifiable framework theorem.
 
 ## Setup
 
@@ -79,7 +79,8 @@ The honest characterization is:
 ## Artifact chain
 
 - [`scripts/lensing_k_sweep.py`](../scripts/lensing_k_sweep.py)
-- [`logs/2026-04-09-lensing-k-sweep.txt`](../logs/2026-04-09-lensing-k-sweep.txt)
+- [`logs/runner-cache/lensing_k_sweep.txt`](../logs/runner-cache/lensing_k_sweep.txt)
+  (SHA-pinned audit-lane cache; see `docs/audit/RUNNER_CACHE_POLICY.md`)
 
 ## Bottom line
 
@@ -96,7 +97,7 @@ The honest characterization is:
 Audit verdict (`audited_conditional`, high criticality, 124 transitive
 descendants):
 
-> Issue: the proposed_retained diagnostic rests on a numerical k-sweep
+> Issue: the previous diagnostic rests on a numerical k-sweep
 > over one Fam1 setup with three seeds per k*H value, but the audit
 > ledger registers no primary runner/output for
 > `scripts/lensing_k_sweep.py` or its log. Why this blocks: a hostile
@@ -113,12 +114,12 @@ descendants):
 - That the wave-interference mechanism interpretation is supported by
   registered kernel / mode analysis; only the slope table is
   reported.
-- Reproducibility from the audit packet alone; the runner and log
-  are not registered.
+- That the fixed artifact pointer by itself supplies registered kernel /
+  mode analysis or closes the lane.
 
 ## What would close this lane (Path A future work)
 
-Promoting from bounded conditional to retained would require:
+A future stronger status would require:
 
 1. Registering `scripts/lensing_k_sweep.py` and its deterministic
    output as the primary runner with PASS thresholds for slopes,
