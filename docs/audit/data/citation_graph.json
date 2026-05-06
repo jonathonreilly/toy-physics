@@ -52226,9 +52226,9 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "6548a36e16ed6eef6bc7d5614bc008e446d3d3f580bb447b77912caf12b534bf",
+      "note_hash": "4a34c9b1e4bef6d58305bad64f5cc69ccad5cfece178302ba64a1e0433fd5333",
       "path": "docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/universal_qg_optional_textbook_comparison_meta_check.py",
       "title": "Universal QG Optional Textbook Comparison Note"
     },
     "universal_qg_pl_field_interface_note": {
@@ -55949,6 +55949,6 @@
     "leaf_count": 548,
     "node_count": 1906,
     "root_count": 865,
-    "runners_with_path": 1480
+    "runners_with_path": 1481
   }
 }

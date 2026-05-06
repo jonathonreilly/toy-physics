@@ -16272,6 +16272,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_universal_gr_tensor_quotient_uniqueness.py"
     },
+    "universal_qg_optional_textbook_comparison_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/universal_qg_optional_textbook_comparison_meta_check.py"
+    },
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24": {
       "assert_count": 1,
       "counts": {
@@ -38233,6 +38245,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/universal_qg_optional_textbook_comparison_meta_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "universal_qg_optional_textbook_comparison_note"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/universality_classifier.py": {
       "assert_count": 0,
       "claims": [
@@ -38776,15 +38803,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 118,
+    "decoration_candidates": 119,
     "dominant_class_distribution": {
-      "A": 10,
+      "A": 11,
       "B": 167,
       "C": 574,
       "D": 212,
       "none": 420
     },
-    "runners_classified": 1383,
+    "runners_classified": 1384,
     "runners_with_C": 683,
     "runners_with_D": 345
   }
