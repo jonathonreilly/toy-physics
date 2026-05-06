@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_nn_continuum.py
-runner_sha256: d8d9e7f3abc062a4050adbbe398e44646386def62ab9495af2e40fc8cb7e0532
+runner_sha256: 8bb1945e3644e7d45b1f110ffc7e7cd233035d8b7dddababb2c36d134c1586c7
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 1.36
+elapsed_sec: 0.71
 status: ok
 ----- stdout -----
 ===============================================================================================
@@ -14,14 +14,14 @@ NEAREST-NEIGHBOR LATTICE REFINEMENT STUDY
 
       h    nodes    npl     gravity         k=0        MI     1-pur      d_TV        Born   time
   ----------------------------------------------------------------------------------------
-  2.000      441     21   -0.775486   +0.00e+00    0.5558    0.4215    0.7498  3.16e-16     0s
-  1.000     1681     41   -0.116678   +0.00e+00    0.5022    0.4229    0.7455  2.95e-16     0s
-  0.500     6561     81   +0.138226   +0.00e+00    0.7420    0.4844    0.9072  5.07e-16     0s
-  0.250    25921    161   +0.077415   +0.00e+00    0.9470    0.4989    0.9878  3.64e-16     1s
+  2.000      441     21   -0.775486   +0.00e+00    0.5558    0.4215    0.7498  2.88e-16     0s
+  1.000     1681     41   -0.116678   +0.00e+00    0.5022    0.4229    0.7455  6.02e-16     0s
+  0.500     6561     81   +0.138226   +0.00e+00    0.7420    0.4844    0.9072  2.26e-16     0s
+  0.250    25921    161   +0.077415   +0.00e+00    0.9470    0.4989    0.9878  3.83e-16     0s
   0.125  FAIL     0s
 
 SAFE CLAIM: Born-clean positive refinement trend through h = 0.25
-BORN: must stay < 1e-10 on the retained window
+BORN: must stay < 1e-10 on the finite window
 h = 0.125 remains unresolved for the raw kernel
 
 ----- stderr -----

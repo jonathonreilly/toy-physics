@@ -9,7 +9,7 @@ stable raw-kernel continuum limit.
 The beam confinement that gives 1/b is preserved: each step shifts
 y by at most ±h.
 
-Test: the retained refinement observables at h = 2.0, 1.0, 0.5, 0.25, 0.125.
+Test: the finite-window refinement observables at h = 2.0, 1.0, 0.5, 0.25, 0.125.
 Safe claim: Born-clean positive refinement trend through h = 0.25.
 The h = 0.125 point is still unresolved for the raw kernel because the
 unrescaled path sum overflows there.
@@ -282,7 +282,7 @@ def main():
 
     print()
     print("SAFE CLAIM: Born-clean positive refinement trend through h = 0.25")
-    print("BORN: must stay < 1e-10 on the retained window")
+    print("BORN: must stay < 1e-10 on the finite window")
     print("h = 0.125 remains unresolved for the raw kernel")
 
 

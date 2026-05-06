@@ -40471,9 +40471,9 @@
       "claim_id": "lattice_nn_continuum_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0d5e7de039ff4e53c5dfdc4cbcae46955ebdbc516dab3bee555a985bf67360ba",
+      "note_hash": "7b8c56041caf8c9a1a5739069469b02051486de2bbf3ed5cd5031939ad1e8c23",
       "path": "docs/LATTICE_NN_CONTINUUM_NOTE.md",
       "runner_path": "scripts/lattice_nn_continuum.py",
       "title": "Nearest-Neighbor Lattice Refinement Note"
@@ -55948,11 +55948,11 @@
       "positive_theorem": 88
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 573,
+      "bounded_theorem": 574,
       "meta": 10,
       "no_go": 118,
       "none": 456,
-      "open_gate": 115,
+      "open_gate": 114,
       "positive_theorem": 634
     },
     "edge_count": 6612,

@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 16 |
-| unaudited | 786 |
+| open_gate | 15 |
+| unaudited | 787 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 32 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 378 |
+| `audited_clean` | 377 |
 | `audited_conditional` | 468 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 32 |
-| `unaudited` | 835 |
+| `unaudited` | 836 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 642 |
+| `bounded_theorem` | 643 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
-| `open_gate` | 112 |
+| `open_gate` | 111 |
 | `positive_theorem` | 789 |
 
 | criticality | count |
@@ -278,7 +278,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_complementarity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_field_strength_unification_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
-| `lattice_nn_continuum_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -8622,19 +8621,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Using the measured norm with h^2 normalization, p = 1.5 is closest to stable across h = 1.0, 0.5, 0.25, 0.125.  _(class `C`)_
 - **chain closes:** True — The current runner, invoked with the note's four h values, reproduces the stated measured slopes: +0.102, -0.204, -0.598, and -1.046, ranking p = 1.5 closest to marginal. The note explicitly bounds the result away from branch promotion, same-harness propagation, and continuum-limit claims.
 - **rationale:** The load-bearing claim is a bounded numerical computation inside a specified local harness, not a physical promotion claim. The runner computes the relevant outgoing transfer norms and log-log measured slopes directly, and the scoped note does not import dependencies or overstate the result beyond the finite discriminator.
-- **auditor confidence:** high
-
-### `lattice_nn_continuum_note`
-
-- **Note:** [`LATTICE_NN_CONTINUUM_NOTE.md`](../../docs/LATTICE_NN_CONTINUUM_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Raw nearest-neighbor lattice refinement is Born-clean through h = 0.25, with h = 0.125 unresolved and the continuum question left open.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `fresh-agent-lattice-nn-continuum`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The nearest-neighbor lattice shows a Born-clean positive refinement trend through h = 0.25, while h = 0.125 remains unresolved and no full continuum theorem is claimed.  _(class `C`)_
-- **chain closes:** True — The runner completed and reproduced the note's table through h = 0.25, including Born residuals below 1e-10, k=0 equal to zero, and the stated positive refinement trend. It also returned FAIL at h = 0.125, matching the note's open-gate boundary rather than supporting a continuum theorem.
-- **rationale:** The scoped claim is deliberately bounded: it asserts the retained finite-spacing window and explicitly leaves the continuum limit unresolved. The current runner output matches the note's numerical rows through h = 0.25 and cleanly reports failure at h = 0.125, so the open gate is supported on its own terms. Residual risk is confined to any future continuum or finer-spacing claim, which this note explicitly does not make.
 - **auditor confidence:** high
 
 ### `lattice_nn_deterministic_rescale_note`
