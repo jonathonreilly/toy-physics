@@ -1,0 +1,33 @@
+slug: koide-hostile-review-guard-20260506
+goal: "Close the audit-blocking print-verification gap in docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md."
+target_status: audit-ready meta exact support
+mode: run
+runtime: short single-cycle repair
+session_start_utc: "2026-05-06T18:09:39Z"
+worktree: /tmp/science-fix-worktrees/koide_hostile_review_guard_note_2026-04-24-9e374e18
+base: origin/main
+base_commit_at_start: cdb638d8e
+active_branch: claude/science-fix/koide_hostile_review_guard_note_2026-04-24-9e374e18
+actual_current_surface_status: exact-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "The branch supplies audit-ready meta evidence, but the independent audit worker must ratify any audited_clean status."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+active_route: stdout-execution-plus-regression-self-test
+hard_residual: "Auditor objected that source substring checks could be satisfied by comments, dead strings, or unrelated literals."
+files_touched:
+  - scripts/frontier_koide_hostile_review_guard.py
+  - docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md
+  - outputs/frontier_koide_hostile_review_guard_2026-05-06.txt
+  - outputs/frontier_koide_hostile_review_guard_self_test_2026-05-06.txt
+  - .claude/science/physics-loops/koide-hostile-review-guard-20260506/
+open_imports: []
+no_go_routes:
+  - "Previous source-substring-only route is rejected by the archived audit rationale."
+review_findings: "local review-loop pass; audit_lint has repo-existing warnings but no errors"
+pr_status: "not opened in this local science-fix turn"
+next_exact_action: "Hand off docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md for independent re-audit."
+stop_condition: "Guard and self-test pass and no local review blocker remains."
