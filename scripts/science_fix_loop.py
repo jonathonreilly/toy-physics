@@ -51,11 +51,12 @@ State file (`logs/science-fix-state.json`):
       "attempts": {
         "<claim_id>": {
           "attempted_at": "<utc iso>",
-          "outcome": "in_progress" | "stale_in_progress" | "pr_opened" | "no_edits" | "timeout" | "error" | "push_failed",
+          "outcome": "in_progress" | "stale_in_progress" | "pr_opened" | "no_edits" | "stalled_no_edits" | "timeout_no_edits" | "pr_opened_partial_stalled" | "pr_opened_partial_timeout" | "codex_failed" | "run_error" | "push_failed",
           "worker_id": "<pid-run_id>",
           "branch": "<branch>",
           "pr_url": "<url>",
           "elapsed_sec": <float>,
+          "codex_stop_reason": "ok" | "stalled" | "timeout" | "error",
           "codex_stdout_tail": "<last 1k chars>",
           "error": "<short error string if applicable>"
         }
@@ -71,8 +72,10 @@ import json
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
+import tempfile
 import time
 import uuid
 from datetime import datetime, timezone
@@ -271,10 +274,54 @@ def cleanup_worktree(path: Path) -> None:
         shutil.rmtree(path, ignore_errors=True)
 
 
+def _newest_mtime(worktree: Path) -> float:
+    """Walk the worktree and return the newest mtime found, ignoring noise
+    files (.git, __pycache__, etc.). Used as a proxy for whether codex is
+    actively making progress.
+    """
+    SKIP_DIRS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache",
+                 ".ipynb_checkpoints", "node_modules"}
+    newest = 0.0
+    for root, dirs, files in os.walk(worktree):
+        # In-place prune so we don't descend into junk
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+        for f in files:
+            try:
+                m = os.path.getmtime(os.path.join(root, f))
+            except OSError:
+                continue
+            if m > newest:
+                newest = m
+    return newest
+
+
 def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
               model: str, reasoning: str,
-              run_log: Path) -> tuple[bool, str, str, float]:
-    """Run codex exec against the worktree. Returns (ok, stdout, stderr, elapsed)."""
+              run_log: Path,
+              stale_after_sec: int = 240,
+              poll_interval_sec: int = 30,
+              progress_callback=None) -> tuple[bool, str, str, float, str]:
+    """Run codex exec against the worktree with a progress-check guard.
+
+    Returns (ok, stdout, stderr, elapsed, stop_reason).
+
+    Behavior:
+      - Hard timeout at `timeout_sec` (default 900s = 15 min) — backstop.
+      - Stale-kill at `stale_after_sec` (default 240s = 4 min) — if no
+        file in the worktree has been touched within this window,
+        codex is considered stuck on a hard physics problem and is
+        terminated. Captured cleanly so the partial diff (if any) is
+        preserved.
+      - Poll every `poll_interval_sec` seconds (default 30s).
+      - `progress_callback(elapsed, stale_for)` is called on each poll
+        if provided, for live-status output.
+
+    `stop_reason` values:
+      - "ok"          codex finished naturally
+      - "stalled"     killed because no file was touched for stale_after_sec
+      - "timeout"     hit the hard backstop
+      - "error"       exception raised
+    """
     cmd = [
         "codex", "exec",
         "-C", str(worktree),
@@ -284,22 +331,89 @@ def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
         prompt_body,
     ]
     t0 = time.time()
+    baseline_mtime = _newest_mtime(worktree)
+    last_progress_time = t0  # wall time of last detected mtime change
+    stop_reason = "ok"
+    stale_enabled = stale_after_sec > 0 and stale_after_sec < timeout_sec
+
+    def _terminate_tree(proc: subprocess.Popen, sig: int) -> None:
+        try:
+            os.killpg(proc.pid, sig)
+        except ProcessLookupError:
+            pass
+        except Exception:
+            try:
+                proc.send_signal(sig)
+            except Exception:
+                pass
+
     try:
-        res = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=timeout_sec,
-            env=os.environ,
-        )
+        with tempfile.TemporaryFile(mode="w+", encoding="utf-8") as stdout_fh, \
+             tempfile.TemporaryFile(mode="w+", encoding="utf-8") as stderr_fh:
+            proc = subprocess.Popen(
+                cmd,
+                stdout=stdout_fh,
+                stderr=stderr_fh,
+                text=True,
+                env=os.environ,
+                start_new_session=True,
+            )
+            while True:
+                # Wait poll_interval_sec, then check status.
+                try:
+                    proc.wait(timeout=poll_interval_sec)
+                    # Process exited within the poll interval.
+                    break
+                except subprocess.TimeoutExpired:
+                    pass
+
+                now = time.time()
+                elapsed = now - t0
+                cur_mtime = _newest_mtime(worktree)
+                if cur_mtime > baseline_mtime:
+                    last_progress_time = now
+                    baseline_mtime = cur_mtime
+                stale_for = now - last_progress_time
+
+                if progress_callback:
+                    progress_callback(elapsed, stale_for)
+
+                if stale_enabled and stale_for >= stale_after_sec:
+                    stop_reason = "stalled"
+                    break
+                if elapsed >= timeout_sec:
+                    stop_reason = "timeout"
+                    break
+
+            if stop_reason in ("stalled", "timeout"):
+                _terminate_tree(proc, signal.SIGTERM)
+                try:
+                    proc.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    _terminate_tree(proc, signal.SIGKILL)
+                    proc.wait(timeout=5)
+            elapsed = time.time() - t0
+            stdout_fh.seek(0)
+            stderr_fh.seek(0)
+            stdout = stdout_fh.read()
+            stderr = stderr_fh.read()
+
+        if stop_reason == "ok":
+            ok = proc.returncode == 0
+            return ok, stdout, stderr, elapsed, "ok"
+        # Annotate stderr with reason for downstream visibility
+        annot = f"\n[codex_{stop_reason} after {elapsed:.0f}s "\
+                f"(stale_after={stale_after_sec}s, hard_timeout={timeout_sec}s)]"
+        return False, stdout, (stderr or "") + annot, elapsed, stop_reason
+
+    except Exception as exc:
+        try:
+            if "proc" in locals():
+                _terminate_tree(proc, signal.SIGKILL)
+        except Exception:
+            pass
         elapsed = time.time() - t0
-        ok = res.returncode == 0
-        return ok, res.stdout, res.stderr, elapsed
-    except subprocess.TimeoutExpired as e:
-        elapsed = time.time() - t0
-        out = e.stdout if isinstance(e.stdout, str) else (e.stdout or b"").decode("utf-8", errors="replace")
-        err = e.stderr if isinstance(e.stderr, str) else (e.stderr or b"").decode("utf-8", errors="replace")
-        return False, out or "", (err or "") + f"\n[codex_timeout at {timeout_sec}s]", elapsed
+        return False, "", f"[run_codex error: {exc!r}]", elapsed, "error"
 
 
 def has_changes(worktree: Path) -> bool:
@@ -393,7 +507,17 @@ def main() -> int:
     p.add_argument("--n", type=int, default=5,
                    help="How many prompts to attempt this run (default 5)")
     p.add_argument("--codex-timeout-sec", type=int, default=DEFAULT_CODEX_TIMEOUT,
-                   help=f"Per-attempt timeout for codex exec (default {DEFAULT_CODEX_TIMEOUT}s)")
+                   help=f"Hard backstop timeout for codex exec (default "
+                        f"{DEFAULT_CODEX_TIMEOUT}s = 15 min)")
+    p.add_argument("--stale-after-sec", type=int, default=240,
+                   help="Kill codex early if no file in the worktree has "
+                        "been touched within this window (default 240s = "
+                        "4 min). This catches HARD physics problems where "
+                        "codex stops making edits and is just thinking; it "
+                        "lets us bail out faster than the hard backstop. "
+                        "Set to a value >= --codex-timeout-sec to disable.")
+    p.add_argument("--poll-interval-sec", type=int, default=30,
+                   help="How often to check codex's progress (default 30s).")
     p.add_argument("--model", default=DEFAULT_MODEL,
                    help=f"Codex model (default {DEFAULT_MODEL})")
     p.add_argument("--reasoning", default=DEFAULT_REASONING,
@@ -418,12 +542,20 @@ def main() -> int:
                         "still alive, or set a cutoff longer than the maximum "
                         "live worker runtime.")
     args = p.parse_args()
+    if args.codex_timeout_sec <= 0:
+        p.error("--codex-timeout-sec must be positive")
+    if args.stale_after_sec < 0:
+        p.error("--stale-after-sec must be non-negative")
+    if args.poll_interval_sec <= 0:
+        p.error("--poll-interval-sec must be positive")
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     run_id = uuid.uuid4().hex[:8]
     run_log = LOG_DIR / f"loop-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}-{run_id}.jsonl"
     print(f"Loop run log: {run_log}")
-    print(f"Codex model: {args.model}  reasoning: {args.reasoning}  timeout: {args.codex_timeout_sec}s")
+    print(f"Codex model: {args.model}  reasoning: {args.reasoning}  "
+          f"timeout: {args.codex_timeout_sec}s  stale_after: "
+          f"{args.stale_after_sec}s  poll: {args.poll_interval_sec}s")
 
     rows = parse_prompts()
     if not rows:
@@ -503,31 +635,66 @@ def main() -> int:
             continue
 
         try:
-            ok, stdout, stderr, elapsed = run_codex(
+            def _progress(elapsed_, stale_):
+                # Live status to stdout so the operator can see progress
+                # without having to tail the codex stderr.
+                print(f"    [progress] elapsed={elapsed_:5.0f}s  "
+                      f"stalled_for={stale_:5.0f}s "
+                      f"(stale_kill@{args.stale_after_sec}s, hard@{args.codex_timeout_sec}s)",
+                      flush=True)
+
+            ok, stdout, stderr, elapsed, stop_reason = run_codex(
                 r["prompt_body"], worktree,
                 args.codex_timeout_sec, args.model, args.reasoning,
                 run_log,
+                stale_after_sec=args.stale_after_sec,
+                poll_interval_sec=args.poll_interval_sec,
+                progress_callback=_progress,
             )
             outcome["elapsed_sec"] = round(elapsed, 1)
             outcome["codex_returncode_ok"] = ok
+            outcome["codex_stop_reason"] = stop_reason
             outcome["codex_stdout_tail"] = (stdout or "")[-1000:]
             outcome["codex_stderr_tail"] = (stderr or "")[-500:]
 
-            if not ok and "[codex_timeout" in (stderr or ""):
-                print(f"  TIMEOUT after {elapsed:.0f}s")
-                outcome["outcome"] = "timeout"
-                punted += 1
-            elif not ok:
+            # Decide whether this attempt produced anything worth promoting
+            # to a PR. Order: structural codex failures first (no edits to
+            # promote), then check the worktree.
+            promote_edits = False
+            if stop_reason == "error":
+                print(f"  RUN ERROR: {(stderr or '').strip()[:200]}")
+                outcome["outcome"] = "run_error"
+                errored += 1
+            elif stop_reason == "ok" and not ok:
                 print(f"  codex exec failed (rc!=0): {(stderr or '').strip()[:200]}")
                 outcome["outcome"] = "codex_failed"
                 errored += 1
-            elif not has_changes(worktree):
-                print(f"  no edits (codex punted) in {elapsed:.0f}s")
-                outcome["outcome"] = "no_edits"
-                punted += 1
             else:
+                # stop_reason in {ok, timeout, stalled} — codex either
+                # finished or was killed early. Any of these can still
+                # have produced useful partial edits.
+                worktree_has_changes = has_changes(worktree)
+                if stop_reason == "stalled" and not worktree_has_changes:
+                    print(f"  STALLED with no edits after {elapsed:.0f}s — "
+                          f"likely a HARD physics problem")
+                    outcome["outcome"] = "stalled_no_edits"
+                    punted += 1
+                elif stop_reason == "timeout" and not worktree_has_changes:
+                    print(f"  HARD TIMEOUT with no edits after {elapsed:.0f}s")
+                    outcome["outcome"] = "timeout_no_edits"
+                    punted += 1
+                elif not worktree_has_changes:
+                    print(f"  no edits (codex punted) in {elapsed:.0f}s")
+                    outcome["outcome"] = "no_edits"
+                    punted += 1
+                else:
+                    promote_edits = True
+
+            if promote_edits:
                 summary = diff_summary(worktree)
-                print(f"  edits made in {elapsed:.0f}s; diff:\n    {summary}")
+                tag = {"ok": "edits made", "stalled": "STALLED but partial edits",
+                       "timeout": "HARD TIMEOUT but partial edits"}[stop_reason]
+                print(f"  {tag} in {elapsed:.0f}s; diff:\n    {summary}")
                 ok2, msg = commit_and_push(cid, worktree, branch, summary)
                 if not ok2:
                     print(f"  push failed: {msg}")
@@ -548,8 +715,13 @@ def main() -> int:
                         outcome["branch"] = branch
                         pr_failed += 1
                     else:
-                        print(f"  PR opened: {pr_msg}")
-                        outcome["outcome"] = "pr_opened"
+                        # If codex was stalled or hard-timed-out but produced
+                        # edits, the PR is real but the verdict_rationale that
+                        # attached can record it as a partial attempt for the
+                        # human reviewer.
+                        verdict = "pr_opened" if stop_reason == "ok" else f"pr_opened_partial_{stop_reason}"
+                        print(f"  PR opened ({verdict}): {pr_msg}")
+                        outcome["outcome"] = verdict
                         outcome["pr_url"] = pr_msg
                         outcome["branch"] = branch
                         applied += 1
