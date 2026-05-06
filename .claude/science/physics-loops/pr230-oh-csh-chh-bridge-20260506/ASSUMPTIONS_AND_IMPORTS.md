@@ -63,12 +63,12 @@ Allowed context:
   pending mode records only active PIDs and the absence of row JSON.  Pending
   checkpoints are not row data, pole evidence, canonical `O_H`, scalar LSZ
   normalization, or `y_t` closure.
-- the completed two-source taste-radial chunks001-008 checkpoints as
+- the completed two-source taste-radial chunks001-010 checkpoints as
   bounded row support only: they validate real chunk JSON, seed control,
   selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
   pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
 - the two-source taste-radial row-combiner gate as bounded aggregation support
-  only: it records `ready=8/63` and refuses to write the combined measurement
+  only: it records `ready=10/63` and refuses to write the combined measurement
   row packet until 63/63 chunks are schema-clean.  Partial diagnostics are not
   combined L12 pole evidence, canonical `O_H`, scalar LSZ normalization,
   `kappa_s`, or `y_t` closure.
@@ -108,6 +108,13 @@ Allowed context:
   not write accepted future certificate paths, and supplies no canonical
   `O_H`, `C_sH/C_HH` rows, W/Z rows, LSZ, `kappa_s`, or closure.
   Exact stress phrases: conditional action-extension support only; does not write accepted future certificate paths.
+- the Same-source EW action adoption attempt as an exact shortcut boundary:
+  the ansatz supplies the action-form side, but ansatz-only action-adoption
+  shortcut blocked remains the current status because the canonical-Higgs
+  operator certificate, same-source sector-overlap theorem, W/Z correlator
+  mass-fit path certificate, accepted action-certificate input, and current
+  action gate are still absent.  It writes no accepted EW action certificate.
+  Exact adoption stress phrases: ansatz-only action-adoption shortcut blocked; canonical-Higgs operator certificate; W/Z correlator mass-fit path certificate.
 - the post-FMS source-overlap necessity gate as exact current-surface boundary
   only: it proves current source-only rows, FMS `C_HH` support, and
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an
@@ -192,7 +199,7 @@ Open imports after this block:
   workers and partial directories are explicitly non-evidence.
 - Two-source taste-radial active-pending chunk checkpoints are not proof
   selectors; they explicitly certify that completed row JSON is absent.
-- Completed two-source taste-radial chunks001-008 are not proof selectors
+- Completed two-source taste-radial chunks001-010 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
 - Source-Higgs schema field names in completed two-source taste-radial chunks

@@ -629,6 +629,24 @@ def main() -> int:
         "pr230_two_source_taste_radial_chunk004_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_chunk005_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk005_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk006_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk006_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk007_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk007_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk008_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk008_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk009_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk009_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk010_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk010_checkpoint_2026-05-06.json"
+        ),
         "pr230_taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -646,6 +664,9 @@ def main() -> int:
         ),
         "pr230_same_source_ew_higgs_action_ansatz_gate": load(
             "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json"
+        ),
+        "pr230_same_source_ew_action_adoption_attempt": load(
+            "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json"
         ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
@@ -2793,6 +2814,27 @@ def main() -> int:
         is False,
         statuses["pr230_same_source_ew_higgs_action_ansatz_gate"],
     )
+    same_source_ew_action_adoption_attempt = certificates[
+        "pr230_same_source_ew_action_adoption_attempt"
+    ]
+    report(
+        "pr230-same-source-ew-action-adoption-attempt-blocks-ansatz-only-shortcut",
+        "ansatz-only same-source EW action adoption shortcut blocked"
+        in str(statuses["pr230_same_source_ew_action_adoption_attempt"])
+        and same_source_ew_action_adoption_attempt.get("proposal_allowed")
+        is False
+        and same_source_ew_action_adoption_attempt.get(
+            "same_source_ew_action_adoption_attempt_passed"
+        )
+        is True
+        and same_source_ew_action_adoption_attempt.get("adoption_allowed_now")
+        is False
+        and same_source_ew_action_adoption_attempt.get(
+            "accepted_action_certificate_written_by_this_attempt"
+        )
+        is False,
+        statuses["pr230_same_source_ew_action_adoption_attempt"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -2838,70 +2880,26 @@ def main() -> int:
         is False,
         statuses["pr230_source_higgs_overlap_kappa_contract"],
     )
-    two_source_chunk001 = certificates[
-        "pr230_two_source_taste_radial_chunk001_checkpoint"
-    ]
-    two_source_chunk002 = certificates[
-        "pr230_two_source_taste_radial_chunk002_checkpoint"
-    ]
-    two_source_chunk003 = certificates[
-        "pr230_two_source_taste_radial_chunk003_checkpoint"
-    ]
-    two_source_chunk004 = certificates[
-        "pr230_two_source_taste_radial_chunk004_checkpoint"
-    ]
-    report(
-        "pr230-two-source-taste-radial-chunk001-checkpoint-not-closure",
-        "two-source taste-radial chunk001"
-        in str(statuses["pr230_two_source_taste_radial_chunk001_checkpoint"])
-        and two_source_chunk001.get("checkpoint_passed") is True
-        and two_source_chunk001.get("completed") is True
-        and two_source_chunk001.get("proposal_allowed") is False
-        and two_source_chunk001.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
+    two_source_chunks = {
+        idx: certificates[
+            f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
+        ]
+        for idx in range(1, 11)
+    }
+    for idx, two_source_chunk in two_source_chunks.items():
+        status_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
+        report(
+            f"pr230-two-source-taste-radial-chunk{idx:03d}-checkpoint-not-closure",
+            f"two-source taste-radial chunk{idx:03d}" in str(statuses[status_key])
+            and two_source_chunk.get("checkpoint_passed") is True
+            and two_source_chunk.get("completed") is True
+            and two_source_chunk.get("proposal_allowed") is False
+            and two_source_chunk.get("chunk_summary", {}).get(
+                "pole_residue_rows_count"
+            )
+            == 0,
+            statuses[status_key],
         )
-        == 0,
-        statuses["pr230_two_source_taste_radial_chunk001_checkpoint"],
-    )
-    report(
-        "pr230-two-source-taste-radial-chunk002-checkpoint-not-closure",
-        "two-source taste-radial chunk002"
-        in str(statuses["pr230_two_source_taste_radial_chunk002_checkpoint"])
-        and two_source_chunk002.get("checkpoint_passed") is True
-        and two_source_chunk002.get("completed") is True
-        and two_source_chunk002.get("proposal_allowed") is False
-        and two_source_chunk002.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
-        )
-        == 0,
-        statuses["pr230_two_source_taste_radial_chunk002_checkpoint"],
-    )
-    report(
-        "pr230-two-source-taste-radial-chunk003-checkpoint-not-closure",
-        "two-source taste-radial chunk003"
-        in str(statuses["pr230_two_source_taste_radial_chunk003_checkpoint"])
-        and two_source_chunk003.get("checkpoint_passed") is True
-        and two_source_chunk003.get("completed") is True
-        and two_source_chunk003.get("proposal_allowed") is False
-        and two_source_chunk003.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
-        )
-        == 0,
-        statuses["pr230_two_source_taste_radial_chunk003_checkpoint"],
-    )
-    report(
-        "pr230-two-source-taste-radial-chunk004-checkpoint-not-closure",
-        "two-source taste-radial chunk004"
-        in str(statuses["pr230_two_source_taste_radial_chunk004_checkpoint"])
-        and two_source_chunk004.get("checkpoint_passed") is True
-        and two_source_chunk004.get("completed") is True
-        and two_source_chunk004.get("proposal_allowed") is False
-        and two_source_chunk004.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
-        )
-        == 0,
-        statuses["pr230_two_source_taste_radial_chunk004_checkpoint"],
-    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4689,6 +4687,20 @@ def main() -> int:
         )
         is False
     )
+    result["same_source_ew_action_adoption_attempt_blocks_ansatz_only_shortcut"] = (
+        same_source_ew_action_adoption_attempt.get(
+            "same_source_ew_action_adoption_attempt_passed"
+        )
+        is True
+        and same_source_ew_action_adoption_attempt.get("proposal_allowed")
+        is False
+        and same_source_ew_action_adoption_attempt.get("adoption_allowed_now")
+        is False
+        and same_source_ew_action_adoption_attempt.get(
+            "accepted_action_certificate_written_by_this_attempt"
+        )
+        is False
+    )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(
             "post_fms_source_overlap_necessity_gate_passed"
@@ -4720,42 +4732,16 @@ def main() -> int:
         )
         is False
     )
-    result["two_source_taste_radial_chunk001_checkpoint_not_closure"] = (
-        two_source_chunk001.get("checkpoint_passed") is True
-        and two_source_chunk001.get("completed") is True
-        and two_source_chunk001.get("proposal_allowed") is False
-        and two_source_chunk001.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
+    for idx, two_source_chunk in two_source_chunks.items():
+        result[f"two_source_taste_radial_chunk{idx:03d}_checkpoint_not_closure"] = (
+            two_source_chunk.get("checkpoint_passed") is True
+            and two_source_chunk.get("completed") is True
+            and two_source_chunk.get("proposal_allowed") is False
+            and two_source_chunk.get("chunk_summary", {}).get(
+                "pole_residue_rows_count"
+            )
+            == 0
         )
-        == 0
-    )
-    result["two_source_taste_radial_chunk002_checkpoint_not_closure"] = (
-        two_source_chunk002.get("checkpoint_passed") is True
-        and two_source_chunk002.get("completed") is True
-        and two_source_chunk002.get("proposal_allowed") is False
-        and two_source_chunk002.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
-        )
-        == 0
-    )
-    result["two_source_taste_radial_chunk003_checkpoint_not_closure"] = (
-        two_source_chunk003.get("checkpoint_passed") is True
-        and two_source_chunk003.get("completed") is True
-        and two_source_chunk003.get("proposal_allowed") is False
-        and two_source_chunk003.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
-        )
-        == 0
-    )
-    result["two_source_taste_radial_chunk004_checkpoint_not_closure"] = (
-        two_source_chunk004.get("checkpoint_passed") is True
-        and two_source_chunk004.get("completed") is True
-        and two_source_chunk004.get("proposal_allowed") is False
-        and two_source_chunk004.get("chunk_summary", {}).get(
-            "pole_residue_rows_count"
-        )
-        == 0
-    )
     result["origin_main_composite_higgs_intake_not_closure"] = (
         origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")
         is True
@@ -4854,6 +4840,7 @@ def main() -> int:
         "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
         "does not treat FMS/lattice literature or method names as PR230 proof authority",
         "does not treat the same-source EW/Higgs action ansatz as adopted current-surface action authority",
+        "does not treat the same-source EW action adoption attempt as an accepted action certificate",
         "does not treat two completed taste-radial chunks as combined L12 pole evidence, canonical O_H, or scalar LSZ normalization",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",

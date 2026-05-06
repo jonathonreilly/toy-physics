@@ -66,6 +66,17 @@ Local verification completed:
   FAIL=0 after completed chunks007-008 landed; records `ready=8/63`, no bad
   chunk audits, finite-mode `rho_sx`/`Delta_sx` scouts, and
   `combined_rows_written=false`;
+- `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py`:
+  PASS=15 FAIL=0 for completed chunk009 and PASS=15 FAIL=0 for completed
+  chunk010; both certificates remain bounded row support only;
+- `frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py`: PASS=13
+  FAIL=0 after completed chunks009-010 landed; records `ready=10/63`, no bad
+  chunk audits, finite-mode `rho_sx`/`Delta_sx` scouts, and
+  `combined_rows_written=false`;
+- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=316 FAIL=0 after
+  loading and firewall-checking completed taste-radial chunks001-010;
+- `frontier_yt_retained_closure_route_certificate.py`: PASS=284 FAIL=0 after
+  loading and firewall-checking completed taste-radial chunks001-010;
 - `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
   FAIL=0;
 - `frontier_yt_pr230_degree_one_higgs_action_premise_gate.py`: PASS=15
@@ -84,7 +95,7 @@ Local verification completed:
   harness sparse-vertex support, and aggregate PR230 gates;
 - `python3 -m py_compile scripts/frontier_yt_source_higgs_production_readiness_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py` after hardening the source-Higgs readiness gate for completed taste-radial `C_sx/C_xx` aliases;
 - `frontier_yt_source_higgs_production_readiness_gate.py`: PASS=25 FAIL=0
-  after scanning eight completed taste-radial chunks and confirming finite
+  after scanning ten completed taste-radial chunks and confirming finite
   alias mode rows, zero pole-residue rows, canonical `O_H` identity false, and
   no physical Yukawa readout;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
@@ -127,6 +138,15 @@ Local verification completed:
   `frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py`: PASS=15
   FAIL=0.  The artifact is conditional support only and writes no accepted
   future action, canonical-`O_H`, source-Higgs, or W/Z row certificate paths;
+- after adding the same-source EW action adoption attempt,
+  `frontier_yt_pr230_same_source_ew_action_adoption_attempt.py`: PASS=9
+  FAIL=0.  The artifact blocks direct ansatz promotion into the accepted EW
+  action certificate because canonical-Higgs, sector-overlap, W/Z mass-fit
+  path, accepted input, and action-gate readiness prerequisites are absent;
+- aggregate gates after wiring the adoption attempt:
+  assumption/import stress PASS=70 FAIL=0, full assembly PASS=129 FAIL=0,
+  retained route PASS=278 FAIL=0, campaign status PASS=310 FAIL=0, and
+  completion audit PASS=43 FAIL=0;
 - `python3 -m py_compile` for the chunk checkpoint, row combiner,
   source-Higgs readiness, assumption stress, full assembly, retained route,
   campaign status, and completion-audit runners after the chunks007-008

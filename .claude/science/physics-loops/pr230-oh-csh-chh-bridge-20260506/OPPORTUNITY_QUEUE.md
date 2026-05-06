@@ -21,6 +21,10 @@
    centered `Phi^dagger Phi`.  It verifies the source derivative and local FMS
    expansion, but it is not an adopted current-surface action and writes no
    accepted future certificate paths.
+   The same-source EW action adoption attempt now blocks the ansatz-only
+   promotion shortcut against the accepted builder schema: the action-form side
+   is present, but canonical-Higgs, sector-overlap, W/Z mass-fit path, accepted
+   action-certificate input, and action-gate readiness are still missing.
    The post-FMS source-overlap necessity gate shows that even with FMS `C_HH`
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a
@@ -42,12 +46,12 @@
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   completed chunks001-008 and currently records active chunks009-010 under a
-   two-worker cap.  The completed chunks001-008 certificates pass
+   completed chunks001-010 and currently records active chunks011-012 under a
+   two-worker cap.  The completed chunks001-010 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
-   gate now records `ready=8/63`, no bad chunk audits, finite-mode
+   gate now records `ready=10/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  Chunks009-010 remain
+   chunks are schema-clean.  Chunks011-012 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row

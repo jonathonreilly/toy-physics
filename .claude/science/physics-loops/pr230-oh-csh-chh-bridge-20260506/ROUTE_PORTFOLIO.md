@@ -97,6 +97,11 @@ lattice, shared source coordinate `s`, and `s` coupled to centered
 but is not current-surface adoption and does not write accepted action,
 canonical-`O_H`, source-Higgs, or W/Z row certificate paths.
 
+The same-source EW action adoption attempt checks that the ansatz cannot be
+promoted directly into the accepted action certificate.  The action-form side
+is available, but the accepted schema still lacks canonical-Higgs,
+sector-overlap, W/Z mass-fit path, valid input, and action-gate readiness.
+
 The `origin/main` composite-Higgs stretch packet is context for this route
 only.  Its Z3 multi-channel candidate does not become PR230 authority until it
 derives the needed premises and emits same-source action/`O_H`/row artifacts on

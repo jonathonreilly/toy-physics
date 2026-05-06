@@ -194,6 +194,12 @@ accepted future EW-action, canonical-`O_H`, `C_sH/C_HH`, or W/Z response
 certificate paths.  Status is conditional support only until same-surface
 adoption plus downstream row/Gram/LSZ gates exist.
 
+The same-source EW action adoption attempt now blocks the ansatz-only
+promotion shortcut.  The action-form side is present, but the accepted builder
+schema still lacks canonical-Higgs, same-source sector-overlap, W/Z mass-fit
+path, accepted certificate input, and action-gate readiness prerequisites.
+The accepted EW action certificate path remains unwritten.
+
 The post-FMS source-overlap necessity gate now checks the next inference
 directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
 and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a
@@ -221,24 +227,24 @@ postprocessor records the same contract and computes
 before checking `|kappa_spH| = 1`/Gram purity.  Current status is still rows
 absent, proposal disallowed, and no `kappa_s = 1`.
 
-Chunks001-008 of the two-source taste-radial production wave have completed.
+Chunks001-010 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for
-chunks001-008, including production metadata, `numba_gauge_seed_v1`, the
+chunks001-010, including production metadata, `numba_gauge_seed_v1`, the
 preserved three-mass scan, selected-mass-only FH/LSZ/source rows, and
-`C_sx/C_xx` timeseries.  Chunks009-010 are active under the supervisor's
-two-worker cap.  Completed chunks001-008 are still bounded row support only:
+`C_sx/C_xx` timeseries.  Chunks011-012 are active under the supervisor's
+two-worker cap.  Completed chunks001-010 are still bounded row support only:
 they are not combined L12 evidence, pole/FV/IR evidence, canonical `O_H`,
 `kappa_s`, or top-Yukawa closure.
 
 The two-source row-combiner gate is now packaged.  It audits completed chunk
 JSON against the 63-chunk manifest and refuses to write the future combined
 measurement-row packet until every manifest chunk is present and schema-clean.
-Current result is `ready=8/63`, no bad chunk audits, and
+Current result is `ready=10/63`, no bad chunk audits, and
 `combined_rows_written=false`.  The combiner is an aggregation boundary, not
 physics evidence: partial diagnostics are not combined L12 pole evidence,
 canonical `O_H`, scalar LSZ normalization, `kappa_s`, or top-Yukawa closure.
 The combiner now also records finite-mode `rho_sx = C_sx/sqrt(C_ss C_xx)` and
-`Delta_sx = C_ss C_xx - C_sx^2` scouts for each ready mode.  On chunks001-008
+`Delta_sx = C_ss C_xx - C_sx^2` scouts for each ready mode.  On chunks001-010
 the mean finite-mode `rho_sx` values are near zero at the recorded finite row
 level, while `Delta_sx` is positive.  These are route diagnostics only:
 finite-mode, partial-chunk `C_sx/C_xx` rows are not isolated-pole residues,
@@ -252,7 +258,7 @@ aliases, not canonical `C_sH/C_HH` pole rows.  The gate scans completed row
 chunks, requires finite mode rows plus alias metadata, requires zero pole
 residue rows, requires `canonical_higgs_operator_identity_passed=false`, and
 requires `used_as_physical_yukawa_readout=false`.  The current readiness result
-is `PASS=25 FAIL=0` with eight completed taste-radial chunks scanned; it remains
+is `PASS=25 FAIL=0` with ten completed taste-radial chunks scanned; it remains
 a firewall/infrastructure check only.
 
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
@@ -271,12 +277,14 @@ Best next work:
    and attach the Higgs mass-source action bridge for `dS/ds=sum O_H`; FMS
    literature, the conditional expansion, and the mass-source bridge remain
    route support only until the same-surface action, canonical `O_H`, LSZ, and
-   pole rows exist.  The row builder/postprocessor are now ready to consume the
-   overlap/kappa contract when those rows exist;
+   pole rows exist.  The adoption attempt shows ansatz-only promotion is
+   blocked until canonical-Higgs, sector-overlap, and W/Z mass-fit path
+   certificates exist.  The row builder/postprocessor are now ready to consume
+   the overlap/kappa contract when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
-   source using the no-resume manifest and row contract; chunks001-008 are
-   complete and checkpointed, the combiner gate records `ready=8/63` and writes
-   no combined packet, chunks009-010 are active under the two-worker launcher
+   source using the no-resume manifest and row contract; chunks001-010 are
+   complete and checkpointed, the combiner gate records `ready=10/63` and writes
+   no combined packet, chunks011-012 are active under the two-worker launcher
    cap, and after they complete the next action is rerunning the per-chunk
    checkpoint without pending mode, rerunning the combiner, then the next
    bounded wave, then prove/reject its canonical-`O_H` identity or supply

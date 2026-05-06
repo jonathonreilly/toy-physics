@@ -185,6 +185,9 @@ def main() -> int:
         "same_source_ew_higgs_action_ansatz_gate": load(
             "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json"
         ),
+        "same_source_ew_action_adoption_attempt": load(
+            "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -341,6 +344,10 @@ def main() -> int:
         "conditional action-extension support only",
         "not an adopted current-surface action",
         "does not write accepted future certificate paths",
+        "Same-source EW action adoption attempt",
+        "ansatz-only action-adoption shortcut blocked",
+        "canonical-Higgs operator certificate",
+        "W/Z correlator mass-fit path certificate",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -1055,6 +1062,23 @@ def main() -> int:
         and ew_higgs_action_ansatz.get("future_default_certificates_written")
         is False,
         ew_higgs_action_ansatz.get("actual_current_surface_status"),
+    )
+    ew_action_adoption_attempt = certificates["same_source_ew_action_adoption_attempt"]
+    report(
+        "same-source-ew-action-adoption-attempt-blocks-ansatz-only-shortcut",
+        "ansatz-only same-source EW action adoption shortcut blocked"
+        in str(ew_action_adoption_attempt.get("actual_current_surface_status"))
+        and ew_action_adoption_attempt.get("proposal_allowed") is False
+        and ew_action_adoption_attempt.get(
+            "same_source_ew_action_adoption_attempt_passed"
+        )
+        is True
+        and ew_action_adoption_attempt.get("adoption_allowed_now") is False
+        and ew_action_adoption_attempt.get(
+            "accepted_action_certificate_written_by_this_attempt"
+        )
+        is False,
+        ew_action_adoption_attempt.get("actual_current_surface_status"),
     )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(

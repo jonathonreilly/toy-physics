@@ -39,6 +39,10 @@ This block lands:
   concrete conditional action-extension shape while keeping current-surface
   adoption, accepted future certificate paths, row packets, and closure
   explicitly absent;
+- an executable same-source EW action adoption attempt that blocks direct
+  promotion of the ansatz into the accepted EW action certificate until
+  canonical-Higgs, sector-overlap, W/Z mass-fit path, and action-gate
+  prerequisites are supplied;
 - an executable post-FMS source-overlap necessity gate proving that current
   source-only rows, conditional FMS `C_HH` support, and taste-radial
   `C_sx/C_xx` chunks still do not determine `Res C_sH` or canonical `y_t`;

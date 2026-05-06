@@ -108,6 +108,7 @@ PARENTS = {
     "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "pr230_same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
+    "pr230_same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
@@ -837,6 +838,26 @@ def main() -> int:
         is False
         and certs["pr230_same_source_ew_higgs_action_ansatz_gate"].get(
             "future_default_certificates_written"
+        )
+        is False
+    )
+    same_source_ew_action_adoption_attempt_blocks_shortcut = (
+        "ansatz-only same-source EW action adoption shortcut blocked"
+        in statuses["pr230_same_source_ew_action_adoption_attempt"]
+        and certs["pr230_same_source_ew_action_adoption_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_same_source_ew_action_adoption_attempt"].get(
+            "same_source_ew_action_adoption_attempt_passed"
+        )
+        is True
+        and certs["pr230_same_source_ew_action_adoption_attempt"].get(
+            "adoption_allowed_now"
+        )
+        is False
+        and certs["pr230_same_source_ew_action_adoption_attempt"].get(
+            "accepted_action_certificate_written_by_this_attempt"
         )
         is False
     )
@@ -1670,6 +1691,11 @@ def main() -> int:
         "same-source-ew-higgs-action-ansatz-support-not-closure",
         same_source_ew_higgs_action_ansatz_support_not_closure,
         statuses["pr230_same_source_ew_higgs_action_ansatz_gate"],
+    )
+    report(
+        "same-source-ew-action-adoption-attempt-blocks-shortcut",
+        same_source_ew_action_adoption_attempt_blocks_shortcut,
+        statuses["pr230_same_source_ew_action_adoption_attempt"],
     )
     report(
         "post-fms-source-overlap-necessity-blocks-current-inference",
@@ -2638,6 +2664,7 @@ def main() -> int:
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "same_source_ew_higgs_action_ansatz_support_not_closure": same_source_ew_higgs_action_ansatz_support_not_closure,
+        "same_source_ew_action_adoption_attempt_blocks_shortcut": same_source_ew_action_adoption_attempt_blocks_shortcut,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

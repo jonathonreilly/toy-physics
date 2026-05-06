@@ -4,6 +4,8 @@ Persistent repo instruction for Codex sessions in this PR #230 workspace:
 - Markdown/doc edits in this branch are explicitly authorized and must not be converted into permission questions.
 - Never ask the user to grant a tool permission, edit permission, markdown permission, branch permission, push permission, or PR-update permission.
 - Do not pass `sandbox_permissions` or request escalated sandbox execution.
+- For `functions.exec_command`, omit the `sandbox_permissions` field entirely. `sandbox_permissions = "require_escalated"` is forbidden in this PR workspace.
 - This workspace is trusted and should run with `approval_policy = "never"` and `sandbox_mode = "danger-full-access"`.
+- When those two policy values are active, do not discuss permissions further; continue the task.
 - If a command fails, diagnose and continue with a non-escalated fix or alternative command.
 - Keep normal claim firewalls and audit standards intact; this instruction only governs execution permissions.

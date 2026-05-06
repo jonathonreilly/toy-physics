@@ -164,6 +164,12 @@ def main() -> int:
         "pr230_two_source_taste_radial_chunk002_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk003_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk004_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk005_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk005_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk006_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk006_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk007_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk007_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk008_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk008_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk009_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk009_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk010_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk010_checkpoint_2026-05-06.json",
         "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
         "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
         "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -1613,94 +1619,18 @@ def main() -> int:
         ).get("set_kappa_s_equal_one")
         is False
     )
-    two_source_taste_radial_chunk001_checkpoint_not_closure = (
-        "two-source taste-radial chunk001"
-        in certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
-            "actual_current_surface_status", ""
+    two_source_taste_radial_chunk_checkpoint_not_closure = {}
+    for idx in range(1, 11):
+        cert_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
+        cert = certificates[cert_key]
+        two_source_taste_radial_chunk_checkpoint_not_closure[idx] = (
+            f"two-source taste-radial chunk{idx:03d}"
+            in cert.get("actual_current_surface_status", "")
+            and cert.get("checkpoint_passed") is True
+            and cert.get("completed") is True
+            and cert.get("proposal_allowed") is False
+            and cert.get("chunk_summary", {}).get("pole_residue_rows_count") == 0
         )
-        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
-            "checkpoint_passed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
-            "completed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
-            "proposal_allowed"
-        )
-        is False
-        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
-            "chunk_summary", {}
-        ).get("pole_residue_rows_count")
-        == 0
-    )
-    two_source_taste_radial_chunk002_checkpoint_not_closure = (
-        "two-source taste-radial chunk002"
-        in certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
-            "actual_current_surface_status", ""
-        )
-        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
-            "checkpoint_passed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
-            "completed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
-            "proposal_allowed"
-        )
-        is False
-        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
-            "chunk_summary", {}
-        ).get("pole_residue_rows_count")
-        == 0
-    )
-    two_source_taste_radial_chunk003_checkpoint_not_closure = (
-        "two-source taste-radial chunk003"
-        in certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
-            "actual_current_surface_status", ""
-        )
-        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
-            "checkpoint_passed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
-            "completed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
-            "proposal_allowed"
-        )
-        is False
-        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
-            "chunk_summary", {}
-        ).get("pole_residue_rows_count")
-        == 0
-    )
-    two_source_taste_radial_chunk004_checkpoint_not_closure = (
-        "two-source taste-radial chunk004"
-        in certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
-            "actual_current_surface_status", ""
-        )
-        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
-            "checkpoint_passed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
-            "completed"
-        )
-        is True
-        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
-            "proposal_allowed"
-        )
-        is False
-        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
-            "chunk_summary", {}
-        ).get("pole_residue_rows_count")
-        == 0
-    )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
         in certificates["pr230_kinetic_taste_mixing_bridge"].get(
@@ -4240,34 +4170,13 @@ def main() -> int:
             "actual_current_surface_status", ""
         ),
     )
-    report(
-        "two-source-taste-radial-chunk001-checkpoint-not-closure",
-        two_source_taste_radial_chunk001_checkpoint_not_closure,
-        certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
-            "actual_current_surface_status", ""
-        ),
-    )
-    report(
-        "two-source-taste-radial-chunk002-checkpoint-not-closure",
-        two_source_taste_radial_chunk002_checkpoint_not_closure,
-        certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
-            "actual_current_surface_status", ""
-        ),
-    )
-    report(
-        "two-source-taste-radial-chunk003-checkpoint-not-closure",
-        two_source_taste_radial_chunk003_checkpoint_not_closure,
-        certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
-            "actual_current_surface_status", ""
-        ),
-    )
-    report(
-        "two-source-taste-radial-chunk004-checkpoint-not-closure",
-        two_source_taste_radial_chunk004_checkpoint_not_closure,
-        certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
-            "actual_current_surface_status", ""
-        ),
-    )
+    for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items():
+        cert_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
+        report(
+            f"two-source-taste-radial-chunk{idx:03d}-checkpoint-not-closure",
+            not_closure,
+            certificates[cert_key].get("actual_current_surface_status", ""),
+        )
     report(
         "kinetic-taste-mixing-shortcut-closed",
         kinetic_taste_mixing_bridge_blocks_shortcut,
@@ -5662,10 +5571,10 @@ def main() -> int:
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
-        "two_source_taste_radial_chunk001_checkpoint_not_closure": two_source_taste_radial_chunk001_checkpoint_not_closure,
-        "two_source_taste_radial_chunk002_checkpoint_not_closure": two_source_taste_radial_chunk002_checkpoint_not_closure,
-        "two_source_taste_radial_chunk003_checkpoint_not_closure": two_source_taste_radial_chunk003_checkpoint_not_closure,
-        "two_source_taste_radial_chunk004_checkpoint_not_closure": two_source_taste_radial_chunk004_checkpoint_not_closure,
+        "two_source_taste_radial_chunk_checkpoint_not_closure": {
+            f"chunk{idx:03d}": not_closure
+            for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items()
+        },
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
@@ -5676,6 +5585,10 @@ def main() -> int:
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }
+    for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items():
+        result[
+            f"two_source_taste_radial_chunk{idx:03d}_checkpoint_not_closure"
+        ] = not_closure
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
