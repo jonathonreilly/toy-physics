@@ -149,6 +149,12 @@
       "transitive_descendants": 305
     },
     {
+      "claim_id": "universal_gr_discrete_global_closure_note",
+      "criticality": "critical",
+      "load_bearing_score": 20.88,
+      "transitive_descendants": 470
+    },
+    {
       "claim_id": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
       "criticality": "critical",
       "load_bearing_score": 20.655,
@@ -159,12 +165,6 @@
       "criticality": "critical",
       "load_bearing_score": 20.262,
       "transitive_descendants": 306
-    },
-    {
-      "claim_id": "gauge_scalar_temporal_completion_theorem_note",
-      "criticality": "critical",
-      "load_bearing_score": 19.585,
-      "transitive_descendants": 542
     }
   ]
 }

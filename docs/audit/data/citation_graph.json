@@ -13793,6 +13793,26 @@
       "to": "universal_qg_optional_textbook_comparison_note"
     },
     {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_uv_finite_partition_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_projective_schur_closure_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_canonical_refinement_net_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_inverse_limit_closure_note"
+    },
+    {
       "from": "universal_qg_canonical_refinement_net_note",
       "to": "universal_gr_lorentzian_global_atlas_closure_note"
     },
@@ -13827,6 +13847,38 @@
     {
       "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
       "to": "universal_qg_optional_textbook_comparison_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_smooth_gravitational_global_solution_class_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_smooth_gravitational_global_atlas_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_canonical_smooth_geometric_action_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_gr_discrete_global_closure_note"
     },
     {
       "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
@@ -13923,6 +13975,38 @@
     {
       "from": "universal_qg_smooth_gravitational_global_solution_class_note",
       "to": "universal_qg_optional_textbook_comparison_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_smooth_gravitational_global_atlas_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_pl_sobolev_interface_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_pl_weak_form_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_canonical_refinement_net_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_projective_schur_closure_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_inverse_limit_closure_note"
     },
     {
       "from": "universal_qg_smooth_gravitational_local_identification_note",
@@ -51615,9 +51699,14 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_qg_uv_finite_partition_note",
+        "universal_qg_projective_schur_closure_note",
+        "universal_qg_canonical_refinement_net_note",
+        "universal_qg_inverse_limit_closure_note"
       ],
-      "note_hash": "067f0989b6bec10f252a04932398e27776615bfcfb094dd909b3c6c4bfaac026",
+      "note_hash": "3f796282e728f782f2eabe0a34a7a27fe9e139db62070fc6dda4b5b66596e914",
       "path": "docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Abstract Gaussian Completion on `PL S^3 x R`"
@@ -51672,9 +51761,17 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_solution_class_note",
+        "universal_qg_smooth_gravitational_global_atlas_note",
+        "universal_qg_canonical_smooth_geometric_action_note",
+        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_gr_discrete_global_closure_note"
       ],
-      "note_hash": "b1b657db581cb1111dacf9d92c1c7d6696738a2c9402ab24b0c006db30b83ab4",
+      "note_hash": "dfb2f61f22590e56678976b2d1730c7151a33c03800a8c011fc5460ea9b296be",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Textbook Continuum Gravitational Closure"
@@ -51839,9 +51936,17 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_atlas_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_qg_pl_sobolev_interface_note",
+        "universal_qg_pl_weak_form_note",
+        "universal_qg_canonical_refinement_net_note",
+        "universal_qg_projective_schur_closure_note",
+        "universal_qg_inverse_limit_closure_note"
       ],
-      "note_hash": "376c4c1de29234d74f1e4d783db6d2037a3aebc5e70913b73f4a53dc705bb093",
+      "note_hash": "18edf5f78764a6ee41b5b036933cbf1bc269e9faf76f4fa24f42e9571ba5a177",
       "path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Smooth Gravitational Global Solution Class"
@@ -55464,7 +55569,7 @@
       "open_gate": 118,
       "positive_theorem": 636
     },
-    "edge_count": 6521,
+    "edge_count": 6542,
     "leaf_count": 553,
     "node_count": 1903,
     "root_count": 876,

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 771 |
+| unaudited | 774 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 473 |
+| ~~audited_conditional~~ | 470 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 473 |
+| `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 817 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -102,9 +102,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 524 | 22.04 | `audited_conditional` | ~~audited_conditional~~ |
 | 21 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 337 | 21.40 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 305 | 21.26 | `audited_clean` | **retained** |
-| 23 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 306 | 20.26 | `unaudited` | unaudited |
-| 25 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | critical | 542 | 19.59 | `audited_clean` | **retained_bounded** |
+| 23 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 470 | 20.88 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 306 | 20.26 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -933,11 +933,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_signature_extension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `universal_qg_abstract_gaussian_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `universal_qg_canonical_textbook_continuum_gr_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `universal_qg_smooth_gravitational_global_solution_class_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -13862,36 +13859,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** No runner, cited authority, or derivation is provided, so the audit must judge from the note text alone. The load-bearing move introduces and names the missing primitive Pi_curv/projector bundle and uses that definition to classify the route as blocked. This is an honest bounded blocker statement, but it is not a first-principles computation or algebraic closure from retained inputs.
 - **auditor confidence:** high
 
-### `universal_qg_abstract_gaussian_completion_note`
-
-- **Note:** [`UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`](../../docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited only the asserted construction of an abstract Gaussian/Cameron-Martin completion from a projectively consistent inverse-limit Gaussian cylinder family on the canonical barycentric-dyadic refinement net.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-universal_qg_abstract_ga-098`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Because the inverse-limit family is exactly projectively consistent, the covariance bilinear form is refinement-independent, null-quotienting gives a pre-Hilbert cylindrical space, and its completion defines H_QG.  _(class `A`)_
-- **chain closes:** False — The functional-analytic construction would be standard if the projectively consistent Gaussian cylinder family and refinement-independent cylindrical observables were retained inputs. The restricted packet provides no retained authority proving those load-bearing premises.
-- **rationale:** The note's mathematical closure is an algebraic/standard completion step over an imported projective Gaussian cylinder family, not a first-principles compute. The only cited authority supplied is a packaging-only optional comparison note and does not establish the inverse-limit Gaussian family, Schur/projective closure, or continuity of the mean functional. Therefore the theorem does not close from the restricted packet, even though the completion step itself is plausible conditional on the missing premises.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_canonical_textbook_continuum_gr_closure_note`
-
-- **Note:** [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited whether the stated canonical textbook continuum gravitational closure follows from the provided source note and its one cited authority.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-universal_qg_canonical_t-071`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Because all of these steps are carried by the same exact operator/action family K_GR(D) = H_D ⊗ Lambda_R, the chosen canonical textbook target already contains the weak/Gaussian, stationary Lorentzian/Einstein-Regge, and atlas-patching families.  _(class `F`)_
-- **chain closes:** False — The packet does not provide retained-grade authorities for the six asserted exact equivalences or for the bridge identifying both sectors as one operator/action family. The only cited authority is packaging-only and marked audited_renaming, so it cannot close the theorem claim.
-- **rationale:** The load-bearing step is an asserted identity between existing sector constructions under K_GR(D), not a first-principles computation or algebraic closure from supplied retained inputs. The source imports multiple exact equivalence and global closure premises that are not present in the restricted packet. The sole cited authority is explicitly packaging-only and has effective_status audited_renaming, which is not retained-grade. Therefore the theorem closure does not follow from the provided inputs.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`
-- **auditor confidence:** high
-
 ### `universal_qg_inverse_limit_closure_note`
 
 - **Note:** [`UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
@@ -13937,21 +13904,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
   - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_smooth_gravitational_global_solution_class_note`
-
-- **Note:** [`UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`](../../docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited whether the stated smooth global weak gravitational stationary/Gaussian solution class follows from the provided one-hop restricted packet.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-universal_qg_smooth_grav-064`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The exhaustion levels form one exact projective weak/Gaussian family whose limit is a smooth global weak gravitational stationary/Gaussian solution class.  _(class `A`)_
-- **chain closes:** False — The note relies on multiple upstream closure claims about local smooth gravitational identification, finite-atlas patching, discrete-global stationary families, canonical weak Sobolev/Gaussian objects, refinement nets, and Schur/projective closure that are not provided as retained-grade authorities in the restricted packet. The only cited authority supplied is packaging-only and not a theorem authority for these premises.
-- **rationale:** The load-bearing step is an algebraic/projective-limit style closure, but it is not closed over the restricted inputs because the premises it needs are asserted rather than supplied. The sole cited authority is an optional textbook comparison note with effective status audited_renaming and explicitly packaging-only scope. No runner or source is available to independently certify the missing closure steps.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`
 - **auditor confidence:** high
 
 ### `valley_linear_action_note`

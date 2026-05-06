@@ -102,3 +102,37 @@ comparison, and the canonical textbook continuum gravitational closure; any
 alternate textbook comparison is collected separately in
 [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md).
 That note is packaging-only and not part of the theorem stack.
+
+## Citations
+
+The auditor's `missing_dependency_edge` flag asked for retained-grade
+upstream notes proving the exact inverse-limit Gaussian cylinder family,
+projective compatibility, refinement-independent cylindrical observables,
+and any needed continuity of the stationary mean functional. The
+following are the load-bearing repo-native authorities for each
+ingredient enumerated in the "Exact setup" section; the markdown links
+register them as one-hop dependency edges in the citation graph.
+
+- [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+  — exact discrete `3+1` Einstein/Regge stationary action family on
+  `PL S^3 × R` (item 1 of "Exact setup").
+- [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+  — exact UV-finite partition-density family on the same discrete route
+  (item 2).
+- [UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
+  — exact Schur/projective coarse-graining closure (item 3).
+- [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+  — exact canonical barycentric-dyadic refinement net (item 4).
+- [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+  — exact inverse-limit Gaussian cylinder closure on the refinement net
+  (item 5), i.e. the projectively consistent cylinder family used as
+  input to the Cameron–Martin completion below.
+
+The abstract-completion content of this note (covariance bilinear form,
+null-direction quotient, Hilbert completion, and refinement-independent
+mean functional) is unchanged. It is built on top of the listed
+authorities and is the standard algebraic completion step.
+
+Until each linked authority is itself audit-clean, this note remains
+`audited_conditional` even with the registered edges; the wiring is
+the prerequisite for unlock, not the unlock itself.

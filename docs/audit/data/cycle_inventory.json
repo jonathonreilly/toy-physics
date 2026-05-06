@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 460,
+      "max_transitive_descendants": 463,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
           "title": "Universal QG UV-Finite Partition Density Note",
-          "transitive_descendants": 460
+          "transitive_descendants": 463
         },
         {
           "audit_status": "audited_conditional",
@@ -33,7 +33,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
           "title": "Universal QG Projective Schur Closure Note",
-          "transitive_descendants": 460
+          "transitive_descendants": 463
         }
       ],
       "requires_lemma_extraction": false
@@ -56,7 +56,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 460,
+      "max_transitive_descendants": 463,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -65,7 +65,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
           "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
-          "transitive_descendants": 460
+          "transitive_descendants": 463
         },
         {
           "audit_status": "unaudited",
@@ -74,7 +74,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
           "title": "Universal QG UV-Finite Partition Density Note",
-          "transitive_descendants": 460
+          "transitive_descendants": 463
         },
         {
           "audit_status": "audited_conditional",
@@ -83,7 +83,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
           "title": "Universal QG Projective Schur Closure Note",
-          "transitive_descendants": 460
+          "transitive_descendants": 463
         }
       ],
       "requires_lemma_extraction": false
