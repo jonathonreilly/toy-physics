@@ -1,7 +1,7 @@
 # Teleportation Resource-Fidelity Note
 
 **Date:** 2026-04-25
-**Status:** planning / first artifact; not a manuscript claim surface
+**Status:** bounded open-gate derivation artifact; not a manuscript claim surface
 **Runner:** `scripts/frontier_teleportation_resource_fidelity.py`
 
 ## Scope
@@ -79,6 +79,109 @@ the teleportation threshold is `v > 1/3`. The CHSH threshold for the same
 isotropic family is higher, `v > 1/sqrt(2)`, so a resource can beat the
 teleportation benchmark without violating CHSH.
 
+## Fixed-Protocol Derivation
+
+Let `g=(z,x)` label the four Bell states
+`|beta_g> = |Phi+>, |Phi->, |Psi+>, |Psi->`, with the same bit convention used
+by the runner, and let `P_g` be the corresponding Pauli on Bob's qubit, up to
+an irrelevant overall phase:
+
+```text
+P_00 = I,   P_10 = Z,   P_01 = X,   P_11 = ZX.
+```
+
+The resource is an arbitrary physical two-qubit density matrix on `R,B`. Expand
+it in this Bell basis:
+
+```text
+rho_RB = sum_{g,h} rho_{g,h} |beta_g><beta_h|.
+```
+
+For a pure input state `|psi>` and Bell-measurement outcome `m`, the branch
+amplitude from a pure resource component `|beta_g>` is:
+
+```text
+(<beta_m|_AR tensor I_B)(|psi>_A tensor |beta_g>_RB)
+    = (1/2) phase(m,g) P_m^\dagger P_g |psi>_B.
+```
+
+After Bob applies the fixed correction `P_m`, that branch becomes:
+
+```text
+(1/2) phase(m,g) P_g |psi>_B.
+```
+
+Thus an off-diagonal Bell-basis resource element
+`|beta_g><beta_h|` contributes, after summing over the four classical records,
+
+```text
+(1/4) sum_m phase(m,g) phase(m,h)^* P_g |psi><psi| P_h^\dagger.
+```
+
+The phases are the four characters of the two-bit Pauli/Bell label group, so
+their record sum is orthogonal. Equivalently, for `m=(z_m,x_m)` the relative
+branch phase can be chosen in the form
+
+```text
+phase(m,g) phase(m,h)^*
+    = c_{g,h} (-1)^{z_m (x_g xor x_h) + x_m (z_g xor z_h)},
+```
+
+where `c_{g,h}` is independent of the measurement record. Summing over the four
+records gives:
+
+```text
+(1/4) sum_m phase(m,g) phase(m,h)^* = delta_{g,h}.
+```
+
+All Bell-basis coherences in `rho_RB` therefore drop out of this fixed
+Bell-measurement/Pauli-correction protocol. By linearity, the corrected
+teleportation channel is exactly the Pauli channel
+
+```text
+T_rho(sigma) = sum_g p_g P_g sigma P_g^\dagger,
+    p_g = <beta_g|rho_RB|beta_g>.
+```
+
+The Choi state of this channel is diagonal in the same Bell basis:
+
+```text
+J(T_rho) = sum_g p_g |beta_g><beta_g|.
+```
+
+Therefore the channel entanglement fidelity against the identity channel is
+just the identity-error probability
+
+```text
+F_e = <Phi+|J(T_rho)|Phi+> = p_00 = <Phi+|rho_RB|Phi+>.
+```
+
+For a trace-preserving single-qubit channel, the Haar-average pure-state
+fidelity is related to entanglement fidelity by
+
+```text
+F_avg = (2 F_e + 1) / 3.
+```
+
+Combining the last two equations gives the fixed-protocol formula used by the
+runner:
+
+```text
+F_avg = (1 + 2 * <Phi+|rho_RB|Phi+>) / 3.
+```
+
+The qubit classical benchmark is `2/3`, so this fixed convention beats the
+benchmark exactly when:
+
+```text
+<Phi+|rho_RB|Phi+> > 1/2.
+```
+
+This is not an optimized teleportation-fidelity theorem. A resource whose
+largest Bell overlap is in another Bell frame can be rescued by relabeling or
+changing local frames; this note's threshold is only for the fixed `Phi+`
+measurement/correction convention above.
+
 ## First Run
 
 Command:
@@ -148,7 +251,7 @@ The first run reported `PASS` for:
 
 ## Limitations
 
-This is still a bounded planning artifact.
+This is still a bounded open-gate artifact.
 
 - The Bell resource is supplied as a density matrix. The runner does not derive
   it from the Poisson-coupled CHSH Hamiltonian or any native preparation
@@ -167,4 +270,6 @@ This is still a bounded planning artifact.
 
 The ideal Bell-resource assumption is now bounded by a concrete fidelity
 harness. The useful fixed-protocol resource condition is explicit:
-`<Phi+|rho|Phi+> > 1/2`. The lane remains planning / first artifact.
+`<Phi+|rho|Phi+> > 1/2`. This closes the supplied-density-matrix,
+fixed-protocol threshold derivation only; the broader teleportation lane
+remains open-gate outside this narrow scope.
