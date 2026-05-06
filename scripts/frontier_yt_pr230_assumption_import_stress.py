@@ -134,6 +134,9 @@ def main() -> int:
         "source_coordinate_transport_gate": load(
             "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json"
         ),
+        "origin_main_composite_higgs_intake_guard": load(
+            "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
+        ),
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -728,6 +731,18 @@ def main() -> int:
         is False,
         source_coordinate_transport.get("actual_current_surface_status"),
     )
+    composite_higgs_intake = certificates["origin_main_composite_higgs_intake_guard"]
+    report(
+        "origin-main-composite-higgs-packet-not-pr230-oh-authority",
+        "origin/main composite-Higgs stretch"
+        in str(composite_higgs_intake.get("actual_current_surface_status"))
+        and composite_higgs_intake.get("proposal_allowed") is False
+        and composite_higgs_intake.get("origin_main_composite_higgs_intake_guard_passed")
+        is True
+        and composite_higgs_intake.get("origin_main_composite_higgs_closes_pr230")
+        is False,
+        composite_higgs_intake.get("actual_current_surface_status"),
+    )
     source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -884,7 +899,12 @@ def main() -> int:
             "FH/LSZ source is the uniform additive mass source and has zero "
             "projection onto that taste-axis span.  That stack cannot be used "
             "as O_H authority until a source-coordinate transport certificate "
-            "or C_sH/C_HH rows exist.  The first-principles O_H bridge "
+            "or C_sH/C_HH rows exist.  The origin/main composite-Higgs intake "
+            "guard adds the same firewall for cross-lane stretch packets: a "
+            "multi-channel Z3 composite-Higgs candidate with branch-local "
+            "Z3/equal-condensate/strong-coupling premises is useful context, "
+            "but it is not PR230 uniform-source transport, canonical O_H "
+            "authority, or C_sH/C_HH pole-row evidence.  The first-principles O_H bridge "
             "candidate portfolio keeps five positive candidates open while "
             "recording that no candidate currently supplies closure authority.  "
             "The source-coordinate, action-first, W/Z response, Schur, and "
@@ -919,6 +939,7 @@ def main() -> int:
             "does not treat staggered-Wilson determinant positivity as source-Higgs overlap authority",
             "does not treat reflection plus determinant positivity as a primitive neutral bridge",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
+            "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

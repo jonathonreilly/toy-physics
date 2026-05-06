@@ -37,6 +37,12 @@ the current surface:
 - neutral primitive/rank-one needs a same-surface primitive transfer,
   off-diagonal generator, or irreducibility certificate.
 
+The `origin/main` composite-Higgs stretch packet was also ingested as
+cross-lane context.  It has a `PASS=80 FAIL=0` runner tally, but depends on
+branch-local Z3/equal-condensate/strong-coupling premises and supplies no PR230
+uniform-source transport, canonical `O_H`, or `C_sH/C_HH` rows.  It can inform
+the action-first route only after those same-surface artifacts exist.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then

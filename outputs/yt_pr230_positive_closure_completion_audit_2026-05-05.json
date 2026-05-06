@@ -43,6 +43,7 @@
     "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
     "neutral_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
@@ -67,6 +68,7 @@
     "genuine_source_pole_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
     "matching_running": "open / PR230 matching-running bridge awaits certified physical input",
     "neutral_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
     "retained_route": "open / retained closure not yet reached",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
@@ -81,7 +83,7 @@
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
   },
-  "pass_count": 25,
+  "pass_count": 26,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -94,6 +96,7 @@
       "source_higgs_production_certificate": false,
       "top_wz_matched_response_rows": false
     },
+    "origin_main_composite_higgs_not_closure": true,
     "osp_higgs_rows_absent": true,
     "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
@@ -131,6 +134,7 @@
           "Res_C_HH",
           "O_sp-Higgs Gram purity plus FV/IR/model-class authority"
         ],
+        "origin_main_composite_higgs_not_closure": true,
         "osp_higgs_rows_absent": true,
         "taste_condensate_oh_bridge_blocked": true
       },
@@ -214,7 +218,8 @@
               "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
               "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
               "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
-              "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json"
+              "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
+              "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
             ],
             "passes_current_surface": false
           },
@@ -289,7 +294,8 @@
               "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
               "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
               "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
-              "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"
+              "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
+              "outputs/yt_pr230_schur_route_completion_2026-05-06.json"
             ],
             "passes_current_surface": false
           },
@@ -301,7 +307,8 @@
               "production C_sH/C_HH pole residues absent",
               "Gram-purity postprocessor awaiting production certificate",
               "perfect Gram purity against an unratified supplied operator is not O_H authority",
-              "Higgs/taste condensate stack has zero projection from the PR230 uniform mass source onto the trace-zero taste-Higgs axes"
+              "Higgs/taste condensate stack has zero projection from the PR230 uniform mass source onto the trace-zero taste-Higgs axes",
+              "origin/main composite-Higgs stretch packet is cross-lane conditional context, not PR230 O_H/C_sH/C_HH authority"
             ],
             "parents": [
               "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
@@ -312,7 +319,8 @@
               "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
               "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
               "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
-              "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
+              "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+              "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
             ],
             "passes_current_surface": false
           }

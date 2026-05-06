@@ -147,6 +147,7 @@ def main() -> int:
         "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
         "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
         "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
+        "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
         "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
         "pr230_wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
@@ -1156,6 +1157,24 @@ def main() -> int:
         is True
         and certificates["pr230_source_coordinate_transport_gate"].get(
             "future_transport_certificate_present"
+        )
+        is False
+    )
+    origin_main_composite_higgs_intake_not_closure = (
+        "origin/main composite-Higgs stretch"
+        in certificates["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "origin_main_composite_higgs_intake_guard_passed"
+        )
+        is True
+        and certificates["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "origin_main_composite_higgs_closes_pr230"
         )
         is False
     )
@@ -3535,6 +3554,13 @@ def main() -> int:
         ),
     )
     report(
+        "origin-main-composite-higgs-intake-not-closure",
+        origin_main_composite_higgs_intake_not_closure,
+        certificates["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "source-coordinate-transport-current-surface-closed",
         source_coordinate_transport_completion_blocks,
         certificates["pr230_source_coordinate_transport_completion"].get(
@@ -4882,6 +4908,7 @@ def main() -> int:
             "same-surface artifact."
         ),
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
+        "origin_main_composite_higgs_intake_not_closure": origin_main_composite_higgs_intake_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,

@@ -578,6 +578,9 @@ def main() -> int:
         "pr230_source_coordinate_transport_gate": load(
             "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json"
         ),
+        "pr230_origin_main_composite_higgs_intake_guard": load(
+            "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
+        ),
         "pr230_source_coordinate_transport_completion": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -2392,6 +2395,20 @@ def main() -> int:
         is False,
         statuses["pr230_source_coordinate_transport_gate"],
     )
+    origin_main_composite_higgs = certificates["pr230_origin_main_composite_higgs_intake_guard"]
+    report(
+        "pr230-origin-main-composite-higgs-intake-not-closure",
+        "origin/main composite-Higgs stretch"
+        in str(statuses["pr230_origin_main_composite_higgs_intake_guard"])
+        and origin_main_composite_higgs.get("proposal_allowed") is False
+        and origin_main_composite_higgs.get(
+            "origin_main_composite_higgs_intake_guard_passed"
+        )
+        is True
+        and origin_main_composite_higgs.get("origin_main_composite_higgs_closes_pr230")
+        is False,
+        statuses["pr230_origin_main_composite_higgs_intake_guard"],
+    )
     source_transport_completion = certificates["pr230_source_coordinate_transport_completion"]
     report(
         "pr230-source-coordinate-transport-current-surface-closed",
@@ -3645,6 +3662,10 @@ def main() -> int:
             "route": "main audit-drift reopen guard",
             "needed": "do not reopen from origin/main audit/effective-status drift unless a listed PR230 same-surface artifact is present",
         },
+        {
+            "route": "origin/main composite-Higgs packet intake",
+            "needed": "treat cross-lane composite-Higgs stretch packets as context only until they produce PR230 same-source O_H/C_sH/C_HH authority or a listed same-surface artifact",
+        },
     ]
 
     result = {
@@ -4062,6 +4083,13 @@ def main() -> int:
         is True
         and source_transport_completion.get("proposal_allowed") is False
     )
+    result["origin_main_composite_higgs_intake_not_closure"] = (
+        origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")
+        is True
+        and origin_main_composite_higgs.get("origin_main_composite_higgs_closes_pr230")
+        is False
+        and origin_main_composite_higgs.get("proposal_allowed") is False
+    )
     result["action_first_route_completion_blocks"] = (
         action_first_route_completion.get("action_first_route_completion_passed") is True
         and action_first_route_completion.get("proposal_allowed") is False
@@ -4100,6 +4128,7 @@ def main() -> int:
         "does not treat post-cycle-32 origin/main audit/effective-status/runner-cache drift as same-surface physics evidence",
         "does not treat Burnside/double-commutant theorem names as proof without same-surface neutral generators",
         "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
+        "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]

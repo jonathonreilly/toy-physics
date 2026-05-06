@@ -90,6 +90,7 @@ PARENTS = {
     "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
+    "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
     "pr230_wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
@@ -245,6 +246,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "Gram-purity postprocessor awaiting production certificate",
                 "perfect Gram purity against an unratified supplied operator is not O_H authority",
                 "Higgs/taste condensate stack has zero projection from the PR230 uniform mass source onto the trace-zero taste-Higgs axes",
+                "origin/main composite-Higgs stretch packet is cross-lane conditional context, not PR230 O_H/C_sH/C_HH authority",
             ],
             "parents": [
                 PARENTS["source_higgs_readiness"],
@@ -256,6 +258,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["cross_lane_oh_authority_audit"],
                 PARENTS["canonical_oh_premise_stretch"],
                 PARENTS["pr230_taste_condensate_oh_bridge_audit"],
+                PARENTS["pr230_origin_main_composite_higgs_intake_guard"],
             ],
         },
         "same_source_wz_response": {
@@ -481,6 +484,20 @@ def main() -> int:
         )
         is False
     )
+    origin_main_composite_higgs_not_closure = (
+        "origin/main composite-Higgs stretch"
+        in statuses["pr230_origin_main_composite_higgs_intake_guard"]
+        and certs["pr230_origin_main_composite_higgs_intake_guard"].get("proposal_allowed")
+        is False
+        and certs["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "origin_main_composite_higgs_intake_guard_passed"
+        )
+        is True
+        and certs["pr230_origin_main_composite_higgs_intake_guard"].get(
+            "origin_main_composite_higgs_closes_pr230"
+        )
+        is False
+    )
     source_coordinate_transport_completion_blocks = (
         "source-coordinate transport not derivable from current PR230 surface"
         in statuses["pr230_source_coordinate_transport_completion"]
@@ -690,6 +707,7 @@ def main() -> int:
         is True
         and taste_condensate_oh_bridge_blocks_shortcut
         and source_coordinate_transport_blocks_current_shortcut
+        and origin_main_composite_higgs_not_closure
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1151,6 +1169,11 @@ def main() -> int:
         "source-coordinate-transport-blocks-current-shortcut",
         source_coordinate_transport_blocks_current_shortcut,
         statuses["pr230_source_coordinate_transport_gate"],
+    )
+    report(
+        "origin-main-composite-higgs-intake-not-closure",
+        origin_main_composite_higgs_not_closure,
+        statuses["pr230_origin_main_composite_higgs_intake_guard"],
     )
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -1989,6 +2012,11 @@ def main() -> int:
             "orthogonal to the trace-zero taste-axis Higgs operators, so that "
             "stack is not an O_H bridge without a new source-coordinate "
             "transport theorem or production C_sH/C_HH rows."
+            " The origin/main composite-Higgs stretch packet has also been "
+            "intaken: it is a conditional cross-lane candidate with named "
+            "Z3/equal-condensate/strong-coupling residuals, not a PR230 "
+            "uniform-source transport certificate, canonical O_H authority, "
+            "or C_sH/C_HH row set."
             " The first-principles O_H bridge candidate portfolio now ranks "
             "the surviving source-transport, action-first O_H, W/Z response, "
             "Schur-row, and neutral-primitive routes as open positive "
@@ -2061,6 +2089,7 @@ def main() -> int:
         "negative_route_applicability_review_passed": negative_route_review_passed,
         "taste_condensate_oh_bridge_blocks_shortcut": taste_condensate_oh_bridge_blocks_shortcut,
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
+        "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,

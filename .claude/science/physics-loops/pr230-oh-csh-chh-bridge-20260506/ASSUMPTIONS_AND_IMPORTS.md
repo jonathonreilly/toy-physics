@@ -17,6 +17,9 @@ Allowed context:
 - existing source-Higgs gates as acceptance surfaces.
 - the May 6 genuine `O_sp` intake artifact as source-side support only, not as
   canonical-Higgs identity or physical `y_t` closure.
+- the `origin/main` composite-Higgs stretch packet as cross-lane action-first
+  context only, not as PR230 `O_H`, source-transport, or `C_sH/C_HH`
+  authority.
 
 Open imports after this block:
 
@@ -24,6 +27,9 @@ Open imports after this block:
 - uniform mass source is orthogonal to taste-axis Higgs operators in the
   exact taste-block Hilbert-Schmidt algebra.
 - Higgs/taste-stack theorem names are not proof selectors until source-coordinate transport or C_sH/C_HH rows exist.
+- Cross-lane composite-Higgs stretch packets are not PR230 proof selectors
+  until same-source `O_H`, action, transport, or `C_sH/C_HH` rows exist on the
+  PR230 surface.
 - Source-coordinate transport to O_H is not proof selectors until a same-surface transport certificate exists.
 - Source-coordinate transport completion is a current-surface boundary, not a
   global theorem against future transport.

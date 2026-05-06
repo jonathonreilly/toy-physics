@@ -46,6 +46,11 @@ surface is closed by `YT_PR230_ACTION_FIRST_ROUTE_COMPLETION` because the
 same-source EW/Higgs action, canonical `O_H`, production rows, and Gram purity
 certificate are absent.
 
+The `origin/main` composite-Higgs stretch packet is context for this route
+only.  Its Z3 multi-channel candidate does not become PR230 authority until it
+derives the needed premises and emits same-source action/`O_H`/row artifacts on
+the PR230 surface.
+
 ## Route F: W/Z Same-Source Response
 
 Measure matched top/W/Z source-response slopes so the source normalization

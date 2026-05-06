@@ -302,6 +302,7 @@
     "pr230_nonchunk_terminal_route_exhaustion": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
     "pr230_oh_bridge_candidate_portfolio": "open / first-principles O_H bridge positive-candidate portfolio",
     "pr230_oh_source_higgs_authority_rescan_gate": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
+    "pr230_origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
     "pr230_reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
     "pr230_scalar_lsz_holonomic_exact_authority_attempt": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
@@ -402,7 +403,8 @@
   "fail_count": 0,
   "neutral_primitive_route_completion_blocks": true,
   "oh_bridge_candidate_portfolio_open": true,
-  "pass_count": 285,
+  "origin_main_composite_higgs_intake_not_closure": true,
+  "pass_count": 286,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
@@ -469,6 +471,10 @@
     {
       "needed": "do not reopen from origin/main audit/effective-status drift unless a listed PR230 same-surface artifact is present",
       "route": "main audit-drift reopen guard"
+    },
+    {
+      "needed": "treat cross-lane composite-Higgs stretch packets as context only until they produce PR230 same-source O_H/C_sH/C_HH authority or a listed same-surface artifact",
+      "route": "origin/main composite-Higgs packet intake"
     }
   ],
   "schur_route_completion_blocks": true,
@@ -494,6 +500,7 @@
     "does not treat post-cycle-32 origin/main audit/effective-status/runner-cache drift as same-surface physics evidence",
     "does not treat Burnside/double-commutant theorem names as proof without same-surface neutral generators",
     "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
+    "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
     "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
     "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem"
   ],
