@@ -18,10 +18,11 @@
       "U(1) gauge action",
       "gauge-covariant Higgs kinetic term",
       "Higgs potential",
-      "source coupled to canonical Higgs radial mode"
+      "source coupled to centered Phi^dagger Phi on the same scalar source coordinate"
     ],
     "required_certificates": [
       "canonical Higgs operator certificate with non-shortcut reference and allowed kind",
+      "Higgs mass-source action bridge reference with allowed kind",
       "same-source sector-overlap certificate with non-shortcut reference and allowed kind",
       "W/Z correlator mass-fit path certificate with non-shortcut reference and allowed kind"
     ],
@@ -54,13 +55,14 @@
     ],
     "valid": false
   },
-  "exact_next_action": "Supply a real same-source EW action certificate satisfying this schema, then implement W/Z correlator mass-fit rows or source-Higgs C_sH/C_HH rows with identity certificates.",
+  "exact_next_action": "Supply a real same-source EW action certificate satisfying this schema, with the scalar source coupled to centered Phi^dagger Phi and the Higgs mass-source action bridge attached, then implement W/Z correlator mass-fit rows or source-Higgs C_sH/C_HH rows with identity certificates.",
   "fail_count": 0,
   "input": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
   "input_present": false,
   "parent_certificates": {
     "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "same_source_wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
@@ -70,13 +72,14 @@
   "parent_statuses": {
     "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
     "canonical_higgs_operator_realization_gate": "open / canonical-Higgs operator realization gate not passed",
+    "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
     "same_source_sector_overlap_identity": "exact negative boundary / same-source sector-overlap identity obstruction",
     "same_source_wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
     "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
     "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
-    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan"
+    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan with smoke schema path"
   },
-  "pass_count": 10,
+  "pass_count": 11,
   "proposal_allowed": false,
   "proposal_allowed_reason": "This builder validates an action-surface prerequisite only; it does not authorize retained/proposed-retained y_t wording.",
   "same_source_ew_action_certificate_valid": false,
@@ -105,5 +108,5 @@
     "does not define O_H by fiat",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "No same-source EW action certificate is present.  Current PR #230 still has static EW gauge-mass algebra and structural gauge support, but no dynamic SU(2)xU(1)/Higgs action block with the same scalar source coordinate used by the top FH/LSZ measurement."
+  "verdict": "No same-source EW action certificate is present.  Current PR #230 still has static EW gauge-mass algebra and structural gauge support, but no dynamic SU(2)xU(1)/Higgs action block with the same scalar source coordinate used by the top FH/LSZ measurement and coupled to centered Phi^dagger Phi."
 }

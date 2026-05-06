@@ -175,6 +175,15 @@ This is support only: the same-source EW/Higgs action certificate, canonical
 `O_H` certificate, `v`, canonical LSZ, `C_sH/C_HH` rows, and
 `kappa_s` authority remain absent.
 
+The same-source EW action certificate builder and W/Z action gate now consume
+that bridge explicitly.  Future candidates must couple the shared scalar source
+to centered `Phi^dagger Phi` and attach the Higgs mass-source action bridge;
+they can no longer satisfy the contract by simply naming a canonical Higgs
+radial source.  Builder validation is now `PASS=11 FAIL=0`, the W/Z action
+gate is `PASS=25 FAIL=0`, and the semantic firewall remains `PASS=12 FAIL=0`.
+This is still contract support only: no EW/Higgs action, W/Z rows, canonical
+`O_H`, source-Higgs rows, LSZ, or closure is supplied.
+
 The post-FMS source-overlap necessity gate now checks the next inference
 directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
 and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a

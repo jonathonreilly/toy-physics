@@ -84,9 +84,9 @@ def action_contract() -> list[dict[str, Any]]:
             "current_surface": "native gauge notes give structural SU(2)/hypercharge support, not a same-source EW production action",
         },
         {
-            "id": "canonical_higgs_radial_source",
-            "required": "scalar source s coupled to the canonical Higgs radial direction",
-            "current_surface": "current top harness source is an additive staggered mass/source coordinate; canonical O_H certificate is absent",
+            "id": "centered_phi_dagger_phi_source",
+            "required": "scalar source s coupled to centered Phi^dagger Phi, with the Higgs mass-source action bridge attached",
+            "current_surface": "current top harness source is an additive staggered mass/source coordinate; same-source EW/Higgs action and canonical O_H certificate are absent",
         },
         {
             "id": "matched_top_wz_source_coordinate",

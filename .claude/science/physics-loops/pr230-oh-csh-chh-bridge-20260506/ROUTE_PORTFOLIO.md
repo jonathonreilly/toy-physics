@@ -85,6 +85,11 @@ is `v`.  This does not supply the action, `v`, canonical LSZ, source-Higgs pole
 rows, or `kappa_s=1`; it only removes an action-source algebra ambiguity once
 the action certificate exists.
 
+The same-source EW action certificate builder and W/Z action gate now encode
+that sharper contract.  Future candidates must attach the bridge and couple the
+shared source to centered `Phi^dagger Phi`; a self-declared canonical radial
+source is no longer sufficient.
+
 The `origin/main` composite-Higgs stretch packet is context for this route
 only.  Its Z3 multi-channel candidate does not become PR230 authority until it
 derives the needed premises and emits same-source action/`O_H`/row artifacts on

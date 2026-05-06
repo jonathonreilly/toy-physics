@@ -11,7 +11,10 @@
    contract if that action couples `s` to centered `Phi^dagger Phi`: the source
    derivative is `dS/ds=sum O_H` and the degree-one coefficient is `v`.  This
    does not supply the action, `v`, canonical LSZ, source-Higgs rows, or
-   `kappa_s=1`.
+   `kappa_s=1`.  The same-source EW action certificate builder and W/Z action
+   gate now require that centered-composite source coupling plus bridge
+   attachment for future candidates; the current action certificate remains
+   absent.
    The post-FMS source-overlap necessity gate shows that even with FMS `C_HH`
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a

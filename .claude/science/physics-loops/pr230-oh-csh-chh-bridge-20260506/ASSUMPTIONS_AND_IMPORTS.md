@@ -95,6 +95,11 @@ Allowed context:
   degree-one coefficient is `v`; the current action, canonical `O_H`
   certificate, `v`, LSZ normalization, source-Higgs pole rows, and any
   `kappa_s=1` authority are absent.
+- the refreshed same-source EW action certificate builder/gate as contract
+  support only: it now requires a centered `Phi^dagger Phi` source coupling and
+  the Higgs mass-source action bridge, but still reports the action certificate
+  absent and supplies no W/Z rows, canonical `O_H`, source-Higgs rows, LSZ, or
+  closure.
 - the post-FMS source-overlap necessity gate as exact current-surface boundary
   only: it proves current source-only rows, FMS `C_HH` support, and
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an
@@ -131,6 +136,9 @@ Open imports after this block:
 - Higgs mass-source action bridge is not a proof selector until a same-surface
   EW/Higgs action, canonical `O_H` certificate, nonzero `v` authority, LSZ
   normalization, and source-Higgs pole rows exist on PR230.
+- Same-source EW action contract refresh is not a proof selector until a real
+  same-surface EW/Higgs action candidate satisfies that refreshed contract and
+  the downstream W/Z or source-Higgs row gates pass.
 - Post-FMS `C_HH` support is not a source-overlap proof selector until a
   same-surface `Res C_sH` row, Gram-purity theorem, or physical-response
   bypass exists on PR230.

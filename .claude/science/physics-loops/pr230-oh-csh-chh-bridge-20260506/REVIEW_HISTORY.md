@@ -114,12 +114,24 @@ Local verification completed:
   FAIL=0, `frontier_yt_pr230_campaign_status_certificate.py`: PASS=308
   FAIL=0, and `frontier_yt_pr230_positive_closure_completion_audit.py`:
   PASS=41 FAIL=0;
+- after wiring the Higgs mass-source bridge into the same-source EW action
+  contract, `frontier_yt_wz_same_source_ew_action_certificate_builder.py`:
+  PASS=11 FAIL=0, `frontier_yt_wz_same_source_ew_action_gate.py`: PASS=25
+  FAIL=0, and `frontier_yt_wz_same_source_ew_action_semantic_firewall.py`:
+  PASS=12 FAIL=0;
+- aggregate gates after the same-source EW action contract refresh:
+  assumption/import stress PASS=68 FAIL=0, full assembly PASS=127 FAIL=0,
+  retained route PASS=278 FAIL=0, campaign status PASS=308 FAIL=0, and
+  completion audit PASS=41 FAIL=0;
 - `python3 -m py_compile` for the chunk checkpoint, row combiner,
   source-Higgs readiness, assumption stress, full assembly, retained route,
   campaign status, and completion-audit runners after the chunks007-008
   checkpoint refresh;
 - `python3 -m py_compile` for the Higgs mass-source action bridge runner and
   the aggregate PR230 gates after the bridge integration;
+- `python3 -m py_compile` for the same-source EW action builder, semantic
+  firewall, W/Z action gate, and aggregate PR230 gates after the refreshed
+  centered-composite source contract;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata regenerated after chunks007-008 completed checkpoints and
   `ready=8/63` combiner refresh;
@@ -132,6 +144,10 @@ Local verification completed:
   pre-existing warnings;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata regenerated after adding the Higgs mass-source action bridge note;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated after the same-source EW action contract refresh;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
 - `git diff --check`: clean.

@@ -28,6 +28,7 @@ PARENTS = {
     "same_source_wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
 }
@@ -156,8 +157,17 @@ def validate_action_certificate(candidate: dict[str, Any]) -> dict[str, Any]:
         "u1_gauge_action_present": action.get("u1_gauge_action") is True,
         "gauge_covariant_higgs_kinetic_present": action.get("gauge_covariant_higgs_kinetic") is True,
         "higgs_potential_present": action.get("higgs_potential") is True,
-        "source_couples_to_canonical_higgs_radial": source.get("couples_to") == "canonical_higgs_radial",
+        "source_couples_to_centered_phi_dagger_phi": source.get("couples_to")
+        == "centered_phi_dagger_phi",
+        "source_operator_centered": source.get("operator_centered") is True,
         "source_matches_top_fh_lsz_coordinate": source.get("matches_top_fh_lsz_source_coordinate") is True,
+        "higgs_mass_source_action_bridge_reference": path_ref_ok(
+            certificates.get("higgs_mass_source_action_bridge")
+        ),
+        "higgs_mass_source_action_bridge_kind_allowed": certificates.get(
+            "higgs_mass_source_action_bridge_kind"
+        )
+        == "higgs_mass_source_action_bridge",
         "wz_correlator_observables_defined": observables.get("wz_two_point_correlators") is True,
         "wz_mass_fit_method_defined": nonempty_string(observables.get("wz_mass_fit_method")),
         "canonical_higgs_certificate_reference": path_ref_ok(certificates.get("canonical_higgs_operator_certificate")),
@@ -205,7 +215,7 @@ def acceptance_schema() -> dict[str, Any]:
             "U(1) gauge action",
             "gauge-covariant Higgs kinetic term",
             "Higgs potential",
-            "source coupled to canonical Higgs radial mode",
+            "source coupled to centered Phi^dagger Phi on the same scalar source coordinate",
         ],
         "required_observables": [
             "W/Z two-point correlators under source shifts",
@@ -214,6 +224,7 @@ def acceptance_schema() -> dict[str, Any]:
         ],
         "required_certificates": [
             "canonical Higgs operator certificate with non-shortcut reference and allowed kind",
+            "Higgs mass-source action bridge reference with allowed kind",
             "same-source sector-overlap certificate with non-shortcut reference and allowed kind",
             "W/Z correlator mass-fit path certificate with non-shortcut reference and allowed kind",
         ],
@@ -276,9 +287,19 @@ def main() -> int:
         "source-Higgs Gram purity gate not passed" in parent_statuses["source_higgs_gram_purity_gate"]
         and parents["source_higgs_gram_purity_gate"].get("source_higgs_gram_purity_gate_passed") is False
     )
+    mass_source_bridge_loaded = (
+        "Higgs mass-source action bridge"
+        in parent_statuses["higgs_mass_source_action_bridge"]
+        and parents["higgs_mass_source_action_bridge"].get(
+            "higgs_mass_source_action_bridge_passed"
+        )
+        is True
+        and parents["higgs_mass_source_action_bridge"].get("proposal_allowed") is False
+    )
 
     report("parent-certificates-present", not missing_parents, f"missing={missing_parents}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
+    report("higgs-mass-source-action-bridge-loaded", mass_source_bridge_loaded, parent_statuses["higgs_mass_source_action_bridge"])
     report("candidate-state-recorded", True, f"present={validation['present']}")
     if validation["present"]:
         report("candidate-schema-valid", validation["valid"] is True, f"reasons={validation['reasons']}")
@@ -308,7 +329,8 @@ def main() -> int:
                 "No same-source EW action certificate is present.  Current PR #230 "
                 "still has static EW gauge-mass algebra and structural gauge support, "
                 "but no dynamic SU(2)xU(1)/Higgs action block with the same scalar "
-                "source coordinate used by the top FH/LSZ measurement."
+                "source coordinate used by the top FH/LSZ measurement and coupled "
+                "to centered Phi^dagger Phi."
             )
         ),
         "proposal_allowed": False,
@@ -331,8 +353,10 @@ def main() -> int:
         ],
         "exact_next_action": (
             "Supply a real same-source EW action certificate satisfying this schema, "
-            "then implement W/Z correlator mass-fit rows or source-Higgs C_sH/C_HH "
-            "rows with identity certificates."
+            "with the scalar source coupled to centered Phi^dagger Phi and the "
+            "Higgs mass-source action bridge attached, then implement W/Z "
+            "correlator mass-fit rows or source-Higgs C_sH/C_HH rows with "
+            "identity certificates."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

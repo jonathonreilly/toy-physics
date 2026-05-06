@@ -29,8 +29,8 @@ A future W/Z action certificate must provide all of the following:
 
 - dynamical `SU(2)_L` and `U(1)_Y` gauge fields with update or ensemble
   semantics;
-- a scalar source `s` coupled to the canonical Higgs radial direction, not to
-  `H_unit`;
+- a scalar source `s` coupled to centered `Phi^dagger Phi`, with the Higgs
+  mass-source action bridge attached, not to `H_unit`;
 - a same-source-coordinate certificate tying the top `dE_top/ds` source to the
   W/Z `dM/ds` source;
 - W/Z two-point correlators and mass fits under source shifts;

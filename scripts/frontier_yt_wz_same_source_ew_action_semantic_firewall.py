@@ -74,7 +74,8 @@ def base_candidate() -> dict[str, Any]:
             "higgs_potential": True,
         },
         "source_coupling": {
-            "couples_to": "canonical_higgs_radial",
+            "couples_to": "centered_phi_dagger_phi",
+            "operator_centered": True,
             "matches_top_fh_lsz_source_coordinate": True,
         },
         "observables": {
@@ -82,6 +83,8 @@ def base_candidate() -> dict[str, Any]:
             "wz_mass_fit_method": "future production W/Z correlator effective-mass fit",
         },
         "certificates": {
+            "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
+            "higgs_mass_source_action_bridge_kind": "higgs_mass_source_action_bridge",
             "canonical_higgs_operator_certificate": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
             "canonical_higgs_operator_certificate_kind": "canonical_higgs_identity_theorem",
             "same_source_sector_overlap_certificate": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -130,6 +133,8 @@ def main() -> int:
         for key in (
             "canonical_higgs_certificate_not_shortcut",
             "canonical_higgs_certificate_kind_allowed",
+            "higgs_mass_source_action_bridge_reference",
+            "higgs_mass_source_action_bridge_kind_allowed",
             "sector_overlap_certificate_not_shortcut",
             "sector_overlap_certificate_kind_allowed",
             "wz_mass_fit_path_certificate_not_shortcut",
