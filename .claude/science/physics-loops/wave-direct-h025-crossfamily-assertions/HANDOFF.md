@@ -27,4 +27,6 @@ The target row is reset to `unaudited`, with `claim_type=bounded_theorem`, and t
 
 ## PR
 
-Pending.
+Opened:
+
+- https://github.com/jonathonreilly/cl3-lattice-framework/pull/571

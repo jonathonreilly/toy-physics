@@ -36,7 +36,7 @@ open_imports:
   - "The source logs are frozen outputs from existing control runners; this branch asserts them but does not recompute the expensive control sweep."
   - "Fam3 and family-wide portability are outside scope."
 review_findings: []
-pr_status: pending
-pr_url: null
-next_exact_action: "Commit, push, open the review PR, then record the PR URL in HANDOFF.md and PR_BACKLOG.md."
+pr_status: open
+pr_url: https://github.com/jonathonreilly/cl3-lattice-framework/pull/571
+next_exact_action: "Await independent review and audit disposition."
 stop_condition: "Ready PR opened and verified for this bounded-support block."

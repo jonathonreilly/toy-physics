@@ -1,17 +1,7 @@
 # PR Backlog
 
-PR creation is pending for:
+No backlog item remains for this block.
 
-- branch: `physics-loop/wave-direct-h025-crossfamily-assertions-block01-20260506`
-- title: `[physics-loop] wave-direct-h025-crossfamily-assertions block01 bounded-support`
-- base: `main`
+Opened PR:
 
-If `gh pr create` fails, use this command after pushing:
-
-```bash
-gh pr create \
-  --base main \
-  --head physics-loop/wave-direct-h025-crossfamily-assertions-block01-20260506 \
-  --title "[physics-loop] wave-direct-h025-crossfamily-assertions block01 bounded-support" \
-  --body-file /tmp/wave-direct-h025-crossfamily-pr-body.md
-```
+- https://github.com/jonathonreilly/cl3-lattice-framework/pull/571
