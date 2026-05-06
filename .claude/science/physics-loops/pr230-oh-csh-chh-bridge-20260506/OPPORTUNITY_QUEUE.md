@@ -7,9 +7,11 @@
    the current source line is blocked.  The exact two-source taste-radial chart
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
-   manifest now records the row chunk commands.  The remaining work is
-   completed production `C_sx/C_xx` rows plus either canonical-`O_H`
-   identity/source-overlap authority or a physical-response bypass.
+   manifest now records the row chunk commands, and the row-wave launcher has
+   chunks001-002 active under a two-worker cap.  The remaining work is
+   completed production `C_sx/C_xx` rows, per-chunk schema gates, combined
+   pole/FV/IR diagnostics, plus either canonical-`O_H` identity/source-overlap
+   authority or a physical-response bypass.
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
    matrix step is now conditionally solved, and direct promotion from cyclic
    symmetry `P` to lazy physical transfer `L=(I+P)/2` is blocked.  The missing

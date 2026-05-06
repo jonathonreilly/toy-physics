@@ -115,6 +115,16 @@ process/output collision guard.  It is dry-run run-control support only: no
 `C_sx/C_xx` row data, pole residue, canonical `O_H`, or closure evidence is
 created by the manifest.
 
+The row-wave launcher is now explicit too.
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_WAVE_LAUNCHER` consumes the manifest,
+checks active row occupancy, stale partial directories, completed outputs, and
+no-resume command boundaries, and can start only a bounded wave when called
+with `--launch`.  The local cap used here is two active workers because the
+row jobs are CPU-bound on this machine.  Chunks001-002 were started as active
+row workers with distinct seeds and output directories.  This is still
+run-control support only: active processes, logs, empty directories, and
+partial directories are not `C_sx/C_xx` row evidence.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -127,8 +137,10 @@ Best next work:
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
-   source using the no-resume manifest and row contract, then prove/reject its
-   canonical-`O_H` identity or supply another bridge;
+   source using the no-resume manifest and row contract; chunks001-002 are
+   active under the two-worker launcher cap, and after they complete the next
+   action is per-chunk schema gates plus the next bounded wave, then
+   prove/reject its canonical-`O_H` identity or supply another bridge;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
    with a neutral transfer row, off-diagonal generator, or primitive-cone
    theorem;

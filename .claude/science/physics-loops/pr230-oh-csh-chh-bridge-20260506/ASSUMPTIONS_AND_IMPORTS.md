@@ -53,6 +53,11 @@ Allowed context:
   support only: it records exact no-resume chunk commands and a collision
   guard for future `C_sx/C_xx` rows, but it is not row data, pole evidence,
   canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
+- the two-source taste-radial row-wave launcher as bounded run-control support
+  only: it records active occupancy and can start a capped no-resume wave, but
+  active processes, logs, empty directories, and partial directories are not
+  row data, pole evidence, canonical `O_H`, scalar LSZ normalization, or
+  `y_t` closure.
 
 Open imports after this block:
 
@@ -104,6 +109,9 @@ Open imports after this block:
 - Two-source taste-radial action source vertex is not proof selectors until measured C_sx/C_xx rows and canonical O_H/source-overlap or physical-response authority exist.
 - Two-source taste-radial row contract is not proof selectors until production C_sx/C_xx rows, pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority exist.
 - Two-source taste-radial row production manifest is not proof selectors until the planned chunks are actually run, combined, pole-tested, and bridged to canonical O_H or physical response.
+- Two-source taste-radial row-wave launcher status is not proof selectors until
+  completed chunk JSON exists and passes per-chunk schema gates; active
+  workers and partial directories are explicitly non-evidence.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

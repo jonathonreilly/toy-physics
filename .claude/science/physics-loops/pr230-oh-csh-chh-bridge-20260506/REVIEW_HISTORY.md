@@ -31,6 +31,9 @@ Local verification completed:
   FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py`:
   PASS=17 FAIL=0;
+- `frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py`:
+  PASS=12 FAIL=0 with `--max-concurrent 2`, recording active chunks001-002
+  and launching no extra worker in dry-run/status mode;
 - `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=22
   FAIL=0 after accepting the support-only action certificate;
 - `frontier_yt_fh_lsz_production_postprocess_gate.py`: PASS=12 FAIL=0;
