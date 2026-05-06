@@ -25,6 +25,7 @@ no_go_routes:
 review_findings:
   - "Author-side audit_lint completed with warnings only; no errors."
 subagents_used: false
-pr_status: pending
-next_exact_action: "Commit, push, open PR, then record PR URL in loop pack."
+pr_status: open
+pr_url: https://github.com/jonathonreilly/cl3-lattice-framework/pull/554
+next_exact_action: "Await review or independent audit."
 stop_condition: "One review PR opened for this science block."
