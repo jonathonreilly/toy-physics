@@ -37,6 +37,18 @@ do not encode a physical neutral transfer, same-source action row, lazy
 aperiodic self term, off-diagonal neutral generator, or strict primitive-cone
 certificate.
 
+The strengthened runner also checks the larger compatible family
+
+```text
+T_eps = eps I + (1 - eps) P .
+```
+
+Every sampled `T_eps` preserves the same Z3 cyclic constraints, commutes with
+`P`, is stochastic, and fixes the uniform triplet vector.  But primitive status
+varies: `eps=0` is the pure periodic cycle, `0 < eps < 1` is primitive, and
+`eps=1` is identity/nonprimitive.  The current surface therefore does not
+select `eps=1/2` or any physical lazy coefficient.
+
 ## Identifiability Boundary
 
 The same current parent data are compatible with two physical interpretations:
@@ -52,6 +64,11 @@ Model B: physical transfer = (I + P)/2
 Since the current artifacts specify the symmetry `P` but do not select `A`
 versus `B` as PR230 dynamics, choosing `B` would import an unproved lazy/self
 transfer term.  That is exactly the forbidden shortcut.
+
+The one-parameter family sharpens the same point: even the existence of a
+primitive compatible transfer does not identify which compatible transfer is
+physical.  A same-surface action, off-diagonal generator, or row certificate
+has to supply that selection.
 
 ## Claim Boundary
 
@@ -76,5 +93,58 @@ To reopen this route positively, supply one of:
 
 ```bash
 python3 scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=20 FAIL=0
 ```
+
+## Fifty-Step Science Ledger
+
+1. Loaded the same-surface Z3 taste-triplet certificate.
+2. Loaded the conditional Z3 primitive theorem.
+3. Loaded the Z3 generation-action lift boundary.
+4. Loaded the neutral primitive route completion gate.
+5. Loaded the neutral off-diagonal generator attempt.
+6. Loaded the neutral primitive-cone gate.
+7. Loaded the full positive assembly gate.
+8. Loaded the retained-route certificate.
+9. Loaded the campaign status certificate.
+10. Verified no parent authorizes proposal wording.
+11. Isolated the remaining H3 premise: physical lazy neutral transfer.
+12. Represented the supplied cyclic action by the permutation `P`.
+13. Verified `P^3 = I`.
+14. Verified pure `P` remains periodic.
+15. Verified pure `P` is not primitive.
+16. Constructed the mathematical lazy matrix `L=(I+P)/2`.
+17. Verified `L^2=(I+2P+P^2)/4`.
+18. Verified `L^2` is strictly positive.
+19. Confirmed `L` differs from the parent symmetry `P`.
+20. Identified the added load-bearing self edge in `L`.
+21. Built the compatible family `T_eps = eps I + (1-eps)P`.
+22. Tested `eps=0`.
+23. Found `eps=0` is nonprimitive.
+24. Tested `eps=1/8`.
+25. Found `eps=1/8` is primitive.
+26. Tested `eps=1/4`.
+27. Found `eps=1/4` is primitive.
+28. Tested `eps=1/2`.
+29. Found `eps=1/2` is primitive.
+30. Tested `eps=3/4`.
+31. Found `eps=3/4` is primitive.
+32. Tested `eps=1`.
+33. Found `eps=1` is nonprimitive.
+34. Verified every sampled `T_eps` commutes with `P`.
+35. Verified every sampled `T_eps` fixes the uniform triplet vector.
+36. Verified every sampled `T_eps` is stochastic.
+37. Confirmed primitive status varies while parent constraints stay fixed.
+38. Checked no same-surface neutral-transfer artifact exists.
+39. Checked no off-diagonal generator certificate exists.
+40. Checked no strict primitive-cone certificate exists.
+41. Checked no same-source EW action certificate exists.
+42. Checked no canonical `O_H` certificate exists.
+43. Checked no source-Higgs row packet exists.
+44. Rejected importing Markov laziness as dynamics.
+45. Rejected treating symmetry averaging as physical transfer.
+46. Rejected selecting `eps=1/2` by definition.
+47. Rejected Ward/H-unit authority.
+48. Rejected observed-target and plaquette/`u0` shortcuts.
+49. Preserved future reopen for a real same-surface action or row packet.
+50. Regenerated the executable certificate with the strengthened boundary.

@@ -43,6 +43,7 @@
     "uses_yt_ward_identity_as_authority": false
   },
   "hypothetical_axiom_status": "Under an accepted new same-surface lazy-transfer axiom this would supply the finite primitive-cone step; no closure is authorized on the actual current surface.",
+  "lazy_coefficient_unselected": true,
   "lazy_matrix_primitive_as_math": true,
   "parent_encodes_only_symmetry": true,
   "parent_statuses": {
@@ -56,7 +57,7 @@
     "z3_generation_action_lift": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
     "z3_triplet_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 17,
+  "pass_count": 20,
   "physical_lazy_transfer_instantiated": false,
   "pr230_closure_authorized": false,
   "primitive_witness": {
@@ -153,6 +154,166 @@
     "does not use H_unit, Ward authority, observed targets, alpha_LM, plaquette, or u0",
     "does not set kappa_s, c2, Z_match, or a source-Higgs overlap to one"
   ],
+  "transfer_counterfamily": [
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "eps": "0",
+      "matrix": [
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "primitive": false,
+      "primitive_power": null,
+      "row_stochastic": true,
+      "uniform_vector_fixed": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "eps": "1/8",
+      "matrix": [
+        [
+          "1/8",
+          "0",
+          "7/8"
+        ],
+        [
+          "7/8",
+          "1/8",
+          "0"
+        ],
+        [
+          "0",
+          "7/8",
+          "1/8"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "row_stochastic": true,
+      "uniform_vector_fixed": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "eps": "1/4",
+      "matrix": [
+        [
+          "1/4",
+          "0",
+          "3/4"
+        ],
+        [
+          "3/4",
+          "1/4",
+          "0"
+        ],
+        [
+          "0",
+          "3/4",
+          "1/4"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "row_stochastic": true,
+      "uniform_vector_fixed": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "eps": "1/2",
+      "matrix": [
+        [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "row_stochastic": true,
+      "uniform_vector_fixed": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "eps": "3/4",
+      "matrix": [
+        [
+          "3/4",
+          "0",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "3/4",
+          "0"
+        ],
+        [
+          "0",
+          "1/4",
+          "3/4"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "row_stochastic": true,
+      "uniform_vector_fixed": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "eps": "1",
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "primitive": false,
+      "primitive_power": null,
+      "row_stochastic": true,
+      "uniform_vector_fixed": true
+    }
+  ],
+  "transfer_family_preserves_parent_constraints": true,
+  "transfer_family_primitive_varies": true,
   "writes_strict_future_certificate": false,
   "z3_lazy_transfer_promotion_attempt_passed": true
 }

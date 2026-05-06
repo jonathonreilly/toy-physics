@@ -149,6 +149,54 @@ def to_strings(a: Matrix) -> list[list[str]]:
     return [[str(value) for value in row] for row in a]
 
 
+def row_sums(a: Matrix) -> list[Fraction]:
+    return [sum(row) for row in a]
+
+
+def col_sums(a: Matrix) -> list[Fraction]:
+    return [sum(a[i][j] for i in range(len(a))) for j in range(len(a[0]))]
+
+
+def transfer_eps(eps: Fraction) -> Matrix:
+    return matadd(matscale(eps, eye(3)), matscale(Fraction(1) - eps, cyclic_z3()))
+
+
+def primitive_power(a: Matrix, max_power: int = 9) -> int | None:
+    for power in range(1, max_power + 1):
+        if all_positive(matpow(a, power)):
+            return power
+    return None
+
+
+def transfer_counterfamily() -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    p = cyclic_z3()
+    for eps in [
+        Fraction(0),
+        Fraction(1, 8),
+        Fraction(1, 4),
+        Fraction(1, 2),
+        Fraction(3, 4),
+        Fraction(1),
+    ]:
+        t = transfer_eps(eps)
+        primitive_at = primitive_power(t)
+        rows.append(
+            {
+                "eps": str(eps),
+                "matrix": to_strings(t),
+                "row_stochastic": row_sums(t) == [Fraction(1)] * 3,
+                "column_stochastic": col_sums(t) == [Fraction(1)] * 3,
+                "commutes_with_z3_cycle": matmul(t, p) == matmul(p, t),
+                "uniform_vector_fixed": row_sums(t) == [Fraction(1)] * 3
+                and col_sums(t) == [Fraction(1)] * 3,
+                "primitive": primitive_at is not None,
+                "primitive_power": primitive_at,
+            }
+        )
+    return rows
+
+
 def future_presence() -> dict[str, bool]:
     return {name: (ROOT / rel).exists() for name, rel in STRICT_FUTURE_ARTIFACTS.items()}
 
@@ -188,6 +236,7 @@ def main() -> int:
     p3 = matmul(p2, p)
     lazy = matscale(Fraction(1, 2), matadd(ident, p))
     lazy2 = matmul(lazy, lazy)
+    transfer_family = transfer_counterfamily()
     pure_cycle_nonprimitive = all(has_zero(matpow(p, k)) for k in range(1, 7))
     lazy_primitive_as_math = all_positive(lazy2)
     lazy_differs_from_parent_symmetry = lazy != p
@@ -264,6 +313,22 @@ def main() -> int:
         and lazy_primitive_as_math
         and lazy_differs_from_parent_symmetry
     )
+    transfer_family_preserves_parent_constraints = all(
+        row["row_stochastic"]
+        and row["column_stochastic"]
+        and row["commutes_with_z3_cycle"]
+        and row["uniform_vector_fixed"]
+        for row in transfer_family
+    )
+    transfer_family_primitive_varies = (
+        any(row["primitive"] for row in transfer_family)
+        and any(not row["primitive"] for row in transfer_family)
+    )
+    lazy_coefficient_unselected = (
+        transfer_family_preserves_parent_constraints
+        and transfer_family_primitive_varies
+        and not physical_lazy_transfer_present
+    )
     aggregate_gates_still_open = (
         certs["full_positive_assembly"].get("proposal_allowed") is False
         and certs["retained_route"].get("proposal_allowed") is False
@@ -282,6 +347,9 @@ def main() -> int:
         and primitive_gate_absent
         and parent_encodes_only_symmetry
         and countermodel_identifiability_gap
+        and transfer_family_preserves_parent_constraints
+        and transfer_family_primitive_varies
+        and lazy_coefficient_unselected
         and aggregate_gates_still_open
         and no_forbidden_imports
     )
@@ -300,6 +368,9 @@ def main() -> int:
     report("physical-lazy-transfer-not-present", not physical_lazy_transfer_present, str(futures))
     report("parent-encodes-only-symmetry", parent_encodes_only_symmetry, "same-surface artifact says symmetry automorphism, not transfer")
     report("countermodel-identifiability-gap", countermodel_identifiability_gap, "same P is compatible with nonprimitive P dynamics or primitive L dynamics")
+    report("transfer-family-preserves-parent-constraints", transfer_family_preserves_parent_constraints, "T_eps = eps I + (1-eps)P")
+    report("primitive-status-varies-across-transfer-family", transfer_family_primitive_varies, str([(row["eps"], row["primitive"]) for row in transfer_family]))
+    report("lazy-coefficient-unselected", lazy_coefficient_unselected, "current surface does not select eps=1/2 or any physical eps")
     report("aggregate-gates-still-open", aggregate_gates_still_open, "assembly/retained/campaign proposal_allowed=false")
     report("forbidden-firewall-clean", no_forbidden_imports, str(firewall))
     report("lazy-transfer-promotion-attempt-passed", promotion_attempt_passed, "exact negative boundary if all checks pass")
@@ -362,6 +433,9 @@ def main() -> int:
         "physical_lazy_transfer_instantiated": physical_lazy_transfer_present,
         "parent_encodes_only_symmetry": parent_encodes_only_symmetry,
         "countermodel_identifiability_gap": countermodel_identifiability_gap,
+        "transfer_family_preserves_parent_constraints": transfer_family_preserves_parent_constraints,
+        "transfer_family_primitive_varies": transfer_family_primitive_varies,
+        "lazy_coefficient_unselected": lazy_coefficient_unselected,
         "pr230_closure_authorized": False,
         "writes_strict_future_certificate": False,
         "strict_future_artifact_presence": futures,
@@ -377,6 +451,7 @@ def main() -> int:
             "load_bearing_new_term": "the identity/self edge with coefficient 1/2 in L",
         },
         "countermodels": countermodels,
+        "transfer_counterfamily": transfer_family,
         "parent_statuses": statuses,
         "forbidden_firewall": firewall,
         "strict_non_claims": [
