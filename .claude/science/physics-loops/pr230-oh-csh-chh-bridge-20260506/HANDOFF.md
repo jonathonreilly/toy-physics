@@ -43,6 +43,13 @@ branch-local Z3/equal-condensate/strong-coupling premises and supplies no PR230
 uniform-source transport, canonical `O_H`, or `C_sH/C_HH` rows.  It can inform
 the action-first route only after those same-surface artifacts exist.
 
+The fresh `origin/main` EW M-residual stretch script has now been ingested too.
+It is exact Fierz singlet/adjoint channel bookkeeping with CMT/u0 mean-field
+language, and it explicitly leaves the framework EW Wilson-line construction
+open.  It supplies no PR230 same-source EW action, no W/Z response rows, no
+matched covariance, no `delta_perp`, no strict `g2`, no canonical `O_H`, and no
+`C_sH/C_HH` rows.  Treat it as context only, not W/Z or source-Higgs authority.
+
 The follow-on lazy-Z3 theorem is exact conditional support: for the cyclic
 triplet permutation `P`, the lazy transfer `L=(I+P)/2` satisfies
 `L^2=(I+2P+P^2)/4` with strictly positive entries, so Perron-Frobenius gives a
@@ -87,3 +94,4 @@ Best next work:
 
 Do not close the larger source-Higgs route based on this block alone.
 Do not close it from completed L12 FH/LSZ support rows either.
+Do not close it from the origin/main EW M-residual CMT/Fierz packet.

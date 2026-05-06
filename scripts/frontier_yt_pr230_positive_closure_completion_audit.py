@@ -27,6 +27,7 @@ PARENTS = {
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+    "origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
@@ -246,6 +247,20 @@ def main() -> int:
         and "not PR230 same-surface"
         in parent_statuses["origin_main_composite_higgs_intake_guard"]
     )
+    origin_main_ew_m_residual_not_closure = (
+        certs["origin_main_ew_m_residual_intake_guard"].get(
+            "origin_main_ew_m_residual_intake_guard_passed"
+        )
+        is True
+        and certs["origin_main_ew_m_residual_intake_guard"].get("proposal_allowed")
+        is False
+        and certs["origin_main_ew_m_residual_intake_guard"].get(
+            "origin_main_ew_m_residual_closes_pr230"
+        )
+        is False
+        and "context-only channel bookkeeping"
+        in parent_statuses["origin_main_ew_m_residual_intake_guard"]
+    )
     z3_triplet_conditional_primitive_not_closure = (
         certs["z3_triplet_conditional_primitive_cone"].get(
             "z3_triplet_conditional_primitive_theorem_passed"
@@ -343,6 +358,7 @@ def main() -> int:
     report("taste-condensate-oh-bridge-blocked", taste_condensate_bridge_blocked, parent_statuses["taste_condensate_oh_bridge"])
     report("source-coordinate-transport-blocked", source_coordinate_transport_blocked, parent_statuses["source_coordinate_transport_gate"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
+    report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
     report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
@@ -393,6 +409,7 @@ def main() -> int:
                 "osp_higgs_rows_absent": osp_higgs_rows_absent,
                 "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
                 "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
+                "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
                 "future_bridge_file_presence": future_bridge_presence,
                 "needed": [
                     "same-surface canonical O_H identity/normalization certificate",
@@ -481,6 +498,7 @@ def main() -> int:
             "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
             "source_coordinate_transport_blocked": source_coordinate_transport_blocked,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
+            "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
             "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
             "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,

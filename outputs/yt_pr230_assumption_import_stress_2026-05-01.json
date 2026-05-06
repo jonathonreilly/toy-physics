@@ -28,6 +28,7 @@
     "oh_bridge_candidate_portfolio": "open / first-principles O_H bridge positive-candidate portfolio",
     "oh_source_higgs_authority_rescan_gate": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
     "origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
+    "origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "same_source_wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
@@ -53,7 +54,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 55,
+  "pass_count": 56,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

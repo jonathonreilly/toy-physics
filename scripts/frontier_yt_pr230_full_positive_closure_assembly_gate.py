@@ -91,6 +91,7 @@ PARENTS = {
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+    "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
@@ -284,6 +285,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "same-source/native top/W factorization-independence shortcut rejected",
                 "deterministic W-response covariance shortcut rejected",
                 "current-branch covariance-theorem import shortcut rejected",
+                "origin/main EW M-residual CMT/Fierz packet is context-only and admits missing EW Wilson-line construction",
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
@@ -312,6 +314,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["top_wz_covariance_marginal_derivation_no_go"],
                 PARENTS["top_wz_factorization_independence_gate"],
                 PARENTS["top_wz_deterministic_response_covariance_gate"],
+                PARENTS["pr230_origin_main_ew_m_residual_intake_guard"],
                 PARENTS["same_source_top_response_builder"],
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
@@ -501,6 +504,22 @@ def main() -> int:
         is True
         and certs["pr230_origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_closes_pr230"
+        )
+        is False
+    )
+    origin_main_ew_m_residual_not_closure = (
+        "origin/main EW M-residual CMT packet"
+        in statuses["pr230_origin_main_ew_m_residual_intake_guard"]
+        and certs["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "origin_main_ew_m_residual_intake_guard_passed"
+        )
+        is True
+        and certs["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "origin_main_ew_m_residual_closes_pr230"
         )
         is False
     )
@@ -826,6 +845,7 @@ def main() -> int:
         and taste_condensate_oh_bridge_blocks_shortcut
         and source_coordinate_transport_blocks_current_shortcut
         and origin_main_composite_higgs_not_closure
+        and origin_main_ew_m_residual_not_closure
         and z3_triplet_conditional_primitive_not_closure
         and z3_generation_action_lift_not_derived
         and z3_lazy_transfer_promotion_not_derived
@@ -1295,6 +1315,11 @@ def main() -> int:
         "origin-main-composite-higgs-intake-not-closure",
         origin_main_composite_higgs_not_closure,
         statuses["pr230_origin_main_composite_higgs_intake_guard"],
+    )
+    report(
+        "origin-main-ew-m-residual-intake-not-closure",
+        origin_main_ew_m_residual_not_closure,
+        statuses["pr230_origin_main_ew_m_residual_intake_guard"],
     )
     report(
         "z3-triplet-conditional-primitive-support-not-closure",
@@ -2261,6 +2286,7 @@ def main() -> int:
         "taste_condensate_oh_bridge_blocks_shortcut": taste_condensate_oh_bridge_blocks_shortcut,
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
+        "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,

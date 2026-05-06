@@ -148,6 +148,7 @@ def main() -> int:
         "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
         "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
         "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+        "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
         "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
         "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
         "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
@@ -1186,6 +1187,24 @@ def main() -> int:
         is True
         and certificates["pr230_origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_closes_pr230"
+        )
+        is False
+    )
+    origin_main_ew_m_residual_intake_not_closure = (
+        "origin/main EW M-residual CMT packet"
+        in certificates["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "origin_main_ew_m_residual_intake_guard_passed"
+        )
+        is True
+        and certificates["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "origin_main_ew_m_residual_closes_pr230"
         )
         is False
     )
@@ -3690,6 +3709,13 @@ def main() -> int:
         ),
     )
     report(
+        "origin-main-ew-m-residual-intake-not-closure",
+        origin_main_ew_m_residual_intake_not_closure,
+        certificates["pr230_origin_main_ew_m_residual_intake_guard"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "z3-triplet-conditional-primitive-support-not-closure",
         z3_triplet_conditional_primitive_not_closure,
         certificates["pr230_z3_triplet_conditional_primitive_cone"].get(
@@ -5084,6 +5110,7 @@ def main() -> int:
         ),
         "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "origin_main_composite_higgs_intake_not_closure": origin_main_composite_higgs_intake_not_closure,
+        "origin_main_ew_m_residual_intake_not_closure": origin_main_ew_m_residual_intake_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,

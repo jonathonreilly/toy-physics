@@ -581,6 +581,9 @@ def main() -> int:
         "pr230_origin_main_composite_higgs_intake_guard": load(
             "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
         ),
+        "pr230_origin_main_ew_m_residual_intake_guard": load(
+            "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json"
+        ),
         "pr230_same_surface_z3_taste_triplet": load(
             "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json"
         ),
@@ -2429,6 +2432,22 @@ def main() -> int:
         is False,
         statuses["pr230_origin_main_composite_higgs_intake_guard"],
     )
+    origin_main_ew_m_residual = certificates[
+        "pr230_origin_main_ew_m_residual_intake_guard"
+    ]
+    report(
+        "pr230-origin-main-ew-m-residual-intake-not-closure",
+        "origin/main EW M-residual CMT packet"
+        in str(statuses["pr230_origin_main_ew_m_residual_intake_guard"])
+        and origin_main_ew_m_residual.get("proposal_allowed") is False
+        and origin_main_ew_m_residual.get(
+            "origin_main_ew_m_residual_intake_guard_passed"
+        )
+        is True
+        and origin_main_ew_m_residual.get("origin_main_ew_m_residual_closes_pr230")
+        is False,
+        statuses["pr230_origin_main_ew_m_residual_intake_guard"],
+    )
     z3_triplet_conditional_primitive = certificates[
         "pr230_z3_triplet_conditional_primitive_cone"
     ]
@@ -4173,6 +4192,13 @@ def main() -> int:
         and origin_main_composite_higgs.get("origin_main_composite_higgs_closes_pr230")
         is False
         and origin_main_composite_higgs.get("proposal_allowed") is False
+    )
+    result["origin_main_ew_m_residual_intake_not_closure"] = (
+        origin_main_ew_m_residual.get("origin_main_ew_m_residual_intake_guard_passed")
+        is True
+        and origin_main_ew_m_residual.get("origin_main_ew_m_residual_closes_pr230")
+        is False
+        and origin_main_ew_m_residual.get("proposal_allowed") is False
     )
     result["z3_triplet_conditional_primitive_not_closure"] = (
         z3_triplet_conditional_primitive.get(

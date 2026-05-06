@@ -20,6 +20,12 @@ Allowed context:
 - the `origin/main` composite-Higgs stretch packet as cross-lane action-first
   context only, not as PR230 `O_H`, source-transport, or `C_sH/C_HH`
   authority.
+- the `origin/main` EW M-residual CMT packet as context only.  Its Fierz
+  singlet/adjoint channel bookkeeping may inform future W/Z work, but it is
+  not PR230 same-source EW action, W/Z response, canonical `O_H`, or
+  source-Higgs pole-row authority.
+- Origin-main EW M-residual CMT packet is a context-only intake guard, not
+  a PR230 closure artifact.
 - the exact lazy-Z3 primitive matrix theorem as conditional mathematics only:
   if a same-surface PR230 action supplies a positive lazy cyclic transfer on
   the triplet, Perron-Frobenius gives rank-one triplet support.
@@ -41,6 +47,9 @@ Open imports after this block:
 - Cross-lane composite-Higgs stretch packets are not PR230 proof selectors
   until same-source `O_H`, action, transport, or `C_sH/C_HH` rows exist on the
   PR230 surface.
+- CMT/u0/Fierz channel bookkeeping is not proof selectors until an explicit
+  same-surface EW Wilson-line action/current and W/Z response rows exist with
+  strict `g2`, covariance, and `delta_perp` authority.
 - Source-coordinate transport to O_H is not proof selectors until a same-surface transport certificate exists.
 - Source-coordinate transport completion is a current-surface boundary, not a
   global theorem against future transport.

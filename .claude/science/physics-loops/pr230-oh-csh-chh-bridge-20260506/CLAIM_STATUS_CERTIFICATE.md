@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
+actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
 conditional_surface_status: conditional-support if a future source-coordinate transport theorem, certified O_H/C_sH/C_HH rows, W/Z response rows with strict g2/covariance/delta_perp, Schur A/B/C rows, or same-surface neutral primitive-cone transfer lands
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The block proves the current scalar-reparam and route-completion shortcuts cannot close PR230 and classifies the origin/main composite-Higgs packet as context only.  The lazy-Z3 result is conditional primitive mathematics, the H1 lift attempt shows Koide/lepton Z3 does not derive cyclic quark-bilinear action on the current surface, and the lazy-transfer promotion attempt shows the same-surface cyclic symmetry P does not instantiate physical lazy transfer L=(I+P)/2.  The FH/LSZ L12 chunked support surface is complete but lacks multivolume scaling, isolated-pole/FV/IR/model-class authority, and canonical-Higgs/source-overlap or same-source W/Z authority.  The same-surface PR230 positive transfer/action, O_H certificate, source-Higgs pole rows, W/Z rows, and Schur rows remain absent."
+proposal_allowed_reason: "The block proves the current scalar-reparam and route-completion shortcuts cannot close PR230 and classifies the origin/main composite-Higgs and EW M-residual packets as context only.  The EW M-residual packet is Fierz/CMT channel bookkeeping that explicitly leaves EW Wilson-line construction open and emits no PR230 same-source W/Z rows, O_H, or C_sH/C_HH rows.  The lazy-Z3 result is conditional primitive mathematics, the H1 lift attempt shows Koide/lepton Z3 does not derive cyclic quark-bilinear action on the current surface, and the lazy-transfer promotion attempt shows the same-surface cyclic symmetry P does not instantiate physical lazy transfer L=(I+P)/2.  The FH/LSZ L12 chunked support surface is complete but lacks multivolume scaling, isolated-pole/FV/IR/model-class authority, and canonical-Higgs/source-overlap or same-source W/Z authority.  The same-surface PR230 positive transfer/action, O_H certificate, source-Higgs pole rows, W/Z rows, and Schur rows remain absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -19,6 +19,9 @@ preserve first-principles reopen routes after a same-surface row, certificate,
 or theorem is supplied.  The `origin/main` composite-Higgs packet remains
 non-closing for PR230 until its branch-local premises are derived and it emits a
 same-surface action, `O_H`, transport, or `C_sH/C_HH` artifact.
+The `origin/main` EW M-residual packet remains non-closing for PR230 until it
+emits a same-surface EW Wilson-line action/current and production W/Z response
+rows with strict `g2`, covariance, and `delta_perp` authority.
 The lazy-Z3 primitive theorem may support a future neutral primitive certificate
 only after a same-surface positive transfer or off-diagonal generator is
 derived; it is not itself a PR230 closure artifact.

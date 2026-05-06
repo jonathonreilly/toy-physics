@@ -1,0 +1,63 @@
+{
+  "actual_current_surface_status": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "branch_state": {
+    "local_head": "3e6dd903cf1ef604b25632fb0db3bd16709a2b58",
+    "remote_main_head": "8ef172ae39b879a5440506b7985ead0d077d0bef",
+    "remote_pr_head": "dca20700b145618a690f6493bc315c1c8620be29"
+  },
+  "conditional_surface_status": "The packet may inform a future W/Z route only after a same-surface framework EW Wilson-line current/action is explicitly constructed and production W/Z response rows, matched covariance, delta_perp, and strict non-observed g2 authority are supplied without using u0/CMT as PR230 y_t proof input.",
+  "exact_next_action": "Reopen via a genuine same-source EW/WZ artifact only after an explicit framework EW Wilson-line action/current, production W/Z mass-fit response rows, matched top/W covariance, strict g2 authority, and delta_perp control are present; otherwise continue with canonical O_H/C_sH/C_HH, two-source transport, Schur A/B/C, strict scalar-LSZ, or neutral primitive-cone routes.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "sets_c2_equal_one": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_z_match_equal_one": false,
+    "uses_alpha_lm_plaquette_or_u0_as_pr230_proof_input": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_cold_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "same_source_ew_action_certificate": false,
+    "source_higgs_measurement_rows": false,
+    "top_wz_matched_response_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "origin_main_ew_m_residual_closes_pr230": false,
+  "origin_main_ew_m_residual_intake_guard_passed": true,
+  "packet_classification": {
+    "admits_missing_ew_current": true,
+    "channel_bookkeeping_only": true,
+    "cmt_u0_present": true,
+    "explicit_nonclosure": true,
+    "output_schema_absent": true,
+    "pr230_surface_absent": true,
+    "remote_script_exists": true
+  },
+  "parent_statuses": {
+    "action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "same_source_wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
+    "wz_response_route_completion": "exact negative boundary / WZ same-source response route not complete on current PR230 surface"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The remote script explicitly disclaims closure of M and names the missing EW Wilson-line construction.  It verifies Fierz/CMT channel bookkeeping only, mentions u0/mean-field factors, emits no PR230 same-source action, no W/Z response rows, no canonical O_H certificate, and no C_sH/C_HH pole rows.  Current aggregate gates still deny proposal wording.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use CMT/u0/mean-field bookkeeping as PR230 proof authority",
+    "does not treat Fierz channel decomposition as same-source EW action",
+    "does not treat implicit EW Wilson-line current language as production W/Z response rows",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set c2=1, Z_match=1, or kappa_s=1"
+  ]
+}

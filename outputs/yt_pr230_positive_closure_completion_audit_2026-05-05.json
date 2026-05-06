@@ -44,6 +44,7 @@
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
     "neutral_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+    "origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
@@ -72,6 +73,7 @@
     "matching_running": "open / PR230 matching-running bridge awaits certified physical input",
     "neutral_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
     "origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
+    "origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
     "retained_route": "open / retained closure not yet reached",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
@@ -89,7 +91,7 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 29,
+  "pass_count": 30,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -103,6 +105,7 @@
       "top_wz_matched_response_rows": false
     },
     "origin_main_composite_higgs_not_closure": true,
+    "origin_main_ew_m_residual_not_closure": true,
     "osp_higgs_rows_absent": true,
     "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
@@ -144,6 +147,7 @@
           "O_sp-Higgs Gram purity plus FV/IR/model-class authority"
         ],
         "origin_main_composite_higgs_not_closure": true,
+        "origin_main_ew_m_residual_not_closure": true,
         "osp_higgs_rows_absent": true,
         "taste_condensate_oh_bridge_blocked": true
       },
@@ -246,6 +250,7 @@
               "same-source/native top/W factorization-independence shortcut rejected",
               "deterministic W-response covariance shortcut rejected",
               "current-branch covariance-theorem import shortcut rejected",
+              "origin/main EW M-residual CMT/Fierz packet is context-only and admits missing EW Wilson-line construction",
               "same-source top-response certificate absent",
               "same-source W-response row builder strict inputs absent",
               "lightweight same-source W readout production rows absent",
@@ -274,6 +279,7 @@
               "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
               "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
               "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
+              "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
               "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
               "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
               "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",

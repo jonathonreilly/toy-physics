@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: z3_lazy_transfer_promotion_attempt
+active_route: origin_main_ew_m_residual_intake_guard
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -13,7 +13,9 @@ hard_residual: >
   canonical-Higgs/source-overlap authority, or same-source W/Z response
   authority.  The same-surface Z3 taste-triplet artifact supplies a cyclic
   symmetry P, but the lazy primitive matrix L=(I+P)/2 is not instantiated as a
-  physical PR230 transfer/action row.
+  physical PR230 transfer/action row.  The fetched origin/main EW M-residual
+  packet is Fierz/CMT channel bookkeeping only and explicitly leaves the EW
+  Wilson-line construction open; it is not a PR230 W/Z response or O_H row.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -33,6 +35,7 @@ files_touched:
   - scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
   - scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py
   - scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py
+  - scripts/frontier_yt_pr230_origin_main_ew_m_residual_intake_guard.py
   - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md
   - docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md
@@ -48,6 +51,7 @@ files_touched:
   - docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md
   - docs/YT_PR230_Z3_GENERATION_ACTION_LIFT_ATTEMPT_NOTE_2026-05-06.md
   - docs/YT_PR230_Z3_LAZY_TRANSFER_PROMOTION_ATTEMPT_NOTE_2026-05-06.md
+  - docs/YT_PR230_ORIGIN_MAIN_EW_M_RESIDUAL_INTAKE_GUARD_NOTE_2026-05-06.md
   - docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
@@ -67,6 +71,7 @@ files_touched:
   - outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json
   - outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json
   - outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json
+  - outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json
   - outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
@@ -79,18 +84,19 @@ verification:
   z3_triplet_conditional_primitive_pass_fail: "13/0"
   z3_generation_action_lift_pass_fail: "19/0"
   z3_lazy_transfer_promotion_pass_fail: "17/0"
+  origin_main_ew_m_residual_intake_guard_pass_fail: "18/0"
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
   source_higgs_production_readiness_pass_fail: "21/0"
-  completion_audit_pass_fail: "28/0"
+  completion_audit_pass_fail: "30/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "55/0"
-  full_positive_assembly_pass_fail: "114/0"
-  retained_route_certificate_pass_fail: "260/0"
-  campaign_status_certificate_pass_fail: "290/0"
-  audit_pipeline: "complete; audit metadata intentionally regenerated for the Z3 rows and current note hashes"
+  assumption_import_stress_pass_fail: "56/0"
+  full_positive_assembly_pass_fail: "115/0"
+  retained_route_certificate_pass_fail: "261/0"
+  campaign_status_certificate_pass_fail: "291/0"
+  audit_pipeline: "complete; audit metadata intentionally regenerated for the EW M-residual intake row and current note hashes"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
 next_exact_action: >
@@ -109,7 +115,11 @@ next_exact_action: >
   The Z3 lazy-transfer promotion attempt shows the same-surface cyclic symmetry
   cannot itself be promoted into physical lazy transfer: a future PR230 neutral
   transfer/action row, off-diagonal generator, or primitive-cone certificate
-  must instantiate the self/identity edge.
+  must instantiate the self/identity edge.  The origin/main EW M-residual CMT/
+  Fierz packet is also context-only: it cannot be used as W/Z, O_H, or y_t
+  proof authority unless a future same-surface EW Wilson-line action/current
+  and production W/Z rows with strict g2/covariance/delta_perp authority are
+  supplied.
 stop_condition: >
   This block stops after preserving the scalar-reparametrization gate and
   recording current-surface completion boundaries for all five surviving
@@ -119,4 +129,6 @@ stop_condition: >
   H1, recording the current-surface generation-action lift boundary, recording
   the Z3 lazy-transfer promotion boundary, and
   refreshing the FH/LSZ postprocess gate so completed L12 chunks are recognized
-  as support-only rather than closure evidence.
+  as support-only rather than closure evidence, then ingesting the origin/main
+  EW M-residual CMT/Fierz packet as context-only rather than same-surface
+  PR230 W/Z or O_H closure authority.

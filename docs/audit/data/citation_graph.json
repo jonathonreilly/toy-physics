@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T13:08:15.136557+00:00",
+  "generated_at": "2026-05-06T13:28:31.183426+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42508,6 +42508,16 @@
       "runner_path": "scripts/frontier_yt_pr230_origin_main_composite_higgs_intake_guard.py",
       "title": "PR230 Origin/Main Composite-Higgs Intake Guard Note"
     },
+    "yt_pr230_origin_main_ew_m_residual_intake_guard_note_2026-05-06": {
+      "claim_id": "yt_pr230_origin_main_ew_m_residual_intake_guard_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / context-only intake.  This note does not",
+      "deps": [],
+      "note_hash": "557d9ac2a44076cb7523d6ecbe7cfebec15be49ea929dd20a83e8b4a36d93322",
+      "path": "docs/YT_PR230_ORIGIN_MAIN_EW_M_RESIDUAL_INTAKE_GUARD_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_origin_main_ew_m_residual_intake_guard.py",
+      "title": "PR230 Origin-Main EW M-Residual Intake Guard"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
       "current_status": "open",
@@ -42713,7 +42723,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / Z3 lazy-transfer promotion not derivable",
       "deps": [],
-      "note_hash": "965549e474ac30509e9f2c76ee3fd403f6759cdc947492b85b327979ac7736b9",
+      "note_hash": "1403d4c7f56dfac78631cb5ab4e11e3220658b839693fdf52ccdd7d4ba8e3f07",
       "path": "docs/YT_PR230_Z3_LAZY_TRANSFER_PROMOTION_ATTEMPT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py",
       "title": "PR230 Z3 Lazy-Transfer Promotion Attempt"
@@ -45447,6 +45457,7 @@
     "yt_pr230_oh_source_higgs_authority_rescan_gate_note_2026-05-05",
     "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06",
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06",
+    "yt_pr230_origin_main_ew_m_residual_intake_guard_note_2026-05-06",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
@@ -45587,17 +45598,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1085,
-    "node_count": 2038,
-    "root_count": 1551,
-    "runners_with_path": 1534,
+    "leaf_count": 1086,
+    "node_count": 2039,
+    "root_count": 1552,
+    "runners_with_path": 1535,
     "status_counts": {
       "bounded": 556,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 436,
-      "unknown": 570
+      "unknown": 571
     }
   }
 }

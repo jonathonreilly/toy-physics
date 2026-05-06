@@ -137,6 +137,9 @@ def main() -> int:
         "origin_main_composite_higgs_intake_guard": load(
             "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
         ),
+        "origin_main_ew_m_residual_intake_guard": load(
+            "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json"
+        ),
         "z3_triplet_conditional_primitive_cone_theorem": load(
             "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
         ),
@@ -280,6 +283,8 @@ def main() -> int:
         "not proof selectors until same-surface primitive transfer, off-diagonal generator, or irreducibility certificate exists",
         "Z3 lazy-transfer promotion attempt",
         "same-surface neutral transfer/action or off-diagonal generator",
+        "Origin-main EW M-residual CMT packet",
+        "CMT/u0/Fierz channel bookkeeping is not proof selectors",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -753,6 +758,24 @@ def main() -> int:
         and composite_higgs_intake.get("origin_main_composite_higgs_closes_pr230")
         is False,
         composite_higgs_intake.get("actual_current_surface_status"),
+    )
+    ew_m_residual_intake = certificates["origin_main_ew_m_residual_intake_guard"]
+    report(
+        "origin-main-ew-m-residual-packet-not-pr230-wz-authority",
+        "origin/main EW M-residual CMT packet"
+        in str(ew_m_residual_intake.get("actual_current_surface_status"))
+        and ew_m_residual_intake.get("proposal_allowed") is False
+        and ew_m_residual_intake.get(
+            "origin_main_ew_m_residual_intake_guard_passed"
+        )
+        is True
+        and ew_m_residual_intake.get("origin_main_ew_m_residual_closes_pr230")
+        is False
+        and ew_m_residual_intake.get("packet_classification", {}).get(
+            "explicit_nonclosure"
+        )
+        is True,
+        ew_m_residual_intake.get("actual_current_surface_status"),
     )
     z3_primitive = certificates["z3_triplet_conditional_primitive_cone_theorem"]
     report(
