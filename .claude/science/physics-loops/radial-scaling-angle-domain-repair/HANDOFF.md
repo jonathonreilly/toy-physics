@@ -51,5 +51,7 @@ records the old audit state is
 
 ## Next Exact Action
 
-Open a PR against `main` and request independent audit of
+PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/550
+
+Next exact action: independent audit of
 `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02`.

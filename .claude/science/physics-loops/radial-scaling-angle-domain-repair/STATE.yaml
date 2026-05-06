@@ -26,6 +26,6 @@ files_touched:
 runner_result: "python3 scripts/frontier_radial_scaling_protected_angle_narrow.py -> PASS=11 FAIL=0"
 review_findings: none
 review_loop_disposition: pass
-pr_status: pending
-next_exact_action: "Commit, push, open PR, and request independent audit."
+pr_status: "opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/550"
+next_exact_action: "Request independent audit of radial_scaling_protected_angle_narrow_theorem_note_2026-05-02."
 stop_condition: "Single selected prompt resolved and PR shipped."
