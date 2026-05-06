@@ -1,15 +1,54 @@
 # Persistent Object Multistage Floor Sweep
 
 **Date:** 2026-04-16  
-**Status:** bounded multistage floor positive; `top4` is the first self-maintaining floor on the stable widened exact-lattice branch
+**Claim type:** bounded_theorem
+**Status:** bounded support theorem; audit status is set only by the independent audit lane
 
 ## Artifact chain
 
-- Script: [`scripts/persistent_object_top3_multistage_probe.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_top3_multistage_probe.py)
-- `top3` log: [`logs/2026-04-16-persistent-object-top3-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top3-multistage-probe.txt)
-- `top4` log: [`logs/2026-04-16-persistent-object-top4-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top4-multistage-probe.txt)
-- `top5` log: [`logs/2026-04-16-persistent-object-top5-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top5-multistage-probe.txt)
-- `top6` log: [`logs/2026-04-16-persistent-object-top6-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top6-multistage-probe.txt)
+- Bounded floor certificate runner:
+  [`scripts/persistent_object_multistage_floor_certificate.py`](../scripts/persistent_object_multistage_floor_certificate.py)
+- Bounded floor certificate cache:
+  [`logs/runner-cache/persistent_object_multistage_floor_certificate.txt`](../logs/runner-cache/persistent_object_multistage_floor_certificate.txt)
+- Slow parameterized multistage probe:
+  [`scripts/persistent_object_top3_multistage_probe.py`](../scripts/persistent_object_top3_multistage_probe.py)
+- `top3` completed cache:
+  [`logs/runner-cache/persistent_object_top3_multistage_probe.txt`](../logs/runner-cache/persistent_object_top3_multistage_probe.txt)
+- `top4` completed transfer cache, whose listed cases include the same five
+  stable widened-regime rows:
+  [`logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt`](../logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt)
+- `top5` completed repair-pass log:
+  [`outputs/persistent_object_top5_multistage_probe_2026-05-06.txt`](../outputs/persistent_object_top5_multistage_probe_2026-05-06.txt)
+
+## Bounded floor certificate
+
+The certificate runner is the first listed runner so the restricted audit
+packet contains the load-bearing floor comparison directly. It reports:
+
+- `top3`: `0 / 5` on the five stable widened-regime rows, from the fresh
+  SHA-pinned `top3` cache.
+- `top4`: `5 / 5` on those same rows, extracted from the fresh SHA-pinned
+  `top4` transfer-sweep cache.
+- `top5`: `5 / 5` from a completed live run of the same parameterized
+  multistage probe with `--top-keep 5`.
+- `top6`: `5 / 5` by exact source-cardinality identity. The source cluster has
+  five nodes, and `_topk_weights` keeps `min(top_keep, len(source_probs))`;
+  therefore `top6` has the same effective configured support and same gate
+  result as `top5` in this setup.
+
+Current certificate summary:
+
+```text
+FLOOR TABLE
+  top3: 0/5
+  top4: 5/5
+  top5: 5/5
+  top6: 5/5
+[PASS] first admissible configured object width is top4
+
+SUMMARY: PASS=30 FAIL=0
+STATUS: FLOOR CERTIFICATE PASS
+```
 
 ## Question
 
@@ -17,11 +56,11 @@ The first multistage probe closed `top3` as an honest self-maintaining object:
 
 - compressed carry stayed perfect
 - the response law stayed perfectly stable
-- but within-segment overlap fell below the retained persistence bar
+- but within-segment overlap fell below the configured persistence bar
 
 That left one last bounded diagnostic on this exact route:
 
-> is `top3` simply too narrow, with a slightly broader retained object class as
+> is `top3` simply too narrow, with a slightly broader configured object class as
 > the real self-maintaining floor?
 
 ## Frozen setup
@@ -29,7 +68,7 @@ That left one last bounded diagnostic on this exact route:
 Fixed across the floor sweep:
 
 - exact lattice with `h = 0.25`
-- retained blended readout `blend = 0.25`
+- configured blended readout `blend = 0.25`
 - source strengths `0.001, 0.002, 0.004, 0.008`
 - three updates per segment
 - three chained segments
@@ -72,7 +111,7 @@ So the first honest self-maintaining floor on this exact-lattice branch is:
 
 The multistage failure at `top3` was real, but it was also narrow.
 
-At `top4`, the stable widened-regime rows all clear the retained persistence
+At `top4`, the stable widened-regime rows all clear the configured persistence
 bar:
 
 - baseline stage overlaps: `[0.956, 0.956, 0.956]`
@@ -94,7 +133,7 @@ So the honest read is no longer:
 It is now:
 
 > a self-maintaining multistage exact-lattice compact object on the stable
-> widened branch, with `top4` as the first retained floor
+> widened branch, with `top4` as the first bounded floor
 
 ### Why `top5` and `top6` do not matter much
 
@@ -117,7 +156,7 @@ The branch now has:
 - second-ring partial transfer
 - a mapped inward-source boundary
 - a self-maintaining multistage object on the stable widened branch
-- the first retained multistage floor at `top4`
+- the first bounded multistage floor at `top4`
 
 So the correct interpretation is:
 
@@ -126,7 +165,7 @@ So the correct interpretation is:
 > on the stable widened branch, not merely a compression-stabilized `top3`
 > transfer object.
 
-## What this proves
+## What this bounded certificate supports
 
 - the failure at `top3` was a narrow floor miss rather than the end of the
   whole exact-lattice route

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 514,
+    "critical": 515,
     "high": 15,
     "leaf": 187,
     "medium": 97
@@ -3498,6 +3498,27 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 290
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "persistent_object_multistage_floor_sweep_note_2026-04-16",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.675,
+      "note_path": "docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/persistent_object_multistage_floor_certificate.py",
+      "transitive_descendants": 288
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24953,6 +24974,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 14,
-  "total_pending": 813
+  "ready_count": 15,
+  "total_pending": 814
 }

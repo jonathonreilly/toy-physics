@@ -43435,13 +43435,13 @@
     },
     "persistent_object_multistage_floor_sweep_note_2026-04-16": {
       "claim_id": "persistent_object_multistage_floor_sweep_note_2026-04-16",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e3903809c0bd407293739e812cf4458b97980f83305d6dc3cde31b7b97e362dd",
+      "note_hash": "209c18d9b1f4207b9fbb6e2655982dce2dc1321c3c0465fb883e78b4658d92cb",
       "path": "docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md",
-      "runner_path": "scripts/persistent_object_top3_multistage_probe.py",
+      "runner_path": "scripts/persistent_object_multistage_floor_certificate.py",
       "title": "Persistent Object Multistage Floor Sweep"
     },
     "persistent_object_readout_localization_note": {
@@ -55952,10 +55952,10 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 77,
+      "bounded_theorem": 78,
       "meta": 10,
       "no_go": 14,
-      "none": 1707,
+      "none": 1706,
       "open_gate": 10,
       "positive_theorem": 89
     },
