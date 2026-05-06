@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_qg_smooth_gravitational_local_identification.py
+runner_sha256: 740537a9707d256c76bd5fa50556af9619d6a372528cd16696270188d24765ad
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+[EXACT] PASS: the route already has exact positive-background local GR closure and exact canonical textbook weak/measure equivalence
+    this theorem starts from the already-closed local gravitational operator family and the already-closed canonical textbook weak/Gaussian object
+[EXACT] PASS: the positive-background local gravitational operator family is symmetric positive definite on the sampled class
+    Lambda_R min eigenvalue=1.363463e+00, min sampled K_GR eigenvalue=4.685717e-03
+[EXACT] PASS: the canonical textbook weak solution equals the local gravitational stationary field on the sampled class
+    max weak residual=8.882e-16, max stationary-vs-covariance-source error=5.684e-14
+[EXACT] PASS: the canonical textbook Gaussian covariance equals the local gravitational covariance on the sampled class
+    max covariance identification error=1.776e-14
+[EXACT] PASS: the local gravitational action completion identity is exactly the same weak/Gaussian completion identity on the sampled class
+    max completion identity error=1.123e-13
+[EXACT] PASS: the remaining stronger issue is therefore not local smooth gravitational identification, but only later geometric/action and continuum-gravitational closures already discharged elsewhere on the branch
+    the canonical textbook weak/Gaussian object is already exactly the positive-background local gravitational object; later notes close the finite-atlas and global smooth weak/Gaussian route, the geometric/action comparison, and the continuum gravitational closure built on this step
+UNIVERSAL QG SMOOTH GRAVITATIONAL LOCAL IDENTIFICATION
+==============================================================================
+Lambda_R min eigenvalue                  = 1.363463e+00
+min sampled K_GR eigenvalue              = 4.685717e-03
+max weak residual                        = 8.882e-16
+max stationary-vs-cov-source error       = 5.684e-14
+max covariance identification error      = 1.776e-14
+max completion identity error            = 1.123e-13
+
+Verdict:
+On the exact positive-background local class, the canonical textbook weak Sobolev / Gaussian cylinder object is already exactly the smooth local gravitational weak/Gaussian object of the direct-universal route.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=6 FAIL=0 TOTAL=6
+
+----- stderr -----
+

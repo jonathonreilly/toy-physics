@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 789 |
+| unaudited | 788 |
 | audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 462 |
+| ~~audited_conditional~~ | 463 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 462 |
+| `audited_conditional` | 463 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 837 |
+| `unaudited` | 836 |
 
 | claim_type | count |
 |---|---:|
@@ -927,6 +927,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_smooth_gravitational_global_atlas_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_smooth_gravitational_local_identification_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -13721,6 +13722,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md`
   - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
   - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_smooth_gravitational_local_identification_note`
+
+- **Note:** [`UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md`](../../docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Positive-background local identification of the canonical textbook weak Sobolev/Gaussian cylinder object with the project-native smooth local gravitational weak/Gaussian object determined by K_GR(D).
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-qg-local-identification`  (codex-current; independence=weak)
+- **load-bearing step:** on the positive-background local class, the weak bilinear form of the canonical textbook object is exactly the weak form induced by K_GR(D); the textbook weak solution is exactly F_* and the textbook Gaussian covariance is exactly K_GR(D)^-1  _(class `B`)_
+- **chain closes:** False — The direct ledger dependency is only the optional textbook comparison meta note, which explicitly carries no theorem authority. The runner's substantive premises require positive-background local K_GR(D) closure and canonical textbook weak/measure equivalence, but those rows are not wired as direct dependencies and are not retained-grade in the current ledger.
+- **rationale:** Issue: the note claims local smooth gravitational weak/Gaussian identification from already-closed inputs, but the only direct ledger authority is a meta packaging note with zero theorem authority. Why this blocks: the completed runner checks the algebraic identification only after importing the positive-background local operator family and the canonical textbook weak/Gaussian object from unwired upstream rows, including rows that are conditional or unaudited. Repair target: wire the local-identification runner and replace the meta-only dependency with direct retained-grade dependencies for the K_GR(D) positive-background local closure and canonical textbook weak/measure carrier. Claim boundary until fixed: the runner gives a useful consistency/algebra check on the positive-background local class, but the theorem cannot retain until those premises are direct retained-grade authorities.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
+  - `UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`
+  - `UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md`
 - **auditor confidence:** high
 
 ### `valley_linear_action_note`
