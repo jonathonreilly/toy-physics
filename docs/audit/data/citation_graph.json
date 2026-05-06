@@ -38776,7 +38776,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "0ff6deef3e5f406b286b7b4c4af0f09fb643649636cf89acc24899ac9dbb2a1d",
+      "note_hash": "ab268de626d0a361b01e0a009d63acc6e70ef0492ffc4a070cd262226b4ad5d2",
       "path": "docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py",
       "title": "Koide delta lattice Wilson selected-eigenline no-go"

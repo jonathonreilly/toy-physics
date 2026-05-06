@@ -8538,7 +8538,7 @@
         "A": 0,
         "B": 0,
         "C": 19,
-        "D": 1
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -27305,7 +27305,7 @@
         "A": 0,
         "B": 0,
         "C": 19,
-        "D": 1
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "C",

@@ -1,0 +1,47 @@
+loop: koide-delta-wilson-selected-eigenline-no-go-repair-20260506
+date: 2026-05-06
+branch: local-science-fix-worktree
+mode: run
+target: no-go
+cycle: 1
+active_route: split_stale_ambient_eta_residual_from_rank_two_selected_line_no_go
+hard_residual: false_ambient_eta_mismatch_claim_blocking_rank_two_no_go_audit
+files_touched:
+  - docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md
+  - scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
+  - logs/runner-cache/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.txt
+  - logs/runner-cache/frontier_koide_hostile_review_guard.txt
+  - outputs/frontier_koide_hostile_review_guard_2026-05-06.txt
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/runner_classification.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/auditor_reliability.json
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/publication/ci3_z3/DERIVATION_ATLAS_EFFECTIVE_STATUS.md
+  - docs/publication/ci3_z3/FULL_CLAIM_LEDGER_EFFECTIVE_STATUS.md
+  - docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md
+  - docs/publication/ci3_z3/RESULTS_INDEX_EFFECTIVE_STATUS.md
+claim_status:
+  claim_id: koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24
+  actual_current_surface_status: no-go
+  conditional_surface_status: null
+  hypothetical_axiom_status: null
+  admitted_observation_status: null
+  proposal_allowed: false
+  audit_required_before_effective_retained: true
+  bare_retained_allowed: false
+verification_completed:
+  - python3 scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
+  - python3 scripts/cached_runner_output.py scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py --refresh --tail-chars 6000
+  - python3 scripts/frontier_koide_hostile_review_guard.py
+  - python3 scripts/cached_runner_output.py scripts/frontier_koide_hostile_review_guard.py --refresh --tail-chars 5000
+  - python3 scripts/frontier_koide_hostile_review_guard.py > outputs/frontier_koide_hostile_review_guard_2026-05-06.txt
+  - python3 scripts/frontier_koide_lane_regression.py
+  - python3 -m py_compile scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
+  - bash docs/audit/scripts/run_pipeline.sh
+  - git diff --check
+next_exact_action: independent audit re-run of the repaired note
+stop_condition: local missing-derivation closure packaged

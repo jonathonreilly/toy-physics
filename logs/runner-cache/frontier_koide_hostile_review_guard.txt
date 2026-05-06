@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_koide_hostile_review_guard.py
-runner_sha256: f6f782ed565c51a41faed479b0fac0355b4271ef0b150bd9263e0059a38f011b
+runner_sha256: 5fa5b89392033e7fd32ff248b87bf74a29a9601e84795594aff213f317c99791
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.06
+elapsed_sec: 1.53
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -25,9 +25,21 @@ B. No-go scripts expose negative closeout flags
 ========================================================================================
   [PASS] B.1 no-go script set is non-empty
        scripts=6
-  [PASS] B.2 every no-go script prints an explicit negative CLOSES flag
-  [PASS] B.3 every no-go script prints an explicit residual label
-  [PASS] B.4 no no-go script promotes closure with a TRUE closeout flag
+  [PASS] B.2 every no-go script emits an explicit negative CLOSES flag
+       scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py (returncode=0): KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_Q=FALSE; KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_DELTA=FALSE
+       scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py (returncode=0): DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
+       scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py (returncode=0): DELTA_MARKED_RELATIVE_COBORDISM_CLOSES_DELTA=FALSE
+       scripts/frontier_koide_dimensionless_objection_closure_review.py (returncode=0): Q_DIMENSIONLESS_OBJECTION_CLOSES_Q=FALSE; DELTA_DIMENSIONLESS_OBJECTION_CLOSES_DELTA=FALSE; FULL_DIMENSIONLESS_OBJECTION_CLOSES_LANE=FALSE
+       scripts/frontier_koide_q_delta_readout_retention_split_no_go.py (returncode=0): Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_Q=FALSE; Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_DELTA=FALSE; Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_FULL_LANE=FALSE
+       scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py (returncode=0): Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_Q=FALSE; Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_DELTA=FALSE; Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_FULL_LANE=FALSE
+  [PASS] B.3 every no-go script emits an explicit residual label
+       scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py (returncode=0): RESIDUAL_PRIMITIVE=type_b_rational_to_radian_observable_law
+       scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py (returncode=0): RESIDUAL_ENDPOINT=-theta0 + theta_end - 2/9; RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS; RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split; RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed; RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
+       scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py (returncode=0): RESIDUAL_ENDPOINT=-theta0 + theta_end - 2/9; RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS; RESIDUAL_MARK=derived_boundary_mark_is_scalar_on_multiplicity; RESIDUAL_TRIVIALIZATION=marked_endpoint_section_not_based; RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
+       scripts/frontier_koide_dimensionless_objection_closure_review.py (returncode=0): RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure; RESIDUAL_DELTA=derive_selected_line_local_boundary_source_and_based_endpoint
+       scripts/frontier_koide_q_delta_readout_retention_split_no_go.py (returncode=0): RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure; RESIDUAL_SCALAR=derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor; RESIDUAL_DELTA=selected_line_endpoint_transition_tau_not_removed_by_closed_readout
+       scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py (returncode=0): RESIDUAL_SCALAR=canonical_zero_section_for_source_label_spectator_and_endpoint_kernel; RESIDUAL_Q=nontrivial_trace_kernel_span_Z; RESIDUAL_DELTA=nontrivial_closed_boundary_kernel_span_spectator_and_endpoint_exact
+  [PASS] B.4 no no-go script output promotes closure with a TRUE closeout flag
 
 ========================================================================================
 Summary

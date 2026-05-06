@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
-runner_sha256: bf0585341bf7be0499155e2a54d47d66ec21d98b196254f68ad53a7e421d333d
+runner_sha256: eae94bbdf3c61af3f6e429380612975ce57cbb471132480f2135c83b7d6e41b5
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.44
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
 ----- stdout -----
 
 ========================================================================================
@@ -14,7 +14,7 @@ A. Finite Wilson-Dirac support model
        ||D-D†||=0.00e+00; ||UDU†-D||=5.06e-15
 [PASS] A.2 body-diagonal action has three retained fixed sites
        fixed_sites=[(0, 0, 0), (1, 1, 1), (2, 2, 2)]
-[FAIL] A.3 finite Wilson eta proxy is not the exact APS value 2/9
+[PASS] A.3 finite Wilson eta proxy matches the APS comparator 2/9
        |eta|/fixed_site=0.222222222222; exact APS comparator=0.222222222222
 
 ========================================================================================
@@ -62,10 +62,10 @@ E. Verdict
 ========================================================================================
 Summary
 ========================================================================================
-PASSED: 13/14
+PASSED: 14/14
   [PASS] A.1 L=3 Wilson-Dirac operator is Hermitian and Z3-equivariant
   [PASS] A.2 body-diagonal action has three retained fixed sites
-  [FAIL] A.3 finite Wilson eta proxy is not the exact APS value 2/9
+  [PASS] A.3 finite Wilson eta proxy matches the APS comparator 2/9
   [PASS] B.1 Wilson zero-mode space has dimension four
   [PASS] B.2 each spin-lift Z3 character in the zero-mode space has multiplicity two
   [PASS] B.3 a CP1 family of rank-one lines has the same Wilson zero-mode and character data
@@ -78,14 +78,14 @@ PASSED: 13/14
   [PASS] E.1 lattice Wilson selected-eigenline route does not close delta
   [PASS] E.2 residual is rank-one selected-line choice plus endpoint lift
 
-VERDICT: lattice Wilson selected-eigenline audit has FAILs.
-KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=FALSE
+VERDICT: lattice Wilson selected-eigenline route does not close delta.
+KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=TRUE
 DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
 RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT=finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
+AMBIENT_ETA_PROXY_MATCHES_APS_COMPARATOR=TRUE
 
 ----- stderr -----
 

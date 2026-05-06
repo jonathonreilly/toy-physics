@@ -17,10 +17,11 @@ Wilson operator + body-diagonal Z3 action
 
 ## Result
 
-Negative.  In this finite Wilson realization, the ambient eta proxy is not the
-exact APS value `2/9`; the runner reports the mismatch rather than promoting
-it.  Independently, the zero-mode character sector relevant to the selected
-endpoint has rank two.  The retained data select a spectral
+Negative for the selected-eigenline route.  In this finite Wilson realization,
+the ambient eta proxy equals the APS comparator `2/9`; it is therefore not a
+residual of this runner and is not part of the retained no-go claim.  The
+computed obstruction is narrower: the zero-mode character sector relevant to
+the selected endpoint has rank two.  The finite Wilson data select a spectral
 projector/eigenspace, not a unique rank-one line inside it.
 
 The runner constructs two orthonormal zero-mode lines with the same spin-lift
@@ -32,7 +33,7 @@ psi(alpha) = cos(alpha) psi_0 + sin(alpha) psi_1
 
 is still a Wilson zero mode with the same character.
 
-## Unified Residual
+## Selected-Line Residual
 
 The rank-two line freedom gives:
 
@@ -55,8 +56,9 @@ alpha = 0
 c = 0.
 ```
 
-Those are a selected rank-one eigenline theorem and an endpoint-lift theorem.
-They are not consequences of the finite Wilson data.
+Here `c` is the endpoint lift/basepoint offset, not an ambient eta-proxy
+mismatch.  Closure requires a selected rank-one eigenline theorem and an
+endpoint-lift theorem.  They are not consequences of the finite Wilson data.
 
 ## Endpoint Lift
 
@@ -76,8 +78,8 @@ endpoint by `s`.  Thus the endpoint basepoint remains an independent residual.
 RESIDUAL_ENDPOINT = theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE = rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION = wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT = finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR = minus_spectator_channel_plus_c_over_eta_APS
+AMBIENT_ETA_PROXY_MATCHES_APS_COMPARATOR = TRUE
 ```
 
 ## Falsifiers
@@ -105,6 +107,6 @@ DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
 RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT=finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
+AMBIENT_ETA_PROXY_MATCHES_APS_COMPARATOR=TRUE
 ```
