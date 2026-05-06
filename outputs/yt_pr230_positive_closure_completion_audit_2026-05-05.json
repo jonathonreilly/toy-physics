@@ -44,6 +44,7 @@
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
     "neutral_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
@@ -83,6 +84,7 @@
     "fms_post_degree_route_rescore": "bounded-support / FMS post-degree route rescore; action-first composite O_H route selected as cleanest future artifact, no current closure",
     "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
     "genuine_source_pole_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
+    "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
     "matching_running": "open / PR230 matching-running bridge awaits certified physical input",
     "neutral_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
     "origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
@@ -111,7 +113,7 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 40,
+  "pass_count": 41,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -129,6 +131,7 @@
       "two_source_taste_radial_action": true,
       "two_source_taste_radial_rows": false
     },
+    "higgs_mass_source_action_bridge_not_closure": true,
     "origin_main_composite_higgs_not_closure": true,
     "origin_main_ew_m_residual_not_closure": true,
     "osp_higgs_rows_absent": true,

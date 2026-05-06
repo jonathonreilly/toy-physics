@@ -167,6 +167,14 @@ sharpens the missing artifact but does not close PR230: the action, nonzero
 `v`, canonical LSZ normalization, `C_sH/C_HH` pole rows, and Gram/FV/IR
 authority are still absent.
 
+The Higgs mass-source action bridge now supplies the corresponding future
+action-source derivative contract.  If a same-surface EW/Higgs action couples
+the scalar source to centered `Phi^dagger Phi`, then the runner derives
+`dS/ds=sum O_H` and the degree-one coefficient `v` with `PASS=14 FAIL=0`.
+This is support only: the same-source EW/Higgs action certificate, canonical
+`O_H` certificate, `v`, canonical LSZ, `C_sH/C_HH` rows, and
+`kappa_s` authority remain absent.
+
 The post-FMS source-overlap necessity gate now checks the next inference
 directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
 and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a
@@ -239,10 +247,13 @@ Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows; this is now the cleanest non-chunk route after
-   the FMS post-degree rescore and composite-expansion theorem, but FMS
-   literature and the conditional expansion are route support only; the row
-   builder/postprocessor are now ready to consume the overlap/kappa contract
-   when those rows exist;
+   the FMS post-degree rescore and composite-expansion theorem.  The future
+   action certificate should couple the source to centered `Phi^dagger Phi`
+   and attach the Higgs mass-source action bridge for `dS/ds=sum O_H`; FMS
+   literature, the conditional expansion, and the mass-source bridge remain
+   route support only until the same-surface action, canonical `O_H`, LSZ, and
+   pole rows exist.  The row builder/postprocessor are now ready to consume the
+   overlap/kappa contract when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-008 are
    complete and checkpointed, the combiner gate records `ready=8/63` and writes

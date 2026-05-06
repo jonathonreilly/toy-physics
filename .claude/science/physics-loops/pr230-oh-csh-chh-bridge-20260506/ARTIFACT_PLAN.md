@@ -28,6 +28,10 @@ This block lands:
 - an executable FMS composite-`O_H` conditional theorem that derives the
   `Phi^dagger Phi` radial expansion and pole-residue scaling while preserving
   the missing same-surface action/source-overlap firewall;
+- an executable Higgs mass-source action bridge deriving the future
+  source-derivative contract `dS/ds=sum O_H` and degree-one coefficient `v`
+  conditional on a same-surface EW/Higgs action that couples the source to
+  centered `Phi^dagger Phi`;
 - an executable post-FMS source-overlap necessity gate proving that current
   source-only rows, conditional FMS `C_HH` support, and taste-radial
   `C_sx/C_xx` chunks still do not determine `Res C_sH` or canonical `y_t`;

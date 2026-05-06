@@ -78,6 +78,13 @@ surface is closed by `YT_PR230_ACTION_FIRST_ROUTE_COMPLETION` because the
 same-source EW/Higgs action, canonical `O_H`, production rows, and Gram purity
 certificate are absent.
 
+`YT_PR230_HIGGS_MASS_SOURCE_ACTION_BRIDGE` sharpens this route's future action
+contract: if the future same-surface action couples the scalar source to
+centered `Phi^dagger Phi`, then `dS/ds=sum O_H` and the degree-one coefficient
+is `v`.  This does not supply the action, `v`, canonical LSZ, source-Higgs pole
+rows, or `kappa_s=1`; it only removes an action-source algebra ambiguity once
+the action certificate exists.
+
 The `origin/main` composite-Higgs stretch packet is context for this route
 only.  Its Z3 multi-channel candidate does not become PR230 authority until it
 derives the needed premises and emits same-source action/`O_H`/row artifacts on

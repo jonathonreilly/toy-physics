@@ -641,6 +641,9 @@ def main() -> int:
         "pr230_fms_composite_oh_conditional_theorem": load(
             "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
         ),
+        "pr230_higgs_mass_source_action_bridge": load(
+            "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -2744,6 +2747,26 @@ def main() -> int:
         is True,
         statuses["pr230_fms_composite_oh_conditional_theorem"],
     )
+    higgs_mass_source_action_bridge = certificates[
+        "pr230_higgs_mass_source_action_bridge"
+    ]
+    report(
+        "pr230-higgs-mass-source-action-bridge-support-not-proof",
+        "Higgs mass-source action bridge"
+        in str(statuses["pr230_higgs_mass_source_action_bridge"])
+        and higgs_mass_source_action_bridge.get("proposal_allowed") is False
+        and higgs_mass_source_action_bridge.get(
+            "higgs_mass_source_action_bridge_passed"
+        )
+        is True
+        and higgs_mass_source_action_bridge.get(
+            "same_surface_ew_action_certificate_absent"
+        )
+        is True
+        and higgs_mass_source_action_bridge.get("canonical_oh_absent") is True
+        and higgs_mass_source_action_bridge.get("source_higgs_rows_absent") is True,
+        statuses["pr230_higgs_mass_source_action_bridge"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -4612,6 +4635,17 @@ def main() -> int:
         is True
         and fms_composite_oh_conditional_theorem.get("source_higgs_rows_absent")
         is True
+    )
+    result["higgs_mass_source_action_bridge_support_not_proof"] = (
+        higgs_mass_source_action_bridge.get("higgs_mass_source_action_bridge_passed")
+        is True
+        and higgs_mass_source_action_bridge.get("proposal_allowed") is False
+        and higgs_mass_source_action_bridge.get(
+            "same_surface_ew_action_certificate_absent"
+        )
+        is True
+        and higgs_mass_source_action_bridge.get("canonical_oh_absent") is True
+        and higgs_mass_source_action_bridge.get("source_higgs_rows_absent") is True
     )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(

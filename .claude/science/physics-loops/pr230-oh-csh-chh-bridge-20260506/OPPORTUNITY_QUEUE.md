@@ -7,6 +7,11 @@
    shortcut failed.  The FMS composite-`O_H` conditional theorem now derives
    the local `Phi^dagger Phi` bridge for this future route, but the same-
    surface action, `v`, LSZ normalization, and pole rows are still missing.
+   The Higgs mass-source action bridge now fixes the future action-source
+   contract if that action couples `s` to centered `Phi^dagger Phi`: the source
+   derivative is `dS/ds=sum O_H` and the degree-one coefficient is `v`.  This
+   does not supply the action, `v`, canonical LSZ, source-Higgs rows, or
+   `kappa_s=1`.
    The post-FMS source-overlap necessity gate shows that even with FMS `C_HH`
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a
@@ -33,7 +38,7 @@
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
    gate now records `ready=8/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  Chunks007-008 remain
+   chunks are schema-clean.  Chunks009-010 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row

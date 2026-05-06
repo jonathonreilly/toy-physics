@@ -89,6 +89,12 @@ Allowed context:
   `Phi^dagger Phi=((v+h)^2+pi^2)/2`, it derives the linear `v h` component and
   pole-residue scaling `v^2 Z_h`, but it does not supply the action, `v`,
   `Z_h`, source-overlap row `C_sH`, `C_HH` pole rows, or Gram/FV/IR authority.
+- the Higgs mass-source action bridge as conditional support only: if a future
+  same-surface EW/Higgs action couples the scalar source to centered
+  `Phi^dagger Phi`, then the source derivative is `dS/ds=sum O_H` and the
+  degree-one coefficient is `v`; the current action, canonical `O_H`
+  certificate, `v`, LSZ normalization, source-Higgs pole rows, and any
+  `kappa_s=1` authority are absent.
 - the post-FMS source-overlap necessity gate as exact current-surface boundary
   only: it proves current source-only rows, FMS `C_HH` support, and
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an
@@ -122,6 +128,9 @@ Open imports after this block:
 - action-first O_H/C_sH/C_HH is not proof selectors until same-source EW/Higgs action, canonical O_H, source-Higgs rows, and Gram-purity certificate exist.
 - FMS composite `Phi^dagger Phi` expansion is not a proof selector until the
   same-surface EW/Higgs action and source-Higgs pole rows exist on PR230.
+- Higgs mass-source action bridge is not a proof selector until a same-surface
+  EW/Higgs action, canonical `O_H` certificate, nonzero `v` authority, LSZ
+  normalization, and source-Higgs pole rows exist on PR230.
 - Post-FMS `C_HH` support is not a source-overlap proof selector until a
   same-surface `Res C_sH` row, Gram-purity theorem, or physical-response
   bypass exists on PR230.

@@ -39,6 +39,7 @@ PARENTS = {
     "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+    "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
@@ -394,6 +395,23 @@ def main() -> int:
         )
         is True
     )
+    higgs_mass_source_action_bridge_not_closure = (
+        "Higgs mass-source action bridge"
+        in parent_statuses["higgs_mass_source_action_bridge"]
+        and certs["higgs_mass_source_action_bridge"].get("proposal_allowed") is False
+        and certs["higgs_mass_source_action_bridge"].get(
+            "higgs_mass_source_action_bridge_passed"
+        )
+        is True
+        and certs["higgs_mass_source_action_bridge"].get(
+            "same_surface_ew_action_certificate_absent"
+        )
+        is True
+        and certs["higgs_mass_source_action_bridge"].get("canonical_oh_absent")
+        is True
+        and certs["higgs_mass_source_action_bridge"].get("source_higgs_rows_absent")
+        is True
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in parent_statuses["post_fms_source_overlap_necessity_gate"]
@@ -562,6 +580,7 @@ def main() -> int:
     report("degree-one-higgs-action-premise-not-derived", degree_one_higgs_action_premise_not_derived, parent_statuses["degree_one_higgs_action_premise_gate"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
+    report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
     report("post-fms-source-overlap-necessity-blocks-current-inference", post_fms_source_overlap_necessity_blocks_current_inference, parent_statuses["post_fms_source_overlap_necessity_gate"])
     report("source-higgs-overlap-kappa-contract-not-closure", source_higgs_overlap_kappa_contract_not_closure, parent_statuses["source_higgs_overlap_kappa_contract"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
@@ -714,6 +733,7 @@ def main() -> int:
             "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
+            "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,
             "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,

@@ -179,6 +179,9 @@ def main() -> int:
         "fms_composite_oh_conditional_theorem": load(
             "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
         ),
+        "higgs_mass_source_action_bridge": load(
+            "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -1016,6 +1019,20 @@ def main() -> int:
         )
         is False,
         fms_composite.get("actual_current_surface_status"),
+    )
+    mass_source_bridge = certificates["higgs_mass_source_action_bridge"]
+    report(
+        "higgs-mass-source-action-bridge-support-not-proof",
+        "Higgs mass-source action bridge"
+        in str(mass_source_bridge.get("actual_current_surface_status"))
+        and mass_source_bridge.get("proposal_allowed") is False
+        and mass_source_bridge.get("higgs_mass_source_action_bridge_passed") is True
+        and mass_source_bridge.get("same_surface_ew_action_certificate_absent") is True
+        and mass_source_bridge.get("canonical_oh_absent") is True
+        and mass_source_bridge.get("source_higgs_rows_absent") is True
+        and mass_source_bridge.get("forbidden_firewall", {}).get("set_kappa_s_equal_one")
+        is False,
+        mass_source_bridge.get("actual_current_surface_status"),
     )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(
