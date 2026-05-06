@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 61 |
+| **retained** | 62 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 794 |
-| audit_in_progress | 3 |
+| audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 3 |
-| `audited_clean` | 375 |
+| `audit_in_progress` | 2 |
+| `audited_clean` | 376 |
 | `audited_conditional` | 459 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
@@ -113,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `second_grown_family_complex_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -418,6 +417,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-gpt-5 | A | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -12496,6 +12496,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** At NMAX = 4 and n_grid = 80, the runner computes a finite fusion table on 0 <= p,q <= 4 using numerical Cartan-torus character orthogonality; the returned table has non-negative integer entries after rounding, maximum integer residual < 3.6e-15, and passes V1-V9 plus the numerical-noise check.  _(class `A`)_
 - **chain closes:** True — The source note scopes the claim to the finite default runner surface and explicitly excludes Wilson-plaquette, lattice-gauge, and bridge-parent claims. The runner completed cleanly and reproduced the note's stated PASS=10 FAIL=0 summary with the same residual and table size.
 - **rationale:** The bounded theorem is supported by the completed runner output: NMAX=4, n_grid=80, table shape (25,25,25), 3049 nonzero entries, max integer residual 3.553e-15, and SUMMARY: BOUNDED PASS=10 FAIL=0. The validation suite checks standard SU(3) landmark decompositions, commutativity, singlet selection, dimension overflow, crossing, Pieri, and rounding noise without importing the deferred gauge-scalar bridge. Residual risk is limited to the declared finite numerical surface: this audit does not certify arbitrary-representation fusion, Wigner intertwiners, Haar-integral PRs, cube Perron computation, or any Wilson-plaquette bridge claim.
+- **auditor confidence:** high
+
+### `su3_wigner_intertwiner_block1_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Self-contained finite-dimensional SU(3) adjoint tensor-product decomposition (1,1) tensor (1,1) = 1 + 8 + 8 + 10 + 10bar + 27, with explicit orthonormal CG blocks checked by the supplied runner.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-judicial-third-su3-wigner-intertwiner-block1-20260506`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** The runner constructs the Gell-Mann-basis adjoint generators, total quadratic/cubic Casimirs and exchange operator on C^8 tensor C^8, then diagonalizes and checks the resulting six block dimensions, orthonormality, and equivariance identities.  _(class `A`)_
+- **chain closes:** True — The rubric defines C narrowly as a first-principles compute from the CL(3) on Z^3 axiom plus accepted normalizations producing a number not present in any input. This packet is pure SU(3) finite-dimensional representation theory: the runner performs exact linear-algebra checks from standard SU(3) inputs rather than a CL(3)/Z^3 physical compute. The scoped theorem closes as an algebraic representation-theory construction with no direct dependencies or hidden physical bridge, so the first audit's clean verdict and A classification are ratified.
+- **rationale:** The rubric defines C narrowly as a first-principles compute from the CL(3) on Z^3 axiom plus accepted normalizations producing a number not present in any input. This packet is pure SU(3) finite-dimensional representation theory: the runner performs exact linear-algebra checks from standard SU(3) inputs rather than a CL(3)/Z^3 physical compute. The scoped theorem closes as an algebraic representation-theory construction with no direct dependencies or hidden physical bridge, so the first audit's clean verdict and A classification are ratified.
 - **auditor confidence:** high
 
 ### `su3_wilson_closed_form_fanout_theorem_note_2026-05-04`

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 524,
+    "critical": 523,
     "high": 15,
     "leaf": 181,
     "medium": 95
@@ -3345,24 +3345,26 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "cross_confirmation_disagreement",
-      "claim_id": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
-      "claim_scope": "Self-contained finite-dimensional SU(3) adjoint tensor-product decomposition of (1,1) tensor (1,1), as implemented from the Gell-Mann basis and checked by Casimir, exchange, orthonormality, and equivariance identities.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "disagreement",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.627,
-      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "audit_in_progress",
+      "cross_confirmation_status": null,
+      "deps": [
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.124,
+      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_su3_wigner_intertwiner_engine.py",
-      "transitive_descendants": 558
+      "runner_path": "scripts/frontier_su3_wigner_4fold_haar_projector.py",
+      "transitive_descendants": 557
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3715,29 +3717,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
       "transitive_descendants": 287
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.124,
-      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_su3_wigner_4fold_haar_projector.py",
-      "transitive_descendants": 557
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24953,5 +24932,5 @@
     }
   ],
   "ready_count": 19,
-  "total_pending": 815
+  "total_pending": 814
 }
