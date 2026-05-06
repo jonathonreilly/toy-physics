@@ -4021,6 +4021,38 @@
       "to": "dm_candidate_mass_window_theorem_note_2026-04-19"
     },
     {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "cl3_taste_generation_theorem"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "dm_su3_gauge_loop_obstruction_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29"
+    },
+    {
+      "from": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
       "from": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
       "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
     },
@@ -31925,6 +31957,26 @@
       "runner_path": "scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py",
       "title": "DM eta Freezeout-Bypass Quantitative Theorem"
     },
+    "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06": {
+      "claim_id": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem",
+        "su3_adjoint_casimir_theorem_note_2026-05-02",
+        "cl3_taste_generation_theorem",
+        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
+        "dm_su3_gauge_loop_obstruction_note_2026-04-25",
+        "higgs_mass_from_axiom_note",
+        "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+        "observable_principle_from_axiom_note"
+      ],
+      "note_hash": "1700ad77703cd661f33e073ced17389dc0660836161eec9862fd28bbff573bb5",
+      "path": "docs/DM_ETA_G1_CL3_ADJ3_EMBEDDING_ALGEBRAIC_SUPPORT_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_dm_eta_g1_cl3_adj3_embedding_2026_05_06.py",
+      "title": "DM-eta G1 Cl(3)/SU(3) Embedding Algebraic Support Theorem (V1)"
+    },
     "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29": {
       "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
       "claim_type_author_hint": null,
@@ -55863,7 +55915,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 74,
+      "bounded_theorem": 75,
       "meta": 10,
       "no_go": 12,
       "none": 1710,
@@ -55871,17 +55923,17 @@
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 571,
+      "bounded_theorem": 572,
       "meta": 10,
       "no_go": 116,
       "none": 456,
       "open_gate": 118,
       "positive_theorem": 634
     },
-    "edge_count": 6599,
-    "leaf_count": 550,
-    "node_count": 1905,
+    "edge_count": 6607,
+    "leaf_count": 549,
+    "node_count": 1906,
     "root_count": 866,
-    "runners_with_path": 1479
+    "runners_with_path": 1480
   }
 }

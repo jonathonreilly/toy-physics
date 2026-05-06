@@ -3048,6 +3048,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py"
     },
+    "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_dm_eta_g1_cl3_adj3_embedding_2026_05_06.py"
+    },
     "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29": {
       "assert_count": 0,
       "counts": {
@@ -22109,6 +22121,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_dm_eta_g1_cl3_adj3_embedding_2026_05_06.py": {
+      "assert_count": 1,
+      "claims": [
+        "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_dm_eta_nsites_v_structural_support_lift.py": {
       "assert_count": 0,
       "claims": [
@@ -38754,11 +38781,11 @@
       "A": 10,
       "B": 167,
       "C": 574,
-      "D": 211,
+      "D": 212,
       "none": 420
     },
-    "runners_classified": 1382,
+    "runners_classified": 1383,
     "runners_with_C": 683,
-    "runners_with_D": 344
+    "runners_with_D": 345
   }
 }
