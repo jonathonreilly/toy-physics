@@ -1,0 +1,34 @@
+loop: dm-wilson-schur-feshbach-boundary-20260506
+date: 2026-05-06
+branch: claude/science-fix/dm_wilson_direct_descendant_schur_feshbach_boundary_variatio-2235113f
+base: origin/main
+mode: run
+target: proposed_retained
+cycle: 1
+active_route: finite_dimensional_certificate_and_audit_hint
+hard_residual: >
+  Separate the closed finite-dimensional Schur-Feshbach theorem from the open
+  Wilson-native D_- / support-split / final selector gates.
+files_touched:
+  - docs/DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md
+  - scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py
+  - .claude/science/physics-loops/dm-wilson-schur-feshbach-boundary-20260506/
+claim_status:
+  claim_id: dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25
+  actual_current_surface_status: proposed_retained
+  conditional_surface_status: null
+  hypothetical_axiom_status: null
+  admitted_observation_status: null
+  audit_required_before_effective_retained: true
+  bare_retained_allowed: false
+open_imports: []
+verification_completed:
+  - python3 scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py
+  - python3 -m py_compile scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py
+  - bash docs/audit/scripts/run_pipeline.sh
+  - python3 docs/audit/scripts/audit_lint.py --strict
+  - git diff --check
+review_disposition: pass
+pr_status: not_opened
+next_exact_action: send audit-queue row to independent fresh-context audit with cross-confirmation
+stop_condition: named target packaged for independent re-audit

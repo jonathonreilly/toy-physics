@@ -5175,13 +5175,13 @@
     "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25": {
       "assert_count": 0,
       "counts": {
-        "A": 0,
+        "A": 21,
         "B": 4,
         "C": 0,
         "D": 0
       },
       "decoration_candidate": true,
-      "dominant_class": "B",
+      "dominant_class": "A",
       "runner": "scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py"
     },
     "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19": {
@@ -24699,13 +24699,13 @@
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25"
       ],
       "counts": {
-        "A": 0,
+        "A": 21,
         "B": 4,
         "C": 0,
         "D": 0
       },
       "decoration_candidate": true,
-      "dominant_class": "B",
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/frontier_dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_2026_04_19.py": {
@@ -38724,8 +38724,8 @@
   "stats": {
     "decoration_candidates": 117,
     "dominant_class_distribution": {
-      "A": 10,
-      "B": 166,
+      "A": 11,
+      "B": 165,
       "C": 574,
       "D": 211,
       "none": 420
