@@ -131,6 +131,9 @@ def main() -> int:
         "taste_condensate_oh_bridge_audit": load(
             "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
         ),
+        "oh_bridge_candidate_portfolio": load(
+            "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -682,6 +685,16 @@ def main() -> int:
         == 0.0,
         taste_bridge.get("actual_current_surface_status"),
     )
+    candidate_portfolio = certificates["oh_bridge_candidate_portfolio"]
+    report(
+        "oh-bridge-first-principles-candidate-portfolio-open",
+        "first-principles O_H bridge positive-candidate portfolio"
+        in str(candidate_portfolio.get("actual_current_surface_status"))
+        and candidate_portfolio.get("proposal_allowed") is False
+        and candidate_portfolio.get("candidate_portfolio_passed") is True
+        and candidate_portfolio.get("candidate_count") == 5,
+        candidate_portfolio.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -777,7 +790,10 @@ def main() -> int:
             "FH/LSZ source is the uniform additive mass source and has zero "
             "projection onto that taste-axis span.  That stack cannot be used "
             "as O_H authority until a source-coordinate transport certificate "
-            "or C_sH/C_HH rows exist.  Positive closure still requires "
+            "or C_sH/C_HH rows exist.  The first-principles O_H bridge "
+            "candidate portfolio keeps five positive candidates open while "
+            "recording that no candidate currently supplies closure authority.  "
+            "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
         ),

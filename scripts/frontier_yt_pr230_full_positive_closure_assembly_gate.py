@@ -89,6 +89,7 @@ PARENTS = {
     "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
     "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+    "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -457,6 +458,18 @@ def main() -> int:
             "uniform_source_relative_projection_onto_taste_axis_span"
         )
         == 0.0
+    )
+    oh_bridge_candidate_portfolio_open = (
+        "first-principles O_H bridge positive-candidate portfolio"
+        in statuses["pr230_oh_bridge_candidate_portfolio"]
+        and certs["pr230_oh_bridge_candidate_portfolio"].get("proposal_allowed")
+        is False
+        and certs["pr230_oh_bridge_candidate_portfolio"].get(
+            "candidate_portfolio_passed"
+        )
+        is True
+        and certs["pr230_oh_bridge_candidate_portfolio"].get("candidate_count")
+        == 5
     )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
@@ -1058,6 +1071,11 @@ def main() -> int:
         "taste-condensate-oh-bridge-blocks-current-shortcut",
         taste_condensate_oh_bridge_blocks_shortcut,
         statuses["pr230_taste_condensate_oh_bridge_audit"],
+    )
+    report(
+        "oh-bridge-first-principles-candidate-portfolio-open",
+        oh_bridge_candidate_portfolio_open,
+        statuses["pr230_oh_bridge_candidate_portfolio"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",
@@ -1856,6 +1874,10 @@ def main() -> int:
             "orthogonal to the trace-zero taste-axis Higgs operators, so that "
             "stack is not an O_H bridge without a new source-coordinate "
             "transport theorem or production C_sH/C_HH rows."
+            " The first-principles O_H bridge candidate portfolio now ranks "
+            "the surviving source-transport, action-first O_H, W/Z response, "
+            "Schur-row, and neutral-primitive routes as open positive "
+            "candidates; it is not closure authority."
             " The cycle-8 current-surface exhaustion gate now records that no "
             "hidden non-chunk shortcut remains executable without one of the "
             "named future same-surface rows, certificates, or theorems.  The "
@@ -1923,6 +1945,7 @@ def main() -> int:
         ),
         "negative_route_applicability_review_passed": negative_route_review_passed,
         "taste_condensate_oh_bridge_blocks_shortcut": taste_condensate_oh_bridge_blocks_shortcut,
+        "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "

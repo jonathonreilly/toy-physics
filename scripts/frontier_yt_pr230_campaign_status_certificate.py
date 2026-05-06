@@ -575,6 +575,9 @@ def main() -> int:
         "pr230_taste_condensate_oh_bridge_audit": load(
             "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
         ),
+        "pr230_oh_bridge_candidate_portfolio": load(
+            "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -2359,6 +2362,16 @@ def main() -> int:
         == 0.0,
         statuses["pr230_taste_condensate_oh_bridge_audit"],
     )
+    oh_bridge_candidate_portfolio = certificates["pr230_oh_bridge_candidate_portfolio"]
+    report(
+        "pr230-oh-bridge-first-principles-candidate-portfolio-open",
+        "first-principles O_H bridge positive-candidate portfolio"
+        in str(statuses["pr230_oh_bridge_candidate_portfolio"])
+        and oh_bridge_candidate_portfolio.get("proposal_allowed") is False
+        and oh_bridge_candidate_portfolio.get("candidate_portfolio_passed") is True
+        and oh_bridge_candidate_portfolio.get("candidate_count") == 5,
+        statuses["pr230_oh_bridge_candidate_portfolio"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -3948,7 +3961,13 @@ def main() -> int:
         "not a PR230 O_H bridge on the current source surface: the uniform "
         "mass source has zero projection onto the trace-zero taste-axis Higgs "
         "operators, so that route requires source-coordinate transport or "
-        "C_sH/C_HH pole rows before it can reopen."
+        "C_sH/C_HH pole rows before it can reopen.  The first-principles "
+        "O_H bridge candidate portfolio records the surviving positive "
+        "candidate routes and keeps them open without authorizing closure."
+    )
+    result["oh_bridge_candidate_portfolio_open"] = (
+        oh_bridge_candidate_portfolio.get("candidate_portfolio_passed") is True
+        and oh_bridge_candidate_portfolio.get("candidate_count") == 5
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",

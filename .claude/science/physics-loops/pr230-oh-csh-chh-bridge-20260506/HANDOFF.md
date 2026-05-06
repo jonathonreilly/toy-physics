@@ -6,9 +6,18 @@ orthogonal to the uniform mass source `I`, so the current PR230 scalar source
 cannot be identified with the taste-axis Higgs direction without a new
 source-coordinate transport theorem.
 
+The first-principles candidate portfolio is now packaged.  It preserves five
+surviving positive candidates: action-first `O_H`, source-coordinate
+transport, W/Z response, Schur rows, and neutral primitive/rank-one.
+
 Best next work:
 
-1. derive source-coordinate transport, or
-2. supply a certified same-surface `O_H` and run source-Higgs pole rows.
+1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
+   run source-Higgs pole rows;
+2. derive source-coordinate transport;
+3. derive a neutral off-diagonal generator / primitive-cone theorem;
+4. produce Schur A/B/C rows from a real neutral kernel basis;
+5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`
+   authority are also supplied.
 
 Do not close the larger source-Higgs route based on this block alone.

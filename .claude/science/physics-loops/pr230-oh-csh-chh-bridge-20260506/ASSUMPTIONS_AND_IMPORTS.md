@@ -26,4 +26,14 @@ Open imports after this block:
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;
 - production `C_sH/C_HH` pole residues;
+- W/Z response rows with strict non-observed `g2`, matched covariance, and
+  `delta_perp` authority;
+- Schur `A/B/C` rows from a real neutral scalar kernel basis;
+- neutral primitive-cone / off-diagonal-generator theorem;
 - scalar-LSZ, FV/IR, and matching gates.
+
+Negative-route interpretation:
+
+- current negative artifacts block shortcuts on the current surface;
+- they do not block first-principles derivation after a named same-surface row,
+  certificate, or theorem is supplied.

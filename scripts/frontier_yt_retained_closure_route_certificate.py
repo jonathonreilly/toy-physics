@@ -146,6 +146,7 @@ def main() -> int:
         "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
         "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
         "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+        "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1133,6 +1134,24 @@ def main() -> int:
             "algebra", {}
         ).get("uniform_source_relative_projection_onto_taste_axis_span")
         == 0.0
+    )
+    oh_bridge_candidate_portfolio_open = (
+        "first-principles O_H bridge positive-candidate portfolio"
+        in certificates["pr230_oh_bridge_candidate_portfolio"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_oh_bridge_candidate_portfolio"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_oh_bridge_candidate_portfolio"].get(
+            "candidate_portfolio_passed"
+        )
+        is True
+        and certificates["pr230_oh_bridge_candidate_portfolio"].get(
+            "candidate_count"
+        )
+        == 5
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"
@@ -3417,6 +3436,13 @@ def main() -> int:
         ),
     )
     report(
+        "oh-bridge-first-principles-candidate-portfolio-open",
+        oh_bridge_candidate_portfolio_open,
+        certificates["pr230_oh_bridge_candidate_portfolio"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
         derived_bridge_rank_one_closure_attempt_blocks,
         certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
@@ -4563,6 +4589,10 @@ def main() -> int:
             "projection onto those axes.  It is framework-native context, but "
             "not PR230 O_H authority without source-coordinate transport or "
             "C_sH/C_HH pole rows.  "
+            "The first-principles O_H bridge candidate portfolio ranks the "
+            "surviving source-transport, action-first O_H, W/Z response, "
+            "Schur-row, and neutral-primitive routes as open positive "
+            "candidates; it is route selection, not retained closure.  "
             "The source-Higgs harness absence guard now records missing "
             "O_H/C_sH/C_HH rows directly in future production certificates; "
             "that guard is an instrumentation firewall, not evidence.  "
@@ -4717,6 +4747,7 @@ def main() -> int:
             "runner-cache surfaces and still supplies no listed PR230 "
             "same-surface artifact."
         ),
+        "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

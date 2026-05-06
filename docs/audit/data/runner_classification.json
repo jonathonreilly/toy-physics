@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T10:50:42.266807+00:00",
+  "generated_at": "2026-05-06T10:58:29.797631+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16896,6 +16896,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py"
+    },
+    "yt_pr230_oh_bridge_first_principles_candidate_portfolio_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py"
     },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "assert_count": 1,
@@ -34821,6 +34833,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_oh_bridge_first_principles_candidate_portfolio_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -40153,11 +40180,11 @@
       "A": 9,
       "B": 225,
       "C": 502,
-      "D": 301,
+      "D": 302,
       "none": 404
     },
-    "runners_classified": 1441,
-    "runners_with_C": 754,
-    "runners_with_D": 535
+    "runners_classified": 1442,
+    "runners_with_C": 755,
+    "runners_with_D": 536
   }
 }
