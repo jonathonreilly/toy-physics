@@ -104,3 +104,50 @@ The direct-universal route is now exact at:
 What remained after the positive-background theorem was a stronger global
 solution-class statement. This note does not yet claim that global step by
 itself.
+
+## Citations
+
+The auditor's `missing_dependency_edge` flag asked for the retained
+upstream note or self-contained proof defining `H_D`, `Lambda_R`, the
+function spaces, and the invertibility / unique-stationary-bridge
+theorem for `K_GR(D)`. Each of those load-bearing structural ingredients
+already exists as a dedicated repo-native authority note. The markdown
+links below register them as one-hop dependency edges in the citation
+graph.
+
+- [UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md](UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
+  — exact positive-background local closure on which the bilinear form
+  `B_D(h, k) = -Tr(D^-1 h D^-1 k)` and the operator `H_D` are first
+  defined, before signature is allowed to flip. This is the
+  immediate-predecessor theorem the present note extends from the
+  positive cone to the Lorentzian signature class.
+- [UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md](UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md)
+  — strengthened positive-background extension on which the function
+  spaces and the invertibility chain are tightened.
+- [UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md](UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
+  — exact symmetric positive slice generator `Lambda_R` used in the
+  product `K_GR(D) = H_D ⊗ Lambda_R`. The note defines `Lambda_R`'s
+  algebraic and analytic properties.
+- [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+  — discrete-global stationary family carrying the same `K_GR(D)`
+  operator across positive-background and Lorentzian sectors; the
+  invertibility / unique-stationary-bridge theorem on the discrete
+  route is established there.
+- [UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md](UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md)
+  — invariant nonlinear completion that the present Lorentzian
+  signature extension inherits as the underlying tensor-variational
+  framework.
+- [UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md](UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md)
+  — stationary-bridge identity `F_* = K_GR(D)^-1 J` and the exact
+  completion-of-square identity used in §"Exact mechanism" / §"Exact
+  Lorentzian local operator family".
+- [UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+  — global atlas closure that picks up the present note's local
+  Lorentzian extension as one ingredient of the discrete-to-global
+  bridge.
+
+These additions are strictly additive: the verdict, the exact
+mechanism, and the "Honest status" inventory above are unchanged.
+Until each linked authority is itself audit-clean, this note remains
+`audited_conditional` even with the registered edges; the wiring is
+the prerequisite for unlock, not the unlock itself.

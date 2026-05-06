@@ -18,17 +18,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 62 |
+| **retained** | 61 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 771 |
+| unaudited | 773 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 473 |
+| ~~audited_conditional~~ | 472 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 378 |
-| `audited_conditional` | 473 |
+| `audited_clean` | 377 |
+| `audited_conditional` | 472 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 817 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
@@ -55,14 +55,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 56 |
 | `no_go` | 186 |
 | `open_gate` | 116 |
-| `positive_theorem` | 789 |
+| `positive_theorem` | 788 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 943 |
+| `critical` | 944 |
 | `high` | 26 |
 | `medium` | 175 |
-| `leaf` | 652 |
+| `leaf` | 651 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 171
@@ -464,7 +465,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_block_normalization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_canonical_projector_connection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_complement_canonical_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
-| `universal_gr_constraint_action_stationarity_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_lambda_bypass_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-fresh-agent | A | - |
 | `valley_linear_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -930,7 +930,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `universal_gr_lorentzian_signature_extension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_abstract_gaussian_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -13678,19 +13677,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note is correctly framed as bounded: it does not claim a canonical complement section, and its strongest statement is the negative orbit-canonical obstruction. The runner passes the relevant algebraic invariance/orbit checks, but five text-presence checks use a hardcoded external ROOT and were treated only as ancillary input verification, not as authority over this checkout. No hidden physical comparator, tuned numerical match, or definition-as-derivation is load-bearing.
 - **auditor confidence:** medium
 
-### `universal_gr_constraint_action_stationarity_note`
-
-- **Note:** [`UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md`](../../docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-current-restricted-audit-f161`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The candidate is orbit-flat on the valid 3+1 polarization-frame orbit: complement coefficients move, but action-like invariants do not pick a unique section.  _(class `A`)_
-- **chain closes:** True — The local negative claim closes: an SO(3)-orbit-flat quadratic action/constraint cannot canonically select a complement-frame section when the complement coordinates still vary along that orbit.
-- **rationale:** The claim is a support/no-go result about failure of action stationarity to resolve the complement-frame ambiguity, not a positive GR closure theorem. The source note's load-bearing step is an algebraic orbit-flatness argument, and the runner's current algebraic checks support that step. The single current-checkout runner failure is tied to a stale blocker-note text check, not to the load-bearing stationarity computation.
-- **auditor confidence:** high
-
 ### `universal_gr_discrete_global_closure_note`
 
 - **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
@@ -13780,19 +13766,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Because each local Lorentzian operator is nondegenerate, local action densities agree exactly on overlaps, and the source/field pairing transforms compatibly, the local stationary solutions transform compatibly across the atlas into one global stationary section.  _(class `A`)_
 - **chain closes:** False — The congruence invariance of B_D is an algebraic identity, but the global theorem also imports unsupported premises: nondegeneracy of each K_GR(D), existence/compatibility of the finite atlas, compatible source/field pairing, and a bridge from overlap covariance to unique global stationary section.
 - **rationale:** No cited authorities or runner are provided, so the audit can only assess the note text. The displayed trace identity is a plausible class A algebraic covariance check, but the claimed unique global stationary section depends on additional global gluing and nondegeneracy assumptions not closed inside the restricted packet. The note is marked support and does not supply an independent retained-grade theorem establishing those premises.
-- **auditor confidence:** high
-
-### `universal_gr_lorentzian_signature_extension_note`
-
-- **Note:** [`UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the note's local algebraic extension from positive symmetric backgrounds to nondegenerate Lorentzian 3+1 backgrounds using only the provided source note and no cited authorities.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-universal_gr_lorentzian_-067`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Because B_D is defined for invertible Lorentzian D and remains nondegenerate, K_GR(D)=H_D ⊗ Lambda_R remains exactly nondegenerate, giving F_* = K_GR(D)^-1 J uniquely.  _(class `A`)_
-- **chain closes:** False — The algebraic nondegeneracy of B_D for invertible D is plausible as a standard identity, but the conclusion imports unprovided structure: the exact operator H_D, the slice generator Lambda_R, the action space, boundary-source pairing, and invertibility needed for K_GR(D)^-1 J. With no cited authorities, those ingredients are not closed by the restricted packet.
-- **rationale:** The load-bearing step is an algebraic extension, not a first-principles compute, and there is no runner or cited authority packet establishing the surrounding operator/action framework. The note explicitly relies on objects said to be already present on the branch, especially Lambda_R and the direct-universal local operator construction, but those inputs are absent here. Therefore the Lorentzian nondegeneracy claim may be conditionally salvageable, but it does not close from the restricted inputs alone.
 - **auditor confidence:** high
 
 ### `universal_gr_polarization_frame_bundle_attempt`

@@ -13753,6 +13753,34 @@
       "to": "universal_gr_discrete_global_closure_note"
     },
     {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_positive_background_local_closure_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_positive_background_extension_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_isotropic_glue_operator_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_invariant_nonlinear_completion_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_constraint_action_stationarity_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
       "from": "universal_gr_positive_background_extension_note",
       "to": "universal_gr_positive_background_local_closure_note"
     },
@@ -51502,8 +51530,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "62779cce3628d562890e032d44dbd7265700ca2801f3bd6d3c2d2c19c89900b6",
+      "deps": [
+        "universal_gr_positive_background_local_closure_note",
+        "universal_gr_positive_background_extension_note",
+        "universal_gr_isotropic_glue_operator_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_gr_invariant_nonlinear_completion_note",
+        "universal_gr_constraint_action_stationarity_note",
+        "universal_gr_lorentzian_global_atlas_closure_note"
+      ],
+      "note_hash": "f07bfdfcb71d8ef72ceb15d4df4397e2166eb241368ea1eb0652db1196f0e62a",
       "path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`"
@@ -55368,7 +55404,6 @@
     "universal_gr_isotropic_schur_localization_note",
     "universal_gr_lambda_bypass_note",
     "universal_gr_lorentzian_global_atlas_closure_note",
-    "universal_gr_lorentzian_signature_extension_note",
     "universal_gr_polarization_frame_bundle_attempt",
     "universal_gr_polarization_frame_bundle_blocker_note",
     "universal_gr_supermetric_normal_form_note",
@@ -55464,10 +55499,10 @@
       "open_gate": 118,
       "positive_theorem": 636
     },
-    "edge_count": 6521,
-    "leaf_count": 553,
+    "edge_count": 6528,
+    "leaf_count": 552,
     "node_count": 1903,
-    "root_count": 876,
+    "root_count": 875,
     "runners_with_path": 1477
   }
 }
