@@ -16284,6 +16284,18 @@
       "dominant_class": "C",
       "runner": "scripts/universal_gr_positive_background_local_closure.py"
     },
+    "universal_gr_supermetric_normal_form_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_universal_gr_supermetric_normal_form.py"
+    },
     "universal_gr_tensor_quotient_uniqueness_note": {
       "assert_count": 1,
       "counts": {
@@ -33334,6 +33346,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_universal_gr_supermetric_normal_form.py": {
+      "assert_count": 1,
+      "claims": [
+        "universal_gr_supermetric_normal_form_note"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_universal_gr_tensor_action_blocker.py": {
       "assert_count": 1,
       "claims": [
@@ -38871,15 +38898,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 119,
+    "decoration_candidates": 120,
     "dominant_class_distribution": {
-      "A": 13,
+      "A": 14,
       "B": 166,
       "C": 574,
       "D": 212,
       "none": 422
     },
-    "runners_classified": 1387,
+    "runners_classified": 1388,
     "runners_with_C": 684,
     "runners_with_D": 345
   }

@@ -52069,13 +52069,13 @@
     },
     "universal_gr_supermetric_normal_form_note": {
       "claim_id": "universal_gr_supermetric_normal_form_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f91bf6570d524c0ae7d8cc0cb9f0f745fd48b74d26f5606e548743f2da33caa1",
+      "note_hash": "f4c65aef15292be0fda5b7a766fc29c0a5f36bc4df23c23f56a3494dd494405e",
       "path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_supermetric_normal_form.py",
       "title": "Universal GR Supermetric Normal Form on `PL S^3 x R`"
     },
     "universal_gr_tensor_action_blocker_note": {
@@ -55980,9 +55980,9 @@
       "bounded_theorem": 78,
       "meta": 10,
       "no_go": 14,
-      "none": 1705,
+      "none": 1704,
       "open_gate": 10,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 577,
@@ -55996,6 +55996,6 @@
     "leaf_count": 550,
     "node_count": 1907,
     "root_count": 864,
-    "runners_with_path": 1483
+    "runners_with_path": 1484
   }
 }

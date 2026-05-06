@@ -1,0 +1,22 @@
+[EXACT] PASS: the log-det second variation derives the universal Hessian formula
+    sympy exact: d^2 log det(D+s h+t k)/ds dt at zero equals -Tr(D^-1 h D^-1 k)
+[EXACT] PASS: the universal Hessian equals the inverse-metric contraction on the invariant background
+    max Hessian-vs-supermetric error=4.163e-17
+[EXACT] PASS: the canonical Gram matrix has the exact symbolic lapse/shift/trace/shear weights
+    sympy exact: diag(-a^-2, -(ab)^-1 x3, -b^-2 x6) with zero off-diagonal entries
+[EXACT] PASS: the canonical basis Gram matrix is exactly diagonal with the inverse-metric weights
+    max offdiag/diag error=(2.220e-16, 2.220e-16)
+UNIVERSAL GR SUPERMETRIC NORMAL FORM
+==============================================================================
+max Hessian-vs-supermetric error = 4.163e-17
+max Gram diagonalization error = 2.220e-16
+max coefficient error = 2.220e-16
+
+Boundary:
+Given the displayed log-det generator and invariant background, the local Hessian is the inverse-metric supermetric normal form on symmetric `3+1` perturbations.
+This does not prove the scalar-generator selection premises or the exact Einstein/Regge dynamical gluing law.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=4 FAIL=0 TOTAL=4
