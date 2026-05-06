@@ -22,7 +22,9 @@ The exact answer from the current branch is:
 
 More precisely:
 
-  - the bivectors B_a = -(i/2) eps_{abc} Gamma_b Gamma_c form exact su(2)
+  - the normalized bivectors
+        B_a = -(i/4) sum_{bc} eps_{abc} Gamma_b Gamma_c
+      equivalently B_1=-(i/2)Gamma_2 Gamma_3 cyclically, form exact su(2)
   - the spatial Gamma_i family on C^8 transforms as a vector:
         [B_a, Gamma_b] = i eps_{abc} Gamma_c
         sum_a [B_a,[B_a,Gamma_b]] = 2 Gamma_b
@@ -90,21 +92,26 @@ G2 = kron3(SY, SX, I2)
 G3 = kron3(SY, SY, SX)
 G_SPATIAL_8 = [G1, G2, G3]
 
-B1 = -0.5j * G2 @ G3
-B2 = -0.5j * G3 @ G1
-B3 = -0.5j * G1 @ G2
-B_8 = [B1, B2, B3]
-
 G0_4D = kron4(SZ, SZ, SZ, SX)
 G1_4D = kron4(SX, I2, I2, I2)
 G2_4D = kron4(SZ, SX, I2, I2)
 G3_4D = kron4(SZ, SZ, SX, I2)
 G_SPATIAL_16 = [G1_4D, G2_4D, G3_4D]
 
-B1_4D = -0.5j * G2_4D @ G3_4D
-B2_4D = -0.5j * G3_4D @ G1_4D
-B3_4D = -0.5j * G1_4D @ G2_4D
-B_16 = [B1_4D, B2_4D, B3_4D]
+
+def weak_bivectors(gammas: list[np.ndarray]) -> list[np.ndarray]:
+    return [
+        sum(
+            -0.25j * eps(a, b, c) * gammas[b - 1] @ gammas[c - 1]
+            for b in range(1, 4)
+            for c in range(1, 4)
+        )
+        for a in range(1, 4)
+    ]
+
+
+B_8 = weak_bivectors(G_SPATIAL_8)
+B_16 = weak_bivectors(G_SPATIAL_16)
 
 GAMMA5_4D = G0_4D @ G1_4D @ G2_4D @ G3_4D
 P_L = (I16 + GAMMA5_4D) / 2.0
@@ -118,6 +125,16 @@ def vector_error(generators: list[np.ndarray], family: list[np.ndarray]) -> floa
         for b, X in enumerate(family, start=1):
             target = sum(1j * eps(a, b, c) * family[c - 1] for c in range(1, 4))
             err = np.linalg.norm(B @ X - X @ B - target)
+            worst = max(worst, float(err))
+    return worst
+
+
+def clifford_error(family: list[np.ndarray], identity: np.ndarray) -> float:
+    worst = 0.0
+    for i, Gi in enumerate(family):
+        for j, Gj in enumerate(family):
+            target = 2.0 * identity if i == j else np.zeros_like(identity)
+            err = np.linalg.norm(Gi @ Gj + Gj @ Gi - target)
             worst = max(worst, float(err))
     return worst
 
@@ -144,6 +161,27 @@ def main() -> int:
     print("=" * 78)
     print("NEUTRINO WEAK VECTOR THEOREM")
     print("=" * 78)
+    print()
+
+    print("Part 0: Explicit Clifford and chirality packet")
+    cliff_8 = clifford_error(G_SPATIAL_8, I8)
+    cliff_16 = clifford_error(G_SPATIAL_16, I16)
+    gamma5_anticomm = max(float(np.linalg.norm(G @ GAMMA5_4D + GAMMA5_4D @ G)) for G in G_SPATIAL_16)
+    projector_err = max(
+        float(np.linalg.norm(P_L @ P_L - P_L)),
+        float(np.linalg.norm(P_R @ P_R - P_R)),
+        float(np.linalg.norm(P_L @ P_R)),
+        float(np.linalg.norm(P_L + P_R - I16)),
+    )
+    print(f"  max C^8 spatial Clifford error = {cliff_8:.3e}")
+    print(f"  max C^16 spatial Clifford error = {cliff_16:.3e}")
+    print(f"  max {{Gamma_i, gamma_5}} error = {gamma5_anticomm:.3e}")
+    print(f"  max chiral projector algebra error = {projector_err:.3e}")
+    print()
+    check("C^8 Gamma_i satisfy {Gamma_i,Gamma_j}=2 delta_ij", cliff_8 < 1e-12)
+    check("C^16 Gamma_i satisfy {Gamma_i,Gamma_j}=2 delta_ij", cliff_16 < 1e-12)
+    check("gamma_5 anticommutes with each spatial Gamma_i", gamma5_anticomm < 1e-12)
+    check("P_L and P_R are complementary orthogonal projectors", projector_err < 1e-12)
     print()
 
     print("Part 1: Derived weak SU(2) on the taste space")
@@ -229,7 +267,7 @@ def main() -> int:
     print("  3. But covariance alone is homogeneous. Rescaled families lambda Y_i")
     print("     satisfy the same weak-vector equations, so the representation law")
     print("     does not by itself select the physical base normalization.")
-    print("  4. The later bosonic-normalization theorem closes that base step.")
+    print("  4. Base normalization is a separate input outside this runner.")
     print("     What remains beyond this runner is the second-order suppression")
     print("     law, not weak-vector classification.")
     print()

@@ -33753,9 +33753,9 @@
       "claim_id": "dm_neutrino_weak_vector_theorem_note_2026-04-15",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "51c11b91609e462a2844b7b177ecf106ee354f825ddabc2a7992d7a387f29b32",
+      "note_hash": "a82e12b585635fa72c30a1682e90b696e962b2f36748096c0d7dac9a67aac58a",
       "path": "docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md",
       "runner_path": null,
       "title": "DM Neutrino Weak Vector Theorem"
@@ -55938,12 +55938,12 @@
       "positive_theorem": 89
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 575,
+      "bounded_theorem": 576,
       "meta": 10,
       "no_go": 118,
       "none": 457,
       "open_gate": 113,
-      "positive_theorem": 633
+      "positive_theorem": 632
     },
     "edge_count": 6610,
     "leaf_count": 549,

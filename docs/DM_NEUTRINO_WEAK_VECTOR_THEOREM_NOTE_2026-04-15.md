@@ -1,6 +1,7 @@
 # DM Neutrino Weak Vector Theorem
 
-**Status:** support - structural or confirmatory support note
+**Status:** bounded support theorem; audit status set only by the independent
+audit lane
 **Date:** 2026-04-15  
 **Branch:** `codex/dm-across-the-line`
 
@@ -8,7 +9,7 @@
 
 ## Status
 
-**EXACT representation theorem; base normalization closed elsewhere**
+**Exact representation theorem; base normalization cited separately**
 
 The branch now closes one more exact part of the neutrino bridge:
 
@@ -19,10 +20,12 @@ The branch now closes one more exact part of the neutrino bridge:
 This is real progress. It upgrades the bridge family from "an axis-picked
 operator that seems plausible" to "a theorem-grade spin-1 weak multiplet."
 
-At the stage of this theorem alone, it still did **not** close the neutrino
+At the stage of this theorem alone, it still does **not** close the neutrino
 base coupling. The reason is sharp: the weak-vector covariance equations are
-homogeneous, so they do not fix the overall coefficient. The later
-bosonic-normalization theorem closes that base-normalization step separately.
+homogeneous, so they do not fix the overall coefficient. The separate
+bosonic-normalization row supplies a base-normalization input outside this
+claim; this note does not re-audit that input or the downstream second-order
+suppression law.
 
 ---
 
@@ -30,7 +33,9 @@ bosonic-normalization theorem closes that base-normalization step separately.
 
 Let
 
-- `B_a = -(i/2) eps_{abc} Gamma_b Gamma_c` be the derived weak bivectors
+- `B_a = -(i/4) sum_{m,n=1}^3 eps_{amn} Gamma_m Gamma_n` be the
+  normalized derived weak bivectors, equivalently
+  `B_1 = -(i/2) Gamma_2 Gamma_3` and cyclic permutations
 - `gamma_5` be the `3+1` chirality operator on `C^16`
 - `P_L = (1 + gamma_5)/2`, `P_R = (1 - gamma_5)/2`
 - `Y_i = P_R Gamma_i P_L`
@@ -61,6 +66,76 @@ axis choice; the full family `Y_i` is an exact weak-vector multiplet.
 
 ---
 
+## Restricted-Packet Algebra
+
+This note does not require an external authority for the load-bearing
+commutator. The exact packet used by the runner is:
+
+- `sigma_x = [[0,1],[1,0]]`
+- `sigma_y = [[0,-i],[i,0]]`
+- `sigma_z = [[1,0],[0,-1]]`
+
+On `C^8`, the spatial taste generators are
+
+- `Gamma_1 = sigma_x x I x I`
+- `Gamma_2 = sigma_y x sigma_x x I`
+- `Gamma_3 = sigma_y x sigma_y x sigma_x`
+
+On `C^16`, the bridge packet uses
+
+- `Gamma_0 = sigma_z x sigma_z x sigma_z x sigma_x`
+- `Gamma_1 = sigma_x x I x I x I`
+- `Gamma_2 = sigma_z x sigma_x x I x I`
+- `Gamma_3 = sigma_z x sigma_z x sigma_x x I`
+- `gamma_5 = Gamma_0 Gamma_1 Gamma_2 Gamma_3`
+- `P_L = (I + gamma_5)/2`, `P_R = (I - gamma_5)/2`
+
+These matrices obey the Clifford relations
+
+`Gamma_i Gamma_j + Gamma_j Gamma_i = 2 delta_ij I`
+
+for the spatial `Gamma_i`. The runner also checks that `gamma_5`
+anticommutes with each spatial `Gamma_i` and that `P_L`, `P_R` are
+complementary orthogonal projectors.
+
+The commutator identity then follows directly. For any spatial Clifford
+triple,
+
+`[Gamma_m Gamma_n, Gamma_b] = 2 delta_{nb} Gamma_m - 2 delta_{mb} Gamma_n`.
+
+Therefore
+
+`[B_a, Gamma_b]`
+
+`= -(i/4) sum_{m,n} eps_{amn} [Gamma_m Gamma_n, Gamma_b]`
+
+`= i sum_c eps_{abc} Gamma_c`.
+
+Because `gamma_5` anticommutes with each spatial `Gamma_i`, every even
+product `Gamma_m Gamma_n` commutes with `gamma_5`. Hence
+`[B_a, P_L] = [B_a, P_R] = 0`, and
+
+`[B_a, Y_b] = [B_a, P_R Gamma_b P_L]`
+
+`= P_R [B_a, Gamma_b] P_L`
+
+`= i sum_c eps_{abc} P_R Gamma_c P_L`
+
+`= i sum_c eps_{abc} Y_c`.
+
+The spin-1 Casimir follows by applying the same commutator twice:
+
+`sum_a [B_a,[B_a,Y_b]] = 2 Y_b`,
+
+using `sum_{a,c} eps_{abc} eps_{acd} = -2 delta_bd`. Trace orthogonality is
+the finite-matrix trace identity
+
+`Tr(Y_i^dag Y_j) = Tr(P_L Gamma_i Gamma_j P_L) = 8 delta_ij`,
+
+checked exactly by the paired runner on the explicit tensor-product matrices.
+
+---
+
 ## What This Actually Buys
 
 This theorem closes the representation content of the bridge family.
@@ -85,7 +160,7 @@ This matters because it removes one more possible harsh objection:
 > "Maybe `Gamma_1` is just a basis artifact and not a genuine weak-sector
 > operator family."
 
-That objection is now dead.
+That objection is no longer supported by this finite packet.
 
 ---
 
@@ -119,9 +194,9 @@ That equality would require an extra ingredient beyond covariance, for example:
 - or a theorem-grade Higgs / bridge field-normalization principle
 - or a stronger gauge-Higgs unification result than the branch currently has
 
-At the stage of this note, none of those existed on this branch yet. The later
-bosonic-normalization theorem supplies the field-normalization selector, but
-not the second-order suppression law.
+At the stage of this note, none of those are supplied here. The separate
+bosonic-normalization row supplies the field-normalization selector outside
+this claim, but not the second-order suppression law.
 
 ---
 
@@ -165,10 +240,18 @@ That is the right Nature-bar statement.
 
 Verified by:
 
-- [`scripts/frontier_dm_neutrino_weak_vector_theorem.py`](/Users/jonBridger/Toy%20Physics-dm/scripts/frontier_dm_neutrino_weak_vector_theorem.py)
+- [`scripts/frontier_dm_neutrino_weak_vector_theorem.py`](../scripts/frontier_dm_neutrino_weak_vector_theorem.py)
+- captured stdout:
+  [`outputs/frontier_dm_neutrino_weak_vector_theorem_2026-05-06.txt`](../outputs/frontier_dm_neutrino_weak_vector_theorem_2026-05-06.txt)
+
+Command:
+
+`python3 scripts/frontier_dm_neutrino_weak_vector_theorem.py`
 
 The runner checks:
 
+- explicit `C^8` and `C^16` Clifford relations
+- `gamma_5` chirality anticommutation and `P_L`, `P_R` projector algebra
 - exact `su(2)` closure of the weak bivectors
 - exact vector transformation of `Gamma_i`
 - exact vector transformation of `Y_i = P_R Gamma_i P_L`
@@ -176,4 +259,6 @@ The runner checks:
 - trace orthogonality of the bridge family
 - explicit rescaling invariance of the covariance equations
 
-All checks pass.
+Latest captured result:
+
+`RESULT: 18 PASS, 0 FAIL`

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 793 |
+| unaudited | 794 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 30 |
 | ~~audited_conditional~~ | 467 |
-| ~~audited_failed~~ | 13 |
+| ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,19 +41,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 374 |
 | `audited_conditional` | 467 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 57 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 30 |
-| `unaudited` | 842 |
+| `unaudited` | 843 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 644 |
+| `bounded_theorem` | 645 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 789 |
+| `positive_theorem` | 788 |
 
 | criticality | count |
 |---|---:|
@@ -968,7 +968,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | B | - |
-| `dm_neutrino_weak_vector_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `equivalence_principle_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -5211,19 +5210,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** **Script:** `scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py`  _(class `B`)_
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
-- **auditor confidence:** medium
-
-### `dm_neutrino_weak_vector_theorem_note_2026-04-15`
-
-- **Note:** [`DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the claimed exact weak-vector covariance, spin-1 Casimir, and trace orthogonality of the direct chiral bridge family from the definitions stated in the note only.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_neutrino_weak_vector_-015`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The chiral bridge family Y_i = P_R Gamma_i P_L obeys [B_a, Y_b] = i eps_{abc} Y_c under the derived weak bivectors.  _(class `A`)_
-- **chain closes:** False — The note asserts the Clifford/gamma algebra consequences but does not provide the Gamma_i defining relations, chirality commutation relations, runner output, or runner source needed to verify the algebra inside the restricted packet. The missing step is an explicit derivation or auditable computation of the commutator and trace identities from the stated axiom-level operator definitions.
-- **rationale:** The load-bearing step is an algebraic identity claim, not a renaming or numerical match. However, with no cited authorities, no runner stdout, and no runner source, the restricted packet contains only the theorem statement and a description of checks, not the checks themselves. Because the relevant operator algebra is not fully specified in the packet, the claimed exact weak-vector theorem does not close on its own terms in this audit.
 - **auditor confidence:** medium
 
 ### `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15`
