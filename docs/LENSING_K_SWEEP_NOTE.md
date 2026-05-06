@@ -79,7 +79,8 @@ The honest characterization is:
 ## Artifact chain
 
 - [`scripts/lensing_k_sweep.py`](../scripts/lensing_k_sweep.py)
-- [`logs/2026-04-09-lensing-k-sweep.txt`](../logs/2026-04-09-lensing-k-sweep.txt)
+- [`logs/runner-cache/lensing_k_sweep.txt`](../logs/runner-cache/lensing_k_sweep.txt)
+  (SHA-pinned audit-lane cache; see `docs/audit/RUNNER_CACHE_POLICY.md`)
 
 ## Bottom line
 
