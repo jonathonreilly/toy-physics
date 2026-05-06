@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 791 |
+| unaudited | 790 |
 | audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 460 |
+| ~~audited_conditional~~ | 461 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 460 |
+| `audited_conditional` | 461 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 839 |
+| `unaudited` | 838 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 641 |
 | `decoration` | 10 |
 | `meta` | 55 |
-| `no_go` | 186 |
+| `no_go` | 187 |
 | `open_gate` | 115 |
-| `positive_theorem` | 791 |
+| `positive_theorem` | 790 |
 
 | criticality | count |
 |---|---:|
@@ -914,6 +914,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
+| `universal_gr_constraint_action_stationarity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_gr_discrete_global_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -13467,6 +13468,26 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — For the bounded claim actually made, the algebraic checks support a canonical rank-2 Pi_A1 core, SO(3) closure on the complement, invariant A1 block data, and nontrivial orbit-valued complement response. This closes only as a current-atlas obstruction, not as an absolute no-go theorem against future added invariants.
 - **rationale:** The note is correctly framed as bounded: it does not claim a canonical complement section, and its strongest statement is the negative orbit-canonical obstruction. The runner passes the relevant algebraic invariance/orbit checks, but five text-presence checks use a hardcoded external ROOT and were treated only as ancillary input verification, not as authority over this checkout. No hidden physical comparator, tuned numerical match, or definition-as-derivation is load-bearing.
 - **auditor confidence:** medium
+
+### `universal_gr_constraint_action_stationarity_note`
+
+- **Note:** [`UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md`](../../docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go claim that constraint-style action stationarity for the A1-anchored quadratic candidate does not canonically select the E plus T1 complement frame on the PL S^3 x R universal route.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-gr-stationarity`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The runner samples valid SO(3) polarization-frame rotations and finds the A1 core and action-like energies orbit-flat while the complement coordinates move, so stationarity/minimization does not select a unique complement section.  _(class `B`)_
+- **chain closes:** False — The matching runner passes, but the ledger row has no runner path and no dependency edges. The runner imports several authority notes, including conditional and unaudited rows, so the no-go cannot be retained until those premises are wired and retained-grade or the claim is re-scoped to a standalone finite diagnostic.
+- **rationale:** Issue: the source states a runner-backed no-go for action-stationarity selection, and the matching runner passes, but the audit ledger row has no runner_path and no direct dependencies. The runner reads OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE, S3_ANOMALY_SPACETIME_LIFT_NOTE, UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE, UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE, UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE, UNIVERSAL_GR_CANONICAL_PROJECTOR_CONNECTION_NOTE, and UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE; several are conditional or unaudited. Why this blocks: the orbit-flat calculation is not an independent retained theorem if its scalar generator, 3+1 lift, tensor candidate, quotient uniqueness, A1 selector, and blocker premises are not wired and retained-grade. Repair target: wire scripts/frontier_universal_gr_constraint_action_stationarity.py as the runner, add the real dependency edges, audit or retain those dependency rows, then re-audit whether the runner proves a standalone no-go or only a diagnostic. Claim boundary until fixed: the row is runner-supported evidence that the sampled stationarity functional is orbit-flat and does not select a complement frame under the stated premises, not a retained no-go theorem for the universal GR route.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
+  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
+  - `UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md`
+  - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
+- **auditor confidence:** high
 
 ### `universal_gr_discrete_global_closure_note`
 

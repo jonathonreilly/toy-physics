@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_constraint_action_stationarity.py
+runner_sha256: 065f839f62a79c556fc0b623b4f5969b2e16c0f026fbff2ff8dae8711bb03cd5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+UNIVERSAL GR CONSTRAINT / ACTION-STATIONARITY AUDIT
+==============================================================================
+[PASS] scalar generator is exact
+    observable principle gives the exact scalar generator
+[PASS] 3+1 lift is exact
+    route-2 gives the exact PL S^3 x R scaffold
+[PASS] tensor candidate is exact as a construction
+    tensor-valued Hessian candidate is already built
+[PASS] quotient uniqueness is exact on the prototype
+    quotient-uniqueness note records the nondegenerate prototype kernel
+[PASS] A1 projector is exact and rank-2
+    A1 projector is already canonical on the invariant block
+[PASS] canonical projector note still leaves an SO(3) complement orbit
+    the complement still lives on the valid frame orbit
+[PASS] constraint-style action is orbit-flat
+    energy deltas = total 8.327e-17, core 2.776e-17, perp 8.327e-17
+[PASS] complement coordinates remain frame-dependent
+    coordinate deltas = total 1.021e+00, perp 1.021e+00
+[PASS] current blocker still records the curvature-localization boundary
+    blocker records the older frame-orbit boundary while preserving the curvature-localization caveat
+[PASS] new note records the constraint-style bypass question
+    new note states the exact bypass question and the orbit-flat result
+
+==============================================================================
+STATIONARITY RESULTS
+==============================================================================
+samples_checked          = 288
+max_total_delta          = 1.021410824854e+00
+max_core_delta           = 9.714451465470e-17
+max_perp_delta           = 1.021410824854e+00
+max_total_energy_delta   = 8.326672684689e-17
+max_core_energy_delta    = 2.775557561563e-17
+max_perp_energy_delta    = 8.326672684689e-17
+mean_total_norm          = 3.889226243272e-01
+mean_core_norm           = 2.581817867775e-01
+mean_perp_norm           = 2.540831507170e-01
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=10 FAIL=0 TOTAL=10
+Constraint-style / action-stationarity does not canonically select the complement frame. The A1 core is invariant, but the complement coefficients move on an orbit-flat SO(3) family, so canonical curvature localization still collapses onto the same complement-frame ambiguity.
+
+----- stderr -----
+
