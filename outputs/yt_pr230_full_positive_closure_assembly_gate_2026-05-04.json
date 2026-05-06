@@ -143,6 +143,7 @@
     "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
     "pr230_logdet_hessian_neutral_mixing_attempt": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
     "pr230_minimal_axioms_yukawa_summary_firewall": "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json",
+    "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "pr230_oh_source_higgs_authority_rescan_gate": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
     "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
     "pr230_scalar_lsz_carleman_tauberian_determinacy": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
@@ -255,6 +256,7 @@
     "pr230_l12_chunk_compute_status": "bounded-support / completed L12 same-source chunk compute status; physical y_t closure still open",
     "pr230_logdet_hessian_neutral_mixing_attempt": "exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge",
     "pr230_minimal_axioms_yukawa_summary_firewall": "exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority",
+    "pr230_negative_route_applicability_review": "exact support / selected PR230 negative-route applicability review passed",
     "pr230_oh_source_higgs_authority_rescan_gate": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
     "pr230_reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "pr230_scalar_lsz_carleman_tauberian_determinacy": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
@@ -297,7 +299,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 96,
+  "pass_count": 97,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {

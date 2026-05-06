@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_source_higgs_gram_purity_contract_witness_2026-05-03.json"
 
 PARENTS = {
+    "genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "gram_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
@@ -150,6 +151,18 @@ def main() -> int:
     proposal_allowed = [name for name, cert in parents.items() if cert.get("proposal_allowed") is True]
     evaluations = [evaluate(row) for row in candidate_rows()]
     expectations_met = all(row["expectation_met"] for row in evaluations)
+    genuine_source_pole_loaded = (
+        parents["genuine_source_pole_artifact_intake"].get(
+            "artifact_is_genuine_current_surface_support"
+        )
+        is True
+        and parents["genuine_source_pole_artifact_intake"].get("artifact_is_physics_closure")
+        is False
+        and parents["genuine_source_pole_artifact_intake"].get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
     pure_eval = evaluations[0]
     mixed_eval = evaluations[1]
     forbidden_eval = evaluations[2]
@@ -157,6 +170,11 @@ def main() -> int:
 
     report("parent-certificates-present", not missing_parents, f"missing={missing_parents}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
+    report(
+        "genuine-source-pole-artifact-loaded",
+        genuine_source_pole_loaded,
+        status(parents["genuine_source_pole_artifact_intake"]),
+    )
     report("postprocessor-current-surface-open", "awaiting production certificate" in status(parents["gram_postprocessor"]), status(parents["gram_postprocessor"]))
     report("rank-repair-current-rows-absent", "current rows absent" in status(parents["rank_repair"]), status(parents["rank_repair"]))
     report("builder-current-rows-absent", "rows absent" in status(parents["source_higgs_builder"]), status(parents["source_higgs_builder"]))
@@ -182,6 +200,7 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": "This is an in-memory contract witness, not production source-Higgs evidence.",
         "contract_witness_passed": expectations_met,
+        "genuine_source_pole_artifact_loaded": genuine_source_pole_loaded,
         "evaluations": evaluations,
         "parent_certificates": PARENTS,
         "strict_non_claims": [

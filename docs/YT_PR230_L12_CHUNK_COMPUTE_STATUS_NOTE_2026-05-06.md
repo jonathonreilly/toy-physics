@@ -51,3 +51,25 @@ are still:
 The runner does not use `H_unit`, `yt_ward_identity`, observed targets,
 `alpha_LM`, plaquette, or `u0`.  It does not define `y_t_bare` or set
 `kappa_s`, `c2`, `Z_match`, or `cos(theta)` to one.
+
+## Verification
+
+```bash
+python3 scripts/frontier_yt_pr230_l12_chunk_compute_status.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_negative_route_applicability_review.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=42 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=277 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=97 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=245 FAIL=0
+```

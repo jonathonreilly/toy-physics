@@ -87,6 +87,7 @@ PARENTS = {
     "pr230_minimal_axioms_yukawa_summary_firewall": "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json",
     "pr230_genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
+    "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -420,6 +421,24 @@ def main() -> int:
         and certs["pr230_l12_chunk_compute_status"].get(
             "strict_closure_blockers", {}
         ).get("canonical_oh_or_source_higgs_overlap_absent")
+        is True
+    )
+    negative_route_applicability_review_passed = (
+        "negative-route applicability review passed"
+        in statuses["pr230_negative_route_applicability_review"]
+        and certs["pr230_negative_route_applicability_review"].get("proposal_allowed")
+        is False
+        and certs["pr230_negative_route_applicability_review"].get(
+            "negative_results_are_current_surface_blockers_only"
+        )
+        is True
+        and certs["pr230_negative_route_applicability_review"].get(
+            "future_reopen_paths_preserved"
+        )
+        is True
+        and certs["pr230_negative_route_applicability_review"].get(
+            "no_retained_negative_overclaim"
+        )
         is True
     )
     scalar_lsz_blocks = (
@@ -1011,6 +1030,11 @@ def main() -> int:
         "completed-l12-chunk-compute-status-support-only",
         l12_chunk_compute_support_only,
         statuses["pr230_l12_chunk_compute_status"],
+    )
+    report(
+        "negative-route-applicability-review-preserves-reopen",
+        negative_route_applicability_review_passed,
+        statuses["pr230_negative_route_applicability_review"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",

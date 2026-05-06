@@ -637,6 +637,18 @@ def main() -> int:
         is True,
         l12_compute_status.get("actual_current_surface_status"),
     )
+    negative_route_review = certificates["negative_route_applicability_review"]
+    report(
+        "negative-route-applicability-review-preserves-future-reopen",
+        "negative-route applicability review passed"
+        in str(negative_route_review.get("actual_current_surface_status"))
+        and negative_route_review.get("proposal_allowed") is False
+        and negative_route_review.get("negative_results_are_current_surface_blockers_only")
+        is True
+        and negative_route_review.get("future_reopen_paths_preserved") is True
+        and negative_route_review.get("no_retained_negative_overclaim") is True,
+        negative_route_review.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",

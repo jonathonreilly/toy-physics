@@ -21,11 +21,15 @@ It builds four in-memory candidates:
 
 The postprocessor accepts only the first in-memory candidate.
 
+The witness also now requires the PR230 genuine source-pole artifact intake:
+`O_sp` must be present as same-surface source-side support, must remain
+non-closing by itself, and must not be identified with canonical `O_H`.
+
 ## Validation
 
 ```text
 python3 scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
 ```
 
 The witness also confirms that the current surface remains open: the real

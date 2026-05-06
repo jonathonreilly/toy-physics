@@ -59,4 +59,16 @@ routes.  It is an overclaim firewall for the current route ledger.
 ```bash
 python3 scripts/frontier_yt_pr230_negative_route_applicability_review.py
 # SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=42 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=277 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=97 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=245 FAIL=0
 ```

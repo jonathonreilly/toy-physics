@@ -1,5 +1,43 @@
 # Claim Status Certificate
 
+Genuine source-pole artifact intake and L12 compute status:
+
+```text
+actual_current_surface_status: exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_l12_chunk_compute_status.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_negative_route_applicability_review.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=42 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=277 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=97 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=245 FAIL=0
+```
+
+`O_sp` is a genuine same-source source-side artifact and the completed L12
+streams are real finite-volume support.  Neither is a physical top-Yukawa
+closure artifact.  The branch still lacks `O_sp = O_H`, `C_spH/C_HH` pole rows,
+strict scalar-LSZ denominator/FV/IR authority, matching/running closure, and
+retained-route authorization.  The negative-route applicability review only
+certifies that selected no-go artifacts are scoped current-surface blockers
+with named reopen paths.  No effective-retention or proposed-retention wording
+is allowed.
+
 Complete-Bernstein scalar-LSZ inverse diagnostic:
 
 ```text

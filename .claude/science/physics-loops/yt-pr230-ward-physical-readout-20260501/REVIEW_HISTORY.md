@@ -1,5 +1,38 @@
 # Review History
 
+## 2026-05-06 - Block 240 Genuine Source-Pole Artifact Intake
+
+Review stance: exact source-side support / no closure promotion.
+
+- Added `scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py`.
+- Added
+  `docs/YT_PR230_GENUINE_SOURCE_POLE_ARTIFACT_INTAKE_NOTE_2026-05-06.md`
+  and
+  `outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json`.
+- Consumed the compatible completed-L12 status block:
+  `scripts/frontier_yt_pr230_l12_chunk_compute_status.py`,
+  `docs/YT_PR230_L12_CHUNK_COMPUTE_STATUS_NOTE_2026-05-06.md`, and
+  `outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json`.
+- Added the negative-route applicability review:
+  `scripts/frontier_yt_pr230_negative_route_applicability_review.py`,
+  `docs/YT_PR230_NEGATIVE_ROUTE_APPLICABILITY_REVIEW_NOTE_2026-05-06.md`,
+  and
+  `outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json`.
+- Wired both certificates into assumption/import stress, campaign status, full
+  assembly, and retained-route gates; also wired the negative-route review
+  into those aggregate gates.
+- Validation: source-pole intake `PASS=14 FAIL=0`, L12 compute status
+  `PASS=14 FAIL=0`, negative-route applicability review `PASS=9 FAIL=0`,
+  assumption stress `PASS=42 FAIL=0`, campaign status `PASS=277 FAIL=0`,
+  full assembly `PASS=97 FAIL=0`, retained-route `PASS=245 FAIL=0`.
+
+Disposition: `O_sp` is the genuine same-source source-pole artifact found in
+the cleanest contract.  It is not `O_H`, and completed L12 finite-shell support
+is not physical `y_t`.  No retained or `proposed_retained` wording is allowed.
+Selected no-go artifacts remain current-surface blockers only; they do not
+preclude future `O_H/C_sH/C_HH`, W/Z, Schur, scalar-LSZ, neutral-primitive, or
+matching/running artifacts.
+
 ## 2026-05-05 - Block 234 Complete-Bernstein Scalar-LSZ Inverse Diagnostic
 
 Review stance: scalar-LSZ model-class diagnostic / exact negative boundary.

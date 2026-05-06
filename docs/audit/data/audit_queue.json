@@ -5,7 +5,7 @@
     "leaf": 642,
     "medium": 301
   },
-  "generated_at": "2026-05-06T02:06:11.433178+00:00",
+  "generated_at": "2026-05-06T10:20:17.874516+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20456,7 +20456,7 @@
       "load_bearing_score": 0.0,
       "note_path": "docs/YT_PR230_NEGATIVE_ROUTE_APPLICABILITY_REVIEW_NOTE_2026-05-06.md",
       "ready": true,
-      "runner_path": "scripts/frontier_yt_pr230_negative_route_applicability_review.py",
+      "runner_path": null,
       "transitive_descendants": 0
     },
     {

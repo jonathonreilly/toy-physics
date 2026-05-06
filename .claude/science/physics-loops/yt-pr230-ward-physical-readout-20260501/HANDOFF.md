@@ -1,5 +1,48 @@
 # Handoff
 
+Latest checkpoint, 2026-05-06 genuine source-pole artifact intake and L12
+compute status:
+
+- Added `scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py`,
+  `docs/YT_PR230_GENUINE_SOURCE_POLE_ARTIFACT_INTAKE_NOTE_2026-05-06.md`,
+  and
+  `outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json`.
+- This identifies the one genuine current artifact inside the cleanest
+  source-Higgs contract: the Legendre/LSZ normalized source-pole operator
+  `O_sp`.  It is same-surface source-side support, invariant under source
+  rescaling and analytic contact terms, but it is not canonical `O_H`.
+- Also consumed the completed L12 compute-status block:
+  `scripts/frontier_yt_pr230_l12_chunk_compute_status.py`,
+  `docs/YT_PR230_L12_CHUNK_COMPUTE_STATUS_NOTE_2026-05-06.md`, and
+  `outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json`.
+  The four-mode/x16 and eight-mode/x8 streams are complete at `63/63` chunks
+  and `1008` saved configurations, with source responses agreeing at
+  `z=0.010398804406050486`.
+- Added the selected negative-route applicability review:
+  `scripts/frontier_yt_pr230_negative_route_applicability_review.py`,
+  `docs/YT_PR230_NEGATIVE_ROUTE_APPLICABILITY_REVIEW_NOTE_2026-05-06.md`,
+  and
+  `outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json`.
+  It verifies that 18 selected no-go/exact-negative blockers are only
+  current-surface route filters and keep future reopen artifacts named.
+- Result: exact source-side support plus bounded L12 compute support.  The
+  finite-shell L12 rows still block the scalar-LSZ shortcut: `C_ss` increases
+  with `q_hat^2` and `Gamma_ss` decreases, so strict Stieltjes and
+  complete-Bernstein denominator authority remain absent.
+- Verification: source-pole intake `PASS=14 FAIL=0`; L12 compute status
+  `PASS=14 FAIL=0`; negative-route applicability review `PASS=9 FAIL=0`;
+  assumption stress `PASS=42 FAIL=0`; campaign status `PASS=277 FAIL=0`;
+  full assembly `PASS=97 FAIL=0`; retained-route `PASS=245 FAIL=0`.
+- Claim boundary: no `O_sp = O_H` identity, no `C_spH/C_HH` pole rows, no
+  scalar-LSZ FV/IR/model-class authority, no matching/running closure, and no
+  retained/proposed-retained closure is authorized.
+
+Next exact action: build a same-surface `O_sp`-Higgs overlap artifact:
+`Res_C_sp_sp = 1`, `Res_C_spH`, and `Res_C_HH`, with canonical `O_H`
+identity/normalization and FV/IR/model-class gates; or supply an equivalent
+same-surface `O_H` identity theorem.  Do not treat completed L12 finite-shell
+compute support as physical `y_t`.
+
 Latest checkpoint, 2026-05-05 complete-Bernstein scalar-LSZ inverse diagnostic:
 
 - Added `scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py`,

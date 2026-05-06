@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T02:06:08.501125+00:00",
+  "generated_at": "2026-05-06T10:20:15.034592+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42043,7 +42043,7 @@
       "current_status": "support",
       "current_status_raw": "exact-support / genuine same-source `O_sp` artifact intaken; canonical `O_H` bridge open",
       "deps": [],
-      "note_hash": "2502f3d29bffe9d45dd657eed7efdd0cb556b41fc722543fc2ef964bfc5655fb",
+      "note_hash": "1edbf41e50895f53604a7cd93e4e39285e8fc525937c6875d795cd2fc286c9c1",
       "path": "docs/YT_PR230_GENUINE_SOURCE_POLE_ARTIFACT_INTAKE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py",
       "title": "PR230 Genuine Source-Pole Artifact Intake"
@@ -42093,7 +42093,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / completed L12 same-source chunk compute status; physical `y_t` closure still open",
       "deps": [],
-      "note_hash": "7e084684451e4ba11e61fa0cbd4894c28fcd6a0c01ba1a09074e2f8852258969",
+      "note_hash": "9121243fad9e4dc00691d500da6ef68f2a137c41aae80d5cdf5f310e57e1fffd",
       "path": "docs/YT_PR230_L12_CHUNK_COMPUTE_STATUS_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_l12_chunk_compute_status.py",
       "title": "PR230 completed-L12 chunk compute status"
@@ -42143,9 +42143,9 @@
       "current_status": "support",
       "current_status_raw": "exact support / selected negative-route applicability review",
       "deps": [],
-      "note_hash": "4ac1773eab7437e61f50694d827e344025fb1fd49ec4c20ef03fbd88612125f2",
+      "note_hash": "bb47b08289760d04b7c8e2259098664c9e4548891af29d3c47f899e3d2a5fd2a",
       "path": "docs/YT_PR230_NEGATIVE_ROUTE_APPLICABILITY_REVIEW_NOTE_2026-05-06.md",
-      "runner_path": "scripts/frontier_yt_pr230_negative_route_applicability_review.py",
+      "runner_path": null,
       "title": "PR230 Negative-Route Applicability Review"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
@@ -43209,7 +43209,7 @@
       "current_status": "support",
       "current_status_raw": "exact-support / contract witness; current rows absent",
       "deps": [],
-      "note_hash": "ada1363c39d793af13c3b349645a54c702061075216adb089d602702dde5d3d1",
+      "note_hash": "1ed41ff63f91e65c894d0e730f4726c8a7565a5e275dbf46b514aeb99af86d5d",
       "path": "docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py",
       "title": "Source-Higgs Gram-Purity Contract Witness"
@@ -45425,7 +45425,7 @@
     "leaf_count": 1070,
     "node_count": 2023,
     "root_count": 1536,
-    "runners_with_path": 1520,
+    "runners_with_path": 1519,
     "status_counts": {
       "bounded": 555,
       "open": 102,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T02:06:11.033681+00:00",
+  "generated_at": "2026-05-06T10:20:17.495484+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16716,18 +16716,6 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py"
-    },
-    "yt_pr230_negative_route_applicability_review_note_2026-05-06": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 2,
-        "C": 1,
-        "D": 2
-      },
-      "decoration_candidate": false,
-      "dominant_class": "B",
-      "runner": "scripts/frontier_yt_pr230_negative_route_applicability_review.py"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "assert_count": 1,
@@ -34596,21 +34584,6 @@
       "dominant_class": "D",
       "exists": true
     },
-    "scripts/frontier_yt_pr230_negative_route_applicability_review.py": {
-      "assert_count": 1,
-      "claims": [
-        "yt_pr230_negative_route_applicability_review_note_2026-05-06"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 2,
-        "C": 1,
-        "D": 2
-      },
-      "decoration_candidate": false,
-      "dominant_class": "B",
-      "exists": true
-    },
     "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py": {
       "assert_count": 1,
       "claims": [
@@ -40151,13 +40124,13 @@
     "decoration_candidates": 107,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 225,
+      "B": 224,
       "C": 502,
       "D": 301,
       "none": 404
     },
-    "runners_classified": 1441,
-    "runners_with_C": 754,
-    "runners_with_D": 535
+    "runners_classified": 1440,
+    "runners_with_C": 753,
+    "runners_with_D": 534
   }
 }

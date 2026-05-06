@@ -569,6 +569,9 @@ def main() -> int:
         "pr230_l12_chunk_compute_status": load(
             "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json"
         ),
+        "pr230_negative_route_applicability_review": load(
+            "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -2339,6 +2342,28 @@ def main() -> int:
         ).get("canonical_oh_or_source_higgs_overlap_absent")
         is True,
         statuses["pr230_l12_chunk_compute_status"],
+    )
+    report(
+        "pr230-negative-route-applicability-review-preserves-reopen",
+        "negative-route applicability review passed"
+        in str(statuses["pr230_negative_route_applicability_review"])
+        and certificates["pr230_negative_route_applicability_review"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_negative_route_applicability_review"].get(
+            "negative_results_are_current_surface_blockers_only"
+        )
+        is True
+        and certificates["pr230_negative_route_applicability_review"].get(
+            "future_reopen_paths_preserved"
+        )
+        is True
+        and certificates["pr230_negative_route_applicability_review"].get(
+            "no_retained_negative_overclaim"
+        )
+        is True,
+        statuses["pr230_negative_route_applicability_review"],
     )
     report(
         "pr230-derived-bridge-rank-one-attempt-blocks-current-source-only-closure",

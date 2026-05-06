@@ -1,5 +1,35 @@
 # No-Go Ledger
 
+## Genuine `O_sp` plus completed L12 support is not physical `y_t` closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_l12_chunk_compute_status.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_negative_route_applicability_review.py
+# SUMMARY: PASS=9 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=97 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=245 FAIL=0
+```
+
+`O_sp` is a genuine source-side LSZ artifact, but it is not a canonical Higgs
+identity.  Completed L12 same-source data are real finite-volume support, but
+they do not supply strict scalar-LSZ denominator authority, `O_sp = O_H`,
+`C_spH/C_HH` pole rows, FV/IR control, matching/running, or retained-route
+authorization.  Do not treat `O_sp`, completed L12 source-response agreement,
+or finite-shell `C_ss/Gamma_ss` rows as retained closure or
+`proposed_retained` evidence.
+
+The negative-route applicability review verifies that selected no-go artifacts
+remain current-surface blockers only.  They do not rule out future
+same-surface `O_H/C_sH/C_HH`, W/Z, Schur, scalar-LSZ, neutral primitive, or
+matching/running artifacts.
+
 ## Current polefit8x8 inverse proxy is not complete-Bernstein denominator authority
 
 Runners:

@@ -1,5 +1,21 @@
 # Opportunity Queue
 
+2026-05-06 update: the genuine-source-pole artifact intake is landed.  The
+branch does have one real artifact inside the source-Higgs contract:
+`O_sp`, the Legendre/LSZ-normalized same-source source-pole operator.  This is
+source-side exact support only, not closure.  The completed L12 compute-status
+block also shows real same-source support data across the four-mode/x16 and
+eight-mode/x8 streams, but it remains single-volume finite-shell evidence and
+continues to fail strict scalar-LSZ denominator shortcuts.  The highest-value
+positive queue is now sharper: produce `O_sp`-Higgs pole-residue rows
+(`Res_C_sp_sp=1`, `Res_C_spH`, `Res_C_HH`) with same-surface canonical `O_H`
+identity/normalization and FV/IR/model-class authority.  If that cannot be
+supplied, pivot to genuine same-source W/Z response rows with identity/
+covariance/strict `g2`, strict scalar-LSZ denominator authority, Schur rows,
+or a neutral primitive/off-diagonal-generator certificate.  The selected
+no-go routes remain current-surface filters only; reopen them immediately if a
+named same-surface artifact appears.
+
 2026-05-05 update: the `O_H/source-Higgs` authority rescan is now landed and
 blocks the "maybe we already had it" route.  The current PR230 branch contains
 no same-surface canonical `O_H` identity/normalization certificate and no

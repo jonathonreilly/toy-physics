@@ -1,5 +1,19 @@
 # Literature Bridges
 
+2026-05-06 genuine source-pole artifact intake:
+
+The literature bridge remains route context only.  FMS/gauge-invariant Higgs
+operator language motivates why the final object must be a same-surface
+canonical `O_H` or `O_sp`-Higgs overlap certificate.  Feynman-Hellmann
+literature motivates source-response measurement rows.  Neither is imported as
+the missing `O_sp = O_H` identity, `kappa_s = 1`, pole-row data, or retained
+closure authority.
+
+Current conclusion: the one genuine current artifact is `O_sp`, the
+Legendre/LSZ-normalized source-pole operator.  It is source-side exact support.
+The cleanest next physics artifact is `C_spH/C_HH` pole-residue rows or an
+equivalent same-surface canonical `O_H` identity certificate.
+
 2026-05-05 fresh artifact route review:
 
 The literature bridge was used only to choose the next artifact contract, not
