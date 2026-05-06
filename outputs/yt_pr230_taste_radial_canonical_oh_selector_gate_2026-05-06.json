@@ -1,0 +1,145 @@
+{
+  "actual_current_surface_status": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "candidate_summaries": [
+    {
+      "hermiticity_error": 0.0,
+      "name": "degree1_radial_E1",
+      "norm": 1.0,
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.6123724356957945,
+        -0.20412414523193165,
+        -0.2041241452319315,
+        -0.20412414523193145,
+        0.2041241452319315,
+        0.2041241452319316,
+        0.2041241452319316,
+        0.6123724356957946
+      ],
+      "trace": 0.0,
+      "z3_invariance_error": 0.0
+    },
+    {
+      "hermiticity_error": 0.0,
+      "name": "degree2_pair_E2",
+      "norm": 1.0,
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.20412414523193168,
+        -0.20412414523193156,
+        -0.20412414523193154,
+        -0.20412414523193154,
+        -0.20412414523193148,
+        -0.20412414523193145,
+        0.6123724356957947,
+        0.6123724356957947
+      ],
+      "trace": 0.0,
+      "z3_invariance_error": 0.0
+    },
+    {
+      "hermiticity_error": 0.0,
+      "name": "degree3_triple_E3",
+      "norm": 0.9999999999999999,
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.35355339059327373,
+        -0.35355339059327373,
+        -0.35355339059327373,
+        -0.35355339059327373,
+        0.35355339059327373,
+        0.35355339059327373,
+        0.35355339059327373,
+        0.35355339059327373
+      ],
+      "trace": 0.0,
+      "z3_invariance_error": 0.0
+    },
+    {
+      "hermiticity_error": 0.0,
+      "name": "mixed_E1_E2",
+      "norm": 1.0,
+      "source_overlap": 0.0,
+      "spectrum": [
+        -0.2886751345948129,
+        -0.2886751345948129,
+        -0.2886751345948128,
+        -9.866404196230474e-17,
+        -1.2693246267462229e-17,
+        1.3877787807814457e-17,
+        1.3153713681131544e-16,
+        0.8660254037844386
+      ],
+      "trace": 0.0,
+      "z3_invariance_error": 0.0
+    }
+  ],
+  "canonical_oh_selector_absent": true,
+  "conditional_surface_status": "conditional-support if a same-surface EW/Higgs action or canonical operator theorem proves canonical O_H is the degree-one radial fluctuation in span{S0,S1,S2}",
+  "degree_one_premise_status": "conditional-support: if a same-surface EW/Higgs action proves the canonical scalar is the degree-one radial fluctuation in span{S0,S1,S2}, then the taste-radial source is the unique Z3-invariant target",
+  "degree_one_radial_unique": true,
+  "degree_one_z3_invariant_dimension": 1,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_kappa_s_equal_one": false,
+    "used_alpha_lm_or_plaquette": false,
+    "used_degree_one_premise_as_derived": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "full_invariant_selector_nonunique": true,
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_higgs_rows": false,
+    "taste_radial_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "retained_route": "open / retained closure not yet reached",
+    "source_coordinate_transport_completion": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+    "two_source_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
+    "two_source_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",
+    "two_source_row_manifest": "bounded-support / two-source taste-radial C_sx/C_xx production manifest; rows absent"
+  },
+  "pass_count": 17,
+  "production_rows_absent": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The degree-one Z3-invariant taste-radial direction is unique only after importing or deriving the degree-one radial-Higgs premise. The current Cl(3)/Z^3 taste symmetry filters leave E1, E2, E3, and their mixtures admissible, so the taste-radial source cannot be identified with canonical O_H by symmetry notation alone.  Production C_sx/C_xx rows, a canonical-O_H certificate, or a same-source physical-response bypass remain required.",
+  "spectra_distinguish_candidates": true,
+  "symmetry_only_status": "exact negative boundary: Z3, trace-zero, source-orthogonality, Hermiticity, and Hilbert-Schmidt normalization leave a 3D invariant taste algebra and do not select canonical O_H",
+  "taste_radial_canonical_oh_selector_gate_passed": true,
+  "z3_tracezero_invariant_basis": [
+    "E1=S0+S1+S2",
+    "E2=S0S1+S1S2+S2S0",
+    "E3=S0S1S2"
+  ],
+  "z3_tracezero_invariant_gram": [
+    [
+      1.0000000000000002,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0000000000000002,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.9999999999999998
+    ]
+  ],
+  "z3_tracezero_invariant_rank": 3
+}

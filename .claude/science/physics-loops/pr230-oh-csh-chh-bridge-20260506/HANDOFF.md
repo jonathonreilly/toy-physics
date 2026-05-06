@@ -125,6 +125,16 @@ row workers with distinct seeds and output directories.  This is still
 run-control support only: active processes, logs, empty directories, and
 partial directories are not `C_sx/C_xx` row evidence.
 
+The taste-radial canonical-`O_H` selector surface is now sharpened.  The
+selector gate proves the positive finite-algebra fact: inside the degree-one
+axis span `span{S0,S1,S2}`, the cyclic `Z3` invariant line is uniquely
+`S0+S1+S2`, matching the implemented taste-radial source.  It also blocks the
+symmetry-only shortcut: in the full trace-zero cyclic taste algebra,
+`S0+S1+S2`, `S0S1+S1S2+S2S0`, `S0S1S2`, and mixtures pass the same basic
+Hermitian/source-orthogonal/Z3 filters.  A same-surface EW/Higgs action,
+canonical-operator theorem, production source-overlap rows, or physical
+response bypass is still required before `x = O_H`.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -140,7 +150,9 @@ Best next work:
    source using the no-resume manifest and row contract; chunks001-002 are
    active under the two-worker launcher cap, and after they complete the next
    action is per-chunk schema gates plus the next bounded wave, then
-   prove/reject its canonical-`O_H` identity or supply another bridge;
+   prove/reject its canonical-`O_H` identity or supply another bridge; the
+   selector gate reduces the identity route to deriving the degree-one
+   Higgs-action premise, not merely citing `Z3` symmetry;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
    with a neutral transfer row, off-diagonal generator, or primitive-cone
    theorem;
@@ -153,3 +165,6 @@ Do not close it from completed L12 FH/LSZ support rows either.
 Do not close it from the origin/main EW M-residual CMT/Fierz packet.
 Do not close it by adding entropy, spectral-gap, reversibility, or Markov-lazy
 selectors unless the same-surface PR230 action derives that selector.
+Do not close it by treating degree-one taste-radial uniqueness as canonical
+`O_H`; that uniqueness is conditional on a missing same-surface degree-one
+Higgs-action premise.

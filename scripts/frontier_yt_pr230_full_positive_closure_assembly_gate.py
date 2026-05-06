@@ -102,6 +102,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
     "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+    "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -703,6 +704,30 @@ def main() -> int:
             "future_combined_rows_present"
         )
         is False
+    )
+    taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
+        "degree-one taste-radial uniqueness"
+        in statuses["pr230_taste_radial_canonical_oh_selector_gate"]
+        and certs["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "taste_radial_canonical_oh_selector_gate_passed"
+        )
+        is True
+        and certs["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "degree_one_radial_unique"
+        )
+        is True
+        and certs["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "full_invariant_selector_nonunique"
+        )
+        is True
+        and certs["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "canonical_oh_selector_absent"
+        )
+        is True
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
@@ -1464,6 +1489,11 @@ def main() -> int:
         "two-source-taste-radial-row-production-manifest-support-not-closure",
         two_source_taste_radial_row_manifest_support_not_closure,
         statuses["pr230_two_source_taste_radial_row_production_manifest"],
+    )
+    report(
+        "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
+        taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
+        statuses["pr230_taste_radial_canonical_oh_selector_gate"],
     )
     report(
         "kinetic-taste-mixing-shortcut-closed",
@@ -2416,6 +2446,7 @@ def main() -> int:
         "two_source_taste_radial_action_support_not_closure": two_source_taste_radial_action_support_not_closure,
         "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
+        "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
@@ -2457,6 +2488,7 @@ def main() -> int:
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat the two-source taste-radial chart as canonical O_H or production source-Higgs rows",
             "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",
+            "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",

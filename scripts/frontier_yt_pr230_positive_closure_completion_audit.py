@@ -35,6 +35,7 @@ PARENTS = {
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
     "two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+    "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -313,6 +314,28 @@ def main() -> int:
         )
         is False
     )
+    taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
+        "degree-one taste-radial uniqueness"
+        in parent_statuses["taste_radial_canonical_oh_selector_gate"]
+        and certs["taste_radial_canonical_oh_selector_gate"].get("proposal_allowed")
+        is False
+        and certs["taste_radial_canonical_oh_selector_gate"].get(
+            "taste_radial_canonical_oh_selector_gate_passed"
+        )
+        is True
+        and certs["taste_radial_canonical_oh_selector_gate"].get(
+            "degree_one_radial_unique"
+        )
+        is True
+        and certs["taste_radial_canonical_oh_selector_gate"].get(
+            "full_invariant_selector_nonunique"
+        )
+        is True
+        and certs["taste_radial_canonical_oh_selector_gate"].get(
+            "canonical_oh_selector_absent"
+        )
+        is True
+    )
     origin_main_composite_higgs_not_closure = (
         certs["origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_intake_guard_passed"
@@ -441,6 +464,7 @@ def main() -> int:
     report("two-source-taste-radial-action-support-not-closure", two_source_taste_radial_action_not_closure, parent_statuses["two_source_taste_radial_action"])
     report("two-source-taste-radial-row-contract-support-not-closure", two_source_taste_radial_row_contract_not_closure, parent_statuses["two_source_taste_radial_row_contract"])
     report("two-source-taste-radial-row-production-manifest-support-not-closure", two_source_taste_radial_row_manifest_not_closure, parent_statuses["two_source_taste_radial_row_production_manifest"])
+    report("taste-radial-canonical-oh-selector-blocks-symmetry-shortcut", taste_radial_canonical_oh_selector_blocks_symmetry_shortcut, parent_statuses["taste_radial_canonical_oh_selector_gate"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
@@ -586,6 +610,7 @@ def main() -> int:
             "two_source_taste_radial_action_not_closure": two_source_taste_radial_action_not_closure,
             "two_source_taste_radial_row_contract_not_closure": two_source_taste_radial_row_contract_not_closure,
             "two_source_taste_radial_row_manifest_not_closure": two_source_taste_radial_row_manifest_not_closure,
+            "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,

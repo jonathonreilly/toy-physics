@@ -53,6 +53,7 @@
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+    "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
@@ -86,6 +87,7 @@
     "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
+    "taste_radial_canonical_oh_selector_gate": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "two_source_taste_radial_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_taste_radial_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
@@ -99,7 +101,7 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 34,
+  "pass_count": 35,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -120,6 +122,7 @@
     "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
     "taste_condensate_oh_bridge_blocked": true,
+    "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": true,
     "two_source_taste_radial_action_not_closure": true,
     "two_source_taste_radial_row_contract_not_closure": true,
     "two_source_taste_radial_row_manifest_not_closure": true,

@@ -11,7 +11,11 @@
    chunks001-002 active under a two-worker cap.  The remaining work is
    completed production `C_sx/C_xx` rows, per-chunk schema gates, combined
    pole/FV/IR diagnostics, plus either canonical-`O_H` identity/source-overlap
-   authority or a physical-response bypass.
+   authority or a physical-response bypass.  The taste-radial selector gate
+   proves uniqueness inside the degree-one taste-axis subspace, but also
+   proves that current `Z3` symmetry filters leave higher-degree trace-zero
+   invariants unless a same-surface degree-one Higgs-action premise is
+   derived.
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
    matrix step is now conditionally solved, and direct promotion from cyclic
    symmetry `P` to lazy physical transfer `L=(I+P)/2` is blocked.  The missing

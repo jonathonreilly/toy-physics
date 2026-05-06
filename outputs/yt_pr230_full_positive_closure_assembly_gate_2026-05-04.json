@@ -168,6 +168,7 @@
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+    "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "pr230_two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
     "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
@@ -302,6 +303,7 @@
     "pr230_source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "pr230_source_sector_pattern_transfer_gate": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure",
     "pr230_taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
+    "pr230_taste_radial_canonical_oh_selector_gate": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
     "pr230_two_source_taste_radial_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "pr230_two_source_taste_radial_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
     "pr230_two_source_taste_radial_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",
@@ -348,7 +350,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 120,
+  "pass_count": 121,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
@@ -496,6 +498,7 @@
     "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
     "does not treat the two-source taste-radial chart as canonical O_H or production source-Higgs rows",
     "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",
+    "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
     "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
     "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
     "does not treat terminal non-chunk route exhaustion as positive closure",
@@ -537,6 +540,7 @@
     }
   },
   "taste_condensate_oh_bridge_blocks_shortcut": true,
+  "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": true,
   "two_source_taste_radial_action_support_not_closure": true,
   "two_source_taste_radial_chart_support_not_closure": true,
   "two_source_taste_radial_row_contract_support_not_closure": true,

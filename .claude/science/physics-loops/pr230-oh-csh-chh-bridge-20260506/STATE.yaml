@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: two_source_taste_radial_row_wave_launcher
+active_route: taste_radial_canonical_oh_selector_gate_after_row_wave_launcher
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support with chunks001-002 active under a two-worker cap, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support with chunks001-002 active under a two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -34,6 +34,11 @@ hard_residual: >
   chunks001-002 occupancy, and enforces a conservative two-worker local cap.
   This is launch/status infrastructure only: active processes, logs, empty
   directories, and partial directories are not C_sx/C_xx row evidence.
+  The taste-radial selector gate proves the degree-one Z3 radial line is unique
+  inside span{S0,S1,S2}, but also proves that current Z3/trace/source filters
+  leave a three-dimensional trace-zero invariant taste algebra, so degree-one
+  uniqueness is not canonical O_H authority without a same-surface
+  Higgs-action premise.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -60,6 +65,7 @@ files_touched:
   - scripts/frontier_yt_pr230_two_source_taste_radial_row_contract.py
   - scripts/frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py
   - scripts/frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py
+  - scripts/frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py
   - scripts/yt_direct_lattice_correlator_production.py
   - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - scripts/frontier_yt_pr230_positive_closure_completion_audit.py
@@ -84,6 +90,7 @@ files_touched:
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_CONTRACT_NOTE_2026-05-06.md
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_PRODUCTION_MANIFEST_NOTE_2026-05-06.md
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_WAVE_LAUNCHER_NOTE_2026-05-06.md
+  - docs/YT_PR230_TASTE_RADIAL_CANONICAL_OH_SELECTOR_GATE_NOTE_2026-05-06.md
   - docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
@@ -110,6 +117,7 @@ files_touched:
   - outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_row_wave_launcher_2026-05-06.json
+  - outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json
   - outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
@@ -129,18 +137,19 @@ verification:
   two_source_taste_radial_row_contract_pass_fail: "12/0"
   two_source_taste_radial_row_production_manifest_pass_fail: "17/0"
   two_source_taste_radial_row_wave_launcher_pass_fail: "12/0"
+  taste_radial_canonical_oh_selector_gate_pass_fail: "17/0"
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
   source_higgs_production_readiness_pass_fail: "21/0"
-  completion_audit_pass_fail: "34/0"
+  completion_audit_pass_fail: "35/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "60/0"
-  full_positive_assembly_pass_fail: "120/0"
-  retained_route_certificate_pass_fail: "266/0"
-  campaign_status_certificate_pass_fail: "296/0"
-  audit_pipeline: "complete; audit metadata intentionally regenerated for the two-source taste-radial row-production manifest note row and current note hashes"
+  assumption_import_stress_pass_fail: "61/0"
+  full_positive_assembly_pass_fail: "121/0"
+  retained_route_certificate_pass_fail: "267/0"
+  campaign_status_certificate_pass_fail: "297/0"
+  audit_pipeline: "complete; audit metadata intentionally regenerated for the taste-radial canonical-O_H selector note row and current note hashes"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
 next_exact_action: >
@@ -151,8 +160,8 @@ next_exact_action: >
   chunks001-002 row workers finish under the two-worker cap, run the
   per-chunk row schema gates, then launch the next safe bounded wave and verify
   measured production C_sx/C_xx rows for that vertex,
-  then prove/reject that h_taste is canonical O_H or bridge it by same-source
-  physical response.
+  then derive the missing degree-one Higgs-action premise or bridge the
+  taste-radial source by same-source physical response.
   Other live positive artifacts remain certified canonical O_H plus C_sH/C_HH
   pole rows, neutral primitive/rank-one, Schur A/B/C rows, or W/Z response with
   strict g2/covariance/delta_perp.  Do not spend closure wording on the
@@ -192,5 +201,7 @@ stop_condition: >
   C_sx/C_xx row contract plus a production manifest as support-only
   source-coordinate progress, then adding a row-wave launcher/status
   certificate and starting chunks001-002 under a two-worker cap as run-control
-  support only while leaving canonical O_H, completed measured production
-  rows, and closure open.
+  support only while leaving active work as non-evidence, then proving
+  degree-one taste-radial uniqueness while blocking symmetry-only canonical
+  O_H selection, leaving canonical O_H, completed measured production rows,
+  and closure open.

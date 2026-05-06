@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 664,
+    "leaf": 665,
     "medium": 301
   },
-  "generated_at": "2026-05-06T14:57:35.972596+00:00",
+  "generated_at": "2026-05-06T15:15:26.084166+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21330,6 +21330,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_taste_radial_canonical_oh_selector_gate_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_TASTE_RADIAL_CANONICAL_OH_SELECTOR_GATE_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24857,6 +24874,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 811,
-  "total_pending": 1202
+  "ready_count": 812,
+  "total_pending": 1203
 }

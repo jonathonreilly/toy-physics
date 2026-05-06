@@ -34,6 +34,8 @@ Local verification completed:
 - `frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py`:
   PASS=12 FAIL=0 with `--max-concurrent 2`, recording active chunks001-002
   and launching no extra worker in dry-run/status mode;
+- `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
+  FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=22
   FAIL=0 after accepting the support-only action certificate;
 - `frontier_yt_fh_lsz_production_postprocess_gate.py`: PASS=12 FAIL=0;
@@ -42,15 +44,15 @@ Local verification completed:
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py`:
   PASS=16 FAIL=0;
-- `frontier_yt_pr230_assumption_import_stress.py`: PASS=60 FAIL=0;
-- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=120
+- `frontier_yt_pr230_assumption_import_stress.py`: PASS=61 FAIL=0;
+- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=121
   FAIL=0;
-- `frontier_yt_retained_closure_route_certificate.py`: PASS=266 FAIL=0;
-- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=296 FAIL=0;
-- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=34 FAIL=0;
+- `frontier_yt_retained_closure_route_certificate.py`: PASS=267 FAIL=0;
+- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=297 FAIL=0;
+- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=35 FAIL=0;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
-  metadata intentionally regenerated for the two-source taste-radial
-  row-production manifest note row and updated note hashes;
+  metadata intentionally regenerated for the taste-radial canonical-`O_H`
+  selector note row and updated note hashes;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
 - `git diff --check`: clean.

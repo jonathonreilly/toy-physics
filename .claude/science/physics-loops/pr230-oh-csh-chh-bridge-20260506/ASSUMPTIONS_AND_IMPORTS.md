@@ -58,6 +58,10 @@ Allowed context:
   active processes, logs, empty directories, and partial directories are not
   row data, pole evidence, canonical `O_H`, scalar LSZ normalization, or
   `y_t` closure.
+- the taste-radial canonical-`O_H` selector gate as exact conditional support
+  only: it proves the cyclic degree-one radial source is unique in
+  `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
+  select it from the full trace-zero invariant taste algebra.
 
 Open imports after this block:
 
@@ -112,6 +116,9 @@ Open imports after this block:
 - Two-source taste-radial row-wave launcher status is not proof selectors until
   completed chunk JSON exists and passes per-chunk schema gates; active
   workers and partial directories are explicitly non-evidence.
+- Taste-radial degree-one uniqueness is not a proof selector until a
+  same-surface EW/Higgs action or canonical-operator theorem derives the
+  degree-one Higgs-action premise.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

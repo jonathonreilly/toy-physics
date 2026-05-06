@@ -19,6 +19,9 @@ This block lands:
 - an executable two-source taste-radial row-contract certificate that emits
   explicit `C_sx/C_xx` aliases for the sparse source path while preserving
   legacy schema fields and the production-row firewall;
+- an executable taste-radial canonical-`O_H` selector gate that proves
+  degree-one Z3 radial uniqueness while blocking symmetry-only canonical
+  `O_H` selection from the full trace-zero cyclic taste algebra;
 - a refreshed FH/LSZ production postprocess gate that recognizes completed L12
   chunked support while preserving all no-closure firewalls;
 - a paired JSON certificate;

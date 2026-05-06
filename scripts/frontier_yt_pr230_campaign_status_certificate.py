@@ -614,6 +614,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_production_manifest": load(
             "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json"
         ),
+        "pr230_taste_radial_canonical_oh_selector_gate": load(
+            "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2606,6 +2609,24 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_row_production_manifest"],
     )
+    taste_radial_selector_gate = certificates[
+        "pr230_taste_radial_canonical_oh_selector_gate"
+    ]
+    report(
+        "pr230-taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
+        "degree-one taste-radial uniqueness"
+        in str(statuses["pr230_taste_radial_canonical_oh_selector_gate"])
+        and taste_radial_selector_gate.get("proposal_allowed") is False
+        and taste_radial_selector_gate.get(
+            "taste_radial_canonical_oh_selector_gate_passed"
+        )
+        is True
+        and taste_radial_selector_gate.get("degree_one_radial_unique") is True
+        and taste_radial_selector_gate.get("full_invariant_selector_nonunique")
+        is True
+        and taste_radial_selector_gate.get("canonical_oh_selector_absent") is True,
+        statuses["pr230_taste_radial_canonical_oh_selector_gate"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4309,6 +4330,15 @@ def main() -> int:
         and two_source_taste_radial_row_manifest.get("future_combined_rows_present")
         is False
     )
+    result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
+        taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")
+        is True
+        and taste_radial_selector_gate.get("proposal_allowed") is False
+        and taste_radial_selector_gate.get("degree_one_radial_unique") is True
+        and taste_radial_selector_gate.get("full_invariant_selector_nonunique")
+        is True
+        and taste_radial_selector_gate.get("canonical_oh_selector_absent") is True
+    )
     result["origin_main_composite_higgs_intake_not_closure"] = (
         origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")
         is True
@@ -4404,6 +4434,7 @@ def main() -> int:
         "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
         "does not treat the two-source taste-radial chart as canonical O_H or source-Higgs production rows",
         "does not treat the two-source taste-radial row production manifest as row data or pole evidence",
+        "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]

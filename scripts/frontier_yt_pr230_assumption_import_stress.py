@@ -164,6 +164,9 @@ def main() -> int:
         "two_source_taste_radial_row_production_manifest": load(
             "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json"
         ),
+        "taste_radial_canonical_oh_selector_gate": load(
+            "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -906,6 +909,19 @@ def main() -> int:
         is False,
         two_source_row_manifest.get("actual_current_surface_status"),
     )
+    taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
+    report(
+        "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
+        "degree-one taste-radial uniqueness"
+        in str(taste_radial_selector.get("actual_current_surface_status"))
+        and taste_radial_selector.get("proposal_allowed") is False
+        and taste_radial_selector.get("taste_radial_canonical_oh_selector_gate_passed")
+        is True
+        and taste_radial_selector.get("degree_one_radial_unique") is True
+        and taste_radial_selector.get("full_invariant_selector_nonunique") is True
+        and taste_radial_selector.get("canonical_oh_selector_absent") is True,
+        taste_radial_selector.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -1090,6 +1106,10 @@ def main() -> int:
             "and a collision guard for those rows, but it is dry-run run control "
             "only until the chunks are actually run, combined, pole-tested, and "
             "bridged to canonical O_H or physical response.  "
+            "The taste-radial canonical-O_H selector gate proves the degree-one "
+            "radial axis is unique only after a degree-one Higgs-action premise "
+            "is supplied; current Z3/trace/source filters leave a three-dimensional "
+            "trace-zero invariant taste algebra.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1123,6 +1143,7 @@ def main() -> int:
             "does not treat the two-source taste-radial action source vertex as canonical O_H or measured C_sx/C_xx rows",
             "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
+            "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

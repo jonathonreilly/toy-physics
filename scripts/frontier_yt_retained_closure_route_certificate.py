@@ -159,6 +159,7 @@ def main() -> int:
         "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
         "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+        "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1410,6 +1411,32 @@ def main() -> int:
             "future_combined_rows_present"
         )
         is False
+    )
+    taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
+        "degree-one taste-radial uniqueness"
+        in certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "taste_radial_canonical_oh_selector_gate_passed"
+        )
+        is True
+        and certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "degree_one_radial_unique"
+        )
+        is True
+        and certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "full_invariant_selector_nonunique"
+        )
+        is True
+        and certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "canonical_oh_selector_absent"
+        )
+        is True
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
@@ -3887,6 +3914,13 @@ def main() -> int:
         ),
     )
     report(
+        "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
+        taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
+        certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "kinetic-taste-mixing-shortcut-closed",
         kinetic_taste_mixing_bridge_blocks_shortcut,
         certificates["pr230_kinetic_taste_mixing_bridge"].get(
@@ -5202,6 +5236,10 @@ def main() -> int:
             "no-resume chunk commands and a collision guard for C_sx/C_xx rows, "
             "but it is run-control support only until rows are actually run, "
             "combined, pole-tested, and bridged to O_H or physical response.  "
+            "The taste-radial canonical-O_H selector gate proves uniqueness only "
+            "inside the degree-one source-axis subspace and blocks the "
+            "symmetry-only selector because the full Z3 trace-zero taste algebra "
+            "remains three-dimensional.  "
             "The cycle-14 through cycle-17 gates record that no current route, "
             "independent pivot, reopen source, or executable non-chunk queue "
             "item remains on this branch.  The cycle-18 reopen-freshness gate "
@@ -5265,6 +5303,7 @@ def main() -> int:
         "two_source_taste_radial_action_support_not_closure": two_source_taste_radial_action_support_not_closure,
         "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
+        "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
