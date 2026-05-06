@@ -44,12 +44,16 @@ REQUIRED_FIELDS = {
     "claim_scope",
     "auditor",
     "auditor_family",
+    "auditor_model",            # exact model slug (e.g. "gpt-5.5")
+    "auditor_reasoning_effort", # e.g. "xhigh"
     "independence",
 }
 JUDICIAL_REQUIRED_FIELDS = {
     "claim_id",
     "third_auditor",
     "auditor_family",
+    "auditor_model",
+    "auditor_reasoning_effort",
     "independence",
     "sided_with",
     "ratified_verdict",
@@ -58,6 +62,10 @@ JUDICIAL_REQUIRED_FIELDS = {
     "first_auditor_error",
     "second_auditor_error",
 }
+
+# Reasoning-effort policy for new audits. The audit lane runs at xhigh
+# only; weaker effort levels are not accepted as ratifying evidence.
+REQUIRED_REASONING_EFFORT = "xhigh"
 
 ALLOWED_VERDICTS = {
     "audited_clean",
@@ -141,6 +149,8 @@ def audit_summary_from_row(row: dict) -> dict:
     return {
         "auditor": row.get("auditor"),
         "auditor_family": row.get("auditor_family"),
+        "auditor_model": row.get("auditor_model"),
+        "auditor_reasoning_effort": row.get("auditor_reasoning_effort"),
         "independence": row.get("independence"),
         "audit_date": row.get("audit_date"),
         "claim_type": row.get("claim_type"),
@@ -154,6 +164,8 @@ def audit_summary_from_blob(audit: dict) -> dict:
     return {
         "auditor": audit.get("auditor"),
         "auditor_family": audit.get("auditor_family"),
+        "auditor_model": audit.get("auditor_model"),
+        "auditor_reasoning_effort": audit.get("auditor_reasoning_effort"),
         "independence": audit.get("independence"),
         "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
         "claim_type": audit.get("claim_type"),
@@ -167,6 +179,8 @@ def judicial_summary_from_blob(judgment: dict) -> dict:
     return {
         "auditor": judgment.get("third_auditor"),
         "auditor_family": judgment.get("auditor_family"),
+        "auditor_model": judgment.get("auditor_model"),
+        "auditor_reasoning_effort": judgment.get("auditor_reasoning_effort"),
         "independence": judgment.get("independence"),
         "audit_date": judgment.get("audit_date") or datetime.now(timezone.utc).isoformat(),
         "claim_type": judgment.get("ratified_claim_type"),
@@ -410,6 +424,8 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     row["audit_status"] = ratified_verdict
     row["auditor"] = judgment["third_auditor"]
     row["auditor_family"] = judgment["auditor_family"]
+    row["auditor_model"] = judgment["auditor_model"]
+    row["auditor_reasoning_effort"] = judgment["auditor_reasoning_effort"]
     row["independence"] = judgment["independence"]
     row["audit_date"] = third["audit_date"]
     row["claim_type"] = ratified_claim_type or chosen_claim_type or row.get("claim_type")
@@ -469,6 +485,40 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     independence = audit["independence"]
     if independence not in ALLOWED_INDEPENDENCE:
         return False, f"independence {independence!r} not in {sorted(ALLOWED_INDEPENDENCE)}"
+
+    # Model + reasoning-effort stamping. Every NEW audit blob must
+    # record exactly which model and reasoning effort produced the
+    # verdict, so future audits / lints can verify provenance without
+    # inferring from auditor_family alone (which has historically been
+    # imprecise for manual apply_audit invocations). Required fields
+    # were added by REQUIRED_FIELDS above; this block validates values.
+    auditor_model = audit.get("auditor_model")
+    if not isinstance(auditor_model, str) or not auditor_model.strip():
+        return False, "auditor_model must be a non-empty string (e.g. 'gpt-5.5')"
+    auditor_reasoning = audit.get("auditor_reasoning_effort")
+    if not isinstance(auditor_reasoning, str) or not auditor_reasoning.strip():
+        return False, ("auditor_reasoning_effort must be a non-empty string "
+                       "(e.g. 'xhigh')")
+    if auditor_reasoning != REQUIRED_REASONING_EFFORT:
+        return False, (
+            f"auditor_reasoning_effort={auditor_reasoning!r} must equal "
+            f"{REQUIRED_REASONING_EFFORT!r}: the audit lane only accepts "
+            f"verdicts produced at {REQUIRED_REASONING_EFFORT} reasoning "
+            f"effort. Re-run the audit with the correct setting."
+        )
+    # auditor_family must encode the same model rank as auditor_model
+    # for codex-gpt-* families, so the ledger's family label and the
+    # exact-model stamp can't drift.
+    declared_family = audit["auditor_family"]
+    if declared_family.startswith("codex-gpt-"):
+        expected = f"codex-{auditor_model}"
+        if declared_family != expected:
+            return False, (
+                f"auditor_family={declared_family!r} does not match "
+                f"auditor_model={auditor_model!r}: expected family "
+                f"{expected!r}. Either fix the family label or fix the "
+                f"model field; they must agree."
+            )
 
     criticality = row.get("criticality") or "leaf"
     if verdict == "audited_clean":
@@ -731,6 +781,8 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     row["audit_status"] = verdict
     row["auditor"] = audit["auditor"]
     row["auditor_family"] = audit["auditor_family"]
+    row["auditor_model"] = audit["auditor_model"]
+    row["auditor_reasoning_effort"] = audit["auditor_reasoning_effort"]
     row["independence"] = independence
     row["audit_date"] = audit.get("audit_date") or datetime.now(timezone.utc).isoformat()
     row["claim_type"] = claim_type
