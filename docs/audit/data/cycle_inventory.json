@@ -1608,10 +1608,10 @@
           "transitive_descendants": 499
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "lorentz_kernel_positive_closure_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
           "transitive_descendants": 499
@@ -1726,10 +1726,10 @@
           "transitive_descendants": 499
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "lorentz_kernel_positive_closure_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
           "transitive_descendants": 499
@@ -2026,10 +2026,10 @@
           "transitive_descendants": 393
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Left-Handed-Content Anomaly Trace Catalog Theorem",
           "transitive_descendants": 393
@@ -3074,7 +3074,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_c3_character_holonomy_closure_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md",
           "title": "PMNS `C3` Character Holonomy Closure",
@@ -3083,7 +3083,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_three_flux_holonomy_closure_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md",
           "title": "PMNS Three-Flux Holonomy Closure",
@@ -3148,7 +3148,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -3185,7 +3185,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -3222,7 +3222,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -3331,10 +3331,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
           "claim_type": "no_go",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis",
           "transitive_descendants": 286
@@ -3405,10 +3405,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -3666,7 +3666,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_mass_ratio_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
           "title": "Quark Mass-Ratio Support Packet (2026-04-18)",
@@ -3749,7 +3749,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -3781,7 +3781,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -3790,7 +3790,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -4549,7 +4549,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -4590,7 +4590,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -5292,7 +5292,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -5798,7 +5798,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -5865,7 +5865,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -5874,7 +5874,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md",
           "title": "P1 \u0394_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)",
@@ -6094,10 +6094,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -6230,7 +6230,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -6399,7 +6399,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -6497,7 +6497,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -6552,10 +6552,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -6645,10 +6645,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -6794,7 +6794,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -6905,7 +6905,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -6989,7 +6989,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -7091,7 +7091,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -7193,7 +7193,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -7295,7 +7295,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -7397,7 +7397,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -7499,7 +7499,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -7610,7 +7610,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -7721,7 +7721,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -7789,10 +7789,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -8057,7 +8057,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -8154,7 +8154,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -8269,7 +8269,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -8384,7 +8384,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -8526,7 +8526,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -8607,10 +8607,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -8892,7 +8892,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -9020,7 +9020,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_retained_status_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
           "title": "Neutrino Retained Status Note (2026-04-16)",
@@ -9285,7 +9285,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -9294,7 +9294,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md",
           "title": "P1 \u0394_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)",
@@ -9413,7 +9413,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -9563,7 +9563,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -9939,7 +9939,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -9948,7 +9948,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -9982,10 +9982,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -10277,7 +10277,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -10286,7 +10286,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -10385,7 +10385,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -10834,7 +10834,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -10843,7 +10843,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -10877,10 +10877,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -11417,7 +11417,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -11426,7 +11426,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -11525,7 +11525,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -11534,7 +11534,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md",
           "title": "P1 \u0394_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)",
@@ -11623,7 +11623,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -11632,7 +11632,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -11731,7 +11731,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "YT UV-to-IR Transport Master Obstruction Theorem Note",
@@ -12607,7 +12607,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_mass_ratio_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
           "title": "Quark Mass-Ratio Support Packet (2026-04-18)",
@@ -13353,7 +13353,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_mass_ratio_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
           "title": "Quark Mass-Ratio Support Packet (2026-04-18)",
@@ -13371,7 +13371,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -13380,7 +13380,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -13646,7 +13646,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_mass_ratio_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
           "title": "Quark Mass-Ratio Support Packet (2026-04-18)",
@@ -13664,7 +13664,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -13673,7 +13673,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -13921,7 +13921,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_mass_ratio_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
           "title": "Quark Mass-Ratio Support Packet (2026-04-18)",
@@ -13939,7 +13939,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -13948,7 +13948,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -14184,7 +14184,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_mass_ratio_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
           "title": "Quark Mass-Ratio Support Packet (2026-04-18)",
@@ -14202,7 +14202,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
@@ -14211,7 +14211,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
@@ -14281,10 +14281,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Intrinsic Slot Theorem",
           "transitive_descendants": 286
