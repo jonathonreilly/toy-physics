@@ -96,26 +96,26 @@
   "x_given_source_first_shell_stieltjes_support": true,
   "x_given_source_summary": {
     "shell": {
-      "count": 34,
+      "count": 36,
       "max": 0.2697468820611708,
-      "mean": 0.2695500552928034,
-      "min": 0.269397809985968,
-      "stderr": 1.5920296464277928e-05
+      "mean": 0.26954854925501315,
+      "min": 0.26938045602061306,
+      "stderr": 1.6094283151983457e-05
     },
     "shell_minus_zero": {
-      "count": 34,
+      "count": 36,
       "max": -0.01124889363522047,
-      "mean": -0.011294165733556977,
+      "mean": -0.011293597157348848,
       "min": -0.01133433356961161,
-      "stderr": 3.852613980190175e-06
+      "stderr": 3.7652084955349424e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": -506.4973030760837,
+    "shell_minus_zero_z_score_from_chunk_scatter": -494.595619807674,
     "zero": {
-      "count": 34,
+      "count": 36,
       "max": 0.2810229245536583,
-      "mean": 0.2808442210263604,
-      "min": 0.28068870370685767,
-      "stderr": 1.5613148278289313e-05
+      "mean": 0.28084214641236205,
+      "min": 0.28064189872814843,
+      "stderr": 1.6197705928658283e-05
     }
   }
 }

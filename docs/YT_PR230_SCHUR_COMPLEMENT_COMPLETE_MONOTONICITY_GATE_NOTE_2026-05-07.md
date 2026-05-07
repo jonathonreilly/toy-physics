@@ -14,7 +14,7 @@ The Schur-complement repair gate found one useful finite diagnostic:
 C_x|s(q) = det([[C_ss(q), C_sx(q)], [C_sx(q), C_xx(q)]]) / C_ss(q)
 ```
 
-On chunks001-030 this object decreases from zero mode to first shell, while
+On chunks001-036 this object decreases from zero mode to first shell, while
 raw `C_ss` and `C_s|x` fail that necessary Stieltjes direction.  This block
 tests whether that first-shell success is enough to promote `C_x|s` into
 strict scalar-LSZ moment/threshold/FV authority.
@@ -26,9 +26,9 @@ It is not enough on the current surface.
 The runner records real bounded support:
 
 - `C_x|s` first-shell difference mean
-  `-0.01129314476652999`;
-- chunk-scatter z score `-459.08170655875074`;
-- ready chunks `30/63`.
+  `-0.011293597157348848`;
+- chunk-scatter z score `-494.595619807674`;
+- ready chunks `36/63`.
 
 But the current packet still has only two ordered `q_hat^2` levels:
 

@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T09:47:36.384395+00:00",
+  "generated_at": "2026-05-07T09:49:41.521210+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42763,7 +42763,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support plus exact boundary / `C_x|s` first-shell support is",
       "deps": [],
-      "note_hash": "a3ed0106accac4bed48eac177acf1b8bb8314ba64ac18d1b851956466e687671",
+      "note_hash": "0ffde753995f1308f40c58839cf690d2f195334d9d1bb1f55183bf7769794654",
       "path": "docs/YT_PR230_SCHUR_COMPLEMENT_COMPLETE_MONOTONICITY_GATE_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py",
       "title": "PR230 Schur-Complement Complete-Monotonicity Gate"
