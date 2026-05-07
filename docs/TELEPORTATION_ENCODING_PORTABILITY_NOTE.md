@@ -227,3 +227,17 @@ model, or readout error model.
 No matter, mass, charge, energy, or object is teleported.  Only an unknown
 quantum state on Bob's already-present encoded taste-qubit register is
 reconstructed after the classical Bell record is available.
+
+## Coordinated Algebraic Closure (2026-05-07)
+
+The finite operator-targeting result documented above is now subsumed by a
+single algebraic theorem (T5 in the companion closure note):
+
+  current_fixed_x in RALA(a) iff a = d - 1.
+
+See `docs/TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md`
+(runner `scripts/frontier_teleportation_retained_axis_operator_algebra_closure.py`)
+for the proof. The closure note retains the finite operator-targeting
+content of this note as a theorem rather than a case-by-case audit; the
+physical-implementation gate (apparatus, noise, durable record, dynamical
+preparation) remains open.
