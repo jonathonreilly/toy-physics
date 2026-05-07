@@ -878,10 +878,6 @@
     },
     {
       "from": "broad_gravity_derivation_note",
-      "to": "gravity_clean_derivation_note"
-    },
-    {
-      "from": "broad_gravity_derivation_note",
       "to": "gravity_full_self_consistency_note"
     },
     {
@@ -7409,10 +7405,6 @@
       "to": "hierarchy_matsubara_decomposition_note"
     },
     {
-      "from": "higgs_from_lattice_note",
-      "to": "higgs_mass_derived_note"
-    },
-    {
       "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "to": "graph_first_su3_integration_note"
     },
@@ -7491,10 +7483,6 @@
     {
       "from": "higgs_mass_retention_analysis_note_2026-04-18",
       "to": "plaquette_self_consistency_note"
-    },
-    {
-      "from": "higgs_mechanism_note",
-      "to": "higgs_mass_derived_note"
     },
     {
       "from": "higgs_vacuum_explicit_systematic_note",
@@ -10675,10 +10663,6 @@
     {
       "from": "newton_derivation_note",
       "to": "equivalence_principle_harness_note"
-    },
-    {
-      "from": "newton_law_derived_note",
-      "to": "gravity_clean_derivation_note"
     },
     {
       "from": "newton_law_derived_note",
@@ -14225,14 +14209,6 @@
       "to": "universal_gr_positive_background_local_closure_note"
     },
     {
-      "from": "universal_qg_projective_schur_closure_note",
-      "to": "universal_qg_uv_finite_partition_note"
-    },
-    {
-      "from": "universal_qg_projective_schur_closure_note",
-      "to": "universal_qg_canonical_refinement_net_note"
-    },
-    {
       "from": "universal_qg_smooth_gravitational_global_atlas_note",
       "to": "universal_qg_optional_textbook_comparison_note"
     },
@@ -15235,10 +15211,6 @@
     {
       "from": "yt_explicit_systematic_budget_note",
       "to": "yt_exact_schur_normal_form_uniqueness_note"
-    },
-    {
-      "from": "yt_explicit_systematic_budget_note",
-      "to": "yt_zero_import_authority_note"
     },
     {
       "from": "yt_flagship_boundary_note",
@@ -28936,10 +28908,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "gravity_clean_derivation_note",
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "366f8d54f0af39329a5709df3ed96ba476393d42c5f21f77b207c6f706e9638c",
+      "note_hash": "0af3b0a9e8429ccaf24c433c202b784ce4801b449fde0fb12633338a860c8120",
       "path": "docs/BROAD_GRAVITY_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Broad Gravity Bundle: Per-Signature Derivation Chains"
@@ -37738,10 +37709,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "higgs_mass_derived_note"
-      ],
-      "note_hash": "263098d967b327549256fd05474ed798404897107fd360ebcc36eb2febe8fdad",
+      "deps": [],
+      "note_hash": "a1b5df7aa634159e591844254da8a12a8356f295099c3abcce40a1340a08bf53",
       "path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
@@ -37843,10 +37812,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "higgs_mass_derived_note"
-      ],
-      "note_hash": "87be576ebf77446b500dce664c1c46d6f30e8669fe37d2b8cbac59c909919763",
+      "deps": [],
+      "note_hash": "1fe51d7c7e3c10615cf1b9acf6fec9442d23c5f30ba54033f29cdc12c6b40f01",
       "path": "docs/HIGGS_MECHANISM_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs Mechanism Note"
@@ -42952,10 +42919,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "gravity_clean_derivation_note",
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "1deecdbfde5b2846dd8d9ada6b384c65105d259eca1786eefd0080af61d28078",
+      "note_hash": "cc815b105245209bba2c2be3243172849f3ff79228141261ca2330d1001c8fa1",
       "path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_distance_law_definitive.py",
       "title": "Newton's Law Derived from Cl(3) on Z^3"
@@ -52333,11 +52299,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "universal_gr_positive_background_local_closure_note",
-        "universal_qg_uv_finite_partition_note",
-        "universal_qg_canonical_refinement_net_note"
+        "universal_gr_positive_background_local_closure_note"
       ],
-      "note_hash": "c9cd2bad7bca2867c9f60529c1e5469c04e9de6905776487eb64fb976f537477",
+      "note_hash": "4bf95716f4e08638e13d07e98c093a2409e6d2a70940538ec337d4a6d0c6ab72",
       "path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Projective Schur Closure Note"
@@ -54373,10 +54337,9 @@
       "deps": [
         "yt_bridge_higher_order_corrections_note",
         "yt_bridge_nonlocal_corrections_note",
-        "yt_exact_schur_normal_form_uniqueness_note",
-        "yt_zero_import_authority_note"
+        "yt_exact_schur_normal_form_uniqueness_note"
       ],
-      "note_hash": "b723d3889aeae5862f7d96962a179645380f85e0c10658e94dd74b3e979d5f1a",
+      "note_hash": "955c89bfe8f712890ff0ba3ac02c3398d7b3b2617db481462c315d7d34b65328",
       "path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
       "title": "`y_t` Residual-Budget and Bridge Cross-Check Note"
@@ -55524,6 +55487,8 @@
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
     "hierarchy_spatial_bc_and_u0_scaling_note",
+    "higgs_from_lattice_note",
+    "higgs_mechanism_note",
     "higher_dimension_status_2026-04-01",
     "higher_order_structural_theorems_note",
     "higher_symmetry_gravity_probe_note",
@@ -55992,10 +55957,10 @@
       "open_gate": 112,
       "positive_theorem": 627
     },
-    "edge_count": 6617,
+    "edge_count": 6610,
     "leaf_count": 550,
     "node_count": 1907,
-    "root_count": 864,
+    "root_count": 866,
     "runners_with_path": 1486
   }
 }
