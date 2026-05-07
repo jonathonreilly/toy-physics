@@ -30,3 +30,23 @@ Fixes applied during review:
 2. Narrowed prose from "the Z3-invariant neutral operator sector" to the
    current symmetric taste-polynomial sector, matching what the runner
    explicitly exhibits.
+
+## Block02
+
+Review-loop/self-review status at checkpoint: pending.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py`
+- `outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json`
+- `docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Pre-review result:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PENDING | Runner passes locally with PASS=10 FAIL=0 and writes paired certificate. |
+| Physics Claim Boundary | SUPPORT/BOUNDARY | The block exposes the common canonical `O_H` / accepted EW-Higgs action root cut and keeps source-Higgs and W/Z row obligations separate. |
+| Imports / Support | PENDING | Forbidden import firewall is explicit; review must verify no support contract is treated as current action authority. |
+| Nature Retention | NO-GO | No retained or `proposed_retained` closure is authorized. |

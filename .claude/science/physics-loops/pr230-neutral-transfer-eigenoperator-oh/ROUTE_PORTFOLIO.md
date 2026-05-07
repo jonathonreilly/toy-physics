@@ -40,7 +40,39 @@
 
 | Rank | Route | Positive probability | Missing-import count | Runner/test availability | Landability | Notes |
 |---:|---|---:|---:|---|---|---|
-| 1 | Physical source-radial transfer/action row | Medium-low | 2 | New runner target now explicit | High as support/no-go | Needs actual same-surface off-diagonal generator or action row. |
-| 2 | Canonical `O_H` / source-Higgs pole rows | Medium | 3 | Existing gates and builder contracts | High | Cleanest positive route if rows/certificate appear. |
-| 3 | Same-source W/Z accepted-action response | Medium-low | 4 | Existing W/Z contracts | High | Needs accepted action, W/Z rows, covariance, strict non-observed `g2`. |
-| 4 | Schur / scalar-LSZ support | Low-medium | 4 | Strong diagnostics exist | Medium | Useful support, not closure without pole/FV/IR and `O_H`. |
+| 1 | Common canonical `O_H` / accepted EW-Higgs action root | Medium | 2 | New block02 runner plus existing gates | High | Shared root vertex for the source-Higgs and W/Z priority pivots. |
+| 2 | Physical source-Higgs pole rows after canonical `O_H` | Medium | 3 | Time-kernel harness and OS/GEVP contracts exist | High | Needs production `C_ss/C_sH/C_HH` rows, Gram/FV/IR/LSZ authority. |
+| 3 | Same-source W/Z accepted-action response | Medium-low | 4 | Existing W/Z contracts and block02 cut | High | Needs accepted action, W/Z rows, same-source top rows, covariance, strict non-observed `g2`. |
+| 4 | Physical source-radial transfer/action row | Medium-low | 2 | Block01 runner gives exact missing datum | High as support/no-go | Reopens only if actual same-surface off-diagonal generator or action row appears. |
+| 5 | Schur / scalar-LSZ support | Low-medium | 4 | Strong diagnostics exist | Medium | Useful support, not closure without pole/FV/IR and `O_H`. |
+
+## Selected Block02 Route
+
+**Canonical `O_H` / W/Z common accepted-action cut**
+
+- Type: exact support/boundary route-selection certificate.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 3.
+- Claim-state movement: pivots from the blocked neutral-transfer shortcut to a
+  precise shared root vertex for the two requested positive routes.  It
+  separates the common canonical `O_H` / accepted EW-Higgs action certificate
+  from route-specific source-Higgs rows and W/Z response/covariance/`g2`
+  obligations.
+- Artifact: `YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT`.
+
+## Block02 Fan-Out Synthesis
+
+1. **Canonical `O_H` / source-Higgs frame**
+   - Result: degree-one radial-tangent support and time-kernel support exist,
+     but no current canonical `O_H`, `C_sH/C_HH` pole rows, Gram/FV/IR/LSZ, or
+     retained-route approval exists.
+
+2. **W/Z accepted-action frame**
+   - Result: response-ratio algebra is exact support, but no accepted
+     same-source action, W/Z rows, same-source top rows, matched covariance,
+     or strict non-observed `g2` exists.
+
+3. **Common-root frame**
+   - Result: the strict common vertex is a non-shortcut same-surface canonical
+     `O_H` / accepted EW-Higgs action certificate.  After that vertex lands,
+     the two routes fork into separate production row obligations.

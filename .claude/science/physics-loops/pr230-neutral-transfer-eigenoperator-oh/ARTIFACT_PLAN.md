@@ -18,3 +18,23 @@ outputs/yt_pr230_same_surface_neutral_transfer_operator_2026-05-06.json
 or a replacement certificate proving the same source-radial off-diagonal
 neutral transfer/action datum, canonical `O_H` pole-overlap rows, or W/Z
 physical-response bypass.
+
+Block02 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py` | Created; PASS=10 FAIL=0 |
+| Certificate | `outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json` | Created |
+| Theorem/boundary note | `docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md` | Created |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block02:
+
+```text
+outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
+```
+
+or an equivalent non-shortcut same-surface accepted EW-Higgs action
+certificate.  If that lands, the next production targets are
+`C_ss/C_sH/C_HH(t)` source-Higgs rows or W/Z response/covariance/strict-`g2`
+rows on the accepted action.

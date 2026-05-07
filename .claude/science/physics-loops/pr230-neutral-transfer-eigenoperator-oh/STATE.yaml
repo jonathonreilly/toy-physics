@@ -1,67 +1,75 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T08:15:38-04:00"
-branch: physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507
-base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-base_head_at_start: ac8b25aee045dc2166743954fd72df45d7e77fca
-lock_status: "branch-local supervisor lock used during run and removed before delivery; scripts/automation_lock.py fails on hardcoded /Users/jonreilly path"
-cycle_count: 1
-active_science_block: block01_neutral_transfer_eigenoperator_source_mixing
-active_route: neutral transfer / eigenoperator / primitive route
+checkpoint_time: "2026-05-07T08:29:21-04:00"
+branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
+base_branch: claude/yt-direct-lattice-correlator-2026-04-30
+base_head_at_start: 76c5d93e7
+lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
+cycle_count: 2
+active_science_block: block02_canonical_oh_wz_common_action_cut
+active_route: canonical O_H/source-Higgs bridge plus W/Z accepted-action response pivot
 target_status: best-honest-status
-actual_current_surface_status: exact negative boundary / current same-surface Z3 eigenoperator data do not certify a physical neutral scalar transfer or O_H bridge
-conditional_surface_status: conditional-support if a future same-surface neutral action/transfer supplies source-radial off-diagonal generator data or measured C_spH/C_HH pole rows with canonical LSZ/FV/IR authority
+actual_current_surface_status: exact support/boundary / canonical O_H and WZ accepted-action common-cut certificate; current surface remains open
+conditional_surface_status: exact-support if a future same-surface canonical O_H / accepted EW-Higgs action certificate lands; source-Higgs and WZ still need their separate production rows and authority gates
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The block shows the source identity and taste-radial axis are orthogonal Z3-invariant basis vectors.  Symmetry/eigenoperator data allow zero or nonzero source-radial mixing, and the full source-plus-triplet primitive transfer requires a new eta coupling absent from current PR230 artifacts."
+proposal_allowed_reason: "Block02 exposes the shared root vertex and route-specific data cuts only. The current surface still lacks canonical O_H, an accepted same-source EW/Higgs action, source-Higgs pole rows, W/Z response rows, matched covariance, strict g2, and aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Supply a physical same-surface source-radial off-diagonal transfer/action entry, a strict neutral primitive-cone certificate on the full source-plus-neutral sector, canonical O_H with source-Higgs pole rows, or a W/Z response bypass."
+hard_residual: "Retire the shared root vertex with a non-shortcut same-surface canonical O_H / accepted EW-Higgs action certificate; then supply source-Higgs C_ss/C_sH/C_HH pole rows or W/Z response/covariance/strict-g2 rows on that action."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current same-surface PR230 action primitives"
   - "same-surface Z3 taste-triplet artifact"
   - "Z3 positive-cone support Q_i^+=(I+S_i)/2 at exact-support status"
-  - "conditional lazy-triplet primitive theorem only as conditional mathematics"
-  - "completed two-source taste-radial rows only as C_sx/C_xx support, not canonical C_sH/C_HH"
+  - "degree-one radial-tangent O_H theorem only under its future action premise"
+  - "source-Higgs time-kernel GEVP harness only as support/infrastructure"
+  - "W/Z response-ratio algebra only as support until accepted action, rows, covariance, and strict g2 exist"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "alpha_LM/u0/plaquette chain, observed g2, kappa_s=1, c2=1, Z_match=1"
   - "renaming C_sx/C_xx as C_sH/C_HH before x=canonical O_H"
   - "gauge Perron, entropy, area, Fisher, or projector language as physics without same-surface transfer/action proof"
+  - "treating support contracts, formal GEVP smoke, or static EW algebra as accepted physical response"
 files_touched:
-  - scripts/frontier_yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go.py
-  - docs/YT_PR230_NEUTRAL_TRANSFER_EIGENOPERATOR_SOURCE_MIXING_NO_GO_NOTE_2026-05-07.md
-  - outputs/yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_2026-05-07.json
+  - scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
+  - docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md
+  - outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
-  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/GOAL.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/NO_GO_LEDGER.md
-  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/LITERATURE_BRIDGES.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ARTIFACT_PLAN.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md
-  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK01.md
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK02.md
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/load_bearing_summary.json
+  - docs/audit/data/runner_classification.json
 commands_run:
+  - "sed -n read of physics-loop SKILL.md, STATE.yaml, and HANDOFF.md before other work"
   - "git fetch origin"
-  - "python3 scripts/automation_lock.py status # failed: permission denied /Users/jonreilly"
-  - "python3 -m py_compile scripts/frontier_yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go.py"
-  - "python3 scripts/frontier_yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go.py # PASS=18 FAIL=0"
-  - "python3 docs-link check for new theorem note # missing_links=[]"
+  - "git switch -c physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py"
+  - "python3 scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py # PASS=10 FAIL=0"
+  - "python3 link check for new theorem note # missing_links=[]"
   - "python3 scripts/frontier_yt_pr230_assumption_import_stress.py # PASS=93 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py # PASS=154 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=308 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=341 FAIL=0"
-  - "local review-loop pass on block01 changed files # pass for exact negative-boundary claim"
-  - "git commit -m 'Add PR230 neutral transfer eigenoperator no-go' # cb5eea468"
-  - "git push -u origin physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507"
-  - "gh pr create --base claude/yt-direct-lattice-correlator-2026-04-30 --head physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507 # PR 639"
-review_disposition: pass_exact_negative_boundary
-pr_status: "opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/639"
-next_exact_action: "Yield for outer supervisor continuation; next campaign route is a physical same-surface source-radial off-diagonal generator/action row, then canonical O_H/source-Higgs pole rows if still blocked."
-stop_condition: "Complete block01 delivery and yield for outer supervisor continuation; no-go/support-only is not campaign completion."
+  - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings"
+  - "python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+  - "git diff --check # clean"
+review_disposition: pass_exact_support_boundary
+pr_status: "direct integration into draft PR #230 requested; commit and push to claude/yt-direct-lattice-correlator-2026-04-30"
+next_exact_action: "Commit clean block02 artifacts without repo-wide audit-surface churn, push to draft PR #230, then continue on the common canonical O_H / accepted EW-Higgs action certificate."
+stop_condition: "Complete block02 delivery and yield for outer supervisor continuation; support-only/open status is not campaign completion."

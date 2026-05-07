@@ -1,16 +1,18 @@
 # PR Backlog
 
-Block01 review PR was created successfully:
+Block01 PR was opened:
 
+```text
 https://github.com/jonathonreilly/cl3-lattice-framework/pull/639
+```
 
-Expected recovery command if GitHub PR creation fails:
+Block02 is being integrated directly into draft PR #230 after user direction.
+No standalone block02 review PR should be opened unless PR #230 integration
+fails and the packet needs separate review.
+
+Expected recovery commands if direct PR #230 push fails:
 
 ```bash
-git push -u origin physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507
-gh pr create \
-  --base claude/yt-direct-lattice-correlator-2026-04-30 \
-  --head physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507 \
-  --title "[physics-loop] pr230-neutral-transfer-eigenoperator-oh block01 exact negative boundary" \
-  --body-file .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK01.md
+git push origin HEAD:claude/yt-direct-lattice-correlator-2026-04-30
+gh pr view 230 --json url,state,isDraft,headRefName
 ```
