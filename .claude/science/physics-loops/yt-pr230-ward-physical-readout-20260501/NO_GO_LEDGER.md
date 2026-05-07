@@ -1,5 +1,19 @@
 # No-Go Ledger
 
+## Clean source-Higgs route selector remains support-only at chunks001-052
+
+The 2026-05-07 clean source-Higgs selector refresh consumes the current
+committed chunks001-052 prefix and excludes active chunks053-054.  This
+refreshes the route ranking; it does not add the missing physics artifact.
+The clean path still starts with a same-surface FMS/EW-Higgs action or native
+Cl(3)/Z3 action derivation plus canonical `O_H`, followed by production
+`C_ss/C_sH/C_HH` pole rows and `O_sp`-Higgs Gram/overlap gates.
+
+Do not treat the selector, outside-math method names, FMS literature, the
+chunks001-052 finite row prefix, finite Schur diagnostics, or active worker
+state as canonical `O_H`, source-Higgs pole rows, W/Z response rows,
+scalar-LSZ/FV authority, retained, or proposed-retained closure.
+
 ## Additive-top Jacobian rows are not W/Z subtraction closure
 
 The 2026-05-07 additive-top Jacobian refresh updates the support artifact from

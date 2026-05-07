@@ -5,7 +5,7 @@ positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
 **Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract, the FMS
-action-adoption minimal cut, the fresh-artifact intake refresh, chunks001-050
+action-adoption minimal cut, the fresh-artifact intake refresh, chunks001-052
 two-source taste-radial support, two-source finite-Schur support, the
 same-surface neutral multiplicity-one intake gate, and the rejected candidate
 attempt landed.
@@ -31,7 +31,7 @@ The refresh consumes the current genuine support without promoting it:
   `C_ss/C_sH/C_HH` pole rows exist;
 - the fresh-artifact intake at the current PR head still rejects retained or
   `proposed_retained` closure and excludes active worker outputs/logs;
-- the two-source taste-radial campaign has `50/63` chunks packaged as partial
+- the two-source taste-radial campaign has `52/63` chunks packaged as partial
   `C_sx/C_xx` support only;
 - finite Schur `A_f/B_f/C_f` inverse rows are bounded diagnostics, not pole
   `K'(pole)` authority.
@@ -133,5 +133,5 @@ support, but they are not a closure substitute.
 
 ```bash
 python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
-# SUMMARY: PASS=20 FAIL=0
+# SUMMARY: PASS=22 FAIL=0
 ```

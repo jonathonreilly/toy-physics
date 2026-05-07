@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 clean source-Higgs selector current-prefix refresh:
+
+- Refreshed `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
+  and `docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md`
+  against the current committed chunks001-052 prefix.
+- Result: route ranking is unchanged.  Clean source-Higgs/FMS remains first:
+  same-surface accepted EW/Higgs action or native Cl(3)/Z3 action derivation,
+  canonical `O_H` identity/LSZ normalization, then production
+  `C_ss/C_sH/C_HH` pole rows and `O_sp`-Higgs Gram/overlap gates.  W/Z
+  response remains first fallback only after accepted-action, covariance, and
+  strict non-observed `g2` roots.
+- Validation: clean route selector `PASS=22 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+- Chunks053-054 remain active run-control only and are excluded from evidence.
+- Claim boundary: exact support only.  No canonical `O_H`, no source-Higgs
+  pole rows, no W/Z rows, no scalar-LSZ/FV authority, and no retained or
+  `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 additive-top Jacobian current-prefix refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`

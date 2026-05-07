@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-07 clean source-Higgs selector current-prefix refresh: the selector
+now consumes the current committed chunks001-052 row prefix and excludes active
+chunks053-054 as run-control-only state.  The closure ranking is unchanged:
+highest-value target remains same-surface accepted FMS/EW-Higgs action or a
+native Cl(3)/Z3 action derivation plus canonical `O_H`, then production
+`C_ss/C_sH/C_HH` pole rows and `O_sp`-Higgs Gram/overlap gates.  W/Z remains
+the first fallback only after accepted-action, matched covariance, and strict
+non-observed `g2` roots close.  No outside-math method name, partial chunk
+prefix, FMS literature, Schur finite row, or active worker state is proof
+authority.
+
 2026-05-07 additive-top Jacobian current-prefix refresh: the additive-top
 builder now tracks the current committed package audit and consumes
 chunks001-052, with active chunks053-054 excluded.  This improves freshness of

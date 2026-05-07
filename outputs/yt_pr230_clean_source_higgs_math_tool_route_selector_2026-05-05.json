@@ -15,7 +15,7 @@
     "same_surface_multiplicity_gate_loaded": true,
     "two_source_expected_chunks": 63,
     "two_source_partial_rows_support_only": true,
-    "two_source_ready_chunks": 50
+    "two_source_ready_chunks": 52
   },
   "exact_next_action": "For the clean source-Higgs route, retire the FMS/action-adoption root first: supply a same-surface accepted EW/Higgs action or native Cl(3)/Z3 action derivation, plus a canonical O_H identity and LSZ normalization certificate.  Only after that root lands, run the source-Higgs time-kernel C_ss/C_sH/C_HH rows, compute the O_sp-Higgs Gram/overlap packet, and rerun scalar-LSZ, full assembly, retained-route, campaign, and completion-audit gates.  Completed taste-radial chunks may continue to be packaged as bounded C_sx/C_xx support, but they are not a closure substitute.",
   "fail_count": 0,

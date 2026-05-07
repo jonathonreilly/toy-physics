@@ -16,11 +16,25 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-276-additive-top-jacobian-current-prefix-refresh
-blocks_completed: 275
-active_route: "Additive-top Jacobian current-prefix refresh"
-active_hard_residual: "Refreshed the additive-top Jacobian row builder so it consumes the committed chunk-package audit dynamically instead of a stale chunks001-046 hard limit.  The artifact now records chunks001-052, active chunks053-054 excluded, row_count=52, A_top weighted mean 1.3263445336471822 with stderr 0.0004504696260217704, and diagnostic T_total-A_top median 0.09907662065195189.  This remains bounded support only: no per-configuration matched covariance, no W/Z rows, no strict non-observed g2, no canonical O_H/source-Higgs pole rows, and no retained/proposed-retained closure.  Validation: additive row builder PASS=12 FAIL=0; additive contract PASS=22 FAIL=0; assumption stress PASS=104 FAIL=0; campaign status PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0."
+current_phase: campaign-block-277-clean-source-higgs-selector-current-prefix-refresh
+blocks_completed: 276
+active_route: "Clean source-Higgs route selector current-prefix refresh"
+active_hard_residual: "Refreshed the clean source-Higgs outside-math route selector against the current committed chunks001-052 two-source taste-radial prefix while chunks053-054 remain active run-control only.  The selector still ranks the same-surface accepted FMS/EW-Higgs action plus canonical O_H certificate first, then production C_ss/C_sH/C_HH pole rows and O_sp-Higgs Gram/overlap gates; W/Z response remains first fallback after accepted-action, covariance, and strict non-observed g2 roots.  This remains exact support only: no canonical O_H, no source-Higgs pole rows, no W/Z rows, no scalar-LSZ/FV authority, and no retained/proposed-retained closure.  Validation: selector PASS=22 FAIL=0; assumption stress PASS=104 FAIL=0; campaign status PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0."
 files_touched:
+  - "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md"
+  - "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py"
   - "docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json"

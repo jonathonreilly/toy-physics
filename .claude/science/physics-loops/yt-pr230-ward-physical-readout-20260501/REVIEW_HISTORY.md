@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - Clean Source-Higgs Selector Current-Prefix Refresh
+
+Review stance: exact support / route selector freshness, no closure.
+
+- Refreshed the clean source-Higgs outside-math route selector against the
+  current committed chunks001-052 prefix.
+- The ranking is unchanged: accepted same-surface FMS/EW-Higgs action plus
+  canonical `O_H` first, production `C_ss/C_sH/C_HH` pole rows and
+  `O_sp`-Higgs Gram/overlap gates next, with W/Z response as first fallback
+  only after accepted-action, covariance, and strict `g2` roots.
+- Validation: selector `PASS=22 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: support only.  The selector supplies no canonical `O_H`, no pole
+rows, no W/Z response rows, no scalar-LSZ/FV authority, and no
+retained/proposed-retained closure.  Chunks053-054 remain active run-control
+only.
+
 ## 2026-05-07 - Additive-Top Jacobian Current-Prefix Refresh
 
 Review stance: bounded support / infrastructure-adjacent row refresh, no
