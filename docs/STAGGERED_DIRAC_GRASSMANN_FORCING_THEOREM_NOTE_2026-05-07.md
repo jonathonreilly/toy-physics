@@ -1,0 +1,210 @@
+# Staggered-Dirac Substep 1 — Grassmann Partition Forcing (Block 02)
+
+**Date:** 2026-05-07
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Status:** branch-local positive theorem packaging the substep-1
+forcing of the staggered-Dirac realization gate. Conditional on the
+cited retained primitive chain (per-site Cl(3) dim 2 +
+[Cl(3) per-site uniqueness chirality-aware repair](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
++ [spin-statistics S2](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md)).
+This note repackages the existing spin-statistics S2 forcing argument
+as the explicit substep-1 forcing theorem under the parent
+[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md).
+**Authority role:** branch-local source-note proposal. Audit verdict
+and effective status are set only by the independent audit lane.
+**Loop:** staggered-dirac-realization-gate-20260507 (Block 02)
+**Branch:** physics-loop/staggered-dirac-realization-gate-block02-20260507
+**Primary runner:** [`scripts/probe_grassmann_forcing_dependency_chain.py`](../scripts/probe_grassmann_forcing_dependency_chain.py)
+
+## Question
+
+Does A1 (Cl(3) local algebra) + A2 (Z³ substrate) + admissible
+mathematical infrastructure FORCE the matter sector of the
+staggered-Dirac realization to be Grassmann (vs. allowing both
+Grassmann AND bosonic 2nd-quantization)?
+
+## Answer
+
+**Yes — the matter measure on A1+A2 is uniquely Grassmann.**
+Bosonic 2nd quantization is incompatible with the retained finite
+per-site Cl(3) module dimension; only the Grassmann implementation
+is consistent with A1.
+
+## Setup
+
+### Premises (A_min for substep 1)
+
+| ID | Statement | Class |
+|---|---|---|
+| A1 | Local algebra is `Cl(3)` per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | retained axiom |
+| A2 | `Z^3` spatial substrate | retained axiom |
+| U2 | Cl(3) per-site uniqueness (chirality-aware): exactly two non-isomorphic complex spinor irreps, each dim 2 | retained per [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md) |
+| U4 | Per-site Hilbert dim = 2 (chirality-independent) | retained per [`CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md`](CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md) |
+| S2 | Spin-statistics: bosonic 2nd-quantization on Cl(3) site → infinite-dim Fock incompatible with U4 | support per [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md) (S2) |
+
+### Forbidden imports
+
+- NO PDG observed values (no fermion masses, no mixing angles)
+- NO lattice MC empirical measurements
+- NO same-surface family arguments
+- NO new axioms beyond A1+A2 (no-new-axiom rule)
+
+## Theorem 1 (Grassmann partition forcing)
+
+**Theorem.** On A1 (Cl(3) local algebra) + A2 (Z³ substrate) plus
+retained primitives U2, U4, S2:
+
+```
+The matter measure on the framework's Cl(3) ⊗ Z³ substrate must be
+the finite Grassmann partition with one (χ_x, χ̄_x) pair per site.
+Bosonic 2nd-quantization is RULED OUT by spin-statistics S2.
+```
+
+Specifically: there is no consistent matter measure on A1+A2
+implementing the canonical staggered Dirac–Wilson operator that uses
+**commuting** (bosonic) generators in place of the Grassmann pair.
+Hence the staggered-Dirac realization's Grassmann content is
+**forced**, not admitted as an independent axiom.
+
+### Proof
+
+The proof is a one-line repackaging of spin-statistics S2 specialized
+to substep-1 of the staggered-Dirac realization gate.
+
+**Step 1.** By U2 + U4, the per-site Hilbert space at every
+`x ∈ Z³` is a finite-dimensional Cl(3) module of complex dimension
+2 (Pauli realization on each chirality summand).
+
+**Step 2.** Suppose for contradiction the matter generators were
+**commuting** (bosonic) creation/annihilation operators `a_x, a_x^†`
+satisfying `[a_x, a_y^†] = δ_{xy}, [a_x, a_y] = 0`. Build the
+corresponding bosonic Fock space `F_B = ⊕_{n_1, n_2, ...} |n_1 n_2 ...⟩`
+over the modes indexed by `Λ ⊂ Z³`.
+
+**Step 3.** By the standard bosonic-Fock construction, each per-site
+factor of `F_B` is the infinite-dimensional bosonic Fock tower
+`H_x^B = ⊕_{n=0}^∞ |n⟩_x` with `dim_C H_x^B = ∞`.
+
+**Step 4.** Per A1 + U4, the per-site Hilbert space MUST be the
+faithful irreducible Cl(3) representation of complex dimension 2.
+This is incompatible with `dim_C H_x^B = ∞` from Step 3.
+
+**Step 5.** Contradiction. Hence the matter generators cannot be
+bosonic. By the only remaining algebraic alternative (Grassmann),
+the matter measure is forced to be the finite Grassmann partition
+with one Grassmann pair per site, where `dim_C H_x^F = 2` (finite,
+matches U4).
+
+**Step 6.** The Grassmann implementation has `χ_x² = 0` and one
+Grassmann pair `(χ_x, χ̄_x)` per site, giving per-site Hilbert
+dimension exactly 2 (the two-state local Fock module). This matches
+U4 and is the unique algebraic alternative to bosonic generators.
+
+QED.
+
+## Hypothesis set used
+
+- A1 (Cl(3) local algebra)
+- A2 (Z³ substrate)
+- U2 (Cl(3) per-site uniqueness, chirality-aware)
+- U4 (per-site Hilbert dim 2)
+- S2 (spin-statistics: bosonic incompatibility argument)
+- Standard finite Grassmann calculus (admissible standard math, narrow
+  non-derivation role)
+
+No fitted parameters. No observed values. No physics conventions
+admitted beyond the cited retained primitives + standard finite
+Grassmann calculus.
+
+## Status
+
+```yaml
+actual_current_surface_status: branch-local positive theorem
+target_claim_type: positive_theorem
+conditional_surface_status: |
+  Conditional on:
+   (a) A1+A2 retained per MINIMAL_AXIOMS_2026-05-03;
+   (b) U2 retained (chirality-aware repair 2026-05-03);
+   (c) U4 retained per CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02;
+   (d) S2 support tier per AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29
+       — currently awaiting re-audit after upstream U2 chirality repair.
+       Effective retention of this Block 02 theorem requires S2 to be
+       re-audited at retained tier.
+hypothetical_axiom_status: null
+admitted_observation_status: |
+  Standard finite Grassmann calculus (Berezin, Slavnov-Faddeev) and
+  bosonic Fock construction admitted as standard math machinery in
+  narrow non-derivation roles. No PDG/MC values are load-bearing.
+claim_type_reason: |
+  Theorem 1 is a packaging of spin-statistics S2 specialized to
+  substep-1 of the staggered-Dirac realization gate. The forcing
+  content (bosonic ruled out, Grassmann forced) is the existing
+  S2 result; this note explicitly maps it to the gate's substep-1
+  forcing requirement.
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+forbidden_imports_used: false
+```
+
+## Seven retained-proposal certificate criteria
+
+| # | Criterion | Pass? | Notes |
+|---|---|---|---|
+| 1 | `proposal_allowed: true` | **NO** | This is `positive_theorem` with conditional dependency on S2 re-audit |
+| 2 | No open imports | **NO** | S2 is currently support tier, awaiting re-audit |
+| 3 | No load-bearing observed/fitted/admitted values | **YES** | Pure derivation from retained primitives + standard math |
+| 4 | Every dep retained | **PARTIAL** | A1, A2, U2, U4 retained; S2 support pending re-audit |
+| 5 | Runner checks dep classes | **YES** | Paired runner verifies dependency chain |
+| 6 | Review-loop disposition `pass` | **PENDING** | Block-local self-review pending |
+| 7 | PR body says independent audit required | **WILL_DO** | PR body explicit |
+
+**Verdict:** `positive_theorem` honest tier conditional on S2 re-audit.
+Once S2 is re-audited at retained tier (which the chirality repair
+should enable), this theorem becomes effectively retained for the
+gate's substep-1 closure.
+
+## Promotion-Value Gate (V1-V5)
+
+| # | Question | Answer |
+|---|---|---|
+| V1 | Verdict-identified obstruction closed? | Substep 1 of the staggered-Dirac realization gate (parent's "Forcing the Grassmann partition from A1+A2") |
+| V2 | New derivation? | Explicit packaging of S2 forcing as substep-1 closure. Cleaner dependency chain, audit-ready. |
+| V3 | Audit lane could complete from existing primitives? | Spin-statistics S2 + per-site dim 2 + parent gate exist; this PR explicitly maps them to the substep-1 forcing requirement. New audit-graph artifact. |
+| V4 | Marginal content non-trivial? | Yes — closes one of four substeps of a high-blast-radius open gate |
+| V5 | One-step variant of landed cycle? | No — first substep packaging in this campaign |
+
+**PASS V1-V5.**
+
+## What this closes
+
+- Substep 1 of the staggered-Dirac realization gate (Grassmann
+  partition forcing) is packaged as an explicit positive theorem
+- The dependency chain through retained U2, U4 + support-tier S2
+  is documented audit-ready
+- The campaign's first substep is closed (conditional on S2 re-audit)
+
+## What this does NOT close
+
+- The staggered-Dirac realization gate itself (substeps 2, 3, 4
+  remain open — Blocks 03, 04, 05 of this campaign)
+- The S2 re-audit (independent audit lane work)
+
+## Cross-references
+
+- Parent open-gate: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- Block 01 forcing-gap map: [`STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md`](STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md)
+- Spin-statistics S2 (load-bearing): [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md)
+- Per-site uniqueness (U2): [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+- Per-site Hilbert dim (U4): [`CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md`](CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md)
+- Standard methodology: Berezin (1966) — finite Grassmann calculus; Slavnov-Faddeev — fermion measure; spin-statistics theorem in QFT (Streater-Wightman 1964)
+
+## Command
+
+```bash
+python3 scripts/probe_grassmann_forcing_dependency_chain.py
+```
+
+Expected output: dependency chain verification — A1, A2, U2, U4, S2
+all consistent; bosonic Fock dim infinite; Grassmann Fock dim 2;
+contradiction with U4 forces Grassmann.
