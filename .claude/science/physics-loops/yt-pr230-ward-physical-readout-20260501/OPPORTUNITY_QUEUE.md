@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-07 clean-route refresh: the outside-math route selector now consumes
+the current support state (`O_sp`, radial-spurion contract, chunks001-018
+partial `C_sx/C_xx`, finite Schur A/B/C diagnostics) and still selects the
+direct `O_sp`-Higgs pole-residue contract as the cleanest closure target.  No
+literature/FMS/math tool, `O_sp`, partial row packet, radial-spurion algebra,
+or finite Schur diagnostic is current closure.  Next positive artifact remains
+certified canonical `O_H` plus `C_ss/C_spH/C_HH` pole rows, or a genuine
+equivalent physical-response/neutral-primitive bridge.
+
 2026-05-06 completion-audit refresh: the post-`O_sp` completion audit now
 consumes `O_sp` as exact source-side support while still rejecting positive
 closure.  The immediate positive queue is unchanged and sharpened: the next

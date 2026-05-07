@@ -6,7 +6,13 @@
   "clean_physics_priority": "source_higgs",
   "closure_allowed": false,
   "conditional_surface_status": "conditional-support if a future same-surface O_H certificate, source-Higgs pole rows, and scalar-LSZ authority land and the aggregate gates pass",
-  "exact_next_action": "For the clean source-Higgs route, attempt a same-surface invariant-ring/commutant/primitive-cone derivation of the canonical O_H identity and normalization certificate.  If and only if that certificate lands, produce C_ss/C_sH/C_HH pole rows and run the GNS/Gram-purity plus scalar-LSZ aggregate gates.",
+  "current_support_intake": {
+    "finite_schur_support_only": true,
+    "osp_source_side_available": true,
+    "radial_spurion_support_only": true,
+    "two_source_partial_rows_support_only": true
+  },
+  "exact_next_action": "For the clean source-Higgs route, attempt a same-surface invariant-ring/commutant/primitive-cone derivation of the canonical O_H identity and normalization certificate.  If and only if that certificate lands, produce C_ss/C_spH/C_HH pole rows and run the O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates.",
   "fail_count": 0,
   "forbidden_firewall": {
     "set_c2_equal_one_without_derivation": false,
@@ -20,6 +26,26 @@
     "used_yt_ward_identity_as_authority": false
   },
   "hypothetical_axiom_status": null,
+  "literature_refresh_rows": [
+    {
+      "id": "weak_and_higgs_from_lattice_2026",
+      "pr230_boundary": "route guidance only; supplies no PR230 same-source EW/Higgs action, O_H identity, or pole rows",
+      "route_use": "current lattice-Higgs/FMS context for gauge-invariant weak and Higgs spectroscopy",
+      "url": "https://arxiv.org/abs/2603.12882"
+    },
+    {
+      "id": "testing_gauge_invariant_perturbation_theory_2016",
+      "pr230_boundary": "does not identify the current Cl(3)/Z3 source pole with canonical O_H",
+      "route_use": "supports using gauge-invariant composite operators when a BEH gauge-Higgs action is present",
+      "url": "https://arxiv.org/abs/1610.04188"
+    },
+    {
+      "id": "su2_composite_spectral_properties_2021",
+      "pr230_boundary": "does not provide PR230 C_spH/C_HH rows, W/Z response rows, or kappa_s authority",
+      "route_use": "gauge-invariant composite correlators can carry Higgs-sector spectral information",
+      "url": "https://doi.org/10.1140/epjc/s10052-021-09008-9"
+    }
+  ],
   "outside_math_route_rows": [
     {
       "clean_use": "derive a same-surface canonical O_H operator identity and normalization certificate, or prove a one-dimensional neutral top-coupled scalar sector",
@@ -119,16 +145,23 @@
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
     "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "scalar_lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_production_readiness_gate": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "source_higgs_unratified_gram_shortcut_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
+    "two_source_taste_radial_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
+    "two_source_taste_radial_pole_lift": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
+    "two_source_taste_radial_schur_abc": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
     "wz_smoke_to_production_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json"
   },
   "parent_statuses": {
@@ -137,22 +170,35 @@
     "canonical_oh_premise_stretch": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
     "fms_oh_certificate_construction_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
     "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "genuine_source_pole_artifact_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
+    "legendre_source_pole_operator": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
     "neutral_scalar_commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
     "neutral_scalar_primitive_cone_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
     "nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
     "nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
     "retained_closure_route": "open / retained closure not yet reached",
+    "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
     "scalar_lsz_stieltjes_moment_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
     "schur_compressed_denominator_row_bootstrap_no_go": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
     "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
     "source_higgs_production_readiness_gate": "open / source-Higgs production launch blocked by missing O_H certificate",
     "source_higgs_unratified_gram_shortcut_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority",
+    "two_source_taste_radial_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "two_source_taste_radial_pole_lift": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
+    "two_source_taste_radial_schur_abc": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
     "wz_smoke_to_production_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
   },
-  "pass_count": 14,
+  "pass_count": 19,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Outside-math tools are classified only as methods for producing future same-surface certificates.  Current O_H/C_sH/C_HH rows, neutral irreducibility, Schur rows, strict scalar-LSZ authority, and W/Z response rows remain absent.",
+  "refresh_date": "2026-05-07",
   "selected_clean_route": {
+    "current_genuine_artifact": {
+      "artifact": "O_sp",
+      "limit": "source-side exact support only; O_sp = O_H, C_spH/C_HH rows, and Gram purity remain absent",
+      "role": "LSZ-normalized same-source source-pole operator with unit source-side pole residue"
+    },
     "current_status": "future-only / no current closure authority",
     "id": "source_higgs_invariant_ring_then_gns_pole_rows",
     "stage_1": {
@@ -197,6 +243,7 @@
   "strict_non_claims": [
     "does not claim retained or proposed_retained PR230 closure",
     "does not reopen the non-chunk route queue on prose or path names",
+    "does not treat O_sp, radial-spurion algebra, partial C_sx/C_xx chunks, or finite Schur rows as canonical-Higgs closure",
     "does not treat PSLQ, motivic recognition, or exact constants as proof selectors",
     "does not import H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, c2=1, Z_match=1, or kappa_s=1",
     "does not use reduced pilots, smoke rows, or exact toy contractions as production evidence"

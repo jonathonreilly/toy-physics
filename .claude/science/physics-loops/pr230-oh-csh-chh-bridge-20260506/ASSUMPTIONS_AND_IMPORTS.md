@@ -10,6 +10,11 @@ Forbidden proof inputs:
 
 Allowed context:
 
+- the 2026-05-07 clean source-Higgs outside-math route selector refresh as
+  route support only: it consumes `O_sp`, radial-spurion action-contract
+  support, chunks001-018 partial `C_sx/C_xx` support, and finite Schur
+  `A_f/B_f/C_f` diagnostics, but still forbids treating any of them as
+  canonical `O_H`, `kappa_s`, scalar-LSZ, W/Z response, or closure authority.
 - the exact algebra of the taste-shift operators in
   `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`;
 - the PR230 production harness source coordinate, which is the uniform additive

@@ -6,7 +6,7 @@ runtime_budget_requested: "12h"
 campaign_started_at_utc: "2026-05-01T16:00:07Z"
 checkpoint_interval: "30m"
 deep_block: "90m"
-date: "2026-05-06"
+date: "2026-05-07"
 worktree: "/private/tmp/pr230-wroute-build"
 branch: "codex/pr230-wroute-build tracking origin/claude/yt-direct-lattice-correlator-2026-04-30"
 repo_lock:
@@ -16,10 +16,10 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-241-post-osp-positive-closure-completion-audit
+current_phase: campaign-block-242-clean-source-higgs-route-selector-refresh
 blocks_completed: 241
-active_route: "PR230 post-O_sp positive-closure completion audit"
-active_hard_residual: "The completion audit now explicitly consumes the genuine O_sp source-pole artifact while keeping it support-only: O_sp is exact same-source source-side LSZ normalization, not canonical O_H.  It also consumes the taste-condensate O_H bridge audit as a blocked shortcut because the taste-Higgs axes are orthogonal to the PR230 uniform scalar source.  The audit confirms production and polefit8x8 chunk families are complete with target schema, but closure still lacks a canonical O_H certificate, O_sp-Higgs pole rows (Res_C_sp_sp=1, Res_C_spH, Res_C_HH), scalar-LSZ FV/IR/model-class authority, an accepted source-overlap or same-source physical-response bridge, matching/running, and retained-route/campaign proposal authorization.  Post-O_sp completion audit PASS=24 FAIL=0.  No retained/proposed-retained closure is authorized."
+active_route: "PR230 clean source-Higgs outside-math route selector refresh"
+active_hard_residual: "The clean source-Higgs outside-math route selector now consumes O_sp, radial-spurion action-contract support, chunks001-018 partial C_sx/C_xx support, and finite Schur A/B/C diagnostics while keeping them support-only.  The cleanest closure target remains certified canonical O_H plus C_ss/C_spH/C_HH pole rows, O_sp-Higgs Gram purity, and scalar-LSZ/FV/IR authority.  Selector refresh PASS=19 FAIL=0.  No retained/proposed-retained closure is authorized."
 files_touched:
   - "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
   - "docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md"

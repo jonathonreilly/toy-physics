@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 refresh: the clean source-Higgs outside-math route selector now
+consumes the latest genuine support surface: `O_sp` is the real source-side
+artifact; the radial-spurion contract is future-action support only;
+chunks001-018 provide partial `C_sx/C_xx` row support only; finite Schur
+`A_f/B_f/C_f` rows are bounded diagnostics, not pole authority.  The cleanest
+physics closure remains `O_sp`-Higgs pole-residue closure: certified
+same-surface canonical `O_H`, production `C_ss/C_spH/C_HH` pole rows,
+O_sp-Higgs Gram purity, and scalar-LSZ/FV/IR authority.  FMS/lattice and
+outside-math tools are route engines only until they emit those artifacts.
+
 1. Action-first same-source EW/Higgs action plus gauge-invariant composite
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
    pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree

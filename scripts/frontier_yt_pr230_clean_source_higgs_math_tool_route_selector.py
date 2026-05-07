@@ -27,6 +27,8 @@ OUTPUT = (
 )
 
 PARENTS = {
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
@@ -39,6 +41,11 @@ PARENTS = {
     "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "scalar_lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "wz_smoke_to_production_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
+    "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "two_source_taste_radial_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
+    "two_source_taste_radial_schur_abc": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
+    "two_source_taste_radial_pole_lift": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
@@ -55,6 +62,27 @@ FUTURE_FILES = {
     "neutral_primitive_cone_certificate": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
     "stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
 }
+
+LITERATURE_REFRESH_ROWS = [
+    {
+        "id": "weak_and_higgs_from_lattice_2026",
+        "url": "https://arxiv.org/abs/2603.12882",
+        "route_use": "current lattice-Higgs/FMS context for gauge-invariant weak and Higgs spectroscopy",
+        "pr230_boundary": "route guidance only; supplies no PR230 same-source EW/Higgs action, O_H identity, or pole rows",
+    },
+    {
+        "id": "testing_gauge_invariant_perturbation_theory_2016",
+        "url": "https://arxiv.org/abs/1610.04188",
+        "route_use": "supports using gauge-invariant composite operators when a BEH gauge-Higgs action is present",
+        "pr230_boundary": "does not identify the current Cl(3)/Z3 source pole with canonical O_H",
+    },
+    {
+        "id": "su2_composite_spectral_properties_2021",
+        "url": "https://doi.org/10.1140/epjc/s10052-021-09008-9",
+        "route_use": "gauge-invariant composite correlators can carry Higgs-sector spectral information",
+        "pr230_boundary": "does not provide PR230 C_spH/C_HH rows, W/Z response rows, or kappa_s authority",
+    },
+]
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -252,6 +280,11 @@ def selected_clean_route() -> dict[str, Any]:
             "canonical Higgs directly, instead of normalizing through W/Z or "
             "downstream matching observables."
         ),
+        "current_genuine_artifact": {
+            "artifact": "O_sp",
+            "role": "LSZ-normalized same-source source-pole operator with unit source-side pole residue",
+            "limit": "source-side exact support only; O_sp = O_H, C_spH/C_HH rows, and Gram purity remain absent",
+        },
         "stage_1": {
             "goal": "same-surface canonical O_H identity and normalization",
             "candidate_tools": [
@@ -348,6 +381,35 @@ def main() -> int:
     no_forbidden_imports = all(value is False for value in firewall.values())
     source_higgs_ranked_first = ranking[0]["option"] == "O_H/C_sH/C_HH source-Higgs pole rows"
     wz_fallback_not_primary = ranking[-1]["option"] == "genuine same-source W/Z response rows"
+    literature_refresh_support_not_proof = (
+        len(LITERATURE_REFRESH_ROWS) == 3
+        and all(row["url"].startswith(("https://arxiv.org/abs/", "https://doi.org/")) for row in LITERATURE_REFRESH_ROWS)
+        and all("no PR230" in row["pr230_boundary"] or "does not" in row["pr230_boundary"] for row in LITERATURE_REFRESH_ROWS)
+    )
+    osp_source_side_available = (
+        "genuine same-source O_sp source-pole artifact intake"
+        in statuses["genuine_source_pole_artifact_intake"]
+        and parents["genuine_source_pole_artifact_intake"].get("proposal_allowed") is False
+        and "Legendre source-pole operator constructed"
+        in statuses["legendre_source_pole_operator"]
+        and parents["legendre_source_pole_operator"].get("proposal_allowed") is False
+    )
+    radial_spurion_support_only = (
+        "radial-spurion action contract" in statuses["radial_spurion_action_contract"]
+        and parents["radial_spurion_action_contract"].get("current_surface_contract_satisfied") is False
+        and parents["radial_spurion_action_contract"].get("accepted_action_certificate_written") is False
+        and parents["same_source_ew_action_adoption_attempt"].get("adoption_allowed_now") is False
+    )
+    two_source_partial_rows_support_only = (
+        parents["two_source_taste_radial_combiner"].get("ready_chunks") == 18
+        and parents["two_source_taste_radial_combiner"].get("expected_chunks") == 63
+        and parents["two_source_taste_radial_combiner"].get("combined_rows_written") is False
+    )
+    finite_schur_support_only = (
+        parents["two_source_taste_radial_schur_abc"].get("finite_schur_abc_rows_written") is True
+        and parents["two_source_taste_radial_schur_abc"].get("strict_schur_abc_kernel_rows_written") is False
+        and parents["two_source_taste_radial_pole_lift"].get("proposal_allowed") is False
+    )
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -359,6 +421,11 @@ def main() -> int:
     report("outside-math-tools-classified", len(rows) == 6, f"count={len(rows)}")
     report("no-outside-math-tool-is-current-closure-evidence", all_rows_not_current_closure, "all rows future-only or support-only")
     report("pslq-value-recognition-not-proof-selector", not pslq_not_selector["future_useful"], pslq_not_selector["not_allowed_use"])
+    report("literature-refresh-support-not-proof", literature_refresh_support_not_proof, f"rows={len(LITERATURE_REFRESH_ROWS)}")
+    report("osp-source-side-artifact-available-not-closure", osp_source_side_available, statuses["genuine_source_pole_artifact_intake"])
+    report("radial-spurion-action-contract-future-only", radial_spurion_support_only, statuses["radial_spurion_action_contract"])
+    report("two-source-row-combiner-partial-support-only", two_source_partial_rows_support_only, f"ready={parents['two_source_taste_radial_combiner'].get('ready_chunks')}/63")
+    report("finite-schur-abc-support-not-pole-authority", finite_schur_support_only, statuses["two_source_taste_radial_schur_abc"])
     report("clean-physics-route-ranks-source-higgs-first", source_higgs_ranked_first, ranking[0]["option"])
     report("wz-response-demoted-to-fallback-for-clean-goal", wz_fallback_not_primary, ranking[-1]["option"])
     report("selected-route-is-source-higgs-invariant-to-gns", selected["id"] == "source_higgs_invariant_ring_then_gns_pole_rows", selected["id"])
@@ -388,9 +455,17 @@ def main() -> int:
         "audit_required_before_effective_retained": True,
         "clean_physics_priority": "source_higgs",
         "closure_allowed": closure_allowed,
+        "refresh_date": "2026-05-07",
         "parent_certificates": PARENTS,
         "parent_statuses": statuses,
         "strict_future_file_presence": future_present,
+        "literature_refresh_rows": LITERATURE_REFRESH_ROWS,
+        "current_support_intake": {
+            "osp_source_side_available": osp_source_side_available,
+            "radial_spurion_support_only": radial_spurion_support_only,
+            "two_source_partial_rows_support_only": two_source_partial_rows_support_only,
+            "finite_schur_support_only": finite_schur_support_only,
+        },
         "outside_math_route_rows": rows,
         "user_option_clean_physics_ranking": ranking,
         "selected_clean_route": selected,
@@ -398,6 +473,7 @@ def main() -> int:
         "strict_non_claims": [
             "does not claim retained or proposed_retained PR230 closure",
             "does not reopen the non-chunk route queue on prose or path names",
+            "does not treat O_sp, radial-spurion algebra, partial C_sx/C_xx chunks, or finite Schur rows as canonical-Higgs closure",
             "does not treat PSLQ, motivic recognition, or exact constants as proof selectors",
             "does not import H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, c2=1, Z_match=1, or kappa_s=1",
             "does not use reduced pilots, smoke rows, or exact toy contractions as production evidence",
@@ -406,8 +482,8 @@ def main() -> int:
             "For the clean source-Higgs route, attempt a same-surface invariant-"
             "ring/commutant/primitive-cone derivation of the canonical O_H "
             "identity and normalization certificate.  If and only if that "
-            "certificate lands, produce C_ss/C_sH/C_HH pole rows and run the "
-            "GNS/Gram-purity plus scalar-LSZ aggregate gates."
+            "certificate lands, produce C_ss/C_spH/C_HH pole rows and run the "
+            "O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

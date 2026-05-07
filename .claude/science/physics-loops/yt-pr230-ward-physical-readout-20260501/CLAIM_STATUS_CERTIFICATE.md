@@ -1,5 +1,22 @@
 # Claim Status Certificate
 
+Clean-route selector refresh:
+
+```text
+actual_current_surface_status: exact support / clean source-Higgs outside-math route selector; positive closure still open
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
+# SUMMARY: PASS=19 FAIL=0
+```
+
+The refresh consumes `O_sp`, radial-spurion action-contract support,
+chunks001-018 partial `C_sx/C_xx` support, and finite Schur diagnostics.  It
+keeps them support-only and continues to require canonical `O_H`,
+`C_ss/C_spH/C_HH` pole rows, O_sp-Higgs Gram purity, and scalar-LSZ/FV/IR
+authority before any closure wording.
+
 Post-`O_sp` positive-closure completion audit:
 
 ```text

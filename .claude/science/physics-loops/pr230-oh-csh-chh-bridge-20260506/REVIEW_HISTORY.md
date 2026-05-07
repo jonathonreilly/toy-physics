@@ -4,6 +4,20 @@ No external review-loop has been run yet for this block.
 
 Local verification completed:
 
+- `frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`:
+  PASS=19 FAIL=0 after the 2026-05-07 refresh.  It consumes `O_sp`,
+  radial-spurion action-contract support, chunks001-018 partial `C_sx/C_xx`
+  support, and finite Schur A/B/C diagnostics while preserving
+  `proposal_allowed=false` and no closure wording.
+- Follow-on aggregate gates after the selector refresh:
+  assumption/import stress PASS=77 FAIL=0, campaign PASS=323 FAIL=0,
+  full assembly PASS=136 FAIL=0, retained-route PASS=290 FAIL=0, and
+  completion audit PASS=45 FAIL=0.
+- Hygiene: py_compile passed for the selector/assumption/campaign scripts;
+  `git diff --check` passed; exact conflict-marker scan passed; audit pipeline
+  completed and regenerated audit metadata intentionally for the edited note
+  hash; strict audit lint passed with the known five warning-only rows.
+
 - local review-loop pass for the Z3 lazy-transfer promotion attempt:
   disposition `open / exact negative boundary`, no retained/proposed-retained
   wording authorized, and audit metadata intentionally regenerated so strict

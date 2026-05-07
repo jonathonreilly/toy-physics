@@ -4,6 +4,8 @@
 positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
+**Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract, and
+chunks001-018/two-source finite-Schur support landed
 
 ## Purpose
 
@@ -14,6 +16,17 @@ aggregate gates.
 
 This note classifies outside-math tools as possible certificate-producing
 methods, not as proof authority by name.
+
+The refresh consumes the current genuine support without promoting it:
+
+- `O_sp` is a real LSZ-normalized same-source source-pole operator with unit
+  source-side pole residue;
+- the radial-spurion action contract is exact future-action support, but the
+  current additive source is not that action;
+- the two-source taste-radial campaign has `18/63` chunks combined as partial
+  `C_sx/C_xx` support only;
+- finite Schur `A_f/B_f/C_f` inverse rows are bounded diagnostics, not pole
+  `K'(pole)` authority.
 
 ## Ranking
 
@@ -47,6 +60,18 @@ Allowed uses:
 - PSLQ, motivic, MZV, or free-probability recognition only after a
   same-surface quantity has already been produced independently.
 
+Literature refresh rows, still route guidance only:
+
+- `arXiv:2603.12882`, "Weak and Higgs physics from the lattice";
+- `arXiv:1610.04188`, "Testing gauge-invariant perturbation theory";
+- `doi:10.1140/epjc/s10052-021-09008-9`, "Spectral properties of local gauge
+  invariant composite operators in the SU(2) Yang-Mills-Higgs model".
+
+These sources support the gauge-invariant composite-Higgs/FMS route shape after
+an EW/Higgs action and operator are supplied.  They do not supply a PR230
+same-source action, `O_sp = O_H`, `C_spH/C_HH` rows, W/Z response rows, or
+`kappa_s` authority.
+
 Forbidden uses:
 
 - using PSLQ or exact constants as selectors for `O_H`, `y_t`, `g2`,
@@ -69,14 +94,14 @@ No closure is claimed.  The current surface still lacks:
 The selected clean next action is:
 
 ```text
-derive a same-surface invariant-ring/commutant/primitive-cone O_H identity
-and normalization certificate; only after that, produce C_ss/C_sH/C_HH rows
-and run GNS/Gram-purity plus scalar-LSZ aggregate gates.
+use O_sp as the normalized source side, derive a same-surface canonical O_H
+identity/normalization certificate, then produce C_ss/C_spH/C_HH rows and run
+O_sp-Higgs Gram purity plus scalar-LSZ aggregate gates.
 ```
 
 ## Verification
 
 ```bash
 python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=19 FAIL=0
 ```

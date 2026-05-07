@@ -1,5 +1,17 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 clean-route selector refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`,
+  `docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md`,
+  and `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`.
+- The selector now consumes `O_sp`, radial-spurion action-contract support,
+  chunks001-018 partial `C_sx/C_xx` support, and finite Schur A/B/C
+  diagnostics.  All remain support-only.
+- Clean closure target remains certified canonical `O_H` plus
+  `C_ss/C_spH/C_HH` pole rows and O_sp-Higgs Gram purity.  No
+  retained/proposed-retained closure is authorized.
+
 Latest checkpoint, 2026-05-06 post-`O_sp` positive-closure completion audit:
 
 - Refreshed `scripts/frontier_yt_pr230_positive_closure_completion_audit.py`,

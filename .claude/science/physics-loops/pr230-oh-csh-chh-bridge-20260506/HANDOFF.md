@@ -1,5 +1,13 @@
 # Handoff
 
+2026-05-07 route refresh: the clean source-Higgs outside-math selector has been
+rerun after `O_sp`, the radial-spurion action contract, chunks001-018, and the
+finite Schur row support landed.  It keeps the clean closure target unchanged:
+use `O_sp` as the normalized source side, then supply a certified same-surface
+canonical `O_H`, production `C_ss/C_spH/C_HH` pole rows, O_sp-Higgs Gram
+purity, and scalar-LSZ/FV/IR authority.  Literature and outside-math methods
+remain admissible engines only; they are not proof selectors.
+
 The taste-condensate route is now scoped.  It does not supply PR230 `O_H`.
 The exact algebra is simple: taste-Higgs axes `S_i` are trace-zero and
 orthogonal to the uniform mass source `I`, so the current PR230 scalar source

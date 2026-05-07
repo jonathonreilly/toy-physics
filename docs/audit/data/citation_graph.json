@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T00:23:42.297427+00:00",
+  "generated_at": "2026-05-07T00:36:11.547276+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41993,7 +41993,7 @@
       "current_status": "support",
       "current_status_raw": "exact support / clean source-Higgs outside-math route selector;",
       "deps": [],
-      "note_hash": "b87b7a6cedf86090e0ea08159de63ed368354b5b6e332541bc10976f459faf88",
+      "note_hash": "07b6208e8c7a90c04360d52b5ebbbef146b4e14080880e2697e96f4c8411996f",
       "path": "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py",
       "title": "PR230 Clean Source-Higgs Math-Tool Route Selector"
