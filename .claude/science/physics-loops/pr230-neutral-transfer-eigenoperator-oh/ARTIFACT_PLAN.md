@@ -156,3 +156,25 @@ one of those, source-Higgs rows remain bounded support and `C_sx/C_xx` must not
 be aliased to canonical `C_sH/C_HH`.  After block08, do not cycle more
 current-surface shortcut gates; positive work requires one of the block07
 future disjunct artifacts or continued production row generation.
+
+Block09 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py` | Created; PASS=18 FAIL=0 |
+| Certificate | `outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json` | Created |
+| Checkpoint note | `docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md` | Created |
+| Campaign status runner | `scripts/frontier_yt_pr230_campaign_status_certificate.py` | Updated; PASS=347 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block09:
+
+```text
+outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
+```
+
+plus production `C_ss/C_sH/C_HH` pole rows with Gram flatness, or a neutral
+primitive/rank-one authority theorem, or W/Z physical-response rows with
+accepted action, sector-overlap, matched covariance, and strict non-observed
+`g2`.  Existing `001-044` taste-radial chunks remain bounded staging support
+only.

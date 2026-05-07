@@ -40,6 +40,12 @@ hard-residual gates, and records that positive work now requires one of the
 explicit block07 future disjunct artifacts.  No standalone block08 review PR
 should be opened unless PR #230 integration fails.
 
+Block09 follows the same direct PR #230 landing path.  It adds a source-Higgs
+bridge aperture checkpoint over the completed `001-044` two-source
+taste-radial chunks and records that those `C_sx/C_xx` rows are bounded
+staging support only, not canonical `C_sH/C_HH` pole rows.  No standalone
+block09 review PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

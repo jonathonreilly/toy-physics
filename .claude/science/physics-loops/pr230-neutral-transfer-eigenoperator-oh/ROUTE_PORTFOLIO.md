@@ -266,3 +266,40 @@
    - Result: open.  The W/Z builder still requires a non-shortcut canonical
      Higgs certificate; current taste-radial `x` and `C_sx/C_xx` support
      cannot be relabeled as canonical `O_H` or `C_sH/C_HH`.
+
+## Selected Block09 Route
+
+**Source-Higgs bridge aperture checkpoint**
+
+- Type: bounded-support / exact-boundary checkpoint.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: checks the highest-ranked source-Higgs route against
+  the latest completed row evidence without touching the live worker.  It
+  records that the existing `001-044` two-source taste-radial chunks are real
+  staging support, but remain `C_sx/C_xx` rows and do not close canonical
+  `O_H`, production `C_sH/C_HH` pole rows, scalar-LSZ/FV authority, or Gram
+  flatness.
+- Artifact: `YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT`.
+
+## Block09 Fan-Out Synthesis
+
+1. **Canonical `O_H` plus direct source-Higgs rows**
+   - Result: absent.  The hard residual and direct pole-row contract agree
+     that production `C_ss/C_sH/C_HH` rows are meaningful only after a
+     same-surface `O_H` certificate exists.
+
+2. **Existing two-source taste-radial rows**
+   - Result: bounded support.  The completed prefix is `44/63`, schema-clean,
+     and not counted from the live worker, but it is still `C_sx/C_xx`
+     second-source data, not canonical `C_sH/C_HH` pole evidence.
+
+3. **Time-kernel / GEVP and scalar-LSZ authority**
+   - Result: support/boundary only.  The time-kernel contract and strict
+     scalar-LSZ/FV gate do not supply production pole/FV/IR authority or Gram
+     flatness.
+
+4. **W/Z fallback after block08**
+   - Result: open.  The W/Z physical-response route still needs accepted
+     action, sector-overlap, production response rows, matched covariance, and
+     strict non-observed `g2`.

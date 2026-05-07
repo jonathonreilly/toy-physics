@@ -18709,7 +18709,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T13:31:16.261205+00:00",
+  "generated_at": "2026-05-07T13:54:19.103784+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43103,6 +43103,16 @@
       "runner_path": "scripts/frontier_yt_pr230_source_coordinate_transport_gate.py",
       "title": "PR230 Source-Coordinate Transport Gate"
     },
+    "yt_pr230_source_higgs_bridge_aperture_checkpoint_note_2026-05-07": {
+      "claim_id": "yt_pr230_source_higgs_bridge_aperture_checkpoint_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / source-Higgs bridge aperture checkpoint; current",
+      "deps": [],
+      "note_hash": "e888fb27bee32b1d2a95e1007fe5deed29b71303c23dbf253aa4c86cfd9660f6",
+      "path": "docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py",
+      "title": "PR230 Source-Higgs Bridge Aperture Checkpoint"
+    },
     "yt_pr230_source_higgs_direct_pole_row_contract_note_2026-05-07": {
       "claim_id": "yt_pr230_source_higgs_direct_pole_row_contract_note_2026-05-07",
       "current_status": "support",
@@ -43312,6 +43322,16 @@
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS041_042_PACKAGE_NOTE_2026-05-07.md",
       "runner_path": null,
       "title": "PR230 Two-Source Taste-Radial Chunks041-042 Package"
+    },
+    "yt_pr230_two_source_taste_radial_chunks043_044_package_note_2026-05-07": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunks043_044_package_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / chunks001-044 packaged; no closure",
+      "deps": [],
+      "note_hash": "abd4f41e46daa6639e17353b81edfc9d42ab4ac82c3c6ee2c35f2c8bda500956",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS043_044_PACKAGE_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Two-Source Taste-Radial Chunks043-044 Package"
     },
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
@@ -46291,6 +46311,7 @@
     "yt_pr230_schur_x_given_source_one_pole_scout_note_2026-05-07",
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
+    "yt_pr230_source_higgs_bridge_aperture_checkpoint_note_2026-05-07",
     "yt_pr230_source_higgs_direct_pole_row_contract_note_2026-05-07",
     "yt_pr230_source_higgs_overlap_kappa_contract_note_2026-05-06",
     "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
@@ -46312,6 +46333,7 @@
     "yt_pr230_two_source_taste_radial_chunks037_038_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_chunks039_040_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_chunks041_042_package_note_2026-05-07",
+    "yt_pr230_two_source_taste_radial_chunks043_044_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
@@ -46450,12 +46472,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4677,
-    "leaf_count": 1111,
-    "node_count": 2096,
-    "root_count": 1604,
-    "runners_with_path": 1584,
+    "leaf_count": 1113,
+    "node_count": 2098,
+    "root_count": 1606,
+    "runners_with_path": 1585,
     "status_counts": {
-      "bounded": 578,
+      "bounded": 580,
       "open": 104,
       "proposed_promoted": 1,
       "proposed_retained": 373,

@@ -740,6 +740,9 @@ def main() -> int:
         "pr230_wz_accepted_action_response_root_checkpoint": load(
             "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json"
         ),
+        "pr230_source_higgs_bridge_aperture_checkpoint": load(
+            "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3478,6 +3481,46 @@ def main() -> int:
         ),
         statuses["pr230_wz_accepted_action_response_root_checkpoint"],
     )
+    source_higgs_bridge_aperture_checkpoint = certificates[
+        "pr230_source_higgs_bridge_aperture_checkpoint"
+    ]
+    source_higgs_aperture_rows = source_higgs_bridge_aperture_checkpoint.get(
+        "two_source_rows", {}
+    )
+    source_higgs_aperture_ready = source_higgs_aperture_rows.get("ready_chunks")
+    report(
+        "pr230-source-higgs-bridge-aperture-checkpoint-support-not-closure",
+        "source-Higgs bridge aperture checkpoint"
+        in str(statuses["pr230_source_higgs_bridge_aperture_checkpoint"])
+        and source_higgs_bridge_aperture_checkpoint.get("proposal_allowed")
+        is False
+        and source_higgs_bridge_aperture_checkpoint.get(
+            "source_higgs_bridge_aperture_checkpoint_passed"
+        )
+        is True
+        and source_higgs_bridge_aperture_checkpoint.get(
+            "current_surface_closure_satisfied"
+        )
+        is False
+        and isinstance(source_higgs_aperture_ready, int)
+        and 42 <= source_higgs_aperture_ready < 63
+        and source_higgs_aperture_rows.get("present_chunks")
+        == source_higgs_aperture_ready
+        and source_higgs_aperture_rows.get("expected_chunks") == 63
+        and source_higgs_aperture_rows.get("combined_rows_written") is False
+        and not any(
+            source_higgs_bridge_aperture_checkpoint.get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+        and all(
+            value is False
+            for value in source_higgs_bridge_aperture_checkpoint.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_source_higgs_bridge_aperture_checkpoint"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -5841,6 +5884,24 @@ def main() -> int:
         wz_response_route_completion.get("wz_response_route_completion_passed") is True
         and wz_response_route_completion.get("proposal_allowed") is False
     )
+    result["source_higgs_bridge_aperture_support_not_closure"] = (
+        source_higgs_bridge_aperture_checkpoint.get(
+            "source_higgs_bridge_aperture_checkpoint_passed"
+        )
+        is True
+        and source_higgs_bridge_aperture_checkpoint.get("proposal_allowed")
+        is False
+        and source_higgs_bridge_aperture_checkpoint.get(
+            "current_surface_closure_satisfied"
+        )
+        is False
+        and isinstance(source_higgs_aperture_ready, int)
+        and 42 <= source_higgs_aperture_ready < 63
+        and source_higgs_aperture_rows.get("present_chunks")
+        == source_higgs_aperture_ready
+        and source_higgs_aperture_rows.get("expected_chunks") == 63
+        and source_higgs_aperture_rows.get("combined_rows_written") is False
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -5889,6 +5950,11 @@ def main() -> int:
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
         "does not treat the C_x|s one-pole interpolation as a physical scalar pole or residue authority",
+        (
+            "does not treat the source-Higgs bridge aperture checkpoint or "
+            f"{source_higgs_aperture_ready}/63 C_sx/C_xx chunks as canonical "
+            "O_H or C_sH/C_HH closure"
+        ),
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")

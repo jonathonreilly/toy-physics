@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-07 09:28 EDT
+Checkpoint: 2026-05-07 09:52 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -22,112 +22,98 @@ Base / landing path: draft PR #230 head
 Review PR opened for block01:
 https://github.com/jonathonreilly/cl3-lattice-framework/pull/639
 
-## Block05 Result
+## Blocks 05-08
 
-Created `YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT`.
+- Block05 created `YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT`.  The
+  corrected readout is exact support only if same-coordinate `T_total/A_top/W/g2`
+  rows and matched covariance are supplied.
+- Block06 created `YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT`.  Current
+  PR230 still lacks canonical `O_H` and production `C_sH/C_HH` pole rows.
+- Block07 created `YT_PR230_CANONICAL_OH_HARD_RESIDUAL_EQUIVALENCE_GATE`.
+  With `Res(C_sp,sp)=1`, PSD positivity allows `b >= |a|^2`; closure needs
+  flatness `b=|a|^2`, neutral rank-one authority, or full W/Z physical-response
+  authority.
+- Block08 created `YT_PR230_WZ_ACCEPTED_ACTION_RESPONSE_ROOT_CHECKPOINT` and
+  blocked the current W/Z action-root fan-out: sector-overlap identity,
+  adopted radial action, production W/Z mass-fit path, downstream response
+  packet, and canonical `O_H` shared root.
 
-The corrected readout
+## Block09 Result
 
-```text
-y_t = g2 (T_total - A_top) / (sqrt(2) W)
-```
+Created `YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT`.
 
-is exact support if same-coordinate `T_total/A_top/W/g2` rows and matched
-covariance are supplied.  Current PR230 has the contract, not those rows.
+This block continued after block08 and checked whether the source-Higgs route
+has a current aperture from row evidence already on disk.  It consumed only
+existing certificates and completed chunks; it did not touch or relaunch the
+live chunk worker.
 
-## Block06 Result
+During delivery the draft PR head advanced with packaged chunks `043-044`.
+Block09 was rebased on that head and refreshed against the current contiguous
+`001-044` prefix.
 
-Created `YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT`.
+Result:
 
-This block records the future direct source-Higgs pole-row surface for a
-certified same-surface `O_H_candidate` plus production `C_ss/C_sH/C_HH` rows.
-Current PR230 still lacks canonical `O_H` and production pole rows.
+- the completed two-source taste-radial packet is the contiguous `001-044`
+  prefix out of `63` manifest chunks;
+- those rows are schema-clean bounded staging support;
+- they remain `C_sx/C_xx` second-source rows, not canonical `C_sH/C_HH` pole
+  rows;
+- the combined measurement-row file is not written because chunks `045-063`
+  are absent;
+- canonical `O_H`, production `C_sH/C_HH` rows, strict scalar-LSZ/FV/IR
+  authority, and Gram flatness are absent;
+- the W/Z fallback remains open after block08.
 
-## Block07 Result
-
-Created `YT_PR230_CANONICAL_OH_HARD_RESIDUAL_EQUIVALENCE_GATE`.
-
-This block packages the hard residual.  With `Res(C_sp,sp)=1`, PSD positivity
-allows `b >= |a|^2`; closure needs flatness `b=|a|^2`, neutral rank-one
-authority, or full W/Z physical-response authority.  None is present.
-
-## Block08 Result
-
-Created `YT_PR230_WZ_ACCEPTED_ACTION_RESPONSE_ROOT_CHECKPOINT`.
-
-This block continued after block07 and fanned out the W/Z action-root route:
-
-- current same-source sector-overlap identity;
-- adopted no-independent-top radial action after additive-source incompatibility;
-- additive-top subtraction rows after the block05 contract;
-- production W/Z correlator mass-fit path;
-- response-ratio packet after accepted action;
-- canonical `O_H` as the shared action-builder root.
-
-No frame closes on the actual current surface.  The honest status is exact
-negative boundary / W/Z accepted-action response root not closed by current
-sector-overlap, radial-action, subtraction-row, or mass-fit candidates.
-`proposal_allowed=false`.
+Honest status: bounded-support / source-Higgs bridge aperture checkpoint;
+current surface remains open.  `proposal_allowed=false`.
 
 ## Verification
 
 ```bash
-python3 -m py_compile scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
-python3 scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py
-# SUMMARY: PASS=12 FAIL=0
+python3 -m py_compile scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=347 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings; newly seeded=1
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
 python3 link check for new theorem note
 # missing_links=[]
-python3 certificate firewall check
-# proposal_allowed=false, root_closures_found=[], forbidden_firewall clean
-bash docs/audit/scripts/run_pipeline.sh
-python3 docs/audit/scripts/audit_lint.py --strict
-python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=93 FAIL=0
-python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=154 FAIL=0
-python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=308 FAIL=0
-python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=346 FAIL=0
-git diff --check
+rg forbidden/status firewall review
+# no load-bearing forbidden import or retained/proposed_retained promotion found after bounded-support wording fix
 ```
-
-The audit pipeline was rerun after block08 integration and strict lint passed
-with the known 5 warnings.
 
 ## Claim Boundary
 
 No retained or `proposed_retained` wording is authorized.
 
-Block08 does not claim physical W/Z response closure, does not write or
-validate an accepted same-source EW/Higgs action certificate, does not assume
-`k_top = k_gauge`, does not treat the conditional radial-spurion theorem or
-additive-source boundary as current action authority, does not use the
-block05-block07 support/boundary contracts as current row evidence, does not
-identify taste-radial `x` with canonical `O_H`, does not relabel
-`C_sx/C_xx` as `C_sH/C_HH`, and does not use `H_unit`, `yt_ward_identity`,
-observed targets, observed `g2`, `alpha_LM`, plaquette, `u0`, or unit
-conventions.  It did not touch or relaunch the live chunk worker.
+Block09 does not claim canonical `O_H`, does not claim physical source-Higgs
+pole rows, does not relabel `C_sx/C_xx` as `C_sH/C_HH`, does not use
+`C_sx/C_xx` chunks as Gram flatness, does not set `kappa_s`, `c2`, `Z_match`,
+or any overlap to one, does not use `H_unit`, `yt_ward_identity`, `y_t_bare`,
+observed targets, observed `g2`, `alpha_LM`, plaquette, or `u0`, and does not
+treat W/Z response as closed after block08.
 
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
-through block07 science content is already present on the draft PR #230 head.
-Block08 should follow the same direct PR #230 landing path unless PR230
+through block08 science content is already present on the draft PR #230 head.
+Block09 should follow the same direct PR #230 landing path unless PR230
 integration fails.
 
 ## Review
 
-Local review-loop disposition for block08: pass exact negative boundary.  Code,
-claim boundary, import firewall, repo-governance links, audit compatibility,
-and PR230 assembly gates were checked locally.  No independent audit verdict
-was applied.
+Local review-loop disposition for block09: pass bounded-support/open boundary.
+Code, claim boundary, import firewall, repo-governance links, and campaign
+status compatibility were checked locally.  No independent audit verdict was
+applied.
 
 ## Next Exact Action
 
-Do not cycle more current-surface shortcut gates.  Positive work now requires
-one of the explicit block07 future disjunct artifacts:
+Continue only through a real missing artifact:
 
 ```text
 certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness
@@ -145,3 +131,7 @@ or
 W/Z physical-response rows with accepted action, sector-overlap, matched
 covariance, and strict non-observed g2
 ```
+
+Existing `001-044` `C_sx/C_xx` rows are bounded staging support only.  Do not
+cycle more current-surface shortcut gates, and do not touch the live chunk
+worker from this lane.

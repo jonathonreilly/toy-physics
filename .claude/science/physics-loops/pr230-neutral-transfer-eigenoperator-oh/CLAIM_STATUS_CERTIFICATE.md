@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block08_wz_accepted_action_response_root_checkpoint`.
+Current block: `block09_source_higgs_bridge_aperture_checkpoint`.
 
 ```yaml
-actual_current_surface_status: exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, subtraction-row, or mass-fit candidates
-conditional_surface_status: conditional-support if a future same-surface no-independent-top radial action, sector-overlap identity, canonical O_H certificate, additive-top subtraction rows, and production W/Z mass-fit path land
+actual_current_surface_status: bounded-support / source-Higgs bridge aperture checkpoint; 44 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness
+conditional_surface_status: exact support if a future same-surface canonical O_H certificate, production C_ss/C_sH/C_HH pole rows, complete row/FV/IR authority, and Gram flatness land without forbidden imports
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block08 checks the W/Z action-root fan-out after the additive-source, additive-top subtraction, direct source-Higgs pole-row, and canonical O_H hard-residual gates. Every attack remains support-only or blocked: current sector-overlap identity absent, radial action not adopted on the actual additive-source surface, additive top contamination not removed or measured by rows, production W/Z mass fits absent, canonical O_H absent, and downstream covariance/strict g2 absent."
+proposal_allowed_reason: "Block09 consumes only existing 44/63 two-source taste-radial chunks and parent certificates. The rows are useful staging support but remain C_sx/C_xx, not canonical C_sH/C_HH pole evidence. Canonical O_H, production source-Higgs pole rows, complete row/FV/IR authority, Gram flatness, and W/Z physical-response authority remain absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,20 +17,20 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
-1. Open imports remain: canonical `O_H`, accepted same-source EW/Higgs action,
-   current same-source sector-overlap or adopted no-independent-top radial
-   action, production additive-top subtraction rows, production
-   `C_ss/C_sH/C_HH` pole rows, W/Z mass-fit response rows, same-source
-   top-response rows, matched top/W or top/Z covariance, strict non-observed
-   `g2`, FV/IR/model-class row authority, and aggregate retained-route
+1. Open imports remain: canonical `O_H`, production `C_ss/C_sH/C_HH` pole rows,
+   full 63/63 row packet or replacement physical rows, strict scalar-LSZ/FV/IR
+   authority, source-Higgs Gram flatness, neutral primitive/rank-one authority,
+   accepted same-source EW/Higgs action, sector-overlap, W/Z response rows,
+   matched covariance, strict non-observed `g2`, and aggregate retained-route
    approval.
-2. The block verifies dependency classes and forbidden-input firewalls, but it
-   is an action-root boundary rather than a positive retained-grade proposal.
-3. Block08 does not assume `k_top=k_gauge`, does not treat the conditional
-   radial-spurion theorem as current action authority, does not relabel
-   `C_sx/C_xx`, does not identify taste-radial `x` with canonical `O_H`, and
-   does not use the block05-block07 support/boundary contracts as current row
-   evidence.
+2. Block09 verifies dependency classes and forbidden-input firewalls, but it is
+   an aperture checkpoint over current staging rows, not a positive retained
+   proposal.
+3. Block09 does not touch the live worker, does not relabel `C_sx/C_xx` as
+   `C_sH/C_HH`, does not identify taste-radial `x` with canonical `O_H`, does
+   not set `kappa_s`, `c2`, `Z_match`, or overlaps to one, and does not use
+   `H_unit`, `yt_ward_identity`, `y_t_bare`, observed targets, observed `g2`,
+   `alpha_LM`, plaquette, or `u0`.
 4. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
@@ -51,5 +51,8 @@ Prior block certificate summary:
   current canonical `O_H` and production pole rows are absent.
 - Block07 actual status: exact negative boundary / canonical `O_H` hard
   residual not closed on the current PR230 surface.
-- Block01 through Block08 all have `proposal_allowed=false`; their boundaries
+- Block08 actual status: exact negative boundary / W/Z accepted-action response
+  root not closed by current sector-overlap, radial-action, subtraction-row, or
+  mass-fit candidates.
+- Block01 through Block09 all have `proposal_allowed=false`; their boundaries
   remain active.
