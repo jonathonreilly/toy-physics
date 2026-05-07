@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - W/Z Same-Source Accepted-Action Minimal Certificate Cut
+
+Review stance: exact negative boundary / dependency cut, no closure.
+
+- Added `scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py`,
+  its note, and its JSON certificate.
+- The runner records that support-side W/Z contracts are loaded but not
+  action authority.  The accepted same-source EW action still needs canonical
+  `O_H`, current sector-overlap/adopted radial-spurion action, and production
+  W/Z mass-fit path roots.
+- Validation: W/Z cut `PASS=12 FAIL=0`; assumption stress `PASS=92 FAIL=0`;
+  campaign status `PASS=340 FAIL=0`; full assembly `PASS=153 FAIL=0`;
+  retained-route `PASS=307 FAIL=0`; completion audit `PASS=62 FAIL=0`;
+  `py_compile` passed.
+
+Disposition: no closure.  The cleanest route remains same-surface canonical
+`O_H` plus `C_spH/C_HH` pole rows; the W/Z route is reopened only by closing
+the accepted-action cut and then adding W/Z response rows, covariance, and
+strict non-observed `g2`.
+
 ## 2026-05-07 - FMS Literature Source-Overlap Intake
 
 Review stance: exact negative boundary / literature bridge only.

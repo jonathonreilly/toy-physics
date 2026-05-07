@@ -719,6 +719,9 @@ def main() -> int:
         "pr230_wz_response_ratio_identifiability_contract": load(
             "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
         ),
+        "pr230_wz_same_source_action_minimal_certificate_cut": load(
+            "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3298,6 +3301,30 @@ def main() -> int:
         is False,
         statuses["pr230_wz_response_ratio_identifiability_contract"],
     )
+    wz_same_source_action_minimal_cut = certificates[
+        "pr230_wz_same_source_action_minimal_certificate_cut"
+    ]
+    report(
+        "pr230-wz-same-source-action-minimal-certificate-cut-open",
+        "WZ accepted same-source action minimal certificate cut"
+        in str(statuses["pr230_wz_same_source_action_minimal_certificate_cut"])
+        and wz_same_source_action_minimal_cut.get("proposal_allowed") is False
+        and wz_same_source_action_minimal_cut.get(
+            "wz_same_source_action_minimal_certificate_cut_passed"
+        )
+        is True
+        and wz_same_source_action_minimal_cut.get(
+            "current_surface_action_certificate_satisfied"
+        )
+        is False
+        and set(wz_same_source_action_minimal_cut.get("root_certificate_cut_open", []))
+        == {
+            "same_surface_canonical_higgs_operator_certificate",
+            "current_same_source_sector_overlap_identity",
+            "wz_correlator_mass_fit_path_certificate",
+        },
+        statuses["pr230_wz_same_source_action_minimal_certificate_cut"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -5528,6 +5555,23 @@ def main() -> int:
         and wz_response_ratio_contract.get("strict_g2_authority_present") is False
         and wz_response_ratio_contract.get("matched_covariance_authority_present")
         is False
+    )
+    result["wz_same_source_action_minimal_certificate_cut_open"] = (
+        wz_same_source_action_minimal_cut.get(
+            "wz_same_source_action_minimal_certificate_cut_passed"
+        )
+        is True
+        and wz_same_source_action_minimal_cut.get("proposal_allowed") is False
+        and wz_same_source_action_minimal_cut.get(
+            "current_surface_action_certificate_satisfied"
+        )
+        is False
+        and set(wz_same_source_action_minimal_cut.get("root_certificate_cut_open", []))
+        == {
+            "same_surface_canonical_higgs_operator_certificate",
+            "current_same_source_sector_overlap_identity",
+            "wz_correlator_mass_fit_path_certificate",
+        }
     )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(

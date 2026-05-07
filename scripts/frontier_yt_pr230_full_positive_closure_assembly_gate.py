@@ -126,6 +126,7 @@ PARENTS = {
     "pr230_radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
     "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
+    "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
@@ -1260,6 +1261,32 @@ def main() -> int:
         )
         is False
     )
+    wz_same_source_action_minimal_certificate_cut_open = (
+        "WZ accepted same-source action minimal certificate cut"
+        in statuses["pr230_wz_same_source_action_minimal_certificate_cut"]
+        and certs["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "wz_same_source_action_minimal_certificate_cut_passed"
+        )
+        is True
+        and certs["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "current_surface_action_certificate_satisfied"
+        )
+        is False
+        and set(
+            certs["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+                "root_certificate_cut_open", []
+            )
+        )
+        == {
+            "same_surface_canonical_higgs_operator_certificate",
+            "current_same_source_sector_overlap_identity",
+            "wz_correlator_mass_fit_path_certificate",
+        }
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in statuses["pr230_post_fms_source_overlap_necessity_gate"]
@@ -2285,6 +2312,11 @@ def main() -> int:
         statuses["pr230_wz_response_ratio_identifiability_contract"],
     )
     report(
+        "wz-same-source-action-minimal-certificate-cut-open",
+        wz_same_source_action_minimal_certificate_cut_open,
+        statuses["pr230_wz_same_source_action_minimal_certificate_cut"],
+    )
+    report(
         "post-fms-source-overlap-necessity-blocks-current-inference",
         post_fms_source_overlap_necessity_blocks_current_inference,
         statuses["pr230_post_fms_source_overlap_necessity_gate"],
@@ -3302,6 +3334,7 @@ def main() -> int:
         "radial_spurion_sector_overlap_support_not_closure": radial_spurion_sector_overlap_support_not_closure,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
+        "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
@@ -3354,6 +3387,7 @@ def main() -> int:
             "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
+            "does not treat the W/Z same-source minimal certificate cut as accepted action authority or response rows",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",

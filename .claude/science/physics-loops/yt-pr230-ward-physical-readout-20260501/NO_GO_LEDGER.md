@@ -1,5 +1,18 @@
 # No-Go Ledger
 
+## W/Z accepted same-source action still has a three-root certificate cut
+
+The 2026-05-07 W/Z same-source accepted-action minimal certificate cut records
+that the W/Z fallback cannot be assembled from conditional support contracts
+alone.  The action ansatz, centered `Phi^dagger Phi` bridge, radial-spurion
+contract, conditional sector-overlap theorem, and response-ratio algebra are
+support only.  The accepted action still lacks canonical `O_H`, current
+sector-overlap/adopted radial-spurion authority, and production W/Z
+correlator mass-fit path roots.  Do not treat the ansatz, static EW algebra,
+radial-spurion theorem, response-ratio contract, or builder schema as W/Z
+response evidence, strict `g2`, matched covariance, retained, or
+proposed-retained closure.
+
 ## FMS literature is not PR230 source-overlap or kappa authority
 
 The 2026-05-07 FMS literature source-overlap intake records FMS and

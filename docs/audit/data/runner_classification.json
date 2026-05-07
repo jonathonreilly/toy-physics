@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T08:18:13.631830+00:00",
+  "generated_at": "2026-05-07T09:39:28.549030+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16633,6 +16633,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py"
     },
+    "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py"
+    },
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06": {
       "assert_count": 1,
       "counts": {
@@ -17257,6 +17269,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py"
     },
+    "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py"
+    },
     "yt_pr230_schur_route_completion_note_2026-05-06": {
       "assert_count": 1,
       "counts": {
@@ -17592,6 +17616,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_wz_response_route_completion.py"
+    },
+    "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py"
     },
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05": {
       "assert_count": 1,
@@ -35115,6 +35151,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py": {
       "assert_count": 1,
       "claims": [
@@ -35895,6 +35946,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_schur_route_completion.py": {
       "assert_count": 1,
       "claims": [
@@ -36304,6 +36370,21 @@
       "assert_count": 1,
       "claims": [
         "yt_pr230_wz_response_route_completion_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
       ],
       "counts": {
         "A": 0,
@@ -41555,13 +41636,13 @@
     "decoration_candidates": 109,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 240,
-      "C": 526,
-      "D": 314,
+      "B": 241,
+      "C": 527,
+      "D": 315,
       "none": 404
     },
-    "runners_classified": 1493,
-    "runners_with_C": 803,
-    "runners_with_D": 581
+    "runners_classified": 1496,
+    "runners_with_C": 806,
+    "runners_with_D": 583
   }
 }

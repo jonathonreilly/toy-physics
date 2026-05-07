@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T09:21:09.974435+00:00",
+  "generated_at": "2026-05-07T09:39:25.794422+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43118,6 +43118,16 @@
       "runner_path": "scripts/frontier_yt_pr230_wz_response_route_completion.py",
       "title": "PR230 W/Z Response Route Completion"
     },
+    "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07": {
+      "claim_id": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
+      "current_status": "open",
+      "current_status_raw": "exact negative boundary / WZ accepted same-source action minimal certificate cut remains open.",
+      "deps": [],
+      "note_hash": "8d2a4f25687808d517cfe430cd23caa5e13739cba922a01c04a8bc86d5aef4c3",
+      "path": "docs/YT_PR230_WZ_SAME_SOURCE_ACTION_MINIMAL_CERTIFICATE_CUT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py",
+      "title": "PR230 W/Z Same-Source Accepted-Action Minimal Certificate Cut"
+    },
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05": {
       "claim_id": "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
       "current_status": "unknown",
@@ -45958,6 +45968,7 @@
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
     "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
     "yt_pr230_wz_response_route_completion_note_2026-05-06",
+    "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
     "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06",
     "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06",
@@ -46082,13 +46093,13 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1130,
-    "node_count": 2083,
-    "root_count": 1596,
-    "runners_with_path": 1574,
+    "leaf_count": 1131,
+    "node_count": 2084,
+    "root_count": 1597,
+    "runners_with_path": 1575,
     "status_counts": {
       "bounded": 574,
-      "open": 103,
+      "open": 104,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 451,

@@ -239,6 +239,9 @@ def main() -> int:
         "wz_response_ratio_identifiability_contract": load(
             "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
         ),
+        "wz_same_source_action_minimal_certificate_cut": load(
+            "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -1895,6 +1898,7 @@ def main() -> int:
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
+            "does not treat the W/Z same-source minimal certificate cut as an accepted action certificate or W/Z response evidence",
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",
             "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",

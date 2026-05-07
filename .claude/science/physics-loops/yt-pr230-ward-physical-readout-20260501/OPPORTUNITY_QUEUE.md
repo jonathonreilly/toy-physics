@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 W/Z same-source accepted-action minimal certificate cut: the W/Z
+fallback now has a precise dependency cut.  The support-side contracts are
+present but do not validate the accepted action.  Root open vertices are:
+same-surface canonical `O_H`, current same-source sector-overlap identity or
+adopted radial-spurion action, and production W/Z correlator mass-fit path.
+Even after those, W/Z closure still needs matched top/W or top/Z covariance
+and strict non-observed `g2`.  This makes canonical `O_H` plus
+`C_spH/C_HH` pole rows still the cleanest closure target; W/Z remains first
+fallback only after the accepted-action cut is closed.
+
 2026-05-07 FMS literature source-overlap intake: the targeted FMS and
 gauge-invariant-field rescan is now executable and blocks a common shortcut.
 The references support the future acceptance shape for a gauge-invariant

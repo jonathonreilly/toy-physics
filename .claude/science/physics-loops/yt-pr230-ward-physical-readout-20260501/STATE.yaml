@@ -16,10 +16,10 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-257-two-source-taste-radial-chunks035-036-package
-blocks_completed: 256
-active_route: "PR230 two-source taste-radial row-wave packaging"
-active_hard_residual: "Two-source taste-radial chunks035-036 now pass completed-mode checkpoints and package audit; the row combiner reports ready=36/63 with combined_rows_written=false.  The strict scalar-LSZ gate remains blocked by first-shell Stieltjes violation (z=143.92652720800947), one-volume/partial-packet status, and absent canonical O_H/FV/IR authority.  Schur C_s|x still fails first-shell monotonicity (z=134.33514802069274) while C_x|s is only a necessary first-shell support check (z=-494.595619807674); complete monotonicity remains unavailable with only two q_hat^2 levels.  Aggregate gates remain open/support-only: assumption PASS=92 FAIL=0, campaign PASS=339 FAIL=0, assembly PASS=152 FAIL=0, retained PASS=306 FAIL=0, completion PASS=61 FAIL=0.  Chunk037 is active run-control only.  No canonical O_H, C_sH/C_HH, W/Z response, strict scalar-LSZ/FV/IR, Schur pole, primitive neutral transfer, retained, or proposed-retained closure is authorized."
+current_phase: campaign-block-258-wz-same-source-action-minimal-certificate-cut
+blocks_completed: 257
+active_route: "PR230 W/Z same-source accepted-action dependency cut"
+active_hard_residual: "The W/Z fallback route now has an executable accepted-action cut.  Current support-side contracts are loaded (action ansatz, centered Phi^dagger Phi source bridge, no-independent-top radial-spurion action contract, conditional sector-overlap theorem, response-ratio algebra), but the accepted same-source EW action certificate remains absent.  The root non-shortcut cut is exactly canonical O_H, current same-source sector-overlap identity/adopted radial-spurion action, and production W/Z correlator mass-fit path; after those, W/Z closure still needs matched top/W or top/Z covariance and strict non-observed g2.  Validation: W/Z cut PASS=12 FAIL=0, assumption PASS=92 FAIL=0, campaign PASS=340 FAIL=0, assembly PASS=153 FAIL=0, retained PASS=307 FAIL=0, completion PASS=62 FAIL=0.  Chunks037-038 remain active run-control only.  No canonical O_H, C_sH/C_HH, W/Z response, strict scalar-LSZ/FV/IR, Schur pole, primitive neutral transfer, retained, or proposed-retained closure is authorized."
 files_touched:
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS035_036_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk035_2026-05-06.json"

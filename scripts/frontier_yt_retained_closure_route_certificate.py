@@ -193,6 +193,7 @@ def main() -> int:
         "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
         "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
         "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
+        "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -2024,6 +2025,34 @@ def main() -> int:
             "proposal_allowed"
         )
         is False
+    )
+    wz_same_source_action_minimal_certificate_cut_open = (
+        "WZ accepted same-source action minimal certificate cut"
+        in certificates["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "wz_same_source_action_minimal_certificate_cut_passed"
+        )
+        is True
+        and certificates["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "current_surface_action_certificate_satisfied"
+        )
+        is False
+        and set(
+            certificates["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+                "root_certificate_cut_open", []
+            )
+        )
+        == {
+            "same_surface_canonical_higgs_operator_certificate",
+            "current_same_source_sector_overlap_identity",
+            "wz_correlator_mass_fit_path_certificate",
+        }
     )
     two_source_taste_radial_chunk_checkpoint_not_closure = {}
     for idx in range(1, 11):
@@ -4804,6 +4833,13 @@ def main() -> int:
             "actual_current_surface_status", ""
         ),
     )
+    report(
+        "wz-same-source-action-minimal-certificate-cut-open",
+        wz_same_source_action_minimal_certificate_cut_open,
+        certificates["pr230_wz_same_source_action_minimal_certificate_cut"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
     for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items():
         cert_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
         report(
@@ -6138,6 +6174,10 @@ def main() -> int:
             "same-surface covariance formula.  The Goldstone-equivalence "
             "source-identity no-go now also blocks treating longitudinal-"
             "equivalence bookkeeping as source-coordinate authority.  "
+            "The W/Z same-source minimal certificate cut records that the "
+            "accepted action certificate still needs canonical O_H, current "
+            "sector-overlap identity, and W/Z mass-fit path roots before any "
+            "W/Z physical-response readout can be assembled.  "
             "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "
@@ -6271,6 +6311,7 @@ def main() -> int:
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
+        "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "two_source_taste_radial_chunk_checkpoint_not_closure": {
             f"chunk{idx:03d}": not_closure
             for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items()

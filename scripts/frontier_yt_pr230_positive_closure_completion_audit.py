@@ -49,6 +49,7 @@ PARENTS = {
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
+    "wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
@@ -914,6 +915,22 @@ def main() -> int:
         )
         is False
     )
+    wz_same_source_action_minimal_certificate_cut_open = (
+        "WZ accepted same-source action minimal certificate cut"
+        in parent_statuses["wz_same_source_action_minimal_certificate_cut"]
+        and certs["wz_same_source_action_minimal_certificate_cut"].get(
+            "wz_same_source_action_minimal_certificate_cut_passed"
+        )
+        is True
+        and certs["wz_same_source_action_minimal_certificate_cut"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["wz_same_source_action_minimal_certificate_cut"].get(
+            "current_surface_action_certificate_satisfied"
+        )
+        is False
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -985,6 +1002,7 @@ def main() -> int:
     report("same-source-ew-action-adoption-attempt-not-closure", same_source_ew_action_adoption_attempt_not_closure, parent_statuses["same_source_ew_action_adoption_attempt"])
     report("radial-spurion-action-contract-not-closure", radial_spurion_action_contract_not_closure, parent_statuses["radial_spurion_action_contract"])
     report("wz-response-ratio-identifiability-contract-not-closure", wz_response_ratio_identifiability_contract_not_closure, parent_statuses["wz_response_ratio_identifiability_contract"])
+    report("wz-same-source-action-minimal-certificate-cut-open", wz_same_source_action_minimal_certificate_cut_open, parent_statuses["wz_same_source_action_minimal_certificate_cut"])
     report("post-fms-source-overlap-necessity-blocks-current-inference", post_fms_source_overlap_necessity_blocks_current_inference, parent_statuses["post_fms_source_overlap_necessity_gate"])
     report("source-higgs-overlap-kappa-contract-not-closure", source_higgs_overlap_kappa_contract_not_closure, parent_statuses["source_higgs_overlap_kappa_contract"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
@@ -1159,6 +1177,7 @@ def main() -> int:
             "same_source_ew_action_adoption_attempt_not_closure": same_source_ew_action_adoption_attempt_not_closure,
             "radial_spurion_action_contract_not_closure": radial_spurion_action_contract_not_closure,
             "wz_response_ratio_identifiability_contract_not_closure": wz_response_ratio_identifiability_contract_not_closure,
+            "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
             "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,

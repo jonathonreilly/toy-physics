@@ -1,5 +1,27 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 W/Z same-source accepted-action minimal certificate cut:
+
+- Added
+  `scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py`,
+  `docs/YT_PR230_WZ_SAME_SOURCE_ACTION_MINIMAL_CERTIFICATE_CUT_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json`.
+- The runner converts the W/Z fallback into an exact dependency cut.  Current
+  support-side contracts are loaded, but the accepted same-source EW action
+  certificate remains absent.
+- Root open cut: same-surface canonical `O_H`, current same-source
+  sector-overlap identity/adopted radial-spurion action, and production W/Z
+  correlator mass-fit path.  Later W/Z readout still also needs matched
+  top/W or top/Z covariance and strict non-observed `g2`.
+- Validation: W/Z cut `PASS=12 FAIL=0`; assumption/import stress
+  `PASS=92 FAIL=0`; campaign status `PASS=340 FAIL=0`; full assembly
+  `PASS=153 FAIL=0`; retained-route `PASS=307 FAIL=0`; completion audit
+  `PASS=62 FAIL=0`; `py_compile` passed for touched scripts.
+- Claim boundary: no accepted EW action, no canonical `O_H`, no W/Z rows, no
+  covariance, no strict `g2`, no retained/proposed-retained closure.
+- Chunks037-038 remain active run-control only.
+
 Latest checkpoint, 2026-05-07 FMS literature source-overlap intake:
 
 - Added `scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py`,

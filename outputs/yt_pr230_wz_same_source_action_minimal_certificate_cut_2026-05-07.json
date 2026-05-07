@@ -1,0 +1,261 @@
+{
+  "accepted_action_certificate_path": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+  "accepted_action_certificate_present": false,
+  "action_certificate_rows": [
+    {
+      "evidence": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+      "missing_reason": null,
+      "required_for": "accepted_same_source_ew_action",
+      "satisfied": true,
+      "shortcut_rejection": "The ansatz is action-form support only and does not write the accepted action certificate.",
+      "vertex": "action_form_ansatz"
+    },
+    {
+      "evidence": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
+      "missing_reason": null,
+      "required_for": "accepted_same_source_ew_action",
+      "satisfied": true,
+      "shortcut_rejection": "The bridge identifies the operator for a future mass-source term; it does not supply same-surface action adoption.",
+      "vertex": "centered_phi_dagger_phi_source_bridge"
+    },
+    {
+      "evidence": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+      "missing_reason": null,
+      "required_for": "accepted_same_source_ew_action and W/Z response ratio",
+      "satisfied": true,
+      "shortcut_rejection": "Current PR230 top FH/LSZ source is still the additive top source surface, not an adopted no-independent-top radial action.",
+      "vertex": "no_independent_top_source_radial_contract"
+    },
+    {
+      "evidence": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
+      "missing_reason": null,
+      "required_for": "future W/Z response readout",
+      "satisfied": true,
+      "shortcut_rejection": "dv/ds cancellation is conditional on the missing same-source action, W/Z rows, covariance, and strict g2 authority.",
+      "vertex": "response_ratio_algebra_contract"
+    },
+    {
+      "evidence": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+      "missing_reason": null,
+      "required_for": "future W/Z response readout",
+      "satisfied": true,
+      "shortcut_rejection": "The theorem supplies a conditional sector-overlap shape, but not the current additive-source identity.",
+      "vertex": "same_source_sector_overlap_contract_support"
+    },
+    {
+      "evidence": "open / canonical-Higgs operator certificate absent",
+      "missing_reason": "Builder requires a non-shortcut canonical-Higgs certificate with allowed kind; current candidate_valid is not true.",
+      "required_for": "accepted_same_source_ew_action",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "same_surface_canonical_higgs_operator_certificate"
+    },
+    {
+      "evidence": "exact negative boundary / same-source sector-overlap identity obstruction; exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+      "missing_reason": "Current sector-overlap identity remains absent; conditional radial-spurion support is not the accepted current identity.",
+      "required_for": "accepted_same_source_ew_action",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "current_same_source_sector_overlap_identity"
+    },
+    {
+      "evidence": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+      "missing_reason": "Builder requires a non-shortcut W/Z mass-fit path certificate; current production correlator mass-fit rows are absent.",
+      "required_for": "accepted_same_source_ew_action",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "wz_correlator_mass_fit_path_certificate"
+    },
+    {
+      "evidence": "open / same-source EW action certificate absent; exact negative boundary / same-source EW action not defined on PR230 surface",
+      "missing_reason": "Accepted candidate file is absent or invalid; the builder cannot validate without the missing certificate vertices.",
+      "required_for": "accepted_same_source_ew_action",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "accepted_same_source_ew_action_candidate"
+    },
+    {
+      "evidence": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+      "missing_reason": null,
+      "required_for": "firewall",
+      "satisfied": true,
+      "shortcut_rejection": "The adoption attempt deliberately blocks using the action ansatz as the accepted action certificate.",
+      "vertex": "ansatz_only_adoption_shortcut"
+    }
+  ],
+  "actual_current_surface_status": "exact negative boundary / WZ accepted same-source action minimal certificate cut remains open",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "closure_response_cut_open": [
+    "matched_top_wz_covariance_rows",
+    "strict_non_observed_g2_authority",
+    "source_higgs_gram_or_physical_identity",
+    "aggregate_wz_route_completion"
+  ],
+  "closure_rows": [
+    {
+      "evidence": "open / matched top-W response rows absent",
+      "missing_reason": "No paired top/W or top/Z covariance row packet is present.",
+      "required_for": "W/Z physical-response y_t readout",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "matched_top_wz_covariance_rows"
+    },
+    {
+      "evidence": "open / electroweak g2 certificate builder inputs absent; exact negative boundary / WZ response g2 authority absent for PR230",
+      "missing_reason": "Current g2 authority is blocked; observed W/Z data and normalization-by-fiat are forbidden.",
+      "required_for": "W/Z physical-response y_t readout",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "strict_non_observed_g2_authority"
+    },
+    {
+      "evidence": "open / source-Higgs Gram purity gate not passed",
+      "missing_reason": "Source-Higgs Gram purity is not passed on the current surface.",
+      "required_for": "source-Higgs/WZ bridge cross-check",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "source_higgs_gram_or_physical_identity"
+    },
+    {
+      "evidence": "exact negative boundary / WZ same-source response route not complete on current PR230 surface; open / full positive PR230 closure assembly gate not passed; open / retained closure not yet reached; open / active campaign continuing after current shortcut blocks",
+      "missing_reason": "Aggregate W/Z, assembly, retained-route, and campaign gates remain open.",
+      "required_for": "retained/proposed_retained proposal",
+      "satisfied": false,
+      "shortcut_rejection": null,
+      "vertex": "aggregate_wz_route_completion"
+    }
+  ],
+  "conditional_surface_status": "support: W/Z response can cancel source normalization only after the root action cut is closed and production W/Z/covariance/g2 rows exist",
+  "current_surface_action_certificate_satisfied": false,
+  "dependency_dag": {
+    "accepted_same_source_ew_action": [
+      "action_form_ansatz",
+      "centered_phi_dagger_phi_source_bridge",
+      "same_surface_canonical_higgs_operator_certificate",
+      "current_same_source_sector_overlap_identity",
+      "wz_correlator_mass_fit_path_certificate",
+      "accepted_same_source_ew_action_candidate"
+    ],
+    "wz_physical_response_readout": [
+      "accepted_same_source_ew_action",
+      "no_independent_top_source_radial_contract",
+      "response_ratio_algebra_contract",
+      "matched_top_wz_covariance_rows",
+      "strict_non_observed_g2_authority",
+      "aggregate_wz_route_completion"
+    ]
+  },
+  "exact_next_action": "Close one root vertex with a genuine artifact.  The cleanest path is still same-surface canonical O_H plus C_spH/C_HH pole rows.  For W/Z specifically, produce a non-shortcut canonical-Higgs certificate, a current same-source sector-overlap identity/adopted radial-spurion action, and a production W/Z correlator mass-fit path before writing the accepted action certificate; then add matched top/W covariance rows and strict non-observed g2.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_conditional_contract_as_current_action_authority": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_observed_wz_masses_or_g2": false,
+    "used_reduced_pilots_as_production_evidence": false,
+    "used_static_ew_algebra_as_response_rows": false,
+    "used_yt_ward_identity": false,
+    "wrote_accepted_action_certificate": false
+  },
+  "hypothetical_axiom_status": null,
+  "minimal_action_completion_set": [
+    "same_surface_canonical_higgs_operator_certificate",
+    "current_same_source_sector_overlap_identity",
+    "wz_correlator_mass_fit_path_certificate",
+    "accepted_same_source_ew_action_candidate"
+  ],
+  "open_action_cut": [
+    "same_surface_canonical_higgs_operator_certificate",
+    "current_same_source_sector_overlap_identity",
+    "wz_correlator_mass_fit_path_certificate",
+    "accepted_same_source_ew_action_candidate"
+  ],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
+    "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
+    "wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
+    "electroweak_g2_certificate_builder": "open / electroweak g2 certificate builder inputs absent",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+    "radial_spurion_sector_overlap_theorem": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+    "same_source_ew_action_builder": "open / same-source EW action certificate absent",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+    "same_source_sector_overlap_identity": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
+    "wz_response_ratio_identifiability_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
+    "wz_response_route_completion": "exact negative boundary / WZ same-source response route not complete on current PR230 surface"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The accepted same-source EW action certificate is absent, and its root non-shortcut certificate cut is still open: canonical O_H, current sector-overlap identity, and W/Z mass-fit path.",
+  "root_certificate_cut": [
+    "same_surface_canonical_higgs_operator_certificate",
+    "current_same_source_sector_overlap_identity",
+    "wz_correlator_mass_fit_path_certificate"
+  ],
+  "root_certificate_cut_open": [
+    "same_surface_canonical_higgs_operator_certificate",
+    "current_same_source_sector_overlap_identity",
+    "wz_correlator_mass_fit_path_certificate"
+  ],
+  "satisfied_support_vertices": [
+    "action_form_ansatz",
+    "centered_phi_dagger_phi_source_bridge",
+    "no_independent_top_source_radial_contract",
+    "response_ratio_algebra_contract",
+    "same_source_sector_overlap_contract_support",
+    "ansatz_only_adoption_shortcut"
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not write or validate the accepted same-source EW action certificate",
+    "does not treat an ansatz, radial-spurion contract, or response-ratio algebra as current action authority",
+    "does not treat static EW algebra as W/Z mass-response rows",
+    "does not supply canonical O_H, current sector-overlap identity, W/Z mass-fit rows, matched covariance, or strict g2",
+    "does not set kappa_s, c2, Z_match, or g2 to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, or value recognition"
+  ],
+  "support_side_loaded": {
+    "action_form_ansatz": true,
+    "centered_phi_dagger_phi_source_bridge": true,
+    "no_independent_top_source_radial_contract": true,
+    "response_ratio_algebra_contract": true,
+    "same_source_sector_overlap_contract_support": true
+  },
+  "wz_same_source_action_minimal_certificate_cut_passed": true
+}
