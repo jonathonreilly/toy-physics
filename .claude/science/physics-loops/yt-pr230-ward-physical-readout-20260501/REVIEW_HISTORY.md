@@ -1,5 +1,22 @@
 # Review History
 
+## 2026-05-07 - Fresh-Artifact Intake Refresh
+
+Review stance: open / committed-head intake checkpoint, no closure.
+
+- Refreshed the fresh-artifact intake runner, note, and certificate at current
+  PR head `0dea6f014f5c75ce649e284e49e1940e5bce867d`.
+- The intake now consumes the FMS action-adoption minimal cut and the
+  chunks001-050 packaged row prefix, while excluding active chunk051-052
+  worker output/log state.
+- Validation: fresh-artifact intake `PASS=18 FAIL=0`; campaign status
+  `PASS=356 FAIL=0`.
+
+Disposition: no new closure artifact.  No retained or `proposed_retained`
+wording is allowed.  Reopen requires a same-surface canonical `O_H` /
+source-Higgs pole-row packet or a strict W/Z accepted-action physical-response
+packet.
+
 ## 2026-05-07 - FMS Action-Adoption Minimal Cut
 
 Review stance: exact support / adoption root cut, no closure.

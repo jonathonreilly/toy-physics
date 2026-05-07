@@ -7,8 +7,8 @@
 
 ## Question
 
-After block17 additive-top Jacobian rows landed on draft PR #230, does
-the committed head contain either of the two high-priority campaign inputs?
+After the FMS action-adoption minimal cut landed on draft PR #230, does the
+committed head contain either of the two high-priority campaign inputs?
 
 1. certified canonical `O_H` plus production `C_ss/C_sH/C_HH` pole rows with
    Gram flatness; or
@@ -24,28 +24,27 @@ active chunk-worker output, pending checkpoints, or live logs.
 The current committed head is:
 
 ```text
-cde753822e630be0e6b0fd4287a801513a2ee94c
-Add PR230 additive top Jacobian rows
+0dea6f014f5c75ce649e284e49e1940e5bce867d
+Add PR230 FMS action-adoption cut
 ```
 
-The block15 aggregate wiring is exact support only: it makes the assembly,
-route-certificate, and completion-audit gates see the additive-source
-contamination and subtraction-row contract directly, but it does not add row
-authority.  The block16 open-surface bridge intake is also support/route
-guidance only: it names an FMS/gauge-Higgs `O_H` candidate-packet route and
-positive-cone transfer-kernel fallback, but imports no PR230 proof authority and
-supplies no production rows.
+The current head contains a real FMS route sharpening.  It loads the `O_sp`
+source-pole support, degree-one taste-radial axis support, FMS `O_H`
+candidate/action packet, future source-overlap residue formula, and
+source-Higgs time-kernel manifest.  The FMS cut is still support-only because
+it does not adopt the same-surface EW/Higgs action, certify canonical `O_H`,
+or provide strict `C_ss/C_sH/C_HH` pole rows.
 
-The block17 additive-top Jacobian rows add bounded W/Z-repair support, but they
-remain coarse chunk-level mass-scan rows.  They are not same-source W/Z response
-rows, not per-configuration matched covariance, not accepted action authority,
-not strict non-observed `g2`, and not a final subtracted-response readout.
+The additive-top Jacobian rows remain bounded W/Z-repair support.  They are not
+same-source W/Z response rows, not per-configuration matched covariance, not
+accepted action authority, not strict non-observed `g2`, and not a final
+subtracted-response readout.
 
 The source-Higgs side remains open:
 
-- `ready_chunks = 46`, `expected_chunks = 63`;
+- `ready_chunks = 50`, `expected_chunks = 63`;
 - `combined_rows_written = false`;
-- the first missing chunk is `47`;
+- the first missing chunk is `51`;
 - the current rows are still `C_sx/C_xx` staging rows, not canonical
   `C_sH/C_HH` pole rows;
 - canonical `O_H`, source-Higgs measurement rows, production certificate, and
@@ -62,11 +61,11 @@ The W/Z side also remains open:
 - strict non-observed `g2` authority is absent;
 - `delta_perp` authority and final W-response rows are absent.
 
-The common `O_H`/WZ root cut, block15 additive-response aggregate wiring,
-block16 open-surface bridge intake, and block17 additive-top Jacobian rows are
-useful support/boundary information, but none is the accepted action, certified
-`O_H`, source-Higgs pole-row packet, matched W/Z covariance packet, or
-production-response packet itself.
+The common `O_H`/WZ root cut, additive-response aggregate wiring, open-surface
+bridge intake, additive-top Jacobian rows, and FMS action-adoption minimal cut
+are useful support/boundary information, but none is the accepted action,
+certified `O_H`, source-Higgs pole-row packet, matched W/Z covariance packet,
+or production-response packet itself.
 
 ## Claim Boundary
 
@@ -87,9 +86,9 @@ if a fresh committed artifact supplies one of:
   same-source top rows, matched covariance, strict non-observed `g2`,
   `delta_perp` authority, and final W-response rows.
 
-The block16 route guidance says the next constructive non-chunk attempt should
-be an explicit accepted FMS/gauge-Higgs `O_H` candidate/action packet wired into
-the source-Higgs time-kernel manifest.  If that packet cannot be made
-same-surface and accepted, pivot to the H3/H4 physical positivity-improving
-transfer-kernel rank-one theorem.  Until then, this lane is waiting on explicit
-production/certificate inputs.
+The cleanest constructive non-chunk route is still a same-surface accepted
+FMS/gauge-Higgs action and canonical `O_H` certificate, followed by production
+`C_ss/C_sH/C_HH` time-kernel rows.  If that packet cannot be made same-surface
+and accepted, pivot only to a real strict W/Z packet or an H3/H4 physical
+positivity-improving transfer-kernel rank-one theorem.  Until then, this lane
+is waiting on explicit production/certificate inputs.

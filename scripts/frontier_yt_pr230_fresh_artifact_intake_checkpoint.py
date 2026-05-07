@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -33,6 +34,7 @@ PARENTS = {
     "two_source_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
     "common_oh_wz_cut": "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json",
     "open_surface_bridge_intake": "outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json",
+    "fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
     "additive_top_jacobian_rows": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
     "wz_accepted_action_root": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
     "wz_physical_response_intake": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json",
@@ -134,6 +136,7 @@ def main() -> int:
     package = parents["two_source_package"]
     common_cut = parents["common_oh_wz_cut"]
     open_surface = parents["open_surface_bridge_intake"]
+    fms_cut = parents["fms_action_adoption_minimal_cut"]
     additive_top = parents["additive_top_jacobian_rows"]
     wz_root = parents["wz_accepted_action_root"]
     wz_intake = parents["wz_physical_response_intake"]
@@ -162,15 +165,24 @@ def main() -> int:
         "pr_head_open_status": campaign.get("proposal_allowed") is False,
         "source_higgs_roots_absent": not any(source_roots.values()),
         "source_higgs_parent_still_open": source.get("proposal_allowed") is False,
-        "two_source_prefix_is_46_of_63": ready_chunks == 46 and expected_chunks == 63,
+        "two_source_prefix_is_current_partial": isinstance(ready_chunks, int)
+        and isinstance(expected_chunks, int)
+        and expected_chunks == 63
+        and 0 < ready_chunks < expected_chunks,
         "two_source_combined_rows_absent": combiner.get("combined_rows_written") is False,
-        "next_missing_chunk_is_47": bool(missing_chunks) and missing_chunks[0] == 47,
+        "next_missing_chunk_is_ready_plus_one": bool(missing_chunks)
+        and isinstance(ready_chunks, int)
+        and missing_chunks[0] == ready_chunks + 1,
         "strict_scalar_lsz_not_authority": lsz.get("proposal_allowed") is False
         and lsz.get("strict_scalar_lsz_moment_fv_authority_present") is not True,
         "common_cut_support_only": common_cut.get("proposal_allowed") is False,
         "open_surface_bridge_support_only": open_surface.get("proposal_allowed")
         is False
         and "open-surface bridge intake" in status(open_surface),
+        "fms_action_cut_support_only": fms_cut.get("proposal_allowed") is False
+        and fms_cut.get("closure_authorized") is False
+        and fms_cut.get("adoption_allowed_now") is False
+        and "FMS action-adoption minimal cut" in status(fms_cut),
         "additive_top_jacobian_support_only": additive_top.get("proposal_allowed")
         is False
         and "additive-top" in status(additive_top)
@@ -188,7 +200,7 @@ def main() -> int:
 
     result = {
         "artifact": "YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT",
-        "generated_at": "2026-05-07T11:56:08-04:00",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "git_head": git_value("rev-parse", "HEAD"),
         "git_head_subject": git_value("log", "-1", "--pretty=%s"),
         "actual_current_surface_status": (
@@ -208,10 +220,11 @@ def main() -> int:
         "admitted_observation_status": None,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
-            "The committed PR head contains the block14 46/63 C_sx/C_xx staging "
-            "prefix, block15 additive-response aggregate wiring, and block16 "
-            "open-surface bridge intake plus block17 additive-top coarse "
-            "Jacobian rows, all at support/boundary or route-guidance status.  "
+            f"The committed PR head contains a {ready_chunks}/{expected_chunks} "
+            "C_sx/C_xx staging prefix, additive-response aggregate wiring, "
+            "open-surface bridge intake, additive-top coarse Jacobian rows, "
+            "and the FMS action-adoption minimal cut, all at support/boundary "
+            "or route-guidance status.  "
             "The source-Higgs closure roots, W/Z accepted-action roots, W/Z "
             "production roots, matched covariance, strict g2 certificate, "
             "delta_perp authority, and final W-response rows remain absent."
@@ -248,10 +261,13 @@ def main() -> int:
         },
         "common_root_cut_status": status(common_cut),
         "open_surface_bridge_intake_status": status(open_surface),
+        "fms_action_adoption_minimal_cut_status": status(fms_cut),
         "additive_top_jacobian_rows_status": status(additive_top),
         "parent_statuses": {name: status(cert) for name, cert in parents.items()},
         "checks": checks,
         "forbidden_firewall": FORBIDDEN_FIREWALL,
+        "pass_count": PASS_COUNT,
+        "fail_count": FAIL_COUNT,
         "summary": {
             "pass": PASS_COUNT,
             "fail": FAIL_COUNT,

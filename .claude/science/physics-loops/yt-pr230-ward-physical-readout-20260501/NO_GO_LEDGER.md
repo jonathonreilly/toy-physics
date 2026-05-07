@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Fresh-artifact intake at current head still finds no closure packet
+
+The 2026-05-07 fresh-artifact intake refresh checks committed PR head
+`0dea6f014f5c75ce649e284e49e1940e5bce867d` after the FMS action-adoption
+minimal cut.  It consumes committed certificates only and excludes active
+chunk051-052 worker output/log state.  The branch still has no certified
+canonical `O_H` plus production `C_ss/C_sH/C_HH` pole-row packet, and no
+strict W/Z accepted-action physical-response packet with production rows,
+matched covariance, strict non-observed `g2`, `delta_perp` authority, and
+final W-response rows.
+
+Do not reopen retained/proposed-retained closure merely because the FMS cut,
+open-surface bridge intake, additive-top support, or chunks001-050 finite
+`C_sx/C_xx` packet exists.  The next reopen requires an actual same-surface
+certificate or strict production packet.
+
 ## FMS action-adoption cut is not current-surface action authority
 
 The 2026-05-07 FMS action-adoption minimal cut records the exact root

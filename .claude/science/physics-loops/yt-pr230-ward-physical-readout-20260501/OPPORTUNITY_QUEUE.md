@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-07 fresh-artifact intake refresh: the current committed PR head
+`0dea6f014f5c75ce649e284e49e1940e5bce867d` has been rechecked after the FMS
+action-adoption minimal cut and the chunks001-050 row package.  The refreshed
+intake consumes committed artifacts only, ignores active chunk051-052
+worker outputs/logs, and still finds no certified canonical `O_H` plus
+production `C_ss/C_sH/C_HH` pole-row packet and no strict W/Z accepted-action
+physical-response packet.  Highest-value next action is unchanged: supply the
+same-surface accepted FMS/EW-Higgs action and canonical `O_H` certificate, then
+launch source-Higgs time-kernel rows; fallback only to a real strict W/Z packet
+or a physical H3/H4 positivity-improving transfer-kernel theorem.
+
 2026-05-07 FMS action-adoption minimal cut: the cleanest closure route is now
 sharpened into a strict root cut.  The current support vertices (`O_sp`,
 degree-one radial-axis support, FMS `O_H` candidate/action packet, residue

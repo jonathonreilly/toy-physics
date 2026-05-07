@@ -1,5 +1,26 @@
 # Claim Status Certificate
 
+Fresh-artifact intake refresh:
+
+```text
+actual_current_surface_status: open / fresh-artifact intake checkpoint; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+```
+
+At current PR head `0dea6f014f5c75ce649e284e49e1940e5bce867d`, the intake
+finds no certified canonical `O_H` / source-Higgs pole-row packet and no
+strict W/Z accepted-action physical-response packet.  The chunks001-050
+finite row prefix, FMS cut, open-surface intake, and additive-top support are
+all support/boundary artifacts only.  Chunks051-052 are active run-control
+only until completed and checkpointed.
+
 FMS action-adoption minimal cut checkpoint:
 
 ```text

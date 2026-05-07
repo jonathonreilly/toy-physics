@@ -1,5 +1,23 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 fresh-artifact intake refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py`,
+  `docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md`, and
+  `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json` at
+  current PR head `0dea6f014f5c75ce649e284e49e1940e5bce867d`.
+- The runner now consumes the FMS action-adoption minimal cut and the
+  chunks001-050 packaged row prefix.  It verifies the intake is
+  committed-head-only and does not inspect active worker outputs, pending
+  checkpoints, or live logs.
+- Result: no certified canonical `O_H` / source-Higgs `C_ss/C_sH/C_HH`
+  pole-row packet exists; no strict W/Z accepted-action physical-response
+  packet exists; `proposal_allowed=false`.
+- Validation: fresh-artifact intake `PASS=18 FAIL=0`; campaign status
+  `PASS=356 FAIL=0`.
+- Chunks051-052 remain active run-control only under the row-wave supervisor
+  and are not staged evidence until completed and checkpointed.
+
 Latest checkpoint, 2026-05-07 FMS action-adoption minimal cut:
 
 - Added `scripts/frontier_yt_pr230_fms_action_adoption_minimal_cut.py`,
