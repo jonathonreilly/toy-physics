@@ -1,0 +1,17 @@
+# Assumptions And Imports
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| `Cl(3)/Z^3` substrate and PR230 current source surface | Minimal substrate for the same-surface route | zero-input structural / current PR230 surface | `MINIMAL_AXIOMS_2026-04-11.md`, PR230 branch gates | Yes | Yes | None; this is the lane surface | Allowed |
+| Same-surface Z3 taste-triplet artifact | Supplies cyclic action on `S0,S1,S2` | exact support | `YT_PR230_SAME_SURFACE_Z3_TASTE_TRIPLET_ARTIFACT_NOTE_2026-05-06.md` | Yes for H1 support | Yes for neutral primitive route | Already exact support; not physical transfer | Support only |
+| Z3 positive-cone support `Q_i^+=(I+S_i)/2` | Supplies equal-rank/equal-norm positive projectors | exact support | `YT_PR230_Z3_TRIPLET_POSITIVE_CONE_SUPPORT_CERTIFICATE_NOTE_2026-05-06.md` | Yes for H2 support | Yes for neutral primitive route | Already exact support; needs H3/H4 | Support only |
+| Lazy triplet transfer `L=(I+P)/2` | Conditional primitive math on triplet | conditional-support | `YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md` | Yes as contrast witness | Not sufficient | Derive physical same-surface transfer/action row | Conditional only |
+| Source identity `I/sqrt(8)` and taste-radial `x=(S0+S1+S2)/sqrt(24)` | Block01 source/radial basis | framework-derived exact algebra | New block01 runner | Yes | Yes | Needs physical off-diagonal transfer/action or pole rows | Exact boundary |
+| Source-radial mixing coefficient | Missing bridge datum | unsupported import if assumed | New block01 runner | Yes | Yes | Same-surface neutral transfer/action row or measured `C_spH/C_HH` rows | Open blocker |
+| Canonical `O_H` certificate | Needed to promote `x` to canonical Higgs | absent | `YT_CANONICAL_HIGGS_OPERATOR_CERTIFICATE_GATE_NOTE_2026-05-03.md` | Yes | Yes | Same-surface identity and normalization theorem | Open blocker |
+| Source-Higgs `C_sH/C_HH` pole rows | Observable bridge to canonical Higgs | absent | `YT_PR230_SOURCE_HIGGS_POLE_ROW_ACCEPTANCE_CONTRACT_NOTE_2026-05-06.md` | Yes | Yes | Production same-ensemble pole-row packet and Gram purity | Open blocker |
+| Current `C_sx/C_xx` taste-radial rows | Bounded support for taste-radial diagnostics | computed lattice input / support-only | two-source taste-radial row notes | No for closure | Helpful only after `x=O_H` | Finish rows, then promote only after canonical identity | Guarded |
+| OS/GEVP transfer-kernel method | Future artifact contract | literature/context bridge already recorded | `YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md` | No for block01 proof | Yes for future pole authority | Produce Euclidean-time matrix rows | Context only |
+| `yt_ward_identity`, `H_unit`, observed top/yukawa targets | Forbidden shortcut class | unsupported import | User instruction and PR230 gates | No | Forbidden | None | Excluded |
+| `alpha_LM`, plaquette, `u0`, observed `g2`, unit `kappa_s/c2/Z_match` | Forbidden normalization shortcut class | unsupported import | User instruction and PR230 gates | No | Forbidden | None | Excluded |
+| Entropy/gap/Markov laziness as physical transfer selector | Forbidden unless supplied by same-surface action | unsupported import | `YT_PR230_Z3_LAZY_SELECTOR_NO_GO_NOTE_2026-05-06.md` | No | Forbidden on current surface | Derive action principle or transfer row | Excluded |

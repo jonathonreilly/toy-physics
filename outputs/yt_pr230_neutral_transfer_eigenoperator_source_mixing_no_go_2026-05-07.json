@@ -1,0 +1,321 @@
+{
+  "actual_current_surface_status": "exact negative boundary / current same-surface Z3 eigenoperator data do not certify a physical neutral scalar transfer or O_H bridge",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface neutral action/transfer supplies the source-radial off-diagonal generator or measured C_spH/C_HH pole rows with canonical LSZ/FV/IR authority",
+  "current_missing_artifacts": {
+    "accepted_same_source_ew_action": false,
+    "accepted_same_source_ew_action_absent": true,
+    "canonical_oh_certificate": false,
+    "canonical_oh_or_source_higgs_rows_absent": true,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "physical_transfer_or_offdiagonal_generator_absent": true,
+    "same_surface_neutral_transfer_operator": false,
+    "source_higgs_measurement_rows": false
+  },
+  "eigenoperator_fork": {
+    "conclusion": "Eigenoperator purity and source-radial bridge coupling are not forced by current same-surface Z3 data.  The off-diagonal source-radial entry is an independent transfer/action datum.",
+    "diagonal_positive_kernel": {
+      "basis": [
+        "source_identity",
+        "degree1_taste_radial"
+      ],
+      "bridge_present": false,
+      "determinant": "6",
+      "matrix": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "3"
+        ]
+      ],
+      "radial_is_eigenoperator": true,
+      "source_radial_bridge_entry": "0"
+    },
+    "mixed_positive_kernel": {
+      "basis": [
+        "source_identity",
+        "degree1_taste_radial"
+      ],
+      "bridge_present": true,
+      "determinant": "23/4",
+      "matrix": [
+        [
+          "2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "3"
+        ]
+      ],
+      "radial_is_eigenoperator": false,
+      "source_radial_bridge_entry": "1/2"
+    }
+  },
+  "forbidden_import_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "imports_entropy_gap_or_markov_laziness_as_physics": false,
+    "passed": true,
+    "renames_C_sx_C_xx_as_C_sH_C_HH": false,
+    "sets_c2_or_zmatch_to_one": false,
+    "sets_kappa_s_to_one": false,
+    "uses_H_unit": false,
+    "uses_alpha_lm_plaquette_u0": false,
+    "uses_observed_top_mass_or_yukawa": false,
+    "uses_observed_wz_or_g2_values": false,
+    "uses_reduced_pilots_as_proof": false,
+    "uses_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "invariant_operator_basis": {
+    "basis": [
+      "source_identity",
+      "degree1_taste_radial",
+      "degree2_taste_radial",
+      "degree3_taste_radial"
+    ],
+    "gram": [
+      [
+        0.9999999999999998,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0000000000000002,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0000000000000002,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999998
+      ]
+    ],
+    "max_orthonormal_error": 2.220446049250313e-16,
+    "source_radial_hilbert_schmidt_overlap": 0.0,
+    "z3_cycle_errors": {
+      "degree1_taste_radial": 0.0,
+      "degree2_taste_radial": 0.0,
+      "degree3_taste_radial": 0.0,
+      "source_identity": 0.0
+    },
+    "z3_trivial_sector_dimension_exhibited": 4
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_gate": "open / canonical-Higgs operator certificate absent",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_multiplicity_candidate": "exact negative boundary / same-surface neutral multiplicity-one candidate attempt rejected on current PR230 surface",
+    "os_transfer_kernel_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "source_coordinate_transport": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
+    "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "z3_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
+    "z3_lazy_selector_no_go": "exact negative boundary / Z3 lazy selector shortcuts do not derive the PR230 physical neutral transfer",
+    "z3_lazy_transfer_promotion": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
+    "z3_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
+  },
+  "primitive_transfer_witness": {
+    "conclusion": "Triplet primitivity does not imply full source-Higgs primitivity. A source-triplet eta coupling is needed and is not selected by the current same-surface artifacts.",
+    "eta_positive_example_primitive_power": 2,
+    "eta_zero_reducible": true,
+    "source_plus_triplet_eta_rows": [
+      {
+        "eta": "0",
+        "matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "1/2",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "1/2"
+          ]
+        ],
+        "primitive_power": null,
+        "row_sums": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "source_to_each_triplet_weight": "0"
+      },
+      {
+        "eta": "1/20",
+        "matrix": [
+          [
+            "17/20",
+            "1/20",
+            "1/20",
+            "1/20"
+          ],
+          [
+            "1/20",
+            "19/40",
+            "0",
+            "19/40"
+          ],
+          [
+            "1/20",
+            "19/40",
+            "19/40",
+            "0"
+          ],
+          [
+            "1/20",
+            "0",
+            "19/40",
+            "19/40"
+          ]
+        ],
+        "primitive_power": 2,
+        "row_sums": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "source_to_each_triplet_weight": "1/20"
+      },
+      {
+        "eta": "1/10",
+        "matrix": [
+          [
+            "7/10",
+            "1/10",
+            "1/10",
+            "1/10"
+          ],
+          [
+            "1/10",
+            "9/20",
+            "0",
+            "9/20"
+          ],
+          [
+            "1/10",
+            "9/20",
+            "9/20",
+            "0"
+          ],
+          [
+            "1/10",
+            "0",
+            "9/20",
+            "9/20"
+          ]
+        ],
+        "primitive_power": 2,
+        "row_sums": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "source_to_each_triplet_weight": "1/10"
+      },
+      {
+        "eta": "1/5",
+        "matrix": [
+          [
+            "2/5",
+            "1/5",
+            "1/5",
+            "1/5"
+          ],
+          [
+            "1/5",
+            "2/5",
+            "0",
+            "2/5"
+          ],
+          [
+            "1/5",
+            "2/5",
+            "2/5",
+            "0"
+          ],
+          [
+            "1/5",
+            "0",
+            "2/5",
+            "2/5"
+          ]
+        ],
+        "primitive_power": 2,
+        "row_sums": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "source_to_each_triplet_weight": "1/5"
+      }
+    ],
+    "triplet_lazy_primitive_power": 2,
+    "triplet_lazy_transfer": [
+      [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "1/2"
+      ]
+    ]
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The exact Cl(3)/Z3 invariant sector contains an orthogonal source identity and taste-radial axis.  Symmetry/eigenoperator data allow both a diagonal positive kernel with zero source-radial bridge and a mixed positive kernel with arbitrary source-radial bridge.  The lazy triplet transfer is primitive only inside the triplet; the source-plus-triplet transfer is reducible unless a new eta coupling is supplied.  Current PR230 artifacts supply no physical neutral transfer/operator, off-diagonal generator, canonical O_H certificate, source-Higgs pole rows, or accepted same-source EW action.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not identify taste-radial x with canonical O_H",
+    "does not rename C_sx/C_xx as C_sH/C_HH",
+    "does not set kappa_s, c2, Z_match, or g2 to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not import entropy, spectral gap, or Markov laziness as physical transfer"
+  ],
+  "verification": {
+    "fail_count": 0,
+    "pass_count": 18
+  }
+}
