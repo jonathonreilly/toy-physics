@@ -1660,3 +1660,12 @@ statistics but does not change the clean closure ordering.  Chunk035 is active
 run-control only.  Continue packaging completed chunks as they land, but do
 not promote active jobs, finite `C_sx/C_xx` rows, first-shell Schur/Stieltjes
 diagnostics, or partial packets into proof authority.
+
+2026-05-07 update: the higher-shell Schur/scalar-LSZ production contract is
+now available as a future route, but it is not evidence.  It is ranked behind
+canonical `O_H/C_sH/C_HH` pole rows and hardened same-source W/Z rows because
+it still requires actual higher-shell rows, complete monotonicity,
+pole/threshold/FV/IR authority, and a canonical `O_H`/source-overlap or
+physical-response bridge.  Do not launch it into the active four-mode row wave;
+use its separate roots only after the current packet finishes or a clean
+separate production window is opened.

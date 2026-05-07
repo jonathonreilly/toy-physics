@@ -61,6 +61,7 @@
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "schur_complement_complete_monotonicity_gate": "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json",
     "schur_complement_stieltjes_repair_gate": "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json",
+    "schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
@@ -120,6 +121,7 @@
     "same_surface_neutral_multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
     "schur_complement_complete_monotonicity_gate": "bounded support plus exact boundary / C_x|s Schur residual passes the necessary first-shell Stieltjes direction but lacks complete monotonicity, threshold, pole, FV/IR, and source-bridge authority",
     "schur_complement_stieltjes_repair_gate": "bounded-support / Schur-complement Stieltjes repair split: C_s|x fails first-shell monotonicity while C_x|s survives the necessary first-shell check; scalar-LSZ authority absent",
+    "schur_higher_shell_production_contract": "bounded-support / higher-shell Schur scalar-LSZ production contract; future campaign only, no physics closure",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
@@ -151,7 +153,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 60,
+  "pass_count": 61,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -184,6 +186,7 @@
     "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": true,
     "schur_complement_complete_monotonicity_not_closure": true,
     "schur_complement_stieltjes_repair_not_closure": true,
+    "schur_higher_shell_production_contract_not_evidence": true,
     "source_coordinate_transport_blocked": true,
     "source_higgs_pole_row_contract_open": true,
     "source_higgs_time_kernel_gevp_contract_support_only": true,

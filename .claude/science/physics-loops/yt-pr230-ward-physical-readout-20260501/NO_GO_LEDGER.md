@@ -3564,3 +3564,20 @@ FV/IR/threshold authority, no W/Z response, and no primitive neutral transfer.
 Reopen as closure only with a complete same-surface artifact satisfying one of
 the named physical authorities.  Do not reopen because the partial packet grew
 from 32 to 34 chunks.
+
+## 2026-05-07 - Higher-Shell Production Contract Is Not Schur/LSZ Authority
+
+No-go on the current surface: a future higher-shell manifest/command contract
+does not supply higher-shell row evidence, complete monotonicity, a scalar
+pole, threshold/model-class control, FV/IR authority, canonical `O_H`, W/Z
+physical response, or `kappa_s`.
+
+The contract is useful run control only.  It deliberately keeps the active
+four-mode packet unmixed, writes no measurement rows, and sets
+`launch_allowed_now=false` while chunks036-037 are active.  Chunk035 has
+completed but is not packaged in this support-only block.
+
+Reopen as closure only after the separate higher-shell campaign actually runs
+and produces complete row artifacts, then passes complete-monotonicity,
+pole/threshold/FV/IR, and canonical `O_H`/source-overlap or physical-response
+bridge gates.  Do not reopen because a command preview or manifest exists.

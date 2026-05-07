@@ -4428,3 +4428,50 @@ reflection-positive/GEVP pole extraction, FV/IR/threshold authority, overlap
 normalization, covariance, seed metadata, and the usual forbidden-import
 firewalls.  Chunks033-034 remain active run-control only; no retained or
 proposed-retained wording is authorized.
+
+## 2026-05-07 - Higher-Shell Schur/Scalar-LSZ Production Contract
+
+The higher-shell Schur/scalar-LSZ route now has an executable future production
+contract, not evidence.  The runner is:
+
+```text
+python3 scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py
+# SUMMARY: PASS=16 FAIL=0
+```
+
+It writes
+`outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json`
+and defines a separate future campaign with eleven modes and five ordered
+L=12 `q_hat^2` levels, non-colliding output roots, seed base `2026057000`,
+and no `--resume`.  It does not launch jobs or write measurement rows.  Active
+chunks036-037 are detected after refreshing the certificate; chunk035 has
+completed but is not packaged in this support-only block.  Therefore
+`launch_allowed_now=false` and the current four-mode packet must remain
+unmixed.
+
+Validation after wiring:
+
+```text
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=92 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=339 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=152 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=306 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=61 FAIL=0
+```
+
+Next action: keep the active row wave isolated.  Use the higher-shell contract
+only after the current packet finishes or a separate production window is
+opened.  Then run rows under the separate roots and test complete
+monotonicity, pole/threshold/FV/IR authority, and canonical `O_H`/source-
+overlap or physical-response bridge.  Until those row and bridge artifacts
+exist, this is infrastructure support only and no retained/proposed-retained
+closure is authorized.

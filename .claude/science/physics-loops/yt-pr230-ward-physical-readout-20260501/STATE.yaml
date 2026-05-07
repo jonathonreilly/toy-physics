@@ -16,11 +16,22 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-255-fms-literature-source-overlap-intake
-blocks_completed: 254
-active_route: "PR230 FMS literature source-overlap intake"
-active_hard_residual: "Targeted FMS/gauge-invariant-field literature rescan is now executable.  The new intake runner PASS=16 FAIL=0 records FMS and gauge-invariant-field references as non-derivation context only and blocks using them as PR230 same-surface action, canonical O_H, source-overlap, kappa_s, or pole-residue authority.  It consumes O_sp, taste-radial promotion, time-kernel harness/GEVP, source-Higgs overlap-kappa, action ansatz/adoption, and W/Z ratio contracts, and confirms the current surface still lacks accepted EW/Higgs action, canonical O_H, C_spH/C_HH pole rows, Gram purity, FV/IR/threshold authority, and retained-route approval.  Aggregate gates remain open: assumption PASS=91 FAIL=0, campaign PASS=338 FAIL=0, assembly PASS=151 FAIL=0, retained PASS=305 FAIL=0, completion PASS=60 FAIL=0.  Chunks035-036 are active run-control only with no root JSONs yet; no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-256-schur-higher-shell-production-contract
+blocks_completed: 255
+active_route: "PR230 higher-shell Schur/scalar-LSZ production contract"
+active_hard_residual: "Higher-shell Schur/scalar-LSZ support is now an executable production contract, not evidence.  The new runner PASS=16 FAIL=0 defines a separate future row campaign with five ordered L=12 q_hat^2 levels, non-colliding output roots, fixed seed base 2026057000, and no --resume.  It explicitly keeps the active four-mode two-source taste-radial packet unmixed, detects active chunks035-036, and sets launch_allowed_now=false.  Aggregate gates remain open while recognizing the contract as support-only: assumption PASS=92 FAIL=0, campaign PASS=339 FAIL=0, assembly PASS=152 FAIL=0, retained PASS=306 FAIL=0, completion PASS=61 FAIL=0.  No row evidence, complete monotonicity, pole/FV/IR authority, canonical O_H/source-overlap, physical response bridge, retained, or proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py"
+  - "docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json"
+  - ".claude/science/physics-loops/pr230-oh-csh-chh-bridge-20260506/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py"
   - "docs/YT_PR230_FMS_LITERATURE_SOURCE_OVERLAP_INTAKE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
@@ -1886,3 +1897,32 @@ checkpoint_2026_05_07_os_transfer_kernel_artifact_gate:
   current_row_packet: "two-source taste-radial ready=32/63; scalar source/taste-radial rows are configuration timeseries, not Euclidean-time C_ij(t) kernels"
   current_active_chunks: "two-source taste-radial chunks033-034 active under two-worker cap; active workers, logs, and live status are run-control only"
   exact_next_artifact: "Produce same-surface scalar time-lag matrix rows C_ss(t), C_sH(t), C_HH(t) for certified canonical O_H, or C_ss(t), C_sx(t), C_xx(t) plus a theorem identifying x with canonical O_H/physical neutral transfer; include OS/GEVP pole extraction, FV/IR/threshold authority, overlap normalization, covariance, seed metadata, and claim firewalls."
+checkpoint_2026_05_07_schur_higher_shell_production_contract:
+  actual_current_surface_status: >
+    bounded support / higher-shell Schur scalar-LSZ production contract;
+    future campaign only, no physics closure.
+  proposal_allowed: false
+  bare_retained_allowed: false
+  contract_summary: >
+    The contract defines a separate future higher-shell row campaign for the
+    Schur/strict scalar-LSZ route with eleven modes and five ordered L=12
+    q_hat^2 levels.  It uses separate output roots, fixed seed base
+    2026057000, no --resume, and does not launch jobs or write measurement
+    rows.  The active four-mode packet remains unmixed.
+  active_chunks:
+    two_source_taste_radial: [36, 37]
+    evidence_status: active workers are non-evidence until completed JSON exists and completed-mode checkpoints pass
+  verification:
+    schur_higher_shell_contract_pass_fail: "16/0"
+    assumption_import_stress_pass_fail: "92/0"
+    campaign_status_certificate_pass_fail: "339/0"
+    full_positive_assembly_pass_fail: "152/0"
+    retained_route_certificate_pass_fail: "306/0"
+    completion_audit_pass_fail: "61/0"
+  next_exact_action: >
+    Do not launch the higher-shell campaign while active chunks036-037 own the
+    four-mode row wave.  Chunk035 has completed but is not packaged in this
+    support-only block.  After the current packet finishes or a separate
+    production window is opened, run higher-shell rows under the separate roots
+    and only then test complete monotonicity, pole/threshold/FV/IR authority,
+    and canonical O_H/source-overlap or physical-response bridge.

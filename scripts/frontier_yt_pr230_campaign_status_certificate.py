@@ -755,6 +755,9 @@ def main() -> int:
         "pr230_fms_literature_source_overlap_intake": load(
             "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
         ),
+        "pr230_schur_higher_shell_production_contract": load(
+            "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -3499,6 +3502,25 @@ def main() -> int:
         is True,
         statuses["pr230_fms_literature_source_overlap_intake"],
     )
+    schur_higher_shell_contract = certificates[
+        "pr230_schur_higher_shell_production_contract"
+    ]
+    report(
+        "pr230-schur-higher-shell-production-contract-not-evidence",
+        "higher-shell Schur scalar-LSZ production contract"
+        in str(statuses["pr230_schur_higher_shell_production_contract"])
+        and schur_higher_shell_contract.get("proposal_allowed") is False
+        and schur_higher_shell_contract.get(
+            "higher_shell_schur_production_contract_passed"
+        )
+        is True
+        and schur_higher_shell_contract.get("launch_allowed_now") is False
+        and schur_higher_shell_contract.get(
+            "current_four_mode_campaign_must_remain_unmixed"
+        )
+        is True,
+        statuses["pr230_schur_higher_shell_production_contract"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -5164,6 +5186,20 @@ def main() -> int:
         is True
         and fms_literature_source_overlap_intake.get("current_blockers", {}).get(
             "source_higgs_rows_absent"
+        )
+        is True
+    )
+    result["schur_higher_shell_production_contract_not_evidence"] = (
+        "higher-shell Schur scalar-LSZ production contract"
+        in str(statuses["pr230_schur_higher_shell_production_contract"])
+        and schur_higher_shell_contract.get("proposal_allowed") is False
+        and schur_higher_shell_contract.get(
+            "higher_shell_schur_production_contract_passed"
+        )
+        is True
+        and schur_higher_shell_contract.get("launch_allowed_now") is False
+        and schur_higher_shell_contract.get(
+            "current_four_mode_campaign_must_remain_unmixed"
         )
         is True
     )

@@ -981,3 +981,20 @@ forbidden: `H_unit`, `yt_ward_identity`, observed top or `y_t`, `alpha_LM`,
 plaquette/`u0`, reduced pilots as production evidence, and fiat
 `c2 = 1`, `Z_match = 1`, or `kappa_s = 1`.  Chunk035 is active run-control
 only until completed, checkpointed, and packaged.
+
+2026-05-07 higher-shell Schur/scalar-LSZ production contract:
+
+The higher-shell command contract is infrastructure support only.  It is not
+proof selectors until the separate higher-shell rows are actually run,
+complete, pole-tested, FV/IR-tested, and bridged to canonical O_H or physical
+response.  It must not be treated as row evidence, complete monotonicity,
+scalar-pole authority, FV/IR authority, canonical `O_H`/source-overlap,
+physical `W/Z` response, `kappa_s`, retained, or proposed-retained closure.
+
+Additional forbidden load-bearing assumptions:
+
+- `higher-shell command preview = measurement rows`
+- `five q_hat^2 levels = complete monotonicity`
+- `higher-shell manifest = pole/threshold/FV/IR authority`
+- `future Schur rows = canonical O_H/source-overlap authority`
+- `launch_allowed_now=false` can be ignored while active chunks own the packet

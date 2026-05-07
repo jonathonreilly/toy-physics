@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T08:50:47.263668+00:00",
+  "generated_at": "2026-05-07T09:13:43.242282+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42778,6 +42778,16 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py",
       "title": "PR #230 Schur-Complement Stieltjes Repair Gate"
     },
+    "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07": {
+      "claim_id": "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / higher-shell production contract; no physics",
+      "deps": [],
+      "note_hash": "c71cd29794c75d8c0db6671ecab52844b908a9e3150839229c3c35ede2eb0f9f",
+      "path": "docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py",
+      "title": "PR230 Higher-Shell Schur/Scalar-LSZ Production Contract"
+    },
     "yt_pr230_schur_route_completion_note_2026-05-06": {
       "claim_id": "yt_pr230_schur_route_completion_note_2026-05-06",
       "current_status": "unknown",
@@ -45904,6 +45914,7 @@
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
     "yt_pr230_schur_complement_complete_monotonicity_gate_note_2026-05-07",
     "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
+    "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
     "yt_pr230_schur_route_completion_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
@@ -46060,12 +46071,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1128,
-    "node_count": 2081,
-    "root_count": 1594,
-    "runners_with_path": 1573,
+    "leaf_count": 1129,
+    "node_count": 2082,
+    "root_count": 1595,
+    "runners_with_path": 1574,
     "status_counts": {
-      "bounded": 572,
+      "bounded": 573,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,

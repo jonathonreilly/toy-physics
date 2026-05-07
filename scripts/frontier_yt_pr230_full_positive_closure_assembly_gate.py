@@ -140,6 +140,7 @@ PARENTS = {
     "pr230_source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
     "pr230_source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
     "pr230_fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
+    "pr230_schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1469,6 +1470,26 @@ def main() -> int:
         ).get("source_higgs_rows_absent")
         is True
     )
+    schur_higher_shell_production_contract_not_evidence = (
+        "higher-shell Schur scalar-LSZ production contract"
+        in statuses["pr230_schur_higher_shell_production_contract"]
+        and certs["pr230_schur_higher_shell_production_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_schur_higher_shell_production_contract"].get(
+            "higher_shell_schur_production_contract_passed"
+        )
+        is True
+        and certs["pr230_schur_higher_shell_production_contract"].get(
+            "launch_allowed_now"
+        )
+        is False
+        and certs["pr230_schur_higher_shell_production_contract"].get(
+            "current_four_mode_campaign_must_remain_unmixed"
+        )
+        is True
+    )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
@@ -2332,6 +2353,11 @@ def main() -> int:
         "fms-literature-source-overlap-intake-non-authority",
         fms_literature_source_overlap_intake_non_authority,
         statuses["pr230_fms_literature_source_overlap_intake"],
+    )
+    report(
+        "schur-higher-shell-production-contract-not-evidence",
+        schur_higher_shell_production_contract_not_evidence,
+        statuses["pr230_schur_higher_shell_production_contract"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",
@@ -3290,6 +3316,7 @@ def main() -> int:
         "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
         "source_higgs_time_kernel_gevp_contract_support_only": source_higgs_time_kernel_gevp_contract_support_only,
         "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
+        "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "

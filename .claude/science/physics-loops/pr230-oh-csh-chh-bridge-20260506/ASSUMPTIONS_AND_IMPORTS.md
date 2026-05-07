@@ -365,6 +365,10 @@ Open imports after this block:
 - same-surface H1 quark-bilinear Z3 action certificate, if the origin/main
   composite-Higgs packet is to become load-bearing;
 - scalar-LSZ, FV/IR, and matching gates.
+- Higher-shell Schur/scalar-LSZ production contract is not proof selectors
+  until the separate higher-shell rows are actually run, complete,
+  pole-tested, FV/IR-tested, and bridged to canonical O_H or physical response.
+- Exact stress phrase: not proof selectors until the separate higher-shell rows are actually run, complete, pole-tested, FV/IR-tested, and bridged to canonical O_H or physical response.
 
 Negative-route interpretation:
 

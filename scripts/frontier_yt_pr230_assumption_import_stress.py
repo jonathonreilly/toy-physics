@@ -275,6 +275,9 @@ def main() -> int:
         "fms_literature_source_overlap_intake": load(
             "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
         ),
+        "schur_higher_shell_production_contract": load(
+            "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -428,6 +431,8 @@ def main() -> int:
         "ansatz-only action-adoption shortcut blocked",
         "canonical-Higgs operator certificate",
         "W/Z correlator mass-fit path certificate",
+        "Higher-shell Schur/scalar-LSZ production contract",
+        "not proof selectors until the separate higher-shell rows are actually run, complete, pole-tested, FV/IR-tested, and bridged to canonical O_H or physical response",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -1627,6 +1632,19 @@ def main() -> int:
         is True,
         fms_lit_intake.get("actual_current_surface_status"),
     )
+    higher_shell_contract = certificates["schur_higher_shell_production_contract"]
+    report(
+        "higher-shell-schur-production-contract-not-evidence",
+        "higher-shell Schur scalar-LSZ production contract"
+        in str(higher_shell_contract.get("actual_current_surface_status"))
+        and higher_shell_contract.get("proposal_allowed") is False
+        and higher_shell_contract.get("higher_shell_schur_production_contract_passed")
+        is True
+        and higher_shell_contract.get("launch_allowed_now") is False
+        and higher_shell_contract.get("current_four_mode_campaign_must_remain_unmixed")
+        is True,
+        higher_shell_contract.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -1827,6 +1845,11 @@ def main() -> int:
             "they motivate the future O_FMS acceptance shape but do not supply "
             "the PR230 same-surface EW/Higgs action, canonical O_H, C_spH/C_HH "
             "pole rows, or kappa_s normalization.  "
+            "The higher-shell Schur/scalar-LSZ production contract defines a "
+            "separate future five-level q_hat^2 row campaign with non-colliding "
+            "paths and fixed seeds, while keeping the active four-mode packet "
+            "unmixed and explicitly not treating a manifest or contract as "
+            "measurement evidence.  "
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
@@ -1877,6 +1900,7 @@ def main() -> int:
             "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",
             "does not treat a formal reduced-smoke GEVP diagnostic as pole, kappa_s, or y_t authority",
             "does not treat FMS or gauge-invariant-field literature as same-surface PR230 O_H/source-overlap/kappa_s proof",
+            "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

@@ -6149,3 +6149,25 @@ Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
 row evidence for route diagnostics, not canonical `O_H`, not canonical
 `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
 or proposed-retained closure.  Chunk035 is run-control only until completed.
+
+## 2026-05-07 - Higher-Shell Schur/Scalar-LSZ Production Contract
+
+Review stance: bounded support / future production contract, no closure.
+
+- Added `scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py`.
+- Added
+  `docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md`.
+- Added
+  `outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json`.
+- Wired the contract into assumption/import stress, campaign status, full
+  positive assembly, retained-route, and completion-audit certificates.
+- Validation: contract `PASS=16 FAIL=0`, assumption stress
+  `PASS=92 FAIL=0`, campaign status `PASS=339 FAIL=0`, full assembly
+  `PASS=152 FAIL=0`, retained-route `PASS=306 FAIL=0`, completion audit
+  `PASS=61 FAIL=0`.
+
+Disposition: support-only infrastructure.  The contract supplies future
+non-colliding command rows with five ordered `q_hat^2` levels and fixed seed
+control, but it is not measurement evidence and it does not authorize complete
+monotonicity, scalar-pole, FV/IR, canonical `O_H`, W/Z response, retained, or
+proposed-retained claims.
