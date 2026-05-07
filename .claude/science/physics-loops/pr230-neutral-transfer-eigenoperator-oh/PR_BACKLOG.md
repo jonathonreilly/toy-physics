@@ -82,6 +82,18 @@ staging support only and not canonical `O_H`, `C_sH/C_HH`, or W/Z
 physical-response closure.  No standalone block14 review PR should be opened
 unless PR #230 integration fails.
 
+Block15 through block17 follow the same direct PR #230 landing path.  Block15
+wires additive-response blockers into aggregate gates; block16 adds
+open-surface route guidance; block17 adds bounded 46-row additive-top Jacobian
+support at PR head `cde753822e630be0e6b0fd4287a801513a2ee94c`.  None authorizes
+closure without accepted W/Z action, W/Z rows, matched covariance, strict `g2`,
+or certified `O_H`/source-Higgs pole rows.
+
+Block18 follows the same direct PR #230 landing path.  It checks the committed
+post-block17 PR head for a fresh certified `O_H`/source-Higgs pole-row packet or
+strict W/Z physical-response packet and records that neither is present.  No
+standalone block18 review PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

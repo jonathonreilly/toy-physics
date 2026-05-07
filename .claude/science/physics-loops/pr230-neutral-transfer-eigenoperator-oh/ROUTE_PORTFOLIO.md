@@ -505,3 +505,53 @@
      physical-response packet with accepted action, production rows, matched
      covariance, strict non-observed `g2`, `delta_perp` authority, and final
      W-response rows.  Do not touch the live chunk worker from this lane.
+
+## Selected Block17 Route
+
+**Additive-top Jacobian row support**
+
+- Type: bounded support.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: adds 46 chunk-level `A_top=dE_top/dm_bare` rows from
+  packaged chunks001-046 as W/Z repair support, while preserving that strict
+  subtraction closure still needs same-source W/Z rows, per-configuration
+  covariance, accepted action, strict non-observed `g2`, and final readout.
+- Artifact: `YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER`.
+
+## Selected Block18 Route
+
+**Fresh committed artifact intake checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 3.
+- Claim-state movement: verifies committed PR #230 head
+  `cde753822e630be0e6b0fd4287a801513a2ee94c` after block17 and records that no
+  certified `O_H`, source-Higgs pole-row packet, or strict W/Z physical-response
+  packet has landed.  This freezes the top opportunity queue without inspecting
+  active chunk-worker output.
+- Artifact: `YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT`.
+
+## Block18 Fan-Out Synthesis
+
+1. **PR-head artifact frame**
+   - Result: no closure artifact.  The post-block17 head contains bounded
+     additive-top row support, not a strict production/certificate input.
+
+2. **Source-Higgs frame**
+   - Result: open.  The committed prefix remains 46/63 with
+     `combined_rows_written=false`; canonical `O_H`, production
+     `C_ss/C_sH/C_HH` rows, scalar-LSZ/FV authority, and Gram flatness are
+     absent.
+
+3. **W/Z frame**
+   - Result: open.  Coarse `A_top` rows are present, but accepted action,
+     production W/Z rows, same-source top/W/Z matched covariance, strict
+     non-observed `g2`, `delta_perp` authority, and final W-response rows are
+     absent.
+
+4. **Next admissible route**
+   - Result: work matched W/Z response/covariance rows or the explicit accepted
+     FMS/gauge-Higgs `O_H` candidate/action packet.  Do not touch the live chunk
+     worker from this lane.

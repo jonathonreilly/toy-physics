@@ -339,3 +339,19 @@ matched same-source W/Z response rows plus per-configuration
 with dedicated same-source additive-top perturbation rows.  Block17 does not
 provide strict covariance, W/Z rows, strict `g2`, accepted action authority, or
 any retained/proposal status.
+
+Block18 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Fresh artifact intake runner | `scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py` | Created; PASS=17 FAIL=0 |
+| Fresh artifact intake certificate | `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json` | Created; records PR head `cde753822`, no certified `O_H`/source-Higgs packet, no strict W/Z packet |
+| Fresh artifact intake note | `docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status certificate | `scripts/frontier_yt_pr230_campaign_status_certificate.py` and `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume the fresh-artifact checkpoint; PASS=353 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block18 checkpoint |
+
+Follow-on artifact target after block18 is unchanged from block17: matched
+same-source W/Z response rows plus per-configuration `T_total/A_top/W/g2`
+covariance and strict `g2`, or the accepted FMS/gauge-Higgs `O_H`
+candidate/action packet with source-Higgs pole rows and Gram flatness.  The
+fresh-artifact checkpoint does not itself add physics authority.

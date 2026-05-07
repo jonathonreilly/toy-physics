@@ -752,6 +752,9 @@ def main() -> int:
         "pr230_source_higgs_bridge_aperture_checkpoint": load(
             "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json"
         ),
+        "pr230_fresh_artifact_intake_checkpoint": load(
+            "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3613,6 +3616,41 @@ def main() -> int:
         ),
         statuses["pr230_source_higgs_bridge_aperture_checkpoint"],
     )
+    fresh_artifact_intake_checkpoint = certificates[
+        "pr230_fresh_artifact_intake_checkpoint"
+    ]
+    report(
+        "pr230-fresh-artifact-intake-checkpoint-no-new-artifact",
+        "fresh-artifact intake checkpoint"
+        in str(statuses["pr230_fresh_artifact_intake_checkpoint"])
+        and fresh_artifact_intake_checkpoint.get("proposal_allowed") is False
+        and fresh_artifact_intake_checkpoint.get("consumed_committed_pr_head_only")
+        is True
+        and fresh_artifact_intake_checkpoint.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and fresh_artifact_intake_checkpoint.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and fresh_artifact_intake_checkpoint.get("checks", {}).get(
+            "no_closure_artifact_present"
+        )
+        is True
+        and fresh_artifact_intake_checkpoint.get("source_higgs_route", {}).get(
+            "closure_artifact_present"
+        )
+        is False
+        and fresh_artifact_intake_checkpoint.get("wz_route", {}).get(
+            "strict_packet_present"
+        )
+        is False
+        and all(
+            fresh_artifact_intake_checkpoint.get("checks", {}).values()
+        ),
+        statuses["pr230_fresh_artifact_intake_checkpoint"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6141,6 +6179,31 @@ def main() -> int:
         == source_higgs_aperture_ready
         and source_higgs_aperture_rows.get("expected_chunks") == 63
         and source_higgs_aperture_rows.get("combined_rows_written") is False
+    )
+    result["fresh_artifact_intake_checkpoint_no_new_artifact"] = (
+        fresh_artifact_intake_checkpoint.get("proposal_allowed") is False
+        and fresh_artifact_intake_checkpoint.get("consumed_committed_pr_head_only")
+        is True
+        and fresh_artifact_intake_checkpoint.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and fresh_artifact_intake_checkpoint.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and fresh_artifact_intake_checkpoint.get("checks", {}).get(
+            "no_closure_artifact_present"
+        )
+        is True
+        and fresh_artifact_intake_checkpoint.get("source_higgs_route", {}).get(
+            "closure_artifact_present"
+        )
+        is False
+        and fresh_artifact_intake_checkpoint.get("wz_route", {}).get(
+            "strict_packet_present"
+        )
+        is False
     )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True

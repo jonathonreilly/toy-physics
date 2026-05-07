@@ -1,8 +1,8 @@
 # Handoff
 
-Checkpoint: 2026-05-07 11:44 EDT
+Checkpoint: 2026-05-07 11:56 EDT
 
-Branch: `codex/pr230-wroute-build`
+Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
@@ -383,7 +383,7 @@ physical top-Yukawa readout, and does not authorize retained or
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block17 should follow the same direct PR #230 landing path unless
+Block09 through block18 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -425,6 +425,12 @@ Local review disposition for block17: pass bounded-support additive-top rows /
 no closure.  The row artifact preserves production metadata and seed control
 for chunks001-046 while keeping strict subtraction closure open.  No
 independent audit verdict was applied.
+
+Local review disposition for block18: pass open fresh-artifact checkpoint / no
+new closure artifact.  The checkpoint consumes only committed PR-head
+certificates at `cde753822`, records the absent source-Higgs and strict W/Z
+positive packets after the additive-top row artifact, and leaves proposal
+language denied.  No independent audit verdict was applied.
 
 ## Next Exact Action
 
@@ -562,3 +568,55 @@ git diff --check
 Claim boundary: bounded support only.  `proposal_allowed=false`.  The block
 does not use `yt_ward_identity`, `H_unit`, `y_t_bare`, observed targets,
 observed `g2`, `alpha_LM`, plaquette, `u0`, or any unit-overlap convention.
+
+## Block18 Fresh Artifact Intake Checkpoint
+
+Created `YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT`.
+
+This checkpoint resumed after block17 on the committed draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = cde753822e630be0e6b0fd4287a801513a2ee94c
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The block17 additive-top Jacobian rows are useful bounded W/Z-repair support,
+but they are not a certified `O_H`, source-Higgs pole-row packet, accepted W/Z
+action, same-source W/Z response row packet, matched covariance, strict
+non-observed `g2`, or final subtracted readout.  Block18 checked the top
+opportunity queue without consuming active chunk-worker output or pending logs.
+
+Result:
+
+- no certified canonical `O_H` plus production `C_ss/C_sH/C_HH` pole-row packet
+  with Gram flatness is present;
+- the current source-Higgs side remains the 46/63 `C_sx/C_xx` staging prefix
+  with `combined_rows_written=false` and first missing chunk `47`;
+- no strict W/Z physical-response packet is present;
+- accepted action, production W/Z rows, same-source top/W/Z matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final W-response rows remain
+  absent;
+- the live worker was not touched or inspected.
+
+Honest status: open / fresh-artifact intake checkpoint.  `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+# SUMMARY: PASS=17 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=353 FAIL=0
+python3 link check for fresh checkpoint note/handoff/queue
+# missing_links=[]
+rg status/firewall review
+# forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion
+git diff --check
+# OK
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```

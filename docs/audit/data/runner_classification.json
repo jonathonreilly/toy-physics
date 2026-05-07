@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T15:51:51.671691+00:00",
+  "generated_at": "2026-05-07T16:06:42.677680+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16716,6 +16716,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py"
+    },
+    "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py"
     },
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05": {
       "assert_count": 1,
@@ -35424,6 +35436,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_fresh_artifact_literature_route_review.py": {
       "assert_count": 1,
       "claims": [
@@ -42016,11 +42043,11 @@
       "A": 9,
       "B": 245,
       "C": 530,
-      "D": 322,
+      "D": 323,
       "none": 404
     },
-    "runners_classified": 1510,
-    "runners_with_C": 820,
-    "runners_with_D": 595
+    "runners_classified": 1511,
+    "runners_with_C": 821,
+    "runners_with_D": 596
   }
 }

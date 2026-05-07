@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block17_additive_top_jacobian_rows`.
+Current block: `block18_fresh_artifact_intake_checkpoint`.
 
 ```yaml
-actual_current_surface_status: bounded-support / additive-top coarse Jacobian rows after block16 open-surface bridge intake; PR230 head is df5cc8844 before this block and still has no certified O_H/source-Higgs pole-row packet, physical neutral rank-one theorem, or strict W/Z accepted-action physical-response packet
+actual_current_surface_status: open / fresh-artifact intake checkpoint at PR230 head cde753822 after block17 additive-top Jacobian rows; no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet is present
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block17 extracts 46 bounded-support additive-top Jacobian rows from packaged chunks001-046 after block16 open-surface route guidance. The rows preserve production metadata and seed control but are chunk-level coarse mass-scan Jacobians, not per-configuration matched covariance rows, W/Z response rows, strict non-observed g2 authority, accepted action authority, source-Higgs normalization, or physical y_t evidence. No certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, strict W/Z production rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block18 consumes only committed PR-head certificates at cde753822. Block17 additive-top Jacobian rows are bounded support only, and no new positive closure artifact is present. The source-Higgs route still lacks certified O_H, production C_ss/C_sH/C_HH pole rows, strict scalar-LSZ/FV authority, and Gram flatness. The W/Z route still lacks accepted action, production W/Z rows, same-source top/W/Z matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. The live worker was not touched or inspected."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -48,7 +48,10 @@ Reason:
 6. Block17 does not touch or package live chunks047-048, does not promote
    chunk-level `A_top=dE_top/dm_bare` slopes to per-configuration covariance,
    and does not treat the bounded rows as strict additive-subtraction closure.
-7. No branch-local wording may present this block as closure.
+7. Block18 does not touch or inspect the live worker, does not treat the
+   committed PR-head checkpoint as physics evidence, and does not promote the
+   block17 additive-top rows into W/Z closure authority.
+8. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
 
@@ -111,5 +114,10 @@ Prior block certificate summary:
   the 46 rows are production-metadata, seed-controlled support for the W/Z
   subtraction route but not strict covariance, W/Z response, strict `g2`,
   accepted action, source-Higgs normalization, or physical top-Yukawa evidence.
-- Block01 through Block17 all have `proposal_allowed=false`; their boundaries
+- Block18 actual status: open / fresh-artifact intake checkpoint; PR head
+  cde753822 contains the block17 additive-top Jacobian rows but no certified
+  canonical `O_H`, source-Higgs production pole-row packet, accepted W/Z action,
+  production W/Z rows, matched covariance, strict non-observed `g2`,
+  `delta_perp`, or final W-response rows.
+- Block01 through Block18 all have `proposal_allowed=false`; their boundaries
   remain active.

@@ -598,3 +598,47 @@ python3 docs/audit/scripts/audit_lint.py --strict
 git diff --check
 # OK
 ```
+
+## Block18
+
+Local review run on 2026-05-07 11:56 EDT.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py`
+- `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json`
+- `docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Fresh-artifact runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | PR head `cde753822` contains bounded additive-top row support only; no certified `O_H`/source-Higgs pole-row packet or strict W/Z packet is present. |
+| Imports / Support | CLEAN / DISCLOSED | No Ward, `H_unit`, observed target, plaquette/u0, unit-normalization, observed `g2`, scout/smoke promotion, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | Checkpoint consumes committed PR-head certificates only and does not touch or inspect the live chunk worker. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+# SUMMARY: PASS=17 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=353 FAIL=0
+python3 link check for fresh checkpoint note/handoff/queue
+# missing_links=[]
+rg status/firewall review
+# forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion
+git diff --check
+# OK
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```

@@ -18,7 +18,7 @@ only through already-existing support notes and is not used as a proof input
 for canonical `O_H`, accepted EW-Higgs action, source-Higgs pole rows, W/Z
 mass response, covariance, or strict `g2`.
 
-## Block15 Open-Surface Intake
+## Block16 Open-Surface Intake
 
 Block15 widens the search beyond the current repo surface.  The sources are
 route guidance only and are not proof authority for PR230.

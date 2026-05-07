@@ -1,21 +1,21 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T11:44:33-04:00"
-branch: codex/pr230-wroute-build
+checkpoint_time: "2026-05-07T11:56:08-04:00"
+branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 17
-active_science_block: block17_additive_top_jacobian_rows
-active_route: "Bounded additive-top Jacobian row artifact from packaged chunks001-046 three-mass top scans after block16 open-surface bridge intake"
+cycle_count: 18
+active_science_block: block18_fresh_artifact_intake_checkpoint
+active_route: "Fresh committed PR-head artifact intake after block17 additive-top Jacobian rows; top queue checked for certified O_H/source-Higgs pole-row packet and strict W/Z accepted-action physical-response packet; no live worker touched"
 target_status: best-honest-status
-actual_current_surface_status: "bounded-support / additive-top coarse Jacobian rows from packaged chunks001-046 three-mass top scans after block16 open-surface bridge intake; PR #230 head is df5cc8844c2b7eb10365c2db98497d0a0550f1a2 before this block, and still contains no certified O_H/source-Higgs pole-row packet, physical neutral rank-one theorem, or strict W/Z accepted-action physical-response packet"
+actual_current_surface_status: "open / fresh-artifact intake checkpoint at PR #230 head cde753822e630be0e6b0fd4287a801513a2ee94c; block17 additive-top Jacobian rows are bounded W/Z-repair support only, and no certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet is present"
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block17 extracts bounded additive-top Jacobian rows from the packaged chunks001-046 three-mass top scans after preserving block16 open-surface route guidance. The rows have production metadata and seed control, but they are chunk-level coarse mass-scan Jacobians, not per-configuration matched covariance rows and not W/Z response or strict g2 authority. No certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, strict W/Z production rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block18 consumed only committed PR-head certificates at cde753822 after block17 additive-top Jacobian rows. Block17 rows are bounded support only: they are chunk-level coarse mass-scan Jacobians, not per-configuration matched covariance rows, not same-source W/Z response rows, not strict non-observed g2 authority, not accepted action authority, and not final subtracted-response readout. The source-Higgs side still lacks certified O_H, production C_ss/C_sH/C_HH pole rows, strict scalar-LSZ/FV authority, and Gram flatness. The W/Z side still lacks accepted action, production W/Z rows, same-source top/W/Z matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. The live worker was not touched or inspected."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block16 identifies the highest-ranked non-chunk route as an explicit FMS/gauge-Higgs O_H candidate/action packet wired into the source-Higgs time-kernel manifest; block17 adds only bounded additive-top coarse rows."
@@ -38,6 +38,7 @@ minimal_allowed_premises:
   - "block15 additive-response aggregate wiring as exact support only; current source remains contaminated and subtraction rows are absent"
   - "block16 open-surface bridge intake as route guidance only; no proof authority imported"
   - "block17 additive-top coarse Jacobian rows as bounded support only; strict subtraction closure remains open"
+  - "block18 fresh committed artifact intake checkpoint as routing/open status only; no new physics closure or shortcut gate"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -73,6 +74,9 @@ files_touched:
   - outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json
   - scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
   - outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json
+  - scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+  - docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md
+  - outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -197,10 +201,20 @@ commands_run:
   - "2026-05-07 block17: bash docs/audit/scripts/run_pipeline.sh # OK; final rerun newly seeded=0, re-audit required=0, 5 known warnings"
   - "2026-05-07 block17: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
   - "2026-05-07 block17: git diff --check # OK"
-review_disposition: pass_bounded_support_additive_top_rows_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block17 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Build matched same-source W/Z response rows and per-configuration A_top/T_total/W covariance, or replace the coarse mass-scan A_top packet with dedicated same-source additive-top perturbation rows. In parallel, the block16 open-surface result points to an explicit FMS/gauge-Higgs O_H candidate/action packet wired to the source-Higgs time-kernel manifest. Continue only with strict W/Z physical-response packet inputs or a fresh certified O_H plus production C_ss/C_sH/C_HH pole-row/Gram-flatness packet. The additive-top rows are bounded support only and do not authorize proposal wording."
-stop_condition: "Yield for outer supervisor continuation after coherent block17 checkpoint push; open status is not campaign completion, and chunks beyond 046 remain outside this block until packaged intentionally."
+  - "2026-05-07 block18: git fetch origin; git merge --ff-only origin/claude/yt-direct-lattice-correlator-2026-04-30 # PR head cde753822 Add PR230 additive top Jacobian rows"
+  - "2026-05-07 block18: inspected additive-top Jacobian note/certificate and committed source-Higgs/WZ certificates; no live worker output consumed"
+  - "2026-05-07 block18: python3 -m py_compile scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py # OK"
+  - "2026-05-07 block18: python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py # PASS=17 FAIL=0"
+  - "2026-05-07 block18: python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=353 FAIL=0"
+  - "2026-05-07 block18: python3 link check for fresh checkpoint note/handoff/queue # missing_links=[]"
+  - "2026-05-07 block18: rg status/firewall review # forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion"
+  - "2026-05-07 block18: git diff --check # OK"
+  - "2026-05-07 block18: bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings"
+  - "2026-05-07 block18: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+review_disposition: pass_open_fresh_artifact_checkpoint_no_new_artifact
+pr_status: "direct integration into open draft PR #230 landing path; standalone block18 PR not opened because PR #230 remains the landing path"
+next_exact_action: "Build matched same-source W/Z response rows and per-configuration A_top/T_total/W covariance, or replace the coarse mass-scan A_top packet with dedicated same-source additive-top perturbation rows. In parallel, build the explicit FMS/gauge-Higgs O_H candidate/action packet wired to the source-Higgs time-kernel manifest. Continue only with strict W/Z physical-response packet inputs or a fresh certified O_H plus production C_ss/C_sH/C_HH pole-row/Gram-flatness packet. The additive-top rows and this checkpoint are support/routing only and do not authorize proposal wording."
+stop_condition: "Yield for outer supervisor continuation after coherent block18 checkpoint push; open status is not campaign completion, no real missing closure artifact is present, and chunks beyond 046 remain outside this block until packaged intentionally."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -216,4 +230,12 @@ block17_additive_top_jacobian_rows:
   verification: "python3 -m py_compile scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py && python3 scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py # PASS=12 FAIL=0"
   packaged_chunks_consumed: "001-046"
   strict_additive_subtraction_rows_passed: false
+  proposal_allowed: false
+block18_fresh_artifact_intake_checkpoint:
+  runner: scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+  note: docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md
+  output: outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json
+  verification: "python3 -m py_compile scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py && python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py # PASS=17 FAIL=0; campaign status PASS=353 FAIL=0"
+  consumed_committed_pr_head_only: true
+  live_worker_touched: false
   proposal_allowed: false
