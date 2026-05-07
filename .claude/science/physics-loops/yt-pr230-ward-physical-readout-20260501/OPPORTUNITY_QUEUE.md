@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-07 chunks039-040 package refresh: chunks001-040 are now packaged
+partial `C_sx/C_xx` support with `ready=40/63`; chunks039-040 pass
+completed-mode checkpoints and preserve selected-mass-only FH/LSZ,
+normal-equation cache metadata, `numba_gauge_seed_v1`, fixed seeds, and
+non-readout source-Higgs metadata.  Strict scalar-LSZ still fails on raw
+`C_ss` (`z=157.56429412296885`); Schur-complement repair keeps `C_x|s` as a
+useful finite candidate but only as a necessary one-volume check
+(`z=-464.32415387580664`).  The `C_x|s` one-pole interpolation remains
+model-class support only because positive two-pole endpoint counterfamilies
+match the same two points.  The cleanest closure target remains certified
+canonical `O_H` plus `C_ss/C_spH/C_HH` pole rows, with genuine same-source
+W/Z rows as first fallback.  Successor chunks041-042 are active run-control
+only until completed, checkpointed, and packaged.
+
 2026-05-07 W/Z same-source accepted-action minimal certificate cut: the W/Z
 fallback now has a precise dependency cut.  The support-side contracts are
 present but do not validate the accepted action.  Root open vertices are:
