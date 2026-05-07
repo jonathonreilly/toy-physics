@@ -33,7 +33,7 @@ Fixes applied during review:
 
 ## Block02
 
-Review-loop/self-review status at checkpoint: pending.
+Review-loop/self-review run locally on 2026-05-07 08:34 EDT.
 
 Scope:
 
@@ -42,11 +42,24 @@ Scope:
 - `docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md`
 - `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
 
-Pre-review result:
+Review results:
 
 | Reviewer | Disposition | Notes |
 |---|---|---|
-| Code / Runner | PENDING | Runner passes locally with PASS=10 FAIL=0 and writes paired certificate. |
+| Code / Runner | PASS | Runner compiles, reproduces PASS=10 FAIL=0, writes the paired certificate, and tests the common-root cut plus forbidden-input firewall. |
 | Physics Claim Boundary | SUPPORT/BOUNDARY | The block exposes the common canonical `O_H` / accepted EW-Higgs action root cut and keeps source-Higgs and W/Z row obligations separate. |
-| Imports / Support | PENDING | Forbidden import firewall is explicit; review must verify no support contract is treated as current action authority. |
-| Nature Retention | NO-GO | No retained or `proposed_retained` closure is authorized. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports are excluded; existing source-Higgs and W/Z contracts remain support only and are not treated as current action authority. |
+| Nature Retention | OPEN | No retained or `proposed_retained` closure is authorized; the current surface still lacks canonical `O_H`, accepted EW-Higgs action, row packets, covariance, strict `g2`, and aggregate approval. |
+| Repo Governance | PASS | Source note has markdown-linked load-bearing dependencies and declares audit authority as the independent audit lane only. |
+| Audit Compatibility | PASS | Audit pipeline and strict lint pass with the known 5 warnings; new row is seeded as `current_status=support`, `audit_status=unaudited`, with dependency links populated. |
+| Methodology Skill | SKIPPED | No methodology-skill files changed. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
+python3 scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
+bash docs/audit/scripts/run_pipeline.sh
+python3 docs/audit/scripts/audit_lint.py --strict
+git diff --check
+```

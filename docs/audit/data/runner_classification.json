@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T09:49:44.475174+00:00",
+  "generated_at": "2026-05-07T12:38:02.754804+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16549,6 +16549,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_campaign_status_certificate.py"
     },
+    "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py"
+    },
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05": {
       "assert_count": 1,
       "counts": {
@@ -16824,6 +16836,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py"
+    },
+    "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go.py"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "assert_count": 1,
@@ -17292,6 +17316,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_schur_route_completion.py"
+    },
+    "yt_pr230_schur_x_given_source_one_pole_scout_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py"
     },
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06": {
       "assert_count": 1,
@@ -35046,6 +35082,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py": {
       "assert_count": 1,
       "claims": [
@@ -35386,6 +35437,21 @@
         "B": 1,
         "C": 2,
         "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -35971,6 +36037,21 @@
         "B": 3,
         "C": 2,
         "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_schur_x_given_source_one_pole_scout_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
       },
       "decoration_candidate": false,
       "dominant_class": "B",
@@ -41636,13 +41717,13 @@
     "decoration_candidates": 109,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 241,
-      "C": 527,
-      "D": 315,
+      "B": 242,
+      "C": 528,
+      "D": 316,
       "none": 404
     },
-    "runners_classified": 1496,
-    "runners_with_C": 806,
-    "runners_with_D": 583
+    "runners_classified": 1499,
+    "runners_with_C": 809,
+    "runners_with_D": 585
   }
 }

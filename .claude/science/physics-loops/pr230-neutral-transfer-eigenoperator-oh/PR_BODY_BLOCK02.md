@@ -32,7 +32,14 @@ targets, `alpha_LM`, plaquette, `u0`, or unit conventions for `kappa_s`,
 python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
 python3 scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
 # SUMMARY: PASS=10 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+python3 docs/audit/scripts/audit_lint.py --strict
+git diff --check
 ```
+
+Review-loop/self-review disposition is PASS for an exact support/boundary
+checkpoint.  The audit row remains unaudited support; independent audit owns
+any later effective-status change.
 
 ## Next Action
 

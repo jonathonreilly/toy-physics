@@ -8493,6 +8493,70 @@
       "to": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
     },
     {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_z3_triplet_positive_cone_support_certificate_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "to": "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07"
+    },
+    {
       "from": "yt_qfp_selector_no_go_note_2026-05-01",
       "to": "yt_qfp_insensitivity_support_note"
     },
@@ -18529,7 +18593,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T09:49:41.521210+00:00",
+  "generated_at": "2026-05-07T12:37:59.985844+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41988,6 +42052,24 @@
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
     },
+    "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07": {
+      "claim_id": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact support/boundary / canonical `O_H` and W/Z accepted-action common-cut certificate; current surface remains open",
+      "deps": [
+        "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+        "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
+        "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
+        "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07",
+        "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07",
+        "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
+        "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
+      ],
+      "note_hash": "ec0b3761dc89b6481fd9d2cfba7c66503fb6e01162bc022dc79fd49cc4e6564f",
+      "path": "docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py",
+      "title": "PR230 Canonical O_H / WZ Common Accepted-Action Cut"
+    },
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05": {
       "claim_id": "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
       "current_status": "support",
@@ -42237,6 +42319,26 @@
       "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py",
       "title": "PR230 Neutral Primitive Route Completion"
+    },
+    "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07": {
+      "claim_id": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / current same-surface Z3 eigenoperator",
+      "deps": [
+        "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
+        "yt_pr230_z3_triplet_positive_cone_support_certificate_note_2026-05-06",
+        "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
+        "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
+        "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06",
+        "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07",
+        "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03",
+        "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
+        "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07"
+      ],
+      "note_hash": "25fcc8df5f4dffd468d9569b95fb5327559e52258d107e2946b86a4b04847d45",
+      "path": "docs/YT_PR230_NEUTRAL_TRANSFER_EIGENOPERATOR_SOURCE_MIXING_NO_GO_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go.py",
+      "title": "PR230 Neutral Transfer/Eigenoperator Source-Mixing No-Go"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "claim_id": "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
@@ -42798,6 +42900,16 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_route_completion.py",
       "title": "PR230 Schur Route Completion"
     },
+    "yt_pr230_schur_x_given_source_one_pole_scout_note_2026-05-07": {
+      "claim_id": "yt_pr230_schur_x_given_source_one_pole_scout_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / `C_x|s` one-pole finite-residue scout; no scalar-LSZ pole authority",
+      "deps": [],
+      "note_hash": "402519fd38b63fefec88a4f87c498a108287afe467af6e4428d8510b053b80f6",
+      "path": "docs/YT_PR230_SCHUR_X_GIVEN_SOURCE_ONE_POLE_SCOUT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py",
+      "title": "PR230 Schur C_x|s One-Pole Finite-Residue Scout"
+    },
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06": {
       "claim_id": "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
       "current_status": "unknown",
@@ -42987,6 +43099,36 @@
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS035_036_PACKAGE_NOTE_2026-05-07.md",
       "runner_path": null,
       "title": "PR230 Two-Source Taste-Radial Chunks035-036 Package"
+    },
+    "yt_pr230_two_source_taste_radial_chunks037_038_package_note_2026-05-07": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunks037_038_package_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / chunks001-038 packaged; no closure",
+      "deps": [],
+      "note_hash": "239dc8d18c5a7fdd5d3e56aa978caf3aa334341b75107d94e20ff26198f0e849",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS037_038_PACKAGE_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Two-Source Taste-Radial Chunks037-038 Package"
+    },
+    "yt_pr230_two_source_taste_radial_chunks039_040_package_note_2026-05-07": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunks039_040_package_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / chunks001-040 packaged; no closure",
+      "deps": [],
+      "note_hash": "acdfe134e01622dbabc7a1ff139367142442b5c3e77310187f43ad4c0db7acec",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS039_040_PACKAGE_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Two-Source Taste-Radial Chunks039-040 Package"
+    },
+    "yt_pr230_two_source_taste_radial_chunks041_042_package_note_2026-05-07": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunks041_042_package_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / chunks001-042 packaged; no closure",
+      "deps": [],
+      "note_hash": "5a57e5364326942a652ea72d6e53424ea763678d1e22860d578b0d543e8c028e",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS041_042_PACKAGE_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Two-Source Taste-Radial Chunks041-042 Package"
     },
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
@@ -45936,6 +46078,7 @@
     "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
     "yt_pr230_schur_route_completion_note_2026-05-06",
+    "yt_pr230_schur_x_given_source_one_pole_scout_note_2026-05-07",
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
     "yt_pr230_source_higgs_overlap_kappa_contract_note_2026-05-06",
@@ -45955,6 +46098,9 @@
     "yt_pr230_two_source_taste_radial_chunks031_032_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_chunks033_034_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_chunks035_036_package_note_2026-05-07",
+    "yt_pr230_two_source_taste_radial_chunks037_038_package_note_2026-05-07",
+    "yt_pr230_two_source_taste_radial_chunks039_040_package_note_2026-05-07",
+    "yt_pr230_two_source_taste_radial_chunks041_042_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
@@ -46092,18 +46238,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4632,
-    "leaf_count": 1131,
-    "node_count": 2084,
-    "root_count": 1597,
-    "runners_with_path": 1575,
+    "edge_count": 4648,
+    "leaf_count": 1123,
+    "node_count": 2090,
+    "root_count": 1601,
+    "runners_with_path": 1578,
     "status_counts": {
-      "bounded": 574,
+      "bounded": 578,
       "open": 104,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 451,
-      "unknown": 581
+      "support": 452,
+      "unknown": 582
     }
   }
 }

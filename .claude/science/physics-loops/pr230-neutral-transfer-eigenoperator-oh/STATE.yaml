@@ -1,7 +1,7 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T08:29:21-04:00"
+checkpoint_time: "2026-05-07T08:36:00-04:00"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
@@ -66,10 +66,13 @@ commands_run:
   - "python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py # PASS=154 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=308 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=341 FAIL=0"
-  - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings"
+  - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; regenerated 1993-row audit surface after rebase"
   - "python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
   - "git diff --check # clean"
+  - "gh pr view 230 --json number,title,url,state,headRefName,baseRefName # OPEN draft PR230 landing path"
+  - "local review-loop/self-review # PASS exact support/boundary; audit row unaudited support"
+  - "git rebase origin/claude/yt-direct-lattice-correlator-2026-04-30 # clean onto 9a9c82093 chunk package; no live chunk worker touched"
 review_disposition: pass_exact_support_boundary
-pr_status: "direct integration into draft PR #230 requested; commit and push to claude/yt-direct-lattice-correlator-2026-04-30"
-next_exact_action: "Commit clean block02 artifacts without repo-wide audit-surface churn, push to draft PR #230, then continue on the common canonical O_H / accepted EW-Higgs action certificate."
-stop_condition: "Complete block02 delivery and yield for outer supervisor continuation; support-only/open status is not campaign completion."
+pr_status: "direct integration into open draft PR #230; block02 science commit 6308a320e present on claude/yt-direct-lattice-correlator-2026-04-30; checkpoint rebased on 9a9c82093 and prepared for the same landing path"
+next_exact_action: "Supervisor continuation should attack the common canonical O_H / accepted EW-Higgs action certificate."
+stop_condition: "Yield for outer supervisor continuation after this checkpoint push; support-only/open status is not campaign completion."
