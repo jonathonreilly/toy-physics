@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 232 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 10 |
-| unaudited | 792 |
+| open_gate | 11 |
+| unaudited | 791 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 385 |
+| `audited_clean` | 386 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 841 |
+| `unaudited` | 840 |
 
 | claim_type | count |
 |---|---:|
@@ -451,6 +451,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
+| `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | C | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `third_grown_family_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -13033,6 +13034,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** After tracing cells and spectator taste bits while keeping the last KS taste bit per species, the audited Poisson/CHSH ground states yield deterministic two-qubit logical resources with Bell overlap above 0.90 and high standard teleportation fidelity.  _(class `B`)_
 - **chain closes:** True — Within the stated small-surface numerical scope, the runner sanity-checks the teleportation convention, constructs the traced logical two-qubit resource, and reports Bell overlap, CHSH, negativity, and teleportation fidelity above the note's threshold for both Poisson cases. The note explicitly leaves generalization, preparation/readout, and parameter sensitivity outside this scoped claim.
 - **rationale:** The proper retained object is not an open gate but a bounded numerical theorem over the specified small surfaces and extraction rule. The current runner output matches the note's reported values and separates deterministic traced extraction from postselected diagnostic branches. No one-hop cited authorities are present, and the remaining limitations are future hardening tasks rather than missing premises for the scoped result.
+- **auditor confidence:** high
+
+### `teleportation_taste_readout_operator_model_note`
+
+- **Note:** [`TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`](../../docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Static finite-dimensional operator-factorization gate for dims 1,2,3 and sides 2,4 with retained logical axis dim-1, testing whether readout, Bell-measurement, and correction operators are environment-blind as O_logical tensor I_env; no physical detector, dynamics, noisy protocol, resource-fidelity, matter-transfer, or FTL claim is retained.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-gpt-5.5-xhigh-teleportation-taste-readout-operator-model-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Finite operator block-factorization over the retained last taste bit shows native sublattice parity has environment-dependent blocks sigma_s Z_logical; for dim>1 these blocks average to zero and leave full residual, while retained-axis logical operators factor as O_logical tensor I_env. This establishes the stated obstruction and the listed operational conditions within the audited finite grid.  _(class `C`)_
+- **chain closes:** True — The source note's algebraic obstruction, runner construction summary, and completed stdout agree: native parity Z factors only in 1D, fails with rel 1.000000 in 2D/3D, native-Z projectors and native-Z Bell/stabilizer constructions fail as predicted, retained-axis Z/X and axis Bell/fixed-XX tests pass, and Bob no-message input-independence is explicitly separated from readout operationality. The conclusion is limited to an open operational gate rather than a positive teleportation implementation.
+- **rationale:** Clean for the scoped open_gate claim: the packet supports the finite operator obstruction and conditions without promoting it to a physical teleportation theorem. The load-bearing result is a direct finite operator calculation/algebraic block argument, not an external comparator or tuned numerical match. Remaining physical requirements are correctly left open as conditions, not asserted as solved.
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
