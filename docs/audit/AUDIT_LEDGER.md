@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 236 |
+| **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 784 |
+| unaudited | 783 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 393 |
+| `audited_clean` | 394 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 833 |
+| `unaudited` | 832 |
 
 | claim_type | count |
 |---|---:|
@@ -459,6 +459,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_resource_fidelity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | C | - |
+| `teleportation_three_register_cross_encoding_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `third_grown_family_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -13145,6 +13146,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Finite operator block-factorization over the retained last taste bit shows native sublattice parity has environment-dependent blocks sigma_s Z_logical; for dim>1 these blocks average to zero and leave full residual, while retained-axis logical operators factor as O_logical tensor I_env. This establishes the stated obstruction and the listed operational conditions within the audited finite grid.  _(class `C`)_
 - **chain closes:** True — The source note's algebraic obstruction, runner construction summary, and completed stdout agree: native parity Z factors only in 1D, fails with rel 1.000000 in 2D/3D, native-Z projectors and native-Z Bell/stabilizer constructions fail as predicted, retained-axis Z/X and axis Bell/fixed-XX tests pass, and Bob no-message input-independence is explicitly separated from readout operationality. The conclusion is limited to an open operational gate rather than a positive teleportation implementation.
 - **rationale:** Clean for the scoped open_gate claim: the packet supports the finite operator obstruction and conditions without promoting it to a physical teleportation theorem. The load-bearing result is a direct finite operator calculation/algebraic block argument, not an external comparator or tuned numerical match. Remaining physical requirements are correctly left open as conditions, not asserted as solved.
+- **auditor confidence:** high
+
+### `teleportation_three_register_cross_encoding_note`
+
+- **Note:** [`TELEPORTATION_THREE_REGISTER_CROSS_ENCODING_NOTE.md`](../../docs/TELEPORTATION_THREE_REGISTER_CROSS_ENCODING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For valid ordered KS taste-qubit encoding triples generated on dimensions 1,2,3 and side lengths 2,4, the ideal axis-adapted logical teleportation protocol closes algebraically; the current default runner surveys 1609 capped triples and checks the stated controls.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-teleportation-three-register-cross-encoding-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The ideal three-register protocol is the two-dimensional teleportation identity conjugated by the three encoding isometries V_A, V_R, and V_B, with A/R Bell projectors, identity R/B logical resource, and Bob corrections all expressed in the ordered logical bases.  _(class `A`)_
+- **chain closes:** True — The scoped claim is an ideal logical-support theorem, not a physical implementation claim. Given the supplied definitions, conjugating the standard two-qubit teleportation identity by V_A, V_R, and V_B proves the intended map for any valid ordered encoding triple, and the completed runner output is consistent with that algebraic boundary.
+- **rationale:** The load-bearing derivation is an algebraic identity on explicitly defined two-dimensional logical supports, and the runner output reports exact projector resolution/idempotence/orthogonality, all Bell outcomes, corrected-state fidelity, no-message Bob input independence, and the negative-control boundaries within tolerance. The 1609-triple default cap limits the telemetry counts, but the note does not use the capped survey as the theorem boundary; the theorem boundary is the conjugated teleportation identity for runner-valid encodings on the stated surface. No physical resource-preparation, measurement-apparatus, noise, Hamiltonian, or matter-transport bridge is being imported into the scoped claim.
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
