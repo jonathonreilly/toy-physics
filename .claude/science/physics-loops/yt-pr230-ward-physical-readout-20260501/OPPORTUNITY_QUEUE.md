@@ -1,5 +1,21 @@
 # Opportunity Queue
 
+2026-05-07 chunks043-044 package refresh: chunks001-044 are now packaged
+partial `C_sx/C_xx` support with `ready=44/63`; chunks043-044 pass
+completed-mode checkpoints and preserve selected-mass-only FH/LSZ,
+normal-equation cache metadata, `numba_gauge_seed_v1`, fixed seeds, and
+non-readout source-Higgs metadata.  Strict scalar-LSZ still fails on raw
+`C_ss` (`z=163.1563288754601`); Schur-complement repair keeps `C_x|s` as a
+useful finite candidate but only as a necessary one-volume check
+(`z=-501.5228370887908`).  The `C_x|s` one-pole interpolation remains
+model-class support only because positive two-pole endpoint counterfamilies
+match the same two points.  The row-wave launcher active-process filter now
+ignores monitor/supervisor shell command strings and launched chunks045-046
+under the two-worker cap.  The cleanest closure target remains certified
+canonical `O_H` plus `C_ss/C_spH/C_HH` pole rows, with genuine same-source
+W/Z rows as first fallback.  Successor chunks045-046 are active run-control
+only until completed, checkpointed, and packaged.
+
 2026-05-07 chunks041-042 package refresh: chunks001-042 are now packaged
 partial `C_sx/C_xx` support with `ready=42/63`; chunks041-042 pass
 completed-mode checkpoints and preserve selected-mass-only FH/LSZ,

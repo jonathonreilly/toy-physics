@@ -15,6 +15,7 @@ import argparse
 import importlib.util
 import json
 import os
+import shlex
 import subprocess
 import time
 from datetime import datetime, timezone
@@ -97,6 +98,12 @@ def active_process_rows() -> list[dict[str, Any]]:
         except (IndexError, ValueError):
             pid = -1
         command = parts[1] if len(parts) > 1 else line.strip()
+        try:
+            argv = shlex.split(command)
+        except ValueError:
+            argv = []
+        if not any(token.endswith("yt_direct_lattice_correlator_production.py") for token in argv):
+            continue
         chunk = None
         for index in range(1, 64):
             if f"chunk{index:03d}" in command:
