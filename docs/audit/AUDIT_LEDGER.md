@@ -48,13 +48,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 647 |
+| `bounded_theorem` | 649 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 189 |
 | `open_gate` | 109 |
 | `positive_theorem` | 787 |
-| `unset` | 2 |
 
 | criticality | count |
 |---|---:|
@@ -64,7 +63,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `leaf` | 641 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 271
+- **Citation cycles detected:** 268
 
 ### Runner classification (static heuristic)
 

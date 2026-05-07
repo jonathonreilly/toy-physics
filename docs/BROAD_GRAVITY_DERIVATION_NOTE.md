@@ -561,5 +561,17 @@ python3 scripts/frontier_broad_gravity.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [gravity_clean_derivation_note](GRAVITY_CLEAN_DERIVATION_NOTE.md)
 - [gravity_full_self_consistency_note](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+
+The earlier link to `gravity_clean_derivation_note` is removed here as a
+cycle-break: that note CONSUMES this one (via Step 5 of its derivation
+chain, the `S = L(1 - phi)` weak-field action) and is downstream, not
+upstream. The prior audit that asked for the back-link did so before the
+chain direction was clarified; the back-link created a length-2 cycle in
+the citation graph (broad_gravity ↔ gravity_clean) that blocked
+retained-tier promotion of either. The forward edge
+`gravity_clean → broad_gravity_derivation` is preserved on the
+gravity_clean side and is the correct direction. The inline prose
+references to `GRAVITY_CLEAN_DERIVATION_NOTE.md Step 1` and `Step 5`
+remain — they are non-dependency contextual references, not citation
+graph edges.

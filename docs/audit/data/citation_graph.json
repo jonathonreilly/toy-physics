@@ -882,10 +882,6 @@
     },
     {
       "from": "broad_gravity_derivation_note",
-      "to": "gravity_clean_derivation_note"
-    },
-    {
-      "from": "broad_gravity_derivation_note",
       "to": "gravity_full_self_consistency_note"
     },
     {
@@ -7078,15 +7074,11 @@
     },
     {
       "from": "gravity_signed_source_density_boundary_note",
-      "to": "gravity_clean_derivation_note"
+      "to": "staggered_fermion_card_2026-04-11"
     },
     {
       "from": "gravity_signed_source_density_boundary_note",
       "to": "gravity_sign_audit_2026-04-10"
-    },
-    {
-      "from": "gravity_signed_source_density_boundary_note",
-      "to": "staggered_fermion_card_2026-04-11"
     },
     {
       "from": "gravity_signed_source_density_boundary_note",
@@ -10715,10 +10707,6 @@
     {
       "from": "newton_derivation_note",
       "to": "equivalence_principle_harness_note"
-    },
-    {
-      "from": "newton_law_derived_note",
-      "to": "gravity_clean_derivation_note"
     },
     {
       "from": "newton_law_derived_note",
@@ -29237,10 +29225,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "gravity_clean_derivation_note",
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "366f8d54f0af39329a5709df3ed96ba476393d42c5f21f77b207c6f706e9638c",
+      "note_hash": "d67b3a00e55d78d34ec37b8ecc100b4ee7768fc2137d96381323f386cc653be9",
       "path": "docs/BROAD_GRAVITY_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Broad Gravity Bundle: Per-Signature Derivation Chains"
@@ -37571,12 +37558,11 @@
       "claim_type_seed_hint": null,
       "deps": [
         "signed_gravity_chi_selector_theorem_or_nogo_note",
-        "gravity_clean_derivation_note",
-        "gravity_sign_audit_2026-04-10",
         "staggered_fermion_card_2026-04-11",
+        "gravity_sign_audit_2026-04-10",
         "planck_source_unit_normalization_support_theorem_note_2026-04-25"
       ],
-      "note_hash": "ec547626921d834f5aae53f94ad3c38c11ec5135ee61d8312cb9a6465fd71656",
+      "note_hash": "07afced99a00f99b395313fba454e943afd1838c49633e7971a46827c2f5a19f",
       "path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_signed_gravity_source_variational_audit.py",
       "title": "Gravity Signed Source-Density Boundary Note"
@@ -43266,10 +43252,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "gravity_clean_derivation_note",
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "1deecdbfde5b2846dd8d9ada6b384c65105d259eca1786eefd0080af61d28078",
+      "note_hash": "7e562630da8284a956b2cb7580619fcd663f5e9c4fe65578247c987b34d0c5e1",
       "path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_distance_law_definitive.py",
       "title": "Newton's Law Derived from Cl(3) on Z^3"
@@ -56367,7 +56352,7 @@
       "open_gate": 112,
       "positive_theorem": 627
     },
-    "edge_count": 6692,
+    "edge_count": 6689,
     "leaf_count": 546,
     "node_count": 1907,
     "root_count": 858,

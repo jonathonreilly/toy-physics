@@ -25,8 +25,13 @@ next possible route was the source primitive:
 
 The relevant retained inputs are:
 
-- [`GRAVITY_CLEAN_DERIVATION_NOTE.md`](GRAVITY_CLEAN_DERIVATION_NOTE.md):
-  the weak-field Poisson source is `rho = |psi|^2`.
+- [`STAGGERED_FERMION_CARD_2026-04-11.md`](STAGGERED_FERMION_CARD_2026-04-11.md):
+  the Born / mass-density identification `rho = |psi|^2` follows from the
+  staggered-fermion source carrier and is the upstream physical
+  identification used throughout the gravity lane (formerly cross-cited
+  via `GRAVITY_CLEAN_DERIVATION_NOTE.md`, but that note CONSUMES this
+  identification at its Step 4; the back-citation is removed here as a
+  citation-graph cycle break).
 - [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md)
   and [`STAGGERED_FERMION_CARD_2026-04-11.md`](STAGGERED_FERMION_CARD_2026-04-11.md):
   the retained scalar response channel is
