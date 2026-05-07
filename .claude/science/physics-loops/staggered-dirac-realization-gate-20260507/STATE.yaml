@@ -1,0 +1,71 @@
+slug: staggered-dirac-realization-gate-20260507
+goal: |
+  Close the staggered-Dirac realization gate (formerly axiom A3 per
+  MINIMAL_AXIOMS_2026-05-03). Derive (or sharply bound) the forcing
+  argument from A1+A2 + retained primitives + admissible standard
+  math machinery for four substeps:
+    (1) Grassmann partition forcing
+    (2) Kawamoto-Smit phase forcing
+    (3) BZ-corner three-generation forcing
+    (4) Physical-species bridge
+  Pieces of (1)-(4) exist scattered across multiple notes; closure
+  requires either single canonical proof or coordinated chain.
+
+target_status: best-honest-status
+runtime_budget: 12h
+runtime_used: ~30m (loop pack setup)
+mode: campaign
+
+current_block: 01
+current_block_route: ground + map forcing gaps
+current_block_branch: physics-loop/staggered-dirac-realization-gate-block01-20260507 (to create)
+current_block_status: planning
+
+cycles_completed: 0
+blocks_completed: 0
+prs_opened: 0
+prs_remaining_in_24h_volume_cap: 5
+cluster_cap_status: judgment-based per PR #624 governance update
+
+active_route: Block 01 — assumption ledger + forcing-gap map + Block 02 R1.A prep
+active_route_deliverable: STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md
+hard_residual_being_attacked: |
+  Substep 1: package spin-statistics S2 as the explicit Grassmann-
+  partition-forcing theorem on A1+A2 + finite Cl(3) dim 2.
+
+files_touched:
+  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/GOAL.md
+  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/STATE.yaml
+
+open_imports_for_active_target:
+  - spin-statistics theorem (support tier; awaiting re-audit after
+    2026-05-03 Cl(3) per-site uniqueness repair)
+  - Cl(3) per-site uniqueness theorem (chirality-aware repair 2026-05-03,
+    retained)
+  - Per-site Hilbert dim 2 (retained, 2026-05-02)
+
+no_go_routes_avoided:
+  - All seven bridge-gap routes (different lane; sister no-go memory)
+  - New-axiom routes (no-new-axiom rule)
+  - Same-surface family arguments
+  - Re-deriving any retained primitives
+
+review_findings: []
+
+pr_status: not_yet_opened
+
+next_exact_action: |
+  Block 01: write STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md
+  documenting the four substeps and their current closure status,
+  identifying which pieces are retained and which gaps remain. Then
+  Block 02: package spin-statistics S2 as substep-1 forcing theorem.
+
+stop_condition: |
+  Continue until 12h runtime exhausted, corollary exhaustion, value-gate
+  exhaustion, judgment-based cluster cap evaluator says BACKLOG for all
+  queued candidates, or global queue exhaustion.
+
+last_checkpoint: 2026-05-07T~09:00 (initial loop-pack setup)
