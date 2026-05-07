@@ -82,7 +82,7 @@
   "pole_model_class_authority_present": false,
   "proposal_allowed": false,
   "proposal_allowed_reason": "A zero-to-first-shell decrease is only a necessary Stieltjes check. The current packet has two q_hat^2 levels, incomplete chunks, no pole/model-class rows, no spectral threshold theorem, no multivolume FV/IR limit, and no canonical O_H or W/Z bridge.",
-  "ready_chunks": 60,
+  "ready_chunks": 62,
   "schur_complement_complete_monotonicity_gate_passed": true,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",

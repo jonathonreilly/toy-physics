@@ -1060,3 +1060,21 @@ Additional forbidden load-bearing assumptions:
 - refreshed one-pole interpolation = pole/model-class authority
 - finite `C_sx/C_xx` rows = canonical `C_sH/C_HH`
 - finite first-shell Schur support = scalar-LSZ/FV authority
+
+2026-05-07 two-source taste-radial chunks061-062 package:
+
+Chunks061-062 are bounded support only.  The package raises the partial row
+packet to `ready=62/63`, but finite `C_ss/C_sx/C_xx` rows, first-shell
+Stieltjes/Schur diagnostics, the one-pole interpolation, chunk logs, live
+status, and active workers are not proof selectors for canonical `O_H`,
+scalar-LSZ/FV, W/Z response, Schur pole authority, neutral primitive transfer,
+retained, or proposed-retained closure.
+
+Additional forbidden load-bearing assumptions:
+
+- `ready=62/63` = complete production row packet
+- active chunk063 = evidence
+- refreshed one-pole interpolation = pole/model-class authority
+- finite `C_sx/C_xx` rows = canonical `C_sH/C_HH`
+- finite first-shell Schur support = scalar-LSZ/FV authority
+- H1/H2 Z3 support plus 62 finite rows = H3/H4 primitive transfer authority

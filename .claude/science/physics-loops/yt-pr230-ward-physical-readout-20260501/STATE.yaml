@@ -16,10 +16,10 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-286-fresh-artifact-intake-current-head-refresh
-blocks_completed: 285
-active_route: "fresh artifact intake and clean source-Higgs route refresh at committed head e7548e1c6"
-active_hard_residual: "Refreshed the committed-head fresh-artifact intake and clean source-Higgs route selector after the chunks059-060 package.  The current committed PR head e7548e1c6 contains a 60/63 C_ss/C_sx/C_xx staging prefix, but no certified canonical O_H, no production C_ss/C_sH/C_HH pole rows, and no strict W/Z accepted-action physical-response packet.  The cleanest positive target remains same-surface accepted FMS/EW-Higgs action plus canonical O_H, then O_sp-Higgs pole rows; W/Z remains first fallback only after accepted-action, production rows, matched covariance, strict non-observed g2, and delta_perp authority.  Chunks061-062 are active run-control only and chunk063 is pending."
+current_phase: campaign-block-287-two-source-taste-radial-chunks061-062-package
+blocks_completed: 286
+active_route: "two-source taste-radial chunks061-062 packaging with chunk063 isolated run control"
+active_hard_residual: "Chunks061-062 are now completed-mode packaged into the PR230 two-source taste-radial C_ss/C_sx/C_xx row prefix.  The packet is ready=62/63 with combined_rows_written=false; chunk063 is the only active run-control worker and is not evidence.  Refreshed scalar-LSZ, Schur, source-Higgs, primitive-transfer, orthogonal-top, neutral H3/H4, assumption, campaign, full-assembly, retained-route, and completion-audit gates all pass while denying closure.  The current surface still lacks certified canonical O_H, production C_ss/C_sH/C_HH pole rows, strict scalar-LSZ/FV/threshold authority, strict W/Z accepted-action physical response, and neutral primitive/irreducibility authority."
 files_touched:
   - "docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"
