@@ -132,3 +132,93 @@ measure/subtract the independent additive top component with row-level authority
 Do not claim physical W/Z response until accepted action, W/Z response rows,
 same-source top rows, matched covariance, and strict non-observed `g2` exist.
 Canonical `O_H` remains a shared blocker and must not be assumed.
+
+## Block05 Result
+
+Created `YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT`.
+
+This block follows the second repair target from block04.  It proves the exact
+algebraic form of the subtraction repair if PR230 keeps the current mixed
+source convention:
+
+```text
+T_total = dE_top/ds = y_t dv/ds / sqrt(2) + A_top
+W       = dM_W/ds   = g2 dv/ds / 2
+y_t     = g2 (T_total - A_top) / (sqrt(2) W).
+```
+
+The runner verifies that the corrected ratio recovers the input `y_t` and is
+invariant under source reparameterization.  It also records the matched
+covariance gradient for `y_t(T,A,W,g2)` and proves that without a measured
+`A_top` the fixed total top/W slopes admit multiple candidate `y_t` values.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+# SUMMARY: PASS=21 FAIL=0
+```
+
+Block05 is exact support only.  It does not claim retained or
+`proposed_retained` closure.  The current surface still lacks additive-top
+Jacobian rows, W/Z response rows, matched covariance, strict non-observed `g2`,
+and accepted radial-spurion action authority.
+
+## Next Exact Action
+
+After block05, the non-chunk positive routes are:
+
+```text
+build an absent-certificate gate for a replacement radial-spurion action
+```
+
+and
+
+```text
+turn the subtraction contract into an executable future row schema for
+T_total/A_top/W/g2 covariance rows.
+```
+
+Probe A found no hidden current-surface radial-spurion certificate; any
+replacement-action artifact must be a builder/gate with `proposal_allowed=false`
+until a real same-surface action certificate exists.
+
+## Block06 Result
+
+Created `YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT`.
+
+This block follows the consolidated parallel-probe result: W/Z is still a
+fallback infrastructure lane, while the direct source-Higgs Gram-purity route
+is the best positive next non-chunk artifact.  It records the future row
+contract for a certified same-surface `O_H_candidate` plus production
+`C_ss/C_sH/C_HH` pole residues:
+
+```text
+Delta = Res(C_ss) Res(C_HH) - Res(C_sH)^2
+rho   = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH)).
+```
+
+The runner verifies pure, sign-flipped pure, and mixed witnesses.  Pure rows
+pass `Delta=0` and `abs(rho)=1`; mixed rows fail.  The contract attaches the
+existing `O_sp` LSZ-normalized source-side construction and routes future rows
+through the existing extractor, builder, Gram postprocessor, full assembly,
+retained-route, and campaign gates.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py
+python3 scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py
+# SUMMARY: PASS=18 FAIL=0
+```
+
+Block06 is exact support only.  It does not construct `O_H`, promote
+`C_sx/C_xx` aliases, set `kappa_s=1` or `cos(theta)=1`, use `H_unit` or
+Ward identity authority, or claim retained/proposed-retained closure.
+
+## Next Exact Action
+
+The best remaining non-chunk target is now the hard one: derive or supply a
+same-surface canonical `O_H` certificate, or find a genuine neutral rank-one /
+irreducibility theorem that makes the future pole-row contract launchable.

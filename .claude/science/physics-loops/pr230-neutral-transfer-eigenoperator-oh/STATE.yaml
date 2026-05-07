@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07 post-block04"
+checkpoint_time: "2026-05-07 post-block06"
 branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 4
-active_science_block: block04_additive_source_radial_spurion_incompatibility
-active_route: W/Z accepted-action root / radial-spurion repair
+cycle_count: 6
+active_science_block: block06_source_higgs_direct_pole_row_contract
+active_route: source-Higgs direct pole-row contract / O_sp-O_H bridge
 target_status: best-honest-status
-actual_current_surface_status: exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure; current surface remains open
-conditional_surface_status: exact-support for future accepted action if the independent additive top source is removed or measured/subtracted with row authority
+actual_current_surface_status: exact-support / direct source-Higgs pole-row contract; current surface remains open
+conditional_surface_status: exact-support for future same-surface certified O_H_candidate plus C_ss/C_sH/C_HH pole-row packet that passes Gram purity, FV/IR/model-class, and retained-route gates
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block04 shows the current same-source ansatz differentiates to O_top_additive + O_H, not canonical O_H alone. The current surface still lacks a replacement radial-spurion action, additive-source subtraction rows, canonical O_H pole rows, W/Z response rows, matched covariance, strict g2, and aggregate retained-route approval."
+proposal_allowed_reason: "Block06 supplies only an exact future row contract. The current surface still lacks a certified canonical O_H operator, production C_sH/C_HH pole rows, Gram-purity pass, FV/IR/model-class row authority, and aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Repair the W/Z accepted-action root by either replacing the additive top source with a true radial-spurion action or measuring/subtracting the additive top component; canonical O_H remains a shared blocker and must not be assumed."
+hard_residual: "Derive or supply a same-surface canonical O_H certificate, or a genuine neutral rank-one/irreducibility theorem, so the source-Higgs direct pole-row contract can launch without importing H_unit, Ward identity, or observed targets."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface two-source taste-radial action vertex as support only"
@@ -35,10 +35,16 @@ forbidden_imports:
 files_touched:
   - scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py
   - scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
+  - scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+  - scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py
   - docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md
   - docs/YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY_NOTE_2026-05-07.md
+  - docs/YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT_NOTE_2026-05-07.md
+  - docs/YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT_NOTE_2026-05-07.md
   - outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json
   - outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json
+  - outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json
+  - outputs/yt_pr230_source_higgs_direct_pole_row_contract_2026-05-07.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -75,7 +81,11 @@ commands_run:
   - "git diff --check # clean"
   - "python3 -m py_compile scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py"
   - "python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py # PASS=15 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py"
+  - "python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py # PASS=21 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py"
+  - "python3 scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py # PASS=18 FAIL=0"
 review_disposition: pass_exact_negative_boundary
 pr_status: "direct integration into open draft PR #230 landing path; standalone block03 PR not opened unless PR230 integration fails"
-next_exact_action: "Commit/push block04 to draft PR230, then attack replacement radial-spurion action or additive-source subtraction rows; W/Z mass-fit path remains infrastructure only until accepted action and strict g2 exist."
+next_exact_action: "Commit/push blocks05-06 to draft PR230, then attack the canonical O_H certificate / neutral rank-one hard residual; W/Z mass-fit remains infrastructure until same-source action and strict g2 exist."
 stop_condition: "Yield for outer supervisor continuation after this coherent checkpoint push; no-go/open status is not campaign completion."
