@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 225 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 806 |
+| unaudited | 805 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 463 |
+| ~~audited_conditional~~ | 464 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 374 |
-| `audited_conditional` | 463 |
+| `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 28 |
-| `unaudited` | 855 |
+| `unaudited` | 854 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 648 |
 | `decoration` | 10 |
 | `meta` | 56 |
-| `no_go` | 190 |
+| `no_go` | 191 |
 | `open_gate` | 109 |
-| `positive_theorem` | 787 |
+| `positive_theorem` | 786 |
 
 | criticality | count |
 |---|---:|
@@ -648,6 +648,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4718,6 +4719,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `DM_NEUTRINO_SOURCE_SURFACE_M_SPECTATOR_THEOREM_NOTE_2026-04-16.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_ATOMIC_WITNESS_VOLUME_SELECTOR_NONREALIZATION_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_ATOMIC_WITNESS_VOLUME_SELECTOR_NONREALIZATION_NOTE_2026-04-18.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Current-bank nonrealization of a unique threshold-volume selector for the canonical rank-one witness-volume family, as demonstrated by the tau=0.13/tau=0.14 recovered-winner flip.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-gpt-5.5-xhigh-dm-neutrino-source-surface-witness-volume-selector-audit-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At tau = 0.13 the unique minimum is recovered lift 1, while at tau = 0.14 the unique minimum is recovered lift 0; therefore the current exact bank does not force a unique threshold-volume selector winner without an intrinsic threshold law.  _(class `A`)_
+- **chain closes:** False — The Dirichlet simplex formula and the two-threshold winner flip close algebraically once the hard-coded RECOVERED_LIFTS bank and recovered_bank construction are accepted. The packet does not provide or wire a retained authority establishing that this hard-coded array is the current recovered bank, so the source note's current-bank claim is conditional rather than clean.
+- **rationale:** Issue: the runner verifies an exact finite-bank flip but takes the recovered bank from hard-coded RECOVERED_LIFTS in scripts/dm_selector_branch_support.py, with recovered_bank helpers imported from unwired branch modules. Why this blocks: the note claims a current exact-bank nonrealization, not merely a conditional calculation over an inline array, and the restricted packet gives no retained one-hop authority for the bank identity. Repair target: add direct dependency wiring to the retained recovered-bank construction and its active affine/q_floor authority, or narrow the note to an explicitly conditional finite-array theorem. Claim boundary until fixed: the packet supports the algebraic threshold-volume flip for the supplied hard-coded bank.
+- **open / conditional deps cited:**
+  - `scripts/dm_selector_branch_support.py#RECOVERED_LIFTS`
+  - `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py`
+  - `scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py`
+  - `scripts/frontier_dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem.py`
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18`
