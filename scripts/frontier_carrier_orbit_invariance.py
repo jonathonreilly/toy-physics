@@ -686,6 +686,59 @@ def part10_v1_v5_promotion_value_gate_check() -> None:
     )
 
 
+def part11_refined_precursor_chain() -> None:
+    """Part 11: verify the 2026-05-07 refinement section that names the
+    precursor chain (decoupling + aligned-bright + cubic Schur) reducing
+    the registry-closure meta-premise to three named upstream retentions,
+    plus the final column-symmetric-source-class residual."""
+    print("\n" + "=" * 88)
+    print("PART 11: REFINED PRECURSOR CHAIN (2026-05-07 closure-attempt sharpening)")
+    print("=" * 88)
+
+    note = read("docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md")
+
+    check(
+        "Note carries the 2026-05-07 refinement section",
+        "Refined precursor chain" in note,
+    )
+    check(
+        "Refinement names the closure verdict as PARTIAL",
+        "Closure verdict:" in note and "PARTIAL" in note,
+    )
+    check(
+        "Refinement names precursor #1 (decoupling property)",
+        "Decoupling property" in note and "delta_A1" in note,
+    )
+    check(
+        "Refinement names precursor #2 (aligned-bright coordinate identification)",
+        "Aligned-bright coordinate identification" in note,
+    )
+    check(
+        "Refinement names precursor #3 (cubic Schur structure)",
+        "Cubic Schur" in note or "cubic Schur" in note,
+    )
+    check(
+        "Refinement cites S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE upstream deps",
+        "S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE" in note,
+    )
+    check(
+        "Refinement explicitly preserves no-new-axioms discipline",
+        "new axiom" in note.lower() and 'rule' in note.lower(),
+    )
+    check(
+        "Refinement names final residual (column-symmetric source class)",
+        "column-symmetric source class" in note.lower() or "column-\nsymmetric" in note.lower(),
+    )
+    check(
+        "Refinement names tractable upgrade path (precursor promotion)",
+        "Tractable upgrade path" in note,
+    )
+    check(
+        "Refinement honestly refuses to claim closure beyond PARTIAL",
+        "remains at PARTIAL" in note or "stretch attempt remains at PARTIAL" in note,
+    )
+
+
 def main() -> int:
     print("=" * 88)
     print("CARRIER ORBIT INVARIANCE — STRETCH ATTEMPT (cycle 22)")
@@ -701,6 +754,7 @@ def main() -> int:
     part8_named_obstruction_registry_closure()
     part9_independence_from_v_even_values()
     part10_v1_v5_promotion_value_gate_check()
+    part11_refined_precursor_chain()
 
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")

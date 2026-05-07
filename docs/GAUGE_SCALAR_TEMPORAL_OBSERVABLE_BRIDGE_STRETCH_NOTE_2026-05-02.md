@@ -199,3 +199,60 @@ objects outside the current retained packet.
 - Parent: [`GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md`](GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - Sister: `PLAQUETTE_SELF_CONSISTENCY_NOTE.md` (parent of plaquette family)
 - Parent of cycle 5 sister M residual: similar shape (kernel-level → observable-level bridge requires non-perturbative input)
+
+## 9. Closure-attempt verdict (2026-05-07 stretch-attempt closure pass)
+
+**Closure verdict for the open question of this gate:** CLOSED-BY-NO-GO at gate level.
+
+The open question this stretch posed —
+
+> *Is `<P>_full = R_O(beta_eff)` analytically derivable from `A_min`
+> plus the current Wilson primitive packet?*
+
+is now formally answered by the companion no-go theorem:
+
+- [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md), now `effective_status: retained_no_go` (per audit ledger row at HEAD).
+
+The no-go's two-witness argument (`beta_eff^-(beta) = beta + a beta^5`
+vs `beta_eff^+(beta) = beta + a beta^5 + c beta^6`) shows that two
+admissible completions of the retained Wilson packet agree on every
+retained premise but produce distinct `R_O(beta_eff(6))` readouts.
+Therefore the bridge is provably not derivable from the current
+packet.
+
+**Companion bounded result:** the implicit-flow theorem
+[`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
+supplies the exact coordinate identity
+`P_Lambda(beta) = R_O(beta_eff,Lambda(beta))` by **defining**
+`beta_eff,Lambda := R_O^{-1}(P_Lambda(beta))`. This is precisely the
+"definition or fit" route the no-go flagged as not constituting a
+positive bridge derivation. The implicit-flow theorem lands at
+`retained_bounded` as a coordinate-redefinition tautology, not as a
+positive plaquette computation.
+
+**Why the gate-level audit status remains `open_gate`.** Per repo
+"audit ratification ≠ demotion" rule, the audited stretch's
+`effective_status: open_gate` reflects the **open question's status
+as a positive derivation** (`<P>_full = R_O(beta_eff)` is NOT a
+retained positive theorem on main). It does NOT reflect a failure to
+close the residual: the no-go fully closes the residual at the
+expected level (negative theorem rather than positive bridge
+derivation).
+
+**Escape hatches required to upgrade to a positive bridge** (per the
+no-go theorem's §5):
+
+- exact `beta=6` Wilson plaquette spectral measure;
+- exact `beta=6` Perron / Jacobi data for the retained source operator;
+- exact nonperturbative effective action whose derivative gives
+  `<P>_full`;
+- exact independently selected `beta_eff(6)` not fitted to `<P>`.
+
+None is currently a retained Wilson primitive. The "no new axioms"
+rule applies: an "import → bounded → retire import" path is the only
+legitimate route to a positive bridge.
+
+**Closure status (final):** the open question is closed at the
+expected level — as a negative theorem, retained. No further action
+on this stretch note's residual is available without an escape-hatch
+primitive.
