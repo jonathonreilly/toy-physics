@@ -1,5 +1,33 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks053-054 package:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-054 packaged; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 53
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 54
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=54/63, combined_rows_written=false
+```
+
+Chunks053-054 are now completed-mode row support and the finite row prefix is
+`54/63`.  Chunks055-056 remain active run-control only; chunks057-063 remain
+pending.  The refreshed row-derived gates still reject closure: raw `C_ss`
+fails strict scalar-LSZ first-shell Stieltjes nonincrease, Schur `C_s|x`
+still fails, Schur `C_x|s` survives only a necessary first-shell check, and finite `C_sx/C_xx` rows are
+not primitive transfer, top-coupling tomography, canonical `O_H`, canonical
+`C_sH/C_HH`, W/Z response, retained, or `proposed_retained` evidence.
+
 Neutral primitive H3/H4 intake-wire refresh:
 
 ```text
@@ -12,7 +40,7 @@ python3 scripts/frontier_yt_pr230_neutral_primitive_route_completion.py
 ```
 
 The refreshed neutral primitive route-completion gate consumes the H3/H4
-aperture checkpoint directly.  H1/H2 Z3 support and the current `52/63`
+aperture checkpoint directly.  H1/H2 Z3 support and the current `54/63`
 `C_sx/C_xx` row prefix remain bounded support only.  H3 physical neutral
 transfer/off-diagonal dynamics, H3 primitive-cone or irreducibility
 authority, and H4 source/canonical-Higgs coupling are still absent.  No

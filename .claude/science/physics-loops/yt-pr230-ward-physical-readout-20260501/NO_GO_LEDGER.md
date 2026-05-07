@@ -1,9 +1,22 @@
 # No-Go Ledger
 
+## Two-source chunks001-054 are not source-Higgs or scalar-LSZ closure
+
+The 2026-05-07 chunks053-054 package refresh advances the finite row prefix to
+`ready=54/63`, but the added rows do not change the claim boundary.  Raw
+`C_ss` still fails strict scalar-LSZ first-shell Stieltjes nonincrease, Schur
+`C_s|x` still fails, and Schur `C_x|s` remains only a necessary first-shell
+diagnostic.
+
+Do not treat chunks001-054, live-status rows, chunk055/chunk056 logs, or partial
+`C_sx/C_xx` rows as canonical `O_H`, canonical `C_sH/C_HH`, physical
+`kappa_s`, strict scalar-LSZ/FV authority, primitive transfer, W/Z response,
+retained, or proposed-retained closure.
+
 ## Neutral primitive H3/H4 aperture is not primitive-cone closure
 
 The 2026-05-07 neutral primitive route-completion refresh consumes the H3/H4
-aperture checkpoint directly.  H1/H2 Z3 support and the current `52/63`
+aperture checkpoint directly.  H1/H2 Z3 support and the current `54/63`
 `C_sx/C_xx` row prefix are bounded staging support only.
 
 Do not treat H1/H2 Z3 support, commutant rank, source-only rows, or

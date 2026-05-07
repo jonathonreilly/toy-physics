@@ -1,5 +1,5 @@
 {
-  "actual_current_surface_status": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 52 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+  "actual_current_surface_status": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 54 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
   "admitted_observation_status": null,
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
@@ -75,13 +75,13 @@
     },
     {
       "blocks_closure": true,
-      "current_status": "bounded support: 52/63 chunks, min finite Gram determinant=0.03370025992406329",
+      "current_status": "bounded support: 54/63 chunks, min finite Gram determinant=0.033700666920491736",
       "evidence": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
       "gate": "finite C_sx/C_xx row staging"
     },
     {
       "blocks_closure": true,
-      "current_status": "bounded-support / source-Higgs bridge aperture checkpoint; 52 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+      "current_status": "bounded-support / source-Higgs bridge aperture checkpoint; 54 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
       "evidence": "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json",
       "gate": "source-Higgs disjunct"
     },
@@ -132,17 +132,17 @@
     "combined_rows_written": false,
     "diagnostics": {
       "chunk_counts_seen": [
-        52
+        54
       ],
-      "determinant_max": 0.03437288288567885,
-      "determinant_min": 0.03370025992406329,
+      "determinant_max": 0.034373246661649565,
+      "determinant_min": 0.033700666920491736,
       "finite_rows_rank_one_flat": false,
-      "max_abs_rho_sx": 4.998268522389569e-05,
+      "max_abs_rho_sx": 6.341856195319036e-05,
       "mode_count": 4
     },
     "expected_chunks": 63,
-    "present_chunks": 52,
-    "ready_chunks": 52,
+    "present_chunks": 54,
+    "ready_chunks": 54,
     "strict_limit": "These are finite C_sx/C_xx covariance rows on a partial two-source taste-radial packet. They are not physical transfer matrices, primitive-cone certificates, canonical O_H, or C_sH/C_HH pole rows."
   }
 }

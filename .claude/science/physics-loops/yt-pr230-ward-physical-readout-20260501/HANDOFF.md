@@ -1,12 +1,33 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 two-source taste-radial chunks053-054 package:
+
+- Packaged chunks053-054 after the completed root JSONs and per-volume
+  artifacts landed.  Checkpoints:
+  `outputs/yt_pr230_two_source_taste_radial_chunk053_checkpoint_2026-05-06.json`
+  and `outputs/yt_pr230_two_source_taste_radial_chunk054_checkpoint_2026-05-06.json`.
+- The two-source taste-radial packet is now `ready=54/63` with
+  `combined_rows_written=false`; chunks055-056 remain active run-control only
+  and chunks057-063 remain pending.
+- Refreshed row-derived gates: strict scalar-LSZ, source-Higgs bridge
+  aperture, Schur subblock/K-prime/A-B-C/pole-lift, Schur repair,
+  Schur complete-monotonicity, one-pole scout, source-Higgs readiness,
+  primitive-transfer candidate, and orthogonal-top exclusion.
+- Current row diagnostics remain non-closure: raw `C_ss` first-shell
+  Stieltjes failure `z=181.81573887267618`; Schur `C_s|x` failure
+  `z=167.44432329992324`; Schur `C_x|s` first-shell support only
+  `z=-585.9748296932755`.
+- Claim boundary: finite `C_ss/C_sx/C_xx` support only; no canonical `O_H`, no
+  canonical `C_sH/C_HH`, no scalar-LSZ/FV authority, no W/Z response, and no
+  retained or `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 neutral primitive H3/H4 intake-wire refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_neutral_primitive_route_completion.py`,
   `docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md`, and
   `outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json`.
 - The completion gate now consumes the H3/H4 aperture checkpoint directly,
-  including the current `52/63` taste-radial row prefix.
+  including the current `54/63` taste-radial row prefix.
 - Result: exact negative boundary on the current surface, not a global theorem
   no-go.  H1/H2 Z3 support is loaded, but H3 physical neutral transfer or
   off-diagonal generator, H3 primitive-cone/irreducibility authority, and H4

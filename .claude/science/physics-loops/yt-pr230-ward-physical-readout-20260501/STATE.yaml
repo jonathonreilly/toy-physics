@@ -16,10 +16,10 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-281-neutral-primitive-h3h4-intake-wire-refresh
-blocks_completed: 280
-active_route: "neutral primitive H3/H4 route completion intake-wire refresh"
-active_hard_residual: "Refreshed the neutral primitive/rank-one route completion gate so it consumes the H3/H4 aperture checkpoint directly.  The route remains hard-physics open only after a real same-surface H3/H4 artifact, but current H1/H2 Z3 support and 52/63 C_sx/C_xx chunks do not supply physical neutral transfer, primitive-cone/irreducibility, or source/canonical-Higgs coupling.  Validation: neutral primitive route completion PASS=15 FAIL=0; aggregate gates pending for this block."
+current_phase: campaign-block-282-two-source-taste-radial-chunks053-054-package
+blocks_completed: 281
+active_route: "two-source taste-radial chunks053-054 package refresh"
+active_hard_residual: "Packaged chunks053-054 after completed root JSONs and per-volume artifacts landed.  The finite C_ss/C_sx/C_xx row prefix is now 54/63 with chunks055-056 active run-control only.  Row-derived gates remain bounded support/no-closure: strict scalar-LSZ raw C_ss still fails first-shell Stieltjes nonincrease, Schur C_s|x still fails while C_x|s remains first-shell support only, primitive-transfer and orthogonal-top gates still reject finite rows as physical authority.  Aggregate gates pending for this block."
 files_touched:
   - "scripts/frontier_yt_pr230_wz_response_route_completion.py"
   - "docs/YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION_NOTE_2026-05-06.md"
@@ -27,6 +27,13 @@ files_touched:
   - "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py"
   - "docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md"
   - "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
+  - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS053_054_PACKAGE_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk053_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk054_2026-05-06.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk053/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk054/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk053_checkpoint_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk054_checkpoint_2026-05-06.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
