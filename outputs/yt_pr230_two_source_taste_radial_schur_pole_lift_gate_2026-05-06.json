@@ -31,67 +31,67 @@
         "derivative_spread": 0.2679491924311227,
         "endpoint_preserving_variants": [
           {
-            "derivative_at_zero_if_zero_is_pole": -0.7177365423413852,
+            "derivative_at_zero_if_zero_is_pole": -0.7180907292230242,
             "endpoint_residual_max": 0.0,
-            "f_shell": 7.977148125636296,
-            "f_zero": 8.169465052534976,
+            "f_shell": 7.97717132199528,
+            "f_zero": 8.169583152982865,
             "lambda": 0.0
           },
           {
-            "derivative_at_zero_if_zero_is_pole": -0.9856857347725079,
+            "derivative_at_zero_if_zero_is_pole": -0.9860399216541469,
             "endpoint_residual_max": 0.0,
-            "f_shell": 7.977148125636296,
-            "f_zero": 8.169465052534976,
+            "f_shell": 7.97717132199528,
+            "f_zero": 8.169583152982865,
             "lambda": 1.0
           }
         ],
-        "shell_minus_zero_over_dp": -0.7177365423413852,
-        "shell_value": 7.977148125636296,
-        "zero_value": 8.169465052534976
+        "shell_minus_zero_over_dp": -0.7180907292230242,
+        "shell_value": 7.97717132199528,
+        "zero_value": 8.169583152982865
       },
       "B": {
         "derivative_spread": 0.26794919243112264,
         "endpoint_preserving_variants": [
           {
-            "derivative_at_zero_if_zero_is_pole": -0.0006620343612170406,
+            "derivative_at_zero_if_zero_is_pole": -0.0006386047782737619,
             "endpoint_residual_max": 0.0,
-            "f_shell": 0.0007485308291494359,
-            "f_zero": 0.0009259224015991961,
+            "f_shell": 0.0005802367332292177,
+            "f_zero": 0.0007513503678503283,
             "lambda": 0.0
           },
           {
-            "derivative_at_zero_if_zero_is_pole": -0.2686112267923397,
+            "derivative_at_zero_if_zero_is_pole": -0.2685877972093964,
             "endpoint_residual_max": 0.0,
-            "f_shell": 0.0007485308291494359,
-            "f_zero": 0.0009259224015991961,
+            "f_shell": 0.0005802367332292177,
+            "f_zero": 0.0007513503678503283,
             "lambda": 1.0
           }
         ],
-        "shell_minus_zero_over_dp": -0.0006620343612170406,
-        "shell_value": 0.0007485308291494359,
-        "zero_value": 0.0009259224015991961
+        "shell_minus_zero_over_dp": -0.0006386047782737619,
+        "shell_value": 0.0005802367332292177,
+        "zero_value": 0.0007513503678503283
       },
       "C": {
         "derivative_spread": 0.26794919243112264,
         "endpoint_preserving_variants": [
           {
-            "derivative_at_zero_if_zero_is_pole": 0.5568667553864275,
+            "derivative_at_zero_if_zero_is_pole": 0.5568455204738663,
             "endpoint_residual_max": 0.0,
-            "f_shell": 3.709905175734761,
-            "f_zero": 3.560693178337228,
+            "f_shell": 3.7099258405345505,
+            "f_zero": 3.56071953301469,
             "lambda": 0.0
           },
           {
-            "derivative_at_zero_if_zero_is_pole": 0.28891756295530485,
+            "derivative_at_zero_if_zero_is_pole": 0.2888963280427436,
             "endpoint_residual_max": 0.0,
-            "f_shell": 3.709905175734761,
-            "f_zero": 3.560693178337228,
+            "f_shell": 3.7099258405345505,
+            "f_zero": 3.56071953301469,
             "lambda": 1.0
           }
         ],
-        "shell_minus_zero_over_dp": 0.5568667553864275,
-        "shell_value": 3.709905175734761,
-        "zero_value": 3.560693178337228
+        "shell_minus_zero_over_dp": 0.5568455204738663,
+        "shell_value": 3.7099258405345505,
+        "zero_value": 3.56071953301469
       }
     }
   },
@@ -114,7 +114,7 @@
   "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Finite inverse rows are endpoint data.  The interpolation witness keeps the endpoint rows fixed while changing the derivative, so the strict K'(pole)/A'B'C' authority is not present on the current surface.",
-  "ready_chunks": 34,
+  "ready_chunks": 36,
   "strict_blockers": {
     "canonical_higgs_identity_absent": true,
     "combined_rows_packet_written_absent": true,

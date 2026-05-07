@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T09:39:25.794422+00:00",
+  "generated_at": "2026-05-07T09:47:36.384395+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42773,7 +42773,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / Schur-complement Stieltjes repair split; scalar-LSZ authority absent",
       "deps": [],
-      "note_hash": "846a9e88c3154d834dd54482c62a5bcef0f1fa1e0db8624dac943b9acde95986",
+      "note_hash": "99a6c34234917ab18b901248daa3df70cb7cb0142b449085b94fb9297880b56c",
       "path": "docs/YT_PR230_SCHUR_COMPLEMENT_STIELTJES_REPAIR_GATE_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py",
       "title": "PR #230 Schur-Complement Stieltjes Repair Gate"
@@ -42983,7 +42983,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / chunks001-036 packaged; no closure",
       "deps": [],
-      "note_hash": "3b64ca83ce83a99ed27ecf4c51c4048c7f3c72c28de728e14903cacc2ac5a57c",
+      "note_hash": "9608de67b8c7a0b5ce2dc5a1d0901903dbed65fceecc7ab847dc9ff865ccdf56",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS035_036_PACKAGE_NOTE_2026-05-07.md",
       "runner_path": null,
       "title": "PR230 Two-Source Taste-Radial Chunks035-036 Package"
@@ -43061,9 +43061,9 @@
     "yt_pr230_two_source_taste_radial_schur_pole_lift_gate_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_schur_pole_lift_gate_note_2026-05-06",
       "current_status": "unknown",
-      "current_status_raw": "exact negative boundary / finite Schur A/B/C rows do not lift to",
+      "current_status_raw": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
       "deps": [],
-      "note_hash": "3f009475f7d4f99ffc6cf1d81ac96244e0615142392ca1c39108e4c4f4065b25",
+      "note_hash": "aa0f312553264dd4a43b2ce359a05ff975e8ca57954fb96d6ccf63aabdbc1b96",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_POLE_LIFT_GATE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py",
       "title": "PR230 Two-Source Taste-Radial Schur Pole-Lift Gate"

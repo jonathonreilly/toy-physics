@@ -6,7 +6,7 @@
 
 ## Claim
 
-The completed two-source taste-radial chunks001-030 contain a stricter finite
+The completed two-source taste-radial chunks001-036 contain a stricter finite
 object than the raw `C_ss` proxy:
 
 ```text
@@ -26,11 +26,11 @@ C(x2) - C(x1) <= 0        for x2 > x1,        x = q_hat^2.
 
 The source residual `C_s|x` does not repair the raw-source problem.  It is
 positive, but it increases from the zero mode to the first shell across the
-30 ready chunks (`z=132.2068077355895`).
+36 ready chunks (`z=134.33514802069274`).
 
 The complement residual `C_x|s` is the useful new artifact: it is positive and
-decreases from the zero mode to the first shell across the 30 ready chunks
-(`z=-459.08170655875074`).  This
+decreases from the zero mode to the first shell across the 36 ready chunks
+(`z=-494.595619807674`).  This
 survives the first-shell necessary Stieltjes check and gives a targeted
 candidate for later complement-scalar diagnostics.
 
@@ -60,5 +60,5 @@ No retained or proposed-retained closure is authorized.  The gate does not set
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
 python3 scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
-# SUMMARY: PASS=22 FAIL=0
+# SUMMARY: PASS=22 FAIL=0, ready=36/63
 ```
