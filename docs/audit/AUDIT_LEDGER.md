@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 242 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 10 |
-| unaudited | 822 |
+| open_gate | 11 |
+| unaudited | 821 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 397 |
+| `audited_clean` | 398 |
 | `audited_conditional` | 443 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 871 |
+| `unaudited` | 870 |
 
 | claim_type | count |
 |---|---:|
@@ -453,6 +453,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_measurement_record_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_microscopic_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `teleportation_native_transport_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -12781,6 +12782,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The runner joins an ideal Bell-stabilizer transducer to a redundant pointer codeword, local 3D+1 record-field pulses, Bob decoding, and retained-axis Pauli correction in one end-to-end model.  _(class `E`)_
 - **chain closes:** False — The runner computes the stated bounded model, but the load-bearing apparatus and carrier are introduced as ideal/projective and classical/discrete model definitions rather than derived from the repository axiom. The missing step is a derivation of the native detector, durable record, and record-field dynamics from the underlying retained physics.
 - **rationale:** The source note is careful that this is planning-level and explicitly lists the Bell-stabilizer transducer, durable pointer, record-field carrier, decoherence, thermodynamic irreversibility, field equation, and conservation-ledger derivation as open. The runner does perform nontrivial checks of the bounded construction and is not merely printing constants, but those checks validate an introduced ideal model rather than deriving the native apparatus from the axiom. Because the conclusion depends on open bridge premises and ideal components, retained closure does not propagate.
+- **auditor confidence:** high
+
+### `teleportation_native_transport_theory_note`
+
+- **Note:** [`TELEPORTATION_NATIVE_TRANSPORT_THEORY_NOTE.md`](../../docs/TELEPORTATION_NATIVE_TRANSPORT_THEORY_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open transport-theory gate for native taste-qubit teleportation: finite RALA supports the bounded algebraic base/fiber and Pauli-frame connection layer, but physical resource derivation, durable records, apparatus, noise, conservation ledgers, branch records, and calibration remain open; no matter, mass, charge, energy, object transport, or FTL closure is claimed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-fresh-teleportation-native-transport-auditor-20260507-f161`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** RALA gives bounded algebraic support for T1 base/fiber separation and T2 Bell connection, while T3 causal records, T4 holonomy bookkeeping, T5 branch records, and T6 preparation curvature require physical content beyond RALA and remain open.  _(class `A`)_
+- **chain closes:** True — The open-gate claim closes because the one-hop RALA authority is retained_bounded for the finite algebraic T1/T2 support, and the source note explicitly keeps all physical transport closure obligations open. The runner corroborates only formal Pauli-frame, twirl, commutation, holonomy, and toy causal-record bookkeeping, and itself holds nature-grade unconditional closure open.
+- **rationale:** This is clean only as an open_gate, not as a retained physical teleportation theorem. The restricted packet supports the bounded algebraic layer through the retained_bounded RALA authority, and the runner source shows seven algebraic/formal checks rather than first-principles native-dynamics derivations. The note does not promote Bell-resource dynamics, durable measurement, record carrier, apparatus, noise model, or conservation ledgers; it names those as unresolved closure requirements.
 - **auditor confidence:** high
 
 ### `teleportation_nature_grade_push_note`
