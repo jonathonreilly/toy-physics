@@ -1669,3 +1669,10 @@ pole/threshold/FV/IR authority, and a canonical `O_H`/source-overlap or
 physical-response bridge.  Do not launch it into the active four-mode row wave;
 use its separate roots only after the current packet finishes or a clean
 separate production window is opened.
+
+2026-05-07 update: two-source taste-radial chunks035-036 are now packaged,
+raising the partial row packet to `ready=36/63`.  This improves finite-row
+statistics but does not change the clean closure ordering.  Continue packaging
+completed chunks as they land, but do not promote partial finite
+`C_ss/C_sx/C_xx` rows, first-shell Schur/Stieltjes diagnostics, active logs,
+or live status into proof authority.  Chunk037 is active run-control only.

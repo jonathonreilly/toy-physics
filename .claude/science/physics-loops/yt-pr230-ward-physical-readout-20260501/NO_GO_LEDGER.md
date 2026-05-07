@@ -3581,3 +3581,14 @@ Reopen as closure only after the separate higher-shell campaign actually runs
 and produces complete row artifacts, then passes complete-monotonicity,
 pole/threshold/FV/IR, and canonical `O_H`/source-overlap or physical-response
 bridge gates.  Do not reopen because a command preview or manifest exists.
+
+## 2026-05-07 - Chunks001-036 Still Do Not Supply Closure
+
+No-go on the current surface: the finite two-source taste-radial packet is now
+`ready=36/63`, but it remains a partial one-volume finite-row packet.  It has
+no canonical `O_H`, no canonical `C_sH/C_HH` pole rows, no strict scalar-LSZ
+FV/IR/threshold authority, no W/Z response, and no primitive neutral transfer.
+
+Reopen as closure only with a complete same-surface artifact satisfying one of
+the named physical authorities.  Do not reopen because the partial packet grew
+from 34 to 36 chunks.

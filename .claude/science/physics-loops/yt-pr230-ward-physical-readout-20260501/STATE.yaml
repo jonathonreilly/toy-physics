@@ -16,11 +16,30 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-256-schur-higher-shell-production-contract
-blocks_completed: 255
-active_route: "PR230 higher-shell Schur/scalar-LSZ production contract"
-active_hard_residual: "Higher-shell Schur/scalar-LSZ support is now an executable production contract, not evidence.  The new runner PASS=16 FAIL=0 defines a separate future row campaign with five ordered L=12 q_hat^2 levels, non-colliding output roots, fixed seed base 2026057000, and no --resume.  It explicitly keeps the active four-mode two-source taste-radial packet unmixed, detects active chunks035-036, and sets launch_allowed_now=false.  Aggregate gates remain open while recognizing the contract as support-only: assumption PASS=92 FAIL=0, campaign PASS=339 FAIL=0, assembly PASS=152 FAIL=0, retained PASS=306 FAIL=0, completion PASS=61 FAIL=0.  No row evidence, complete monotonicity, pole/FV/IR authority, canonical O_H/source-overlap, physical response bridge, retained, or proposed-retained closure is authorized."
+current_phase: campaign-block-257-two-source-taste-radial-chunks035-036-package
+blocks_completed: 256
+active_route: "PR230 two-source taste-radial row-wave packaging"
+active_hard_residual: "Two-source taste-radial chunks035-036 now pass completed-mode checkpoints and package audit; the row combiner reports ready=36/63 with combined_rows_written=false.  The strict scalar-LSZ gate remains blocked by first-shell Stieltjes violation (z=143.92652720800947), one-volume/partial-packet status, and absent canonical O_H/FV/IR authority.  Schur C_s|x still fails first-shell monotonicity (z=134.33514802069274) while C_x|s is only a necessary first-shell support check (z=-494.595619807674); complete monotonicity remains unavailable with only two q_hat^2 levels.  Aggregate gates remain open/support-only: assumption PASS=92 FAIL=0, campaign PASS=339 FAIL=0, assembly PASS=152 FAIL=0, retained PASS=306 FAIL=0, completion PASS=61 FAIL=0.  Chunk037 is active run-control only.  No canonical O_H, C_sH/C_HH, W/Z response, strict scalar-LSZ/FV/IR, Schur pole, primitive neutral transfer, retained, or proposed-retained closure is authorized."
 files_touched:
+  - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS035_036_PACKAGE_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk035_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk036_2026-05-06.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk035/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk036/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk035_checkpoint_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk036_checkpoint_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json"
+  - "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
+  - "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json"
+  - "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json"
+  - "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json"
+  - "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  - "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
+  - "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json"
   - "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py"
   - "docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json"
@@ -1926,3 +1945,10 @@ checkpoint_2026_05_07_schur_higher_shell_production_contract:
     production window is opened, run higher-shell rows under the separate roots
     and only then test complete monotonicity, pole/threshold/FV/IR authority,
     and canonical O_H/source-overlap or physical-response bridge.
+checkpoint_2026_05_07_two_source_taste_radial_chunks035_036_package:
+  actual_current_surface_status: "bounded-support / two-source taste-radial chunks001-036 packaged; combined rows not written because ready=36/63, canonical O_H, strict scalar-LSZ/FV, W/Z response, and proposal firewalls remain open; proposal_allowed=false"
+  runner_pass_fail: "chunk035 15/0; chunk036 15/0; package audit 10/0; row combiner 13/0; strict scalar-LSZ moment/FV 13/0; Schur subblock 16/0; Schur K-prime 14/0; Schur A/B/C 17/0; Schur pole lift 13/0; Schur-complement Stieltjes repair 22/0; complete monotonicity 15/0; source-Higgs readiness 25/0; primitive-transfer candidate 13/0; orthogonal-top exclusion 12/0"
+  scalar_and_schur_boundary: "raw C_ss z=143.92652720800947; C_s|x z=134.33514802069274; C_x|s z=-494.595619807674 only passes a necessary first-shell check; complete monotonicity unavailable with two q_hat^2 levels"
+  aggregate_refresh: "assumption stress 92/0; campaign 339/0; full assembly 152/0; retained route 306/0; completion audit 61/0"
+  current_active_chunks: "successor chunk037 is active run-control/log state after chunks035-036 completed; active workers, logs, live status, and pending checkpoints are non-evidence"
+  next_exact_action: "Continue row-wave packaging only after completed JSON/checkpoints exist, or pivot to a genuine closure artifact: canonical O_H plus C_ss/C_spH/C_HH pole rows, same-source W/Z rows with identity/covariance/strict g2, strict scalar-LSZ moment/threshold/FV authority, Schur A/B/C pole rows, or a neutral primitive/off-diagonal-generator certificate."

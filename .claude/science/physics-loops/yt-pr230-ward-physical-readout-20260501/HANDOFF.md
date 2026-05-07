@@ -4475,3 +4475,33 @@ monotonicity, pole/threshold/FV/IR authority, and canonical `O_H`/source-
 overlap or physical-response bridge.  Until those row and bridge artifacts
 exist, this is infrastructure support only and no retained/proposed-retained
 closure is authorized.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks035-036 Package
+
+Chunks035-036 are now packaged as bounded support.  The checkpoint commands:
+
+```text
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 35 --output outputs/yt_pr230_two_source_taste_radial_chunk035_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 36 --output outputs/yt_pr230_two_source_taste_radial_chunk036_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=36/63, combined_rows_written=false
+```
+
+The scalar/Schur refresh remains non-closure: strict scalar-LSZ still fails
+first-shell Stieltjes monotonicity, the Schur residual gives only first-shell
+support for `C_x|s`, complete monotonicity is unavailable with two
+`q_hat^2` levels, and canonical `O_H`/source-overlap/W/Z/primitive-transfer
+authority is absent.  Aggregate gates remain open: assumption `PASS=92
+FAIL=0`, campaign `PASS=339 FAIL=0`, assembly `PASS=152 FAIL=0`, retained
+`PASS=306 FAIL=0`, completion audit `PASS=61 FAIL=0`.
+
+Chunk037 is active run-control only.  Package it only after completed JSON and
+completed-mode checkpoint exist.  No retained or proposed-retained closure is
+authorized.

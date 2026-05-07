@@ -998,3 +998,11 @@ Additional forbidden load-bearing assumptions:
 - `higher-shell manifest = pole/threshold/FV/IR authority`
 - `future Schur rows = canonical O_H/source-overlap authority`
 - `launch_allowed_now=false` can be ignored while active chunks own the packet
+
+2026-05-07 two-source taste-radial chunks035-036 package:
+
+Chunks035-036 are bounded support only.  The package raises the partial row
+packet to `ready=36/63`, but finite `C_ss/C_sx/C_xx` rows, first-shell
+Stieltjes/Schur diagnostics, and chunk logs are not proof selectors for
+canonical `O_H`, scalar-LSZ/FV, W/Z response, Schur pole authority, neutral
+primitive transfer, retained, or proposed-retained closure.

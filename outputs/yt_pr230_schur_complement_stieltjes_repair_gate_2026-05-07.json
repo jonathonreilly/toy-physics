@@ -2121,6 +2121,128 @@
       "shell_p_hat_sq_mean": 0.26794919243112264,
       "volume": "12x24",
       "zero_p_hat_sq": 0.0
+    },
+    {
+      "C_source_given_x_shell_mean": 0.12527857441039597,
+      "C_source_given_x_shell_minus_zero": 0.0029570049936974013,
+      "C_source_given_x_zero": 0.12232156941669857,
+      "C_x_given_source_shell_mean": 0.26938045602061306,
+      "C_x_given_source_shell_minus_zero": -0.011261442707535374,
+      "C_x_given_source_zero": 0.28064189872814843,
+      "chunk_index": 35,
+      "mode_rows": {
+        "0,0,0": {
+          "C_source_given_x": 0.12232156941669857,
+          "C_ss": 0.1223216499650771,
+          "C_sx": 0.00015035047314880664,
+          "C_x_given_source": 0.28064189872814843,
+          "C_xx": 0.28064208352997855,
+          "Delta_sx": 0.03432858010175919,
+          "mode": "0,0,0",
+          "p_hat_sq": 0.0,
+          "rho_sx": 0.0008114779733734002
+        },
+        "0,0,1": {
+          "C_source_given_x": 0.12528390304079345,
+          "C_ss": 0.12528397645293374,
+          "C_sx": 0.000140823621435982,
+          "C_x_given_source": 0.2701362561697833,
+          "C_xx": 0.2701364144605154,
+          "Delta_sx": 0.03384374435705881,
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0007654841070151882
+        },
+        "0,1,0": {
+          "C_source_given_x": 0.12529628295814255,
+          "C_ss": 0.1252963641237585,
+          "C_sx": 0.0001478425175414926,
+          "C_x_given_source": 0.2692937838018886,
+          "C_xx": 0.269293958247573,
+          "Delta_sx": 0.03374153199150613,
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0008048534500587743
+        },
+        "1,0,0": {
+          "C_source_given_x": 0.1252555372322519,
+          "C_ss": 0.12525563264621759,
+          "C_sx": 0.0001601213070033584,
+          "C_x_given_source": 0.26871132809016723,
+          "C_xx": 0.26871153278222315,
+          "Delta_sx": 0.033657607399139235,
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0008727851349731346
+        }
+      },
+      "rho_sx_shell_mean": 0.0008143742306823658,
+      "rho_sx_zero": 0.0008114779733734002,
+      "seed": 2026056035,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "volume": "12x24",
+      "zero_p_hat_sq": 0.0
+    },
+    {
+      "C_source_given_x_shell_mean": 0.1254245618206359,
+      "C_source_given_x_shell_minus_zero": 0.0029957003284113715,
+      "C_source_given_x_zero": 0.12242886149222454,
+      "C_x_given_source_shell_mean": 0.26966543720454644,
+      "C_x_given_source_shell_minus_zero": -0.011306420016085894,
+      "C_x_given_source_zero": 0.28097185722063234,
+      "chunk_index": 36,
+      "mode_rows": {
+        "0,0,0": {
+          "C_source_given_x": 0.12242886149222454,
+          "C_ss": 0.12242886150405541,
+          "C_sx": 1.8232215992116565e-06,
+          "C_x_given_source": 0.28097185722063234,
+          "C_xx": 0.28097185724778395,
+          "Delta_sx": 0.03439906459420203,
+          "mode": "0,0,0",
+          "p_hat_sq": 0.0,
+          "rho_sx": 9.830285713510814e-06
+        },
+        "0,0,1": {
+          "C_source_given_x": 0.12545664277926308,
+          "C_ss": 0.12545664500025794,
+          "C_sx": 2.4505938766725336e-05,
+          "C_x_given_source": 0.27039279960810847,
+          "C_xx": 0.2703928043949496,
+          "Delta_sx": 0.03392257347106035,
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.00013305369639208666
+        },
+        "0,1,0": {
+          "C_source_given_x": 0.1254135375605626,
+          "C_ss": 0.1254135379213831,
+          "C_sx": 9.862691554928673e-06,
+          "C_x_given_source": 0.2695874485581763,
+          "C_xx": 0.26958744933379175,
+          "Delta_sx": 0.03380991570287976,
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 5.363810259617984e-05
+        },
+        "1,0,0": {
+          "C_source_given_x": 0.12540350512208207,
+          "C_ss": 0.12540350679858864,
+          "C_sx": -2.1236930129730362e-05,
+          "C_x_given_source": 0.26901606344735457,
+          "C_xx": 0.26901606704380265,
+          "Delta_sx": 0.03373555774144988,
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.00011562394630512405
+        }
+      },
+      "rho_sx_shell_mean": 2.3689284227714152e-05,
+      "rho_sx_zero": 9.830285713510814e-06,
+      "seed": 2026056036,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "volume": "12x24",
+      "zero_p_hat_sq": 0.0
     }
   ],
   "proposal_allowed": false,
@@ -2159,9 +2281,11 @@
     31,
     32,
     33,
-    34
+    34,
+    35,
+    36
   ],
-  "ready_chunks": 34,
+  "ready_chunks": 36,
   "row_definition": {
     "C_source_given_x": "Delta_sx / C_xx",
     "C_x_given_source": "Delta_sx / C_ss",
@@ -2174,26 +2298,26 @@
   "source_given_x_stieltjes_first_shell_passed": false,
   "source_given_x_summary": {
     "shell": {
-      "count": 34,
+      "count": 36,
       "max": 0.12556725651890951,
-      "mean": 0.1253581518965226,
+      "mean": 0.12535778613091111,
       "min": 0.1252049477858375,
-      "stderr": 1.5408843742883458e-05
+      "stderr": 1.4830718452244895e-05
     },
     "shell_minus_zero": {
-      "count": 34,
+      "count": 36,
       "max": 0.003012342079657143,
-      "mean": 0.0029510384671464357,
+      "mean": 0.002952444811252433,
       "min": 0.0029108370910620046,
-      "stderr": 3.990670562154686e-06
+      "stderr": 3.9668704408370985e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": 128.66656381261006,
+    "shell_minus_zero_z_score_from_chunk_scatter": 134.33514802069274,
     "zero": {
-      "count": 34,
+      "count": 36,
       "max": 0.12264386254073878,
-      "mean": 0.12240711342937617,
+      "mean": 0.1224053413196587,
       "min": 0.12224010196301965,
-      "stderr": 1.698843752439398e-05
+      "stderr": 1.6220082780250882e-05
     }
   },
   "stieltjes_necessary_condition": "For C(x)=int dmu(s)/(x+s), dmu(s)>=0, x=q_hat^2, C is non-increasing: C(x2)-C(x1)<=0 for x2>x1.  A zero-to-first-shell increase rejects that object as the strict unsubtracted positive Stieltjes scalar two-point candidate.  A decrease is only a necessary first-shell check, not scalar-LSZ authority.",
@@ -2211,26 +2335,26 @@
   "x_given_source_stieltjes_first_shell_passed": true,
   "x_given_source_summary": {
     "shell": {
-      "count": 34,
+      "count": 36,
       "max": 0.2697468820611708,
-      "mean": 0.2695500552928034,
-      "min": 0.269397809985968,
-      "stderr": 1.5920296464277928e-05
+      "mean": 0.26954854925501315,
+      "min": 0.26938045602061306,
+      "stderr": 1.6094283151983457e-05
     },
     "shell_minus_zero": {
-      "count": 34,
+      "count": 36,
       "max": -0.01124889363522047,
-      "mean": -0.011294165733556977,
+      "mean": -0.011293597157348848,
       "min": -0.01133433356961161,
-      "stderr": 3.852613980190175e-06
+      "stderr": 3.7652084955349424e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": -506.4973030760837,
+    "shell_minus_zero_z_score_from_chunk_scatter": -494.595619807674,
     "zero": {
-      "count": 34,
+      "count": 36,
       "max": 0.2810229245536583,
-      "mean": 0.2808442210263604,
-      "min": 0.28068870370685767,
-      "stderr": 1.5613148278289313e-05
+      "mean": 0.28084214641236205,
+      "min": 0.28064189872814843,
+      "stderr": 1.6197705928658283e-05
     }
   }
 }

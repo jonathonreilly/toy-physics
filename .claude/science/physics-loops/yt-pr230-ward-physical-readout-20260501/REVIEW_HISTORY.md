@@ -6171,3 +6171,27 @@ non-colliding command rows with five ordered `q_hat^2` levels and fixed seed
 control, but it is not measurement evidence and it does not authorize complete
 monotonicity, scalar-pole, FV/IR, canonical `O_H`, W/Z response, retained, or
 proposed-retained claims.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks035-036 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks035-036 into the two-source taste-radial row stream.
+- Added
+  `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS035_036_PACKAGE_NOTE_2026-05-07.md`.
+- Refreshed chunk checkpoints, package audit, row combiner, Schur finite-row
+  diagnostics, strict scalar-LSZ moment/FV gate, Schur-complement gates,
+  source-Higgs readiness, primitive-transfer candidate, orthogonal-top
+  exclusion gate, assumption stress, campaign status, full assembly,
+  retained-route, and completion audit.
+- Validation: chunk035 `PASS=15 FAIL=0`, chunk036 `PASS=15 FAIL=0`,
+  package audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at
+  `ready=36/63`, strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair
+  `PASS=22 FAIL=0`, assumption stress `PASS=92 FAIL=0`, campaign status
+  `PASS=339 FAIL=0`, full assembly `PASS=152 FAIL=0`, retained-route
+  `PASS=306 FAIL=0`, and completion audit `PASS=61 FAIL=0`.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for route diagnostics, not canonical `O_H`, not canonical
+`C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
+or proposed-retained closure.  Chunk037 is run-control only until completed.
