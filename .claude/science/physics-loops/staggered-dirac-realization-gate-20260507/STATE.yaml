@@ -1,71 +1,96 @@
 slug: staggered-dirac-realization-gate-20260507
 goal: |
   Close the staggered-Dirac realization gate (formerly axiom A3 per
-  MINIMAL_AXIOMS_2026-05-03). Derive (or sharply bound) the forcing
-  argument from A1+A2 + retained primitives + admissible standard
-  math machinery for four substeps:
+  MINIMAL_AXIOMS_2026-05-03). Derive the forcing argument from A1+A2
+  + retained primitives + admissible standard math machinery for four
+  substeps:
     (1) Grassmann partition forcing
     (2) Kawamoto-Smit phase forcing
     (3) BZ-corner three-generation forcing
     (4) Physical-species bridge
-  Pieces of (1)-(4) exist scattered across multiple notes; closure
-  requires either single canonical proof or coordinated chain.
 
 target_status: best-honest-status
 runtime_budget: 12h
-runtime_used: ~30m (loop pack setup)
+runtime_used: ~7h
 mode: campaign
+campaign_status: STOPPED — volume cap reached (5 PRs/24h); Block 06 synthesis in PR_BACKLOG
 
-current_block: 01
-current_block_route: ground + map forcing gaps
-current_block_branch: physics-loop/staggered-dirac-realization-gate-block01-20260507 (to create)
-current_block_status: planning
+current_block: -- (campaign closed)
+last_completed_block: 06 (synthesis committed; PR deferred per volume cap)
+final_branch_head: 6th branch physics-loop/staggered-dirac-realization-gate-block06-20260507
 
-cycles_completed: 0
-blocks_completed: 0
-prs_opened: 0
-prs_remaining_in_24h_volume_cap: 5
-cluster_cap_status: judgment-based per PR #624 governance update
+cycles_completed: 6
+blocks_completed: 6
+prs_opened: 5  # #631-#635
+prs_remaining_in_24h_volume_cap: 0  # 5/5 used
+cluster_cap_status: judgment-based per PR #624; all PRs PASSED V1-V5 evaluator self-record
 
-active_route: Block 01 — assumption ledger + forcing-gap map + Block 02 R1.A prep
-active_route_deliverable: STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md
+active_route: campaign closed; HANDOFF.md ranks next-campaign priorities
 hard_residual_being_attacked: |
-  Substep 1: package spin-statistics S2 as the explicit Grassmann-
-  partition-forcing theorem on A1+A2 + finite Cl(3) dim 2.
+  Final substep-4 admitted-context AC and Block 02 S2 re-audit are
+  the residual gaps. Both deferred to next campaign.
 
-files_touched:
-  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/GOAL.md
-  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/ASSUMPTIONS_AND_IMPORTS.md
-  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/NO_GO_LEDGER.md
-  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/ROUTE_PORTFOLIO.md
-  - .claude/science/physics-loops/staggered-dirac-realization-gate-20260507/STATE.yaml
+prior_blocks_summary:
+  block01:
+    deliverable: docs/STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md
+    branch: physics-loop/staggered-dirac-realization-gate-block01-20260507
+    pr: '#631 OPEN, base=main'
+    status: scoping audit
+    key_result: forcing-gap map for substeps 1-4
+  block02:
+    deliverable: docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md
+    runner: scripts/probe_grassmann_forcing_dependency_chain.py PASS=9/0
+    branch: physics-loop/staggered-dirac-realization-gate-block02-20260507
+    pr: '#632 OPEN, stacked on #631'
+    status: positive_theorem (substep 1)
+    key_result: bosonic 2nd-quantization incompatible with finite Cl(3) dim 2; Grassmann uniquely forced
+  block03:
+    deliverable: docs/STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md
+    runner: scripts/probe_kawamoto_smit_phase_forcing.py PASS=24/0
+    branch: physics-loop/staggered-dirac-realization-gate-block03-20260507
+    pr: '#633 OPEN, stacked on #632'
+    status: positive_theorem (substep 2)
+    key_result: η_1=1, η_2(x)=(−1)^{x_1}, η_3(x)=(−1)^{x_1+x_2} unique up to gauge
+  block04:
+    deliverable: docs/STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md
+    runner: scripts/probe_bz_corner_decomposition.py PASS=5/0
+    branch: physics-loop/staggered-dirac-realization-gate-block04-20260507
+    pr: '#634 OPEN, stacked on #633'
+    status: positive_theorem (substep 3)
+    key_result: 1+3+3+1 BZ-corner decomposition unique; hw=1 = three-gen triplet
+  block05:
+    deliverable: docs/STAGGERED_DIRAC_PHYSICAL_SPECIES_BRIDGE_THEOREM_NOTE_2026-05-07.md
+    runner: none (theoretical packaging)
+    branch: physics-loop/staggered-dirac-realization-gate-block05-20260507
+    pr: '#635 OPEN, stacked on #634'
+    status: bounded_theorem (substep 4, admitted-context AC)
+    key_result: DHR superselection chain → three physical species
+  block06:
+    deliverable: docs/STAGGERED_DIRAC_REALIZATION_FORCING_THEOREM_NOTE_2026-05-07.md
+    runner: none (synthesis)
+    branch: physics-loop/staggered-dirac-realization-gate-block06-20260507
+    pr: PR_BACKLOG (volume cap)
+    status: bounded_theorem (synthesis of 1-4)
+    key_result: |
+      Single canonical-parent positive theorem packaging Blocks 02-05.
+      Replaces open-gate parent identity upon audit ratification.
 
-open_imports_for_active_target:
-  - spin-statistics theorem (support tier; awaiting re-audit after
-    2026-05-03 Cl(3) per-site uniqueness repair)
-  - Cl(3) per-site uniqueness theorem (chirality-aware repair 2026-05-03,
-    retained)
-  - Per-site Hilbert dim 2 (retained, 2026-05-02)
+review_findings: pending (block-local internal review at each block; campaign-level review-loop deferred to next campaign)
 
-no_go_routes_avoided:
-  - All seven bridge-gap routes (different lane; sister no-go memory)
-  - New-axiom routes (no-new-axiom rule)
-  - Same-surface family arguments
-  - Re-deriving any retained primitives
-
-review_findings: []
-
-pr_status: not_yet_opened
+pr_status:
+  block01: '#631 OPEN, awaiting independent audit (base=main)'
+  block02: '#632 OPEN, stacked on #631'
+  block03: '#633 OPEN, stacked on #632'
+  block04: '#634 OPEN, stacked on #633'
+  block05: '#635 OPEN, stacked on #634'
+  block06: PR_BACKLOG; ready for opening after 24h volume-cap reset
 
 next_exact_action: |
-  Block 01: write STAGGERED_DIRAC_FORCING_GAP_MAP_NOTE_2026-05-07.md
-  documenting the four substeps and their current closure status,
-  identifying which pieces are retained and which gaps remain. Then
-  Block 02: package spin-statistics S2 as substep-1 forcing theorem.
+  Campaign CLOSED. See HANDOFF.md and PR_BACKLOG.md for next-campaign
+  priorities. Top priority: open Block 06 PR after 24h reset.
 
-stop_condition: |
-  Continue until 12h runtime exhausted, corollary exhaustion, value-gate
-  exhaustion, judgment-based cluster cap evaluator says BACKLOG for all
-  queued candidates, or global queue exhaustion.
+stop_condition_reached: |
+  Volume cap reached at Block 05 (5 PRs/24h on single goal-specific
+  target). Block 06 synthesis committed to branch but PR deferred.
 
-last_checkpoint: 2026-05-07T~09:00 (initial loop-pack setup)
+last_checkpoint: 2026-05-07T~16:00 (campaign close, HANDOFF + PR_BACKLOG written)
