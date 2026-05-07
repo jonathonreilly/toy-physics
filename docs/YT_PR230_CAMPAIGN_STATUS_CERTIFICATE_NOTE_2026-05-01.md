@@ -57,12 +57,37 @@ assumption/import stress `PASS=77 FAIL=0`; full positive closure assembly
 `PASS=136 FAIL=0`; retained-route `PASS=290 FAIL=0`; campaign status
 `PASS=323 FAIL=0`; completion audit `PASS=45 FAIL=0`.
 
+## 2026-05-06 Two-Source Taste-Radial Chunks017-018 Update
+
+Completed-mode chunk checkpoints now pass for chunks017 and 018:
+`PASS=15 FAIL=0` each.  The two-source row combiner now records
+`ready=18/63`, no bad chunk audits, and `combined_rows_written=false`; it
+still writes no combined row packet.  The Schur-subblock, finite-shell
+K-prime scout, finite Schur A/B/C rows, and pole-lift gate were rerun on the
+ready chunks001-018 packet.
+
+This remains bounded support only.  The packet is still partial, the rows are
+finite `C_sx/C_xx`/finite inverse-block diagnostics rather than strict
+neutral-kernel pole rows, and canonical `O_H`, source-Higgs pole residues,
+FV/IR/model-class authority, `kappa_s`, W/Z response rows, and closure remain
+absent.  Chunks019-020 are active under the two-worker supervisor cap and are
+run-control state only until completed JSON and completed-mode checkpoints
+exist.
+
+Validation: chunk017 checkpoint `PASS=15 FAIL=0`; chunk018 checkpoint
+`PASS=15 FAIL=0`; row combiner `PASS=13 FAIL=0`; Schur-subblock witness
+`PASS=16 FAIL=0`; finite-shell K-prime scout `PASS=14 FAIL=0`; finite Schur
+A/B/C rows `PASS=17 FAIL=0`; pole-lift gate `PASS=13 FAIL=0`;
+assumption/import stress `PASS=77 FAIL=0`; full positive closure assembly
+`PASS=136 FAIL=0`; retained-route `PASS=290 FAIL=0`; campaign status
+`PASS=323 FAIL=0`; completion audit `PASS=45 FAIL=0`.
+
 ## 2026-05-06 Two-Source Taste-Radial Schur Pole-Lift Update
 
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json`.
 The gate blocks the finite-endpoint promotion shortcut for the measured
-finite `A_f/B_f/C_f` rows from chunks001-016.
+finite `A_f/B_f/C_f` rows from the ready chunk packet.
 
 Even granting the favorable assumption that the zero-mode point is the pole,
 two endpoint values do not determine the pole derivative:
@@ -89,7 +114,7 @@ control or direct strict neutral-kernel A/B/C pole rows.
 
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json`.
-Completed chunks001-016 provide finite inverse rows for the measured
+Completed chunks001-018 provide finite inverse rows for the measured
 source/complement block:
 
 ```text
@@ -108,7 +133,7 @@ Validation: finite Schur A/B/C rows `PASS=17 FAIL=0`; Schur route completion
 closure assembly gate `PASS=134 FAIL=0`; retained-route `PASS=288 FAIL=0`;
 campaign status `PASS=321 FAIL=0`; completion audit `PASS=44 FAIL=0`.
 
-The campaign target remains open.  Chunks017-018 are active under the
+The campaign target remains open.  Chunks019-020 are active under the
 two-worker cap and remain non-evidence until completed JSON exists and
 completed-mode checkpoints pass.
 
@@ -116,7 +141,7 @@ completed-mode checkpoints pass.
 
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json`.
-Completed chunks001-016 provide a real finite same-ensemble
+Completed chunks001-018 provide a real finite same-ensemble
 source/complement correlator block for the certified taste-radial chart:
 
 ```text
@@ -135,8 +160,8 @@ Validation: Schur-subblock witness `PASS=16 FAIL=0`; Schur route completion
 closure assembly gate `PASS=133 FAIL=0`; retained-route `PASS=287 FAIL=0`;
 campaign status `PASS=320 FAIL=0`; completion audit `PASS=44 FAIL=0`.
 
-The campaign target remains open.  Chunks013-014 have completed and passed
-completed-mode checkpoints; chunks017-018 are active under the two-worker cap
+The campaign target remains open.  Chunks001-018 have completed and passed
+completed-mode checkpoints; chunks019-020 are active under the two-worker cap
 and remain non-evidence until completed JSON exists and completed-mode
 checkpoints pass.
 
@@ -145,7 +170,7 @@ checkpoints pass.
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json`.
 The scout inverts the finite 2x2 `C_ss/C_sx/C_xx` correlator block from
-chunks001-016 and compares the zero mode with the first nonzero momentum shell:
+chunks001-018 and compares the zero mode with the first nonzero momentum shell:
 
 ```text
 K_{s|x}(q) = C_xx(q) / (C_ss(q) C_xx(q) - C_sx(q)^2)
@@ -1725,12 +1750,13 @@ response ratios.  It also blocks using the current additive top mass FH source
 as that radial spurion.  This is support only; no retained/proposed-retained
 wording is authorized.
 
-Latest two-source taste-radial chunks015-016 checkpoint: completed-mode
+Earlier two-source taste-radial chunks015-016 checkpoint: completed-mode
 chunk checkpoints now pass `PASS=15 FAIL=0` for chunks015 and 016.  The
-row-combiner gate now records `ready=16/63`, no bad chunk audits, and
+row-combiner gate then recorded `ready=16/63`, no bad chunk audits, and
 `combined_rows_written=false`; it still writes no combined row packet.  The
 source-Higgs readiness gate scans sixteen completed taste-radial chunks and
 continues to classify their schema fields as explicit `C_sx/C_xx` aliases, not
-canonical `C_sH/C_HH` pole rows.  Chunks017-018 are active under the
-two-worker supervisor cap.  This is bounded production-row support only; no
+canonical `C_sH/C_HH` pole rows.  This historical checkpoint is superseded by
+the chunks017-018 update above, which records `ready=18/63` and active
+chunks019-020.  This is bounded production-row support only; no
 retained/proposed-retained wording is authorized.

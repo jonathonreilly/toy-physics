@@ -246,12 +246,12 @@ Local verification completed:
   `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index
   15` PASS=15 FAIL=0 and `--chunk-index 16` PASS=15 FAIL=0;
 - two-source taste-radial row combiner refreshed after chunks015-016:
-  PASS=13 FAIL=0, `ready=16/63`, `combined_rows_written=false`;
+  PASS=13 FAIL=0, `ready=18/63`, `combined_rows_written=false`;
 - source-Higgs production readiness refreshed after chunks015-016:
   PASS=25 FAIL=0 and still records taste-radial schema fields as `C_sx/C_xx`
   aliases, not canonical `C_sH/C_HH` rows;
 - Schur-subblock witness and finite-shell K-prime scout refreshed on
-  chunks001-016: witness PASS=16 FAIL=0, finite-shell scout PASS=14 FAIL=0,
+  chunks001-018: witness PASS=16 FAIL=0, finite-shell scout PASS=14 FAIL=0,
   Schur route completion PASS=13 FAIL=0;
 - aggregate gates after the chunks015-016 refresh:
   assumption/import stress PASS=74 FAIL=0, full assembly PASS=133 FAIL=0,
@@ -351,7 +351,7 @@ Local verification completed:
 - finite Schur A/B/C inverse-row certificate packaged:
   `frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py`
   PASS=17 FAIL=0.  The certificate computes finite `K(q)=G(q)^(-1)` rows
-  with `A_f=K_ss`, `B_f=K_sx`, and `C_f=K_xx` from chunks001-016 while
+  with `A_f=K_ss`, `B_f=K_sx`, and `C_f=K_xx` from chunks001-018 while
   preserving the strict neutral-kernel A/B/C pole-row, isolated-pole
   `K'(pole)`, FV/IR, canonical `O_H`, `kappa_s`, and closure firewalls;
 - Schur route completion refreshed to consume the finite A/B/C rows:
@@ -398,6 +398,23 @@ Local verification completed:
   action-first PASS=16 FAIL=0 and W/Z route PASS=14 FAIL=0, both with
   proposal disallowed;
 - aggregate gates after the radial-spurion action-contract block:
+  assumption/import stress PASS=77 FAIL=0, full assembly PASS=136 FAIL=0,
+  campaign status PASS=323 FAIL=0, retained route PASS=290 FAIL=0, and
+  positive-closure completion audit PASS=45 FAIL=0.
+- two-source taste-radial chunks017-018 packaged:
+  completed-mode chunk checkpoints PASS=15 FAIL=0 for each chunk.  The
+  checkpointed artifacts preserve production metadata, `numba_gauge_seed_v1`,
+  the three-mass scan, selected-mass-only FH/LSZ/source rows, and finite
+  `C_sx/C_xx` timeseries; chunks019-020 are active under the two-worker cap;
+- row-combiner and Schur supports refreshed on chunks001-018:
+  combiner PASS=13 FAIL=0 with `ready=18/63` and
+  `combined_rows_written=false`; Schur-subblock witness PASS=16 FAIL=0,
+  finite-shell K-prime scout PASS=14 FAIL=0, finite Schur A/B/C rows
+  PASS=17 FAIL=0, and pole-lift gate PASS=13 FAIL=0.  The refreshed packet is
+  bounded support only: no combined 63/63 row packet, strict pole rows,
+  FV/IR/model-class authority, canonical `O_H`, `kappa_s`, W/Z rows, or
+  closure;
+- aggregate gates after the chunks017-018 block:
   assumption/import stress PASS=77 FAIL=0, full assembly PASS=136 FAIL=0,
   campaign status PASS=323 FAIL=0, retained route PASS=290 FAIL=0, and
   positive-closure completion audit PASS=45 FAIL=0.

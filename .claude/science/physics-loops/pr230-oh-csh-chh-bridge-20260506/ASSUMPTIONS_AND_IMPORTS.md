@@ -63,17 +63,17 @@ Allowed context:
   pending mode records only active PIDs and the absence of row JSON.  Pending
   checkpoints are not row data, pole evidence, canonical `O_H`, scalar LSZ
   normalization, or `y_t` closure.
-- the completed two-source taste-radial chunks001-016 checkpoints as
+- the completed two-source taste-radial chunks001-018 checkpoints as
   bounded row support only: they validate real chunk JSON, seed control,
   selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
   pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
 - the two-source taste-radial row-combiner gate as bounded aggregation support
-  only: it records `ready=16/63` and refuses to write the combined measurement
+  only: it records `ready=18/63` and refuses to write the combined measurement
   row packet until 63/63 chunks are schema-clean.  Partial diagnostics are not
   combined L12 pole evidence, canonical `O_H`, scalar LSZ normalization,
   `kappa_s`, or `y_t` closure.
 - the Two-source taste-radial Schur-subblock witness as bounded row support
-  only: chunks001-016 supply finite `C_ss/C_sx/C_xx` correlator subblocks for
+  only: chunks001-018 supply finite `C_ss/C_sx/C_xx` correlator subblocks for
   the certified `s/x` source chart with positive Gram determinants, but finite
   C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows, do not
   provide `A'`, `B'`, or `C'` pole derivatives, and do not identify `x` with
@@ -85,7 +85,7 @@ Allowed context:
   and do not identify `x` with canonical `O_H`.
 - the finite Schur A/B/C inverse-block row certificate as bounded row support
   only: it computes `K(q)=G(q)^(-1)` and finite
-  `A_f=K_ss`, `B_f=K_sx`, `C_f=K_xx` rows from completed chunks001-016,
+  `A_f=K_ss`, `B_f=K_sx`, `C_f=K_xx` rows from completed chunks001-018,
   but finite inverse-correlator rows are not strict neutral-kernel A/B/C
   pole rows, are not isolated-pole `K'(pole)` derivatives, do not provide
   FV/IR authority, and do not identify `x` with canonical `O_H`.
@@ -247,7 +247,7 @@ Open imports after this block:
   workers and partial directories are explicitly non-evidence.
 - Two-source taste-radial active-pending chunk checkpoints are not proof
   selectors; they explicitly certify that completed row JSON is absent.
-- Completed two-source taste-radial chunks001-016 are not proof selectors
+- Completed two-source taste-radial chunks001-018 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
 - Source-Higgs schema field names in completed two-source taste-radial chunks

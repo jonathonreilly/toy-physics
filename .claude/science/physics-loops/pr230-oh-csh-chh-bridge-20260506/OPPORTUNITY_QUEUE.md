@@ -58,12 +58,12 @@
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   completed chunks001-016 and currently records active chunks017-018 under a
-   two-worker cap.  The completed chunks001-016 certificates pass
+   completed chunks001-018 and currently records active chunks019-020 under a
+   two-worker cap.  The completed chunks001-018 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
-   gate now records `ready=16/63`, no bad chunk audits, finite-mode
+   gate now records `ready=18/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  The Schur-subblock witness packages chunks001-016
+   chunks are schema-clean.  The Schur-subblock witness packages chunks001-018
    as a real finite same-ensemble `C_ss/C_sx/C_xx` source/complement block with
    positive finite Gram determinants, but still lacks strict `K'(pole)` A/B/C
    rows, pole derivatives, FV/IR authority, canonical `O_H`, and `kappa_s`.
@@ -72,7 +72,7 @@
    the Schur route, but it is not isolated-pole `K'(pole)` authority.
    The finite Schur A/B/C inverse-row certificate now computes the full finite
    inverse block `K(q)=G(q)^(-1)` and records `A_f=K_ss`, `B_f=K_sx`, and
-   `C_f=K_xx` for the same chunks001-016.  This is bounded row support for
+   `C_f=K_xx` for the same chunks001-018.  This is bounded row support for
    the Schur contract only; it is not strict neutral-kernel pole-row
    authority, not FV/IR authority, and not canonical `O_H`.
    The finite-to-pole lift gate now blocks the endpoint-promotion shortcut:

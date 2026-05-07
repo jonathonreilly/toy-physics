@@ -98,13 +98,23 @@ python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
 python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
   --chunk-index 12 \
   --output outputs/yt_pr230_two_source_taste_radial_chunk012_checkpoint_2026-05-06.json
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
+  --chunk-index 17 \
+  --output outputs/yt_pr230_two_source_taste_radial_chunk017_checkpoint_2026-05-06.json
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
+  --chunk-index 18 \
+  --output outputs/yt_pr230_two_source_taste_radial_chunk018_checkpoint_2026-05-06.json
 ```
 
 Expected pending summary while chunk001 is active and not yet complete:
 `PASS=2 FAIL=0`.
 
-Completed chunks001-016 now pass completed mode with `PASS=15 FAIL=0`
-each.  Chunks017-018 are active under the row-wave supervisor's two-worker cap
+Completed chunks001-018 now pass completed mode with `PASS=15 FAIL=0`
+each.  Chunks017-018 add the same selected-mass-only FH/LSZ/source-row
+metadata and `numba_gauge_seed_v1` seed-control surface as the prior ready
+set.  Chunks019-020 are active under the row-wave supervisor's two-worker cap
 and remain non-evidence until their completed JSONs exist and completed-mode
 checkpoints pass.  The runner accepts the explicit metadata non-readout
 firewall for older completed artifacts and the production harness now also
