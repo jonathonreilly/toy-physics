@@ -41,6 +41,7 @@ PARENTS = {
     "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "degree_one_radial_tangent_oh_theorem": "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json",
+    "taste_radial_to_source_higgs_promotion_contract": "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
@@ -432,6 +433,30 @@ def main() -> int:
         and certs["degree_one_radial_tangent_oh_theorem"].get(
             "source_higgs_pole_rows_present"
         )
+        is False
+    )
+    taste_radial_to_source_higgs_promotion_contract_support_not_closure = (
+        "taste-radial-to-source-Higgs promotion contract"
+        in parent_statuses["taste_radial_to_source_higgs_promotion_contract"]
+        and certs["taste_radial_to_source_higgs_promotion_contract"].get(
+            "promotion_contract_passed"
+        )
+        is True
+        and certs["taste_radial_to_source_higgs_promotion_contract"].get(
+            "current_promotion_allowed"
+        )
+        is False
+        and certs["taste_radial_to_source_higgs_promotion_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and "same_surface_canonical_O_H_identity_absent"
+        in certs["taste_radial_to_source_higgs_promotion_contract"].get(
+            "current_promotion_blockers", []
+        )
+        and certs["taste_radial_to_source_higgs_promotion_contract"].get(
+            "row_packet_status", {}
+        ).get("canonical_source_higgs_rows_present")
         is False
     )
     fms_post_degree_route_support_not_closure = (
@@ -864,6 +889,7 @@ def main() -> int:
     report("taste-radial-canonical-oh-selector-blocks-symmetry-shortcut", taste_radial_canonical_oh_selector_blocks_symmetry_shortcut, parent_statuses["taste_radial_canonical_oh_selector_gate"])
     report("degree-one-higgs-action-premise-not-derived", degree_one_higgs_action_premise_not_derived, parent_statuses["degree_one_higgs_action_premise_gate"])
     report("degree-one-radial-tangent-oh-theorem-support-not-closure", degree_one_radial_tangent_oh_theorem_support_not_closure, parent_statuses["degree_one_radial_tangent_oh_theorem"])
+    report("taste-radial-to-source-higgs-promotion-contract-support-not-closure", taste_radial_to_source_higgs_promotion_contract_support_not_closure, parent_statuses["taste_radial_to_source_higgs_promotion_contract"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
     report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
@@ -1032,6 +1058,7 @@ def main() -> int:
             "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
             "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
             "degree_one_radial_tangent_oh_theorem_support_not_closure": degree_one_radial_tangent_oh_theorem_support_not_closure,
+            "taste_radial_to_source_higgs_promotion_contract_support_not_closure": taste_radial_to_source_higgs_promotion_contract_support_not_closure,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
             "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,

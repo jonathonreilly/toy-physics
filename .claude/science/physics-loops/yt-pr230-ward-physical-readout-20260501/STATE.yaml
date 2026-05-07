@@ -16,11 +16,14 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-249-degree-one-radial-tangent-oh-theorem
-blocks_completed: 248
-active_route: "PR230 degree-one radial-tangent O_H theorem"
-active_hard_residual: "The degree-one radial-tangent theorem proves an exact action-first axis selector: if a future same-surface EW/Higgs action derives canonical O_H as a linear Z3-covariant radial tangent in span{S0,S1,S2}, the unique axis is (S0+S1+S2)/sqrt(3), matching the two-source taste-radial source axis.  The theorem passes PASS=14 FAIL=0 and is now consumed by aggregate gates: assumption PASS=86 FAIL=0, campaign PASS=333 FAIL=0, assembly PASS=146 FAIL=0, retained PASS=300 FAIL=0, completion PASS=55 FAIL=0.  The action/LSZ premise, canonical O_H certificate, C_ss/C_sH/C_HH pole rows, FV/IR/model-class authority, W/Z physical-response rows, and matching/running bridge remain absent.  Chunks031-032 remain run-control/log state only until completed JSONs and completed-mode checkpoints exist.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-250-taste-radial-to-source-higgs-promotion-contract
+blocks_completed: 249
+active_route: "PR230 taste-radial-to-source-Higgs promotion contract"
+active_hard_residual: "The promotion contract proves the exact relabeling firewall for the finite two-source taste-radial row campaign: C_sx/C_xx rows may be promoted to C_sH/C_HH only after a same-surface certificate proves x = canonical O_H with action/LSZ authority, isolated-pole residue/FV/IR/model-class authority, and Gram/source-overlap purity.  The current branch lacks that certificate, so current promotion is blocked and the row packet remains support-only.  Validation passes: promotion contract PASS=11 FAIL=0, assumption PASS=87 FAIL=0, campaign PASS=334 FAIL=0, assembly PASS=147 FAIL=0, retained PASS=301 FAIL=0, completion PASS=56 FAIL=0.  Chunks031-032 completed root artifacts are present but remain uncheckpointed/unpackaged in this block and are not staged as evidence; chunks033-034 are active run-control only under the two-worker row-wave supervisor.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py"
+  - "docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json"
   - "scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py"
   - "docs/YT_PR230_DEGREE_ONE_RADIAL_TANGENT_OH_THEOREM_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json"

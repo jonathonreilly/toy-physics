@@ -212,6 +212,9 @@ def main() -> int:
         "degree_one_radial_tangent_oh_theorem": load(
             "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json"
         ),
+        "taste_radial_to_source_higgs_promotion_contract": load(
+            "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json"
+        ),
         "fms_post_degree_route_rescore": load(
             "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
         ),
@@ -401,6 +404,8 @@ def main() -> int:
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
         "Degree-one radial-tangent O_H theorem",
         "action/LSZ premise and pole rows absent",
+        "Taste-radial-to-source-Higgs promotion contract",
+        "current promotion blocked by absent canonical O_H identity/action/LSZ premise",
         "FMS post-degree route rescore",
         "FMS/lattice literature is route guidance only, not PR230 proof authority",
         "Same-source EW/Higgs action ansatz",
@@ -1300,6 +1305,28 @@ def main() -> int:
         )
         is False,
         degree_one_radial_tangent.get("actual_current_surface_status"),
+    )
+    promotion_contract = certificates["taste_radial_to_source_higgs_promotion_contract"]
+    report(
+        "taste-radial-to-source-higgs-promotion-contract-support-not-closure",
+        "taste-radial-to-source-Higgs promotion contract"
+        in str(promotion_contract.get("actual_current_surface_status"))
+        and promotion_contract.get("promotion_contract_passed") is True
+        and promotion_contract.get("current_promotion_allowed") is False
+        and promotion_contract.get("proposal_allowed") is False
+        and "same_surface_canonical_O_H_identity_absent"
+        in promotion_contract.get("current_promotion_blockers", [])
+        and promotion_contract.get("row_packet_status", {}).get("row_kind")
+        == "taste_radial_C_sx_C_xx"
+        and promotion_contract.get("row_packet_status", {}).get(
+            "canonical_source_higgs_rows_present"
+        )
+        is False
+        and promotion_contract.get("forbidden_firewall", {}).get(
+            "treated_c_sx_as_c_sH_without_identity_certificate"
+        )
+        is False,
+        promotion_contract.get("actual_current_surface_status"),
     )
     fms_post_degree = certificates["fms_post_degree_route_rescore"]
     report(

@@ -1,5 +1,42 @@
 # Claim Status Certificate
 
+Taste-radial-to-source-Higgs promotion contract checkpoint:
+
+```text
+actual_current_surface_status: exact-support / taste-radial-to-source-Higgs promotion contract; no closure
+current_promotion_allowed: false
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=87 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=334 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=147 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=301 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=56 FAIL=0
+```
+
+The promotion contract allows the finite two-source taste-radial rows to be
+treated as `C_sH/C_HH` only after a same-surface certificate proves
+`x = canonical O_H` with action/LSZ authority, pole-residue/FV/IR authority,
+and Gram/source-overlap purity.  That certificate is absent on the current
+branch, so current `C_sx/C_xx` rows remain taste-radial support only.  The
+current branch still lacks canonical `O_H`, source-Higgs pole rows, strict
+scalar-LSZ/FV authority, strict Schur pole rows, W/Z response rows with strict
+`g2`/covariance, matching/running, and any retained-route or campaign proposal
+authorization.
+
 Degree-one radial-tangent `O_H` theorem checkpoint:
 
 ```text

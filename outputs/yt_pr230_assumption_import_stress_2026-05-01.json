@@ -64,6 +64,7 @@
     "strict_scalar_lsz_moment_fv_authority_gate": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
     "taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
     "taste_radial_canonical_oh_selector_gate": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
+    "taste_radial_to_source_higgs_promotion_contract": "exact-support / taste-radial-to-source-Higgs promotion contract; current promotion blocked by absent canonical O_H identity/action/LSZ premise",
     "two_source_taste_radial_action_certificate": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_taste_radial_chart_certificate": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
     "two_source_taste_radial_chunk_package": "bounded-support / two-source taste-radial chunks001-030 packaged; active chunks, logs, and pending checkpoints are not evidence",
@@ -85,7 +86,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 86,
+  "pass_count": 87,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

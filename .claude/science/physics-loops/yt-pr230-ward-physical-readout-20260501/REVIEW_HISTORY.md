@@ -1,5 +1,27 @@
 # Review History
 
+## 2026-05-07 - Taste-Radial-To-Source-Higgs Promotion Contract
+
+Review stance: exact support / relabeling firewall only.
+
+- Added `scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py`,
+  its note, and its JSON certificate.
+- The contract records the necessary and sufficient promotion obligations for
+  relabeling finite `C_sx/C_xx` rows as canonical `C_sH/C_HH`: same-surface
+  `x = canonical O_H` identity, action/LSZ authority, isolated-pole
+  residue/FV/IR authority, and Gram/source-overlap purity.
+- Validation: promotion contract `PASS=11 FAIL=0`; assumption stress
+  `PASS=87 FAIL=0`; campaign status `PASS=334 FAIL=0`; full assembly
+  `PASS=147 FAIL=0`; retained-route `PASS=301 FAIL=0`; completion audit
+  `PASS=56 FAIL=0`.
+
+Disposition: exact support only.  Current `C_sx/C_xx` rows remain
+taste-radial finite-row evidence, not canonical `C_sH/C_HH`, not physical
+`kappa_spH`, not W/Z response, not strict scalar-LSZ authority, and not
+retained/proposed-retained closure.  Chunks031-032 completed root artifacts
+are present but not packaged in this block; chunks033-034 are active
+run-control only.
+
 ## 2026-05-07 - Degree-One Radial-Tangent O_H Theorem
 
 Review stance: exact support / axis-selection theorem only.

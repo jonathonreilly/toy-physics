@@ -692,6 +692,9 @@ def main() -> int:
         "pr230_degree_one_radial_tangent_oh_theorem": load(
             "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json"
         ),
+        "pr230_taste_radial_to_source_higgs_promotion_contract": load(
+            "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json"
+        ),
         "pr230_fms_post_degree_route_rescore": load(
             "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
         ),
@@ -3081,6 +3084,33 @@ def main() -> int:
         and degree_one_radial_tangent_oh_theorem.get("source_higgs_pole_rows_present")
         is False,
         statuses["pr230_degree_one_radial_tangent_oh_theorem"],
+    )
+    taste_radial_to_source_higgs_promotion_contract = certificates[
+        "pr230_taste_radial_to_source_higgs_promotion_contract"
+    ]
+    report(
+        "pr230-taste-radial-to-source-higgs-promotion-contract-support-not-closure",
+        "taste-radial-to-source-Higgs promotion contract"
+        in str(statuses["pr230_taste_radial_to_source_higgs_promotion_contract"])
+        and taste_radial_to_source_higgs_promotion_contract.get(
+            "promotion_contract_passed"
+        )
+        is True
+        and taste_radial_to_source_higgs_promotion_contract.get(
+            "current_promotion_allowed"
+        )
+        is False
+        and taste_radial_to_source_higgs_promotion_contract.get("proposal_allowed")
+        is False
+        and "same_surface_canonical_O_H_identity_absent"
+        in taste_radial_to_source_higgs_promotion_contract.get(
+            "current_promotion_blockers", []
+        )
+        and taste_radial_to_source_higgs_promotion_contract.get(
+            "row_packet_status", {}
+        ).get("canonical_source_higgs_rows_present")
+        is False,
+        statuses["pr230_taste_radial_to_source_higgs_promotion_contract"],
     )
     fms_post_degree_route_rescore = certificates[
         "pr230_fms_post_degree_route_rescore"

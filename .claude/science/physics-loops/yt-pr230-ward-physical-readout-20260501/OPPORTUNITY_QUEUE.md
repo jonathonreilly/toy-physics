@@ -1,5 +1,20 @@
 # Opportunity Queue
 
+2026-05-07 taste-radial-to-source-Higgs promotion contract: the finite
+`C_sx/C_xx` row campaign now has an exact relabeling firewall.  The rows can
+be promoted to canonical `C_sH/C_HH` only after a same-surface certificate
+proves `x = canonical O_H` with EW/Higgs action or canonical-operator
+authority, canonical LSZ/metric normalization, isolated-pole residue/FV/IR
+authority, and Gram/source-overlap purity.  The current branch does not have
+that certificate, so the clean positive target is unchanged but sharper:
+derive the same-surface canonical `O_H` identity/action/LSZ artifact and run
+`C_ss/C_sH/C_HH` pole rows, or pivot to genuine same-source W/Z response rows
+with identity/covariance/strict non-observed `g2`.  Strict scalar-LSZ
+authority, higher-shell/multivolume Schur rows, and neutral
+primitive/irreducibility remain fallback routes.  Chunks031-032 have completed
+root artifacts on disk but are not evidence until checkpointed and packaged;
+chunks033-034 are active run-control only.
+
 2026-05-07 degree-one radial-tangent `O_H` theorem: the degree-one source-axis
 selection problem is now exactly solved under a future action premise.  If a
 same-surface EW/Higgs action derives canonical `O_H` as a linear

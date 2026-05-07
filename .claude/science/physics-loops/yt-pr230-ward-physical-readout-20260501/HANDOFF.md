@@ -1,5 +1,36 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 taste-radial-to-source-Higgs promotion contract:
+
+- Added `scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py`,
+  `docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json`.
+- The contract fixes the exact promotion boundary for the row campaign:
+  finite `C_sx/C_xx` taste-radial rows may be relabeled as canonical
+  `C_sH/C_HH` rows only after a same-surface certificate proves
+  `x = canonical O_H` with EW/Higgs action or canonical-operator authority,
+  canonical LSZ/metric normalization, isolated-pole residue extraction,
+  FV/IR/model-class authority, and source-Higgs Gram/source-overlap purity.
+- Result: exact support plus firewall only.  The current branch does not
+  supply that same-surface identity/action/LSZ certificate, so `C_sx` remains
+  `C_sx`, `C_xx` remains `C_xx`, and the physical
+  `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` readout is not allowed.
+- Validation: promotion contract `PASS=11 FAIL=0`; assumption stress
+  `PASS=87 FAIL=0`; campaign status `PASS=334 FAIL=0`; full assembly
+  `PASS=147 FAIL=0`; retained-route `PASS=301 FAIL=0`; completion audit
+  `PASS=56 FAIL=0`.
+- Chunks031-032 now have completed root artifacts on disk, but they are
+  intentionally left out of this checkpoint until completed-mode chunk
+  checkpoints, package audit, row combiner, and aggregate refresh are run in a
+  separate package block.  Chunks033-034 are active run-control only under the
+  two-worker row-wave supervisor.
+- Claim boundary: no retained/proposed-retained closure is authorized.  The
+  cleanest positive artifact remains either a same-surface canonical `O_H`
+  identity/action/LSZ certificate plus `C_ss/C_sH/C_HH` pole rows, or genuine
+  same-source W/Z response rows with strict identity/covariance/`g2`
+  authority.
+
 Latest checkpoint, 2026-05-07 degree-one radial-tangent `O_H` theorem:
 
 - Added `scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py`,

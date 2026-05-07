@@ -1,5 +1,16 @@
 # No-Go Ledger
 
+## Taste-radial rows are not canonical source-Higgs rows without an identity certificate
+
+The 2026-05-07 taste-radial-to-source-Higgs promotion contract proves the
+row-campaign relabeling boundary.  Current finite `C_sx/C_xx` rows may not be
+treated as canonical `C_sH/C_HH` rows unless a same-surface certificate proves
+`x = canonical O_H` with action/LSZ authority, isolated-pole residue/FV/IR
+authority, and Gram/source-overlap purity.  The current branch lacks that
+certificate.  Do not use `C_sx`, `C_xx`, the degree-one taste-radial axis, or
+finite Schur/taste-radial diagnostics as physical `kappa_spH`, canonical
+`O_H`, source-Higgs pole rows, or retained/proposed-retained evidence.
+
 ## Degree-one radial-tangent uniqueness is not canonical `O_H` closure
 
 The 2026-05-07 degree-one radial-tangent theorem proves a useful exact

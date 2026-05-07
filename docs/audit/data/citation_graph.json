@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T06:58:11.970460+00:00",
+  "generated_at": "2026-05-07T07:19:52.023246+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42858,6 +42858,16 @@
       "runner_path": "scripts/frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py",
       "title": "PR230 Taste-Radial Canonical `O_H` Selector Gate"
     },
+    "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07": {
+      "claim_id": "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact-support / taste-radial-to-source-Higgs promotion contract;",
+      "deps": [],
+      "note_hash": "c68a7dee68086ed1e0da44b483d666c0f85817a1323b48dbfb897f865d446e6f",
+      "path": "docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py",
+      "title": "PR230 Taste-Radial To Source-Higgs Promotion Contract"
+    },
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
       "current_status": "support",
@@ -45842,6 +45852,7 @@
     "yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_note_2026-05-07",
     "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
     "yt_pr230_taste_radial_canonical_oh_selector_gate_note_2026-05-06",
+    "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06",
@@ -45983,16 +45994,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1121,
-    "node_count": 2074,
-    "root_count": 1587,
-    "runners_with_path": 1569,
+    "leaf_count": 1122,
+    "node_count": 2075,
+    "root_count": 1588,
+    "runners_with_path": 1570,
     "status_counts": {
       "bounded": 569,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 449,
+      "support": 450,
       "unknown": 579
     }
   }
