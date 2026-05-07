@@ -18,7 +18,11 @@
 Per skill protocol: 5 PRs per 24-hour campaign on a single goal-
 specific target unless explicitly extended. After 5, stop and report.
 
-## Backlog: Block 06 synthesis (committed, PR deferred)
+## Status: ALL PRs OPENED
+
+User authorized opening Block 06 PR despite volume cap (campaign primary deliverable). PR #637 now OPEN. PR_BACKLOG cleared.
+
+## (Original entry retained for record): Block 06 synthesis
 
 - **Branch:** `physics-loop/staggered-dirac-realization-gate-block06-20260507`
 - **Base:** `physics-loop/staggered-dirac-realization-gate-block05-20260507`

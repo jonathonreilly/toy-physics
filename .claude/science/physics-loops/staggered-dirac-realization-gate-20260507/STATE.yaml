@@ -21,8 +21,8 @@ final_branch_head: 6th branch physics-loop/staggered-dirac-realization-gate-bloc
 
 cycles_completed: 6
 blocks_completed: 6
-prs_opened: 5  # #631-#635
-prs_remaining_in_24h_volume_cap: 0  # 5/5 used
+prs_opened: 6  # #631-#635, #637 (Block 06 opened post-cap per user explicit authorization)
+prs_remaining_in_24h_volume_cap: 0  # cap was overridden by user authorization for the synthesis PR
 cluster_cap_status: judgment-based per PR #624; all PRs PASSED V1-V5 evaluator self-record
 
 active_route: campaign closed; HANDOFF.md ranks next-campaign priorities
@@ -69,7 +69,7 @@ prior_blocks_summary:
     deliverable: docs/STAGGERED_DIRAC_REALIZATION_FORCING_THEOREM_NOTE_2026-05-07.md
     runner: none (synthesis)
     branch: physics-loop/staggered-dirac-realization-gate-block06-20260507
-    pr: PR_BACKLOG (volume cap)
+    pr: '#637 OPEN, stacked on #635 (post-cap per user authorization)'
     status: bounded_theorem (synthesis of 1-4)
     key_result: |
       Single canonical-parent positive theorem packaging Blocks 02-05.
