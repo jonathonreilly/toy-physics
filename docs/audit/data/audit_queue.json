@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 507,
+    "critical": 506,
     "high": 24,
     "leaf": 176,
     "medium": 126
@@ -5757,27 +5757,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_fusion_engine_pr1_theorem_note_2026-05-03",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.735,
-      "note_path": "docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_su3_fusion_engine.py",
-      "transitive_descendants": 425
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -27930,6 +27909,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 10,
-  "total_pending": 833
+  "ready_count": 9,
+  "total_pending": 832
 }

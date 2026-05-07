@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 67 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 234 |
+| **retained_bounded** | 235 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 820 |
+| unaudited | 819 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 392 |
+| `audited_clean` | 393 |
 | `audited_conditional` | 441 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 869 |
+| `unaudited` | 868 |
 
 | claim_type | count |
 |---|---:|
@@ -425,6 +425,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block2_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block3_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -12302,6 +12303,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The algebraic d^{abc} construction closes cleanly over the supplied SU(3) Gell-Mann generators and standard trace projection. The runner actually computes the tensors from explicit matrices; only the reference-table comparison is a hard-coded external/canonical-value check. However, the only cited authority is retained_bounded and explicitly says the identification of the 3D symmetric base with physical SM color SU(3)_c is deferred, while this note repeatedly labels the generators as SU(3)_c and includes physics-facing corollaries. The audited result is therefore retained only as an algebraic SU(3) statement, conditional on the missing physical-color bridge for any SU(3)_c/SM reading.
 - **open / conditional deps cited:**
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+- **auditor confidence:** high
+
+### `su3_fusion_engine_pr1_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite default run of scripts/frontier_su3_fusion_engine.py at NMAX=4,n_grid=80 computing SU(3) fusion multiplicities on the 25-weight box 0<=p,q<=4 and checking V1-V9 plus integer residual.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-agent-019e0248-f9e9-72d2-81bd-9d5e57ca24a8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At NMAX=4 and n_grid=80, the runner computes the finite SU(3) fusion table on 0<=p,q<=4 by Cartan-torus character orthogonality, rounds to non-negative integers with residual <3.6e-15, and passes V1-V9.  _(class `C`)_
+- **chain closes:** True — The runner source constructs Schur characters, normalized Weyl-Vandermonde Cartan weights, and all 25^3 numerical fusion integrals directly from standard SU(3) representation-theory formulas. No cross-note, Wilson-plaquette, bridge-parent, or external comparator input is used, and the note confines the claim to this bounded finite run.
+- **rationale:** The bounded theorem closes on the restricted surface actually claimed: NMAX=4, n_grid=80, 25 weights, and 25^3 rounded fusion multiplicities computed by the runner. The nine validation passes are algebraic SU(3) identity checks over the computed table, and the tenth pass checks the computed integer residual at machine precision. This does not establish arbitrary SU(3) fusion, Wilson plaquette closure, rho_(p,q)(6), or any bridge parent chain; it cleanly supports only the finite-box engine check.
 - **auditor confidence:** high
 
 ### `su3_wigner_intertwiner_block1_theorem_note_2026-05-03`
