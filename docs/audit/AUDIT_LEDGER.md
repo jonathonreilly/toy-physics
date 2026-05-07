@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 65 |
+| **retained** | 66 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 786 |
+| unaudited | 785 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 391 |
+| `audited_clean` | 392 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 835 |
+| `unaudited` | 834 |
 
 | claim_type | count |
 |---|---:|
@@ -289,6 +289,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
+| `lattice_nn_light_cone_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_nn_rg_alpha_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -8685,6 +8686,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The h = 0.125 continuation did not complete in a practical runtime window and did not produce a retained numerical result.  _(class `C`)_
 - **chain closes:** True — The source note and cited scripts consistently bound the safe claim to Born-clean refinement through h = 0.25 and treat h = 0.125 as unresolved. The audit does not require completing the long run because the scoped claim is the open boundary, not a positive extension.
 - **rationale:** The seeded positive_theorem label is not the note's actual scoped claim. The note explicitly says the h = 0.125 attempt did not complete, produced no retained numerical result, and should not be promoted as a canonical Born-clean extension. Under the timeout/noncompletion policy, this is a clean open gate rather than a failed or conditional theorem.
+- **auditor confidence:** high
+
+### `lattice_nn_light_cone_note`
+
+- **Note:** [`LATTICE_NN_LIGHT_CONE_NOTE.md`](../../docs/LATTICE_NN_LIGHT_CONE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For finite vertex set V, one-step dependency relation R, and any R-local update rule with shared external randomness, initial differences on S can affect only vertices in C_t(S) after t ticks.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-lattice-nn-light-cone-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** If v is outside C_{t+1}(S), no predecessor u with (u,v) in R lies in C_t(S), so all inputs to the R-local update at v are equal in the two histories.  _(class `A`)_
+- **chain closes:** True — The induction proof closes directly from the recursive definition of C_t(S) and the locality definition of the update rule. The runner is consistent with this scoped graph-reachability theorem and does not import physical-spacetime or metric assumptions.
+- **rationale:** The live claim is only a finite graph/DAG forward-reachability bound, not an emergent-relativity or physical light-cone result. Within that boundary, the proof is a standard induction on ticks and uses no hidden bridge beyond the declared R-locality premise. The runner completed and checks representative dependency-support recurrences with explicit non-claim guards.
 - **auditor confidence:** high
 
 ### `lattice_nn_rg_alpha_sweep_note`
