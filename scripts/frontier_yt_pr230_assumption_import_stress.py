@@ -269,6 +269,9 @@ def main() -> int:
         "source_higgs_time_kernel_harness_extension_gate": load(
             "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json"
         ),
+        "source_higgs_time_kernel_gevp_contract": load(
+            "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1595,6 +1598,18 @@ def main() -> int:
         and time_kernel_harness.get("physical_higgs_normalization") == "not_derived",
         time_kernel_harness.get("actual_current_surface_status"),
     )
+    time_kernel_gevp = certificates["source_higgs_time_kernel_gevp_contract"]
+    report(
+        "source-higgs-time-kernel-gevp-contract-support-only",
+        "source-Higgs time-kernel GEVP contract"
+        in str(time_kernel_gevp.get("actual_current_surface_status"))
+        and time_kernel_gevp.get("proposal_allowed") is False
+        and time_kernel_gevp.get("formal_gevp_diagnostic", {}).get("available")
+        is True
+        and time_kernel_gevp.get("physical_pole_extraction_accepted") is False
+        and time_kernel_gevp.get("used_as_physical_yukawa_readout") is False,
+        time_kernel_gevp.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -1785,6 +1800,11 @@ def main() -> int:
             "the selected mass only, but its taste-radial smoke certificate is "
             "support-only infrastructure and still lacks canonical O_H, pole/"
             "FV/IR/threshold authority, and source-overlap normalization.  "
+            "The paired GEVP contract confirms the postprocessor shape: the "
+            "smoke C_ij(0), C_ij(1) rows admit a formal two-operator GEVP "
+            "diagnostic, but that diagnostic is not pole authority without "
+            "production statistics, canonical O_H or physical neutral identity, "
+            "FV/IR/threshold control, and overlap normalization.  "
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
@@ -1833,6 +1853,7 @@ def main() -> int:
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",
             "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",
+            "does not treat a formal reduced-smoke GEVP diagnostic as pole, kappa_s, or y_t authority",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

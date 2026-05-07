@@ -950,3 +950,21 @@ Additional forbidden load-bearing assumptions:
 Allowed use: run future production rows once a canonical `O_H` or physical
 neutral/W/Z identity exists, then apply OS/GEVP pole/FV/IR/threshold and
 overlap-normalization gates before any retained proposal.
+
+2026-05-07 source-Higgs time-kernel GEVP contract:
+
+The GEVP postprocessor can be a valid extraction method only after the physical
+row and identity premises exist.  On the current smoke surface, a formal GEVP
+diagnostic is just algebra on reduced rows.
+
+Additional forbidden load-bearing assumptions:
+
+- `formal GEVP diagnostic = physical scalar pole`
+- `negative or small smoke GEVP eigenvalue = physical energy`
+- `two time lags = pole plateau`
+- `one configuration = production covariance`
+- `GEVP method name = canonical O_H/source-overlap authority`
+
+Allowed use: keep the GEVP contract as the future acceptance target for
+production same-surface `C_ij(t)` rows after the canonical `O_H` or physical
+neutral/W/Z identity premise is independently certified.

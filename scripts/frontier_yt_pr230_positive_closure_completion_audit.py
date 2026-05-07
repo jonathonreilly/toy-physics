@@ -54,6 +54,7 @@ PARENTS = {
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
+    "source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
     "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
@@ -737,6 +738,20 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_time_kernel_gevp_contract_support_only = (
+        "source-Higgs time-kernel GEVP contract"
+        in parent_statuses["source_higgs_time_kernel_gevp_contract"]
+        and certs["source_higgs_time_kernel_gevp_contract"].get("proposal_allowed")
+        is False
+        and certs["source_higgs_time_kernel_gevp_contract"].get(
+            "formal_gevp_diagnostic", {}
+        ).get("available")
+        is True
+        and certs["source_higgs_time_kernel_gevp_contract"].get(
+            "physical_pole_extraction_accepted"
+        )
+        is False
+    )
     two_source_taste_radial_primitive_transfer_candidate_not_h3 = (
         "finite C_sx rows do not certify a physical primitive neutral transfer"
         in parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"]
@@ -943,6 +958,7 @@ def main() -> int:
     report("same-surface-neutral-multiplicity-one-gate-rejects-current-surface", same_surface_neutral_multiplicity_gate_rejects_current_surface, parent_statuses["same_surface_neutral_multiplicity_one_gate"])
     report("os-transfer-kernel-artifact-absent", os_transfer_kernel_artifact_absent, parent_statuses["os_transfer_kernel_artifact_gate"])
     report("source-higgs-time-kernel-harness-support-only", source_higgs_time_kernel_harness_support_only, parent_statuses["source_higgs_time_kernel_harness_extension_gate"])
+    report("source-higgs-time-kernel-gevp-contract-support-only", source_higgs_time_kernel_gevp_contract_support_only, parent_statuses["source_higgs_time_kernel_gevp_contract"])
     report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
     report("orthogonal-top-coupling-exclusion-candidate-rejected", orthogonal_top_coupling_exclusion_candidate_rejected, parent_statuses["orthogonal_top_coupling_exclusion_candidate_gate"])
     report("strict-scalar-lsz-moment-fv-authority-absent", strict_scalar_lsz_moment_fv_authority_absent, parent_statuses["strict_scalar_lsz_moment_fv_authority_gate"])
@@ -1113,6 +1129,7 @@ def main() -> int:
             "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
             "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
             "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
+            "source_higgs_time_kernel_gevp_contract_support_only": source_higgs_time_kernel_gevp_contract_support_only,
             "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
             "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
             "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,

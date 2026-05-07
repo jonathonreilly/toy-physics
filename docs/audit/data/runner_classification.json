@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T08:04:44.967136+00:00",
+  "generated_at": "2026-05-07T08:13:56.456611+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17316,6 +17316,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py"
+    },
+    "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py"
     },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "assert_count": 1,
@@ -35958,6 +35970,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_source_overlap_route_selection.py": {
       "assert_count": 1,
       "claims": [
@@ -41529,12 +41556,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 240,
-      "C": 525,
+      "C": 526,
       "D": 314,
       "none": 404
     },
-    "runners_classified": 1492,
-    "runners_with_C": 802,
+    "runners_classified": 1493,
+    "runners_with_C": 803,
     "runners_with_D": 581
   }
 }

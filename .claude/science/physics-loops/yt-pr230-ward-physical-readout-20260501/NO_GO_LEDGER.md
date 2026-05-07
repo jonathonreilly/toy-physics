@@ -3526,3 +3526,18 @@ Reopen as physics only with production same-surface time-lag rows plus a
 certified canonical `O_H` identity or physical neutral/W/Z response identity,
 OS/GEVP pole/FV/IR/threshold control, source-overlap normalization, covariance,
 seed metadata, and retained-route approval.
+
+## 2026-05-07 - Formal GEVP On Smoke Rows Is Not Pole Authority
+
+No-go on the current surface: the new postprocessor contract can parse the
+smoke `C_ij(0), C_ij(1)` rows into a formal two-operator GEVP diagnostic, but
+that diagnostic is not a physical scalar pole extraction.  The smoke is
+reduced, one-configuration, two-time-lag support using taste-radial `x`, not a
+certified canonical `O_H`.
+
+Do not treat a formal GEVP eigenvalue, effective-energy proxy, or method name
+as `kappa_s`, source-Higgs overlap, pole residue, or physical `y_t` authority.
+Reopen only when production same-surface time-kernel rows also satisfy
+canonical `O_H` or physical neutral/W/Z identity, reflection-positive operator
+identity, pole/FV/IR/threshold, covariance, and source-overlap normalization
+gates.

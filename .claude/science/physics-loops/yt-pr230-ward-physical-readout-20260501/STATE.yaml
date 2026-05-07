@@ -16,11 +16,24 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-252-source-higgs-time-kernel-harness-extension
-blocks_completed: 251
-active_route: "PR230 source-Higgs scalar time-kernel harness support"
-active_hard_residual: "Added a default-off same-surface Euclidean-time scalar matrix harness path.  The production harness now preserves the three-mass top scan but emits source-Higgs time-kernel rows only at the selected FH/LSZ mass m=0.75 when --source-higgs-time-kernel-* controls and an operator certificate are supplied.  The numba smoke writes source_higgs_time_kernel_v1 rows with C_ss/C_sH/C_Hs/C_HH(t), taste-radial C_sx/C_xs/C_xx(t) aliases, C_matrix_by_t, normal-cache reuse, and numba_gauge_seed_v1.  Gate results: time-kernel harness PASS=13 FAIL=0, assumption PASS=89 FAIL=0, campaign PASS=336 FAIL=0, assembly PASS=149 FAIL=0, retained PASS=303 FAIL=0, completion PASS=58 FAIL=0.  Status remains support-only infrastructure: the supplied taste-radial operator has canonical_higgs_operator_identity_passed=false, physical_higgs_normalization=not_derived, and used_as_physical_yukawa_readout=false.  Positive closure still needs certified canonical O_H or physical neutral/WZ identity plus OS/GEVP pole extraction, FV/IR/threshold authority, source-overlap normalization, and retained-route approval."
+current_phase: campaign-block-253-source-higgs-time-kernel-gevp-contract
+blocks_completed: 252
+active_route: "PR230 source-Higgs time-kernel GEVP postprocessor contract"
+active_hard_residual: "Added a support-only GEVP contract consuming the new source_higgs_time_kernel_v1 smoke rows.  The runner parses zero-mode C_ij(0), C_ij(1), computes a formal 2x2 GEVP diagnostic with C0 eigenvalues [0.3849721055896716, 0.8886745859375313] and formal lambdas [-0.07126344862830206, 0.03684785667734801], and explicitly rejects physical pole extraction.  Blockers all remain active: reduced smoke, one configuration, tau depth <3, canonical O_H identity absent, physical Higgs normalization not derived, production time-kernel rows absent, reflection-positive operator identity absent, FV/IR/threshold authority absent, source-overlap normalization absent, retained/campaign proposal not allowed.  Gate results: GEVP contract PASS=12 FAIL=0, assumption PASS=90 FAIL=0, campaign PASS=337 FAIL=0, assembly PASS=150 FAIL=0, retained PASS=304 FAIL=0, completion PASS=59 FAIL=0.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py"
+  - "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_GEVP_CONTRACT_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
   - "scripts/yt_direct_lattice_correlator_production.py"
   - "scripts/frontier_yt_pr230_source_higgs_time_kernel_harness_extension_gate.py"
   - "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_HARNESS_EXTENSION_NOTE_2026-05-07.md"

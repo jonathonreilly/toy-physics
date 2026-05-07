@@ -203,6 +203,7 @@ def main() -> int:
         "pr230_same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
         "pr230_os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
         "pr230_source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
+        "pr230_source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -2187,6 +2188,24 @@ def main() -> int:
         is True
         and certificates["pr230_source_higgs_time_kernel_harness_extension_gate"].get(
             "used_as_physical_yukawa_readout"
+        )
+        is False
+    )
+    source_higgs_time_kernel_gevp_contract_support_only = (
+        "source-Higgs time-kernel GEVP contract"
+        in certificates["pr230_source_higgs_time_kernel_gevp_contract"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_source_higgs_time_kernel_gevp_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_source_higgs_time_kernel_gevp_contract"].get(
+            "formal_gevp_diagnostic", {}
+        ).get("available")
+        is True
+        and certificates["pr230_source_higgs_time_kernel_gevp_contract"].get(
+            "physical_pole_extraction_accepted"
         )
         is False
     )
@@ -4817,6 +4836,13 @@ def main() -> int:
         ),
     )
     report(
+        "source-higgs-time-kernel-gevp-contract-support-only",
+        source_higgs_time_kernel_gevp_contract_support_only,
+        certificates["pr230_source_higgs_time_kernel_gevp_contract"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
         derived_bridge_rank_one_closure_attempt_blocks,
         certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
@@ -6199,6 +6225,7 @@ def main() -> int:
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
         "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
+        "source_higgs_time_kernel_gevp_contract_support_only": source_higgs_time_kernel_gevp_contract_support_only,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

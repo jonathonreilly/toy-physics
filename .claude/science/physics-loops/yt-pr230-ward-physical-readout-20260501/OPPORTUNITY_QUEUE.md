@@ -1626,3 +1626,17 @@ now:
 
 The harness smoke itself is support-only infrastructure and must not be used
 as retained/proposed-retained closure.
+
+2026-05-07 update: the GEVP postprocessor contract is now executable.  Use it
+as the future pole-extraction acceptance shape, but not as current evidence.
+The formal reduced-smoke diagnostic confirms the code path while keeping the
+actual route order unchanged:
+
+1. canonical `O_H` or physical neutral/W/Z identity,
+2. production same-surface `C_ij(t)` rows with enough time depth and
+   configuration statistics,
+3. OS/GEVP pole extraction plus FV/IR/threshold and source-overlap authority,
+4. retained-route/campaign approval.
+
+Do not spend another block on formal GEVP algebra alone unless a fresh
+production or identity artifact appears.

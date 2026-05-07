@@ -1,0 +1,64 @@
+{
+  "actual_current_surface_status": "bounded-support / source-Higgs time-kernel GEVP contract; smoke rows are not physics closure",
+  "artifact": "yt_pr230_source_higgs_time_kernel_gevp_contract",
+  "bare_retained_allowed": false,
+  "blockers": {
+    "campaign_proposal_not_allowed": true,
+    "canonical_O_H_identity_absent": true,
+    "fv_ir_threshold_authority_absent": true,
+    "physical_higgs_normalization_not_derived": true,
+    "production_time_kernel_rows_absent": true,
+    "reduced_smoke_not_production": true,
+    "reflection_positive_operator_identity_absent": true,
+    "retained_route_proposal_not_allowed": true,
+    "single_configuration_smoke": true,
+    "source_overlap_normalization_absent": true,
+    "tau_depth_insufficient_for_pole_plateau": true
+  },
+  "checks": {
+    "FAIL": 0,
+    "PASS": 12
+  },
+  "contract": {
+    "requires_canonical_O_H_or_physical_neutral_identity": true,
+    "requires_pole_fv_ir_threshold_authority": true,
+    "requires_production_statistics": true,
+    "requires_reflection_positive_operator_identity": true,
+    "requires_retained_route_approval": true,
+    "requires_same_surface_Cij_t": true,
+    "requires_source_overlap_normalization": true
+  },
+  "created_utc": "2026-05-07T08:13:52Z",
+  "forbidden_firewall": {
+    "sets_Z_match_to_one": false,
+    "sets_c2_to_one": false,
+    "sets_kappa_s_to_one": false,
+    "treats_formal_GEVP_as_pole_authority": false,
+    "treats_taste_radial_x_as_canonical_O_H": false,
+    "uses_H_unit_matrix_element_readout": false,
+    "uses_alpha_LM_plaquette_or_u0_as_proof_input": false,
+    "uses_observed_top_mass_or_y_t_selector": false,
+    "uses_reduced_smoke_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "formal_gevp_diagnostic": {
+    "C0_eigenvalues": [
+      0.3849721055896716,
+      0.8886745859375313
+    ],
+    "available": true,
+    "formal_effective_energies_abs_lambda": [
+      2.641371724966999,
+      3.3009578254753102
+    ],
+    "formal_lambda_tau1_tau0": [
+      -0.07126344862830206,
+      0.03684785667734801
+    ],
+    "strict_limit": "This is a reduced-smoke algebraic diagnostic only.  Negative or small lambdas are not interpreted physically without production statistics, reflection-positive operator identity, pole/FV/IR/threshold authority, and source-overlap normalization."
+  },
+  "physical_pole_extraction_accepted": false,
+  "proposal_allowed": false,
+  "strict_limit": "This runner validates parsing and a formal GEVP diagnostic only. It does not authorize kappa_s, canonical O_H, pole residue, or physical y_t closure.",
+  "used_as_physical_yukawa_readout": false
+}

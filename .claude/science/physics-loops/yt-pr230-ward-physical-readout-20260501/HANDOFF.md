@@ -1,5 +1,29 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 source-Higgs time-kernel GEVP contract:
+
+- Added
+  `scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py`,
+  `docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_GEVP_CONTRACT_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json`.
+- The runner consumes the numba time-kernel smoke and confirms that the
+  zero-mode `C_ij(0)` and `C_ij(1)` rows can be parsed into a formal 2x2 GEVP
+  diagnostic.  Formal lambdas are
+  `[-0.07126344862830206, 0.03684785667734801]`.
+- The same runner rejects physical pole extraction because the artifact is
+  reduced smoke with one configuration and two time lags, uses taste-radial
+  `x` rather than certified canonical `O_H`, and lacks production statistics,
+  reflection-positive operator identity, FV/IR/threshold authority, and
+  source-overlap normalization.
+- Validation: GEVP contract `PASS=12 FAIL=0`; assumption/import stress
+  `PASS=90 FAIL=0`; campaign status `PASS=337 FAIL=0`; full assembly
+  `PASS=150 FAIL=0`; retained-route `PASS=304 FAIL=0`; completion audit
+  `PASS=59 FAIL=0`.
+- Claim boundary: support-only postprocessor contract.  No `kappa_s`,
+  canonical `O_H`, physical pole residue, retained, proposed-retained, or
+  physical `y_t` claim is allowed.
+
 Latest checkpoint, 2026-05-07 source-Higgs time-kernel harness extension:
 
 - Added default-off scalar time-kernel instrumentation to

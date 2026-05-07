@@ -6083,3 +6083,25 @@ Disposition: support-only.  The new schema is the right row shape for a future
 OS/GEVP artifact, but the current smoke uses taste-radial `x`, not certified
 canonical `O_H`; no `kappa_s`, physical `y_t`, retained, or proposed-retained
 claim is allowed.
+
+## 2026-05-07 - Source-Higgs Time-Kernel GEVP Contract
+
+Review stance: bounded support / postprocessor contract, no closure.
+
+- Added
+  `scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py`.
+- Added
+  `docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_GEVP_CONTRACT_NOTE_2026-05-07.md`.
+- Added
+  `outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json`.
+- Wired the contract into assumption/import stress, campaign status, full
+  positive assembly, retained-route, and completion-audit certificates.
+- Validation: GEVP contract `PASS=12 FAIL=0`, assumption stress
+  `PASS=90 FAIL=0`, campaign status `PASS=337 FAIL=0`, full assembly
+  `PASS=150 FAIL=0`, retained-route `PASS=304 FAIL=0`, completion audit
+  `PASS=59 FAIL=0`.
+
+Disposition: support-only.  Formal GEVP parsing works on the smoke rows, but
+the result is not physical pole authority before production rows, canonical
+`O_H` or physical neutral identity, FV/IR/threshold control, and
+source-overlap normalization exist.

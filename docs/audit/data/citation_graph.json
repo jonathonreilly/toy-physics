@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T08:04:42.234213+00:00",
+  "generated_at": "2026-05-07T08:13:53.613932+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42818,6 +42818,16 @@
       "runner_path": "scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py",
       "title": "PR #230 Source-Higgs Pole-Row Acceptance Contract Note"
     },
+    "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07": {
+      "claim_id": "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / source-Higgs time-kernel GEVP contract; smoke rows",
+      "deps": [],
+      "note_hash": "453c8026ae411d1d273a52a597747e5581a9d4366690abf9f789a8ccaaa43c24",
+      "path": "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_GEVP_CONTRACT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py",
+      "title": "PR #230 Source-Higgs Time-Kernel GEVP Contract"
+    },
     "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07": {
       "claim_id": "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07",
       "current_status": "support",
@@ -45878,6 +45888,7 @@
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
     "yt_pr230_source_higgs_overlap_kappa_contract_note_2026-05-06",
     "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
+    "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07",
     "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
@@ -46027,12 +46038,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1125,
-    "node_count": 2078,
-    "root_count": 1591,
-    "runners_with_path": 1571,
+    "leaf_count": 1126,
+    "node_count": 2079,
+    "root_count": 1592,
+    "runners_with_path": 1572,
     "status_counts": {
-      "bounded": 570,
+      "bounded": 571,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,

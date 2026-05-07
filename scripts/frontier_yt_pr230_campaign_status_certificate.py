@@ -749,6 +749,9 @@ def main() -> int:
         "pr230_source_higgs_time_kernel_harness_extension_gate": load(
             "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json"
         ),
+        "pr230_source_higgs_time_kernel_gevp_contract": load(
+            "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -3455,6 +3458,24 @@ def main() -> int:
         is False,
         statuses["pr230_source_higgs_time_kernel_harness_extension_gate"],
     )
+    source_higgs_time_kernel_gevp_contract = certificates[
+        "pr230_source_higgs_time_kernel_gevp_contract"
+    ]
+    report(
+        "pr230-source-higgs-time-kernel-gevp-contract-support-only",
+        "source-Higgs time-kernel GEVP contract"
+        in str(statuses["pr230_source_higgs_time_kernel_gevp_contract"])
+        and source_higgs_time_kernel_gevp_contract.get("proposal_allowed") is False
+        and source_higgs_time_kernel_gevp_contract.get(
+            "formal_gevp_diagnostic", {}
+        ).get("available")
+        is True
+        and source_higgs_time_kernel_gevp_contract.get(
+            "physical_pole_extraction_accepted"
+        )
+        is False,
+        statuses["pr230_source_higgs_time_kernel_gevp_contract"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -5098,6 +5119,17 @@ def main() -> int:
             "used_as_physical_yukawa_readout"
         )
         is False
+    )
+    result["source_higgs_time_kernel_gevp_contract_support_only"] = (
+        source_higgs_time_kernel_gevp_contract.get(
+            "formal_gevp_diagnostic", {}
+        ).get("available")
+        is True
+        and source_higgs_time_kernel_gevp_contract.get(
+            "physical_pole_extraction_accepted"
+        )
+        is False
+        and source_higgs_time_kernel_gevp_contract.get("proposal_allowed") is False
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")
