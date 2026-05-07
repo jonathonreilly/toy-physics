@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## FMS action-adoption cut is not current-surface action authority
+
+The 2026-05-07 FMS action-adoption minimal cut records the exact root
+certificate needed before the FMS `O_H` packet can be used as PR230
+source-Higgs authority.  Current support vertices are real but insufficient:
+`O_sp`, the degree-one radial-axis theorem, the FMS candidate/action packet,
+the future source-overlap formula, and the time-kernel manifest do not adopt
+the action.  The current surface still lacks a same-surface EW/Higgs action
+derivation or accepted extension, dynamic `Phi`, canonical `h/v` LSZ metric,
+canonical `O_H` provenance, a same-source derivative theorem with no
+independent additive top source, and production `C_ss/C_sH/C_HH` pole rows.
+
+Do not treat the FMS minimal cut, FMS literature, the action ansatz, `O_sp`,
+taste-radial `x`, or the time-kernel manifest as retained/proposed-retained
+closure, canonical `O_H`, source-overlap authority, or permission to set
+`kappa_s`, `c2`, `Z_match`, or `g2` to one.
+
 ## Two-source chunks001-046 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks045-046 package moves the finite two-source row packet to

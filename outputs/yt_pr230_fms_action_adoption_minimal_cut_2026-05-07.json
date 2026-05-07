@@ -1,0 +1,177 @@
+{
+  "accepted_current_surface": false,
+  "actual_current_surface_status": "exact-support / FMS action-adoption minimal cut; current PR230 surface has candidate support but no adopted same-surface action, canonical O_H, or strict pole rows",
+  "admitted_observation_status": null,
+  "adoption_allowed_now": false,
+  "adoption_root_cut": [
+    {
+      "current_evidence": "exact negative boundary / same-source EW action not defined on PR230 surface",
+      "current_satisfied": false,
+      "id": "same_surface_action_derivation_or_accepted_extension",
+      "required_artifact": [
+        "outputs/yt_pr230_same_surface_ew_higgs_action_certificate_2026-05-07.json",
+        "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json"
+      ]
+    },
+    {
+      "current_evidence": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+      "current_satisfied": false,
+      "id": "dynamic_phi_and_gauge_covariant_higgs_kinetic_term",
+      "required_artifact": "accepted action certificate with Phi, gauge kinetic semantics, and update/ensemble authority"
+    },
+    {
+      "current_evidence": "open / canonical-Higgs operator certificate absent",
+      "current_satisfied": false,
+      "id": "canonical_radial_h_lsz_metric_and_v",
+      "required_artifact": "outputs/yt_pr230_canonical_oh_certificate_2026-05-07.json"
+    },
+    {
+      "current_evidence": "open / canonical-Higgs operator certificate absent",
+      "current_satisfied": false,
+      "id": "fms_OH_identity_and_normalization",
+      "required_artifact": "O_H = Phi^dagger Phi - <Phi^dagger Phi> with canonical normalization and same-surface provenance"
+    },
+    {
+      "current_evidence": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+      "current_satisfied": false,
+      "id": "same_source_derivative_no_independent_top_source",
+      "required_artifact": "dS/ds = sum_x O_H(x), with no independent additive top bare-mass source"
+    },
+    {
+      "current_evidence": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+      "current_satisfied": false,
+      "id": "production_C_ss_C_sH_C_HH_pole_rows",
+      "required_artifact": [
+        "outputs/yt_pr230_source_higgs_pole_rows_2026-05-06.json",
+        "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json"
+      ]
+    },
+    {
+      "current_evidence": "exact-support / direct source-Higgs pole-row contract; O_H and production C_sH/C_HH rows are absent",
+      "current_satisfied": false,
+      "id": "pole_covariance_fv_ir_model_class_authority",
+      "required_artifact": "isolated-pole residue, covariance, FV/IR, zero-mode, and model-class certificate"
+    },
+    {
+      "current_evidence": "open / full positive PR230 closure assembly gate not passed; open / retained closure not yet reached; open / active campaign continuing after current shortcut blocks",
+      "current_satisfied": false,
+      "id": "aggregate_retained_route_gates",
+      "required_artifact": "assembly, retained-route, and campaign proposal certificates"
+    }
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "closure_authorized": false,
+  "conditional_surface_status": "exact-support for the FMS source-Higgs route only after every root in adoption_root_cut is satisfied and aggregate route gates pass",
+  "current_surface_action_adopted": false,
+  "fail_count": 0,
+  "fms_action_adoption_minimal_cut_passed": true,
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh": false,
+    "claimed_retained_or_proposed_retained": false,
+    "identified_osp_with_oh_without_rows": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_fms_literature_as_proof_authority": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yt": false,
+    "used_observed_wz_or_g2": false,
+    "used_reduced_pilots_as_production": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "accepted_same_source_ew_action": false,
+    "accepted_same_surface_ew_higgs_action": false,
+    "canonical_oh_certificate": false,
+    "source_higgs_measurement_rows": false,
+    "source_higgs_pole_rows": false,
+    "source_higgs_production_certificate": false
+  },
+  "future_files": {
+    "accepted_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+    "accepted_same_surface_ew_higgs_action": "outputs/yt_pr230_same_surface_ew_higgs_action_certificate_2026-05-07.json",
+    "canonical_oh_certificate": "outputs/yt_pr230_canonical_oh_certificate_2026-05-07.json",
+    "source_higgs_measurement_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+    "source_higgs_pole_rows": "outputs/yt_pr230_source_higgs_pole_rows_2026-05-06.json",
+    "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json"
+  },
+  "hypothetical_axiom_status": "external gauge-Higgs extension remains hypothetical until accepted or derived from the Cl(3)/Z3 substrate",
+  "missing_root_vertices": [
+    "same_surface_action_derivation_or_accepted_extension",
+    "dynamic_phi_and_gauge_covariant_higgs_kinetic_term",
+    "canonical_radial_h_lsz_metric_and_v",
+    "fms_OH_identity_and_normalization",
+    "same_source_derivative_no_independent_top_source",
+    "production_C_ss_C_sH_C_HH_pole_rows",
+    "pole_covariance_fv_ir_model_class_authority",
+    "aggregate_retained_route_gates"
+  ],
+  "next_exact_action": "Derive or supply the same-surface action/canonical O_H root certificate; after it passes, launch the existing source-Higgs time-kernel rows and run pole/covariance/FV/IR/source-overlap gates.",
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "degree_one_radial_tangent_oh_theorem": "exact-support / degree-one radial-tangent O_H uniqueness theorem; same-surface action/LSZ premise and pole rows absent",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "fms_source_overlap_readout_gate": "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "genuine_source_pole_artifact_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+    "source_higgs_direct_pole_row_contract": "exact-support / direct source-Higgs pole-row contract; O_H and production C_sH/C_HH rows are absent",
+    "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
+    "source_higgs_pole_row_acceptance_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "source_higgs_time_kernel_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The FMS packet is a candidate/action shape only.  The current surface lacks an accepted action derivation, dynamic Phi/canonical radial LSZ metric, O_H identity, same-source derivative theorem, and production C_ss/C_sH/C_HH pole rows.",
+  "same_surface_cl3_z3_derived": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not identify taste-radial x or O_sp with O_H",
+    "does not set kappa_s, c2, Z_match, or g2 to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat FMS literature or the action ansatz as same-surface proof authority"
+  ],
+  "support_vertices": [
+    {
+      "id": "O_sp_source_pole",
+      "proof_limit": "does not identify O_sp with canonical O_H",
+      "role": "same-source LSZ source-side normalization",
+      "satisfied": true
+    },
+    {
+      "id": "degree_one_radial_axis",
+      "proof_limit": "the degree-one premise and canonical LSZ metric are not derived",
+      "role": "unique taste-radial axis under a future degree-one action premise",
+      "satisfied": true
+    },
+    {
+      "id": "fms_candidate_packet",
+      "proof_limit": "candidate packet is not an accepted Cl(3)/Z3 same-surface action",
+      "role": "candidate O_H and action-shape packet",
+      "satisfied": true
+    },
+    {
+      "id": "source_overlap_readout_formula",
+      "proof_limit": "strict C_ss/C_sH/C_HH pole rows are absent",
+      "role": "future kappa_sH residue formula",
+      "satisfied": true
+    },
+    {
+      "id": "time_kernel_manifest",
+      "proof_limit": "manifest is not evidence and is blocked until O_H is accepted",
+      "role": "future non-colliding row campaign commands",
+      "satisfied": true
+    }
+  ]
+}

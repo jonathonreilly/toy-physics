@@ -191,6 +191,7 @@ def main() -> int:
         "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
         "pr230_fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
         "pr230_fms_source_overlap_readout_gate": "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json",
+        "pr230_fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
         "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
         "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
         "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
@@ -1998,6 +1999,41 @@ def main() -> int:
             "closure_authorized"
         )
         is False
+    )
+    fms_action_adoption_minimal_cut_support_not_closure = (
+        "FMS action-adoption minimal cut"
+        in certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "fms_action_adoption_minimal_cut_passed"
+        )
+        is True
+        and certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "adoption_allowed_now"
+        )
+        is False
+        and certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "accepted_current_surface"
+        )
+        is False
+        and certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "same_surface_cl3_z3_derived"
+        )
+        is False
+        and certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "closure_authorized"
+        )
+        is False
+        and bool(
+            certificates["pr230_fms_action_adoption_minimal_cut"].get(
+                "missing_root_vertices"
+            )
+        )
     )
     higgs_mass_source_action_bridge_support_not_closure = (
         "Higgs mass-source action bridge"
@@ -5086,6 +5122,13 @@ def main() -> int:
         ),
     )
     report(
+        "fms-action-adoption-minimal-cut-support-not-closure",
+        fms_action_adoption_minimal_cut_support_not_closure,
+        certificates["pr230_fms_action_adoption_minimal_cut"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "higgs-mass-source-action-bridge-support-not-closure",
         higgs_mass_source_action_bridge_support_not_closure,
         certificates["pr230_higgs_mass_source_action_bridge"].get(
@@ -6639,6 +6682,7 @@ def main() -> int:
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "fms_oh_candidate_action_packet_support_not_closure": fms_oh_candidate_action_packet_support_not_closure,
         "fms_source_overlap_readout_gate_support_not_closure": fms_source_overlap_readout_gate_support_not_closure,
+        "fms_action_adoption_minimal_cut_support_not_closure": fms_action_adoption_minimal_cut_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,

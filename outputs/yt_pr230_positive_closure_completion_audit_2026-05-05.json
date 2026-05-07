@@ -45,6 +45,7 @@
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "fh_lsz_pade_stieltjes": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "fh_lsz_stieltjes_moment": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
@@ -115,6 +116,7 @@
     "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
     "fh_lsz_pade_stieltjes": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
     "fh_lsz_stieltjes_moment": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+    "fms_action_adoption_minimal_cut": "exact-support / FMS action-adoption minimal cut; current PR230 surface has candidate support but no adopted same-surface action, canonical O_H, or strict pole rows",
     "fms_composite_oh_conditional_theorem": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
     "fms_literature_source_overlap_intake": "exact negative boundary / FMS literature does not supply PR230 source-overlap or kappa_s on the current surface",
     "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
@@ -173,7 +175,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 71,
+  "pass_count": 72,
   "post_osp_support_evidence": {
     "additive_source_radial_spurion_incompatibility_not_closure": true,
     "additive_top_subtraction_row_contract_not_closure": true,
@@ -182,6 +184,7 @@
     "canonical_oh_wz_common_action_cut_open": true,
     "degree_one_higgs_action_premise_not_derived": true,
     "degree_one_radial_tangent_oh_theorem_support_not_closure": true,
+    "fms_action_adoption_minimal_cut_support_not_closure": true,
     "fms_composite_oh_conditional_support_not_closure": true,
     "fms_literature_source_overlap_intake_non_authority": true,
     "fms_oh_candidate_action_packet_support_not_closure": true,

@@ -710,6 +710,9 @@ def main() -> int:
         "pr230_fms_source_overlap_readout_gate": load(
             "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json"
         ),
+        "pr230_fms_action_adoption_minimal_cut": load(
+            "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json"
+        ),
         "pr230_higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
@@ -3279,6 +3282,26 @@ def main() -> int:
         and fms_source_overlap_readout_gate.get("strict_rows_present") is False
         and fms_source_overlap_readout_gate.get("closure_authorized") is False,
         statuses["pr230_fms_source_overlap_readout_gate"],
+    )
+    fms_action_adoption_minimal_cut = certificates[
+        "pr230_fms_action_adoption_minimal_cut"
+    ]
+    report(
+        "pr230-fms-action-adoption-minimal-cut-support-not-proof",
+        "FMS action-adoption minimal cut"
+        in str(statuses["pr230_fms_action_adoption_minimal_cut"])
+        and fms_action_adoption_minimal_cut.get("proposal_allowed") is False
+        and fms_action_adoption_minimal_cut.get(
+            "fms_action_adoption_minimal_cut_passed"
+        )
+        is True
+        and fms_action_adoption_minimal_cut.get("adoption_allowed_now") is False
+        and fms_action_adoption_minimal_cut.get("accepted_current_surface") is False
+        and fms_action_adoption_minimal_cut.get("same_surface_cl3_z3_derived")
+        is False
+        and fms_action_adoption_minimal_cut.get("closure_authorized") is False
+        and bool(fms_action_adoption_minimal_cut.get("missing_root_vertices")),
+        statuses["pr230_fms_action_adoption_minimal_cut"],
     )
     higgs_mass_source_action_bridge = certificates[
         "pr230_higgs_mass_source_action_bridge"
@@ -5956,6 +5979,18 @@ def main() -> int:
         and fms_source_overlap_readout_gate.get("readout_executable_now") is False
         and fms_source_overlap_readout_gate.get("strict_rows_present") is False
         and fms_source_overlap_readout_gate.get("closure_authorized") is False
+    )
+    result["fms_action_adoption_minimal_cut_support_not_proof"] = (
+        fms_action_adoption_minimal_cut.get(
+            "fms_action_adoption_minimal_cut_passed"
+        )
+        is True
+        and fms_action_adoption_minimal_cut.get("proposal_allowed") is False
+        and fms_action_adoption_minimal_cut.get("adoption_allowed_now") is False
+        and fms_action_adoption_minimal_cut.get("accepted_current_surface") is False
+        and fms_action_adoption_minimal_cut.get("same_surface_cl3_z3_derived")
+        is False
+        and fms_action_adoption_minimal_cut.get("closure_authorized") is False
     )
     result["higgs_mass_source_action_bridge_support_not_proof"] = (
         higgs_mass_source_action_bridge.get("higgs_mass_source_action_bridge_passed")

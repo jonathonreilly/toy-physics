@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-07 FMS action-adoption minimal cut: the cleanest closure route is now
+sharpened into a strict root cut.  The current support vertices (`O_sp`,
+degree-one radial-axis support, FMS `O_H` candidate/action packet, residue
+readout formula, and time-kernel manifest) are loaded, but adoption is blocked
+by missing same-surface EW/Higgs action authority, dynamic `Phi`, canonical
+`h/v` LSZ metric, canonical `O_H` provenance, no-independent-top-source
+source derivative, production `C_ss/C_sH/C_HH` pole rows, and
+pole/covariance/FV/IR/model-class authority.  Highest-value next action:
+derive or supply the same-surface action/canonical `O_H` root certificate;
+after it passes, launch the source-Higgs time-kernel row campaign.  W/Z
+physical response remains first fallback only after its accepted-action roots
+and strict `g2`/covariance roots close.
+
 2026-05-07 chunks045-046 package refresh: chunks001-046 are now packaged
 partial `C_sx/C_xx` support with `ready=46/63`; chunks045-046 pass
 completed-mode checkpoints and preserve selected-mass-only FH/LSZ,

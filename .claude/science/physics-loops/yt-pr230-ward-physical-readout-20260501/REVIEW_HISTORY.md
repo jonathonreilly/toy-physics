@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - FMS Action-Adoption Minimal Cut
+
+Review stance: exact support / adoption root cut, no closure.
+
+- Added the FMS action-adoption minimal cut runner, note, and certificate.
+- The cut accepts current support vertices as support only: `O_sp`, the
+  degree-one radial-axis theorem, FMS candidate/action packet, future
+  source-overlap readout, and the source-Higgs time-kernel manifest.
+- The root cut remains open: same-surface EW/Higgs action authority, dynamic
+  `Phi`, canonical `h/v` LSZ metric, canonical `O_H`, same-source derivative
+  with no independent additive top source, production pole rows, FV/IR/model
+  authority, and aggregate proposal gates are absent.
+- Validation: FMS cut `PASS=11 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: support only.  No retained or `proposed_retained` wording is
+allowed.  Chunks051-052 are active run-control only and were not staged.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks045-046 Package
 
 Review stance: bounded support / partial row-wave package.

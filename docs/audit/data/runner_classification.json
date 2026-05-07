@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T16:53:34.205937+00:00",
+  "generated_at": "2026-05-07T17:13:22.828952+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16680,6 +16680,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py"
+    },
+    "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_fms_action_adoption_minimal_cut.py"
     },
     "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06": {
       "assert_count": 1,
@@ -35415,6 +35427,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_fms_action_adoption_minimal_cut.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -42096,12 +42123,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 245,
-      "C": 532,
+      "C": 533,
       "D": 323,
       "none": 404
     },
-    "runners_classified": 1513,
-    "runners_with_C": 823,
-    "runners_with_D": 598
+    "runners_classified": 1514,
+    "runners_with_C": 824,
+    "runners_with_D": 599
   }
 }

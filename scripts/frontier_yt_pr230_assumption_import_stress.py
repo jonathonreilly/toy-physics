@@ -242,6 +242,9 @@ def main() -> int:
         "fms_source_overlap_readout_gate": load(
             "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json"
         ),
+        "fms_action_adoption_minimal_cut": load(
+            "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json"
+        ),
         "higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
@@ -1478,6 +1481,28 @@ def main() -> int:
         )
         is False,
         fms_readout_gate.get("actual_current_surface_status"),
+    )
+    fms_action_cut = certificates["fms_action_adoption_minimal_cut"]
+    report(
+        "fms-action-adoption-minimal-cut-support-not-proof",
+        "FMS action-adoption minimal cut"
+        in str(fms_action_cut.get("actual_current_surface_status"))
+        and fms_action_cut.get("proposal_allowed") is False
+        and fms_action_cut.get("fms_action_adoption_minimal_cut_passed") is True
+        and fms_action_cut.get("adoption_allowed_now") is False
+        and fms_action_cut.get("accepted_current_surface") is False
+        and fms_action_cut.get("same_surface_cl3_z3_derived") is False
+        and fms_action_cut.get("closure_authorized") is False
+        and bool(fms_action_cut.get("missing_root_vertices"))
+        and fms_action_cut.get("forbidden_firewall", {}).get(
+            "used_fms_literature_as_proof_authority"
+        )
+        is False
+        and fms_action_cut.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        fms_action_cut.get("actual_current_surface_status"),
     )
     mass_source_bridge = certificates["higgs_mass_source_action_bridge"]
     report(

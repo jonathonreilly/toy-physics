@@ -1,5 +1,30 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 FMS action-adoption minimal cut:
+
+- Added `scripts/frontier_yt_pr230_fms_action_adoption_minimal_cut.py`,
+  `docs/YT_PR230_FMS_ACTION_ADOPTION_MINIMAL_CUT_NOTE_2026-05-07.md`, and
+  `outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json`.
+- The runner makes the cleanest source-Higgs/FMS route precise.  Current
+  support vertices are real but support-only: `O_sp`, degree-one radial-axis
+  support, FMS `O_H` candidate/action packet, the source-overlap residue
+  formula, and the time-kernel manifest.
+- The adoption root cut is not satisfied.  Missing roots are same-surface
+  action derivation or accepted extension, dynamic `Phi` and Higgs kinetic
+  semantics, canonical radial `h/v` LSZ metric, canonical `O_H` provenance,
+  same-source `dS/ds=sum O_H` with no independent top bare-mass source,
+  production `C_ss/C_sH/C_HH` pole rows, pole/covariance/FV/IR/model-class
+  authority, and aggregate proposal gates.
+- Validation: FMS cut `PASS=11 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+- Chunks051-052 remain active run-control only under the row-wave supervisor
+  and are not staged evidence until completed and checkpointed.
+- Claim boundary: no retained or `proposed_retained` closure.  Do not identify
+  `O_sp` or taste-radial `x` with canonical `O_H`, relabel `C_sx/C_xx` as
+  `C_sH/C_HH`, or set `kappa_s`, `c2`, `Z_match`, or `g2` to one.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks045-046 package:
 
 - Packaged chunks045-046 after completed root JSONs and per-volume artifacts

@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T16:53:31.548436+00:00",
+  "generated_at": "2026-05-07T17:13:19.984296+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42373,6 +42373,16 @@
       "runner_path": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py",
       "title": "PR230 Exact Tensor Schur Row Feasibility Attempt"
     },
+    "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07": {
+      "claim_id": "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact-support / FMS action-adoption minimal cut; current PR230 surface does not close.",
+      "deps": [],
+      "note_hash": "44462a9833b2256fa60c268fe217c3c14ab7dfcaa755b7035bb82cd026f996e2",
+      "path": "docs/YT_PR230_FMS_ACTION_ADOPTION_MINIMAL_CUT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_fms_action_adoption_minimal_cut.py",
+      "title": "PR230 FMS Action-Adoption Minimal Cut"
+    },
     "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06": {
       "claim_id": "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
       "current_status": "support",
@@ -46406,6 +46416,7 @@
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
     "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
+    "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07",
     "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
     "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07",
     "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
@@ -46653,16 +46664,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1118,
-    "node_count": 2109,
-    "root_count": 1616,
-    "runners_with_path": 1592,
+    "leaf_count": 1119,
+    "node_count": 2110,
+    "root_count": 1617,
+    "runners_with_path": 1593,
     "status_counts": {
       "bounded": 586,
       "open": 106,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 460,
+      "support": 461,
       "unknown": 583
     }
   }

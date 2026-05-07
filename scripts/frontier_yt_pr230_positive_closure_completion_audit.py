@@ -46,6 +46,7 @@ PARENTS = {
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
     "fms_source_overlap_readout_gate": "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json",
+    "fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
@@ -548,6 +549,29 @@ def main() -> int:
         is False
         and certs["fms_source_overlap_readout_gate"].get("closure_authorized")
         is False
+    )
+    fms_action_adoption_minimal_cut_support_not_closure = (
+        "FMS action-adoption minimal cut"
+        in parent_statuses["fms_action_adoption_minimal_cut"]
+        and certs["fms_action_adoption_minimal_cut"].get("proposal_allowed")
+        is False
+        and certs["fms_action_adoption_minimal_cut"].get(
+            "fms_action_adoption_minimal_cut_passed"
+        )
+        is True
+        and certs["fms_action_adoption_minimal_cut"].get("adoption_allowed_now")
+        is False
+        and certs["fms_action_adoption_minimal_cut"].get(
+            "accepted_current_surface"
+        )
+        is False
+        and certs["fms_action_adoption_minimal_cut"].get(
+            "same_surface_cl3_z3_derived"
+        )
+        is False
+        and certs["fms_action_adoption_minimal_cut"].get("closure_authorized")
+        is False
+        and bool(certs["fms_action_adoption_minimal_cut"].get("missing_root_vertices"))
     )
     higgs_mass_source_action_bridge_not_closure = (
         "Higgs mass-source action bridge"
@@ -1227,6 +1251,7 @@ def main() -> int:
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
     report("fms-oh-candidate-action-packet-support-not-closure", fms_oh_candidate_action_packet_support_not_closure, parent_statuses["fms_oh_candidate_action_packet"])
     report("fms-source-overlap-readout-gate-support-not-closure", fms_source_overlap_readout_gate_support_not_closure, parent_statuses["fms_source_overlap_readout_gate"])
+    report("fms-action-adoption-minimal-cut-support-not-closure", fms_action_adoption_minimal_cut_support_not_closure, parent_statuses["fms_action_adoption_minimal_cut"])
     report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
     report("same-source-ew-higgs-action-ansatz-not-closure", same_source_ew_higgs_action_ansatz_not_closure, parent_statuses["same_source_ew_higgs_action_ansatz_gate"])
     report("same-source-ew-action-adoption-attempt-not-closure", same_source_ew_action_adoption_attempt_not_closure, parent_statuses["same_source_ew_action_adoption_attempt"])
@@ -1411,6 +1436,7 @@ def main() -> int:
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
             "fms_oh_candidate_action_packet_support_not_closure": fms_oh_candidate_action_packet_support_not_closure,
             "fms_source_overlap_readout_gate_support_not_closure": fms_source_overlap_readout_gate_support_not_closure,
+            "fms_action_adoption_minimal_cut_support_not_closure": fms_action_adoption_minimal_cut_support_not_closure,
             "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,
             "same_source_ew_higgs_action_ansatz_not_closure": same_source_ew_higgs_action_ansatz_not_closure,
             "same_source_ew_action_adoption_attempt_not_closure": same_source_ew_action_adoption_attempt_not_closure,
