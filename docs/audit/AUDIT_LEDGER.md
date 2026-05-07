@@ -19,12 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| **retained_no_go** | 120 |
+| **retained_no_go** | 121 |
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
 | unaudited | 802 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 374 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 55 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `fourth_family_complex_boundary_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -202,6 +199,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fifth_family_radial_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-fresh-agent | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5.5 | B | - |
 | `fourth_family_quadrant_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gate_b_connectivity_tolerance_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -5881,6 +5879,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
 - **auditor confidence:** high
+
+### `fourth_family_complex_boundary_note`
+
+- **Note:** [`FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Tested fourth-family quadrant-reflection grown slice only: drifts 0.0, 0.2, 0.5 and seeds 0, 1, 2, with the anchor gamma=0 baseline plus Born proxy retained, fails the clean complex-action anchor crossover.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-fourth-family-complex-boundary-judicial-2026-05-07`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** In the completed cited runner log, the anchor drift=0.20 row has anchor_ok=True but crossover_ok=False because t01=2 and t05=1, so the clean TOWARD@0.1 -> AWAY@0.5 criterion fails.  _(class `B`)_
+- **chain closes:** True — The clean no-go is supported by the source note, runner definition, and completed frozen log for the finite tested slice; this is artifact/log verification, while the current timeout cache is not used as evidence.
+- **rationale:** The clean no-go is supported by the source note, runner definition, and completed frozen log for the finite tested slice; this is artifact/log verification, while the current timeout cache is not used as evidence.
+- **auditor confidence:** judicial
 
 ### `fourth_family_quadrant_note`
 
