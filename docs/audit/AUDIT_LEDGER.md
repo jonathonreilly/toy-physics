@@ -20,14 +20,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 67 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 238 |
+| **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
 | unaudited | 812 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 445 |
+| ~~audited_conditional~~ | 444 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 396 |
-| `audited_conditional` | 445 |
+| `audited_clean` | 397 |
+| `audited_conditional` | 444 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
@@ -133,6 +133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
+| `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -546,7 +547,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
-| `causal_escape_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `central_band_born_dense_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2066,13 +2066,13 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 - **Note:** [`CAUSAL_ESCAPE_WINDOW_NOTE.md`](../../docs/CAUSAL_ESCAPE_WINDOW_NOTE.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the runner-backed finite-window diagnostic at eta=20, s=0.004, including eta=0 null, instantaneous/fwd/dynamic escape values, and three-family portability as printed by scripts/causal_escape_window.py.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-033337-de2b049d-causal_escape_window_not-010`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** At eta=20, s=0.004, instantaneous escape is about 0.39 while dynamic c=0.25 escape is about 0.97, so the registered runner exhibits a trapped-vs-escaping finite window.  _(class `C`)_
-- **chain closes:** False — The runner computes the headline finite-window numbers, but it does not compute the broader mechanism and boundary package stated in the note. Missing steps include exposure-matched static escape, c_crit/eta_max/s-dependence tables, and the listed four-seed robustness gate.
-- **rationale:** The source code genuinely runs a numerical propagation calculation for the null, window, and three-family portability checks; the reported headline values are not just hard-coded constants. However, several note-level claims are explicitly outside the live runner: the exposure-matched proxy is printed as an uncomputed note, and the c_crit, eta_max, s-dependence, and four-seed robustness package is absent. The result is therefore only a bounded conditional finite-window diagnostic under the runner's imposed model and parameters, not a closed causal-escape theorem.
+- **claim_scope:** Finite runner-bounded diagnostic for the specified propagation/trap model, parameters, families, and seeds showing an escape window and its exposure-matched static comparator within the imposed simulation.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-causal-escape-B`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At eta=20, s=0.004, c=0.25, the instantaneous field traps while the dynamic causal field escapes, with forward-only static not escaping and exposure-matched static also escaping.  _(class `C`)_
+- **chain closes:** True — The current runner computes the headline window, exposure-matched static proxy, c/eta/s tables, portability checks, and four-seed gate rather than merely asserting them in prose. Closure is only for this finite diagnostic and does not establish black-hole escape physics, self-consistent field closure, or an irreducible cone-geometry mechanism.
+- **rationale:** The repaired runner constructs the lattice-like propagation model, evaluates the field variants, and computes escape ratios from the stated finite setup; the target values are not hard-coded as expected constants. The completed cache exits successfully and includes the previously missing exposure-matched static, c/eta/s, portability, and four-seed robustness evidence. The clean verdict is bounded to the runner-defined diagnostic, while stale conditional labels and broader causal-gravity prose in the note are not promoted.
 - **auditor confidence:** high
 
 ### `causal_field_portability_note`
