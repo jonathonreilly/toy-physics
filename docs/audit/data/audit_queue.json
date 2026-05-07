@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 504,
     "high": 23,
-    "leaf": 181,
+    "leaf": 180,
     "medium": 128
   },
   "cycle_break_target_count": 254,
@@ -23369,29 +23369,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "teleportation_encoding_portability_note",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "teleportation_retained_axis_operator_algebra_closure_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/TELEPORTATION_ENCODING_PORTABILITY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_teleportation_encoding_portability.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "carrier_orbit_invariance_stretch_attempt_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -28053,6 +28030,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 4,
-  "total_pending": 836
+  "ready_count": 3,
+  "total_pending": 835
 }

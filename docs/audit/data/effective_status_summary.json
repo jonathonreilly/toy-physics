@@ -49,12 +49,12 @@
     "decoration_under_linear_response_true_kubo_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 49,
-    "open_gate": 8,
+    "open_gate": 9,
     "retained": 67,
     "retained_bounded": 242,
     "retained_no_go": 122,
     "retained_pending_chain": 2,
-    "unaudited": 824
+    "unaudited": 823
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
