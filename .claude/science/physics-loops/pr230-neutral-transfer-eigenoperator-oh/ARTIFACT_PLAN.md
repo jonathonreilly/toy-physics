@@ -305,3 +305,20 @@ Follow-on artifact target after block15 remains exactly one of the real
 positive inputs above.  The additive aggregate wiring only prevents a shortcut:
 it does not supply additive-top Jacobian rows, W/Z response rows, matched
 covariance, strict non-observed `g2`, or accepted action authority.
+
+Block16 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Open-surface bridge intake runner | `scripts/frontier_yt_pr230_open_surface_bridge_intake.py` | Created; PASS=12 FAIL=0 |
+| Open-surface bridge intake note | `docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md` | Created; bounded support/open |
+| Open-surface bridge intake certificate | `outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json` | Created; `proposal_allowed=false` |
+| Literature bridges | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/LITERATURE_BRIDGES.md` | Updated with external/open surfaces |
+
+Follow-on artifact target after block16 is no longer another current-surface
+shortcut gate.  The highest-ranked positive target is an explicit
+FMS/gauge-Higgs `O_H` candidate packet wired to the existing source-Higgs
+time-kernel manifest.  It must state whether the operator/action surface is
+derived from `Cl(3)/Z^3` or is a new external extension, and it must require
+measured `C_ss(t)`, `C_sH(t)`, `C_HH(t)`, GEVP/pole rows, covariance, FV/IR
+checks, and Gram flatness before any PR230 top-Yukawa claim.

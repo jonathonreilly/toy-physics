@@ -1,0 +1,231 @@
+{
+  "actual_current_surface_status": "bounded-support / open-surface bridge intake; no current PR230 closure",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "checks": {
+    "fail": 0,
+    "pass": 12
+  },
+  "conditional_surface_status": "exact support if a future accepted route supplies certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or a physical neutral rank-one theorem, or a strict W/Z physical-response packet without forbidden imports",
+  "fallback_next_route": {
+    "audit_posture": "method bridge only; valid after actual Euclidean time rows and operator certificate exist",
+    "external_surface": "OS reconstruction + lattice transfer matrix positivity",
+    "immediate_target": "Run a tiny source-Higgs time-kernel scout after an explicit O_H candidate is supplied; require C_ss(t), C_sH(t), C_HH(t), GEVP pole residue, covariance, and FV/IR gates.",
+    "positive_candidate": true,
+    "rank": 2,
+    "repo_disjunct_supplied_if_successful": "production pole rows and Gram flatness for a certified operator basis",
+    "route_id": "os_transfer_matrix_pole_row_reconstruction",
+    "source_ids": [
+      "osterwalder_schrader_1973",
+      "luscher_transfer_1977"
+    ],
+    "why_relevant": "The current finite static rows are underdetermined.  OS/transfer machinery says the right object is a time-ordered correlator kernel and spectral/pole residue extraction, not equal-time aliasing."
+  },
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh_before_canonical_oh": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "treated_literature_as_proof_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_or_hunit_operator": false,
+    "used_observed_wz_or_g2": false,
+    "used_observed_y_t_or_top_mass": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "generated_at_utc": "2026-05-07T15:35:36.892611+00:00",
+  "hypothetical_axiom_status": null,
+  "open_surface_search_not_current_repo_limited": true,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_oh_hard_residual": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 44 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "source_higgs_aperture": "bounded-support / source-Higgs bridge aperture checkpoint; 46 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+    "source_higgs_time_kernel_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched",
+    "wz_response_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist"
+  },
+  "parents": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_oh_hard_residual": "outputs/yt_pr230_canonical_oh_hard_residual_equivalence_gate_2026-05-07.json",
+    "neutral_h3h4_aperture": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
+    "source_higgs_aperture": "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json",
+    "source_higgs_time_kernel_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
+    "wz_response_intake": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The artifact surveys external/open surfaces as route guidance only. It imports no proof authority and supplies no certified O_H, pole rows, rank-one theorem, accepted W/Z action, production W/Z rows, covariance, strict g2 certificate, or production top response.",
+  "ranked_routes": [
+    {
+      "audit_posture": "open-surface candidate; would need accepted same-surface EW/Higgs action or derivation from Cl(3)/Z^3 before proof use",
+      "external_surface": "FMS + lattice gauge-Higgs spectroscopy",
+      "immediate_target": "Promote the existing source-Higgs time-kernel manifest into a pilot that consumes an explicit candidate gauge-invariant O_H definition, then require Gram flatness rather than setting overlap factors to one.",
+      "positive_candidate": true,
+      "rank": 1,
+      "repo_disjunct_supplied_if_successful": "certified O_H plus C_ss/C_sH/C_HH pole rows",
+      "route_id": "fms_gauge_invariant_higgs_operator_rows",
+      "source_ids": [
+        "fms_1981",
+        "fms_observable_spectrum_2017",
+        "su3_fundamental_higgs_spectrum_2018",
+        "fradkin_shenker_1979"
+      ],
+      "why_relevant": "FMS gives the right language for a gauge-invariant physical Higgs operator.  If PR230 can build O_H as a same-surface composite and measure source-Higgs time-kernel rows, this directly attacks the O_sp/O_H overlap residual without Ward/H_unit renaming."
+    },
+    {
+      "audit_posture": "method bridge only; valid after actual Euclidean time rows and operator certificate exist",
+      "external_surface": "OS reconstruction + lattice transfer matrix positivity",
+      "immediate_target": "Run a tiny source-Higgs time-kernel scout after an explicit O_H candidate is supplied; require C_ss(t), C_sH(t), C_HH(t), GEVP pole residue, covariance, and FV/IR gates.",
+      "positive_candidate": true,
+      "rank": 2,
+      "repo_disjunct_supplied_if_successful": "production pole rows and Gram flatness for a certified operator basis",
+      "route_id": "os_transfer_matrix_pole_row_reconstruction",
+      "source_ids": [
+        "osterwalder_schrader_1973",
+        "luscher_transfer_1977"
+      ],
+      "why_relevant": "The current finite static rows are underdetermined.  OS/transfer machinery says the right object is a time-ordered correlator kernel and spectral/pole residue extraction, not equal-time aliasing."
+    },
+    {
+      "audit_posture": "hard theorem route; blocked until PR230 supplies a physical positivity-improving transfer kernel",
+      "external_surface": "Krein-Rutman/Jentzsch/Perron-Frobenius style cone theory",
+      "immediate_target": "Formulate H3/H4 as a concrete positive-kernel problem: operator space, cone, compactness, irreducibility, and source/Higgs coupling functional.  Do not claim rank one from PSD bounds alone.",
+      "positive_candidate": true,
+      "rank": 3,
+      "repo_disjunct_supplied_if_successful": "same-surface neutral scalar rank-one/flat-extension theorem",
+      "route_id": "neutral_primitive_positive_cone_theorem",
+      "source_ids": [
+        "complex_cones_pf_2010",
+        "luscher_transfer_1977"
+      ],
+      "why_relevant": "Block07 reduced the obstruction to PSD flatness Delta_spH=0.  A genuine positivity-improving transfer theorem could force rank one in the neutral scalar channel, but reflection positivity alone is insufficient."
+    },
+    {
+      "audit_posture": "compute/method route; Yukawa must not be an input tuned to the answer",
+      "external_surface": "chirally invariant lattice Higgs-Yukawa simulations",
+      "immediate_target": "Use only as a validation template for operator construction, correlator fitting, and uncertainty accounting; do not count as derived y_t unless m_t is predicted from substrate data.",
+      "positive_candidate": false,
+      "rank": 4,
+      "repo_disjunct_supplied_if_successful": "direct top/Higgs sector measurement route",
+      "route_id": "lattice_higgs_yukawa_targeted_compute",
+      "source_ids": [
+        "lattice_higgs_yukawa_2010"
+      ],
+      "why_relevant": "This is the nearest established nonperturbative compute route for the top/bottom/Higgs sector.  It can benchmark PR230 methodology, but it does not avoid the bridge if y_t is merely a scanned input."
+    },
+    {
+      "audit_posture": "new principle/import unless beta_lambda(M_Pl)=0 is derived from Cl(3)/Z^3",
+      "external_surface": "multiple-point/Planck criticality",
+      "immediate_target": "Keep as an independent lane only if the Planck boundary condition is derived natively; do not use it to patch PR230 O_H closure.",
+      "positive_candidate": false,
+      "rank": 5,
+      "repo_disjunct_supplied_if_successful": "external boundary condition on y_t via SM RGE",
+      "route_id": "planck_criticality_beta_lambda_route",
+      "source_ids": [
+        "sm_criticality_1995",
+        "mpcp_gravity_tension_2014"
+      ],
+      "why_relevant": "Criticality can numerically point at top mass, but it is not the PR230 physical-observable source-Higgs bridge.  It remains a separate axiom/derivation problem and has known SM tension."
+    }
+  ],
+  "recommended_next_non_chunk_route": {
+    "audit_posture": "open-surface candidate; would need accepted same-surface EW/Higgs action or derivation from Cl(3)/Z^3 before proof use",
+    "external_surface": "FMS + lattice gauge-Higgs spectroscopy",
+    "immediate_target": "Promote the existing source-Higgs time-kernel manifest into a pilot that consumes an explicit candidate gauge-invariant O_H definition, then require Gram flatness rather than setting overlap factors to one.",
+    "positive_candidate": true,
+    "rank": 1,
+    "repo_disjunct_supplied_if_successful": "certified O_H plus C_ss/C_sH/C_HH pole rows",
+    "route_id": "fms_gauge_invariant_higgs_operator_rows",
+    "source_ids": [
+      "fms_1981",
+      "fms_observable_spectrum_2017",
+      "su3_fundamental_higgs_spectrum_2018",
+      "fradkin_shenker_1979"
+    ],
+    "why_relevant": "FMS gives the right language for a gauge-invariant physical Higgs operator.  If PR230 can build O_H as a same-surface composite and measure source-Higgs time-kernel rows, this directly attacks the O_sp/O_H overlap residual without Ward/H_unit renaming."
+  },
+  "sources": [
+    {
+      "authors": "Froehlich, Morchio, Strocchi",
+      "id": "fms_1981",
+      "surface": "gauge-invariant BEH/FMS operator language",
+      "title": "Higgs phenomenon without symmetry breaking order parameter",
+      "url": "https://archives.ihes.fr/document/P_81_12.pdf",
+      "use_in_pr230": "route guidance for defining physical gauge-invariant Higgs operators; not proof of the PR230 source overlap"
+    },
+    {
+      "authors": "Maas, Sondenheimer, Toerek",
+      "id": "fms_observable_spectrum_2017",
+      "surface": "FMS/gauge-invariant spectrum",
+      "title": "On the observable spectrum of theories with a Brout-Englert-Higgs effect",
+      "url": "https://arxiv.org/abs/1709.07477",
+      "use_in_pr230": "evidence that FMS supplies a known gauge-invariant composite-to-elementary mapping in suitable BEH regimes"
+    },
+    {
+      "authors": "Maas, Toerek",
+      "id": "su3_fundamental_higgs_spectrum_2018",
+      "surface": "lattice gauge-Higgs spectroscopy",
+      "title": "The spectrum of an SU(3) gauge theory with a fundamental Higgs field",
+      "url": "https://arxiv.org/abs/1804.04453",
+      "use_in_pr230": "method precedent for lattice spectroscopy of gauge-invariant Higgs composites"
+    },
+    {
+      "authors": "Gerhold",
+      "id": "lattice_higgs_yukawa_2010",
+      "surface": "nonperturbative lattice Higgs-Yukawa top/bottom sector",
+      "title": "Upper and lower Higgs boson mass bounds from a chirally invariant lattice Higgs-Yukawa model",
+      "url": "https://arxiv.org/abs/1002.2569",
+      "use_in_pr230": "method precedent for lattice Higgs-top-bottom Yukawa simulations; not a derivation of y_t without an accepted bridge"
+    },
+    {
+      "authors": "Fradkin, Shenker",
+      "id": "fradkin_shenker_1979",
+      "surface": "lattice gauge-Higgs analytic-continuity structure",
+      "title": "Phase diagrams of lattice gauge theories with Higgs fields",
+      "url": "https://doi.org/10.1103/PhysRevD.19.3682",
+      "use_in_pr230": "route guidance for admissible gauge-Higgs surface extensions; not an overlap selector"
+    },
+    {
+      "authors": "Osterwalder, Schrader",
+      "id": "osterwalder_schrader_1973",
+      "surface": "Euclidean reconstruction / reflection positivity",
+      "title": "Axioms for Euclidean Green's functions",
+      "url": "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/cmp/1103858969.pdf",
+      "use_in_pr230": "justifies transfer/Hilbert-space reconstruction from valid Euclidean correlators; does not by itself identify O_sp with O_H"
+    },
+    {
+      "authors": "Luescher",
+      "id": "luscher_transfer_1977",
+      "surface": "lattice transfer matrix positivity",
+      "title": "Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories",
+      "url": "https://doi.org/10.1007/bf01614090",
+      "use_in_pr230": "supports the transfer-kernel route once the correct gauge-invariant operators are supplied"
+    },
+    {
+      "authors": "Rugh",
+      "id": "complex_cones_pf_2010",
+      "surface": "positive/complex cone spectral gap methods",
+      "title": "Cones and gauges in complex spaces: Spectral gaps and complex Perron-Frobenius theory",
+      "url": "https://annals.math.princeton.edu/2010/171-3/p07",
+      "use_in_pr230": "candidate math toolkit for a neutral primitive/rank-one theorem; requires a PR230 physical transfer kernel first"
+    },
+    {
+      "authors": "Froggatt, Nielsen",
+      "id": "sm_criticality_1995",
+      "surface": "multiple-point / Planck-criticality top-mass route",
+      "title": "Standard Model Criticality Prediction: Top mass 173 +/- 5 GeV and Higgs mass 135 +/- 9 GeV",
+      "url": "https://arxiv.org/abs/hep-ph/9511371",
+      "use_in_pr230": "possible external axiom route; not current-surface derivation and not enough for PR230 retention"
+    },
+    {
+      "authors": "Haba, Kaneta, Takahashi, Yamaguchi",
+      "id": "mpcp_gravity_tension_2014",
+      "surface": "MPCP/beta_lambda Planck boundary tension",
+      "title": "Gravitational effects on vanishing Higgs potential at the Planck scale",
+      "url": "https://arxiv.org/abs/1408.5548",
+      "use_in_pr230": "negative/constraint context for criticality route; warns that beta_lambda(M_Pl)=0 is not automatically SM closure"
+    }
+  ]
+}

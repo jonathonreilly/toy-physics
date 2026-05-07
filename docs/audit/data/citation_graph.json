@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T15:28:30.239596+00:00",
+  "generated_at": "2026-05-07T15:35:43.938044+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42903,6 +42903,16 @@
       "runner_path": "scripts/frontier_yt_pr230_one_higgs_taste_axis_completeness_attempt.py",
       "title": "PR230 One-Higgs Taste-Axis Completeness Attempt"
     },
+    "yt_pr230_open_surface_bridge_intake_note_2026-05-07": {
+      "claim_id": "yt_pr230_open_surface_bridge_intake_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / open-surface bridge intake; no current PR230 closure",
+      "deps": [],
+      "note_hash": "eda60de726ac983e0fcf5f23ea84a93468a7f550cad4b9223efe1e81cc03af5f",
+      "path": "docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_open_surface_bridge_intake.py",
+      "title": "PR230 Open-Surface Bridge Intake"
+    },
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06": {
       "claim_id": "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06",
       "current_status": "unknown",
@@ -46397,6 +46407,7 @@
     "yt_pr230_oh_bridge_first_principles_candidate_portfolio_note_2026-05-06",
     "yt_pr230_oh_source_higgs_authority_rescan_gate_note_2026-05-05",
     "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06",
+    "yt_pr230_open_surface_bridge_intake_note_2026-05-07",
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06",
     "yt_pr230_origin_main_ew_m_residual_intake_guard_note_2026-05-06",
     "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07",
@@ -46587,12 +46598,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1112,
-    "node_count": 2103,
-    "root_count": 1610,
-    "runners_with_path": 1588,
+    "leaf_count": 1113,
+    "node_count": 2104,
+    "root_count": 1611,
+    "runners_with_path": 1589,
     "status_counts": {
-      "bounded": 583,
+      "bounded": 584,
       "open": 105,
       "proposed_promoted": 1,
       "proposed_retained": 373,

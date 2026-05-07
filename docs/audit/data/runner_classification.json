@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T15:28:33.025431+00:00",
+  "generated_at": "2026-05-07T15:35:47.017833+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17112,6 +17112,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_one_higgs_taste_axis_completeness_attempt.py"
+    },
+    "yt_pr230_open_surface_bridge_intake_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_open_surface_bridge_intake.py"
     },
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06": {
       "assert_count": 4,
@@ -35907,6 +35919,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_open_surface_bridge_intake.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_open_surface_bridge_intake_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_origin_main_composite_higgs_intake_guard.py": {
       "assert_count": 4,
       "claims": [
@@ -41987,13 +42014,13 @@
     "decoration_candidates": 109,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 244,
+      "B": 245,
       "C": 530,
       "D": 322,
       "none": 404
     },
-    "runners_classified": 1509,
-    "runners_with_C": 819,
-    "runners_with_D": 594
+    "runners_classified": 1510,
+    "runners_with_C": 820,
+    "runners_with_D": 595
   }
 }

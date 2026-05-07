@@ -335,6 +335,42 @@ git diff --check
 # OK
 ```
 
+## Block15
+
+Local review run on 2026-05-07 after the open-surface literature intake.
+Parallel subagents were not spawned because the user requested the broader
+search surface, not parallel delegation in this turn.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_open_surface_bridge_intake.py`
+- `docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/LITERATURE_BRIDGES.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ARTIFACT_PLAN.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Intake runner compiles and passes `PASS=12 FAIL=0`; it writes a deterministic certificate and consumes current PR230 parent certificates. |
+| Physics Claim Boundary | BOUNDED SUPPORT / OPEN | The block widens route search but supplies no certified `O_H`, pole rows, rank-one theorem, accepted W/Z packet, or strict `g2`. |
+| Imports / Support | CLEAN / DISCLOSED | External literature is route guidance only and not proof authority. Ward/H_unit/y_t_bare, observed targets, plaquette/u0, and unit-overlap conventions remain excluded. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized; PR230 remains draft/open. |
+| Repo Governance | PASS | Updates are confined to PR230-local notes, runner, output, and loop pack. |
+| Audit Compatibility | PASS | Status fields use bounded-support/open language with `proposal_allowed=false`. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_open_surface_bridge_intake.py
+python3 scripts/frontier_yt_pr230_open_surface_bridge_intake.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
 ## Block13
 
 Local review run on 2026-05-07 10:49 EDT.  Parallel subagents were not spawned

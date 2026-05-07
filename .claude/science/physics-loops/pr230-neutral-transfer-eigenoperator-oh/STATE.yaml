@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T11:19:52-04:00"
-branch: codex/pr230-wroute-build
+checkpoint_time: "2026-05-07T11:45:00-04:00"
+branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 15
-active_science_block: block15_additive_response_aggregate_wiring
-active_route: "Aggregate-gate wiring for additive-source radial-spurion incompatibility and additive-top subtraction row contract after PR #230 advanced through chunks045-046 intake"
+cycle_count: 16
+active_science_block: block16_open_surface_bridge_intake
+active_route: "Open-surface bridge intake beyond current repo surface: FMS/gauge-Higgs O_H route, OS transfer rows, positive-cone rank-one theorem, lattice Higgs-Yukawa context, and Planck-criticality boundary context"
 target_status: best-honest-status
-actual_current_surface_status: "exact support / additive-response aggregate wiring after chunks045-046 intake; PR #230 head is 0de6b5885793c4f8e81a190421862b01b75e52f8 after live-worker chunks045-046 intake, but it still contains no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet"
+actual_current_surface_status: "bounded-support / open-surface bridge intake; PR #230 has route guidance beyond the current repo surface but still contains no certified O_H/source-Higgs pole-row packet, physical neutral rank-one theorem, or strict W/Z accepted-action physical-response packet"
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block15 preserves block14's chunks045-046 intake and wires the already-created additive-source radial-spurion incompatibility plus additive-top subtraction row contract into the assumption, full assembly, retained-route, and completion-audit aggregate gates. This is support-only coverage: current dS/ds contains O_top_additive + O_H, and the subtraction identity needs same-surface additive-top Jacobian rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted action authority before any physical-response closure. No certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block16 widens the route search to FMS/gauge-Higgs spectroscopy, lattice Higgs-Yukawa methodology, OS transfer reconstruction, positive-cone spectral theory, and Planck-criticality context as route guidance only. It does not import proof authority and does not supply certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, final W-response rows, or a neutral rank-one theorem."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit block07 future disjunct artifacts: certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Existing H1/H2 Z3 support, 46/63 C_sx/C_xx rows, the refreshed raw C_ss scalar-LSZ boundary, and W/Z scout/smoke rows are bounded staging/support only."
+hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block15 identifies the highest-ranked non-chunk route as an explicit FMS/gauge-Higgs O_H candidate/action packet wired into the source-Higgs time-kernel manifest."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -173,7 +173,20 @@ commands_run:
   - "2026-05-07 block15: bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; generated audit metadata kept intentionally for strict lint"
   - "2026-05-07 block15: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
   - "2026-05-07 block15: git diff --check # OK"
-review_disposition: pass_exact_support_aggregate_wiring_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block15 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Do not cycle more current-surface shortcut gates. Continue only if a fresh same-surface certified O_H plus production C_ss/C_sH/C_HH pole-row/Gram-flatness packet appears, or if a strict W/Z physical-response packet appears with accepted action, canonical O_H/sector-overlap authority, production W/Z rows, same-source top rows, additive-top subtraction or no-independent-top radial action authority, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. The 46/63 C_sx/C_xx prefix, refreshed scalar-LSZ row-prefix boundary, and additive aggregate wiring are support only; do not reuse scout/smoke rows or touch the live chunk worker."
-stop_condition: "Yield for outer supervisor continuation after coherent block15 checkpoint push; open status is not campaign completion, and chunks047-048 remain active outside this block."
+  - "2026-05-07 block16: literature/open-surface search over FMS/gauge-Higgs, lattice Higgs-Yukawa, OS transfer, positive-cone theory, and Planck criticality"
+  - "2026-05-07 block16: python3 -m py_compile scripts/frontier_yt_pr230_open_surface_bridge_intake.py # OK"
+  - "2026-05-07 block16: python3 scripts/frontier_yt_pr230_open_surface_bridge_intake.py # PASS=12 FAIL=0"
+  - "2026-05-07 block16: bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings"
+  - "2026-05-07 block16: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+review_disposition: pass_bounded_support_open_surface_intake_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block16 PR not opened because user direction keeps PR230-specific work in draft PR #230"
+next_exact_action: "Build an explicit FMS/gauge-Higgs O_H candidate/action packet, state whether its operator/action surface is derived from Cl(3)/Z^3 or is a new external extension, wire it to the source-Higgs time-kernel manifest, and require measured C_ss(t), C_sH(t), C_HH(t), GEVP/pole rows, covariance, FV/IR checks, and Gram flatness before any y_t claim. If that surface cannot be accepted, pivot to the H3/H4 physical positivity-improving transfer-kernel rank-one theorem. Do not cycle more current-surface shortcut gates and do not touch the live chunk worker."
+stop_condition: "Block16 route-intake artifact landed; continue with the explicit FMS/gauge-Higgs O_H candidate packet as the next non-chunk science block."
+block16_open_surface_bridge_intake:
+  runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
+  note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
+  output: outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json
+  verification: "python3 -m py_compile scripts/frontier_yt_pr230_open_surface_bridge_intake.py && python3 scripts/frontier_yt_pr230_open_surface_bridge_intake.py # PASS=12 FAIL=0"
+  top_route: fms_gauge_invariant_higgs_operator_rows
+  proof_authority_imported: false
+  proposal_allowed: false

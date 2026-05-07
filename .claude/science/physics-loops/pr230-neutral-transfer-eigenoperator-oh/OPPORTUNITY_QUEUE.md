@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block15 additive-response aggregate wiring.
+Campaign mode queue after block16 open-surface bridge intake.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -46,3 +46,23 @@ current derivative still contains `O_top_additive + O_H`, and the exact
 subtraction identity still needs additive-top Jacobian rows, W/Z response rows,
 matched covariance, strict non-observed `g2`, and accepted action authority.
 It does not change the queue ranking or authorize proposal wording.
+
+## Block16 Open-Surface Additions
+
+The search is no longer limited to the current repo surface.  Block16 surveys
+FMS/gauge-Higgs spectroscopy, lattice Higgs-Yukawa methodology,
+Osterwalder-Schrader transfer reconstruction, positive-cone spectral theory,
+and Planck-criticality routes as route guidance only.
+
+| Rank | Open-surface opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Decision |
+|---:|---|---:|---:|---|---|---|
+| 1 | FMS/gauge-Higgs `O_H` candidate packet wired to source-Higgs time-kernel rows | Medium if the action/operator surface is accepted or derived | 2-4 | Block15 intake plus existing time-kernel manifest | Medium | Work this next. It directly attacks `O_sp/O_H` without Ward/H_unit renaming. |
+| 2 | OS/transfer-matrix pole-row reconstruction after `O_H` candidate exists | Medium-low until rows exist | 3-5 | Time-kernel manifest and GEVP contracts | Medium | Use as the method shell for route 1; not proof by itself. |
+| 3 | Neutral primitive positive-kernel rank-one theorem | Medium-low | 2-3 | Block07 and block10 gates | Medium | Work only after formulating H3/H4 as a physical positivity-improving transfer kernel, not a PSD shortcut. |
+| 4 | Lattice Higgs-Yukawa targeted compute | Low-medium | 4+ | PR230 compute harnesses | Medium | Use as validation template; not closure if y_t is scanned as input. |
+| 5 | Planck criticality / MPCP beta-lambda route | Low for PR230 bridge | 1 new principle unless derived | Existing beta-lambda loop history | Low-medium | Keep separate; do not use as the PR230 source-Higgs bridge. |
+
+The concrete next move is not to re-check absence of `O_H`; it is to attempt
+construction of an explicit gauge-invariant `O_H` candidate/action packet from
+the FMS/gauge-Higgs surface and subject it to the existing source-Higgs
+time-kernel and Gram-flatness requirements.

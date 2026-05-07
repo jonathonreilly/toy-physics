@@ -95,5 +95,11 @@ Prior block certificate summary:
 - Block15 actual status: exact support / additive-response aggregate wiring;
   current aggregate gates now consume the additive-source incompatibility and
   additive-top subtraction row contract, but proposal language remains denied.
-- Block01 through Block15 all have `proposal_allowed=false`; their boundaries
+- Block16 actual status: bounded-support / open-surface bridge intake; it
+  widens the search to FMS/gauge-Higgs spectroscopy, lattice Higgs-Yukawa
+  methodology, OS transfer reconstruction, positive-cone theory, and
+  Planck-criticality context as route guidance only.  It supplies no certified
+  `O_H`, pole rows, rank-one theorem, accepted W/Z packet, strict `g2`, or
+  top-response evidence.
+- Block01 through Block16 all have `proposal_allowed=false`; their boundaries
   remain active.

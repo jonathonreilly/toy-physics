@@ -442,3 +442,46 @@ the same absence.  Either supply one of the required artifacts from another
 worker/branch, or keep yielding this lane as waiting on the explicit
 production/certificate inputs while the outer supervisor runs independent
 positive work.
+
+## Block15 Open-Surface Bridge Intake
+
+Created `YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE`.
+
+Files:
+
+- `scripts/frontier_yt_pr230_open_surface_bridge_intake.py`
+- `docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/LITERATURE_BRIDGES.md`
+
+Block15 deliberately broadens the search beyond the current repo surface.  It
+surveys FMS/gauge-Higgs spectroscopy, lattice Higgs-Yukawa methodology,
+Osterwalder-Schrader transfer reconstruction, lattice transfer positivity,
+positive-cone spectral theory, and Planck criticality.  These sources are route
+guidance only; none is imported as PR230 proof authority.
+
+Result:
+
+- strongest positive target: FMS/gauge-Higgs gauge-invariant `O_H` candidate
+  packet wired to the existing source-Higgs time-kernel manifest;
+- second target: OS/transfer pole-row reconstruction after a certified
+  operator exists;
+- third target: H3/H4 as a physical positivity-improving transfer-kernel
+  rank-one theorem;
+- lattice Higgs-Yukawa and Planck-criticality routes are useful context but do
+  not close PR230 if y_t or beta-lambda is introduced as an external input.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_open_surface_bridge_intake.py
+python3 scripts/frontier_yt_pr230_open_surface_bridge_intake.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+Claim boundary: bounded support/open.  `proposal_allowed=false`.  The block
+does not use `yt_ward_identity`, `H_unit`, `y_t_bare`, observed targets,
+observed `g2`, `alpha_LM`, plaquette, `u0`, or any unit-overlap convention.
+The next real science move is not another current-surface absence gate; it is
+to attempt the explicit FMS/gauge-Higgs `O_H` candidate/action packet and then
+measure or certify the required time-kernel pole rows and Gram flatness.
