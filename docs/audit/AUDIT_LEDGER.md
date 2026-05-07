@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 231 |
+| **retained_bounded** | 232 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 793 |
+| unaudited | 792 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 384 |
+| `audited_clean` | 385 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 842 |
+| `unaudited` | 841 |
 
 | claim_type | count |
 |---|---:|
@@ -285,6 +285,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_field_strength_unification_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_nn_continuum_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -8626,6 +8627,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The supplied raw nearest-neighbor runner defines the finite lattice family and measurement harness, prints finite rows for h = 2.0, 1.0, 0.5, and 0.25 with Born residuals below 1e-10 and k=0 equal to 0, then prints FAIL for h = 0.125; the note scopes its conclusion exactly to that completed finite window and excludes the finer-spacing/continuum question.  _(class `C`)_
 - **chain closes:** True — Within the restricted packet, the runner source actually constructs the raw 3-forward-edge nearest-neighbor lattice, applies one fixed measurement procedure across the requested spacings, computes the listed observables without a fitted external comparator, and the completed stdout matches the table and safe claim. The note does not promote the failed h = 0.125 row or any continuum inference into the claimed result, so the bounded finite-window implication closes.
 - **rationale:** The scoped claim is narrow enough for the supplied completed runner output: all four finite-window rows are present and finite, k=0 is reported as +0.00e+00, the worst Born residual is 6.02e-16 below the 1e-10 tolerance, and h = 0.125 is treated only as an unresolved gate. There is no cited authority, external physical identification, tuned observed target, or continuum extrapolation required for the bounded statement.
+- **auditor confidence:** high
+
+### `lattice_nn_deterministic_rescale_note`
+
+- **Note:** [`LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md`](../../docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite computational claim only: for the exact supplied runner, constants, lattice geometry, slit construction, propagation rule, and tested spacings down to h=0.0625, the deterministic geometry-only rescale schedule keeps the Born diagnostic machine-clean and yields the printed observable rows. It does not establish a continuum theory or physical interpretation beyond this finite tested surface.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-lattice-nn-deterministic-rescale-audit-2-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The supplied runner explicitly evaluates the fixed h grid {1.0, 0.5, 0.25, 0.125, 0.0625} on the raw three-edge nearest-neighbor lattice using a deterministic per-edge scale factor spacing/sqrt(3), then computes the displayed Born |I3|/P, k=0, MI, 1-purity, d_TV, and gravity rows; the completed stdout shows machine-scale Born residuals at every tested spacing including the sub-0.25 rows.  _(class `C`)_
+- **chain closes:** True — Within the bounded scope, the packet contains the note, the complete runner source, and completed runner stdout. The source implements the asserted fixed schedule and finite h list, and the stdout supplies the rows on which the conclusion rests. No external authority, hidden dependency, or long-running missing computation is needed for the finite claim.
+- **rationale:** The bounded conclusion is supported on its own terms: the runner is deterministic for the stated constants, applies step_scale = spacing/sqrt(3) independent of amplitudes and blocked-set configuration, completes for all claimed spacings, and reports Born residuals of order 1e-16 through h=0.0625. The note also explicitly limits the conclusion and warns against continuum overstatement. The phrase about smooth convergence is acceptable only as a finite-row trend inside this scope, not as an asymptotic theorem.
 - **auditor confidence:** high
 
 ### `lattice_nn_high_precision_note`
