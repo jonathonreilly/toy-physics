@@ -87,3 +87,54 @@ imports observed (no PDG/MC values as derivation inputs).
 - No additional artifact required for Block 01.
 - Open PR with clear "independent audit required" notice.
 - Continue to Block 02.
+
+---
+
+## Block 02 review (2026-05-06)
+
+**Artifact:** `docs/BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md`
+**Runner:** `scripts/probe_hk_plaquette_closed_form.py` PASS=8/0
+**Type:** internal hostile-review
+
+### Semantic challenges and responses
+
+**Challenge A — Is "exact in 2 characters" really exact, or just leading-order truncation?**
+Response: Genuinely exact. Schur orthogonality forces ALL irreps (p,q)
+with p + q ≥ 2 to integrate to zero against the (1,0) + (0,1) sum that
+defines Re Tr U. Verified numerically: NMAX=2, NMAX=5, NMAX=10 all give
+identical symbolic 3 exp(-2t/3). PASS.
+
+**Challenge B — Does this depend on the HK character expansion form?**
+Response: Yes, but the HK character expansion is derived from
+Brownian-motion + bi-invariant metric (Block 01). Not an independent
+ansatz. PASS.
+
+**Challenge C — Is the 21% structural difference from Wilson load-bearing?**
+Response: Real consequence of action choice. Both values are exact
+arithmetic. Framework needs to derive which action is forced (Block 04).
+PASS.
+
+**Challenge D — Is "264× ε_witness BELOW MC" meaningful?**
+Response: Comparator only. Thermodynamic limit (Block 03) may shift.
+Note explicitly labels comparator-only. PASS.
+
+**Challenge E — Consistency-equality vs derivation?**
+Response: Forward derivation from Schur + retained Casimir + Block 01.
+The exact-in-2-characters structural finding is new content. PASS.
+
+**Challenge F — V3 "audit lane could complete" check.**
+Response: Schur + Casimir + standard HK form is in principle audit-
+derivable. But the project's framing (until 2026-05-06) was Wilson; HK
+evaluation under that framing was not a question. Block 02 does the HK
+evaluation under the new-physics opening's reframing — generally pass,
+strictly marginal.
+
+### Disposition
+
+**PASS** at bounded-support tier. No demotion needed locally.
+Independent audit required.
+
+### Local action
+
+- Open stacked PR (base = Block 01 branch) with explicit "depends on Block 01" notice.
+- Continue to Block 03 (thermodynamic Casimir-diagonal closure attempt).

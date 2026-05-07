@@ -9,57 +9,69 @@ goal: |
 
 target_status: best-honest-status
 runtime_budget: 12h
-runtime_used: ~30m (loop pack setup)
+runtime_used: ~90m (loop pack + Block 01 closure)
 mode: campaign
 
-current_block: 01
-current_block_route: R1.A (bi-invariant metric → Brownian time t)
-current_block_branch: physics-loop/bridge-gap-new-physics-block01-20260506
+current_block: 02
+current_block_route: R2.A (single-plaquette ⟨P⟩_HK,1plaq(6) closed form)
+current_block_branch: physics-loop/bridge-gap-new-physics-block02-20260506 (to create)
 current_block_status: planning
 
-cycles_completed: 0
-blocks_completed: 0
-prs_opened: 0
-volume_cap: 5
-cluster_cap_remaining: 2 (gauge_vacuum_plaquette_*)
+cycles_completed: 1
+blocks_completed: 1
+prs_opened: 1  # PR #617 OPEN
+prs_remaining_in_24h_volume_cap: 4  # 5 - 1
+cluster_cap_remaining: 2 (bridge_gap_new_physics_* parent-row family)
 
-active_route: R1.A
-active_route_deliverable: BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md
+active_route: R2.A
+active_route_deliverable: BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md
 hard_residual_being_attacked: |
-  Derive the canonical Brownian time t = t(β) from Cl(3) Tr-form +
-  small-U Wilson-HK matching. Target: closed-form t(β=6) at canonical
-  g_bare = 1.
+  Derive the closed-form ⟨P⟩_HK,1plaq(6) = exp(-2/3) ≈ 0.5134 directly
+  from heat-kernel character expansion using retained C_2(1,0) = 4/3 and
+  Block 01's t(6) = 1. Bound the error from finite-character truncation
+  (NMAX) and identify what additional input is needed for the
+  thermodynamic limit (Block 03 target). Compare to Wilson 0.4225 and
+  MC comparator 0.5934.
 
-files_touched:
-  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/GOAL.md
-  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/ASSUMPTIONS_AND_IMPORTS.md
-  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/NO_GO_LEDGER.md
-  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/ROUTE_PORTFOLIO.md
-  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/STATE.yaml
+prior_blocks_summary:
+  block01:
+    deliverable: docs/BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md
+    runner: scripts/probe_hk_time_derivation.py PASS=7/0
+    branch: physics-loop/bridge-gap-new-physics-block01-20260506
+    pr: '#617 OPEN'
+    status: bounded support theorem; review-loop pass; independent audit pending
+    key_result: t(β) = 2 N_c / β = g_bare²; t(6) = 1 at canonical normalization
+    closed_routes: |
+      Confirmed t(β) is uniquely determined by canonical Tr-form + small-U
+      Wilson-HK matching. No convention freedom in this specific selection.
 
 open_imports_for_active_target:
-  - g_bare = 1 normalization (open gate per MINIMAL_AXIOMS_2026-05-03)
-  - SU(3) gauge group emergence (bounded, depends on staggered-Dirac open gate)
-  - heat-kernel-Wilson small-U matching (admitted standard machinery,
-    Menotti-Onofri 1981)
+  - heat-kernel character expansion of single-plaquette expectation
+    (standard derivation; admissible standard machinery)
+  - retained C_2(1,0) = 4/3 (already retained per SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02)
+  - Block 01's t(6) = 1 (just-landed bounded support theorem)
 
 no_go_routes_avoided:
   - All seven routes consolidated in BRIDGE_GAP_EXHAUSTED_ROUTES_CONSOLIDATION_NOTE_2026-05-06.md
   - constant-lift ansatz (refuted)
   - anisotropic Wilson via Cl(3) pseudoscalar / staggered-η (no-go)
+  - V≥2 PF lift / L_s ≥ 3 escalation / SDP+MM on V-invariant block / etc.
 
-review_findings: []
+review_findings:
+  block01: PASS — internal hostile-review across 7 semantic challenges (see REVIEW_HISTORY.md)
 
-pr_status: not_yet_opened
+pr_status:
+  block01: '#617 OPEN, awaiting independent audit'
 
 next_exact_action: |
-  Execute Block 01 R1.A: write BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md
-  with the bi-invariant-metric → Brownian time derivation, paired runner
-  scripts/probe_hk_time_derivation.py with exact-arithmetic verification.
+  Execute Block 02 R2.A: derive ⟨P⟩_HK,1plaq(6) closed form from Schur
+  orthogonality + retained Casimir + heat-kernel character expansion.
+  Verify in exact arithmetic. Produce paired runner. Create dedicated
+  Block 02 branch from main, commit, push, open PR (or backlog).
 
 stop_condition: |
   Continue until 12h runtime exhausted, corollary exhaustion, volume cap (5
   PRs/24h), cluster cap (2 PRs per parent-row family), or global queue
   exhaustion.
 
-last_checkpoint: 2026-05-06T20:30 (initial loop-pack setup)
+last_checkpoint: 2026-05-06T22:00 (Block 01 closed; PR #617 OPEN; pivoting to Block 02)

@@ -76,3 +76,59 @@ bi-invariant metric → Brownian time matching) not present in any prior
 landed cycle. It is not "plug-and-chug" — the Tr-form / small-U
 expansion / matching chain is a genuine derivation, not arithmetic
 verification of an already-implicit identity. **PASS.**
+
+---
+
+## Block 02 (R2.A) — Single-Plaquette HK Closed Form
+
+**Block path:** [`docs/BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md`](../../../../docs/BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md)
+**Runner:** [`scripts/probe_hk_plaquette_closed_form.py`](../../../../scripts/probe_hk_plaquette_closed_form.py) — PASS=8 FAIL=0 verified 2026-05-06
+**Branch:** physics-loop/bridge-gap-new-physics-block02-20260506 (stacked on block01)
+
+```yaml
+actual_current_surface_status: bounded support theorem
+target_claim_type: bounded_theorem
+conditional_surface_status: |
+  Inherits Block 01 conditionals (a)-(d). Adds Block-02-specific:
+   (e) the result is for SINGLE-plaquette evaluation under heat-kernel
+       measure. Multi-plaquette / thermodynamic ⟨P⟩_HK(6) is Block 03
+       target.
+hypothetical_axiom_status: null
+admitted_observation_status: |
+  Schur orthogonality + heat-kernel character expansion derived from
+  Block 01 are admitted standard machinery. Retained Casimir
+  C_2(1,0) = 4/3 is load-bearing. Block 01's t = 1 is just-landed
+  bounded support. No PDG/MC values are load-bearing.
+claim_type_reason: |
+  Theorem (T2) gives the exact closed-form single-plaquette HK
+  expectation = exp(-2t/3), with the structural finding that it
+  requires only TWO characters (no NMAX truncation). At Block 01's
+  t = 1: ⟨P⟩_HK,1plaq(6) = exp(-2/3) ≈ 0.5134, distinct from Wilson
+  V=1 PF value 0.4225 by ~21%. Bounded support: useful as one input
+  to the four cluster lanes IF heat-kernel is the framework's derived
+  action (Block 04 still open).
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+forbidden_imports_used: false
+```
+
+### Promotion-Value Gate (V1-V5) for Block 02
+
+| # | Question | Answer |
+|---|---|---|
+| V1 | Verdict-identified obstruction closed? | New-physics opening Step 2: closed-form ⟨P⟩_HK,1plaq(6) under derived t. Closes the parent's "what is the framework's actually-derived single-plaquette value?" question for the heat-kernel candidate action. |
+| V2 | New derivation? | Schur orthogonality + retained Casimir + Block 01's t = 1 → exp(-2/3) closed form. The exact-in-2-characters structural finding is novel content. |
+| V3 | Audit lane could complete from existing primitives? | Combining retained Casimir + Schur + Block 01 is a one-step. Block 02 does it under the new-physics opening's framing. Marginal-pass. |
+| V4 | Marginal content non-trivial? | Yes — exact value `exp(-2/3) = 0.5134`, structural exact-in-2-characters property, decisive 21% difference from Wilson 1-plaq. |
+| V5 | One-step variant of landed cycle? | No — Block 02 builds on Block 01 with new derivation content (Schur picking out 2 characters, evaluating exp(-2/3) closed form). Distinct from Block 01 (which derived t). |
+
+**V1-V5 verdict for Block 02: PASS.**
+
+### Corollary-churn check
+
+Block 02 builds directly on Block 01 with new content: (a) the Schur-
+orthogonality argument that picks out exactly two characters; (b) the
+exact closed-form numerical value exp(-2/3); (c) the structural
+observation that HK 1-plaq is exact in finite character order while
+Wilson 1-plaq requires infinite Bessel series. **Not corollary churn.**
+**PASS.**
