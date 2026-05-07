@@ -1,5 +1,18 @@
 # No-Go Ledger
 
+## Two-source chunks001-058 are not source-Higgs or scalar-LSZ closure
+
+The 2026-05-07 chunks057-058 package refresh advances the finite row prefix to
+`ready=58/63`, but the added rows do not change the claim boundary. Raw
+`C_ss` still fails strict scalar-LSZ first-shell Stieltjes nonincrease, Schur
+`C_s|x` still fails, and Schur `C_x|s` remains only a necessary first-shell
+diagnostic.
+
+Do not treat chunks001-058, live-status rows, chunk059/chunk060 logs, or
+partial `C_sx/C_xx` rows as canonical `O_H`, canonical `C_sH/C_HH`, physical
+`kappa_s`, strict scalar-LSZ/FV authority, primitive transfer, W/Z response,
+neutral primitive closure, retained, or proposed-retained closure.
+
 ## Two-source chunks001-056 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks055-056 package refresh advances the finite row prefix to

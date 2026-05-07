@@ -1,11 +1,11 @@
 {
-  "actual_current_surface_status": "bounded-support / source-Higgs bridge aperture checkpoint; 56 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+  "actual_current_surface_status": "bounded-support / source-Higgs bridge aperture checkpoint; 58 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
   "admitted_observation_status": null,
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
   "conditional_surface_status": "exact support if a future same-surface canonical O_H certificate, production C_ss/C_sH/C_HH pole rows, complete row/FV/IR authority, and Gram flatness land without forbidden imports",
   "current_surface_closure_satisfied": false,
-  "exact_next_action": "Continue only through a real missing artifact: same-surface canonical O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, a neutral primitive/rank-one authority theorem, or W/Z physical-response rows with accepted action, sector-overlap, matched covariance, and strict non-observed g2.  Existing 56/63 C_sx/C_xx rows are bounded source-Higgs staging evidence only.",
+  "exact_next_action": "Continue only through a real missing artifact: same-surface canonical O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, a neutral primitive/rank-one authority theorem, or W/Z physical-response rows with accepted action, sector-overlap, matched covariance, and strict non-observed g2.  Existing 58/63 C_sx/C_xx rows are bounded source-Higgs staging evidence only.",
   "fail_count": 0,
   "forbidden_firewall": {
     "aliased_c_sx_to_c_sh_before_canonical_oh": false,
@@ -71,13 +71,13 @@
     },
     {
       "blocks_closure": true,
-      "current_status": "bounded-support: 56/63 chunks ready",
+      "current_status": "bounded-support: 58/63 chunks ready",
       "evidence": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
       "gate": "two-source taste-radial C_sx/C_xx staging rows"
     },
     {
       "blocks_closure": true,
-      "current_status": "bounded-support / two-source taste-radial chunks001-056 packaged; active chunks, logs, and pending checkpoints are not evidence",
+      "current_status": "bounded-support / two-source taste-radial chunks001-058 packaged; active chunks, logs, and pending checkpoints are not evidence",
       "evidence": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
       "gate": "completed row package evidence boundary"
     },
@@ -120,15 +120,13 @@
     "combined_rows_written": false,
     "expected_chunks": 63,
     "missing_chunk_indices": [
-      57,
-      58,
       59,
       60,
       61,
       62,
       63
     ],
-    "present_chunks": 56,
+    "present_chunks": 58,
     "ready_chunk_indices": [
       1,
       2,
@@ -185,9 +183,11 @@
       53,
       54,
       55,
-      56
+      56,
+      57,
+      58
     ],
-    "ready_chunks": 56,
+    "ready_chunks": 58,
     "strict_limit": "These are two-source taste-radial C_sx/C_xx rows. They are not canonical-Higgs C_sH/C_HH pole rows before O_H is certified."
   }
 }

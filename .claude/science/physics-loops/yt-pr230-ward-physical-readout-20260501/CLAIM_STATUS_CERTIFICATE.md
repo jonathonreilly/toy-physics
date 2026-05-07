@@ -1,5 +1,34 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks057-058 package:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-058 packaged; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 57
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 58
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=58/63, combined_rows_written=false
+```
+
+Chunks057-058 are now completed-mode row support and the finite row prefix is
+`58/63`. Chunks059-060 are active run-control only; chunks061-063 remain
+pending. The refreshed row-derived gates still reject closure: raw `C_ss`
+fails strict scalar-LSZ first-shell Stieltjes nonincrease, Schur `C_s|x`
+still fails, Schur `C_x|s` survives only a necessary first-shell check, and
+finite `C_sx/C_xx` rows are not primitive transfer, top-coupling tomography,
+canonical `O_H`, canonical `C_sH/C_HH`, W/Z response, neutral primitive
+closure, retained, or `proposed_retained` evidence.
+
 Two-source taste-radial chunks055-056 package:
 
 ```text

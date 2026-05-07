@@ -1,5 +1,28 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 two-source taste-radial chunks057-058 package:
+
+- Packaged chunks057-058 after the completed root JSONs and per-volume
+  artifacts landed. Checkpoints:
+  `outputs/yt_pr230_two_source_taste_radial_chunk057_checkpoint_2026-05-06.json`
+  and `outputs/yt_pr230_two_source_taste_radial_chunk058_checkpoint_2026-05-06.json`.
+- The two-source taste-radial packet is now `ready=58/63` with
+  `combined_rows_written=false`; chunks059-060 are active run-control only
+  and chunks061-063 remain pending.
+- Refreshed row-derived gates: strict scalar-LSZ, source-Higgs bridge
+  aperture, Schur subblock/K-prime/A-B-C/pole-lift, Schur repair,
+  Schur complete-monotonicity, one-pole scout, source-Higgs readiness,
+  primitive-transfer candidate, orthogonal-top exclusion, neutral H3/H4
+  aperture, neutral primitive route completion, and aggregate closure
+  firewalls.
+- Current row diagnostics remain non-closure: raw `C_ss` first-shell
+  Stieltjes failure `z=189.0601845909904`; Schur `C_s|x` failure
+  `z=173.58719383606584`; Schur `C_x|s` first-shell support only
+  `z=-615.1840801700874`.
+- Claim boundary: finite `C_ss/C_sx/C_xx` support only; no canonical `O_H`, no
+  canonical `C_sH/C_HH`, no scalar-LSZ/FV authority, no W/Z response, no
+  neutral primitive closure, and no retained or `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks055-056 package:
 
 - Packaged chunks055-056 after the completed root JSONs and per-volume
