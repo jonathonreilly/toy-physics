@@ -348,7 +348,7 @@
     "pr230_two_source_taste_radial_chunk008_checkpoint": "bounded-support / two-source taste-radial chunk008 C_sx/C_xx row checkpoint",
     "pr230_two_source_taste_radial_chunk009_checkpoint": "bounded-support / two-source taste-radial chunk009 C_sx/C_xx row checkpoint",
     "pr230_two_source_taste_radial_chunk010_checkpoint": "bounded-support / two-source taste-radial chunk010 C_sx/C_xx row checkpoint",
-    "pr230_two_source_taste_radial_chunk_package": "bounded-support / two-source taste-radial chunks001-032 packaged; active chunks, logs, and pending checkpoints are not evidence",
+    "pr230_two_source_taste_radial_chunk_package": "bounded-support / two-source taste-radial chunks001-034 packaged; active chunks, logs, and pending checkpoints are not evidence",
     "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
     "pr230_two_source_taste_radial_row_combiner_gate": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
     "pr230_two_source_taste_radial_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",

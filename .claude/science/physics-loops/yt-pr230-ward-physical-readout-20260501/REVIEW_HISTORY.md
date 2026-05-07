@@ -6105,3 +6105,27 @@ Disposition: support-only.  Formal GEVP parsing works on the smoke rows, but
 the result is not physical pole authority before production rows, canonical
 `O_H` or physical neutral identity, FV/IR/threshold control, and
 source-overlap normalization exist.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks033-034 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks033-034 into the two-source taste-radial row stream.
+- Added
+  `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS033_034_PACKAGE_NOTE_2026-05-07.md`.
+- Refreshed chunk checkpoints, package audit, row combiner, Schur finite-row
+  diagnostics, strict scalar-LSZ moment/FV gate, Schur-complement gates,
+  source-Higgs readiness, primitive-transfer candidate, orthogonal-top
+  exclusion gate, assumption stress, campaign status, full assembly,
+  retained-route, and completion audit.
+- Validation: chunk033 `PASS=15 FAIL=0`, chunk034 `PASS=15 FAIL=0`,
+  package audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at
+  `ready=34/63`, strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair
+  `PASS=22 FAIL=0`, assumption stress `PASS=90 FAIL=0`, campaign status
+  `PASS=337 FAIL=0`, full assembly `PASS=150 FAIL=0`, retained-route
+  `PASS=304 FAIL=0`, and completion audit `PASS=59 FAIL=0`.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for route diagnostics, not canonical `O_H`, not canonical
+`C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
+or proposed-retained closure.  Chunk035 is run-control only until completed.

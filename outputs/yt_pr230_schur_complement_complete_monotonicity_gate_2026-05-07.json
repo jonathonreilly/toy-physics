@@ -82,7 +82,7 @@
   "pole_model_class_authority_present": false,
   "proposal_allowed": false,
   "proposal_allowed_reason": "A zero-to-first-shell decrease is only a necessary Stieltjes check. The current packet has two q_hat^2 levels, incomplete chunks, no pole/model-class rows, no spectral threshold theorem, no multivolume FV/IR limit, and no canonical O_H or W/Z bridge.",
-  "ready_chunks": 32,
+  "ready_chunks": 34,
   "schur_complement_complete_monotonicity_gate_passed": true,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
@@ -96,26 +96,26 @@
   "x_given_source_first_shell_stieltjes_support": true,
   "x_given_source_summary": {
     "shell": {
-      "count": 32,
+      "count": 34,
       "max": 0.2697468820611708,
-      "mean": 0.2695516146367486,
+      "mean": 0.2695500552928034,
       "min": 0.269397809985968,
-      "stderr": 1.6867887476362452e-05
+      "stderr": 1.5920296464277928e-05
     },
     "shell_minus_zero": {
-      "count": 32,
+      "count": 34,
       "max": -0.01124889363522047,
-      "mean": -0.011293715463696218,
+      "mean": -0.011294165733556977,
       "min": -0.01133433356961161,
-      "stderr": 4.05785500106777e-06
+      "stderr": 3.852613980190175e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": -478.2217012807756,
+    "shell_minus_zero_z_score_from_chunk_scatter": -506.4973030760837,
     "zero": {
-      "count": 32,
+      "count": 34,
       "max": 0.2810229245536583,
-      "mean": 0.2808453301004448,
+      "mean": 0.2808442210263604,
       "min": 0.28068870370685767,
-      "stderr": 1.652855001237611e-05
+      "stderr": 1.5613148278289313e-05
     }
   }
 }

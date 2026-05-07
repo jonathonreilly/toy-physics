@@ -44,7 +44,7 @@
     "stieltjes_moment_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
     "threshold_authority_audit": "exact negative boundary / FH-LSZ threshold-authority import audit"
   },
-  "parsed_chunks": 32,
+  "parsed_chunks": 34,
   "pass_count": 13,
   "per_chunk_rows": [
     {
@@ -1230,26 +1230,100 @@
       "volume": "12x24",
       "zero_C_ss_real": 0.12222385208014586,
       "zero_p_hat_sq": 0.0
+    },
+    {
+      "chunk_index": 33,
+      "mode_rows": {
+        "0,0,0": {
+          "C_ss_real": 0.12240038209928304,
+          "C_ss_real_config_stderr": 0.00011982344523731843,
+          "p_hat_sq": 0.0,
+          "timeseries_count": 16
+        },
+        "0,0,1": {
+          "C_ss_real": 0.12534569038491813,
+          "C_ss_real_config_stderr": 0.00012169245378014207,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        },
+        "0,1,0": {
+          "C_ss_real": 0.1252978614301087,
+          "C_ss_real_config_stderr": 0.00011345189448591644,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        },
+        "1,0,0": {
+          "C_ss_real": 0.12534421623758235,
+          "C_ss_real_config_stderr": 0.00011305315206031645,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        }
+      },
+      "seed": 2026056033,
+      "selected_mass_parameter": 0.75,
+      "shell_C_ss_real_mean": 0.1253292560175364,
+      "shell_minus_zero": 0.002928873918253347,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "volume": "12x24",
+      "zero_C_ss_real": 0.12240038209928304,
+      "zero_p_hat_sq": 0.0
+    },
+    {
+      "chunk_index": 34,
+      "mode_rows": {
+        "0,0,0": {
+          "C_ss_real": 0.12233566718464582,
+          "C_ss_real_config_stderr": 0.00010453218407022211,
+          "p_hat_sq": 0.0,
+          "timeseries_count": 16
+        },
+        "0,0,1": {
+          "C_ss_real": 0.1252895919090149,
+          "C_ss_real_config_stderr": 0.00010758819497139293,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        },
+        "0,1,0": {
+          "C_ss_real": 0.12527501345832417,
+          "C_ss_real_config_stderr": 0.00010081551470207248,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        },
+        "1,0,0": {
+          "C_ss_real": 0.12528561897718665,
+          "C_ss_real_config_stderr": 9.664697586616985e-05,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        }
+      },
+      "seed": 2026056034,
+      "selected_mass_parameter": 0.75,
+      "shell_C_ss_real_mean": 0.12528340811484193,
+      "shell_minus_zero": 0.002947740930196105,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "volume": "12x24",
+      "zero_C_ss_real": 0.12233566718464582,
+      "zero_p_hat_sq": 0.0
     }
   ],
   "proposal_allowed": false,
   "proposal_allowed_reason": "The gate finds a necessary Stieltjes monotonicity violation in the current raw C_ss proxy and also records no 63/63 combined packet, no multivolume FV/IR authority, no isolated-pole/model-class authority, and no canonical O_H/source-overlap authority.",
   "raw_c_ss_rows_positive": true,
-  "ready_chunks": 32,
+  "ready_chunks": 34,
   "shell_minus_zero_summary": {
-    "count": 32,
+    "count": 34,
     "max": 0.0030000103444333404,
-    "mean": 0.0029511635916225315,
+    "mean": 0.002950407346481484,
     "min": 0.002890116126499989,
-    "stderr": 4.291837330051784e-06
+    "stderr": 4.089202342818601e-06
   },
-  "shell_minus_zero_z_score_from_chunk_scatter": 129.6442275547381,
+  "shell_minus_zero_z_score_from_chunk_scatter": 137.39835521329425,
   "shell_summary": {
-    "count": 32,
+    "count": 34,
     "max": 0.12551651195700791,
-    "mean": 0.1253154112976151,
+    "mean": 0.12531487722517828,
     "min": 0.12515980073473093,
-    "stderr": 1.5365252619007716e-05
+    "stderr": 1.4484869547121086e-05
   },
   "stieltjes_theorem": "For C(x)=int dmu(s)/(x+s) with dmu(s)>=0 and x=q_hat^2>=0, C(x2)-C(x1)=-(x2-x1) int dmu(s)/((x2+s)(x1+s)) <= 0 for x2>x1. A raw scalar-source proxy that increases from the zero mode to a higher shell is therefore not the strict unsubtracted Stieltjes two-point object needed for scalar-LSZ moment authority.",
   "strict_non_claims": [
@@ -1267,10 +1341,10 @@
     "12x24"
   ],
   "zero_mode_summary": {
-    "count": 32,
+    "count": 34,
     "max": 0.12259617590647398,
-    "mean": 0.12236424770599257,
+    "mean": 0.1223644698786968,
     "min": 0.12222385208014586,
-    "stderr": 1.6795489835990187e-05
+    "stderr": 1.5852276874282202e-05
   }
 }

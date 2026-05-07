@@ -1640,3 +1640,10 @@ actual route order unchanged:
 
 Do not spend another block on formal GEVP algebra alone unless a fresh
 production or identity artifact appears.
+
+2026-05-07 update: two-source taste-radial chunks033-034 are now packaged,
+raising the partial row packet to `ready=34/63`.  This improves finite-row
+statistics but does not change the clean closure ordering.  Chunk035 is active
+run-control only.  Continue packaging completed chunks as they land, but do
+not promote active jobs, finite `C_sx/C_xx` rows, first-shell Schur/Stieltjes
+diagnostics, or partial packets into proof authority.

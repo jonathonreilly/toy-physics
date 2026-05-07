@@ -968,3 +968,15 @@ Additional forbidden load-bearing assumptions:
 Allowed use: keep the GEVP contract as the future acceptance target for
 production same-surface `C_ij(t)` rows after the canonical `O_H` or physical
 neutral/W/Z identity premise is independently certified.
+
+2026-05-07 two-source taste-radial chunks033-034 package:
+
+Chunks001-034 now supply finite same-surface `C_ss/C_sx/C_xx` row support
+through the taste-radial chart.  This is not permission to read `x` as
+canonical `H`, not permission to alias `C_sx/C_xx` as canonical
+`C_sH/C_HH`, and not permission to treat first-shell Schur/Stieltjes
+diagnostics as scalar-LSZ authority.  The same forbidden imports remain
+forbidden: `H_unit`, `yt_ward_identity`, observed top or `y_t`, `alpha_LM`,
+plaquette/`u0`, reduced pilots as production evidence, and fiat
+`c2 = 1`, `Z_match = 1`, or `kappa_s = 1`.  Chunk035 is active run-control
+only until completed, checkpointed, and packaged.
