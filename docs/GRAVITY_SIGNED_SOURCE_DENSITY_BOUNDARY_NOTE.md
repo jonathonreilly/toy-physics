@@ -25,8 +25,12 @@ next possible route was the source primitive:
 
 The relevant retained inputs are:
 
-- [`GRAVITY_CLEAN_DERIVATION_NOTE.md`](GRAVITY_CLEAN_DERIVATION_NOTE.md):
-  the weak-field Poisson source is `rho = |psi|^2`.
+- [`STAGGERED_FERMION_CARD_2026-04-11.md`](STAGGERED_FERMION_CARD_2026-04-11.md):
+  the Born / mass-density identification `rho = |psi|^2` (used as the
+  unsigned baseline source candidate in this note's gate table). This
+  replaces a prior citation of `GRAVITY_CLEAN_DERIVATION_NOTE.md` which
+  itself consumes this same identification — the prior citation was a
+  misattribution that created a length-2 citation cycle in the graph.
 - [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md)
   and [`STAGGERED_FERMION_CARD_2026-04-11.md`](STAGGERED_FERMION_CARD_2026-04-11.md):
   the retained scalar response channel is

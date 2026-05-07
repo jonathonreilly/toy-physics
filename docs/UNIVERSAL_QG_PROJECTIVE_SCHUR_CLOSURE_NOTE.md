@@ -138,5 +138,18 @@ discrete net.
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [universal_gr_positive_background_local_closure_note](UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
-- [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
-- [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+
+<!--
+Cycle-break (2026-05-06): the back-edges to
+`UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md` and
+`UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md` were removed from this
+section because both of those notes already cite this closure note as a
+forward authority. Retaining the bookkeeping back-link as a Markdown
+citation produced cycle-0001 and cycle-0002 in the citation graph
+(`docs/audit/data/cycle_inventory.json`). The dependency relationship is
+preserved as plain prose / file paths so that the audit pipeline sees
+only the natural authority direction.
+
+File pointers for navigation: `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`,
+`UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`.
+-->

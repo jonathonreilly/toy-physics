@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 234 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 805 |
+| unaudited | 822 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 447 |
+| ~~audited_conditional~~ | 441 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,38 +39,37 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 447 |
+| `audited_conditional` | 441 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 854 |
+| `unaudited` | 871 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 647 |
+| `bounded_theorem` | 657 |
 | `decoration` | 10 |
 | `meta` | 56 |
-| `no_go` | 189 |
+| `no_go` | 190 |
 | `open_gate` | 109 |
-| `positive_theorem` | 787 |
-| `unset` | 2 |
+| `positive_theorem` | 789 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 959 |
-| `high` | 26 |
-| `medium` | 174 |
-| `leaf` | 641 |
+| `critical` | 922 |
+| `high` | 36 |
+| `medium` | 211 |
+| `leaf` | 642 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 271
+- **Citation cycles detected:** 250
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1391
-- runners with (C) first-principles compute hits: 684
-- runners with (D) external comparator hits: 345
+- runners classified: 1399
+- runners with (C) first-principles compute hits: 692
+- runners with (D) external comparator hits: 348
 - decoration candidates (no C, no D): 120
 
 ## Top 25 by load-bearing score (topology only)
@@ -79,31 +78,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 553 | 37.11 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 628 | 35.30 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 567 | 33.65 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 554 | 32.62 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 411 | 36.69 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 640 | 35.32 | `audited_clean` | **retained_bounded** |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 575 | 33.67 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 384 | 32.09 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 364 | 31.51 | `unaudited` | unaudited |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 364 | 30.51 | `unaudited` | unaudited |
-| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 618 | 29.27 | `audited_clean` | **retained_bounded** |
+| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 630 | 29.30 | `audited_clean` | **retained_bounded** |
 | 8 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 301 | 29.24 | `unaudited` | unaudited |
-| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 392 | 26.62 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `minimal_axioms_2026-05-03` | meta | critical | 640 | 25.82 | `unaudited` | meta |
-| 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 630 | 25.80 | `audited_clean` | open_gate |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 531 | 25.55 | `unaudited` | unaudited |
+| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 397 | 26.64 | `unaudited` | unaudited |
+| 10 | `minimal_axioms_2026-05-03` | meta | critical | 651 | 26.35 | `unaudited` | meta |
+| 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 641 | 25.83 | `audited_clean` | open_gate |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 539 | 25.58 | `unaudited` | unaudited |
 | 13 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 364 | 25.51 | `unaudited` | unaudited |
 | 14 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 364 | 24.51 | `unaudited` | unaudited |
-| 15 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 317 | 24.31 | `unaudited` | unaudited |
-| 16 | `three_generation_structure_note` | bounded_theorem | critical | 421 | 24.22 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `left_handed_charge_matching_note` | bounded_theorem | critical | 442 | 23.79 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 425 | 23.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 540 | 22.58 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 364 | 22.51 | `unaudited` | unaudited |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 577 | 22.18 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 322 | 24.34 | `unaudited` | unaudited |
+| 16 | `three_generation_structure_note` | bounded_theorem | critical | 424 | 24.23 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `left_handed_charge_matching_note` | bounded_theorem | critical | 445 | 23.80 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 428 | 23.75 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 364 | 22.51 | `unaudited` | unaudited |
+| 20 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 363 | 22.01 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 414 | 21.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 364 | 21.51 | `unaudited` | unaudited |
-| 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 322 | 21.34 | `audited_clean` | **retained** |
+| 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 327 | 21.36 | `audited_clean` | **retained** |
 | 24 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 289 | 21.18 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 397 | 21.14 | `unaudited` | unaudited |
+| 25 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 400 | 21.15 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -840,7 +839,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | A | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -889,7 +887,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `su3_adjoint_casimir_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -911,7 +908,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
-| `universal_gr_discrete_global_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -920,7 +916,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -936,12 +931,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_higher_order_corrections_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_bridge_operator_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
-| `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `yt_exact_hessian_selector_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_exact_schur_normal_form_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `yt_explicit_systematic_budget_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -9913,19 +9906,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`
 - **auditor confidence:** high
 
-### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
-
-- **Note:** [`PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md`](../../docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded V=1 single-plaquette SU(3) Wilson-integral Picard-Fuchs ODE and beta=6 logarithmic-derivative value, excluding any thermodynamic-limit or bridge promotion.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-2026-05-06-plaquette-v1-picard-fuchs`  (codex-current; independence=weak)
-- **load-bearing step:** For the single-plaquette SU(3) Wilson integral J(beta), the third-order Picard-Fuchs equation holds and its analytic Frobenius solution gives the physical V=1 plaquette integral.  _(class `A`)_
-- **chain closes:** False — The restricted packet gives a proposed ODE, a truncated Taylor residual check, sampled ODE-vs-Weyl numerical agreement, and the beta=6 value. It does not provide an exact derivation that this differential operator annihilates the full SU(3) integral rather than the checked finite truncation and sample points.
-- **rationale:** Issue: the exact Picard-Fuchs equation for the full single-plaquette SU(3) integral is asserted, but the runner verifies only a finite Taylor truncation plus sampled numerical agreement with direct Weyl integration. Why this blocks: finite-order residual cancellation and pointwise numerical agreement strongly support the candidate ODE and beta=6 value, but they do not constitute an exact proof that the ODE annihilates J(beta) globally or that the analytic Frobenius branch is the full physical integral. Repair target: add an exact holonomic/creative-telescoping or Bessel-determinant derivation/certificate for the differential operator, with the Frobenius branch identification, or narrow the claim to a finite computational certificate. Claim boundary until fixed: the V=1 beta=6 value and proposed ODE are well-supported by the current runner, but the exact Picard-Fuchs theorem is not retained-grade yet.
-- **auditor confidence:** high
-
 ### `pmns_active_four_real_source_from_transport_note`
 
 - **Note:** [`PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`](../../docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
@@ -12266,21 +12246,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
 - **auditor confidence:** high
 
-### `su3_adjoint_casimir_theorem_note_2026-05-02`
-
-- **Note:** [`SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Algebraic SU(3) adjoint quadratic Casimir equals 3 in Gell-Mann normalization Tr[T^a T^b]=(1/2)δ^{ab}, conditional on the cited carrier being the intended color SU(3).
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-su3_adjoint_casimir_theo-287`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The step Σ_{c,d} f^{acd} f^{bcd} = N δ^{ab}, followed by the trace/Schur argument, gives C_2(adj)=N=3.  _(class `A`)_
-- **chain closes:** False — The SU(3) algebraic Casimir calculation closes, but the cited authority explicitly defers the bridge identifying the 3D symmetric-base SU(3) with physical SM color SU(3)_c. The source note uses physical color/gluon wording that needs that missing bridge.
-- **rationale:** The runner genuinely computes the Gell-Mann structure constants, adjoint generators, closure, trace normalization, and Casimir value, and all checks are algebraic class A rather than external or fitted checks. However, the only cited authority is retained_bounded with explicit language that the physical-color identification is deferred to a separate bridge theorem. Therefore the algebraic SU(3) result is valid within the restricted carrier, but the claim as phrased for SU(3)_c/gluon color charge does not close from the provided packet alone.
-- **open / conditional deps cited:**
-  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
-- **auditor confidence:** high
-
 ### `su3_casimir_fundamental_theorem_note_2026-05-02`
 
 - **Note:** [`SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md)
@@ -13268,19 +13233,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note is correctly framed as bounded: it does not claim a canonical complement section, and its strongest statement is the negative orbit-canonical obstruction. The runner passes the relevant algebraic invariance/orbit checks, but five text-presence checks use a hardcoded external ROOT and were treated only as ancillary input verification, not as authority over this checkout. No hidden physical comparator, tuned numerical match, or definition-as-derivation is load-bearing.
 - **auditor confidence:** medium
 
-### `universal_gr_discrete_global_closure_note`
-
-- **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audit of the claimed exact global Lorentzian Einstein/Regge stationary action family on the discrete PL S^3 x R route from the note text alone.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-234846-c679ece8-universal_gr_discrete_gl-015`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Congruence covariance gives exact overlap compatibility, so compatible local stationary representatives patch to a unique global stationary section on finite atlases of PL S^3 x R.  _(class `A`)_
-- **chain closes:** False — The restricted packet provides no derivation or cited retained inputs establishing H_D, Lambda_R, congruence covariance, overlap compatibility, or the finite-atlas patching theorem. The missing step is an explicit bridge proving that the local stationary problems and overlap data glue uniquely into a global stationary section.
-- **rationale:** The note asserts the global closure stack but cites no authorities and provides no runner or proof. Its conclusion depends on imported structural premises: the exact slice generator, tensor family, congruence covariance, and a global patching theorem for stationary representatives. Those are not closed inside the restricted packet, so the positive theorem cannot be audited cleanly from the supplied inputs.
-- **auditor confidence:** high
-
 ### `universal_gr_invariant_frame_obstruction_note`
 
 - **Note:** [`UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md)
@@ -13440,23 +13392,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_projective_schur_closure_note`
-
-- **Note:** [`UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Finite-dimensional Schur-complement coarse-graining closure for the claimed UV-finite discrete Gaussian partition family.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-universal_qg_projective_-096`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Because the positive-background route is symmetric positive definite, C is invertible, and integrating out the fine field gives the Schur-complement effective action K_eff = A - B C^-1 B^T and J_eff = eta - B C^-1 xi.  _(class `A`)_
-- **chain closes:** False — The Schur-complement algebra is standard, but the restricted packet does not close the needed convergent Gaussian premise. The cited positive-background authority explicitly corrects K_GR(D) to negative-definite, while the UV-finite partition authority remains unaudited and still assumes positive-definiteness.
-- **rationale:** The load-bearing Schur-complement step is a genuine algebraic identity conditional on an invertible/definite Gaussian block structure. However, all cited authorities are marked unaudited/support rather than retained-grade, and one cited authority contradicts the source note's positive-definite premise by stating K_GR(D) is negative-definite. No runner source or output is available to repair that gap inside the packet.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
 - **auditor confidence:** high
 
@@ -14076,22 +14011,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** The code performs a real numerical scan, but the scan objective is explicitly the imported target y_t(v)=0.9176 and the best rows are selected by minimizing deviation from that target. The result therefore establishes a tuned numerical match within a chosen profile class, not a first-principles computation from the stated axiom. The note itself acknowledges that deriving why the exact interacting lattice bridge belongs to this UV-localized class remains open.
 - **auditor confidence:** high
 
-### `yt_ew_color_projection_theorem`
-
-- **Note:** [`YT_EW_COLOR_PROJECTION_THEOREM.md`](../../docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the conditional EW color-projection normalization: exact F_adj = 8/9 is supported, while the physical EW readout remains parameterized by kappa_EW.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-232946-c1a20bdf-yt_ew_color_projection_t-002`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The retained packet only supports K_EW(kappa_EW) = 1 / (8/9 + kappa_EW/9), with K_EW = 9/8 only after adding the connected-trace premise kappa_EW = 0.  _(class `A`)_
-- **chain closes:** False — The algebraic conditional family closes, but the stronger package-level 9/8 correction does not. The missing step is a retained derivation or exact computation fixing the disconnected-current readout coefficient kappa_EW = 0.
-- **rationale:** The cited Fierz authority supports the exact channel fraction F_adj = 8/9, and the no-go authority explicitly states that this does not determine the physical EW readout functional. The source note correctly exposes the remaining kappa_EW premise rather than deriving it. The timed-out Monte Carlo is not needed to judge the conditional algebra, and its source is only a numerical support check for R_conn, not a derivation of kappa_EW. Because the package-level 9/8 specialization depends on the open matching coefficient, the chain is conditional rather than clean.
-- **open / conditional deps cited:**
-  - `EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`
-  - `EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`
-- **auditor confidence:** high
-
 ### `yt_ew_coupling_bridge_note`
 
 - **Note:** [`YT_EW_COUPLING_BRIDGE_NOTE.md`](../../docs/YT_EW_COUPLING_BRIDGE_NOTE.md)
@@ -14186,24 +14105,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** The runner performs real numerical checks over a constructed perturbation class rather than merely printing constants, and its reported inequalities pass. However, the claim imports the exact Schur coarse-operator setup and package-scale remainder budgets from a cited authority marked unaudited, so the chain cannot close under the restricted packet. The finite sampled class also does not by itself establish the stated universal quantifier over every admissible operator without an additional covering or analytic argument.
 - **open / conditional deps cited:**
   - `YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md`
-- **auditor confidence:** high
-
-### `yt_explicit_systematic_budget_note`
-
-- **Note:** [`YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`](../../docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the note's claim that the Schur-bridge cross-check path has the stated residual budget and propagated top-mass budget, using the provided cited authorities and runner source/output.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-yt_explicit_systematic_b-083`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The bridge-path endpoint budget is obtained by adding the named exact-bridge tails, giving 1.2147511% conservative and 0.75500635% support-tight around y_t(v)=0.9176.  _(class `B`)_
-- **chain closes:** False — The arithmetic budget closes locally, but the scientific chain depends on cited authorities that are conditional, numerical-match, or unaudited. The packet does not close the higher-order tail, nonlocal tail, structural-class closure, or zero-import authority as retained-grade inputs.
-- **rationale:** The runner performs only hard-coded constant checks and algebraic additions/multiplications; it does not derive the bridge tails or structural closure from first principles. The note's conclusion depends on upstream support notes, including audited_conditional, audited_numerical_match, and unaudited authorities. Under the rubric, retained status cannot propagate through those open dependencies even though the local arithmetic matches the stated numbers.
-- **open / conditional deps cited:**
-  - `YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`
-  - `YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md`
-  - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
-  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_interacting_bridge_locality_note`

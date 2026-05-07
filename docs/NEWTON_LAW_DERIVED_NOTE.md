@@ -115,5 +115,24 @@ This note synthesizes those results into a single derivation chain.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [gravity_clean_derivation_note](GRAVITY_CLEAN_DERIVATION_NOTE.md)
 - [gravity_full_self_consistency_note](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+  — supplies the `L^{-1} = G_0` self-consistency closure that justifies
+  treating `(-Delta_lat)` as THE field operator (Theorem assumption 2:
+  the lattice Poisson equation is the equation of motion). Correct
+  upstream.
+
+### Direction-corrected cycle break (2026-05-05)
+
+The earlier link to `gravity_clean_derivation_note` is removed because
+gravity_clean is a **parallel presentation** of the same Newton-from-Z^3
+derivation, not an upstream supplier. Both this note and gravity_clean
+independently consume the Maradudin et al. 1971 lattice Green's function
+asymptotic theorem (an external math theorem, not an internal repo dep).
+Neither note derives the other's content; they are alternate routes to
+`F = G_N M_1 M_2 / r^2` from `Cl(3) on Z^3`.
+
+The earlier back-link from this note to gravity_clean was added by a
+prior audit-bookkeeping pass and created a length-2 citation cycle
+`newton_law ↔ gravity_clean` in the graph. Removing the back-link breaks
+the cycle without losing science content (the inline mathematical
+justification — Maradudin's theorem — remains in the Theorem section).

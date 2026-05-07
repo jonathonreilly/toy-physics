@@ -522,6 +522,8 @@ linked authority is itself audit-clean, this note remains
 `audited_conditional` even with the registered edges; the wiring is the
 prerequisite, not the unlock.
 
+### Upstream authorities (citation graph deps)
+
 - [SELF_CONSISTENCY_FORCES_POISSON_NOTE.md](SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)
   — supplies the `L^{-1} = G_0` self-consistency closure forcing the
   field operator to be the negative graph Laplacian (Step 3 of the
@@ -533,17 +535,43 @@ prerequisite, not the unlock.
 - [GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
   — registers the broader self-consistency surface and the role of
   `L^{-1} = G_0` within it.
-- [GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md](GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md)
-  — registers the Born / mass-density source-identification
-  `rho = |psi|^2` and its sign-orientation boundary, supplying the
-  Step 4 input that the propagator density acts as the gravitational
-  source.
-- [BROAD_GRAVITY_DERIVATION_NOTE.md](BROAD_GRAVITY_DERIVATION_NOTE.md)
-  — registers the weak-field action / test-mass response
-  `S = L(1 - phi)` referenced by Step 5 of the derivation chain.
-- [NEWTON_LAW_DERIVED_NOTE.md](NEWTON_LAW_DERIVED_NOTE.md)
-  — registers the Z^3 lattice Green-function asymptotic
-  `G_0(r) ~ 1/r` and the resulting inverse-square force law (Step 8).
+- [STAGGERED_FERMION_CARD_2026-04-11.md](STAGGERED_FERMION_CARD_2026-04-11.md)
+  — establishes the Born / mass-density identification `rho = |psi|^2`
+  used at Step 4. (Replaces a prior citation of
+  `GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md`, which is a parallel
+  audit of source-density forms rather than the upstream establishing
+  the Born identification — see "Direction-corrected cycle break"
+  below.)
+
+### External mathematical theorems (no internal citation graph edge)
+
+- **Maradudin et al. 1971** — the lattice Laplacian Green's function on
+  `Z^3` converges to `1/(4 pi r)` at large `r`. This is a result of
+  pure lattice potential theory, used at Step 5 (continuum form) and
+  Step 8 (force-law derivation). It is an external math theorem, not
+  an internal repo dep.
+
+### Direction-corrected cycle break (2026-05-05)
+
+Three citation edges previously listed here registered the wrong
+direction in the citation graph. They have been removed in this
+revision because each downstream note actually CONSUMES this note
+rather than supplying input to it:
+
+- `BROAD_GRAVITY_DERIVATION_NOTE.md` — broad_gravity's Step 1 and
+  Step 5 explicitly cite this note as their authority ("established in
+  GRAVITY_CLEAN_DERIVATION_NOTE.md Step 1", line 27-29 of broad_gravity;
+  "Established in GRAVITY_CLEAN_DERIVATION_NOTE.md Step 5", line 59).
+  broad_gravity is downstream, not upstream.
+- `NEWTON_LAW_DERIVED_NOTE.md` — newton_law is a parallel, more compact
+  presentation of the Newton-from-Z^3 derivation. It cites Maradudin
+  directly for the Green's function asymptotic. There is no internal
+  upstream-downstream relationship between gravity_clean and newton_law
+  — they are alternate routes to the same conclusion.
+- `GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md` — gravity_signed_source
+  is an audit of source-density forms (rho_B, rho_s, rho_Q, rho_g) that
+  consumes `rho = |psi|^2` from STAGGERED_FERMION_CARD upstream. It is
+  not the upstream establishing the Born identification.
 
 These dependency edges are additive. The note does not narrow its claim
 or change its hypotheses; the citations only make the four upstream

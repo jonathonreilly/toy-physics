@@ -144,7 +144,7 @@ def main() -> int:
         and "lorentzian" in lor_text.lower()
         and "global stationary section" in glob_text.lower()
         and "pl s^3 x r" in lift_text.lower(),
-        "the capstone theorem is built from already-derived universal route steps",
+        "the structural-assembly statement is built from already-derived universal route steps",
     )
     record(
         "the Lorentzian glued operator is nondegenerate on the discrete 3+1 route",
@@ -174,11 +174,14 @@ def main() -> int:
     print(f"overlap action mismatch     = {action_err:.3e}")
     print(f"overlap stationary mismatch = {stationary_err:.3e}")
 
-    print("\nVerdict:")
+    print("\nVerdict (scope-bounded):")
     print(
-        "The direct-universal route is closed as an exact global Lorentzian "
-        "Einstein/Regge stationary action family on the discrete 3+1 spacetime "
-        "PL S^3 x R."
+        "On the explicit chart change S and Lorentzian background D0 above, "
+        "the direct-universal route assembles into a runner-verified "
+        "single-overlap structural-assembly statement for an exact global "
+        "Lorentzian Einstein/Regge stationary action family on the discrete "
+        "3+1 spacetime PL S^3 x R, conditional on the cited support-tier "
+        "closure-stack notes. See the note's audit boundary for scope."
     )
 
     print("\n" + "=" * 78)

@@ -119,4 +119,13 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [yt_bridge_higher_order_corrections_note](YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
 - [yt_bridge_nonlocal_corrections_note](YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
 - [yt_exact_schur_normal_form_uniqueness_note](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md)
-- [yt_zero_import_authority_note](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+
+<!--
+Cycle-break (2026-05-06): the back-edge to
+`YT_ZERO_IMPORT_AUTHORITY_NOTE.md` was removed from this section because
+the authority note already cites this budget note as a forward authority
+(see its sibling list under "Use this note together with"). Retaining the
+bookkeeping back-link as a Markdown citation produced cycle-0003 in the
+citation graph (`docs/audit/data/cycle_inventory.json`). File pointer:
+`YT_ZERO_IMPORT_AUTHORITY_NOTE.md`.
+-->

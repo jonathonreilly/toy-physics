@@ -881,6 +881,98 @@
       "to": "lattice_3d_l2_tail_stats_note"
     },
     {
+      "from": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+      "to": "lattice_physical_matching_cluster_obstruction_note_2026-05-02"
+    },
+    {
+      "from": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+      "to": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+      "to": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+      "to": "bridge_gap_hk_time_derivation_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_cube_perron_note_2026-05-06",
+      "to": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_cube_perron_note_2026-05-06",
+      "to": "su3_cube_full_rho_perron_2026-05-04"
+    },
+    {
+      "from": "bridge_gap_hk_cube_perron_note_2026-05-06",
+      "to": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_cube_perron_note_2026-05-06",
+      "to": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_cube_perron_note_2026-05-06",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+      "to": "bridge_gap_hk_time_derivation_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+      "to": "su3_cube_full_rho_perron_2026-05-04"
+    },
+    {
+      "from": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+      "to": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06"
+    },
+    {
+      "from": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "bridge_gap_hk_time_derivation_note_2026-05-06",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "bridge_gap_hk_time_derivation_note_2026-05-06",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "bridge_gap_hk_time_derivation_note_2026-05-06",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "bridge_gap_hk_time_derivation_note_2026-05-06",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "bridge_gap_hk_time_derivation_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+    },
+    {
       "from": "broad_gravity_derivation_note",
       "to": "gravity_clean_derivation_note"
     },
@@ -4073,6 +4165,94 @@
       "to": "observable_principle_from_axiom_note"
     },
     {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "dm_su3_gauge_loop_obstruction_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "cl3_taste_generation_theorem"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06"
+    },
+    {
+      "from": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "to": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "dm_su3_gauge_loop_obstruction_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "cl3_taste_generation_theorem"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29"
+    },
+    {
+      "from": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+      "to": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06"
+    },
+    {
+      "from": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+      "to": "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06"
+    },
+    {
+      "from": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+      "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+      "to": "cl3_taste_generation_theorem"
+    },
+    {
       "from": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
       "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
     },
@@ -6954,15 +7134,7 @@
     },
     {
       "from": "gravity_clean_derivation_note",
-      "to": "gravity_signed_source_density_boundary_note"
-    },
-    {
-      "from": "gravity_clean_derivation_note",
-      "to": "broad_gravity_derivation_note"
-    },
-    {
-      "from": "gravity_clean_derivation_note",
-      "to": "newton_law_derived_note"
+      "to": "staggered_fermion_card_2026-04-11"
     },
     {
       "from": "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
@@ -7078,15 +7250,11 @@
     },
     {
       "from": "gravity_signed_source_density_boundary_note",
-      "to": "gravity_clean_derivation_note"
+      "to": "staggered_fermion_card_2026-04-11"
     },
     {
       "from": "gravity_signed_source_density_boundary_note",
       "to": "gravity_sign_audit_2026-04-10"
-    },
-    {
-      "from": "gravity_signed_source_density_boundary_note",
-      "to": "staggered_fermion_card_2026-04-11"
     },
     {
       "from": "gravity_signed_source_density_boundary_note",
@@ -7445,10 +7613,6 @@
       "to": "hierarchy_matsubara_decomposition_note"
     },
     {
-      "from": "higgs_from_lattice_note",
-      "to": "higgs_mass_derived_note"
-    },
-    {
       "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "to": "graph_first_su3_integration_note"
     },
@@ -7527,10 +7691,6 @@
     {
       "from": "higgs_mass_retention_analysis_note_2026-04-18",
       "to": "plaquette_self_consistency_note"
-    },
-    {
-      "from": "higgs_mechanism_note",
-      "to": "higgs_mass_derived_note"
     },
     {
       "from": "higgs_vacuum_explicit_systematic_note",
@@ -10718,10 +10878,6 @@
     },
     {
       "from": "newton_law_derived_note",
-      "to": "gravity_clean_derivation_note"
-    },
-    {
-      "from": "newton_law_derived_note",
       "to": "gravity_full_self_consistency_note"
     },
     {
@@ -11229,8 +11385,40 @@
       "to": "scalar_3plus1_temporal_ratio_note"
     },
     {
+      "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+    },
+    {
       "from": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
       "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+    },
+    {
+      "from": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
+      "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
     },
     {
       "from": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
@@ -13346,15 +13534,11 @@
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
-      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-      "to": "one_generation_matter_closure_note"
-    },
-    {
-      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+      "to": "anomaly_forces_time_theorem"
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -13363,6 +13547,10 @@
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+      "to": "one_generation_matter_closure_note"
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -14109,6 +14297,22 @@
       "to": "universal_gr_discrete_global_closure_note"
     },
     {
+      "from": "universal_gr_discrete_global_closure_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
+      "from": "universal_gr_discrete_global_closure_note",
+      "to": "universal_gr_positive_background_local_closure_note"
+    },
+    {
+      "from": "universal_gr_discrete_global_closure_note",
+      "to": "universal_gr_lorentzian_signature_extension_note"
+    },
+    {
+      "from": "universal_gr_discrete_global_closure_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
       "from": "universal_gr_lorentzian_signature_extension_note",
       "to": "universal_gr_positive_background_local_closure_note"
     },
@@ -14483,14 +14687,6 @@
     {
       "from": "universal_qg_projective_schur_closure_note",
       "to": "universal_gr_positive_background_local_closure_note"
-    },
-    {
-      "from": "universal_qg_projective_schur_closure_note",
-      "to": "universal_qg_uv_finite_partition_note"
-    },
-    {
-      "from": "universal_qg_projective_schur_closure_note",
-      "to": "universal_qg_canonical_refinement_net_note"
     },
     {
       "from": "universal_qg_smooth_gravitational_global_atlas_note",
@@ -15535,10 +15731,6 @@
     {
       "from": "yt_explicit_systematic_budget_note",
       "to": "yt_exact_schur_normal_form_uniqueness_note"
-    },
-    {
-      "from": "yt_explicit_systematic_budget_note",
-      "to": "yt_zero_import_authority_note"
     },
     {
       "from": "yt_flagship_boundary_note",
@@ -27980,7 +28172,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "87466d859defbcf9c11747663d6461252d02df260638bff34ff5a70190e1f625",
+      "note_hash": "8d4cd101507aef395dbc185de665abf7144a38412c2f8797432d52392230b8b9",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -29231,6 +29423,89 @@
       "runner_path": null,
       "title": "Breakthrough Direction Memo"
     },
+    "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06": {
+      "claim_id": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "named-obstruction no-go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "lattice_physical_matching_cluster_obstruction_note_2026-05-02",
+        "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+        "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+        "bridge_gap_hk_time_derivation_note_2026-05-06"
+      ],
+      "note_hash": "f59a51779e59f9ed2b0278a5ac738d1f1413a1454db362ce5ee3ca15b4085157",
+      "path": "docs/BRIDGE_GAP_ACTION_FORM_UNIQUENESS_NO_GO_NOTE_2026-05-06.md",
+      "runner_path": null,
+      "title": "Bridge Gap \u2014 Action-Form Uniqueness No-Go (Block 04)"
+    },
+    "bridge_gap_hk_cube_perron_note_2026-05-06": {
+      "claim_id": "bridge_gap_hk_cube_perron_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+        "su3_cube_full_rho_perron_2026-05-04",
+        "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+        "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+        "su3_casimir_fundamental_theorem_note_2026-05-02"
+      ],
+      "note_hash": "0ba44bdaa6279ca68194fd1b3f33a583fa62b4a518550c8731e72d04a34e5c17",
+      "path": "docs/BRIDGE_GAP_HK_CUBE_PERRON_NOTE_2026-05-06.md",
+      "runner_path": "scripts/probe_hk_cube_perron_l2_2026_05_06.py",
+      "title": "Bridge Gap \u2014 HK Cube Perron L_s=2 (Block 06)"
+    },
+    "bridge_gap_hk_plaquette_closed_form_note_2026-05-06": {
+      "claim_id": "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "bridge_gap_hk_time_derivation_note_2026-05-06",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+        "g_bare_structural_normalization_theorem_note_2026-04-18"
+      ],
+      "note_hash": "7a8a3993a7ba10057b316fae1ec3d01d248574580232b5053043fe7fb3ec92fa",
+      "path": "docs/BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/probe_hk_plaquette_closed_form.py",
+      "title": "Bridge Gap \u2014 Single-Plaquette Heat-Kernel Closed Form (Block 02)"
+    },
+    "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06": {
+      "claim_id": "bridge_gap_hk_thermodynamic_stretch_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch attempt + named obstruction",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "su3_cube_full_rho_perron_2026-05-04",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "bridge_gap_hk_plaquette_closed_form_note_2026-05-06",
+        "su3_casimir_fundamental_theorem_note_2026-05-02"
+      ],
+      "note_hash": "9a111f3572bf9ed28d37eda1ae6857f04a385eac1a41da0e46bd3ef62e49e50c",
+      "path": "docs/BRIDGE_GAP_HK_THERMODYNAMIC_STRETCH_NOTE_2026-05-06.md",
+      "runner_path": null,
+      "title": "Bridge Gap \u2014 Heat-Kernel Thermodynamic \u27e8P\u27e9(6) Stretch Attempt (Block 03)"
+    },
+    "bridge_gap_hk_time_derivation_note_2026-05-06": {
+      "claim_id": "bridge_gap_hk_time_derivation_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+        "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+      ],
+      "note_hash": "20798c609c8d65c90f180a4f6afc16351828196c9a5160025b8f1e4750100856",
+      "path": "docs/BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md",
+      "runner_path": "scripts/probe_hk_time_derivation.py",
+      "title": "Bridge Gap \u2014 Heat-Kernel Time from Canonical Cl(3) Tr-Form (Block 01)"
+    },
     "broad_gravity_derivation_note": {
       "claim_id": "broad_gravity_derivation_note",
       "claim_type_author_hint": null,
@@ -29240,7 +29515,7 @@
         "gravity_clean_derivation_note",
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "366f8d54f0af39329a5709df3ed96ba476393d42c5f21f77b207c6f706e9638c",
+      "note_hash": "7ceb196770437f8a9abf6f65aa3103f8ad0bfe344bad4689e7f74a5938fcb1ee",
       "path": "docs/BROAD_GRAVITY_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Broad Gravity Bundle: Per-Signature Derivation Chains"
@@ -32321,6 +32596,64 @@
       "path": "docs/DM_ETA_G1_CL3_ADJ3_EMBEDDING_ALGEBRAIC_SUPPORT_THEOREM_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_dm_eta_g1_cl3_adj3_embedding_2026_05_06.py",
       "title": "DM-eta G1 Cl(3)/SU(3) Embedding Algebraic Support Theorem (V1)"
+    },
+    "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06": {
+      "claim_id": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+        "dm_su3_gauge_loop_obstruction_note_2026-04-25",
+        "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
+        "cl3_color_automorphism_theorem",
+        "cl3_taste_generation_theorem",
+        "su3_adjoint_casimir_theorem_note_2026-05-02",
+        "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+        "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "185868bb4c2614aedbbfa122647dc4541eef88a75a3181322d5788529bc618fe",
+      "path": "docs/DM_ETA_G1_COLEMAN_WEINBERG_BOUNDED_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_dm_eta_g1_coleman_weinberg_2026_05_06.py",
+      "title": "DM-eta G1 Wilson-Link Coleman-Weinberg Bridge Theorem (V1)"
+    },
+    "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06": {
+      "claim_id": "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
+        "dm_su3_gauge_loop_obstruction_note_2026-04-25",
+        "cl3_color_automorphism_theorem",
+        "cl3_taste_generation_theorem",
+        "su3_adjoint_casimir_theorem_note_2026-05-02",
+        "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
+        "higgs_mass_from_axiom_note"
+      ],
+      "note_hash": "c711e82dd586351ea01f18377c58ac991b77d4a3f9a929137d9b036f3c8303a8",
+      "path": "docs/DM_ETA_G1_DYNAMICAL_RESIDUAL_OPERATOR_TRACE_SUPPORT_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_dm_eta_g1_dynamical_residual_2026_05_06.py",
+      "title": "DM-eta G1 Dynamical Residual: Operator-Trace Support Theorem (V1)"
+    },
+    "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06": {
+      "claim_id": "dm_eta_g1_operator_bridge_proof_theorem_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "dm_eta_g1_dynamical_residual_operator_trace_support_theorem_note_2026-05-06",
+        "dm_eta_g1_cl3_adj3_embedding_algebraic_support_theorem_note_2026-05-06",
+        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
+        "cl3_color_automorphism_theorem",
+        "cl3_taste_generation_theorem"
+      ],
+      "note_hash": "57295e7a77f861e9310fbf2a54f0cc73f2749ca45295b0bcfcede66bfc44f18e",
+      "path": "docs/DM_ETA_G1_OPERATOR_BRIDGE_PROOF_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_dm_eta_g1_bridge_proof_2026_05_06.py",
+      "title": "DM-eta G1 Operator-Level Adjoint-Channel Bridge Proof Theorem (V1)"
     },
     "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29": {
       "claim_id": "dm_eta_nsites_v_structural_support_lift_theorem_note_2026-04-29",
@@ -37449,11 +37782,9 @@
         "self_consistency_forces_poisson_note",
         "poisson_exhaustive_uniqueness_note",
         "gravity_full_self_consistency_note",
-        "gravity_signed_source_density_boundary_note",
-        "broad_gravity_derivation_note",
-        "newton_law_derived_note"
+        "staggered_fermion_card_2026-04-11"
       ],
-      "note_hash": "827753a7d1f5cf08a09122ff3eb9ca529611225654574efe4de6bff62ed68e15",
+      "note_hash": "9cb56948dd6885f8c17a2f2e01e3982698673edb9677f7f63041b10954abc717",
       "path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)"
@@ -37571,12 +37902,11 @@
       "claim_type_seed_hint": null,
       "deps": [
         "signed_gravity_chi_selector_theorem_or_nogo_note",
-        "gravity_clean_derivation_note",
-        "gravity_sign_audit_2026-04-10",
         "staggered_fermion_card_2026-04-11",
+        "gravity_sign_audit_2026-04-10",
         "planck_source_unit_normalization_support_theorem_note_2026-04-25"
       ],
-      "note_hash": "ec547626921d834f5aae53f94ad3c38c11ec5135ee61d8312cb9a6465fd71656",
+      "note_hash": "8781da95d91136343a43aa4931968df40fb83dc34ec7154b837e1c3197eb7d57",
       "path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_signed_gravity_source_variational_audit.py",
       "title": "Gravity Signed Source-Density Boundary Note"
@@ -38050,10 +38380,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "higgs_mass_derived_note"
-      ],
-      "note_hash": "263098d967b327549256fd05474ed798404897107fd360ebcc36eb2febe8fdad",
+      "deps": [],
+      "note_hash": "d1f73b65e8d37aa182f720ac73bf2784184b7092f2dadfae665ab05988009756",
       "path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
@@ -38155,10 +38483,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "higgs_mass_derived_note"
-      ],
-      "note_hash": "87be576ebf77446b500dce664c1c46d6f30e8669fe37d2b8cbac59c909919763",
+      "deps": [],
+      "note_hash": "257eff7c125c4c51b2a40dda438f965c7fb35ccce1272fe7c5d1723c1f1a5082",
       "path": "docs/HIGGS_MECHANISM_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs Mechanism Note"
@@ -43266,10 +43592,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "gravity_clean_derivation_note",
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "1deecdbfde5b2846dd8d9ada6b384c65105d259eca1786eefd0080af61d28078",
+      "note_hash": "03339005a461c1854ee4092120b36cdee03c579c2b5017e1465529670bfab918",
       "path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_distance_law_definitive.py",
       "title": "Newton's Law Derived from Cl(3) on Z^3"
@@ -44236,6 +44561,36 @@
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
       "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant"
     },
+    "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06": {
+      "claim_id": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+        "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+        "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
+        "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06"
+      ],
+      "note_hash": "9276acadc79421e73428a803491d30eb5d5a8e4caafe6bdafe06ca4a9fac492d",
+      "path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_BOUNDED_SYNTHESIS_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_su3_v1_picard_fuchs_minimality_extended_2026_05_06.py",
+      "title": "V=1 SU(3) Wilson Picard-Fuchs ODE Bounded Synthesis"
+    },
+    "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06": {
+      "claim_id": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+        "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+      ],
+      "note_hash": "5e8e67a016ec5fae3d60fb6c8e2ae013e81dcf12827d48c2f5b71b10b3f87959",
+      "path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_KOUTSCHAN_MINIMALITY_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_su3_v1_picard_fuchs_minimality_extended_2026_05_06.py",
+      "title": "Plaquette V=1 Picard-Fuchs ODE: Extended (Koutschan-style) Minimality Note"
+    },
     "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06": {
       "claim_id": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
       "claim_type_author_hint": "bounded_theorem",
@@ -44259,6 +44614,20 @@
       "path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py",
       "title": "Plaquette V=1 Picard-Fuchs ODE Note"
+    },
+    "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06": {
+      "claim_id": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+        "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+      ],
+      "note_hash": "858416af2a0032e8b68158b781540b72458ff72d8bef5e746ee6aa995b28deb9",
+      "path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_RANK_BOUND_CITATION_NOTE_2026-05-06.md",
+      "runner_path": null,
+      "title": "Plaquette V=1 Picard-Fuchs ODE: Rank-Bound Citation Note"
     },
     "pmns_active_four_real_source_from_transport_note": {
       "claim_id": "pmns_active_four_real_source_from_transport_note",
@@ -50653,19 +51022,19 @@
     "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "structural-uniqueness theorem (rational arithmetic on a finite anomaly system).",
+      "claim_type_seed_hint": null,
       "deps": [
-        "anomaly_forces_time_theorem",
-        "one_generation_matter_closure_note",
         "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem",
         "hypercharge_identification_note",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "one_generation_matter_closure_note",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "0c3173fe82e96691468c149212a0345483797b20cbb007b01a3e1540aed00ad4",
+      "note_hash": "780ff243db7bdf02a734b14a03d358ae259334616fa8366e119ce7d43c714450",
       "path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_sm_hypercharge_uniqueness.py",
       "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation"
@@ -51922,7 +52291,7 @@
         "z2_hw1_mass_matrix_parametrization_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "7a5f8393a75930e5bb64fa0b03378db1579913de7c2eb115fe964bc3fc7df724",
+      "note_hash": "5498284922c1f20156238c84498e9b686a77f9ec45043048885e42d56b7cc706",
       "path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem Note"
@@ -52259,13 +52628,18 @@
     },
     "universal_gr_discrete_global_closure_note": {
       "claim_id": "universal_gr_discrete_global_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "51fb6531f8553565be1f300cefa285c00c955c01c98cbbc5d3f72061d09c01bf",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "s3_anomaly_spacetime_lift_note",
+        "universal_gr_positive_background_local_closure_note",
+        "universal_gr_lorentzian_signature_extension_note",
+        "universal_gr_lorentzian_global_atlas_closure_note"
+      ],
+      "note_hash": "ce910faf7509b90cda917eaa886f66c5da1450e9f6b74f6de5c7e52d0c199222",
       "path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_discrete_global_closure.py",
       "title": "Universal GR Discrete Global Closure on `PL S^3 x R`"
     },
     "universal_gr_invariant_frame_obstruction_note": {
@@ -52704,11 +53078,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "universal_gr_positive_background_local_closure_note",
-        "universal_qg_uv_finite_partition_note",
-        "universal_qg_canonical_refinement_net_note"
+        "universal_gr_positive_background_local_closure_note"
       ],
-      "note_hash": "c9cd2bad7bca2867c9f60529c1e5469c04e9de6905776487eb64fb976f537477",
+      "note_hash": "999ceb31540c5fe0343319e10bff29099014e5239bac0567d2cc613324a3ea2c",
       "path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Projective Schur Closure Note"
@@ -54624,13 +54996,13 @@
     "yt_ew_color_projection_theorem": {
       "claim_id": "yt_ew_color_projection_theorem",
       "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded EW-normalization-lane support theorem.",
+      "claim_type_seed_hint": null,
       "deps": [
         "ew_current_fierz_channel_decomposition_note_2026-05-01",
         "ew_current_matching_rule_open_gate_note_2026-05-03"
       ],
-      "note_hash": "67b8ab12b7b6118e73a2ef121b4005f8dec792c865a70c4a63b6183c02d5a505",
+      "note_hash": "e3ecee12b787a29e8cb12a3efb9c7d327dccc1314b1e9f5b55ddd91477d2bd5c",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"
@@ -54754,10 +55126,9 @@
       "deps": [
         "yt_bridge_higher_order_corrections_note",
         "yt_bridge_nonlocal_corrections_note",
-        "yt_exact_schur_normal_form_uniqueness_note",
-        "yt_zero_import_authority_note"
+        "yt_exact_schur_normal_form_uniqueness_note"
       ],
-      "note_hash": "b723d3889aeae5862f7d96962a179645380f85e0c10658e94dd74b3e979d5f1a",
+      "note_hash": "7c6882af06fa9c15e48aa68f09c14968e5ba37c213176f2ff668aff5cf8936ad",
       "path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
       "title": "`y_t` Residual-Budget and Bridge Cross-Check Note"
@@ -55902,6 +56273,8 @@
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
     "hierarchy_spatial_bc_and_u0_scaling_note",
+    "higgs_from_lattice_note",
+    "higgs_mechanism_note",
     "higher_dimension_status_2026-04-01",
     "higher_order_structural_theorems_note",
     "higher_symmetry_gravity_probe_note",
@@ -56266,7 +56639,6 @@
     "universal_gr_block_normalization_note",
     "universal_gr_canonical_projector_connection_note",
     "universal_gr_complement_canonical_note",
-    "universal_gr_discrete_global_closure_note",
     "universal_gr_invariant_frame_obstruction_note",
     "universal_gr_invariant_nonlinear_completion_note",
     "universal_gr_isotropic_glue_operator_note",
@@ -56352,25 +56724,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 83,
+      "bounded_theorem": 90,
       "meta": 10,
       "no_go": 14,
-      "none": 1698,
+      "none": 1702,
       "open_gate": 11,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 580,
+      "bounded_theorem": 589,
       "meta": 10,
-      "no_go": 118,
-      "none": 460,
+      "no_go": 119,
+      "none": 462,
       "open_gate": 112,
-      "positive_theorem": 627
+      "positive_theorem": 626
     },
-    "edge_count": 6692,
+    "edge_count": 6740,
     "leaf_count": 546,
-    "node_count": 1907,
-    "root_count": 858,
-    "runners_with_path": 1486
+    "node_count": 1918,
+    "root_count": 859,
+    "runners_with_path": 1495
   }
 }

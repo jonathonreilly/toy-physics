@@ -29,8 +29,12 @@ What remains true on the current package:
 This note is part of the support stack for the bounded Higgs lane. It is not a
 standalone promotion surface.
 
-## Audit dependency repair links
-
-This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
-
-- [higgs_mass_derived_note](HIGGS_MASS_DERIVED_NOTE.md)
+<!--
+Cycle-break (2026-05-06): the "Audit dependency repair links" back-edge
+to `HIGGS_MASS_DERIVED_NOTE.md` was removed because the derived-mass
+authority note already cites this lattice support note as a Supporting
+Higgs surface ("bounded / historical quantitative support"). Retaining
+the bookkeeping back-link produced cycle-0046 in the citation graph
+(`docs/audit/data/cycle_inventory.json`). File pointer:
+`HIGGS_MASS_DERIVED_NOTE.md`.
+-->
