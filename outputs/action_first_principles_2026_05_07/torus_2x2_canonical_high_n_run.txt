@@ -1,0 +1,29 @@
+======================================================================
+Cl(3) -> KS, 2x2 torus FINAL CANONICAL HIGH-N RUN
+======================================================================
+
+Settings:
+  Geometry: 2x2 spatial torus (Z^2 PBC), 8 SU(3) link variables
+  Basis: Casimir-diagonal Wilson-loop characters
+    - 4 plaquettes, 4 non-contractible loops, 8 twisted, 2 length-6
+    - Irreps: (0,0), (1,0), (0,1), (1,1), (2,0), (0,2), (2,1), (1,2)
+    - Total basis: 151 elements
+  Sample size: 100,000 per seed
+  Seeds: 5 (11, 22, 33, 44, 55)
+
+seed=11: <P>_avg=0.04312, E_0=-0.08595, P-spread=0.0010
+seed=22: <P>_avg=0.04355, E_0=-0.08637, P-spread=0.0010
+seed=33: <P>_avg=0.04383, E_0=-0.08828, P-spread=0.0007
+seed=44: <P>_avg=0.04406, E_0=-0.08902, P-spread=0.0015
+seed=55: <P>_avg=0.04245, E_0=-0.08422, P-spread=0.0006
+
+CANONICAL RESULT: <P>_KS(g^2=1) = 0.04340 +/- 0.00064
+Strong-coupling LO:               1/24 = 0.04167
+Ratio (numerical / LO): 1.0416 -> 4.2% above LO
+
+Reference comparators:
+  KS literature (3D thermo) at g^2=1:  ~0.55-0.60
+  Wilson 4D MC at beta=6:                 0.5934
+
+Gap to literature: framework prediction is at strong-coupling LO,
+literature is in the deconfining regime requiring richer methods.

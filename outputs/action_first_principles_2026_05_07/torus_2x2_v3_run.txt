@@ -1,0 +1,204 @@
+======================================================================
+Cl(3) -> KS, 2x2 torus v3 (Casimir-diagonal basis)
+======================================================================
+
+[1] Basis convergence
+
+=== Basis convergence at g^2 = 1.0, N = 20000 ===
+
+--- 3 irreps, plaq only ---
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 20000 ---
+  Basis size: 9 (time: 0.3s)
+  E_0 = -0.082639  (kept 9/9)
+  <P>_avg = 0.041550
+  Plaq: P00=0.0434, P10=0.0397, P01=0.0428, P11=0.0402
+  1                                   amp=+0.9847, cas=0.00
+  chi_(1, 0)(P10)                     amp=+0.0633, cas=5.33
+  chi_(0, 1)(P10)                     amp=+0.0633, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.0631, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.0631, cas=5.33
+
+--- 3 irreps, plaq + nc ---
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 20000 ---
+  Basis size: 17 (time: 0.3s)
+  E_0 = -0.082674  (kept 17/17)
+  <P>_avg = 0.041536
+  Plaq: P00=0.0434, P10=0.0397, P01=0.0428, P11=0.0402
+  1                                   amp=-0.9847, cas=0.00
+  chi_(0, 1)(P10)                     amp=-0.0633, cas=5.33
+  chi_(1, 0)(P10)                     amp=-0.0633, cas=5.33
+  chi_(1, 0)(P11)                     amp=-0.0631, cas=5.33
+  chi_(0, 1)(P11)                     amp=-0.0631, cas=5.33
+
+--- 3 irreps, plaq+nc+disjoint products ---
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 20000 ---
+  Basis size: 41 (time: 0.3s)
+  E_0 = -0.082790  (kept 41/41)
+  <P>_avg = 0.041531
+  Plaq: P00=0.0434, P10=0.0398, P01=0.0428, P11=0.0402
+  1                                   amp=-0.9847, cas=0.00
+  chi_(1, 0)(P10)                     amp=-0.0633, cas=5.33
+  chi_(0, 1)(P10)                     amp=-0.0633, cas=5.33
+  chi_(0, 1)(P11)                     amp=-0.0631, cas=5.33
+  chi_(1, 0)(P11)                     amp=-0.0631, cas=5.33
+
+--- 4 irreps, plaq+nc+disjoint products ---
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 20000 ---
+  Basis size: 49 (time: 0.3s)
+  E_0 = -0.083066  (kept 49/49)
+  <P>_avg = 0.041795
+  Plaq: P00=0.0436, P10=0.0399, P01=0.0431, P11=0.0406
+  1                                   amp=+0.9846, cas=0.00
+  chi_(1, 0)(P10)                     amp=+0.0635, cas=5.33
+  chi_(0, 1)(P10)                     amp=+0.0635, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.0634, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.0634, cas=5.33
+
+--- 6 irreps, plaq+nc+disjoint products ---
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 20000 ---
+  Basis size: 65 (time: 0.3s)
+  E_0 = -0.083295  (kept 65/65)
+  <P>_avg = 0.041954
+  Plaq: P00=0.0438, P10=0.0399, P01=0.0433, P11=0.0408
+  1                                   amp=+0.9846, cas=0.00
+  chi_(1, 0)(P10)                     amp=+0.0637, cas=5.33
+  chi_(0, 1)(P10)                     amp=+0.0637, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.0635, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.0635, cas=5.33
+
+--- 6 irreps, plaq+nc+longer+disjoint ---
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 20000 ---
+  Basis size: 75 (time: 0.3s)
+  E_0 = -0.083326  (kept 75/75)
+  <P>_avg = 0.041963
+  Plaq: P00=0.0438, P10=0.0400, P01=0.0433, P11=0.0408
+  1                                   amp=+0.9845, cas=0.00
+  chi_(1, 0)(P10)                     amp=+0.0637, cas=5.33
+  chi_(0, 1)(P10)                     amp=+0.0637, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.0635, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.0635, cas=5.33
+
+
+Convergence summary at g^2 = 1.0:
+config                                         #basis        E_0    <P>_avg
+3 irreps, plaq only                                 9   -0.082639    0.041550
+3 irreps, plaq + nc                                17   -0.082674    0.041536
+3 irreps, plaq+nc+disjoint products                41   -0.082790    0.041531
+4 irreps, plaq+nc+disjoint products                49   -0.083066    0.041795
+6 irreps, plaq+nc+disjoint products                65   -0.083295    0.041954
+6 irreps, plaq+nc+longer+disjoint                  75   -0.083326    0.041963
+
+[2] Sample convergence
+
+=== Sample size convergence at g^2 = 1.0 ===
+
+       N   seed     <P>_avg           E_0   #basis
+    5000     11    0.043114     -0.084680       49
+    5000     22    0.041672     -0.082843       49
+    5000     33    0.038916     -0.075734       49
+   10000     11    0.043499     -0.086951       49
+   10000     22    0.040939     -0.080049       49
+   10000     33    0.043395     -0.088016       49
+   20000     11    0.041795     -0.083066       49
+   20000     22    0.043900     -0.088139       49
+   20000     33    0.042071     -0.082563       49
+   50000     11    0.042875     -0.085294       49
+   50000     22    0.044812     -0.091375       49
+   50000     33    0.042749     -0.084530       49
+  100000     11    0.042946     -0.085743       49
+  100000     22    0.043372     -0.086150       49
+  100000     33    0.043662     -0.088065       49
+
+Mean +/- std over seeds:
+       N     mean<P>       stdev
+    5000    0.041234    0.002133
+   10000    0.042611    0.001449
+   20000    0.042589    0.001144
+   50000    0.043479    0.001156
+  100000    0.043327    0.000360
+
+[3] Coupling sweep
+
+=== Coupling sweep ===
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 0.5, N = 80000 ---
+  Basis size: 75 (time: 1.2s)
+  E_0 = -0.610007  (kept 75/75)
+  <P>_avg = 0.126816
+  Plaq: P00=0.1314, P10=0.1216, P01=0.1267, P11=0.1276
+  1                                   amp=+0.8347, cas=0.00
+  chi_(1, 0)(P00)                     amp=+0.1901, cas=5.33
+  chi_(0, 1)(P00)                     amp=+0.1901, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.1883, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.1883, cas=5.33
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 0.75, N = 80000 ---
+  Basis size: 75 (time: 1.3s)
+  E_0 = -0.211634  (kept 75/75)
+  <P>_avg = 0.075867
+  Plaq: P00=0.0786, P10=0.0727, P01=0.0760, P11=0.0761
+  1                                   amp=-0.9474, cas=0.00
+  chi_(0, 1)(P00)                     amp=-0.1104, cas=5.33
+  chi_(1, 0)(P00)                     amp=-0.1104, cas=5.33
+  chi_(1, 0)(P11)                     amp=-0.1092, cas=5.33
+  chi_(0, 1)(P11)                     amp=-0.1092, cas=5.33
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.0, N = 80000 ---
+  Basis size: 75 (time: 1.2s)
+  E_0 = -0.092367  (kept 75/75)
+  <P>_avg = 0.045085
+  Plaq: P00=0.0468, P10=0.0432, P01=0.0453, P11=0.0450
+  1                                   amp=-0.9814, cas=0.00
+  chi_(0, 1)(P00)                     amp=-0.0650, cas=5.33
+  chi_(1, 0)(P00)                     amp=-0.0650, cas=5.33
+  chi_(1, 0)(P11)                     amp=-0.0642, cas=5.33
+  chi_(0, 1)(P11)                     amp=-0.0642, cas=5.33
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 1.5, N = 80000 ---
+  Basis size: 75 (time: 1.2s)
+  E_0 = -0.028856  (kept 75/75)
+  <P>_avg = 0.020575
+  Plaq: P00=0.0216, P10=0.0195, P01=0.0209, P11=0.0203
+  1                                   amp=+0.9959, cas=0.00
+  chi_(1, 0)(P00)                     amp=+0.0289, cas=5.33
+  chi_(0, 1)(P00)                     amp=+0.0289, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.0286, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.0286, cas=5.33
+
+--- 2x2 torus v3 (Casimir-diag basis), g^2 = 2.0, N = 80000 ---
+  Basis size: 75 (time: 1.2s)
+  E_0 = -0.013149  (kept 75/75)
+  <P>_avg = 0.011990
+  Plaq: P00=0.0127, P10=0.0112, P01=0.0123, P11=0.0117
+  1                                   amp=+0.9985, cas=0.00
+  chi_(0, 1)(P00)                     amp=+0.0162, cas=5.33
+  chi_(1, 0)(P00)                     amp=+0.0162, cas=5.33
+  chi_(0, 1)(P11)                     amp=+0.0160, cas=5.33
+  chi_(1, 0)(P11)                     amp=+0.0160, cas=5.33
+
+Coupling sweep summary:
+   g^2         E_0     <P>_avg      plaq spread
+  0.50   -0.610007    0.126816  +-     0.0035
+  0.75   -0.211634    0.075867  +-     0.0021
+  1.00   -0.092367    0.045085  +-     0.0013
+  1.50   -0.028856    0.020575  +-     0.0007
+  2.00   -0.013149    0.011990  +-     0.0006
+
+======================================================================
+Reference values for comparison:
+  KS Hamilton limit (literature) at g^2~1:    ~0.55-0.60
+  Wilson 4D MC at beta=6:                       0.5934
+  Single-plaquette toy at g^2=1:                0.218
+  Strong-coupling LO at g^2=1:                  0.0417 (=1/24)
+  Mean-field K=4 (3D cubic):                    0.589
+
+Note: 2x2 torus is FINITE-VOLUME and 2D-PBC; the literature
+reference is THERMODYNAMIC LIMIT in 3D. Direct comparison is
+not exact -- but tracking the trend matters.
+======================================================================

@@ -1,0 +1,149 @@
+======================================================================
+Cl(3) -> KS, 2x2x2 spatial torus (Z^3 PBC)
+======================================================================
+
+Plaquette enumeration:
+  Total plaquette specs: 24
+  Unique by link-set:    24
+
+=== 2x2x2 basis convergence at g^2 = 1.0 ===
+
+--- 3 irreps no disjoint pairs ---
+
+--- 2x2x2 torus, g^2 = 1.0, N = 10000 ---
+  N plaquettes: 24
+  Basis size: 49 (sample+basis: 0.4s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.473669  (kept 49/49)
+  <P>_avg = 0.034696
+  Plaq spread: mean=0.0347, std=0.0048
+
+--- 3 irreps with disjoint pairs ---
+
+--- 2x2x2 torus, g^2 = 1.0, N = 10000 ---
+  N plaquettes: 24
+  Basis size: 673 (sample+basis: 0.5s)
+  H+Gram: 0.3s
+  Diag: 0.3s
+  E_0 = -0.530801  (kept 673/673)
+  <P>_avg = 0.040401
+  Plaq spread: mean=0.0404, std=0.0061
+
+--- 4 irreps no disjoint pairs ---
+
+--- 2x2x2 torus, g^2 = 1.0, N = 10000 ---
+  N plaquettes: 24
+  Basis size: 73 (sample+basis: 0.4s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.475390  (kept 73/73)
+  <P>_avg = 0.034892
+  Plaq spread: mean=0.0349, std=0.0049
+
+--- 4 irreps with disjoint pairs ---
+
+--- 2x2x2 torus, g^2 = 1.0, N = 10000 ---
+  N plaquettes: 24
+  Basis size: 697 (sample+basis: 0.5s)
+  H+Gram: 0.3s
+  Diag: 0.3s
+  E_0 = -0.533016  (kept 697/697)
+  <P>_avg = 0.040649
+  Plaq spread: mean=0.0406, std=0.0062
+
+--- 6 irreps no disjoint pairs ---
+
+--- 2x2x2 torus, g^2 = 1.0, N = 10000 ---
+  N plaquettes: 24
+  Basis size: 121 (sample+basis: 0.4s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.476558  (kept 121/121)
+  <P>_avg = 0.034950
+  Plaq spread: mean=0.0349, std=0.0049
+
+--- 6 irreps with disjoint pairs ---
+
+--- 2x2x2 torus, g^2 = 1.0, N = 10000 ---
+  N plaquettes: 24
+  Basis size: 745 (sample+basis: 0.6s)
+  H+Gram: 0.4s
+  Diag: 0.4s
+  E_0 = -0.534516  (kept 745/745)
+  <P>_avg = 0.040736
+  Plaq spread: mean=0.0407, std=0.0062
+
+Basis convergence summary at g^2 = 1.0:
+config                disj   #basis        E_0    <P>_avg
+3 irreps             False       49   -0.473669    0.034696
+3 irreps              True      673   -0.530801    0.040401
+4 irreps             False       73   -0.475390    0.034892
+4 irreps              True      697   -0.533016    0.040649
+6 irreps             False      121   -0.476558    0.034950
+6 irreps              True      745   -0.534516    0.040736
+
+[2] Coupling sweep (4 irreps, no disjoint pairs)
+
+=== 2x2x2 coupling sweep ===
+
+--- 2x2x2 torus, g^2 = 0.5, N = 20000 ---
+  N plaquettes: 24
+  Basis size: 73 (sample+basis: 0.8s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -1.906524  (kept 73/73)
+  <P>_avg = 0.051023
+  Plaq spread: mean=0.0510, std=0.0042
+
+--- 2x2x2 torus, g^2 = 0.75, N = 20000 ---
+  N plaquettes: 24
+  Basis size: 73 (sample+basis: 0.8s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.905919  (kept 73/73)
+  <P>_avg = 0.044324
+  Plaq spread: mean=0.0443, std=0.0031
+
+--- 2x2x2 torus, g^2 = 1.0, N = 20000 ---
+  N plaquettes: 24
+  Basis size: 73 (sample+basis: 0.8s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.459011  (kept 73/73)
+  <P>_avg = 0.034170
+  Plaq spread: mean=0.0342, std=0.0022
+
+--- 2x2x2 torus, g^2 = 1.5, N = 20000 ---
+  N plaquettes: 24
+  Basis size: 73 (sample+basis: 0.8s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.148443  (kept 73/73)
+  <P>_avg = 0.018186
+  Plaq spread: mean=0.0182, std=0.0016
+
+--- 2x2x2 torus, g^2 = 2.0, N = 20000 ---
+  N plaquettes: 24
+  Basis size: 73 (sample+basis: 0.8s)
+  H+Gram: 0.0s
+  Diag: 0.0s
+  E_0 = -0.063080  (kept 73/73)
+  <P>_avg = 0.010509
+  Plaq spread: mean=0.0105, std=0.0015
+
+Coupling sweep summary:
+   g^2     <P>_avg           E_0   #basis
+  0.50    0.051023     -1.906524       73
+  0.75    0.044324     -0.905919       73
+  1.00    0.034170     -0.459011       73
+  1.50    0.018186     -0.148443       73
+  2.00    0.010509     -0.063080       73
+
+======================================================================
+Reference values:
+  KS Hamilton limit (literature) thermodynamic at g^2~1:  ~0.55-0.60
+  Wilson 4D MC at beta=6:                                   0.5934
+  2x2 torus v3 at g^2=1:                                    0.042
+  Strong-coupling LO at g^2=1:                              0.0417
+======================================================================

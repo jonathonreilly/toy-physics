@@ -1,0 +1,33 @@
+======================================================================
+Strong-coupling expansion of KS <P> at canonical Cl(3) Tr-form
+======================================================================
+
+Leading order: <P>_KS = 1/24/g^4 + O(1/g^8)
+  = 1/(24 g^4) for SU(3) at canonical normalization
+
+Strong-coupling values at canonical g^2 = 1:
+  <P>_KS^(LO) = 0.041667
+  At g^2 = 1: 1/24 = 0.041667
+
+Coupling sweep:
+   g^2      <P>^(LO)
+  0.50      0.166667
+  0.75      0.074074
+  1.00      0.041667
+  1.50      0.018519
+  2.00      0.010417
+  4.00      0.002604
+
+Comparison:
+  KS literature (Hamilton limit) at g^2~1:  ~0.55-0.60
+  Wilson MC (4D) beta=6:                       0.5934
+  Single-plaquette toy at g^2=1:               0.218
+  Strong-coupling LO at g^2=1:                 0.0417
+
+Strong-coupling LO is far below the asymptotic <P>_KS at g^2=1
+because g^2=1 is INSIDE the deconfining regime where the series
+does not converge well.
+
+The strong-coupling series for KS converges only for g^2 > g_c^2
+where g_c^2 ~ 1.5-2.0. At g^2=1 we need a different approach
+(spin-network or Monte Carlo).

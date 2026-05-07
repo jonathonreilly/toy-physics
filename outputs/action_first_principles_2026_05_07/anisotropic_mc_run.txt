@@ -1,0 +1,66 @@
+======================================================================
+Anisotropic Wilson MC for KS Hamiltonian limit
+======================================================================
+
+KS Hamilton limit: xi -> infinity
+Trotter dictionary (Kogut-Susskind):
+  beta_sigma = 1/(g^2 xi),  beta_tau = xi/g^2
+
+[1] xi=1 (isotropic): beta_sigma=beta_tau=6, Lt=16
+
+--- Anisotropic Wilson MC: 2x2x2x16, beta_sigma=6.00, beta_tau=6.00 ---
+  Thermalizing 500 sweeps...
+    sweep 200: P_sp=0.6664, P_tau=0.6278, accept=0.81
+    sweep 400: P_sp=0.6263, P_tau=0.5927, accept=0.75
+  Measuring 500 sweeps...
+  Total time: 21.4s
+  P_sp  = 0.6340 +/- 0.0005
+  P_tau = 0.5989 +/- 0.0004
+
+[2] xi=2: beta_sigma=3, beta_tau=12, Lt=32
+
+--- Anisotropic Wilson MC: 2x2x2x32, beta_sigma=3.00, beta_tau=12.00 ---
+  Thermalizing 500 sweeps...
+    sweep 200: P_sp=0.5476, P_tau=0.7519, accept=0.76
+    sweep 400: P_sp=0.5246, P_tau=0.7492, accept=0.79
+  Measuring 500 sweeps...
+  Total time: 42.3s
+  P_sp  = 0.5237 +/- 0.0005
+  P_tau = 0.7475 +/- 0.0002
+
+[3] xi=4: beta_sigma=1.5, beta_tau=24, Lt=64
+
+--- Anisotropic Wilson MC: 2x2x2x64, beta_sigma=1.50, beta_tau=24.00 ---
+  Thermalizing 500 sweeps...
+    sweep 200: P_sp=0.5555, P_tau=0.8569, accept=0.69
+    sweep 400: P_sp=0.5155, P_tau=0.8542, accept=0.65
+  Measuring 500 sweeps...
+  Total time: 84.9s
+  P_sp  = 0.4876 +/- 0.0006
+  P_tau = 0.8539 +/- 0.0001
+
+[4] xi=8: beta_sigma=0.75, beta_tau=48, Lt=64
+
+--- Anisotropic Wilson MC: 2x2x2x64, beta_sigma=0.75, beta_tau=48.00 ---
+  Thermalizing 500 sweeps...
+    sweep 200: P_sp=0.6235, P_tau=0.9241, accept=0.54
+    sweep 400: P_sp=0.5636, P_tau=0.9241, accept=0.53
+  Measuring 500 sweeps...
+  Total time: 85.2s
+  P_sp  = 0.5399 +/- 0.0005
+  P_tau = 0.9226 +/- 0.0000
+
+=== Summary: 2x2x2 spatial torus, g^2=1 ===
+    xi  beta_sigma   beta_tau    Lt        P_sp       P_tau
+     1        6.00       6.00    16      0.6340      0.5989
+     2        3.00      12.00    32      0.5237      0.7475
+     4        1.50      24.00    64      0.4876      0.8539
+     8        0.75      48.00    64      0.5399      0.9226
+
+Interpretation:
+  As xi -> infinity (Hamilton limit), P_sp converges to <P>_KS
+  on the 2x2x2 spatial torus. This is the path-integral analog
+  of the variational ED problem.
+
+Reference: KS literature P_sp ~ 0.55-0.60
+           Wilson 4D MC isotropic beta=6: P_sp ~ 0.5934 (large vol)

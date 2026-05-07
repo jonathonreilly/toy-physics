@@ -1,0 +1,36 @@
+======================================================================
+Coupling sweep: 2x2x2 spatial torus
+======================================================================
+
+S = -(beta_sigma/N_c) Sum_sp - (beta_tau/N_c) Sum_tau
+Trotter dictionary: beta_sigma = beta_W/xi, beta_tau = beta_W*xi
+where beta_W = 2*N_c/g^2 = 6/g^2 for SU(3).
+
+[1] Isotropic xi=1 sweep on 2x2x2x16:
+   g^2    beta_W      P_sp     P_sp_LO=1/(24g^4)
+  0.50     12.00    0.8347                0.1667
+  0.75      8.00    0.7447                0.0741
+  1.00      6.00    0.6253                0.0417
+  1.25      4.80    0.4936                0.0267
+  1.50      4.00    0.3569                0.0185
+  2.00      3.00    0.2282                0.0104
+  3.00      2.00    0.1340                0.0046
+
+[2] Anisotropic xi=2 sweep on 2x2x2x32:
+   g^2  beta_sigma   beta_tau      P_sp
+  0.50        6.00      24.00    0.7798
+  0.75        4.00      16.00    0.6515
+  1.00        3.00      12.00    0.5343
+  1.50        2.00       8.00    0.2712
+  2.00        1.50       6.00    0.1325
+
+[3] More extreme anisotropic xi=4 (closer to Hamilton):
+   g^2  beta_sigma   beta_tau      P_sp
+  0.50        3.00      48.00    0.7597
+  1.00        1.50      24.00    0.5097
+  2.00        0.75      12.00    0.1605
+
+Reference: at g^2=1, beta=6:
+  KS literature P_sp ~ 0.55-0.60
+  Wilson MC isotropic large vol: 0.5934
+  Strong-coupling LO 1/(24*g^4) at g^2=1: 0.0417

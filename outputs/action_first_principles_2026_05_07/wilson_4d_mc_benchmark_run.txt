@@ -1,0 +1,95 @@
+======================================================================
+Wilson 4D MC benchmark on small spatial torus
+======================================================================
+
+Goal: independent benchmark for the 2x2 spatial torus KS Hamiltonian
+via 4D Euclidean lattice MC at large N_t (Hamilton limit).
+
+[1] 2x2x2x8 lattice at beta=6 (g^2=1)
+
+--- Wilson 4D MC: 2x2x2x8, beta=6.00, eps=0.1 ---
+  Thermalizing 1000 sweeps...
+    sweep 100: <P>=0.6365, accept=0.69
+    sweep 200: <P>=0.6252, accept=0.73
+    sweep 300: <P>=0.6237, accept=0.80
+    sweep 400: <P>=0.6380, accept=0.77
+    sweep 500: <P>=0.6182, accept=0.81
+    sweep 600: <P>=0.6271, accept=0.80
+    sweep 700: <P>=0.5813, accept=0.83
+    sweep 800: <P>=0.5963, accept=0.80
+    sweep 900: <P>=0.5973, accept=0.79
+    sweep 1000: <P>=0.5995, accept=0.79
+  Measuring 2000 sweeps...
+  Total time: 39.5s
+  <P>_all     = 0.6142 +/- 0.0003
+  <P>_spatial = 0.6274 +/- 0.0003
+
+[2] 2x2x2x16 lattice at beta=6 (Hamilton limit closer)
+
+--- Wilson 4D MC: 2x2x2x16, beta=6.00, eps=0.1 ---
+  Thermalizing 1000 sweeps...
+    sweep 100: <P>=0.6710, accept=0.79
+    sweep 200: <P>=0.6471, accept=0.81
+    sweep 300: <P>=0.6121, accept=0.82
+    sweep 400: <P>=0.6095, accept=0.75
+    sweep 500: <P>=0.6093, accept=0.79
+    sweep 600: <P>=0.6077, accept=0.80
+    sweep 700: <P>=0.6268, accept=0.75
+    sweep 800: <P>=0.6257, accept=0.79
+    sweep 900: <P>=0.6185, accept=0.81
+    sweep 1000: <P>=0.6052, accept=0.79
+  Measuring 1000 sweeps...
+  Total time: 50.7s
+  <P>_all     = 0.6142 +/- 0.0003
+  <P>_spatial = 0.6243 +/- 0.0004
+
+[3] 2x2x2x32 lattice at beta=6 (close to Hamilton limit)
+
+--- Wilson 4D MC: 2x2x2x32, beta=6.00, eps=0.1 ---
+  Thermalizing 1000 sweeps...
+    sweep 100: <P>=0.6695, accept=0.81
+    sweep 200: <P>=0.6381, accept=0.81
+    sweep 300: <P>=0.6250, accept=0.79
+    sweep 400: <P>=0.6251, accept=0.79
+    sweep 500: <P>=0.6166, accept=0.79
+    sweep 600: <P>=0.6221, accept=0.80
+    sweep 700: <P>=0.6090, accept=0.78
+    sweep 800: <P>=0.6063, accept=0.78
+    sweep 900: <P>=0.6051, accept=0.80
+    sweep 1000: <P>=0.6189, accept=0.80
+  Measuring 500 sweeps...
+  Total time: 71.5s
+  <P>_all     = 0.6139 +/- 0.0003
+  <P>_spatial = 0.6281 +/- 0.0003
+
+[4] 4x4x4x4 at beta=6 (intermediate volume reference)
+
+--- Wilson 4D MC: 4x4x4x4, beta=6.00, eps=0.1 ---
+  Thermalizing 1000 sweeps...
+    sweep 100: <P>=0.6569, accept=0.79
+    sweep 200: <P>=0.6298, accept=0.80
+    sweep 300: <P>=0.6139, accept=0.81
+    sweep 400: <P>=0.6138, accept=0.79
+    sweep 500: <P>=0.6140, accept=0.79
+    sweep 600: <P>=0.6142, accept=0.79
+    sweep 700: <P>=0.6026, accept=0.80
+    sweep 800: <P>=0.6011, accept=0.79
+    sweep 900: <P>=0.5994, accept=0.79
+    sweep 1000: <P>=0.5968, accept=0.79
+  Measuring 500 sweeps...
+  Total time: 66.1s
+  <P>_all     = 0.5980 +/- 0.0003
+  <P>_spatial = 0.5974 +/- 0.0004
+
+======================================================================
+Summary
+======================================================================
+  2x2x2x8, beta=6.0: <P>_all = 0.6142+/-0.0003, <P>_spatial = 0.6274+/-0.0003
+  2x2x2x16, beta=6.0: <P>_all = 0.6142+/-0.0003, <P>_spatial = 0.6243+/-0.0004
+  2x2x2x32, beta=6.0: <P>_all = 0.6139+/-0.0003, <P>_spatial = 0.6281+/-0.0003
+  4x4x4x4, beta=6.0: <P>_all = 0.5980+/-0.0003, <P>_spatial = 0.5974+/-0.0004
+
+Reference: large-volume Wilson MC at beta=6 gives <P> ~ 0.5934.
+If small-volume <P> matches large-volume, the 2x2 spatial torus
+can support <P> ~ 0.55-0.60 and the spin-network ED truncation
+error is the framework gap.
