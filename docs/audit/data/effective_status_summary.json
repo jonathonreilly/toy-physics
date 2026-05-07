@@ -1,12 +1,12 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 620,
-    "decoration": 10,
-    "meta": 62,
-    "no_go": 183,
-    "open_gate": 111,
-    "positive_theorem": 622,
-    "unset": 190
+    "bounded_theorem": 623,
+    "decoration": 11,
+    "meta": 64,
+    "no_go": 180,
+    "open_gate": 101,
+    "positive_theorem": 547,
+    "unset": 272
   },
   "cycle_examples": [
     [
@@ -51,10 +51,10 @@
   ],
   "cycles_detected": 189,
   "effective_status_counts": {
-    "audit_in_progress": 3,
-    "audited_conditional": 572,
+    "audit_in_progress": 2,
+    "audited_conditional": 594,
     "audited_failed": 14,
-    "audited_numerical_match": 25,
+    "audited_numerical_match": 26,
     "audited_renaming": 35,
     "decoration_under_cl3_color_automorphism_theorem": 2,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
@@ -67,13 +67,14 @@
     "retained": 63,
     "retained_bounded": 224,
     "retained_no_go": 120,
-    "retained_pending_chain": 3,
-    "unaudited": 664
+    "retained_pending_chain": 4,
+    "unaudited": 641
   },
-  "retained_pending_chain_count": 3,
+  "retained_pending_chain_count": 4,
   "retained_pending_chain_examples": [
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
     "diamond_signal_budget_hardening_note",
+    "dm_su3_gauge_loop_obstruction_note_2026-04-25",
     "industrial_sdp_bootstrap_infrastructure_note_2026-05-03"
   ]
 }

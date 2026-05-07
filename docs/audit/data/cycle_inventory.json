@@ -1599,10 +1599,10 @@
           "transitive_descendants": 499
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
           "transitive_descendants": 499
@@ -1717,10 +1717,10 @@
           "transitive_descendants": 499
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
           "transitive_descendants": 499
@@ -2763,19 +2763,19 @@
       "max_transitive_descendants": 300,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "cosmological_constant_result_2026-04-12",
-          "claim_type": null,
-          "effective_status": "unaudited",
+          "claim_type": "bounded_theorem",
+          "effective_status": "audited_conditional",
           "note_path": "docs/COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md",
           "title": "Cosmological Constant \u2014 Spectral-Gap Companion",
           "transitive_descendants": 300
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audit_in_progress",
           "claim_id": "cosmological_constant_vacuum_energy_audit_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
+          "claim_type": "no_go",
+          "effective_status": "audit_in_progress",
           "note_path": "docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md",
           "title": "Cosmological Constant Vacuum-Energy Audit",
           "transitive_descendants": 300
@@ -3111,7 +3111,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "abcc_cp_phase_no_go_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md",
           "title": "A-BCC CP-Phase No-Go Theorem",
@@ -3120,7 +3120,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
           "title": "\u03c3_hier Uniqueness Theorem",
@@ -3259,7 +3259,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md",
           "title": "DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem",
@@ -3296,7 +3296,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -3305,7 +3305,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -3331,10 +3331,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
-          "claim_type": "no_go",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis",
           "transitive_descendants": 286
@@ -3342,7 +3342,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 O13 Cheeger-Simons R/Z Period Inheritance No-Go",
@@ -3405,10 +3405,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -3416,7 +3416,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_berry_phase_theorem_note_2026-04-19",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry-Holonomy Theorem: Actual-Route Closure of the Brannen-Zenczykowski phase offset",
@@ -3444,7 +3444,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -3481,7 +3481,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -3831,7 +3831,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md",
           "title": "DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem",
@@ -3881,7 +3881,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md",
           "title": "DM PMNS Ordered-Chain Graded-Current Delta Closure Theorem",
@@ -3890,7 +3890,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md",
           "title": "DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem",
@@ -3931,7 +3931,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -3940,7 +3940,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -3949,7 +3949,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -3981,7 +3981,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -3990,7 +3990,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -4031,7 +4031,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -4040,7 +4040,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -4331,7 +4331,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -4340,7 +4340,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -4349,7 +4349,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_1_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 \u0394_1 BZ-Computation Note (C_F Channel of the Ward-Ratio 1-Loop Correction)",
@@ -4381,7 +4381,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -4390,7 +4390,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -4399,7 +4399,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_2_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 \u0394_2 (C_A Channel) BZ Computation Note",
@@ -4431,7 +4431,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -4440,7 +4440,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -4449,7 +4449,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -4497,10 +4497,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "yt_qfp_insensitivity_support_note",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
           "transitive_descendants": 286
@@ -4599,7 +4599,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p2_v_matching_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
           "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
@@ -4635,7 +4635,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -4644,7 +4644,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -4653,7 +4653,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -4698,7 +4698,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md",
           "title": "DM PMNS Ordered-Chain Graded-Current Delta Closure Theorem",
@@ -4707,7 +4707,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md",
           "title": "DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem",
@@ -4761,7 +4761,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -4770,7 +4770,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -4779,7 +4779,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -4824,7 +4824,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -4833,7 +4833,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -4842,7 +4842,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -5202,7 +5202,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
           "title": "\u03c3_hier Uniqueness Theorem",
@@ -5265,7 +5265,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -5328,7 +5328,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -5337,7 +5337,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -5346,7 +5346,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -5355,7 +5355,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_1_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 \u0394_1 BZ-Computation Note (C_F Channel of the Ward-Ratio 1-Loop Correction)",
@@ -5391,7 +5391,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -5400,7 +5400,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -5409,7 +5409,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -5418,7 +5418,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_2_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 \u0394_2 (C_A Channel) BZ Computation Note",
@@ -5458,7 +5458,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -5467,7 +5467,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -5476,7 +5476,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -5534,7 +5534,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -5543,7 +5543,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -5552,7 +5552,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -5561,7 +5561,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -5762,7 +5762,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -5771,7 +5771,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -5838,7 +5838,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -5918,7 +5918,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -5927,7 +5927,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -5936,7 +5936,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -5945,7 +5945,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -6007,7 +6007,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -6016,7 +6016,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -6025,7 +6025,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -6034,7 +6034,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -6043,7 +6043,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -6094,10 +6094,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -6105,7 +6105,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -6114,7 +6114,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -6123,17 +6123,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -6185,7 +6185,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -6363,7 +6363,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -6372,7 +6372,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -6452,7 +6452,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -6461,7 +6461,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -6470,7 +6470,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -6545,17 +6545,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -6563,7 +6563,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -6572,7 +6572,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -6581,17 +6581,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -6645,10 +6645,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -6656,7 +6656,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -6665,7 +6665,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -6674,17 +6674,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -6701,7 +6701,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_microscopic_scalar_selector_target_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md",
           "title": "Koide Microscopic Scalar Selector Target",
@@ -6749,7 +6749,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -6803,7 +6803,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -6851,7 +6851,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -6860,7 +6860,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -6998,7 +6998,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -7007,7 +7007,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_scalar_bridge_nonrealization_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md",
           "title": "PMNS Scalar Bridge Nonrealization",
@@ -7100,7 +7100,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -7109,7 +7109,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_sector_exchange_nonforcing_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md",
           "title": "PMNS Sector-Exchange Nonforcing",
@@ -7202,7 +7202,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -7211,7 +7211,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_sector_orientation_orbit_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md",
           "title": "PMNS Sector-Orientation Orbit Reduction",
@@ -7304,7 +7304,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -7313,7 +7313,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_current_stack_zero_law_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md",
           "title": "PMNS Selector Current-Stack Zero Law",
@@ -7406,7 +7406,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -7415,7 +7415,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_nonuniversal_support_reduction_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md",
           "title": "PMNS Selector Non-Universal Support Reduction",
@@ -7508,7 +7508,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -7517,7 +7517,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_sector_odd_reduction_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md",
           "title": "PMNS Selector Sector-Odd Reduction",
@@ -7565,7 +7565,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -7574,7 +7574,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -7583,7 +7583,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -7619,7 +7619,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md",
           "title": "P1 \u0394_R Master Assembly Theorem Note (Three-Channel Ratio Correction Roll-Up)",
@@ -7667,7 +7667,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -7676,7 +7676,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -7685,7 +7685,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -7694,7 +7694,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -7773,7 +7773,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
@@ -7782,17 +7782,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -7800,7 +7800,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -7809,7 +7809,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -7818,17 +7818,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -7888,7 +7888,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -8003,7 +8003,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -8012,7 +8012,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -8066,7 +8066,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -8163,7 +8163,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -8181,7 +8181,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_right_conjugacy_invariant_no_go_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md",
           "title": "PMNS Right-Conjugacy-Invariant No-Go",
@@ -8278,7 +8278,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -8287,7 +8287,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_sector_orientation_orbit_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md",
           "title": "PMNS Sector-Orientation Orbit Reduction",
@@ -8296,7 +8296,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lepton_shared_higgs_universality_underdetermination_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md",
           "title": "Lepton Shared-Higgs Universality Underdetermination",
@@ -8393,7 +8393,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -8402,7 +8402,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_sector_orientation_orbit_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md",
           "title": "PMNS Sector-Orientation Orbit Reduction",
@@ -8411,7 +8411,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_minimal_branch_nonselection_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md",
           "title": "PMNS Minimal-Branch Current-Atlas Nonselection Theorem",
@@ -8463,7 +8463,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -8472,7 +8472,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -8481,7 +8481,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -8490,7 +8490,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -8499,7 +8499,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -8582,7 +8582,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -8591,7 +8591,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
@@ -8600,17 +8600,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -8618,7 +8618,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -8627,7 +8627,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -8636,17 +8636,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -8710,7 +8710,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -8719,7 +8719,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -8728,7 +8728,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -8737,7 +8737,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -8746,7 +8746,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -8755,7 +8755,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -8764,7 +8764,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -8838,7 +8838,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -8847,7 +8847,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -8901,7 +8901,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -8910,7 +8910,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_current_stack_zero_law_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md",
           "title": "PMNS Selector Current-Stack Zero Law",
@@ -8966,7 +8966,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -8975,7 +8975,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -9029,7 +9029,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
           "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)",
@@ -9038,7 +9038,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_sign_to_branch_reduction_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md",
           "title": "PMNS Selector Sign-To-Branch Reduction",
@@ -9094,7 +9094,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -9103,7 +9103,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -9222,7 +9222,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -9231,7 +9231,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -9240,7 +9240,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -9249,7 +9249,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -9258,7 +9258,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -9350,7 +9350,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -9359,7 +9359,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -9368,7 +9368,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -9377,7 +9377,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -9386,7 +9386,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -9500,7 +9500,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -9509,7 +9509,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -9518,7 +9518,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -9527,7 +9527,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -9536,7 +9536,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -9627,7 +9627,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -9636,7 +9636,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -9645,7 +9645,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -9654,7 +9654,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -9781,7 +9781,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -9790,7 +9790,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -9862,7 +9862,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
           "title": "DM Flagship Gate \u2014 Open-Gate Review",
@@ -9871,7 +9871,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_PARITY_MIXING_SELECTION_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "Parity-Mixing Selector Law \u2014 Narrower-Gap + Closure-Candidate-Pending-Physics-Cross-Check",
@@ -9957,7 +9957,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -9966,7 +9966,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
@@ -9975,17 +9975,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -9993,7 +9993,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -10002,7 +10002,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -10011,17 +10011,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -10106,7 +10106,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -10115,7 +10115,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -10124,7 +10124,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -10133,7 +10133,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -10142,7 +10142,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -10295,7 +10295,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_explicit_calculations_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md",
           "title": "Koide Lane Explicit Calculations",
@@ -10322,7 +10322,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -10331,7 +10331,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -10340,7 +10340,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -10349,7 +10349,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -10358,7 +10358,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -10457,7 +10457,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
           "title": "\u03c3_hier Uniqueness Theorem",
@@ -10493,7 +10493,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -10502,7 +10502,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -10511,7 +10511,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -10520,7 +10520,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -10529,7 +10529,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -10538,7 +10538,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -10547,7 +10547,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -10556,7 +10556,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -10641,7 +10641,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "abcc_cp_phase_no_go_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md",
           "title": "A-BCC CP-Phase No-Go Theorem",
@@ -10650,7 +10650,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
           "title": "\u03c3_hier Uniqueness Theorem",
@@ -10686,7 +10686,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -10695,7 +10695,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -10704,7 +10704,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -10713,7 +10713,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -10722,7 +10722,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -10731,7 +10731,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -10740,7 +10740,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -10749,7 +10749,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -10852,7 +10852,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -10861,7 +10861,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
@@ -10870,17 +10870,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
           "transitive_descendants": 286
@@ -10888,7 +10888,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
@@ -10897,7 +10897,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
@@ -10906,17 +10906,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
           "transitive_descendants": 286
@@ -10942,7 +10942,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
@@ -10951,7 +10951,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "structural_no_go_survey_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
@@ -11027,7 +11027,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -11036,7 +11036,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -11045,7 +11045,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -11054,7 +11054,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -11063,7 +11063,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -11072,7 +11072,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -11144,7 +11144,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
           "title": "DM Flagship Gate \u2014 Open-Gate Review",
@@ -11220,7 +11220,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -11229,7 +11229,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -11238,7 +11238,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -11247,7 +11247,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -11256,7 +11256,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -11265,7 +11265,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -11274,7 +11274,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -11435,7 +11435,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_explicit_calculations_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md",
           "title": "Koide Lane Explicit Calculations",
@@ -11462,7 +11462,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -11471,7 +11471,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -11480,7 +11480,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -11489,7 +11489,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -11498,7 +11498,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -11543,7 +11543,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P3 MSbar-to-Pole K_3 Color-Tensor Retention Theorem (3-loop structural skeleton)",
@@ -11641,7 +11641,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_explicit_calculations_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md",
           "title": "Koide Lane Explicit Calculations",
@@ -11668,7 +11668,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
           "title": "P1 Rep-A vs Rep-B 1-Loop Cancellation Sub-Theorem Note (Ward-Identity Ratio Stability)",
@@ -11677,7 +11677,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_revision_verification_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Revision Verification Note (Critical Review of the 3x Upward Revision Claim)",
@@ -11686,7 +11686,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
           "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
@@ -11695,7 +11695,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_color_factor_retention_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
           "title": "P1 Color-Factor Retention Sub-Theorem Note (Three-Channel Ratio Decomposition)",
@@ -11704,7 +11704,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "yt_p1_delta_3_bz_computation_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
           "title": "P1 Delta_3 BZ Computation Note (T_F n_f fermion-loop channel)",
@@ -11829,7 +11829,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -11838,7 +11838,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -11847,7 +11847,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -11856,7 +11856,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -11865,7 +11865,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -11874,7 +11874,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -11883,7 +11883,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -11955,7 +11955,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
           "title": "DM Flagship Gate \u2014 Open-Gate Review",
@@ -12035,7 +12035,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -12044,7 +12044,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -12053,7 +12053,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -12062,7 +12062,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -12071,7 +12071,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -12080,7 +12080,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -12089,7 +12089,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -12098,7 +12098,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -12245,7 +12245,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -12254,7 +12254,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -12263,7 +12263,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -12272,7 +12272,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -12281,7 +12281,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -12290,7 +12290,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -12299,7 +12299,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -12308,7 +12308,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -12380,7 +12380,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_flagship_closure_review_note_2026-04-17",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md",
           "title": "DM Flagship Gate \u2014 Open-Gate Review",
@@ -12472,7 +12472,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -12481,7 +12481,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -12490,7 +12490,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -12499,7 +12499,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -12508,7 +12508,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -12517,7 +12517,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -12526,7 +12526,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -12535,7 +12535,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -12580,7 +12580,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -12589,7 +12589,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -12598,7 +12598,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -12625,7 +12625,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_mass_derived_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MASS_DERIVED_NOTE.md",
           "title": "Neutrino Sector Closure (Phase 4 of mass spectrum)",
@@ -12721,7 +12721,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
           "title": "\u03c3_hier Uniqueness Theorem",
@@ -12757,7 +12757,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -12766,7 +12766,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -12775,7 +12775,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -12784,7 +12784,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -12793,7 +12793,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -12802,7 +12802,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -12811,7 +12811,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -12820,7 +12820,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -12983,7 +12983,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "abcc_cp_phase_no_go_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md",
           "title": "A-BCC CP-Phase No-Go Theorem",
@@ -12992,7 +12992,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
           "title": "\u03c3_hier Uniqueness Theorem",
@@ -13028,7 +13028,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md",
           "title": "\u03b8_23 Upper-Octant Chamber-Closure Prediction",
@@ -13037,7 +13037,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md",
           "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package",
@@ -13046,7 +13046,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -13055,7 +13055,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -13064,7 +13064,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -13073,7 +13073,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -13082,7 +13082,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -13091,7 +13091,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -13254,7 +13254,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -13263,7 +13263,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -13272,7 +13272,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -13281,7 +13281,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -13326,7 +13326,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -13335,7 +13335,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -13344,7 +13344,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -13389,7 +13389,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -13407,7 +13407,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_wilson_parent_correctness_audit_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_WILSON_PARENT_CORRECTNESS_AUDIT_NOTE_2026-04-18.md",
           "title": "DM Wilson Parent Correctness Audit Note",
@@ -13425,7 +13425,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_BANK_Z3_DOUBLET_BLOCK_SELECTION_OBSTRUCTION_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Bank `Z_3` Doublet-Block Selection Obstruction Theorem",
@@ -13529,7 +13529,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md",
           "title": "Observable-Bank Exhaustion \u2014 Atlas Exhaustion Theorem (Obstruction + New-Gap)",
@@ -13538,7 +13538,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -13547,7 +13547,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -13556,7 +13556,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -13565,7 +13565,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -13574,7 +13574,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -13619,7 +13619,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -13628,7 +13628,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -13637,7 +13637,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -13682,7 +13682,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -13700,7 +13700,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_wilson_parent_correctness_audit_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_WILSON_PARENT_CORRECTNESS_AUDIT_NOTE_2026-04-18.md",
           "title": "DM Wilson Parent Correctness Audit Note",
@@ -13813,7 +13813,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Full Closure Boundary",
@@ -13822,7 +13822,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Source-Amplitude Theorem",
@@ -13831,7 +13831,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino `c_odd` Bosonic Normalization Theorem",
@@ -13840,7 +13840,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_unique_amplitude_slot_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
           "title": "PMNS Selector Unique Amplitude Slot",
@@ -13849,7 +13849,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_selector_class_space_uniqueness_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md",
           "title": "PMNS Selector Class-Space Uniqueness",
@@ -13894,7 +13894,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -13903,7 +13903,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -13912,7 +13912,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -13957,7 +13957,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -13975,7 +13975,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_wilson_parent_correctness_audit_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_WILSON_PARENT_CORRECTNESS_AUDIT_NOTE_2026-04-18.md",
           "title": "DM Wilson Parent Correctness Audit Note",
@@ -13993,7 +13993,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_LEPTOGENESIS_PMNS_MICROSCOPIC_SELECTOR_REDUCTION_THEOREM_NOTE_2026-04-17.md",
           "title": "DM Leptogenesis PMNS Microscopic Selector Reduction Theorem",
@@ -14157,7 +14157,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 `sqrt(sigma)` Retention Gate Audit: EFT-Bridge Decomposition of the 5.6% Gap",
@@ -14166,7 +14166,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
           "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap",
@@ -14175,7 +14175,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md",
           "title": "Lane 1 \u2014 Hadron Mass Program",
@@ -14220,7 +14220,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
@@ -14238,7 +14238,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_wilson_parent_correctness_audit_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_WILSON_PARENT_CORRECTNESS_AUDIT_NOTE_2026-04-18.md",
           "title": "DM Wilson Parent Correctness Audit Note",
@@ -14256,7 +14256,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_BANK_Z3_DOUBLET_BLOCK_SELECTION_OBSTRUCTION_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Bank `Z_3` Doublet-Block Selection Obstruction Theorem",
@@ -14274,17 +14274,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_M_SPECTATOR_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface `m`-Spectator Theorem",
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Intrinsic Slot Theorem",
           "transitive_descendants": 286
@@ -14292,7 +14292,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_postcanonical_polar_section_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md",
           "title": "DM Neutrino Post-Canonical Positive Polar Section",
@@ -14301,7 +14301,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_postcanonical_extension_class_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_POSTCANONICAL_EXTENSION_CLASS_NOTE_2026-04-15.md",
           "title": "DM Neutrino Post-Canonical Extension Class",
@@ -14310,7 +14310,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_LEPTOGENESIS_UNIVERSAL_YUKAWA_NO_GO_NOTE_2026-04-15.md",
           "title": "Leptogenesis Universal-Yukawa No-Go",
@@ -14319,7 +14319,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md",
           "title": "DM Neutrino Atmospheric-Scale Theorem",
@@ -14328,7 +14328,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_majorana_endpoint_exchange_midpoint_theorem_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MAJORANA_ENDPOINT_EXCHANGE_MIDPOINT_THEOREM_NOTE.md",
           "title": "Majorana Endpoint-Exchange Midpoint Theorem",
@@ -14337,7 +14337,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_majorana_axis_exchange_fixed_point_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md",
           "title": "Majorana Axis-Exchange Fixed-Point Theorem",
@@ -14346,7 +14346,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_majorana_nambu_source_principle_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md",
           "title": "Majorana Nambu Source Principle",

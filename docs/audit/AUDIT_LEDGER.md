@@ -21,14 +21,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 63 |
 | **retained_no_go** | 120 |
 | **retained_bounded** | 224 |
-| _retained_pending_chain_ | 3 |
+| _retained_pending_chain_ | 4 |
 | open_gate | 19 |
-| unaudited | 664 |
-| audit_in_progress | 3 |
+| unaudited | 641 |
+| audit_in_progress | 2 |
 | meta | 49 |
-| ~~audited_numerical_match~~ | 25 |
+| ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 35 |
-| ~~audited_conditional~~ | 572 |
+| ~~audited_conditional~~ | 594 |
 | ~~audited_failed~~ | 14 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,24 +39,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 3 |
-| `audited_clean` | 383 |
-| `audited_conditional` | 572 |
+| `audit_in_progress` | 2 |
+| `audited_clean` | 384 |
+| `audited_conditional` | 594 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 58 |
-| `audited_numerical_match` | 25 |
+| `audited_numerical_match` | 26 |
 | `audited_renaming` | 35 |
-| `unaudited` | 713 |
+| `unaudited` | 690 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 620 |
-| `decoration` | 10 |
-| `meta` | 62 |
-| `no_go` | 183 |
-| `open_gate` | 111 |
-| `positive_theorem` | 622 |
-| `unset` | 190 |
+| `bounded_theorem` | 623 |
+| `decoration` | 11 |
+| `meta` | 64 |
+| `no_go` | 180 |
+| `open_gate` | 101 |
+| `positive_theorem` | 547 |
+| `unset` | 272 |
 
 | criticality | count |
 |---|---:|
@@ -65,7 +65,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 177 |
 | `leaf` | 649 |
 
-- **Retained pending chain closure:** 3
+- **Retained pending chain closure:** 4
 - **Citation cycles detected:** 189
 
 ### Runner classification (static heuristic)
@@ -112,9 +112,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `dm_su3_gauge_loop_obstruction_note_2026-04-25` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
+| `cosmological_constant_vacuum_energy_audit_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `lh_doublet_su2_squared_hypercharge_anomaly_cancellation_note_2026-05-01` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -188,6 +187,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_su3_gauge_loop_obstruction_note_2026-04-25` | no_go | ~~audited_clean~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -511,6 +511,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `angular_kernel_underdetermination_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `architecture_portability_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `area_law_coefficient_gap_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `area_law_multipocket_selector_no_go_note_2026-04-25` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `area_law_native_car_semantics_tightening_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `area_law_primitive_car_edge_identification_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -530,6 +532,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -609,8 +612,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `continuum_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `continuum_identification_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `continuum_limit_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `cosmological_constant_result_2026-04-12` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `cosmology_from_mass_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cpt_exact_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -643,6 +648,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -686,14 +692,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -718,6 +724,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -726,6 +733,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_to_dweh_hermitian_source_family_target_note_2026-04-18` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_wilson_to_dweh_local_chain_path_algebra_target_note_2026-04-18` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `down_type_mass_ratio_ckm_dual_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `edge_deletion_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `edge_deletion_boundary_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -771,6 +779,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -802,6 +811,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `hierarchy_bosonic_bilinear_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `higgs_mass_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -819,12 +829,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `inverse_problem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `k_dependence_review_safe_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `koide_brannen_geometry_dirac_support_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -846,7 +855,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_so2_phase_erasure_support_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_taste_cube_cyclic_source_descent_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `kubo_continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -905,6 +913,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pauli_group_order_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `persistent_object_exact_lattice_park_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -940,9 +949,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `qnm_hardening_feasibility_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_endpoint_denominator_admissibility_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_endpoint_readout_constraints_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_mass_ratio_full_solve_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_mass_ratios_taste_staircase_support_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -965,12 +977,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_remaining_open_imports_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_selector_synthesis_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `scalar_tensor_ray_magnitude_bridge_note_2026-04-19` | decoration | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `second_grown_family_complex_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | C | - |
 | `session_synthesis_2026-04-10_graph_axioms` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `shapiro_delay_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `sign_portability_invariant_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `signed_gravity_tensor_source_transport_retention_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -1026,6 +1040,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_positive_background_extension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `universal_qg_canonical_smooth_geometric_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_canonical_smooth_gravitational_weak_measure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | B | - |
 | `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `universal_qg_canonical_textbook_weak_measure_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | B | - |
@@ -1033,7 +1048,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_external_fe_smooth_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | B | - |
 | `universal_qg_smooth_gravitational_global_atlas_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `universal_qg_smooth_gravitational_local_identification_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | B | - |
+| `up_sector_partition_revisit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `up_type_mass_ratio_ckm_inversion_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `uv_gauge_to_yukawa_bridge_sc_vs_pert_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `w_mass_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -1056,16 +1073,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_rearrangement_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_bridge_variational_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
+| `yt_eft_bridge_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `yt_exact_hessian_selector_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_exact_schur_normal_form_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_explicit_systematic_budget_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `yt_flagship_boundary_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `yt_gauge_crossover_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_p3_k_series_geometric_bound_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `yt_qfp_insensitivity_support_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_schur_stability_gap_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_vertex_power_derivation` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `yt_zero_import_authority_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -1154,6 +1176,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `quark_up_amplitude_candidate_scan_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -1610,6 +1633,44 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The audited claim is a bounded mathematical no-go, not a general physical exclusion of every finite or gapped carrier. Under the explicit premise that the finite Schmidt spectrum has algebraic nonzero entries, the von Neumann entropy is a linear form in logarithms of algebraic numbers with algebraic coefficients. Baker's theorem gives that any nonzero such form is transcendental. A non-product finite probability spectrum has strictly positive entropy, while the product spectrum has entropy 0. Since 1/4 is algebraic and nonzero, exact equality S=1/4 is excluded. The runner summary checks the target rationality, representative rational/algebraic spectra, primitive m/16 binary cases, flat ranks, direct-sum log-linear forms, and the p_star transcendental-selector consequence without reporting failures. Residual risk is only scope control: the clean result covers algebraic finite Schmidt spectra and algebraic finite-matrix cases yielding algebraic reduced spectra; it does not prove that all physically possible finite or gapped edge carriers must have algebraic Schmidt spectra.
 - **auditor confidence:** high
 
+### `area_law_coefficient_gap_note`
+
+- **Note:** [`AREA_LAW_COEFFICIENT_GAP_NOTE.md`](../../docs/AREA_LAW_COEFFICIENT_GAP_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the gap note's status claim that existing single/simple-fiber carriers do not derive the Planck 1/4 coefficient, while the later 1/4 Widom carrier remains conditional on accepting primitive CAR/Clifford-Majorana edge semantics.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-area_law_coefficient_gap-030`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The post-audit update says the coefficient problem is resolved only if the rank-four primitive boundary block is accepted as the two-orbital Laplacian-gated CAR edge carrier; otherwise the broader no-go remains retained.  _(class `B`)_
+- **chain closes:** False — The restricted packet supports the negative/simple-fiber gap assessment, but the positive closure imports an explicit carrier-identification premise. The missing step is a retained derivation that rank-four primitive boundary data force the two-orbital CAR edge carrier and self-dual Laplacian gate.
+- **rationale:** The note is a cross-note synthesis rather than a first-principles computation, and no runner output or source is available for this specific claim. Multiple cited authorities are marked audited_conditional and explicitly preserve the residual carrier premise. The stated conclusion is therefore usable as a conditional/open-gate status note, not as a closed derivation of the 1/4 entanglement coefficient from the supplied inputs alone.
+- **open / conditional deps cited:**
+  - `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`
+  - `BH_ENTROPY_DERIVED_NOTE.md`
+  - `BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`
+  - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`
+  - `AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md`
+  - `AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`
+  - `AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`
+  - `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `area_law_multipocket_selector_no_go_note_2026-04-25`
+
+- **Note:** [`AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md`](../../docs/AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the restricted claim that multipocket Widom carriers can hit c_Widom=1/4 only by adding a pocket-measure or sector-weight selector, and that this selector is not derived by the retained primitive boundary trace alone.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-area_law_multipocket_sel-026`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** In the minimal multipocket model, c_Widom(mu)=(1+mu)/6, so c_Widom=1/4 requires mu=1/2, an additional transverse-measure selector not supplied by the primitive 4/16 trace.  _(class `A`)_
+- **chain closes:** True — The no-go conclusion follows algebraically from the stated Widom crossing formula and the multipocket/direct-sum parameterizations. The positive parity-gate and CAR-edge notes are conditional subsequent repairs, not needed to establish the selector-free no-go surface.
+- **rationale:** The core no-go calculation is a clean class-A algebraic closure over the stated Widom crossing-count setup: the quarter coefficient requires either mu=1/2 or exact sector weights, neither of which is the same datum as 4/16. The runner source performs arithmetic and parameter-sensitivity checks rather than a first-principles Cl(3)/Z^3 derivation, which is appropriate for this no-go scope. However, the restricted packet includes cited authorities marked audited_conditional with explicit open carrier-identification language, so the overall audit verdict is conditional under the rubric's dependency rule.
+- **open / conditional deps cited:**
+  - `AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`
+  - `AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
 ### `area_law_native_car_semantics_tightening_note_2026-04-25`
 
 - **Note:** [`AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`](../../docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
@@ -1950,6 +2011,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `MINIMAL_AXIOMS_2026-04-11.md`
   - `MINIMAL_AXIOMS_2026-05-03.md`
+- **auditor confidence:** high
+
+### `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01`
+
+- **Note:** [`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](../../docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Equal-time tensor-factor locality and a lattice Lieb-Robinson lightcone bound for a finite-range Hamiltonian, plus the claimed continuum spacelike microcausality limit.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-axiom_first_microcausali-039`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Assuming the RP-reconstructed Hamiltonian has the finite-range decomposition H = sum_z h_z with each h_z supported in radius r and ||h_z|| <= J, the standard Lieb-Robinson estimate gives ||[alpha_t(O_x), O_y]|| <= 2||O_x||||O_y|| exp(-d(x,y) + v_LR|t|).  _(class `A`)_
+- **chain closes:** False — The finite-range local Hamiltonian decomposition for the RP-reconstructed H and the continuum Lorentz/microcausality bridge are not closed by the restricted packet. Several load-bearing upstream authorities are audited_conditional, including RP, spectrum condition, Lorentz kernel closure, emergent Lorentz invariance, and cluster decomposition.
+- **rationale:** The lattice Lieb-Robinson step is standard finite-lattice mathematics once a bounded finite-range Hamiltonian is supplied, and the runner performs a real toy 1D qubit check rather than merely printing constants. But the source note depends on non-retained upstream authorities and also assumes that the RP-reconstructed Hamiltonian inherits the required local finite-range decomposition with the stated J. The continuum strict microcausality claim further imports an unresolved Lorentz-limit bridge from conditional authorities, so retained-grade closure does not follow from the provided packet.
+- **open / conditional deps cited:**
+  - `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
+  - `AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
+  - `LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`
+  - `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
+  - `AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
@@ -3591,6 +3672,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `runner_prints_SAFE_READ_without_hard_assertions`
 - **auditor confidence:** high
 
+### `cosmological_constant_result_2026-04-12`
+
+- **Note:** [`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](../../docs/COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded/conditional S^3 spectral-gap cosmological-constant companion: exact scalar eigenvalue coefficient 3, conditional identification of Lambda with that gap, and present-epoch O(1) comparison.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-cosmological_constant_re-080`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The note identifies the cosmological constant with the retained S^3 scalar spectral gap, Lambda = lambda_1(S^3_R) = 3/R^2, and then with R_Lambda = c/H_inf obtains Lambda = 3 H_inf^2/c^2.  _(class `F`)_
+- **chain closes:** False — The scalar eigenvalue algebra closes, but the physical identification Lambda = lambda_1 and the cosmological scale choice R_Lambda = c/H_inf are explicit open bridge assumptions in the packet.
+- **rationale:** The mathematical S^3 eigenvalue lambda_1 = 3/R^2 is standard algebra within the provided surface, and substituting R_Lambda = c/H_inf gives the stated formula. However, the load-bearing physical move is an asserted identification between the scalar spectral gap and the cosmological constant, plus an open cosmological radius bridge. Multiple cited authorities explicitly mark the cosmology lane as bounded/conditional, and the provided runner is a negative vacuum-energy audit rather than a first-principles computation of the positive spectral-gap claim.
+- **open / conditional deps cited:**
+  - `DARK_ENERGY_EOS_NOTE.md`
+  - `OMEGA_LAMBDA_DERIVATION_NOTE.md`
+  - `COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md`
+  - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
+  - `GRAVITON_MASS_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
 ### `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29`
 
 - **Note:** [`COSMOLOGICAL_CONSTANT_RETENTION_WITH_R_BUDGET_THEOREM_NOTE_2026-04-29.md`](../../docs/COSMOLOGICAL_CONSTANT_RETENTION_WITH_R_BUDGET_THEOREM_NOTE_2026-04-29.md)
@@ -3630,6 +3730,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`
   - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
   - `CONFINEMENT_STRING_TENSION_NOTE.md`
+- **auditor confidence:** high
+
+### `cosmology_from_mass_spectrum_note`
+
+- **Note:** [`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](../../docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the conditional cosmology pie-chart cascade from imported eta and bounded alpha_GUT/Sommerfeld R through BBN, Omega_DM/Omega_b, Omega_m, and flatness to Omega_Lambda.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-cosmology_from_mass_spec-167`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** With eta imported from Planck and R = R_base * S_vis/S_dark fixed by a bounded Sommerfeld alpha_GUT choice near 0.048, the cascade computes Omega_b, Omega_DM, Omega_m, and Omega_Lambda by BBN, multiplication, addition, and flatness.  _(class `G`)_
+- **chain closes:** False — The arithmetic cascade closes only conditionally after importing eta and choosing a bounded Sommerfeld continuation for R. The missing closure is promotion of eta and the alpha_GUT/Sommerfeld matter-cosmology bridge to retained theorem-grade inputs.
+- **rationale:** The note is honest that eta is imported from Planck and that alpha_GUT/Sommerfeld is bounded rather than derived. The runner verifies arithmetic and observational agreement but also hard-codes ETA_OBS and selects R_selfconsistent = 5.48 to match the observed dark-to-baryon ratio. At least one cited authority is explicitly not retained-grade, including R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md with effective_status audited_conditional and the freezeout-bypass eta support note with effective_status audited_numerical_match.
+- **open / conditional deps cited:**
+  - `R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`
+  - `DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `cosmology_scale_identification_and_reduction_note`
@@ -4311,6 +4427,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** **Runner result:** `PASS = 39, FAIL = 0`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 16 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21`
+
+- **Note:** [`DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Given the exact active half-plane, the five-basin target chart, and the cited source-cubic signs, the audit checked whether A-BCC reduces to selecting Basin 1 on the exact PMNS target-surface chamber root set.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-dm_abcc_exact_target_sur-323`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the exact target-surface chamber roots {Basin 1, Basin 2, Basin X}, the source cubic has signs I_src(Basin 1) > 0 and I_src(Basin 2), I_src(Basin X) < 0, so I_src(H) > 0 selects Basin 1 uniquely.  _(class `B`)_
+- **chain closes:** False — The internal composition works conditionally, but both cited authorities are marked audited_conditional rather than retained-grade. The missing step is retained-grade closure of the target chamber/root completeness and source-cubic selector inputs.
+- **rationale:** The runner performs finite algebraic/numerical checks on hard-coded basin coordinates and imported source-cubic/determinant machinery, and its reported signs support the local implication on the stated chamber roots. However, the claim depends on upstream authorities explicitly labeled audited_conditional, and the runner also relies on an archived basin-enumeration completeness note rather than proving completeness in this restricted packet. Under the rubric, retained status cannot propagate through those conditional dependencies.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  - `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
@@ -5260,6 +5393,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`
 - **auditor confidence:** high
 
+### `dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_SINGLET_DOUBLET_CP_SLOT_TOOL_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_SINGLET_DOUBLET_CP_SLOT_TOOL_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the algebraic singlet-doublet Hermitian-kernel slot calculation, its real doublet rotation to the heavy-neutrino mass basis, and the resulting CP tensor formula relative to the cited circulant no-go.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-dm_neutrino_singlet_doub-229`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Under the real doublet rotation, the singlet-doublet entries become (K_mass)_{01}=sqrt(2)(v cos phi - i u sin phi) and (K_mass)_{02}=sqrt(2)(u cos phi - i v sin phi), so Im[(K_mass)_{0j}^2] = -2 u v sin(2 phi).  _(class `A`)_
+- **chain closes:** False — The algebra for the defined slot family closes, but the broader theorem relies on an unaudited upstream circulant-tool authority and does not independently prove the global minimality of this carrier over all non-circulant kernels.
+- **rationale:** The runner performs explicit finite-dimensional matrix algebra checks, but its reported class C labels overstate the work: the load-bearing step is an algebraic identity for a defined kernel and rotation, not a first-principles axiom computation. One cited authority is explicitly marked unaudited, which blocks clean retention under the rubric. The note also imports the global minimal-carrier framing beyond what the algebra alone establishes in the restricted packet.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_Z3_CIRCULANT_CP_TOOL_NOTE_2026-04-15.md`
+- **auditor confidence:** high
+
 ### `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16`
 
 - **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
@@ -5371,24 +5519,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
-### `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16`
-
-- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the claim that the Z_3 singlet-doublet slot readout from the positive polar H-section is shift-invariant and constant over the cited source-oriented shift-quotient bundle.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260506-190728-00d8c855-dm_neutrino_source_surfa-292`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the explicit source-oriented quotient gauge, the coordinates m, delta, and r31 drop out of a(H) and b(H), leaving the constant pair a_* and b_*.  _(class `A`)_
-- **chain closes:** False — The local algebraic reduction is supported by the runner as a finite sampled identity check over imported formulas. The terminal chain does not close because multiple load-bearing cited authorities are unaudited, audited_renaming, or audited_conditional rather than retained-grade.
-- **rationale:** The runner imports exact_package, slot_pair_from_h, cp_pair_from_h, and quotient_gauge_h from upstream theorem-side modules, then checks shift invariance, sampled constancy, CP reconstruction, and note text. That is class A algebra over imported retained-looking inputs, not a first-principles computation from Cl(3). Because the cited authorities include audited_renaming, unaudited, and audited_conditional statuses, the claim cannot be promoted as clean from this restricted packet.
-- **open / conditional deps cited:**
-  - `DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`
-  - `DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md`
-  - `DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md`
-- **auditor confidence:** high
-
 ### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`
 
 - **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md)
@@ -5431,24 +5561,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
-### `dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17`
+### `dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17`
 
-- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md)
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Conditional commutant-class Schur lemma on H_hw=1 plus scalar-baseline reference curvature Q = 6(delta^2 + q_+^2)/m^2, explicitly not a live-sheet promotion.
+- **claim_scope:** Audited only the bounded scalar-baseline diagnostic quadratic on the active pair and its constrained minimizer on the cited active half-plane, not any physical selector closure.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260506-190728-00d8c855-dm_neutrino_source_surfa-293`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Because the retained algebra generated by P_1, P_2, P_3 and C_3[111] is the full irreducible matrix algebra on H_hw=1, any C-linear Hermitian operator commuting with every retained generator is D = m I_3.  _(class `A`)_
-- **chain closes:** False — The algebraic Schur step closes conditionally from the quoted matrix-algebra inputs, but the cited retained-generation and live-sheet authorities are audited_conditional or unaudited. The missing retained step is closure of those upstream dependency surfaces, especially the retained H_hw=1 generation algebra and live source-sheet premises.
-- **rationale:** The note is honestly scoped as a conditional commutant-class lemma and explicitly withdraws live-sheet curvature promotion. The core Schur inference is standard algebra once the retained irreducible algebra is granted, and the runner source does compute commutators, determinant identities, curvature checks, and live non-commutation rather than merely printing constants. However, several cited authorities are not retained-grade in the restricted packet, including an unaudited diagnostic note and multiple audited_conditional support theorems, so the audit cannot mark the chain clean.
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-dm_neutrino_source_surfa-301`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For the scalar baseline this reduces to K_m(X,Y) = (1/m^2) Tr(XY) on the active traceless block, and Tr(T_delta T_delta)=Tr(T_q T_q)=6 with Tr(T_delta T_q)=0.  _(class `A`)_
+- **chain closes:** False — The algebraic diagnostic follows from the supplied matrices, scalar baseline, and half-plane input. The audit chain does not close to retained grade because all three cited authorities are marked audited_conditional in the restricted packet.
+- **rationale:** The load-bearing step is a genuine algebraic identity over the supplied active generators and chosen scalar baseline, and the minimizer calculation is standard convex minimization on the cited half-plane. The runner performs substantive matrix and minimization checks, but its PASS labels overstate these as class C; the actual checks are algebraic over imported upstream objects. Because the cited authorities are all audited_conditional rather than retained-grade, the verdict must remain conditional.
 - **open / conditional deps cited:**
-  - `DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md`
   - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
-  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16`
@@ -5998,6 +6125,26 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a support note whose executable closure is pending.
 - **auditor confidence:** medium
 
+### `dm_split2_interval_certified_dominance_closure_theorem_note_2026-04-21`
+
+- **Note:** [`DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the interval-certified exclusion of transport-closing points on the two stated residual split-2 boxes, conditional on the cited carrier reduction, active affine chart, and imported transport functional/kernel.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-dm_split2_interval_certi-255`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Weyl-separated cofactor projector intervals, pushed through the exact one-variable transport kernel, give rowwise eta/eta_obs upper bounds strictly below 1 on both CAP_BOX and ENDPOINT_BOX.  _(class `A`)_
+- **chain closes:** False — The interval arithmetic step itself is an algebraic/numerical enclosure over the stated operators and boxes, and the runner appears to compute those enclosures rather than merely print constants. The restricted packet does not retain-grade the upstream carrier reduction or provide a closed authority for the exact transport functional/kernel and normalizations imported by the runner.
+- **rationale:** The load-bearing enclosure is not a renaming or tuned external numerical match; it is a genuine interval closure over imported branch objects. However, all three cited authorities are marked audited_conditional, and the runner also imports the transport kernel, exact package constants, q_floor, active_affine_h, and box definitions from files not fully closed in the restricted packet. Under the rubric, non-retained cited authorities and missing bridge authorities force audited_conditional even though the local interval check passes on its own terms.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`
+  - `scripts/frontier_dm_leptogenesis_flavor_column_functional_theorem.py`
+  - `scripts/dm_leptogenesis_exact_common.py`
+  - `scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py`
+- **auditor confidence:** high
+
 ### `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15`
 
 - **Note:** [`DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md`](../../docs/DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md)
@@ -6010,6 +6157,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_su3_gauge_loop_obstruction_note_2026-04-25`
+
+- **Note:** [`DM_SU3_GAUGE_LOOP_OBSTRUCTION_NOTE_2026-04-25.md`](../../docs/DM_SU3_GAUGE_LOOP_OBSTRUCTION_NOTE_2026-04-25.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited only the no-go that the standard perturbative one-loop SU(3) gauge-boson Coleman-Weinberg route gives zero for a color-singlet scalar and therefore does not derive the 8/3 enhancement.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** _retained_pending_chain_  (reason: `chain_waiting_on:dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-dm_su3_gauge_loop_obstru-166`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For a color-singlet scalar in the trivial SU(3) representation, C_2(R)=0, so the standard one-loop Coleman-Weinberg gauge-boson mass correction delta m^2 is zero and cannot produce 8/3.  _(class `A`)_
+- **chain closes:** True — Within the stated scope, the conclusion follows from the supplied one-loop formula and the trivial-representation Casimir C_2(singlet)=0. The note does not claim that all possible 8/3 mechanisms are ruled out; R1-R3 remain explicitly open.
+- **rationale:** The load-bearing no-go is a direct algebraic substitution into the stated one-loop gauge self-energy formula: the singlet Casimir vanishes, so the one-loop correction vanishes. The runner source performs only textbook SU(3) constant arithmetic and zero-Casimir checks, and it does not hard-code a contested positive derivation of 8/3. The cited upstream notes contain open dependencies for the broader dark-mass program, but those open mechanisms are not needed for the narrow obstruction claim audited here.
+- **open / conditional deps cited:**
+  - `DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md`
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+- **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19`
 
@@ -6140,6 +6303,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** **Script:** `scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_2026_04_18.py`  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_to_dweh_local_chain_path_algebra_target_note_2026-04-18`
+
+- **Note:** [`DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md`](../../docs/DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audited the algebraic sharpening from a generic nine-channel Hermitian Wilson target to the Hermitian shadow of a local adjacent-chain path algebra, conditional on the upstream dW_e^H target reductions.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-dm_wilson_to_dweh_local_-105`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** One adjacent two-edge chain generated by E12, E23 and their adjoints produces the nine matrix units whose Hermitian combinations form a real basis of Herm(3).  _(class `A`)_
+- **chain closes:** False — The local matrix-algebra/Herm(3) basis claim closes algebraically. The broader Wilson-to-dW_e^H target claim does not close as a completed theorem because Phi_chain realization and the descended identity dW_W o Phi_chain = dW_e^H are explicitly left open, and the cited upstream authorities are not retained-grade.
+- **rationale:** The runner verifies standard finite-dimensional matrix algebra and string-checks the upstream target notes; it does not derive a Wilson embedding or the descended first-variation identity. The source note itself states those two steps remain open. In addition, cited authorities include audited_conditional and audited_numerical_match inputs, so retained status cannot propagate through this claim.
+- **open / conditional deps cited:**
+  - `DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md`
+  - `DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md`
+  - `DM_WILSON_TO_DWEH_HERMITIAN_SOURCE_FAMILY_TARGET_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `down_type_mass_ratio_ckm_dual_note`
@@ -7474,6 +7654,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
 - **auditor confidence:** high
 
+### `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Existence, on the truncated dominant-weight box, of a zero-extension of the retained first-sector packet that gives a nonnegative conjugation-symmetric coefficient sequence and a PSD Wilson-factorized operator preserving the retained three-sample reconstruction.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-gauge_vacuum_plaquette_f-191`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Extend the retained packet by zero outside the first-symmetric weights; then T_ext = exp(3 J) D_6^loc diag(rho_ext) exp(3 J) is a self-adjoint, conjugation-symmetric, positive-semidefinite factorized operator that preserves the retained first-sector reconstruction.  _(class `A`)_
+- **chain closes:** False — The finite zero-extension and PSD checks close algebraically conditional on the retained packet and factorized-class setup. They do not close as retained-grade from this restricted packet because the retained-packet authority is audited_conditional and the character-measure/factorized-class authority is audited_renaming/open_gate.
+- **rationale:** Issue: The new construction is an algebraic zero-extension/PSD check, but both direct cited authorities are non-retained in the packet: the character-measure authority is audited_renaming/open_gate and the retained-packet authority is audited_conditional. Why this blocks: the existence claim depends on the retained packet and canonical factorized boundary description being accepted inputs; retained status does not propagate through conditional or open dependencies. Repair target: first ratify the truncated packet theorem and the character-measure/factorized-class bridge as retained-grade, or scope the theorem as explicitly conditional on those inputs. Claim boundary until fixed: conditional on those inputs, the zero-extension itself is a finite algebraic construction and the runner's matrix checks support PSD and retained-sector reconstruction.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
 ### `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md)
@@ -8356,6 +8552,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
+### `hierarchy_bosonic_bilinear_selector_note`
+
+- **Note:** [`HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md`](../../docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the restricted claim that bosonic-bilinear/CPT-even/local closure on the APBC temporal phase set algebraically selects the unique minimal resolved orbit L_t = 4 and yields the (7/8)^(1/4) hierarchy factor.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-hierarchy_bosonic_biline-140`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The physical EWSB order parameter is a local bosonic CPT-even bilinear, and the unique minimal resolved APBC orbit with exactly those closure properties is L_t = 4.  _(class `A`)_
+- **chain closes:** False — The APBC orbit partition and uniform-weight calculation close algebraically. The physical bridge from electroweak effective-action curvature to this exact APBC Klein-four orbit selector is asserted rather than closed by the restricted packet.
+- **rationale:** The runner genuinely computes the finite APBC phase orbits, the L_t = 4 uniform weight, and the numerical hierarchy value, so the internal algebra is not just printed constants. However, it also imports CANONICAL_ALPHA_LM and checks closeness to the measured v, and it does not derive the load-bearing physical identification of the EWSB order parameter with the specific local bosonic CPT-even APBC orbit selector. One cited authority is audited_conditional, and the retained_bounded authority itself says the remaining order-parameter selection step is still open.
+- **open / conditional deps cited:**
+  - `HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md`
+  - `HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md`
+- **auditor confidence:** high
+
 ### `hierarchy_dimensional_compression_note`
 
 - **Note:** [`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](../../docs/HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md)
@@ -8853,23 +9065,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the source conflates link-level imaginary-action damping with the detector escape observable. The factor exp(-k gamma L f) is below 1 for f > 0 and gamma > 0, but the runner's detector escape ratios are still above 1 for UNIFORM f=0.005 at gamma=0.1 and 0.2, UNIFORM f=0.01 at gamma=0.1 and 0.2, and GRAVITY at gamma=0.1 and 0.2. Why this blocks: the retained separation claim says kernel-generic absorption occurs under any nonzero field at gamma > 0, but the measured observable used by the note only shows suppression at sufficiently large gamma in this setup. Repair target: distinguish local per-link attenuation from total detector escape, or add a theorem/runner proving a thresholded escape-suppression criterion across gamma and field families. Claim boundary until fixed: safely claim only that gamma=0.5 suppresses detector escape for the tested nonzero fields, and that the 1/r gravity field uniquely shows the tested TOWARD -> AWAY centroid crossover by gamma=0.2.
 - **auditor confidence:** high
 
-### `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24`
-
-- **Note:** [`KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md`](../../docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Audited the restricted-packet claim that five canonical fractional-rational topology paths do not derive a literal 2/9 radian phase and instead leave P_A1 as a period-convention primitive.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260506-190728-00d8c855-koide_a1_fractional_topo-295`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Every audited fractional-topology formalism maps the dimensionless rational invariant to phase by its canonical 2π-period map, so outputs are rational multiples of π and the period-1 radian map is just P_A1 restated.  _(class `A`)_
-- **chain closes:** False — The internal no-go argument is coherent as a structural 2π-normalization argument, but the full five-probe synthesis depends on cited authorities that are unaudited or conditional and on runner computations/source not provided in the packet.
-- **rationale:** The load-bearing argument is an algebraic/definition-level closure once each formalism's canonical phase normalization and retained applicability are accepted. However, several one-hop authorities are explicitly not retained-grade, including the Cheeger-Simons and Z3-qubit no-go notes, and the Berry obstruction authority is audited_conditional. No runner stdout or runner source was provided, so the claimed 5-probe verification cannot independently upgrade the synthesis to clean in this restricted audit.
-- **open / conditional deps cited:**
-  - `KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`
-  - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
-  - `KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
-- **auditor confidence:** high
-
 ### `koide_a1_loop_final_status_2026-04-22`
 
 - **Note:** [`KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md`](../../docs/KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md)
@@ -8937,19 +9132,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
 - **auditor confidence:** high
 
-### `koide_brannen_geometry_dirac_support_note_2026-04-22`
+### `koide_circulant_character_derivation_note_2026-04-18`
 
-- **Note:** [`KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`](../../docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Audited the note's support claim that exact selected-line geometry and a conditional Route-3 Wilson-line arithmetic law reproduce the rational 2/9, without proving the physical Brannen-phase bridge.
+- **Note:** [`KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`](../../docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the conditional algebraic derivation that the C3-circulant spectrum yields Koide Q = 2/3 when the equipartition condition A1 and square-root mass readout P1 are assumed.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260506-190728-00d8c855-koide_brannen_geometry_d-296`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The same runner verifies the conditional Route-3 Wilson-line relation W^{d^2} = exp(2i) with d = 3 and n_eff = 2, giving per-step phase 2/d^2 = 2/9, but the physical one-clock identification remains open.  _(class `A`)_
-- **chain closes:** False — The arithmetic and selected-line geometry checks close as support calculations, but the physical identification of the selected-line Berry phase with the ambient APS/ABSS or one-clock natural-time quantity is explicitly left open. The Callan-Harvey cited authority is also unaudited and conditional.
-- **rationale:** The runner performs substantive algebraic and numerical checks rather than merely printing constants, and it supports the internal 2/9 coincidences advertised by the note. However, the note repeatedly states that the physical Brannen-phase bridge is not discharged, and the runner itself encodes the one-clock radian identification as an assumption rather than deriving it. One cited authority is marked unaudited and explicitly classifies the Callan-Harvey route as a bridge-conditioned support candidate.
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-koide_circulant_characte-244`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given R1 + R2 + A1 + P1, with 3a² = 6|b|² and λ_k = √m_k, the standard C3 cosine identities give Q = 2/3 exactly.  _(class `A`)_
+- **chain closes:** False — The algebra from the stated assumptions closes, but the repository-internal derivation does not: A1 is explicitly a non-retained selection assumption and P1 is explicitly an open readout/positive-parent identification.
+- **rationale:** The load-bearing Koide computation is a standard algebraic identity once A1 and P1 are inserted. However, those premises are not closed by the restricted packet: the source note says A1 is the load-bearing non-axiom step and P1 remains outside the audit-ratified tier. The cited authorities also include audited_conditional and unaudited support notes, so retained status cannot propagate to the full derivation.
 - **open / conditional deps cited:**
-  - `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
+  - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
+  - `KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md`
+  - `KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md`
+  - `KOIDE_POSITIVE_PARENT_AXIS_OBSTRUCTION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_circulant_wilson_target_note_2026-04-18`
@@ -9489,22 +9687,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The runner performs many genuine symbolic algebra checks, but several load-bearing support claims rely on imported premises: Frobenius uniqueness as the forced functional, PL/O smoothability/equivariant smoothing facts, ABSS applicability, and the retained kinematics list itself. With no cited authorities provided, those premises cannot be treated as closed retained-grade inputs in this restricted audit. The note is also careful to leave the physical Q and delta bridges open, so the audited scope is only conditional internal support-chain cleanliness.
 - **open / conditional deps cited:**
   - `KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
-- **auditor confidence:** high
-
-### `koide_selected_line_cyclic_response_bridge_note_2026-04-18`
-
-- **Note:** [`KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`](../../docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the restricted claim that the selected-line cyclic scalar and first-branch point are algebraically fixed by the Berry/Brannen phase input delta = 2/9 via the displayed kappa_sel(delta) bridge and branch monotonicity.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260506-190728-00d8c855-koide_selected_line_cycl-287`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the exact first selected-line branch, kappa_sel(delta) = -sqrt(3) cos(delta + pi/6) / (sqrt(2) + sin(delta + pi/6)), so delta = 2/9 fixes kappa_sel,* and the unique first-branch point m_*.  _(class `A`)_
-- **chain closes:** False — The internal scalar-phase bridge and uniqueness argument close conditionally once delta = 2/9 is supplied. The restricted packet does not retain-grade the upstream Berry/Brannen authorities, and the value delta = 2/9 remains explicitly conditional/open in the cited Brannen reduction note.
-- **rationale:** The runner performs real algebraic and numerical checks for the kappa bridge, branch monotonicity, root solve, and near-legacy compatibility; it is not merely printing constants. However, the load-bearing phase value delta = 2/9 is imported from cited authorities whose effective_status is unaudited, and one cited authority explicitly says the physical-base radian bridge remains open. Therefore the note is a conditional algebraic bridge over an unretained phase-value premise, not a clean standalone closure.
-- **open / conditional deps cited:**
-  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
-  - `KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20`
@@ -11067,6 +11249,26 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The bounded compact-update claim is current with the primary runner: the top-3 update shrinks the source object and preserves the tested weak-field gates on the exact lattice. The detector response remains broad and the note explicitly avoids claiming a sharply localized inertial response or persistent-mass theorem. Residual risk is the stated scope limitation: this is one exact-lattice family and one minimal repeated-update loop.
 - **auditor confidence:** high
 
+### `persistent_object_exact_lattice_park_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_EXACT_LATTICE_PARK_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_EXACT_LATTICE_PARK_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A synthesis/park claim that the provided upstream exact-lattice compact-object notes jointly support bounded beyond-pocket top4 multistage object-plus-response transfer, with a persistent inward-source boundary and no inertial-mass closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-persistent_object_exact_-184`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The exact-lattice branch supports a bounded beyond-pocket transferable multistage compact-object floor at top4, with inward-source rows 0.50, 0.75, and 1.00 remaining closed and no closure-grade inertial-mass law.  _(class `B`)_
+- **chain closes:** False — The synthesis depends on upstream audit-status authorities, including several audited_conditional notes and one audited_failed multistage-floor note. The missing step is a retained-grade closure of the top4 multistage floor and transfer chain from the cited packet.
+- **rationale:** The provided runner genuinely computes the compact top3 update baseline and supports only the early compact-object step, not the full parked beyond-pocket top4 multistage synthesis. The source note's load-bearing conclusion is assembled by cross-note dependence on cited authorities rather than a fresh first-principles computation in the park note. Because multiple cited authorities are not retained-grade, and one is explicitly marked audited_failed, retained status cannot propagate to this synthesis. The stated negative boundary and below-closure limitation are coherent within the packet, but the full positive chain remains conditional on repairing upstream audit status.
+- **open / conditional deps cited:**
+  - `PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`
+  - `PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`
+  - `PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`
+  - `PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md`
+  - `PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md`
+  - `PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`
+- **auditor confidence:** high
+
 ### `persistent_object_green_scout_note`
 
 - **Note:** [`PERSISTENT_OBJECT_GREEN_SCOUT_NOTE.md`](../../docs/PERSISTENT_OBJECT_GREEN_SCOUT_NOTE.md)
@@ -11979,6 +12181,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
+### `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the restricted claim that exact shell-normalized carrier columns plus imported retained a_d = rho force the LO bridge factor kappa = 1 and hence BICAC / STRC-LO.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-quark_bimodule_lo_shell_-096`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the shell-normalized slot, a separate bridge factor would give shell coefficient rho*kappa instead of the retained shell coefficient rho, so only kappa = 1 is allowed.  _(class `A`)_
+- **chain closes:** False — The algebra rho*kappa = rho implies kappa = 1, but the restricted packet does not close the physical identification of the retained scalar comparison a_d = rho with the shell coefficient. Both cited authorities are marked audited_conditional rather than retained-grade.
+- **rationale:** The runner checks the advertised algebraic consequences and carrier-column targets, but it does not establish the contested bridge from the scalar comparison rho to the physical LO shell coefficient from first principles. The result depends on imported retained-status claims from two cited authorities whose effective_status is audited_conditional. Under the rubric, non-retained cited authorities and an unclosed normalization/bridge premise force audited_conditional even though the internal algebra is consistent.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
 ### `quark_bimodule_norm_existence_theorem_note_2026-04-19`
 
 - **Note:** [`QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md)
@@ -12076,6 +12294,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `scripts/frontier_quark_up_amplitude_candidate_scan.py`
 - **auditor confidence:** high
 
+### `quark_endpoint_denominator_admissibility_note_2026-04-19`
+
+- **Note:** [`QUARK_ENDPOINT_DENOMINATOR_ADMISSIBILITY_NOTE_2026-04-19.md`](../../docs/QUARK_ENDPOINT_DENOMINATOR_ADMISSIBILITY_NOTE_2026-04-19.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the exact algebraic denominator-admissibility restriction and the no-go against global uniqueness of sqrt(7) on the stated live endpoint atom set.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-quark_endpoint_denominat-179`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** After projecting away the fixed sqrt(5) numerator and excluding bridge ratios with positive support numerator content, the live endpoint atoms generate D_gen = {6, 7, sqrt(6), sqrt(7)} and realize D_real = {6, 7, 42, sqrt(6), sqrt(7), sqrt(42)}.  _(class `A`)_
+- **chain closes:** False — The internal algebra over the listed endpoint atoms checks, but the packet does not independently close the provenance of the live endpoint atom set. The only cited authority is audited_conditional, so retained-grade closure cannot propagate.
+- **rationale:** The runner performs genuine exact Fraction arithmetic over the provided endpoint atoms and verifies the stated generator class, realized class, and sqrt(7) uniqueness/no-go claims as algebraic consequences of those inputs. However, the derivation is class A over an imported live endpoint atom set, not a first-principles compute, and the cited upstream authority is explicitly audited_conditional rather than retained-grade. Under the rubric, that prevents audited_clean even though the local algebra is consistent.
+- **open / conditional deps cited:**
+  - `QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
 ### `quark_endpoint_ratio_chain_law_note_2026-04-19`
 
 - **Note:** [`QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md`](../../docs/QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md)
@@ -12119,6 +12352,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For arbitrary positive diagonal Yukawa singular-value matrices D_u and D_d and fixed CKM unitary V, the construction Y_u = D_u and Y_d = V D_d gives U_u^dag U_d = V while leaving the singular values equal to the freely chosen diagonal entries, so CKM mixing does not determine quark Yukawa eigenvalues.  _(class `A`)_
 - **chain closes:** True — The negative boundary closes as an exact linear-algebra obstruction: the allowed one-Higgs gauge skeleton admits arbitrary 3x3 Yukawa matrices, the top Ward normalization supplies no generation projector, and a fixed CKM matrix is compatible with independently varied Yukawa singular values. Therefore the listed support surface leaves the target non-top ratios unconstrained.
 - **rationale:** The proof is a clean no-go: it does not attempt to derive numerical masses, does not reuse the top Ward identity as a hidden species-uniform physical identification, and the runner checks the load-bearing CKM/singular-value witness plus the gauge-selection freedom and scope firewall.
+- **auditor confidence:** high
+
+### `quark_jts_affine_physical_carrier_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the algebraic identification Pert(p)=H_(1+5) and Pert(p) ≅ J^1_p(A_p) for the provided p and retained physical carrier H_(1+5).
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-quark_jts_affine_physica-097`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Because cos_d = 1/sqrt(6) is nonzero, {p,e5} is a basis of H_(1+5), hence Pert(p)=span{p,e5}=H_(1+5) and affine 1-jets at p are canonically tangent vectors in that plane.  _(class `A`)_
+- **chain closes:** False — The local linear-algebra argument closes if the cited physical carrier H_(1+5), projector ray p, and retained constants are granted. The restricted packet does not close those upstream inputs at retained grade because multiple cited authorities are audited_conditional.
+- **rationale:** The runner verifies the note's actual mathematics as elementary linear algebra and finite-difference tangent checking; it does not perform a first-principles derivation of the carrier or projector inputs. The load-bearing step is class A and appears internally correct over the quoted inputs. However, CKM_ATLAS_AXIOM_CLOSURE_NOTE.md, CL3_SM_EMBEDDING_THEOREM.md, and QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md are marked audited_conditional, so the claim cannot be audited_clean under the rubric.
+- **open / conditional deps cited:**
+  - `CL3_SM_EMBEDDING_THEOREM.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
@@ -12287,6 +12537,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For fixed a_u in (0,1), the admissible family R_{p,q}(a_u;y_t)=y_t*(a_u^(p+q),a_u^q,1) with p,q>0 gives y_u/y_c=a_u^p and y_c/y_t=a_u^q, so the same scalar supports a continuum of ordered scale-covariant ratio pairs and does not determine p or q.  _(class `A`)_
 - **chain closes:** True — The no-go closes internally: granting the exact scalar, positivity, ordering, top-scale normalization, and scale covariance, the displayed two-parameter power family is an explicit admissible counterfamily. Since different positive p,q values preserve the premises while changing the two ratios, the ratios are underdetermined unless an additional readout theorem fixes the exponents or equivalent functions.
 - **rationale:** This is a negative boundary theorem, not a retained mass-ratio prediction. The load-bearing step is exact algebra over an admissible continuum and the runner directly checks scalar domain, ordering, scale covariance, distinct ratio outputs, fit-capacity versus prediction, and absence of hidden mass/fitting/top-reuse imports. The conclusion follows even after granting the stated premises.
+- **auditor confidence:** high
+
+### `quark_up_amplitude_candidate_scan_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded numerical candidate shortlist for the remaining up-sector amplitude a_u, using the quoted exact-support anchor and the provided runner source/output.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-quark_up_amplitude_candi-091`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The scan evaluates exact candidates for a_u on the exact-support anchor and after a two-ratio refit, finding a short exact-candidate shortlist including 7/9 and sqrt(3/5).  _(class `G`)_
+- **chain closes:** False — The runner does perform the stated candidate scan, but it depends on the solved anchor, atlas observables, and optimizer-defined refits imported from upstream code. It establishes a numerical shortlist near a calibrated closure surface, not a retained derivation of a_u from first principles.
+- **rationale:** The load-bearing evidence is a numerical scan over candidate values scored against atlas CKM/J and mass-ratio targets at a fixed exact-support anchor. The provided source computes these scores rather than merely printing constants, but the closure depends on imported observational comparators and a fitted/refitted numerical surface. The note is appropriately cautious that no candidate is framework-forced, yet the audited chain remains a tuned numerical match rather than a first-principles derivation.
+- **open / conditional deps cited:**
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `quark_up_amplitude_scalar_comparison_bridge_note_2026-04-19`
@@ -12729,6 +12995,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
+### `scalar_tensor_ray_magnitude_bridge_note_2026-04-19`
+
+- **Note:** [`SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`](../../docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Audited only the algebraic scalar-to-tensor squared-ray magnitude bridge supp=6/7 on the common 1(+)5 CKM direction, assuming the cited scalar and tensor ray inputs.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-scalar_tensor_ray_magnit-098`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The scalar ray has magnitude squared 1/7, the tensor ray has magnitude squared 1/6, so their squared-magnitude ratio is (1/7)/(1/6)=6/7=supp.  _(class `A`)_
+- **chain closes:** False — The local algebra closes exactly from the provided ray coordinates. The full audit chain does not close to retained grade because both cited upstream authorities are audited_conditional rather than retained-grade inputs.
+- **rationale:** The load-bearing computation is a straightforward algebraic identity over supplied scalar and tensor ray coordinates, and the runner genuinely computes the magnitude ratio checks T8-T9. However, the cited authorities are explicitly marked audited_conditional, so the bridge cannot inherit retained-grade closure in this restricted packet. The runner also hard-codes the retained inputs rather than deriving the upstream scalar and tensor ray structures from first principles, which is appropriate for class A but not class C.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
 ### `scalar_trace_tensor_no_go_note`
 
 - **Note:** [`SCALAR_TRACE_TENSOR_NO_GO_NOTE.md`](../../docs/SCALAR_TRACE_TENSOR_NO_GO_NOTE.md)
@@ -12995,6 +13277,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CAUSAL_MOVING_UNIFICATION_NOTE.md`
   - `COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`
   - `DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_delay_note`
+
+- **Note:** [`SHAPIRO_DELAY_NOTE.md`](../../docs/SHAPIRO_DELAY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited only the canonical in-repo replay table for the claimed discrete Shapiro-style phase lag and its exact-zero control, not an independent derivation of the phase-lag observable.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-shapiro_delay_note-020`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The retained c-dependent phase lag table is portable across three families, seed-stable, has exact zero control, and increases monotonically as c decreases.  _(class `E`)_
+- **chain closes:** False — The runner hard-codes the phase rows and computes only means and spreads from those constants. The restricted packet does not include an executable derivation of the phase lags from the framework operators or closed retained upstream Shapiro authority.
+- **rationale:** The runner verifies formatting-level arithmetic over hard-coded phase rows and preserves the exact-zero row, but it does not compute the Shapiro-style phase lag from first principles. The source note also cites conditional/open upstream authorities, including a proxy-only NV bridge and a causal-field reconciliation note whose upstream center-family causal result is explicitly not asserted as valid. Therefore the replay table may be a stable canonical artifact, but the scientific identification as a discrete Shapiro-delay observable is not closed by the restricted packet.
+- **open / conditional deps cited:**
+  - `DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`
+  - `CAUSAL_FIELD_RECONCILIATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `shapiro_diamond_bridge_note`
@@ -15504,6 +15802,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** No runner, cited authority, or derivation is provided, so the audit must judge from the note text alone. The load-bearing move introduces and names the missing primitive Pi_curv/projector bundle and uses that definition to classify the route as blocked. This is an honest bounded blocker statement, but it is not a first-principles computation or algebraic closure from retained inputs.
 - **auditor confidence:** high
 
+### `universal_qg_canonical_smooth_geometric_action_note`
+
+- **Note:** [`UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the internal claim that the smooth weak/Gaussian positive-background sector and Lorentzian Einstein/Regge stationary sector are two signature sectors of the same project-native B_D/K_GR action family on PL S^3 x R.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-universal_qg_canonical_s-010`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** All cited steps use the same exact congruence-covariant bilinear/action family B_D(h,k) = -Tr(D^-1 h D^-1 k), with K_GR(D) = H_D ⊗ Lambda_R; only the signature class of D changes between the positive-background and Lorentzian sectors.  _(class `A`)_
+- **chain closes:** False — The algebraic same-family identification is visible in the restricted packet, but the chain depends on four cited authorities whose effective statuses are audited_conditional rather than retained-grade. The packet also does not independently close the weak/Gaussian-to-B_D/K_GR bridge beyond those conditional inputs.
+- **rationale:** The load-bearing step is an algebraic comparison of existing cited structures, not a new first-principles computation. However, every one-hop cited authority is marked audited_conditional, and retained status cannot propagate through conditional dependencies under the rubric. No runner source or stdout is available, but the verdict does not depend on missing compute because the dependency-status blocker is already substantive in the restricted packet.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`
+  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
+- **auditor confidence:** high
+
 ### `universal_qg_canonical_smooth_gravitational_weak_measure_note`
 
 - **Note:** [`UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
@@ -15649,6 +15965,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md`
 - **auditor confidence:** high
 
+### `up_sector_partition_revisit_note_2026-04-19`
+
+- **Note:** [`UP_SECTOR_PARTITION_REVISIT_NOTE_2026-04-19.md`](../../docs/UP_SECTOR_PARTITION_REVISIT_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the claimed obstruction of the old CP-orthogonal up-sector partition and the bounded phase-window replacement using only the cited quark-surface authorities and runner source/output.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-up_sector_partition_revi-182`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Substituting retained Phase 1 down-type equalities into the old CP-orthogonal partition formulas forces m_u/m_c = 0 and (m_c/m_t)^(5/3) = 0, so any nonzero newer up-sector solve can only be represented by a phase-deformed edge rather than an interior orthogonal partition.  _(class `A`)_
+- **chain closes:** False — The algebraic obstruction closes on its own terms, but the bounded replacement depends on newer quark-surface inputs whose cited authorities are audited_conditional or audited_numerical_match, not retained-grade. The missing step is retained-grade closure of those upstream quark surfaces and their amplitudes/carriers.
+- **rationale:** The exact obstruction part is a genuine algebraic consequence of accepting retained Phase 1 down exactness and the old orthogonal sum rules. However, the full audited claim also imports three newer quark surfaces from cited authorities that are not retained-grade and explicitly leave parameters or carriers underived. The runner does compute the advertised back-projections and phase windows, but it does so from those imported upstream solves rather than from a first-principles retained derivation.
+- **open / conditional deps cited:**
+  - `QUARK_MASS_RATIO_FULL_SOLVE_NOTE_2026-04-18.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
+  - `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`
+- **auditor confidence:** high
+
 ### `up_type_mass_ratio_ckm_inversion_note`
 
 - **Note:** [`UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`](../../docs/UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md)
@@ -15663,6 +15997,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `ALPHA_S_DERIVED_NOTE.md`
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+- **auditor confidence:** high
+
+### `uv_gauge_to_yukawa_bridge_sc_vs_pert_note`
+
+- **Note:** [`UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`](../../docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the subordinate claim that the perturbative one-gluon-exchange coefficient 1/(2 N_c), not the strong-coupling one-link coefficient 1/N_c^2, is the intended leading 4-fermion coefficient on the cited tadpole-improved canonical surface.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-uv_gauge_to_yukawa_bridg-142`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the canonical surface alpha_LM = 0.0907 << 1, the perturbative expansion is convergent, so C_pert = 1/(2 N_c) is the correct input while the strong-coupling C_strong = 1/N_c^2 does not govern.  _(class `A`)_
+- **chain closes:** False — The algebraic coefficients are supported by SU(N_c) Fierz and Haar one-link checks, but the selection of the perturbative expansion as governing depends on the cited canonical-surface/open Ward-identification framework rather than a closed retained authority in this packet.
+- **rationale:** The runner appears to compute the advertised SU(3), Clifford, Clebsch-Gordan, and Haar coefficients rather than merely printing constants. However, the source note is explicitly subordinate to YT_WARD_IDENTITY_DERIVATION_THEOREM.md, whose provided authority status is support/open identification gate and audited_renaming, and it also cites conditional/superseded upstream material. Under the rubric, retained status cannot propagate through those open or conditional authorities even if the local coefficient arithmetic is correct.
+- **open / conditional deps cited:**
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `valley_linear_action_note`
@@ -16406,6 +16757,22 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** The code performs a real numerical scan, but the scan objective is explicitly the imported target y_t(v)=0.9176 and the best rows are selected by minimizing deviation from that target. The result therefore establishes a tuned numerical match within a chosen profile class, not a first-principles computation from the stated axiom. The note itself acknowledges that deriving why the exact interacting lattice bridge belongs to this UV-localized class remains open.
 - **auditor confidence:** high
 
+### `yt_eft_bridge_theorem`
+
+- **Note:** [`YT_EFT_BRIDGE_THEOREM.md`](../../docs/YT_EFT_BRIDGE_THEOREM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded bridge claim that `v` is the EFT endpoint, backward Ward transfer is the correct bridge, and direct EFT Ward matching at `v` fails by a `u_0` dressing mismatch.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-yt_eft_bridge_theorem-203`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The lattice Ward boundary is imposed on the lattice side and transferred to `y_t(v)` by backward SM RGE continuation through the endpoint `v`.  _(class `B`)_
+- **chain closes:** False — The restricted packet supports the claimed bridge only conditionally because both cited authorities are `audited_conditional` and the bridge relies on perturbative EFT/RGE infrastructure and boundary-condition transfer not closed as retained-grade inside this packet.
+- **rationale:** The runner performs nontrivial RGE/root-finding around supplied framework constants and comparator checks, but its load-bearing bridge depends on cited conditional authorities and on the imported status of the EFT transfer surface. The source note itself states the theorem is bridge-conditioned and does not close the full renormalized `y_t` lane. Under the rubric, conditional upstream authorities and an open bridge premise prevent `audited_clean`.
+- **open / conditional deps cited:**
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
+  - `YT_BOUNDARY_THEOREM.md`
+- **auditor confidence:** high
+
 ### `yt_ew_color_projection_theorem`
 
 - **Note:** [`YT_EW_COLOR_PROJECTION_THEOREM.md`](../../docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
@@ -16536,6 +16903,40 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
 - **auditor confidence:** high
 
+### `yt_flagship_boundary_note`
+
+- **Note:** [`YT_FLAGSHIP_BOUNDARY_NOTE.md`](../../docs/YT_FLAGSHIP_BOUNDARY_NOTE.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audit of the boundary note's package-status summary for the y_t lane using only its four cited one-hop authority notes.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-yt_flagship_boundary_not-118`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current y_t lane is best described as zero external SM observables, exact retained lattice-scale Ward theorem, derived low-energy central values, and a standard-method primary residual budget of order ~1.95%.  _(class `B`)_
+- **chain closes:** False — The boundary summary depends on cited authorities that are not retained-grade, including an explicitly support/open Ward-identification note and conditional authority/budget notes. The restricted packet does not close the claimed retained exact Ward theorem or derived physical low-energy route as theorem-grade inputs.
+- **rationale:** The note is primarily a cross-note boundary/status synthesis, so its load-bearing step is class B rather than a first-principles computation. Its own wording is cautious about the primary path, but the cited authorities include effective_status values audited_conditional and audited_renaming, and the Ward authority explicitly says it is support/open identification gate rather than a first-principles derivation of the SM top Yukawa value. Under the rubric, retained status cannot propagate through those open or non-retained dependencies.
+- **open / conditional deps cited:**
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_gauge_crossover_theorem`
+
+- **Note:** [`YT_GAUGE_CROSSOVER_THEOREM.md`](../../docs/YT_GAUGE_CROSSOVER_THEOREM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited claim is the bounded import-allowed companion route asserting a finite one-shot lattice-to-MSbar crossover preserving y_t/g_s = 1/sqrt(6) and yielding m_t = 171.0 GeV with about -1.1% residual.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-yt_gauge_crossover_theor-204`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Applying the one-shot lattice-scheme to MSbar crossover map to alpha_plaq = 0.092 gives alpha_MSbar(M_Pl) = 0.081893 and hence y_t^MSbar(M_Pl) = g_s^MSbar/sqrt(6) = 0.414146, which runs to m_t = 171.0 GeV.  _(class `G`)_
+- **chain closes:** False — The chain does not close as a retained theorem because both one-hop authorities are audited_conditional and the source note explicitly depends on perturbative scheme conversion, imported matching coefficients, and perturbative running below the crossover surface. The load-bearing numerical result also depends on the chosen imported plaquette/matching inputs rather than a closed first-principles derivation inside the restricted packet.
+- **rationale:** The note correctly presents itself as a bounded companion rather than a zero-input retained theorem. Its cited authorities are both marked audited_conditional, which independently forces a conditional verdict under the rubric. The runner performs nontrivial algebraic and numerical checks, but the central crossover mass result relies on imported scheme-conversion coefficients, accepted normalization/plaquette inputs, and an observational comparator band rather than a closed class (C) derivation from only retained inputs.
+- **open / conditional deps cited:**
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
+  - `YT_BOUNDARY_THEOREM.md`
+- **auditor confidence:** high
+
 ### `yt_interacting_bridge_locality_note`
 
 - **Note:** [`YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md`](../../docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
@@ -16587,6 +16988,24 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
+### `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17`
+
+- **Note:** [`YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](../../docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Symbolic one-loop H_unit reduction to a tadpole-improved D_S1 integral and the claimed framework-native envelope |I_S^{framework}| <= 23.35, without performing the 4D BZ quadrature.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-yt_p1_h_unit_renormaliza-173`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The claimed retained envelope is |I_S^{framework}| <= 16 * |1 - 1/<P>|^{-1} = 23.35, derived from u_0 = <P>^{1/4} and tadpole subtraction.  _(class `B`)_
+- **chain closes:** False — The numerical envelope depends on imported plaquette/tadpole and open-gate Ward/vertex authorities, and the packet does not derive that the tadpole-subtracted BZ integral is bounded by 16 * |1 - 1/<P>|^{-1}. The runner verifies hard-coded structural assertions and arithmetic consistency, not the load-bearing integral bound.
+- **rationale:** Issue: the claimed bound imports non-retained dependencies and an asserted tadpole-envelope formula. Why this blocks: the provided authorities include audited_conditional, open_gate, audited_renaming, and superseded/meta inputs, so retained status cannot propagate. Repair target: retain or replace the plaquette, vertex-power, Ward, and current axiom authorities, and add a real theorem proving the envelope over the tadpole-subtracted BZ kernel. Claim boundary until fixed: this is a conditional symbolic bookkeeping and consistency note, not a retained framework-native bound.
+- **open / conditional deps cited:**
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
+  - `YT_VERTEX_POWER_DERIVATION.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+- **auditor confidence:** high
+
 ### `yt_p3_k_series_geometric_bound_note_2026-04-17`
 
 - **Note:** [`YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
@@ -16620,6 +17039,24 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **open / conditional deps cited:**
   - `YT_EW_COLOR_PROJECTION_THEOREM.md`
   - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_qfp_insensitivity_support_note`
+
+- **Note:** [`YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`](../../docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the claimed QFP sensitivity envelope supporting a bounded ~3% systematic for using SM RGE as a surrogate above v in the backward-Ward transfer to y_t(v).
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260507-124356-da905da7-yt_qfp_insensitivity_sup-227`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The SM RGE and the exact lattice taste-staircase RG flow both satisfy conditions (i)-(iv), therefore y_t(v; SM RGE) = y_t(v; lattice) + O(3%).  _(class `B`)_
+- **chain closes:** False — The runner closes only the SM-surrogate sensitivity scans under finite coefficient perturbations. The missing step is a retained theorem that the exact non-perturbative lattice taste-staircase is a smooth QFP-family flow with only O(few %) deviations from the tested beta-coefficient family.
+- **rationale:** Issue: the note assumes the exact lattice taste-staircase belongs to the same bounded smooth QFP family tested by perturbing SM beta coefficients. Why this blocks: the restricted packet contains unaudited, open, and conditional cited authorities, and the P2 note itself says the staircase is non-perturbative rather than a per-step perturbative beta ladder. Repair target: retain the upstream Ward, boundary, and zero-import authorities and prove a direct lattice-flow bridge into the claimed QFP envelope. Claim boundary until fixed: the runner supports conditional SM-RGE coefficient-insensitivity, not a retained theorem equating the SM surrogate and exact lattice flow to O(3%).
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_BOUNDARY_THEOREM.md`
+  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_schur_stability_gap_note`
