@@ -1,21 +1,21 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T11:05:35-04:00"
-branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
+checkpoint_time: "2026-05-07T11:19:52-04:00"
+branch: codex/pr230-wroute-build
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 14
-active_science_block: block14_chunks045_046_intake_checkpoint
-active_route: "Source-Higgs/scalar-LSZ intake after PR #230 advanced with live-worker chunks045-046 packaged; no live worker touched"
+cycle_count: 15
+active_science_block: block15_additive_response_aggregate_wiring
+active_route: "Aggregate-gate wiring for additive-source radial-spurion incompatibility and additive-top subtraction row contract after PR #230 advanced through chunks045-046 intake"
 target_status: best-honest-status
-actual_current_surface_status: "bounded-support / chunks045-046 intake plus PR-head checkpoint; PR #230 head is 0fb8403672b3b30bc5bef0aec9160e62f75d45b7 after live-worker chunks045-046 packaging, but it still contains no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet"
+actual_current_surface_status: "exact support / additive-response aggregate wiring after chunks045-046 intake; PR #230 head is 0de6b5885793c4f8e81a190421862b01b75e52f8 after live-worker chunks045-046 intake, but it still contains no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet"
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block14 fast-forwarded over the live-worker chunks045-046 package and reran the source-Higgs aperture, strict scalar-LSZ, and campaign status certificates without touching the live chunk worker. The completed two-source taste-radial prefix is now 46/63, but those rows remain C_sx/C_xx staging support only; raw C_ss still increases from zero mode to first shell across all 46 ready chunks, only one volume 12x24 is present, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block15 preserves block14's chunks045-046 intake and wires the already-created additive-source radial-spurion incompatibility plus additive-top subtraction row contract into the assumption, full assembly, retained-route, and completion-audit aggregate gates. This is support-only coverage: current dS/ds contains O_top_additive + O_H, and the subtraction identity needs same-surface additive-top Jacobian rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted action authority before any physical-response closure. No certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 hard_residual: "Positive work still requires one of the explicit block07 future disjunct artifacts: certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Existing H1/H2 Z3 support, 46/63 C_sx/C_xx rows, the refreshed raw C_ss scalar-LSZ boundary, and W/Z scout/smoke rows are bounded staging/support only."
@@ -35,6 +35,7 @@ minimal_allowed_premises:
   - "supervisor resume/fresh-artifact checkpoint as routing-only state; no physics closure or shortcut gate"
   - "block13 strict scalar-LSZ current-prefix refresh as bounded support/exact boundary over already packaged 44/63 chunks; no live worker access"
   - "block14 chunks045-046 intake as bounded support/exact boundary over the live-worker packaged 46/63 prefix; no live worker access"
+  - "block15 additive-response aggregate wiring as exact support only; current source remains contaminated and subtraction rows are absent"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -56,6 +57,15 @@ files_touched:
   - outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  - docs/YT_PR230_ADDITIVE_RESPONSE_AGGREGATE_WIRING_NOTE_2026-05-07.md
+  - scripts/frontier_yt_pr230_assumption_import_stress.py
+  - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+  - outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -150,7 +160,20 @@ commands_run:
   - "2026-05-07 block14: git diff --check # OK"
   - "2026-05-07 block14: bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; newly seeded=1, re-audit required=2"
   - "2026-05-07 block14: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
-review_disposition: pass_bounded_support_checkpoint_no_new_artifact
-pr_status: "direct integration into open draft PR #230 landing path; standalone block14 PR not opened because this is an intake checkpoint and PR #230 remains the landing path"
-next_exact_action: "Do not cycle more current-surface shortcut gates. Continue only if a fresh same-surface certified O_H plus production C_ss/C_sH/C_HH pole-row/Gram-flatness packet appears, or if a strict W/Z physical-response packet appears with accepted action, canonical O_H/sector-overlap authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. The 46/63 C_sx/C_xx prefix and refreshed scalar-LSZ row-prefix boundary are support only; do not reuse scout/smoke rows or touch the live chunk worker."
-stop_condition: "Yield for outer supervisor continuation after coherent block14 checkpoint push; open status is not campaign completion, but no real missing artifact is present on the fetched PR230 head."
+  - "2026-05-07 block15: git fetch origin; git rebase --autostash origin/claude/yt-direct-lattice-correlator-2026-04-30 # rebased over 0de6b588 chunks045-046 neutral intake checkpoint; loop-pack conflicts resolved by preserving block14 and applying additive wiring as block15"
+  - "2026-05-07 block15: verified chunks047-048 still active; did not touch live chunk worker"
+  - "2026-05-07 block15: python3 -m py_compile scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py # OK"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py # PASS=15 FAIL=0"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py # PASS=21 FAIL=0"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_pr230_assumption_import_stress.py # PASS=100 FAIL=0"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=352 FAIL=0"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py # PASS=160 FAIL=0"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=314 FAIL=0"
+  - "2026-05-07 block15: python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py # PASS=69 FAIL=0"
+  - "2026-05-07 block15: bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; generated audit metadata kept intentionally for strict lint"
+  - "2026-05-07 block15: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+  - "2026-05-07 block15: git diff --check # OK"
+review_disposition: pass_exact_support_aggregate_wiring_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block15 PR not opened because PR #230 remains the landing path"
+next_exact_action: "Do not cycle more current-surface shortcut gates. Continue only if a fresh same-surface certified O_H plus production C_ss/C_sH/C_HH pole-row/Gram-flatness packet appears, or if a strict W/Z physical-response packet appears with accepted action, canonical O_H/sector-overlap authority, production W/Z rows, same-source top rows, additive-top subtraction or no-independent-top radial action authority, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. The 46/63 C_sx/C_xx prefix, refreshed scalar-LSZ row-prefix boundary, and additive aggregate wiring are support only; do not reuse scout/smoke rows or touch the live chunk worker."
+stop_condition: "Yield for outer supervisor continuation after coherent block15 checkpoint push; open status is not campaign completion, and chunks047-048 remain active outside this block."

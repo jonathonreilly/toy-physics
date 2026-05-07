@@ -193,6 +193,8 @@ def main() -> int:
         "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
         "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
         "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+        "pr230_additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
+        "pr230_additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
         "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
         "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
         "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -2029,6 +2031,66 @@ def main() -> int:
         and certificates["pr230_radial_spurion_action_contract"].get(
             "accepted_action_certificate_written"
         )
+        is False
+    )
+    additive_source_radial_spurion_incompatibility_support_not_closure = (
+        "current additive source is incompatible"
+        in certificates["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "additive_source_radial_spurion_incompatibility_passed"
+        )
+        is True
+        and certificates["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "forbidden_firewall", {}
+        ).get("set_kappa_s_equal_one")
+        is False
+        and certificates["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "forbidden_firewall", {}
+        ).get("used_observed_wz_masses_or_g2")
+        is False
+    )
+    additive_top_subtraction_row_contract_support_not_closure = (
+        "additive-top subtraction row contract"
+        in certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "additive_top_subtraction_row_contract_passed"
+        )
+        is True
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "subtraction_identity_exact"
+        )
+        is True
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "matched_covariance_delta_method_valid"
+        )
+        is True
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("additive_top_jacobian_rows")
+        is False
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("wz_response_ratio_rows")
+        is False
+        and certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("strict_electroweak_g2_certificate")
         is False
     )
     wz_response_ratio_identifiability_contract_support_not_closure = (
@@ -4974,6 +5036,20 @@ def main() -> int:
         ),
     )
     report(
+        "additive-source-radial-spurion-incompatibility-support-not-closure",
+        additive_source_radial_spurion_incompatibility_support_not_closure,
+        certificates["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "additive-top-subtraction-row-contract-support-not-closure",
+        additive_top_subtraction_row_contract_support_not_closure,
+        certificates["pr230_additive_top_subtraction_row_contract"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "wz-response-ratio-identifiability-contract-support-not-closure",
         wz_response_ratio_identifiability_contract_support_not_closure,
         certificates["pr230_wz_response_ratio_identifiability_contract"].get(
@@ -6486,6 +6562,8 @@ def main() -> int:
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
+        "additive_source_radial_spurion_incompatibility_support_not_closure": additive_source_radial_spurion_incompatibility_support_not_closure,
+        "additive_top_subtraction_row_contract_support_not_closure": additive_top_subtraction_row_contract_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,

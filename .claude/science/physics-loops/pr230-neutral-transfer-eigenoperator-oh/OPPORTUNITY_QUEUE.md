@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block14 chunks045-046 intake checkpoint.
+Campaign mode queue after block15 additive-response aggregate wiring.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -32,8 +32,17 @@ canonical `O_H`, accepted same-source EW/Higgs action, source-Higgs pole rows,
 W/Z production rows, matched covariance, strict `g2`, and aggregate approval.
 This does not change the priority: the next positive move should consume a
 fresh certified `O_H` plus production `C_ss/C_sH/C_HH` Gram-flat packet, or a
-genuinely strict W/Z packet with accepted action, production rows, matched
+genuinely strict W/Z packet with accepted action, production rows,
+additive-top subtraction or no-independent-top radial action authority, matched
 covariance, strict `g2`, `delta_perp` authority, and final W-response rows.  If
 neither artifact is present on resume, yield this lane as waiting on those
 explicit production/certificate inputs and let the outer supervisor allocate
 independent positive work.
+
+Block15 wired the additive-source radial-spurion incompatibility and
+additive-top subtraction row contract into assumption, assembly, retained-route,
+and completion-audit gates.  This is support-only aggregate coverage: the
+current derivative still contains `O_top_additive + O_H`, and the exact
+subtraction identity still needs additive-top Jacobian rows, W/Z response rows,
+matched covariance, strict non-observed `g2`, and accepted action authority.
+It does not change the queue ranking or authorize proposal wording.

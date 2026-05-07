@@ -1,6 +1,8 @@
 {
   "action_first_route_completion_blocks": true,
   "actual_current_surface_status": "open / retained closure not yet reached",
+  "additive_source_radial_spurion_incompatibility_support_not_closure": true,
+  "additive_top_subtraction_row_contract_support_not_closure": true,
   "canonical_oh_accepted_action_stretch_blocks_current_stack": true,
   "canonical_oh_wz_common_action_cut_open": true,
   "closure_routes": [
@@ -66,7 +68,7 @@
   "origin_main_ew_m_residual_intake_not_closure": true,
   "orthogonal_top_coupling_exclusion_candidate_rejected": true,
   "os_transfer_kernel_artifact_absent": true,
-  "pass_count": 312,
+  "pass_count": 314,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
@@ -308,6 +310,8 @@
     "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
     "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
+    "pr230_additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
+    "pr230_additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
     "pr230_canonical_oh_accepted_action_stretch_attempt": "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json",
     "pr230_canonical_oh_wz_common_action_cut": "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",

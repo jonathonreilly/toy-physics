@@ -31,9 +31,17 @@ TASTE_BRIDGE_PACK = (
     / "physics-loops"
     / "pr230-oh-csh-chh-bridge-20260506"
 )
+CURRENT_NEUTRAL_PACK = (
+    ROOT
+    / ".claude"
+    / "science"
+    / "physics-loops"
+    / "pr230-neutral-transfer-eigenoperator-oh"
+)
 ASSUMPTIONS = PACK / "ASSUMPTIONS_AND_IMPORTS.md"
 ACTIVE_ASSUMPTIONS = ACTIVE_PACK / "ASSUMPTIONS_AND_IMPORTS.md"
 TASTE_BRIDGE_ASSUMPTIONS = TASTE_BRIDGE_PACK / "ASSUMPTIONS_AND_IMPORTS.md"
+CURRENT_NEUTRAL_ASSUMPTIONS = CURRENT_NEUTRAL_PACK / "ASSUMPTIONS_AND_IMPORTS.md"
 OUTPUT = ROOT / "outputs" / "yt_pr230_assumption_import_stress_2026-05-01.json"
 
 PASS_COUNT = 0
@@ -62,7 +70,11 @@ def main() -> int:
     text = ASSUMPTIONS.read_text(encoding="utf-8")
     active_text = ACTIVE_ASSUMPTIONS.read_text(encoding="utf-8")
     taste_bridge_text = TASTE_BRIDGE_ASSUMPTIONS.read_text(encoding="utf-8")
-    combined_text = f"{text}\n\n{active_text}\n\n{taste_bridge_text}"
+    current_neutral_text = CURRENT_NEUTRAL_ASSUMPTIONS.read_text(encoding="utf-8")
+    combined_text = (
+        f"{text}\n\n{active_text}\n\n{taste_bridge_text}\n\n"
+        f"{current_neutral_text}"
+    )
     certificates = {
         "campaign": load("outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"),
         "clean_source_higgs_math_tool_selector": load(
@@ -238,6 +250,12 @@ def main() -> int:
         ),
         "radial_spurion_action_contract": load(
             "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json"
+        ),
+        "additive_source_radial_spurion_incompatibility": load(
+            "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json"
+        ),
+        "additive_top_subtraction_row_contract": load(
+            "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json"
         ),
         "wz_response_ratio_identifiability_contract": load(
             "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
@@ -451,6 +469,10 @@ def main() -> int:
         "does not write accepted future certificate paths",
         "Same-source EW action adoption attempt",
         "ansatz-only action-adoption shortcut blocked",
+        "Additive-source radial-spurion incompatibility",
+        "current additive source is incompatible with accepted radial-spurion action closure",
+        "Additive-top subtraction row contract",
+        "Current source contains `O_top_additive + O_H`",
         "canonical-Higgs operator certificate",
         "W/Z correlator mass-fit path certificate",
         "Higher-shell Schur/scalar-LSZ production contract",
@@ -476,6 +498,11 @@ def main() -> int:
         "taste-bridge-assumption-ledger-present",
         TASTE_BRIDGE_ASSUMPTIONS.exists(),
         str(TASTE_BRIDGE_ASSUMPTIONS.relative_to(ROOT)),
+    )
+    report(
+        "current-neutral-assumption-ledger-present",
+        CURRENT_NEUTRAL_ASSUMPTIONS.exists(),
+        str(CURRENT_NEUTRAL_ASSUMPTIONS.relative_to(ROOT)),
     )
     report("refreshed-kinetic-imports-present", "Heavy kinetic-action coefficient `c2`" in text and "Z_match" in text, "c2 and Z_match imports named")
     report("forbidden-imports-explicit", not missing_terms, f"missing={missing_terms}")
@@ -1489,6 +1516,49 @@ def main() -> int:
         is False,
         radial_spurion_action_contract.get("actual_current_surface_status"),
     )
+    additive_source = certificates["additive_source_radial_spurion_incompatibility"]
+    report(
+        "additive-source-radial-spurion-incompatibility-support-not-current-closure",
+        "current additive source is incompatible"
+        in str(additive_source.get("actual_current_surface_status"))
+        and additive_source.get("proposal_allowed") is False
+        and additive_source.get("additive_source_radial_spurion_incompatibility_passed")
+        is True
+        and additive_source.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False
+        and additive_source.get("forbidden_firewall", {}).get(
+            "used_observed_wz_masses_or_g2"
+        )
+        is False,
+        additive_source.get("actual_current_surface_status"),
+    )
+    additive_top_contract = certificates["additive_top_subtraction_row_contract"]
+    report(
+        "additive-top-subtraction-row-contract-support-not-current-closure",
+        "additive-top subtraction row contract"
+        in str(additive_top_contract.get("actual_current_surface_status"))
+        and additive_top_contract.get("proposal_allowed") is False
+        and additive_top_contract.get("additive_top_subtraction_row_contract_passed")
+        is True
+        and additive_top_contract.get("current_surface_contract_satisfied") is False
+        and additive_top_contract.get("subtraction_identity_exact") is True
+        and additive_top_contract.get("matched_covariance_delta_method_valid") is True
+        and additive_top_contract.get("future_artifact_presence", {}).get(
+            "additive_top_jacobian_rows"
+        )
+        is False
+        and additive_top_contract.get("future_artifact_presence", {}).get(
+            "wz_response_ratio_rows"
+        )
+        is False
+        and additive_top_contract.get("future_artifact_presence", {}).get(
+            "strict_electroweak_g2_certificate"
+        )
+        is False,
+        additive_top_contract.get("actual_current_surface_status"),
+    )
     wz_ratio_contract = certificates["wz_response_ratio_identifiability_contract"]
     report(
         "wz-response-ratio-identifiability-contract-support-not-closure",
@@ -1949,7 +2019,14 @@ def main() -> int:
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
-            "already a canonical-Higgs radial spurion.  "
+            "already a canonical-Higgs radial spurion.  The additive-source "
+            "radial-spurion incompatibility and additive-top subtraction row "
+            "contract make the same blocker executable in aggregate gates: "
+            "the current derivative contains O_top_additive + O_H, and the "
+            "exact corrected ratio requires same-ensemble additive-top "
+            "Jacobian rows, W/Z response rows, matched covariance, strict "
+            "non-observed g2 authority, and an accepted action certificate "
+            "before it can be a physical-response closure route.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1991,6 +2068,8 @@ def main() -> int:
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
+            "does not treat the current additive top source as a no-independent-top radial spurion",
+            "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
             "does not treat the W/Z same-source minimal certificate cut as an accepted action certificate or W/Z response evidence",
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",

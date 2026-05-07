@@ -274,6 +274,53 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=352 FAIL=0
 ```
 
+## Block15 Result
+
+Created `YT_PR230_ADDITIVE_RESPONSE_AGGREGATE_WIRING`.
+
+This block preserves block14's chunks045-046 intake and wires the already
+created additive-source radial-spurion incompatibility and additive-top
+subtraction row-contract certificates into the assumption/import stress runner,
+full positive closure assembly gate, retained-route certificate, and
+positive-closure completion audit.  Chunks047 and 048 were still active, so no
+live chunk worker was touched.
+
+Result:
+
+- aggregate gates now see the current-source contamination
+  `O_top_additive + O_H`;
+- aggregate gates now see that the subtraction identity is exact support only;
+- a W/Z physical-response route still needs additive-top Jacobian rows, W/Z
+  response rows, matched covariance, strict non-observed `g2`, and accepted
+  action authority before any proposal wording.
+
+Validation:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# OK
+python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+# SUMMARY: PASS=21 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=100 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=160 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=314 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=69 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun preserved the new note hash, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
 ## Claim Boundary
 
 No retained or `proposed_retained` wording is authorized.
@@ -314,12 +361,18 @@ the live chunk worker, does not promote chunks045-046 or the current 46/63
 package as canonical `O_H`, source-Higgs Gram flatness, W/Z action/response,
 matched covariance, strict `g2`, or `delta_perp` authority.
 
+Block15 is aggregate support wiring only.  It does not turn the current
+additive top source into a no-independent-top radial spurion, does not treat
+the subtraction identity as row evidence, does not set `g2`, `kappa_s`, `c2`,
+or `Z_match` by convention, does not claim matched covariance, and does not
+authorize retained or `proposed_retained` wording.
+
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block14 should follow the same direct PR #230 landing path unless
+Block09 through block15 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -348,6 +401,11 @@ PR #230 head movement after block13 adds only live-worker finite-row support
 rather than a certified `O_H`, source-Higgs pole-row, or strict W/Z
 physical-response artifact.  No independent audit verdict was applied.
 
+Local review disposition for block15: pass exact support aggregate wiring / no
+closure.  The additive-response blockers are now visible to aggregate gates,
+and proposal language remains denied.  No independent audit verdict was
+applied.
+
 ## Next Exact Action
 
 Continue only through a real missing artifact:
@@ -361,7 +419,8 @@ or
 ```text
 strict W/Z physical-response packet with accepted action, canonical
 O_H/sector-overlap authority, production W/Z rows, same-source top rows,
-matched covariance, strict non-observed g2, delta_perp authority, and final
+additive-top subtraction or no-independent-top radial action authority, matched
+covariance, strict non-observed g2, delta_perp authority, and final
 W-response rows
 ```
 

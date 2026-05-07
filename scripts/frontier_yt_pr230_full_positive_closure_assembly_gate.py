@@ -126,6 +126,8 @@ PARENTS = {
     "pr230_same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "pr230_radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
     "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "pr230_additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
+    "pr230_additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -1264,6 +1266,62 @@ def main() -> int:
         )
         is False
         and certs["pr230_radial_spurion_action_contract"].get("proposal_allowed")
+        is False
+    )
+    additive_source_radial_spurion_incompatibility_support_not_closure = (
+        "current additive source is incompatible"
+        in statuses["pr230_additive_source_radial_spurion_incompatibility"]
+        and certs["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "additive_source_radial_spurion_incompatibility_passed"
+        )
+        is True
+        and certs["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "forbidden_firewall", {}
+        ).get("set_kappa_s_equal_one")
+        is False
+        and certs["pr230_additive_source_radial_spurion_incompatibility"].get(
+            "forbidden_firewall", {}
+        ).get("used_observed_wz_masses_or_g2")
+        is False
+    )
+    additive_top_subtraction_row_contract_support_not_closure = (
+        "additive-top subtraction row contract"
+        in statuses["pr230_additive_top_subtraction_row_contract"]
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "additive_top_subtraction_row_contract_passed"
+        )
+        is True
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "subtraction_identity_exact"
+        )
+        is True
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "matched_covariance_delta_method_valid"
+        )
+        is True
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("additive_top_jacobian_rows")
+        is False
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("wz_response_ratio_rows")
+        is False
+        and certs["pr230_additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("strict_electroweak_g2_certificate")
         is False
     )
     wz_response_ratio_identifiability_contract_support_not_closure = (
@@ -2442,6 +2500,16 @@ def main() -> int:
         statuses["pr230_radial_spurion_action_contract"],
     )
     report(
+        "additive-source-radial-spurion-incompatibility-support-not-closure",
+        additive_source_radial_spurion_incompatibility_support_not_closure,
+        statuses["pr230_additive_source_radial_spurion_incompatibility"],
+    )
+    report(
+        "additive-top-subtraction-row-contract-support-not-closure",
+        additive_top_subtraction_row_contract_support_not_closure,
+        statuses["pr230_additive_top_subtraction_row_contract"],
+    )
+    report(
         "wz-response-ratio-identifiability-contract-support-not-closure",
         wz_response_ratio_identifiability_contract_support_not_closure,
         statuses["pr230_wz_response_ratio_identifiability_contract"],
@@ -3489,6 +3557,8 @@ def main() -> int:
         "same_source_ew_action_adoption_attempt_blocks_shortcut": same_source_ew_action_adoption_attempt_blocks_shortcut,
         "radial_spurion_sector_overlap_support_not_closure": radial_spurion_sector_overlap_support_not_closure,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
+        "additive_source_radial_spurion_incompatibility_support_not_closure": additive_source_radial_spurion_incompatibility_support_not_closure,
+        "additive_top_subtraction_row_contract_support_not_closure": additive_top_subtraction_row_contract_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
@@ -3547,6 +3617,8 @@ def main() -> int:
             "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
+            "does not treat the current additive top source as a no-independent-top radial spurion",
+            "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
             "does not treat the W/Z same-source minimal certificate cut as accepted action authority or response rows",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",

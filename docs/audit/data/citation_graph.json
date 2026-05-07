@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T15:16:01.869581+00:00",
+  "generated_at": "2026-05-07T15:28:30.239596+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42196,6 +42196,16 @@
       "runner_path": "scripts/frontier_yt_pr230_action_first_route_completion.py",
       "title": "PR230 Action-First Route Completion"
     },
+    "yt_pr230_additive_response_aggregate_wiring_note_2026-05-07": {
+      "claim_id": "yt_pr230_additive_response_aggregate_wiring_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact support / aggregate gate wiring; closure not authorized.",
+      "deps": [],
+      "note_hash": "a21c6688bccb4a541740ca785793ff67a0d3e60beeba3b157a77826d51eaa86a",
+      "path": "docs/YT_PR230_ADDITIVE_RESPONSE_AGGREGATE_WIRING_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Additive Response Aggregate Wiring"
+    },
     "yt_pr230_additive_source_radial_spurion_incompatibility_note_2026-05-07": {
       "claim_id": "yt_pr230_additive_source_radial_spurion_incompatibility_note_2026-05-07",
       "current_status": "support",
@@ -46324,6 +46334,7 @@
     "yt_positivity_improving_neutral_scalar_rank_one_support_note_2026-05-03",
     "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05",
     "yt_pr230_action_first_route_completion_note_2026-05-06",
+    "yt_pr230_additive_response_aggregate_wiring_note_2026-05-07",
     "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07",
     "yt_pr230_assumption_import_stress_note_2026-05-01",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
@@ -46576,16 +46587,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1111,
-    "node_count": 2102,
-    "root_count": 1609,
+    "leaf_count": 1112,
+    "node_count": 2103,
+    "root_count": 1610,
     "runners_with_path": 1588,
     "status_counts": {
       "bounded": 583,
       "open": 105,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 457,
+      "support": 458,
       "unknown": 583
     }
   }

@@ -48,6 +48,8 @@ PARENTS = {
     "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
+    "additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
     "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -573,6 +575,60 @@ def main() -> int:
         and certs["radial_spurion_action_contract"].get(
             "accepted_action_certificate_written"
         )
+        is False
+    )
+    additive_source_radial_spurion_incompatibility_not_closure = (
+        "current additive source is incompatible"
+        in parent_statuses["additive_source_radial_spurion_incompatibility"]
+        and certs["additive_source_radial_spurion_incompatibility"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["additive_source_radial_spurion_incompatibility"].get(
+            "additive_source_radial_spurion_incompatibility_passed"
+        )
+        is True
+        and certs["additive_source_radial_spurion_incompatibility"].get(
+            "forbidden_firewall", {}
+        ).get("set_kappa_s_equal_one")
+        is False
+        and certs["additive_source_radial_spurion_incompatibility"].get(
+            "forbidden_firewall", {}
+        ).get("used_observed_wz_masses_or_g2")
+        is False
+    )
+    additive_top_subtraction_row_contract_not_closure = (
+        "additive-top subtraction row contract"
+        in parent_statuses["additive_top_subtraction_row_contract"]
+        and certs["additive_top_subtraction_row_contract"].get("proposal_allowed")
+        is False
+        and certs["additive_top_subtraction_row_contract"].get(
+            "additive_top_subtraction_row_contract_passed"
+        )
+        is True
+        and certs["additive_top_subtraction_row_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certs["additive_top_subtraction_row_contract"].get(
+            "subtraction_identity_exact"
+        )
+        is True
+        and certs["additive_top_subtraction_row_contract"].get(
+            "matched_covariance_delta_method_valid"
+        )
+        is True
+        and certs["additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("additive_top_jacobian_rows")
+        is False
+        and certs["additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("wz_response_ratio_rows")
+        is False
+        and certs["additive_top_subtraction_row_contract"].get(
+            "future_artifact_presence", {}
+        ).get("strict_electroweak_g2_certificate")
         is False
     )
     post_fms_source_overlap_necessity_blocks_current_inference = (
@@ -1125,6 +1181,8 @@ def main() -> int:
     report("same-source-ew-higgs-action-ansatz-not-closure", same_source_ew_higgs_action_ansatz_not_closure, parent_statuses["same_source_ew_higgs_action_ansatz_gate"])
     report("same-source-ew-action-adoption-attempt-not-closure", same_source_ew_action_adoption_attempt_not_closure, parent_statuses["same_source_ew_action_adoption_attempt"])
     report("radial-spurion-action-contract-not-closure", radial_spurion_action_contract_not_closure, parent_statuses["radial_spurion_action_contract"])
+    report("additive-source-radial-spurion-incompatibility-not-closure", additive_source_radial_spurion_incompatibility_not_closure, parent_statuses["additive_source_radial_spurion_incompatibility"])
+    report("additive-top-subtraction-row-contract-not-closure", additive_top_subtraction_row_contract_not_closure, parent_statuses["additive_top_subtraction_row_contract"])
     report("wz-response-ratio-identifiability-contract-not-closure", wz_response_ratio_identifiability_contract_not_closure, parent_statuses["wz_response_ratio_identifiability_contract"])
     report("wz-same-source-action-minimal-certificate-cut-open", wz_same_source_action_minimal_certificate_cut_open, parent_statuses["wz_same_source_action_minimal_certificate_cut"])
     report("wz-accepted-action-response-root-checkpoint-blocks", wz_accepted_action_response_root_checkpoint_blocks, parent_statuses["wz_accepted_action_response_root_checkpoint"])
@@ -1305,6 +1363,8 @@ def main() -> int:
             "same_source_ew_higgs_action_ansatz_not_closure": same_source_ew_higgs_action_ansatz_not_closure,
             "same_source_ew_action_adoption_attempt_not_closure": same_source_ew_action_adoption_attempt_not_closure,
             "radial_spurion_action_contract_not_closure": radial_spurion_action_contract_not_closure,
+            "additive_source_radial_spurion_incompatibility_not_closure": additive_source_radial_spurion_incompatibility_not_closure,
+            "additive_top_subtraction_row_contract_not_closure": additive_top_subtraction_row_contract_not_closure,
             "wz_response_ratio_identifiability_contract_not_closure": wz_response_ratio_identifiability_contract_not_closure,
             "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
             "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
@@ -1342,6 +1402,8 @@ def main() -> int:
             "does not treat W/Z smoke rows as production response rows",
             "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
             "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
+            "does not treat the current additive top source as a no-independent-top radial spurion",
+            "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
             "does not set c2=1, Z_match=1, or kappa_s=1",
         ],

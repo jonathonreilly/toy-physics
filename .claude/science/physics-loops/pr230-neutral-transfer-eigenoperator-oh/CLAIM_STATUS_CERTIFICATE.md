@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block14_chunks045_046_intake_checkpoint`.
+Current block: `block15_additive_response_aggregate_wiring`.
 
 ```yaml
-actual_current_surface_status: bounded-support / chunks045-046 intake plus PR-head checkpoint; PR230 head is 0fb840367 after live-worker chunks045-046 packaging, with no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
+actual_current_surface_status: exact support / additive-response aggregate wiring after chunks045-046 intake; PR230 head is 0de6b588 after live-worker chunks045-046 intake, with no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block14 fast-forwarded over the live-worker chunks045-046 package and reran the source-Higgs aperture, strict scalar-LSZ, and campaign status certificates without touching the live chunk worker. The row prefix is now 46/63, but it remains bounded C_sx/C_xx staging support only: raw C_ss rows are positive but increase from zero mode to first shell across all 46 ready chunks, the row prefix is single-volume 12x24, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block15 preserves block14's chunks045-046 intake and wires the additive-source radial-spurion incompatibility plus additive-top subtraction row contract into aggregate gates. Current dS/ds contains O_top_additive + O_H, and the subtraction identity needs same-surface additive-top Jacobian rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted action authority before any physical-response closure. No certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -37,7 +37,12 @@ Reason:
    `delta_perp` by convention, and does not use `H_unit`, `yt_ward_identity`,
    `y_t_bare`, observed targets, observed `g2`, `alpha_LM`, plaquette, or
    `u0`.
-4. No branch-local wording may present this block as closure.
+4. Block15 does not touch the live worker, does not treat the additive top
+   source as a no-independent-top radial spurion, and does not treat the exact
+   subtraction formula as row evidence before additive Jacobian rows, W/Z rows,
+   matched covariance, strict non-observed `g2`, and accepted action authority
+   exist.
+5. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
 
@@ -87,5 +92,8 @@ Prior block certificate summary:
   does not supply certified canonical `O_H`, production `C_ss/C_sH/C_HH` rows,
   Gram flatness, accepted W/Z action, W/Z production rows, matched covariance,
   strict non-observed `g2`, `delta_perp`, or final W-response rows.
-- Block01 through Block14 all have `proposal_allowed=false`; their boundaries
+- Block15 actual status: exact support / additive-response aggregate wiring;
+  current aggregate gates now consume the additive-source incompatibility and
+  additive-top subtraction row contract, but proposal language remains denied.
+- Block01 through Block15 all have `proposal_allowed=false`; their boundaries
   remain active.

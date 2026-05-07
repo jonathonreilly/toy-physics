@@ -289,3 +289,19 @@ outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
 plus production `C_ss/C_sH/C_HH` pole rows with Gram flatness, or the strict
 W/Z packet listed under block11.  The chunks045-046 package is support only and
 does not authorize another current-surface shortcut gate.
+
+Block15 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Aggregate wiring note | `docs/YT_PR230_ADDITIVE_RESPONSE_AGGREGATE_WIRING_NOTE_2026-05-07.md` | Created; exact support only, closure not authorized |
+| Assumption/import stress runner | `scripts/frontier_yt_pr230_assumption_import_stress.py` | Updated; PASS=100 FAIL=0 |
+| Full positive assembly gate | `scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py` | Updated; PASS=160 FAIL=0 |
+| Retained-route certificate runner | `scripts/frontier_yt_retained_closure_route_certificate.py` | Updated; PASS=314 FAIL=0 |
+| Positive completion audit | `scripts/frontier_yt_pr230_positive_closure_completion_audit.py` | Updated; PASS=69 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block15 checkpoint |
+
+Follow-on artifact target after block15 remains exactly one of the real
+positive inputs above.  The additive aggregate wiring only prevents a shortcut:
+it does not supply additive-top Jacobian rows, W/Z response rows, matched
+covariance, strict non-observed `g2`, or accepted action authority.
