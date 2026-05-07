@@ -308,4 +308,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [pmns_graph_first_cycle_frame_support_note](PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md)
 - [dm_wilson_to_dweh_local_chain_path_algebra_target_note_2026-04-18](DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md)
-- [dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21](DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md)
+- `DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md` (DOWNSTREAM consumer; backticked to avoid length-2 cycle)

@@ -9,20 +9,6 @@
   },
   "cycle_examples": [
     [
-      "abcc_cp_phase_no_go_theorem_note_2026-04-19",
-      "sigma_hier_uniqueness_theorem_note_2026-04-19"
-    ],
-    [
-      "sigma_hier_uniqueness_theorem_note_2026-04-19",
-      "dm_sigma_hier_closure_packet_note_2026-04-20",
-      "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-      "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
-    ],
-    [
-      "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
-    ],
-    [
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
@@ -32,11 +18,29 @@
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
     ],
     [
-      "angular_kernel_underdetermination_no_go_note",
-      "architecture_note_directional_measure"
+      "hypercharge_identification_note",
+      "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    ],
+    [
+      "hypercharge_identification_note",
+      "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+      "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
+    ],
+    [
+      "hypercharge_identification_note",
+      "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+      "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
+      "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    ],
+    [
+      "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+      "hypercharge_identification_note",
+      "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+      "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
+      "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     ]
   ],
-  "cycles_detected": 217,
+  "cycles_detected": 94,
   "effective_status_counts": {
     "audited_conditional": 445,
     "audited_failed": 8,

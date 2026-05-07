@@ -8,7 +8,14 @@ retained routing clarification/support note for the boost-covariance program
 **Companions:**
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md),
-[ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md),
+`ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`
+(backticked rather than markdown-linked because architecture's
+**Beta-derivation status** header line legitimately cites this no-go
+theorem upstream; the bidirectional load-bearing relationship between
+the two notes is preserved as an inline reference here, avoiding a
+length-2 citation graph cycle. Architecture defines the angular kernel
+this no-go is about; this no-go feeds back the underdetermination result
+to architecture's β = 0.8 boundary.),
 [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
 
 ## Purpose

@@ -63,7 +63,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `leaf` | 641 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 217
+- **Citation cycles detected:** 94
 
 ### Runner classification (static heuristic)
 

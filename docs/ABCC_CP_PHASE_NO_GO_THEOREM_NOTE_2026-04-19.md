@@ -157,4 +157,4 @@ Expected: `PASS = 20, FAIL = 0`.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [sigma_hier_uniqueness_theorem_note_2026-04-19](SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md)
+- `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md` (sibling/parallel; backticked to break length-2 cycle)

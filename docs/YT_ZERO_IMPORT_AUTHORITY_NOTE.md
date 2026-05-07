@@ -22,7 +22,9 @@ Use this note together with:
 - [ALPHA_S_DERIVED_NOTE.md](./ALPHA_S_DERIVED_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - `YT_FLAGSHIP_BOUNDARY_NOTE.md`
-- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](./YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md` (DOWNSTREAM support note that
+  cross-checks this authority's residual budget; backticked to avoid
+  length-2 cycle — citation graph direction is *budget → this_note*)
 
 Do not treat older backward-Ward / route-history notes as competing authority.
 

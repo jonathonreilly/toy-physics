@@ -107,7 +107,7 @@ Y_e = diag(y_1, y_2, y_3).
 ```
 
 **Status upgraded from CONDITIONAL to GAUGE (retained) by
-[`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md).**
+`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md` (sibling/parallel; backticked to break length-2 cycle).**
 That theorem proves the three `q_H` branches give **identical**
 `Y_e Y_e†` on the `L_L`-axis basis, hence identical `U_e = I`, hence
 identical `|U_PMNS|` up to the separately-flagged `σ_hier` row
@@ -195,7 +195,7 @@ is an honest, separate flag from the `q_H = 0` condition.
 |------|---------|--------|
 | 1 | conjugate Z_3 triplets `q_L, q_R` on `H_hw=1` | RETAINED |
 | 2 | trichotomy support rule on `Y_e` | RETAINED |
-| 3 | `q_H = 0` branch condition | **GAUGE (retained)** via [`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md) |
+| 3 | `q_H = 0` branch condition | **GAUGE (retained)** via `HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md` (sibling/parallel; backticked to break length-2 cycle) |
 | 4 | diagonal `Y_e` ⇒ `U_e = I` | RETAINED (linear algebra) |
 | 5 | hierarchy pairing `σ_hier = (2, 1, 0)` | **OBSERVATIONAL** (discrete) |
 

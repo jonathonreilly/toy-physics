@@ -23,7 +23,7 @@ clean, read legacy `retained` / `promoted` wording as proposed package status.
 3. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
 4. [Reproduce guide](./REPRODUCE.md)
 5. [Manuscript claims surface](./CLAIMS_TABLE.md)
-6. [Science map by domain](./SCIENCE_MAP.md)
+6. `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle)
 7. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
 8. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 9. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
@@ -153,7 +153,7 @@ Those surfaces are intentionally separate:
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md) is the short manuscript claim surface
 - [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md) is the
   shortest public prediction/falsification surface
-- [SCIENCE_MAP.md](./SCIENCE_MAP.md) is the domain-organized science map
+- `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle) is the domain-organized science map
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) and
   [REPRODUCE.md](./REPRODUCE.md) are the evidence and reproduction surfaces
 
@@ -161,9 +161,9 @@ Those surfaces are intentionally separate:
 
 - spacetime, gravity, and quantum gravity:
   [GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md),
-  [SCIENCE_MAP.md](./SCIENCE_MAP.md)
+  `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle)
 - gauge, matter, and strong CP:
-  [SCIENCE_MAP.md](./SCIENCE_MAP.md),
+  `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle),
   [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - quantitative electroweak, QCD, Yukawa, Higgs:
   [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md),
@@ -171,15 +171,15 @@ Those surfaces are intentionally separate:
   [hadron mass open lane](../../lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md)
 - flavor, CKM, quark, charged leptons:
   [CLAIMS_TABLE.md](./CLAIMS_TABLE.md),
-  [SCIENCE_MAP.md](./SCIENCE_MAP.md)
+  `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle)
 - neutrino and dark matter:
-  [SCIENCE_MAP.md](./SCIENCE_MAP.md),
+  `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle),
   [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - cosmology and companion phenomenology:
   [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md),
-  [SCIENCE_MAP.md](./SCIENCE_MAP.md)
+  `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle)
 - absolute-scale / Planck-scale lane:
-  [SCIENCE_MAP.md](./SCIENCE_MAP.md),
+  `SCIENCE_MAP.md` (sibling/parallel; backticked to break length-2 cycle),
   [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md),
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),

@@ -110,4 +110,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 - [pmns_sector_exchange_nonforcing_note](PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md)
-- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator; backticked to avoid length-2 cycle — citation graph direction is *atlas → this_note*)

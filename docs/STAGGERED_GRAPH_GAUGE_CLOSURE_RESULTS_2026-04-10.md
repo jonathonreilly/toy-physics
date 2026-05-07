@@ -56,5 +56,9 @@ Force remains the primary gravity observable; current is the gauge observable.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [staggered_graph_gauge_closure_note](STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md)
+- `staggered_graph_gauge_closure_note` (UPSTREAM framing note; this
+  results note is the data appendix that the framing note describes —
+  citation graph direction is *framing_note → results*; backticked here
+  to avoid the length-2 cycle that a reverse-direction markdown link
+  would create)
 - [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)

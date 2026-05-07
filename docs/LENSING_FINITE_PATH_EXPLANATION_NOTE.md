@@ -213,4 +213,4 @@ the final explanation.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [lensing_long_path_test_note](LENSING_LONG_PATH_TEST_NOTE.md)
+- `LENSING_LONG_PATH_TEST_NOTE.md` (DOWNSTREAM consumer; backticked to avoid length-2 cycle)

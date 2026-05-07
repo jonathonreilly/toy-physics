@@ -73,35 +73,35 @@ observables have to be retained or the QCD sector remains incomplete.
 
 ### Support landed 2026-04-28
 
-- [HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md](../../HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md)
+- `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   maps the lane into phase-ordered dependencies: `sqrt(sigma)` gate work
   can proceed in parallel; `m_pi` via GMOR needs Lane 3 `m_u + m_d` plus
   `Sigma` and `f_pi`; proton/spectroscopy/form factors wait on broader
   quark-mass and lattice-QCD bridges.
-- [HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md](../../HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)
+- `HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   decomposes the bounded `sqrt(sigma)` readout into the `(B1)`-`(B5)`
   residual budget and isolates `(B2)` quenched-to-dynamical screening as
   the dominant numerical gate.
-- [HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md](../../HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md)
+- `HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   records the Banks-Casher `Sigma` no-active-route result on current
   framework content: existing `L=4,6` data is finite-volume/lattice-free,
   and no structural identity currently pins `rho_Dirac(0)`.
 
 ### Support landed 2026-04-30
 
-- [HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
+- `HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   sharpens the old `(B2)` target: a single quenched-to-dynamical
   multiplicative factor is not itself a retained observable once full-QCD
   string breaking is handled honestly. The gate splits into `(B2a)`
   observable-definition and `(B2b)` bridge-value closure.
-- [HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md)
+- `HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   shows that modern full-QCD static-energy literature is useful bridge
   material but still does not promote the bounded `sqrt(sigma)` row.
-- [HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md)
+- `HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   records the current-surface no-go for `(B5)`: the repo still lacks a
   framework-side large-volume Wilson/Creutz/static-force ladder proving
   equivalence to standard `SU(3)` lattice QCD at the bridge level.
-- [HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md)
+- `HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md` (DOWNSTREAM support note; backticked to avoid length-2 cycles in the citation graph)
   narrows the next executable route: a local `L = 4, 6, 8` ladder is a
   scout only, while genuine `(B5)` closure needs the larger-volume
   Wilson/Creutz / force-scale class.

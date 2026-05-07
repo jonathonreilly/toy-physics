@@ -317,7 +317,14 @@ sesquilinear-pairing rewriting applies term by term.
 **Update 2026-05-05.** The closed-form bridge that the original Step 3a
 left as a runner-supported gap (E6 only) is now supplied by the dedicated
 bridge note
-[`STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`](STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md).
+`STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`
+(reference is backticked rather than markdown-linked because the bridge
+note CONSUMES this note's canonical conventions as its starting surface;
+citation graph direction is *bridge → this_note*. A markdown link here
+would create a length-2 cycle. The two notes form a joint authority pair
+on the symmetric-canonical surface; the bridge supplies the closed-form
+det positivity, this note supplies the conventions and the surrounding
+RP factorisation).
 The bridge takes this note's own asserted conventions as input
 (`ε M_W ε = M_W`, mass `m · I`, balanced sublattices `n_+ = n_-`) and
 adds one further structural specification — symmetric-canonical

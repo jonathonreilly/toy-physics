@@ -163,7 +163,7 @@ specialisation that this note generalises is also explicitly cited.
   `theta_eff = 0` on the retained Wilson-plus-staggered action surface
   (the load-bearing input of every "theta-induced ... = 0" row in the
   Vanishing Theta-Induced Components table).
-- [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) — the
+- `CKM_NEUTRON_EDM_BOUND_NOTE.md` (DOWNSTREAM consumer; backticked to avoid length-2 cycle) — the
   prior single-channel statement that this note universalises across
   hadronic, nuclear, atomic, and theta-mediated charged-lepton EDM
   channels.

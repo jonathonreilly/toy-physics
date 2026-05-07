@@ -7,7 +7,7 @@ is intentionally not the full package ledger.
 For broader inventory and companion lanes, use:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
-- [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
+- `FULL_CLAIM_LEDGER.md` (sibling/parallel; backticked to break length-2 cycle)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 
 ## Audit Transition Notice

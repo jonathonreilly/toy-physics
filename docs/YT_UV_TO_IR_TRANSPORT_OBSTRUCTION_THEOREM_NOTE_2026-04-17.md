@@ -106,8 +106,13 @@ decomposition itself is fixed by this master theorem.
 
 ### Downstream P2 sub-theorems (refining the P2 primitive)
 
+(References below are backticked rather than markdown-linked because all
+sub-theorems CONSUME this master obstruction theorem's P1/P2/P3 framing;
+the citation graph direction is *sub_theorem → this_note*. Markdown
+links here would create wrong-direction edges and length-2 cycles.)
+
 - **Taste-staircase transport** (partial):
-  [`docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`](YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md) —
+  `docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md` —
   17-decade transport reduced to a single open matching coefficient
   `M = 1.9734`.
 - **v-matching theorem**:

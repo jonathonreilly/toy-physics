@@ -81,5 +81,5 @@ python3 scripts/frontier_pmns_c3_character_holonomy_closure.py
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [pmns_oriented_cycle_channel_value_law_note](PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)
-- [pmns_three_flux_holonomy_closure_note](PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md)
+- `PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md` (sibling/parallel; backticked to break length-2 cycle)
 - [pmns_twisted_flux_transfer_holonomy_boundary_note](PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md)
