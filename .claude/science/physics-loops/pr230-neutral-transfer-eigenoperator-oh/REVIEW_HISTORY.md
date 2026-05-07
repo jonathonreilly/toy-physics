@@ -197,3 +197,46 @@ python3 docs/audit/scripts/audit_lint.py --strict
 python3 link check for new theorem note # missing_links=[]
 rg forbidden/status firewall review # no load-bearing forbidden import or retained/proposed_retained promotion found
 ```
+
+## Block10
+
+Review-loop/local review run on 2026-05-07 10:03 EDT.  Parallel subagents were
+not spawned because this turn did not explicitly authorize sub-agents; the
+required reviewer passes were applied locally to the changed files.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py`
+- `outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json`
+- `docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Runner compiles, reproduces PASS=9 FAIL=0, consumes only existing parent certificates and the 44/63 row summary, and does not touch the live worker. |
+| Physics Claim Boundary | BOUNDED / OPEN | The note keeps H1/H2 Z3 support separate from H3 physical transfer and H4 source/canonical-Higgs coupling authority. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports are listed only in the firewall as excluded; finite `C_sx/C_xx` rows remain covariance staging support and are not treated as transfer/action or `C_sH/C_HH` pole evidence. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized; the route still needs a same-surface H3/H4 certificate or a W/Z/source-Higgs physical row packet. |
+| Repo Governance | PASS | The new note has paired runner/output links and remains branch-local for PR230 direct landing. |
+| Audit Compatibility | PASS | Campaign status certificate now includes block10 and passes with PASS=348 FAIL=0; the note declares `Claim type: open_gate`, audit pipeline/lint pass with the known five warnings, and generated audit files are included for commit. |
+| Methodology Skill | SKIPPED | No methodology-skill files changed. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py
+# SUMMARY: PASS=9 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=348 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```

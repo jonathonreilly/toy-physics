@@ -178,3 +178,24 @@ primitive/rank-one authority theorem, or W/Z physical-response rows with
 accepted action, sector-overlap, matched covariance, and strict non-observed
 `g2`.  Existing `001-044` taste-radial chunks remain bounded staging support
 only.
+
+Block10 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py` | Created; PASS=9 FAIL=0 |
+| Certificate | `outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json` | Created |
+| Checkpoint note | `docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md` | Created |
+| Campaign status runner | `scripts/frontier_yt_pr230_campaign_status_certificate.py` | Updated; PASS=348 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block10:
+
+```text
+outputs/yt_pr230_wz_response_ratio_rows_2026-05-07.json
+```
+
+with accepted same-source EW/Higgs action, sector-overlap, matched covariance,
+and strict non-observed `g2`; or a fresh same-surface canonical `O_H` plus
+production `C_ss/C_sH/C_HH` Gram-flat row packet.  Do not reopen the neutral
+primitive route without a same-surface H3/H4 certificate.

@@ -46,6 +46,14 @@ taste-radial chunks and records that those `C_sx/C_xx` rows are bounded
 staging support only, not canonical `C_sH/C_HH` pole rows.  No standalone
 block09 review PR should be opened unless PR #230 integration fails.
 
+Block10 follows the same direct PR #230 landing path.  It adds a neutral
+primitive H3/H4 aperture checkpoint after H1/H2 support was loaded, records
+that current `44/63` finite `C_sx/C_xx` rows are not physical transfer/action,
+primitive-cone, off-diagonal-generator, or source/canonical-Higgs coupling
+authority, and pivots next work toward W/Z physical-response rows or a fresh
+certified `O_H` / source-Higgs pole-row packet.  No standalone block10 review
+PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

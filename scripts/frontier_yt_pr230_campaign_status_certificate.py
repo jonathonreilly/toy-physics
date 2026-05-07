@@ -761,6 +761,9 @@ def main() -> int:
         "pr230_neutral_primitive_route_completion": load(
             "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
         ),
+        "pr230_neutral_primitive_h3h4_aperture_checkpoint": load(
+            "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json"
+        ),
         "pr230_oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
@@ -3629,6 +3632,44 @@ def main() -> int:
         is True,
         statuses["pr230_neutral_primitive_route_completion"],
     )
+    neutral_primitive_h3h4_aperture_checkpoint = certificates[
+        "pr230_neutral_primitive_h3h4_aperture_checkpoint"
+    ]
+    neutral_h3h4_rows = neutral_primitive_h3h4_aperture_checkpoint.get(
+        "two_source_rows", {}
+    )
+    neutral_h3h4_diagnostics = neutral_h3h4_rows.get("diagnostics", {})
+    report(
+        "pr230-neutral-primitive-h3h4-aperture-support-not-closure",
+        "neutral primitive H3/H4 aperture checkpoint"
+        in str(statuses["pr230_neutral_primitive_h3h4_aperture_checkpoint"])
+        and neutral_primitive_h3h4_aperture_checkpoint.get("proposal_allowed")
+        is False
+        and neutral_primitive_h3h4_aperture_checkpoint.get(
+            "neutral_primitive_h3h4_aperture_checkpoint_passed"
+        )
+        is True
+        and neutral_primitive_h3h4_aperture_checkpoint.get(
+            "current_surface_closure_satisfied"
+        )
+        is False
+        and neutral_h3h4_rows.get("ready_chunks") == 44
+        and neutral_h3h4_rows.get("expected_chunks") == 63
+        and neutral_h3h4_rows.get("combined_rows_written") is False
+        and neutral_h3h4_diagnostics.get("finite_rows_rank_one_flat") is False
+        and not any(
+            neutral_primitive_h3h4_aperture_checkpoint.get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+        and all(
+            value is False
+            for value in neutral_primitive_h3h4_aperture_checkpoint.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_neutral_primitive_h3h4_aperture_checkpoint"],
+    )
     oh_bridge_candidate_portfolio = certificates["pr230_oh_bridge_candidate_portfolio"]
     report(
         "pr230-oh-bridge-first-principles-candidate-portfolio-open",
@@ -5914,6 +5955,22 @@ def main() -> int:
         is True
         and neutral_primitive_route_completion.get("proposal_allowed") is False
     )
+    result["neutral_primitive_h3h4_aperture_support_not_closure"] = (
+        neutral_primitive_h3h4_aperture_checkpoint.get(
+            "neutral_primitive_h3h4_aperture_checkpoint_passed"
+        )
+        is True
+        and neutral_primitive_h3h4_aperture_checkpoint.get("proposal_allowed")
+        is False
+        and neutral_primitive_h3h4_aperture_checkpoint.get(
+            "current_surface_closure_satisfied"
+        )
+        is False
+        and neutral_h3h4_rows.get("ready_chunks") == 44
+        and neutral_h3h4_rows.get("expected_chunks") == 63
+        and neutral_h3h4_rows.get("combined_rows_written") is False
+        and neutral_h3h4_diagnostics.get("finite_rows_rank_one_flat") is False
+    )
     result["strict_non_claims"] = [
         "does not claim retained closure",
         "does not count non-independent historical chunks as production evidence",
@@ -5954,6 +6011,12 @@ def main() -> int:
             "does not treat the source-Higgs bridge aperture checkpoint or "
             f"{source_higgs_aperture_ready}/63 C_sx/C_xx chunks as canonical "
             "O_H or C_sH/C_HH closure"
+        ),
+        (
+            "does not treat the neutral primitive H3/H4 aperture checkpoint, "
+            "H1/H2 Z3 support, or finite C_sx/C_xx covariance rows as physical "
+            "neutral transfer, primitive-cone, or source/canonical-Higgs coupling "
+            "authority"
         ),
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")

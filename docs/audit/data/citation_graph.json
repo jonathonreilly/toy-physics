@@ -18709,7 +18709,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T13:54:19.103784+00:00",
+  "generated_at": "2026-05-07T14:09:16.228719+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42483,6 +42483,16 @@
       "runner_path": null,
       "title": "PR230 Negative-Route Applicability Review"
     },
+    "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07": {
+      "claim_id": "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / neutral primitive H3/H4 aperture checkpoint;",
+      "deps": [],
+      "note_hash": "f38579ddaeba415ac1d1a6e06e08d07f8e7437b8ee141c5c6970b033d64dea6a",
+      "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py",
+      "title": "PR230 Neutral Primitive H3/H4 Aperture Checkpoint"
+    },
     "yt_pr230_neutral_primitive_route_completion_note_2026-05-06": {
       "claim_id": "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
       "current_status": "unknown",
@@ -46251,6 +46261,7 @@
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
     "yt_pr230_negative_route_applicability_review_note_2026-05-06",
+    "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07",
     "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
@@ -46472,12 +46483,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4677,
-    "leaf_count": 1113,
-    "node_count": 2098,
-    "root_count": 1606,
-    "runners_with_path": 1585,
+    "leaf_count": 1114,
+    "node_count": 2099,
+    "root_count": 1607,
+    "runners_with_path": 1586,
     "status_counts": {
-      "bounded": 580,
+      "bounded": 581,
       "open": 104,
       "proposed_promoted": 1,
       "proposed_retained": 373,

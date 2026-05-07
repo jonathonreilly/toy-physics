@@ -303,3 +303,41 @@
    - Result: open.  The W/Z physical-response route still needs accepted
      action, sector-overlap, production response rows, matched covariance, and
      strict non-observed `g2`.
+
+## Selected Block10 Route
+
+**Neutral primitive H3/H4 aperture checkpoint**
+
+- Type: bounded-support / exact-boundary checkpoint.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: pivots from the blocked source-Higgs aperture to the
+  next ranked neutral primitive route and checks whether the loaded H1/H2 Z3
+  support plus the current `001-044` two-source taste-radial chunks can supply
+  H3 physical neutral transfer/off-diagonal dynamics or H4 source/canonical-
+  Higgs coupling authority.  They cannot.
+- Artifact: `YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT`.
+
+## Block10 Fan-Out Synthesis
+
+1. **H1/H2 Z3 primitive support**
+   - Result: real exact support.  The same-surface Z3 taste-triplet action and
+     positive-cone equal-magnitude support are loaded, but they remain
+     algebraic support only.
+
+2. **Finite `C_sx/C_xx` row staging as H3**
+   - Result: bounded support, not physical transfer.  The current `44/63`
+     row prefix has schema-clean finite covariance diagnostics, with positive
+     finite Gram determinants; it is not a transfer/action matrix,
+     primitive-cone certificate, or off-diagonal generator.
+
+3. **H4 source/canonical-Higgs coupling**
+   - Result: absent.  The source-Higgs aperture remains open because canonical
+     `O_H`, production `C_sH/C_HH` rows, and Gram flatness are absent.
+
+4. **W/Z fallback after neutral route**
+   - Result: open.  The next positive route should consume actual W/Z
+     physical-response rows with accepted action, sector-overlap, matched
+     covariance, and strict non-observed `g2`, or a fresh certified `O_H` /
+     source-Higgs pole-row packet.  Do not reopen neutral primitive work
+     without a same-surface H3/H4 certificate.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T13:54:22.311875+00:00",
+  "generated_at": "2026-05-07T14:09:19.029468+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16872,6 +16872,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py"
+    },
+    "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py"
     },
     "yt_pr230_neutral_primitive_route_completion_note_2026-05-06": {
       "assert_count": 1,
@@ -35571,6 +35583,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py": {
       "assert_count": 1,
       "claims": [
@@ -41908,11 +41935,11 @@
       "A": 9,
       "B": 243,
       "C": 530,
-      "D": 320,
+      "D": 321,
       "none": 404
     },
-    "runners_classified": 1506,
-    "runners_with_C": 816,
-    "runners_with_D": 591
+    "runners_classified": 1507,
+    "runners_with_C": 817,
+    "runners_with_D": 592
   }
 }

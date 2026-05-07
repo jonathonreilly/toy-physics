@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 701,
+    "leaf": 702,
     "medium": 317
   },
-  "generated_at": "2026-05-07T13:54:22.846744+00:00",
+  "generated_at": "2026-05-07T14:09:19.521006+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21049,6 +21049,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25808,6 +25825,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 859,
-  "total_pending": 1255
+  "ready_count": 860,
+  "total_pending": 1256
 }
