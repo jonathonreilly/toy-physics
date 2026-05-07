@@ -10,7 +10,7 @@ current surface remains open
 **Certificate:** `outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json`
 
 ```yaml
-actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 58 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
+actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 60 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
 conditional_surface_status: exact support if a future same-surface primitive neutral transfer or off-diagonal generator certificate supplies H3 and a canonical O_H/source-Higgs or W/Z physical-response packet supplies H4 without forbidden imports
 proposal_allowed: false
 bare_retained_allowed: false
@@ -36,7 +36,7 @@ What is genuinely present:
 
 - H1 same-surface Z3 taste-triplet support is loaded.
 - H2 positive-cone equal-magnitude support is loaded.
-- The two-source taste-radial row combiner now sees the contiguous `001-058`
+- The two-source taste-radial row combiner now sees the contiguous `001-060`
   prefix out of `63` chunks.
 - The finite `C_ss/C_sx/C_xx` diagnostics are schema-clean bounded staging
   evidence.
@@ -87,6 +87,6 @@ python3 scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py
 ```
 
 Refresh note: the 2026-05-07 runner now accepts the current contiguous row
-prefix dynamically.  At this checkpoint it consumes `ready=58/63` rather than
-the earlier `ready=44/63`, `ready=52/63`, `ready=53/63`, and `ready=54/63`
-prefixes; the H3/H4 boundary is unchanged.
+prefix dynamically.  At this checkpoint it consumes `ready=60/63` rather than
+the earlier `ready=44/63`, `ready=52/63`, `ready=53/63`, `ready=54/63`, and
+`ready=58/63` prefixes; the H3/H4 boundary is unchanged.

@@ -16,11 +16,18 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-284-two-source-taste-radial-chunks057-058-package
-blocks_completed: 283
-active_route: "two-source taste-radial chunks057-058 package refresh"
-active_hard_residual: "Packaged chunks057-058 after completed root JSONs and per-volume artifacts landed.  The finite C_ss/C_sx/C_xx row prefix is now 58/63 with chunks059-060 active run-control only and chunks061-063 pending.  Row-derived gates remain bounded support/no-closure: strict scalar-LSZ raw C_ss still fails first-shell Stieltjes nonincrease with z=189.0601845909904, Schur C_s|x still fails with z=173.58719383606584 while C_x|s remains first-shell support only with z=-615.1840801700874, and primitive-transfer/orthogonal-top/neutral gates still reject finite rows as physical authority.  Aggregate gates pass but continue to deny retained/proposed_retained closure."
+current_phase: campaign-block-285-two-source-taste-radial-chunks059-060-package
+blocks_completed: 284
+active_route: "two-source taste-radial chunks059-060 package refresh"
+active_hard_residual: "Packaged chunks059-060 after completed root JSONs and per-volume artifacts landed.  The finite C_ss/C_sx/C_xx row prefix is now 60/63 with chunks061-062 active run-control only and chunk063 pending.  Row-derived gates remain bounded support/no-closure: strict scalar-LSZ raw C_ss still fails first-shell Stieltjes nonincrease with z=195.44413991399455, Schur C_s|x still fails with z=177.78270290819148 while C_x|s remains first-shell support only with z=-631.4581297917338, and primitive-transfer/orthogonal-top/neutral gates still reject finite rows as physical authority.  Aggregate gates pass but continue to deny retained/proposed_retained closure."
 files_touched:
+  - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS059_060_PACKAGE_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk059_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk060_2026-05-06.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk059/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk060/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk059_checkpoint_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk060_checkpoint_2026-05-06.json"
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS057_058_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk057_2026-05-06.json"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk058_2026-05-06.json"
