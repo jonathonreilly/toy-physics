@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 502,
+    "critical": 501,
     "high": 24,
     "leaf": 176,
     "medium": 126
@@ -5777,27 +5777,6 @@
       "ready": true,
       "runner_path": "scripts/lensing_k_sweep.py",
       "transitive_descendants": 313
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.748,
-      "note_path": "docs/DM_LEPTOGENESIS_PMNS_ACTIVE_PROJECTOR_REDUCTION_NOTE_2026-04-16.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py",
-      "transitive_descendants": 303
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27818,6 +27797,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 6,
-  "total_pending": 828
+  "ready_count": 5,
+  "total_pending": 827
 }

@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 816 |
+| unaudited | 815 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 441 |
+| ~~audited_conditional~~ | 442 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 441 |
+| `audited_conditional` | 442 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 865 |
+| `unaudited` | 864 |
 
 | claim_type | count |
 |---|---:|
@@ -643,6 +643,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -4108,6 +4109,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The baryogenesis triplet channels are exact linear functionals of the projected Hermitian response pack: gamma = A13/2, E1 = (R22 - R33)/2 + (S12 - S13)/4, and E2 = R11 + (S12 + S13)/4 - (R22 + R33)/2 - S23/2.  _(class `A`)_
 - **chain closes:** False — The packet does not provide the definitions or derivations of hermitian_linear_responses, breaking_triplet_coordinates, or canonical_h that the runner imports. The runner verifies the formulas numerically against imported code rather than deriving the projected-source bridge from the stated axiom within the restricted packet.
 - **rationale:** The load-bearing formulas look like an algebraic identity once the response-pack and breaking-triplet coordinate definitions are accepted, but those definitions are imported from unavailable modules and no cited retained authority is provided. The runner labels checks as class C, but its source shows numeric checks and note-text checks, not a first-principles Cl(3) computation or symbolic proof. Therefore the claim is conditional on missing bridge/definition authorities rather than clean from the restricted packet.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_ACTIVE_PROJECTOR_REDUCTION_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_ACTIVE_PROJECTOR_REDUCTION_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded reduction of one-sided PMNS flavored-transport projectors from the full Hermitian pair to the active Hermitian block, and conditionally to the active five-real source after imported PMNS selector/seed laws.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-dm-pmns-active-B`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Because H_pass is diagonal on the passive monomial lane, U_pass is only a phase/permutation matrix, hence |U_PMNS|^2 equals the active block packet, or its transpose on N_e.  _(class `A`)_
+- **chain closes:** False — The active-projector localization is algebraic once the one-sided passive-monomial premise is granted. The restricted packet contains no direct authority for that premise or for the imported PMNS branch/orientation and weak-axis seed-average laws, so the deps=[] chain does not close.
+- **rationale:** Issue: the note explicitly imports the active PMNS/neutrino lane and PMNS-side native laws, but no one-hop dependencies are provided. Why this blocks: the runner checks finite algebraic examples and hard-coded canonical transport values, with several literal True PASS lines, so it does not independently establish the missing PMNS premises. Repair target: add direct retained dependency edges for the active PMNS/neutrino lane, the one-sided passive-monomial branch/orientation law, and the weak-axis seed-average laws. Claim boundary until fixed: bounded algebraic reduction of the projector packet under the stated one-sided assumptions; the active five-real source law remains open.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16`
