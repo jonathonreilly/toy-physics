@@ -7,7 +7,7 @@
 
 ## Question
 
-After the neutral H3/H4 aperture refresh landed on draft PR #230, does the
+After the chunks059-060 package landed on draft PR #230, does the
 committed head contain either of the two high-priority campaign inputs?
 
 1. certified canonical `O_H` plus production `C_ss/C_sH/C_HH` pole rows with
@@ -24,8 +24,8 @@ active chunk-worker output, pending checkpoints, or live logs.
 The current committed head is:
 
 ```text
-0f2b542dc978feb53477a6dba5f3c5a70a0dccd4
-Refresh PR230 neutral H3H4 aperture prefix
+e7548e1c6ad77f63299df57e63de8aff35f5c59a
+Package PR230 two-source chunks059-060
 ```
 
 The current head contains a real FMS route sharpening.  It loads the `O_sp`
@@ -42,9 +42,9 @@ subtracted-response readout.
 
 The source-Higgs side remains open:
 
-- `ready_chunks = 52`, `expected_chunks = 63`;
+- `ready_chunks = 60`, `expected_chunks = 63`;
 - `combined_rows_written = false`;
-- the first missing chunk is `53`;
+- the first missing chunk is `61`;
 - the current rows are still `C_sx/C_xx` staging rows, not canonical
   `C_sH/C_HH` pole rows;
 - canonical `O_H`, source-Higgs measurement rows, production certificate, and
@@ -93,6 +93,7 @@ and accepted, pivot only to a real strict W/Z packet or an H3/H4 physical
 positivity-improving transfer-kernel rank-one theorem.  Until then, this lane
 is waiting on explicit production/certificate inputs.
 
-Refresh note: this checkpoint now consumes committed head `0f2b542dc` and the
-packaged chunks001-052 prefix.  Chunks053-054 are active run-control only and
-remain excluded from evidence until completed and checkpointed.
+Refresh note: this checkpoint now consumes committed head `e7548e1c6` and the
+packaged chunks001-060 prefix.  Chunks061-062 are active run-control only and
+remain excluded from evidence until completed and checkpointed; chunk063 is
+pending.

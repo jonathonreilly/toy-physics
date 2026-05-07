@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 fresh-artifact intake current-head refresh:
+
+- Refreshed `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json`
+  and `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
+  after committed head `e7548e1c6`.
+- The intake now consumes the chunks001-060 prefix:
+  `ready=60/63`, first missing chunk `61`, `combined_rows_written=false`.
+- Result: no certified canonical `O_H` / source-Higgs `C_ss/C_sH/C_HH`
+  pole-row packet exists; no strict W/Z accepted-action physical-response
+  packet exists; `proposal_allowed=false`.
+- Cleanest positive target remains same-surface accepted FMS/EW-Higgs action
+  plus canonical `O_H`, then `O_sp`-Higgs pole rows. W/Z remains first
+  fallback only after accepted action, production rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final response rows.
+- Chunks061-062 remain active run-control only and are excluded from evidence;
+  chunk063 is pending.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks059-060 package:
 
 - Packaged chunks059-060 after the completed root JSONs and per-volume

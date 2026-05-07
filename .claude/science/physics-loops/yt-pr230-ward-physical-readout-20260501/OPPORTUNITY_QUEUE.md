@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-07 fresh-artifact intake current-head refresh: committed PR head
+`e7548e1c6` has been rechecked after the chunks059-060 package.  The intake
+consumes committed artifacts only, sees the current chunks001-060 prefix
+(`ready=60/63`, first missing chunk `61`), and still finds no certified
+canonical `O_H` plus production `C_ss/C_sH/C_HH` pole-row packet and no strict
+W/Z accepted-action physical-response packet.  Highest-value next action is
+unchanged: supply the same-surface accepted FMS/EW-Higgs action and canonical
+`O_H` certificate, then launch source-Higgs time-kernel rows; fallback only to
+a real strict W/Z packet or a physical H3/H4 transfer-kernel theorem. Chunks
+061-062 are active run-control only; chunk063 is pending.
+
 2026-05-07 chunks059-060 package refresh: chunks001-060 are now packaged partial
 `C_sx/C_xx` support with `ready=60/63`; chunks059-060 pass completed-mode
 checkpointing and preserve selected-mass-only FH/LSZ, normal-equation cache
