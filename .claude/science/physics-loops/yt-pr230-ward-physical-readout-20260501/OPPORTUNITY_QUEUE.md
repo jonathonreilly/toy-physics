@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 neutral primitive H3/H4 intake-wire refresh: the neutral
+primitive/rank-one completion gate now consumes the H3/H4 aperture checkpoint
+directly.  H1/H2 Z3 support and the current chunks001-052 `C_sx/C_xx` prefix
+remain bounded staging support only; H3 physical neutral transfer or
+off-diagonal generator, H3 primitive-cone/irreducibility authority, and H4
+source/canonical-Higgs coupling are still absent.  Reopen this route only with
+a real H3/H4 same-surface artifact or direct physical rows.  The cleanest
+positive target remains canonical `O_H/C_sH/C_HH` pole rows; W/Z remains
+available only after a strict physical-response packet.
+
 2026-05-07 W/Z route completion intake-wire refresh: the W/Z route completion
 gate now consumes the physical-response packet intake checkpoint directly and
 records current-surface exhaustion, not physics closure.  The shortcut remains

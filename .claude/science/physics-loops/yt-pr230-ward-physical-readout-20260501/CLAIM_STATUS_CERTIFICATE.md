@@ -1,5 +1,23 @@
 # Claim Status Certificate
 
+Neutral primitive H3/H4 intake-wire refresh:
+
+```text
+actual_current_surface_status: exact negative boundary / neutral primitive route remains incomplete after H3/H4 aperture intake
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_neutral_primitive_route_completion.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+The refreshed neutral primitive route-completion gate consumes the H3/H4
+aperture checkpoint directly.  H1/H2 Z3 support and the current `52/63`
+`C_sx/C_xx` row prefix remain bounded support only.  H3 physical neutral
+transfer/off-diagonal dynamics, H3 primitive-cone or irreducibility
+authority, and H4 source/canonical-Higgs coupling are still absent.  No
+retained or `proposed_retained` closure is authorized.
+
 W/Z route completion intake-wire refresh:
 
 ```text

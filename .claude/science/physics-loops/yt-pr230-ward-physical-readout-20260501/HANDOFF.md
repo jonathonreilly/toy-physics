@@ -1,5 +1,21 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 neutral primitive H3/H4 intake-wire refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_neutral_primitive_route_completion.py`,
+  `docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md`, and
+  `outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json`.
+- The completion gate now consumes the H3/H4 aperture checkpoint directly,
+  including the current `52/63` taste-radial row prefix.
+- Result: exact negative boundary on the current surface, not a global theorem
+  no-go.  H1/H2 Z3 support is loaded, but H3 physical neutral transfer or
+  off-diagonal generator, H3 primitive-cone/irreducibility authority, and H4
+  source/canonical-Higgs coupling remain absent.
+- Validation: neutral primitive route completion `PASS=15 FAIL=0`.
+- Claim boundary: no primitive-cone closure, no neutral irreducibility
+  closure, no canonical `O_H`, no `C_sH/C_HH`, and no retained or
+  `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 W/Z route completion intake-wire refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_wz_response_route_completion.py`,

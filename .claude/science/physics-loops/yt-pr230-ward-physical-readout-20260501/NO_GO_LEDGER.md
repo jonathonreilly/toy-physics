@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Neutral primitive H3/H4 aperture is not primitive-cone closure
+
+The 2026-05-07 neutral primitive route-completion refresh consumes the H3/H4
+aperture checkpoint directly.  H1/H2 Z3 support and the current `52/63`
+`C_sx/C_xx` row prefix are bounded staging support only.
+
+Do not treat H1/H2 Z3 support, commutant rank, source-only rows, or
+taste-radial `C_sx/C_xx` rows as H3 physical neutral transfer, H3
+primitive-cone/irreducibility authority, H4 source/canonical-Higgs coupling,
+canonical `O_H`, `C_sH/C_HH`, retained, or proposed-retained closure.
+
+Reopen requires a same-surface physical neutral transfer/off-diagonal
+generator or primitive-cone/irreducibility certificate and its coupling to the
+PR230 source/canonical-Higgs sector, or direct physical rows.
+
 ## W/Z route completion is current-surface exhaustion, not closure
 
 The 2026-05-07 W/Z route completion refresh consumes the W/Z physical-response

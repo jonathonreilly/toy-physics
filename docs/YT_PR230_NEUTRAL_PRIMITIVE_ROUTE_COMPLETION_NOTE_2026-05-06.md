@@ -27,7 +27,25 @@ This boundary is not a claim that the theorem is impossible.  It says the next
 positive step must construct the missing same-surface neutral off-diagonal /
 primitive-transfer certificate, or supply future physical rows.
 
+## 2026-05-07 H3/H4 Aperture Wiring Refresh
+
+The completion gate now consumes
+`outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json`
+directly.  That aperture loads the current `52/63` `C_sx/C_xx` row prefix and
+keeps the exact missing roots explicit:
+
+- H3 physical neutral transfer / off-diagonal generator: absent;
+- H3 primitive-cone or irreducibility certificate: absent;
+- H4 source-to-canonical-Higgs coupling: absent;
+- finite `C_sx/C_xx` rows remain bounded staging support, not neutral transfer
+  or `C_sH/C_HH` rows.
+
+This refresh preserves the route as hard-physics open after a real H3/H4
+artifact, but blocks any shortcut that treats H1/H2 Z3 support, commutant rank,
+source-only rows, or the current taste-radial packet as primitive-cone
+authority.
+
 ```bash
 python3 scripts/frontier_yt_pr230_neutral_primitive_route_completion.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=15 FAIL=0
 ```

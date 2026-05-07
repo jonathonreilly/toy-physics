@@ -1,5 +1,21 @@
 # Review History
 
+## 2026-05-07 - Neutral Primitive H3/H4 Intake-Wire Refresh
+
+Review stance: exact negative boundary / H3/H4 primitive route still open only
+after a real same-surface artifact.
+
+- Updated the neutral primitive route-completion gate to consume the H3/H4
+  aperture checkpoint directly.
+- The refreshed certificate now records the current `52/63` taste-radial row
+  prefix as bounded staging support and keeps the missing H3/H4 roots explicit.
+- Validation: neutral primitive route completion `PASS=15 FAIL=0`.
+
+Disposition: no neutral primitive, irreducibility, or rank-one closure.  H3
+physical transfer/off-diagonal generator, H3 primitive-cone/irreducibility
+authority, and H4 source/canonical-Higgs coupling remain absent.  No retained
+or `proposed_retained` closure is allowed.
+
 ## 2026-05-07 - W/Z Route Completion Intake-Wire Refresh
 
 Review stance: exact negative boundary / W/Z shortcut exhausted, no closure.

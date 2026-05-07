@@ -25,12 +25,14 @@
     "neutral_scalar_rank_one_purity_certificate": false
   },
   "h3_physical_transfer_or_offdiagonal_generator_absent": true,
+  "h3h4_aperture_blocks": true,
   "h4_source_canonical_higgs_coupling_absent": true,
   "neutral_primitive_route_completion_passed": true,
   "parent_certificates": {
     "neutral_burnside_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
     "neutral_commutant_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_dynamical_rank_one": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_h3h4_aperture": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
     "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "neutral_offdiagonal_generator": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
     "neutral_rank_one_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
@@ -45,6 +47,7 @@
     "neutral_burnside_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
     "neutral_commutant_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
     "neutral_dynamical_rank_one": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 52 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
     "neutral_irreducibility_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
     "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
     "neutral_rank_one_gate": "open / neutral scalar rank-one purity gate not passed",
@@ -55,7 +58,7 @@
     "primitive_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
     "primitive_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface"
   },
-  "pass_count": 14,
+  "pass_count": 15,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Conditional Perron support exists, but the current surface has no primitive-cone/irreducibility/off-diagonal-generator certificate.",
   "strict_non_claims": [

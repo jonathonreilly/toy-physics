@@ -24,6 +24,7 @@ PARENTS = {
     "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "neutral_burnside_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
     "neutral_offdiagonal_generator": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
+    "neutral_h3h4_aperture": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
     "neutral_rank_one_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
     "neutral_commutant_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_dynamical_rank_one": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
@@ -117,6 +118,21 @@ def main() -> int:
         certs["neutral_offdiagonal_generator"].get("exact_negative_boundary_passed") is True
         and certs["neutral_offdiagonal_generator"].get("offdiagonal_generator_written") is False
     )
+    h3h4_aperture_blocks = (
+        certs["neutral_h3h4_aperture"].get(
+            "neutral_primitive_h3h4_aperture_checkpoint_passed"
+        )
+        is True
+        and certs["neutral_h3h4_aperture"].get("proposal_allowed") is False
+        and certs["neutral_h3h4_aperture"].get(
+            "h3_physical_transfer_or_offdiagonal_generator_absent"
+        )
+        is True
+        and certs["neutral_h3h4_aperture"].get(
+            "h4_source_canonical_higgs_coupling_absent"
+        )
+        is True
+    )
     z3_h2_support_only = (
         "Z3-triplet positive-cone H2 support" in status(h2_support)
         and h2_support.get("z3_triplet_positive_cone_h2_support_passed") is True
@@ -160,6 +176,7 @@ def main() -> int:
     report("irreducibility-authority-absent", irreducibility_authority_absent, statuses["neutral_irreducibility_audit"])
     report("burnside-current-generators-block", burnside_blocks, statuses["neutral_burnside_attempt"])
     report("offdiagonal-generator-absent", offdiagonal_absent, statuses["neutral_offdiagonal_generator"])
+    report("h3h4-aperture-blocks", h3h4_aperture_blocks, statuses["neutral_h3h4_aperture"])
     report("z3-h2-positive-cone-support-only", z3_h2_support_only, status(h2_support))
     report(
         "conditional-z3-remaining-premises-h3-h4",
@@ -180,6 +197,7 @@ def main() -> int:
         and irreducibility_authority_absent
         and burnside_blocks
         and offdiagonal_absent
+        and h3h4_aperture_blocks
         and z3_h2_support_only
         and conditional_z3_remaining_h3_h4
         and rank_one_gate_open
@@ -200,6 +218,7 @@ def main() -> int:
             "remaining_unsupplied_conditional_premises", []
         ),
         "h3_physical_transfer_or_offdiagonal_generator_absent": offdiagonal_absent,
+        "h3h4_aperture_blocks": h3h4_aperture_blocks,
         "h4_source_canonical_higgs_coupling_absent": True,
         "z3_support_certificates": {
             "conditional_z3_primitive": CONDITIONAL_Z3_PRIMITIVE,
