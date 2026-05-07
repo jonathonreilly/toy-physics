@@ -240,3 +240,50 @@ python3 docs/audit/scripts/audit_lint.py --strict
 git diff --check
 # OK
 ```
+
+## Block11
+
+Review-loop/local review run on 2026-05-07 10:19 EDT.  Parallel subagents were
+not spawned because this turn did not explicitly authorize sub-agents; the
+required reviewer passes were applied locally to the changed files.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py`
+- `outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json`
+- `docs/YT_PR230_WZ_PHYSICAL_RESPONSE_PACKET_INTAKE_CHECKPOINT_NOTE_2026-05-07.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Runner compiles, reproduces PASS=10 FAIL=0, loads existing W/Z action/row/covariance/`g2` certificates, and writes a paired packet-intake certificate. |
+| Physics Claim Boundary | EXACT NEGATIVE BOUNDARY / OPEN | The note blocks only current W/Z packet intake; a future accepted action plus production W/Z/top/covariance/`g2`/`delta_perp` packet can reopen the route. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports are excluded; scout/smoke artifacts and support contracts are explicitly non-production. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized; the route still needs strict production packet roots or a fresh canonical `O_H`/source-Higgs packet. |
+| Repo Governance | PASS | The new note has paired runner/output links and remains branch-local for PR230 direct landing. |
+| Audit Compatibility | PASS | Campaign status certificate now includes block11 and passes with PASS=350 FAIL=0. |
+| Methodology Skill | SKIPPED | No methodology-skill files changed. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=350 FAIL=0
+link check for block11 note
+# missing_links=[]
+rg forbidden/status firewall review
+# hits are non-claim/firewall exclusions only
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings; final rerun after rebase newly seeded=1
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```

@@ -199,3 +199,35 @@ with accepted same-source EW/Higgs action, sector-overlap, matched covariance,
 and strict non-observed `g2`; or a fresh same-surface canonical `O_H` plus
 production `C_ss/C_sH/C_HH` Gram-flat row packet.  Do not reopen the neutral
 primitive route without a same-surface H3/H4 certificate.
+
+Block11 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py` | Created; PASS=10 FAIL=0 |
+| Certificate | `outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json` | Created |
+| Checkpoint note | `docs/YT_PR230_WZ_PHYSICAL_RESPONSE_PACKET_INTAKE_CHECKPOINT_NOTE_2026-05-07.md` | Created |
+| Campaign status runner | `scripts/frontier_yt_pr230_campaign_status_certificate.py` | Updated; PASS=350 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block11:
+
+```text
+outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
+```
+
+plus production `C_ss/C_sH/C_HH` pole rows with Gram flatness, or a strict W/Z
+physical-response packet:
+
+```text
+outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json
+outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json
+outputs/yt_same_source_top_response_certificate_2026-05-04.json
+outputs/yt_electroweak_g2_certificate_2026-05-04.json
+outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json
+outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json
+outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json
+outputs/yt_same_source_w_response_rows_2026-05-04.json
+```
+
+Scout/smoke rows are non-production and must not be promoted.

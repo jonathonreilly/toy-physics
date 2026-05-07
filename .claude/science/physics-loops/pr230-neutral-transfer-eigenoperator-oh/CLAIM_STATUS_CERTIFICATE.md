@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block10_neutral_primitive_h3h4_aperture_checkpoint`.
+Current block: `block11_wz_physical_response_packet_intake_checkpoint`.
 
 ```yaml
-actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 44 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
-conditional_surface_status: exact support if a future same-surface primitive neutral transfer or off-diagonal generator certificate supplies H3 and a canonical O_H/source-Higgs or W/Z physical-response packet supplies H4 without forbidden imports
+actual_current_surface_status: exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist
+conditional_surface_status: exact support if future same-surface artifacts supply accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block10 consumes only existing H1/H2 Z3 support, the 44/63 two-source taste-radial C_sx/C_xx row summary, and parent route certificates. H3 physical neutral transfer/off-diagonal dynamics, H4 source/canonical-Higgs coupling, certified O_H, production C_sH/C_HH rows, and W/Z physical-response rows remain absent."
+proposal_allowed_reason: "Block11 consumes only existing W/Z accepted-action, response-ratio, row-builder, covariance, g2, smoke/scout, and aggregate certificates. No accepted action, canonical O_H/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present; scout/smoke artifacts are explicitly non-production."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -24,15 +24,17 @@ Reason:
    accepted same-source EW/Higgs action, sector-overlap, W/Z response rows,
    matched covariance, strict non-observed `g2`, and aggregate retained-route
    approval.
-2. Block10 verifies dependency classes and forbidden-input firewalls, but it is
-   an aperture checkpoint over current H1/H2 support and finite `C_sx/C_xx`
-   staging rows, not a positive retained proposal.
-3. Block10 does not touch the live worker, does not treat H1/H2 Z3 support as
-   physical transfer, does not relabel `C_sx/C_xx` as `C_sH/C_HH`, does not
-   identify taste-radial `x` with canonical `O_H`, does not set `kappa_s`,
-   `c2`, `Z_match`, `g2`, or overlaps to one, and does not use `H_unit`,
-   `yt_ward_identity`, `y_t_bare`, observed targets, observed `g2`,
-   `alpha_LM`, plaquette, or `u0`.
+2. Block11 verifies dependency classes and forbidden-input firewalls, but it is
+   an intake checkpoint over current W/Z scout/schema rows and support
+   contracts, not a positive retained proposal.
+3. Block11 does not touch the live worker, does not promote scout/smoke rows to
+   production evidence, does not use static EW mass algebra as response rows,
+   does not assume `k_top = k_gauge` or top/W covariance, does not identify
+   taste-radial `x` with canonical `O_H`, does not relabel `C_sx/C_xx` as
+   `C_sH/C_HH`, does not set `kappa_s`, `c2`, `Z_match`, `g2`, or
+   `delta_perp` by convention, and does not use `H_unit`, `yt_ward_identity`,
+   `y_t_bare`, observed targets, observed `g2`, `alpha_LM`, plaquette, or
+   `u0`.
 4. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
@@ -62,5 +64,10 @@ Prior block certificate summary:
 - Block10 actual status: bounded-support / neutral primitive H3/H4 aperture
   checkpoint; H1/H2 support and existing `44/63` finite `C_sx/C_xx` rows do not
   supply H3 physical transfer or H4 source/canonical-Higgs coupling.
-- Block01 through Block10 all have `proposal_allowed=false`; their boundaries
+- Block11 actual status: exact negative boundary / WZ physical-response packet
+  intake checkpoint; scout/schema W/Z artifacts and support contracts do not
+  supply accepted action, production W/Z rows, same-source top rows, matched
+  covariance, strict non-observed `g2`, `delta_perp` authority, or final
+  W-response rows.
+- Block01 through Block11 all have `proposal_allowed=false`; their boundaries
   remain active.

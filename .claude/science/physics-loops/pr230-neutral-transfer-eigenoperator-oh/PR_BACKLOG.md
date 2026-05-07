@@ -54,6 +54,12 @@ authority, and pivots next work toward W/Z physical-response rows or a fresh
 certified `O_H` / source-Higgs pole-row packet.  No standalone block10 review
 PR should be opened unless PR #230 integration fails.
 
+Block11 follows the same direct PR #230 landing path.  It adds a W/Z
+physical-response packet intake checkpoint and records that current W/Z
+scout/schema rows and support contracts are not the strict accepted-action
+production packet.  No standalone block11 review PR should be opened unless
+PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

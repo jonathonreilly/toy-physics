@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T10:03:51-04:00"
+checkpoint_time: "2026-05-07T10:19:31-04:00"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 10
-active_science_block: block10_neutral_primitive_h3h4_aperture_checkpoint
-active_route: neutral primitive H3/H4 aperture checkpoint after source-Higgs bridge aperture remained open
+cycle_count: 11
+active_science_block: block11_wz_physical_response_packet_intake_checkpoint
+active_route: W/Z physical-response packet intake after neutral primitive H3/H4 aperture remained open
 target_status: best-honest-status
-actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 44 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
-conditional_surface_status: exact support if a future same-surface primitive neutral transfer or off-diagonal generator certificate supplies H3 and a canonical O_H/source-Higgs or W/Z physical-response packet supplies H4 without forbidden imports
+actual_current_surface_status: exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist
+conditional_surface_status: exact support if future same-surface artifacts supply accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block10 consumes only existing H1/H2 Z3 support, the 44/63 two-source taste-radial C_sx/C_xx row summary, and parent route certificates. H3 physical neutral transfer/off-diagonal dynamics, H4 source/canonical-Higgs coupling, certified O_H, production C_sH/C_HH rows, and W/Z physical-response rows remain absent."
+proposal_allowed_reason: "Block11 consumes only existing W/Z accepted-action, response-ratio, row-builder, covariance, g2, smoke/scout, and aggregate certificates. No accepted action, canonical O_H/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present; scout/smoke artifacts are explicitly non-production."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit block07 future disjunct artifacts: certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or W/Z physical-response rows with accepted action, sector-overlap, covariance, and strict g2. Existing H1/H2 Z3 support and 44/63 C_sx/C_xx rows are bounded staging support only."
+hard_residual: "Positive work still requires one of the explicit block07 future disjunct artifacts: certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Existing H1/H2 Z3 support, 44/63 C_sx/C_xx rows, and W/Z scout/smoke rows are bounded staging/support only."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -31,6 +31,7 @@ minimal_allowed_premises:
   - "same-surface Z3 H1/H2 neutral primitive support as exact support only; H3/H4 remain absent"
   - "source-Higgs time-kernel/GEVP and scalar-LSZ/FV gates as support or boundary surfaces only"
   - "W/Z correlator mass-fit path gate as future row schema, not production evidence"
+  - "W/Z physical-response packet intake as exact negative boundary; scout/smoke W/Z artifacts are schema support only"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -45,6 +46,9 @@ files_touched:
   - scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py
   - docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md
   - outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json
+  - scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py
+  - docs/YT_PR230_WZ_PHYSICAL_RESPONSE_PACKET_INTAKE_CHECKPOINT_NOTE_2026-05-07.md
+  - outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
@@ -59,6 +63,7 @@ files_touched:
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK09.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK10.md
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK11.md
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -89,8 +94,17 @@ commands_run:
   - "rg forbidden/status firewall review # hits are non-claim/firewall exclusions only"
   - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; newly seeded=0 after claim-type metadata refresh"
   - "python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py"
+  - "python3 scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py # PASS=10 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "git rebase origin/claude/yt-direct-lattice-correlator-2026-04-30 after remote source-Higgs time-kernel manifest; no conflicts"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=350 FAIL=0"
+  - "link check for block11 note # missing_links=[]"
+  - "rg forbidden/status firewall review # hits are non-claim/firewall exclusions only"
+  - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; final rerun after rebase newly seeded=1"
+  - "python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
   - "git diff --check # OK"
-review_disposition: pass_bounded_support_open_boundary
-pr_status: "direct integration into open draft PR #230 landing path; standalone block10 PR not opened unless PR230 integration fails"
-next_exact_action: "Pivot to a real missing artifact: W/Z physical-response rows with accepted action, sector-overlap, matched covariance, and strict non-observed g2; or a fresh same-surface canonical O_H plus production C_ss/C_sH/C_HH Gram-flat row packet. Do not reopen the neutral primitive route without a same-surface H3/H4 certificate."
-stop_condition: "Yield for outer supervisor continuation after coherent block10 checkpoint push; bounded-support/open status is not campaign completion."
+review_disposition: pass_exact_negative_boundary_wz_packet_absence
+pr_status: "direct integration into open draft PR #230 landing path; standalone block11 PR not opened unless PR230 integration fails"
+next_exact_action: "Pivot back to the canonical O_H/source-Higgs bridge only if a fresh same-surface O_H certificate or production C_ss/C_sH/C_HH pole-row packet appears; otherwise keep W/Z as a future production task requiring accepted action, W/Z rows, same-source top rows, matched covariance, strict g2, delta_perp authority, and final W-response rows. Do not reuse scout/smoke rows or touch the live chunk worker."
+stop_condition: "Yield for outer supervisor continuation after coherent block11 checkpoint push; exact negative boundary/open status is not campaign completion."

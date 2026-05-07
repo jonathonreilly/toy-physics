@@ -8673,6 +8673,46 @@
       "to": "yt_wz_g2_authority_firewall_note_2026-05-05"
     },
     {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_wz_mass_fit_response_row_builder_note_2026-05-04"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_same_source_w_response_row_builder_note_2026-05-04"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_same_source_wz_response_certificate_gate_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "to": "yt_wz_g2_authority_firewall_note_2026-05-05"
+    },
+    {
       "from": "yt_qfp_selector_no_go_note_2026-05-01",
       "to": "yt_qfp_insensitivity_support_note"
     },
@@ -18709,7 +18749,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T14:09:16.228719+00:00",
+  "generated_at": "2026-05-07T14:28:58.072339+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43173,6 +43213,16 @@
       "runner_path": null,
       "title": "PR #230 Source-Higgs Time-Kernel Harness Extension"
     },
+    "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07": {
+      "claim_id": "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / source-Higgs time-kernel production manifest; no",
+      "deps": [],
+      "note_hash": "a61f25c6de24b571922d24bb4ba6c5a024057692f99b0af19ba34d8f8b0ff637",
+      "path": "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_PRODUCTION_MANIFEST_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py",
+      "title": "PR #230 Source-Higgs Time-Kernel Production Manifest"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "claim_id": "yt_pr230_source_overlap_route_selection_note_2026-05-03",
       "current_status": "bounded",
@@ -43477,6 +43527,27 @@
       "path": "docs/YT_PR230_WZ_HARNESS_SMOKE_SCHEMA_GATE_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "PR230 W/Z Harness Smoke-Schema Gate Note"
+    },
+    "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07": {
+      "claim_id": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+      "current_status": "open",
+      "current_status_raw": "open / exact negative boundary; WZ physical-response packet not",
+      "deps": [
+        "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
+        "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07",
+        "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
+        "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
+        "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04",
+        "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
+        "yt_same_source_w_response_row_builder_note_2026-05-04",
+        "yt_same_source_wz_response_certificate_gate_note_2026-05-02",
+        "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05",
+        "yt_wz_g2_authority_firewall_note_2026-05-05"
+      ],
+      "note_hash": "9b970d1fe3e9c2aa5b9256f1994df2ba937e071ede6d470df614392def80d1c0",
+      "path": "docs/YT_PR230_WZ_PHYSICAL_RESPONSE_PACKET_INTAKE_CHECKPOINT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py",
+      "title": "PR230 W/Z Physical-Response Packet Intake Checkpoint"
     },
     "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07": {
       "claim_id": "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
@@ -46328,6 +46399,7 @@
     "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
     "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07",
     "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07",
+    "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
     "yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_note_2026-05-07",
@@ -46482,14 +46554,14 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4677,
-    "leaf_count": 1114,
-    "node_count": 2099,
-    "root_count": 1607,
-    "runners_with_path": 1586,
+    "edge_count": 4687,
+    "leaf_count": 1111,
+    "node_count": 2101,
+    "root_count": 1608,
+    "runners_with_path": 1588,
     "status_counts": {
-      "bounded": 581,
-      "open": 104,
+      "bounded": 582,
+      "open": 105,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 457,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T14:09:19.029468+00:00",
+  "generated_at": "2026-05-07T14:29:01.117016+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17473,6 +17473,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_source_higgs_time_kernel_gevp_contract.py"
     },
+    "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -17724,6 +17736,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py"
+    },
+    "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py"
     },
     "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07": {
       "assert_count": 1,
@@ -36333,6 +36357,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_source_overlap_route_selection.py": {
       "assert_count": 1,
       "claims": [
@@ -36643,6 +36682,21 @@
         "B": 2,
         "C": 4,
         "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 6
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -41933,13 +41987,13 @@
     "decoration_candidates": 109,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 243,
+      "B": 244,
       "C": 530,
-      "D": 321,
+      "D": 322,
       "none": 404
     },
-    "runners_classified": 1507,
-    "runners_with_C": 817,
-    "runners_with_D": 592
+    "runners_classified": 1509,
+    "runners_with_C": 819,
+    "runners_with_D": 594
   }
 }

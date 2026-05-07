@@ -740,6 +740,9 @@ def main() -> int:
         "pr230_wz_accepted_action_response_root_checkpoint": load(
             "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json"
         ),
+        "pr230_wz_physical_response_packet_intake_checkpoint": load(
+            "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json"
+        ),
         "pr230_source_higgs_bridge_aperture_checkpoint": load(
             "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json"
         ),
@@ -3487,6 +3490,40 @@ def main() -> int:
         ),
         statuses["pr230_wz_accepted_action_response_root_checkpoint"],
     )
+    wz_physical_response_packet_intake = certificates[
+        "pr230_wz_physical_response_packet_intake_checkpoint"
+    ]
+    report(
+        "pr230-wz-physical-response-packet-intake-blocks-current-packet",
+        "WZ physical-response packet not present"
+        in str(statuses["pr230_wz_physical_response_packet_intake_checkpoint"])
+        and wz_physical_response_packet_intake.get("proposal_allowed") is False
+        and wz_physical_response_packet_intake.get(
+            "wz_physical_response_packet_intake_checkpoint_passed"
+        )
+        is True
+        and wz_physical_response_packet_intake.get("current_route_blocked")
+        is True
+        and wz_physical_response_packet_intake.get("production_packet_present")
+        is False
+        and not any(
+            wz_physical_response_packet_intake.get(
+                "production_roots_present", {}
+            ).values()
+        )
+        and all(
+            wz_physical_response_packet_intake.get(
+                "scout_artifacts_present", {}
+            ).values()
+        )
+        and all(
+            value is False
+            for value in wz_physical_response_packet_intake.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_wz_physical_response_packet_intake_checkpoint"],
+    )
     source_higgs_bridge_aperture_checkpoint = certificates[
         "pr230_source_higgs_bridge_aperture_checkpoint"
     ]
@@ -5861,6 +5898,25 @@ def main() -> int:
             "current_same_source_sector_overlap_identity",
             "wz_correlator_mass_fit_path_certificate",
         }
+    )
+    result["wz_physical_response_packet_intake_blocks_current_packet"] = (
+        wz_physical_response_packet_intake.get(
+            "wz_physical_response_packet_intake_checkpoint_passed"
+        )
+        is True
+        and wz_physical_response_packet_intake.get("proposal_allowed") is False
+        and wz_physical_response_packet_intake.get("production_packet_present")
+        is False
+        and not any(
+            wz_physical_response_packet_intake.get(
+                "production_roots_present", {}
+            ).values()
+        )
+        and all(
+            wz_physical_response_packet_intake.get(
+                "scout_artifacts_present", {}
+            ).values()
+        )
     )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(

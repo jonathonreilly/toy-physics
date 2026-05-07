@@ -341,3 +341,44 @@
      covariance, and strict non-observed `g2`, or a fresh certified `O_H` /
      source-Higgs pole-row packet.  Do not reopen neutral primitive work
      without a same-surface H3/H4 certificate.
+
+## Selected Block11 Route
+
+**W/Z physical-response packet intake checkpoint**
+
+- Type: exact negative boundary / production-packet intake.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: tests the next W/Z physical-response opportunity
+  against the actual branch artifacts after block10.  The branch contains W/Z
+  scout/schema rows and support contracts, but it lacks every strict
+  production root: accepted action, canonical `O_H`/sector-overlap authority,
+  production W/Z mass-fit rows, same-source top rows, matched covariance,
+  strict non-observed `g2`, `delta_perp` authority, and final W-response rows.
+- Artifact: `YT_PR230_WZ_PHYSICAL_RESPONSE_PACKET_INTAKE_CHECKPOINT`.
+
+## Block11 Fan-Out Synthesis
+
+1. **Accepted-action/root side**
+   - Result: blocked.  The minimal certificate cut and action-root checkpoint
+     agree that the current same-source EW/Higgs action is not accepted on the
+     PR230 surface.
+
+2. **Production W/Z row side**
+   - Result: absent.  The W/Z mass-fit response-row builder is open in current
+     mode and writes no strict measurement rows; scout rows are not production.
+
+3. **Top/covariance/`g2` side**
+   - Result: absent.  Same-source top-response, matched top/W or top/Z
+     covariance, and strict non-observed `g2` certificates are not present.
+
+4. **Final W-response packet**
+   - Result: absent.  The same-source W-response row builder lacks the W/Z
+     certificate and `delta_perp` correction certificate, so it writes no
+     production rows.
+
+5. **Next admissible route**
+   - Result: pivot only on a fresh artifact.  Either supply the strict W/Z
+     packet roots above, or return to canonical `O_H`/source-Higgs only after
+     a same-surface `O_H` certificate or production `C_ss/C_sH/C_HH` pole-row
+     packet appears.
