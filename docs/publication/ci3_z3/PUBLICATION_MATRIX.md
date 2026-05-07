@@ -23,7 +23,10 @@ placement rather than audit-ratified status.
 Use this file together with:
 
 - `QUANTITATIVE_SUMMARY_TABLE.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
-- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- `CLAIMS_TABLE.md` (sibling publication-package artifact; backticked to
+  avoid length-2 cycle — CLAIMS_TABLE already lists this matrix in its
+  body cross-references, so citation graph direction is *claims_table →
+  this_matrix*)
 - `FULL_CLAIM_LEDGER.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 
 Terminology rule:

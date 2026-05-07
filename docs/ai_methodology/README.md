@@ -46,7 +46,10 @@ Use it to answer:
    Adversarial review of the synthesis packet: what is now usable, what was
    narrowed, and what remains before publication.
 
-10. [`METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md`](./METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md)
+10. `METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md` (downstream consumer
+   packet; backticked to avoid length-2 cycle — that source packet
+   already lists this README as its lane front door, so citation graph
+   direction is *source_packet → this_readme*)
    Working methods-paper source packet: thesis, paper shape, evidence corpus,
    case-study candidates, and synthesis path.
 
@@ -66,7 +69,9 @@ Use it to answer:
 - active review queue:
   [`../repo/ACTIVE_REVIEW_QUEUE.md`](../repo/ACTIVE_REVIEW_QUEUE.md)
 - canonical runner/index surface:
-  [`../CANONICAL_HARNESS_INDEX.md`](../CANONICAL_HARNESS_INDEX.md)
+  `../CANONICAL_HARNESS_INDEX.md` (cross-reference only — backticked to
+  avoid length-3 cycle through ACTIVE_WORKING_LANES; the harness index is
+  the master surface and lists this readme as a downstream lane entry)
 - branch-side retainability examples:
   [`../CLAUDE_BRANCH_RETAINABILITY_NOTE.md`](../CLAUDE_BRANCH_RETAINABILITY_NOTE.md),
   [`../UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md`](../UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md)

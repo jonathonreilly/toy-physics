@@ -121,7 +121,9 @@ python3 scripts/frontier_pmns_selector_nonuniversal_support_reduction.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator;
+  backticked to avoid length-2 cycle — citation graph direction is
+  *atlas → this_note*)
 - [lepton_shared_higgs_universality_collapse_note](LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md)
 - [lepton_shared_higgs_universality_underdetermination_note](LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md)
 - [pmns_selector_sector_odd_reduction_note](PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md)
