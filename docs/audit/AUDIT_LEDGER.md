@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 230 |
+| **retained_bounded** | 231 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 794 |
+| unaudited | 793 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 383 |
+| `audited_clean` | 384 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 843 |
+| `unaudited` | 842 |
 
 | claim_type | count |
 |---|---:|
@@ -284,6 +284,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_complementarity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_field_strength_unification_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `lattice_nn_continuum_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -8612,6 +8613,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Using the measured norm with h^2 normalization, p = 1.5 is closest to stable across h = 1.0, 0.5, 0.25, 0.125.  _(class `C`)_
 - **chain closes:** True — The current runner, invoked with the note's four h values, reproduces the stated measured slopes: +0.102, -0.204, -0.598, and -1.046, ranking p = 1.5 closest to marginal. The note explicitly bounds the result away from branch promotion, same-harness propagation, and continuum-limit claims.
 - **rationale:** The load-bearing claim is a bounded numerical computation inside a specified local harness, not a physical promotion claim. The runner computes the relevant outgoing transfer norms and log-log measured slopes directly, and the scoped note does not import dependencies or overstate the result beyond the finite discriminator.
+- **auditor confidence:** high
+
+### `lattice_nn_continuum_note`
+
+- **Note:** [`LATTICE_NN_CONTINUUM_NOTE.md`](../../docs/LATTICE_NN_CONTINUUM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-spacing computational claim for the raw nearest-neighbor harness on H_finite = {2.0, 1.0, 0.5, 0.25}: finite gravity, k=0, MI, classical purity, total-variation, and Born rows, with Born residual < 1e-10 and h = 0.125/continuum explicitly outside the claimed window.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-lattice-nn-continuum-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The supplied raw nearest-neighbor runner defines the finite lattice family and measurement harness, prints finite rows for h = 2.0, 1.0, 0.5, and 0.25 with Born residuals below 1e-10 and k=0 equal to 0, then prints FAIL for h = 0.125; the note scopes its conclusion exactly to that completed finite window and excludes the finer-spacing/continuum question.  _(class `C`)_
+- **chain closes:** True — Within the restricted packet, the runner source actually constructs the raw 3-forward-edge nearest-neighbor lattice, applies one fixed measurement procedure across the requested spacings, computes the listed observables without a fitted external comparator, and the completed stdout matches the table and safe claim. The note does not promote the failed h = 0.125 row or any continuum inference into the claimed result, so the bounded finite-window implication closes.
+- **rationale:** The scoped claim is narrow enough for the supplied completed runner output: all four finite-window rows are present and finite, k=0 is reported as +0.00e+00, the worst Born residual is 6.02e-16 below the 1e-10 tolerance, and h = 0.125 is treated only as an unresolved gate. There is no cited authority, external physical identification, tuned observed target, or continuum extrapolation required for the bounded statement.
 - **auditor confidence:** high
 
 ### `lattice_nn_high_precision_note`
