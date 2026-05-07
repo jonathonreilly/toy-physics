@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 242 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 826 |
+| unaudited | 825 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 442 |
+| ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 394 |
-| `audited_conditional` | 442 |
+| `audited_conditional` | 443 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 875 |
+| `unaudited` | 874 |
 
 | claim_type | count |
 |---|---:|
@@ -797,6 +797,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | D | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_nn_rg_gravity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -8568,6 +8569,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the raw NN barrier refinement path, refined h=0.5 and h=0.25 retain a positive far-field distance signal with fixed-strength decay slopes near -1, while alpha=1.5 preserves but flattens the decay.  _(class `C`)_
 - **chain closes:** True — The current runner completed and reproduces the source note's distance rows, signs, slopes, and R^2 values. The cited one-hop dependency is now retained_bounded/audited_clean for the same raw NN finite window including h=1.0,0.5,0.25, so the prior upstream Born/k=0 bridge is closed within the restricted packet.
 - **rationale:** The claim is bounded to the barrier harness and finite h,b grid actually executed by the runner. The live output supports the far-field sign statements, fixed-strength near-1/b decay through h=0.25, and alpha=1.5 flattening comparison, while the audited-clean continuum note supplies the raw NN finite-window Born/k=0 controls. No continuum, universal attraction, or no-barrier branch claim is needed for closure.
+- **auditor confidence:** high
+
+### `lattice_nn_high_precision_note`
+
+- **Note:** [`LATTICE_NN_HIGH_PRECISION_NOTE.md`](../../docs/LATTICE_NN_HIGH_PRECISION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The note's bounded statement that raw NN h = 0.125 no-rescale evaluation is blocked by float64 overflow and that deterministic-rescale rows are canonical observable-equivalent raw-NN values, with continuum theory excluded.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-lattice-nn-hp-auditor-20260507-f161`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By the step-scale invariance theorem, the deterministic-rescale runner's h = 0.125 row is observable-equivalent to the unobtainable raw-kernel-no-rescale row.  _(class `A`)_
+- **chain closes:** False — The float64 overflow bound for raw h = 0.125 closes locally, and fixed-detector-layer normalized observables have a plausible scalar-cancellation argument. The full observable-equivalence statement is broader than the demonstrated theorem because the purity/decoherence construction aggregates mid-window amplitudes before normalization, and the closure runner's finite-window equality table is embedded constants rather than a live parse or full-observable comparison against the raw and deterministic caches.
+- **rationale:** Issue: the source note promotes exact observable-equivalence for all NN runner observables, but the closure runner only certifies normalized detector probabilities, centroid, overflow, and rescale bounds, while the finite-window equality table is hard-coded. Why this blocks: the deterministic-rescale h = 0.125 row can only substitute for the raw no-rescale row for observables covered by a valid step-scale invariance proof, and the current proof/runner does not cover the full reported observable vector. Repair target: add a proof and runner check for every reported observable, including the mid-window purity/decoherence calculation, and parse or recompute the raw/rescaled finite-window equality instead of embedding constants. Claim boundary until fixed: the raw h = 0.125 float64 overflow bound and deterministic Born-clean rows are supported, but the all-observables canonical-equivalence statement remains conditional.
 - **auditor confidence:** high
 
 ### `lattice_nn_light_cone_note`
