@@ -1559,3 +1559,14 @@ theorem authority.  The W/Z route still needs measured matched top/W rows or
 a new strict joint covariance theorem plus source-identity, W/Z, `g_2`,
 sector-overlap, and correction certificates.  No retained/proposed-retained
 wording is authorized.
+
+Latest two-source taste-radial chunks023-024 package checkpoint: the retained
+route certificate is refreshed at `PASS=298 FAIL=0`.  The current two-source
+taste-radial support packet covers chunks001-024, the combiner remains partial
+at `ready=24/63`, and no combined measurement-row packet is written.  The
+strict scalar-LSZ moment/FV gate and the Schur-complement Stieltjes repair
+gate remain non-closure support: the raw `C_ss` proxy fails the Stieltjes
+first-shell necessary check, `C_x|s` is only a one-volume finite-row candidate,
+and canonical `O_H/C_sH/C_HH`, source-overlap, W/Z response, matching, and
+retained-proposal firewalls remain open.  No retained or `proposed_retained`
+closure is authorized.

@@ -22,13 +22,13 @@ matches both endpoint values for every `lambda`, while
 `f_lambda'(0) = (f(dp)-f(0))/dp - lambda dp` changes with `lambda`.
 
 The runner applies this endpoint-preserving witness to the measured finite
-`A_f`, `B_f`, and `C_f` rows from chunks001-022.  It therefore keeps the
+`A_f`, `B_f`, and `C_f` rows from chunks001-024.  It therefore keeps the
 finite-row support, but blocks treating finite endpoint secants or finite
 inverse rows as strict pole derivatives.
 
 The current blockers are:
 
-- `ready=22/63`, no combined 63/63 row packet;
+- `ready=24/63`, no combined 63/63 row packet;
 - Schur kernel row contract still open;
 - strict neutral-kernel A/B/C pole rows absent;
 - isolated-pole derivative rows absent;

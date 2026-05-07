@@ -8,7 +8,7 @@ taste-radial row campaign.  The package audit counts only completed
 and a passing completed chunk checkpoint.  Active workers, logs, partial
 directories, and pending checkpoints are explicitly non-evidence.
 
-The current package contains chunks001-022.  Each completed checkpoint preserves
+The current package contains chunks001-024.  Each completed checkpoint preserves
 the no-claim firewall: `proposal_allowed=false`, zero pole-residue rows, and
 explicit alias metadata showing that the emitted schema fields are
 taste-radial `C_sx/C_xx` support rows, not canonical-Higgs `C_sH/C_HH` pole

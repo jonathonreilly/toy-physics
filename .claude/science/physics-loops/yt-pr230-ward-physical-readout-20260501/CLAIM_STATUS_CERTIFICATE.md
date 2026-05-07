@@ -4316,3 +4316,33 @@ not proof authority.  It lacks a physical primitive/off-diagonal transfer,
 orthogonal-neutral top-coupling exclusion, canonical LSZ/FV/IR metric, and
 measured `C_spH/C_HH` pole-overlap rows.  No retained or proposed-retained
 wording is authorized.
+
+Two-source taste-radial chunks023-024 package checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-024 packaged;
+combined 63/63 rows, canonical O_H, strict scalar-LSZ/FV, W/Z response, and
+proposal firewalls remain open
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 23
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 24
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=24/63, combined_rows_written=false
+
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
+# SUMMARY: PASS=22 FAIL=0
+```
+
+The new packet is finite `C_ss/C_sx/C_xx` row support only.  It is not
+canonical `O_H`, not canonical `C_sH/C_HH`, not scalar-LSZ normalization, not
+`kappa_s`, not W/Z physical response, and not retained or proposed-retained
+closure.  Active chunks025-026, logs, and live status are run-control only.

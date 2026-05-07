@@ -19,7 +19,7 @@ transfer or off-diagonal generator.
 
 It is not enough on the current surface.
 
-The ready packet has 20 of 63 chunks.  On those ready rows the finite
+The ready packet has 24 of 63 chunks.  On those ready rows the finite
 off-diagonal `C_sx` entries are present, and the finite `2x2`
 `C_ss/C_sx/C_xx` blocks have positive Gram determinants.  That is real
 support for the two-source chart and for future Schur/source-Higgs work.

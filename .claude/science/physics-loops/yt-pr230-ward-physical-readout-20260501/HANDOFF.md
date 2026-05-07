@@ -4014,3 +4014,24 @@ This is support-only infrastructure.  The current PR230 surface still has no
 accepted same-source EW action, W/Z rows, matched covariance, strict `g2`,
 canonical `O_H`, or source-Higgs rows.  No retained/proposed-retained wording
 is authorized.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks023-024 Package
+
+Chunks023-024 completed and were packaged into the two-source taste-radial
+row support stream.  Completed-mode checkpoints pass `PASS=15 FAIL=0` for
+both chunks; the package audit passes `PASS=10 FAIL=0`; the row combiner
+passes `PASS=13 FAIL=0` with `ready=24/63` and
+`combined_rows_written=false`; strict scalar-LSZ moment/FV remains blocked at
+`PASS=13 FAIL=0`; and Schur-complement Stieltjes repair remains support-only
+at `PASS=22 FAIL=0`.
+
+Aggregate refresh remains non-closure: assumption stress `PASS=85 FAIL=0`,
+campaign status `PASS=331 FAIL=0`, full assembly `PASS=144 FAIL=0`,
+retained-route `PASS=298 FAIL=0`, and completion audit `PASS=53 FAIL=0`.
+Chunks025-026 are the current live row-wave jobs under the two-worker cap;
+their workers, logs, and live status are not evidence until completed outputs
+and checkpoints exist.
+
+The support packet is finite `C_ss/C_sx/C_xx` data only.  It does not define
+canonical `O_H`, does not supply `C_sH/C_HH` pole rows, does not derive
+`kappa_s`, and does not authorize retained/proposed-retained closure.

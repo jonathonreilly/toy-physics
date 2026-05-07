@@ -3403,3 +3403,16 @@ correlator mass-fit rows, matched top-W/Z identity/covariance, and strict
 non-observed `g2` authority.  Do not reopen with static EW algebra,
 synthetic smoke rows, action notation by definition, or the current additive
 top source.
+
+## 2026-05-07 - Finite Two-Source Rows Are Not Closure
+
+No-go on the current surface: packaging chunks001-024 gives finite
+`C_ss/C_sx/C_xx` row support, but it does not supply canonical `O_H`,
+canonical `C_sH/C_HH` pole rows, strict scalar-LSZ/FV authority, Schur
+`A/B/C` pole derivatives, W/Z response, or a primitive neutral transfer.
+
+The partial packet is `ready=24/63`, so no combined measurement-row file is
+written.  The raw `C_ss` proxy still fails the strict scalar-LSZ first-shell
+Stieltjes necessary condition, while the Schur `C_x|s` residual is only a
+one-volume finite-row candidate.  Reopen this as closure only with a complete
+same-surface artifact that supplies one of the named missing authorities.

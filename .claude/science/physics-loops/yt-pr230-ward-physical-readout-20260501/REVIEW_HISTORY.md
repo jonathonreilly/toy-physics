@@ -5847,3 +5847,25 @@ radial spurion; the current additive source is rejected.  No accepted
 same-source EW action, W/Z rows, matched covariance, strict `g2`, canonical
 `O_H`, or source-Higgs rows are present, so no retained/proposed-retained
 wording is allowed.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks023-024 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks023-024 into the two-source taste-radial row stream.
+- Refreshed chunk checkpoints, package audit, row combiner, Schur finite-row
+  diagnostics, strict scalar-LSZ moment/FV gate, Schur-complement Stieltjes
+  repair gate, source-Higgs readiness, assumption stress, campaign status,
+  full assembly, retained-route, and completion audit.
+- Validation: chunk023 `PASS=15 FAIL=0`, chunk024 `PASS=15 FAIL=0`, package
+  audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at `ready=24/63`,
+  strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair `PASS=22 FAIL=0`,
+  assumption stress `PASS=85 FAIL=0`, campaign status `PASS=331 FAIL=0`,
+  full assembly `PASS=144 FAIL=0`, retained-route `PASS=298 FAIL=0`, and
+  completion audit `PASS=53 FAIL=0`.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for the route, not canonical `O_H`, not canonical `C_sH/C_HH`,
+not scalar-LSZ/FV authority, not W/Z response, and not retained or
+proposed-retained closure.  Active chunks025-026 are run-control only until
+their completed artifacts and checkpoints exist.

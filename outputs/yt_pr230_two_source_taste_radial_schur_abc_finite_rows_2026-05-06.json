@@ -2336,6 +2336,218 @@
       "seed": 2026056022,
       "shell_p_hat_sq_mean": 0.26794919243112264,
       "shell_p_hat_sq_stdev": 0.0
+    },
+    {
+      "chunk_index": 23,
+      "finite_difference": {
+        "A_finite_K_ss_shell_mean": 7.983269462181519,
+        "A_finite_K_ss_shell_minus_zero_over_dp": -0.7131717050489432,
+        "A_finite_K_ss_zero": 8.17436324461411,
+        "B_finite_K_sx_shell_mean": -0.0019716764120133253,
+        "B_finite_K_sx_shell_minus_zero_over_dp": -0.002100911599604524,
+        "B_finite_K_sx_zero": -0.001408738845530115,
+        "C_finite_K_xx_shell_mean": 3.7088874693520726,
+        "C_finite_K_xx_shell_minus_zero_over_dp": 0.5575152648668892,
+        "C_finite_K_xx_zero": 3.559501704362966,
+        "det_K_shell_mean": 29.609050766251375,
+        "det_K_shell_minus_zero_over_dp": 1.9122761478085428,
+        "det_K_zero": 29.096657916740778,
+        "rho_sx_shell_mean": 0.00036232897531087474,
+        "rho_sx_shell_minus_zero_over_dp": 0.0003775626807048626,
+        "rho_sx_zero": 0.000261161359923877
+      },
+      "max_inverse_identity_residual": 2.220446049250313e-16,
+      "mode_rows": {
+        "0,0,0": {
+          "A_finite_K_ss": 8.17436324461411,
+          "B_finite_K_sx": -0.001408738845530115,
+          "C_finite_K_xx": 3.559501704362966,
+          "C_ss": 0.12233369600551289,
+          "C_sx": 4.8415830077845344e-05,
+          "C_xx": 0.2809382186780629,
+          "Delta_sx": 0.03436820829599985,
+          "det_K": 29.096657916740778,
+          "inverse_identity_check": {
+            "ss": 1.0,
+            "sx": 0.0,
+            "xs": -5.421010862427522e-20,
+            "xx": 1.0
+          },
+          "mode": "0,0,0",
+          "p_hat_sq": 0.0,
+          "rho_sx": 0.000261161359923877,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        },
+        "0,0,1": {
+          "A_finite_K_ss": 7.982394620659208,
+          "B_finite_K_sx": -0.0024704533460594017,
+          "C_finite_K_xx": 3.6984495105770847,
+          "C_ss": 0.12527571665531043,
+          "C_sx": 8.368042135116519e-05,
+          "C_xx": 0.2703836307265265,
+          "Delta_sx": 0.033872496108717495,
+          "det_K": 29.522477374870462,
+          "inverse_identity_check": {
+            "ss": 1.0000000000000002,
+            "sx": 0.0,
+            "xs": -1.0842021724855044e-19,
+            "xx": 1.0000000000000002
+          },
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0004546740966779952,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        },
+        "0,1,0": {
+          "A_finite_K_ss": 7.982647552468419,
+          "B_finite_K_sx": -0.0006210059344088233,
+          "C_finite_K_xx": 3.7099318725168535,
+          "C_ss": 0.12527172300282813,
+          "C_sx": 2.096924851226393e-05,
+          "C_xx": 0.2695467322270848,
+          "Delta_sx": 0.033766583136159475,
+          "det_K": 29.61507819632287,
+          "inverse_identity_check": {
+            "ss": 0.9999999999999999,
+            "sx": 0.0,
+            "xs": 0.0,
+            "xx": 0.9999999999999999
+          },
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.00011411409902652733,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        },
+        "1,0,0": {
+          "A_finite_K_ss": 7.984766213416931,
+          "B_finite_K_sx": -0.0028235699555717517,
+          "C_finite_K_xx": 3.71828102496228,
+          "C_ss": 0.1252385156687092,
+          "C_sx": 9.510300801595723e-05,
+          "C_xx": 0.2689415517053719,
+          "Delta_sx": 0.033681831692638046,
+          "det_K": 29.689596727560794,
+          "inverse_identity_check": {
+            "ss": 0.9999999999999999,
+            "sx": 0.0,
+            "xs": 0.0,
+            "xx": 1.0000000000000002
+          },
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0005181987302281016,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        }
+      },
+      "seed": 2026056023,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "shell_p_hat_sq_stdev": 0.0
+    },
+    {
+      "chunk_index": 24,
+      "finite_difference": {
+        "A_finite_K_ss_shell_mean": 7.978095244641172,
+        "A_finite_K_ss_shell_minus_zero_over_dp": -0.7127675731804451,
+        "A_finite_K_ss_zero": 8.169080740265963,
+        "B_finite_K_sx_shell_mean": 0.0036127135811770696,
+        "B_finite_K_sx_shell_minus_zero_over_dp": -0.0002452056734765099,
+        "B_finite_K_sx_zero": 0.00367841624336463,
+        "C_finite_K_xx_shell_mean": 3.7100274286752253,
+        "C_finite_K_xx_shell_minus_zero_over_dp": 0.5547527865672252,
+        "C_finite_K_xx_zero": 3.5613818675156224,
+        "det_K_shell_mean": 29.5989447562696,
+        "det_K_shell_minus_zero_over_dp": 1.8874558261315235,
+        "det_K_zero": 29.09320249190824,
+        "rho_sx_shell_mean": -0.0006638948030425283,
+        "rho_sx_shell_minus_zero_over_dp": 6.745600329558266e-05,
+        "rho_sx_zero": -0.0006819695846502108
+      },
+      "max_inverse_identity_residual": 2.220446049250313e-16,
+      "mode_rows": {
+        "0,0,0": {
+          "A_finite_K_ss": 8.169080740265963,
+          "B_finite_K_sx": 0.00367841624336463,
+          "C_finite_K_xx": 3.5613818675156224,
+          "C_ss": 0.12241285119801293,
+          "C_sx": -0.000126435590732499,
+          "C_xx": 0.28079001418073685,
+          "Delta_sx": 0.034372290237835876,
+          "det_K": 29.09320249190824,
+          "inverse_identity_check": {
+            "ss": 1.0,
+            "sx": 0.0,
+            "xs": 0.0,
+            "xx": 1.0
+          },
+          "mode": "0,0,0",
+          "p_hat_sq": 0.0,
+          "rho_sx": -0.0006819695846502108,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        },
+        "0,0,1": {
+          "A_finite_K_ss": 7.9759724183531855,
+          "B_finite_K_sx": 0.0024883338128365486,
+          "C_finite_K_xx": 3.6997654083318996,
+          "C_ss": 0.12537658825462542,
+          "C_sx": -8.43239420503504e-05,
+          "C_xx": 0.27028746405761517,
+          "Delta_sx": 0.03388771298101128,
+          "det_K": 29.509220659427278,
+          "inverse_identity_check": {
+            "ss": 1.0,
+            "sx": -5.421010862427522e-20,
+            "xs": 0.0,
+            "xx": 1.0
+          },
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.0004580677594074558,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        },
+        "0,1,0": {
+          "A_finite_K_ss": 7.981063735618484,
+          "B_finite_K_sx": 0.004367957833219557,
+          "C_finite_K_xx": 3.7115297079834164,
+          "C_ss": 0.12529666185003535,
+          "C_sx": -0.0001474568651375508,
+          "C_xx": 0.26943086079424083,
+          "Delta_sx": 0.033758765713372864,
+          "det_K": 29.62193607700147,
+          "inverse_identity_check": {
+            "ss": 0.9999999999999999,
+            "sx": 0.0,
+            "xs": 2.168404344971009e-19,
+            "xx": 1.0000000000000002
+          },
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.0008025490354451056,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        },
+        "1,0,0": {
+          "A_finite_K_ss": 7.977249579951845,
+          "B_finite_K_sx": 0.0039818490974751035,
+          "C_finite_K_xx": 3.7187871697103594,
+          "C_ss": 0.12535655609588925,
+          "C_sx": -0.0001342241077463652,
+          "C_xx": 0.26890501898177416,
+          "Delta_sx": 0.03370898908034383,
+          "det_K": 29.665677532380037,
+          "inverse_identity_check": {
+            "ss": 1.0,
+            "sx": 0.0,
+            "xs": 0.0,
+            "xx": 1.0
+          },
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.0007310676142750233,
+          "strict_limit": "Finite inverse of the measured correlator block.  Not a strict neutral-kernel A/B/C row at the scalar pole."
+        }
+      },
+      "seed": 2026056024,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "shell_p_hat_sq_stdev": 0.0
     }
   ],
   "conditional_surface_status": "conditional-support for the Schur route only after complete 63/63 rows, isolated-pole K'(pole) or equivalent derivative authority, FV/IR limiting control, and canonical O_H/source-overlap or same-source W/Z response authority are supplied",
@@ -2345,109 +2557,109 @@
   "finite_schur_abc_rows_written": true,
   "finite_shell_summary": {
     "A_finite_K_ss_shell_mean": {
-      "count": 22,
+      "count": 24,
       "max": 7.986905088068048,
-      "mean": 7.977506504928879,
+      "mean": 7.977771158969084,
       "min": 7.9643355832966956,
-      "stdev": 0.005804548032417258
+      "stdev": 0.0056700035409623165
     },
     "A_finite_K_ss_shell_minus_zero_over_dp": {
-      "count": 22,
+      "count": 24,
       "max": -0.7065425194782079,
-      "mean": -0.7181234505412574,
+      "mean": -0.7176939662557104,
       "min": -0.7326105914422173,
-      "stdev": 0.006074323351142855
+      "stdev": 0.005984122947422506
     },
     "A_finite_K_ss_zero": {
-      "count": 22,
+      "count": 24,
       "max": 8.180621448618574,
-      "mean": 8.16992710356726,
+      "mean": 8.170076677639992,
       "min": 8.154117108744266,
-      "stdev": 0.006645354645266615
+      "stdev": 0.0064174837481761875
     },
     "B_finite_K_sx_shell_mean": {
-      "count": 22,
+      "count": 24,
       "max": 0.005466004371964465,
-      "mean": 0.0006313408011368384,
+      "mean": 0.0006471056164239244,
       "min": -0.005555208097948439,
-      "stdev": 0.002851773583340431
+      "stdev": 0.00284714335510022
     },
     "B_finite_K_sx_shell_minus_zero_over_dp": {
-      "count": 22,
+      "count": 24,
       "max": 0.0025461532091132387,
-      "mean": -0.0002112902567671067,
+      "mean": -0.0002914376217482242,
       "min": -0.0038405072259346793,
-      "stdev": 0.001716881204582344
+      "stdev": 0.001685216476298027
     },
     "B_finite_K_sx_zero": {
-      "count": 22,
+      "count": 24,
       "max": 0.005124693045453241,
-      "mean": 0.0006879558548061491,
+      "mean": 0.0007251960918154081,
       "min": -0.004526147288233351,
-      "stdev": 0.00259233955296411
+      "stdev": 0.0025912092986044083
     },
     "C_finite_K_xx_shell_mean": {
-      "count": 22,
+      "count": 24,
       "max": 3.712002043118027,
-      "mean": 3.7101528604617795,
+      "mean": 3.7100949095077684,
       "min": 3.7077587872407136,
-      "stdev": 0.001252566317629948
+      "stdev": 0.0012244558376325722
     },
     "C_finite_K_xx_shell_minus_zero_over_dp": {
-      "count": 22,
+      "count": 24,
       "max": 0.5588825507936342,
-      "mean": 0.5570956985553432,
-      "min": 0.5547877773965046,
-      "stdev": 0.001049344059214783
+      "mean": 0.5570155591521527,
+      "min": 0.5547527865672252,
+      "stdev": 0.001115790200514933
     },
     "C_finite_K_xx_zero": {
-      "count": 22,
+      "count": 24,
       "max": 3.562665639171458,
-      "mean": 3.5608795179270234,
+      "mean": 3.560843040261379,
       "min": 3.5585902338703836,
-      "stdev": 0.0011463860428550603
+      "stdev": 0.0011366811068345385
     },
     "det_K_shell_mean": {
-      "count": 22,
+      "count": 24,
       "max": 29.64562021565786,
-      "mean": 29.59776181847918,
+      "mean": 29.598281480377622,
       "min": 29.55180624794291,
-      "stdev": 0.025513801846545146
+      "stdev": 0.024488146465134236
     },
     "det_K_shell_minus_zero_over_dp": {
-      "count": 22,
+      "count": 24,
       "max": 1.928017536158709,
-      "mean": 1.887081774495067,
+      "mean": 1.8881471255346474,
       "min": 1.8379602640344057,
-      "stdev": 0.022011432810446215
+      "stdev": 0.021651612727290666
     },
     "det_K_zero": {
-      "count": 22,
+      "count": 24,
       "max": 29.140430893242833,
-      "mean": 29.092119780951737,
+      "mean": 29.092353982899468,
       "min": 29.03944131046569,
-      "stdev": 0.026137198864236214
+      "stdev": 0.024992752845262495
     },
     "rho_sx_shell_mean": {
-      "count": 22,
+      "count": 24,
       "max": 0.0010219054080234267,
-      "mean": -0.00011589128776166591,
+      "mean": -0.00011879892327034597,
       "min": -0.0010044881130406907,
-      "stdev": 0.0005241843199850558
+      "stdev": 0.0005233235260123272
     },
     "rho_sx_shell_minus_zero_over_dp": {
-      "count": 22,
+      "count": 24,
       "max": 0.0006804390703986079,
-      "mean": 4.3106878976896744e-05,
+      "mean": 5.8057084228840574e-05,
       "min": -0.00046035848697133485,
-      "stdev": 0.00030822852596481745
+      "stdev": 0.0003023236578685962
     },
     "rho_sx_zero": {
-      "count": 22,
+      "count": 24,
       "max": 0.0008395823086115359,
-      "mean": -0.00012744174117175152,
+      "mean": -0.00013435527210436946,
       "min": -0.0009500004592309483,
-      "stdev": 0.0004805773912388462
+      "stdev": 0.00048037184790189615
     }
   },
   "forbidden_firewall": {
@@ -2510,9 +2722,11 @@
     19,
     20,
     21,
-    22
+    22,
+    23,
+    24
   ],
-  "ready_chunks": 22,
+  "ready_chunks": 24,
   "row_definition": {
     "A_finite_K_ss": "C_xx / Delta_sx",
     "B_finite_K_sx": "-C_sx / Delta_sx",

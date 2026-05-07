@@ -1710,3 +1710,9 @@ checkpoint_2026_05_07_same_source_ew_action_contract_hardening:
   aggregate_refresh: "assumption stress 85/0; campaign 331/0; full assembly 144/0; retained route 298/0; completion audit 53/0"
   current_active_chunks: "two-source taste-radial chunks023-024 active under two-worker cap; active workers, logs, and live status are non-evidence"
   next_exact_action: "Supply a real same-source EW/Higgs action certificate with one no-independent-top-source radial spurion v(s), attach the W/Z response-ratio contract, then produce W/Z correlator mass-fit rows with matched top-W/Z identity/covariance and strict non-observed g2 authority; otherwise pursue canonical O_H plus C_ss/C_spH/C_HH rows."
+checkpoint_2026_05_07_two_source_taste_radial_chunks023_024_package:
+  actual_current_surface_status: "bounded-support / two-source taste-radial chunks001-024 packaged; combined 63/63 rows, canonical O_H, strict scalar-LSZ/FV, W/Z response, and proposal firewalls remain open; proposal_allowed=false"
+  runner_pass_fail: "chunk023 15/0; chunk024 15/0; package audit 10/0; row combiner 13/0; strict scalar-LSZ moment/FV 13/0; Schur-complement Stieltjes repair 22/0"
+  aggregate_refresh: "assumption stress 85/0; campaign 331/0; full assembly 144/0; retained route 298/0; completion audit 53/0"
+  current_active_chunks: "two-source taste-radial chunks025-026 active under two-worker cap after chunks023-024 completed; active workers, logs, live status, and pending checkpoints are non-evidence"
+  next_exact_action: "Continue row-wave packaging only after completed JSON/checkpoints exist, or pivot to a genuine closure artifact: canonical O_H plus C_ss/C_spH/C_HH pole rows, same-source W/Z rows with identity/covariance/strict g2, strict scalar-LSZ moment/threshold/FV authority, Schur A/B/C pole rows, or a neutral primitive/off-diagonal-generator certificate."

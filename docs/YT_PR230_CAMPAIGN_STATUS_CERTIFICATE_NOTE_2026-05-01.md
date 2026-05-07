@@ -1574,9 +1574,21 @@ reports `PASS=328 FAIL=0` after aggregate reruns.  The new gate tests finite
 Schur residuals from the two-source taste-radial block.  `C_s|x` remains
 positive but increases from zero mode to first shell, so it does not repair
 the source Stieltjes failure.  `C_x|s` is positive and decreases across
-chunks001-022, making it the stronger finite complement-scalar diagnostic for
+chunks001-024, making it the stronger finite complement-scalar diagnostic for
 future row waves.  This is bounded support only; it is not scalar-LSZ
 authority, canonical `O_H`, `kappa_s`, or retained/proposed-retained closure.
+
+Latest two-source taste-radial chunks023-024 package checkpoint: campaign
+status now consumes the packaged chunks001-024 row packet and reports
+`PASS=331 FAIL=0` after aggregate reruns.  The chunk023 and chunk024
+checkpoints each pass `PASS=15 FAIL=0`; the row combiner is `ready=24/63`
+with `combined_rows_written=false`; the strict scalar-LSZ moment/FV gate is
+`PASS=13 FAIL=0`; and the Schur-complement Stieltjes repair gate is
+`PASS=22 FAIL=0`.  Chunks025-026 may be active under the row-wave supervisor,
+but active workers, logs, and live status are run-control only.  The new rows
+are finite `C_ss/C_sx/C_xx` support, not canonical `O_H`, not
+`C_sH/C_HH`, not strict scalar-LSZ/FV authority, and not retained or
+proposed-retained closure.
 
 Latest D17 source-pole checkpoint: campaign status now includes the D17
 identity closure attempt and reports `PASS=96 FAIL=0` over 100 certificates.

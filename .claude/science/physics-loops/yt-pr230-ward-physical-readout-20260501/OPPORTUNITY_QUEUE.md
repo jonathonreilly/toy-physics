@@ -1495,3 +1495,12 @@ priority order stays: certified `O_H/C_sH/C_HH` pole rows or canonical `O_H`;
 then genuine W/Z rows satisfying the hardened contract; then strict
 scalar-LSZ moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
 primitive/off-diagonal-generator certificate.
+
+2026-05-07 update: two-source taste-radial chunks023-024 are now packaged,
+raising the partial row packet to `ready=24/63`.  This strengthens Schur and
+strict scalar-LSZ diagnostics but does not change the clean closure ordering:
+the next genuine artifact is still certified `O_H/C_sH/C_HH` pole rows or
+canonical `O_H`, then hardened same-source W/Z rows, strict scalar-LSZ
+moment/threshold/FV authority, Schur `A/B/C` pole rows, or a neutral
+primitive/off-diagonal-generator certificate.  Do not promote finite
+`C_sx/C_xx` aliases or active row-wave jobs into proof authority.

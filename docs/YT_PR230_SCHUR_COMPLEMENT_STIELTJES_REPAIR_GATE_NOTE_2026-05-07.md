@@ -6,7 +6,7 @@
 
 ## Claim
 
-The completed two-source taste-radial chunks001-022 contain a stricter finite
+The completed two-source taste-radial chunks001-024 contain a stricter finite
 object than the raw `C_ss` proxy:
 
 ```text
