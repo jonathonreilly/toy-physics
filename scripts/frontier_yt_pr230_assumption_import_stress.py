@@ -230,6 +230,9 @@ def main() -> int:
         "oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
+        "same_surface_neutral_multiplicity_one_gate": load(
+            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1330,6 +1333,16 @@ def main() -> int:
         and candidate_portfolio.get("candidate_count") == 5,
         candidate_portfolio.get("actual_current_surface_status"),
     )
+    same_surface_neutral_gate = certificates["same_surface_neutral_multiplicity_one_gate"]
+    report(
+        "same-surface-neutral-multiplicity-one-gate-rejects-current-surface",
+        "same-surface neutral multiplicity-one artifact intake gate"
+        in str(same_surface_neutral_gate.get("actual_current_surface_status"))
+        and same_surface_neutral_gate.get("proposal_allowed") is False
+        and same_surface_neutral_gate.get("candidate_accepted") is False
+        and same_surface_neutral_gate.get("candidate_certificate_present") is False,
+        same_surface_neutral_gate.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -1491,6 +1504,10 @@ def main() -> int:
             "source-overlap necessity gate then blocks the next inference: "
             "current source-only rows and taste-radial C_sx/C_xx chunks do "
             "not determine Res C_sH or exclude orthogonal neutral top coupling.  "
+            "The same-surface neutral multiplicity-one intake gate makes the "
+            "clean source-Higgs positive artifact contract executable and "
+            "rejects the current two-singlet neutral completion without "
+            "claiming O_H authority.  "
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
@@ -1522,6 +1539,7 @@ def main() -> int:
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
             "does not treat conditional Z3-triplet primitive-cone support as a PR230 primitive certificate",
+            "does not treat the same-surface multiplicity-one intake gate as an accepted O_H certificate",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
             "does not treat the two-source taste-radial chart as canonical O_H or as production source-Higgs rows",

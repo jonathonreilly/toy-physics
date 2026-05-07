@@ -46,6 +46,7 @@ PARENTS = {
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
+    "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -597,6 +598,20 @@ def main() -> int:
         and "Z3 lazy-transfer promotion not derivable"
         in parent_statuses["z3_lazy_transfer_promotion_attempt"]
     )
+    same_surface_neutral_multiplicity_gate_rejects_current_surface = (
+        "same-surface neutral multiplicity-one artifact intake gate"
+        in parent_statuses["same_surface_neutral_multiplicity_one_gate"]
+        and certs["same_surface_neutral_multiplicity_one_gate"].get("proposal_allowed")
+        is False
+        and certs["same_surface_neutral_multiplicity_one_gate"].get(
+            "candidate_accepted"
+        )
+        is False
+        and certs["same_surface_neutral_multiplicity_one_gate"].get(
+            "candidate_certificate_present"
+        )
+        is False
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -671,6 +686,7 @@ def main() -> int:
     report("z3-triplet-positive-cone-h2-support-not-transfer", z3_triplet_positive_cone_h2_support_not_transfer, parent_statuses["z3_triplet_positive_cone_support"])
     report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
+    report("same-surface-neutral-multiplicity-one-gate-rejects-current-surface", same_surface_neutral_multiplicity_gate_rejects_current_surface, parent_statuses["same_surface_neutral_multiplicity_one_gate"])
     report("future-bridge-artifact-files-support-only-or-absent", no_unclosed_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
@@ -828,6 +844,7 @@ def main() -> int:
             "z3_triplet_positive_cone_h2_support_not_transfer": z3_triplet_positive_cone_h2_support_not_transfer,
             "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
             "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
+            "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
             "future_bridge_file_presence": future_bridge_presence,
         },
         "bare_retained_allowed": False,
@@ -839,12 +856,15 @@ def main() -> int:
             "does not treat completed chunks as scalar-LSZ or source-overlap authority",
             "does not treat W/Z smoke rows as production response rows",
             "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
+            "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
             "does not set c2=1, Z_match=1, or kappa_s=1",
         ],
         "exact_next_action": (
             "Supply one fresh parseable same-surface artifact beyond O_sp: "
-            "O_sp-Higgs pole rows with canonical O_H identity/normalization "
+            "a same-surface neutral multiplicity-one certificate accepted by "
+            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json, "
+            "then O_sp-Higgs pole rows with canonical O_H identity/normalization "
             "(Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a real source-coordinate "
             "transport certificate from the uniform PR230 source to canonical "
             "O_H, a genuine same-source EW action plus production W/Z mass-fit "

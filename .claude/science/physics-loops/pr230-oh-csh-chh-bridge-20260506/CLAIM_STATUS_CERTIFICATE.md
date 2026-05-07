@@ -27,7 +27,7 @@ schema now exist, and the manifest now records exact no-resume chunk commands,
 and the launcher has completed chunks001-018 and advanced to active
 chunks019-020 under a two-worker cap.  The completed chunks001-018
 checkpoints pass, and the combiner gate records `ready=18/63` while writing no
-combined row packet, but they remain bounded row support only.  Chunks017-018
+combined row packet, but they remain bounded row support only.  Chunks019-020
 remain non-evidence until completed JSON exists and completed-mode checkpoints
 pass.  The route still needs completed 63/63 production `C_sx/C_xx` rows, a
 combined row packet, pole/FV/IR authority, and either
@@ -168,3 +168,18 @@ forbids an independent additive top bare-mass source.  It proves the response
 ratio algebra and additive-source counterexample, but remains support-only
 because no accepted EW/Higgs action certificate, W/Z rows, strict `g2`,
 canonical `O_H`, or source-Higgs pole rows exist.
+
+## 2026-05-07 Same-Surface Neutral Multiplicity-One Intake Gate
+
+The new gate is support-only intake for the clean source-Higgs route.  It
+requires a future same-surface neutral-sector candidate to supply `Cl(3)/Z3`
+action data, a top-coupled neutral sector, multiplicity-one or primitive/
+irreducible generator authority, canonical metric/LSZ normalization, and
+either an `O_sp = O_H` identity or measured `C_spH/C_HH` pole-overlap rows.
+
+The current surface is rejected by an explicit two-singlet neutral completion:
+`source_singlet` and `orthogonal_neutral_singlet` can carry the same current
+source-only observables while the candidate canonical-Higgs vector rotates in
+the orthogonal slot.  Therefore the gate writes no canonical `O_H`
+certificate, no source-Higgs pole-row packet, no `kappa_s = 1` authority, and
+no retained/proposed-retained closure proposal.

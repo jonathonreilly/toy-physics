@@ -5786,3 +5786,23 @@ same-surface canonical `O_H` certificate or source-Higgs production
 counterfamily with fixed `C_ss` and variable source-Higgs overlap, so no
 source-Higgs bridge or `kappa_s = 1` normalization may be inferred.  No
 effective-retention or proposed-retention wording is allowed.
+
+## 2026-05-07 - Same-Surface Neutral Multiplicity-One Intake Gate
+
+Review stance: exact support intake gate plus current-surface rejection.
+
+- Added `scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_gate.py`.
+- Added `docs/YT_PR230_SAME_SURFACE_NEUTRAL_MULTIPLICITY_ONE_GATE_NOTE_2026-05-07.md`.
+- Added `outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json`.
+- Wired the gate into the clean route selector, assumption/import stress,
+  campaign status, full positive assembly, retained-route, and completion-audit
+  certificates.
+- Validation: runner `PASS=17 FAIL=0`, route selector `PASS=20 FAIL=0`,
+  assumption stress `PASS=78 FAIL=0`, campaign status `PASS=324 FAIL=0`,
+  full assembly `PASS=137 FAIL=0`, retained-route `PASS=291 FAIL=0`, and
+  completion audit `PASS=46 FAIL=0`.
+
+Disposition: support-only.  The gate rejects the current two-singlet neutral
+surface and names the future same-surface candidate artifact.  It does not
+certify `O_H`, set `kappa_s=1`, or authorize retained/proposed-retained
+wording.

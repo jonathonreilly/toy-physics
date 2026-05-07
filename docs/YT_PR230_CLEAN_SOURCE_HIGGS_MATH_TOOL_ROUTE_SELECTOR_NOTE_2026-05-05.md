@@ -4,8 +4,9 @@
 positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
-**Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract, and
-chunks001-018/two-source finite-Schur support landed
+**Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract,
+chunks001-018/two-source finite-Schur support, and the same-surface neutral
+multiplicity-one intake gate landed
 
 ## Purpose
 
@@ -27,6 +28,9 @@ The refresh consumes the current genuine support without promoting it:
   `C_sx/C_xx` support only;
 - finite Schur `A_f/B_f/C_f` inverse rows are bounded diagnostics, not pole
   `K'(pole)` authority.
+- the same-surface neutral multiplicity-one intake gate now records the exact
+  future positive artifact contract and rejects the current two-singlet
+  completion.
 
 ## Ranking
 
@@ -86,6 +90,7 @@ Forbidden uses:
 No closure is claimed.  The current surface still lacks:
 
 - `outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json`;
+- `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`;
 - `outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json`;
 - neutral irreducibility or primitive-cone certificates;
 - Schur kernel rows;
@@ -95,13 +100,14 @@ The selected clean next action is:
 
 ```text
 use O_sp as the normalized source side, derive a same-surface canonical O_H
-identity/normalization certificate, then produce C_ss/C_spH/C_HH rows and run
-O_sp-Higgs Gram purity plus scalar-LSZ aggregate gates.
+identity/normalization certificate by first satisfying the same-surface neutral
+multiplicity-one gate, then produce C_ss/C_spH/C_HH rows and run O_sp-Higgs
+Gram purity plus scalar-LSZ aggregate gates.
 ```
 
 ## Verification
 
 ```bash
 python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
-# SUMMARY: PASS=19 FAIL=0
+# SUMMARY: PASS=20 FAIL=0
 ```

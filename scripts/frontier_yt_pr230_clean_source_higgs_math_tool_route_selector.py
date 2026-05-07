@@ -38,6 +38,7 @@ PARENTS = {
     "source_higgs_unratified_gram_shortcut_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "scalar_lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "wz_smoke_to_production_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
@@ -54,6 +55,7 @@ PARENTS = {
 
 FUTURE_FILES = {
     "canonical_oh_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+    "same_surface_neutral_multiplicity_one_certificate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json",
     "source_higgs_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
     "matched_top_wz_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
     "top_wz_closed_covariance_theorem": "outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json",
@@ -128,6 +130,8 @@ def math_route_rows(statuses: dict[str, str]) -> list[dict[str, Any]]:
             ),
             "required_output_contract": [
                 FUTURE_FILES["canonical_oh_certificate"],
+                "or",
+                FUTURE_FILES["same_surface_neutral_multiplicity_one_certificate"],
                 "or",
                 FUTURE_FILES["neutral_irreducibility_certificate"],
                 "or",
@@ -410,6 +414,14 @@ def main() -> int:
         and parents["two_source_taste_radial_schur_abc"].get("strict_schur_abc_kernel_rows_written") is False
         and parents["two_source_taste_radial_pole_lift"].get("proposal_allowed") is False
     )
+    same_surface_multiplicity_gate_loaded = (
+        "same-surface neutral multiplicity-one artifact intake gate"
+        in statuses["same_surface_neutral_multiplicity_one_gate"]
+        and parents["same_surface_neutral_multiplicity_one_gate"].get("proposal_allowed") is False
+        and parents["same_surface_neutral_multiplicity_one_gate"].get("candidate_accepted") is False
+        and parents["same_surface_neutral_multiplicity_one_gate"].get("candidate_certificate_present")
+        is False
+    )
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -426,6 +438,7 @@ def main() -> int:
     report("radial-spurion-action-contract-future-only", radial_spurion_support_only, statuses["radial_spurion_action_contract"])
     report("two-source-row-combiner-partial-support-only", two_source_partial_rows_support_only, f"ready={parents['two_source_taste_radial_combiner'].get('ready_chunks')}/63")
     report("finite-schur-abc-support-not-pole-authority", finite_schur_support_only, statuses["two_source_taste_radial_schur_abc"])
+    report("same-surface-multiplicity-gate-loaded", same_surface_multiplicity_gate_loaded, statuses["same_surface_neutral_multiplicity_one_gate"])
     report("clean-physics-route-ranks-source-higgs-first", source_higgs_ranked_first, ranking[0]["option"])
     report("wz-response-demoted-to-fallback-for-clean-goal", wz_fallback_not_primary, ranking[-1]["option"])
     report("selected-route-is-source-higgs-invariant-to-gns", selected["id"] == "source_higgs_invariant_ring_then_gns_pole_rows", selected["id"])
@@ -465,6 +478,7 @@ def main() -> int:
             "radial_spurion_support_only": radial_spurion_support_only,
             "two_source_partial_rows_support_only": two_source_partial_rows_support_only,
             "finite_schur_support_only": finite_schur_support_only,
+            "same_surface_multiplicity_gate_loaded": same_surface_multiplicity_gate_loaded,
         },
         "outside_math_route_rows": rows,
         "user_option_clean_physics_ranking": ranking,
@@ -479,10 +493,11 @@ def main() -> int:
             "does not use reduced pilots, smoke rows, or exact toy contractions as production evidence",
         ],
         "exact_next_action": (
-            "For the clean source-Higgs route, attempt a same-surface invariant-"
-            "ring/commutant/primitive-cone derivation of the canonical O_H "
-            "identity and normalization certificate.  If and only if that "
-            "certificate lands, produce C_ss/C_spH/C_HH pole rows and run the "
+            "For the clean source-Higgs route, produce the actual candidate "
+            "file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json "
+            "satisfying the same-surface neutral multiplicity-one gate.  If "
+            "and only if that certificate lands, rerun the canonical O_H "
+            "certificate gate, produce C_ss/C_spH/C_HH pole rows, and run the "
             "O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates."
         ),
         "pass_count": PASS_COUNT,

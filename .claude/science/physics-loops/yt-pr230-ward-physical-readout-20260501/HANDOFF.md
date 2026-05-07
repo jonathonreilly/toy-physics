@@ -3943,3 +3943,19 @@ canonical `O_H`, source-Higgs pole rows, W/Z rows with
 identity/covariance/strict `g2`, Schur rows, strict scalar-LSZ authority, or a
 neutral primitive/off-diagonal-generator certificate.  No
 retained/proposed-retained wording is authorized.
+
+## 2026-05-07 - Same-Surface Neutral Multiplicity-One Intake Gate
+
+The active PR230 source-Higgs work has added an intake gate for the cleanest
+next artifact.  A future candidate must supply same-surface `Cl(3)/Z3`
+neutral representation/action data, a top-coupled neutral sector,
+multiplicity-one or primitive-generator authority, canonical metric/LSZ
+normalization, and either `O_sp = O_H` or measured `C_spH/C_HH` pole-overlap
+rows.
+
+The current surface is rejected by a two-singlet neutral completion with a
+source singlet and an orthogonal neutral singlet.  Source-only observables can
+remain fixed while candidate `O_H` rotates, so no canonical-Higgs identity,
+`kappa_s=1`, retained, or proposed-retained claim is authorized.  Chunks019-020
+remain active under the two-worker cap and are non-evidence until completed
+JSON exists and completed-mode checkpoints pass.

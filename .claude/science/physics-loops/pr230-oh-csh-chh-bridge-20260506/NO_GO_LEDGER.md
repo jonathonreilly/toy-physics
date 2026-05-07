@@ -5,6 +5,7 @@ same-surface artifacts, rows, or retained theorems may reopen the route.
 
 | Route | Disposition | Artifact |
 |---|---|---|
+| Same-surface neutral multiplicity-one intake from current two-singlet neutral surface | exact support plus current-surface rejection: the gate defines the required future artifact, but the current surface allows a source singlet plus an orthogonal neutral singlet, with source-only observables fixed while the candidate `O_H` overlap rotates; no `O_H`, `kappa_s`, or closure authority follows | `YT_PR230_SAME_SURFACE_NEUTRAL_MULTIPLICITY_ONE_GATE_NOTE_2026-05-07.md` |
 | Outside-math/FMS/literature route refresh plus `O_sp`, radial-spurion, partial chunks, or finite Schur rows as closure | support-only boundary: the refreshed selector consumes these artifacts and still ranks `O_sp`-Higgs pole rows as the cleanest route; none supplies canonical `O_H`, `C_spH/C_HH` pole rows, W/Z response, strict scalar-LSZ/FV/IR authority, or closure | `YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md` |
 | Existing Higgs/taste condensate stack as PR230 `O_H` bridge | current shortcut blocked: uniform source has zero projection onto taste-axis span | `YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md` |
 | Scalar reparametrization of PR230 uniform source as canonical `O_H` | current shortcut blocked: allowed reparametrizations preserve the `I_8` source tangent; trace-zero taste-axis tangent requires a new source axis | `YT_PR230_SOURCE_COORDINATE_TRANSPORT_GATE_NOTE_2026-05-06.md` |

@@ -1,0 +1,254 @@
+{
+  "actual_current_surface_status": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "candidate_accepted": false,
+  "candidate_certificate_present": false,
+  "candidate_schema": {
+    "accepted_status_after_independent_review": "proposed_retained may be requested only by downstream aggregate gates, never by this intake gate alone",
+    "must_have_boolean_false_fields": [
+      "forbidden_import_firewall.uses_H_unit",
+      "forbidden_import_firewall.uses_yt_ward_identity",
+      "forbidden_import_firewall.uses_observed_targets",
+      "forbidden_import_firewall.uses_alpha_lm_plaquette_u0",
+      "forbidden_import_firewall.sets_c2_zmatch_kappas_to_one_by_convention"
+    ],
+    "must_have_boolean_true_fields": [
+      "same_surface_cl3_z3_representation.present",
+      "multiplicity_one_or_primitive_generator_proof.passed",
+      "canonical_metric_lsz_normalization.passed",
+      "source_to_canonical_higgs_overlap.passed",
+      "forbidden_import_firewall.passed"
+    ],
+    "required_top_level_fields": [
+      "actual_current_surface_status",
+      "same_surface_cl3_z3_representation",
+      "neutral_scalar_basis",
+      "action_or_transfer_matrices",
+      "top_coupled_neutral_sector",
+      "source_pole_operator_coordinates",
+      "multiplicity_one_or_primitive_generator_proof",
+      "canonical_metric_lsz_normalization",
+      "source_to_canonical_higgs_overlap",
+      "forbidden_import_firewall",
+      "downstream_certificate_paths",
+      "proposal_allowed"
+    ]
+  },
+  "conditional_surface_status": "conditional-support if a future candidate certificate satisfies same-surface representation, multiplicity-one or primitive-generator, canonical LSZ metric, source-Higgs overlap, and firewall obligations",
+  "current_two_singlet_counterfamily": [
+    {
+      "candidate_oh_vector": [
+        1.0,
+        0.0
+      ],
+      "case": "source_aligned_candidate",
+      "commutant_dimension": 4,
+      "degree_one_invariant_dimension": 2,
+      "group_action": "trivial_on_both_singlets_on_current_surface",
+      "neutral_basis": [
+        "source_singlet",
+        "orthogonal_neutral_singlet"
+      ],
+      "passes_multiplicity_one_contract": false,
+      "rejection_reason": "current surface allows an orthogonal neutral singlet with identical source-only rows",
+      "source_only_observables_change": false,
+      "source_to_candidate_overlap": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "candidate_oh_vector": [
+        0.8660254037844387,
+        0.49999999999999994
+      ],
+      "case": "candidate_rotated_30deg",
+      "commutant_dimension": 4,
+      "degree_one_invariant_dimension": 2,
+      "group_action": "trivial_on_both_singlets_on_current_surface",
+      "neutral_basis": [
+        "source_singlet",
+        "orthogonal_neutral_singlet"
+      ],
+      "passes_multiplicity_one_contract": false,
+      "rejection_reason": "current surface allows an orthogonal neutral singlet with identical source-only rows",
+      "source_only_observables_change": false,
+      "source_to_candidate_overlap": 0.8660254037844387,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "candidate_oh_vector": [
+        0.5000000000000001,
+        0.8660254037844386
+      ],
+      "case": "candidate_rotated_60deg",
+      "commutant_dimension": 4,
+      "degree_one_invariant_dimension": 2,
+      "group_action": "trivial_on_both_singlets_on_current_surface",
+      "neutral_basis": [
+        "source_singlet",
+        "orthogonal_neutral_singlet"
+      ],
+      "passes_multiplicity_one_contract": false,
+      "rejection_reason": "current surface allows an orthogonal neutral singlet with identical source-only rows",
+      "source_only_observables_change": false,
+      "source_to_candidate_overlap": 0.5000000000000001,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "candidate_oh_vector": [
+        6.123233995736766e-17,
+        1.0
+      ],
+      "case": "orthogonal_neutral_candidate",
+      "commutant_dimension": 4,
+      "degree_one_invariant_dimension": 2,
+      "group_action": "trivial_on_both_singlets_on_current_surface",
+      "neutral_basis": [
+        "source_singlet",
+        "orthogonal_neutral_singlet"
+      ],
+      "passes_multiplicity_one_contract": false,
+      "rejection_reason": "current surface allows an orthogonal neutral singlet with identical source-only rows",
+      "source_only_observables_change": false,
+      "source_to_candidate_overlap": 6.123233995736766e-17,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "exact_next_action": "Produce the actual candidate file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json with a same-surface representation/action and a multiplicity-one or primitive-generator proof.  If it passes this gate, rerun the canonical O_H certificate gate, source-Higgs row builder, Gram-purity postprocessor, scalar-LSZ gates, full assembly gate, retained-route gate, and completion audit.",
+  "fail_count": 0,
+  "future_file_presence": {
+    "candidate_same_surface_multiplicity_one_certificate": false,
+    "canonical_higgs_operator_certificate": false,
+    "neutral_irreducibility_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "source_higgs_measurement_rows": false,
+    "source_higgs_production_certificate": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "clean_source_higgs_route_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "invariant_ring_oh_attempt": "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json",
+    "neutral_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "neutral_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
+    "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "z3_positive_cone_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json",
+    "z3_triplet_conditional_primitive": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "clean_source_higgs_route_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "invariant_ring_oh_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+    "neutral_commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
+    "neutral_primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "neutral_primitive_cone_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+    "oh_bridge_candidate_portfolio": "open / first-principles O_H bridge positive-candidate portfolio",
+    "retained_route": "open / retained closure not yet reached",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
+    "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
+    "z3_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
+    "z3_triplet_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+  },
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This gate defines the positive artifact contract but no candidate certificate is present.  The current two-singlet neutral completion keeps source-only data fixed while changing the source-to-Higgs overlap, so it cannot certify canonical O_H or kappa_s.",
+  "required_artifact_contract": [
+    {
+      "acceptance_rule": "basis/action/source coordinates are present and use the same surface, not a cross-lane or literature carrier",
+      "current_satisfied": false,
+      "id": "same_surface_cl3_z3_neutral_representation",
+      "required_evidence": [
+        "explicit neutral scalar basis on the PR230 same surface",
+        "Cl(3)/Z3 action or transfer matrices on that basis",
+        "source-pole operator coordinates in the same basis",
+        "top-coupled neutral scalar sector definition"
+      ]
+    },
+    {
+      "acceptance_rule": "two copies of a trivial neutral singlet, or any rotatable orthogonal neutral scalar, rejects the candidate",
+      "current_satisfied": false,
+      "id": "multiplicity_one_or_primitive_generator",
+      "required_evidence": [
+        "degree-one invariant dimension equals one in the top-coupled neutral sector",
+        "or commutant dimension equals one on that sector",
+        "or a primitive/irreducible positive transfer certificate selects one canonical radial generator"
+      ]
+    },
+    {
+      "acceptance_rule": "LSZ/canonical metric fixes normalization rather than importing a unit convention",
+      "current_satisfied": false,
+      "id": "canonical_metric_and_lsz_normalization",
+      "required_evidence": [
+        "kinetic or inverse-propagator derivative metric for the selected scalar",
+        "finite-volume/IR/zero-mode limiting order",
+        "canonical field normalization used by v",
+        "no kappa_s = 1 convention"
+      ]
+    },
+    {
+      "acceptance_rule": "source-only C_ss rows are insufficient; an independent cross row or identity theorem is required",
+      "current_satisfied": false,
+      "id": "source_to_canonical_higgs_overlap",
+      "required_evidence": [
+        "identity O_sp = O_H with normalization, or measured C_spH/C_HH pole-residue overlap",
+        "Gram-purity or equivalent orthogonal-neutral exclusion",
+        "source-scale invariant kappa_spH row using Res(C_spH)/sqrt(Res(C_ss) Res(C_HH))"
+      ]
+    },
+    {
+      "acceptance_rule": "accepted candidate paths must exist before downstream O_H/C_sH/C_HH gates can pass",
+      "current_satisfied": false,
+      "id": "measurement_rows_or_certificate_paths",
+      "required_evidence": [
+        "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+        "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+        "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json"
+      ]
+    },
+    {
+      "acceptance_rule": "every forbidden import is explicitly absent from load-bearing proof inputs",
+      "current_satisfied": true,
+      "id": "claim_firewall",
+      "required_evidence": [
+        "H_unit matrix-element readout",
+        "yt_ward_identity as authority",
+        "observed top mass or observed y_t selector",
+        "alpha_LM / plaquette / u0 proof input",
+        "reduced cold pilots as production evidence",
+        "c2 = 1 unless derived",
+        "Z_match = 1 unless derived",
+        "kappa_s = 1 unless derived by scalar LSZ/canonical normalization",
+        "PSLQ or value-recognition hit as proof selector"
+      ]
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write or accept a canonical O_H certificate",
+    "does not infer O_H from source-only rows or symmetry labels",
+    "does not treat Z3 positive-cone H2 support as a physical primitive transfer",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, or PSLQ/value recognition as authority"
+  ]
+}

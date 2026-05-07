@@ -58,6 +58,17 @@ open.  It supplies no PR230 same-source EW action, no W/Z response rows, no
 matched covariance, no `delta_perp`, no strict `g2`, no canonical `O_H`, and no
 `C_sH/C_HH` rows.  Treat it as context only, not W/Z or source-Higgs authority.
 
+The same-surface neutral multiplicity-one intake gate is now packaged.  It is
+the executable contract for the cleanest source-Higgs route: a future candidate
+must provide PR230 same-surface `Cl(3)/Z3` neutral-sector action data,
+top-coupled neutral-sector coordinates, a multiplicity-one or primitive/
+irreducible generator proof, canonical metric/LSZ normalization, and either an
+`O_sp = O_H` identity or measured `C_spH/C_HH` pole-overlap rows.  The current
+surface is rejected because a two-singlet neutral completion keeps source-only
+observables fixed while the candidate canonical-Higgs direction rotates through
+an orthogonal neutral slot.  This is support-only intake and does not certify
+`O_H`, set `kappa_s=1`, or authorize retained/proposed-retained wording.
+
 The follow-on lazy-Z3 theorem is exact conditional support: for the cyclic
 triplet permutation `P`, the lazy transfer `L=(I+P)/2` satisfies
 `L^2=(I+2P+P^2)/4` with strictly positive entries, so Perron-Frobenius gives a
@@ -391,7 +402,7 @@ Best next work:
    complete and checkpointed, the combiner gate records `ready=18/63` and writes
    no combined packet, the Schur subblock, finite-shell slope, and finite
    `A_f/B_f/C_f` inverse rows are support-only diagnostics, the pole-lift gate
-   blocks endpoint secants as derivative authority, chunks017-018 are
+   blocks endpoint secants as derivative authority, chunks019-020 are
    active under the two-worker launcher cap, and after they complete the next
    action is rerunning the per-chunk checkpoint without pending mode, rerunning
    the combiner, then the next bounded wave, then prove/reject its

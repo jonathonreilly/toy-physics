@@ -4,6 +4,17 @@ No external review-loop has been run yet for this block.
 
 Local verification completed:
 
+- Same-surface neutral multiplicity-one intake gate:
+  `frontier_yt_pr230_same_surface_neutral_multiplicity_one_gate.py`
+  PASS=17 FAIL=0.  It rejects the current two-singlet neutral surface and
+  defines the required future same-surface candidate artifact without writing
+  an `O_H` certificate or closure claim.
+- Follow-on refresh after wiring that gate into the aggregate surface:
+  clean route selector PASS=20 FAIL=0, assumption/import stress PASS=78
+  FAIL=0, campaign status PASS=324 FAIL=0, full assembly PASS=137 FAIL=0,
+  retained-route PASS=291 FAIL=0, and completion audit PASS=46 FAIL=0.  All
+  continue to preserve `proposal_allowed=false`.
+
 - `frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`:
   PASS=19 FAIL=0 after the 2026-05-07 refresh.  It consumes `O_sp`,
   radial-spurion action-contract support, chunks001-018 partial `C_sx/C_xx`

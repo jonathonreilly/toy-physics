@@ -3359,3 +3359,18 @@ production source-Higgs pole rows.  Do not reopen it with method names,
 cross-lane `O_H` references, the unratified smoke operator, unratified Gram
 purity, FMS language, GNS/flat-extension rank, holonomic derivative machinery,
 or positivity preservation alone.
+
+## 2026-05-07 - Same-Surface Neutral Multiplicity-One Intake Gate
+
+No-go on the current surface: a two-singlet neutral completion
+(`source_singlet`, `orthogonal_neutral_singlet`) keeps source-only observables
+fixed while the candidate canonical-Higgs direction rotates through the
+orthogonal slot.  The intake gate therefore rejects current source-only,
+Z3-cone, finite Schur endpoint, and method-name shortcuts as `O_H` or
+`kappa_s` authority.
+
+Reopen only with
+`outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`
+or equivalent same-surface representation/action plus multiplicity-one or
+primitive-generator proof, canonical metric/LSZ normalization, and
+source-to-Higgs overlap rows.

@@ -710,6 +710,9 @@ def main() -> int:
         "pr230_oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
+        "pr230_same_surface_neutral_multiplicity_one_gate": load(
+            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -3137,6 +3140,19 @@ def main() -> int:
         and oh_bridge_candidate_portfolio.get("candidate_count") == 5,
         statuses["pr230_oh_bridge_candidate_portfolio"],
     )
+    same_surface_neutral_multiplicity_gate = certificates[
+        "pr230_same_surface_neutral_multiplicity_one_gate"
+    ]
+    report(
+        "pr230-same-surface-neutral-multiplicity-one-gate-rejects-current-surface",
+        "same-surface neutral multiplicity-one artifact intake gate"
+        in str(statuses["pr230_same_surface_neutral_multiplicity_one_gate"])
+        and same_surface_neutral_multiplicity_gate.get("proposal_allowed") is False
+        and same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False
+        and same_surface_neutral_multiplicity_gate.get("candidate_certificate_present")
+        is False,
+        statuses["pr230_same_surface_neutral_multiplicity_one_gate"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -4740,11 +4756,20 @@ def main() -> int:
         "does not supply the physical lazy transfer, source/Higgs row, or "
         "strict primitive certificate.  The first-principles "
         "O_H bridge candidate portfolio records the surviving positive "
-        "candidate routes and keeps them open without authorizing closure."
+        "candidate routes and keeps them open without authorizing closure.  "
+        "The same-surface neutral multiplicity-one intake gate now makes "
+        "the cleanest missing positive artifact executable and rejects the "
+        "current two-singlet surface without authorizing O_H closure."
     )
     result["oh_bridge_candidate_portfolio_open"] = (
         oh_bridge_candidate_portfolio.get("candidate_portfolio_passed") is True
         and oh_bridge_candidate_portfolio.get("candidate_count") == 5
+    )
+    result["same_surface_neutral_multiplicity_one_gate_rejects_current_surface"] = (
+        same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False
+        and same_surface_neutral_multiplicity_gate.get("candidate_certificate_present")
+        is False
+        and same_surface_neutral_multiplicity_gate.get("proposal_allowed") is False
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")
@@ -5118,6 +5143,7 @@ def main() -> int:
         "does not treat post-cycle-26 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-27 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-28 origin/main audit/effective-status drift as same-surface physics evidence",
+        "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
         "does not treat post-cycle-29 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-30 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-31 origin/main audit/effective-status drift as same-surface physics evidence",

@@ -125,6 +125,7 @@ PARENTS = {
     "pr230_schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
     "pr230_neutral_primitive_route_completion": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
     "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
+    "pr230_same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1152,6 +1153,22 @@ def main() -> int:
         and certs["pr230_oh_bridge_candidate_portfolio"].get("candidate_count")
         == 5
     )
+    same_surface_neutral_multiplicity_gate_rejects_current_surface = (
+        "same-surface neutral multiplicity-one artifact intake gate"
+        in statuses["pr230_same_surface_neutral_multiplicity_one_gate"]
+        and certs["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "candidate_accepted"
+        )
+        is False
+        and certs["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "candidate_certificate_present"
+        )
+        is False
+    )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
@@ -1940,6 +1957,11 @@ def main() -> int:
         "oh-bridge-first-principles-candidate-portfolio-open",
         oh_bridge_candidate_portfolio_open,
         statuses["pr230_oh_bridge_candidate_portfolio"],
+    )
+    report(
+        "same-surface-neutral-multiplicity-one-gate-rejects-current-surface",
+        same_surface_neutral_multiplicity_gate_rejects_current_surface,
+        statuses["pr230_same_surface_neutral_multiplicity_one_gate"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",
@@ -2884,6 +2906,7 @@ def main() -> int:
         "schur_route_completion_blocks": schur_route_completion_blocks,
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
+        "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -2924,6 +2947,7 @@ def main() -> int:
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",
+            "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
             "does not treat cycle-14 non-chunk route selection closure as positive evidence",
             "does not treat cycle-15 independent-route exhaustion as positive evidence",
             "does not treat cycle-16 reopen-source absence as positive evidence",
@@ -2950,7 +2974,9 @@ def main() -> int:
             "the taste-radial C_sx/C_xx row chunks only under the no-resume "
             "manifest/collision guard.  In parallel, "
             "pursue one non-chunk bridge that can satisfy this gate: a real "
-            "same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
+            "same-surface neutral multiplicity-one certificate accepted by "
+            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json, "
+            "then a same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
             "EW action plus top/W/Z mass-response rows, matched covariance or "
             "a real top/W factorization theorem, and sector-overlap identity, "
             "with source identity supplied by real rows or a certificate rather "

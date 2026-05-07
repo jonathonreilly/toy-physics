@@ -10,9 +10,10 @@
     "finite_schur_support_only": true,
     "osp_source_side_available": true,
     "radial_spurion_support_only": true,
+    "same_surface_multiplicity_gate_loaded": true,
     "two_source_partial_rows_support_only": true
   },
-  "exact_next_action": "For the clean source-Higgs route, attempt a same-surface invariant-ring/commutant/primitive-cone derivation of the canonical O_H identity and normalization certificate.  If and only if that certificate lands, produce C_ss/C_spH/C_HH pole rows and run the O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates.",
+  "exact_next_action": "For the clean source-Higgs route, produce the actual candidate file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json satisfying the same-surface neutral multiplicity-one gate.  If and only if that certificate lands, rerun the canonical O_H certificate gate, produce C_ss/C_spH/C_HH pole rows, and run the O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates.",
   "fail_count": 0,
   "forbidden_firewall": {
     "set_c2_equal_one_without_derivation": false,
@@ -57,6 +58,8 @@
       "rank_for_clean_source_higgs": 1,
       "required_output_contract": [
         "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+        "or",
+        "outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json",
         "or",
         "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json",
         "or",
@@ -154,6 +157,7 @@
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "scalar_lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
@@ -179,6 +183,7 @@
     "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
     "retained_closure_route": "open / retained closure not yet reached",
     "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+    "same_surface_neutral_multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
     "scalar_lsz_stieltjes_moment_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
     "schur_compressed_denominator_row_bootstrap_no_go": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
     "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
@@ -189,7 +194,7 @@
     "two_source_taste_radial_schur_abc": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
     "wz_smoke_to_production_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
   },
-  "pass_count": 19,
+  "pass_count": 20,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Outside-math tools are classified only as methods for producing future same-surface certificates.  Current O_H/C_sH/C_HH rows, neutral irreducibility, Schur rows, strict scalar-LSZ authority, and W/Z response rows remain absent.",
   "refresh_date": "2026-05-07",
@@ -235,6 +240,7 @@
     "matched_top_wz_rows": false,
     "neutral_irreducibility_certificate": false,
     "neutral_primitive_cone_certificate": false,
+    "same_surface_neutral_multiplicity_one_certificate": false,
     "schur_kernel_rows": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,

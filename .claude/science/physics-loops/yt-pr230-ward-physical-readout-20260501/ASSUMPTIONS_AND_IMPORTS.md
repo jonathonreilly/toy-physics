@@ -823,6 +823,16 @@ improvement.  Conditional rank-one support is not a source-to-Higgs
 normalization and cannot set `kappa_s = 1` or authorize
 retained/proposed-retained closure.
 
+2026-05-07 same-surface neutral multiplicity-one gate:
+
+The gate is intake support only.  It requires a future same-surface
+`Cl(3)/Z3` neutral representation/action, top-coupled neutral sector,
+multiplicity-one or primitive-generator proof, canonical metric/LSZ
+normalization, and an `O_sp = O_H` identity or measured `C_spH/C_HH`
+pole-overlap rows.  The current two-singlet neutral surface is rejected and
+cannot be used as canonical `O_H`, source-Higgs overlap, scalar-LSZ
+normalization, `kappa_s=1`, retained, or proposed-retained authority.
+
 2026-05-05 O_H/source-Higgs authority rescan:
 
 O_H/source-Higgs authority rescan is an exact current-surface inventory gate,

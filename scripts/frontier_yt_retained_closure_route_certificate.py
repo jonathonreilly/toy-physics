@@ -190,6 +190,7 @@ def main() -> int:
         "pr230_schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
         "pr230_neutral_primitive_route_completion": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
         "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
+        "pr230_same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1886,6 +1887,24 @@ def main() -> int:
             "candidate_count"
         )
         == 5
+    )
+    same_surface_neutral_multiplicity_gate_rejects_current_surface = (
+        "same-surface neutral multiplicity-one artifact intake gate"
+        in certificates["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "candidate_accepted"
+        )
+        is False
+        and certificates["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "candidate_certificate_present"
+        )
+        is False
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"
@@ -4423,6 +4442,13 @@ def main() -> int:
         ),
     )
     report(
+        "same-surface-neutral-multiplicity-one-gate-rejects-current-surface",
+        same_surface_neutral_multiplicity_gate_rejects_current_surface,
+        certificates["pr230_same_surface_neutral_multiplicity_one_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
         derived_bridge_rank_one_closure_attempt_blocks,
         certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
@@ -5603,6 +5629,9 @@ def main() -> int:
             "strongly connected, have a positive primitive power, certify the "
             "isolated pole and overlaps, and pass the forbidden-import "
             "firewall.  No such certificate is present.  "
+            "The same-surface neutral multiplicity-one gate now records the "
+            "clean source-Higgs artifact contract and rejects the current "
+            "two-singlet completion without authorizing O_H closure.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "
@@ -5628,8 +5657,10 @@ def main() -> int:
             "Do not run more small pilot MC for closure.  Either run the strict "
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
-            "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action, including the canonical-Higgs pole identity, "
+            "the same-surface neutral multiplicity-one certificate accepted by "
+            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json "
+            "and then the microscopic interacting scalar denominator/residue "
+            "theorem from the retained action, including the canonical-Higgs pole identity, "
             "a source-pole mixing exclusion, a same-source sector-overlap "
             "identity, or a same-source gauge-mass response observable.  "
             "For the same-source W/Z response route, first build a strict "
@@ -5788,6 +5819,7 @@ def main() -> int:
         "schur_route_completion_blocks": schur_route_completion_blocks,
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
+        "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

@@ -4242,3 +4242,22 @@ operator is explicitly rejected as estimator plumbing, not evidence; FMS,
 invariant-ring, GNS, holonomic, Perron, and positivity methods remain
 certificate engines only.  No effective-retention or proposed-retention
 wording is allowed.
+
+Same-surface neutral multiplicity-one intake gate:
+
+```text
+actual_current_surface_status: exact support / intake gate packaged; current
+two-singlet neutral surface rejected
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
+# SUMMARY: PASS=20 FAIL=0
+```
+
+The gate writes no canonical `O_H` certificate, no source-Higgs pole-row
+packet, and no `kappa_s=1` authority.  It only defines the future candidate
+contract and rejects current source-only two-singlet shortcuts.

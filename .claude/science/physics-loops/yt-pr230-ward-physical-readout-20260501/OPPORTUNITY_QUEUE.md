@@ -1470,3 +1470,11 @@ more method-name shortcuts:
    authority.
 4. Schur `A/B/C` rows or an equivalent precontracted kernel certificate.
 5. Neutral primitive-cone/off-diagonal-generator certificate.
+
+2026-05-07 update: before treating neutral-sector algebra as `O_H` authority,
+produce the same-surface neutral multiplicity-one candidate certificate now
+defined by the active intake gate.  It must include the PR230 `Cl(3)/Z3`
+neutral representation/action, top-coupled neutral-sector coordinates,
+multiplicity-one or primitive-generator proof, canonical metric/LSZ
+normalization, and either `O_sp = O_H` or measured `C_spH/C_HH` pole-overlap
+rows.  The current two-singlet neutral surface is rejected.

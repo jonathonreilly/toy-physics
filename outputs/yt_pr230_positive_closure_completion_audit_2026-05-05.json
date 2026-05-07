@@ -18,7 +18,7 @@
     "scalar_lsz_model_class_fv_ir": false,
     "source_overlap_or_physical_response_bridge": false
   },
-  "exact_next_action": "Supply one fresh parseable same-surface artifact beyond O_sp: O_sp-Higgs pole rows with canonical O_H identity/normalization (Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a real source-coordinate transport certificate from the uniform PR230 source to canonical O_H, a genuine same-source EW action plus production W/Z mass-fit rows, matched covariance and non-observed g2 certificate, same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector primitive-cone/irreducibility certificate.  Then rerun assembly, retained-route, and campaign gates before any proposal wording.",
+  "exact_next_action": "Supply one fresh parseable same-surface artifact beyond O_sp: a same-surface neutral multiplicity-one certificate accepted by outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json, then O_sp-Higgs pole rows with canonical O_H identity/normalization (Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a real source-coordinate transport certificate from the uniform PR230 source to canonical O_H, a genuine same-source EW action plus production W/Z mass-fit rows, matched covariance and non-observed g2 certificate, same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector primitive-cone/irreducibility certificate.  Then rerun assembly, retained-route, and campaign gates before any proposal wording.",
   "fail_count": 0,
   "missing_requirements": [
     "canonical_oh_certificate",
@@ -54,6 +54,7 @@
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
+    "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
@@ -98,6 +99,7 @@
     "retained_route": "open / retained closure not yet reached",
     "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
     "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+    "same_surface_neutral_multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
@@ -121,7 +123,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 45,
+  "pass_count": 46,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -147,6 +149,7 @@
     "radial_spurion_action_contract_not_closure": true,
     "same_source_ew_action_adoption_attempt_not_closure": true,
     "same_source_ew_higgs_action_ansatz_not_closure": true,
+    "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": true,
     "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
     "taste_condensate_oh_bridge_blocked": true,
@@ -435,6 +438,7 @@
     "does not treat completed chunks as scalar-LSZ or source-overlap authority",
     "does not treat W/Z smoke rows as production response rows",
     "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
+    "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
     "does not set c2=1, Z_match=1, or kappa_s=1"
   ]

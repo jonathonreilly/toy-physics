@@ -15,6 +15,11 @@ Allowed context:
   support, chunks001-018 partial `C_sx/C_xx` support, and finite Schur
   `A_f/B_f/C_f` diagnostics, but still forbids treating any of them as
   canonical `O_H`, `kappa_s`, scalar-LSZ, W/Z response, or closure authority.
+- the 2026-05-07 same-surface neutral multiplicity-one gate as intake support
+  only: it defines the future candidate contract and rejects the current
+  two-singlet neutral surface, but it is not an accepted `O_H` certificate,
+  not source-Higgs pole-row evidence, not scalar-LSZ normalization, and not
+  permission to set `kappa_s = 1`.
 - the exact algebra of the taste-shift operators in
   `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`;
 - the PR230 production harness source coordinate, which is the uniform additive
@@ -298,6 +303,8 @@ Open imports after this block:
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;
+- same-surface neutral multiplicity-one or primitive-generator certificate
+  with canonical metric/LSZ normalization and source-to-Higgs overlap rows;
 - production `C_sH/C_HH` pole residues;
 - future source-Higgs production rows must attach
   `outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json` and
