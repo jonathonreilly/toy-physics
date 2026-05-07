@@ -33,6 +33,10 @@ A future W/Z action certificate must provide all of the following:
   mass-source action bridge attached, not to `H_unit`;
 - a same-source-coordinate certificate tying the top `dE_top/ds` source to the
   W/Z `dM/ds` source;
+- one radial branch `v(s)` controlling top, W, and Z responses, with no
+  independent additive `s * tbar t` top source;
+- the W/Z response-ratio identifiability contract attached as support, not as
+  closure authority;
 - W/Z two-point correlators and mass fits under source shifts;
 - a firewall excluding observed masses/couplings, static EW algebra, `H_unit`,
   `yt_ward_identity`, `alpha_LM`, plaquette, and `u0` authority.
@@ -41,7 +45,7 @@ A future W/Z action certificate must provide all of the following:
 
 ```text
 python3 scripts/frontier_yt_wz_same_source_ew_action_gate.py
-# SUMMARY: PASS=22 FAIL=0
+# SUMMARY: PASS=26 FAIL=0
 ```
 
 ## Boundary
@@ -52,5 +56,6 @@ closure.  It writes no W/Z measurement rows, defines no retained or
 campaign.
 
 Next action: implement a genuine same-source EW gauge/Higgs production action
-and W/Z correlator mass-fit harness, or pivot back to source-Higgs pole rows,
-Schur rows, neutral-sector irreducibility, or FH/LSZ production evidence.
+with one no-independent-top-source radial spurion and W/Z correlator mass-fit
+harness, or pivot back to source-Higgs pole rows, Schur rows, neutral-sector
+irreducibility, or FH/LSZ production evidence.

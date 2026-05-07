@@ -31,6 +31,7 @@ FUTURE_ROWS = ROOT / "outputs" / "yt_fh_gauge_mass_response_measurement_rows_202
 PARENTS = {
     "wz_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
     "wz_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
     "wz_repo_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
@@ -92,6 +93,11 @@ def action_contract() -> list[dict[str, Any]]:
             "id": "matched_top_wz_source_coordinate",
             "required": "certificate that the top dE/ds source and W/Z dM/ds source are the same coordinate",
             "current_surface": "sector-overlap and canonical-Higgs identity gates remain open",
+        },
+        {
+            "id": "no_independent_top_source_radial_spurion",
+            "required": "one radial branch v(s) controls top, W, and Z responses, with no independent additive s * tbar t source",
+            "current_surface": "the W/Z response-ratio contract names this requirement; the current additive top source is not an accepted radial-spurion action",
         },
         {
             "id": "wz_correlator_observables",
@@ -208,6 +214,19 @@ def main() -> int:
         certs["wz_action_certificate_builder"].get("same_source_ew_action_certificate_valid")
         is True
     )
+    wz_response_ratio_contract_loaded = (
+        "WZ response-ratio identifiability contract"
+        in status(certs["wz_response_ratio_identifiability_contract"])
+        and certs["wz_response_ratio_identifiability_contract"].get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and certs["wz_response_ratio_identifiability_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certs["wz_response_ratio_identifiability_contract"].get("proposal_allowed") is False
+    )
     future_rows_present = FUTURE_ROWS.exists()
     observable_gap_open = (
         "FH gauge-mass response observable gap" in status(certs["wz_observable_gap"])
@@ -270,6 +289,11 @@ def main() -> int:
         status(certs["wz_action_certificate_builder"]),
     )
     report(
+        "wz-response-ratio-contract-loaded",
+        wz_response_ratio_contract_loaded,
+        status(certs["wz_response_ratio_identifiability_contract"]),
+    )
+    report(
         "future-ew-action-certificate-not-valid",
         not future_action_cert_valid,
         f"valid={future_action_cert_valid}",
@@ -294,9 +318,11 @@ def main() -> int:
             "gauge notes supply structural SU(2)/hypercharge support, but no "
             "same-source SU(2)xU(1)/Higgs production action, W/Z correlator "
             "mass-fit path, top/WZ source-coordinate identity, or canonical "
-            "Higgs pole identity is present.  Static EW algebra, the QCD "
-            "top harness absent guard, and the synthetic smoke-schema path "
-            "remain rejected as W/Z measurement data."
+            "Higgs pole identity is present.  The response-ratio contract also "
+            "requires a no-independent-top-source radial spurion, absent on the "
+            "current additive-source surface.  Static EW algebra, the QCD top "
+            "harness absent guard, and the synthetic smoke-schema path remain "
+            "rejected as W/Z measurement data."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No same-source EW action certificate, W/Z correlator rows, sector-overlap identity, or canonical-Higgs identity exists.",
@@ -307,6 +333,7 @@ def main() -> int:
         "future_action_certificate_builder": PARENTS["wz_action_certificate_builder"],
         "future_action_certificate_present": future_action_cert_present,
         "future_action_certificate_valid": future_action_cert_valid,
+        "wz_response_ratio_contract_loaded": wz_response_ratio_contract_loaded,
         "future_rows_path": display(FUTURE_ROWS),
         "action_contract": contract,
         "shortcut_rejections": rejections,
@@ -329,13 +356,15 @@ def main() -> int:
             "does not treat synthetic smoke-schema rows as W/Z evidence",
             "does not treat static EW gauge-mass algebra as dM_W/ds",
             "does not treat structural SU(2) or beta-function notes as a production EW action",
+            "does not treat the current additive top source as a no-independent-top-source radial spurion",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
             "Either implement a genuine same-source EW gauge/Higgs production "
-            "action and W/Z correlator mass-fit harness, or pivot back to "
-            "source-Higgs C_sH/C_HH pole rows, Schur A/B/C kernel rows, "
-            "neutral-sector irreducibility, or FH/LSZ production evidence."
+            "action with one no-independent-top-source radial spurion and W/Z "
+            "correlator mass-fit harness, or pivot back to source-Higgs "
+            "C_sH/C_HH pole rows, Schur A/B/C kernel rows, neutral-sector "
+            "irreducibility, or FH/LSZ production evidence."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

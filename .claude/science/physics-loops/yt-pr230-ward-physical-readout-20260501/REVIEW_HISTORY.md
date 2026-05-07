@@ -5826,3 +5826,24 @@ Disposition: exact negative boundary.  The candidate file is present but
 records `candidate_accepted=false`; physical transfer, orthogonal-neutral
 exclusion, canonical LSZ/FV/IR metric, and `C_spH/C_HH` overlap rows remain
 absent.
+
+## 2026-05-07 - Same-Source EW Action Contract Hardening
+
+Review stance: support-only firewall hardening / exact negative boundary.
+
+- Updated `scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py`.
+- Updated `scripts/frontier_yt_wz_same_source_ew_action_gate.py`.
+- Updated the paired W/Z action builder/gate notes and certificates.
+- Refreshed assumption stress, campaign status, full positive assembly,
+  retained-route, and completion-audit certificates.
+- Validation: builder `PASS=12 FAIL=0`, gate `PASS=26 FAIL=0`, assumption
+  stress `PASS=85 FAIL=0`, campaign status `PASS=331 FAIL=0`, full assembly
+  `PASS=144 FAIL=0`, retained-route `PASS=298 FAIL=0`, completion audit
+  `PASS=53 FAIL=0`.
+
+Disposition: support-only.  The future W/Z action contract now requires the
+W/Z response-ratio identifiability contract and a no-independent-top-source
+radial spurion; the current additive source is rejected.  No accepted
+same-source EW action, W/Z rows, matched covariance, strict `g2`, canonical
+`O_H`, or source-Higgs rows are present, so no retained/proposed-retained
+wording is allowed.

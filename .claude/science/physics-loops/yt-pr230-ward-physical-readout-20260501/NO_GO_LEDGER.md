@@ -3385,3 +3385,21 @@ top-coupling exclusion, no canonical LSZ/FV/IR metric, and no measured
 
 Reopen only by retiring one of those failed obligations with a same-surface
 artifact.  Do not reopen merely because the target JSON file exists.
+
+## 2026-05-07 - Additive Top Source Is Not A Same-Source EW Action
+
+No-go on the current surface: the present PR230 top source is an additive
+scalar/source coordinate for the QCD top harness.  It is not an accepted
+single radial spurion `v(s)` controlling top, W, and Z masses inside a
+same-source EW/Higgs action.
+
+The same-source EW action builder/gate now require the W/Z response-ratio
+identifiability contract, no independent additive `s * tbar t` source, and an
+explicit same-source EW/Higgs action certificate before W/Z response rows can
+be considered closure-relevant.
+
+Reopen only with a real same-source EW/Higgs action certificate plus W/Z
+correlator mass-fit rows, matched top-W/Z identity/covariance, and strict
+non-observed `g2` authority.  Do not reopen with static EW algebra,
+synthetic smoke rows, action notation by definition, or the current additive
+top source.

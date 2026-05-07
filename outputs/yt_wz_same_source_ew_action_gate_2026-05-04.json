@@ -17,6 +17,11 @@
       "required": "certificate that the top dE/ds source and W/Z dM/ds source are the same coordinate"
     },
     {
+      "current_surface": "the W/Z response-ratio contract names this requirement; the current additive top source is not an accepted radial-spurion action",
+      "id": "no_independent_top_source_radial_spurion",
+      "required": "one radial branch v(s) controls top, W, and Z responses, with no independent additive s * tbar t source"
+    },
+    {
       "current_surface": "production harness has a W/Z absent guard and no W/Z correlator CLI path",
       "id": "wz_correlator_observables",
       "required": "W/Z two-point correlators and mass fits under source shifts"
@@ -41,7 +46,7 @@
     "sm_one_higgs_surface": "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md",
     "su2_beta_surface": "docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md"
   },
-  "exact_next_action": "Either implement a genuine same-source EW gauge/Higgs production action and W/Z correlator mass-fit harness, or pivot back to source-Higgs C_sH/C_HH pole rows, Schur A/B/C kernel rows, neutral-sector irreducibility, or FH/LSZ production evidence.",
+  "exact_next_action": "Either implement a genuine same-source EW gauge/Higgs production action with one no-independent-top-source radial spurion and W/Z correlator mass-fit harness, or pivot back to source-Higgs C_sH/C_HH pole rows, Schur A/B/C kernel rows, neutral-sector irreducibility, or FH/LSZ production evidence.",
   "fail_count": 0,
   "future_action_certificate": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
   "future_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
@@ -58,9 +63,10 @@
     "wz_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
     "wz_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "wz_repo_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
+    "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json"
   },
-  "pass_count": 25,
+  "pass_count": 26,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No same-source EW action certificate, W/Z correlator rows, sector-overlap identity, or canonical-Higgs identity exists.",
   "same_source_ew_action_ready": false,
@@ -92,7 +98,9 @@
     "does not treat synthetic smoke-schema rows as W/Z evidence",
     "does not treat static EW gauge-mass algebra as dM_W/ds",
     "does not treat structural SU(2) or beta-function notes as a production EW action",
+    "does not treat the current additive top source as a no-independent-top-source radial spurion",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "The first W/Z implementation work unit is not satisfied on the current PR230 surface.  Existing EW/Higgs notes supply static tree-level dictionaries after canonical H is supplied, and native gauge notes supply structural SU(2)/hypercharge support, but no same-source SU(2)xU(1)/Higgs production action, W/Z correlator mass-fit path, top/WZ source-coordinate identity, or canonical Higgs pole identity is present.  Static EW algebra, the QCD top harness absent guard, and the synthetic smoke-schema path remain rejected as W/Z measurement data."
+  "verdict": "The first W/Z implementation work unit is not satisfied on the current PR230 surface.  Existing EW/Higgs notes supply static tree-level dictionaries after canonical H is supplied, and native gauge notes supply structural SU(2)/hypercharge support, but no same-source SU(2)xU(1)/Higgs production action, W/Z correlator mass-fit path, top/WZ source-coordinate identity, or canonical Higgs pole identity is present.  The response-ratio contract also requires a no-independent-top-source radial spurion, absent on the current additive-source surface.  Static EW algebra, the QCD top harness absent guard, and the synthetic smoke-schema path remain rejected as W/Z measurement data.",
+  "wz_response_ratio_contract_loaded": true
 }

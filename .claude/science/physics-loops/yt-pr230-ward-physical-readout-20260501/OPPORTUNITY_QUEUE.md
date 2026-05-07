@@ -1485,3 +1485,13 @@ same-surface physical primitive/off-diagonal transfer, an orthogonal-neutral
 top-coupling exclusion, canonical scalar LSZ/FV/IR metric authority, or
 measured `C_spH/C_HH` pole-overlap rows.  The file path itself is no longer the
 target; passing one of those obligations is.
+
+2026-05-07 update: the same-source EW action builder/gate now consume the W/Z
+response-ratio contract and reject independent additive top-source action
+shapes.  W/Z remains a viable future route only if a real same-source
+EW/Higgs action supplies one radial spurion `v(s)`, W/Z mass-fit rows, matched
+top-W/Z covariance/identity, and strict non-observed `g2` authority.  The
+priority order stays: certified `O_H/C_sH/C_HH` pole rows or canonical `O_H`;
+then genuine W/Z rows satisfying the hardened contract; then strict
+scalar-LSZ moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
+primitive/off-diagonal-generator certificate.

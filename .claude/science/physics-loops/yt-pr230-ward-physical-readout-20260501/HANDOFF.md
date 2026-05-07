@@ -3978,3 +3978,39 @@ LSZ/FV/IR metric, no source-Higgs identity, no measured `C_spH/C_HH` rows, and
 no orthogonal-neutral top-coupling exclusion.  File presence is not evidence;
 the next action is to retire one of those failed obligations with a
 same-surface artifact.
+
+## 2026-05-07 - Same-Source EW Action Contract Hardening
+
+The W/Z response route gate is now hardened against an additive-source
+shortcut.  The same-source EW action certificate builder and gate consume
+`outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json`
+and require a single no-independent-top-source radial spurion `v(s)` for
+top/W/Z responses.
+
+```text
+python3 scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_wz_same_source_ew_action_gate.py
+# SUMMARY: PASS=26 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=85 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=331 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=144 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=298 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=53 FAIL=0
+```
+
+This is support-only infrastructure.  The current PR230 surface still has no
+accepted same-source EW action, W/Z rows, matched covariance, strict `g2`,
+canonical `O_H`, or source-Higgs rows.  No retained/proposed-retained wording
+is authorized.

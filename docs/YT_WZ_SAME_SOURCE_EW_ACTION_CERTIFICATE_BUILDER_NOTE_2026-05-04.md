@@ -19,21 +19,24 @@ The builder defines the future acceptance schema for
 `outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json`.  A valid
 certificate must provide dynamic `SU(2)_L` and `U(1)_Y` fields, a dynamic Higgs
 doublet, the gauge-covariant Higgs kinetic term, a scalar source coupled to the
-centered `Phi^dagger Phi` composite on the same source coordinate, W/Z
-correlator observables, and references to the Higgs mass-source action bridge,
-canonical-Higgs, sector-overlap, and W/Z mass-fit certificates.
+centered `Phi^dagger Phi` composite on the same source coordinate, one radial
+branch `v(s)` through which top, W, and Z masses respond, no independent
+additive `s * tbar t` top source, W/Z correlator observables, and references
+to the Higgs mass-source action bridge, W/Z response-ratio identifiability
+contract, canonical-Higgs, sector-overlap, and W/Z mass-fit certificates.
 
 ## Current Result
 
 No same-source EW action certificate is present on the current PR #230 surface.
 The gate therefore remains open.  Static `dM_W/dh`, native gauge structural
-support, and the QCD top FH/LSZ harness do not satisfy the contract.
+support, the QCD top FH/LSZ harness, and the current additive top source do not
+satisfy the no-independent-top-source radial-spurion contract.
 
 ## Verification
 
 ```bash
 python3 scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py
-# SUMMARY: PASS=11 FAIL=0
+# SUMMARY: PASS=12 FAIL=0
 ```
 
 ## Claim Boundary
@@ -45,5 +48,6 @@ measurement data, or use `H_unit`, `yt_ward_identity`, observed targets,
 
 Exact next action for this route: supply a real same-source EW action
 certificate satisfying this schema, attach the Higgs mass-source action bridge
-for `dS/ds=sum O_H`, then implement W/Z correlator mass-fit rows or
+for `dS/ds=sum O_H`, attach the W/Z response-ratio contract, forbid an
+independent additive top source, then implement W/Z correlator mass-fit rows or
 source-Higgs `C_sH/C_HH` rows with identity certificates.

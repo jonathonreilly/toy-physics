@@ -29,6 +29,7 @@ PARENTS = {
     "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
+    "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
 }
@@ -161,6 +162,8 @@ def validate_action_certificate(candidate: dict[str, Any]) -> dict[str, Any]:
         == "centered_phi_dagger_phi",
         "source_operator_centered": source.get("operator_centered") is True,
         "source_matches_top_fh_lsz_coordinate": source.get("matches_top_fh_lsz_source_coordinate") is True,
+        "single_radial_spurion_for_top_wz": source.get("single_radial_spurion_for_top_wz") is True,
+        "no_independent_additive_top_source": source.get("no_independent_additive_top_source") is True,
         "higgs_mass_source_action_bridge_reference": path_ref_ok(
             certificates.get("higgs_mass_source_action_bridge")
         ),
@@ -168,6 +171,13 @@ def validate_action_certificate(candidate: dict[str, Any]) -> dict[str, Any]:
             "higgs_mass_source_action_bridge_kind"
         )
         == "higgs_mass_source_action_bridge",
+        "wz_response_ratio_contract_reference": path_ref_ok(
+            certificates.get("wz_response_ratio_identifiability_contract")
+        ),
+        "wz_response_ratio_contract_kind_allowed": certificates.get(
+            "wz_response_ratio_identifiability_contract_kind"
+        )
+        == "wz_response_ratio_identifiability_contract",
         "wz_correlator_observables_defined": observables.get("wz_two_point_correlators") is True,
         "wz_mass_fit_method_defined": nonempty_string(observables.get("wz_mass_fit_method")),
         "canonical_higgs_certificate_reference": path_ref_ok(certificates.get("canonical_higgs_operator_certificate")),
@@ -216,6 +226,8 @@ def acceptance_schema() -> dict[str, Any]:
             "gauge-covariant Higgs kinetic term",
             "Higgs potential",
             "source coupled to centered Phi^dagger Phi on the same scalar source coordinate",
+            "top, W, and Z masses respond through one radial branch v(s)",
+            "no independent additive s * tbar t top source",
         ],
         "required_observables": [
             "W/Z two-point correlators under source shifts",
@@ -225,6 +237,7 @@ def acceptance_schema() -> dict[str, Any]:
         "required_certificates": [
             "canonical Higgs operator certificate with non-shortcut reference and allowed kind",
             "Higgs mass-source action bridge reference with allowed kind",
+            "W/Z response-ratio identifiability contract reference with allowed kind",
             "same-source sector-overlap certificate with non-shortcut reference and allowed kind",
             "W/Z correlator mass-fit path certificate with non-shortcut reference and allowed kind",
         ],
@@ -296,10 +309,27 @@ def main() -> int:
         is True
         and parents["higgs_mass_source_action_bridge"].get("proposal_allowed") is False
     )
+    wz_response_ratio_contract_loaded = (
+        "WZ response-ratio identifiability contract"
+        in parent_statuses["wz_response_ratio_identifiability_contract"]
+        and parents["wz_response_ratio_identifiability_contract"].get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and parents["wz_response_ratio_identifiability_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and parents["wz_response_ratio_identifiability_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+    )
 
     report("parent-certificates-present", not missing_parents, f"missing={missing_parents}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
     report("higgs-mass-source-action-bridge-loaded", mass_source_bridge_loaded, parent_statuses["higgs_mass_source_action_bridge"])
+    report("wz-response-ratio-contract-loaded", wz_response_ratio_contract_loaded, parent_statuses["wz_response_ratio_identifiability_contract"])
     report("candidate-state-recorded", True, f"present={validation['present']}")
     if validation["present"]:
         report("candidate-schema-valid", validation["valid"] is True, f"reasons={validation['reasons']}")
@@ -330,7 +360,8 @@ def main() -> int:
                 "still has static EW gauge-mass algebra and structural gauge support, "
                 "but no dynamic SU(2)xU(1)/Higgs action block with the same scalar "
                 "source coordinate used by the top FH/LSZ measurement and coupled "
-                "to centered Phi^dagger Phi."
+                "to centered Phi^dagger Phi through one no-independent-top-source "
+                "radial spurion."
             )
         ),
         "proposal_allowed": False,
@@ -348,15 +379,17 @@ def main() -> int:
             "does not claim retained or proposed_retained y_t closure",
             "does not synthesize EW action data or W/Z rows",
             "does not treat static EW algebra as a same-source measurement",
+            "does not treat the current additive top source as the future radial-spurion action",
             "does not define O_H by fiat",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
             "Supply a real same-source EW action certificate satisfying this schema, "
             "with the scalar source coupled to centered Phi^dagger Phi and the "
-            "Higgs mass-source action bridge attached, then implement W/Z "
-            "correlator mass-fit rows or source-Higgs C_sH/C_HH rows with "
-            "identity certificates."
+            "Higgs mass-source action bridge and W/Z response-ratio contract "
+            "attached, while forbidding an independent additive top source.  "
+            "Then implement W/Z correlator mass-fit rows or source-Higgs "
+            "C_sH/C_HH rows with identity certificates."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
