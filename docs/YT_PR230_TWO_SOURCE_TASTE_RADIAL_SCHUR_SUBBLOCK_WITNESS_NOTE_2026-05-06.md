@@ -11,7 +11,7 @@ same-ensemble source/complement subblock for the certified `s/x` chart:
 G(q) = [[C_ss(q), C_sx(q)], [C_sx(q), C_xx(q)]]
 ```
 
-The runner validates chunks001-024 through the manifest/combiner path, checks
+The runner validates chunks001-026 through the manifest/combiner path, checks
 production seed control and non-readout metadata, and computes finite-mode
 Schur diagnostics:
 

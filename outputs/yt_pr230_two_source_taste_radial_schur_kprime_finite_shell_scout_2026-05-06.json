@@ -1876,6 +1876,162 @@
         "rho_sx": -0.0006819695846502108,
         "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
       }
+    },
+    {
+      "chunk_index": 25,
+      "finite_difference": {
+        "C_source_given_x_shell_mean": 0.1253226958430969,
+        "C_source_given_x_slope": 0.011001517892760916,
+        "C_source_given_x_zero": 0.12237484800821508,
+        "K_source_given_x_shell_mean": 7.979401988465078,
+        "K_source_given_x_slope": -0.7173443453696551,
+        "K_source_given_x_zero": 8.17161382650191,
+        "K_x_given_source_shell_mean": 3.7089683460847476,
+        "K_x_given_source_slope": 0.5548507426924527,
+        "K_x_given_source_zero": 3.5602965376604963,
+        "delta_p_hat_sq": 0.26794919243112264,
+        "rho_sx_shell_mean": -0.000688159141234399,
+        "rho_sx_zero": -0.0008263500809452776
+      },
+      "seed": 2026056025,
+      "shell_modes": {
+        "0,0,1": {
+          "C_source_given_x": 0.12528122772698452,
+          "C_ss": 0.12528128070829336,
+          "C_sx": -0.00011970468156406462,
+          "C_x_given_source": 0.27045773389633554,
+          "C_xx": 0.2704578482726471,
+          "Delta_sx": 0.033883291279995724,
+          "K_source_given_x_preview": 7.982041828159771,
+          "K_x_given_source_preview": 3.697435401804012,
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.0006503067310525073,
+          "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+        },
+        "0,1,0": {
+          "C_source_given_x": 0.12529167150183632,
+          "C_ss": 0.1252917389992675,
+          "C_sx": -0.00013486608318849484,
+          "C_x_given_source": 0.2694747085862335,
+          "C_xx": 0.2694748537582979,
+          "Delta_sx": 0.03376295485509004,
+          "K_source_given_x_preview": 7.981376479484063,
+          "K_x_given_source_preview": 3.7109233933172394,
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.0007339769201916728,
+          "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+        },
+        "1,0,0": {
+          "C_source_given_x": 0.1253951883004699,
+          "C_ss": 0.12539524631628196,
+          "C_sx": -0.00012490697622439878,
+          "C_x_given_source": 0.26892229775189475,
+          "C_xx": 0.2689224221725021,
+          "Delta_sx": 0.03372157776653936,
+          "K_source_given_x_preview": 7.9747876577514,
+          "K_x_given_source_preview": 3.7185462431329914,
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": -0.0006801937724590172,
+          "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+        }
+      },
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "shell_p_hat_sq_stdev": 0.0,
+      "zero_mode": {
+        "C_source_given_x": 0.12237484800821508,
+        "C_ss": 0.12237493157248244,
+        "C_sx": -0.00015320303442729292,
+        "C_x_given_source": 0.2808754802927481,
+        "C_xx": 0.28087567208995246,
+        "Delta_sx": 0.03437211768121319,
+        "K_source_given_x_preview": 8.17161382650191,
+        "K_x_given_source_preview": 3.5602965376604963,
+        "mode": "0,0,0",
+        "p_hat_sq": 0.0,
+        "rho_sx": -0.0008263500809452776,
+        "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+      }
+    },
+    {
+      "chunk_index": 26,
+      "finite_difference": {
+        "C_source_given_x_shell_mean": 0.12533733449302212,
+        "C_source_given_x_slope": 0.011119884994224649,
+        "C_source_given_x_zero": 0.12235777028889266,
+        "K_source_given_x_shell_mean": 7.9784691091064746,
+        "K_source_given_x_slope": -0.725082408938222,
+        "K_source_given_x_zero": 8.172754355027484,
+        "K_x_given_source_shell_mean": 3.711395350381507,
+        "K_x_given_source_slope": 0.558355577998795,
+        "K_x_given_source_zero": 3.561784424167317,
+        "delta_p_hat_sq": 0.26794919243112264,
+        "rho_sx_shell_mean": 0.0002524254863242429,
+        "rho_sx_zero": 0.0003858006086979934
+      },
+      "seed": 2026056026,
+      "shell_modes": {
+        "0,0,1": {
+          "C_source_given_x": 0.12531043658304516,
+          "C_ss": 0.12531044778696543,
+          "C_sx": 5.5026365808641656e-05,
+          "C_x_given_source": 0.27025367891128305,
+          "C_xx": 0.27025370307447927,
+          "Delta_sx": 0.033865609520447655,
+          "K_source_given_x_preview": 7.980181278334981,
+          "K_x_given_source_preview": 3.700227149648804,
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0002990138902424141,
+          "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+        },
+        "0,1,0": {
+          "C_source_given_x": 0.1253248915611911,
+          "C_ss": 0.12532491338161983,
+          "C_sx": 7.666242601411504e-05,
+          "C_x_given_source": 0.26934056170853693,
+          "C_xx": 0.2693406086036626,
+          "Delta_sx": 0.033755082566279224,
+          "K_source_given_x_preview": 7.979260843898201,
+          "K_x_given_source_preview": 3.712771643664038,
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.0004172659373730775,
+          "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+        },
+        "1,0,0": {
+          "C_source_given_x": 0.12537667533483016,
+          "C_ss": 0.1253766755455537,
+          "C_sx": 7.525160817803471e-06,
+          "C_x_given_source": 0.26873143723025,
+          "C_xx": 0.2687314376819133,
+          "Delta_sx": 0.033692654214507387,
+          "K_source_given_x_preview": 7.975965205086244,
+          "K_x_given_source_preview": 3.721187257831679,
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 4.099663135723703e-05,
+          "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+        }
+      },
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "shell_p_hat_sq_stdev": 0.0,
+      "zero_mode": {
+        "C_source_given_x": 0.12235777028889266,
+        "C_ss": 0.12235778850088402,
+        "C_sx": 7.150640347972885e-05,
+        "C_x_given_source": 0.28075814841988433,
+        "C_xx": 0.28075819020852566,
+        "Delta_sx": 0.034352946144260016,
+        "K_source_given_x_preview": 8.172754355027484,
+        "K_x_given_source_preview": 3.561784424167317,
+        "mode": "0,0,0",
+        "p_hat_sq": 0.0,
+        "rho_sx": 0.0003858006086979934,
+        "strict_limit": "Finite-shell inverse of the measured two-source correlator block. Not an isolated-pole K'(pole) Schur kernel row."
+      }
     }
   ],
   "conditional_surface_status": "conditional-support for Schur K-prime work only after complete 63/63 rows, pole-location/derivative extraction, FV/IR limiting authority, and canonical O_H/source-overlap or physical-response authority are supplied",
@@ -1885,67 +2041,67 @@
   "finite_shell_schur_kprime_scout_passed": true,
   "finite_shell_summary": {
     "C_source_given_x_shell_mean": {
-      "count": 24,
+      "count": 26,
       "max": 0.12555975546417297,
-      "mean": 0.12534836004328534,
+      "mean": 0.1253469488990372,
       "min": 0.1252049477858375,
-      "stdev": 8.912590915124395e-05
+      "stdev": 8.565682134808076e-05
     },
     "C_source_given_x_slope": {
-      "count": 24,
+      "count": 26,
       "max": 0.011242213691058156,
-      "mean": 0.0110111007871111,
+      "mean": 0.011014916222217385,
       "min": 0.010863391916399399,
-      "stdev": 8.542967526229764e-05
+      "stdev": 8.47128363271685e-05
     },
     "C_source_given_x_zero": {
-      "count": 24,
+      "count": 26,
       "max": 0.1226374341530643,
-      "mean": 0.12239794447960121,
+      "mean": 0.12239551099259757,
       "min": 0.12224010196301965,
-      "stdev": 9.61911563639551e-05
+      "stdev": 9.269442943268162e-05
     },
     "K_source_given_x_shell_mean": {
-      "count": 24,
+      "count": 26,
       "max": 7.986905088068048,
-      "mean": 7.977771158969084,
+      "mean": 7.977860727416522,
       "min": 7.9643355832966956,
-      "stdev": 0.0056700035409623165
+      "stdev": 0.00544927069475239
     },
     "K_source_given_x_slope": {
-      "count": 24,
+      "count": 26,
       "max": -0.7065425194782079,
-      "mean": -0.7176939662557104,
+      "mean": -0.7179646901709588,
       "min": -0.7326105914422173,
-      "stdev": 0.005984122947422506
+      "stdev": 0.005920910315106051
     },
     "K_source_given_x_zero": {
-      "count": 24,
+      "count": 26,
       "max": 8.180621448618574,
-      "mean": 8.170076677639992,
+      "mean": 8.17023878634189,
       "min": 8.154117108744266,
-      "stdev": 0.0064174837481761875
+      "stdev": 0.006184120855674109
     },
     "K_x_given_source_slope": {
-      "count": 24,
+      "count": 26,
       "max": 0.5588825507936342,
-      "mean": 0.5570155591521527,
+      "mean": 0.5569838361670351,
       "min": 0.5547527865672252,
-      "stdev": 0.001115790200514933
+      "stdev": 0.001184746969055232
     },
     "rho_sx_shell_mean": {
-      "count": 24,
+      "count": 26,
       "max": 0.0010219054080234267,
-      "mean": -0.00011879892327034597,
+      "mean": -0.00012641953128455613,
       "min": -0.0010044881130406907,
-      "stdev": 0.0005233235260123272
+      "stdev": 0.000519977749560236
     },
     "rho_sx_zero": {
-      "count": 24,
+      "count": 26,
       "max": 0.0008395823086115359,
-      "mean": -0.00013435527210436946,
+      "mean": -0.00014096446164431353,
       "min": -0.0009500004592309483,
-      "stdev": 0.00048037184790189615
+      "stdev": 0.0004921665092894475
     }
   },
   "forbidden_firewall": {
@@ -2007,9 +2163,11 @@
     21,
     22,
     23,
-    24
+    24,
+    25,
+    26
   ],
-  "ready_chunks": 24,
+  "ready_chunks": 26,
   "row_definition": {
     "Delta_sx": "C_ss*C_xx - C_sx^2",
     "G": "[[C_ss(q), C_sx(q)], [C_sx(q), C_xx(q)]]",

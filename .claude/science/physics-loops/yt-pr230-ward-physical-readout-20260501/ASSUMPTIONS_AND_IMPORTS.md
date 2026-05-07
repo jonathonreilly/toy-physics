@@ -855,6 +855,18 @@ same PR230 surface.  A source-only row family with fixed `C_ss` and variable
 the canonical-Higgs overlap, set `kappa_s = 1`, or authorize
 retained/proposed-retained closure.
 
+2026-05-07 two-source taste-radial chunks025-026 package:
+
+Chunks001-026 now supply finite same-surface `C_ss/C_sx/C_xx` row support
+through the taste-radial chart.  This is not permission to read `x` as
+canonical `H`, not permission to alias `C_sx/C_xx` as canonical
+`C_sH/C_HH`, and not permission to treat first-shell Schur/Stieltjes
+diagnostics as scalar-LSZ authority.  The same forbidden imports remain
+forbidden: `H_unit`, `yt_ward_identity`, observed top or `y_t`, `alpha_LM`,
+plaquette/`u0`, reduced pilots as production evidence, and fiat
+`c2 = 1`, `Z_match = 1`, or `kappa_s = 1`.  Chunks027-028 are active
+run-control only until completed, checkpointed, and packaged.
+
 2026-05-07 two-source taste-radial chunks023-024 package:
 
 Chunks001-024 now supply finite same-surface `C_ss/C_sx/C_xx` row support

@@ -1,5 +1,55 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks025-026 package checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-026 packaged; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 25 --output outputs/yt_pr230_two_source_taste_radial_chunk025_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 26 --output outputs/yt_pr230_two_source_taste_radial_chunk026_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=26/63, combined_rows_written=false
+
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# SUMMARY: PASS=25 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=85 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=331 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=144 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=298 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=53 FAIL=0
+```
+
+Chunks001-026 are finite `C_sx/C_xx` row support only.  Chunks027-028 are
+active run-control and are not evidence.  The current branch still lacks
+canonical `O_H`, `C_spH/C_HH` pole rows, strict scalar-LSZ/FV authority,
+strict Schur pole rows, W/Z rows with strict `g2`/covariance, and any
+retained-route or campaign proposal authorization.
+
 Same-source EW action contract hardening:
 
 ```text
@@ -64,12 +114,12 @@ python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 ```
 
 The refresh consumes `O_sp`, radial-spurion action-contract support,
-chunks001-024 partial `C_sx/C_xx` support, finite Schur diagnostics, and the
+chunks001-026 partial `C_sx/C_xx` support, finite Schur diagnostics, and the
 rejected same-surface neutral multiplicity-one candidate.  It keeps them
 support-only, ranks genuine same-source W/Z response rows as the first
 fallback after source-Higgs pole rows, and continues to require canonical
 `O_H`, `C_ss/C_spH/C_HH` pole rows, O_sp-Higgs Gram purity, and
-scalar-LSZ/FV/IR authority before any closure wording.  Chunks025-026 remain
+scalar-LSZ/FV/IR authority before any closure wording.  Chunks027-028 remain
 active run-control only until completed and packaged.
 
 Post-`O_sp` positive-closure completion audit:

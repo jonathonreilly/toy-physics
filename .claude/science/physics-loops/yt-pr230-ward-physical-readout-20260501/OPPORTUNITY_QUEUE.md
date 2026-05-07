@@ -1,8 +1,8 @@
 # Opportunity Queue
 
-2026-05-07 clean-route refresh: the outside-math route selector now consumes
-the current support state (`O_sp`, radial-spurion contract, chunks001-024
-partial `C_sx/C_xx`, finite Schur A/B/C diagnostics, and the rejected
+2026-05-07 chunks025-026 package refresh: the outside-math route selector now
+consumes the current support state (`O_sp`, radial-spurion contract,
+chunks001-026 partial `C_sx/C_xx`, finite Schur A/B/C diagnostics, and the rejected
 same-surface neutral multiplicity-one candidate) and still selects the direct
 `O_sp`-Higgs pole-residue contract as the cleanest closure target.  No
 literature/FMS/math tool, `O_sp`, partial row packet, radial-spurion algebra,
@@ -12,7 +12,8 @@ Next positive artifact remains certified canonical `O_H` plus
 response rows with hardened same-source action, identity/covariance, strict
 non-observed `g2`, and orthogonal-correction authority; then strict
 scalar-LSZ authority, Schur rows, or a neutral primitive/irreducibility
-certificate.
+certificate.  Chunks027-028 are active run-control only until completed,
+checkpointed, and packaged.
 
 2026-05-06 completion-audit refresh: the post-`O_sp` completion audit now
 consumes `O_sp` as exact source-side support while still rejecting positive
@@ -1509,3 +1510,12 @@ canonical `O_H`, then hardened same-source W/Z rows, strict scalar-LSZ
 moment/threshold/FV authority, Schur `A/B/C` pole rows, or a neutral
 primitive/off-diagonal-generator certificate.  Do not promote finite
 `C_sx/C_xx` aliases or active row-wave jobs into proof authority.
+
+2026-05-07 update: two-source taste-radial chunks025-026 are now packaged,
+raising the partial row packet to `ready=26/63`.  The refreshed package audit,
+combiner, Schur finite-row diagnostics, strict scalar-LSZ moment/FV gate,
+Schur-complement Stieltjes repair gate, source-Higgs readiness gate,
+primitive-transfer candidate, orthogonal-top exclusion gate, and aggregate
+claim gates all pass their support-only checks while still blocking closure.
+Chunks027-028 are active under the two-worker cap and remain non-evidence
+until completed outputs and completed-mode checkpoints exist.

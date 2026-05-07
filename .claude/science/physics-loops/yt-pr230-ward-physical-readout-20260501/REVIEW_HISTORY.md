@@ -1,5 +1,30 @@
 # Review History
 
+## 2026-05-07 - Two-Source Taste-Radial Chunks025-026 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks025-026 into the two-source taste-radial row stream after
+  completed root JSONs and per-volume artifacts landed.
+- Refreshed chunk checkpoints, package audit, row combiner, strict
+  scalar-LSZ moment/FV, Schur subblock/K-prime/A-B-C/pole-lift diagnostics,
+  Schur-complement repair, source-Higgs readiness, primitive-transfer
+  candidate, orthogonal-top exclusion, assumption stress, campaign status,
+  full assembly, retained-route, and completion audit.
+- Validation: chunk025 `PASS=15 FAIL=0`, chunk026 `PASS=15 FAIL=0`, package
+  audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at `ready=26/63`,
+  strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair `PASS=22 FAIL=0`,
+  source-Higgs readiness `PASS=25 FAIL=0`, assumption stress `PASS=85
+  FAIL=0`, campaign status `PASS=331 FAIL=0`, full assembly `PASS=144
+  FAIL=0`, retained-route `PASS=298 FAIL=0`, and completion audit `PASS=53
+  FAIL=0`.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for the route, not canonical `O_H`, not canonical
+`C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
+or proposed-retained closure.  Chunks027-028 are run-control only until their
+completed artifacts and checkpoints exist.
+
 ## 2026-05-07 - Clean Source-Higgs Route Selector Refresh
 
 Review stance: route selection / no closure promotion.
@@ -7,7 +32,7 @@ Review stance: route selection / no closure promotion.
 - Updated `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`,
   its note, and its JSON certificate.
 - The selector now records `O_sp` as the genuine source-side artifact and
-  keeps radial-spurion, chunks001-024 partial row support, finite Schur, FMS,
+  keeps radial-spurion, chunks001-026 partial row support, finite Schur, FMS,
   rejected neutral-candidate, and outside-math inputs support-only.
 - Re-ranked genuine same-source W/Z response rows as the first fallback after
   source-Higgs pole rows, with identity/covariance/strict non-observed `g2`

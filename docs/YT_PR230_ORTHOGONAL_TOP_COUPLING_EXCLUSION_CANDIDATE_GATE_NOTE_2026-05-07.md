@@ -16,9 +16,10 @@ selection rule.
 It does not.
 
 The current finite `C_sx/C_xx` rows are source/complement correlator rows, not
-top-coupling tomography.  Their finite off-diagonal entries and positive
-finite `C_ss/C_sx/C_xx` blocks support the two-source row program, but they do
-not measure or null the top coupling of an orthogonal neutral scalar.
+top-coupling tomography.  Across the 26 ready chunks their finite off-diagonal
+entries and positive finite `C_ss/C_sx/C_xx` blocks support the two-source row
+program, but they do not measure or null the top coupling of an orthogonal
+neutral scalar.
 
 The post-FMS counterfamily still applies: at fixed measured source response,
 different canonical `y_t` values are compatible with finite orthogonal
