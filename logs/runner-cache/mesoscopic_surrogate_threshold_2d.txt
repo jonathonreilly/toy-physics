@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/mesoscopic_surrogate_threshold_2d.py
+runner_sha256: 8152dcf928894f513d87761849d684980ae89a01028ecb9d1a0ad83e21c2efec
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.98
+status: ok
+----- stdout -----
+====================================================================================================
+MESOSCOPIC SURROGATE TWO-STAGE THRESHOLD SWEEP (2D)
+  Retained 2D ordered-lattice family
+  h=0.5, W=12, L=20, source_y=5.0, sigma=1.25
+  Goal: does shrinking source support produce a clear threshold in two-stage
+        sourced-response stability?
+====================================================================================================
+
+Free-profile centroid: +5.2244
+Free-profile spread:   3.0797
+Probe launch y:        +5.0000
+
+  topN    cap1       r1       r2 delta2/delta1   carry  stable?
+------------------------------------------------------------------------------
+     1   0.095    1.000    1.000        1.000   1.000      YES
+     2   0.184    1.307    1.307        1.000   1.000      YES
+     3   0.259    1.019    1.019        1.000   1.000      YES
+     4   0.329    1.055    1.055        1.000   1.000      YES
+     5   0.385    0.557    0.557        1.000   1.000      YES
+     6   0.441    1.787    1.786        1.000   1.000      YES
+     7   0.492    1.713    1.713        1.000   1.000      YES
+     8   0.541    0.874    0.874        1.000   1.000      YES
+     9   0.586    0.655    0.655        1.000   1.000      YES
+    10   0.625    0.774    0.774        1.000   1.000      YES
+    12   0.698    0.030    0.030        0.993   1.000      YES
+    16   0.818    0.468    0.468        1.000   1.000      YES
+    20   0.920    0.337    0.337        1.000   1.000      YES
+    25   0.982    0.372    0.372        1.000   1.000      YES
+    32   0.997    0.385    0.385        1.000   1.000      YES
+    40   1.000    0.117    0.117        1.000   1.000      YES
+    49   1.000    0.117    0.117        1.000   1.000      YES
+    64   1.000    0.117    0.117        1.000   1.000      YES
+    81   1.000    0.117    0.117        1.000   1.000      YES
+
+First stable topN in scanned range: 1
+Stable topNs in scanned range: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16, 20, 25, 32, 40, 49, 64, 81]
+
+SAFE READ
+  - If stability is present for all scanned topN, there is no sharp support
+    threshold in this 2D companion family.
+  - If stability fails only below some topN, that would identify a real
+    mesoscopic support floor.
+  - The honest output is whichever of those two cases the frozen scan shows.
+
+AUDIT CHECKS
+  [PASS C] frozen_topN_support_list_scanned: scanned topN=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16, 20, 25, 32, 40, 49, 64, 81]
+  [PASS C] all_scanned_topN_stable: stable_topNs=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16, 20, 25, 32, 40, 49, 64, 81]
+  [PASS C] stage_ratio_relative_error_within_one_percent: max_rel_err=0.0066069 <= 0.01 at topN=12
+  [PASS C] support_carry_floor: min_carry=1 >= 0.99
+  [PASS C] no_sharp_collapse_in_scanned_range: first stable topN=1
+
+SUMMARY: PASS=5 FAIL=0
+
+----- stderr -----
+

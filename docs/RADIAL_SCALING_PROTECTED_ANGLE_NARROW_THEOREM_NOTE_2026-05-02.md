@@ -51,9 +51,9 @@ sqrt(rho_bar^2 + eta_bar^2)  =  mu * sqrt(rho^2 + eta^2).                 (5)
 ```
 
 **Conclusion (T4) (counter-protection).** The angle at the point `(1, 0)`
-is **not** in general preserved by the radial scaling on the domain where
-both affine-base tangent readouts are defined. Concretely, assume in addition
-that
+is **not** in general preserved by the radial scaling. The finite tangent
+statement is made only on the subdomain where both affine-base tangent
+readouts are defined. Concretely, assume in addition that
 
 ```text
 rho != 1,        mu*rho != 1.
@@ -68,10 +68,11 @@ tan(beta_bar)  =  eta_bar / (1 - rho_bar)  =  mu eta / (1 - mu rho)
 is equal to `tan(beta) = eta / (1 - rho)` if and only if `mu = 1`. Hence
 for every defined case with `mu != 1`, the `(1,0)`-based tangent readout is
 not preserved. If `rho = 1` or `mu*rho = 1`, one of the two tangent
-denominators vanishes; that vertical-boundary case is outside the finite
-tangent equality statement. Only the origin-angle and the radial distance
-have the canonical scaling behavior on the whole open first-quadrant radial
-scaling domain.
+denominators vanishes; that vertical-boundary case is outside, and not a
+counterexample to, the finite tangent equality statement. Thus T4 is not a
+universal finite-tangent claim on the whole open first-quadrant radial
+scaling domain. Only the origin-angle and the radial distance have the
+canonical scaling behavior on that whole domain.
 
 ## Proof
 
@@ -93,8 +94,13 @@ is preserved by `(T1)`.
 `(T3)` `sqrt(rho_bar^2 + eta_bar^2) = sqrt(mu^2 rho^2 + mu^2 eta^2)
 = mu sqrt(rho^2 + eta^2)`.
 
-`(T4)` On the subdomain `rho != 1` and `mu*rho != 1`, both finite tangent
-readouts are defined. By substitution:
+`(T4)` Let
+
+```text
+D_T4 = {rho > 0, eta > 0, mu > 0, rho != 1, mu*rho != 1}.
+```
+
+On `D_T4`, both finite tangent readouts are defined. By substitution:
 
 ```text
 tan(beta_bar) - tan(beta)
@@ -102,8 +108,9 @@ tan(beta_bar) - tan(beta)
   =  eta (mu - 1) / ((1 - mu rho)(1 - rho)).
 ```
 
-Since `eta > 0` and the two denominators are nonzero on this subdomain, the
-difference vanishes if and only if `mu - 1 = 0`. Thus
+The denominator is nonzero exactly by the last two exclusions in `D_T4`.
+Since `eta > 0`, the equality condition on `D_T4` is therefore the numerator
+condition `eta (mu - 1) = 0`, equivalently `mu = 1`. Thus
 `tan(beta_bar) = tan(beta)` iff `mu = 1`, and every defined case with
 `mu != 1` is counter-protected. If either denominator vanishes, the tangent
 readout from `(1,0)` is vertical/undefined rather than an exception to this
@@ -171,7 +178,7 @@ real symbols.
 ## Validation
 
 Primary runner: [`scripts/frontier_radial_scaling_protected_angle_narrow.py`](./../scripts/frontier_radial_scaling_protected_angle_narrow.py)
-verifies (PASS=11/0):
+verifies (PASS=13/0):
 
 1. Slope preservation `eta_bar / rho_bar = eta / rho` symbolic.
 2. `arctan(eta_bar / rho_bar) = arctan(eta / rho)` symbolic.
@@ -182,9 +189,15 @@ verifies (PASS=11/0):
    `tan(beta_bar) - tan(beta)` as
    `eta*(mu - 1)/((1 - mu*rho)*(1 - rho))`, with explicit finite-tangent
    domain exclusions `rho != 1` and `mu*rho != 1`.
-6. Counter-protection at `(1, 0)`: `tan(beta_bar) != tan(beta)` at
+6. Counter-protection at `(1, 0)`: the denominator is exactly
+   `(1 - mu*rho)*(1 - rho)`, so the displayed exclusions are precisely the
+   finite-tangent guard.
+7. Counter-protection at `(1, 0)`: after imposing the finite-tangent guard,
+   tangent equality reduces to `eta*(mu - 1) = 0`, hence `mu = 1` because
+   `eta > 0`.
+8. Counter-protection at `(1, 0)`: `tan(beta_bar) != tan(beta)` at
    `(rho, eta) = (1/6, sqrt(5)/6), mu = 99/100`.
-7. Framework instance `(rho, eta) = (1/6, sqrt(5)/6)` at any `mu = 1 - x`:
+9. Framework instance `(rho, eta) = (1/6, sqrt(5)/6)` at any `mu = 1 - x`:
    `eta_bar / rho_bar = sqrt(5)` exact.
-8. Doubled-angle catalog `sin(2 gamma) = sqrt(5)/3`, `cos(2 gamma) = -2/3`
+10. Doubled-angle catalog `sin(2 gamma) = sqrt(5)/3`, `cos(2 gamma) = -2/3`
    at framework instance.

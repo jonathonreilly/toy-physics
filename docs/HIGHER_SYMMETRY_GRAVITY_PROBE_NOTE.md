@@ -1,7 +1,9 @@
 # Higher-Symmetry Gravity Probe Note
 
 **Date:** 2026-04-03 (originally); 2026-05-03 (review-loop scope-narrow)
-**Status:** fit-window-restricted positive bump on M ∈ {2..8}; not a clean gravity-law contender
+**Claim type:** bounded_theorem
+**Status:** bounded support theorem: positive-row bump fit inside `M ∈ {2,3,5,8}`; not rowwise-positive and not a clean gravity-law contender
+**Status authority:** independent audit lane only; effective status is pipeline-derived after independent review.
 
 This note records the gravity-side follow-up to the higher-symmetry joint
 validation.
@@ -9,8 +11,25 @@ validation.
 Script:
 [`scripts/higher_symmetry_gravity_probe.py`](../scripts/higher_symmetry_gravity_probe.py)
 
+Audit cache:
+[`logs/runner-cache/higher_symmetry_gravity_probe.txt`](../logs/runner-cache/higher_symmetry_gravity_probe.txt)
+
 Log:
 [`logs/2026-04-03-higher-symmetry-gravity-probe-z2z2-dense-n80-n120.txt`](../logs/2026-04-03-higher-symmetry-gravity-probe-z2z2-dense-n80-n120.txt)
+
+## Runner/cache closure (2026-05-06)
+
+The audit-facing runner defaults now match this note's dense surface:
+`N = 80, 100, 120`, `16` seeds, `z2z2-quarter = 16`,
+`connect_radius = 5.2`, `anchor_b = 5.0`, and `mass_count = 4`.
+The SHA-pinned audit cache linked above is the completed runner record for
+that surface.
+
+The mass power-law fit is a **positive-row subfit inside** the declared
+window `M ∈ {2,3,5,8}`. The runner source filters the fit inputs to rows
+with `delta > 0`; therefore the claim is not rowwise positivity throughout
+`{2,3,5,8}`. The excluded in-window negative rows are visible in the table
+below: `N=80, M=2` and `N=100, M=3`.
 
 ## Review-loop scope-narrow (2026-05-03)
 
@@ -18,9 +37,10 @@ The 2026-05-03 audit identified two over-broad statements in the original
 note:
 
 1. **"Gravity-positive" was asserted globally**, but the fixed-anchor data
-   contains negative-delta rows outside the fit window: `N=80 M∈{1,2}`;
+   contains negative-delta rows, including `N=80 M∈{1,2}`;
    `N=100 M∈{1,3}`; `N=120 M=16`. The honest claim is restricted to the
-   **fit window `M ∈ {2,3,5,8}`** where the power-law fit is computed.
+   **positive-row subfit inside `M ∈ {2,3,5,8}`** where the power-law fit is
+   computed.
 2. **"Does not lose Born safety at N=120"** is asserted from external
    context, but the runner [`scripts/higher_symmetry_gravity_probe.py`](../scripts/higher_symmetry_gravity_probe.py)
    does not check Born safety on this surface. The Born-safety claim is
@@ -76,15 +96,17 @@ Honest row-by-row data including negative-delta rows outside the fit window:
 | 120 | 12 | +0.4172 | 0.3927 | +1.06 | positive |
 | 120 | 16 | -0.1194 | 0.3448 | -0.35 | **negative** |
 
-The power-law fit is computed on the window `M ∈ {2,3,5,8}` (chosen
-upstream by the joint-validator setup), and within that window the
-positive bump dominates:
+The power-law fit is computed from positive rows inside the window
+`M ∈ {2,3,5,8}` (chosen upstream by the joint-validator setup). Row signs
+are not hidden: the in-window negative rows are excluded from the fit by
+the runner's `delta > 0` guard, and the fitted positive rows are listed
+explicitly:
 
-| N | fit (M ∈ {2,3,5,8} window) |
-|---|---|
-| 80 | `delta ~= 0.3668 * M^0.724`, `R^2 = 0.999` |
-| 100 | `delta ~= 0.0748 * M^1.348`, `R^2 = 0.918` |
-| 120 | `delta ~= 0.0504 * M^1.318`, `R^2 = 0.622` |
+| N | fit rows inside `M ∈ {2,3,5,8}` | positive-row fit |
+|---:|:---|:---|
+| 80 | `{3,5,8}` | `delta ~= 0.3668 * M^0.724`, `R^2 = 0.999` |
+| 100 | `{2,5,8}` | `delta ~= 0.0748 * M^1.348`, `R^2 = 0.918` |
+| 120 | `{2,3,5,8}` | `delta ~= 0.0504 * M^1.318`, `R^2 = 0.622` |
 
 ## Fixed-Distance Sweep
 
@@ -99,16 +121,20 @@ range, but the tail is not a clean retained gravity law:
 
 ## Narrow Read (scope-narrowed 2026-05-03)
 
-- **Within the fit window `M ∈ {2,3,5,8}`** the dense `Z2 x Z2` extension
-  shows a positive mass-bump fit with high `R^2` at `N = 80` and degrading
-  but still positive bump-fits at `N = 100, 120`.
+- **Inside the declared fit window `M ∈ {2,3,5,8}`** the dense `Z2 x Z2`
+  extension shows a positive-row mass-bump fit with high `R^2` at
+  `N = 80` and degrading but still positive-row bump-fits at
+  `N = 100, 120`.
+- The in-window negative rows `N=80, M=2` and `N=100, M=3` are not fit
+  inputs, so the note does **not** claim rowwise positivity throughout the
+  whole set `{2,3,5,8}`.
 - **Outside the fit window** there are explicit negative-delta rows at low
   `M` (and at `M = 16` for `N = 120`). The note no longer claims global
   gravity-positivity.
 - The distance response is a broad bump / plateau across `b ∈ [2,12]`
   rather than a clean retained law.
-- So this lane is a real bounded fit-window-restricted gravity-side
-  positive, but it is **not** the cleanest gravity law in the project.
+- So this lane is a real bounded fit-window positive-row bump, but it is
+  **not** the cleanest gravity law in the project.
 
 ## Conclusion (scope-narrowed 2026-05-03)
 
@@ -121,10 +147,10 @@ The honest current interpretation is:
 
 - **decoherence lead:** yes (from upstream joint-validator notes, not
   re-derived here)
-- **gravity-positive on the fit window `M ∈ {2,3,5,8}`:** yes
+- **positive-row gravity bump fit inside `M ∈ {2,3,5,8}`:** yes
+- **rowwise gravity-positive on all of `M ∈ {2,3,5,8}`:** **no**
 - **gravity-positive globally:** **no** (negative rows at `M = 1, 2, 16`
   for various `N`)
 - **Born safety at `N = 120`:** **not checked here** (this note does not
   carry that claim)
 - **gravity-law contender:** not yet
-

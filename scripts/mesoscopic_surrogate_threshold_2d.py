@@ -59,6 +59,15 @@ STABILITY_REL_ERR = 0.01
 STABILITY_CARRY = 0.99
 
 
+def pass_check(label: str, condition: bool, detail: str) -> int:
+    """Print an audit-readable check line and fail closed on violation."""
+    if condition:
+        print(f"  [PASS C] {label}: {detail}")
+        return 1
+    print(f"  [FAIL C] {label}: {detail}")
+    raise AssertionError(label)
+
+
 def main() -> None:
     pos, adj, nl, hw, nmap = generate(PHYS_L, PHYS_W, MAX_D_PHYS, H)
     n = len(pos)
@@ -94,6 +103,7 @@ def main() -> None:
     print("-" * 78)
 
     stable_topns = []
+    rows = []
     for topn in TOPN_VALUES:
         src1, cap1 = topn_compress(free_profile, topn)
         stage1 = stage_metrics(pos, adj, n, nl, nmap, det, blocked, free_profile, src1, probe_init, FIELD_STRENGTH)
@@ -102,6 +112,17 @@ def main() -> None:
         carry = overlap(src1, src2)
         rel = abs(stage2["ratio"] - stage1["ratio"]) / max(abs(stage1["ratio"]), 1e-30)
         stable = rel <= STABILITY_REL_ERR and carry >= STABILITY_CARRY
+        row = {
+            "topn": topn,
+            "cap1": cap1,
+            "cap2": cap2,
+            "stage1_ratio": stage1["ratio"],
+            "stage2_ratio": stage2["ratio"],
+            "ratio_rel_err": rel,
+            "carry": carry,
+            "stable": stable,
+        }
+        rows.append(row)
         if stable:
             stable_topns.append(topn)
         delta_ratio = stage2["ratio"] / stage1["ratio"] if abs(stage1["ratio"]) > 1e-30 else 0.0
@@ -124,6 +145,43 @@ def main() -> None:
     print("  - If stability fails only below some topN, that would identify a real")
     print("    mesoscopic support floor.")
     print("  - The honest output is whichever of those two cases the frozen scan shows.")
+
+    min_carry = min(row["carry"] for row in rows)
+    max_ratio_rel_err = max(row["ratio_rel_err"] for row in rows)
+    worst_ratio_row = max(rows, key=lambda row: row["ratio_rel_err"])
+    pass_count = 0
+    print()
+    print("AUDIT CHECKS")
+    pass_count += pass_check(
+        "frozen_topN_support_list_scanned",
+        tuple(row["topn"] for row in rows) == TOPN_VALUES,
+        f"scanned topN={list(TOPN_VALUES)}",
+    )
+    pass_count += pass_check(
+        "all_scanned_topN_stable",
+        stable_topns == list(TOPN_VALUES),
+        f"stable_topNs={stable_topns}",
+    )
+    pass_count += pass_check(
+        "stage_ratio_relative_error_within_one_percent",
+        max_ratio_rel_err <= STABILITY_REL_ERR,
+        (
+            f"max_rel_err={max_ratio_rel_err:.6g} <= {STABILITY_REL_ERR:.6g} "
+            f"at topN={worst_ratio_row['topn']}"
+        ),
+    )
+    pass_count += pass_check(
+        "support_carry_floor",
+        min_carry >= STABILITY_CARRY,
+        f"min_carry={min_carry:.6g} >= {STABILITY_CARRY:.6g}",
+    )
+    pass_count += pass_check(
+        "no_sharp_collapse_in_scanned_range",
+        stable_topns and stable_topns[0] == TOPN_VALUES[0],
+        f"first stable topN={stable_topns[0] if stable_topns else None}",
+    )
+    print()
+    print(f"SUMMARY: PASS={pass_count} FAIL=0")
 
 
 if __name__ == "__main__":

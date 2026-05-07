@@ -9660,6 +9660,18 @@
       "dominant_class": null,
       "runner": "scripts/lattice_nn_continuum.py"
     },
+    "lattice_nn_deterministic_rescale_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/lattice_nn_deterministic_rescale.py"
+    },
     "lattice_nn_distance_law_note": {
       "assert_count": 0,
       "counts": {
@@ -10296,6 +10308,18 @@
       "dominant_class": null,
       "runner": "scripts/mesoscopic_surrogate_source_2d.py"
     },
+    "mesoscopic_surrogate_threshold_2d_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/mesoscopic_surrogate_threshold_2d.py"
+    },
     "mesoscopic_surrogate_two_stage_2d_note": {
       "assert_count": 0,
       "counts": {
@@ -10381,16 +10405,16 @@
       "runner": "scripts/mirror_2d_validation.py"
     },
     "mirror_chokepoint_boundary_fit_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 1
+        "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/mirror_chokepoint_joint.py"
+      "dominant_class": null,
+      "runner": "scripts/mirror_chokepoint_boundary_fit_certificate.py"
     },
     "mirror_chokepoint_note": {
       "assert_count": 0,
@@ -35792,6 +35816,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/lattice_nn_deterministic_rescale.py": {
+      "assert_count": 0,
+      "claims": [
+        "lattice_nn_deterministic_rescale_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/lattice_nn_distance_law.py": {
       "assert_count": 0,
       "claims": [
@@ -36272,6 +36311,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/mesoscopic_surrogate_threshold_2d.py": {
+      "assert_count": 1,
+      "claims": [
+        "mesoscopic_surrogate_threshold_2d_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/mesoscopic_surrogate_two_stage_2d.py": {
       "assert_count": 0,
       "claims": [
@@ -36365,10 +36419,24 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/mirror_chokepoint_boundary_fit_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "mirror_chokepoint_boundary_fit_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/mirror_chokepoint_joint.py": {
       "assert_count": 0,
       "claims": [
-        "mirror_chokepoint_boundary_fit_note",
         "mirror_chokepoint_note"
       ],
       "counts": {
@@ -38904,9 +38972,9 @@
       "B": 166,
       "C": 574,
       "D": 212,
-      "none": 422
+      "none": 425
     },
-    "runners_classified": 1388,
+    "runners_classified": 1391,
     "runners_with_C": 684,
     "runners_with_D": 345
   }

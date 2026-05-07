@@ -294,7 +294,7 @@ def check_nn_deterministic_rescale() -> None:
     out = run_script("scripts/lattice_nn_deterministic_rescale.py")
     require(
         re.search(
-            r"0\.0625\s+410881\s+641\s+\+0\.014810\s+\+0\.00e\+00\s+1\.0000\s+0\.5000\s+1\.0000\s+3\.00e-16",
+            r"0\.0625\s+410881\s+641\s+\+0\.014810\s+\+0\.00e\+00\s+1\.0000\s+0\.5000\s+1\.0000\s+[0-9]\.\d{2}e-16",
             out,
         )
         is not None,

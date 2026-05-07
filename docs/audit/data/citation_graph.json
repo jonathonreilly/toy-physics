@@ -37939,11 +37939,11 @@
     },
     "higher_symmetry_gravity_probe_note": {
       "claim_id": "higher_symmetry_gravity_probe_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "971b3ee0105d2d2096c760de050a990b158b380ea7b071a3007633a75f48bf76",
+      "note_hash": "f94ed440ab2c315d7c4f650c489ad23a4a6e204b56b5ce2fe2f211d887887fdd",
       "path": "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md",
       "runner_path": "scripts/higher_symmetry_gravity_probe.py",
       "title": "Higher-Symmetry Gravity Probe Note"
@@ -40501,13 +40501,13 @@
     },
     "lattice_nn_deterministic_rescale_note": {
       "claim_id": "lattice_nn_deterministic_rescale_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "87716fca8b20da3f59e3f750b33dc5c8282a630cae8cf2b0cd760c015fcc3ce5",
+      "note_hash": "6d8040c5bfd68df9997eb43576208fd771be4687387526e99821c76bdb6d9de2",
       "path": "docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_deterministic_rescale.py",
       "title": "Lattice NN Deterministic Rescale Note"
     },
     "lattice_nn_distance_law_note": {
@@ -41410,13 +41410,13 @@
     },
     "mesoscopic_surrogate_threshold_2d_note": {
       "claim_id": "mesoscopic_surrogate_threshold_2d_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "919ba0bcb2682c6230c5677ed58de9426bd49ccbc79702a9672b9068d15ef965",
+      "note_hash": "6d8fce11bdee32d7a2d921d318d0c470aaa87137eb351ea9dabd9534064d467f",
       "path": "docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_threshold_2d.py",
       "title": "Mesoscopic Surrogate Threshold 2D Note"
     },
     "mesoscopic_surrogate_two_stage_2d_note": {
@@ -41527,13 +41527,13 @@
     },
     "mirror_chokepoint_boundary_fit_note": {
       "claim_id": "mirror_chokepoint_boundary_fit_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f2f183a168cfec6464ae8389dff3f7c1f109d18ba871604f4da2f5270a4bbcc0",
+      "note_hash": "9d29b9427bcff5616b8db101f0bdbee17ca0e7458aed22c53b0800a745b0818a",
       "path": "docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md",
-      "runner_path": "scripts/mirror_chokepoint_joint.py",
+      "runner_path": "scripts/mirror_chokepoint_boundary_fit_certificate.py",
       "title": "Mirror Chokepoint Boundary Fit Note"
     },
     "mirror_chokepoint_note": {
@@ -47986,7 +47986,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "659c721b903772ac02ca6476593157fdd72e290a1fffa780cec7aca974c2f293",
+      "note_hash": "d76f243cdc07a5ca16e2909a864c0352168fb3f3bb057334fbc93552cd2aeef3",
       "path": "docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
       "title": "Radial-Scaling Protected-Angle Narrow Theorem"
@@ -51329,22 +51329,22 @@
     },
     "teleportation_taste_readout_operator_model_note": {
       "claim_id": "teleportation_taste_readout_operator_model_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "cfebcc19cb5ed95c0553c2dae92cfdc7f33b39e48b41729ec00b89cf7f8a5522",
+      "note_hash": "1a2b9bf306627a2a94b0f3e0db0b1295088a610ca5d5f3a341bad974b7cbd740",
       "path": "docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_taste_readout_operator_model.py",
       "title": "Teleportation Taste Readout/Operator Model"
     },
     "teleportation_three_register_cross_encoding_note": {
       "claim_id": "teleportation_three_register_cross_encoding_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "b2d558780e92a0d15585e1c833aaca3cea5970ddaae7908f44719b7ae985e057",
+      "note_hash": "cfb687ee097f4edc2071d14f9ff8244ee599037fcf309086407e861faae1fe4d",
       "path": "docs/TELEPORTATION_THREE_REGISTER_CROSS_ENCODING_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_three_register_cross_encoding.py",
       "title": "Teleportation Three-Register Cross-Encoding Note"
@@ -55977,25 +55977,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 78,
+      "bounded_theorem": 83,
       "meta": 10,
       "no_go": 14,
-      "none": 1704,
-      "open_gate": 10,
+      "none": 1698,
+      "open_gate": 11,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 577,
+      "bounded_theorem": 580,
       "meta": 10,
       "no_go": 118,
-      "none": 461,
-      "open_gate": 113,
-      "positive_theorem": 628
+      "none": 460,
+      "open_gate": 112,
+      "positive_theorem": 627
     },
     "edge_count": 6617,
     "leaf_count": 550,
     "node_count": 1907,
     "root_count": 864,
-    "runners_with_path": 1484
+    "runners_with_path": 1486
   }
 }
