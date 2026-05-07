@@ -647,6 +647,9 @@ def main() -> int:
         "pr230_schur_complement_complete_monotonicity_gate": load(
             "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json"
         ),
+        "pr230_schur_x_given_source_one_pole_scout": load(
+            "outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json"
+        ),
         "pr230_two_source_taste_radial_chunk_package": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
         ),
@@ -3040,6 +3043,29 @@ def main() -> int:
         )
         is False,
         statuses["pr230_schur_complement_complete_monotonicity_gate"],
+    )
+    schur_one_pole_scout = certificates["pr230_schur_x_given_source_one_pole_scout"]
+    schur_one_pole_scout_not_authority = (
+        "one-pole finite-residue scout"
+        in str(statuses["pr230_schur_x_given_source_one_pole_scout"])
+        and schur_one_pole_scout.get("proposal_allowed") is False
+        and schur_one_pole_scout.get("schur_x_given_source_one_pole_scout_passed")
+        is True
+        and schur_one_pole_scout.get("one_pole_fit_valid") is True
+        and schur_one_pole_scout.get("one_pole_model_class_authority_passed")
+        is False
+        and schur_one_pole_scout.get("two_pole_counterfamily_present") is True
+        and schur_one_pole_scout.get("physical_pole_residue_authority_present")
+        is False
+        and schur_one_pole_scout.get(
+            "canonical_higgs_or_physical_response_bridge_present"
+        )
+        is False
+    )
+    report(
+        "pr230-schur-x-given-source-one-pole-scout-not-authority",
+        schur_one_pole_scout_not_authority,
+        statuses["pr230_schur_x_given_source_one_pole_scout"],
     )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
@@ -5692,6 +5718,9 @@ def main() -> int:
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
     )
+    result["schur_x_given_source_one_pole_scout_not_authority"] = (
+        schur_one_pole_scout_not_authority
+    )
     result["neutral_primitive_route_completion_blocks"] = (
         neutral_primitive_route_completion.get("neutral_primitive_route_completion_passed")
         is True
@@ -5732,6 +5761,7 @@ def main() -> int:
         "does not treat two completed taste-radial chunks as combined L12 pole evidence, canonical O_H, or scalar LSZ normalization",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
+        "does not treat the C_x|s one-pole interpolation as a physical scalar pole or residue authority",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")

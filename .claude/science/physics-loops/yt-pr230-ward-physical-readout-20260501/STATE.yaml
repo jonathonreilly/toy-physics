@@ -16,11 +16,14 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-258-wz-same-source-action-minimal-certificate-cut
-blocks_completed: 257
-active_route: "PR230 W/Z same-source accepted-action dependency cut"
-active_hard_residual: "The W/Z fallback route now has an executable accepted-action cut.  Current support-side contracts are loaded (action ansatz, centered Phi^dagger Phi source bridge, no-independent-top radial-spurion action contract, conditional sector-overlap theorem, response-ratio algebra), but the accepted same-source EW action certificate remains absent.  The root non-shortcut cut is exactly canonical O_H, current same-source sector-overlap identity/adopted radial-spurion action, and production W/Z correlator mass-fit path; after those, W/Z closure still needs matched top/W or top/Z covariance and strict non-observed g2.  Validation: W/Z cut PASS=12 FAIL=0, assumption PASS=92 FAIL=0, campaign PASS=340 FAIL=0, assembly PASS=153 FAIL=0, retained PASS=307 FAIL=0, completion PASS=62 FAIL=0.  Chunks037-038 remain active run-control only.  No canonical O_H, C_sH/C_HH, W/Z response, strict scalar-LSZ/FV/IR, Schur pole, primitive neutral transfer, retained, or proposed-retained closure is authorized."
+current_phase: campaign-block-259-schur-cx-given-source-one-pole-scout
+blocks_completed: 258
+active_route: "PR230 Schur C_x|s one-pole finite-residue scout"
+active_hard_residual: "The current chunks001-036 Schur residual C_x|s has two endpoint means, C(0)=0.28084214641236205 and C(0.267949192431123)=0.26954854925501315, whose one-pole interpolation gives m^2=6.395244587492961 and R=1.796054216783564.  This is finite-row targeting support only: positive two-pole endpoint counterfamilies match the same endpoints while changing low-pole residue, so the interpolation is not scalar-LSZ pole authority, K'(pole), canonical O_H/source-overlap, W/Z response, retained, or proposed-retained closure.  Validation: scout PASS=13 FAIL=0, assumption PASS=93 FAIL=0, campaign PASS=341 FAIL=0, assembly PASS=154 FAIL=0, retained PASS=308 FAIL=0, completion PASS=63 FAIL=0, all with proposal_allowed=false."
 files_touched:
+  - "scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py"
+  - "docs/YT_PR230_SCHUR_X_GIVEN_SOURCE_ONE_POLE_SCOUT_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json"
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS035_036_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk035_2026-05-06.json"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk036_2026-05-06.json"
@@ -1952,3 +1955,11 @@ checkpoint_2026_05_07_two_source_taste_radial_chunks035_036_package:
   aggregate_refresh: "assumption stress 92/0; campaign 339/0; full assembly 152/0; retained route 306/0; completion audit 61/0"
   current_active_chunks: "successor chunk037 is active run-control/log state after chunks035-036 completed; active workers, logs, live status, and pending checkpoints are non-evidence"
   next_exact_action: "Continue row-wave packaging only after completed JSON/checkpoints exist, or pivot to a genuine closure artifact: canonical O_H plus C_ss/C_spH/C_HH pole rows, same-source W/Z rows with identity/covariance/strict g2, strict scalar-LSZ moment/threshold/FV authority, Schur A/B/C pole rows, or a neutral primitive/off-diagonal-generator certificate."
+checkpoint_2026_05_07_schur_x_given_source_one_pole_scout:
+  actual_current_surface_status: "bounded-support / C_x|s one-pole finite-residue scout; positive endpoint fits are model-class diagnostics only, not scalar-LSZ pole authority; proposal_allowed=false"
+  runner_pass_fail: "one-pole scout 13/0"
+  finite_row_values: "C_x|s(0)=0.28084214641236205; C_x|s(0.267949192431123)=0.26954854925501315; one-pole interpolation m^2=6.395244587492961; R=1.796054216783564"
+  model_class_boundary: "positive two-pole Stieltjes endpoint counterfamilies match the same two endpoints with low-pole residue fractions 0.05603199909715472, 0.1733688878857277, and 0.012381090416629829 of the one-pole residue"
+  aggregate_refresh: "assumption stress 93/0; campaign 341/0; full assembly 154/0; retained route 308/0; completion audit 63/0"
+  current_active_chunks: "chunks037-038 active/live status remains run-control only until completed JSON and completed-mode checkpoints exist"
+  next_exact_action: "Use the one-pole mass/residue only to target future higher-shell or multivolume diagnostics.  Closure still requires one-pole/threshold/FV/IR model-class authority plus canonical O_H/source-overlap, or a genuine same-source W/Z physical-response bridge with strict action/covariance/g2 authority."

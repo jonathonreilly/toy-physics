@@ -1007,3 +1007,23 @@ packet to `ready=36/63`, but finite `C_ss/C_sx/C_xx` rows, first-shell
 Stieltjes/Schur diagnostics, and chunk logs are not proof selectors for
 canonical `O_H`, scalar-LSZ/FV, W/Z response, Schur pole authority, neutral
 primitive transfer, retained, or proposed-retained closure.
+
+2026-05-07 Schur `C_x|s` one-pole finite-residue scout:
+
+The Schur C_x|s one-pole finite-residue scout is bounded support only.  The
+two endpoint means determine a one-pole interpolation, but that interpolation
+is model-class support only: one-pole interpolation is model-class support only.
+Positive two-pole endpoint counterfamilies match the same current endpoints
+while changing the low-pole residue.  Therefore the one-pole fit is not
+scalar-LSZ pole authority, not a physical scalar pole certificate, not a
+`K'(pole)` or pole-residue certificate, and not canonical
+`O_H`/source-overlap/W/Z response authority.
+
+Additional forbidden load-bearing assumptions:
+
+- `C_x|s` one-pole interpolation = physical scalar pole
+- one-pole residue = scalar-LSZ pole residue
+- one-pole finite-residue scout is not scalar-LSZ pole authority
+- two endpoint values = complete Stieltjes/threshold/FV authority
+- `C_x|s` residual = canonical `O_H`
+- one-pole finite-residue scout = retained or proposed-retained closure

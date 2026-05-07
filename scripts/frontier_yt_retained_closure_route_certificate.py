@@ -170,6 +170,7 @@ def main() -> int:
         "pr230_strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
         "pr230_schur_complement_stieltjes_repair_gate": "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json",
         "pr230_schur_complement_complete_monotonicity_gate": "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json",
+        "pr230_schur_x_given_source_one_pole_scout": "outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json",
         "pr230_two_source_taste_radial_chunk_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
         "pr230_source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
@@ -1750,6 +1751,36 @@ def main() -> int:
         and certificates[
             "pr230_schur_complement_complete_monotonicity_gate"
         ].get("canonical_higgs_or_physical_response_bridge_present")
+        is False
+    )
+    schur_x_given_source_one_pole_scout_not_authority = (
+        "one-pole finite-residue scout"
+        in certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("actual_current_surface_status", "")
+        and certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("schur_x_given_source_one_pole_scout_passed")
+        is True
+        and certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("one_pole_fit_valid")
+        is True
+        and certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("one_pole_model_class_authority_passed")
+        is False
+        and certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("two_pole_counterfamily_present")
+        is True
+        and certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("physical_pole_residue_authority_present")
         is False
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
@@ -4743,6 +4774,13 @@ def main() -> int:
         ].get("actual_current_surface_status", ""),
     )
     report(
+        "schur-x-given-source-one-pole-scout-not-authority",
+        schur_x_given_source_one_pole_scout_not_authority,
+        certificates[
+            "pr230_schur_x_given_source_one_pole_scout"
+        ].get("actual_current_surface_status", ""),
+    )
+    report(
         "pr230-two-source-taste-radial-chunk-package-support-not-closure",
         two_source_taste_radial_chunk_package_support_not_closure,
         certificates["pr230_two_source_taste_radial_chunk_package"].get(
@@ -6299,6 +6337,7 @@ def main() -> int:
         "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
         "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
         "schur_complement_stieltjes_repair_support_not_closure": schur_complement_stieltjes_repair_support_not_closure,
+        "schur_x_given_source_one_pole_scout_not_authority": schur_x_given_source_one_pole_scout_not_authority,
         "two_source_taste_radial_chunk_package_support_not_closure": two_source_taste_radial_chunk_package_support_not_closure,
         "source_higgs_pole_row_contract_open": source_higgs_pole_row_contract_open,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,

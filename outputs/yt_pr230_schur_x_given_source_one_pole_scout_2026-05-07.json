@@ -1,0 +1,148 @@
+{
+  "actual_current_surface_status": "bounded-support / C_x|s one-pole finite-residue scout; positive endpoint fits are model-class diagnostics only, not scalar-LSZ pole authority",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_higgs_or_physical_response_bridge_present": false,
+  "conditional_surface_status": "If a future same-surface theorem supplies one-pole saturation, threshold/contact/FV/IR control, and canonical O_H or W/Z bridge authority, these parameters can seed the strict scalar-LSZ route.",
+  "exact_next_action": "Use the one-pole mass/residue only as a target for future higher-shell and multivolume diagnostics.  Closure still requires a one-pole/threshold/FV theorem plus canonical O_H/source-overlap, or a genuine W/Z physical-response bridge.",
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_C_x_given_source_as_canonical_O_H": false,
+    "treated_one_pole_fit_as_physical_pole": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_reduced_pilot_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "mean_endpoint_values": {
+    "C_x_given_source_shell": 0.26954854925501315,
+    "C_x_given_source_zero": 0.28084214641236205,
+    "delta_q_hat_sq": 0.267949192431123
+  },
+  "one_pole_fit_from_means": {
+    "C0": 0.28084214641236205,
+    "C1": 0.26954854925501315,
+    "delta_q_hat_sq": 0.267949192431123,
+    "fit_valid": true,
+    "implied_mass_sq": 6.395244587492961,
+    "implied_pole_location_q_hat_sq": -6.395244587492961,
+    "implied_residue": 1.796054216783564,
+    "model": "C(x)=R/(x+m^2) through the two endpoints",
+    "ratio_C1_over_C0": 0.9597866726856358,
+    "strict_limit": "This is the unique one-pole interpolation of two finite endpoint values. It is not physical pole/residue authority without an independent one-pole model-class theorem, threshold/FV/IR control, and a canonical O_H or physical-response bridge."
+  },
+  "one_pole_fit_valid": true,
+  "one_pole_model_class_authority_passed": false,
+  "p_hat_sq_levels": [
+    0.0,
+    0.267949192431123
+  ],
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "retained_route": "open / retained closure not yet reached",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "schur_complete_monotonicity": "bounded support plus exact boundary / C_x|s Schur residual passes the necessary first-shell Stieltjes direction but lacks complete monotonicity, threshold, pole, FV/IR, and source-bridge authority",
+    "schur_pole_lift": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
+    "schur_repair": "bounded-support / Schur-complement Stieltjes repair split: C_s|x fails first-shell monotonicity while C_x|s survives the necessary first-shell check; scalar-LSZ authority absent",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "strict_scalar_lsz": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+  },
+  "pass_count": 13,
+  "per_chunk_one_pole_fit_summary": {
+    "mass_sq": {
+      "count": 36,
+      "max": 6.420479464699779,
+      "mean": 6.395269871276877,
+      "min": 6.373663105416795,
+      "stderr": 0.002199957780992737
+    },
+    "residue": {
+      "count": 36,
+      "max": 1.8028056814863913,
+      "mean": 1.796061354622359,
+      "min": 1.789516299801494,
+      "stderr": 0.0006295000662310344
+    }
+  },
+  "physical_pole_residue_authority_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Two endpoint values determine a one-pole interpolation, but positive two-pole Stieltjes counterfamilies match the same endpoints. The current surface lacks higher shells, threshold/contact/FV/IR, pole-model-class authority, and canonical O_H or W/Z bridge authority.",
+  "ready_chunks": 36,
+  "schur_x_given_source_one_pole_scout_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat the one-pole interpolation as a physical scalar pole",
+    "does not treat C_x|s as canonical O_H",
+    "does not supply source-Higgs C_spH/C_HH rows",
+    "does not supply W/Z response, strict g2, or covariance rows",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "two_pole_counterfamily_present": true,
+  "two_pole_endpoint_counterfamilies": [
+    {
+      "endpoint0": 0.28084214641236205,
+      "endpoint0_residual": 0.0,
+      "endpoint1": 0.26954854925501315,
+      "endpoint1_residual": 0.0,
+      "endpoint_ratio_high": 0.9896340305805116,
+      "endpoint_ratio_low": 0.8564629927101555,
+      "endpoint_weight_high": 0.7758720036113811,
+      "endpoint_weight_low": 0.22412799638861888,
+      "high_factor": 4.0,
+      "low_factor": 0.25,
+      "low_pole_residue_fraction_of_one_pole_residue": 0.05603199909715472,
+      "mass_sq_high": 25.580978349971843,
+      "mass_sq_low": 1.5988111468732402,
+      "residue_high": 5.574032735082135,
+      "residue_low": 0.1006365082532576,
+      "strict_limit": "A positive two-pole Stieltjes measure with these masses matches the same two endpoints.  Therefore the one-pole residue is a model assumption, not a consequence of the current row packet.",
+      "valid_positive_family": true
+    },
+    {
+      "endpoint0": 0.2808421464123621,
+      "endpoint0_residual": 5.551115123125783e-17,
+      "endpoint1": 0.26954854925501315,
+      "endpoint1_residual": 0.0,
+      "endpoint_ratio_high": 0.979480762944848,
+      "endpoint_ratio_low": 0.9226825377863838,
+      "endpoint_weight_high": 0.6532622242285446,
+      "endpoint_weight_low": 0.3467377757714554,
+      "high_factor": 2.0,
+      "low_factor": 0.5,
+      "low_pole_residue_fraction_of_one_pole_residue": 0.1733688878857277,
+      "mass_sq_high": 12.790489174985922,
+      "mass_sq_low": 3.1976222937464804,
+      "residue_high": 2.3465887449821756,
+      "residue_low": 0.3113799221462382,
+      "strict_limit": "A positive two-pole Stieltjes measure with these masses matches the same two endpoints.  Therefore the one-pole residue is a model assumption, not a consequence of the current row packet.",
+      "valid_positive_family": true
+    },
+    {
+      "endpoint0": 0.28084214641236205,
+      "endpoint0_residual": 0.0,
+      "endpoint1": 0.26954854925501315,
+      "endpoint1_residual": 0.0,
+      "endpoint_ratio_high": 0.9958276620355564,
+      "endpoint_ratio_low": 0.7047306088914191,
+      "endpoint_weight_high": 0.8761890958337017,
+      "endpoint_weight_low": 0.12381090416629828,
+      "high_factor": 10.0,
+      "low_factor": 0.1,
+      "low_pole_residue_fraction_of_one_pole_residue": 0.012381090416629829,
+      "mass_sq_high": 63.95244587492961,
+      "mass_sq_low": 0.6395244587492961,
+      "residue_high": 15.736831202718983,
+      "residue_low": 0.022237109651166577,
+      "strict_limit": "A positive two-pole Stieltjes measure with these masses matches the same two endpoints.  Therefore the one-pole residue is a model assumption, not a consequence of the current row packet.",
+      "valid_positive_family": true
+    }
+  ]
+}

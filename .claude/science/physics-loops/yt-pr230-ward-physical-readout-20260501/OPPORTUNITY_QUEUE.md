@@ -1686,3 +1686,11 @@ statistics but does not change the clean closure ordering.  Continue packaging
 completed chunks as they land, but do not promote partial finite
 `C_ss/C_sx/C_xx` rows, first-shell Schur/Stieltjes diagnostics, active logs,
 or live status into proof authority.  Chunk037 is active run-control only.
+
+2026-05-07 update: the `C_x|s` one-pole finite-residue scout supplies useful
+targeting numbers for future Schur/scalar-LSZ diagnostics, but it does not
+change the route order.  The cleanest closure target remains a genuine
+source-Higgs artifact (`O_H/C_spH/C_HH` pole rows) or a hardened same-source
+W/Z physical-response row packet.  The Schur route should move only after
+higher-shell/multivolume or analytic moment/threshold/FV authority can exclude
+the two-pole endpoint counterfamilies.

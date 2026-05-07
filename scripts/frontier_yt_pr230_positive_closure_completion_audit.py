@@ -63,6 +63,7 @@ PARENTS = {
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
     "schur_complement_stieltjes_repair_gate": "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json",
     "schur_complement_complete_monotonicity_gate": "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json",
+    "schur_x_given_source_one_pole_scout": "outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -887,6 +888,30 @@ def main() -> int:
         )
         is False
     )
+    schur_x_given_source_one_pole_scout_not_authority = (
+        "one-pole finite-residue scout"
+        in parent_statuses["schur_x_given_source_one_pole_scout"]
+        and certs["schur_x_given_source_one_pole_scout"].get("proposal_allowed")
+        is False
+        and certs["schur_x_given_source_one_pole_scout"].get(
+            "schur_x_given_source_one_pole_scout_passed"
+        )
+        is True
+        and certs["schur_x_given_source_one_pole_scout"].get("one_pole_fit_valid")
+        is True
+        and certs["schur_x_given_source_one_pole_scout"].get(
+            "one_pole_model_class_authority_passed"
+        )
+        is False
+        and certs["schur_x_given_source_one_pole_scout"].get(
+            "two_pole_counterfamily_present"
+        )
+        is True
+        and certs["schur_x_given_source_one_pole_scout"].get(
+            "physical_pole_residue_authority_present"
+        )
+        is False
+    )
     wz_response_ratio_identifiability_contract_not_closure = (
         "WZ response-ratio identifiability contract"
         in parent_statuses["wz_response_ratio_identifiability_contract"]
@@ -1022,6 +1047,7 @@ def main() -> int:
     report("strict-scalar-lsz-moment-fv-authority-absent", strict_scalar_lsz_moment_fv_authority_absent, parent_statuses["strict_scalar_lsz_moment_fv_authority_gate"])
     report("schur-complement-stieltjes-repair-not-closure", schur_complement_stieltjes_repair_not_closure, parent_statuses["schur_complement_stieltjes_repair_gate"])
     report("schur-complement-complete-monotonicity-not-closure", schur_complement_complete_monotonicity_not_closure, parent_statuses["schur_complement_complete_monotonicity_gate"])
+    report("schur-x-given-source-one-pole-scout-not-authority", schur_x_given_source_one_pole_scout_not_authority, parent_statuses["schur_x_given_source_one_pole_scout"])
     report("future-bridge-artifact-files-support-only-or-absent", no_unclosed_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
@@ -1196,6 +1222,7 @@ def main() -> int:
             "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
             "schur_complement_stieltjes_repair_not_closure": schur_complement_stieltjes_repair_not_closure,
             "schur_complement_complete_monotonicity_not_closure": schur_complement_complete_monotonicity_not_closure,
+            "schur_x_given_source_one_pole_scout_not_authority": schur_x_given_source_one_pole_scout_not_authority,
             "future_bridge_file_presence": future_bridge_presence,
         },
         "bare_retained_allowed": False,

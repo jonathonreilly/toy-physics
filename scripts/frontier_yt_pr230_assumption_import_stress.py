@@ -197,6 +197,9 @@ def main() -> int:
         "schur_complement_complete_monotonicity_gate": load(
             "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json"
         ),
+        "schur_x_given_source_one_pole_scout": load(
+            "outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json"
+        ),
         "two_source_taste_radial_chunk_package": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
         ),
@@ -414,6 +417,10 @@ def main() -> int:
         "finite zero-to-first-shell inverse slopes are not isolated-pole K'(pole) rows",
         "Schur-complement complete-monotonicity/threshold gate",
         "first-shell C_x|s support is not strict scalar-LSZ authority",
+        "Schur C_x|s one-pole finite-residue scout",
+        "one-pole interpolation is model-class support only",
+        "two-pole endpoint counterfamilies",
+        "not scalar-LSZ pole authority",
         "two-source taste-radial chunks001-022 packaged",
         "active chunks, logs, and pending checkpoints are not evidence",
         "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract",
@@ -1647,6 +1654,22 @@ def main() -> int:
         and higher_shell_contract.get("current_four_mode_campaign_must_remain_unmixed")
         is True,
         higher_shell_contract.get("actual_current_surface_status"),
+    )
+    schur_one_pole_scout = certificates["schur_x_given_source_one_pole_scout"]
+    report(
+        "schur-x-given-source-one-pole-scout-not-authority",
+        "one-pole finite-residue scout"
+        in str(schur_one_pole_scout.get("actual_current_surface_status"))
+        and schur_one_pole_scout.get("proposal_allowed") is False
+        and schur_one_pole_scout.get("schur_x_given_source_one_pole_scout_passed")
+        is True
+        and schur_one_pole_scout.get("one_pole_fit_valid") is True
+        and schur_one_pole_scout.get("one_pole_model_class_authority_passed")
+        is False
+        and schur_one_pole_scout.get("two_pole_counterfamily_present") is True
+        and schur_one_pole_scout.get("physical_pole_residue_authority_present")
+        is False,
+        schur_one_pole_scout.get("actual_current_surface_status"),
     )
 
     result = {

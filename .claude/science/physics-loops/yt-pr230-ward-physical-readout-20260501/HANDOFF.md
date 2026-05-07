@@ -4527,3 +4527,43 @@ FAIL=0`, campaign `PASS=339 FAIL=0`, assembly `PASS=152 FAIL=0`, retained
 Chunk037 is active run-control only.  Package it only after completed JSON and
 completed-mode checkpoint exist.  No retained or proposed-retained closure is
 authorized.
+
+## 2026-05-07 - Schur C_x|s One-Pole Finite-Residue Scout
+
+The current chunks001-036 Schur residual `C_x|s` has two endpoint means:
+
+```text
+C_x|s(0) = 0.28084214641236205
+C_x|s(0.267949192431123) = 0.26954854925501315
+one-pole interpolation: m^2 = 6.395244587492961, R = 1.796054216783564
+```
+
+The scout is bounded support only.  Positive two-pole Stieltjes endpoint
+counterfamilies match the same two data points, so the one-pole residue is a
+model-class assumption rather than scalar-LSZ pole authority.
+
+```text
+python3 scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=93 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=341 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=154 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=308 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=63 FAIL=0
+```
+
+No retained or proposed-retained closure is authorized.  Use the interpolation
+only as a target for future higher-shell/multivolume diagnostics; closure
+still needs strict scalar-LSZ model-class/FV/IR/threshold authority plus
+canonical `O_H`/source-overlap, or genuine same-source W/Z response rows with
+accepted action, covariance, and strict `g2`.

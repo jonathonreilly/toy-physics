@@ -4995,3 +4995,35 @@ The package is finite `C_ss/C_sx/C_xx` row support only.  It is not canonical
 `O_H`, not canonical `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z
 response, and not retained or proposed-retained closure.  Chunk037 is active
 run-control only.
+
+## 2026-05-07 - Schur C_x|s One-Pole Finite-Residue Scout
+
+```text
+actual_current_surface_status: bounded-support / one-pole finite-residue scout;
+positive endpoint fits are model-class diagnostics only
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=93 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=341 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=154 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=308 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=63 FAIL=0
+```
+
+The scout does not claim retained or proposed-retained closure.  It does not
+treat `C_x|s` as canonical `O_H`, does not treat a two-endpoint one-pole
+interpolation as a physical scalar pole, and does not set `kappa_s`, `c2`, or
+`Z_match` to one.

@@ -6215,3 +6215,24 @@ Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
 row evidence for route diagnostics, not canonical `O_H`, not canonical
 `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
 or proposed-retained closure.  Chunk037 is run-control only until completed.
+
+## 2026-05-07 - Schur C_x|s One-Pole Finite-Residue Scout
+
+Review stance: bounded support / model-class boundary.
+
+- Added `scripts/frontier_yt_pr230_schur_x_given_source_one_pole_scout.py`.
+- Added
+  `docs/YT_PR230_SCHUR_X_GIVEN_SOURCE_ONE_POLE_SCOUT_NOTE_2026-05-07.md`.
+- Added
+  `outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json`.
+- Wired the scout into assumption/import stress, campaign status, full
+  positive assembly, retained-route, and completion-audit certificates.
+- Validation: scout `PASS=13 FAIL=0`, assumption stress `PASS=93 FAIL=0`,
+  campaign status `PASS=341 FAIL=0`, full assembly `PASS=154 FAIL=0`,
+  retained-route `PASS=308 FAIL=0`, completion audit `PASS=63 FAIL=0`.
+
+Disposition: support only.  The two endpoint means determine a one-pole
+interpolation, but positive two-pole endpoint counterfamilies match those
+means while changing low-pole residue.  This blocks any physical scalar-pole,
+scalar-LSZ, canonical `O_H`, W/Z, retained, or proposed-retained claim from the
+scout alone.

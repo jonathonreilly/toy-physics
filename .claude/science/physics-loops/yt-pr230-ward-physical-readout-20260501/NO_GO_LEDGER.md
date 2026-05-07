@@ -3605,3 +3605,18 @@ FV/IR/threshold authority, no W/Z response, and no primitive neutral transfer.
 Reopen as closure only with a complete same-surface artifact satisfying one of
 the named physical authorities.  Do not reopen because the partial packet grew
 from 34 to 36 chunks.
+
+## 2026-05-07 - C_x|s One-Pole Interpolation Is Not Scalar-LSZ Authority
+
+No-go on the current surface: two finite `C_x|s` endpoint means determine a
+unique one-pole interpolation, but positive two-pole Stieltjes endpoint
+counterfamilies match the same endpoints while changing low-pole residue.  The
+one-pole scout is therefore finite-row targeting support, not a scalar pole,
+not `K'(pole)`, not a pole-residue certificate, not canonical `O_H`, not W/Z
+response, and not retained/proposed-retained closure.
+
+Reopen as closure only with higher-shell or analytic complete-monotonicity
+authority, threshold/contact and FV/IR control, an isolated physical pole, and
+one accepted bridge: canonical `O_H/C_spH/C_HH` pole rows, same-source W/Z
+physical-response rows, strict Schur A/B/C pole rows, or a neutral primitive
+transfer theorem.
