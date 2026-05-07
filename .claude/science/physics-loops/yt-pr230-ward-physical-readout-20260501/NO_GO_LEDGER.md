@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## Two-source chunks001-052 are not source-Higgs or scalar-LSZ closure
+
+The 2026-05-07 chunks051-052 package moves the finite two-source row packet to
+`ready=52/63`, but the added rows do not change the claim boundary.  The raw
+`C_ss` proxy still violates the strict scalar-LSZ Stieltjes nonincrease
+direction (`z=178.01483337800587`).  Schur `C_s|x` still fails
+(`z=162.2723812955626`); Schur `C_x|s` survives only the necessary
+first-shell check (`z=-568.5961022860091`) and lacks complete-monotonicity,
+threshold, pole, FV/IR, and source-bridge authority.  The one-pole
+interpolation remains model-class support only because positive two-pole
+counterfamilies match the same endpoints.
+
+Chunks053-054 are active run-control only until completed and checkpointed;
+chunks055-063 remain pending.  Do not treat chunks001-052, live-status rows,
+active worker logs, or finite `C_sx/C_xx` blocks as canonical `O_H`,
+canonical `C_sH/C_HH`, scalar-LSZ/FV authority, W/Z response, retained, or
+proposed-retained closure.
+
 ## Clean Source-Higgs Selector Is Not Closure
 
 The refreshed 2026-05-07 clean source-Higgs outside-math route selector is an

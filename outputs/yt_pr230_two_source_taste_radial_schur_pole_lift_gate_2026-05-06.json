@@ -28,70 +28,70 @@
     "p_hat_sq_zero": 0.0,
     "rows": {
       "A": {
-        "derivative_spread": 0.2679491924311226,
+        "derivative_spread": 0.2679491924311227,
         "endpoint_preserving_variants": [
           {
-            "derivative_at_zero_if_zero_is_pole": -0.7180576960880065,
+            "derivative_at_zero_if_zero_is_pole": -0.7180916734081867,
             "endpoint_residual_max": 0.0,
-            "f_shell": 7.977408714891573,
-            "f_zero": 8.169811694677307,
+            "f_shell": 7.977926435397441,
+            "f_zero": 8.170338519378678,
             "lambda": 0.0
           },
           {
-            "derivative_at_zero_if_zero_is_pole": -0.9860068885191291,
+            "derivative_at_zero_if_zero_is_pole": -0.9860408658393094,
             "endpoint_residual_max": 0.0,
-            "f_shell": 7.977408714891573,
-            "f_zero": 8.169811694677307,
+            "f_shell": 7.977926435397441,
+            "f_zero": 8.170338519378678,
             "lambda": 1.0
           }
         ],
-        "shell_minus_zero_over_dp": -0.7180576960880065,
-        "shell_value": 7.977408714891573,
-        "zero_value": 8.169811694677307
+        "shell_minus_zero_over_dp": -0.7180916734081867,
+        "shell_value": 7.977926435397441,
+        "zero_value": 8.170338519378678
       },
       "B": {
         "derivative_spread": 0.26794919243112264,
         "endpoint_preserving_variants": [
           {
-            "derivative_at_zero_if_zero_is_pole": -0.00041628108612698104,
+            "derivative_at_zero_if_zero_is_pole": -0.000392046930708634,
             "endpoint_residual_max": 0.0,
-            "f_shell": 0.00044822549228325004,
-            "f_zero": 0.0005597676731353252,
+            "f_shell": 0.0001397267553236547,
+            "f_zero": 0.0002447754138021335,
             "lambda": 0.0
           },
           {
-            "derivative_at_zero_if_zero_is_pole": -0.2683654735172496,
+            "derivative_at_zero_if_zero_is_pole": -0.2683412393618313,
             "endpoint_residual_max": 0.0,
-            "f_shell": 0.00044822549228325004,
-            "f_zero": 0.0005597676731353252,
+            "f_shell": 0.0001397267553236547,
+            "f_zero": 0.0002447754138021335,
             "lambda": 1.0
           }
         ],
-        "shell_minus_zero_over_dp": -0.00041628108612698104,
-        "shell_value": 0.00044822549228325004,
-        "zero_value": 0.0005597676731353252
+        "shell_minus_zero_over_dp": -0.000392046930708634,
+        "shell_value": 0.0001397267553236547,
+        "zero_value": 0.0002447754138021335
       },
       "C": {
         "derivative_spread": 0.26794919243112264,
         "endpoint_preserving_variants": [
           {
-            "derivative_at_zero_if_zero_is_pole": 0.557025144239131,
+            "derivative_at_zero_if_zero_is_pole": 0.5570669362508881,
             "endpoint_residual_max": 0.0,
-            "f_shell": 3.7101227893412494,
-            "f_zero": 3.5608683517785447,
+            "f_shell": 3.71014326236382,
+            "f_zero": 3.560877626665315,
             "lambda": 0.0
           },
           {
-            "derivative_at_zero_if_zero_is_pole": 0.2890759518080083,
+            "derivative_at_zero_if_zero_is_pole": 0.28911774381976546,
             "endpoint_residual_max": 0.0,
-            "f_shell": 3.7101227893412494,
-            "f_zero": 3.5608683517785447,
+            "f_shell": 3.71014326236382,
+            "f_zero": 3.560877626665315,
             "lambda": 1.0
           }
         ],
-        "shell_minus_zero_over_dp": 0.557025144239131,
-        "shell_value": 3.7101227893412494,
-        "zero_value": 3.5608683517785447
+        "shell_minus_zero_over_dp": 0.5570669362508881,
+        "shell_value": 3.71014326236382,
+        "zero_value": 3.560877626665315
       }
     }
   },
@@ -114,7 +114,7 @@
   "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Finite inverse rows are endpoint data.  The interpolation witness keeps the endpoint rows fixed while changing the derivative, so the strict K'(pole)/A'B'C' authority is not present on the current surface.",
-  "ready_chunks": 46,
+  "ready_chunks": 50,
   "strict_blockers": {
     "canonical_higgs_identity_absent": true,
     "combined_rows_packet_written_absent": true,

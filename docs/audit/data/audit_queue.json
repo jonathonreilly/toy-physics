@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 707,
+    "leaf": 708,
     "medium": 323
   },
-  "generated_at": "2026-05-07T17:33:24.251337+00:00",
+  "generated_at": "2026-05-07T17:57:28.930869+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -22522,6 +22522,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_two_source_taste_radial_chunks051_052_package_note_2026-05-07",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS051_052_PACKAGE_NOTE_2026-05-07.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26025,6 +26042,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 870,
-  "total_pending": 1267
+  "ready_count": 871,
+  "total_pending": 1268
 }

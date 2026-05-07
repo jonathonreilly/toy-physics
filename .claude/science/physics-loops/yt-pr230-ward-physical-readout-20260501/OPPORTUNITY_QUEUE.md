@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-07 chunks051-052 package refresh: chunks001-052 are now packaged
+partial `C_sx/C_xx` support with `ready=52/63`; chunks051-052 pass
+completed-mode checkpoints and preserve selected-mass-only FH/LSZ,
+normal-equation cache metadata, `numba_gauge_seed_v1`, fixed seeds, and
+non-readout source-Higgs metadata.  Strict scalar-LSZ still fails on raw
+`C_ss` (`z=178.01483337800587`); Schur-complement repair keeps `C_x|s` as a
+useful finite candidate but only as a necessary one-volume check
+(`z=-568.5961022860091`).  The `C_x|s` one-pole interpolation remains
+model-class support only because positive two-pole endpoint counterfamilies
+match the same two points.  The cleanest closure target remains certified
+canonical `O_H` plus `C_ss/C_sH/C_HH` pole rows, with genuine same-source W/Z
+rows as first fallback.  Successor chunks053-054 are active run-control only
+until completed, checkpointed, and packaged; chunks055-063 remain pending.
+
 2026-05-07 clean source-Higgs route selector refresh: the selector has been
 refreshed against the current FMS action-adoption minimal cut, fresh-artifact
 intake, and chunks001-050 prefix.  The cleanest positive route remains

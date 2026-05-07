@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T17:33:20.722867+00:00",
+  "generated_at": "2026-05-07T17:57:25.738790+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43493,6 +43493,16 @@
       "runner_path": null,
       "title": "PR230 Two-Source Taste-Radial Chunks047-050 Package"
     },
+    "yt_pr230_two_source_taste_radial_chunks051_052_package_note_2026-05-07": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunks051_052_package_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / chunks001-052 packaged; no closure",
+      "deps": [],
+      "note_hash": "af0b4171f8cb25bcd2f63dd9f0d3b60f6f24e446a84c0168a151b6da8f3e120a",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS051_052_PACKAGE_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Two-Source Taste-Radial Chunks051-052 Package"
+    },
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
       "current_status": "bounded",
@@ -46526,6 +46536,7 @@
     "yt_pr230_two_source_taste_radial_chunks043_044_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_chunks045_046_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_chunks047_050_package_note_2026-05-07",
+    "yt_pr230_two_source_taste_radial_chunks051_052_package_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
@@ -46664,12 +46675,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1119,
-    "node_count": 2110,
-    "root_count": 1617,
+    "leaf_count": 1120,
+    "node_count": 2111,
+    "root_count": 1618,
     "runners_with_path": 1593,
     "status_counts": {
-      "bounded": 586,
+      "bounded": 587,
       "open": 106,
       "proposed_promoted": 1,
       "proposed_retained": 373,
