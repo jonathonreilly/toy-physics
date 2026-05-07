@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 6 |
-| unaudited | 829 |
+| unaudited | 830 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 28 |
+| ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 440 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,17 +43,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 28 |
-| `unaudited` | 878 |
+| `audited_renaming` | 27 |
+| `unaudited` | 879 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 669 |
+| `bounded_theorem` | 670 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 108 |
-| `positive_theorem` | 784 |
+| `positive_theorem` | 783 |
 
 | criticality | count |
 |---|---:|
@@ -67,7 +67,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1405
+- runners classified: 1406
 - runners with (C) first-principles compute hits: 697
 - runners with (D) external comparator hits: 349
 - decoration candidates (no C, no D): 120
@@ -1038,7 +1038,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5.5 | E | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
-| `restricted_strong_field_closure_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_bilinear_tensor_action_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -10523,19 +10522,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Within the restricted inputs, the note's operational claims close: the runner script matches the documented bootstrap behavior, the current inspection output supports that the helper is present and importable, and the usage search supports the claim that relevant retained numpy replay lanes call it. The note also explicitly limits its scope to local operational reproducibility and disclaims CI enforcement, scientific promotion, and generalization beyond this host.
 - **rationale:** The support note is internally accurate against the provided runner and inspection output. Its load-bearing operational convention is implemented by the bootstrap helper and reflected in listed script usages. Because the claim boundary is explicitly local, non-scientific, and non-CI-enforced, no hidden premise is needed for the stated support-level claim.
 - **auditor confidence:** high
-
-### `restricted_strong_field_closure_note`
-
-- **Note:** [`RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`](../../docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited whether the provided note alone closes the claimed exact restricted strong-field closure for the local O_h shell source class without cited authorities or runner evidence.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-restricted_strong_field_-036`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The note asserts that on the exact local O_h class, the shell law, same-charge bridge, local 3+1 lift, and Schur boundary action form one exact restricted strong-field closure package.  _(class `E`)_
-- **chain closes:** False — The packet provides assertions and definitional substitutions but no independent derivation of the exact shell source, pointwise orbit laws, unique bridge, or Schur-complement boundary-action stationarity from the axiom. The missing step is a retained-grade derivation or runner certificate establishing those exact identities rather than declaring them.
-- **rationale:** No cited authorities or runner source/stdout are available, so the audit must judge the note text alone. The local 3+1 equations partly follow by substituting the definitions of rho and S once the bridge and shell source are assumed, but the core closure package is introduced as an exact status assertion rather than derived. That makes the load-bearing step a definitional/package declaration, not a first-principles computation or genuine algebraic closure over independent retained inputs.
-- **auditor confidence:** medium
 
 ### `retardation_discriminator_note`
 

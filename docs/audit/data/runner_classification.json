@@ -13368,6 +13368,18 @@
       "dominant_class": null,
       "runner": "scripts/reproduction_audit_harness.py"
     },
+    "restricted_strong_field_closure_note": {
+      "assert_count": 3,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_restricted_strong_field_closure_packet.py"
+    },
     "retained_cross_lane_consistency_support_note_2026-04-22": {
       "assert_count": 0,
       "counts": {
@@ -31363,6 +31375,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_restricted_strong_field_closure_packet.py": {
+      "assert_count": 3,
+      "claims": [
+        "restricted_strong_field_closure_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_retained_cross_lane_consistency.py": {
       "assert_count": 0,
       "claims": [
@@ -39363,9 +39390,9 @@
       "B": 167,
       "C": 586,
       "D": 212,
-      "none": 426
+      "none": 427
     },
-    "runners_classified": 1405,
+    "runners_classified": 1406,
     "runners_with_C": 697,
     "runners_with_D": 349
   }

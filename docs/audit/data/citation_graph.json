@@ -49018,13 +49018,13 @@
     },
     "restricted_strong_field_closure_note": {
       "claim_id": "restricted_strong_field_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "39edfe0f9b867e3519ad876638932aeab882213992e6eb1494834d360683d668",
+      "note_hash": "87fe6d10affd7ca84c68a729a244eebf555ef29cd301e546c53660eaa11fa053",
       "path": "docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_restricted_strong_field_closure_packet.py",
       "title": "Restricted Strong-Field Closure on the Exact `O_h` Shell Class"
     },
     "retained_cross_lane_consistency_support_note_2026-04-22": {
@@ -56981,18 +56981,18 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 94,
+      "bounded_theorem": 95,
       "meta": 10,
       "no_go": 14,
-      "none": 1706,
+      "none": 1705,
       "open_gate": 11,
       "positive_theorem": 89
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 599,
+      "bounded_theorem": 600,
       "meta": 10,
       "no_go": 119,
-      "none": 463,
+      "none": 462,
       "open_gate": 112,
       "positive_theorem": 621
     },
@@ -57000,6 +57000,6 @@
     "leaf_count": 543,
     "node_count": 1924,
     "root_count": 857,
-    "runners_with_path": 1501
+    "runners_with_path": 1502
   }
 }
