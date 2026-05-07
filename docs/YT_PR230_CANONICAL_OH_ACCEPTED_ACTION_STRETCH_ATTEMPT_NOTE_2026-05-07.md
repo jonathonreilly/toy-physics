@@ -56,7 +56,7 @@ or `C_sx -> C_sH` aliasing.
 | Schema completion | blocked | The canonical-Higgs candidate file is absent; the schema exists, but no identity/normalization certificate satisfies it. |
 | Degree-one radial tangent | support only | The degree-one theorem selects the taste-radial axis only under the missing same-surface EW/Higgs action premise. |
 | SM/EW one-Higgs import | exact negative boundary | SM/EW one-Higgs algebra assumes canonical `H` after it is supplied and does not identify a PR230 operator or remove orthogonal neutral top couplings. |
-| Source-Higgs pole promotion | support only | `C_sx/C_xx` cannot be relabeled as `C_sH/C_HH` before `x=canonical O_H`, LSZ/metric, pole, FV/IR, and Gram-purity authority exist. |
+| Source-Higgs pole promotion | support only | `C_sx/C_xx` cannot be relabeled as `C_sH/C_HH` before `x=canonical O_H`, LSZ/metric, pole, FV/IR, and Gram-purity authority exist.  The time-kernel production manifest is a future command surface only, not row evidence. |
 | W/Z accepted action | root cut still open | The W/Z route still lacks canonical `O_H`, current same-source sector-overlap/adopted radial action, and W/Z mass-fit path before response/covariance/strict-`g2` rows even matter. |
 
 ## Exact Result
@@ -102,6 +102,7 @@ source-Higgs pole/Gram/FV/IR gates pass.
 - [PR230 SM one-Higgs to O_H import boundary](YT_SM_ONE_HIGGS_OH_IMPORT_BOUNDARY_NOTE_2026-05-03.md)
 - [PR230 one-Higgs taste-axis completeness attempt](YT_PR230_ONE_HIGGS_TASTE_AXIS_COMPLETENESS_ATTEMPT_NOTE_2026-05-06.md)
 - [PR230 taste-radial to source-Higgs promotion contract](YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md)
+- [PR230 source-Higgs time-kernel production manifest](YT_PR230_SOURCE_HIGGS_TIME_KERNEL_PRODUCTION_MANIFEST_NOTE_2026-05-07.md)
 - [PR230 W/Z same-source accepted-action minimal certificate cut](YT_PR230_WZ_SAME_SOURCE_ACTION_MINIMAL_CERTIFICATE_CUT_NOTE_2026-05-07.md)
 - [PR230 canonical O_H / WZ common accepted-action cut](YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md)
 
@@ -111,8 +112,9 @@ This block does not claim retained or `proposed_retained` closure.  It does
 not write or validate a canonical `O_H` or accepted EW-Higgs action
 certificate, does not identify taste-radial `x` with canonical `O_H`, does not
 relabel `C_sx/C_xx` as `C_sH/C_HH`, and does not treat SM/EW one-Higgs
-algebra, support contracts, or static response formulas as current action
-authority.  It did not touch or relaunch the live chunk worker.
+algebra, support contracts, time-kernel manifests, or static response formulas
+as current action authority.  It did not touch or relaunch the live chunk
+worker.
 
 ## Verification
 

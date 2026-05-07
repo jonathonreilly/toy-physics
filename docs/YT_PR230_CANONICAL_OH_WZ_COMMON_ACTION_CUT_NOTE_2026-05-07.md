@@ -35,7 +35,10 @@ For the source-Higgs route, canonical `O_H` is needed before any
 the degree-one radial-tangent theorem selects the taste-radial axis only after
 a future same-surface action proves that canonical `O_H` is a linear
 Z3-covariant radial tangent, and the time-kernel GEVP path is a support
-contract until production rows exist.
+contract until production rows exist.  The refreshed 2026-05-07 pass also
+loads the source-Higgs time-kernel production manifest: it defines exact
+future commands, but it is still not launched row evidence and still cannot
+substitute for canonical `O_H`.
 
 For the W/Z route, the same accepted-action problem appears as a root cut.
 The response-ratio algebra is exact support, but the route still needs an
@@ -65,6 +68,7 @@ The block also did not touch or relaunch the live chunk worker.
 - [Degree-one radial-tangent O_H theorem](YT_PR230_DEGREE_ONE_RADIAL_TANGENT_OH_THEOREM_NOTE_2026-05-07.md)
 - [Source-Higgs pole-row acceptance contract](YT_PR230_SOURCE_HIGGS_POLE_ROW_ACCEPTANCE_CONTRACT_NOTE_2026-05-06.md)
 - [Source-Higgs time-kernel GEVP contract](YT_PR230_SOURCE_HIGGS_TIME_KERNEL_GEVP_CONTRACT_NOTE_2026-05-07.md)
+- [Source-Higgs time-kernel production manifest](YT_PR230_SOURCE_HIGGS_TIME_KERNEL_PRODUCTION_MANIFEST_NOTE_2026-05-07.md)
 - [OS transfer-kernel artifact gate](YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md)
 - [W/Z response-ratio identifiability contract](YT_PR230_WZ_RESPONSE_RATIO_IDENTIFIABILITY_CONTRACT_NOTE_2026-05-07.md)
 - [W/Z accepted same-source action minimal certificate cut](YT_PR230_WZ_SAME_SOURCE_ACTION_MINIMAL_CERTIFICATE_CUT_NOTE_2026-05-07.md)
@@ -83,5 +87,20 @@ strict non-observed `g2`.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
 python3 scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=11 FAIL=0
+```
+
+Aggregate refresh after wiring this cut:
+
+```bash
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=97 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=158 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=312 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=67 FAIL=0
 ```

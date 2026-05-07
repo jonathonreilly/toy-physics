@@ -1,5 +1,27 @@
 # Review History
 
+## 2026-05-07 - Common O_H/WZ Root-Cut Aggregate Refresh
+
+Review stance: exact support / exact negative boundary, no closure.
+
+- Refreshed `scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py`
+  to load the source-Higgs time-kernel production manifest as future-command
+  support only.
+- Refreshed the canonical `O_H` accepted-action stretch attempt and W/Z
+  accepted-action response-root checkpoint.
+- Wired those certificates into assumption/import stress, campaign status,
+  full assembly, retained-route, and completion audit.
+- Validation: common cut `PASS=11 FAIL=0`; accepted-action stretch
+  `PASS=11 FAIL=0`; W/Z root checkpoint `PASS=12 FAIL=0`; assumption stress
+  `PASS=97 FAIL=0`; campaign status `PASS=352 FAIL=0`; full assembly
+  `PASS=158 FAIL=0`; retained-route `PASS=312 FAIL=0`; completion audit
+  `PASS=67 FAIL=0`.
+
+Disposition: root still open.  The block supplies no canonical `O_H`, no
+accepted EW/Higgs action, no source-Higgs pole rows, no W/Z response rows, no
+covariance, no strict `g2`, no scalar-LSZ/FV/threshold authority, and no
+retained or proposed-retained closure.
+
 ## 2026-05-07 - Source-Higgs Time-Kernel Production Manifest
 
 Review stance: bounded support / production manifest, no physics evidence.

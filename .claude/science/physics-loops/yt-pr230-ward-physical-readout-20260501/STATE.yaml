@@ -16,11 +16,28 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-265-source-higgs-time-kernel-production-manifest
-blocks_completed: 264
-active_route: "PR230 source-Higgs time-kernel production manifest"
-active_hard_residual: "Added the source-Higgs time-kernel production manifest runner, note, and certificate.  The manifest emits exact non-colliding future commands for 63 L12xT24 C_ss/C_sH/C_HH(t)-shape chunks with fixed seeds 2026058001..2026058063, no --resume, source_higgs_time_kernel_v1 options, selected production settings, and separate output roots.  It records active static taste-radial workers as run-control state but does not require them for pass/fail, because launch is independently blocked by absent canonical O_H / physical neutral identity and the current taste-radial operator certificate is not canonical O_H.  Aggregate gates were wired to treat the manifest as not evidence.  Current chunks045-046 remain active run-control only under the two-worker cap until root JSONs and per-volume artifacts exist.  This is bounded support only: no time-kernel rows launched, no scalar-LSZ pole/FV/model authority, no canonical O_H/source-overlap, no W/Z response, no retained, and no proposed-retained closure."
+current_phase: campaign-block-266-common-oh-wz-root-cut-aggregate-refresh
+blocks_completed: 265
+active_route: "PR230 canonical O_H / WZ accepted-action common root cut"
+active_hard_residual: "Refreshed the canonical O_H / WZ common accepted-action cut after the source-Higgs time-kernel production manifest landed, then wired the common cut, canonical O_H accepted-action stretch attempt, and W/Z accepted-action response-root checkpoint through the aggregate assumption, campaign, assembly, retained-route, and completion-audit gates.  Refreshed counts: common cut PASS=11 FAIL=0, accepted-action stretch PASS=11 FAIL=0, W/Z response-root checkpoint PASS=12 FAIL=0, assumption/import stress PASS=97 FAIL=0, campaign status PASS=352 FAIL=0, full assembly PASS=158 FAIL=0, retained-route PASS=312 FAIL=0, completion audit PASS=67 FAIL=0.  The refreshed cut confirms the shared root remains open: no same-surface canonical O_H / accepted EW-Higgs action certificate, no production C_ss/C_sH/C_HH(t) rows, no accepted W/Z action/root rows, no covariance, no strict g2, no scalar-LSZ/FV/threshold authority, and no retained/proposed-retained closure.  Chunks045-046 remain active run-control only until completed root JSONs and per-volume artifacts exist."
 files_touched:
+  - "scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py"
+  - "scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py"
+  - "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json"
+  - "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json"
+  - "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json"
+  - "docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md"
+  - "docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
   - "scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py"
   - "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_PRODUCTION_MANIFEST_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json"

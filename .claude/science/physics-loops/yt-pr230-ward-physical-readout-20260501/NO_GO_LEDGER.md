@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Common `O_H`/WZ root cut still blocks current closure
+
+The 2026-05-07 aggregate refresh wires the common canonical `O_H` / W/Z
+accepted-action cut, accepted-action stretch attempt, and W/Z response-root
+checkpoint into the main gates.  All pass as exact support or exact negative
+boundary, not closure.  The current surface still lacks the shared root
+certificate: same-surface canonical `O_H` / accepted EW-Higgs action.  The W/Z
+route also lacks current sector-overlap/adopted radial action, production W/Z
+mass-fit rows, response rows, matched covariance, and strict non-observed
+`g2`.
+
+Do not treat the common cut, stretch attempt, W/Z root checkpoint, or
+time-kernel manifest as accepted action authority, canonical `O_H`, physical
+response rows, covariance, strict `g2`, retained, or proposed-retained
+closure.
+
 ## Time-kernel production manifest is not source-Higgs evidence
 
 The 2026-05-07 source-Higgs time-kernel production manifest defines exact

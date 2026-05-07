@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-07 common `O_H`/WZ root-cut aggregate refresh: the common root is now
+explicitly wired through assumption stress, campaign status, full assembly,
+retained-route, and completion audit.  The refreshed common cut includes the
+source-Higgs time-kernel production manifest as future-command support only.
+The cleanest closure target is unchanged and sharper: supply a same-surface
+canonical `O_H` / accepted EW-Higgs action certificate, then launch
+`C_ss/C_sH/C_HH(t)` rows from the time-kernel manifest and run OS/GEVP,
+FV/IR/threshold, covariance, and source-overlap gates.  W/Z remains the first
+fallback only after its action-root vertices close: current sector-overlap or
+adopted no-independent-top radial action, W/Z mass-fit path, response rows,
+matched covariance, and strict non-observed `g2`.
+
 2026-05-07 source-Higgs time-kernel production manifest: the cleanest closure
 target remains canonical `O_H` plus production `C_ss/C_sH/C_HH(t)` pole rows.
 The new manifest makes the future row campaign executable with exact commands,

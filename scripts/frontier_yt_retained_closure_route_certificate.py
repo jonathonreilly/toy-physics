@@ -195,6 +195,9 @@ def main() -> int:
         "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
         "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
         "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
+        "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
+        "pr230_canonical_oh_wz_common_action_cut": "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json",
+        "pr230_canonical_oh_accepted_action_stretch_attempt": "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -2085,6 +2088,81 @@ def main() -> int:
             "current_same_source_sector_overlap_identity",
             "wz_correlator_mass_fit_path_certificate",
         }
+    )
+    wz_accepted_action_response_root_checkpoint_blocks = (
+        "WZ accepted-action response root not closed"
+        in certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "wz_accepted_action_response_root_checkpoint_passed"
+        )
+        is True
+        and certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "current_route_blocked"
+        )
+        is True
+        and certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "root_closures_found"
+        )
+        == []
+        and not any(
+            certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+    )
+    canonical_oh_wz_common_action_cut_open = (
+        "canonical O_H and WZ accepted-action common-cut"
+        in certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "common_action_cut_passed"
+        )
+        is True
+        and certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "common_canonical_oh_vertex_open"
+        )
+        is True
+        and certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "aggregate_denies_proposal"
+        )
+        is True
+        and certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "time_kernel_manifest_not_evidence"
+        )
+        is True
+    )
+    canonical_oh_accepted_action_stretch_blocks_current_stack = (
+        "canonical O_H accepted-action root not derivable"
+        in certificates["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "stretch_attempt_passed"
+        )
+        is True
+        and certificates["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "current_route_blocked"
+        )
+        is True
+        and certificates["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "root_closures_found"
+        )
+        == []
     )
     two_source_taste_radial_chunk_checkpoint_not_closure = {}
     for idx in range(1, 11):
@@ -4909,6 +4987,27 @@ def main() -> int:
             "actual_current_surface_status", ""
         ),
     )
+    report(
+        "wz-accepted-action-response-root-checkpoint-blocks",
+        wz_accepted_action_response_root_checkpoint_blocks,
+        certificates["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "canonical-oh-wz-common-action-cut-open",
+        canonical_oh_wz_common_action_cut_open,
+        certificates["pr230_canonical_oh_wz_common_action_cut"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "canonical-oh-accepted-action-stretch-blocks-current-stack",
+        canonical_oh_accepted_action_stretch_blocks_current_stack,
+        certificates["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
     for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items():
         cert_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
         report(
@@ -6389,6 +6488,9 @@ def main() -> int:
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
+        "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
+        "canonical_oh_wz_common_action_cut_open": canonical_oh_wz_common_action_cut_open,
+        "canonical_oh_accepted_action_stretch_blocks_current_stack": canonical_oh_accepted_action_stretch_blocks_current_stack,
         "two_source_taste_radial_chunk_checkpoint_not_closure": {
             f"chunk{idx:03d}": not_closure
             for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items()

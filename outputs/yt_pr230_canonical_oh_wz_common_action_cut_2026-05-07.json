@@ -61,6 +61,7 @@
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "source_higgs_pole_row_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
     "source_higgs_time_kernel_gevp": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
+    "source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "wz_response_ratio_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_same_source_action_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json"
   },
@@ -73,10 +74,11 @@
     "retained_route": "open / retained closure not yet reached",
     "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
     "source_higgs_time_kernel_gevp": "bounded-support / source-Higgs time-kernel GEVP contract; smoke rows are not physics closure",
+    "source_higgs_time_kernel_production_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched",
     "wz_response_ratio_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
     "wz_same_source_action_cut": "exact negative boundary / WZ accepted same-source action minimal certificate cut remains open"
   },
-  "pass_count": 10,
+  "pass_count": 11,
   "proposal_allowed": false,
   "proposal_allowed_reason": "This block only exposes the shared root vertex and route-specific data cuts.  The current surface still lacks canonical O_H, an accepted same-source EW/Higgs action, source-Higgs pole rows, W/Z response rows, matched covariance, strict g2, and aggregate retained-route approval.",
   "ranked_next_actions": [
@@ -128,6 +130,7 @@
     "support_already_present": [
       "degree_one_radial_tangent_axis_unique_under_future_action_premise",
       "default_off_time_kernel_harness_and_formal_GEVP_contract",
+      "non-colliding source-Higgs time-kernel production manifest",
       "strict_source_Higgs_pole_row_acceptance_schema"
     ]
   },
@@ -136,9 +139,11 @@
     "does not write or validate the accepted same-source EW action certificate",
     "does not identify C_sx/C_xx with C_sH/C_HH before canonical O_H is certified",
     "does not treat the formal GEVP smoke as physical pole authority",
+    "does not treat the time-kernel production manifest as launched rows or pole authority",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, or unit normalization conventions",
     "does not touch or relaunch the live chunk worker"
   ],
+  "time_kernel_manifest_not_evidence": true,
   "wz_route_support": {
     "current_surface_status": "open_support_only",
     "route": "W/Z accepted-action physical response",

@@ -1,5 +1,42 @@
 # Claim Status Certificate
 
+Common `O_H`/WZ root-cut aggregate refresh:
+
+```text
+actual_current_surface_status: exact support/boundary plus exact negative boundary; common root remains open
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=97 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=158 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=312 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=67 FAIL=0
+```
+
+The common root remains open.  No same-surface canonical `O_H` / accepted
+EW-Higgs action certificate, source-Higgs pole rows, W/Z response rows,
+covariance, strict `g2`, scalar-LSZ/FV/threshold authority, retained, or
+proposed-retained closure is present.
+
 Source-Higgs time-kernel production manifest checkpoint:
 
 ```text

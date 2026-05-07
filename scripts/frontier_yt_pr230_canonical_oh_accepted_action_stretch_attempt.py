@@ -36,6 +36,7 @@ PARENTS = {
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "taste_radial_to_source_higgs_promotion": "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json",
     "source_higgs_pole_row_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "source_higgs_production_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "wz_same_source_action_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "wz_response_ratio_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
@@ -138,6 +139,7 @@ def stretch_frames(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
     two_source = certs["two_source_taste_radial_action"]
     promotion = certs["taste_radial_to_source_higgs_promotion"]
     pole_contract = certs["source_higgs_pole_row_contract"]
+    time_kernel_manifest = certs["source_higgs_time_kernel_production_manifest"]
     readiness = certs["source_higgs_production_readiness"]
     wz_cut = certs["wz_same_source_action_cut"]
     wz_ratio = certs["wz_response_ratio_contract"]
@@ -196,15 +198,24 @@ def stretch_frames(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
         frame(
             "source_higgs_pole_promotion",
             route="promote C_sx/C_xx rows into C_sH/C_HH rows",
-            support_loaded=promotion.get("promotion_contract_passed") is True
-            and pole_contract.get("proposal_allowed") is False,
+            support_loaded=(
+                promotion.get("promotion_contract_passed") is True
+                and pole_contract.get("proposal_allowed") is False
+                and time_kernel_manifest.get("proposal_allowed") is False
+                and time_kernel_manifest.get("chunk_count") == 63
+            ),
             closes_root=False,
             obstruction=(
                 "The promotion contract explicitly blocks relabeling before "
                 "x=canonical O_H, LSZ/metric normalization, pole rows, FV/IR, "
                 "and Gram-purity authority exist."
             ),
-            evidence=[status(promotion), status(pole_contract), status(readiness)],
+            evidence=[
+                status(promotion),
+                status(pole_contract),
+                status(time_kernel_manifest),
+                status(readiness),
+            ],
             next_move=(
                 "Continue taste-radial rows only as bounded support until the "
                 "canonical O_H identity and production pole gates pass."
@@ -316,6 +327,7 @@ def main() -> int:
             "does not write or validate a canonical O_H or accepted EW-Higgs action certificate",
             "does not identify taste-radial x with canonical O_H",
             "does not relabel C_sx/C_xx as C_sH/C_HH",
+            "does not treat the source-Higgs time-kernel production manifest as row evidence",
             "does not treat SM/EW one-Higgs algebra, support contracts, or static response formulas as current action authority",
             "does not use forbidden imports or touch the live chunk worker",
         ],

@@ -33,6 +33,7 @@ PARENTS = {
     "degree_one_radial_tangent_oh": "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json",
     "source_higgs_pole_row_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
     "source_higgs_time_kernel_gevp": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
+    "source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "os_transfer_kernel_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "wz_response_ratio_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_same_source_action_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
@@ -112,6 +113,7 @@ def source_higgs_contract() -> dict[str, Any]:
         "support_already_present": [
             "degree_one_radial_tangent_axis_unique_under_future_action_premise",
             "default_off_time_kernel_harness_and_formal_GEVP_contract",
+            "non-colliding source-Higgs time-kernel production manifest",
             "strict_source_Higgs_pole_row_acceptance_schema",
         ],
         "current_surface_status": "open_support_only",
@@ -249,6 +251,24 @@ def main() -> int:
         )
         is False
     )
+    time_kernel_manifest_not_evidence = (
+        certs["source_higgs_time_kernel_production_manifest"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "closure_launch_authorized_now"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "operator_certificate_is_canonical_oh"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "chunk_count"
+        )
+        == 63
+    )
     os_transfer_absent = (
         certs["os_transfer_kernel_gate"].get("os_transfer_kernel_artifact_present")
         is False
@@ -290,6 +310,7 @@ def main() -> int:
     report("neutral-transfer-current-route-blocked", neutral_blocked, statuses["neutral_source_mixing_no_go"])
     report("source-higgs-support-artifacts-present", oh_support, statuses["degree_one_radial_tangent_oh"])
     report("time-kernel-remains-support-only", time_kernel_support_only, statuses["source_higgs_time_kernel_gevp"])
+    report("time-kernel-manifest-not-evidence", time_kernel_manifest_not_evidence, statuses["source_higgs_time_kernel_production_manifest"])
     report("os-transfer-kernel-physical-artifact-absent", os_transfer_absent, statuses["os_transfer_kernel_gate"])
     report("wz-support-contracts-present", wz_support, statuses["wz_response_ratio_contract"])
     report("common-canonical-oh-vertex-open", common_vertex_open, str(common["open_root_vertices"]))
@@ -322,6 +343,7 @@ def main() -> int:
         "bare_retained_allowed": False,
         "audit_required_before_effective_retained": True,
         "common_action_cut_passed": passed,
+        "time_kernel_manifest_not_evidence": time_kernel_manifest_not_evidence,
         "neutral_current_route_blocked": neutral_blocked,
         "source_higgs_route_support": source_higgs_contract(),
         "wz_route_support": wz_contract(),
@@ -337,6 +359,7 @@ def main() -> int:
             "does not write or validate the accepted same-source EW action certificate",
             "does not identify C_sx/C_xx with C_sH/C_HH before canonical O_H is certified",
             "does not treat the formal GEVP smoke as physical pole authority",
+            "does not treat the time-kernel production manifest as launched rows or pole authority",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, or unit normalization conventions",
             "does not touch or relaunch the live chunk worker",
         ],

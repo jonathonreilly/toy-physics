@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 common `O_H`/WZ root-cut aggregate refresh:
+
+- Refreshed the canonical `O_H` / W/Z common accepted-action cut so it loads
+  the source-Higgs time-kernel production manifest as future-command support
+  only.  The shared root remains open: no same-surface canonical `O_H` /
+  accepted EW-Higgs action certificate exists.
+- Refreshed root-cut runners: common action cut `PASS=11 FAIL=0`;
+  canonical `O_H` accepted-action stretch `PASS=11 FAIL=0`; W/Z
+  accepted-action response-root checkpoint `PASS=12 FAIL=0`.
+- Wired those root cuts through the aggregate gates: assumption/import stress
+  `PASS=97 FAIL=0`; campaign status `PASS=352 FAIL=0`; full assembly
+  `PASS=158 FAIL=0`; retained-route `PASS=312 FAIL=0`; completion audit
+  `PASS=67 FAIL=0`.
+- Claim boundary: the current surface still has no canonical `O_H`, no
+  production `C_ss/C_sH/C_HH(t)` rows, no accepted W/Z action or response
+  rows, no matched covariance, no strict non-observed `g2`, and no retained
+  or proposed-retained closure.
+- Chunks045-046 are still live run-control only until completed root JSONs,
+  per-volume artifacts, and completed-mode checkpoints exist.
+
 Latest checkpoint, 2026-05-07 source-Higgs time-kernel production manifest:
 
 - Added the source-Higgs time-kernel production manifest runner, note, and

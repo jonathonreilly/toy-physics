@@ -8546,6 +8546,10 @@
     },
     {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
     },
     {
@@ -8567,6 +8571,10 @@
     {
       "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
       "to": "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+      "to": "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07"
     },
     {
       "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
@@ -18749,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T14:28:58.072339+00:00",
+  "generated_at": "2026-05-07T14:48:27.181157+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42247,10 +42255,11 @@
         "yt_sm_one_higgs_oh_import_boundary_note_2026-05-03",
         "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06",
         "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
+        "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07",
         "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
         "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07"
       ],
-      "note_hash": "8f402add01bfa79eac7c61b6b1e6d1d96280e80959519c43f15bdf0aa116861b",
+      "note_hash": "6ebb10da8874bdec7ca1b6932e6549bda936552b9d472ee3f97563e26fa4ec56",
       "path": "docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py",
       "title": "PR230 Canonical O_H / Accepted-Action Stretch Attempt"
@@ -42274,11 +42283,12 @@
         "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
         "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
         "yt_pr230_source_higgs_time_kernel_gevp_contract_note_2026-05-07",
+        "yt_pr230_source_higgs_time_kernel_production_manifest_note_2026-05-07",
         "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07",
         "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
         "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
       ],
-      "note_hash": "ec0b3761dc89b6481fd9d2cfba7c66503fb6e01162bc022dc79fd49cc4e6564f",
+      "note_hash": "115f1e17e826db847e1269330f697fd11c76b21de6d20cd54fd42046805f02ac",
       "path": "docs/YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py",
       "title": "PR230 Canonical O_H / WZ Common Accepted-Action Cut"
@@ -46554,8 +46564,8 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4687,
-    "leaf_count": 1111,
+    "edge_count": 4689,
+    "leaf_count": 1110,
     "node_count": 2101,
     "root_count": 1608,
     "runners_with_path": 1588,

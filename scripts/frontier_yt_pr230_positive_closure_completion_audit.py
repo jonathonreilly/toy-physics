@@ -50,6 +50,9 @@ PARENTS = {
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
+    "wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
+    "canonical_oh_wz_common_action_cut": "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json",
+    "canonical_oh_accepted_action_stretch_attempt": "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
@@ -985,6 +988,73 @@ def main() -> int:
         )
         is False
     )
+    wz_accepted_action_response_root_checkpoint_blocks = (
+        "WZ accepted-action response root not closed"
+        in parent_statuses["wz_accepted_action_response_root_checkpoint"]
+        and certs["wz_accepted_action_response_root_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["wz_accepted_action_response_root_checkpoint"].get(
+            "wz_accepted_action_response_root_checkpoint_passed"
+        )
+        is True
+        and certs["wz_accepted_action_response_root_checkpoint"].get(
+            "current_route_blocked"
+        )
+        is True
+        and certs["wz_accepted_action_response_root_checkpoint"].get(
+            "root_closures_found"
+        )
+        == []
+        and not any(
+            certs["wz_accepted_action_response_root_checkpoint"].get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+    )
+    canonical_oh_wz_common_action_cut_open = (
+        "canonical O_H and WZ accepted-action common-cut"
+        in parent_statuses["canonical_oh_wz_common_action_cut"]
+        and certs["canonical_oh_wz_common_action_cut"].get("proposal_allowed")
+        is False
+        and certs["canonical_oh_wz_common_action_cut"].get(
+            "common_action_cut_passed"
+        )
+        is True
+        and certs["canonical_oh_wz_common_action_cut"].get(
+            "common_canonical_oh_vertex_open"
+        )
+        is True
+        and certs["canonical_oh_wz_common_action_cut"].get(
+            "aggregate_denies_proposal"
+        )
+        is True
+        and certs["canonical_oh_wz_common_action_cut"].get(
+            "time_kernel_manifest_not_evidence"
+        )
+        is True
+    )
+    canonical_oh_accepted_action_stretch_blocks_current_stack = (
+        "canonical O_H accepted-action root not derivable"
+        in parent_statuses["canonical_oh_accepted_action_stretch_attempt"]
+        and certs["canonical_oh_accepted_action_stretch_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["canonical_oh_accepted_action_stretch_attempt"].get(
+            "stretch_attempt_passed"
+        )
+        is True
+        and certs["canonical_oh_accepted_action_stretch_attempt"].get(
+            "current_route_blocked"
+        )
+        is True
+        and certs["canonical_oh_accepted_action_stretch_attempt"].get(
+            "root_closures_found"
+        )
+        == []
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -1057,6 +1127,9 @@ def main() -> int:
     report("radial-spurion-action-contract-not-closure", radial_spurion_action_contract_not_closure, parent_statuses["radial_spurion_action_contract"])
     report("wz-response-ratio-identifiability-contract-not-closure", wz_response_ratio_identifiability_contract_not_closure, parent_statuses["wz_response_ratio_identifiability_contract"])
     report("wz-same-source-action-minimal-certificate-cut-open", wz_same_source_action_minimal_certificate_cut_open, parent_statuses["wz_same_source_action_minimal_certificate_cut"])
+    report("wz-accepted-action-response-root-checkpoint-blocks", wz_accepted_action_response_root_checkpoint_blocks, parent_statuses["wz_accepted_action_response_root_checkpoint"])
+    report("canonical-oh-wz-common-action-cut-open", canonical_oh_wz_common_action_cut_open, parent_statuses["canonical_oh_wz_common_action_cut"])
+    report("canonical-oh-accepted-action-stretch-blocks-current-stack", canonical_oh_accepted_action_stretch_blocks_current_stack, parent_statuses["canonical_oh_accepted_action_stretch_attempt"])
     report("post-fms-source-overlap-necessity-blocks-current-inference", post_fms_source_overlap_necessity_blocks_current_inference, parent_statuses["post_fms_source_overlap_necessity_gate"])
     report("source-higgs-overlap-kappa-contract-not-closure", source_higgs_overlap_kappa_contract_not_closure, parent_statuses["source_higgs_overlap_kappa_contract"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
@@ -1234,6 +1307,9 @@ def main() -> int:
             "radial_spurion_action_contract_not_closure": radial_spurion_action_contract_not_closure,
             "wz_response_ratio_identifiability_contract_not_closure": wz_response_ratio_identifiability_contract_not_closure,
             "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
+            "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
+            "canonical_oh_wz_common_action_cut_open": canonical_oh_wz_common_action_cut_open,
+            "canonical_oh_accepted_action_stretch_blocks_current_stack": canonical_oh_accepted_action_stretch_blocks_current_stack,
             "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,

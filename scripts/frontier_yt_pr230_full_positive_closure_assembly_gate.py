@@ -128,6 +128,9 @@ PARENTS = {
     "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
+    "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
+    "pr230_canonical_oh_wz_common_action_cut": "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json",
+    "pr230_canonical_oh_accepted_action_stretch_attempt": "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
@@ -1317,6 +1320,75 @@ def main() -> int:
             "wz_correlator_mass_fit_path_certificate",
         }
     )
+    wz_accepted_action_response_root_checkpoint_blocks = (
+        "WZ accepted-action response root not closed"
+        in statuses["pr230_wz_accepted_action_response_root_checkpoint"]
+        and certs["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "wz_accepted_action_response_root_checkpoint_passed"
+        )
+        is True
+        and certs["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "current_route_blocked"
+        )
+        is True
+        and certs["pr230_wz_accepted_action_response_root_checkpoint"].get(
+            "root_closures_found"
+        )
+        == []
+        and not any(
+            certs["pr230_wz_accepted_action_response_root_checkpoint"].get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+    )
+    canonical_oh_wz_common_action_cut_open = (
+        "canonical O_H and WZ accepted-action common-cut"
+        in statuses["pr230_canonical_oh_wz_common_action_cut"]
+        and certs["pr230_canonical_oh_wz_common_action_cut"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_canonical_oh_wz_common_action_cut"].get(
+            "common_action_cut_passed"
+        )
+        is True
+        and certs["pr230_canonical_oh_wz_common_action_cut"].get(
+            "common_canonical_oh_vertex_open"
+        )
+        is True
+        and certs["pr230_canonical_oh_wz_common_action_cut"].get(
+            "aggregate_denies_proposal"
+        )
+        is True
+        and certs["pr230_canonical_oh_wz_common_action_cut"].get(
+            "time_kernel_manifest_not_evidence"
+        )
+        is True
+    )
+    canonical_oh_accepted_action_stretch_blocks_current_stack = (
+        "canonical O_H accepted-action root not derivable"
+        in statuses["pr230_canonical_oh_accepted_action_stretch_attempt"]
+        and certs["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "stretch_attempt_passed"
+        )
+        is True
+        and certs["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "current_route_blocked"
+        )
+        is True
+        and certs["pr230_canonical_oh_accepted_action_stretch_attempt"].get(
+            "root_closures_found"
+        )
+        == []
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in statuses["pr230_post_fms_source_overlap_necessity_gate"]
@@ -2380,6 +2452,21 @@ def main() -> int:
         statuses["pr230_wz_same_source_action_minimal_certificate_cut"],
     )
     report(
+        "wz-accepted-action-response-root-checkpoint-blocks",
+        wz_accepted_action_response_root_checkpoint_blocks,
+        statuses["pr230_wz_accepted_action_response_root_checkpoint"],
+    )
+    report(
+        "canonical-oh-wz-common-action-cut-open",
+        canonical_oh_wz_common_action_cut_open,
+        statuses["pr230_canonical_oh_wz_common_action_cut"],
+    )
+    report(
+        "canonical-oh-accepted-action-stretch-blocks-current-stack",
+        canonical_oh_accepted_action_stretch_blocks_current_stack,
+        statuses["pr230_canonical_oh_accepted_action_stretch_attempt"],
+    )
+    report(
         "post-fms-source-overlap-necessity-blocks-current-inference",
         post_fms_source_overlap_necessity_blocks_current_inference,
         statuses["pr230_post_fms_source_overlap_necessity_gate"],
@@ -3404,6 +3491,9 @@ def main() -> int:
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
+        "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
+        "canonical_oh_wz_common_action_cut_open": canonical_oh_wz_common_action_cut_open,
+        "canonical_oh_accepted_action_stretch_blocks_current_stack": canonical_oh_accepted_action_stretch_blocks_current_stack,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

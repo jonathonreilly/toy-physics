@@ -245,6 +245,15 @@ def main() -> int:
         "wz_same_source_action_minimal_certificate_cut": load(
             "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json"
         ),
+        "wz_accepted_action_response_root_checkpoint": load(
+            "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json"
+        ),
+        "canonical_oh_wz_common_action_cut": load(
+            "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json"
+        ),
+        "canonical_oh_accepted_action_stretch_attempt": load(
+            "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -1505,6 +1514,46 @@ def main() -> int:
         is False,
         wz_ratio_contract.get("actual_current_surface_status"),
     )
+    wz_root_checkpoint = certificates["wz_accepted_action_response_root_checkpoint"]
+    report(
+        "wz-accepted-action-response-root-checkpoint-blocks-current-root",
+        "WZ accepted-action response root not closed"
+        in str(wz_root_checkpoint.get("actual_current_surface_status"))
+        and wz_root_checkpoint.get("proposal_allowed") is False
+        and wz_root_checkpoint.get(
+            "wz_accepted_action_response_root_checkpoint_passed"
+        )
+        is True
+        and wz_root_checkpoint.get("current_route_blocked") is True
+        and wz_root_checkpoint.get("root_closures_found") == []
+        and not any(wz_root_checkpoint.get("future_artifact_presence", {}).values()),
+        wz_root_checkpoint.get("actual_current_surface_status"),
+    )
+    common_action_cut = certificates["canonical_oh_wz_common_action_cut"]
+    report(
+        "canonical-oh-wz-common-action-cut-open",
+        "canonical O_H and WZ accepted-action common-cut"
+        in str(common_action_cut.get("actual_current_surface_status"))
+        and common_action_cut.get("proposal_allowed") is False
+        and common_action_cut.get("common_action_cut_passed") is True
+        and common_action_cut.get("common_canonical_oh_vertex_open") is True
+        and common_action_cut.get("aggregate_denies_proposal") is True
+        and common_action_cut.get("time_kernel_manifest_not_evidence") is True,
+        common_action_cut.get("actual_current_surface_status"),
+    )
+    accepted_action_stretch = certificates[
+        "canonical_oh_accepted_action_stretch_attempt"
+    ]
+    report(
+        "canonical-oh-accepted-action-stretch-blocks-current-stack",
+        "canonical O_H accepted-action root not derivable"
+        in str(accepted_action_stretch.get("actual_current_surface_status"))
+        and accepted_action_stretch.get("proposal_allowed") is False
+        and accepted_action_stretch.get("stretch_attempt_passed") is True
+        and accepted_action_stretch.get("current_route_blocked") is True
+        and accepted_action_stretch.get("root_closures_found") == [],
+        accepted_action_stretch.get("actual_current_surface_status"),
+    )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(
         "post-fms-source-overlap-necessity-gate-blocks-current-inference",
@@ -1948,6 +1997,7 @@ def main() -> int:
             "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",
             "does not treat a formal reduced-smoke GEVP diagnostic as pole, kappa_s, or y_t authority",
             "does not treat a source-Higgs time-kernel production manifest as launched rows, pole evidence, source-overlap authority, or y_t closure",
+            "does not treat common O_H/WZ root cuts or accepted-action stretch checkpoints as canonical O_H, accepted action, W/Z rows, covariance, strict g2, or y_t closure",
             "does not treat FMS or gauge-invariant-field literature as same-surface PR230 O_H/source-overlap/kappa_s proof",
             "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",

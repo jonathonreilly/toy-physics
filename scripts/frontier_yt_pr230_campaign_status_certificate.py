@@ -743,6 +743,12 @@ def main() -> int:
         "pr230_wz_physical_response_packet_intake_checkpoint": load(
             "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json"
         ),
+        "pr230_canonical_oh_wz_common_action_cut": load(
+            "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json"
+        ),
+        "pr230_canonical_oh_accepted_action_stretch_attempt": load(
+            "outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json"
+        ),
         "pr230_source_higgs_bridge_aperture_checkpoint": load(
             "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json"
         ),
@@ -3524,6 +3530,49 @@ def main() -> int:
         ),
         statuses["pr230_wz_physical_response_packet_intake_checkpoint"],
     )
+    canonical_oh_wz_common_action_cut = certificates[
+        "pr230_canonical_oh_wz_common_action_cut"
+    ]
+    report(
+        "pr230-canonical-oh-wz-common-action-cut-open",
+        "canonical O_H and WZ accepted-action common-cut"
+        in str(statuses["pr230_canonical_oh_wz_common_action_cut"])
+        and canonical_oh_wz_common_action_cut.get("proposal_allowed") is False
+        and canonical_oh_wz_common_action_cut.get("common_action_cut_passed")
+        is True
+        and canonical_oh_wz_common_action_cut.get(
+            "common_canonical_oh_vertex_open"
+        )
+        is True
+        and canonical_oh_wz_common_action_cut.get("aggregate_denies_proposal")
+        is True
+        and canonical_oh_wz_common_action_cut.get(
+            "time_kernel_manifest_not_evidence"
+        )
+        is True,
+        statuses["pr230_canonical_oh_wz_common_action_cut"],
+    )
+    canonical_oh_accepted_action_stretch_attempt = certificates[
+        "pr230_canonical_oh_accepted_action_stretch_attempt"
+    ]
+    report(
+        "pr230-canonical-oh-accepted-action-stretch-blocks-current-stack",
+        "canonical O_H accepted-action root not derivable"
+        in str(statuses["pr230_canonical_oh_accepted_action_stretch_attempt"])
+        and canonical_oh_accepted_action_stretch_attempt.get("proposal_allowed")
+        is False
+        and canonical_oh_accepted_action_stretch_attempt.get(
+            "stretch_attempt_passed"
+        )
+        is True
+        and canonical_oh_accepted_action_stretch_attempt.get(
+            "current_route_blocked"
+        )
+        is True
+        and canonical_oh_accepted_action_stretch_attempt.get("root_closures_found")
+        == [],
+        statuses["pr230_canonical_oh_accepted_action_stretch_attempt"],
+    )
     source_higgs_bridge_aperture_checkpoint = certificates[
         "pr230_source_higgs_bridge_aperture_checkpoint"
     ]
@@ -5917,6 +5966,48 @@ def main() -> int:
                 "scout_artifacts_present", {}
             ).values()
         )
+    )
+    result["wz_accepted_action_response_root_checkpoint_blocks_current_root"] = (
+        wz_accepted_action_response_root_checkpoint.get("proposal_allowed")
+        is False
+        and wz_accepted_action_response_root_checkpoint.get(
+            "wz_accepted_action_response_root_checkpoint_passed"
+        )
+        is True
+        and wz_accepted_action_response_root_checkpoint.get("current_route_blocked")
+        is True
+        and wz_accepted_action_response_root_checkpoint.get("root_closures_found")
+        == []
+        and not any(
+            wz_accepted_action_response_root_checkpoint.get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+    )
+    result["canonical_oh_wz_common_action_cut_open"] = (
+        canonical_oh_wz_common_action_cut.get("proposal_allowed") is False
+        and canonical_oh_wz_common_action_cut.get("common_action_cut_passed")
+        is True
+        and canonical_oh_wz_common_action_cut.get(
+            "common_canonical_oh_vertex_open"
+        )
+        is True
+        and canonical_oh_wz_common_action_cut.get("aggregate_denies_proposal")
+        is True
+        and canonical_oh_wz_common_action_cut.get("time_kernel_manifest_not_evidence")
+        is True
+    )
+    result["canonical_oh_accepted_action_stretch_blocks_current_stack"] = (
+        canonical_oh_accepted_action_stretch_attempt.get("proposal_allowed")
+        is False
+        and canonical_oh_accepted_action_stretch_attempt.get(
+            "stretch_attempt_passed"
+        )
+        is True
+        and canonical_oh_accepted_action_stretch_attempt.get("current_route_blocked")
+        is True
+        and canonical_oh_accepted_action_stretch_attempt.get("root_closures_found")
+        == []
     )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(
