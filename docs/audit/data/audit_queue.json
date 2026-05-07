@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 500,
-    "high": 24,
+    "high": 23,
     "leaf": 176,
     "medium": 126
   },
@@ -18950,27 +18950,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.044,
-      "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py",
-      "transitive_descendants": 32
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -27776,6 +27755,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 4,
-  "total_pending": 826
+  "ready_count": 3,
+  "total_pending": 825
 }

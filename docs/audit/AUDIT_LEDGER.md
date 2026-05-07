@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 814 |
+| unaudited | 813 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 443 |
+| ~~audited_conditional~~ | 444 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 443 |
+| `audited_conditional` | 444 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 863 |
+| `unaudited` | 862 |
 
 | claim_type | count |
 |---|---:|
@@ -847,6 +847,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -9993,6 +9994,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`
+- **auditor confidence:** high
+
+### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
+
+- **Note:** [`PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md`](../../docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded V=1 SU(3) Wilson single-plaquette Picard-Fuchs ODE, analytic beta=0 Frobenius branch, finite ODE-vs-Weyl checks at beta in {2,4,6,8,10}, and <P>_V=1(6)=0.422531739650, with no thermodynamic-limit or downstream bridge claim.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-plaquette-v1-pf`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For the single-plaquette SU(3) Wilson integral J(beta), the runner verifies the stated third-order Picard-Fuchs equation and identifies its analytic Frobenius solution with the physical integral.  _(class `A`)_
+- **chain closes:** False — The runner gives strong finite symbolic and numerical evidence, but it checks the ODE residual only on a truncated Bessel-determinant Taylor series and finite Weyl quadrature points. The restricted packet does not prove the Bessel determinant identity, the all-order Picard-Fuchs relation, or the global identification of the analytic Frobenius branch with the SU(3) Haar integral.
+- **rationale:** Issue: the exact Picard-Fuchs ODE and Frobenius-branch identification are promoted from truncated series substitution plus finite numerical agreement. Why this blocks: a hostile specialist could accept the beta=6 quadrature and spot checks while rejecting the all-order ODE theorem from the provided packet. Repair target: add an all-order derivation or certificate, such as creative telescoping from the Weyl integral or a proved Bessel-determinant-to-ODE certificate with initial-condition uniqueness. Claim boundary until fixed: the note may safely report the runner's finite residual check, ODE/Weyl numerical agreement at the listed beta values, and the V=1 beta=6 numerical plaquette value.
 - **auditor confidence:** high
 
 ### `pmns_active_four_real_source_from_transport_note`
