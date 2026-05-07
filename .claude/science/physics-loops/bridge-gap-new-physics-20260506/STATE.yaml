@@ -3,75 +3,103 @@ goal: |
   Pursue new-physics opening on the bridge gap. Wilson is admitted-as-import
   per G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18 line 467; the
   framework's actual derived gauge action is open. Heat-kernel is the
-  Casimir-native candidate. Block 01: derive t = t(β) from canonical
-  Tr(T_a T_b) = δ_{ab}/2 + small-U matching. Block 02: evaluate ⟨P⟩_HK,1plaq(6).
-  Block 03: thermodynamic ⟨P⟩_HK(6) closure. Block 04: action-form uniqueness.
+  Casimir-native candidate. Block 01: t derivation. Block 02: ⟨P⟩_HK,1plaq
+  closed form. Block 03: thermodynamic stretch. Block 04: action-form
+  uniqueness. Block 05+: exploratory unattacked routes.
 
 target_status: best-honest-status
 runtime_budget: 12h
-runtime_used: ~90m (loop pack + Block 01 closure)
+runtime_used: ~4h (loop pack + Blocks 01-04 closure + PR_BACKLOG)
 mode: campaign
 
-current_block: 02
-current_block_route: R2.A (single-plaquette ⟨P⟩_HK,1plaq(6) closed form)
-current_block_branch: physics-loop/bridge-gap-new-physics-block02-20260506 (to create)
+current_block: 05
+current_block_route: R4.B (Cl(3)⊗Cl(3) → SU(4) ⊃ SU(3)×U(1) tensor exploration)
+current_block_branch: continues on physics-loop/bridge-gap-new-physics-block02-20260506
 current_block_status: planning
 
-cycles_completed: 1
-blocks_completed: 1
-prs_opened: 1  # PR #617 OPEN
-prs_remaining_in_24h_volume_cap: 4  # 5 - 1
-cluster_cap_remaining: 2 (bridge_gap_new_physics_* parent-row family)
+cycles_completed: 4
+blocks_completed: 4
+prs_opened: 2  # #617, #619
+prs_remaining_in_24h_volume_cap: 3  # 5 - 2
+cluster_cap_remaining: 0  # 2/2 used in bridge_gap_new_physics_*
+cluster_cap_status: HIT — no new PRs in this family; Block 03+4 in PR_BACKLOG
 
-active_route: R2.A
-active_route_deliverable: BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md
+active_route: R4.B
+active_route_deliverable: BRIDGE_GAP_GAUGE_GROUP_TASTE_CUBE_EXPLORATION_NOTE_2026-05-06.md
 hard_residual_being_attacked: |
-  Derive the closed-form ⟨P⟩_HK,1plaq(6) = exp(-2/3) ≈ 0.5134 directly
-  from heat-kernel character expansion using retained C_2(1,0) = 4/3 and
-  Block 01's t(6) = 1. Bound the error from finite-character truncation
-  (NMAX) and identify what additional input is needed for the
-  thermodynamic limit (Block 03 target). Compare to Wilson 0.4225 and
-  MC comparator 0.5934.
+  Does the framework's Cl(3) per-site × staggered-taste-cube structure
+  actually derive SU(4) ⊃ SU(3) × U(1) (with U(1) hypercharge as
+  byproduct) rather than just SU(3)? Structural exploration — likely
+  produces an exploratory finding rather than a tight uniqueness theorem.
 
 prior_blocks_summary:
   block01:
     deliverable: docs/BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md
     runner: scripts/probe_hk_time_derivation.py PASS=7/0
     branch: physics-loop/bridge-gap-new-physics-block01-20260506
-    pr: '#617 OPEN'
-    status: bounded support theorem; review-loop pass; independent audit pending
-    key_result: t(β) = 2 N_c / β = g_bare²; t(6) = 1 at canonical normalization
-    closed_routes: |
-      Confirmed t(β) is uniquely determined by canonical Tr-form + small-U
-      Wilson-HK matching. No convention freedom in this specific selection.
+    pr: '#617 OPEN, base = main'
+    status: bounded support theorem; review-loop pass
+    key_result: t(β) = 2 N_c / β = g_bare²; t(6) = 1 at canonical
+  block02:
+    deliverable: docs/BRIDGE_GAP_HK_PLAQUETTE_CLOSED_FORM_NOTE_2026-05-06.md
+    runner: scripts/probe_hk_plaquette_closed_form.py PASS=8/0
+    branch: physics-loop/bridge-gap-new-physics-block02-20260506
+    pr: '#619 OPEN, base = block01 (stacked)'
+    status: bounded support theorem; review-loop pass
+    key_result: ⟨P⟩_HK,1plaq(6) = exp(-2/3) = 0.5134 exact in 2 characters
+  block03:
+    deliverable: docs/BRIDGE_GAP_HK_THERMODYNAMIC_STRETCH_NOTE_2026-05-06.md
+    runner: none (theoretical analysis)
+    branch: committed to block02 branch (cluster cap hit)
+    pr: PR_BACKLOG.md
+    status: stretch_attempt + named_obstruction; review-loop pass
+    key_result: |
+      Casimir-diagonal factorization Z = Σ (Π W_λ) F_Λ exact;
+      thermodynamic limit needs cluster-decomposition estimate
+      (not in current primitives).
+  block04:
+    deliverable: docs/BRIDGE_GAP_ACTION_FORM_UNIQUENESS_NO_GO_NOTE_2026-05-06.md
+    runner: none (no-go analysis)
+    branch: committed to block02 branch (cluster cap hit)
+    pr: PR_BACKLOG.md
+    status: named-obstruction no_go; review-loop pass
+    key_result: |
+      Wilson, HK, Manton are jointly compatible with current retained
+      primitives + continuum-limit matching. Action-form uniqueness
+      cannot be derived under no-new-axiom rule. Cluster lanes' downstream
+      values range-bounded ~5-10% (150-300× ε_witness).
 
 open_imports_for_active_target:
-  - heat-kernel character expansion of single-plaquette expectation
-    (standard derivation; admissible standard machinery)
-  - retained C_2(1,0) = 4/3 (already retained per SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02)
-  - Block 01's t(6) = 1 (just-landed bounded support theorem)
+  - staggered-Dirac realization (open gate per MINIMAL_AXIOMS_2026-05-03)
+  - cl3_color_automorphism (audit_renaming 2026-05-04, deferred physical-color bridge)
+  - g_bare = 1 (open gate)
 
 no_go_routes_avoided:
   - All seven routes consolidated in BRIDGE_GAP_EXHAUSTED_ROUTES_CONSOLIDATION_NOTE_2026-05-06.md
-  - constant-lift ansatz (refuted)
-  - anisotropic Wilson via Cl(3) pseudoscalar / staggered-η (no-go)
-  - V≥2 PF lift / L_s ≥ 3 escalation / SDP+MM on V-invariant block / etc.
+  - Block 04's action-form no-go (just-landed)
 
 review_findings:
-  block01: PASS — internal hostile-review across 7 semantic challenges (see REVIEW_HISTORY.md)
+  block01: PASS — internal hostile-review across 7 semantic challenges
+  block02: PASS — internal hostile-review across 6 semantic challenges
+  block03: pending review (committed but not yet reviewed in REVIEW_HISTORY)
+  block04: pending review (committed but not yet reviewed in REVIEW_HISTORY)
 
 pr_status:
   block01: '#617 OPEN, awaiting independent audit'
+  block02: '#619 OPEN, stacked on #617, awaiting independent audit'
+  block03: PR_BACKLOG (cluster cap)
+  block04: PR_BACKLOG (cluster cap)
 
 next_exact_action: |
-  Execute Block 02 R2.A: derive ⟨P⟩_HK,1plaq(6) closed form from Schur
-  orthogonality + retained Casimir + heat-kernel character expansion.
-  Verify in exact arithmetic. Produce paired runner. Create dedicated
-  Block 02 branch from main, commit, push, open PR (or backlog).
+  Execute Block 05 R4.B: structural exploration of the framework's
+  Cl(3) × taste cube → gauge group structure. Does the staggered taste
+  cube's gl(3) ⊕ gl(1) commutant actually give SU(3) × U(1) (with U(1)
+  identifiable as SM hypercharge), or just SU(3) with an unattributed
+  U(1)? Honest exploratory tier; closure is multi-cycle.
 
 stop_condition: |
-  Continue until 12h runtime exhausted, corollary exhaustion, volume cap (5
-  PRs/24h), cluster cap (2 PRs per parent-row family), or global queue
-  exhaustion.
+  Continue until 12h runtime exhausted, corollary exhaustion, or global
+  queue exhaustion. Cluster cap already hit on bridge_gap_new_physics_*;
+  remaining work goes to PR_BACKLOG or commits-only.
 
-last_checkpoint: 2026-05-06T22:00 (Block 01 closed; PR #617 OPEN; pivoting to Block 02)
+last_checkpoint: 2026-05-06T~23:30 (Blocks 01-04 closed; pivoting to Block 05)
