@@ -52,7 +52,17 @@ Local review-loop pass completed.  The only fixes were citation-graph hygiene
 for load-bearing dependencies and narrower sector wording in the runner/note.
 No retained/proposed-retained promotion is allowed.
 
+## Delivery
+
+Committed as `cb5eea468` and pushed to
+`origin/physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507`.
+
+Review PR opened:
+https://github.com/jonathonreilly/cl3-lattice-framework/pull/639
+
 ## Next Exact Action
 
-Commit, push, and open a review PR.  If PR creation fails, write exact
-recovery commands in `PR_BACKLOG.md`.
+Yield for outer supervisor continuation.  The next ranked retained-positive
+opportunity remains a physical same-surface source-radial off-diagonal
+generator/action row; if that blocks, pivot to canonical `O_H` / source-Higgs
+pole rows.

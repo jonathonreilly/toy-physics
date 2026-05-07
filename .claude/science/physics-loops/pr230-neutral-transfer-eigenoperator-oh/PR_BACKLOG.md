@@ -1,6 +1,8 @@
 # PR Backlog
 
-No PR attempt has been made yet for block01 at the pre-push checkpoint.
+Block01 review PR was created successfully:
+
+https://github.com/jonathonreilly/cl3-lattice-framework/pull/639
 
 Expected recovery command if GitHub PR creation fails:
 

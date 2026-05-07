@@ -1,7 +1,7 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T08:13:11-04:00"
+checkpoint_time: "2026-05-07T08:15:38-04:00"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: ac8b25aee045dc2166743954fd72df45d7e77fca
@@ -58,7 +58,10 @@ commands_run:
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=308 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=341 FAIL=0"
   - "local review-loop pass on block01 changed files # pass for exact negative-boundary claim"
+  - "git commit -m 'Add PR230 neutral transfer eigenoperator no-go' # cb5eea468"
+  - "git push -u origin physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507"
+  - "gh pr create --base claude/yt-direct-lattice-correlator-2026-04-30 --head physics-loop/pr230-neutral-transfer-eigenoperator-campaign-20260507 # PR 639"
 review_disposition: pass_exact_negative_boundary
-pr_status: pending
-next_exact_action: "Commit, push, and open a review PR for block01; if PR creation fails, update PR_BACKLOG.md with exact recovery commands."
+pr_status: "opened https://github.com/jonathonreilly/cl3-lattice-framework/pull/639"
+next_exact_action: "Yield for outer supervisor continuation; next campaign route is a physical same-surface source-radial off-diagonal generator/action row, then canonical O_H/source-Higgs pole rows if still blocked."
 stop_condition: "Complete block01 delivery and yield for outer supervisor continuation; no-go/support-only is not campaign completion."
