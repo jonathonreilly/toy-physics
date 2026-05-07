@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 818
+**Total pending:** 817
 **Ready (all deps already at retained-grade or metadata tiers):** 21
 
 By criticality:
-- `critical`: 513
+- `critical`: 512
 - `high`: 15
 - `medium`: 102
 - `leaf`: 188
@@ -16,7 +16,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 502 | 11.47 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
-| 2 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | audit_in_progress | critical | 290 | 9.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
+| 2 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | unaudited | critical | 289 | 9.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
 | 3 | `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 288 | 8.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_multistage_floor_certificate.py` |
 | 4 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 287 | 13.17 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py` |
 | 5 | `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14` | positive_theorem | unaudited | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_yukawa_candidate.py` |

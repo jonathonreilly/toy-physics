@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 513,
+    "critical": 512,
     "high": 15,
     "leaf": 188,
     "medium": 102
@@ -3394,24 +3394,26 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16",
-      "claim_scope": "Finite exact-lattice transfer sweep with h=0.25, blend=0.25, top_keep=4, three updates per segment, three chained segments, and the listed 13 widened-pocket cases; closure is only 11/13 cases and excludes matter or inertial-mass closure.",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16",
+      "claim_scope": null,
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "claim_type_provenance": "migration_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.685,
-      "note_path": "docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "queue_reason": "audit_in_progress",
+      "cross_confirmation_status": null,
+      "deps": [
+        "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.18,
+      "note_path": "docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md",
+      "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
-      "transitive_descendants": 290
+      "transitive_descendants": 289
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8054,29 +8056,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_dm_selector_first_shoulder_exit_threshold_support_2026_04_21.py",
-      "transitive_descendants": 289
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.18,
-      "note_path": "docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 289
     },
     {
@@ -25061,5 +25040,5 @@
     }
   ],
   "ready_count": 21,
-  "total_pending": 818
+  "total_pending": 817
 }
