@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 831 |
+| unaudited | 830 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 440 |
+| ~~audited_conditional~~ | 441 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 440 |
+| `audited_conditional` | 441 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 880 |
+| `unaudited` | 879 |
 
 | claim_type | count |
 |---|---:|
@@ -78,7 +78,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 411 | 36.69 | `unaudited` | unaudited |
+| 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 411 | 36.69 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 644 | 35.33 | `audited_clean` | **retained_bounded** |
 | 3 | `minimal_axioms_2026-04-11` | meta | critical | 579 | 33.68 | `unaudited` | meta |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 388 | 32.10 | `audited_conditional` | ~~audited_conditional~~ |
@@ -826,6 +826,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
@@ -9415,6 +9416,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The Born rule and attractive Newtonian gravity are both consequences of linear amplitude superposition, so nonlinear propagators that give I_3 != 0 also flip the gravitational force sign.  _(class `G`)_
 - **chain closes:** False — The runner demonstrates behavior for two selected nonlinear update rules on a chosen finite 2D lattice with chosen normalization and analytic 1/r phase prescription. It does not derive the broad theorem that amplitude nonlinearity generally determines the Born rule and attractive Newtonian gravity.
 - **rationale:** The numerical runner is not a first-principles derivation from the stated framework axiom; it is a toy simulation at chosen lattice sizes, propagation kernels, nonlinearities, normalizations, and field coupling. Its stdout also overstates the mass-law claim: beta remains near 1 for the nonlinear cases, while the asserted gravity failure is mainly the selected sign response. The source note’s universal conclusion does not follow from the restricted packet even if the reported runner values are accepted.
+- **auditor confidence:** high
+
+### `observable_principle_from_axiom_note`
+
+- **Note:** [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](../../docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional exact-algebra closure on the specified minimal APBC hierarchy block: given P1-P4, log|det(D+J)| is the additive CPT-even scalar generator, local source derivatives give the scalar curvature kernel, the Matsubara form matches it, and the Klein-four orbit test identifies L_t=4.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-observable-principle-20260507-C`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** Conditional on premises P1-P4, the four exact-algebra identities (1-4) in the Claim Scope hold verbatim on the exact minimal hierarchy block.  _(class `A`)_
+- **chain closes:** False — The second audit is correct under the stated audit policy. The runner verifies exact finite-block algebra after P1-P4 are admitted, but the policy distinguishes claim_type from verdict: bounded_theorem does not by itself permit retained_bounded when the row depends on explicit physical-selection premises not closed by retained authorities. The safe mathematical scope is conditional on P1-P4; the audit status remains audited_conditional until those premises are derived or retained upstream.
+- **rationale:** The second audit is correct under the stated audit policy. The runner verifies exact finite-block algebra after P1-P4 are admitted, but the policy distinguishes claim_type from verdict: bounded_theorem does not by itself permit retained_bounded when the row depends on explicit physical-selection premises not closed by retained authorities. The safe mathematical scope is conditional on P1-P4; the audit status remains audited_conditional until those premises are derived or retained upstream.
 - **auditor confidence:** high
 
 ### `oh_schur_boundary_action_note`
