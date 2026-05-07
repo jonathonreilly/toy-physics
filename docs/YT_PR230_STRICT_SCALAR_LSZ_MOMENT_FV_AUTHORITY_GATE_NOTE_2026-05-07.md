@@ -6,7 +6,7 @@
 
 ## Claim
 
-The completed two-source taste-radial chunks001-020 contain real selected-mass
+The completed two-source taste-radial chunks001-022 contain real selected-mass
 scalar-source rows, but the raw `C_ss(q^2)` proxy is not the strict
 scalar-LSZ Stieltjes object needed for a moment/threshold/FV authority row.
 
@@ -31,7 +31,7 @@ zero-mode mean across every ready chunk.
 
 The certificate records:
 
-- `ready_chunks = 20`, `expected_chunks = 63`;
+- `ready_chunks = 22`, `expected_chunks = 63`;
 - `volumes = ["12x24"]`, so no multivolume FV/IR authority is present;
 - `raw_c_ss_rows_positive = true`;
 - `current_raw_c_ss_proxy_fails_stieltjes_monotonicity = true`;
@@ -41,10 +41,10 @@ The certificate records:
 The chunk-scatter comparison gives a strong diagnostic separation:
 
 ```text
-zero-mode mean C_ss  = 0.1223815736511032
-first-shell mean     = 0.1253330240740323
-shell - zero         = 0.002951450422929096
-z-score              = 96.55979981842111
+zero-mode mean C_ss  = 0.12238267870698949
+first-shell mean     = 0.12533455191754872
+shell - zero         = 0.002951873210559208
+z-score              = 106.12371311835619
 ```
 
 ## Boundary

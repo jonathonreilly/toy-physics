@@ -1,5 +1,24 @@
 # Review History
 
+2026-05-07 chunks021-022 package:
+
+- completed-mode checkpoint runners PASS=15 FAIL=0 for chunk021 and chunk022;
+- row-combiner and Schur support refreshed on chunks001-022:
+  combiner PASS=13 FAIL=0 with `ready=22/63` and
+  `combined_rows_written=false`; source-Higgs readiness PASS=25 FAIL=0 with 22
+  taste-radial row artifacts classified as `C_sx/C_xx` aliases;
+  Schur-subblock witness PASS=16 FAIL=0, finite-shell K-prime scout
+  PASS=14 FAIL=0, finite Schur A/B/C rows PASS=17 FAIL=0, pole-lift gate
+  PASS=13 FAIL=0, primitive-transfer candidate PASS=13 FAIL=0, and strict
+  scalar-LSZ moment/FV gate PASS=13 FAIL=0;
+- aggregate gates after the chunks021-022 package:
+  assumption/import stress PASS=81 FAIL=0, full assembly PASS=140 FAIL=0,
+  campaign status PASS=327 FAIL=0, retained route PASS=294 FAIL=0, and
+  positive-closure completion audit PASS=49 FAIL=0;
+- no retained/proposed-retained closure wording is authorized; chunks023-024
+  are active under the existing two-worker supervisor and remain non-evidence
+  until completed JSONs exist and completed-mode checkpoints pass.
+
 No external review-loop has been run yet for this block.
 
 Local verification completed:
@@ -481,9 +500,9 @@ Local verification completed:
   completed-mode chunk checkpoints PASS=15 FAIL=0 for each chunk.  The
   checkpointed artifacts preserve production metadata, `numba_gauge_seed_v1`,
   the three-mass scan, selected-mass-only FH/LSZ/source rows, and finite
-  `C_sx/C_xx` timeseries; chunks021-022 are active under the two-worker cap;
-- row-combiner and Schur supports refreshed on chunks001-020:
-  combiner PASS=13 FAIL=0 with `ready=20/63` and
+  `C_sx/C_xx` timeseries; chunks023-024 are active under the two-worker cap;
+- row-combiner and Schur supports refreshed on chunks001-022:
+  combiner PASS=13 FAIL=0 with `ready=22/63` and
   `combined_rows_written=false`; source-Higgs readiness PASS=25 FAIL=0 with 20
   taste-radial row artifacts classified as `C_sx/C_xx` aliases;
   Schur-subblock witness PASS=16 FAIL=0, finite-shell K-prime scout
@@ -499,7 +518,7 @@ Local verification completed:
 - strict scalar-LSZ moment/FV authority gate packaged:
   `frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py`
   PASS=13 FAIL=0.  The gate reads completed two-source taste-radial
-  chunks001-020 and checks the current raw selected-mass `C_ss` proxy against
+  chunks001-022 and checks the current raw selected-mass `C_ss` proxy against
   the necessary Stieltjes non-increase condition.  The proxy is positive but
   increases from zero mode to first shell, so it is diagnostic support only and
   not strict scalar-LSZ moment/FV/model-class authority, canonical `O_H`,

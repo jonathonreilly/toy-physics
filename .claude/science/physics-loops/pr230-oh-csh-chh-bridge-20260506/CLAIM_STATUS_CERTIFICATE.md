@@ -1,11 +1,26 @@
 # Claim Status Certificate
 
+2026-05-07 chunks021-022 update: completed-mode checkpoints now pass for
+chunks021 and 022.  The two-source taste-radial packet advances to
+`ready=22/63` with `combined_rows_written=false`; source-Higgs readiness scans
+22 taste-radial row artifacts and still classifies their schema fields as
+`C_sx/C_xx` aliases.  Schur-subblock, finite-shell, finite A/B/C, pole-lift,
+primitive-transfer, and strict scalar-LSZ moment/FV certificates were
+refreshed on chunks001-022.  This remains bounded support only: no 63/63
+packet, strict pole rows, FV/IR/model-class authority, canonical `O_H`,
+source-Higgs pole rows, W/Z rows, `kappa_s`, retained, or proposed-retained
+closure wording is authorized.  Chunks023-024 are active under the same
+two-worker supervisor and are non-evidence until completed JSONs exist and
+completed-mode checkpoints pass.  Aggregate refresh: assumption PASS=81,
+campaign PASS=327, assembly PASS=140, retained-route PASS=294, completion
+audit PASS=49, all FAIL=0 and `proposal_allowed=false`.
+
 2026-05-07 strict scalar-LSZ moment/FV update: the new certificate
 `outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json`
 passes with `PASS=13 FAIL=0` as an exact negative boundary.  It checks the
 completed two-source taste-radial selected-mass raw `C_ss` rows directly:
-chunks001-020 are positive, but the first-shell mean exceeds the zero-mode
-mean (`0.1253330240740323` vs `0.1223815736511032`), violating the necessary
+chunks001-022 are positive, but the first-shell mean exceeds the zero-mode
+mean (`0.12533455191754872` vs `0.12238267870698949`), violating the necessary
 non-increase property for an unsubtracted positive Stieltjes scalar two-point
 object.  The raw proxy is diagnostic support only, not scalar-LSZ moment/FV
 authority.  Aggregate refresh: assumption PASS=81, campaign PASS=327, assembly
@@ -33,7 +48,7 @@ PASS=325, full assembly PASS=138, retained-route PASS=292, completion audit
 PASS=47, all FAIL=0 and `proposal_allowed=false`.
 
 2026-05-07 clean-route refresh: `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
-now consumes `O_sp`, radial-spurion action-contract support, chunks001-020,
+now consumes `O_sp`, radial-spurion action-contract support, chunks001-022,
 and finite Schur A/B/C diagnostics.  The selector remains support-only and
 keeps `proposal_allowed=false`; clean closure still requires certified
 canonical `O_H`, `C_ss/C_spH/C_HH` pole rows, O_sp-Higgs Gram purity, and
@@ -49,17 +64,17 @@ orthogonal-neutral top-coupling exclusion.  This remains an exact negative
 boundary with `proposal_allowed=false`; it supplies no canonical `O_H`, no
 `kappa_s=1`, and no retained/proposed-retained closure wording.
 
-2026-05-07 chunks019-020 update: completed-mode checkpoints now pass for
-chunks019 and 020.  The two-source taste-radial packet advances to
-`ready=20/63` with `combined_rows_written=false`; source-Higgs readiness scans
-20 taste-radial row artifacts and still classifies their schema fields as
+2026-05-07 chunks019-022 cumulative update: completed-mode checkpoints now
+pass through chunk022.  The two-source taste-radial packet advances to
+`ready=22/63` with `combined_rows_written=false`; source-Higgs readiness scans
+22 taste-radial row artifacts and still classifies their schema fields as
 `C_sx/C_xx` aliases.  Schur-subblock, finite-shell, finite A/B/C, and pole-lift
-certificates were refreshed on chunks001-020.  This remains bounded support
+certificates were refreshed on chunks001-022.  This remains bounded support
 only: no 63/63 packet, strict pole rows, FV/IR/model-class authority,
 canonical `O_H`, source-Higgs pole rows, W/Z rows, `kappa_s`, retained, or
 proposed-retained closure wording is authorized.
 
-This chunks019-020 update is the live current checkpoint and supersedes older
+This chunks019-022 update is the live current checkpoint and supersedes older
 cumulative text below that referred to `ready=18/63` and chunks019-020 as
 active run-control state.
 

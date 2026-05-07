@@ -3,8 +3,8 @@ branch: codex/pr230-wroute-build
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
 active_route: strict_scalar_lsz_moment_fv_authority_gate
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-020 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=20/63, finite-mode rho_sx/Delta_sx scouts, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, bounded finite Schur A/B/C inverse-block row support, exact finite-to-pole Schur lift boundary, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks021-022 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact no-independent-top-source radial-spurion action contract support added for the W/Z physical-response route, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, exact same-surface neutral multiplicity-one candidate attempt present but rejected, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
-latest_support_artifact: exact negative boundary / strict scalar-LSZ moment/FV authority rejected for current raw C_ss proxy; completed chunks001-020 are positive but increase from zero mode to first shell, so raw rows are diagnostic support only and not the strict Stieltjes scalar two-point object
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-022 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=22/63, finite-mode rho_sx/Delta_sx scouts, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, bounded finite Schur A/B/C inverse-block row support, exact finite-to-pole Schur lift boundary, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks023-024 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact no-independent-top-source radial-spurion action contract support added for the W/Z physical-response route, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, exact same-surface neutral multiplicity-one candidate attempt present but rejected, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+latest_support_artifact: exact negative boundary / strict scalar-LSZ moment/FV authority rejected for current raw C_ss proxy; completed chunks001-022 are positive but increase from zero mode to first shell, so raw rows are diagnostic support only and not the strict Stieltjes scalar two-point object
 latest_route_gate_refresh: strict scalar-LSZ moment/FV authority gate PASS=13 FAIL=0, assumption/import stress PASS=81 FAIL=0, campaign PASS=327 FAIL=0, full assembly PASS=140 FAIL=0, retained-route PASS=294 FAIL=0, and completion audit PASS=49 FAIL=0 while preserving proposal_allowed=false and no retained/proposed_retained closure
 proposal_allowed: false
 bare_retained_allowed: false
@@ -105,7 +105,7 @@ hard_residual: >
   source response fixed while changing canonical y_t through finite
   orthogonal neutral top coupling.
   The strict scalar-LSZ moment/FV authority gate now checks the current raw
-  C_ss proxy from completed two-source taste-radial chunks001-020.  The rows
+  C_ss proxy from completed two-source taste-radial chunks001-022.  The rows
   are positive, but first-shell C_ss exceeds zero-mode C_ss across the ready
   chunks; an unsubtracted positive Stieltjes scalar two-point object must be
   non-increasing in q_hat^2.  The current raw proxy is therefore diagnostic
@@ -748,7 +748,7 @@ checkpoint_2026_05_07_two_source_taste_radial_chunks019_020:
     completion_audit_pass_fail: "46/0"
   next_exact_action: >
     Keep the two-worker row wave running without duplicate chunk workers.
-    When chunks021-022 complete, package their completed-mode checkpoints and
+    When chunks023-024 complete, package their completed-mode checkpoints and
     rerun the combiner, source-Higgs readiness, Schur support, selector, and
     aggregate firewalls.  In parallel, the clean physics blocker remains
     retiring one same-surface neutral multiplicity-one candidate obligation.
@@ -757,10 +757,10 @@ checkpoint_2026_05_07_strict_scalar_lsz_moment_fv_authority_gate:
   status: exact negative boundary / current raw C_ss rows are not strict scalar-LSZ moment/FV authority
   summary: >
     The strict scalar-LSZ moment/FV authority gate reads completed two-source
-    taste-radial chunks001-020 and checks the raw selected-mass C_ss proxy
+    taste-radial chunks001-022 and checks the raw selected-mass C_ss proxy
     against the necessary Stieltjes non-increase condition.  The rows are
     positive, but the first-shell mean exceeds the zero-mode mean
-    (0.1253330240740323 vs 0.1223815736511032), so the raw proxy cannot be the
+    (0.12533455191754872 vs 0.12238267870698949), so the raw proxy cannot be the
     strict unsubtracted positive Stieltjes scalar two-point object.  This
     retires the shortcut while leaving the positive route through a certified
     contact-subtracted/denominator scalar object, multivolume FV/IR authority,
@@ -780,6 +780,47 @@ checkpoint_2026_05_07_strict_scalar_lsz_moment_fv_authority_gate:
     - outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json
   next_exact_action: >
     Continue the active two-worker row wave without duplicate chunks.  When
-    chunks021-022 complete, package them; otherwise pursue a positive
+    chunks023-024 complete, package them; otherwise pursue a positive
     source-Higgs/W/Z/action artifact that supplies canonical O_H/source-overlap
     or physical response authority.
+
+checkpoint_2026_05_07_two_source_taste_radial_chunks021_022:
+  actual_current_surface_status: >
+    bounded support / two-source taste-radial chunks021-022 completed-mode
+    checkpoints packaged; ready packet advanced to 22/63 and no combined row
+    packet, canonical O_H, scalar-LSZ/FV/IR authority, kappa_s, retained, or
+    proposed_retained closure authorized.
+  proposal_allowed: false
+  bare_retained_allowed: false
+  completed_chunks:
+    two_source_taste_radial_range: "chunks001-022"
+    ready_count: 22
+    expected_count: 63
+    combined_rows_written: false
+  active_chunks:
+    two_source_taste_radial: [23, 24]
+    concurrency_cap: 2
+    evidence_status: active workers are non-evidence until completed JSON exists and completed-mode checkpoints pass
+  verification:
+    chunk021_checkpoint_pass_fail: "15/0"
+    chunk022_checkpoint_pass_fail: "15/0"
+    row_combiner_pass_fail: "13/0"
+    source_higgs_readiness_pass_fail: "25/0"
+    schur_subblock_witness_pass_fail: "16/0"
+    finite_shell_scout_pass_fail: "14/0"
+    finite_schur_abc_pass_fail: "17/0"
+    finite_to_pole_lift_gate_pass_fail: "13/0"
+    primitive_transfer_candidate_pass_fail: "13/0"
+    strict_scalar_lsz_moment_fv_gate_pass_fail: "13/0"
+    assumption_import_stress_pass_fail: "81/0"
+    campaign_status_certificate_pass_fail: "327/0"
+    full_positive_assembly_pass_fail: "140/0"
+    retained_route_certificate_pass_fail: "294/0"
+    completion_audit_pass_fail: "49/0"
+  next_exact_action: >
+    Keep the two-worker row wave running without duplicate chunk workers.
+    When chunks023-024 complete, package their completed-mode checkpoints and
+    rerun the combiner, source-Higgs readiness, Schur support, scalar-LSZ
+    moment/FV gate, and aggregate firewalls.  In parallel, the clean physics
+    blocker remains retiring one same-surface neutral multiplicity-one
+    candidate obligation or landing real O_H/C_sH/C_HH or W/Z rows.

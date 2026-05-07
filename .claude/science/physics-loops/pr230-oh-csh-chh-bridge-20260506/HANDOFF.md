@@ -1,5 +1,17 @@
 # Handoff
 
+2026-05-07 chunks021-022 checkpoint: completed-mode checkpoints now pass for
+chunks021 and 022, both `PASS=15 FAIL=0`.  The two-source taste-radial packet
+is now `ready=22/63`, the combiner still writes no combined row packet, and
+source-Higgs readiness scans 22 taste-radial artifacts as `C_sx/C_xx` aliases
+only.  Schur-subblock, finite-shell, finite A/B/C, pole-lift,
+primitive-transfer, and strict scalar-LSZ moment/FV gates were refreshed on
+the 22 ready chunks.  Aggregate gates remain open with
+`proposal_allowed=false`: assumption PASS=81, campaign PASS=327, assembly
+PASS=140, retained-route PASS=294, completion audit PASS=49, all FAIL=0.
+Chunks023-024 are active under the existing two-worker supervisor and remain
+run-control state, not evidence.
+
 2026-05-07 orthogonal-top-coupling candidate checkpoint: the new
 `YT_PR230_ORTHOGONAL_TOP_COUPLING_EXCLUSION_CANDIDATE_GATE` checks whether
 the finite two-source rows, FMS support, or primitive-cone support repair the
@@ -13,7 +25,7 @@ PASS=139, retained-route PASS=293, completion audit PASS=48, all FAIL=0.
 
 2026-05-07 primitive-transfer candidate checkpoint: the new
 `YT_PR230_TWO_SOURCE_TASTE_RADIAL_PRIMITIVE_TRANSFER_CANDIDATE_GATE` consumes
-the ready chunks001-020 finite `C_ss/C_sx/C_xx` packet and confirms the exact
+the ready chunks001-022 finite `C_ss/C_sx/C_xx` packet and confirms the exact
 boundary for H3.  Finite `C_sx` rows exist and the finite `2x2` blocks are
 positive, but they are correlator/covariance rows, not a same-surface
 transfer/action matrix, primitive cone certificate, pole/FV/IR transfer
@@ -365,7 +377,7 @@ aliases, not canonical `C_sH/C_HH` pole rows.  The gate scans completed row
 chunks, requires finite mode rows plus alias metadata, requires zero pole
 residue rows, requires `canonical_higgs_operator_identity_passed=false`, and
 requires `used_as_physical_yukawa_readout=false`.  The current readiness result
-is `PASS=25 FAIL=0` with sixteen completed taste-radial chunks scanned; it remains
+is `PASS=25 FAIL=0` with 22 completed taste-radial chunks scanned; it remains
 a firewall/infrastructure check only.
 
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
@@ -483,20 +495,20 @@ Do not close it by treating Z3 positive-cone H2 support as a physical neutral
 transfer, primitive irreducibility theorem, source-Higgs coupling, or
 canonical-Higgs authority.
 
-2026-05-07 chunk checkpoint update: chunks019-020 of the two-source
+2026-05-07 chunk checkpoint update: chunks019-022 of the two-source
 taste-radial row wave are now packaged as bounded support.  Completed-mode
-checkpoints pass `PASS=15 FAIL=0` for each chunk, the combiner reports
-`ready=20/63` with `combined_rows_written=false`, and the source-Higgs
-readiness gate scans 20 taste-radial row artifacts while continuing to
+checkpoints pass `PASS=15 FAIL=0` for each packaged chunk, the combiner reports
+`ready=22/63` with `combined_rows_written=false`, and the source-Higgs
+readiness gate scans 22 taste-radial row artifacts while continuing to
 classify their source-Higgs-shaped fields as explicit `C_sx/C_xx` aliases.
 Schur-subblock, finite-shell, finite A/B/C, and pole-lift certificates were
-refreshed on chunks001-020 and remain support/firewall artifacts only: no
+refreshed on chunks001-022 and remain support/firewall artifacts only: no
 63/63 packet, strict pole rows, FV/IR/model-class theorem, canonical `O_H`,
 `kappa_s`, W/Z rows, retained, or `proposed_retained` closure is authorized.
-Chunks021-022 are active under the two-worker supervisor cap.
+Chunks023-024 are active under the two-worker supervisor cap.
 
 2026-05-07 strict scalar-LSZ moment/FV update: the current raw selected-mass
-`C_ss` proxy from completed two-source taste-radial chunks001-020 is now
+`C_ss` proxy from completed two-source taste-radial chunks001-022 is now
 checked directly.  `frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py`
 passes `PASS=13 FAIL=0` and records an exact boundary: the rows are positive,
 but first-shell `C_ss` exceeds zero-mode `C_ss` across the ready chunks, while

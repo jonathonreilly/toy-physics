@@ -3,7 +3,7 @@
 2026-05-07 refresh: the clean source-Higgs outside-math route selector now
 consumes the latest genuine support surface: `O_sp` is the real source-side
 artifact; the radial-spurion contract is future-action support only;
-chunks001-020 provide partial `C_sx/C_xx` row support only; finite Schur
+chunks001-022 provide partial `C_sx/C_xx` row support only; finite Schur
 `A_f/B_f/C_f` rows are bounded diagnostics, not pole authority.  The cleanest
 physics closure remains `O_sp`-Higgs pole-residue closure: certified
 same-surface canonical `O_H`, production `C_ss/C_spH/C_HH` pole rows,
@@ -39,7 +39,7 @@ The strict scalar-LSZ moment/FV shortcut is now checked against the current
 completed two-source taste-radial `C_ss` rows too:
 `outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json`
 passes as an exact boundary.  The raw selected-mass `C_ss` proxy is positive
-but increases from the zero mode to the first shell across chunks001-020, so
+but increases from the zero mode to the first shell across chunks001-022, so
 it is not the strict unsubtracted positive Stieltjes scalar two-point object.
 This route now needs a certified contact-subtracted or denominator-derived
 scalar object, threshold and multivolume FV/IR authority, and canonical
@@ -103,12 +103,12 @@ scalar object, threshold and multivolume FV/IR authority, and canonical
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   completed chunks001-020 and currently records active chunks021-022 under a
-   two-worker cap.  The completed chunks001-020 certificates pass
+   completed chunks001-022 and currently records active chunks023-024 under a
+   two-worker cap.  The completed chunks001-022 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
-   gate now records `ready=20/63`, no bad chunk audits, finite-mode
+   gate now records `ready=22/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  The Schur-subblock witness packages chunks001-020
+   chunks are schema-clean.  The Schur-subblock witness packages chunks001-022
    as a real finite same-ensemble `C_ss/C_sx/C_xx` source/complement block with
    positive finite Gram determinants, but still lacks strict `K'(pole)` A/B/C
    rows, pole derivatives, FV/IR authority, canonical `O_H`, and `kappa_s`.
@@ -117,7 +117,7 @@ scalar object, threshold and multivolume FV/IR authority, and canonical
    the Schur route, but it is not isolated-pole `K'(pole)` authority.
    The finite Schur A/B/C inverse-row certificate now computes the full finite
    inverse block `K(q)=G(q)^(-1)` and records `A_f=K_ss`, `B_f=K_sx`, and
-   `C_f=K_xx` for the same chunks001-020.  This is bounded row support for
+   `C_f=K_xx` for the same chunks001-022.  This is bounded row support for
    the Schur contract only; it is not strict neutral-kernel pole-row
    authority, not FV/IR authority, and not canonical `O_H`.
    The finite-to-pole lift gate now blocks the endpoint-promotion shortcut:
@@ -129,9 +129,9 @@ scalar object, threshold and multivolume FV/IR authority, and canonical
    `C_sx` rows as H3 physical neutral transfer.  They remain useful finite
    row support, but not an action/transfer matrix, primitive cone certificate,
    pole-transfer limit, canonical `O_H`, or `kappa_s`.
-   Chunks019-020 remain
-   non-evidence until completed JSON exists and completed-mode checkpoints
-   pass.  The remaining work is more completed production `C_sx/C_xx` rows,
+   Chunks023-024 are active run-control state and remain non-evidence until
+   completed JSON exists and completed-mode checkpoints pass.  The remaining
+   work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row
    packet exists, combined pole/FV/IR diagnostics, plus either
    canonical-`O_H` identity/source-overlap authority or a physical-response

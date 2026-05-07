@@ -40,7 +40,7 @@ source-Higgs modes/noises, and no `C_sH/C_HH` rows.  Therefore the current
 chunk wave cannot by itself close the `O_sp/O_H` blocker.
 
 The gate now also scans the completed two-source taste-radial row artifacts.
-It currently scans chunks001-020.  Those chunks do contain finite mode rows in
+It currently scans chunks001-022.  Those chunks do contain finite mode rows in
 the source-Higgs schema, but the artifact metadata marks them as `C_sx/C_xx`
 second-source aliases with
 `canonical_higgs_operator_identity_passed=false`, zero pole-residue rows, and
