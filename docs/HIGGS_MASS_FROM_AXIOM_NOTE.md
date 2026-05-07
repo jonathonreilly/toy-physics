@@ -222,15 +222,12 @@ the physical scale. None of these is supplied here. Hence
 calibration runners (which are different observables built on
 different chains, NOT verifiers for this note's tree-level formula).
 
-**(c) The susceptibility argument.** The scalar susceptibility
-chi = d^2 W / dJ^2 counts the response of ALL internal DOF. The full
-susceptibility (per site) is chi = N_c / (4 u_0^2). The Higgs-channel
-susceptibility is chi_H = chi / (N_c * N_taste) = 1 / (4 u_0^2 * N_taste),
-where the factor 1/N_c projects onto the color singlet and 1/N_taste
-projects onto the taste singlet. Then m_H^2 = v^2 / chi_H = v^2 * 4 u_0^2 * N_taste,
-which would give m_H ~ 1000 GeV -- too large. The correct identification
-is m_H^2 = (1/chi_H) * (v/M_Pl)^2, where the hierarchy factor converts
-from lattice to physical units. This reduces to the same formula [6].
+> **Note (2026-05-07 cleanup).** A duplicate of paragraph (c) appeared
+> here in earlier drafts (the original pre-2026-05-03-repair version
+> that read "the correct identification is m_H² = (1/chi_H)·(v/M_Pl)²"
+> contradicting the sharpened cross-check framing above). That stale
+> paragraph has been removed; the susceptibility content is fully
+> covered by the cross-check framing in (c) above.
 
 ---
 
@@ -289,6 +286,52 @@ Three identified corrections reduce the gap between 140.3 GeV and 125.25 GeV:
 
 ---
 
+## Step 7: Authority chain for the +12% gap (2026-05-07)
+
+The narrative paragraph above ("The remaining +12% gap") attributes the
+140.3 GeV → 125.10 GeV closure to three corrections without naming the
+sister authorities that actually carry each derivation. This step
+upgrades the cross-reference to an audit-compatible authority inventory
+without attempting any new derivation. Each row is a pointer; this note
+does not change any sibling claim boundary or effective status. The audit
+ledger remains the only authority for current audit/effective status.
+
+| Gap correction | Sister authority | Status authority | Closes the gap from / to | Open content |
+|---|---|---|---|---|
+| 2-loop CW + RGE running | [`HIGGS_MASS_DERIVED_NOTE.md`](HIGGS_MASS_DERIVED_NOTE.md) (`bounded_theorem`, td=309) + `scripts/frontier_higgs_mass_corrected_yt.py` (corrected-y_t RGE) | audit ledger only | tree-level → ~119.93 GeV via corrected-y_t at 3L+NNLO | conditional on `y_t` Ward + RGE-transport scaffolding |
+| Lattice spacing convergence (`m_H/m_W` flow as `a → 0`) | [`HIGGS_FROM_LATTICE_NOTE.md`](HIGGS_FROM_LATTICE_NOTE.md) (`bounded_theorem`, td=310) | audit ledger only | `m_H/m_W = 1.85` at `a=1` → 1.64 at `a=0.5` → 1.558 SM in continuum | continuum-limit theorem surface |
+| Wilson-term taste-breaking ((1,4,6,4,1) staircase) | (no dedicated authority note) | absent | breaks 16-fold degeneracy → reduces effective `N_taste` in [5] | **open follow-on**: theorem note + runner deriving the (1,4,6,4,1) staircase reduction of `N_taste` and its quantitative effect on `m_H_tree` |
+| Buttazzo full-3-loop calibration cross-check | `scripts/frontier_higgs_buttazzo_calibration.py` | (auxiliary calibration) | independent ~125.1 GeV via 3-loop Buttazzo parametric calibration | a different observable along a different chain; not load-bearing for this note |
+
+### What this Step 7 changes
+
+No claim status or theorem boundary. The +12% gap remains an open chain
+across sister authorities and one missing dedicated authority. This note
+continues to claim only the tree-level formula
+`m_H_tree = v/(2 u_0) = 140.3 GeV`, with the gap-closure load explicitly
+delegated.
+
+### What this Step 7 records
+
+- The **2026-05-02 status correction audit packet**
+  (`HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md`)
+  classifies the lattice-curvature → physical-(m_H/v)² bridge as a
+  **same-shape obstruction** with cycle 5 (yt_ew matching M)
+  and cycle 9 (gauge-scalar observable bridge) — i.e., as
+  a member of the **lattice → continuum / physical matching cluster**
+  identified in `AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_2026-05-02.md`
+  §2.3. That cluster requires an independent non-perturbative matching
+  theorem before it can support a physical-mass closure.
+  Closing the cluster closes this gap.
+- The **Wilson taste-breaking row is the most concrete follow-on
+  derivation target** of the four. The (1,4,6,4,1) staircase is a
+  direct algebraic structure; its reduction of effective `N_taste` and
+  the resulting `m_H_tree` correction is the cleanest follow-on source addition
+  that would bring this note's table to fully-cited closure on
+  `bounded_theorem` tier. Out of scope for the current note update, but flagged.
+
+---
+
 ## Definitive answer
 
     m_H = v / (2 u_0) = 140.3 GeV     (zero free parameters, +12%)
@@ -305,6 +348,9 @@ from the hierarchy theorem. N_c cancels. The 8/9 does not enter.
 - `HIERARCHY_THEOREM.md` -- v = M_Pl * alpha_LM^16
 - `YT_EW_COLOR_PROJECTION_THEOREM.md` -- 8/9 applies to EW couplings only
 - `HIGGS_MASS_DERIVED_NOTE.md` -- CW analysis and honest status
+- `HIGGS_FROM_LATTICE_NOTE.md` -- lattice spacing convergence (`a → 0`)
+- `HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md` -- 2026-05-02 status-correction packet classifying the lattice-curvature → (m_H/v)² bridge as same-shape lattice-physical matching obstruction (cycles 5, 9, 11)
+- `AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_2026-05-02.md` -- cluster-level synthesis of the lattice-physical matching obstruction
 - `frontier_higgs_mass_corrected_yt.py` -- corrected-`y_t` Higgs support route
 - `frontier_higgs_buttazzo_calibration.py` -- full-3-loop boundary support
 
@@ -314,3 +360,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [yt_ew_color_projection_theorem](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [higgs_mass_derived_note](HIGGS_MASS_DERIVED_NOTE.md)
+- [higgs_from_lattice_note](HIGGS_FROM_LATTICE_NOTE.md)

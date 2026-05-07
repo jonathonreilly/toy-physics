@@ -7958,8 +7958,9 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "yt_ew_color_projection_theorem",
-        "higgs_mass_derived_note"
+        "higgs_mass_derived_note",
+        "higgs_from_lattice_note",
+        "yt_ew_color_projection_theorem"
       ],
       "direct_in_degree": 10,
       "effective_status": "unaudited",

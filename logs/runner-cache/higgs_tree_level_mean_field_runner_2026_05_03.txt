@@ -1,15 +1,16 @@
 ===== runner cache v1 =====
 runner: scripts/higgs_tree_level_mean_field_runner_2026_05_03.py
-runner_sha256: 462e1c185071d57d787469694887537bc251289200f8cb1648eb19ec2b160db5
+runner_sha256: 9b578ac157acc088a69981e5138818e5e9d4f8c83ae86b7dc4175abb43700694
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.03
+elapsed_sec: 0.05
 status: ok
 ----- stdout -----
 ================================================================================
  higgs_tree_level_mean_field_runner_2026_05_03.py
  Review-loop repair runner for HIGGS_MASS_FROM_AXIOM_NOTE.md
  Reproduces the note's tree-level mean-field formula m_H_tree = v/(2 u_0).
+ 2026-05-07 update adds T6/T7 structural checks.
 ================================================================================
 
 --- T1: V_taste curvature at m=0 (Step 3) ---
@@ -45,8 +46,28 @@ status: ok
   Higgs-mass observable along a different chain.
   [PASS] Tree-level formula clearly distinguished from RGE/Buttazzo observables  (primary runner reports the tree-level value; other runners report different observables)
 
+--- T6: no duplicate Step 5(c) in parent note (2026-05-07) ---
+  [PASS] stale pre-repair Step 5(c) paragraph is removed  (checks for the contradicting 'the correct identification is m_H^2 = (1/chi_H)*(v/M_Pl)^2' phrasing)
+  [PASS] 2026-05-07 cleanup-tracking note is present  (explicit '2026-05-07 cleanup' marker recording the duplicate removal)
+  [PASS] '**(c)' anchor appears at most 2x in the note (was 3x before cleanup)  (actual count: 1)
+
+--- T7: Step 7 authority-chain table for the +12% gap (2026-05-07) ---
+  [PASS] contains: Step 7 header  (marker = 'Step 7: Authority chain for the +12% gap')
+  [PASS] contains: HIGGS_MASS_DERIVED_NOTE cross-ref  (marker = 'HIGGS_MASS_DERIVED_NOTE.md')
+  [PASS] contains: HIGGS_FROM_LATTICE_NOTE cross-ref  (marker = 'HIGGS_FROM_LATTICE_NOTE.md')
+  [PASS] contains: Wilson-term taste-breaking row  (marker = 'Wilson-term taste-breaking')
+  [PASS] contains: 2026-05-02 status correction audit cross-ref  (marker = 'HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02')
+  [PASS] contains: audit backlog campaign synthesis cross-ref  (marker = 'AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_2026-05-02')
+  [PASS] contains: Wilson-staircase open-target call-out  (marker = '(1,4,6,4,1) staircase')
+  [PASS] sister authority file exists: docs/HIGGS_MASS_DERIVED_NOTE.md
+  [PASS] sister authority file exists: docs/HIGGS_FROM_LATTICE_NOTE.md
+  [PASS] sister authority file exists: docs/HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md
+  [PASS] sister authority file exists: docs/AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_2026-05-02.md
+  [PASS] Step 7 scope guard: this note does not change sibling status
+  [PASS] Step 7 reaffirms tree-level scope and delegates the gap closure
+
 ================================================================================
- SUMMARY: PASS=5, FAIL=0
+ SUMMARY: PASS=21, FAIL=0
 ================================================================================
 
 ----- stderr -----

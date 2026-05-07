@@ -7670,11 +7670,15 @@
     },
     {
       "from": "higgs_mass_from_axiom_note",
-      "to": "yt_ew_color_projection_theorem"
+      "to": "higgs_mass_derived_note"
     },
     {
       "from": "higgs_mass_from_axiom_note",
-      "to": "higgs_mass_derived_note"
+      "to": "higgs_from_lattice_note"
+    },
+    {
+      "from": "higgs_mass_from_axiom_note",
+      "to": "yt_ew_color_projection_theorem"
     },
     {
       "from": "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02",
@@ -38714,10 +38718,11 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "yt_ew_color_projection_theorem",
-        "higgs_mass_derived_note"
+        "higgs_mass_derived_note",
+        "higgs_from_lattice_note",
+        "yt_ew_color_projection_theorem"
       ],
-      "note_hash": "985b473e89dee790dba85ee57a926aa22e01564f30675709fd1a3b42e71d02bb",
+      "note_hash": "27d80a680d0e88ec4039172bc245c11344f71db842ba5de6265e88db9de64f62",
       "path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
       "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
       "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking"
@@ -57181,7 +57186,7 @@
       "open_gate": 113,
       "positive_theorem": 623
     },
-    "edge_count": 6802,
+    "edge_count": 6803,
     "leaf_count": 545,
     "node_count": 1929,
     "root_count": 855,
