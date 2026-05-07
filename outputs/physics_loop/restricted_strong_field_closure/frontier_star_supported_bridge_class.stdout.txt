@@ -1,0 +1,23 @@
+Exact bridge-side closure on the star-supported finite-rank class
+========================================================================
+seed=3: band=[3.162278, 5.000000], max residuals=(psi=2.439e-15, chi=1.456e-15), action errs=(rebuild=8.674e-18, grad=3.296e-17)
+seed=7: band=[3.162278, 5.000000], max residuals=(psi=2.447e-15, chi=1.451e-15), action errs=(rebuild=1.908e-17, grad=6.939e-17)
+seed=11: band=[3.162278, 5.000000], max residuals=(psi=2.021e-15, chi=1.337e-15), action errs=(rebuild=2.776e-17, grad=8.327e-17)
+seed=19: band=[3.162278, 5.000000], max residuals=(psi=2.002e-15, chi=2.000e-15), action errs=(rebuild=1.236e-17, grad=2.776e-17)
+seed=23: band=[3.162278, 5.000000], max residuals=(psi=1.530e-15, chi=2.011e-15), action errs=(rebuild=2.082e-17, grad=9.714e-17)
+[EXACT] PASS: every tested star-supported finite-rank field keeps the exact shell source on the sewing band 3 < r <= 5
+    shell band envelope=[3.162278, 5.000000] across 5 seeds
+[EXACT] PASS: every tested star-supported finite-rank field satisfies the first local static conformal constraint exactly
+    max sampled psi residual=2.447e-15
+[EXACT] PASS: every tested star-supported finite-rank field satisfies the second local static conformal constraint exactly
+    max sampled chi residual=2.011e-15
+[EXACT] PASS: every tested star-supported finite-rank field is stationary for the same microscopic Schur boundary action
+    max sampled (rebuild,grad)=(2.776e-17, 9.714e-17)
+[BOUNDED] PASS: the bridge-side exact closure package extends beyond the benchmark O_h and benchmark finite-rank families to the full tested star-supported finite-rank class
+    exact shell source + exact local constraints + exact microscopic boundary action
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=5 FAIL=0 TOTAL=5
+All checks passed.

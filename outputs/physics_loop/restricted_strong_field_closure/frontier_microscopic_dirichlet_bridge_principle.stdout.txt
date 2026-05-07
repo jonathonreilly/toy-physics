@@ -1,0 +1,22 @@
+Microscopic Dirichlet principle for the bridge
+========================================================================
+exact local O_h: trace_match=2.637e-16, stationary_grad=6.939e-16, base_action=-9.649741e-02, min_sampled_gap=1.592e-09, completion_err=4.448e-17
+finite-rank: trace_match=1.013e-15, stationary_grad=2.581e-15, base_action=-1.373264e+00, min_sampled_gap=2.300e-08, completion_err=6.036e-16
+[EXACT] PASS: the Schur boundary operator is symmetric positive definite on the current bridge surface
+    symmetry error=3.331e-16, min eigenvalue=1.148587e+00
+[EXACT] PASS: the exact shell trace is recovered by the boundary-action minimizer on the exact local O_h class
+    trace match=2.637e-16, stationary gradient=6.939e-16
+[BOUNDED] PASS: the exact local O_h bridge is a strict global minimum of the microscopic boundary action under sampled perturbations
+    min sampled gap=1.592e-09, completion error=4.448e-17
+[EXACT] PASS: the finite-rank bridge is recovered by the same microscopic boundary-action minimizer
+    trace match=1.013e-15, stationary gradient=2.581e-15
+[BOUNDED] PASS: the finite-rank bridge is also a strict global minimum of the microscopic boundary action under sampled perturbations
+    min sampled gap=2.300e-08, completion error=6.036e-16
+[EXACT] PASS: the bridge is the unique minimum-energy discrete Dirichlet extension on the current star-supported strong-field class
+    native bridge is the unique minimizer of the exact microscopic Schur boundary energy
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=6 FAIL=0 TOTAL=6
+All checks passed.

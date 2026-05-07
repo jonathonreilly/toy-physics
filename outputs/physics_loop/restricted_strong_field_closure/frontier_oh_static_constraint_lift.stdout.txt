@@ -1,0 +1,27 @@
+Exact local static-constraint lift
+========================================================================
+exact local O_h: shell band=[3.162278, 5.000000], max residuals=(psi=1.789e-15, chi=1.551e-15)
+finite-rank: shell band=[3.162278, 5.000000], max residuals=(psi=2.207e-15, chi=1.520e-15)
+shell orbit spreads: O_h (rho,S)=(3.123e-17,1.897e-18), finite-rank rel (rho,S)=(1.3905%,2.6295%)
+[PASS (A)] [EXACT] the exact local O_h shell source remains confined to the sewing band 3 < r <= 5
+    shell band=[3.162278, 5.000000]
+[PASS (A)] [EXACT] the exact local O_h bridge fields satisfy the first local static conformal constraint exactly
+    max |H0 psi - 2pi psi^5 rho| = 1.789e-15
+[PASS (A)] [EXACT] the exact local O_h bridge fields satisfy the second local static conformal constraint exactly
+    max |H0 chi + 2pi alpha psi^5 (rho+2S)| = 1.551e-15
+[PASS (A)] [EXACT] outside the sewing shell the exact local O_h bridge is vacuum in the discrete static constraint sense
+    outside max residuals = (1.789e-15, 1.551e-15)
+[PASS (A)] [EXACT] on the exact local O_h class the lifted shell density and stress are pointwise orbit laws
+    max orbit spreads = rho 3.123e-17, S 1.897e-18
+[PASS (A)] [EXACT] the broader finite-rank family satisfies the same local static conformal constraints exactly
+    max residuals = (2.207e-15, 1.520e-15)
+[PASS (A)] [BOUNDED] on the broader finite-rank family the remaining local shell variation stays small
+    relative shell spreads = rho 1.3905%, S 2.6295%
+[PASS (A)] [BOUNDED] the shell-to-3+1 lift is no longer open on the current static conformal bridge surface
+    exact local static conformal constraint lift on the exact local O_h class
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=8 FAIL=0 TOTAL=8
+All checks passed.

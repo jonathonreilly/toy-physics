@@ -1,0 +1,184 @@
+Restricted strong-field closure packet
+========================================================================
+========================================================================
+COMPONENT: scripts/frontier_sewing_shell_source.py
+ROLE: exact shell source
+========================================================================
+Exact projector-shell source law
+========================================================================
+exact local O_h family: R=4.0, ext_err=5.204e-17, full_err=5.204e-17, Q_total=2.52683051, Q_shell=2.52683051, band=[3.162278, 5.000000], count=320
+exact finite-rank family: R=4.0, ext_err=1.943e-16, full_err=1.943e-16, Q_total=9.53220124, Q_shell=9.53220124, band=[3.162278, 5.000000], count=320
+[EXACT] PASS: the local O_h exterior field is reconstructed exactly from the shell source
+    max exterior reconstruction error=5.204e-17
+[EXACT] PASS: the finite-rank exterior field is reconstructed exactly from the shell source
+    max exterior reconstruction error=1.943e-16
+[EXACT] PASS: the local O_h field decomposes exactly into interior field plus shell-generated exterior
+    max full-field decomposition error=5.204e-17
+[EXACT] PASS: the finite-rank field decomposes exactly into interior field plus shell-generated exterior
+    max full-field decomposition error=1.943e-16
+[EXACT] PASS: the local O_h shell source carries the same total charge as the full field
+    Q_total=2.52683051, Q_shell=2.52683051
+[EXACT] PASS: the finite-rank shell source carries the same total charge as the full field
+    Q_total=9.53220124, Q_shell=9.53220124
+[EXACT] PASS: the local O_h shell source is confined to the finite sewing band 3 < r <= 5
+    support band=[3.162278, 5.000000], count=320
+[EXACT] PASS: the finite-rank shell source is confined to the finite sewing band 3 < r <= 5
+    support band=[3.162278, 5.000000], count=320
+[BOUNDED] PASS: the exact shell-source support coincides with the previously bounded sewing band
+    O_h band=[3.162, 5.000], finite-rank band=[3.162, 5.000]
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=9 FAIL=0 TOTAL=9
+All checks passed.
+========================================================================
+COMPONENT: scripts/frontier_oh_static_constraint_lift.py
+ROLE: static conformal lift
+========================================================================
+Exact local static-constraint lift
+========================================================================
+exact local O_h: shell band=[3.162278, 5.000000], max residuals=(psi=1.789e-15, chi=1.551e-15)
+finite-rank: shell band=[3.162278, 5.000000], max residuals=(psi=2.207e-15, chi=1.520e-15)
+shell orbit spreads: O_h (rho,S)=(3.123e-17,1.897e-18), finite-rank rel (rho,S)=(1.3905%,2.6295%)
+[PASS (A)] [EXACT] the exact local O_h shell source remains confined to the sewing band 3 < r <= 5
+    shell band=[3.162278, 5.000000]
+[PASS (A)] [EXACT] the exact local O_h bridge fields satisfy the first local static conformal constraint exactly
+    max |H0 psi - 2pi psi^5 rho| = 1.789e-15
+[PASS (A)] [EXACT] the exact local O_h bridge fields satisfy the second local static conformal constraint exactly
+    max |H0 chi + 2pi alpha psi^5 (rho+2S)| = 1.551e-15
+[PASS (A)] [EXACT] outside the sewing shell the exact local O_h bridge is vacuum in the discrete static constraint sense
+    outside max residuals = (1.789e-15, 1.551e-15)
+[PASS (A)] [EXACT] on the exact local O_h class the lifted shell density and stress are pointwise orbit laws
+    max orbit spreads = rho 3.123e-17, S 1.897e-18
+[PASS (A)] [EXACT] the broader finite-rank family satisfies the same local static conformal constraints exactly
+    max residuals = (2.207e-15, 1.520e-15)
+[PASS (A)] [BOUNDED] on the broader finite-rank family the remaining local shell variation stays small
+    relative shell spreads = rho 1.3905%, S 2.6295%
+[PASS (A)] [BOUNDED] the shell-to-3+1 lift is no longer open on the current static conformal bridge surface
+    exact local static conformal constraint lift on the exact local O_h class
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=8 FAIL=0 TOTAL=8
+All checks passed.
+========================================================================
+COMPONENT: scripts/frontier_oh_schur_boundary_action.py
+ROLE: Schur boundary action
+========================================================================
+Exact Schur-complement boundary action for the O_h shell law
+========================================================================
+trace count=1052, bulk count=888, symmetry error=3.331e-16, min eigenvalue=1.148587e+00
+exact local O_h: rebuild_err=2.255e-17, flux_err=9.021e-17, stationary_grad=9.021e-17
+finite-rank: rebuild_err=6.939e-17, flux_err=2.776e-16, stationary_grad=2.776e-16
+sample boundary-action gains: O_h 3.000e-08, 2.604e-08, 3.000e-08 ; finite-rank 3.000e-08, 2.604e-08, 3.000e-08
+[EXACT] PASS: the exact exterior shell boundary action is the symmetric Schur complement of the lattice Laplacian
+    symmetry error=3.331e-16, min eigenvalue=1.148587e+00
+[EXACT] PASS: for the exact local O_h class the trace flux equals the gradient of the Schur boundary action exactly
+    rebuild_err=2.255e-17, flux_err=9.021e-17
+[EXACT] PASS: for the exact local O_h class the microscopic sourced boundary action is stationary at the exact shell trace
+    max stationary gradient=9.021e-17, action=-9.649741e-02
+[BOUNDED] PASS: the exact local O_h shell trace is the unique local minimum of the microscopic sourced boundary action
+    all sampled perturbation gains are strictly positive
+[EXACT] PASS: for the broader finite-rank class the same Schur boundary action reproduces the exact shell trace law
+    rebuild_err=6.939e-17, flux_err=2.776e-16, max stationary gradient=2.776e-16
+[BOUNDED] PASS: the current strong-field shell action is derived from microscopic lattice dynamics rather than inserted on the reduced surface
+    exact Schur-complement boundary energy generates the shell trace law
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=6 FAIL=0 TOTAL=6
+All checks passed.
+========================================================================
+COMPONENT: scripts/frontier_microscopic_dirichlet_bridge_principle.py
+ROLE: Dirichlet bridge minimizer
+========================================================================
+Microscopic Dirichlet principle for the bridge
+========================================================================
+exact local O_h: trace_match=2.637e-16, stationary_grad=6.939e-16, base_action=-9.649741e-02, min_sampled_gap=1.592e-09, completion_err=4.448e-17
+finite-rank: trace_match=1.013e-15, stationary_grad=2.581e-15, base_action=-1.373264e+00, min_sampled_gap=2.300e-08, completion_err=6.036e-16
+[EXACT] PASS: the Schur boundary operator is symmetric positive definite on the current bridge surface
+    symmetry error=3.331e-16, min eigenvalue=1.148587e+00
+[EXACT] PASS: the exact shell trace is recovered by the boundary-action minimizer on the exact local O_h class
+    trace match=2.637e-16, stationary gradient=6.939e-16
+[BOUNDED] PASS: the exact local O_h bridge is a strict global minimum of the microscopic boundary action under sampled perturbations
+    min sampled gap=1.592e-09, completion error=4.448e-17
+[EXACT] PASS: the finite-rank bridge is recovered by the same microscopic boundary-action minimizer
+    trace match=1.013e-15, stationary gradient=2.581e-15
+[BOUNDED] PASS: the finite-rank bridge is also a strict global minimum of the microscopic boundary action under sampled perturbations
+    min sampled gap=2.300e-08, completion error=6.036e-16
+[EXACT] PASS: the bridge is the unique minimum-energy discrete Dirichlet extension on the current star-supported strong-field class
+    native bridge is the unique minimizer of the exact microscopic Schur boundary energy
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=6 FAIL=0 TOTAL=6
+All checks passed.
+========================================================================
+COMPONENT: scripts/frontier_star_supported_bridge_class.py
+ROLE: finite-rank support sanity
+========================================================================
+Exact bridge-side closure on the star-supported finite-rank class
+========================================================================
+seed=3: band=[3.162278, 5.000000], max residuals=(psi=2.439e-15, chi=1.456e-15), action errs=(rebuild=8.674e-18, grad=3.296e-17)
+seed=7: band=[3.162278, 5.000000], max residuals=(psi=2.447e-15, chi=1.451e-15), action errs=(rebuild=1.908e-17, grad=6.939e-17)
+seed=11: band=[3.162278, 5.000000], max residuals=(psi=2.021e-15, chi=1.337e-15), action errs=(rebuild=2.776e-17, grad=8.327e-17)
+seed=19: band=[3.162278, 5.000000], max residuals=(psi=2.002e-15, chi=2.000e-15), action errs=(rebuild=1.236e-17, grad=2.776e-17)
+seed=23: band=[3.162278, 5.000000], max residuals=(psi=1.530e-15, chi=2.011e-15), action errs=(rebuild=2.082e-17, grad=9.714e-17)
+[EXACT] PASS: every tested star-supported finite-rank field keeps the exact shell source on the sewing band 3 < r <= 5
+    shell band envelope=[3.162278, 5.000000] across 5 seeds
+[EXACT] PASS: every tested star-supported finite-rank field satisfies the first local static conformal constraint exactly
+    max sampled psi residual=2.447e-15
+[EXACT] PASS: every tested star-supported finite-rank field satisfies the second local static conformal constraint exactly
+    max sampled chi residual=2.011e-15
+[EXACT] PASS: every tested star-supported finite-rank field is stationary for the same microscopic Schur boundary action
+    max sampled (rebuild,grad)=(2.776e-17, 9.714e-17)
+[BOUNDED] PASS: the bridge-side exact closure package extends beyond the benchmark O_h and benchmark finite-rank families to the full tested star-supported finite-rank class
+    exact shell source + exact local constraints + exact microscopic boundary action
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=5 FAIL=0 TOTAL=5
+All checks passed.
+========================================================================
+COMPONENT: scripts/frontier_one_parameter_reduced_shell_law.py
+ROLE: reduced shell law
+========================================================================
+Exact one-parameter reduced sewing-shell law
+========================================================================
+c_aniso = 0.081435402995901
+max point-column charge difference from unity = 4.441e-16
+max point-column radial-profile difference = 1.110e-15
+max point-column orbit-mode difference = 2.220e-16
+max point-column shell-mean total-field difference = 2.602e-18
+max point-column shell-mean anisotropic-field difference = 3.740e-18
+max family-vs-reference c_aniso difference = 4.163e-17
+[EXACT] PASS: all seven point-Green columns carry unit total charge
+    max |Q-1| across columns = 4.441e-16
+[EXACT] PASS: all seven point-Green columns induce the same radial shell kernel per unit charge
+    max radial-profile difference = 1.110e-15
+[EXACT] PASS: all seven point-Green columns induce the same anisotropic orbit mode per unit charge
+    max orbit-mode difference = 2.220e-16
+[EXACT] PASS: all seven point-Green columns induce the same shell-mean exterior response per unit charge
+    max total-field difference = 2.602e-18, max anisotropic-field difference = 3.740e-18
+[EXACT] PASS: the anisotropic anchor amplitude obeys A_aniso = c_aniso * Q with one exact lattice constant
+    c_aniso = 0.081435402995901
+[EXACT] PASS: the exact local O_h and finite-rank source families satisfy the same one-parameter reduced shell law
+    radial=5.551e-16, orbit=1.804e-16, shell=2.602e-18, aniso=1.952e-18, c_diff=4.163e-17
+[BOUNDED] PASS: on the reduced surface the sewing-shell law behaves like one isotropic shell density plus one cubic shear mode tied to total charge
+    c_aniso = 0.081435402995901
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=7 FAIL=0 TOTAL=7
+All checks passed.
+========================================================================
+PACKET SUMMARY
+========================================================================
+PASS=41 FAIL=0 TOTAL=41
+[EXACT] PASS: restricted strong-field closure packet runners all passed

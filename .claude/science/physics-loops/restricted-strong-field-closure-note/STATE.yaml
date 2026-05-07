@@ -1,0 +1,31 @@
+loop_slug: restricted-strong-field-closure-note
+branch: claude/science-fix/restricted_strong_field_closure_note-f2ee33cc
+target_status: proposed_retained
+actual_current_surface_status: proposed_retained
+claim_scope: >
+  Exact restricted scalar/static-conformal closure on the exact local O_h
+  star-supported source object.
+active_route: in_packet_derivation
+files_touched:
+  - docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/runner_classification.json
+  - scripts/frontier_restricted_strong_field_closure_packet.py
+  - outputs/physics_loop/restricted_strong_field_closure/
+  - .claude/science/physics-loops/restricted-strong-field-closure-note/
+open_imports:
+  - source parameters define the restricted local O_h class and are not derived from the single axiom
+  - full tensorial Einstein/Regge completion remains open
+runner_status:
+  frontier_restricted_strong_field_closure_packet.py: pass
+  frontier_sewing_shell_source.py: pass
+  frontier_oh_static_constraint_lift.py: pass
+  frontier_oh_schur_boundary_action.py: pass
+  frontier_microscopic_dirichlet_bridge_principle.py: pass
+  frontier_star_supported_bridge_class.py: pass
+  frontier_one_parameter_reduced_shell_law.py: pass
+review_disposition: pass
+next_exact_action: submit to independent audit lane for fresh restricted-input re-audit
+stop_condition: named target reaches audit-ready proposed_retained packet or review blocks it

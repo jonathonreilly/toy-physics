@@ -1,0 +1,28 @@
+Exact projector-shell source law
+========================================================================
+exact local O_h family: R=4.0, ext_err=5.204e-17, full_err=5.204e-17, Q_total=2.52683051, Q_shell=2.52683051, band=[3.162278, 5.000000], count=320
+exact finite-rank family: R=4.0, ext_err=1.943e-16, full_err=1.943e-16, Q_total=9.53220124, Q_shell=9.53220124, band=[3.162278, 5.000000], count=320
+[EXACT] PASS: the local O_h exterior field is reconstructed exactly from the shell source
+    max exterior reconstruction error=5.204e-17
+[EXACT] PASS: the finite-rank exterior field is reconstructed exactly from the shell source
+    max exterior reconstruction error=1.943e-16
+[EXACT] PASS: the local O_h field decomposes exactly into interior field plus shell-generated exterior
+    max full-field decomposition error=5.204e-17
+[EXACT] PASS: the finite-rank field decomposes exactly into interior field plus shell-generated exterior
+    max full-field decomposition error=1.943e-16
+[EXACT] PASS: the local O_h shell source carries the same total charge as the full field
+    Q_total=2.52683051, Q_shell=2.52683051
+[EXACT] PASS: the finite-rank shell source carries the same total charge as the full field
+    Q_total=9.53220124, Q_shell=9.53220124
+[EXACT] PASS: the local O_h shell source is confined to the finite sewing band 3 < r <= 5
+    support band=[3.162278, 5.000000], count=320
+[EXACT] PASS: the finite-rank shell source is confined to the finite sewing band 3 < r <= 5
+    support band=[3.162278, 5.000000], count=320
+[BOUNDED] PASS: the exact shell-source support coincides with the previously bounded sewing band
+    O_h band=[3.162, 5.000], finite-rank band=[3.162, 5.000]
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=9 FAIL=0 TOTAL=9
+All checks passed.
