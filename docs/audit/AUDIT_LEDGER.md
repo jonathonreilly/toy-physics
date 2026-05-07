@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 67 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 242 |
+| **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
 | unaudited | 820 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 398 |
+| `audited_clean` | 399 |
 | `audited_conditional` | 443 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `lensing_k_sweep_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -298,6 +295,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_purity_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `lensing_k_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `lorentz_violation_derived_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
@@ -8740,6 +8738,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `logs/2026-04-07-lensing-deflection-lane-lplus.txt`
   - `scripts/lensing_deflection_fine_single.py`
   - `scripts/lensing_deflection_lane_lplus.py`
+- **auditor confidence:** high
+
+### `lensing_k_sweep_note`
+
+- **Note:** [`LENSING_K_SWEEP_NOTE.md`](../../docs/LENSING_K_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded to the SHA-pinned scripts/lensing_k_sweep.py finite internal Kubo/centroid-response sweep on Fam1, H=0.25, seeds 0-2, kH in {0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0}, and b in {3,4,5,6}; excludes wave-interference mechanism, period inference, eikonal authority, physical gravitational-lensing bridge, and framework-level generalization.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-lensing-k-sweep-auditor-20260507-f161-b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The bounded table reports a total slope range of about 2.02, from +0.58 to -1.43, across the enumerated kH sweep, so the fitted internal slope is strongly k-dependent on this setup.  _(class `C`)_
+- **chain closes:** True — The current cache is SHA-pinned to the runner, completed with exit_code=0, and its stdout reproduces the source slope table and kH=5.0 fit failures. The runner computes the finite DAG propagation/Kubo values and log-log fits over the enumerated grid rather than importing the reported slopes; closure is only for that bounded internal numerical sweep.
+- **rationale:** The finite numerical artifact closes: the source table matches the completed cache, and the runner source constructs the Fam1 DAGs, sweeps kH/seeds/b, computes Kubo responses, and fits slopes without hard-coding the table values. I count the runner as a C-style bounded computation rather than the mechanical D label because the scoped claim is internal runner output, not an external comparator match. Clean status is granted only under the narrowed scope; the source's mechanism, periodicity, eikonal, and physical gravitational-response language remains outside the audited claim.
 - **auditor confidence:** high
 
 ### `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`

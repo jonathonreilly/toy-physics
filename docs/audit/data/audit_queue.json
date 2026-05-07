@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 504,
+    "critical": 503,
     "high": 23,
     "leaf": 178,
     "medium": 128
@@ -5771,27 +5771,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "lensing_k_sweep_note",
-      "claim_scope": "Finite numerical k-sweep table for scripts/lensing_k_sweep.py on Fam1 with H=0.25, seeds 0-2, kH in {0.5,1.0,1.5,2.0,2.5,3.0,4.0,5.0}, b in {3,4,5,6}: the reported mean slopes, kH=5.0 fit failure with negative kubos, and slope range 2.0155; excludes wave-interference mechanism, kernel/mode support, eikonal-baseline theorem status, and framework-level generalization.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 5,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.795,
-      "note_path": "docs/LENSING_K_SWEEP_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/lensing_k_sweep.py",
-      "transitive_descendants": 313
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -27986,6 +27965,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1,
-  "total_pending": 833
+  "ready_count": 0,
+  "total_pending": 832
 }
