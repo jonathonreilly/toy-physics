@@ -168,6 +168,8 @@ def main() -> int:
         "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
         "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
         "pr230_strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
+        "pr230_two_source_taste_radial_chunk_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
+        "pr230_source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk002_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk003_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
@@ -1650,6 +1652,42 @@ def main() -> int:
             "pr230_strict_scalar_lsz_moment_fv_authority_gate"
         ].get("current_raw_c_ss_proxy_fails_stieltjes_monotonicity")
         is True
+    )
+    two_source_taste_radial_chunk_package_support_not_closure = (
+        "two-source taste-radial chunks001-"
+        in certificates["pr230_two_source_taste_radial_chunk_package"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_chunk_package"].get(
+            "chunk_package_audit_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk_package"].get(
+            "active_chunks_counted_as_evidence"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_chunk_package"].get(
+            "proposal_allowed"
+        )
+        is False
+    )
+    source_higgs_pole_row_contract_open = (
+        "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract"
+        in certificates["pr230_source_higgs_pole_row_acceptance_contract"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_source_higgs_pole_row_acceptance_contract"].get(
+            "source_higgs_pole_row_acceptance_contract_passed"
+        )
+        is True
+        and certificates["pr230_source_higgs_pole_row_acceptance_contract"].get(
+            "closure_contract_satisfied"
+        )
+        is False
+        and certificates["pr230_source_higgs_pole_row_acceptance_contract"].get(
+            "proposal_allowed"
+        )
+        is False
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
         "degree-one taste-radial uniqueness"
@@ -4412,6 +4450,20 @@ def main() -> int:
         ].get("actual_current_surface_status", ""),
     )
     report(
+        "pr230-two-source-taste-radial-chunk-package-support-not-closure",
+        two_source_taste_radial_chunk_package_support_not_closure,
+        certificates["pr230_two_source_taste_radial_chunk_package"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "pr230-source-higgs-pole-row-contract-open",
+        source_higgs_pole_row_contract_open,
+        certificates["pr230_source_higgs_pole_row_acceptance_contract"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
@@ -5886,6 +5938,8 @@ def main() -> int:
         "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
         "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
         "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
+        "two_source_taste_radial_chunk_package_support_not_closure": two_source_taste_radial_chunk_package_support_not_closure,
+        "source_higgs_pole_row_contract_open": source_higgs_pole_row_contract_open,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

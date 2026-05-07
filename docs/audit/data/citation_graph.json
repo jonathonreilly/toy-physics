@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T02:19:59.077643+00:00",
+  "generated_at": "2026-05-07T02:25:03.743637+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42768,6 +42768,16 @@
       "runner_path": "scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py",
       "title": "PR230 Source-Higgs Overlap/Kappa Contract"
     },
+    "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06": {
+      "claim_id": "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
+      "current_status": "open",
+      "current_status_raw": "open / strict acceptance contract only; proposal_allowed=false.",
+      "deps": [],
+      "note_hash": "9de2fcce940195d50756cf4b41431a2fa3255b9a7b956afd81102af561055463",
+      "path": "docs/YT_PR230_SOURCE_HIGGS_POLE_ROW_ACCEPTANCE_CONTRACT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py",
+      "title": "PR #230 Source-Higgs Pole-Row Acceptance Contract Note"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "claim_id": "yt_pr230_source_overlap_route_selection_note_2026-05-03",
       "current_status": "bounded",
@@ -42847,6 +42857,16 @@
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"
+    },
+    "yt_pr230_two_source_taste_radial_chunk_package_audit_note_2026-05-06": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunk_package_audit_note_2026-05-06",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / package audit only; proposal_allowed=false.",
+      "deps": [],
+      "note_hash": "09538861d63ece771077031f97181da9b2ac014e76324ae9d02f0866c1e5db3f",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_PACKAGE_AUDIT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py",
+      "title": "PR #230 Two-Source Taste-Radial Chunk Package Audit Note"
     },
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
@@ -45773,6 +45793,7 @@
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
     "yt_pr230_source_higgs_overlap_kappa_contract_note_2026-05-06",
+    "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
     "yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_note_2026-05-07",
@@ -45781,6 +45802,7 @@
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_chunk_package_audit_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
@@ -45917,13 +45939,13 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1115,
-    "node_count": 2068,
-    "root_count": 1581,
-    "runners_with_path": 1563,
+    "leaf_count": 1117,
+    "node_count": 2070,
+    "root_count": 1583,
+    "runners_with_path": 1565,
     "status_counts": {
-      "bounded": 566,
-      "open": 102,
+      "bounded": 567,
+      "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 447,

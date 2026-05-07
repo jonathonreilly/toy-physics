@@ -36,6 +36,8 @@ PARENTS = {
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
     "two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+    "two_source_taste_radial_chunk_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
+    "source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
     "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -325,6 +327,40 @@ def main() -> int:
         is True
         and certs["two_source_taste_radial_row_production_manifest"].get(
             "future_combined_rows_present"
+        )
+        is False
+    )
+    two_source_taste_radial_chunk_package_not_closure = (
+        "two-source taste-radial chunks001-"
+        in parent_statuses["two_source_taste_radial_chunk_package"]
+        and certs["two_source_taste_radial_chunk_package"].get(
+            "chunk_package_audit_passed"
+        )
+        is True
+        and certs["two_source_taste_radial_chunk_package"].get("proposal_allowed")
+        is False
+        and certs["two_source_taste_radial_chunk_package"].get(
+            "completed_chunk_count", 0
+        )
+        >= 20
+        and certs["two_source_taste_radial_chunk_package"].get(
+            "active_chunks_counted_as_evidence"
+        )
+        is False
+    )
+    source_higgs_pole_row_contract_open = (
+        "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract"
+        in parent_statuses["source_higgs_pole_row_acceptance_contract"]
+        and certs["source_higgs_pole_row_acceptance_contract"].get(
+            "source_higgs_pole_row_acceptance_contract_passed"
+        )
+        is True
+        and certs["source_higgs_pole_row_acceptance_contract"].get(
+            "closure_contract_satisfied"
+        )
+        is False
+        and certs["source_higgs_pole_row_acceptance_contract"].get(
+            "proposal_allowed"
         )
         is False
     )
@@ -721,6 +757,8 @@ def main() -> int:
     report("two-source-taste-radial-action-support-not-closure", two_source_taste_radial_action_not_closure, parent_statuses["two_source_taste_radial_action"])
     report("two-source-taste-radial-row-contract-support-not-closure", two_source_taste_radial_row_contract_not_closure, parent_statuses["two_source_taste_radial_row_contract"])
     report("two-source-taste-radial-row-production-manifest-support-not-closure", two_source_taste_radial_row_manifest_not_closure, parent_statuses["two_source_taste_radial_row_production_manifest"])
+    report("two-source-taste-radial-chunk-package-support-not-closure", two_source_taste_radial_chunk_package_not_closure, parent_statuses["two_source_taste_radial_chunk_package"])
+    report("source-higgs-pole-row-contract-open", source_higgs_pole_row_contract_open, parent_statuses["source_higgs_pole_row_acceptance_contract"])
     report("taste-radial-canonical-oh-selector-blocks-symmetry-shortcut", taste_radial_canonical_oh_selector_blocks_symmetry_shortcut, parent_statuses["taste_radial_canonical_oh_selector_gate"])
     report("degree-one-higgs-action-premise-not-derived", degree_one_higgs_action_premise_not_derived, parent_statuses["degree_one_higgs_action_premise_gate"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
@@ -883,6 +921,8 @@ def main() -> int:
             "two_source_taste_radial_action_not_closure": two_source_taste_radial_action_not_closure,
             "two_source_taste_radial_row_contract_not_closure": two_source_taste_radial_row_contract_not_closure,
             "two_source_taste_radial_row_manifest_not_closure": two_source_taste_radial_row_manifest_not_closure,
+            "two_source_taste_radial_chunk_package_not_closure": two_source_taste_radial_chunk_package_not_closure,
+            "source_higgs_pole_row_contract_open": source_higgs_pole_row_contract_open,
             "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
             "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

@@ -91,6 +91,10 @@ Allowed context:
   bounded row support only: they validate real chunk JSON, seed control,
   selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
   pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
+- the two-source taste-radial chunks001-022 packaged certificate as bounded
+  support only: active chunks, logs, and pending checkpoints are not evidence,
+  and the package does not turn `C_sx/C_xx` second-source rows into canonical
+  `C_sH/C_HH` pole rows.
 - the two-source taste-radial row-combiner gate as bounded aggregation support
   only: it records `ready=22/63` and refuses to write the combined measurement
   row packet until 63/63 chunks are schema-clean.  Partial diagnostics are not
@@ -284,6 +288,9 @@ Open imports after this block:
 - Completed two-source taste-radial chunks001-022 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
+- source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract is not proof
+  selectors; strict rows absent on current surface means the contract records
+  future acceptance criteria but does not provide source-Higgs pole evidence.
 - Source-Higgs schema field names in completed two-source taste-radial chunks
   are not proof selectors; the readiness gate now treats them as explicit
   `C_sx/C_xx` second-source aliases unless a real canonical `O_H` identity,

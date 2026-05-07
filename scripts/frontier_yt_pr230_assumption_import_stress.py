@@ -191,6 +191,12 @@ def main() -> int:
         "strict_scalar_lsz_moment_fv_authority_gate": load(
             "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
         ),
+        "two_source_taste_radial_chunk_package": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
+        ),
+        "source_higgs_pole_row_acceptance_contract": load(
+            "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -373,6 +379,10 @@ def main() -> int:
         "finite C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows",
         "finite-shell Schur inverse-slope scout",
         "finite zero-to-first-shell inverse slopes are not isolated-pole K'(pole) rows",
+        "two-source taste-radial chunks001-022 packaged",
+        "active chunks, logs, and pending checkpoints are not evidence",
+        "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract",
+        "strict rows absent on current surface",
         "Degree-one Higgs-action premise",
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
         "FMS post-degree route rescore",
@@ -1022,6 +1032,28 @@ def main() -> int:
         and "does not authorize retained or proposed_retained y_t closure"
         in two_source_row_combiner.get("strict_non_claims", []),
         two_source_row_combiner.get("actual_current_surface_status"),
+    )
+    two_source_chunk_package = certificates["two_source_taste_radial_chunk_package"]
+    report(
+        "two-source-taste-radial-chunk-package-support-not-evidence",
+        "two-source taste-radial chunks001-"
+        in str(two_source_chunk_package.get("actual_current_surface_status"))
+        and two_source_chunk_package.get("proposal_allowed") is False
+        and two_source_chunk_package.get("chunk_package_audit_passed") is True
+        and two_source_chunk_package.get("active_chunks_counted_as_evidence")
+        is False,
+        two_source_chunk_package.get("actual_current_surface_status"),
+    )
+    source_higgs_contract = certificates["source_higgs_pole_row_acceptance_contract"]
+    report(
+        "source-higgs-pole-row-contract-open-not-evidence",
+        "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract"
+        in str(source_higgs_contract.get("actual_current_surface_status"))
+        and source_higgs_contract.get("proposal_allowed") is False
+        and source_higgs_contract.get("source_higgs_pole_row_acceptance_contract_passed")
+        is True
+        and source_higgs_contract.get("closure_contract_satisfied") is False,
+        source_higgs_contract.get("actual_current_surface_status"),
     )
     two_source_schur_subblock = certificates["two_source_taste_radial_schur_subblock_witness"]
     report(

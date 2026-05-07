@@ -1,0 +1,60 @@
+{
+  "actual_current_surface_status": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_oh_passed": false,
+  "closure_contract_satisfied": false,
+  "conditional_surface_status": "exact-support if a future same-surface row certificate satisfies this contract and the retained-route/campaign gates subsequently allow proposal wording",
+  "fail_count": 0,
+  "legacy_rows_path": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+  "legacy_rows_present": false,
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "post_fms_source_overlap_necessity": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "two_source_chunk_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_gate": "open / canonical-Higgs operator certificate absent",
+    "post_fms_source_overlap_necessity": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+    "retained_route": "open / retained closure not yet reached",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
+    "two_source_chunk_package": "bounded-support / two-source taste-radial chunks001-022 packaged; active chunks, logs, and pending checkpoints are not evidence"
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This is a strict input contract, not evidence.  Current artifacts do not contain accepted canonical O_H authority or same-ensemble C_ss/C_sH/C_HH pole rows with Gram/FV/IR/scalar-LSZ checks.",
+  "remaining_positive_contract": [
+    "same-surface canonical O_H identity and normalization certificate",
+    "same-ensemble pole rows containing Res_C_ss, Res_C_sH, Res_C_HH with uncertainties",
+    "no C_sx/C_xx aliasing in the accepted row labels",
+    "Gram purity/positivity certificate with uncertainty control",
+    "isolated scalar pole, FV/IR, and scalar-LSZ/model-class certificates",
+    "forbidden-input firewall: no H_unit, yt_ward, observed selector, alpha_LM, plaquette/u0, kappa_s=1, c2=1, or Z_match=1",
+    "rerun full assembly, retained-route, campaign status, and audit pipeline after rows land"
+  ],
+  "rows_path": "outputs/yt_pr230_source_higgs_pole_rows_2026-05-06.json",
+  "rows_present": false,
+  "source_higgs_pole_row_acceptance_contract_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not fabricate C_sH/C_HH pole rows",
+    "does not treat C_sx/C_xx aliases as canonical O_H correlators",
+    "does not infer source-Higgs overlap from source-only rows or FMS expansion",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "validation": {
+    "all_same_ensemble": false,
+    "forbidden_used": [],
+    "row_count": 0,
+    "row_violations": [],
+    "rows_acceptance_passed": false
+  }
+}

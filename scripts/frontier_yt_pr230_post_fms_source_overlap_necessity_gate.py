@@ -256,7 +256,7 @@ def main() -> int:
     report(
         "two-source-rows-are-csx-not-csh",
         two_source_rows_are_c_sx_not_c_sh,
-        "chunks001-006 support-only",
+        "packaged chunks remain C_sx/C_xx support-only",
     )
     report("current-launcher-run-control-only", current_launcher_run_control_only, statuses["two_source_launcher"])
     report("overlap-counterfamily-blocks-inference", overlap_counterfamily_blocks, str(family))

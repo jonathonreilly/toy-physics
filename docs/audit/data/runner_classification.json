@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T02:20:02.042529+00:00",
+  "generated_at": "2026-05-07T02:25:06.420429+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17257,6 +17257,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py"
     },
+    "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -17352,6 +17364,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py"
+    },
+    "yt_pr230_two_source_taste_radial_chunk_package_audit_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py"
     },
     "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07": {
       "assert_count": 1,
@@ -35787,6 +35811,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_source_overlap_route_selection.py": {
       "assert_count": 1,
       "claims": [
@@ -35896,6 +35935,21 @@
       "assert_count": 2,
       "claims": [
         "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_two_source_taste_radial_chunk_package_audit_note_2026-05-06"
       ],
       "counts": {
         "A": 0,
@@ -41312,13 +41366,13 @@
     "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 237,
-      "C": 522,
+      "B": 238,
+      "C": 523,
       "D": 312,
       "none": 404
     },
-    "runners_classified": 1484,
-    "runners_with_C": 796,
-    "runners_with_D": 574
+    "runners_classified": 1486,
+    "runners_with_C": 798,
+    "runners_with_D": 576
   }
 }

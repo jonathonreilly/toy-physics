@@ -641,6 +641,12 @@ def main() -> int:
         "pr230_strict_scalar_lsz_moment_fv_authority_gate": load(
             "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
         ),
+        "pr230_two_source_taste_radial_chunk_package": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
+        ),
+        "pr230_source_higgs_pole_row_acceptance_contract": load(
+            "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2744,6 +2750,40 @@ def main() -> int:
         < two_source_taste_radial_row_combiner.get("expected_chunks")
         and two_source_taste_radial_row_combiner.get("fail_count") == 0,
         statuses["pr230_two_source_taste_radial_row_combiner_gate"],
+    )
+    two_source_taste_radial_chunk_package = certificates[
+        "pr230_two_source_taste_radial_chunk_package"
+    ]
+    report(
+        "pr230-two-source-taste-radial-chunk-package-support-not-closure",
+        "two-source taste-radial chunks001-"
+        in str(statuses["pr230_two_source_taste_radial_chunk_package"])
+        and two_source_taste_radial_chunk_package.get("proposal_allowed") is False
+        and two_source_taste_radial_chunk_package.get("chunk_package_audit_passed")
+        is True
+        and two_source_taste_radial_chunk_package.get(
+            "active_chunks_counted_as_evidence"
+        )
+        is False,
+        statuses["pr230_two_source_taste_radial_chunk_package"],
+    )
+    source_higgs_pole_row_acceptance_contract = certificates[
+        "pr230_source_higgs_pole_row_acceptance_contract"
+    ]
+    report(
+        "pr230-source-higgs-pole-row-contract-open",
+        "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract"
+        in str(statuses["pr230_source_higgs_pole_row_acceptance_contract"])
+        and source_higgs_pole_row_acceptance_contract.get("proposal_allowed") is False
+        and source_higgs_pole_row_acceptance_contract.get(
+            "source_higgs_pole_row_acceptance_contract_passed"
+        )
+        is True
+        and source_higgs_pole_row_acceptance_contract.get(
+            "closure_contract_satisfied"
+        )
+        is False,
+        statuses["pr230_source_higgs_pole_row_acceptance_contract"],
     )
     two_source_taste_radial_schur_subblock = certificates[
         "pr230_two_source_taste_radial_schur_subblock_witness"
