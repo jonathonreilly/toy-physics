@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 6 |
-| unaudited | 832 |
+| open_gate | 7 |
+| unaudited | 831 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 390 |
+| `audited_clean` | 391 |
 | `audited_conditional` | 440 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 881 |
+| `unaudited` | 880 |
 
 | claim_type | count |
 |---|---:|
@@ -220,6 +220,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -6360,6 +6361,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The two completion witnesses agree on every retained premise, but BRIDGE evaluates them as R_O(beta_eff^-(6)) and R_O(beta_eff^+(6)), which are unequal because R_O is injective.  _(class `A`)_
 - **chain closes:** True — The retained dependencies supply the temporal kernel law, beta^5 onset, operator packet, and underdetermination of beta_eff(6)/Perron data. The note's two analytic increasing completions share those retained premises and produce distinct local-response readouts, so the current packet cannot entail a unique BRIDGE value.
 - **rationale:** The no-go is a valid two-witness non-entailment argument over retained inputs: the witnesses share the retained onset and source/operator data but differ by an O(beta^6) term at beta=6. Since the local response is strictly increasing, the bridge readouts differ, so a derivation from the same packet cannot select one without importing the missing exact nonperturbative object. The runner supports this with input checks, exact witness arithmetic, and local-response computations, and it does not use a fitted beta_eff or external plaquette comparator. Residual risk is limited to witness admissibility resting on the supplied retained_no_go underdetermination dependencies.
+- **auditor confidence:** high
+
+### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
+
+- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate stretch note for the positive observable bridge <P>_full = R_O(beta_eff), now bounded by the retained no-go route rather than promoted as a positive bridge theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-context-gauge-scalar-temporal-observable-bridge-stretch-20260507-B`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The no-go's two-witness argument shows that two admissible completions of the retained Wilson packet agree on every retained premise but produce distinct R_O(beta_eff(6)) readouts; therefore the bridge is not derivable from the current packet.  _(class `A`)_
+- **chain closes:** True — The scoped claim is the gate/obstruction statement, not a derivation of the positive bridge. Given the retained_no_go companion theorem and retained_bounded temporal completion theorem, the note's current conclusion that the positive bridge is not derivable from the retained packet closes at gate level.
+- **rationale:** The note explicitly records A_min, forbidden imports, and non-closure of the positive observable bridge, and it does not claim to compute <P>_full. Its current closure step rests on the retained companion no-go theorem's two-witness underdetermination argument, so the only clean scope is the open gate bounded negatively. The runner is structural documentation checking only, but it is consistent with the source note and does not hard-code a positive comparator or fitted bridge.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_bridge_support_note`
