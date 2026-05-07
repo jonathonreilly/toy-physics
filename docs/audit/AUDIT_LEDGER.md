@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 12 |
-| unaudited | 785 |
+| open_gate | 13 |
+| unaudited | 784 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 392 |
+| `audited_clean` | 393 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 834 |
+| `unaudited` | 833 |
 
 | claim_type | count |
 |---|---:|
@@ -448,6 +448,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_cross_encoding_maps_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_dynamical_resource_generation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | C | - |
+| `teleportation_initial_state_preparation_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_measurement_record_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_microscopic_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -12904,6 +12905,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The important result is mixed: two explicit nonuniqueness obstructions, one side-6 sparse scaling warning, and two bounded ideal mechanisms, while ordinary state teleportation is not promoted to nature-grade closure.  _(class `C`)_
 - **chain closes:** False — The runner supports the individual component gates, but the row does not close as one clean ledger claim because it combines no-go-style obstructions, a finite negative scaling control, and positive ideal mechanisms. The missing step is a split or narrowed theorem that selects one citeable claim surface.
 - **rationale:** Issue: the audited object is a mixed row rather than a single closed theorem, no-go, or bounded finite result. Why this blocks: assigning audited_clean to one claim_type would either overstate the bounded positive mechanisms or blur the obstruction/open-gate content. Repair target: split into separate ledger rows for the apparatus no-go, amplitude no-go, sparse side-6 scaling control, ideal pulse schedule, and spin-bath detector model, each with its own scoped claim_type. Claim boundary until fixed: this may be cited only as a planning/open-gate blocker inventory for ordinary state teleportation, with no matter, energy, object, or FTL transport claim.
+- **auditor confidence:** high
+
+### `teleportation_initial_state_preparation_probe_note`
+
+- **Note:** [`TELEPORTATION_INITIAL_STATE_PREPARATION_PROBE_NOTE.md`](../../docs/TELEPORTATION_INITIAL_STATE_PREPARATION_PROBE_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** For the default mass=0, G=0 cases 1D N=8 and 2D 4x4, the artifact audits whether the assumed initial state is a unique product/separable H1-ground tensor product and whether that leaves a native-basis operational preparation gate.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-gpt-5.5-xhigh-teleportation-initial-state-prep-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At G=0 the two-species Hamiltonian is the Kronecker sum of two mass-zero negative-adjacency H1 operators, so the unique ground state on the connected regular default lattices is the uniform tensor product, which is fully delocalized in the native site-pair basis.  _(class `A`)_
+- **chain closes:** True — The runner output matches the analytic Kronecker-sum closure: both cases have degeneracy 1, positive gaps, unit fidelity to H1-ground and uniform tensor products, rank-1 separability diagnostics, and PR/dim=1. This supports the scoped open gate that the assumed state is analytically simple but is a fully delocalized coherent native-site superposition with no supplied preparation/noise/scaling protocol.
+- **rationale:** The scoped object is an open preparation gate, not a retained theorem that the physical preparation is solved. The supplied runner completed and cleanly verifies the small-surface spectral/product/separability/delocalization facts that make the blocker citeable. No hidden bridge is needed for the limited conclusion that the finite-time ramp still depends on preparing two coherent delocalized H1 ground states without an accompanying protocol or scaling argument.
 - **auditor confidence:** high
 
 ### `teleportation_logical_readout_audit`
