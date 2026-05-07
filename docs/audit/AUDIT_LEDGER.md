@@ -48,12 +48,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 659 |
+| `bounded_theorem` | 660 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 109 |
-| `positive_theorem` | 787 |
+| `positive_theorem` | 786 |
 
 | criticality | count |
 |---|---:|
@@ -765,7 +765,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `higgs_mass_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `higgs_mass_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | G | - |
 | `higher_dimension_status_2026-04-01` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -7484,16 +7484,15 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 ### `higgs_mass_derived_note`
 
 - **Note:** [`HIGGS_MASS_DERIVED_NOTE.md`](../../docs/HIGGS_MASS_DERIVED_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded Higgs-mass authority: the direct 3-loop SM RGE runner with lambda(M_Pl)=0 maps the current hard-coded framework input set to m_H ~= 125.1 GeV; exact closure remains conditional on the y_t and framework-input authority paths.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** For the accepted central input y_t(v)=0.9176, the full 3-loop runner gives m_H=125.1 GeV and the exact Higgs lane inherits the current YT-lane precision.  _(class `G`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **auditor:** `codex-audit-loop-higgs-derived-judge`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** For the current accepted central input y_t(v) = 0.9176, the direct full 3-loop runner gives m_H ~= 125.1 GeV, with exact Higgs closure still inheriting the YT-lane precision caveat.  _(class `G`)_
+- **chain closes:** False — The restricted packet shows a real 3-loop RGE computation, but it does not close the authority for y_t(v)=0.9176, g1, g2, alpha_s, v, or the lambda(M_Pl)=0 boundary. The supplied Higgs dependencies explicitly support mechanism-level or bounded quantitative claims, not exact independent m_H closure.
+- **rationale:** Issue: the m_H ~= 125.1 result is obtained at a specific hard-coded input set, especially y_t(v)=0.9176, while the restricted dependencies do not establish those inputs or the lambda(M_Pl)=0 boundary as retained authorities. Why this blocks: the runner removes the Buttazzo-style fit import and performs a real 3-loop RGE computation, but the Higgs number remains input-sensitive and the packet does not prove the input authority or precision budget. Repair target: add retained-grade direct dependencies or runners for the YT authority path, g1/g2/alpha_s/v inputs, and high-scale boundary, with this runner consuming those outputs. Claim boundary until fixed: bounded support that the current hard-coded input set maps to m_H ~= 125.1 GeV with inherited YT/input caveats.
 - **open / conditional deps cited:**
-  - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
   - `HIGGS_MECHANISM_NOTE.md`
   - `HIGGS_FROM_LATTICE_NOTE.md`
 - **auditor confidence:** high
