@@ -1,5 +1,19 @@
 # No-Go Ledger
 
+## Two-source chunks001-042 are not source-Higgs or scalar-LSZ closure
+
+The 2026-05-07 chunks041-042 package moves the finite two-source row packet to
+`ready=42/63`, but the added rows do not change the claim boundary.  The raw
+`C_ss` proxy still fails the strict scalar-LSZ first-shell nonincrease test,
+the finite `C_ss/C_sx/C_xx` block still lacks pole/FV/IR authority, the
+finite Schur A/B/C rows still do not determine strict pole derivatives, and
+the promotion contract still forbids relabeling `C_sx/C_xx` as
+`C_sH/C_HH` without same-surface `x=canonical O_H` authority.  Successor
+chunks043-044 are active run-control only until completed and checkpointed.
+Do not treat chunks001-042, live-status rows, active worker logs, or finite
+Schur diagnostics as canonical `O_H`, `C_sH/C_HH`, W/Z response rows, scalar
+LSZ authority, or retained/proposed-retained evidence.
+
 ## Two-source chunks001-040 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks039-040 package moves the finite two-source row packet to

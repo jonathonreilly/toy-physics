@@ -75,7 +75,7 @@
   "physical_pole_residue_authority_present": false,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Two endpoint values determine a one-pole interpolation, but positive two-pole Stieltjes counterfamilies match the same endpoints. The current surface lacks higher shells, threshold/contact/FV/IR, pole-model-class authority, and canonical O_H or W/Z bridge authority.",
-  "ready_chunks": 40,
+  "ready_chunks": 42,
   "schur_x_given_source_one_pole_scout_passed": true,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",

@@ -16,11 +16,18 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-262-two-source-taste-radial-chunks039-040-package
-blocks_completed: 261
-active_route: "PR230 two-source taste-radial chunks039-040 package"
-active_hard_residual: "Chunks039-040 are packaged, raising the finite C_ss/C_sx/C_xx packet to ready=40/63 with combined_rows_written=false.  The finite Schur row-derived certificates were refreshed at the same readiness: Schur subblock witness PASS=16 FAIL=0, finite-shell K-prime scout PASS=14 FAIL=0, finite Schur A/B/C rows PASS=17 FAIL=0, finite-to-pole lift PASS=13 FAIL=0, Schur complete-monotonicity PASS=15 FAIL=0, and C_x|s one-pole scout PASS=13 FAIL=0.  Source-Higgs readiness remains PASS=25 FAIL=0 but open because canonical O_H and source-Higgs pole rows are absent.  Strict scalar-LSZ still fails raw C_ss first-shell Stieltjes nonincrease (z=157.56429412296885).  Schur C_s|x fails (z=135.66489189938483), while C_x|s survives only a necessary first-shell check (z=-464.32415387580664).  The refreshed C_x|s one-pole interpolation gives C(0)=0.28082694765713595, C(0.267949192431123)=0.2695324948332257, m^2=6.394379209908918, R=1.79571399568097, but positive two-pole endpoint counterfamilies still match the same endpoints.  This is bounded support only: no scalar-LSZ pole/FV/model authority, canonical O_H/source-overlap, W/Z response, retained, or proposed-retained closure.  Chunks041-042 are active run-control only until completed JSONs and checkpoints exist."
+current_phase: campaign-block-263-two-source-taste-radial-chunks041-042-package
+blocks_completed: 262
+active_route: "PR230 two-source taste-radial chunks041-042 package"
+active_hard_residual: "Chunks041-042 are packaged, raising the finite C_ss/C_sx/C_xx packet to ready=42/63 with combined_rows_written=false.  The finite Schur row-derived certificates were refreshed at the same readiness: Schur subblock witness PASS=16 FAIL=0, finite-shell K-prime scout PASS=14 FAIL=0, finite Schur A/B/C rows PASS=17 FAIL=0, finite-to-pole lift PASS=13 FAIL=0, Schur complete-monotonicity PASS=15 FAIL=0, and C_x|s one-pole scout PASS=13 FAIL=0.  Source-Higgs readiness remains PASS=25 FAIL=0 but open because canonical O_H and source-Higgs pole rows are absent.  Strict scalar-LSZ still fails raw C_ss first-shell Stieltjes nonincrease (z=161.93089030677183).  Schur C_s|x fails (z=141.83518270927092), while C_x|s survives only a necessary first-shell check (repair-gate z=-484.2781158031889).  The refreshed C_x|s one-pole interpolation gives C(0)=0.28082694765713595, C(0.267949192431123)=0.2695324948332257, m^2=6.394379209908918, R=1.79571399568097, but positive two-pole endpoint counterfamilies still match the same endpoints.  This is bounded support only: no scalar-LSZ pole/FV/model authority, canonical O_H/source-overlap, W/Z response, retained, or proposed-retained closure.  Chunks043-044 are active run-control only until completed JSONs and checkpoints exist."
 files_touched:
+  - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS041_042_PACKAGE_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk041_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk042_2026-05-06.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk041/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk042/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk041_checkpoint_2026-05-06.json"
+  - "outputs/yt_pr230_two_source_taste_radial_chunk042_checkpoint_2026-05-06.json"
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS039_040_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk039_2026-05-06.json"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk040_2026-05-06.json"

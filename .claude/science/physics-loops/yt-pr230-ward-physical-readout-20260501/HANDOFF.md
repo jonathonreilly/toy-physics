@@ -1,5 +1,40 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 two-source taste-radial chunks041-042 package:
+
+- Packaged chunks041-042 after completed root JSONs and per-volume artifacts
+  landed.  Both chunks preserve production metadata, fixed seeds
+  `2026056041`/`2026056042`, selected-mass-only FH/LSZ at `m=0.75`,
+  normal-equation cache metadata, `numba_gauge_seed_v1`, and explicit
+  non-readout source-Higgs/taste-radial metadata.
+- Completed-mode checkpoints: chunk041 `PASS=15 FAIL=0`; chunk042
+  `PASS=15 FAIL=0`.
+- Package/row status: chunk package audit `PASS=10 FAIL=0`; row combiner
+  `PASS=13 FAIL=0`; ready packet is now `42/63` and
+  `combined_rows_written=false`.
+- Refreshed row-derived gates: strict scalar-LSZ moment/FV `PASS=13 FAIL=0`
+  with raw `C_ss` still failing first-shell Stieltjes nonincrease
+  (`z=161.93089030677183`); Schur subblock witness `PASS=16 FAIL=0`;
+  finite-shell Schur K-prime scout `PASS=14 FAIL=0`; finite Schur A/B/C rows
+  `PASS=17 FAIL=0`; Schur finite-to-pole lift `PASS=13 FAIL=0`;
+  Schur-complement repair `PASS=22 FAIL=0`, with `C_s|x` still failing
+  (`z=141.83518270927092`) and `C_x|s` surviving only the necessary
+  first-shell check (`z=-484.2781158031889` in the repair gate); Schur
+  complete-monotonicity `PASS=15 FAIL=0`; C_x|s one-pole scout
+  `PASS=13 FAIL=0`; source-Higgs readiness `PASS=25 FAIL=0`;
+  primitive-transfer candidate `PASS=13 FAIL=0`; orthogonal-top exclusion
+  gate `PASS=12 FAIL=0`.
+- Aggregate gates remain open/support-only: assumption/import stress
+  `PASS=93 FAIL=0`; campaign status `PASS=341 FAIL=0`; full assembly
+  `PASS=154 FAIL=0`; retained-route `PASS=308 FAIL=0`; completion audit
+  `PASS=63 FAIL=0`.
+- Chunks043-044 are active under the row-wave supervisor's two-worker cap.
+  They are run-control state only until completed JSONs and completed-mode
+  checkpoints exist.
+- Claim boundary: no canonical `O_H`, no `C_ss/C_sH/C_HH` pole rows, no
+  strict scalar-LSZ/FV authority, no W/Z rows with strict `g2`/covariance, no
+  retained/proposed-retained closure.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks039-040 package:
 
 - Packaged chunks039-040 after completed root JSONs and per-volume artifacts

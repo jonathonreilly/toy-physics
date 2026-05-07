@@ -1,5 +1,55 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks041-042 package checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-042 packaged; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 41 --output outputs/yt_pr230_two_source_taste_radial_chunk041_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 42 --output outputs/yt_pr230_two_source_taste_radial_chunk042_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=42/63, combined_rows_written=false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py
+# SUMMARY: PASS=16 FAIL=0, ready=42/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py
+# SUMMARY: PASS=14 FAIL=0, ready=42/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py
+# SUMMARY: PASS=17 FAIL=0, ready=42/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=42/63
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=93 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=341 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=154 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=308 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=63 FAIL=0
+```
+
+Chunks001-042 are finite `C_ss/C_sx/C_xx` row support only.  Chunks043-044
+are active run-control state and are not evidence.  The current branch still
+lacks canonical `O_H`, `C_sH/C_HH` pole rows, strict scalar-LSZ/FV authority,
+strict Schur pole rows, W/Z rows with strict `g2`/covariance, and any
+retained-route or campaign proposal authorization.
+
 Two-source taste-radial chunks039-040 package checkpoint:
 
 ```text
