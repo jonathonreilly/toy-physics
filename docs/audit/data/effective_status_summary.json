@@ -1,11 +1,12 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 648,
+    "bounded_theorem": 647,
     "decoration": 10,
     "meta": 56,
-    "no_go": 191,
+    "no_go": 189,
     "open_gate": 109,
-    "positive_theorem": 786
+    "positive_theorem": 787,
+    "unset": 2
   },
   "cycle_examples": [
     [
@@ -17,6 +18,10 @@
       "dm_sigma_hier_closure_packet_note_2026-04-20",
       "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
       "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
+    ],
+    [
+      "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     ],
     [
       "anomaly_forces_time_theorem",
@@ -39,18 +44,11 @@
       "signed_gravity_chi_selector_theorem_or_nogo_note",
       "antigravity_sign_selector_boundary_note",
       "frontier_extension_lane_opening_note_2026-04-25"
-    ],
-    [
-      "gravity_clean_derivation_note",
-      "gravity_signed_source_density_boundary_note",
-      "signed_gravity_chi_selector_theorem_or_nogo_note",
-      "antigravity_sign_selector_boundary_note",
-      "frontier_extension_lane_opening_note_2026-04-25"
     ]
   ],
-  "cycles_detected": 191,
+  "cycles_detected": 271,
   "effective_status_counts": {
-    "audited_conditional": 465,
+    "audited_conditional": 447,
     "audited_failed": 8,
     "audited_numerical_match": 20,
     "audited_renaming": 28,
@@ -61,12 +59,12 @@
     "decoration_under_linear_response_true_kubo_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 49,
-    "open_gate": 13,
+    "open_gate": 12,
     "retained": 67,
-    "retained_bounded": 237,
-    "retained_no_go": 122,
+    "retained_bounded": 234,
+    "retained_no_go": 121,
     "retained_pending_chain": 2,
-    "unaudited": 782
+    "unaudited": 805
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

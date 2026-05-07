@@ -259,3 +259,9 @@ no nontrivial topological bundle available from which such a phase could be
 forced by Chern arithmetic. That turns the old Berry route from "candidate
 forcing theorem with one missing bundle choice" into a precise obstruction and
 uniqueness theorem for the remaining bundle choice itself.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [charged_lepton_koide_cone_algebraic_equivalence_note](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)

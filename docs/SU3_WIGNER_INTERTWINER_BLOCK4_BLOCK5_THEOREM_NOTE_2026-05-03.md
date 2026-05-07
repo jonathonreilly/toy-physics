@@ -347,3 +347,9 @@ Expected summaries:
 SUMMARY: THEOREM PASS=5 FAIL=0
 SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [su3_cube_index_graph_shortcut_open_gate_note_2026-05-03](SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md)

@@ -743,3 +743,17 @@ No retained runner on `main` regresses.
 > amplitude-completeness / ray-saturation theorem (BACT), together with the
 > still-open per-lane object-derivation work needed to clear the reviewer's
 > bar.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_moment_ratio_uniformity_theorem_note_2026-04-19](KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md)
+- [koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19](KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md)
+- [koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19](KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md)
+- [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- [dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19](DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md)
+- [dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19](DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md)
+- [quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19](QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md)
+- [quark_strc_observable_principle_note_2026-04-19](QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md)
+- [quark_issr1_bicac_forcing_theorem_note_2026-04-19](QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md)

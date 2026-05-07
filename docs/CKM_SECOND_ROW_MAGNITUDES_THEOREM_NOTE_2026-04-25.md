@@ -181,3 +181,11 @@ The runner uses the Python standard library plus the already-mainline
   - atlas `alpha_0 = 90` triangle companion.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   - canonical `alpha_s(v)` input.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [ckm_first_row_magnitudes_theorem_note_2026-04-24](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+- [ckm_third_row_magnitudes_theorem_note_2026-04-24](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)

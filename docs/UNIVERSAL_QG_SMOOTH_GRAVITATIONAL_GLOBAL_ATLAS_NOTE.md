@@ -73,3 +73,13 @@ Those have now been discharged by later authority notes. So what remains beyond
 this theorem is only the separate optional comparison note
 [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md),
 which is packaging-only and not part of the theorem stack.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_smooth_gravitational_local_identification_note](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+- [universal_qg_canonical_textbook_weak_measure_equivalence_note](UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+- [universal_gr_positive_background_extension_note](UNIVERSAL_GR_POSITIVE_BACKGROUND_EXTENSION_NOTE.md)
+- [universal_gr_discrete_global_closure_note](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- [universal_gr_lorentzian_global_atlas_closure_note](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)

@@ -75,3 +75,16 @@ chosen canonical textbook target. It is only:
 
 That is a packaging-only comparison note and not a theorem problem on the
 chosen route.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_canonical_textbook_continuum_gr_closure_note](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
+- [universal_qg_canonical_smooth_gravitational_weak_measure_note](UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+- [universal_qg_canonical_textbook_weak_measure_equivalence_note](UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+- [universal_qg_smooth_gravitational_local_identification_note](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+- [universal_qg_smooth_gravitational_global_atlas_note](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+- [universal_qg_canonical_smooth_geometric_action_note](UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
+- [universal_gr_lorentzian_signature_extension_note](UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md)
+- [universal_gr_constraint_action_stationarity_note](UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md)

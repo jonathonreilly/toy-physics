@@ -153,3 +153,9 @@ from the existing stack:
 
 That is the correct next tool to carry forward while the exact tensor
 observable remains missing.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [s3_time_theta_to_slice_coupling_note](S3_TIME_THETA_TO_SLICE_COUPLING_NOTE.md)

@@ -135,3 +135,10 @@ not the final PMNS-side value law.
 ```bash
 python3 scripts/frontier_dm_leptogenesis_ne_active_column_axiom_boundary.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16](DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16](DM_LEPTOGENESIS_PMNS_ACTIVE_PROJECTOR_REDUCTION_NOTE_2026-04-16.md)

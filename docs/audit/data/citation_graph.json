@@ -697,6 +697,10 @@
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
     {
+      "from": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
       "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -3177,6 +3181,18 @@
       "to": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
     },
     {
+      "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
+      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
       "from": "ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25",
       "to": "alpha_s_derived_note"
     },
@@ -4137,6 +4153,14 @@
       "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     },
     {
+      "from": "dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16",
+      "to": "dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16"
+    },
+    {
       "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
       "to": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15"
     },
@@ -4769,6 +4793,14 @@
       "to": "dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18"
     },
     {
+      "from": "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
+      "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+    },
+    {
       "from": "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
       "to": "observable_principle_from_axiom_note"
     },
@@ -5295,6 +5327,10 @@
     {
       "from": "dm_selector_shifted_relative_action_recovered_packet_closure_theorem_note_2026-04-21",
       "to": "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21"
+    },
+    {
+      "from": "dm_selector_threshold_stabilization_support_theorem_note_2026-04-21",
+      "to": "scalar_selector_remaining_open_imports_2026-04-20"
     },
     {
       "from": "dm_sigma_hier_closure_packet_note_2026-04-20",
@@ -8035,6 +8071,10 @@
     {
       "from": "koide_axiom_native_support_batch_note_2026-04-22",
       "to": "koide_q_second_order_support_batch_note_2026-04-22"
+    },
+    {
+      "from": "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
     },
     {
       "from": "koide_berry_phase_theorem_note_2026-04-19",
@@ -12421,6 +12461,10 @@
       "to": "oh_schur_boundary_action_note"
     },
     {
+      "from": "s3_time_spacetime_tensor_primitive_note",
+      "to": "s3_time_theta_to_slice_coupling_note"
+    },
+    {
       "from": "s3_time_tensorized_schur_primitive_note",
       "to": "s3_general_r_derivation_note"
     },
@@ -12487,6 +12531,42 @@
     {
       "from": "scalar_selector_proof_chains_2026-04-19",
       "to": "dm_sigma_hier_closure_packet_note_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "koide_moment_ratio_uniformity_theorem_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "koide_berry_phase_theorem_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "quark_strc_observable_principle_note_2026-04-19"
+    },
+    {
+      "from": "scalar_selector_synthesis_note_2026-04-19",
+      "to": "quark_issr1_bicac_forcing_theorem_note_2026-04-19"
     },
     {
       "from": "scalar_tensor_ray_magnitude_bridge_note_2026-04-19",
@@ -13261,6 +13341,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "anomaly_forces_time_theorem"
     },
@@ -13567,6 +13651,10 @@
     {
       "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
       "to": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+      "to": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
     },
     {
       "from": "su3_z3_apbc_variant_probe_2026-05-04",
@@ -13989,6 +14077,30 @@
       "to": "universal_gr_a1_invariant_section_note"
     },
     {
+      "from": "universal_gr_constraint_action_stationarity_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "universal_gr_constraint_action_stationarity_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
+      "from": "universal_gr_constraint_action_stationarity_note",
+      "to": "universal_gr_tensor_variational_candidate_note"
+    },
+    {
+      "from": "universal_gr_constraint_action_stationarity_note",
+      "to": "universal_gr_tensor_quotient_uniqueness_note"
+    },
+    {
+      "from": "universal_gr_constraint_action_stationarity_note",
+      "to": "universal_gr_a1_invariant_section_note"
+    },
+    {
+      "from": "universal_gr_constraint_action_stationarity_note",
+      "to": "universal_gr_curvature_localization_blocker_note"
+    },
+    {
       "from": "universal_gr_curvature_localization_blocker_note",
       "to": "universal_gr_isotropic_glue_operator_note"
     },
@@ -14113,6 +14225,22 @@
       "to": "universal_qg_optional_textbook_comparison_note"
     },
     {
+      "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
+      "to": "universal_qg_smooth_gravitational_global_solution_class_note"
+    },
+    {
+      "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
+      "to": "universal_qg_smooth_gravitational_global_atlas_note"
+    },
+    {
       "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
       "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
     },
@@ -14149,16 +14277,148 @@
       "to": "universal_qg_optional_textbook_comparison_note"
     },
     {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_qg_smooth_gravitational_global_atlas_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_qg_canonical_smooth_geometric_action_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_gr_lorentzian_signature_extension_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+      "to": "universal_gr_constraint_action_stationarity_note"
+    },
+    {
       "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
       "to": "universal_qg_optional_textbook_comparison_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+      "to": "universal_qg_pl_weak_form_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+      "to": "universal_qg_pl_sobolev_interface_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+      "to": "universal_qg_external_fe_smooth_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+      "to": "universal_qg_abstract_gaussian_completion_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+      "to": "universal_qg_pl_field_interface_note"
     },
     {
       "from": "universal_qg_continuum_bridge_reduction_note",
       "to": "universal_qg_optional_textbook_comparison_note"
     },
     {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_uv_finite_partition_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_canonical_refinement_net_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_abstract_gaussian_completion_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_pl_field_interface_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_pl_weak_form_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_pl_sobolev_interface_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_smooth_gravitational_global_solution_class_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_canonical_smooth_geometric_action_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
+    },
+    {
+      "from": "universal_qg_continuum_bridge_reduction_note",
+      "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
+    },
+    {
       "from": "universal_qg_external_fe_smooth_equivalence_note",
       "to": "universal_qg_optional_textbook_comparison_note"
+    },
+    {
+      "from": "universal_qg_external_fe_smooth_equivalence_note",
+      "to": "universal_qg_pl_weak_form_note"
+    },
+    {
+      "from": "universal_qg_external_fe_smooth_equivalence_note",
+      "to": "universal_qg_pl_sobolev_interface_note"
+    },
+    {
+      "from": "universal_qg_external_fe_smooth_equivalence_note",
+      "to": "universal_qg_abstract_gaussian_completion_note"
+    },
+    {
+      "from": "universal_qg_external_fe_smooth_equivalence_note",
+      "to": "universal_qg_pl_field_interface_note"
+    },
+    {
+      "from": "universal_qg_external_fe_smooth_equivalence_note",
+      "to": "universal_qg_continuum_bridge_reduction_note"
     },
     {
       "from": "universal_qg_inverse_limit_closure_note",
@@ -14237,6 +14497,26 @@
       "to": "universal_qg_optional_textbook_comparison_note"
     },
     {
+      "from": "universal_qg_smooth_gravitational_global_atlas_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_atlas_note",
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_atlas_note",
+      "to": "universal_gr_positive_background_extension_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_atlas_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_atlas_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
       "from": "universal_qg_smooth_gravitational_global_solution_class_note",
       "to": "universal_qg_smooth_gravitational_local_identification_note"
     },
@@ -14271,6 +14551,26 @@
     {
       "from": "universal_qg_smooth_gravitational_local_identification_note",
       "to": "universal_qg_optional_textbook_comparison_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_local_identification_note",
+      "to": "universal_gr_positive_background_local_closure_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_local_identification_note",
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_local_identification_note",
+      "to": "universal_qg_pl_weak_form_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_local_identification_note",
+      "to": "universal_qg_pl_sobolev_interface_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_local_identification_note",
+      "to": "universal_qg_external_fe_smooth_equivalence_note"
     },
     {
       "from": "universal_qg_uv_finite_partition_note",
@@ -28569,9 +28869,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
       ],
-      "note_hash": "f59d1bfee215b9ccf139339c74b4a2b4152f3507fcffceca5ea5aad2058c19d9",
+      "note_hash": "7b6c46bb6df39323d508a7205a424a23361b4d2eed60751d2cfa3a3ed914ca19",
       "path": "docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
       "title": "Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) \u2297 Z^3"
@@ -30552,9 +30853,12 @@
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "alpha_s_derived_note",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
+        "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
+        "ckm_atlas_axiom_closure_note",
+        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24"
       ],
-      "note_hash": "3caddd826c575d7384a58f08ce8fcee45270afab45df2c2bbac009388d680b60",
+      "note_hash": "1f8ee9a4e400691b8cd4a97151ff9022adfa948d7ffe83968033925b14c371d5",
       "path": "docs/CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_second_row_magnitudes.py",
       "title": "CKM Second-Row Magnitudes Structural Identities Theorem"
@@ -32210,8 +32514,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "1d426aa842dbc44e731d6866d684db56bd10add1da57acb44dc0d58e9a5f9b53",
+      "deps": [
+        "dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16",
+        "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16"
+      ],
+      "note_hash": "f39fb41c27b4e2b6f63541f17449ba18225e483390f2425c54da5394bcb40b1b",
       "path": "docs/DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_ne_active_column_axiom_boundary.py",
       "title": "DM Leptogenesis `N_e` Active-Column Axiom Boundary"
@@ -33295,8 +33602,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "f3da5e907c3079b5afc23e001cf6ee244ea693af8e39f13429f9c8cd91f03c77",
+      "deps": [
+        "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
+        "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+      ],
+      "note_hash": "1e948f3082c7857f1e1f1ba9d3e349417aaf8595f7d527c3e48caafd80ecda0b",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_2026_04_18.py",
       "title": "P3 Sylvester Linear-Path Signature Theorem on the DM Neutrino Source Surface"
@@ -34118,8 +34428,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "43fe9e1bbbb084a82040bc13a2131a084c2938878a7ff77005241d1b9fec74f7",
+      "deps": [
+        "scalar_selector_remaining_open_imports_2026-04-20"
+      ],
+      "note_hash": "e59bc11ea6d5360e35324bf0b72737c045346e7dfa6ed78a83c9622481b65f7e",
       "path": "docs/DM_SELECTOR_THRESHOLD_STABILIZATION_SUPPORT_THEOREM_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_selector_threshold_stabilization_support_2026_04_21.py",
       "title": "DM Selector Threshold Stabilization Support Theorem"
@@ -38651,8 +38963,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "de3c43652eb936ecd95cc2e75c30ade273b4f661fe7591023abdb930f5865a7c",
+      "deps": [
+        "charged_lepton_koide_cone_algebraic_equivalence_note"
+      ],
+      "note_hash": "e596db3e52720d6b790c748238f787df6dc95f341137d5d15f463696f54591a9",
       "path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_koide_berry_bundle_obstruction_theorem.py",
       "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem"
@@ -48445,9 +48759,10 @@
       "deps": [
         "s3_general_r_derivation_note",
         "anomaly_forces_time_theorem",
-        "oh_schur_boundary_action_note"
+        "oh_schur_boundary_action_note",
+        "s3_time_theta_to_slice_coupling_note"
       ],
-      "note_hash": "7e2cbd1cc31490a8b5c717342ea485bd122c04958a5c3da2722130f016746ae3",
+      "note_hash": "f99742c3d0702aae5c3c496a60a5438104e9e03d6e515b6caa3b5ef9e92f5d77",
       "path": "docs/S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md",
       "runner_path": "scripts/frontier_s3_time_spacetime_tensor_primitive.py",
       "title": "Route 2 Spacetime Tensor Primitive Candidate on `PL S^3 x R`"
@@ -48644,8 +48959,18 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "ff99030502123e76c74bfb06ba7e6c4b7ffaaa66ea3ecc7e950093745c977589",
+      "deps": [
+        "koide_moment_ratio_uniformity_theorem_note_2026-04-19",
+        "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_berry_phase_theorem_note_2026-04-19",
+        "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19",
+        "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
+        "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
+        "quark_strc_observable_principle_note_2026-04-19",
+        "quark_issr1_bicac_forcing_theorem_note_2026-04-19"
+      ],
+      "note_hash": "653388243f4fa726959b5a3439edc055806c90c12185bdade76d4b4950fbd30a",
       "path": "docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_koide_z3_joint_projector_identity.py",
       "title": "Scalar-Selector Synthesis"
@@ -50306,9 +50631,10 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "minimal_axioms_2026-04-11"
+        "minimal_axioms_2026-04-11",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29"
       ],
-      "note_hash": "dd7b78a9c0b70f696c0722b7d46410abb16abb17f1426e28d19788b079e0e0c6",
+      "note_hash": "e798c613125ebb99fbfa7e519fbb779259e862c1bae6673f85c1213ece9016c0",
       "path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py",
       "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note"
@@ -50757,9 +51083,10 @@
       "deps": [
         "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
         "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
-        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
+        "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
       ],
-      "note_hash": "5fecffbdb4a2346aa24279f34bb7e6ed0786f2d46f009a47dfd0331ddb5d94a8",
+      "note_hash": "926089469c5f09a8ad56f1cfca71b4b6771f768c440afea4ed0a68874b778644",
       "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
       "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict"
@@ -51903,8 +52230,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "a7701474bee58423e328956a959e86e1907417737c001d30f7a92227749bf44c",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "s3_anomaly_spacetime_lift_note",
+        "universal_gr_tensor_variational_candidate_note",
+        "universal_gr_tensor_quotient_uniqueness_note",
+        "universal_gr_a1_invariant_section_note",
+        "universal_gr_curvature_localization_blocker_note"
+      ],
+      "note_hash": "295828f02d4506812ba922a102ca2b93dee2e5ffc4e4d87b59e71b031ccf18b5",
       "path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`"
@@ -52174,9 +52508,13 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_qg_smooth_gravitational_global_solution_class_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_atlas_note"
       ],
-      "note_hash": "b346f882988bfdd4a57b99a464621e3abb12a69956e9e8ae014029f3489fdcb8",
+      "note_hash": "89c0b45ab76ec82ede4d0e6cdcf13d8b0a16cf1aa57ab25aba6e33b2c0d05a16",
       "path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence"
@@ -52207,9 +52545,17 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_canonical_textbook_continuum_gr_closure_note",
+        "universal_qg_canonical_smooth_gravitational_weak_measure_note",
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_atlas_note",
+        "universal_qg_canonical_smooth_geometric_action_note",
+        "universal_gr_lorentzian_signature_extension_note",
+        "universal_gr_constraint_action_stationarity_note"
       ],
-      "note_hash": "20a8163b5d3a9d51914992b2d7615ba57eb69ee4e08a3102e97cc737a3a9133b",
+      "note_hash": "00e30179c1065a321ed26bacfbc27af87ef16c5d23d3500ae0effeec37ee05dd",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence"
@@ -52220,9 +52566,14 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_pl_weak_form_note",
+        "universal_qg_pl_sobolev_interface_note",
+        "universal_qg_external_fe_smooth_equivalence_note",
+        "universal_qg_abstract_gaussian_completion_note",
+        "universal_qg_pl_field_interface_note"
       ],
-      "note_hash": "b9374b7e783b813410eacc7f1d838a66b5329b898a5d6917ef308cafcf2c1ee5",
+      "note_hash": "e2dae77dbf6cbdcf44c8ca56c5083c94e11c7479dfc382ec6ef0889f6052cd26",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Textbook Weak/Measure Equivalence"
@@ -52233,9 +52584,24 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_uv_finite_partition_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_qg_canonical_refinement_net_note",
+        "universal_qg_abstract_gaussian_completion_note",
+        "universal_qg_pl_field_interface_note",
+        "universal_qg_pl_weak_form_note",
+        "universal_qg_pl_sobolev_interface_note",
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_solution_class_note",
+        "universal_qg_canonical_smooth_gravitational_weak_measure_note",
+        "universal_qg_canonical_smooth_geometric_action_note",
+        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+        "universal_qg_canonical_textbook_continuum_gr_closure_note"
       ],
-      "note_hash": "30de285c4f30ffbba0326e2154d812a258e5b5dbd435178c8a34838c6ec13bc7",
+      "note_hash": "ebd5ddcc22bcfb1865e78ab62da493a9fba07343830a787a1900a4dcd30553e5",
       "path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Continuum Bridge Reduction Note"
@@ -52246,9 +52612,14 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_pl_weak_form_note",
+        "universal_qg_pl_sobolev_interface_note",
+        "universal_qg_abstract_gaussian_completion_note",
+        "universal_qg_pl_field_interface_note",
+        "universal_qg_continuum_bridge_reduction_note"
       ],
-      "note_hash": "8dbebfc4c48f6113369168ae9eb95825aeae25de90b14fbb6171f2789403df74",
+      "note_hash": "26df79879c0fd07f069c7f5ed1fe8f703c37836fa753d5d254a37b9e4f27b15c",
       "path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence"
@@ -52348,9 +52719,14 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_gr_positive_background_extension_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_gr_lorentzian_global_atlas_closure_note"
       ],
-      "note_hash": "def890a740f949e487e545a5142c613847c52291997cb490af112a1ff91afb3b",
+      "note_hash": "48464847273c908876b017dec4eceb84bd966fe84517c0d732f3790514654fcd",
       "path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Smooth Gravitational Global Atlas Identification"
@@ -52381,9 +52757,14 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_optional_textbook_comparison_note",
+        "universal_gr_positive_background_local_closure_note",
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_qg_pl_weak_form_note",
+        "universal_qg_pl_sobolev_interface_note",
+        "universal_qg_external_fe_smooth_equivalence_note"
       ],
-      "note_hash": "4f17e4559f2c80c40119a40e136856c5f262a4818b229aa8d20047d5d74f72c6",
+      "note_hash": "2d0135122d439abb24a992ae106b58bed068bceb3fc240d65db87153191cfcff",
       "path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Smooth Gravitational Local Identification"
@@ -55326,7 +55707,6 @@
     "dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16",
     "dm_leptogenesis_full_microscopic_reduction_note_2026-04-16",
     "dm_leptogenesis_hrad_theorem_note_2026-04-16",
-    "dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16",
     "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
     "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16",
     "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
@@ -55371,7 +55751,6 @@
     "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
     "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
     "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-    "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
     "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
     "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
     "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17",
@@ -55400,7 +55779,6 @@
     "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
     "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
     "dm_pns_attack_cascade_note_2026-04-19",
-    "dm_selector_threshold_stabilization_support_theorem_note_2026-04-21",
     "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20",
     "dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21",
     "dm_strong_cp_gamma_transfer_no_go_note_2026-04-15",
@@ -55548,7 +55926,6 @@
     "koide_a1_physical_bridge_attempt_2026-04-22",
     "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
     "koide_aps_block_by_block_forcing_note_2026-04-21",
-    "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
     "koide_closure_atlas_issues_flagged",
     "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
     "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
@@ -55753,7 +56130,6 @@
     "scalar_selector_full_stack_recovery_note_2026-04-19",
     "scalar_selector_remaining_open_imports_2026-04-20",
     "scalar_selector_reviewer_package_2026-04-20",
-    "scalar_selector_synthesis_note_2026-04-19",
     "scalar_trace_tensor_no_go_note",
     "scaling_failure_mechanisms",
     "scaling_targets",
@@ -55890,7 +56266,6 @@
     "universal_gr_block_normalization_note",
     "universal_gr_canonical_projector_connection_note",
     "universal_gr_complement_canonical_note",
-    "universal_gr_constraint_action_stationarity_note",
     "universal_gr_discrete_global_closure_note",
     "universal_gr_invariant_frame_obstruction_note",
     "universal_gr_invariant_nonlinear_completion_note",
@@ -55992,10 +56367,10 @@
       "open_gate": 112,
       "positive_theorem": 627
     },
-    "edge_count": 6617,
-    "leaf_count": 550,
+    "edge_count": 6692,
+    "leaf_count": 546,
     "node_count": 1907,
-    "root_count": 864,
+    "root_count": 858,
     "runners_with_path": 1486
   }
 }

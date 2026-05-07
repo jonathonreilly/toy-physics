@@ -370,3 +370,10 @@ Expected output ends with `PASS=11 FAIL=0`. The runner:
   - `scripts/frontier_dm_neutrino_source_surface_z3_parity_split_theorem.py` (symbolic gradient of det(H))
   - `scripts/frontier_dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem.py` (numerical det(H) probes)
   - `scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py` (PMNS from H diagonalization)
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
+- [pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17](PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md)

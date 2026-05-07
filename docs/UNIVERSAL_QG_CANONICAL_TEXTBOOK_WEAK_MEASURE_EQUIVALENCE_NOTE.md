@@ -99,3 +99,13 @@ Those have now been discharged by later authority notes. So what remains beyond
 this theorem is only the separate optional comparison note
 [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md),
 which is packaging-only and not part of the theorem stack.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_pl_weak_form_note](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- [universal_qg_pl_sobolev_interface_note](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- [universal_qg_external_fe_smooth_equivalence_note](UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
+- [universal_qg_abstract_gaussian_completion_note](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+- [universal_qg_pl_field_interface_note](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
