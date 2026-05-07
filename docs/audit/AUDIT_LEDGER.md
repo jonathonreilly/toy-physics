@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 815 |
+| unaudited | 814 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 442 |
+| ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 442 |
+| `audited_conditional` | 443 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 864 |
+| `unaudited` | 863 |
 
 | claim_type | count |
 |---|---:|
@@ -629,6 +629,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -3800,6 +3801,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19`
+
+- **Note:** [`DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md`](../../docs/DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Historical four-basin precursor: on the older chart {Basin 1, Basin N, Basin P, Basin X}, the imported chamber-bound C1 and imported DPLE F_4 selector C2 leave Basin 1 uniquely.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-dm-abcc-chamber-judge`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** Composing (C1) and (C2) sends {Basin 1, Basin N, Basin P, Basin X} to {Basin 1, Basin X} by the chamber bound and then to {Basin 1} by DPLE F_4.  _(class `A`)_
+- **chain closes:** False — The finite four-basin set composition closes, but the audit chain does not close from the restricted packet because C1 chamber/P3 and C2 DPLE authorities are imported while ledger deps are empty. The 2026-04-21 correction also confines this note to a historical four-basin precursor; the corrected five-basin theorem is outside this packet.
+- **rationale:** Issue: the load-bearing operation is the algebraic set composition/intersection once C1 and C2 are supplied, so class A is the better classification, but C1 and C2 themselves are imported chamber-bound/P3 and DPLE authorities with no direct dependency edges in the scoped packet. Why this blocks: the runner verifies bounded four-basin arithmetic and consistency checks on hard-coded historical chart data, not retained-grade derivations of the chamber bound, the DPLE selector, or the corrected five-basin native-route theorem. Repair target: add and audit the direct chamber-bound/P3 and DPLE dependency edges, and audit the corrected five-basin note separately if final native-route A-BCC closure is intended. Claim boundary until fixed: conditional historical four-basin precursor only, not retained final A-BCC closure.
+- **open / conditional deps cited:**
+  - `DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`
+  - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
 
 ### `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
 
