@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 507,
     "high": 14,
-    "leaf": 180,
+    "leaf": 179,
     "medium": 95
   },
   "cycle_break_target_count": 194,
@@ -19932,27 +19932,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "yt_ssb_matching_gap_analysis_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_ssb_matching_gap.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -24583,6 +24562,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 3,
-  "total_pending": 796
+  "ready_count": 2,
+  "total_pending": 795
 }

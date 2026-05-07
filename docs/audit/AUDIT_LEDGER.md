@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 66 |
+| **retained** | 67 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 783 |
+| unaudited | 782 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 394 |
+| `audited_clean` | 395 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 832 |
+| `unaudited` | 831 |
 
 | claim_type | count |
 |---|---:|
@@ -501,6 +501,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | B | - |
 | `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `accessible_prediction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -14689,6 +14690,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** The runner performs a substantive numerical scan, but it imports the load-bearing construction and thresholds from an unprovided upstream module, so the chain cannot close from the restricted packet alone. The stdout overstates the conclusion as an open basin and first escape statement: the code only shows no failure in a selected finite grid of perturbation modes and amplitudes. This supports a bounded computational claim only conditional on the upstream base definitions and on the scan family being the intended admissible universe.
 - **open / conditional deps cited:**
   - `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py`
+- **auditor confidence:** high
+
+### `yt_ssb_matching_gap_analysis_note_2026-04-18`
+
+- **Note:** [`YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited only the finite-dimensional H_unit normalization arithmetic: diagonal component overlaps of H_unit = I_D/sqrt(D) on the canonical orthonormal pair basis, with D=N_iso*N_c and the framework instance (2,3).
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-yt-ssb-matching-gap-arithmetic-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given H_unit = I_(N_iso*N_c)/sqrt(N_iso*N_c), the diagonal basis component overlap equals 1/sqrt(N_iso*N_c), hence 1/sqrt(6) at (2,3).  _(class `A`)_
+- **chain closes:** True — The scoped identity follows directly from the stated orthonormal basis, matrix-unit definition, and H_unit normalization. The note explicitly excludes the physical SSB/Yukawa matching bridge, so that unproved bridge is outside the audited claim boundary.
+- **rationale:** The supplied proof and runner close the finite-dimensional arithmetic claim without importing gauge coupling, VEV, LSZ, chirality, HS/source normalization, or physical Yukawa readout assumptions. The alias equality is only clean within the explicitly bounded component-overlap definition and is not used to assert physical operator matching. The runner completed with 13 passes and 0 failures against the current scoped claim.
 - **auditor confidence:** high
 
 ### `yt_zero_import_chain_note`
