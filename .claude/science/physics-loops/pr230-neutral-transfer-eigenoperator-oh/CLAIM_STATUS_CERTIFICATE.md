@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block06_source_higgs_direct_pole_row_contract`.
+Current block: `block07_canonical_oh_hard_residual_equivalence_gate`.
 
 ```yaml
-actual_current_surface_status: exact-support / direct source-Higgs pole-row contract; current surface remains open
-conditional_surface_status: exact-support for future same-surface certified O_H_candidate plus C_ss/C_sH/C_HH pole-row packet that passes Gram purity, FV/IR/model-class, and retained-route gates
+actual_current_surface_status: exact negative boundary / canonical O_H hard residual not closed on current PR230 surface
+conditional_surface_status: exact-support equivalence for future source-Higgs Gram flatness, neutral primitive-cone rank-one authority, or W/Z physical-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block06 supplies only an exact future row contract. The current surface still lacks a certified canonical O_H operator, production C_sH/C_HH pole rows, Gram-purity pass, FV/IR/model-class row authority, and aggregate retained-route approval."
+proposal_allowed_reason: "Block07 sharpens the hard residual but supplies none of the required future artifacts: certified O_H plus C_sH/C_HH rows, neutral primitive-cone authority, or W/Z physical-response authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -25,10 +25,10 @@ Reason:
 2. The runner verifies dependency classes and forbidden-input firewalls, but
    the result is a support/boundary artifact rather than a positive retained
    proposal.
-3. Block06 does not construct `O_H`, does not set `kappa_s=1` or
-   `cos(theta)=1`, does not relabel `C_sx/C_xx` as `C_sH/C_HH`, does not use
-   static EW algebra or `H_unit` as `O_H`, and does not touch the live chunk
-   worker.
+3. Block07 does not construct `O_H`, does not set `kappa_s=1`,
+   `cos(theta)=1`, or flat extension by convention, does not relabel
+   `C_sx/C_xx` as `C_sH/C_HH`, does not use static EW algebra or `H_unit` as
+   `O_H`, and does not touch the live chunk worker.
 4. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
@@ -45,5 +45,10 @@ Prior block certificate summary:
   component is removed or measured/subtracted.
 - Block05 actual status: exact support / additive-top subtraction row contract;
   current additive Jacobian rows and matched covariance are absent.
-- Block01 through Block06 all have `proposal_allowed=false`; their boundaries
+- Block06 actual status: exact support / direct source-Higgs pole-row contract;
+  current `O_H` and production `C_sH/C_HH` pole rows are absent.
+- Block07 actual status: exact negative boundary / canonical `O_H` hard
+  residual not closed on current PR230 surface; future source-Higgs,
+  primitive-cone, and W/Z reopen paths remain explicit.
+- Block01 through Block07 all have `proposal_allowed=false`; their boundaries
   remain active.

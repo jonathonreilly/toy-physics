@@ -222,3 +222,50 @@ Ward identity authority, or claim retained/proposed-retained closure.
 The best remaining non-chunk target is now the hard one: derive or supply a
 same-surface canonical `O_H` certificate, or find a genuine neutral rank-one /
 irreducibility theorem that makes the future pole-row contract launchable.
+
+## Block07 Result
+
+Created `YT_PR230_CANONICAL_OH_HARD_RESIDUAL_EQUIVALENCE_GATE`.
+
+This block packages the second parallel-probe consensus into one hard-residual
+gate.  It proves no new closure, but it makes the blocker exact.  With
+`Res(C_sp,sp)=1`, positivity gives only
+
+```text
+M = [[1, a], [a*, b]],        b >= |a|^2.
+```
+
+The bridge needs the flat-extension equality
+
+```text
+b = |a|^2,
+Delta_spH = Res(C_HH) - |Res(C_sp,H)|^2 = 0,
+|rho_spH| = 1.
+```
+
+The runner verifies PSD-but-not-flat witnesses and flat witnesses, then checks
+that none of the three non-shortcut closure disjuncts is present:
+
+1. certified `O_H` plus production `C_ss/C_sH/C_HH` pole rows;
+2. same-surface neutral scalar primitive-cone / positivity-improving theorem;
+3. W/Z physical-response rows with accepted action, sector-overlap, covariance,
+   and strict `g2`.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py
+python3 scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py
+# SUMMARY: PASS=21 FAIL=0
+```
+
+Block07 is an exact negative boundary for the current surface, not a permanent
+no-go.  It preserves all real future reopen paths and blocks only source-only,
+representation-theory, static-EW, PSD-only, H_unit/Ward, and aliasing
+shortcuts.
+
+## Next Exact Action
+
+Do not cycle more current-surface shortcut gates.  A positive PR230 science
+artifact now has to supply one of the future disjuncts named above, or else
+the work should stay focused on production chunks / future row generation.
