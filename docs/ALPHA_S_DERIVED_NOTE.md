@@ -1,6 +1,6 @@
 # `alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)
 
-**Date:** 2026-04-15 (status amended 2026-05-01)
+**Date:** 2026-04-15 (status amended 2026-05-01; audit re-verified 2026-05-05)
 **Status:** bounded - same-surface quantitative lane on `main`. The
             framework-side carrier is `alpha_s(v)` from the canonical
             plaquette/`u_0` chain; the `M_Z` readout is then the standard
@@ -51,6 +51,35 @@ The honest author tier for this note is therefore `bounded`, not
 `proposed_retained`. The numerical lane `alpha_s(M_Z) = 0.1181` remains
 in place as the bounded same-surface readout under the documented
 one-hop bridge.
+
+## Audit re-verification 2026-05-05
+
+The 2026-05-05 Codex audit pass returned `audited_conditional` for this
+note, confirming the bounded scope is the honest landing tier. The
+verdict explicitly accepted the registered one-hop bridge and the
+plaquette-side bounded scope; its repair note recorded the standard
+audit-prep choice now in effect:
+
+> dependency_not_retained: ratify the plaquette beta=6 insertion
+> authority and the low-energy running bridge, or keep this row
+> explicitly bounded with those dependencies recorded.
+
+This note keeps the latter option: it stays explicitly `bounded`, with
+its two one-hop dependencies recorded as `audited_conditional` as of the
+2026-05-05 ledger snapshot, namely
+
+- [`PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md)
+  (`audited_conditional` 2026-05-05; bounded analytic-insertion scope at
+  `beta = 6`);
+- [`QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md`](QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md)
+  (`audited_conditional` 2026-05-05; standard SM 2-loop RGE plus PDG
+  threshold infrastructure).
+
+For a `bounded_theorem` row those are the appropriate effective statuses
+for one-hop authorities: a bounded conclusion does not require its
+authorities to be `retained_clean`, only that they be honestly scoped
+and that the load-bearing step (here a class-B value transfer) be cited
+without backdoor imports. Both conditions hold on this surface.
 
 ## Authority Role
 
