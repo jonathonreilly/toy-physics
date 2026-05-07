@@ -1,0 +1,65 @@
+slug: bridge-gap-new-physics-20260506
+goal: |
+  Pursue new-physics opening on the bridge gap. Wilson is admitted-as-import
+  per G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18 line 467; the
+  framework's actual derived gauge action is open. Heat-kernel is the
+  Casimir-native candidate. Block 01: derive t = t(β) from canonical
+  Tr(T_a T_b) = δ_{ab}/2 + small-U matching. Block 02: evaluate ⟨P⟩_HK,1plaq(6).
+  Block 03: thermodynamic ⟨P⟩_HK(6) closure. Block 04: action-form uniqueness.
+
+target_status: best-honest-status
+runtime_budget: 12h
+runtime_used: ~30m (loop pack setup)
+mode: campaign
+
+current_block: 01
+current_block_route: R1.A (bi-invariant metric → Brownian time t)
+current_block_branch: physics-loop/bridge-gap-new-physics-block01-20260506
+current_block_status: planning
+
+cycles_completed: 0
+blocks_completed: 0
+prs_opened: 0
+volume_cap: 5
+cluster_cap_remaining: 2 (gauge_vacuum_plaquette_*)
+
+active_route: R1.A
+active_route_deliverable: BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md
+hard_residual_being_attacked: |
+  Derive the canonical Brownian time t = t(β) from Cl(3) Tr-form +
+  small-U Wilson-HK matching. Target: closed-form t(β=6) at canonical
+  g_bare = 1.
+
+files_touched:
+  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/GOAL.md
+  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/bridge-gap-new-physics-20260506/STATE.yaml
+
+open_imports_for_active_target:
+  - g_bare = 1 normalization (open gate per MINIMAL_AXIOMS_2026-05-03)
+  - SU(3) gauge group emergence (bounded, depends on staggered-Dirac open gate)
+  - heat-kernel-Wilson small-U matching (admitted standard machinery,
+    Menotti-Onofri 1981)
+
+no_go_routes_avoided:
+  - All seven routes consolidated in BRIDGE_GAP_EXHAUSTED_ROUTES_CONSOLIDATION_NOTE_2026-05-06.md
+  - constant-lift ansatz (refuted)
+  - anisotropic Wilson via Cl(3) pseudoscalar / staggered-η (no-go)
+
+review_findings: []
+
+pr_status: not_yet_opened
+
+next_exact_action: |
+  Execute Block 01 R1.A: write BRIDGE_GAP_HK_TIME_DERIVATION_NOTE_2026-05-06.md
+  with the bi-invariant-metric → Brownian time derivation, paired runner
+  scripts/probe_hk_time_derivation.py with exact-arithmetic verification.
+
+stop_condition: |
+  Continue until 12h runtime exhausted, corollary exhaustion, volume cap (5
+  PRs/24h), cluster cap (2 PRs per parent-row family), or global queue
+  exhaustion.
+
+last_checkpoint: 2026-05-06T20:30 (initial loop-pack setup)
