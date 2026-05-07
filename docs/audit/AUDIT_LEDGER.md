@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 233 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 11 |
-| unaudited | 790 |
+| open_gate | 12 |
+| unaudited | 789 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 387 |
+| `audited_clean` | 388 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 839 |
+| `unaudited` | 838 |
 
 | claim_type | count |
 |---|---:|
@@ -444,6 +444,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_causal_channel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_cross_encoding_maps_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_dynamical_resource_generation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_measurement_record_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_microscopic_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -12834,6 +12835,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** No high-fidelity Bell-resource window appears in this bounded product-state scan at the 0.90 Bell-overlap threshold, while interacting cases open only useful low-fidelity windows after fixed Bell-frame alignment.  _(class `C`)_
 - **chain closes:** True — The runner directly computes the stated finite model, extraction, Bell overlaps, teleportation fidelity estimates, null control, and Bob no-record input-independence for the default bounded cases. The note keeps the claim within ordinary quantum state teleportation and explicitly states the small-surface, sampled-time, ideal-logical-operation limits.
 - **rationale:** The scoped result is a bounded finite/model computation, not a no-go theorem and not merely an open obligation. The live output supports the note's numerical boundary: interacting cases exceed the useful Bell-overlap threshold but remain far below the 0.90 high-fidelity threshold, with null and no-signaling diagnostics passing. No hidden carrier, matter-transfer, FTL, or protocol-readout claim is needed for the bounded statement.
+- **auditor confidence:** high
+
+### `teleportation_encoding_portability_note`
+
+- **Note:** [`TELEPORTATION_ENCODING_PORTABILITY_NOTE.md`](../../docs/TELEPORTATION_ENCODING_PORTABILITY_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Finite algebraic operator-targeting portability audit for ideal encoded taste-qubit state teleportation on dimensions 1,2,3 and even side lengths 2,4,6,8, with same-cell/same-axis/same-spectator registers only; excludes physical implementation, noise, odd sides, larger lattices, cross-encoding maps, matter transfer, and any general teleportation theorem beyond the surveyed operator gate.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-gpt-5.5-xhigh-teleportation-encoding-portability-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The completed finite runner enumerates the surveyed even KS cell/taste geometries and directly restricts Z plus the fixed/adapted X operators to every declared two-dimensional encoded subspace, establishing the last-axis-only success of current_fixed_x, the non-last-axis zero-restriction/leakage obstruction, and full axis_adapted_x success on the bounded surface.  _(class `C`)_
+- **chain closes:** True — Within the bounded scope, the note's numbers and interpretation match the completed runner stdout: current_fixed_x passes exactly the last logical axis cases and fails 860 non-last-axis cases by flipping the last taste bit, while axis_adapted_x passes all 1330 surveyed encodings. The note does not rely on external comparator data or hidden physical identification and explicitly frames the result as a finite algebraic open operational gate rather than a retained positive physical teleportation claim.
+- **rationale:** The scoped open-gate conclusion follows from the supplied runner output and source note: the obstruction is finite, explicit, and numerically matched; the successful adapted control is limited to ideal operator retargeting; and the note consistently disclaims unsupported physical apparatus, cross-encoding portability, larger surfaces, and matter/FTL claims. Random teleportation trials are not sufficient for an unrestricted state theorem, but the note's retained claim is the finite operator-targeting audit, so this does not break closure.
 - **auditor confidence:** high
 
 ### `teleportation_hard_blocker_attack_note`
