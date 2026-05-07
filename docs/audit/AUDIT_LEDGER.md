@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 65 |
-| **retained_no_go** | 121 |
+| **retained_no_go** | 122 |
 | **retained_bounded** | 228 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 798 |
+| unaudited | 797 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 380 |
+| `audited_clean` | 381 |
 | `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 847 |
+| `unaudited` | 846 |
 
 | claim_type | count |
 |---|---:|
@@ -230,6 +230,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -6937,6 +6938,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The note gives the finite transfer-kernel factorization and the SU(3) tensor-product recurrence needed to identify the local plaquette source with J. The open beta=6 transfer-state/Perron data are explicitly outside scope.
 - **rationale:** The scoped theorem is exact operator algebra on a finite Wilson source surface, not a numerical beta=6 plaquette prediction. The runner supports the character identity, recurrence, self-adjointness, slice counting, and scoped operator realization with THEOREM PASS=7 SUPPORT=2 FAIL=0. No support-class promotion is needed because the audited object is a bounded exact theorem with the remaining state-identification gap excluded.
 - **auditor confidence:** medium
+
+### `gauge_wilson_isotropy_boundary_note_2026-05-04`
+
+- **Note:** [`GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md`](../../docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Route-specific no-go that the Cl(3) pseudoscalar and standard staggered-eta plaquette-product mechanisms do not derive orientation-dependent Wilson plaquette coefficients on the accepted isotropic nearest-neighbor Wilson surface.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-gauge-wilson-isotropy-boundary-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Combining the two checks, the Cl(3) route supplies no fourth anticommuting generator, the staggered eta route supplies no orientation-dependent plaquette factor, and the accepted Wilson source grammar already has one common coefficient on all six plaquette orientations, so these PR #528 routes do not derive a new anisotropic Wilson gauge action.  _(class `A`)_
+- **chain closes:** True — The two negative checks are exact algebraic consequences of the displayed Cl(3) relations and standard staggered eta phases, and both cited dependencies are retained-grade for the needed bounded Wilson grammar and constant-lift obstruction context. The conclusion closes only as a narrow boundary against these two mechanisms, not as a global no-go for every possible anisotropy derivation.
+- **rationale:** The scoped no-go closes: omega=G1G2G3 commutes with every spatial generator rather than anticommutes, and the eta plaquette product is -1 for every orientation, so neither mechanism yields unequal Wilson plaquette weights. Residual risk is scope creep only: this audit does not rule out other future anisotropy mechanisms or an explicitly approved theorem deriving orientation-dependent coefficients.
+- **auditor confidence:** high
 
 ### `gellmann_completeness_theorem_note_2026-05-02`
 
