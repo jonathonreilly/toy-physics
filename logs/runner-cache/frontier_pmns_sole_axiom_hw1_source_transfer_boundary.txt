@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py
-runner_sha256: fe92f181c97b29fd800fb0092355b8c12b83aab411fa35122e00778a683ae07d
+runner_sha256: ed00b6595909455cd482151570c51a2d8b6a5e9b45566aa7675aeeaedd6847c2
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.07
+elapsed_sec: 0.14
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -16,8 +16,10 @@ Question:
   graph-first transfer frame produce a nontrivial retained PMNS pack?
 
 ========================================================================================
-PART 1: NATIVE SOURCES AND GRAPH-FIRST CYCLE FRAME ARE EXACT
+PART 1: CLIFFORD/LATTICE AXIOM, NATIVE SOURCES, AND CYCLE FRAME
 ========================================================================================
+  [PASS] The packet instantiates Cl(3): {gamma_i,gamma_j}=2 delta_ij  (max_residual=0.00e+00)
+  [PASS] The three Z^3 hw=1 translations are commuting involutions
   [PASS] The native hw=1 source projectors resolve the identity exactly
   [PASS] The source projectors are exactly E11,E22,E33
   [PASS] Forward cycle transport sends the source projectors to the canonical edge frame
@@ -26,6 +28,9 @@ PART 1: NATIVE SOURCES AND GRAPH-FIRST CYCLE FRAME ARE EXACT
 ========================================================================================
 PART 2: SOLE-AXIOM SOURCE INSERTIONS GIVE ONLY TRIVIAL RESPONSE COLUMNS
 ========================================================================================
+  [PASS] The sole-axiom active/passive blocks are projector-derived, not inserted targets
+  [PASS] The active identity resolvent is computed from I - lambda(D-I)
+  [PASS] The passive identity-sector resolvent is the scalar identity
   [PASS] The sole-axiom active source columns are exactly the basis columns e1,e2,e3
   [PASS] The sole-axiom passive source columns are exactly a scalar multiple of the basis columns
   [PASS] The active source-derived block is exactly I3
@@ -44,6 +49,7 @@ PART 3: GRAPH-FIRST TRANSFER ADDS ONLY FRAME SUPPORT, NOT VALUE DATA
 ========================================================================================
 PART 4: THE CANONICAL SOLE-AXIOM PACK IS REJECTED BY THE RETAINED PMNS STACK
 ========================================================================================
+  [PASS] Local one-sided-minimal PMNS criterion rejects the projector-derived free pack  (active_support=False, passive_support=False, active_monomial=True, passive_monomial=True)
   [PASS] The retained PMNS closure stack rejects the canonical sole-axiom hw=1 source/transfer pack  (pair is not on a one-sided minimal PMNS class)
   [PASS] Reason: the derived pair is not on a one-sided minimal PMNS class  (pair is not on a one-sided minimal PMNS class)
   [PASS] So native source insertion and graph-first transfer do not evade the sole-axiom free boundary
@@ -68,7 +74,7 @@ RESULT
   So even source insertion plus graph-first transfer do not derive a
   nontrivial retained PMNS lane from Cl(3) on Z^3 alone.
 
-PASS=16 FAIL=0
+PASS=22 FAIL=0
 
 ----- stderr -----
 

@@ -1,0 +1,34 @@
+loop_slug: pmns-sole-axiom-hw1-source-transfer-boundary
+mode: targeted_science_fix
+branch: claude/science-fix/pmns_sole_axiom_hw1_source_transfer_boundary_note-f2ee33cc
+target: close the missing derivation in docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: independent audit still required before any effective retained/bounded-retained status
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+cycle_count: 1
+active_route: in-packet Cl(3)/Z^3 hw=1 projector derivation of the identity sector blocks
+hard_residual: auditor objected that active/passive blocks were set to I3 rather than derived
+files_touched:
+  - docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md
+  - scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py
+  - logs/runner-cache/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.txt
+open_imports:
+  - independent audit must re-check whether the in-packet finite projector derivation is accepted as the scoped sole-axiom derivation
+no_go_routes:
+  - deriving nonzero PMNS value data from the canonical zero-input source/transfer pack remains blocked; the route closes negatively
+lock_status: global automation lock unavailable; command failed with permission denied on /Users/jonreilly
+branch_local_lock: .claude/science/physics-loops/pmns-sole-axiom-hw1-source-transfer-boundary/SUPERVISOR_LOCK.md
+checks_run:
+  - python3 -m py_compile scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py
+  - python3 scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py
+  - python3 scripts/frontier_pmns_c3_character_mode_reduction.py
+  - python3 scripts/frontier_neutrino_two_amplitude_last_mile.py
+  - python3 scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py
+  - python3 scripts/frontier_pmns_c3_nontrivial_current_boundary.py
+  - python3 scripts/frontier_pmns_sigma_zero_no_go.py
+next_exact_action: run an independent audit/re-audit of pmns_sole_axiom_hw1_source_transfer_boundary_note against the updated runner and note

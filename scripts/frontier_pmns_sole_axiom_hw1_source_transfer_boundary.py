@@ -23,26 +23,21 @@ Answer:
 
 from __future__ import annotations
 
+import inspect
 import sys
 
 import numpy as np
 
-from frontier_pmns_graph_first_cycle_frame_support import canonical_edge_basis
 from frontier_pmns_lower_level_end_to_end_closure import close_from_lower_level_observables
-from pmns_lower_level_utils import (
-    CYCLE,
-    I3,
-    active_response_columns_from_sector_operator,
-    circularity_guard,
-    derive_active_block_from_response_columns,
-    derive_passive_block_from_response_columns,
-    passive_response_columns_from_sector_operator,
-)
 
 np.set_printoptions(precision=6, suppress=True, linewidth=140)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+I3 = np.eye(3, dtype=complex)
+CYCLE = np.array([[0, 1, 0], [0, 0, 1], [1, 0, 0]], dtype=complex)
+TARGET_ACTIVE_SUPPORT = (np.abs(I3 + CYCLE) > 0).astype(int)
+BANNED_INPUT_NAMES = {"d0_trip", "dm_trip", "delta_d_act", "diag_a_pq", "m_r"}
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -80,32 +75,215 @@ E22 = e(1, 1)
 E33 = e(2, 2)
 
 
-def source_projectors() -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    return E11, E22, E33
+def pauli_cl3_generators() -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    sigma_x = np.array([[0, 1], [1, 0]], dtype=complex)
+    sigma_y = np.array([[0, -1j], [1j, 0]], dtype=complex)
+    sigma_z = np.array([[1, 0], [0, -1]], dtype=complex)
+    return sigma_x, sigma_y, sigma_z
 
 
-def sole_axiom_hw1_source_transfer_pack(lam_act: float, lam_pass: float) -> dict[str, object]:
-    active_block = I3
-    passive_block = I3
-    active_cols = active_response_columns_from_sector_operator(active_block, lam_act)[1]
-    passive_cols = passive_response_columns_from_sector_operator(passive_block, lam_pass)[1]
+def max_clifford_residual(gammas: tuple[np.ndarray, np.ndarray, np.ndarray]) -> float:
+    ident = np.eye(gammas[0].shape[0], dtype=complex)
+    residual = 0.0
+    for i, gi in enumerate(gammas):
+        for j, gj in enumerate(gammas):
+            target = 2.0 * ident if i == j else np.zeros_like(ident)
+            residual = max(residual, float(np.linalg.norm(gi @ gj + gj @ gi - target)))
+    return residual
+
+
+def hw1_translation_characters() -> tuple[tuple[int, int, int], tuple[int, int, int], tuple[int, int, int]]:
+    return (-1, 1, 1), (1, -1, 1), (1, 1, -1)
+
+
+def hw1_translation_operators() -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    chars = np.array(hw1_translation_characters(), dtype=int)
+    return tuple(np.diag(chars[:, axis]).astype(complex) for axis in range(3))  # type: ignore[return-value]
+
+
+def joint_character_projector(
+    translations: tuple[np.ndarray, np.ndarray, np.ndarray],
+    character: tuple[int, int, int],
+) -> np.ndarray:
+    projector = I3.copy()
+    for translation, sign in zip(translations, character, strict=True):
+        projector = projector @ (I3 + sign * translation) / 2.0
+    return projector
+
+
+def instantiate_cl3_z3_hw1_packet() -> dict[str, object]:
+    gammas = pauli_cl3_generators()
+    translations = hw1_translation_operators()
+    characters = hw1_translation_characters()
+    projectors = tuple(joint_character_projector(translations, character) for character in characters)
+    hw1_identity = sum(projectors, np.zeros((3, 3), dtype=complex))
+    free_sector = sum((projector @ hw1_identity @ projector for projector in projectors), np.zeros((3, 3), dtype=complex))
     return {
-        "active_block": active_block,
-        "passive_block": passive_block,
-        "active_columns": active_cols,
-        "passive_columns": passive_cols,
-        "source_projectors": source_projectors(),
-        "edge_basis": canonical_edge_basis(),
+        "gammas": gammas,
+        "translations": translations,
+        "characters": characters,
+        "projectors": projectors,
+        "hw1_identity": hw1_identity,
+        "free_sector": free_sector,
     }
 
 
-def part1_native_sources_and_graph_first_cycle_frame_are_exact() -> None:
+def source_projectors() -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    packet = instantiate_cl3_z3_hw1_packet()
+    return packet["projectors"]  # type: ignore[return-value]
+
+
+def canonical_edge_basis_from_projectors(
+    projectors: tuple[np.ndarray, np.ndarray, np.ndarray],
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    return tuple(projector @ CYCLE for projector in projectors)  # type: ignore[return-value]
+
+
+def source_vector_from_rank_one_projector(projector: np.ndarray) -> np.ndarray:
+    evals, evecs = np.linalg.eigh(projector)
+    vec = evecs[:, int(np.argmax(evals))].astype(complex)
+    pivot = int(np.argmax(np.abs(vec)))
+    phase = vec[pivot] / abs(vec[pivot])
+    vec = vec / phase
+    if np.real(vec[pivot]) < 0:
+        vec = -vec
+    return vec
+
+
+def source_vectors_from_projectors(projectors: tuple[np.ndarray, np.ndarray, np.ndarray]) -> list[np.ndarray]:
+    return [source_vector_from_rank_one_projector(projector) for projector in projectors]
+
+
+def sole_axiom_hw1_blocks() -> tuple[np.ndarray, np.ndarray, dict[str, object]]:
+    packet = instantiate_cl3_z3_hw1_packet()
+    free_sector = packet["free_sector"]  # type: ignore[assignment]
+    active_block = np.asarray(free_sector, dtype=complex).copy()
+    passive_block = np.asarray(free_sector, dtype=complex).copy()
+    return active_block, passive_block, packet
+
+
+def active_resolvent_from_block(block: np.ndarray, lam: float, identity: np.ndarray) -> np.ndarray:
+    return np.linalg.inv(identity - lam * (block - identity))
+
+
+def passive_resolvent_from_block(block: np.ndarray, lam: float, identity: np.ndarray) -> np.ndarray:
+    return np.linalg.inv(identity - lam * block)
+
+
+def response_columns_from_resolvent(resolvent: np.ndarray, sources: list[np.ndarray]) -> list[np.ndarray]:
+    return [resolvent @ source for source in sources]
+
+
+def kernel_from_response_columns(columns: list[np.ndarray]) -> np.ndarray:
+    return np.column_stack(columns)
+
+
+def derive_active_block_from_response_columns(
+    response_columns: list[np.ndarray], lam: float
+) -> tuple[np.ndarray, np.ndarray]:
+    kernel = kernel_from_response_columns(response_columns)
+    delta = (I3 - np.linalg.inv(kernel)) / lam
+    return kernel, I3 + delta
+
+
+def derive_passive_block_from_response_columns(
+    response_columns: list[np.ndarray], lam: float
+) -> tuple[np.ndarray, np.ndarray]:
+    kernel = kernel_from_response_columns(response_columns)
+    block = (I3 - np.linalg.inv(kernel)) / lam
+    return kernel, block
+
+
+def support_mask(block: np.ndarray, tol: float = 1e-12) -> np.ndarray:
+    return (np.abs(block) > tol).astype(int)
+
+
+def has_active_pmns_support(block: np.ndarray) -> bool:
+    mask = support_mask(block)
+    return bool(np.array_equal(mask, TARGET_ACTIVE_SUPPORT))
+
+
+def has_monomial_support(block: np.ndarray) -> bool:
+    mask = support_mask(block)
+    return bool(
+        np.count_nonzero(mask) == 3
+        and np.array_equal(mask.sum(axis=0), np.ones(3, dtype=int))
+        and np.array_equal(mask.sum(axis=1), np.ones(3, dtype=int))
+    )
+
+
+def local_one_sided_minimal_pmns_rejection(active_block: np.ndarray, passive_block: np.ndarray) -> tuple[bool, str]:
+    active_support = has_active_pmns_support(active_block)
+    passive_support = has_active_pmns_support(passive_block)
+    active_monomial = has_monomial_support(active_block)
+    passive_monomial = has_monomial_support(passive_block)
+    one_sided_minimal = (
+        active_support and passive_monomial and not passive_support
+    ) or (
+        passive_support and active_monomial and not active_support
+    )
+    detail = (
+        f"active_support={active_support}, passive_support={passive_support}, "
+        f"active_monomial={active_monomial}, passive_monomial={passive_monomial}"
+    )
+    return (not one_sided_minimal), detail
+
+
+def circularity_guard(function, extra_banned: set[str] | None = None) -> tuple[bool, list[str]]:
+    banned = set(BANNED_INPUT_NAMES)
+    if extra_banned:
+        banned |= set(extra_banned)
+    params = set(inspect.signature(function).parameters)
+    closure_vars = set()
+    if function.__closure__:
+        closure_vars = set(function.__code__.co_freevars)
+    source = inspect.getsource(function)
+    bad = sorted((params | closure_vars) & banned)
+    for name in banned - set(bad):
+        if f"{name}=" in source:
+            bad.append(name)
+    return len(bad) == 0, sorted(set(bad))
+
+
+def sole_axiom_hw1_source_transfer_pack(lam_act: float, lam_pass: float) -> dict[str, object]:
+    active_block, passive_block, packet = sole_axiom_hw1_blocks()
+    identity = packet["hw1_identity"]  # type: ignore[assignment]
+    projectors = packet["projectors"]  # type: ignore[assignment]
+    sources = source_vectors_from_projectors(projectors)
+    active_resolvent = active_resolvent_from_block(active_block, lam_act, identity)
+    passive_resolvent = passive_resolvent_from_block(passive_block, lam_pass, identity)
+    active_cols = response_columns_from_resolvent(active_resolvent, sources)
+    passive_cols = response_columns_from_resolvent(passive_resolvent, sources)
+    return {
+        "active_block": active_block,
+        "passive_block": passive_block,
+        "active_resolvent": active_resolvent,
+        "passive_resolvent": passive_resolvent,
+        "active_columns": active_cols,
+        "passive_columns": passive_cols,
+        "source_projectors": projectors,
+        "edge_basis": canonical_edge_basis_from_projectors(projectors),
+        "cl3_z3_packet": packet,
+    }
+
+
+def part1_clifford_lattice_sources_and_graph_first_cycle_frame_are_exact() -> None:
     print("\n" + "=" * 88)
-    print("PART 1: NATIVE SOURCES AND GRAPH-FIRST CYCLE FRAME ARE EXACT")
+    print("PART 1: CLIFFORD/LATTICE AXIOM, NATIVE SOURCES, AND CYCLE FRAME")
     print("=" * 88)
 
-    s1, s2, s3 = source_projectors()
-    b1, b2, b3 = canonical_edge_basis()
+    packet = instantiate_cl3_z3_hw1_packet()
+    gammas = packet["gammas"]
+    translations = packet["translations"]
+    s1, s2, s3 = packet["projectors"]
+    b1, b2, b3 = canonical_edge_basis_from_projectors((s1, s2, s3))
+
+    cl_residual = max_clifford_residual(gammas)
+    check("The packet instantiates Cl(3): {gamma_i,gamma_j}=2 delta_ij",
+          cl_residual < 1e-12, f"max_residual={cl_residual:.2e}")
+    check("The three Z^3 hw=1 translations are commuting involutions",
+          all(np.linalg.norm(t @ t - I3) < 1e-12 for t in translations)
+          and all(np.linalg.norm(a @ b - b @ a) < 1e-12 for a in translations for b in translations))
 
     check("The native hw=1 source projectors resolve the identity exactly",
           np.linalg.norm((s1 + s2 + s3) - I3) < 1e-12)
@@ -131,6 +309,17 @@ def part2_sole_axiom_source_insertions_give_only_trivial_response_columns() -> t
     passive_cols = pack["passive_columns"]
     active_kernel, active_block = derive_active_block_from_response_columns(active_cols, lam_act)
     passive_kernel, passive_block = derive_passive_block_from_response_columns(passive_cols, lam_pass)
+    identity = pack["cl3_z3_packet"]["hw1_identity"]
+    active_resolvent = pack["active_resolvent"]
+    passive_resolvent = pack["passive_resolvent"]
+
+    check("The sole-axiom active/passive blocks are projector-derived, not inserted targets",
+          np.linalg.norm(pack["active_block"] - identity) < 1e-12
+          and np.linalg.norm(pack["passive_block"] - identity) < 1e-12)
+    check("The active identity resolvent is computed from I - lambda(D-I)",
+          np.linalg.norm(active_resolvent - I3) < 1e-12)
+    check("The passive identity-sector resolvent is the scalar identity",
+          np.linalg.norm(passive_resolvent - (1.0 / (1.0 - lam_pass)) * I3) < 1e-12)
 
     check("The sole-axiom active source columns are exactly the basis columns e1,e2,e3",
           np.linalg.norm(np.column_stack(active_cols) - I3) < 1e-12)
@@ -154,7 +343,7 @@ def part3_graph_first_transfer_adds_only_frame_support_not_value_data(
 
     transported_cols = [CYCLE @ col for col in active_cols]
     transported_matrix = np.column_stack(transported_cols)
-    b1, b2, b3 = canonical_edge_basis()
+    b1, b2, b3 = canonical_edge_basis_from_projectors(source_projectors())
 
     check("Forward transport of the sole-axiom source columns is exactly the cycle matrix",
           np.linalg.norm(transported_matrix - CYCLE) < 1e-12)
@@ -174,6 +363,12 @@ def part4_the_canonical_sole_axiom_pack_is_rejected_by_the_retained_pmns_closure
     print("\n" + "=" * 88)
     print("PART 4: THE CANONICAL SOLE-AXIOM PACK IS REJECTED BY THE RETAINED PMNS STACK")
     print("=" * 88)
+
+    _active_kernel, active_block = derive_active_block_from_response_columns(active_cols, 0.31)
+    _passive_kernel, passive_block = derive_passive_block_from_response_columns(passive_cols, 0.27)
+    locally_rejected, local_detail = local_one_sided_minimal_pmns_rejection(active_block, passive_block)
+    check("Local one-sided-minimal PMNS criterion rejects the projector-derived free pack",
+          locally_rejected, local_detail)
 
     ok, detail = expect_raises(
         lambda: close_from_lower_level_observables(active_cols, passive_cols, 0.31, 0.27),
@@ -208,7 +403,7 @@ def main() -> int:
     print("  sole axiom Cl(3) on Z^3, do the native source insertions and")
     print("  graph-first transfer frame produce a nontrivial retained PMNS pack?")
 
-    part1_native_sources_and_graph_first_cycle_frame_are_exact()
+    part1_clifford_lattice_sources_and_graph_first_cycle_frame_are_exact()
     active_cols, passive_cols = part2_sole_axiom_source_insertions_give_only_trivial_response_columns()
     part3_graph_first_transfer_adds_only_frame_support_not_value_data(active_cols)
     part4_the_canonical_sole_axiom_pack_is_rejected_by_the_retained_pmns_closure_stack(active_cols, passive_cols)
