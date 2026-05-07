@@ -89,7 +89,10 @@ Without additional `Z_3` information on the Higgs lane, the unresolved Dirac
 texture is therefore a general complex `3 x 3` matrix.
 
 That broad statement is now sharpened by the exact support companion
-[NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md](./NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md):
+`NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md` (DOWNSTREAM sharpening;
+backticked rather than markdown-linked because the citation graph
+direction is *trichotomy → this_note*; trichotomy CONSUMES this note's
+broad statement and adds the Z₃-charge sharpening):
 if a single Higgs doublet with definite generation `Z_3` charge `q_H` is
 admitted, the support of `Y_nu` collapses to one of three exact permutation
 patterns, leaving only three coefficient slots on the selected support.
@@ -108,7 +111,10 @@ Two exact frontier companions now isolate that extra structure more sharply:
 - [NEUTRINO_DIRAC_TWO_HIGGS_ESCAPE_NOTE.md](./NEUTRINO_DIRAC_TWO_HIGGS_ESCAPE_NOTE.md):
   the smallest exact neutrino-side escape from the single-Higgs no-mixing
   theorem is a two-Higgs `Z_3` sector with distinct Higgs charges
-- [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md):
+- `LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md` (DOWNSTREAM sharpening;
+  backticked rather than markdown-linked because the citation graph
+  direction is *triviality → this_note*; triviality CONSUMES this note's
+  broad statement to derive the no-mixing obstruction):
   even allowing charged-lepton misalignment does not rescue the full
   single-Higgs monomial lepton sector; at least one lepton sector must leave
   that class to reproduce PMNS

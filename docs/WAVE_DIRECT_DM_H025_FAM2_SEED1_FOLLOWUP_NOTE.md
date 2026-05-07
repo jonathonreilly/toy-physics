@@ -74,7 +74,7 @@ So the honest conclusion is:
 - The portable part of the read is the seed-conditioned late-gain ordering,
   not a stable `R_hist` band.
 - The narrow `Fam2` pair synthesis now exists in
-  [`WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md).
+  `WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md` (DOWNSTREAM aggregator; backticked to avoid length-2 cycle).
 - The next honest move is to compare that controlled `Fam2` pair against the
   retained `Fam1` pair before any `Fam3`, third-seed, or weaker-strength
   widening.
@@ -85,7 +85,7 @@ So the honest conclusion is:
 - [`logs/2026-04-08-wave-direct-dm-h025-fam2-seed1.txt`](../logs/2026-04-08-wave-direct-dm-h025-fam2-seed1.txt)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md)
 - `docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`
-- [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
+- `docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md` (DOWNSTREAM aggregator; backticked to avoid length-2 cycle)
 - `docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`
 - `docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`
 - `docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`

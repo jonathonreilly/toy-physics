@@ -289,4 +289,9 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [structural_no_go_survey_note](STRUCTURAL_NO_GO_SURVEY_NOTE.md)
 - [higher_order_structural_theorems_note](HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
 - [koide_circulant_character_derivation_note_2026-04-18](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
-- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
+- `charged_lepton_koide_review_packet_2026-04-18` — DOWNSTREAM aggregator
+  (the review packet AGGREGATES this loop summary into its support stack;
+  see the prose pointer above ("Review should start from...")). Reference
+  is backticked rather than markdown-linked because the citation graph
+  direction is *review_packet → this_summary*; a markdown link would
+  create a length-2 cycle.

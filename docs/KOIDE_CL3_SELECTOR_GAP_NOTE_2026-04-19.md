@@ -138,4 +138,9 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19](KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
 - [charged_lepton_mass_hierarchy_review_note_2026-04-17](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
-- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
+- `charged_lepton_koide_review_packet_2026-04-18` — DOWNSTREAM aggregator
+  (the review packet AGGREGATES this note as part of its support stack;
+  this note is upstream content that the packet pulls together).
+  Reference is backticked rather than markdown-linked because the citation
+  graph direction is *review_packet → this_note*; a markdown link here
+  would create the wrong-direction edge and a length-2 cycle.

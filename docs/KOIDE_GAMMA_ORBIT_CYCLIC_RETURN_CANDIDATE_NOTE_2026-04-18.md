@@ -224,10 +224,14 @@ It is:
 > then derive one scalar selector relation on its cyclic moments.
 
 The companion
-[KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md)
+`KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md`
 now makes that second step completely explicit: the cyclic Koide selector pulls
 back to the symmetric orbit-slot cone
 `u^2 + v^2 + w^2 = 4 (uv + uw + vw)`.
+(Reference is backticked rather than markdown-linked because that note
+CONSUMES this cyclic-return content; citation graph direction is
+*selector_bridge → cyclic_return*. A markdown link would create a
+length-2 cycle.)
 
 ## Bottom line
 

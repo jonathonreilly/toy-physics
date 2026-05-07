@@ -133,5 +133,10 @@ projective family.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [universal_gr_lorentzian_global_atlas_closure_note](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
-- [universal_qg_projective_schur_closure_note](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
+- [universal_gr_lorentzian_global_atlas_closure_note](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md) — upstream
+- `universal_qg_projective_schur_closure_note` — DOWNSTREAM consumer
+  (Schur-complement marginalization is an OPERATION on this note's
+  finite partition structure). Reference is backticked rather than
+  markdown-linked because the citation graph direction is
+  *projective_schur → uv_finite_partition*; a markdown link here would
+  create the wrong-direction edge and a length-2 cycle.

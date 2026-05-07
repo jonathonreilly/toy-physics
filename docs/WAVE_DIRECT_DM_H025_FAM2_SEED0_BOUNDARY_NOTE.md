@@ -61,7 +61,7 @@ So the honest conclusion is:
 - That is still **not** enough to promote a family-wide fine-`H` law.
   Even with controls, this row stays in the lower boundary regime.
 - The narrow `Fam2` pair synthesis now also exists in
-  [`WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md).
+  `WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md` (DOWNSTREAM aggregator; backticked to avoid length-2 cycle).
 - The next honest move is therefore a cross-family compression pass over the
   retained `Fam1` and `Fam2` fine-`H` pair syntheses, not a jump to `Fam3`,
   a third seed, or a weaker-strength batch.
@@ -71,5 +71,5 @@ So the honest conclusion is:
 - [`scripts/wave_direct_dm_h025_point_runner.py`](../scripts/wave_direct_dm_h025_point_runner.py)
 - [`logs/2026-04-08-wave-direct-dm-h025-fam2-seed0.txt`](../logs/2026-04-08-wave-direct-dm-h025-fam2-seed0.txt)
 - [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
-- [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
+- `docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md` (DOWNSTREAM aggregator; backticked to avoid length-2 cycle)
 - `docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md`

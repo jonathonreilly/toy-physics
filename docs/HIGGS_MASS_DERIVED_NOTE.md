@@ -114,12 +114,15 @@ It is “Higgs is conditionally closed at 3-loop on the accepted YT route.”
 
 ### Supporting Higgs surfaces
 
-- [HIGGS_MECHANISM_NOTE.md](./HIGGS_MECHANISM_NOTE.md)
-  mechanism-level support
-- [HIGGS_FROM_LATTICE_NOTE.md](./HIGGS_FROM_LATTICE_NOTE.md)
-  bounded / historical quantitative support
-- [HIGGS_MASS_NOTE.md](./HIGGS_MASS_NOTE.md)
-  historical numerical CW support
+These are downstream support notes (each consumes this note as authority,
+direction is *support → this note*; they are referenced by name rather
+than markdown link to avoid creating parent-cites-child citation graph
+edges and length-2 cycles):
+
+- `HIGGS_MECHANISM_NOTE.md` — mechanism-level support
+- `HIGGS_FROM_LATTICE_NOTE.md` — bounded / historical quantitative support
+- [HIGGS_MASS_NOTE.md](./HIGGS_MASS_NOTE.md) — historical numerical CW support
+  (kept as markdown link since it is upstream / does not cite back)
 
 These notes remain useful context, but they should not outrank this note when
 a reader asks what the Higgs lane currently claims.

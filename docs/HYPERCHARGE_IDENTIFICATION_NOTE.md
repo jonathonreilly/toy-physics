@@ -206,7 +206,11 @@ Tr[Y_α²] / (multiplicity-weighted) is α² × 8/3; the GUT factor √(3/5)
 is a structural consequence of the eigenvalue ratio +1 : (−3) and the
 6 + 2 = 8 multiplicity split, independent of α. The squared-trace
 arithmetic is now packaged as the standalone squared-trace subtheorem
-[`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md).
+`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` (downstream;
+that subtheorem CONSUMES this note's eigenvalue-ratio identification, so
+the citation graph direction is *catalog → identification*; the reference
+is intentionally backticked rather than a markdown link to avoid creating
+a parent-cites-child edge and a length-2 cycle).
 
 ## Identification boundary (what is and isn't load-bearing)
 

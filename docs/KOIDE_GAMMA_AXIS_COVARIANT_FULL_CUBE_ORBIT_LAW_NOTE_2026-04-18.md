@@ -162,11 +162,15 @@ Combined with the earlier notes:
   ```text
   diag(u,v,w) -> (r0,r1,r2);
   ```
-- [KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md)
+- `KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md`
   pulled the selector back to
   ```text
   u^2 + v^2 + w^2 = 4(uv + uw + vw).
   ```
+  (Reference is backticked rather than markdown-linked because that note
+  CONSUMES this basis-law content; the citation graph direction is
+  *selector_bridge → axis_covariant*. A markdown link here would create
+  a length-2 cycle.)
 
 This note supplies the missing bridge in between:
 

@@ -80,7 +80,12 @@ chosen route.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [universal_qg_canonical_textbook_continuum_gr_closure_note](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
+- `universal_qg_canonical_textbook_continuum_gr_closure_note` — DOWNSTREAM
+  capstone (the continuum closure note CONSUMES this equivalence as item 5
+  of its closure chain; see line 86 of that note). Reference is backticked
+  rather than markdown-linked because the citation graph direction is
+  *continuum_gr_closure → equivalence*; a markdown link here would create
+  the wrong-direction edge and a length-2 cycle.
 - [universal_qg_canonical_smooth_gravitational_weak_measure_note](UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
 - [universal_qg_canonical_textbook_weak_measure_equivalence_note](UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
 - [universal_qg_smooth_gravitational_local_identification_note](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)

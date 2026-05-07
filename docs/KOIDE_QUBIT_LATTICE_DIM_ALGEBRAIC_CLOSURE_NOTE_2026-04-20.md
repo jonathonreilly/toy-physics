@@ -820,4 +820,8 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
 - [koide_z3_qubit_radian_bridge_no_go_note_2026-04-20](KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
 - [koide_c3_singlet_extension_reduction_theorem_note_2026-04-20](KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md)
-- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
+- `charged_lepton_koide_review_packet_2026-04-18` — DOWNSTREAM aggregator
+  (the review packet AGGREGATES this note into its support stack).
+  Reference is backticked rather than markdown-linked because the citation
+  graph direction is *review_packet → this_note*; a markdown link would
+  create a length-2 cycle.

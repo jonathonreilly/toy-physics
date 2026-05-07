@@ -2446,82 +2446,6 @@
     },
     {
       "from": "ckm_atlas_axiom_closure_note",
-      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_second_row_magnitudes_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
-      "to": "ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25"
-    },
-    {
-      "from": "ckm_atlas_axiom_closure_note",
       "to": "s3_time_bilinear_tensor_primitive_note"
     },
     {
@@ -2859,14 +2783,6 @@
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -7449,14 +7365,6 @@
       "to": "taste_scalar_isotropy_theorem_note"
     },
     {
-      "from": "higgs_mass_derived_note",
-      "to": "higgs_mechanism_note"
-    },
-    {
-      "from": "higgs_mass_derived_note",
-      "to": "higgs_from_lattice_note"
-    },
-    {
       "from": "higgs_mass_from_axiom_note",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -7837,10 +7745,6 @@
       "to": "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
     },
     {
-      "from": "hypercharge_identification_note",
-      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
-    },
-    {
       "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
       "to": "hypercharge_identification_note"
     },
@@ -8033,16 +7937,8 @@
       "to": "koide_circulant_character_derivation_note_2026-04-18"
     },
     {
-      "from": "koide_a1_loop_investigation_summary",
-      "to": "charged_lepton_koide_review_packet_2026-04-18"
-    },
-    {
       "from": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
       "to": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24"
-    },
-    {
-      "from": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
-      "to": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24"
     },
     {
       "from": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
@@ -8075,10 +7971,6 @@
     {
       "from": "koide_berry_phase_theorem_note_2026-04-19",
       "to": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20"
-    },
-    {
-      "from": "koide_berry_phase_theorem_note_2026-04-19",
-      "to": "koide_selected_line_cyclic_response_bridge_note_2026-04-18"
     },
     {
       "from": "koide_brannen_callan_harvey_candidate_note_2026-04-22",
@@ -8177,10 +8069,6 @@
       "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
     },
     {
-      "from": "koide_cl3_selector_gap_note_2026-04-19",
-      "to": "charged_lepton_koide_review_packet_2026-04-18"
-    },
-    {
       "from": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
       "to": "koide_dweh_cyclic_compression_note_2026-04-18"
     },
@@ -8249,16 +8137,8 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
-      "from": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-      "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-    },
-    {
       "from": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
       "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
-    },
-    {
-      "from": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-      "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
     },
     {
       "from": "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18",
@@ -8541,10 +8421,6 @@
       "to": "koide_c3_singlet_extension_reduction_theorem_note_2026-04-20"
     },
     {
-      "from": "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20",
-      "to": "charged_lepton_koide_review_packet_2026-04-18"
-    },
-    {
       "from": "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
       "to": "koide_q_reduced_observable_restriction_theorem_2026-04-22"
     },
@@ -8687,10 +8563,6 @@
     {
       "from": "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
       "to": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18"
-    },
-    {
-      "from": "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
-      "to": "koide_eigenvalue_q23_surface_theorem_note_2026-04-20"
     },
     {
       "from": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
@@ -10451,14 +10323,6 @@
     {
       "from": "neutrino_mass_derived_note",
       "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
-    },
-    {
-      "from": "neutrino_mass_reduction_to_dirac_note",
-      "to": "neutrino_dirac_z3_support_trichotomy_note"
-    },
-    {
-      "from": "neutrino_mass_reduction_to_dirac_note",
-      "to": "lepton_single_higgs_pmns_triviality_note"
     },
     {
       "from": "neutrino_mass_reduction_to_dirac_note",
@@ -14150,10 +14014,6 @@
     },
     {
       "from": "universal_gr_tensor_variational_candidate_note",
-      "to": "universal_gr_tensor_quotient_uniqueness_note"
-    },
-    {
-      "from": "universal_gr_tensor_variational_candidate_note",
       "to": "universal_gr_curvature_localization_blocker_note"
     },
     {
@@ -14259,10 +14119,6 @@
     {
       "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
       "to": "universal_qg_optional_textbook_comparison_note"
-    },
-    {
-      "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-      "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
     },
     {
       "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
@@ -14473,10 +14329,6 @@
       "to": "universal_qg_uv_finite_partition_note"
     },
     {
-      "from": "universal_qg_projective_schur_closure_note",
-      "to": "universal_qg_canonical_refinement_net_note"
-    },
-    {
       "from": "universal_qg_smooth_gravitational_global_atlas_note",
       "to": "universal_qg_optional_textbook_comparison_note"
     },
@@ -14559,10 +14411,6 @@
     {
       "from": "universal_qg_uv_finite_partition_note",
       "to": "universal_gr_lorentzian_global_atlas_closure_note"
-    },
-    {
-      "from": "universal_qg_uv_finite_partition_note",
-      "to": "universal_qg_projective_schur_closure_note"
     },
     {
       "from": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
@@ -14725,10 +14573,6 @@
       "to": "wave_3plus1d_promotions_note"
     },
     {
-      "from": "wave_direct_dm_h025_fam1_seed0_control_note",
-      "to": "wave_direct_dm_h025_seed0_crossfamily_note"
-    },
-    {
       "from": "wave_direct_dm_h025_fam1_seed1_control_note",
       "to": "wave_direct_dm_h025_two_point_synthesis_note"
     },
@@ -14737,16 +14581,8 @@
       "to": "wave_direct_dm_h025_fam2_seed0_control_note"
     },
     {
-      "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-    },
-    {
       "from": "wave_direct_dm_h025_fam2_seed0_control_note",
       "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
     },
     {
       "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
@@ -14755,10 +14591,6 @@
     {
       "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
       "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
     },
     {
       "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
@@ -15075,18 +14907,6 @@
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "to": "ckm_atlas_axiom_closure_note"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -30221,29 +30041,10 @@
       "claim_type_seed_hint": null,
       "deps": [
         "alpha_s_derived_note",
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
-        "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
-        "ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25",
-        "ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25",
-        "ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25",
-        "ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25",
-        "ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25",
-        "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25",
-        "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
-        "ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25",
-        "ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25",
         "s3_time_bilinear_tensor_primitive_note",
         "s3_time_bilinear_tensor_action_note"
       ],
-      "note_hash": "3245d6f53f76cc987acba5e6e529e6e46f29c543fee3ec3305aac05a3405a251",
+      "note_hash": "d31353585d3bd7696784595aa5826d9701583129ad0f216cccbc664c8c1144ba",
       "path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_ckm_atlas_axiom_closure.py",
       "title": "CKM Atlas/Axiom Closure Note"
@@ -30510,11 +30311,9 @@
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
         "alpha_s_derived_note",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "adaaf7d70547c5422d78ada160dd0960b6915021af02fd00ba0e657e59b918a5",
+      "note_hash": "37c80eceb2f0c2ecbbc0b655ecf77515fa99741859992510d63c81596742297a",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -38059,11 +37858,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "taste_scalar_isotropy_theorem_note",
-        "higgs_mechanism_note",
-        "higgs_from_lattice_note"
+        "taste_scalar_isotropy_theorem_note"
       ],
-      "note_hash": "ce3eefa82df02d439a2dc1cbc77a994dba3d07e856d83095bc179d903667c656",
+      "note_hash": "817f1e6b220dc593ef8e0d0924d258fc8f824d275966e5268441c4f70b187a0e",
       "path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
       "title": "Higgs Mass: Canonical Authority Boundary"
@@ -38586,10 +38383,9 @@
         "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
         "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
         "graph_first_su3_integration_note",
-        "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
+        "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
       ],
-      "note_hash": "68a56ae998229ce743e71f7c73a844a52ecca696a96bdaa3d1abcb55b35f5e94",
+      "note_hash": "df19532f819a33184915689b76d11026aad70a57bf13caef55aa3e8751efd0bd",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
       "runner_path": "scripts/frontier_hypercharge_identification.py",
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
@@ -38868,10 +38664,9 @@
         "charged_lepton_koide_cone_algebraic_equivalence_note",
         "structural_no_go_survey_note",
         "higher_order_structural_theorems_note",
-        "koide_circulant_character_derivation_note_2026-04-18",
-        "charged_lepton_koide_review_packet_2026-04-18"
+        "koide_circulant_character_derivation_note_2026-04-18"
       ],
-      "note_hash": "b78c308c210754df8251b596f4d956a45d8d60caf24ba2c7138b0c7b6a6eec63",
+      "note_hash": "5e26e8b805f50bc8d3bf15cd03d1304d3cc622e9f30abc6ebb953e6876c4254f",
       "path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
       "runner_path": null,
       "title": "A1 Derivation \u2014 /loop investigation summary"
@@ -38883,11 +38678,10 @@
       "claim_type_seed_hint": "no_go",
       "deps": [
         "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
-        "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
         "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
         "koide_berry_phase_theorem_note_2026-04-19"
       ],
-      "note_hash": "c7c044ba0e99167478b0835e6e2e6bc02d876e3d150441964c7b989ebaf1ce90",
+      "note_hash": "bd29df0dc78018d13d77f6447fbc7d05d7f4170ca5eabccfb541514affd8732c",
       "path": "docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_a1_cheeger_simons_rz_probe.py",
       "title": "Koide A1 \u2014 O13 Cheeger-Simons R/Z Period Inheritance No-Go"
@@ -38960,10 +38754,9 @@
       "deps": [
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
-        "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
-        "koide_selected_line_cyclic_response_bridge_note_2026-04-18"
+        "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20"
       ],
-      "note_hash": "e7b0682c74abe49e48d4606134827e6107919b33a04de661fede5c3e1f22f4f2",
+      "note_hash": "c883accfef1d9c58cf76f36bad7a4a92b6ca5e8a6623eeff8fc756cd1a84ea1a",
       "path": "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_koide_berry_phase_theorem.py",
       "title": "Koide Berry-Holonomy Theorem: Actual-Route Closure of the Brannen-Zenczykowski phase offset"
@@ -39093,10 +38886,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
-        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-        "charged_lepton_koide_review_packet_2026-04-18"
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17"
       ],
-      "note_hash": "c6c21d7044396a5b171ca9525724d37730a7935b39124128b281db1888a07593",
+      "note_hash": "88459362c5a83e3cccb4db71ffa496d7532e515035f467d778c4def0ed399691",
       "path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Koide Cl(3) \u2192 SM Embedding \u2014 Selector Gap Note"
@@ -39294,10 +39086,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-      ],
-      "note_hash": "ffce1c648d0404ed18ebd3a6927787dd9d2283d19afa89b62c32493cf691c43f",
+      "deps": [],
+      "note_hash": "49fc630826f60979758331110ce42b49809a16629b57d473eb36cc8e231e86a7",
       "path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_axis_covariant_full_cube_orbit_law.py",
       "title": "Koide `Gamma` Axis-Covariant Full-Cube Orbit Law"
@@ -39308,10 +39098,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-        "koide_gamma_orbit_selector_bridge_note_2026-04-18"
+        "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
       ],
-      "note_hash": "8142a06e6590751ead67ebe6340dedc6011906a181009182686036011e644f47",
+      "note_hash": "c62d7089c7ab6fa33690da6906c86eee7281284be81a08f93c6a4e04c54159c3",
       "path": "docs/KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_gamma_orbit_cyclic_return_candidate.py",
       "title": "Koide `Gamma`-Orbit Cyclic Return Candidate"
@@ -39933,10 +39722,9 @@
         "koide_brannen_phase_reduction_theorem_note_2026-04-20",
         "koide_berry_phase_theorem_note_2026-04-19",
         "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
-        "koide_c3_singlet_extension_reduction_theorem_note_2026-04-20",
-        "charged_lepton_koide_review_packet_2026-04-18"
+        "koide_c3_singlet_extension_reduction_theorem_note_2026-04-20"
       ],
-      "note_hash": "251b6616b9a9c8556fe687c0b3787f3c7825262a5abf7e71ba62987042921481",
+      "note_hash": "3f4e9c5c10f1c4da7d85cd0785504ec6736bb81328be4a9a2f86c140c737d556",
       "path": "docs/KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_koide_qubit_lattice_dim_closure.py",
       "title": "Koide Qubit\u2013Lattice-Dimension Algebraic Closure"
@@ -39959,10 +39747,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-        "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-        "koide_eigenvalue_q23_surface_theorem_note_2026-04-20"
+        "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18"
       ],
-      "note_hash": "7b1c0e6cbc1d1b3d228c376a3dd5d7dce19f6d55a8e92b2379357457f01de13b",
+      "note_hash": "ac6565d2b38cbb6fc3285d3c2c7f2dff645ccf5c5cea53800b9d2c0064d62ca2",
       "path": "docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_koide_scale_selector_reparameterization_theorem.py",
       "title": "Koide Scale-Selector Reparameterization Theorem"
@@ -43090,12 +42877,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "neutrino_dirac_z3_support_trichotomy_note",
-        "lepton_single_higgs_pmns_triviality_note",
         "neutrino_dirac_two_higgs_canonical_reduction_note",
         "charged_lepton_two_higgs_canonical_reduction_note"
       ],
-      "note_hash": "5b97817537b2279f3ad7079034c278bb3f508739ee35e72bc970a2529161d4c8",
+      "note_hash": "d751c95fcf32ab2491e11991b8709ba18cb4d3c59a534db08738fb4dca8c7c59",
       "path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
       "title": "Neutrino Mass Reduction To The Dirac Lane"
@@ -52426,10 +52211,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "observable_principle_from_axiom_note",
-        "universal_gr_tensor_quotient_uniqueness_note",
         "universal_gr_curvature_localization_blocker_note"
       ],
-      "note_hash": "0bdffe1aa6ce61fbea115f1bcc0b48dab82875eb3b09dcb348153e6e1eec228b",
+      "note_hash": "a204e3918ea5f2b1e8187781e6a9704f8d45625cbe008d622f9965495b489101",
       "path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`"
@@ -52526,7 +52310,6 @@
       "claim_type_seed_hint": null,
       "deps": [
         "universal_qg_optional_textbook_comparison_note",
-        "universal_qg_canonical_textbook_continuum_gr_closure_note",
         "universal_qg_canonical_smooth_gravitational_weak_measure_note",
         "universal_qg_canonical_textbook_weak_measure_equivalence_note",
         "universal_qg_smooth_gravitational_local_identification_note",
@@ -52535,7 +52318,7 @@
         "universal_gr_lorentzian_signature_extension_note",
         "universal_gr_constraint_action_stationarity_note"
       ],
-      "note_hash": "00e30179c1065a321ed26bacfbc27af87ef16c5d23d3500ae0effeec37ee05dd",
+      "note_hash": "309554ce4d0c6c234a942e51fdbbbb537179869c0753c77158f3c60fe0ddefcd",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence"
@@ -52685,10 +52468,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "universal_gr_positive_background_local_closure_note",
-        "universal_qg_uv_finite_partition_note",
-        "universal_qg_canonical_refinement_net_note"
+        "universal_qg_uv_finite_partition_note"
       ],
-      "note_hash": "c9cd2bad7bca2867c9f60529c1e5469c04e9de6905776487eb64fb976f537477",
+      "note_hash": "ac7163e9dc27d20668a4bbeec1cf4f62a72745375b8517847ab54846d0db44b7",
       "path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Projective Schur Closure Note"
@@ -52755,10 +52537,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "universal_gr_lorentzian_global_atlas_closure_note",
-        "universal_qg_projective_schur_closure_note"
+        "universal_gr_lorentzian_global_atlas_closure_note"
       ],
-      "note_hash": "c8c50d38c786df8bba90e33c7c0b4d2165f6c34c132f40d53280e0ff77f18987",
+      "note_hash": "dcf2116c1167fafedd9e6acba5fbbf8c2e8d8e7591c6e77cd6af468f8f3408cb",
       "path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG UV-Finite Partition Density Note"
@@ -53096,10 +52877,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "wave_direct_dm_h025_seed0_crossfamily_note"
-      ],
-      "note_hash": "1b8afc1aeaa4638d1815eea93b60a88cfe64c10f358e4dbba5decc26fbbcfc16",
+      "deps": [],
+      "note_hash": "af56aa21e267edbb120796200cc711d5880e054db52f4454ac92035b1b1e75ed",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note"
@@ -53123,10 +52902,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        "wave_direct_dm_h025_fam2_seed0_control_note"
       ],
-      "note_hash": "9fa73444a94c0c42c4e5033617d2dac8a0cd486e37f01884a53e37d3877b9358",
+      "note_hash": "b3796eced408c6460cb47f796ba1390ee9933ca833dfec44c90204273d2e44bc",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note"
@@ -53149,10 +52927,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-      ],
-      "note_hash": "3e4e1bde85873994cc80d38608a29b921f5f366794dac7111fad5cd2364960cb",
+      "deps": [],
+      "note_hash": "8329083042b120563a17937a38dd94f61a211246147336348f0b11ec61dc495b",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note"
@@ -53164,10 +52940,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        "wave_direct_dm_h025_fam2_seed0_control_note"
       ],
-      "note_hash": "b92c5d873d173bbf740cbed76d17e666180b96e3d72a9c101f6c8067099d80e4",
+      "note_hash": "b788a3e9b7f9d0ef2d576e8e375ebcefe0b0f4347689a89fc6a9d0cb228d0eab",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note"
@@ -53731,14 +53506,11 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "ckm_atlas_axiom_closure_note",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note"
       ],
-      "note_hash": "2f1ea9aebcfa1e03d90bd06e19a81cacbb16218273d4bf46f95df9141f6ff101",
+      "note_hash": "27eed3e4fa0f43a8985406ace7ac16bd7c28071797b11285aaed31a02f167a53",
       "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_wolfenstein_lambda_a_structural_identities.py",
       "title": "Wolfenstein Lambda and A Structural Identities Theorem"
@@ -55915,6 +55687,7 @@
     "koide_dimensionless_objection_closure_review_packet_2026-04-24",
     "koide_dweh_cyclic_compression_note_2026-04-18",
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+    "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
     "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
     "koide_hostile_review_guard_note_2026-04-24",
     "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
@@ -56267,6 +56040,8 @@
     "wave_3plus1d_promotions_note",
     "wave_amplification_near_horizon_note",
     "wave_direct_dm_family_scout_note",
+    "wave_direct_dm_h025_fam1_seed0_control_note",
+    "wave_direct_dm_h025_fam2_seed1_control_note",
     "wave_direct_dm_h025_two_point_synthesis_note",
     "wave_equation_gravity_note",
     "wave_equation_self_field_note",
@@ -56347,10 +56122,10 @@
       "open_gate": 112,
       "positive_theorem": 627
     },
-    "edge_count": 6688,
-    "leaf_count": 546,
+    "edge_count": 6643,
+    "leaf_count": 547,
     "node_count": 1907,
-    "root_count": 858,
+    "root_count": 861,
     "runners_with_path": 1486
   }
 }

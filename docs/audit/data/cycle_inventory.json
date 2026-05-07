@@ -1,5 +1,5 @@
 {
-  "cycle_count": 257,
+  "cycle_count": 220,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -321,130 +321,6 @@
       "decision": null,
       "edges": [
         {
-          "from": "universal_qg_projective_schur_closure_note",
-          "to": "universal_qg_canonical_refinement_net_note"
-        },
-        {
-          "from": "universal_qg_canonical_refinement_net_note",
-          "to": "universal_qg_projective_schur_closure_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 539,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "universal_qg_projective_schur_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
-          "title": "Universal QG Projective Schur Closure Note",
-          "transitive_descendants": 539
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_refinement_net_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
-          "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
-          "transitive_descendants": 539
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0007",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_uv_finite_partition_note",
-          "to": "universal_qg_projective_schur_closure_note"
-        },
-        {
-          "from": "universal_qg_projective_schur_closure_note",
-          "to": "universal_qg_uv_finite_partition_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 539,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_uv_finite_partition_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
-          "title": "Universal QG UV-Finite Partition Density Note",
-          "transitive_descendants": 539
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "universal_qg_projective_schur_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
-          "title": "Universal QG Projective Schur Closure Note",
-          "transitive_descendants": 539
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0008",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_uv_finite_partition_note",
-          "to": "universal_qg_projective_schur_closure_note"
-        },
-        {
-          "from": "universal_qg_projective_schur_closure_note",
-          "to": "universal_qg_canonical_refinement_net_note"
-        },
-        {
-          "from": "universal_qg_canonical_refinement_net_note",
-          "to": "universal_qg_uv_finite_partition_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 539,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_uv_finite_partition_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
-          "title": "Universal QG UV-Finite Partition Density Note",
-          "transitive_descendants": 539
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "universal_qg_projective_schur_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
-          "title": "Universal QG Projective Schur Closure Note",
-          "transitive_descendants": 539
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_refinement_net_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
-          "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
-          "transitive_descendants": 539
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0009",
-      "decision": null,
-      "edges": [
-        {
           "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
           "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
         },
@@ -478,7 +354,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -515,81 +391,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_tensor_quotient_uniqueness_note"
-        },
-        {
-          "from": "universal_gr_tensor_quotient_uniqueness_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
-          "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0012",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Continuum Gravitational Closure",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -639,7 +441,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -689,7 +491,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -739,7 +541,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -789,7 +591,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -839,7 +641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -889,7 +691,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -939,7 +741,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -989,7 +791,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -1039,7 +841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -1089,7 +891,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -1139,7 +941,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1189,7 +991,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1252,7 +1054,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1315,7 +1117,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1378,7 +1180,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1441,7 +1243,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1504,7 +1306,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1567,7 +1369,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1630,7 +1432,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1706,7 +1508,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1795,7 +1597,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1897,44 +1699,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
-      "decision": null,
-      "edges": [
-        {
-          "from": "hypercharge_identification_note",
-          "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
-        },
-        {
-          "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "to": "hypercharge_identification_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 397,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_identification_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
-          "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
-          "title": "Hypercharge Squared Trace Catalog Theorem",
-          "transitive_descendants": 397
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1971,7 +1736,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -2021,57 +1786,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
-      "decision": null,
-      "edges": [
-        {
-          "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "to": "hypercharge_identification_note"
-        },
-        {
-          "from": "hypercharge_identification_note",
-          "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
-        },
-        {
-          "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 397,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
-          "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_identification_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
-          "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
-          "title": "Hypercharge Squared Trace Catalog Theorem",
-          "transitive_descendants": 397
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -2084,10 +1799,10 @@
         },
         {
           "from": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-          "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+          "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
         },
         {
-          "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+          "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
           "to": "hypercharge_identification_note"
         }
       ],
@@ -2119,6 +1834,82 @@
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
+          "transitive_descendants": 397
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
+          "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
+          "transitive_descendants": 397
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0033",
+      "decision": null,
+      "edges": [
+        {
+          "from": "hypercharge_identification_note",
+          "to": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+        },
+        {
+          "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+          "to": "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
+        },
+        {
+          "from": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
+          "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+        },
+        {
+          "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+          "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+        },
+        {
+          "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+          "to": "hypercharge_identification_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 397,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "hypercharge_identification_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
+          "title": "Hypercharge U(1)_Y Identification from the Commutant",
+          "transitive_descendants": 397
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
+          "title": "LHCM Matter Assignment from SU(3) Representation Content",
+          "transitive_descendants": 397
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
+          "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
+          "transitive_descendants": 397
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
+          "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
           "transitive_descendants": 397
         },
         {
@@ -2134,633 +1925,15 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
-      "decision": null,
-      "edges": [
-        {
-          "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "to": "hypercharge_identification_note"
-        },
-        {
-          "from": "hypercharge_identification_note",
-          "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
-        },
-        {
-          "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
-        },
-        {
-          "from": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-          "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 397,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
-          "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_identification_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
-          "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
-          "title": "Hypercharge Squared Trace Catalog Theorem",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md",
-          "title": "B-L Anomaly-Freedom Theorem With Retained nu_R",
-          "transitive_descendants": 397
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0041",
-      "decision": null,
-      "edges": [
-        {
-          "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "to": "hypercharge_identification_note"
-        },
-        {
-          "from": "hypercharge_identification_note",
-          "to": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
-        },
-        {
-          "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-          "to": "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
-        },
-        {
-          "from": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-          "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 397,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
-          "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "hypercharge_identification_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
-          "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
-          "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 397
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
-          "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
-          "transitive_descendants": 397
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0042",
-      "decision": null,
-      "edges": [
-        {
-          "from": "ckm_atlas_axiom_closure_note",
-          "to": "ckm_second_row_magnitudes_theorem_note_2026-04-25"
-        },
-        {
-          "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-          "to": "ckm_atlas_axiom_closure_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_atlas_axiom_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
-          "title": "CKM Atlas/Axiom Closure Note",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md",
-          "title": "CKM Second-Row Magnitudes Structural Identities Theorem",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0043",
-      "decision": null,
-      "edges": [
-        {
-          "from": "ckm_atlas_axiom_closure_note",
-          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-        },
-        {
-          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "to": "ckm_atlas_axiom_closure_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_atlas_axiom_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
-          "title": "CKM Atlas/Axiom Closure Note",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
-          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0044",
-      "decision": null,
-      "edges": [
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM First-Row Atlas-Leading Magnitudes Structural Identities",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0045",
-      "decision": null,
-      "edges": [
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM Third-Row Magnitudes Structural Identities",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0046",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
-          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0047",
-      "decision": null,
-      "edges": [
-        {
-          "from": "ckm_atlas_axiom_closure_note",
-          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-        },
-        {
-          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "ckm_atlas_axiom_closure_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_atlas_axiom_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
-          "title": "CKM Atlas/Axiom Closure Note",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
-          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0048",
-      "decision": null,
-      "edges": [
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-          "to": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM First-Row Atlas-Leading Magnitudes Structural Identities",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM Atlas Triangle Right-Angle Identity",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0049",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
-          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM First-Row Atlas-Leading Magnitudes Structural Identities",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0050",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
-          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM Third-Row Magnitudes Structural Identities",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0051",
-      "decision": null,
-      "edges": [
-        {
-          "from": "higgs_mass_derived_note",
-          "to": "higgs_from_lattice_note"
-        },
-        {
-          "from": "higgs_from_lattice_note",
-          "to": "higgs_mass_derived_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 308,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "higgs_mass_derived_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
-          "title": "Higgs Mass: Canonical Authority Boundary",
-          "transitive_descendants": 308
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "higgs_from_lattice_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
-          "title": "Higgs From Lattice: Bounded Quantitative Support",
-          "transitive_descendants": 308
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0052",
-      "decision": null,
-      "edges": [
-        {
-          "from": "higgs_mass_derived_note",
-          "to": "higgs_mechanism_note"
-        },
-        {
-          "from": "higgs_mechanism_note",
-          "to": "higgs_mass_derived_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 308,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "higgs_mass_derived_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
-          "title": "Higgs Mass: Canonical Authority Boundary",
-          "transitive_descendants": 308
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "higgs_mechanism_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/HIGGS_MECHANISM_NOTE.md",
-          "title": "Higgs Mechanism Note",
-          "transitive_descendants": 308
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0053",
-      "decision": null,
-      "edges": [
-        {
-          "from": "neutrino_dirac_z3_support_trichotomy_note",
-          "to": "neutrino_mass_reduction_to_dirac_note"
-        },
-        {
-          "from": "neutrino_mass_reduction_to_dirac_note",
-          "to": "neutrino_dirac_z3_support_trichotomy_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 304,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "neutrino_dirac_z3_support_trichotomy_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md",
-          "title": "Neutrino Dirac `Z_3` Support Trichotomy",
-          "transitive_descendants": 304
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "neutrino_mass_reduction_to_dirac_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
-          "title": "Neutrino Mass Reduction To The Dirac Lane",
-          "transitive_descendants": 304
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
           "from": "neutrino_mass_reduction_to_dirac_note",
+          "to": "neutrino_dirac_two_higgs_canonical_reduction_note"
+        },
+        {
+          "from": "neutrino_dirac_two_higgs_canonical_reduction_note",
           "to": "lepton_single_higgs_pmns_triviality_note"
         },
         {
@@ -2768,7 +1941,7 @@
           "to": "neutrino_mass_reduction_to_dirac_note"
         }
       ],
-      "length": 2,
+      "length": 3,
       "max_transitive_descendants": 304,
       "nodes": [
         {
@@ -2778,6 +1951,15 @@
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
+          "transitive_descendants": 304
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "neutrino_dirac_two_higgs_canonical_reduction_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
+          "title": "Neutrino Dirac Two-Higgs Canonical Reduction Theorem",
           "transitive_descendants": 304
         },
         {
@@ -2793,7 +1975,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -2802,6 +1984,10 @@
         },
         {
           "from": "neutrino_mass_reduction_to_dirac_note",
+          "to": "neutrino_dirac_two_higgs_canonical_reduction_note"
+        },
+        {
+          "from": "neutrino_dirac_two_higgs_canonical_reduction_note",
           "to": "lepton_single_higgs_pmns_triviality_note"
         },
         {
@@ -2809,7 +1995,7 @@
           "to": "neutrino_dirac_z3_support_trichotomy_note"
         }
       ],
-      "length": 3,
+      "length": 4,
       "max_transitive_descendants": 304,
       "nodes": [
         {
@@ -2832,6 +2018,15 @@
         },
         {
           "audit_status": "unaudited",
+          "claim_id": "neutrino_dirac_two_higgs_canonical_reduction_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
+          "title": "Neutrino Dirac Two-Higgs Canonical Reduction Theorem",
+          "transitive_descendants": 304
+        },
+        {
+          "audit_status": "unaudited",
           "claim_id": "lepton_single_higgs_pmns_triviality_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
@@ -2843,7 +2038,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -2880,7 +2075,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2917,81 +2112,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
-      "decision": null,
-      "edges": [
-        {
-          "from": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-          "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-        },
-        {
-          "from": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 293,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma` Axis-Covariant Full-Cube Orbit Law",
-          "transitive_descendants": 293
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma`-Orbit Selector Bridge Note",
-          "transitive_descendants": 293
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0059",
-      "decision": null,
-      "edges": [
-        {
-          "from": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "to": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18"
-        },
-        {
-          "from": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-          "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 293,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma`-Orbit Selector Bridge Note",
-          "transitive_descendants": 293
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma`-Orbit Cyclic Return Candidate",
-          "transitive_descendants": 293
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -3028,57 +2149,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
-      "decision": null,
-      "edges": [
-        {
-          "from": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-          "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-        },
-        {
-          "from": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "to": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18"
-        },
-        {
-          "from": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-          "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 293,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma` Axis-Covariant Full-Cube Orbit Law",
-          "transitive_descendants": 293
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma`-Orbit Selector Bridge Note",
-          "transitive_descendants": 293
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md",
-          "title": "Koide `Gamma`-Orbit Cyclic Return Candidate",
-          "transitive_descendants": 293
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -3115,7 +2186,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -3152,7 +2223,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -3189,7 +2260,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -3226,118 +2297,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
-      "decision": null,
-      "edges": [
-        {
-          "from": "charged_lepton_koide_review_packet_2026-04-18",
-          "to": "koide_a1_loop_investigation_summary"
-        },
-        {
-          "from": "koide_a1_loop_investigation_summary",
-          "to": "charged_lepton_koide_review_packet_2026-04-18"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
-          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_a1_loop_investigation_summary",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
-          "title": "A1 Derivation \u2014 /loop investigation summary",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0067",
-      "decision": null,
-      "edges": [
-        {
-          "from": "charged_lepton_koide_review_packet_2026-04-18",
-          "to": "koide_cl3_selector_gap_note_2026-04-19"
-        },
-        {
-          "from": "koide_cl3_selector_gap_note_2026-04-19",
-          "to": "charged_lepton_koide_review_packet_2026-04-18"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
-          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-          "title": "Koide Cl(3) \u2192 SM Embedding \u2014 Selector Gap Note",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0068",
-      "decision": null,
-      "edges": [
-        {
-          "from": "charged_lepton_koide_review_packet_2026-04-18",
-          "to": "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20"
-        },
-        {
-          "from": "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20",
-          "to": "charged_lepton_koide_review_packet_2026-04-18"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
-          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md",
-          "title": "Koide Qubit\u2013Lattice-Dimension Algebraic Closure",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -3374,7 +2334,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -3411,7 +2371,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -3448,118 +2408,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
-      "decision": null,
-      "edges": [
-        {
-          "from": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
-          "to": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24"
-        },
-        {
-          "from": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
-          "to": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
-          "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md",
-          "title": "Koide A1 \u2014 O13 Cheeger-Simons R/Z Period Inheritance No-Go",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0073",
-      "decision": null,
-      "edges": [
-        {
-          "from": "koide_eigenvalue_q23_surface_theorem_note_2026-04-20",
-          "to": "koide_scale_selector_reparameterization_theorem_note_2026-04-20"
-        },
-        {
-          "from": "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
-          "to": "koide_eigenvalue_q23_surface_theorem_note_2026-04-20"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_eigenvalue_q23_surface_theorem_note_2026-04-20",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md",
-          "title": "Koide Eigenvalue `Q = 2/3` Surface Theorem",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md",
-          "title": "Koide Scale-Selector Reparameterization Theorem",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0074",
-      "decision": null,
-      "edges": [
-        {
-          "from": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "to": "koide_berry_phase_theorem_note_2026-04-19"
-        },
-        {
-          "from": "koide_berry_phase_theorem_note_2026-04-19",
-          "to": "koide_selected_line_cyclic_response_bridge_note_2026-04-18"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
-          "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_berry_phase_theorem_note_2026-04-19",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
-          "title": "Koide Berry-Holonomy Theorem: Actual-Route Closure of the Brannen-Zenczykowski phase offset",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -3596,7 +2445,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -3633,7 +2482,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -3670,7 +2519,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -3707,7 +2556,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -3744,7 +2593,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -3781,7 +2630,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -3818,7 +2667,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -3855,7 +2704,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -3892,7 +2741,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -3942,7 +2791,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -3992,7 +2841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -4042,7 +2891,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -4092,7 +2941,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -4142,7 +2991,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -4192,7 +3041,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -4242,7 +3091,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -4292,7 +3141,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -4342,7 +3191,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -4392,7 +3241,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -4442,7 +3291,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -4492,7 +3341,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -4542,7 +3391,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -4592,7 +3441,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -4642,7 +3491,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -4692,7 +3541,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -4742,7 +3591,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -4805,7 +3654,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -4868,7 +3717,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -4931,7 +3780,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0104",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -4994,7 +3843,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -5057,7 +3906,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -5120,7 +3969,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0107",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -5183,7 +4032,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0108",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -5246,7 +4095,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0109",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -5309,7 +4158,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0110",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -5372,7 +4221,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -5435,7 +4284,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -5498,7 +4347,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -5561,7 +4410,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -5637,7 +4486,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -5713,7 +4562,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -5789,7 +4638,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -5865,7 +4714,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -5941,7 +4790,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -6017,7 +4866,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -6106,7 +4955,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -6195,7 +5044,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0093",
       "decision": null,
       "edges": [
         {
@@ -6284,7 +5133,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0094",
       "decision": null,
       "edges": [
         {
@@ -6373,7 +5222,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0095",
       "decision": null,
       "edges": [
         {
@@ -6462,7 +5311,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0096",
       "decision": null,
       "edges": [
         {
@@ -6551,7 +5400,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0097",
       "decision": null,
       "edges": [
         {
@@ -6640,7 +5489,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0098",
       "decision": null,
       "edges": [
         {
@@ -6742,7 +5591,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0099",
       "decision": null,
       "edges": [
         {
@@ -6844,7 +5693,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0100",
       "decision": null,
       "edges": [
         {
@@ -6946,7 +5795,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -7048,7 +5897,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -7150,7 +5999,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -7252,7 +6101,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0133",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -7354,7 +6203,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0134",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -7469,7 +6318,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0135",
+      "cycle_id": "cycle-0106",
       "decision": null,
       "edges": [
         {
@@ -7584,7 +6433,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0136",
+      "cycle_id": "cycle-0107",
       "decision": null,
       "edges": [
         {
@@ -7699,7 +6548,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0137",
+      "cycle_id": "cycle-0108",
       "decision": null,
       "edges": [
         {
@@ -7827,7 +6676,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0138",
+      "cycle_id": "cycle-0109",
       "decision": null,
       "edges": [
         {
@@ -7955,7 +6804,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0139",
+      "cycle_id": "cycle-0110",
       "decision": null,
       "edges": [
         {
@@ -8083,7 +6932,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0140",
+      "cycle_id": "cycle-0111",
       "decision": null,
       "edges": [
         {
@@ -8224,7 +7073,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0141",
+      "cycle_id": "cycle-0112",
       "decision": null,
       "edges": [
         {
@@ -8365,7 +7214,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0142",
+      "cycle_id": "cycle-0113",
       "decision": null,
       "edges": [
         {
@@ -8519,7 +7368,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0143",
+      "cycle_id": "cycle-0114",
       "decision": null,
       "edges": [
         {
@@ -8673,7 +7522,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0144",
+      "cycle_id": "cycle-0115",
       "decision": null,
       "edges": [
         {
@@ -8840,7 +7689,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0145",
+      "cycle_id": "cycle-0116",
       "decision": null,
       "edges": [
         {
@@ -9007,7 +7856,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0146",
+      "cycle_id": "cycle-0117",
       "decision": null,
       "edges": [
         {
@@ -9174,7 +8023,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0147",
+      "cycle_id": "cycle-0118",
       "decision": null,
       "edges": [
         {
@@ -9354,7 +8203,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0148",
+      "cycle_id": "cycle-0119",
       "decision": null,
       "edges": [
         {
@@ -9534,7 +8383,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0149",
+      "cycle_id": "cycle-0120",
       "decision": null,
       "edges": [
         {
@@ -9727,7 +8576,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0150",
+      "cycle_id": "cycle-0121",
       "decision": null,
       "edges": [
         {
@@ -9920,7 +8769,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0151",
+      "cycle_id": "cycle-0122",
       "decision": null,
       "edges": [
         {
@@ -10113,7 +8962,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0152",
+      "cycle_id": "cycle-0123",
       "decision": null,
       "edges": [
         {
@@ -10319,7 +9168,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0153",
+      "cycle_id": "cycle-0124",
       "decision": null,
       "edges": [
         {
@@ -10525,7 +9374,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0154",
+      "cycle_id": "cycle-0125",
       "decision": null,
       "edges": [
         {
@@ -10731,7 +9580,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0155",
+      "cycle_id": "cycle-0126",
       "decision": null,
       "edges": [
         {
@@ -10937,7 +9786,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0156",
+      "cycle_id": "cycle-0127",
       "decision": null,
       "edges": [
         {
@@ -11156,7 +10005,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0157",
+      "cycle_id": "cycle-0128",
       "decision": null,
       "edges": [
         {
@@ -11375,7 +10224,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0158",
+      "cycle_id": "cycle-0129",
       "decision": null,
       "edges": [
         {
@@ -11594,7 +10443,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0159",
+      "cycle_id": "cycle-0130",
       "decision": null,
       "edges": [
         {
@@ -11826,7 +10675,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0160",
+      "cycle_id": "cycle-0131",
       "decision": null,
       "edges": [
         {
@@ -12058,7 +10907,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0161",
+      "cycle_id": "cycle-0132",
       "decision": null,
       "edges": [
         {
@@ -12290,7 +11139,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0162",
+      "cycle_id": "cycle-0133",
       "decision": null,
       "edges": [
         {
@@ -12522,7 +11371,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0163",
+      "cycle_id": "cycle-0134",
       "decision": null,
       "edges": [
         {
@@ -12754,7 +11603,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0164",
+      "cycle_id": "cycle-0135",
       "decision": null,
       "edges": [
         {
@@ -12999,7 +11848,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0165",
+      "cycle_id": "cycle-0136",
       "decision": null,
       "edges": [
         {
@@ -13244,7 +12093,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0166",
+      "cycle_id": "cycle-0137",
       "decision": null,
       "edges": [
         {
@@ -13502,7 +12351,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0167",
+      "cycle_id": "cycle-0138",
       "decision": null,
       "edges": [
         {
@@ -13760,7 +12609,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0168",
+      "cycle_id": "cycle-0139",
       "decision": null,
       "edges": [
         {
@@ -14031,7 +12880,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0169",
+      "cycle_id": "cycle-0140",
       "decision": null,
       "edges": [
         {
@@ -14302,7 +13151,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0170",
+      "cycle_id": "cycle-0141",
       "decision": null,
       "edges": [
         {
@@ -14573,7 +13422,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0171",
+      "cycle_id": "cycle-0142",
       "decision": null,
       "edges": [
         {
@@ -14844,7 +13693,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0172",
+      "cycle_id": "cycle-0143",
       "decision": null,
       "edges": [
         {
@@ -15128,7 +13977,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0173",
+      "cycle_id": "cycle-0144",
       "decision": null,
       "edges": [
         {
@@ -15412,7 +14261,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0174",
+      "cycle_id": "cycle-0145",
       "decision": null,
       "edges": [
         {
@@ -15696,7 +14545,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0175",
+      "cycle_id": "cycle-0146",
       "decision": null,
       "edges": [
         {
@@ -15980,7 +14829,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0176",
+      "cycle_id": "cycle-0147",
       "decision": null,
       "edges": [
         {
@@ -16264,7 +15113,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0177",
+      "cycle_id": "cycle-0148",
       "decision": null,
       "edges": [
         {
@@ -16548,7 +15397,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0178",
+      "cycle_id": "cycle-0149",
       "decision": null,
       "edges": [
         {
@@ -16832,7 +15681,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0179",
+      "cycle_id": "cycle-0150",
       "decision": null,
       "edges": [
         {
@@ -17129,7 +15978,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0180",
+      "cycle_id": "cycle-0151",
       "decision": null,
       "edges": [
         {
@@ -17426,7 +16275,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0181",
+      "cycle_id": "cycle-0152",
       "decision": null,
       "edges": [
         {
@@ -17723,7 +16572,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0182",
+      "cycle_id": "cycle-0153",
       "decision": null,
       "edges": [
         {
@@ -18020,7 +16869,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0183",
+      "cycle_id": "cycle-0154",
       "decision": null,
       "edges": [
         {
@@ -18330,7 +17179,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0184",
+      "cycle_id": "cycle-0155",
       "decision": null,
       "edges": [
         {
@@ -18640,7 +17489,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0185",
+      "cycle_id": "cycle-0156",
       "decision": null,
       "edges": [
         {
@@ -18950,7 +17799,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0186",
+      "cycle_id": "cycle-0157",
       "decision": null,
       "edges": [
         {
@@ -19273,7 +18122,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0187",
+      "cycle_id": "cycle-0158",
       "decision": null,
       "edges": [
         {
@@ -19596,7 +18445,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0188",
+      "cycle_id": "cycle-0159",
       "decision": null,
       "edges": [
         {
@@ -19919,7 +18768,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0189",
+      "cycle_id": "cycle-0160",
       "decision": null,
       "edges": [
         {
@@ -20242,7 +19091,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0190",
+      "cycle_id": "cycle-0161",
       "decision": null,
       "edges": [
         {
@@ -20565,7 +19414,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0191",
+      "cycle_id": "cycle-0162",
       "decision": null,
       "edges": [
         {
@@ -20888,7 +19737,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0192",
+      "cycle_id": "cycle-0163",
       "decision": null,
       "edges": [
         {
@@ -21224,7 +20073,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0193",
+      "cycle_id": "cycle-0164",
       "decision": null,
       "edges": [
         {
@@ -21560,7 +20409,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0194",
+      "cycle_id": "cycle-0165",
       "decision": null,
       "edges": [
         {
@@ -21896,7 +20745,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0195",
+      "cycle_id": "cycle-0166",
       "decision": null,
       "edges": [
         {
@@ -22245,7 +21094,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0196",
+      "cycle_id": "cycle-0167",
       "decision": null,
       "edges": [
         {
@@ -22594,7 +21443,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0197",
+      "cycle_id": "cycle-0168",
       "decision": null,
       "edges": [
         {
@@ -22943,7 +21792,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0198",
+      "cycle_id": "cycle-0169",
       "decision": null,
       "edges": [
         {
@@ -23292,7 +22141,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0199",
+      "cycle_id": "cycle-0170",
       "decision": null,
       "edges": [
         {
@@ -23641,7 +22490,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0200",
+      "cycle_id": "cycle-0171",
       "decision": null,
       "edges": [
         {
@@ -24003,7 +22852,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0201",
+      "cycle_id": "cycle-0172",
       "decision": null,
       "edges": [
         {
@@ -24365,7 +23214,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0202",
+      "cycle_id": "cycle-0173",
       "decision": null,
       "edges": [
         {
@@ -24727,7 +23576,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0203",
+      "cycle_id": "cycle-0174",
       "decision": null,
       "edges": [
         {
@@ -25089,7 +23938,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0204",
+      "cycle_id": "cycle-0175",
       "decision": null,
       "edges": [
         {
@@ -25451,7 +24300,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0205",
+      "cycle_id": "cycle-0176",
       "decision": null,
       "edges": [
         {
@@ -25813,7 +24662,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0206",
+      "cycle_id": "cycle-0177",
       "decision": null,
       "edges": [
         {
@@ -26188,7 +25037,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0207",
+      "cycle_id": "cycle-0178",
       "decision": null,
       "edges": [
         {
@@ -26563,7 +25412,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0208",
+      "cycle_id": "cycle-0179",
       "decision": null,
       "edges": [
         {
@@ -26938,7 +25787,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0209",
+      "cycle_id": "cycle-0180",
       "decision": null,
       "edges": [
         {
@@ -27313,7 +26162,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0210",
+      "cycle_id": "cycle-0181",
       "decision": null,
       "edges": [
         {
@@ -27688,7 +26537,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0211",
+      "cycle_id": "cycle-0182",
       "decision": null,
       "edges": [
         {
@@ -28076,7 +26925,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0212",
+      "cycle_id": "cycle-0183",
       "decision": null,
       "edges": [
         {
@@ -28464,7 +27313,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0213",
+      "cycle_id": "cycle-0184",
       "decision": null,
       "edges": [
         {
@@ -28852,7 +27701,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0214",
+      "cycle_id": "cycle-0185",
       "decision": null,
       "edges": [
         {
@@ -29240,7 +28089,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0215",
+      "cycle_id": "cycle-0186",
       "decision": null,
       "edges": [
         {
@@ -29628,7 +28477,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0216",
+      "cycle_id": "cycle-0187",
       "decision": null,
       "edges": [
         {
@@ -30016,7 +28865,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0217",
+      "cycle_id": "cycle-0188",
       "decision": null,
       "edges": [
         {
@@ -30404,7 +29253,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0218",
+      "cycle_id": "cycle-0189",
       "decision": null,
       "edges": [
         {
@@ -30792,7 +29641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0219",
+      "cycle_id": "cycle-0190",
       "decision": null,
       "edges": [
         {
@@ -31193,7 +30042,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0220",
+      "cycle_id": "cycle-0191",
       "decision": null,
       "edges": [
         {
@@ -31594,7 +30443,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0221",
+      "cycle_id": "cycle-0192",
       "decision": null,
       "edges": [
         {
@@ -31995,7 +30844,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0222",
+      "cycle_id": "cycle-0193",
       "decision": null,
       "edges": [
         {
@@ -32396,7 +31245,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0223",
+      "cycle_id": "cycle-0194",
       "decision": null,
       "edges": [
         {
@@ -32797,7 +31646,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0224",
+      "cycle_id": "cycle-0195",
       "decision": null,
       "edges": [
         {
@@ -33198,7 +32047,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0225",
+      "cycle_id": "cycle-0196",
       "decision": null,
       "edges": [
         {
@@ -33599,7 +32448,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0226",
+      "cycle_id": "cycle-0197",
       "decision": null,
       "edges": [
         {
@@ -34013,7 +32862,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0227",
+      "cycle_id": "cycle-0198",
       "decision": null,
       "edges": [
         {
@@ -34427,7 +33276,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0228",
+      "cycle_id": "cycle-0199",
       "decision": null,
       "edges": [
         {
@@ -34841,7 +33690,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0229",
+      "cycle_id": "cycle-0200",
       "decision": null,
       "edges": [
         {
@@ -35255,7 +34104,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0230",
+      "cycle_id": "cycle-0201",
       "decision": null,
       "edges": [
         {
@@ -35669,7 +34518,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0231",
+      "cycle_id": "cycle-0202",
       "decision": null,
       "edges": [
         {
@@ -36096,7 +34945,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0232",
+      "cycle_id": "cycle-0203",
       "decision": null,
       "edges": [
         {
@@ -36523,7 +35372,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0233",
+      "cycle_id": "cycle-0204",
       "decision": null,
       "edges": [
         {
@@ -36950,7 +35799,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0234",
+      "cycle_id": "cycle-0205",
       "decision": null,
       "edges": [
         {
@@ -36987,7 +35836,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0235",
+      "cycle_id": "cycle-0206",
       "decision": null,
       "edges": [
         {
@@ -37050,7 +35899,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0236",
+      "cycle_id": "cycle-0207",
       "decision": null,
       "edges": [
         {
@@ -37126,7 +35975,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0237",
+      "cycle_id": "cycle-0208",
       "decision": null,
       "edges": [
         {
@@ -37163,7 +36012,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0238",
+      "cycle_id": "cycle-0209",
       "decision": null,
       "edges": [
         {
@@ -37200,7 +36049,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0239",
+      "cycle_id": "cycle-0210",
       "decision": null,
       "edges": [
         {
@@ -37250,7 +36099,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0240",
+      "cycle_id": "cycle-0211",
       "decision": null,
       "edges": [
         {
@@ -37300,7 +36149,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0241",
+      "cycle_id": "cycle-0212",
       "decision": null,
       "edges": [
         {
@@ -37350,7 +36199,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0242",
+      "cycle_id": "cycle-0213",
       "decision": null,
       "edges": [
         {
@@ -37400,7 +36249,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0243",
+      "cycle_id": "cycle-0214",
       "decision": null,
       "edges": [
         {
@@ -37463,7 +36312,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0244",
+      "cycle_id": "cycle-0215",
       "decision": null,
       "edges": [
         {
@@ -37539,7 +36388,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0245",
+      "cycle_id": "cycle-0216",
       "decision": null,
       "edges": [
         {
@@ -37628,344 +36477,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0246",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0247",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0248",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0249",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0250",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0251",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0252",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0253",
+      "cycle_id": "cycle-0217",
       "decision": null,
       "edges": [
         {
@@ -38002,7 +36514,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0254",
+      "cycle_id": "cycle-0218",
       "decision": null,
       "edges": [
         {
@@ -38052,44 +36564,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0255",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam1_seed0_control_note",
-          "to": "wave_direct_dm_h025_seed0_crossfamily_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-          "to": "wave_direct_dm_h025_fam1_seed0_control_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 8,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note",
-          "transitive_descendants": 8
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note",
-          "transitive_descendants": 8
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0256",
+      "cycle_id": "cycle-0219",
       "decision": null,
       "edges": [
         {
@@ -38126,7 +36601,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0257",
+      "cycle_id": "cycle-0220",
       "decision": null,
       "edges": [
         {
@@ -38174,7 +36649,7 @@
     "17": 5,
     "18": 2,
     "19": 2,
-    "2": 55,
+    "2": 29,
     "20": 4,
     "21": 7,
     "22": 4,
@@ -38185,12 +36660,12 @@
     "27": 6,
     "28": 5,
     "29": 8,
-    "3": 46,
+    "3": 37,
     "30": 7,
     "31": 5,
     "32": 3,
-    "4": 28,
-    "5": 10,
+    "4": 25,
+    "5": 11,
     "6": 10,
     "7": 8,
     "8": 3,

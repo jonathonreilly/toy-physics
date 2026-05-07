@@ -36,9 +36,9 @@
       "architecture_note_directional_measure"
     ]
   ],
-  "cycles_detected": 254,
+  "cycles_detected": 217,
   "effective_status_counts": {
-    "audited_conditional": 447,
+    "audited_conditional": 445,
     "audited_failed": 8,
     "audited_numerical_match": 20,
     "audited_renaming": 28,
@@ -54,7 +54,7 @@
     "retained_bounded": 234,
     "retained_no_go": 121,
     "retained_pending_chain": 2,
-    "unaudited": 805
+    "unaudited": 807
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

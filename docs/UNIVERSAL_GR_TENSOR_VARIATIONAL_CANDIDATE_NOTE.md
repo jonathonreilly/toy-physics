@@ -126,6 +126,12 @@ That is the cleanest statement available on the current atlas.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- [universal_gr_tensor_quotient_uniqueness_note](UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md)
-- [universal_gr_curvature_localization_blocker_note](UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md)
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) — upstream input (axiom-side observable principle)
+- [universal_gr_curvature_localization_blocker_note](UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md) — upstream blocker context
+- `universal_gr_tensor_quotient_uniqueness_note` — DOWNSTREAM consumer
+  (quotient uniqueness "isolate(s) the unique symmetric 3+1 quotient kernel
+  CARRIED BY the exact tensor-valued variational candidate" — its purpose
+  statement consumes this note's variational candidate). Reference is
+  backticked rather than markdown-linked because the citation graph
+  direction is *quotient_uniqueness → variational_candidate*; a markdown
+  link here would create a parent-cites-child edge and a length-2 cycle.

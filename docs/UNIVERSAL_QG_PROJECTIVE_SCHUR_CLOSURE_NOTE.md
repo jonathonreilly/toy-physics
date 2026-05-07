@@ -137,6 +137,10 @@ discrete net.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [universal_gr_positive_background_local_closure_note](UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
-- [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
-- [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- [universal_gr_positive_background_local_closure_note](UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md) — upstream
+- [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md) — upstream (this note's Schur-complement marginalization is an operation ON that partition structure)
+- `universal_qg_canonical_refinement_net_note` — DOWNSTREAM consumer (the
+  continuum-limit refinement net consumes this note's Schur closure as
+  its bridge step). Reference is backticked rather than markdown-linked
+  because the citation graph direction is *refinement_net → projective_schur*;
+  a markdown link here would create a length-2 cycle.

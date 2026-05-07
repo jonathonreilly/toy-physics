@@ -152,10 +152,14 @@ J_0 = lambda^6 A^2 eta
   input already used by the CKM atlas.
 - It does not derive CKM magnitudes beyond the parent atlas package.
 - First- and third-row magnitude identities are named separately in
-  [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+  `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
   and
-  [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
-  which preserves the finite-`lambda` standard-matrix guardrail.
+  `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`,
+  which preserves the finite-`lambda` standard-matrix guardrail. (Backticked
+  references rather than markdown links: those notes CONSUME this note's
+  CP-plane identities `rho^2 + eta^2 = 1/6` etc., so the citation graph
+  direction is *first_row → cp_phase* and *third_row → cp_phase*. Markdown
+  links here would create the wrong-direction edge and a length-2 cycle.)
 - It does not promote the older bounded Cabibbo, mass-basis NNI, or partial
   Jarlskog route-history notes as controlling authority.
 - It does not claim BSM CP phases, PMNS phases, or Majorana phases.
