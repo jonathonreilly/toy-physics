@@ -17,7 +17,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 502 | 11.47 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
 | 2 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | unaudited | critical | 289 | 9.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
-| 3 | `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_radial_scaling_protected_angle_narrow.py` |
+| 3 | `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_radial_scaling_protected_angle_narrow.py` |
 | 4 | `universal_gr_supermetric_normal_form_note` | positive_theorem | unaudited | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_universal_gr_supermetric_normal_form.py` |
 | 5 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 553 | 12.61 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
 | 6 | `universal_qg_canonical_refinement_net_note` | positive_theorem | unaudited | critical | 520 | 17.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
