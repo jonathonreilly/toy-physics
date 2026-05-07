@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 241 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 828 |
+| unaudited | 827 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 441 |
+| ~~audited_conditional~~ | 442 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 393 |
-| `audited_conditional` | 441 |
+| `audited_conditional` | 442 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 877 |
+| `unaudited` | 876 |
 
 | claim_type | count |
 |---|---:|
@@ -834,6 +834,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -9617,6 +9618,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The repeated self-consistent Green-like source object survives three updates with positive weak-field response and F~M=1.00 while remaining broad rather than sharply localized.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen scout table: source N_eff stays about 4.788, detector N_eff stays about 497, all deltas are positive, and each update step has F~M=1.00 with 4/4 TOWARD. The note correctly keeps the claim at bounded quasi-persistent source-object scope.
 - **rationale:** The bounded Green-scout claim is current with the primary runner and the output supports repeated source-object survival plus weak-field linear response. The object remains broad, with source N_eff near 4.788 out of 5 and detector response still broad, so the note does not claim a persistent inertial object or mass theorem. Residual risk is limited to the stated minimal exact-lattice loop rather than a hidden closure claim.
+- **auditor confidence:** high
+
+### `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite exact-lattice inward-source diagnosis at h=0.25, blend=0.25, three updates per segment, three chained segments, testing whether top_keep in {5,6,8} changes the top4 inward-source admissibility pattern.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-floor-width-auditor-20260507-f161`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Broadening the compact-object floor to top5, top6, and top8 leaves the inward-side totals at 2/4 with source0.75 and source1.00 closed and source1.25 and source1.50 open.  _(class `C`)_
+- **chain closes:** False — The retained top4 dependency and current cache support only the top_keep=4 widened-pocket result. The decisive top5/top6/top8 inward-source runs are cited as logs, but those log paths are absent in this checkout and no completed cache for those invocations is provided.
+- **rationale:** Issue: the source note's widening conclusion depends on completed top_keep=5, top_keep=6, and top_keep=8 inward-boundary sweep outputs that are not present in the restricted packet. Why this blocks: the available runner cache is a top_keep=4 run only, so it cannot establish that broader compact-object floors preserve the same 2/4 inward pattern. Repair target: provide completed logs/cache or a sliced deterministic runner output for top_keep 5, 6, and 8 on source0p75, source1p00, source1p25, and source1p50. Claim boundary until fixed: the retained top4 11/13 transfer result and its 2/4 inward boundary may be cited, but the statement that widening to top5/top6/top8 does not cure the misses remains unclosed.
 - **auditor confidence:** high
 
 ### `persistent_object_multistage_floor_sweep_note_2026-04-16`
