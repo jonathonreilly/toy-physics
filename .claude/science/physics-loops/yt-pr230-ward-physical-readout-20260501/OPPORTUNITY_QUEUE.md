@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 fresh-artifact intake current-head refresh: committed PR head
+`0f2b542dc978feb53477a6dba5f3c5a70a0dccd4` has been rechecked after the
+neutral H3/H4 aperture refresh.  The intake consumes the chunks001-052 prefix
+(`ready=52/63`, first missing chunk `53`) and still finds no certified
+canonical `O_H` plus production `C_ss/C_sH/C_HH` pole rows and no strict W/Z
+accepted-action physical-response packet.  Highest-value next action remains
+unchanged: supply the same-surface accepted FMS/EW-Higgs action and canonical
+`O_H` certificate, then launch source-Higgs time-kernel rows; fallback only to
+a real strict W/Z packet or a physical H3/H4 transfer-kernel theorem.
+
 2026-05-07 neutral primitive H3/H4 aperture refresh: the neutral aperture gate
 now consumes the current dynamic two-source prefix and reports `ready=52/63`
 instead of the stale `44/63` checkpoint.  The route is still bounded support

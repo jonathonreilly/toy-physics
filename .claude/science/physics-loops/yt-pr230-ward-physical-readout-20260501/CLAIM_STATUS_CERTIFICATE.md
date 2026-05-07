@@ -1,5 +1,23 @@
 # Claim Status Certificate
 
+Fresh-artifact intake current-head refresh:
+
+```text
+actual_current_surface_status: open / fresh-artifact intake checkpoint at PR #230 head; no certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet is present
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0
+```
+
+The refreshed intake consumes committed head `0f2b542dc978feb53477a6dba5f3c5a70a0dccd4`
+and the chunks001-052 prefix (`ready=52/63`, first missing chunk `53`).
+No canonical `O_H`, production `C_ss/C_sH/C_HH` pole rows, strict W/Z
+physical-response packet, matched covariance, or strict non-observed `g2`
+authority is present.  Chunks053-054 remain active run-control only and are
+not evidence.
+
 Neutral primitive H3/H4 aperture refresh:
 
 ```text

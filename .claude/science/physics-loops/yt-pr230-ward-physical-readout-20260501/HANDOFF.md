@@ -1,5 +1,19 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 fresh-artifact intake current-head refresh:
+
+- Refreshed `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json`
+  and `docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md`
+  after commit `0f2b542dc`.
+- The intake consumes committed head
+  `0f2b542dc978feb53477a6dba5f3c5a70a0dccd4` and the chunks001-052 prefix:
+  `ready=52/63`, first missing chunk `53`, `combined_rows_written=false`.
+- Result: fresh-artifact intake `PASS=18 FAIL=0`; no certified canonical
+  `O_H` / source-Higgs `C_ss/C_sH/C_HH` pole-row packet exists; no strict W/Z
+  accepted-action physical-response packet exists; `proposal_allowed=false`.
+- Chunks053-054 are active run-control only and are excluded from evidence
+  until completed and checkpointed.
+
 Latest checkpoint, 2026-05-07 neutral primitive H3/H4 aperture refresh:
 
 - Updated `scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py`

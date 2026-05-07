@@ -1,5 +1,21 @@
 # Review History
 
+## 2026-05-07 - Fresh-Artifact Intake Current-Head Refresh
+
+Review stance: open / committed-head intake checkpoint, no closure.
+
+- Refreshed the fresh-artifact intake certificate and note at current PR head
+  `0f2b542dc978feb53477a6dba5f3c5a70a0dccd4`.
+- The intake consumes committed artifacts only and records the chunks001-052
+  prefix: `ready=52/63`, first missing chunk `53`, and
+  `combined_rows_written=false`.
+- Validation: fresh-artifact intake `PASS=18 FAIL=0`.
+
+Disposition: no new closure artifact.  No retained or `proposed_retained`
+wording is allowed.  Reopen requires a same-surface canonical `O_H` /
+source-Higgs pole-row packet or a strict W/Z accepted-action physical-response
+packet.
+
 ## 2026-05-07 - Neutral Primitive H3/H4 Aperture Refresh
 
 Review stance: bounded support / stale-prefix guard refresh.

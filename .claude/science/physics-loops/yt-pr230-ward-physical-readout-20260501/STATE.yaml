@@ -16,11 +16,13 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-274-neutral-primitive-h3h4-aperture-refresh
-blocks_completed: 273
-active_route: "Neutral primitive H3/H4 aperture checkpoint refresh"
-active_hard_residual: "Removed stale 44-row assumptions from the neutral primitive H3/H4 aperture runner and campaign guard.  The checkpoint now validates the current contiguous two-source prefix dynamically and consumes chunks001-052 with ready=52/63.  The neutral route remains bounded support plus boundary: H1/H2 support and 52 finite C_sx/C_xx chunks do not supply H3 physical transfer/off-diagonal dynamics or H4 source/canonical-Higgs coupling.  Validation: neutral H3/H4 aperture PASS=9 FAIL=0; campaign PASS=356 FAIL=0; assumption/import stress PASS=104 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0.  proposal_allowed remains false."
+current_phase: campaign-block-275-fresh-artifact-intake-current-head-refresh
+blocks_completed: 274
+active_route: "Fresh-artifact intake refresh at current PR230 head"
+active_hard_residual: "Refreshed the committed-head fresh-artifact intake after neutral H3/H4 aperture prefix refresh.  The intake now records head 0f2b542dc978feb53477a6dba5f3c5a70a0dccd4 and consumes the chunks001-052 prefix with ready=52/63, first_missing_chunk=53, combined_rows_written=false.  It still finds no certified canonical O_H/source-Higgs C_ss/C_sH/C_HH pole-row packet and no strict W/Z accepted-action physical-response packet.  Validation: fresh artifact intake PASS=18 FAIL=0.  proposal_allowed remains false.  Chunks053-054 remain active run-control only and are excluded from evidence."
 files_touched:
+  - "docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"
   - "scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py"
   - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
   - "docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md"

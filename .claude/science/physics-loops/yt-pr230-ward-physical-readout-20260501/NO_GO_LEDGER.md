@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Fresh-artifact intake at current head still finds no closure packet
+
+The refreshed 2026-05-07 fresh-artifact intake checks committed PR head
+`0f2b542dc978feb53477a6dba5f3c5a70a0dccd4` after the neutral H3/H4 aperture
+refresh.  It consumes committed certificates only and excludes active
+chunk053-054 worker output/log state.  The branch still has no certified
+canonical `O_H` plus production `C_ss/C_sH/C_HH` pole-row packet, and no
+strict W/Z accepted-action physical-response packet with production rows,
+matched covariance, strict non-observed `g2`, `delta_perp` authority, and
+final W-response rows.
+
+Do not reopen retained/proposed-retained closure merely because the 52-row
+finite `C_sx/C_xx` prefix, neutral H3/H4 aperture refresh, FMS cut,
+open-surface bridge intake, or additive-top support exists.  The next reopen
+requires an actual same-surface certificate or strict production packet.
+
 ## Neutral primitive H3/H4 aperture remains open at 52 rows
 
 The 2026-05-07 neutral primitive H3/H4 aperture refresh removes the old
