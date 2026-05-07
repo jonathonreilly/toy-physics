@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 506,
+    "critical": 505,
     "high": 24,
     "leaf": 176,
     "medium": 126
@@ -5757,30 +5757,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_ew_color_projection_theorem",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01",
-        "ew_current_matching_rule_open_gate_note_2026-05-03"
-      ],
-      "direct_in_degree": 36,
-      "effective_status": "unaudited",
-      "load_bearing_score": 26.637,
-      "note_path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 397
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -27909,6 +27885,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 9,
-  "total_pending": 832
+  "ready_count": 8,
+  "total_pending": 831
 }

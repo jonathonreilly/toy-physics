@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 67 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 235 |
+| **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 819 |
+| unaudited | 818 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,22 +38,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 393 |
+| `audited_clean` | 394 |
 | `audited_conditional` | 441 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 868 |
+| `unaudited` | 867 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 657 |
+| `bounded_theorem` | 658 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 109 |
-| `positive_theorem` | 789 |
+| `positive_theorem` | 788 |
 
 | criticality | count |
 |---|---:|
@@ -86,7 +86,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 364 | 30.51 | `unaudited` | unaudited |
 | 7 | `native_gauge_closure_note` | bounded_theorem | critical | 630 | 29.30 | `audited_clean` | **retained_bounded** |
 | 8 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 301 | 29.24 | `unaudited` | unaudited |
-| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 397 | 26.64 | `unaudited` | unaudited |
+| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 397 | 26.64 | `audited_clean` | **retained_bounded** |
 | 10 | `minimal_axioms_2026-05-03` | meta | critical | 651 | 26.35 | `unaudited` | meta |
 | 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 641 | 25.83 | `audited_clean` | open_gate |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 539 | 25.58 | `unaudited` | unaudited |
@@ -498,6 +498,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | B | - |
+| `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -14051,6 +14052,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Each bridge family scans the UV-localized window and selects its best fit to the accepted endpoint y_t(v)=0.9176, after which the best fits are compared for stability.  _(class `G`)_
 - **chain closes:** False — The runner optimizes profile center and width against the accepted endpoint y_t(v)=0.9176 rather than deriving that endpoint or deriving that the exact interacting bridge lies in this class. The missing step is an independent theorem or retained input forcing the physical bridge into the UV-localized constructive class.
 - **rationale:** The code performs a real numerical scan, but the scan objective is explicitly the imported target y_t(v)=0.9176 and the best rows are selected by minimizing deviation from that target. The result therefore establishes a tuned numerical match within a chosen profile class, not a first-principles computation from the stated axiom. The note itself acknowledges that deriving why the exact interacting lattice bridge belongs to this UV-localized class remains open.
+- **auditor confidence:** high
+
+### `yt_ew_color_projection_theorem`
+
+- **Note:** [`YT_EW_COLOR_PROJECTION_THEOREM.md`](../../docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded EW normalization family K_EW(kappa_EW)=1/(8/9+kappa_EW/9) at N_c=3, using retained F_adj=8/9 and an explicit free readout coefficient kappa_EW; kappa_EW=0 was not audited as derived.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-agent-019e024d-b3b3-7063-a135-58311a1ff537`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The retained Fierz/CMT/OZI packet permits the conditional family alpha_EW(physical; kappa_EW)/alpha_EW(CMT) = 1/(8/9 + kappa_EW/9), with 9/8 only at kappa_EW = 0.  _(class `A`)_
+- **chain closes:** True — For this scoped family, the exact F_adj=8/9 comes from the retained-bounded Fierz/channel dependency and the kappa_EW parametrization comes from the retained no-go dependency. The chain would not close for an unconditional 9/8 theorem or a derivation of kappa_EW=0, but those are outside the audited scope.
+- **rationale:** The load-bearing step is an algebraic substitution over retained dependencies, not a numerical fit or a new physical-readout derivation. The runner performs an MC connected-color-trace consistency check and a plaquette comparator check, but it does not derive kappa_EW=0 and is not needed to close the conditional formula. Old observed-match and 9/8 prose remains non-load-bearing under the source-note header boundary.
 - **auditor confidence:** high
 
 ### `yt_ew_coupling_bridge_note`
