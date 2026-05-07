@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 67 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 241 |
+| **retained_bounded** | 242 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 827 |
+| unaudited | 826 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 393 |
+| `audited_clean` | 394 |
 | `audited_conditional` | 442 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 876 |
+| `unaudited` | 875 |
 
 | claim_type | count |
 |---|---:|
@@ -456,6 +456,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_resource_fidelity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
+| `teleportation_retained_axis_operator_algebra_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `teleportation_three_register_cross_encoding_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -12871,6 +12872,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** After tracing cells and spectator taste bits while keeping the last KS taste bit per species, the audited Poisson/CHSH ground states yield deterministic two-qubit logical resources with Bell overlap above 0.90 and high standard teleportation fidelity.  _(class `B`)_
 - **chain closes:** True — Within the stated small-surface numerical scope, the runner sanity-checks the teleportation convention, constructs the traced logical two-qubit resource, and reports Bell overlap, CHSH, negativity, and teleportation fidelity above the note's threshold for both Poisson cases. The note explicitly leaves generalization, preparation/readout, and parameter sensitivity outside this scoped claim.
 - **rationale:** The proper retained object is not an open gate but a bounded numerical theorem over the specified small surfaces and extraction rule. The current runner output matches the note's reported values and separates deterministic traced extraction from postselected diagnostic branches. No one-hop cited authorities are present, and the remaining limitations are future hardening tasks rather than missing premises for the scoped result.
+- **auditor confidence:** high
+
+### `teleportation_retained_axis_operator_algebra_closure_note`
+
+- **Note:** [`TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md`](../../docs/TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite RALA algebra closure T1-T8 for dim in {1,2,3}, side in {2,4}, all retained axes, with X_fixed taken as the explicitly defined last-axis taste flip; physical apparatus and downstream teleportation gates are excluded.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-rala-auditor-20260507-f161`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The encoded basis is two-dimensional, RALA(a) acts on this subspace as the full M_2(C) algebra of single-qubit Paulis, the encoded Bell state is the standard Bell resource on this 2-qubit logical space, and the axis Bell projectors equal the standard Bell projectors on it.  _(class `A`)_
+- **chain closes:** True — Within the scoped finite algebra, T1-T7 follow from explicit tensor-factor definitions and T8 reduces to the standard qubit teleportation identity on the encoded two-dimensional subspace. No unretained dependency or physical readout/apparatus bridge is needed for this bounded theorem scope.
+- **rationale:** The source note defines RALA, axis Pauli operators, Bell projectors, native Z, and X_fixed explicitly, then proves the advertised closure by finite tensor-product algebra and the standard teleportation identity. The runner source constructs the site/taste permutation, projectors, corrections, residuals, probabilities, and fidelities directly rather than merely printing constants; the completed cache reports PASS=96 FAIL=0, and a bounded smoke run also passed. This clean verdict is only for the algebraic theorem set T1-T8 and does not audit physical implementation gates or independently verify historical prior-runner usage of X_fixed.
 - **auditor confidence:** high
 
 ### `teleportation_three_register_cross_encoding_note`
