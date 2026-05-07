@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 508,
+    "critical": 507,
     "high": 15,
     "leaf": 188,
     "medium": 102
@@ -3414,27 +3414,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 289
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "universal_gr_supermetric_normal_form_note",
-      "claim_scope": "Given the displayed log-det generator W[J] = log det(D+J) - log det D and invariant positive background D = diag(a,b,b,b), the local Hessian on symmetric 3+1 perturbations equals the inverse-metric contraction and has the stated diagonal canonical Gram weights.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 8.67,
-      "note_path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_universal_gr_supermetric_normal_form.py",
-      "transitive_descendants": 287
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24952,6 +24931,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 17,
-  "total_pending": 813
+  "ready_count": 16,
+  "total_pending": 812
 }
