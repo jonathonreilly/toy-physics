@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-07 FMS literature source-overlap intake: the targeted FMS and
+gauge-invariant-field rescan is now executable and blocks a common shortcut.
+The references support the future acceptance shape for a gauge-invariant
+canonical scalar operator, but only as non-derivation context.  They do not
+provide the PR230 same-surface EW/Higgs action, scalar doublet, radial
+background `v`, canonical `O_H`, source-coordinate theorem, `C_spH/C_HH` pole
+rows, or `kappa_s`.  The cleanest positive target remains an accepted
+same-surface EW/Higgs action/O_FMS certificate or direct production
+`C_spH/C_HH` pole rows measuring the `O_sp`-Higgs overlap; first fallback is
+genuine same-source W/Z response rows with identity/covariance/strict
+non-observed `g2`.  Chunks035-036 are active run-control only until completed
+root JSONs and completed-mode checkpoints exist.
+
 2026-05-07 chunks031-032 package refresh: chunks001-032 are now packaged
 partial `C_sx/C_xx` support with `ready=32/63`; chunks031-032 pass
 completed-mode checkpoints and preserve selected-mass-only FH/LSZ,

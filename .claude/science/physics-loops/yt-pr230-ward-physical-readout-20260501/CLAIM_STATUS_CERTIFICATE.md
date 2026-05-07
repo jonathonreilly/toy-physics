@@ -1,5 +1,36 @@
 # Claim Status Certificate
 
+FMS literature source-overlap intake checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / FMS literature does not supply PR230 source-overlap or kappa_s
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=91 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=338 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=151 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=305 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=60 FAIL=0
+```
+
+The intake treats FMS/gauge-invariant-field literature as non-derivation
+context only.  It does not supply same-surface EW/Higgs action authority,
+canonical `O_H`, `C_spH/C_HH` pole rows, `kappa_s`, W/Z response, scalar-LSZ
+FV/IR authority, or retained/proposed-retained closure.
+
 Two-source taste-radial chunks031-032 package checkpoint:
 
 ```text

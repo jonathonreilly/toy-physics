@@ -272,6 +272,9 @@ def main() -> int:
         "source_higgs_time_kernel_gevp_contract": load(
             "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
         ),
+        "fms_literature_source_overlap_intake": load(
+            "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1610,6 +1613,20 @@ def main() -> int:
         and time_kernel_gevp.get("used_as_physical_yukawa_readout") is False,
         time_kernel_gevp.get("actual_current_surface_status"),
     )
+    fms_lit_intake = certificates["fms_literature_source_overlap_intake"]
+    report(
+        "fms-literature-source-overlap-intake-non-authority",
+        "FMS literature does not supply PR230 source-overlap"
+        in str(fms_lit_intake.get("actual_current_surface_status"))
+        and fms_lit_intake.get("proposal_allowed") is False
+        and fms_lit_intake.get("literature_bridge_scope")
+        == "non_derivation_context_only"
+        and fms_lit_intake.get("current_blockers", {}).get("canonical_oh_absent")
+        is True
+        and fms_lit_intake.get("current_blockers", {}).get("source_higgs_rows_absent")
+        is True,
+        fms_lit_intake.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -1805,6 +1822,11 @@ def main() -> int:
             "diagnostic, but that diagnostic is not pole authority without "
             "production statistics, canonical O_H or physical neutral identity, "
             "FV/IR/threshold control, and overlap normalization.  "
+            "The FMS literature source-overlap intake records FMS and modern "
+            "gauge-invariant-field references as non-derivation context only: "
+            "they motivate the future O_FMS acceptance shape but do not supply "
+            "the PR230 same-surface EW/Higgs action, canonical O_H, C_spH/C_HH "
+            "pole rows, or kappa_s normalization.  "
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
@@ -1854,6 +1876,7 @@ def main() -> int:
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",
             "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",
             "does not treat a formal reduced-smoke GEVP diagnostic as pole, kappa_s, or y_t authority",
+            "does not treat FMS or gauge-invariant-field literature as same-surface PR230 O_H/source-overlap/kappa_s proof",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

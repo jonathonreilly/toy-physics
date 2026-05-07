@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 FMS literature source-overlap intake:
+
+- Added `scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py`,
+  `docs/YT_PR230_FMS_LITERATURE_SOURCE_OVERLAP_INTAKE_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json`.
+- The intake records FMS/gauge-invariant-field literature as
+  non-derivation context only.  It sharpens the source-Higgs acceptance
+  contract: a future positive artifact needs an accepted same-surface
+  EW/Higgs action with canonical `O_FMS`, or production `C_spH/C_HH` pole
+  rows measuring the `O_sp`-Higgs overlap directly.
+- Validation: FMS intake `PASS=16 FAIL=0`; assumption/import stress
+  `PASS=91 FAIL=0`; campaign status `PASS=338 FAIL=0`; full assembly
+  `PASS=151 FAIL=0`; retained-route `PASS=305 FAIL=0`; completion audit
+  `PASS=60 FAIL=0`; `py_compile` passed for touched scripts.
+- Claim boundary: no accepted same-surface EW/Higgs action, no canonical
+  `O_H`, no `C_spH/C_HH` pole rows, no Gram/source-overlap purity, no
+  FV/IR/threshold authority, and no retained/proposed-retained closure.
+- Chunks035-036 remain active run-control only; their root JSONs are absent
+  as of this checkpoint.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks033-034 package:
 
 - Packaged chunks033-034 after completed root JSONs and per-volume artifacts

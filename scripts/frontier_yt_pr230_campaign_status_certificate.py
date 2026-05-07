@@ -752,6 +752,9 @@ def main() -> int:
         "pr230_source_higgs_time_kernel_gevp_contract": load(
             "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
         ),
+        "pr230_fms_literature_source_overlap_intake": load(
+            "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -3476,6 +3479,26 @@ def main() -> int:
         is False,
         statuses["pr230_source_higgs_time_kernel_gevp_contract"],
     )
+    fms_literature_source_overlap_intake = certificates[
+        "pr230_fms_literature_source_overlap_intake"
+    ]
+    report(
+        "pr230-fms-literature-source-overlap-intake-non-authority",
+        "FMS literature does not supply PR230 source-overlap"
+        in str(statuses["pr230_fms_literature_source_overlap_intake"])
+        and fms_literature_source_overlap_intake.get("proposal_allowed") is False
+        and fms_literature_source_overlap_intake.get("literature_bridge_scope")
+        == "non_derivation_context_only"
+        and fms_literature_source_overlap_intake.get("current_blockers", {}).get(
+            "canonical_oh_absent"
+        )
+        is True
+        and fms_literature_source_overlap_intake.get("current_blockers", {}).get(
+            "source_higgs_rows_absent"
+        )
+        is True,
+        statuses["pr230_fms_literature_source_overlap_intake"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -5130,6 +5153,19 @@ def main() -> int:
         )
         is False
         and source_higgs_time_kernel_gevp_contract.get("proposal_allowed") is False
+    )
+    result["fms_literature_source_overlap_intake_non_authority"] = (
+        fms_literature_source_overlap_intake.get("literature_bridge_scope")
+        == "non_derivation_context_only"
+        and fms_literature_source_overlap_intake.get("proposal_allowed") is False
+        and fms_literature_source_overlap_intake.get("current_blockers", {}).get(
+            "canonical_oh_absent"
+        )
+        is True
+        and fms_literature_source_overlap_intake.get("current_blockers", {}).get(
+            "source_higgs_rows_absent"
+        )
+        is True
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")

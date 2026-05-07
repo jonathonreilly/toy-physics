@@ -1,5 +1,17 @@
 # No-Go Ledger
 
+## FMS literature is not PR230 source-overlap or kappa authority
+
+The 2026-05-07 FMS literature source-overlap intake records FMS and
+gauge-invariant-field references as non-derivation context only.  They support
+the shape of a future `O_FMS` acceptance contract after a same-surface
+EW/Higgs action exists, but they do not supply the PR230 scalar doublet,
+radial background `v`, canonical kinetic normalization, source-coordinate
+transport, `C_spH/C_HH` pole rows, or `kappa_s`.  Do not treat FMS method
+names, gauge-invariant composite language, `O_sp`, taste-radial `x`,
+time-kernel smoke/GEVP rows, or literature formulas as canonical `O_H`,
+source-overlap, pole-residue, or retained/proposed-retained evidence.
+
 ## Two-source chunks001-032 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks031-032 package moves the finite two-source row packet to

@@ -16,11 +16,14 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-254-two-source-taste-radial-chunks033-034-package
-blocks_completed: 253
-active_route: "PR230 two-source taste-radial chunks033-034 package"
-active_hard_residual: "Chunks033-034 are now checkpointed and packaged into the finite two-source taste-radial row packet.  Chunk033 and chunk034 pass completed-mode checkpoints PASS=15 FAIL=0 each.  Package audit PASS=10 FAIL=0; row combiner PASS=13 FAIL=0 with ready=34/63 and combined_rows_written=false.  Strict scalar-LSZ remains blocked PASS=13 FAIL=0 with raw C_ss first-shell nonincrease violation z=137.39835521329425.  Schur repair remains bounded support PASS=22 FAIL=0 with C_s|x failing z=128.66656381261006 and C_x|s surviving only the necessary first-shell check z=-506.4973030760837.  Source-Higgs readiness PASS=25 FAIL=0 still blocks launch on absent canonical O_H certificate; primitive-transfer candidate PASS=13 FAIL=0 and orthogonal-top exclusion PASS=12 FAIL=0 still reject finite C_sx/C_xx as physical transfer or top-coupling tomography.  Aggregate gates remain open: assumption PASS=90 FAIL=0, campaign PASS=337 FAIL=0, assembly PASS=150 FAIL=0, retained PASS=304 FAIL=0, completion PASS=59 FAIL=0.  Chunk035 is active run-control only; no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-255-fms-literature-source-overlap-intake
+blocks_completed: 254
+active_route: "PR230 FMS literature source-overlap intake"
+active_hard_residual: "Targeted FMS/gauge-invariant-field literature rescan is now executable.  The new intake runner PASS=16 FAIL=0 records FMS and gauge-invariant-field references as non-derivation context only and blocks using them as PR230 same-surface action, canonical O_H, source-overlap, kappa_s, or pole-residue authority.  It consumes O_sp, taste-radial promotion, time-kernel harness/GEVP, source-Higgs overlap-kappa, action ansatz/adoption, and W/Z ratio contracts, and confirms the current surface still lacks accepted EW/Higgs action, canonical O_H, C_spH/C_HH pole rows, Gram purity, FV/IR/threshold authority, and retained-route approval.  Aggregate gates remain open: assumption PASS=91 FAIL=0, campaign PASS=338 FAIL=0, assembly PASS=151 FAIL=0, retained PASS=305 FAIL=0, completion PASS=60 FAIL=0.  Chunks035-036 are active run-control only with no root JSONs yet; no retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py"
+  - "docs/YT_PR230_FMS_LITERATURE_SOURCE_OVERLAP_INTAKE_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS033_034_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk033_2026-05-06.json"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk034_2026-05-06.json"

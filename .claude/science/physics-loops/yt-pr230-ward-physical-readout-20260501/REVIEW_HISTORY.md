@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - FMS Literature Source-Overlap Intake
+
+Review stance: exact negative boundary / literature bridge only.
+
+- Added `scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py`,
+  its note, and its JSON certificate.
+- The runner records FMS and gauge-invariant-field literature as
+  non-derivation context only.  It blocks using those references to infer the
+  PR230 same-surface EW/Higgs action, canonical `O_H`, source-overlap
+  normalization, `kappa_s`, or source-Higgs pole residue.
+- Validation: FMS intake `PASS=16 FAIL=0`; assumption/import stress
+  `PASS=91 FAIL=0`; campaign status `PASS=338 FAIL=0`; full assembly
+  `PASS=151 FAIL=0`; retained-route `PASS=305 FAIL=0`; completion audit
+  `PASS=60 FAIL=0`; `py_compile` passed.
+
+Disposition: no closure.  The cleanest next positive artifact remains an
+accepted same-surface EW/Higgs action/O_FMS certificate or direct production
+`C_spH/C_HH` pole rows measuring the `O_sp`-Higgs overlap.  PR #230 remains
+draft/open with no retained or proposed-retained authorization.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks031-032 Package
 
 Review stance: bounded support / partial row-wave package.

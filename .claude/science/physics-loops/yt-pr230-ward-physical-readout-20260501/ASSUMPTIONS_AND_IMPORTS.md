@@ -53,6 +53,7 @@
 | Cl(3)/Z3 finite automorphism/orbit data | possible substrate source selector | exact negative boundary for PR230 source-Higgs identity closure | allowed as structural support only; does not derive continuous LSZ overlap, `D'(pole)`, or pole residue |
 | Full-staggered PT formula layer | supplies `D_psi`, `D_gluon`, scalar/gauge kinematics | exact support only | formulas reusable; old alpha/plaquette/H_unit surfaces forbidden |
 | EW/Higgs canonical doublet notes | structural guardrails | proposed/unaudited or conditional parents | may not be used as PR230 source-normalization closure |
+| FMS / gauge-invariant-field literature | source-Higgs bridge context | non-derivation context only; intake runner blocks current use as proof authority | may motivate future `O_FMS` acceptance contract only after same-surface EW/Higgs action, canonical LSZ, and `C_spH/C_HH` pole rows exist; cannot set `kappa_s` or identify `O_sp`/taste-radial `x` with canonical `O_H` |
 
 Minimal allowed premise set for the current stretch attempt:
 

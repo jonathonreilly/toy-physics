@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T08:18:11.032187+00:00",
+  "generated_at": "2026-05-07T08:50:47.263668+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42058,6 +42058,16 @@
       "runner_path": "scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py",
       "title": "PR230 FMS Composite `O_H` Conditional Theorem"
     },
+    "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07": {
+      "claim_id": "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / literature bridge only; no closure proposal",
+      "deps": [],
+      "note_hash": "b803e6e3a76d2247fad6c1e32c7847927af1c10c6a08b3ef334eb9b5a8b87005",
+      "path": "docs/YT_PR230_FMS_LITERATURE_SOURCE_OVERLAP_INTAKE_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py",
+      "title": "PR230 FMS Literature Source-Overlap Intake"
+    },
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06": {
       "claim_id": "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
       "current_status": "bounded",
@@ -45822,6 +45832,7 @@
     "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
     "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
+    "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07",
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
@@ -46049,17 +46060,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1127,
-    "node_count": 2080,
-    "root_count": 1593,
-    "runners_with_path": 1572,
+    "leaf_count": 1128,
+    "node_count": 2081,
+    "root_count": 1594,
+    "runners_with_path": 1573,
     "status_counts": {
       "bounded": 572,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 451,
-      "unknown": 580
+      "unknown": 581
     }
   }
 }

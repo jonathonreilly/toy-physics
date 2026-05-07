@@ -55,6 +55,7 @@ PARENTS = {
     "os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
     "source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
+    "fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
@@ -752,6 +753,24 @@ def main() -> int:
         )
         is False
     )
+    fms_literature_source_overlap_intake_non_authority = (
+        "FMS literature does not supply PR230 source-overlap"
+        in parent_statuses["fms_literature_source_overlap_intake"]
+        and certs["fms_literature_source_overlap_intake"].get("proposal_allowed")
+        is False
+        and certs["fms_literature_source_overlap_intake"].get(
+            "literature_bridge_scope"
+        )
+        == "non_derivation_context_only"
+        and certs["fms_literature_source_overlap_intake"].get(
+            "current_blockers", {}
+        ).get("canonical_oh_absent")
+        is True
+        and certs["fms_literature_source_overlap_intake"].get(
+            "current_blockers", {}
+        ).get("source_higgs_rows_absent")
+        is True
+    )
     two_source_taste_radial_primitive_transfer_candidate_not_h3 = (
         "finite C_sx rows do not certify a physical primitive neutral transfer"
         in parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"]
@@ -959,6 +978,7 @@ def main() -> int:
     report("os-transfer-kernel-artifact-absent", os_transfer_kernel_artifact_absent, parent_statuses["os_transfer_kernel_artifact_gate"])
     report("source-higgs-time-kernel-harness-support-only", source_higgs_time_kernel_harness_support_only, parent_statuses["source_higgs_time_kernel_harness_extension_gate"])
     report("source-higgs-time-kernel-gevp-contract-support-only", source_higgs_time_kernel_gevp_contract_support_only, parent_statuses["source_higgs_time_kernel_gevp_contract"])
+    report("fms-literature-source-overlap-intake-non-authority", fms_literature_source_overlap_intake_non_authority, parent_statuses["fms_literature_source_overlap_intake"])
     report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
     report("orthogonal-top-coupling-exclusion-candidate-rejected", orthogonal_top_coupling_exclusion_candidate_rejected, parent_statuses["orthogonal_top_coupling_exclusion_candidate_gate"])
     report("strict-scalar-lsz-moment-fv-authority-absent", strict_scalar_lsz_moment_fv_authority_absent, parent_statuses["strict_scalar_lsz_moment_fv_authority_gate"])
@@ -1130,6 +1150,7 @@ def main() -> int:
             "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
             "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
             "source_higgs_time_kernel_gevp_contract_support_only": source_higgs_time_kernel_gevp_contract_support_only,
+            "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
             "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
             "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
             "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
