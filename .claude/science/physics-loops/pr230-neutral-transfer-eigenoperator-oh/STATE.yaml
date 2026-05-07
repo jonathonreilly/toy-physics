@@ -1,21 +1,21 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T12:30:08-04:00"
+checkpoint_time: "2026-05-07T12:50:00-04:00"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 20
-active_science_block: block20_fms_source_overlap_readout_gate
-active_route: "Exact FMS source-overlap residue readout gate for future kappa_sH rows; current surface lacks accepted action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows"
+cycle_count: 21
+active_science_block: block21_chunks047_050_intake
+active_route: "Two-source taste-radial chunks047-050 package/intake; completed prefix refreshed to 50/63 while active chunks051-052 remain non-evidence"
 target_status: best-honest-status
-actual_current_surface_status: "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface"
+actual_current_surface_status: "bounded-support / two-source taste-radial chunks001-050 packaged; finite C_ss/C_sx/C_xx rows remain non-closure staging evidence"
 conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block20 supplies only the exact residue readout formula kappa_sH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH)) and a gate proving why source-only responses cannot fix canonical Higgs coupling without the missing pole rows. It does not derive or adopt the FMS/EW-Higgs action from Cl(3)/Z^3, does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, does not prove Gram flatness/FV/IR authority, and does not authorize retained or proposed_retained closure."
+proposal_allowed_reason: "Block21 packages completed chunks047-050 into the two-source taste-radial staging packet and refreshes source-Higgs, scalar-LSZ, Schur, primitive-transfer, and readiness gates to the current 50/63 prefix. The rows are finite C_ss/C_sx/C_xx diagnostics only; canonical O_H, strict C_ss/C_sH/C_HH pole rows, complete 63/63 packet, scalar-LSZ/FV/IR authority, Gram flatness, accepted W/Z action/response rows, and strict g2 remain absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block20 makes the kappa_sH residue readout exact once rows exist, but proves the current source-only response remains underdetermined by an orthogonal neutral coupling family."
@@ -27,7 +27,7 @@ minimal_allowed_premises:
   - "source-Higgs direct pole-row contract as future-row support only"
   - "canonical O_H hard-residual equivalence gate as exact negative boundary"
   - "W/Z accepted-action response root checkpoint as exact negative boundary"
-  - "46/63 two-source taste-radial C_sx/C_xx chunks as bounded staging support only"
+  - "50/63 two-source taste-radial C_sx/C_xx chunks as bounded staging support only"
   - "same-surface Z3 H1/H2 neutral primitive support as exact support only; H3/H4 remain absent"
   - "source-Higgs time-kernel/GEVP and scalar-LSZ/FV gates as support or boundary surfaces only"
   - "W/Z correlator mass-fit path gate as future row schema, not production evidence"
@@ -41,6 +41,7 @@ minimal_allowed_premises:
   - "block18 fresh committed artifact intake checkpoint as routing/open status only; no new physics closure or shortcut gate"
   - "block19 FMS O_H candidate/action packet as conditional support only; accepted action, canonical O_H, C_ss/C_sH/C_HH pole rows, pole/Gram/FV/IR, and aggregate gates remain required"
   - "block20 FMS source-overlap readout gate as exact support only; it supplies kappa_sH residue formula and source-only counterfamily, but accepted action, canonical O_H, strict pole rows, and Gram/FV/IR authority remain required"
+  - "block21 chunks047-050 intake as bounded support/exact boundary over the completed 50/63 prefix; active chunks051-052 are not counted as evidence"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -85,6 +86,25 @@ files_touched:
   - scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py
   - docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md
   - outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json
+  - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS047_050_PACKAGE_NOTE_2026-05-07.md
+  - outputs/yt_pr230_two_source_taste_radial_chunk047_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_chunk048_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_chunk049_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_chunk050_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json
+  - outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json
+  - outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json
+  - outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json
+  - outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json
+  - outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json
+  - outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json
+  - outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json
+  - outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json
+  - outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -241,10 +261,19 @@ commands_run:
   - "2026-05-07 block20: git diff --check # OK"
   - "2026-05-07 block20: bash docs/audit/scripts/run_pipeline.sh # OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings"
   - "2026-05-07 block20: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
-review_disposition: pass_exact_support_fms_source_overlap_readout_gate_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block20 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Supply an accepted same-surface action/operator certificate and strict source-Higgs pole rows, then rerun the kappa_sH readout gate; otherwise pivot to strict W/Z matched response rows/covariance/strict g2 or neutral primitive H3/H4 physical-transfer authority."
-stop_condition: "Continue after coherent block20 checkpoint push; this readout gate is exact support only, not campaign completion, and no retained/proposed_retained closure is authorized."
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 47 --output outputs/yt_pr230_two_source_taste_radial_chunk047_checkpoint_2026-05-06.json # PASS=15 FAIL=0"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 48 --output outputs/yt_pr230_two_source_taste_radial_chunk048_checkpoint_2026-05-06.json # PASS=15 FAIL=0"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 49 --output outputs/yt_pr230_two_source_taste_radial_chunk049_checkpoint_2026-05-06.json # PASS=15 FAIL=0"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 50 --output outputs/yt_pr230_two_source_taste_radial_chunk050_checkpoint_2026-05-06.json # PASS=15 FAIL=0"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py # PASS=10 FAIL=0; completed prefix=001-050; active chunks051-052 not counted"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py # PASS=13 FAIL=0; ready=50/63"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py # PASS=18 FAIL=0; ready=50/63"
+  - "2026-05-07 block21: python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py # PASS=13 FAIL=0; ready=50/63; z=178.2296"
+  - "2026-05-07 block21: Schur/primitive/source-Higgs readiness gates rerun # Schur support only; readiness PASS=25 FAIL=0; no closure"
+review_disposition: pass_bounded_support_chunks047_050_intake_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block21 PR not opened because PR #230 remains the landing path"
+next_exact_action: "Do not count active chunks051-052 until checkpoints pass. Continue row package intake when completed, but closure still requires accepted canonical O_H plus strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority, strict W/Z matched response rows/covariance/g2, or neutral primitive H3/H4 physical-transfer authority."
+stop_condition: "Continue after coherent block21 checkpoint push; completed chunks047-050 are bounded support only, not campaign completion, and no retained/proposed_retained closure is authorized."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -291,5 +320,22 @@ block20_fms_source_overlap_readout_gate:
   strict_rows_present: false
   action_accepted_current_surface: false
   canonical_oh_certified: false
+  closure_authorized: false
+  proposal_allowed: false
+block21_chunks047_050_intake:
+  note: docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS047_050_PACKAGE_NOTE_2026-05-07.md
+  checkpoints:
+    - outputs/yt_pr230_two_source_taste_radial_chunk047_checkpoint_2026-05-06.json
+    - outputs/yt_pr230_two_source_taste_radial_chunk048_checkpoint_2026-05-06.json
+    - outputs/yt_pr230_two_source_taste_radial_chunk049_checkpoint_2026-05-06.json
+    - outputs/yt_pr230_two_source_taste_radial_chunk050_checkpoint_2026-05-06.json
+  package_audit: outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json
+  row_combiner: outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json
+  verification: "checkpoints047-050 PASS=15 FAIL=0 each; package audit PASS=10 FAIL=0; combiner PASS=13 FAIL=0 ready=50/63"
+  completed_prefix: "001-050"
+  active_chunks_not_evidence: "051-052"
+  strict_scalar_lsz_authority_present: false
+  canonical_oh_certified: false
+  source_higgs_pole_rows_present: false
   closure_authorized: false
   proposal_allowed: false

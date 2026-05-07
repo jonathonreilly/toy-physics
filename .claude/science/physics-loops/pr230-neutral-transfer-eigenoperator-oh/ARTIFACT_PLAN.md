@@ -389,3 +389,22 @@ canonical `O_H`, and strict `C_ss/C_sH/C_HH` pole rows with pole/Gram/FV/IR
 checks.  If those cannot be supplied, the next clean physics closure attempt is
 strict W/Z physical response with same-source rows and covariance, or the
 neutral primitive H3/H4 physical-transfer/irreducibility certificate.
+
+Block21 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Chunks047-050 package note | `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS047_050_PACKAGE_NOTE_2026-05-07.md` | Created; bounded support only |
+| Chunk checkpoints | `outputs/yt_pr230_two_source_taste_radial_chunk047_checkpoint_2026-05-06.json` through `outputs/yt_pr230_two_source_taste_radial_chunk050_checkpoint_2026-05-06.json` | Created; each PASS=15 FAIL=0 |
+| Package audit | `outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json` | Refreshed to chunks001-050; PASS=10 FAIL=0; active chunks051-052 not evidence |
+| Row combiner | `outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json` | Refreshed to ready=50/63; PASS=13 FAIL=0; combined rows not written |
+| Source-Higgs/scalar-LSZ/Schur gates | Row-dependent support certificates under `outputs/` | Refreshed to 50/63; all support/boundary only |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block21 checkpoint |
+
+Follow-on artifact target after block21 is unchanged in kind but sharper in
+state: complete checkpoints for future chunks only after they finish, while
+reserving closure language for a certified canonical `O_H` plus strict
+`C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a strict W/Z
+physical-response packet, or a neutral primitive H3/H4 physical-transfer
+certificate.  The 50/63 finite `C_ss/C_sx/C_xx` packet remains staging support
+only.

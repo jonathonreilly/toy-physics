@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block20_fms_source_overlap_readout_gate`.
+Current block: `block21_chunks047_050_intake`.
 
 ```yaml
-actual_current_surface_status: exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface
+actual_current_surface_status: bounded-support / two-source taste-radial chunks001-050 packaged; finite C_ss/C_sx/C_xx rows remain non-closure staging evidence
 conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block20 supplies only the exact FMS source-overlap residue readout gate. It does not derive or adopt an EW/Higgs action from Cl(3)/Z^3, does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, and does not prove Gram flatness, FV/IR, scalar-LSZ, or physical-response authority. Block19 remains a conditional FMS O_H candidate/action packet; block18 is routing-only; block17 additive-top Jacobian rows remain bounded W/Z-repair support only."
+proposal_allowed_reason: "Block21 packages completed chunks047-050 and refreshes source-Higgs, strict scalar-LSZ, Schur, primitive-transfer, and readiness gates to the 50/63 prefix. It does not count active chunks051-052, does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, does not prove Gram flatness, FV/IR, scalar-LSZ, or physical-response authority, and does not authorize retained or proposed_retained wording."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -61,7 +61,12 @@ Reason:
    action, canonical `O_H`, strict pole rows, and Gram/FV/IR authority exist.
    It also records why source-only responses cannot fix canonical `y_H` in the
    presence of an orthogonal neutral coupling family.
-10. No branch-local wording may present this block as closure.
+10. Block21 counts only completed chunks047-050 after chunk checkpoints pass,
+    excludes active chunks051-052, does not treat the 50/63 finite
+    `C_ss/C_sx/C_xx` prefix as canonical `C_sH/C_HH` pole rows, does not treat
+    raw `C_ss` as strict scalar-LSZ authority, and does not use Schur
+    first-shell or one-pole scouts as model-class/pole/FV/IR authority.
+11. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
 
@@ -138,5 +143,9 @@ Prior block certificate summary:
   gives the future row-level `kappa_sH` residue formula and a source-only
   counterfamily, but current PR230 still lacks accepted action, canonical
   `O_H`, strict `C_ss/C_sH/C_HH` rows, and Gram/FV/IR authority.
-- Block01 through Block20 all have `proposal_allowed=false`; their boundaries
+- Block21 actual status: bounded-support / chunks047-050 intake; the current
+  50/63 `C_ss/C_sx/C_xx` prefix is schema-clean staging evidence only.  It is
+  not canonical `O_H`, not canonical `C_sH/C_HH`, not strict scalar-LSZ/FV/IR
+  authority, not W/Z response evidence, and not physical top-Yukawa closure.
+- Block01 through Block21 all have `proposal_allowed=false`; their boundaries
   remain active.

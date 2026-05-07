@@ -726,3 +726,38 @@ canonical `O_H`, and strict `C_ss/C_sH/C_HH` pole rows, then rerun the
 readout.  If that route remains unavailable, pivot to genuine same-source W/Z
 response rows with matched covariance and strict non-observed `g2`, or the
 neutral primitive H3/H4 physical-transfer/irreducibility certificate.
+
+## Block21 Chunks047-050 Intake Checkpoint
+
+Packaged completed chunks047-050 into the two-source taste-radial row stream.
+Chunks051-052 are active under the row-wave supervisor and are not counted as
+evidence.
+
+Result:
+
+- `ready_chunks = 50`, `expected_chunks = 63`;
+- `combined_rows_written = false`, with chunks051-063 absent as completed
+  checkpoint evidence;
+- chunk checkpoints 047-050 each pass with `PASS=15 FAIL=0`;
+- package audit passes with `PASS=10 FAIL=0` and records active chunks051-052
+  as non-evidence;
+- source-Higgs aperture passes with `PASS=18 FAIL=0`, but the 50 chunks remain
+  finite `C_sx/C_xx` staging rows;
+- strict scalar-LSZ still fails as authority: raw `C_ss` shell-minus-zero has
+  `z=178.22958332484396`;
+- Schur `C_x|s` survives only the necessary first-shell check, and the one-pole
+  scout remains model-class dependent;
+- primitive-transfer and orthogonal-top exclusion gates still reject finite
+  `C_sx/C_xx` rows as physical transfer or top-coupling tomography.
+
+Honest status: bounded-support / chunks047-050 intake checkpoint.  The current
+surface still lacks certified canonical `O_H`, production `C_ss/C_sH/C_HH`
+pole rows, source-Higgs Gram flatness, strict scalar-LSZ/FV/IR authority,
+accepted W/Z action, production W/Z response rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response authority.
+`proposal_allowed=false`.
+
+Next exact action: checkpoint future chunks only after they finish, while the
+cleanest closure route remains a genuine row/authority artifact: certified
+canonical `O_H` plus strict source-Higgs pole rows, strict W/Z physical-response
+rows, or neutral primitive H3/H4 physical-transfer authority.
