@@ -1,5 +1,33 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks037-038 Schur refresh checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / finite Schur diagnostics refreshed at ready=38/63; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py
+# SUMMARY: PASS=16 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py
+# SUMMARY: PASS=14 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py
+# SUMMARY: PASS=17 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# SUMMARY: PASS=25 FAIL=0
+```
+
+The refreshed finite Schur rows are route diagnostics only.  They do not
+provide canonical `O_H`, canonical `C_sH/C_HH`, scalar-LSZ/FV authority,
+same-source W/Z response with identity/covariance/strict `g2`, or retained /
+proposed-retained top-Yukawa closure.
+
 W/Z same-source accepted-action minimal certificate cut checkpoint:
 
 ```text

@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 two-source taste-radial chunks037-038 Schur refresh:
+
+- Refreshed the finite Schur subblock, K-prime scout, A/B/C finite-row, and
+  finite-to-pole lift certificates after chunks037-038 were packaged.
+- The refreshed finite Schur packet is `ready=38/63`: subblock witness
+  `PASS=16 FAIL=0`, finite-shell K-prime scout `PASS=14 FAIL=0`, finite
+  Schur A/B/C rows `PASS=17 FAIL=0`, and finite-to-pole lift
+  `PASS=13 FAIL=0`.
+- Source-Higgs readiness remains `PASS=25 FAIL=0` but open because the
+  accepted canonical `O_H` certificate and source-Higgs pole rows are absent.
+- Claim boundary: finite `C_ss/C_sx/C_xx` and Schur diagnostic rows are route
+  support only.  They are not canonical `O_H`, not canonical `C_sH/C_HH`, not
+  strict scalar-LSZ/FV authority, not W/Z response, and not retained or
+  proposed-retained closure.
+- Chunks039-040 are active under the two-worker cap and remain run-control
+  only until completed root JSONs and completed-mode checkpoints exist.
+
 Latest checkpoint, 2026-05-07 W/Z same-source accepted-action minimal certificate cut:
 
 - Added
@@ -20,7 +37,8 @@ Latest checkpoint, 2026-05-07 W/Z same-source accepted-action minimal certificat
   `PASS=62 FAIL=0`; `py_compile` passed for touched scripts.
 - Claim boundary: no accepted EW action, no canonical `O_H`, no W/Z rows, no
   covariance, no strict `g2`, no retained/proposed-retained closure.
-- Chunks037-038 remain active run-control only.
+- Historical run-control note: at this older checkpoint chunks037-038 were
+  active only; they were packaged in the later checkpoint above.
 
 Latest checkpoint, 2026-05-07 FMS literature source-overlap intake:
 

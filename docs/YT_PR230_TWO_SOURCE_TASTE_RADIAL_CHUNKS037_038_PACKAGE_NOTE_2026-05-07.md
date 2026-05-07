@@ -65,6 +65,18 @@ python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
 python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
 # SUMMARY: PASS=13 FAIL=0
 
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py
+# SUMMARY: PASS=16 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py
+# SUMMARY: PASS=14 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py
+# SUMMARY: PASS=17 FAIL=0, ready=38/63
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=38/63
+
 python3 scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
 # SUMMARY: PASS=22 FAIL=0
 

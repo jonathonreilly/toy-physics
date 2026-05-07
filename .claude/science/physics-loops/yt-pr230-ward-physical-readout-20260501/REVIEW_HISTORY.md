@@ -6250,12 +6250,15 @@ Review stance: bounded support / partial row-wave package.
   status, full assembly, retained-route, and completion audit.
 - Validation: chunk037 `PASS=15 FAIL=0`, chunk038 `PASS=15 FAIL=0`,
   package audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at
-  `ready=38/63`, strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair
-  `PASS=22 FAIL=0`, complete monotonicity `PASS=15 FAIL=0`, one-pole scout
-  `PASS=13 FAIL=0`, primitive-transfer `PASS=13 FAIL=0`, orthogonal-top
-  `PASS=12 FAIL=0`, assumption stress `PASS=93 FAIL=0`, campaign status
-  `PASS=341 FAIL=0`, full assembly `PASS=154 FAIL=0`, retained-route
-  `PASS=308 FAIL=0`, and completion audit `PASS=63 FAIL=0`.
+  `ready=38/63`, strict scalar-LSZ `PASS=13 FAIL=0`, Schur subblock witness
+  `PASS=16 FAIL=0`, finite-shell Schur K-prime scout `PASS=14 FAIL=0`,
+  finite Schur A/B/C rows `PASS=17 FAIL=0`, Schur finite-to-pole lift
+  `PASS=13 FAIL=0`, Schur repair `PASS=22 FAIL=0`, complete monotonicity
+  `PASS=15 FAIL=0`, one-pole scout `PASS=13 FAIL=0`, primitive-transfer
+  `PASS=13 FAIL=0`, orthogonal-top `PASS=12 FAIL=0`, assumption stress
+  `PASS=93 FAIL=0`, campaign status `PASS=341 FAIL=0`, full assembly
+  `PASS=154 FAIL=0`, retained-route `PASS=308 FAIL=0`, and completion audit
+  `PASS=63 FAIL=0`.
 
 Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
 row evidence for route diagnostics, not canonical `O_H`, not canonical
