@@ -306,6 +306,26 @@ def check_nn_deterministic_rescale() -> None:
     )
 
 
+def check_nn_high_precision_closure() -> None:
+    out = run_script("scripts/lattice_nn_high_precision_closure.py")
+    require(
+        "INVARIANCE: PASS" in out,
+        "NN high-precision closure step-scale invariance certificate failed",
+    )
+    require(
+        "OVERFLOW BOUND: CONFIRMED" in out,
+        "NN high-precision closure raw-kernel overflow bound regressed",
+    )
+    require(
+        "RESCALE FITS: PASS" in out,
+        "NN high-precision closure deterministic-rescale fit regressed",
+    )
+    require(
+        "RUNNER STATUS: PASS" in out,
+        "NN high-precision closure overall runner status regressed",
+    )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -330,6 +350,7 @@ def main() -> None:
         ("structured bridge extension", check_structured_bridge_extension),
         ("NN raw continuum", check_nn_continuum),
         ("NN deterministic rescale", check_nn_deterministic_rescale),
+        ("NN high-precision closure", check_nn_high_precision_closure),
     ]
 
     print("=" * 88)

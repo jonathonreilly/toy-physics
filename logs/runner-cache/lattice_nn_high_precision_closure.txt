@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_high_precision_closure.py
+runner_sha256: cc449bdfc62bd9daf5447908cac7be185504f34c409a7e6a88daa9f84304d72a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+===============================================================================================
+LATTICE NN HIGH-PRECISION CLOSURE
+  Step-scale invariance theorem + raw-kernel float64 overflow bound
+===============================================================================================
+
+--- 1. STEP-SCALE INVARIANCE CERTIFICATE ---
+  test lattice: h = 0.5, layers = 9
+  normalized-probability max abs diff (raw vs rescaled): 8.327e-17
+  centroid max abs diff: 1.044e-16
+  total probability ratio actual:   4.304672e-09
+  total probability ratio expected: 4.304672e-09
+  ratio relative error: 0.000e+00
+  INVARIANCE: PASS
+
+--- 2. RAW-KERNEL h = 0.125 OVERFLOW BOUND ---
+  layers nl: 321
+  per-edge magnitude bound (3/h): 24.00
+  log10(amplitude scale upper bound): 443.05
+  log10(float64 max): 308.25
+  log10(overflow margin): 134.79
+  would overflow float64: True
+  OVERFLOW BOUND: CONFIRMED
+
+--- 3. DETERMINISTIC RESCALE h = 0.125 SCALE BOUND ---
+  layers nl: 321
+  per-edge magnitude (sqrt(3)): 1.7321
+  log10(amplitude scale upper bound): 76.58
+  log10(float64 max): 308.25
+  fits float64 dynamic range: True
+  RESCALE FITS: PASS
+
+--- 4. CANONICAL FINITE-WINDOW ROW EQUALITY (cached) ---
+  h	gravity		k=0		MI	1-pur	d_TV
+  1.0	-0.116678	+0.00e+00	0.5022	0.4229	0.7455
+  0.5	+0.138226	+0.00e+00	0.7420	0.4844	0.9072
+  0.25	+0.077415	+0.00e+00	0.9470	0.4989	0.9878
+  (raw and deterministic-rescale runners report identical
+   observable values here; only Born residual differs in the
+   last decimal due to float roundoff order.)
+
+--- VERDICT ---
+  step-scale invariance theorem:         PASS
+  raw-kernel float64 overflow at h=1/8:  CONFIRMED
+  deterministic rescale fits float64:    PASS
+
+  CLOSURE: the gate's open question (raw kernel without rescale at
+  h = 0.125) is bounded by a float64 overflow of ~10^135 above the
+  representable range. The framework's canonical Born-clean h = 0.125
+  observable values are supplied by the deterministic-rescale lane,
+  which is observable-equivalent to the raw kernel on the
+  float64-clean window by the step-scale invariance theorem.
+
+  RUNNER STATUS: PASS
+
+----- stderr -----
+
