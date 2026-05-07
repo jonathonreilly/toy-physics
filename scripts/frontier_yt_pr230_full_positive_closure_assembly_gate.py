@@ -107,6 +107,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_abc_finite_rows": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_pole_lift_gate": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
+    "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -836,6 +837,26 @@ def main() -> int:
         is False
         and certs["pr230_two_source_taste_radial_schur_pole_lift_gate"].get(
             "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True
+    )
+    two_source_taste_radial_primitive_transfer_candidate_not_h3 = (
+        "finite C_sx rows do not certify a physical primitive neutral transfer"
+        in statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"]
+        and certs["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "physical_transfer_candidate_accepted"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "finite_offdiagonal_correlation_support"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "finite_correlator_blocks_positive"
         )
         is True
     )
@@ -1865,6 +1886,11 @@ def main() -> int:
         statuses["pr230_two_source_taste_radial_schur_pole_lift_gate"],
     )
     report(
+        "two-source-taste-radial-primitive-transfer-candidate-not-h3",
+        two_source_taste_radial_primitive_transfer_candidate_not_h3,
+        statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"],
+    )
+    report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         statuses["pr230_taste_radial_canonical_oh_selector_gate"],
@@ -2884,6 +2910,7 @@ def main() -> int:
         "two_source_taste_radial_kprime_finite_shell_scout_not_closure": two_source_taste_radial_kprime_scout_not_closure,
         "two_source_taste_radial_schur_abc_finite_rows_not_closure": two_source_taste_radial_schur_abc_finite_rows_not_closure,
         "two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion": two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion,
+        "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
@@ -2972,6 +2999,8 @@ def main() -> int:
             "pursue one non-chunk bridge that can satisfy this gate: a real "
             "same-surface neutral multiplicity-one certificate accepted by "
             "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json, "
+            "or physical primitive-transfer authority accepted by "
+            "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json, "
             "then a same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
             "EW action plus top/W/Z mass-response rows, matched covariance or "
             "a real top/W factorization theorem, and sector-overlap identity, "

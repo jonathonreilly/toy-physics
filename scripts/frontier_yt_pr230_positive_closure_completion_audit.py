@@ -47,6 +47,7 @@ PARENTS = {
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
+    "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -608,6 +609,22 @@ def main() -> int:
         )
         is False
     )
+    two_source_taste_radial_primitive_transfer_candidate_not_h3 = (
+        "finite C_sx rows do not certify a physical primitive neutral transfer"
+        in parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"]
+        and certs["two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "physical_transfer_candidate_accepted"
+        )
+        is False
+        and certs["two_source_taste_radial_primitive_transfer_candidate_gate"].get(
+            "finite_offdiagonal_correlation_support"
+        )
+        is True
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -683,6 +700,7 @@ def main() -> int:
     report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
     report("same-surface-neutral-multiplicity-one-gate-rejects-current-surface", same_surface_neutral_multiplicity_gate_rejects_current_surface, parent_statuses["same_surface_neutral_multiplicity_one_gate"])
+    report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
     report("future-bridge-artifact-files-support-only-or-absent", no_unclosed_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
@@ -841,6 +859,7 @@ def main() -> int:
             "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
             "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
             "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
+            "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
             "future_bridge_file_presence": future_bridge_presence,
         },
         "bare_retained_allowed": False,

@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T01:28:24.779058+00:00",
+  "generated_at": "2026-05-07T01:42:44.635240+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "77e0ede6681fa1d924ee4ec65dd0aac4cc109a2ca39753322ff937d74480bae4",
+      "note_hash": "fcdff95b952edad93137f396704537c7b53f2a569599f502afa00407629d5bd1",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -42073,7 +42073,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "de1b5d10ee92407a472d8a004211b7748c4ef49c79e48c47261843789151ed27",
+      "note_hash": "c767778d62ee6cbc746271c35293286b588b60d41bc12e68bd9cdf0e223c85c7",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -42573,7 +42573,7 @@
       "current_status": "open",
       "current_status_raw": "open / positive closure completion audit: closure not achieved.",
       "deps": [],
-      "note_hash": "a50d1a0215c6317871be076350de358f9bb39a7d68b84aef0529e4bed91ab61c",
+      "note_hash": "7f424169955323236ab7504e1ea038424324281942db2e690db9f015b4945a01",
       "path": "docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_positive_closure_completion_audit.py",
       "title": "PR230 Positive Closure Completion Audit Note"
@@ -42828,6 +42828,16 @@
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"
     },
+    "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07": {
+      "claim_id": "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support plus exact boundary / finite `C_sx` rows do not",
+      "deps": [],
+      "note_hash": "f1d8fc811a9903c7444f2c30077e6a5c8f680fe307c16fe56f14ce625ccaf5b5",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_PRIMITIVE_TRANSFER_CANDIDATE_GATE_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate.py",
+      "title": "PR230 Two-Source Taste-Radial Primitive-Transfer Candidate Gate"
+    },
     "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
       "current_status": "bounded",
@@ -43045,7 +43055,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "a40ea3bbca4476380aba8177f9069d16718fa6cf9207f5b0e22d262eeda3be49",
+      "note_hash": "89e0cce2b598ffd0e75edf89b4bb841fa9a39e6c5eaf149673caf94954a71fe1",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -45749,6 +45759,7 @@
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_row_production_manifest_note_2026-05-06",
@@ -45884,12 +45895,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1112,
-    "node_count": 2065,
-    "root_count": 1578,
-    "runners_with_path": 1560,
+    "leaf_count": 1113,
+    "node_count": 2066,
+    "root_count": 1579,
+    "runners_with_path": 1561,
     "status_counts": {
-      "bounded": 565,
+      "bounded": 566,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,

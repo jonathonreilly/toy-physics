@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=262 FAIL=0
+# SUMMARY: PASS=292 FAIL=0
 ```
+
+## 2026-05-07 Two-Source Primitive-Transfer Candidate Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`.
+
+This is support plus a boundary, not closure.  The ready taste-radial packet
+contains finite same-ensemble `C_sx` entries and positive finite
+`C_ss/C_sx/C_xx` blocks, but those rows remain correlator/covariance data.
+They do not instantiate a physical neutral transfer/action row, primitive
+power, irreducible generator, pole/FV/IR transfer limit, canonical `O_H`, or
+source-Higgs overlap.
+
+Validation: primitive-transfer candidate gate `PASS=13 FAIL=0`; full positive
+closure assembly `PASS=138 FAIL=0`; retained-route `PASS=292 FAIL=0`; campaign
+status `PASS=325 FAIL=0`; completion audit `PASS=47 FAIL=0`.
 
 ## 2026-05-06 Z3 Lazy-Selector No-Go Update
 

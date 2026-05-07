@@ -1,0 +1,199 @@
+{
+  "actual_current_surface_status": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "combined_rows_written": false,
+  "conditional_surface_status": "conditional-support if a future same-surface action/transfer theorem or direct neutral transfer row converts the measured source/complement block into a positive primitive neutral transfer with pole/FV/IR and source/canonical-Higgs coupling authority",
+  "exact_next_action": "Supply a same-surface physical neutral transfer/action row or off-diagonal generator theorem, or a model-class/pole/FV/IR theorem that converts the measured C_ss/C_sx/C_xx block into a primitive neutral transfer and couples it to canonical O_H.",
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "finite_correlator_blocks_positive": true,
+  "finite_offdiagonal_correlation_support": true,
+  "hypothetical_axiom_status": null,
+  "mode_summary": {
+    "0,0,0": {
+      "C_sx_real": {
+        "count": 20,
+        "max": 0.00015573928662202072,
+        "mean": -1.4948438380697404e-05,
+        "min": -0.00017610843791869552,
+        "stdev": 8.857195233446278e-05
+      },
+      "C_sx_sign_counts": {
+        "negative": 12,
+        "positive": 8,
+        "zero": 0
+      },
+      "all_blocks_positive_definite": true,
+      "gram_determinant": {
+        "count": 20,
+        "max": 0.03443592420766044,
+        "mean": 0.034376742704388986,
+        "min": 0.03433470107898061,
+        "stdev": 2.9517493407365687e-05
+      },
+      "offdiagonal_entry_observed": true,
+      "rho_sx": {
+        "count": 20,
+        "max": 0.0008395823086115359,
+        "mean": -8.071211216616531e-05,
+        "min": -0.0009500004592309483,
+        "stdev": 0.00047774919549656487
+      },
+      "row_count": 20,
+      "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
+    },
+    "0,0,1": {
+      "C_sx_real": {
+        "count": 20,
+        "max": 0.000202931992194099,
+        "mean": -7.815798579792924e-06,
+        "min": -0.0001826668847958663,
+        "stdev": 9.812245434586211e-05
+      },
+      "C_sx_sign_counts": {
+        "negative": 11,
+        "positive": 9,
+        "zero": 0
+      },
+      "all_blocks_positive_definite": true,
+      "gram_determinant": {
+        "count": 20,
+        "max": 0.033947435240421556,
+        "mean": 0.03388625421365093,
+        "min": 0.03383865682795415,
+        "stdev": 3.0014155595680587e-05
+      },
+      "offdiagonal_entry_observed": true,
+      "rho_sx": {
+        "count": 20,
+        "max": 0.001101404308940309,
+        "mean": -4.256572331224384e-05,
+        "min": -0.0009923711191002188,
+        "stdev": 0.0005329997105107998
+      },
+      "row_count": 20,
+      "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
+    },
+    "0,1,0": {
+      "C_sx_real": {
+        "count": 20,
+        "max": 0.0002204249021318783,
+        "mean": -5.854019797153083e-06,
+        "min": -0.00019150870829394567,
+        "stdev": 0.00010690322593714969
+      },
+      "C_sx_sign_counts": {
+        "negative": 10,
+        "positive": 10,
+        "zero": 0
+      },
+      "all_blocks_positive_definite": true,
+      "gram_determinant": {
+        "count": 20,
+        "max": 0.03382809941874459,
+        "mean": 0.03377982969189551,
+        "min": 0.033736525299778615,
+        "stdev": 2.9259343780545703e-05
+      },
+      "offdiagonal_entry_observed": true,
+      "rho_sx": {
+        "count": 20,
+        "max": 0.0011987200649805207,
+        "mean": -3.196368174655817e-05,
+        "min": -0.001042165835772107,
+        "stdev": 0.0005816456042193204
+      },
+      "row_count": 20,
+      "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
+    },
+    "1,0,0": {
+      "C_sx_real": {
+        "count": 20,
+        "max": 0.00014059692879366014,
+        "mean": -2.532168607497877e-05,
+        "min": -0.00022224996656396842,
+        "stdev": 9.511498603874448e-05
+      },
+      "C_sx_sign_counts": {
+        "negative": 9,
+        "positive": 11,
+        "zero": 0
+      },
+      "all_blocks_positive_definite": true,
+      "gram_determinant": {
+        "count": 20,
+        "max": 0.03376377487020449,
+        "mean": 0.03370156127866841,
+        "min": 0.033655914077499474,
+        "stdev": 2.889813698876254e-05
+      },
+      "offdiagonal_entry_observed": true,
+      "rho_sx": {
+        "count": 20,
+        "max": 0.0007655918501494505,
+        "mean": -0.00013802323403109477,
+        "min": -0.0012109740601922983,
+        "stdev": 0.0005181528411887925
+      },
+      "row_count": 20,
+      "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
+    }
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "finite_schur_abc": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
+    "finite_to_pole_lift": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
+    "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_neutral_multiplicity_candidate": "exact negative boundary / same-surface neutral multiplicity-one candidate attempt rejected on current PR230 surface",
+    "same_surface_neutral_multiplicity_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "schur_subblock": "bounded-support / two-source taste-radial Schur-subblock witness; strict Schur K-prime pole rows and canonical O_H authority absent",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+    "two_source_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
+    "two_source_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "z3_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
+    "z3_triplet_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+  },
+  "pass_count": 13,
+  "physical_transfer_candidate_accepted": false,
+  "primitive_transfer_obligations": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_transfer_or_action_row",
+      "reason": "ready rows are correlator entries, not transfer/action dynamics"
+    },
+    {
+      "current_satisfied": false,
+      "id": "positive_cone_orientation_without_absolute_value",
+      "reason": "positive transfer cannot be created by taking |C_sx| or stochasticizing finite covariance rows"
+    },
+    {
+      "current_satisfied": false,
+      "id": "primitive_power_or_irreducible_generator",
+      "reason": "no transfer matrix or off-diagonal generator is derived"
+    },
+    {
+      "current_satisfied": false,
+      "id": "pole_fv_ir_transfer_limit",
+      "reason": "finite-to-pole lift gate blocks endpoint/secant promotion"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_canonical_higgs_coupling",
+      "reason": "taste-radial x is not canonical O_H and C_spH/C_HH rows are absent"
+    }
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The finite C_sx rows are real same-ensemble off-diagonal correlator entries, but they are not a transfer/action matrix, positive primitive cone certificate, isolated-pole kernel derivative, canonical O_H row, or kappa_s authority.",
+  "ready_chunks": 20,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not treat finite C_sx/C_xx rows as canonical C_sH/C_HH rows",
+    "does not treat finite correlator covariance as a transfer/action matrix",
+    "does not use absolute values or stochastic normalization to create a positive transfer",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, or value recognition"
+  ]
+}

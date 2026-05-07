@@ -14,6 +14,12 @@ pole intake.  `O_sp` is real same-source source-side support, not closure.  The
 completion checklist therefore separates "genuine artifact found" from the
 still-missing source-Higgs bridge.
 
+2026-05-07 refresh: the audit now also consumes the two-source taste-radial
+primitive-transfer candidate gate.  Finite `C_sx` rows and positive finite
+correlator blocks are support only; H3 still needs a same-surface physical
+transfer/action row, off-diagonal generator, or theorem converting those rows
+into primitive neutral transfer authority.
+
 ## Audit Result
 
 The production chunk work is complete as support:
@@ -35,6 +41,8 @@ The current strongest positive artifact is also recorded:
 - the future bridge files for canonical `O_H`, source-Higgs rows, W/Z rows,
   Schur rows, scalar-LSZ authority, and neutral primitive-cone authority remain
   absent.
+- the ready taste-radial `C_sx` rows do not count as a physical primitive
+  neutral transfer or canonical-Higgs bridge.
 
 The completion audit still rejects positive closure because these required
 items remain missing:
@@ -73,7 +81,7 @@ python3 -m py_compile \
   scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 
 python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
-# SUMMARY: PASS=24 FAIL=0
+# SUMMARY: PASS=47 FAIL=0
 ```
 
 Certificate:

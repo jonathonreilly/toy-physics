@@ -1,5 +1,15 @@
 # Claim Status Certificate
 
+2026-05-07 primitive-transfer candidate update: the new certificate
+`outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`
+passes with `PASS=13 FAIL=0` as support/no-go only.  It confirms that finite
+same-ensemble `C_sx` rows and positive finite `C_ss/C_sx/C_xx` blocks are not
+H3 physical transfer authority.  They are not a transfer/action matrix,
+primitive cone certificate, pole/FV/IR transfer limit, canonical `O_H`, or
+`kappa_s` authority.  Aggregate refresh: assumption PASS=79, campaign
+PASS=325, full assembly PASS=138, retained-route PASS=292, completion audit
+PASS=47, all FAIL=0 and `proposal_allowed=false`.
+
 2026-05-07 clean-route refresh: `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
 now consumes `O_sp`, radial-spurion action-contract support, chunks001-020,
 and finite Schur A/B/C diagnostics.  The selector remains support-only and

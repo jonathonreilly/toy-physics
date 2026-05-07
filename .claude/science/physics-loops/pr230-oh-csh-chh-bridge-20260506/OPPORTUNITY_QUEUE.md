@@ -20,6 +20,14 @@ measured `C_spH/C_HH` pole-overlap rows.  More source-only rows, method names,
 Z3 cone support, or finite endpoint Schur diagnostics cannot substitute for
 one of those obligations.
 
+The adjacent H3 finite-row shortcut is now checked too:
+`outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`
+passes as a support/no-go certificate.  Finite `C_sx` rows and positive finite
+`C_ss/C_sx/C_xx` blocks do not become a physical primitive transfer without a
+same-surface action/transfer row, off-diagonal generator theorem, or
+model-class/pole/FV/IR theorem tying the finite correlator block to a
+primitive neutral transfer and canonical `O_H`.
+
 1. Action-first same-source EW/Higgs action plus gauge-invariant composite
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
    pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree
@@ -100,6 +108,10 @@ one of those obligations.
    derivatives, because endpoint-preserving interpolation changes `f'(0)`.
    The strict Schur path therefore needs a real model-class/pole/FV/IR theorem
    or direct strict neutral-kernel pole rows, not just finite endpoint secants.
+   The primitive-transfer candidate gate also blocks treating the same finite
+   `C_sx` rows as H3 physical neutral transfer.  They remain useful finite
+   row support, but not an action/transfer matrix, primitive cone certificate,
+   pole-transfer limit, canonical `O_H`, or `kappa_s`.
    Chunks019-020 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,

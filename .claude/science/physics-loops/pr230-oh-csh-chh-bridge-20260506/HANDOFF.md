@@ -1,5 +1,16 @@
 # Handoff
 
+2026-05-07 primitive-transfer candidate checkpoint: the new
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_PRIMITIVE_TRANSFER_CANDIDATE_GATE` consumes
+the ready chunks001-020 finite `C_ss/C_sx/C_xx` packet and confirms the exact
+boundary for H3.  Finite `C_sx` rows exist and the finite `2x2` blocks are
+positive, but they are correlator/covariance rows, not a same-surface
+transfer/action matrix, primitive cone certificate, pole/FV/IR transfer
+limit, canonical `O_H`, or `kappa_s` authority.  Aggregate gates remain green
+and open: assumption stress PASS=79, campaign PASS=325, full assembly
+PASS=138, retained-route PASS=292, completion audit PASS=47, all FAIL=0 and
+all with `proposal_allowed=false`.
+
 2026-05-07 route refresh: the clean source-Higgs outside-math selector has been
 rerun after `O_sp`, the radial-spurion action contract, chunks001-018, and the
 finite Schur row support landed.  It keeps the clean closure target unchanged:

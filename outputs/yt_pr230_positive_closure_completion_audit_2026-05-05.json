@@ -67,6 +67,7 @@
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
+    "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
     "two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
@@ -112,6 +113,7 @@
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "two_source_taste_radial_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_taste_radial_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
+    "two_source_taste_radial_primitive_transfer_candidate_gate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
     "two_source_taste_radial_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",
     "two_source_taste_radial_row_production_manifest": "bounded-support / two-source taste-radial C_sx/C_xx production manifest; rows absent",
     "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
@@ -123,7 +125,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 46,
+  "pass_count": 47,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -155,6 +157,7 @@
     "taste_condensate_oh_bridge_blocked": true,
     "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": true,
     "two_source_taste_radial_action_not_closure": true,
+    "two_source_taste_radial_primitive_transfer_candidate_not_h3": true,
     "two_source_taste_radial_row_contract_not_closure": true,
     "two_source_taste_radial_row_manifest_not_closure": true,
     "two_source_taste_radial_support_not_closure": true,

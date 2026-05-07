@@ -632,6 +632,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_schur_pole_lift_gate": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": load(
+            "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2834,6 +2837,29 @@ def main() -> int:
         is True,
         statuses["pr230_two_source_taste_radial_schur_pole_lift_gate"],
     )
+    two_source_taste_radial_primitive_transfer_candidate_gate = certificates[
+        "pr230_two_source_taste_radial_primitive_transfer_candidate_gate"
+    ]
+    report(
+        "pr230-two-source-taste-radial-primitive-transfer-candidate-not-h3",
+        "finite C_sx rows do not certify a physical primitive neutral transfer"
+        in str(statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"])
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get("proposal_allowed")
+        is False
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get(
+            "physical_transfer_candidate_accepted"
+        )
+        is False
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get(
+            "finite_offdiagonal_correlation_support"
+        )
+        is True
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get(
+            "finite_correlator_blocks_positive"
+        )
+        is True,
+        statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -4884,6 +4910,24 @@ def main() -> int:
         is False
         and two_source_taste_radial_schur_pole_lift_gate.get(
             "endpoint_derivative_nonidentifiability_witness_passed"
+        )
+        is True
+    )
+    result["two_source_taste_radial_primitive_transfer_candidate_not_h3"] = (
+        "finite C_sx rows do not certify a physical primitive neutral transfer"
+        in str(statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"])
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get("proposal_allowed")
+        is False
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get(
+            "physical_transfer_candidate_accepted"
+        )
+        is False
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get(
+            "finite_offdiagonal_correlation_support"
+        )
+        is True
+        and two_source_taste_radial_primitive_transfer_candidate_gate.get(
+            "finite_correlator_blocks_positive"
         )
         is True
     )

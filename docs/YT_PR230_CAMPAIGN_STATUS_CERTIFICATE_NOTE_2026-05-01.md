@@ -28,8 +28,26 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=323 FAIL=0
+# SUMMARY: PASS=325 FAIL=0
 ```
+
+## 2026-05-07 Two-Source Primitive-Transfer Candidate Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`.
+
+The gate tests whether the ready finite `C_ss/C_sx/C_xx` taste-radial rows
+can satisfy the missing H3 physical neutral transfer/off-diagonal-generator
+premise.  They cannot on the current surface.  The finite `C_sx` entries are
+real same-ensemble off-diagonal correlator rows and the finite `2x2` blocks
+are positive, but they are not a transfer/action matrix, primitive cone
+certificate, isolated-pole kernel derivative, canonical `O_H` row, or
+`kappa_s` authority.
+
+Validation: primitive-transfer candidate gate `PASS=13 FAIL=0`;
+assumption/import stress `PASS=79 FAIL=0`; full positive closure assembly
+`PASS=138 FAIL=0`; retained-route `PASS=292 FAIL=0`; campaign status
+`PASS=325 FAIL=0`; completion audit `PASS=47 FAIL=0`.
 
 ## 2026-05-06 Radial-Spurion Action Contract Update
 

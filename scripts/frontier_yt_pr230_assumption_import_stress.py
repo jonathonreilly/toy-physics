@@ -182,6 +182,9 @@ def main() -> int:
         "two_source_taste_radial_schur_pole_lift_gate": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json"
         ),
+        "two_source_taste_radial_primitive_transfer_candidate_gate": load(
+            "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -1101,6 +1104,22 @@ def main() -> int:
         is False,
         two_source_pole_lift_gate.get("actual_current_surface_status"),
     )
+    primitive_transfer_candidate_gate = certificates[
+        "two_source_taste_radial_primitive_transfer_candidate_gate"
+    ]
+    report(
+        "two-source-taste-radial-primitive-transfer-candidate-not-h3",
+        "finite C_sx rows do not certify a physical primitive neutral transfer"
+        in str(primitive_transfer_candidate_gate.get("actual_current_surface_status"))
+        and primitive_transfer_candidate_gate.get("proposal_allowed") is False
+        and primitive_transfer_candidate_gate.get("physical_transfer_candidate_accepted")
+        is False
+        and primitive_transfer_candidate_gate.get("finite_offdiagonal_correlation_support")
+        is True
+        and primitive_transfer_candidate_gate.get("finite_correlator_blocks_positive")
+        is True,
+        primitive_transfer_candidate_gate.get("actual_current_surface_status"),
+    )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -1503,6 +1522,11 @@ def main() -> int:
             "source-overlap necessity gate then blocks the next inference: "
             "current source-only rows and taste-radial C_sx/C_xx chunks do "
             "not determine Res C_sH or exclude orthogonal neutral top coupling.  "
+            "The two-source taste-radial primitive-transfer candidate gate "
+            "confirms the same boundary for H3: finite C_sx rows and positive "
+            "finite correlator blocks are not a same-surface action/transfer "
+            "matrix, primitive cone certificate, pole/FV/IR transfer limit, "
+            "canonical O_H row, or kappa_s authority.  "
             "The same-surface neutral multiplicity-one intake gate makes the "
             "clean source-Higgs positive artifact contract executable and "
             "rejects the current two-singlet neutral completion without "
@@ -1547,6 +1571,7 @@ def main() -> int:
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
             "does not treat finite C_ss/C_sx/C_xx Schur subblocks as strict K-prime pole rows or canonical O_H evidence",
             "does not treat finite zero-to-first-shell Schur inverse slopes as isolated-pole K'(pole) evidence",
+            "does not treat finite C_sx/C_xx correlator blocks as a physical primitive neutral transfer",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",

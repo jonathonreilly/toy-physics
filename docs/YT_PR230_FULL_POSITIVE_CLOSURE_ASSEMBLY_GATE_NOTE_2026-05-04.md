@@ -43,6 +43,14 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
+2026-05-07 two-source primitive-transfer candidate update: the gate now also
+consumes
+`outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`.
+Finite `C_sx` rows and positive finite `C_ss/C_sx/C_xx` blocks are real
+support, but they do not certify a same-surface physical neutral transfer,
+primitive cone, pole/FV/IR limit, canonical `O_H`, or `kappa_s`.  The assembly
+gate remains open with `PASS=138 FAIL=0`.
+
 2026-05-05 non-chunk cycle-34 update: the gate now also consumes
 `outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json`.
 After cycle 33, `origin/main` advanced again by audit/status, canonical-index,

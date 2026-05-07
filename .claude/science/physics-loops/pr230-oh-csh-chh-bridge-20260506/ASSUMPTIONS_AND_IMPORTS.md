@@ -20,6 +20,11 @@ Allowed context:
   two-singlet neutral surface, but it is not an accepted `O_H` certificate,
   not source-Higgs pole-row evidence, not scalar-LSZ normalization, and not
   permission to set `kappa_s = 1`.
+- the 2026-05-07 two-source taste-radial primitive-transfer candidate gate as
+  support/no-go only: finite `C_sx` rows and positive finite
+  `C_ss/C_sx/C_xx` blocks do not instantiate H3 physical neutral transfer,
+  primitive-cone irreducibility, canonical `O_H`, scalar LSZ normalization, or
+  `kappa_s` authority.
 - the exact algebra of the taste-shift operators in
   `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`;
 - the PR230 production harness source coordinate, which is the uniform additive

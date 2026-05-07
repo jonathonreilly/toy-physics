@@ -4,6 +4,15 @@ No external review-loop has been run yet for this block.
 
 Local verification completed:
 
+- `frontier_yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate.py`:
+  PASS=13 FAIL=0.  It records finite `C_sx` row support and positive finite
+  blocks while rejecting H3 physical transfer authority and preserving
+  `proposal_allowed=false`.
+- Follow-on aggregate gates after wiring the primitive-transfer candidate:
+  assumption/import stress PASS=79 FAIL=0, campaign PASS=325 FAIL=0, full
+  assembly PASS=138 FAIL=0, retained-route PASS=292 FAIL=0, and completion
+  audit PASS=47 FAIL=0.
+
 - Same-surface neutral multiplicity-one intake gate:
   `frontier_yt_pr230_same_surface_neutral_multiplicity_one_gate.py`
   PASS=17 FAIL=0.  It rejects the current two-singlet neutral surface and
