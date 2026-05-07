@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 225 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 807 |
+| unaudited | 806 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 462 |
+| ~~audited_conditional~~ | 463 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 374 |
-| `audited_conditional` | 462 |
+| `audited_conditional` | 463 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 28 |
-| `unaudited` | 856 |
+| `unaudited` | 855 |
 
 | claim_type | count |
 |---|---:|
@@ -880,6 +880,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `su3_adjoint_casimir_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -12253,6 +12254,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The step Σ_{c,d} f^{acd} f^{bcd} = N δ^{ab}, followed by the trace/Schur argument, gives C_2(adj)=N=3.  _(class `A`)_
 - **chain closes:** False — The SU(3) algebraic Casimir calculation closes, but the cited authority explicitly defers the bridge identifying the 3D symmetric-base SU(3) with physical SM color SU(3)_c. The source note uses physical color/gluon wording that needs that missing bridge.
 - **rationale:** The runner genuinely computes the Gell-Mann structure constants, adjoint generators, closure, trace normalization, and Casimir value, and all checks are algebraic class A rather than external or fitted checks. However, the only cited authority is retained_bounded with explicit language that the physical-color identification is deferred to a separate bridge theorem. Therefore the algebraic SU(3) result is valid within the restricted carrier, but the claim as phrased for SU(3)_c/gluon color charge does not close from the provided packet alone.
+- **open / conditional deps cited:**
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+- **auditor confidence:** high
+
+### `su3_casimir_fundamental_theorem_note_2026-05-02`
+
+- **Note:** [`SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** As written: C2=4/3 for the SU(3) fundamental on the 3D symmetric base subspace, plus asserted physical color-triplet/quark color-factor corollaries.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-gpt-5.5-xhigh-su3-casimir-fundamental-audit-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** K4 asserts that the algebraic value 4/3 is the universal coefficient for color-triplet quarks in one-gluon exchange, one-loop quark self-energy, and color-singlet bilinears.  _(class `F`)_
+- **chain closes:** False — The algebraic Casimir subchain closes: with standard Gell-Mann generators on a 3D fundamental representation, C2=sum_a T^a T^a=(4/3)I3. The as-written physical equivalence to quark color charge squared and perturbative QCD color factors does not close because the cited authority explicitly defers identifying the 3D symmetric base with physical SM color.
+- **rationale:** Issue: the note extends the closed algebraic Casimir result to universal physical quark color charge and one-gluon/self-energy color factors. Why this blocks: the one-hop authority is retained_bounded only for algebraic SU(3) embedding/channel-count on the 3D symmetric base and explicitly excludes the physical-color bridge. Repair target: add or cite a retained bridge theorem deriving the identification of that 3D base SU(3) with physical SM quark color and the relevant perturbative color-factor readout. Claim boundary until fixed: C2=4/3 on the algebraic SU(3) fundamental V3 in Gell-Mann normalization.
 - **open / conditional deps cited:**
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high
