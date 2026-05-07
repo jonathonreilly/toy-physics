@@ -707,6 +707,9 @@ def main() -> int:
         "pr230_fms_oh_candidate_action_packet": load(
             "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json"
         ),
+        "pr230_fms_source_overlap_readout_gate": load(
+            "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json"
+        ),
         "pr230_higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
@@ -3259,6 +3262,23 @@ def main() -> int:
         is True
         and fms_oh_candidate_action_packet.get("closure_authorized") is False,
         statuses["pr230_fms_oh_candidate_action_packet"],
+    )
+    fms_source_overlap_readout_gate = certificates[
+        "pr230_fms_source_overlap_readout_gate"
+    ]
+    report(
+        "pr230-fms-source-overlap-readout-gate-support-not-proof",
+        "FMS source-overlap readout gate"
+        in str(statuses["pr230_fms_source_overlap_readout_gate"])
+        and fms_source_overlap_readout_gate.get("proposal_allowed") is False
+        and fms_source_overlap_readout_gate.get(
+            "fms_source_overlap_readout_gate_passed"
+        )
+        is True
+        and fms_source_overlap_readout_gate.get("readout_executable_now") is False
+        and fms_source_overlap_readout_gate.get("strict_rows_present") is False
+        and fms_source_overlap_readout_gate.get("closure_authorized") is False,
+        statuses["pr230_fms_source_overlap_readout_gate"],
     )
     higgs_mass_source_action_bridge = certificates[
         "pr230_higgs_mass_source_action_bridge"
@@ -5927,6 +5947,16 @@ def main() -> int:
         is True
         and fms_oh_candidate_action_packet.get("closure_authorized") is False
     )
+    result["fms_source_overlap_readout_gate_support_not_proof"] = (
+        fms_source_overlap_readout_gate.get(
+            "fms_source_overlap_readout_gate_passed"
+        )
+        is True
+        and fms_source_overlap_readout_gate.get("proposal_allowed") is False
+        and fms_source_overlap_readout_gate.get("readout_executable_now") is False
+        and fms_source_overlap_readout_gate.get("strict_rows_present") is False
+        and fms_source_overlap_readout_gate.get("closure_authorized") is False
+    )
     result["higgs_mass_source_action_bridge_support_not_proof"] = (
         higgs_mass_source_action_bridge.get("higgs_mass_source_action_bridge_passed")
         is True
@@ -6297,6 +6327,7 @@ def main() -> int:
         "does not treat the two-source taste-radial row production manifest as row data or pole evidence",
         "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
         "does not treat FMS/lattice literature or method names as PR230 proof authority",
+        "does not treat the FMS source-overlap readout formula as executable before accepted action, canonical O_H, and strict C_ss/C_sH/C_HH rows exist",
         "does not treat the same-source EW/Higgs action ansatz as adopted current-surface action authority",
         "does not treat the same-source EW action adoption attempt as an accepted action certificate",
         "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",

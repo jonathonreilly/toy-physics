@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T16:17:47.029500+00:00",
+  "generated_at": "2026-05-07T16:33:47.060599+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16728,6 +16728,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py"
+    },
+    "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py"
     },
     "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07": {
       "assert_count": 1,
@@ -35463,6 +35475,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py": {
       "assert_count": 1,
       "claims": [
@@ -42069,12 +42096,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 245,
-      "C": 531,
+      "C": 532,
       "D": 323,
       "none": 404
     },
-    "runners_classified": 1512,
-    "runners_with_C": 822,
-    "runners_with_D": 597
+    "runners_classified": 1513,
+    "runners_with_C": 823,
+    "runners_with_D": 598
   }
 }

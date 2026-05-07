@@ -668,3 +668,61 @@ bash docs/audit/scripts/run_pipeline.sh
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 ```
+
+## Block20 FMS Source-Overlap Readout Gate
+
+Created `YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE`.
+
+Files:
+
+- `scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py`
+- `docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json`
+
+Result:
+
+- records the exact future readout
+  `kappa_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))`;
+- verifies pure one-pole and mixed-overlap witnesses;
+- records an orthogonal neutral-coupling counterfamily showing that
+  source-only response does not determine canonical `y_H`;
+- confirms the FMS packet is support-only, canonical `O_H` is absent, accepted
+  same-source action is absent, and strict `C_ss/C_sH/C_HH` pole rows are
+  absent;
+- keeps `readout_executable_now=false`, `closure_authorized=false`, and
+  `proposal_allowed=false`.
+
+Claim boundary: exact support only.  The gate does not use Ward, `H_unit`,
+observed target values, observed `g2`, plaquette/u0, unit-normalizing
+assumptions, FMS literature as proof authority, reduced pilots, or
+`C_sx -> C_sH` aliasing.  It does not claim retained or `proposed_retained`
+closure.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# OK
+python3 scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=103 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=355 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=162 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=316 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=71 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
+
+Next exact action: supply an accepted same-surface action/operator certificate,
+canonical `O_H`, and strict `C_ss/C_sH/C_HH` pole rows, then rerun the
+readout.  If that route remains unavailable, pivot to genuine same-source W/Z
+response rows with matched covariance and strict non-observed `g2`, or the
+neutral primitive H3/H4 physical-transfer/irreducibility certificate.

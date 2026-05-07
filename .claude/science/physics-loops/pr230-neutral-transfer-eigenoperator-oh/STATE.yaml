@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T12:14:32-04:00"
+checkpoint_time: "2026-05-07T12:30:08-04:00"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 19
-active_science_block: block19_fms_oh_candidate_action_packet
-active_route: "Explicit FMS/gauge-Higgs O_H candidate/action packet wired to the source-Higgs time-kernel manifest; support-only action/operator contract, no current-surface closure"
+cycle_count: 20
+active_science_block: block20_fms_source_overlap_readout_gate
+active_route: "Exact FMS source-overlap residue readout gate for future kappa_sH rows; current surface lacks accepted action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows"
 target_status: best-honest-status
-actual_current_surface_status: "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows"
-conditional_surface_status: exact support only after the packet is converted into an accepted same-surface Cl(3)/Z^3 EW/Higgs action or explicitly admitted extension, a canonical O_H certificate, production C_ss/C_sH/C_HH time-kernel rows, pole/Gram/FV/IR authority, and aggregate route gates
-hypothetical_axiom_status: external gauge-Higgs extension candidate if the action is adopted rather than derived from Cl(3)/Z^3
+actual_current_surface_status: "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface"
+conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
+hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block19 supplies only an explicit candidate/action packet for the FMS O_H route. It does not derive or adopt an EW/Higgs action from the Cl(3)/Z^3 substrate, does not certify canonical O_H, does not produce C_ss/C_sH/C_HH pole rows, does not prove source-overlap/Gram flatness, and does not authorize launching closure rows. Block18 remains a routing-only fresh-artifact intake checkpoint, and block17 additive-top rows remain bounded W/Z-repair support only."
+proposal_allowed_reason: "Block20 supplies only the exact residue readout formula kappa_sH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH)) and a gate proving why source-only responses cannot fix canonical Higgs coupling without the missing pole rows. It does not derive or adopt the FMS/EW-Higgs action from Cl(3)/Z^3, does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, does not prove Gram flatness/FV/IR authority, and does not authorize retained or proposed_retained closure."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block19 makes the FMS/gauge-Higgs O_H candidate/action packet concrete, but keeps it conditional because PR230 has not adopted or derived that action/operator surface."
+hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block20 makes the kappa_sH residue readout exact once rows exist, but proves the current source-only response remains underdetermined by an orthogonal neutral coupling family."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -40,6 +40,7 @@ minimal_allowed_premises:
   - "block17 additive-top coarse Jacobian rows as bounded support only; strict subtraction closure remains open"
   - "block18 fresh committed artifact intake checkpoint as routing/open status only; no new physics closure or shortcut gate"
   - "block19 FMS O_H candidate/action packet as conditional support only; accepted action, canonical O_H, C_ss/C_sH/C_HH pole rows, pole/Gram/FV/IR, and aggregate gates remain required"
+  - "block20 FMS source-overlap readout gate as exact support only; it supplies kappa_sH residue formula and source-only counterfamily, but accepted action, canonical O_H, strict pole rows, and Gram/FV/IR authority remain required"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -81,6 +82,9 @@ files_touched:
   - scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py
   - docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md
   - outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json
+  - scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py
+  - docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md
+  - outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -225,10 +229,22 @@ commands_run:
   - "2026-05-07 block19: git diff --check # OK"
   - "2026-05-07 block19: bash docs/audit/scripts/run_pipeline.sh # OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings"
   - "2026-05-07 block19: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
-review_disposition: pass_conditional_support_fms_oh_candidate_action_packet_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block19 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Derive or adopt the same-surface EW/Higgs action/operator surface, certify canonical O_H, then produce production C_ss/C_sH/C_HH pole rows with pole/Gram/FV/IR authority; otherwise pivot to strict W/Z matched response rows/covariance/strict g2 or neutral primitive H3/H4 physical-transfer authority."
-stop_condition: "Continue after coherent block19 checkpoint push; this packet is conditional support only, not campaign completion, and no retained/proposed_retained closure is authorized."
+  - "2026-05-07 block20: python3 -m py_compile scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py # OK"
+  - "2026-05-07 block20: python3 scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py # PASS=15 FAIL=0"
+  - "2026-05-07 block20: python3 scripts/frontier_yt_pr230_assumption_import_stress.py # PASS=103 FAIL=0"
+  - "2026-05-07 block20: python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=355 FAIL=0"
+  - "2026-05-07 block20: python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py # PASS=162 FAIL=0"
+  - "2026-05-07 block20: python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=316 FAIL=0"
+  - "2026-05-07 block20: python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py # PASS=71 FAIL=0"
+  - "2026-05-07 block20: link check for new note and loop pack # missing_links=[]"
+  - "2026-05-07 block20: rg status/firewall review # hits are exclusion/negative statements only; no retained/proposed_retained promotion"
+  - "2026-05-07 block20: git diff --check # OK"
+  - "2026-05-07 block20: bash docs/audit/scripts/run_pipeline.sh # OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings"
+  - "2026-05-07 block20: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+review_disposition: pass_exact_support_fms_source_overlap_readout_gate_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block20 PR not opened because PR #230 remains the landing path"
+next_exact_action: "Supply an accepted same-surface action/operator certificate and strict source-Higgs pole rows, then rerun the kappa_sH readout gate; otherwise pivot to strict W/Z matched response rows/covariance/strict g2 or neutral primitive H3/H4 physical-transfer authority."
+stop_condition: "Continue after coherent block20 checkpoint push; this readout gate is exact support only, not campaign completion, and no retained/proposed_retained closure is authorized."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -263,5 +279,17 @@ block19_fms_oh_candidate_action_packet:
   external_extension_required: true
   time_kernel_manifest_wired: true
   launch_authorized_now: false
+  closure_authorized: false
+  proposal_allowed: false
+block20_fms_source_overlap_readout_gate:
+  runner: scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py
+  note: docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md
+  output: outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json
+  verification: "python3 -m py_compile scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py && python3 scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py # PASS=15 FAIL=0"
+  exact_readout_formula: "kappa_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))"
+  readout_executable_now: false
+  strict_rows_present: false
+  action_accepted_current_surface: false
+  canonical_oh_certified: false
   closure_authorized: false
   proposal_allowed: false

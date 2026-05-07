@@ -45,6 +45,7 @@ PARENTS = {
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
+    "fms_source_overlap_readout_gate": "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
@@ -528,6 +529,24 @@ def main() -> int:
         )
         is True
         and certs["fms_oh_candidate_action_packet"].get("closure_authorized")
+        is False
+    )
+    fms_source_overlap_readout_gate_support_not_closure = (
+        "FMS source-overlap readout gate"
+        in parent_statuses["fms_source_overlap_readout_gate"]
+        and certs["fms_source_overlap_readout_gate"].get("proposal_allowed")
+        is False
+        and certs["fms_source_overlap_readout_gate"].get(
+            "fms_source_overlap_readout_gate_passed"
+        )
+        is True
+        and certs["fms_source_overlap_readout_gate"].get(
+            "readout_executable_now"
+        )
+        is False
+        and certs["fms_source_overlap_readout_gate"].get("strict_rows_present")
+        is False
+        and certs["fms_source_overlap_readout_gate"].get("closure_authorized")
         is False
     )
     higgs_mass_source_action_bridge_not_closure = (
@@ -1207,6 +1226,7 @@ def main() -> int:
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
     report("fms-oh-candidate-action-packet-support-not-closure", fms_oh_candidate_action_packet_support_not_closure, parent_statuses["fms_oh_candidate_action_packet"])
+    report("fms-source-overlap-readout-gate-support-not-closure", fms_source_overlap_readout_gate_support_not_closure, parent_statuses["fms_source_overlap_readout_gate"])
     report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
     report("same-source-ew-higgs-action-ansatz-not-closure", same_source_ew_higgs_action_ansatz_not_closure, parent_statuses["same_source_ew_higgs_action_ansatz_gate"])
     report("same-source-ew-action-adoption-attempt-not-closure", same_source_ew_action_adoption_attempt_not_closure, parent_statuses["same_source_ew_action_adoption_attempt"])
@@ -1390,6 +1410,7 @@ def main() -> int:
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
             "fms_oh_candidate_action_packet_support_not_closure": fms_oh_candidate_action_packet_support_not_closure,
+            "fms_source_overlap_readout_gate_support_not_closure": fms_source_overlap_readout_gate_support_not_closure,
             "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,
             "same_source_ew_higgs_action_ansatz_not_closure": same_source_ew_higgs_action_ansatz_not_closure,
             "same_source_ew_action_adoption_attempt_not_closure": same_source_ew_action_adoption_attempt_not_closure,

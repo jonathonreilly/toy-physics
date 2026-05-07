@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T16:17:44.363193+00:00",
+  "generated_at": "2026-05-07T16:33:44.217242+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42413,6 +42413,16 @@
       "runner_path": "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py",
       "title": "PR230 FMS Post-Degree Route Rescore"
     },
+    "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07": {
+      "claim_id": "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact-support / FMS source-overlap readout gate; no current PR230",
+      "deps": [],
+      "note_hash": "13b6a1f8feedc7342914d8da6810e96a13c6b814af2588d35996a8d94ef14b32",
+      "path": "docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py",
+      "title": "PR230 FMS Source-Overlap Readout Gate"
+    },
     "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07": {
       "claim_id": "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07",
       "current_status": "open",
@@ -46390,6 +46400,7 @@
     "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07",
     "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
+    "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07",
     "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07",
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
@@ -46631,16 +46642,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1116,
-    "node_count": 2107,
-    "root_count": 1614,
-    "runners_with_path": 1591,
+    "leaf_count": 1117,
+    "node_count": 2108,
+    "root_count": 1615,
+    "runners_with_path": 1592,
     "status_counts": {
       "bounded": 585,
       "open": 106,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 459,
+      "support": 460,
       "unknown": 583
     }
   }

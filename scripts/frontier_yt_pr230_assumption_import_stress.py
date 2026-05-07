@@ -239,6 +239,9 @@ def main() -> int:
         "fms_oh_candidate_action_packet": load(
             "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json"
         ),
+        "fms_source_overlap_readout_gate": load(
+            "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json"
+        ),
         "higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
@@ -1460,6 +1463,22 @@ def main() -> int:
         is False,
         fms_candidate_packet.get("actual_current_surface_status"),
     )
+    fms_readout_gate = certificates["fms_source_overlap_readout_gate"]
+    report(
+        "fms-source-overlap-readout-gate-support-not-proof",
+        "FMS source-overlap readout gate"
+        in str(fms_readout_gate.get("actual_current_surface_status"))
+        and fms_readout_gate.get("proposal_allowed") is False
+        and fms_readout_gate.get("fms_source_overlap_readout_gate_passed") is True
+        and fms_readout_gate.get("readout_executable_now") is False
+        and fms_readout_gate.get("strict_rows_present") is False
+        and fms_readout_gate.get("closure_authorized") is False
+        and fms_readout_gate.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        fms_readout_gate.get("actual_current_surface_status"),
+    )
     mass_source_bridge = certificates["higgs_mass_source_action_bridge"]
     report(
         "higgs-mass-source-action-bridge-support-not-proof",
@@ -2113,6 +2132,7 @@ def main() -> int:
             "does not treat finite C_sx/C_xx rows as orthogonal-neutral top-coupling tomography",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
+            "does not treat the FMS source-overlap readout formula as executable before accepted action, canonical O_H, and strict C_ss/C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not treat the current additive top source as a no-independent-top radial spurion",
             "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",

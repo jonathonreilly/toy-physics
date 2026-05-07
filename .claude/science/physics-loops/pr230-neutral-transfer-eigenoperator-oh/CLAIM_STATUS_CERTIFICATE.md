@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block19_fms_oh_candidate_action_packet`.
+Current block: `block20_fms_source_overlap_readout_gate`.
 
 ```yaml
-actual_current_surface_status: conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows
-conditional_surface_status: exact support only after the packet is converted into an accepted same-surface Cl(3)/Z^3 EW/Higgs action or explicitly admitted extension, a canonical O_H certificate, production C_ss/C_sH/C_HH time-kernel rows, pole/Gram/FV/IR authority, and aggregate route gates
-hypothetical_axiom_status: external gauge-Higgs extension candidate if the action is adopted rather than derived from Cl(3)/Z^3
+actual_current_surface_status: exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface
+conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
+hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block19 supplies only an explicit FMS O_H candidate/action packet. It does not derive or adopt an EW/Higgs action from Cl(3)/Z^3, does not certify canonical O_H, does not produce C_ss/C_sH/C_HH pole rows, and does not prove source-overlap, Gram flatness, FV/IR, or scalar-LSZ authority. Block18 consumed only committed PR-head certificates at cde753822 and remains routing-only. Block17 additive-top Jacobian rows remain bounded W/Z-repair support only."
+proposal_allowed_reason: "Block20 supplies only the exact FMS source-overlap residue readout gate. It does not derive or adopt an EW/Higgs action from Cl(3)/Z^3, does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, and does not prove Gram flatness, FV/IR, scalar-LSZ, or physical-response authority. Block19 remains a conditional FMS O_H candidate/action packet; block18 is routing-only; block17 additive-top Jacobian rows remain bounded W/Z-repair support only."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -56,7 +56,12 @@ Reason:
    not certify canonical `O_H`, does not launch or read closure rows, and does
    not infer `Res C_sH` from source-only rows, taste-radial rows, or FMS
    literature.
-9. No branch-local wording may present this block as closure.
+9. Block20 does not set `kappa_s=1`; it exposes the exact pole-residue readout
+   `Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` and keeps it inactive until accepted
+   action, canonical `O_H`, strict pole rows, and Gram/FV/IR authority exist.
+   It also records why source-only responses cannot fix canonical `y_H` in the
+   presence of an orthogonal neutral coupling family.
+10. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
 
@@ -129,5 +134,9 @@ Prior block certificate summary:
   contract and time-kernel binding, but current PR230 has not derived/adopted
   the EW/Higgs action, certified canonical `O_H`, produced `C_ss/C_sH/C_HH`
   pole rows, or proved source-overlap/Gram/FV/IR authority.
-- Block01 through Block19 all have `proposal_allowed=false`; their boundaries
+- Block20 actual status: exact-support / FMS source-overlap readout gate; it
+  gives the future row-level `kappa_sH` residue formula and a source-only
+  counterfamily, but current PR230 still lacks accepted action, canonical
+  `O_H`, strict `C_ss/C_sH/C_HH` rows, and Gram/FV/IR authority.
+- Block01 through Block20 all have `proposal_allowed=false`; their boundaries
   remain active.

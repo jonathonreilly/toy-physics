@@ -372,3 +372,20 @@ then generate production `C_ss/C_sH/C_HH` pole rows with pole/Gram/FV/IR
 authority; or pivot to strict W/Z same-source response rows and matched
 covariance.  The FMS packet alone is not a physics readout and does not
 authorize retained or `proposed_retained` closure wording.
+
+Block20 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| FMS source-overlap readout runner | `scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py` | Created; PASS=15 FAIL=0 |
+| FMS source-overlap readout certificate | `outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json` | Created; exact support only, `readout_executable_now=false`, `closure_authorized=false` |
+| FMS source-overlap readout note | `docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md` | Created; records exact kappa residue formula and source-only counterfamily |
+| Aggregate gates | assumption/assembly/retained/completion/campaign runners | Updated to consume the readout gate as support-not-proof |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block20 checkpoint |
+
+Follow-on artifact target after block20 is concrete row authority, not another
+normalization convention: accepted same-surface action/operator authority,
+canonical `O_H`, and strict `C_ss/C_sH/C_HH` pole rows with pole/Gram/FV/IR
+checks.  If those cannot be supplied, the next clean physics closure attempt is
+strict W/Z physical response with same-source rows and covariance, or the
+neutral primitive H3/H4 physical-transfer/irreducibility certificate.

@@ -245,6 +245,53 @@ python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 ```
 
+## Block20
+
+Local review run on 2026-05-07 12:30 EDT.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py`
+- `docs/YT_PR230_FMS_SOURCE_OVERLAP_READOUT_GATE_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json`
+- updated aggregate runners and certificate outputs
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | The new readout gate compiles and passes; aggregate assumption, campaign, assembly, retained-route, and completion-audit gates consume it as support-not-proof. |
+| Physics Claim Boundary | EXACT SUPPORT / NO CLOSURE | The residue formula is exact once rows exist, but the current surface still lacks accepted action, canonical `O_H`, strict `C_ss/C_sH/C_HH` rows, Gram flatness, and FV/IR authority. |
+| Imports / Support | CLEAN / DISCLOSED | No `H_unit`, Ward identity, observed target, observed `g2`, `alpha_LM`, plaquette/u0, reduced-pilot, `kappa_s=1`, `c2=1`, or `Z_match=1` shortcut is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | Updates are confined to PR230 runners, outputs, docs note, and loop pack; live chunks047-050 and supervisor outputs were not staged or modified. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# OK
+python3 scripts/frontier_yt_pr230_fms_source_overlap_readout_gate.py
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=103 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=355 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=162 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=316 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=71 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
 ## Block19
 
 Local review run on 2026-05-07 12:14 EDT.

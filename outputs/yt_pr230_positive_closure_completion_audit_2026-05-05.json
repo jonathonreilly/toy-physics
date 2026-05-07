@@ -49,6 +49,7 @@
     "fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
+    "fms_source_overlap_readout_gate": "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
@@ -118,6 +119,7 @@
     "fms_literature_source_overlap_intake": "exact negative boundary / FMS literature does not supply PR230 source-overlap or kappa_s on the current surface",
     "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
     "fms_post_degree_route_rescore": "bounded-support / FMS post-degree route rescore; action-first composite O_H route selected as cleanest future artifact, no current closure",
+    "fms_source_overlap_readout_gate": "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface",
     "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
     "genuine_source_pole_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
     "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
@@ -171,7 +173,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 70,
+  "pass_count": 71,
   "post_osp_support_evidence": {
     "additive_source_radial_spurion_incompatibility_not_closure": true,
     "additive_top_subtraction_row_contract_not_closure": true,
@@ -184,6 +186,7 @@
     "fms_literature_source_overlap_intake_non_authority": true,
     "fms_oh_candidate_action_packet_support_not_closure": true,
     "fms_post_degree_route_support_not_closure": true,
+    "fms_source_overlap_readout_gate_support_not_closure": true,
     "future_bridge_file_presence": {
       "canonical_higgs_operator_certificate": false,
       "carleman_tauberian_certificate": false,

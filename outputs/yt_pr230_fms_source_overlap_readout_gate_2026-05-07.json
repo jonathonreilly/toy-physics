@@ -1,0 +1,116 @@
+{
+  "actual_current_surface_status": "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "closure_authorized": false,
+  "conditional_surface_status": "readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist",
+  "exact_next_action": "Supply the accepted same-surface action/operator certificate and strict source-Higgs pole rows, then rerun this gate to compute kappa_sH.",
+  "fail_count": 0,
+  "fms_source_overlap_readout_gate_passed": true,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c_sx_c_xx_as_c_sh_c_hh": false,
+    "used_fms_literature_as_proof_authority": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yt": false,
+    "used_observed_wz_or_g2": false,
+    "used_reduced_pilots_as_production": false,
+    "used_yt_ward_identity": false
+  },
+  "formula": "kappa_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
+  "hypothetical_axiom_status": null,
+  "missing_current_prerequisites": [
+    "accepted same-surface EW/Higgs/FMS action",
+    "canonical O_H certificate",
+    "strict C_ss/C_sH/C_HH pole-row packet",
+    "accepted pole-row/Gram/FV/IR/scalar-LSZ certificate",
+    "aggregate retained-route and campaign approval"
+  ],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
+    "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
+    "source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "source_higgs_time_kernel_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
+    "source_higgs_pole_row_acceptance_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "source_higgs_time_kernel_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The readout formula is exact support, but the current surface lacks accepted action authority, canonical O_H, and strict source-Higgs pole rows.",
+  "readout_executable_now": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not set kappa_s to one",
+    "does not infer Res C_sH from source-only, FMS C_HH, or C_sx/C_xx rows",
+    "does not treat the FMS packet as an accepted current-surface action",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "strict_readout": {
+    "computed": false,
+    "row_count": 0,
+    "rows_present": false
+  },
+  "strict_rows_path": "outputs/yt_pr230_source_higgs_pole_rows_2026-05-06.json",
+  "strict_rows_present": false,
+  "witness": {
+    "mixed_overlap_readout": {
+      "Res_C_HH": 4.0,
+      "Res_C_sH": 3.0,
+      "Res_C_ss": 9.0,
+      "gram_determinant": 27.0,
+      "pure_overlap": false,
+      "source_higgs_overlap_kappa_sH": 0.5
+    },
+    "orthogonal_counterfamily": [
+      {
+        "canonical_y_H": 0.25,
+        "orthogonal_y_chi_required": 1.0103629710818451,
+        "reconstructed_source_y": 1.0,
+        "rho_sH": 0.5,
+        "same_source_y": 1.0
+      },
+      {
+        "canonical_y_H": 1.0,
+        "orthogonal_y_chi_required": 0.5773502691896258,
+        "reconstructed_source_y": 1.0,
+        "rho_sH": 0.5,
+        "same_source_y": 1.0
+      },
+      {
+        "canonical_y_H": 1.75,
+        "orthogonal_y_chi_required": 0.14433756729740646,
+        "reconstructed_source_y": 1.0,
+        "rho_sH": 0.5,
+        "same_source_y": 1.0
+      }
+    ],
+    "pure_one_pole_readout": {
+      "Res_C_HH": 4.0,
+      "Res_C_sH": 6.0,
+      "Res_C_ss": 9.0,
+      "gram_determinant": 0.0,
+      "pure_overlap": true,
+      "source_higgs_overlap_kappa_sH": 1.0
+    }
+  }
+}

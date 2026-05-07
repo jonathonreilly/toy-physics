@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block19 FMS `O_H` candidate/action packet.
+Campaign mode queue after block20 FMS source-overlap readout gate.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -117,4 +117,33 @@ Updated queue after block19:
    covariance, strict non-observed `g2`, `delta_perp`, and final readout.
 3. If neither row route is available, attack the neutral primitive H3/H4
    physical-transfer/irreducibility theorem rather than another source-only
+   alias gate.
+
+## Block20 FMS Source-Overlap Readout Gate
+
+Block20 makes the FMS/source-Higgs overlap readout exact once the missing rows
+exist:
+
+```text
+kappa_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))
+```
+
+This is useful because it replaces any forbidden `kappa_s=1` convention with a
+row-level pole-residue readout.  It is not executable on the current PR230
+surface because the accepted same-surface action, canonical `O_H`, and strict
+`C_ss/C_sH/C_HH` pole rows are absent.  The runner also records a source-only
+counterfamily: fixed same-source response can coexist with different canonical
+`y_H` values if the orthogonal neutral coupling is allowed to vary.  That keeps
+source-only FH/LSZ responses out of physical `y_t` proof authority.
+
+Updated queue after block20:
+
+1. Supply accepted same-surface FMS/EW-Higgs action and canonical `O_H`
+   authority, then produce strict `C_ss/C_sH/C_HH` pole rows and rerun the
+   kappa readout gate.
+2. If source-Higgs rows cannot be made same-surface, pivot to genuine
+   same-source W/Z response rows with accepted action, same-source top/W/Z
+   covariance, strict non-observed `g2`, `delta_perp`, and final readout.
+3. If neither row route is active, attack the neutral primitive H3/H4
+   physical-transfer/irreducibility certificate rather than another source-only
    alias gate.

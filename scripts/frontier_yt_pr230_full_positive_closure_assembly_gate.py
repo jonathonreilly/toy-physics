@@ -122,6 +122,7 @@ PARENTS = {
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "pr230_fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
+    "pr230_fms_source_overlap_readout_gate": "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json",
     "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "pr230_same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "pr230_same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
@@ -1195,6 +1196,28 @@ def main() -> int:
         )
         is True
         and certs["pr230_fms_oh_candidate_action_packet"].get(
+            "closure_authorized"
+        )
+        is False
+    )
+    fms_source_overlap_readout_gate_support_not_closure = (
+        "FMS source-overlap readout gate"
+        in statuses["pr230_fms_source_overlap_readout_gate"]
+        and certs["pr230_fms_source_overlap_readout_gate"].get("proposal_allowed")
+        is False
+        and certs["pr230_fms_source_overlap_readout_gate"].get(
+            "fms_source_overlap_readout_gate_passed"
+        )
+        is True
+        and certs["pr230_fms_source_overlap_readout_gate"].get(
+            "readout_executable_now"
+        )
+        is False
+        and certs["pr230_fms_source_overlap_readout_gate"].get(
+            "strict_rows_present"
+        )
+        is False
+        and certs["pr230_fms_source_overlap_readout_gate"].get(
             "closure_authorized"
         )
         is False
@@ -2513,6 +2536,11 @@ def main() -> int:
         statuses["pr230_fms_oh_candidate_action_packet"],
     )
     report(
+        "fms-source-overlap-readout-gate-support-not-closure",
+        fms_source_overlap_readout_gate_support_not_closure,
+        statuses["pr230_fms_source_overlap_readout_gate"],
+    )
+    report(
         "higgs-mass-source-action-bridge-support-not-closure",
         higgs_mass_source_action_bridge_support_not_closure,
         statuses["pr230_higgs_mass_source_action_bridge"],
@@ -3591,6 +3619,7 @@ def main() -> int:
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "fms_oh_candidate_action_packet_support_not_closure": fms_oh_candidate_action_packet_support_not_closure,
+        "fms_source_overlap_readout_gate_support_not_closure": fms_source_overlap_readout_gate_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "same_source_ew_higgs_action_ansatz_support_not_closure": same_source_ew_higgs_action_ansatz_support_not_closure,
         "same_source_ew_action_adoption_attempt_blocks_shortcut": same_source_ew_action_adoption_attempt_blocks_shortcut,
