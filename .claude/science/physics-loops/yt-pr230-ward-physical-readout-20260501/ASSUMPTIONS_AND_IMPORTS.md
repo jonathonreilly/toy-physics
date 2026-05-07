@@ -931,3 +931,22 @@ The only admissible reopen is a same-surface scalar time-lag row packet
 `C_ss(t)`, `C_sx(t)`, `C_xx(t)` plus a theorem identifying `x` with canonical
 `O_H` or a physical neutral transfer, with pole/FV/IR/threshold authority,
 overlap normalization, covariance, seed metadata, and all claim firewalls.
+
+2026-05-07 source-Higgs time-kernel harness extension:
+
+The harness can now emit default-off same-surface scalar time-lag rows, but
+that is an implementation artifact, not a physics premise.  The current smoke
+uses the taste-radial second-source certificate and therefore does not derive
+canonical `O_H`, source-Higgs overlap, scalar LSZ normalization, or `kappa_s`.
+
+Additional forbidden load-bearing assumptions:
+
+- `source_higgs_time_kernel_v1 smoke = production evidence`
+- `C_sx/C_xs/C_xx(t) taste-radial aliases = canonical C_sH/C_Hs/C_HH(t)`
+- `same-surface time-kernel schema = pole extraction`
+- `normal-cache reuse = physics authority`
+- `selected-mass-only support row = physical y_t readout`
+
+Allowed use: run future production rows once a canonical `O_H` or physical
+neutral/W/Z identity exists, then apply OS/GEVP pole/FV/IR/threshold and
+overlap-normalization gates before any retained proposal.

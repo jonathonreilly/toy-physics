@@ -1610,3 +1610,19 @@ use `C_ss(t)`, `C_sx(t)`, `C_xx(t)` only if a same-surface theorem identifies
 `x` with canonical `O_H` or a physical neutral transfer.  Do not treat
 configuration timeseries, static `C_sx/C_xx`, or transfer/GEVP method names as
 closure.
+
+2026-05-07 update: the production harness now has a default-off
+`source_higgs_time_kernel_analysis` path and a numba smoke/gate proving schema,
+seed control, selected-mass-only execution, and claim firewalls.  This makes
+the next clean artifact operational rather than just conceptual.  Priority is
+now:
+
+1. Run production same-surface time-kernel chunks only after a certified
+   canonical `O_H` operator or physical neutral/W/Z identity is supplied.
+2. If using the current taste-radial `x` source, first prove `x = canonical
+   O_H` or prove a physical neutral-transfer identity with pole/FV/IR authority.
+3. Then perform OS/GEVP pole extraction and source-overlap normalization from
+   the time-lag matrix rows.
+
+The harness smoke itself is support-only infrastructure and must not be used
+as retained/proposed-retained closure.

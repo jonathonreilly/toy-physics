@@ -758,6 +758,11 @@ def selected_mass_policy_metadata(masses: list[float], args: argparse.Namespace)
     source_higgs_enabled = bool(getattr(args, "source_higgs_cross_modes_parsed", [])) and int(
         getattr(args, "source_higgs_cross_noises", 0)
     ) > 0 and bool(getattr(args, "source_higgs_operator_certificate_data", {}))
+    source_higgs_time_kernel_enabled = bool(
+        getattr(args, "source_higgs_time_kernel_modes_parsed", [])
+    ) and int(getattr(args, "source_higgs_time_kernel_noises", 0)) > 0 and bool(
+        getattr(args, "source_higgs_operator_certificate_data", {})
+    )
     wz_smoke_enabled = wz_mass_response_smoke_enabled(args)
     return {
         "policy": "selected_mass_only_for_scalar_fh_lsz",
@@ -768,6 +773,7 @@ def selected_mass_policy_metadata(masses: list[float], args: argparse.Namespace)
         "scalar_two_point_lsz_selected_mass_only": bool(getattr(args, "scalar_two_point_modes_parsed", []))
         and int(getattr(args, "scalar_two_point_noises", 0)) > 0,
         "source_higgs_cross_correlator_selected_mass_only": source_higgs_enabled,
+        "source_higgs_time_kernel_selected_mass_only": source_higgs_time_kernel_enabled,
         "wz_mass_response_smoke_selected_mass_only": wz_smoke_enabled,
         "non_selected_masses_scalar_fh_lsz_skipped": [
             float(mass) for mass in masses if abs(float(mass) - selected_mass) > 1.0e-15
@@ -861,6 +867,17 @@ def phase_vector(geom: Geometry, nvec: tuple[int, int, int]) -> np.ndarray:
         for color in range(NC):
             phases[site * NC + color] = phase
     return phases
+
+
+def time_projector_vector(geom: Geometry, time_index: int) -> np.ndarray:
+    mask = np.zeros(geom.volume * NC, dtype=np.complex128)
+    target = int(time_index) % geom.time_l
+    for site in range(geom.volume):
+        t, _x, _y, _z = geom.site_coords(site)
+        if t == target:
+            for color in range(NC):
+                mask[site * NC + color] = 1.0 + 0.0j
+    return mask
 
 
 def load_source_higgs_operator_certificate(path: Path | None) -> dict[str, Any]:
@@ -1219,6 +1236,156 @@ def stochastic_source_higgs_cross_correlator(
             "These are source/operator measurement rows only; they are not "
             "physical y_t evidence until isolated-pole, FV/IR, source-overlap "
             "or physical-response, and retained-route gates pass."
+        ),
+    }
+
+
+def stochastic_source_higgs_time_kernel(
+    gauge: GaugeField,
+    mass: float,
+    rtol: float,
+    maxiter: int,
+    modes: list[tuple[int, int, int]],
+    noise_vectors: int,
+    max_tau: int,
+    origin_count: int,
+    rng: np.random.Generator,
+    operator_certificate: dict[str, Any],
+    operator_certificate_path: Path | None,
+    normal_system: NormalEquationSystem | None = None,
+) -> dict[str, Any]:
+    """Estimate same-surface scalar Euclidean-time matrix rows.
+
+    This is default-off instrumentation for the OS transfer-kernel contract.
+    It measures a source/operator 2x2 matrix between a source time slice t0
+    and sink time slice t0+tau.  The supplied operator certificate still carries
+    the burden of proving that the second operator is canonical O_H; taste-radial
+    rows remain x rows and are aliased only for schema continuity.
+    """
+
+    system = normal_system if normal_system is not None else build_normal_equation_system(gauge, mass)
+    geom = gauge.geom
+    n = geom.volume * NC
+    spatial_norm = geom.spatial_l**3 * NC
+    h_operator = source_higgs_operator_matrix(geom, gauge, operator_certificate).astype(np.complex128)
+    one_operator = sparse.identity(n, dtype=np.complex128, format="csr")
+    operators = {
+        "s": one_operator,
+        "H": h_operator,
+    }
+    phases = {momentum_key(mode): phase_vector(geom, mode) for mode in modes}
+    origins = [int(t0 % geom.time_l) for t0 in range(max(1, min(origin_count, geom.time_l)))]
+    tau_values = [int(tau) for tau in range(0, max(0, int(max_tau)) + 1)]
+    accum: dict[str, dict[int, dict[str, list[complex]]]] = {
+        momentum_key(mode): {
+            tau: {"C_ss": [], "C_sH": [], "C_Hs": [], "C_HH": []}
+            for tau in tau_values
+        }
+        for mode in modes
+    }
+    infos: list[int] = []
+    residuals: list[float] = []
+
+    def estimate_pair(
+        eta: np.ndarray,
+        source_slice: np.ndarray,
+        sink_slice: np.ndarray,
+        phase: np.ndarray,
+        sink_operator: sparse.csr_matrix,
+        source_operator: sparse.csr_matrix,
+    ) -> tuple[complex, list[int], list[float]]:
+        right = source_slice * np.conj(phase) * (source_operator @ eta)
+        y, info_y, residual_y = solve_vector_normal_eq_cached(system, right, rtol, maxiter)
+        left = sink_slice * phase * (sink_operator @ y)
+        x, info_x, residual_x = solve_vector_normal_eq_cached(system, left, rtol, maxiter)
+        return complex(np.vdot(eta, x) / spatial_norm), [info_y, info_x], [residual_y, residual_x]
+
+    for _noise in range(noise_vectors):
+        real = 2 * rng.integers(0, 2, size=n) - 1
+        imag = 2 * rng.integers(0, 2, size=n) - 1
+        eta = (real + 1j * imag).astype(np.complex128) / math.sqrt(2.0)
+        for mode in modes:
+            key = momentum_key(mode)
+            phase = phases[key]
+            for origin in origins:
+                source_slice = time_projector_vector(geom, origin)
+                for tau in tau_values:
+                    sink_slice = time_projector_vector(geom, origin + tau)
+                    for sink_label, source_label, out_label in (
+                        ("s", "s", "C_ss"),
+                        ("s", "H", "C_sH"),
+                        ("H", "s", "C_Hs"),
+                        ("H", "H", "C_HH"),
+                    ):
+                        value, info, residual = estimate_pair(
+                            eta,
+                            source_slice,
+                            sink_slice,
+                            phase,
+                            operators[sink_label],
+                            operators[source_label],
+                        )
+                        accum[key][tau][out_label].append(value)
+                        infos.extend(info)
+                        residuals.extend(residual)
+
+    mode_rows: dict[str, Any] = {}
+    for mode in modes:
+        key = momentum_key(mode)
+        tau_rows = []
+        for tau in tau_values:
+            row: dict[str, Any] = {
+                "tau": int(tau),
+                "source_time_origins": origins,
+                "noise_vectors": int(noise_vectors),
+            }
+            for label in ("C_ss", "C_sH", "C_Hs", "C_HH"):
+                values = np.asarray(accum[key][tau][label], dtype=np.complex128)
+                mean = complex(np.mean(values)) if values.size else complex(float("nan"), float("nan"))
+                real_stderr = (
+                    float(np.std(values.real, ddof=1) / math.sqrt(values.size))
+                    if values.size > 1
+                    else 0.0
+                )
+                imag_stderr = (
+                    float(np.std(values.imag, ddof=1) / math.sqrt(values.size))
+                    if values.size > 1
+                    else 0.0
+                )
+                row[f"{label}_real"] = float(mean.real)
+                row[f"{label}_imag"] = float(mean.imag)
+                row[f"{label}_real_stochastic_stderr"] = real_stderr
+                row[f"{label}_imag_stochastic_stderr"] = imag_stderr
+            tau_rows.append(row)
+        mode_rows[key] = {
+            "momentum_mode": list(mode),
+            "p_hat_sq": spatial_p_hat_sq(mode, geom.spatial_l),
+            "tau_rows": tau_rows,
+        }
+
+    return {
+        "mass": mass,
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "operator": source_higgs_operator_summary(operator_certificate, operator_certificate_path),
+        "firewall": source_higgs_firewall_from_certificate(operator_certificate),
+        "measurement_object": (
+            "same-surface Euclidean-time C_ss/C_sx/C_xs/C_xx(t) rows for the supplied taste-radial second-source certificate"
+            if source_higgs_operator_is_taste_radial_second_source(operator_certificate)
+            else "same-surface Euclidean-time C_ss/C_sH/C_Hs/C_HH(t) rows for a supplied canonical-Higgs operator certificate"
+        ),
+        "estimator": "Z2 stochastic trace for Tr[S P_sink(t0+tau) V_A(q) S P_source(t0) V_B(-q)] normalized by spatial_volume*colors",
+        "time_kernel_schema_version": "source_higgs_time_kernel_v1",
+        "time_origins": origins,
+        "tau_values": tau_values,
+        "mode_rows": mode_rows,
+        "cg_infos": infos,
+        "cg_residuals": residuals,
+        "max_cg_residual": max(residuals) if residuals else None,
+        "strict_limit": (
+            "These are scalar time-kernel instrumentation rows only.  They are "
+            "not physical y_t evidence until canonical O_H or physical neutral "
+            "transfer identity, pole/FV/IR/threshold, source-overlap, and "
+            "retained-route gates pass."
         ),
     }
 
@@ -1854,6 +2021,159 @@ def fit_source_higgs_cross_correlator(
     }
 
 
+def fit_source_higgs_time_kernel(
+    source_higgs_time_kernel_measurements: dict[str, list[dict[str, Any]]],
+    spatial_l: int,
+    operator_certificate: dict[str, Any],
+    operator_certificate_path: Path | None,
+) -> dict[str, Any]:
+    mode_rows: dict[str, Any] = {}
+    taste_radial_second_source = source_higgs_operator_is_taste_radial_second_source(operator_certificate)
+    for key, rows in source_higgs_time_kernel_measurements.items():
+        if not rows:
+            continue
+        nvec = tuple(int(x) for x in key.split(","))
+        taus = sorted(
+            {
+                int(tau_row["tau"])
+                for row in rows
+                for tau_row in row.get("tau_rows", [])
+            }
+        )
+        tau_rows = []
+        for tau in taus:
+            out: dict[str, Any] = {"tau": int(tau)}
+            matrix_real: list[list[float]] = []
+            matrix_imag: list[list[float]] = []
+            for label in ("C_ss", "C_sH", "C_Hs", "C_HH"):
+                label_values: list[complex] = []
+                label_series = []
+                for cfg_index, row in enumerate(rows):
+                    matching = [
+                        tau_row
+                        for tau_row in row.get("tau_rows", [])
+                        if int(tau_row.get("tau", -1)) == tau
+                    ]
+                    if not matching:
+                        continue
+                    tau_row = matching[0]
+                    value = complex(
+                        float(tau_row.get(f"{label}_real", float("nan"))),
+                        float(tau_row.get(f"{label}_imag", float("nan"))),
+                    )
+                    label_values.append(value)
+                    label_series.append(
+                        {
+                            "configuration_index": int(cfg_index),
+                            f"{label}_real": float(value.real),
+                            f"{label}_imag": float(value.imag),
+                        }
+                    )
+                values = np.asarray(label_values, dtype=np.complex128)
+                mean = complex(np.mean(values)) if values.size else complex(float("nan"), float("nan"))
+                real_err = (
+                    float(np.std(values.real, ddof=1) / math.sqrt(values.size))
+                    if values.size > 1
+                    else 0.0
+                )
+                imag_err = (
+                    float(np.std(values.imag, ddof=1) / math.sqrt(values.size))
+                    if values.size > 1
+                    else 0.0
+                )
+                out[f"{label}_real"] = float(mean.real)
+                out[f"{label}_imag"] = float(mean.imag)
+                out[f"{label}_real_config_stderr"] = real_err
+                out[f"{label}_imag_config_stderr"] = imag_err
+                out[f"{label}_timeseries"] = label_series
+
+            if taste_radial_second_source:
+                for canonical_label, taste_label in (
+                    ("C_sH", "C_sx"),
+                    ("C_Hs", "C_xs"),
+                    ("C_HH", "C_xx"),
+                ):
+                    out[f"{taste_label}_real"] = out[f"{canonical_label}_real"]
+                    out[f"{taste_label}_imag"] = out[f"{canonical_label}_imag"]
+                    out[f"{taste_label}_real_config_stderr"] = out[
+                        f"{canonical_label}_real_config_stderr"
+                    ]
+                    out[f"{taste_label}_imag_config_stderr"] = out[
+                        f"{canonical_label}_imag_config_stderr"
+                    ]
+                    out[f"{taste_label}_timeseries"] = [
+                        {
+                            "configuration_index": int(item["configuration_index"]),
+                            f"{taste_label}_real": float(item[f"{canonical_label}_real"]),
+                            f"{taste_label}_imag": float(item[f"{canonical_label}_imag"]),
+                        }
+                        for item in out[f"{canonical_label}_timeseries"]
+                    ]
+
+            matrix_real = [
+                [float(out.get("C_ss_real", float("nan"))), float(out.get("C_sH_real", float("nan")))],
+                [float(out.get("C_Hs_real", float("nan"))), float(out.get("C_HH_real", float("nan")))],
+            ]
+            matrix_imag = [
+                [float(out.get("C_ss_imag", float("nan"))), float(out.get("C_sH_imag", float("nan")))],
+                [float(out.get("C_Hs_imag", float("nan"))), float(out.get("C_HH_imag", float("nan")))],
+            ]
+            out["C_matrix_real"] = matrix_real
+            out["C_matrix_imag"] = matrix_imag
+            if taste_radial_second_source:
+                out["C_sx_matrix_real_alias"] = matrix_real
+                out["C_sx_matrix_imag_alias"] = matrix_imag
+            tau_rows.append(out)
+
+        mode_rows[key] = {
+            "momentum_mode": list(nvec),
+            "p_hat_sq": spatial_p_hat_sq(nvec, spatial_l),
+            "configuration_count": len(rows),
+            "tau_rows": tau_rows,
+            "C_matrix_by_t": tau_rows,
+        }
+
+    return {
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "measurement_object": (
+            "same-surface Euclidean-time C_ss/C_sx/C_xs/C_xx(t) rows for the supplied taste-radial second-source certificate"
+            if taste_radial_second_source
+            else "same-surface Euclidean-time C_ss/C_sH/C_Hs/C_HH(t) rows for a supplied canonical-Higgs operator certificate"
+        ),
+        "time_kernel_schema_version": "source_higgs_time_kernel_v1",
+        "operator": source_higgs_operator_summary(operator_certificate, operator_certificate_path),
+        "firewall": source_higgs_firewall_from_certificate(operator_certificate),
+        "mode_rows": mode_rows,
+        "same_ensemble": True,
+        "same_source_coordinate": True,
+        "physical_higgs_normalization": "not_derived",
+        "canonical_higgs_operator_identity_passed": operator_certificate.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is True,
+        "used_as_physical_yukawa_readout": False,
+        "two_source_taste_radial_row_aliases": {
+            "available": taste_radial_second_source,
+            "source_operator_symbol": "x",
+            "C_sx_aliases_C_sH_schema_field": taste_radial_second_source,
+            "C_xs_aliases_C_Hs_schema_field": taste_radial_second_source,
+            "C_xx_aliases_C_HH_schema_field": taste_radial_second_source,
+            "strict_limit": (
+                "C_sx/C_xs/C_xx aliases are second-source taste-radial time-kernel rows. "
+                "They are not canonical-Higgs rows unless a separate canonical "
+                "O_H/source-overlap bridge passes."
+            ),
+        },
+        "strict_limit": (
+            "This default-off harness extension emits same-surface Euclidean-time "
+            "scalar matrix rows for transfer-kernel/GEVP analysis.  It is not "
+            "physical y_t evidence until canonical O_H or physical neutral "
+            "transfer identity, pole/FV/IR/threshold authority, overlap "
+            "normalization, and retained-route gates pass."
+        ),
+    }
+
+
 def wz_mass_response_smoke_enabled(args: argparse.Namespace) -> bool:
     return bool(getattr(args, "wz_mass_response_smoke", False)) and bool(
         getattr(args, "wz_source_shifts_parsed", [])
@@ -2038,6 +2358,9 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
     source_higgs_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
         m: {momentum_key(mode): [] for mode in args.source_higgs_cross_modes_parsed} for m in masses
     }
+    source_higgs_time_kernel_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
+        m: {momentum_key(mode): [] for mode in args.source_higgs_time_kernel_modes_parsed} for m in masses
+    }
     wz_mass_response_measurements: dict[float, list[list[float]]] = {
         s: [] for s in args.wz_source_shifts_parsed
     }
@@ -2131,6 +2454,28 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                 )
                 for key, row in source_higgs["mode_rows"].items():
                     source_higgs_measurements[mass].setdefault(key, []).append(row)
+            if (
+                abs(float(mass) - selected_mass) <= 1.0e-15
+                and args.source_higgs_time_kernel_modes_parsed
+                and args.source_higgs_time_kernel_noises > 0
+                and args.source_higgs_operator_certificate_data
+            ):
+                source_higgs_time_kernel = stochastic_source_higgs_time_kernel(
+                    meas_gauge,
+                    mass,
+                    args.cg_rtol,
+                    args.cg_maxiter,
+                    args.source_higgs_time_kernel_modes_parsed,
+                    args.source_higgs_time_kernel_noises,
+                    args.source_higgs_time_kernel_max_tau,
+                    args.source_higgs_time_kernel_origin_count,
+                    rng,
+                    args.source_higgs_operator_certificate_data,
+                    args.source_higgs_operator_certificate,
+                    normal_system=normal_system,
+                )
+                for key, row in source_higgs_time_kernel["mode_rows"].items():
+                    source_higgs_time_kernel_measurements[mass].setdefault(key, []).append(row)
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
     mass_scan = []
@@ -2151,6 +2496,13 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "source_coordinate": "disabled",
         "mode_rows": {},
         "pole_residue_rows": [],
+        "used_as_physical_yukawa_readout": False,
+    }
+    selected_source_higgs_time_kernel_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "mode_rows": {},
+        "time_kernel_schema_version": "disabled",
+        "physical_higgs_normalization": "not_derived",
         "used_as_physical_yukawa_readout": False,
     }
     selected_wz_mass_response_analysis: dict[str, Any] = {
@@ -2201,6 +2553,17 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                     args.source_higgs_operator_certificate_data,
                     args.source_higgs_operator_certificate,
                 )
+            if (
+                args.source_higgs_time_kernel_modes_parsed
+                and args.source_higgs_time_kernel_noises > 0
+                and args.source_higgs_operator_certificate_data
+            ):
+                selected_source_higgs_time_kernel_analysis = fit_source_higgs_time_kernel(
+                    source_higgs_time_kernel_measurements[mass],
+                    spatial_l,
+                    args.source_higgs_operator_certificate_data,
+                    args.source_higgs_operator_certificate,
+                )
 
     if wz_mass_response_smoke_enabled(args):
         selected_wz_mass_response_analysis = fit_wz_mass_response_smoke(
@@ -2242,6 +2605,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "scalar_source_response_analysis": selected_source_response_analysis,
         "scalar_two_point_lsz_analysis": selected_scalar_two_point_analysis,
         "source_higgs_cross_correlator_analysis": selected_source_higgs_cross_analysis,
+        "source_higgs_time_kernel_analysis": selected_source_higgs_time_kernel_analysis,
         "wz_mass_response_analysis": selected_wz_mass_response_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
@@ -2274,6 +2638,9 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
     }
     source_higgs_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
         m: {momentum_key(mode): [] for mode in args.source_higgs_cross_modes_parsed} for m in masses
+    }
+    source_higgs_time_kernel_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
+        m: {momentum_key(mode): [] for mode in args.source_higgs_time_kernel_modes_parsed} for m in masses
     }
     wz_mass_response_measurements: dict[float, list[list[float]]] = {
         s: [] for s in args.wz_source_shifts_parsed
@@ -2369,6 +2736,28 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
                 )
                 for key, row in source_higgs["mode_rows"].items():
                     source_higgs_measurements[mass].setdefault(key, []).append(row)
+            if (
+                abs(float(mass) - selected_mass) <= 1.0e-15
+                and args.source_higgs_time_kernel_modes_parsed
+                and args.source_higgs_time_kernel_noises > 0
+                and args.source_higgs_operator_certificate_data
+            ):
+                source_higgs_time_kernel = stochastic_source_higgs_time_kernel(
+                    meas_gauge,
+                    mass,
+                    args.cg_rtol,
+                    args.cg_maxiter,
+                    args.source_higgs_time_kernel_modes_parsed,
+                    args.source_higgs_time_kernel_noises,
+                    args.source_higgs_time_kernel_max_tau,
+                    args.source_higgs_time_kernel_origin_count,
+                    scalar_rng,
+                    args.source_higgs_operator_certificate_data,
+                    args.source_higgs_operator_certificate,
+                    normal_system=normal_system,
+                )
+                for key, row in source_higgs_time_kernel["mode_rows"].items():
+                    source_higgs_time_kernel_measurements[mass].setdefault(key, []).append(row)
         print(f"  meas L={spatial_l} cfg={cfg + 1}/{args.measurements} plaquette={plaquettes[-1]:.6f}")
 
     mass_scan = []
@@ -2389,6 +2778,13 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "source_coordinate": "disabled",
         "mode_rows": {},
         "pole_residue_rows": [],
+        "used_as_physical_yukawa_readout": False,
+    }
+    selected_source_higgs_time_kernel_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "mode_rows": {},
+        "time_kernel_schema_version": "disabled",
+        "physical_higgs_normalization": "not_derived",
         "used_as_physical_yukawa_readout": False,
     }
     selected_wz_mass_response_analysis: dict[str, Any] = {
@@ -2435,6 +2831,17 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
             ):
                 selected_source_higgs_cross_analysis = fit_source_higgs_cross_correlator(
                     source_higgs_measurements[mass],
+                    spatial_l,
+                    args.source_higgs_operator_certificate_data,
+                    args.source_higgs_operator_certificate,
+                )
+            if (
+                args.source_higgs_time_kernel_modes_parsed
+                and args.source_higgs_time_kernel_noises > 0
+                and args.source_higgs_operator_certificate_data
+            ):
+                selected_source_higgs_time_kernel_analysis = fit_source_higgs_time_kernel(
+                    source_higgs_time_kernel_measurements[mass],
                     spatial_l,
                     args.source_higgs_operator_certificate_data,
                     args.source_higgs_operator_certificate,
@@ -2488,6 +2895,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "scalar_source_response_analysis": selected_source_response_analysis,
         "scalar_two_point_lsz_analysis": selected_scalar_two_point_analysis,
         "source_higgs_cross_correlator_analysis": selected_source_higgs_cross_analysis,
+        "source_higgs_time_kernel_analysis": selected_source_higgs_time_kernel_analysis,
         "wz_mass_response_analysis": selected_wz_mass_response_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
@@ -2593,6 +3001,11 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
     source_higgs_enabled = bool(getattr(args, "source_higgs_cross_modes_parsed", [])) and int(
         getattr(args, "source_higgs_cross_noises", 0)
     ) > 0 and bool(getattr(args, "source_higgs_operator_certificate_data", {}))
+    source_higgs_time_kernel_enabled = bool(
+        getattr(args, "source_higgs_time_kernel_modes_parsed", [])
+    ) and int(getattr(args, "source_higgs_time_kernel_noises", 0)) > 0 and bool(
+        getattr(args, "source_higgs_operator_certificate_data", {})
+    )
     source_higgs_operator = source_higgs_operator_summary(
         getattr(args, "source_higgs_operator_certificate_data", {}),
         getattr(args, "source_higgs_operator_certificate", None),
@@ -2725,6 +3138,53 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                     "and retained-route gates pass."
                 ),
             },
+            "source_higgs_time_kernel": {
+                "enabled": source_higgs_time_kernel_enabled,
+                "implementation_status": (
+                    "same_surface_time_kernel_rows_enabled_support_only"
+                    if source_higgs_time_kernel_enabled
+                    else "absent_guarded"
+                ),
+                "required_measurement_objects": [
+                    "same-surface Euclidean-time C_ss(t), C_sH(t), C_Hs(t), C_HH(t) rows",
+                    "same-source covariance across matrix entries and time lags",
+                    "canonical O_H or physical neutral transfer identity certificate",
+                    "OS/GEVP pole extraction with FV/IR/threshold authority",
+                    "source-overlap and canonical-Higgs normalization authority",
+                ],
+                "time_kernel_schema_version": (
+                    "source_higgs_time_kernel_v1"
+                    if source_higgs_time_kernel_enabled
+                    else "disabled"
+                ),
+                "canonical_higgs_operator_realization": (
+                    "certificate_supplied_unratified"
+                    if source_higgs_time_kernel_enabled
+                    else "absent"
+                ),
+                "operator": source_higgs_operator,
+                "firewall": source_higgs_firewall,
+                "modes": getattr(args, "source_higgs_time_kernel_modes_parsed", []),
+                "noise_vectors_per_configuration": int(
+                    getattr(args, "source_higgs_time_kernel_noises", 0)
+                ),
+                "max_tau": int(getattr(args, "source_higgs_time_kernel_max_tau", 0)),
+                "origin_count": int(getattr(args, "source_higgs_time_kernel_origin_count", 1)),
+                "selected_mass_only": bool(
+                    fh_lsz_policy.get("source_higgs_time_kernel_selected_mass_only", False)
+                ),
+                "selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
+                "physical_higgs_normalization": "not_derived",
+                "used_as_physical_yukawa_readout": False,
+                "strict_limit": (
+                    "Same-surface time-kernel rows are transfer-kernel/GEVP "
+                    "instrumentation only. They must not be treated as physical "
+                    "source-Higgs pole residues, kappa_s, or y_t evidence until "
+                    "canonical O_H or physical neutral transfer identity, "
+                    "pole/FV/IR/threshold authority, overlap normalization, "
+                    "and retained-route gates pass."
+                ),
+            },
             "wz_mass_response": {
                 "enabled": wz_smoke_enabled,
                 "implementation_status": (
@@ -2781,6 +3241,18 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "scalar_two_point_noises": int(getattr(args, "scalar_two_point_noises", 0)),
                 "source_higgs_cross_modes": getattr(args, "source_higgs_cross_modes_parsed", []),
                 "source_higgs_cross_noises": int(getattr(args, "source_higgs_cross_noises", 0)),
+                "source_higgs_time_kernel_modes": getattr(
+                    args, "source_higgs_time_kernel_modes_parsed", []
+                ),
+                "source_higgs_time_kernel_noises": int(
+                    getattr(args, "source_higgs_time_kernel_noises", 0)
+                ),
+                "source_higgs_time_kernel_max_tau": int(
+                    getattr(args, "source_higgs_time_kernel_max_tau", 0)
+                ),
+                "source_higgs_time_kernel_origin_count": int(
+                    getattr(args, "source_higgs_time_kernel_origin_count", 1)
+                ),
                 "source_higgs_operator_certificate": (
                     str(args.source_higgs_operator_certificate)
                     if getattr(args, "source_higgs_operator_certificate", None) is not None
@@ -3062,6 +3534,35 @@ def parse_args() -> argparse.Namespace:
         help="Z2 noise vectors per configuration for --source-higgs-cross-modes. Zero disables the estimator.",
     )
     parser.add_argument(
+        "--source-higgs-time-kernel-modes",
+        default="",
+        help=(
+            "Optional semicolon-separated spatial momentum triplets for "
+            "same-surface Euclidean-time C_ss/C_sH/C_Hs/C_HH(t) rows. "
+            "Requires --source-higgs-operator-certificate and "
+            "--source-higgs-time-kernel-noises > 0. This is transfer-kernel "
+            "instrumentation only, not a y_t readout."
+        ),
+    )
+    parser.add_argument(
+        "--source-higgs-time-kernel-noises",
+        type=int,
+        default=0,
+        help="Z2 noise vectors per configuration for --source-higgs-time-kernel-modes. Zero disables the estimator.",
+    )
+    parser.add_argument(
+        "--source-higgs-time-kernel-max-tau",
+        type=int,
+        default=0,
+        help="Maximum Euclidean time lag tau for --source-higgs-time-kernel-modes.",
+    )
+    parser.add_argument(
+        "--source-higgs-time-kernel-origin-count",
+        type=int,
+        default=1,
+        help="Number of source time origins for --source-higgs-time-kernel-modes.",
+    )
+    parser.add_argument(
         "--source-higgs-operator-certificate",
         type=Path,
         default=None,
@@ -3205,6 +3706,7 @@ def main() -> int:
     args.scalar_source_shifts_parsed = parse_float_list(args.scalar_source_shifts)
     args.scalar_two_point_modes_parsed = parse_momentum_modes(args.scalar_two_point_modes)
     args.source_higgs_cross_modes_parsed = parse_momentum_modes(args.source_higgs_cross_modes)
+    args.source_higgs_time_kernel_modes_parsed = parse_momentum_modes(args.source_higgs_time_kernel_modes)
     args.wz_source_shifts_parsed = parse_float_list(args.wz_source_shifts)
     args.source_higgs_operator_certificate_data = load_source_higgs_operator_certificate(
         args.source_higgs_operator_certificate
@@ -3213,6 +3715,14 @@ def main() -> int:
         print(
             "source_higgs_cross_correlator=disabled; "
             "--source-higgs-operator-certificate is required for C_sH/C_HH rows"
+        )
+    if (
+        args.source_higgs_time_kernel_modes_parsed
+        or args.source_higgs_time_kernel_noises > 0
+    ) and not args.source_higgs_operator_certificate_data:
+        print(
+            "source_higgs_time_kernel=disabled; "
+            "--source-higgs-operator-certificate is required for C_sH(t)/C_HH(t) rows"
         )
     rng = np.random.default_rng(args.seed)
 
@@ -3239,6 +3749,19 @@ def main() -> int:
         print(
             f"source_higgs_cross_modes={args.source_higgs_cross_modes_parsed}, "
             f"noise_vectors={args.source_higgs_cross_noises}, operator_id={operator_id}"
+        )
+    if (
+        args.source_higgs_time_kernel_modes_parsed
+        and args.source_higgs_time_kernel_noises > 0
+        and args.source_higgs_operator_certificate_data
+    ):
+        operator_id = args.source_higgs_operator_certificate_data.get("operator_id")
+        print(
+            f"source_higgs_time_kernel_modes={args.source_higgs_time_kernel_modes_parsed}, "
+            f"noise_vectors={args.source_higgs_time_kernel_noises}, "
+            f"max_tau={args.source_higgs_time_kernel_max_tau}, "
+            f"origin_count={args.source_higgs_time_kernel_origin_count}, "
+            f"operator_id={operator_id}"
         )
     if wz_mass_response_smoke_enabled(args):
         print(

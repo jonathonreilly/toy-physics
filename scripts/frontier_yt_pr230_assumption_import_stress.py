@@ -266,6 +266,9 @@ def main() -> int:
         "os_transfer_kernel_artifact_gate": load(
             "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json"
         ),
+        "source_higgs_time_kernel_harness_extension_gate": load(
+            "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1579,6 +1582,19 @@ def main() -> int:
         and os_transfer_kernel.get("same_surface_transfer_or_gevp_present") is False,
         os_transfer_kernel.get("actual_current_surface_status"),
     )
+    time_kernel_harness = certificates["source_higgs_time_kernel_harness_extension_gate"]
+    report(
+        "source-higgs-time-kernel-harness-support-only",
+        "source-Higgs time-kernel harness"
+        in str(time_kernel_harness.get("actual_current_surface_status"))
+        and time_kernel_harness.get("proposal_allowed") is False
+        and time_kernel_harness.get("contract", {}).get("adds_default_off_time_kernel_rows")
+        is True
+        and time_kernel_harness.get("contract", {}).get("selected_mass_only") is True
+        and time_kernel_harness.get("used_as_physical_yukawa_readout") is False
+        and time_kernel_harness.get("physical_higgs_normalization") == "not_derived",
+        time_kernel_harness.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -1764,7 +1780,11 @@ def main() -> int:
             "correlator has a tau axis, but the scalar source/taste-radial "
             "matrix rows are configuration timeseries, not same-surface "
             "C_ij(t) rows, and static C(0) admits multiple positive transfer "
-            "candidates.  "
+            "candidates.  The source-Higgs time-kernel harness extension now "
+            "writes default-off same-surface C_ss/C_sH/C_Hs/C_HH(t) rows at "
+            "the selected mass only, but its taste-radial smoke certificate is "
+            "support-only infrastructure and still lacks canonical O_H, pole/"
+            "FV/IR/threshold authority, and source-overlap normalization.  "
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
@@ -1812,6 +1832,7 @@ def main() -> int:
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",
+            "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

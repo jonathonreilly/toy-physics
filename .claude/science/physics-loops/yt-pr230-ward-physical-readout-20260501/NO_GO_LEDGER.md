@@ -3511,3 +3511,18 @@ plus a theorem identifying `x` with canonical `O_H` or a physical neutral
 transfer.  The reopen artifact must include pole extraction, FV/IR/threshold
 authority, overlap normalization, covariance, seed metadata, and all claim
 firewalls.
+
+## 2026-05-07 - Time-Kernel Harness Support Is Not Physics Closure
+
+No-go on the current surface: the new source-Higgs time-kernel harness path
+emits the right kind of schema for future OS/GEVP work, but the current smoke
+uses the taste-radial second-source certificate.  That certificate has
+`canonical_higgs_operator_identity_passed = false`, so `C_sx/C_xs/C_xx(t)`
+aliases are not canonical `C_sH/C_Hs/C_HH(t)` rows.
+
+Do not treat default-off harness support, reduced smoke output, or time-kernel
+method names as `O_H`, `kappa_s`, pole residue, or physical `y_t` authority.
+Reopen as physics only with production same-surface time-lag rows plus a
+certified canonical `O_H` identity or physical neutral/W/Z response identity,
+OS/GEVP pole/FV/IR/threshold control, source-overlap normalization, covariance,
+seed metadata, and retained-route approval.

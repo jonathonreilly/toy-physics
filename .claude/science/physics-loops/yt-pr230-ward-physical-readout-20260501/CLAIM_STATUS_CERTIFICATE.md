@@ -4751,3 +4751,40 @@ same-surface `C_ij(t)` transfer/GEVP kernels.  Do not claim retained or
 proposed-retained closure until a future same-surface time-lag matrix row
 packet, canonical `O_H` or physical neutral-transfer identity, pole/FV/IR
 authority, overlap normalization, and retained-route approval all pass.
+
+## 2026-05-07 - Source-Higgs Time-Kernel Harness Extension
+
+```text
+actual_current_surface_status: source-Higgs time-kernel harness support-only
+infrastructure; open physics closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_source_higgs_time_kernel_harness_extension_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=89 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=336 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=149 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=303 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=58 FAIL=0
+```
+
+The harness now writes default-off same-surface
+`C_ss/C_sH/C_Hs/C_HH(t)` schema rows at the selected FH/LSZ mass only and
+preserves `numba_gauge_seed_v1` in the numba smoke.  The current operator is
+the taste-radial second-source certificate, so
+`canonical_higgs_operator_identity_passed` is false and
+`physical_higgs_normalization` remains `not_derived`.
+
+No retained, proposed-retained, `kappa_s`, or physical `y_t` wording is
+allowed from this artifact.

@@ -746,6 +746,9 @@ def main() -> int:
         "pr230_os_transfer_kernel_artifact_gate": load(
             "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json"
         ),
+        "pr230_source_higgs_time_kernel_harness_extension_gate": load(
+            "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -3429,6 +3432,29 @@ def main() -> int:
         is False,
         statuses["pr230_os_transfer_kernel_artifact_gate"],
     )
+    source_higgs_time_kernel_harness_extension_gate = certificates[
+        "pr230_source_higgs_time_kernel_harness_extension_gate"
+    ]
+    report(
+        "pr230-source-higgs-time-kernel-harness-support-only",
+        "source-Higgs time-kernel harness"
+        in str(statuses["pr230_source_higgs_time_kernel_harness_extension_gate"])
+        and source_higgs_time_kernel_harness_extension_gate.get("proposal_allowed")
+        is False
+        and source_higgs_time_kernel_harness_extension_gate.get("contract", {}).get(
+            "adds_default_off_time_kernel_rows"
+        )
+        is True
+        and source_higgs_time_kernel_harness_extension_gate.get("contract", {}).get(
+            "selected_mass_only"
+        )
+        is True
+        and source_higgs_time_kernel_harness_extension_gate.get(
+            "used_as_physical_yukawa_readout"
+        )
+        is False,
+        statuses["pr230_source_higgs_time_kernel_harness_extension_gate"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -5056,6 +5082,22 @@ def main() -> int:
         and os_transfer_kernel_artifact_gate.get("same_surface_transfer_or_gevp_present")
         is False
         and os_transfer_kernel_artifact_gate.get("proposal_allowed") is False
+    )
+    result["source_higgs_time_kernel_harness_support_only"] = (
+        source_higgs_time_kernel_harness_extension_gate.get("contract", {}).get(
+            "adds_default_off_time_kernel_rows"
+        )
+        is True
+        and source_higgs_time_kernel_harness_extension_gate.get("contract", {}).get(
+            "selected_mass_only"
+        )
+        is True
+        and source_higgs_time_kernel_harness_extension_gate.get("proposal_allowed")
+        is False
+        and source_higgs_time_kernel_harness_extension_gate.get(
+            "used_as_physical_yukawa_readout"
+        )
+        is False
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")

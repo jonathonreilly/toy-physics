@@ -16,11 +16,26 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-251-two-source-taste-radial-chunks031-032-package
-blocks_completed: 250
-active_route: "PR230 two-source taste-radial chunks031-032 package"
-active_hard_residual: "Chunks031-032 are now checkpointed and packaged into the finite two-source taste-radial row packet.  The package is ready=32/63 with combined_rows_written=false.  Chunk031 and chunk032 pass completed-mode checkpoints PASS=15 FAIL=0 each; package audit PASS=10 FAIL=0; row combiner PASS=13 FAIL=0; strict scalar-LSZ remains blocked PASS=13 FAIL=0 with raw C_ss first-shell nonincrease violation z=129.6442275547381; Schur repair remains bounded support PASS=22 FAIL=0 with C_s|x failing z=122.43050921271058 and C_x|s surviving only the necessary first-shell check z=-478.2217012807756.  Promotion contract PASS=11 FAIL=0 still blocks relabeling C_sx/C_xx as C_sH/C_HH without same-surface x=canonical O_H identity/action/LSZ, pole/FV/IR, and Gram authority.  Aggregate gates remain open: assumption PASS=87 FAIL=0, campaign PASS=334 FAIL=0, assembly PASS=147 FAIL=0, retained PASS=301 FAIL=0, completion PASS=56 FAIL=0.  Chunks033-034 are active run-control only; no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-252-source-higgs-time-kernel-harness-extension
+blocks_completed: 251
+active_route: "PR230 source-Higgs scalar time-kernel harness support"
+active_hard_residual: "Added a default-off same-surface Euclidean-time scalar matrix harness path.  The production harness now preserves the three-mass top scan but emits source-Higgs time-kernel rows only at the selected FH/LSZ mass m=0.75 when --source-higgs-time-kernel-* controls and an operator certificate are supplied.  The numba smoke writes source_higgs_time_kernel_v1 rows with C_ss/C_sH/C_Hs/C_HH(t), taste-radial C_sx/C_xs/C_xx(t) aliases, C_matrix_by_t, normal-cache reuse, and numba_gauge_seed_v1.  Gate results: time-kernel harness PASS=13 FAIL=0, assumption PASS=89 FAIL=0, campaign PASS=336 FAIL=0, assembly PASS=149 FAIL=0, retained PASS=303 FAIL=0, completion PASS=58 FAIL=0.  Status remains support-only infrastructure: the supplied taste-radial operator has canonical_higgs_operator_identity_passed=false, physical_higgs_normalization=not_derived, and used_as_physical_yukawa_readout=false.  Positive closure still needs certified canonical O_H or physical neutral/WZ identity plus OS/GEVP pole extraction, FV/IR/threshold authority, source-overlap normalization, and retained-route approval."
 files_touched:
+  - "scripts/yt_direct_lattice_correlator_production.py"
+  - "scripts/frontier_yt_pr230_source_higgs_time_kernel_harness_extension_gate.py"
+  - "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_HARNESS_EXTENSION_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_source_higgs_time_kernel_harness_smoke_numba_2026-05-07.json"
+  - "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS031_032_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk031_2026-05-06.json"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk032_2026-05-06.json"

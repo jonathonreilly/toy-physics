@@ -1,0 +1,986 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 1
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.6204201667359089,
+          "stderr": 0.0,
+          "tau": 0
+        },
+        {
+          "mean": 0.13133283573683044,
+          "stderr": 0.0,
+          "tau": 1
+        },
+        {
+          "mean": 0.03996202764848502,
+          "stderr": 0.0,
+          "tau": 2
+        },
+        {
+          "mean": 0.13792305613446174,
+          "stderr": 0.0,
+          "tau": 3
+        }
+      ],
+      "dims": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 1.552662104979062,
+          "tau": 0
+        },
+        {
+          "m_eff": 1.189805137369684,
+          "tau": 1
+        },
+        {
+          "m_eff": -1.238766270970326,
+          "tau": 2
+        }
+      ],
+      "fh_lsz_measurement_policy": {
+        "non_selected_masses_scalar_fh_lsz_skipped": [
+          0.45,
+          1.05
+        ],
+        "normal_equation_cache": {
+          "key": "mass/source-shift value",
+          "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+          "scope": "per saved gauge configuration and smeared measurement gauge"
+        },
+        "physical_higgs_normalization": "not_derived",
+        "policy": "selected_mass_only_for_scalar_fh_lsz",
+        "scalar_source_response_selected_mass_only": false,
+        "scalar_two_point_lsz_selected_mass_only": false,
+        "selected_mass_index": 1,
+        "selected_mass_parameter": 0.75,
+        "source_higgs_cross_correlator_selected_mass_only": false,
+        "source_higgs_time_kernel_selected_mass_only": true,
+        "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+        "top_correlator_mass_scan_preserved": true,
+        "used_as_physical_yukawa_readout": false,
+        "wz_mass_response_smoke_selected_mass_only": false
+      },
+      "mass_fit": {
+        "chi2_dof": 4.930380657631324e-17,
+        "m_lat": 1.1898051373696887,
+        "m_lat_err": 1.414213562373095e-06,
+        "tau_max": 2,
+        "tau_min": 1
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": 4.979684464207637e-18,
+          "m_bare_lat": 0.45,
+          "m_fit_lat": 0.7346006744491103,
+          "m_fit_lat_err": 1.414213562373095e-06,
+          "max_cg_residual": 8.561541723197525e-09
+        },
+        {
+          "chi2_dof": 4.930380657631324e-17,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": 1.1898051373696887,
+          "m_fit_lat_err": 1.414213562373095e-06,
+          "max_cg_residual": 5.545840418283787e-09
+        },
+        {
+          "chi2_dof": 6.409494854920721e-17,
+          "m_bare_lat": 1.05,
+          "m_fit_lat": 1.5981587664490036,
+          "m_fit_lat_err": 1.414213562373095e-06,
+          "max_cg_residual": 3.971371099235439e-09
+        }
+      ],
+      "measurement_separation_sweeps": 1,
+      "measurement_sweeps": 1,
+      "momentum_analysis": {
+        "energy_fits": {},
+        "kinetic_mass_fits": {}
+      },
+      "plaquette_history": [
+        0.6504188958291994
+      ],
+      "plaquette_mean": 0.5303253715110811,
+      "plaquette_measurements": [
+        0.5303253715110811
+      ],
+      "r0_over_a": 5.37,
+      "rng_seed_control": {
+        "base_seed": 20260430,
+        "gauge_rng_seed": 22297140,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 22297140,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 22297140
+      },
+      "runtime_seconds": 0.014054059982299805,
+      "scalar_source_response_analysis": {
+        "energy_fits": [],
+        "slope_dE_ds_lat": NaN,
+        "source_coordinate": "disabled"
+      },
+      "scalar_two_point_lsz_analysis": {
+        "mode_rows": {},
+        "physical_higgs_normalization": "not_derived",
+        "source_coordinate": "disabled"
+      },
+      "selected_mass_parameter": 0.75,
+      "source_higgs_cross_correlator_analysis": {
+        "mode_rows": {},
+        "pole_residue_rows": [],
+        "source_coordinate": "disabled",
+        "used_as_physical_yukawa_readout": false
+      },
+      "source_higgs_time_kernel_analysis": {
+        "canonical_higgs_operator_identity_passed": false,
+        "firewall": {
+          "used_alpha_lm_or_plaquette": false,
+          "used_hunit_matrix_element_readout": false,
+          "used_observed_targets_as_selectors": false,
+          "used_taste_radial_axis_as_canonical_oh": false,
+          "used_yt_ward_identity": false
+        },
+        "measurement_object": "same-surface Euclidean-time C_ss/C_sx/C_xs/C_xx(t) rows for the supplied taste-radial second-source certificate",
+        "mode_rows": {
+          "0,0,0": {
+            "C_matrix_by_t": [
+              {
+                "C_HH_imag": -0.23362919593768627,
+                "C_HH_imag_config_stderr": 0.0,
+                "C_HH_real": 0.7829052499828277,
+                "C_HH_real_config_stderr": 0.0,
+                "C_HH_timeseries": [
+                  {
+                    "C_HH_imag": -0.23362919593768627,
+                    "C_HH_real": 0.7829052499828277,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_Hs_imag": -0.14270189958901963,
+                "C_Hs_imag_config_stderr": 0.0,
+                "C_Hs_real": 0.19137782290349006,
+                "C_Hs_real_config_stderr": 0.0,
+                "C_Hs_timeseries": [
+                  {
+                    "C_Hs_imag": -0.14270189958901963,
+                    "C_Hs_real": 0.19137782290349006,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_matrix_imag": [
+                  [
+                    0.031073740154361613,
+                    -0.13108491294575886
+                  ],
+                  [
+                    -0.14270189958901963,
+                    -0.23362919593768627
+                  ]
+                ],
+                "C_matrix_real": [
+                  [
+                    0.49074144154437516,
+                    0.21893485999496137
+                  ],
+                  [
+                    0.19137782290349006,
+                    0.7829052499828277
+                  ]
+                ],
+                "C_sH_imag": -0.13108491294575886,
+                "C_sH_imag_config_stderr": 0.0,
+                "C_sH_real": 0.21893485999496137,
+                "C_sH_real_config_stderr": 0.0,
+                "C_sH_timeseries": [
+                  {
+                    "C_sH_imag": -0.13108491294575886,
+                    "C_sH_real": 0.21893485999496137,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_ss_imag": 0.031073740154361613,
+                "C_ss_imag_config_stderr": 0.0,
+                "C_ss_real": 0.49074144154437516,
+                "C_ss_real_config_stderr": 0.0,
+                "C_ss_timeseries": [
+                  {
+                    "C_ss_imag": 0.031073740154361613,
+                    "C_ss_real": 0.49074144154437516,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_sx_imag": -0.13108491294575886,
+                "C_sx_imag_config_stderr": 0.0,
+                "C_sx_matrix_imag_alias": [
+                  [
+                    0.031073740154361613,
+                    -0.13108491294575886
+                  ],
+                  [
+                    -0.14270189958901963,
+                    -0.23362919593768627
+                  ]
+                ],
+                "C_sx_matrix_real_alias": [
+                  [
+                    0.49074144154437516,
+                    0.21893485999496137
+                  ],
+                  [
+                    0.19137782290349006,
+                    0.7829052499828277
+                  ]
+                ],
+                "C_sx_real": 0.21893485999496137,
+                "C_sx_real_config_stderr": 0.0,
+                "C_sx_timeseries": [
+                  {
+                    "C_sx_imag": -0.13108491294575886,
+                    "C_sx_real": 0.21893485999496137,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xs_imag": -0.14270189958901963,
+                "C_xs_imag_config_stderr": 0.0,
+                "C_xs_real": 0.19137782290349006,
+                "C_xs_real_config_stderr": 0.0,
+                "C_xs_timeseries": [
+                  {
+                    "C_xs_imag": -0.14270189958901963,
+                    "C_xs_real": 0.19137782290349006,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xx_imag": -0.23362919593768627,
+                "C_xx_imag_config_stderr": 0.0,
+                "C_xx_real": 0.7829052499828277,
+                "C_xx_real_config_stderr": 0.0,
+                "C_xx_timeseries": [
+                  {
+                    "C_xx_imag": -0.23362919593768627,
+                    "C_xx_real": 0.7829052499828277,
+                    "configuration_index": 0
+                  }
+                ],
+                "tau": 0
+              },
+              {
+                "C_HH_imag": 0.0005669330527628413,
+                "C_HH_imag_config_stderr": 0.0,
+                "C_HH_real": 0.013833021160310289,
+                "C_HH_real_config_stderr": 0.0,
+                "C_HH_timeseries": [
+                  {
+                    "C_HH_imag": 0.0005669330527628413,
+                    "C_HH_real": 0.013833021160310289,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_Hs_imag": -0.03976214270907357,
+                "C_Hs_imag_config_stderr": 0.0,
+                "C_Hs_real": -0.03361823071786601,
+                "C_Hs_real_config_stderr": 0.0,
+                "C_Hs_timeseries": [
+                  {
+                    "C_Hs_imag": -0.03976214270907357,
+                    "C_Hs_real": -0.03361823071786601,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_matrix_imag": [
+                  [
+                    -0.04870734739715591,
+                    -0.03318515969908863
+                  ],
+                  [
+                    -0.03976214270907357,
+                    0.0005669330527628413
+                  ]
+                ],
+                "C_matrix_real": [
+                  [
+                    -0.034470067518185966,
+                    -0.0074444647403731565
+                  ],
+                  [
+                    -0.03361823071786601,
+                    0.013833021160310289
+                  ]
+                ],
+                "C_sH_imag": -0.03318515969908863,
+                "C_sH_imag_config_stderr": 0.0,
+                "C_sH_real": -0.0074444647403731565,
+                "C_sH_real_config_stderr": 0.0,
+                "C_sH_timeseries": [
+                  {
+                    "C_sH_imag": -0.03318515969908863,
+                    "C_sH_real": -0.0074444647403731565,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_ss_imag": -0.04870734739715591,
+                "C_ss_imag_config_stderr": 0.0,
+                "C_ss_real": -0.034470067518185966,
+                "C_ss_real_config_stderr": 0.0,
+                "C_ss_timeseries": [
+                  {
+                    "C_ss_imag": -0.04870734739715591,
+                    "C_ss_real": -0.034470067518185966,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_sx_imag": -0.03318515969908863,
+                "C_sx_imag_config_stderr": 0.0,
+                "C_sx_matrix_imag_alias": [
+                  [
+                    -0.04870734739715591,
+                    -0.03318515969908863
+                  ],
+                  [
+                    -0.03976214270907357,
+                    0.0005669330527628413
+                  ]
+                ],
+                "C_sx_matrix_real_alias": [
+                  [
+                    -0.034470067518185966,
+                    -0.0074444647403731565
+                  ],
+                  [
+                    -0.03361823071786601,
+                    0.013833021160310289
+                  ]
+                ],
+                "C_sx_real": -0.0074444647403731565,
+                "C_sx_real_config_stderr": 0.0,
+                "C_sx_timeseries": [
+                  {
+                    "C_sx_imag": -0.03318515969908863,
+                    "C_sx_real": -0.0074444647403731565,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xs_imag": -0.03976214270907357,
+                "C_xs_imag_config_stderr": 0.0,
+                "C_xs_real": -0.03361823071786601,
+                "C_xs_real_config_stderr": 0.0,
+                "C_xs_timeseries": [
+                  {
+                    "C_xs_imag": -0.03976214270907357,
+                    "C_xs_real": -0.03361823071786601,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xx_imag": 0.0005669330527628413,
+                "C_xx_imag_config_stderr": 0.0,
+                "C_xx_real": 0.013833021160310289,
+                "C_xx_real_config_stderr": 0.0,
+                "C_xx_timeseries": [
+                  {
+                    "C_xx_imag": 0.0005669330527628413,
+                    "C_xx_real": 0.013833021160310289,
+                    "configuration_index": 0
+                  }
+                ],
+                "tau": 1
+              }
+            ],
+            "configuration_count": 1,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0,
+            "tau_rows": [
+              {
+                "C_HH_imag": -0.23362919593768627,
+                "C_HH_imag_config_stderr": 0.0,
+                "C_HH_real": 0.7829052499828277,
+                "C_HH_real_config_stderr": 0.0,
+                "C_HH_timeseries": [
+                  {
+                    "C_HH_imag": -0.23362919593768627,
+                    "C_HH_real": 0.7829052499828277,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_Hs_imag": -0.14270189958901963,
+                "C_Hs_imag_config_stderr": 0.0,
+                "C_Hs_real": 0.19137782290349006,
+                "C_Hs_real_config_stderr": 0.0,
+                "C_Hs_timeseries": [
+                  {
+                    "C_Hs_imag": -0.14270189958901963,
+                    "C_Hs_real": 0.19137782290349006,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_matrix_imag": [
+                  [
+                    0.031073740154361613,
+                    -0.13108491294575886
+                  ],
+                  [
+                    -0.14270189958901963,
+                    -0.23362919593768627
+                  ]
+                ],
+                "C_matrix_real": [
+                  [
+                    0.49074144154437516,
+                    0.21893485999496137
+                  ],
+                  [
+                    0.19137782290349006,
+                    0.7829052499828277
+                  ]
+                ],
+                "C_sH_imag": -0.13108491294575886,
+                "C_sH_imag_config_stderr": 0.0,
+                "C_sH_real": 0.21893485999496137,
+                "C_sH_real_config_stderr": 0.0,
+                "C_sH_timeseries": [
+                  {
+                    "C_sH_imag": -0.13108491294575886,
+                    "C_sH_real": 0.21893485999496137,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_ss_imag": 0.031073740154361613,
+                "C_ss_imag_config_stderr": 0.0,
+                "C_ss_real": 0.49074144154437516,
+                "C_ss_real_config_stderr": 0.0,
+                "C_ss_timeseries": [
+                  {
+                    "C_ss_imag": 0.031073740154361613,
+                    "C_ss_real": 0.49074144154437516,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_sx_imag": -0.13108491294575886,
+                "C_sx_imag_config_stderr": 0.0,
+                "C_sx_matrix_imag_alias": [
+                  [
+                    0.031073740154361613,
+                    -0.13108491294575886
+                  ],
+                  [
+                    -0.14270189958901963,
+                    -0.23362919593768627
+                  ]
+                ],
+                "C_sx_matrix_real_alias": [
+                  [
+                    0.49074144154437516,
+                    0.21893485999496137
+                  ],
+                  [
+                    0.19137782290349006,
+                    0.7829052499828277
+                  ]
+                ],
+                "C_sx_real": 0.21893485999496137,
+                "C_sx_real_config_stderr": 0.0,
+                "C_sx_timeseries": [
+                  {
+                    "C_sx_imag": -0.13108491294575886,
+                    "C_sx_real": 0.21893485999496137,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xs_imag": -0.14270189958901963,
+                "C_xs_imag_config_stderr": 0.0,
+                "C_xs_real": 0.19137782290349006,
+                "C_xs_real_config_stderr": 0.0,
+                "C_xs_timeseries": [
+                  {
+                    "C_xs_imag": -0.14270189958901963,
+                    "C_xs_real": 0.19137782290349006,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xx_imag": -0.23362919593768627,
+                "C_xx_imag_config_stderr": 0.0,
+                "C_xx_real": 0.7829052499828277,
+                "C_xx_real_config_stderr": 0.0,
+                "C_xx_timeseries": [
+                  {
+                    "C_xx_imag": -0.23362919593768627,
+                    "C_xx_real": 0.7829052499828277,
+                    "configuration_index": 0
+                  }
+                ],
+                "tau": 0
+              },
+              {
+                "C_HH_imag": 0.0005669330527628413,
+                "C_HH_imag_config_stderr": 0.0,
+                "C_HH_real": 0.013833021160310289,
+                "C_HH_real_config_stderr": 0.0,
+                "C_HH_timeseries": [
+                  {
+                    "C_HH_imag": 0.0005669330527628413,
+                    "C_HH_real": 0.013833021160310289,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_Hs_imag": -0.03976214270907357,
+                "C_Hs_imag_config_stderr": 0.0,
+                "C_Hs_real": -0.03361823071786601,
+                "C_Hs_real_config_stderr": 0.0,
+                "C_Hs_timeseries": [
+                  {
+                    "C_Hs_imag": -0.03976214270907357,
+                    "C_Hs_real": -0.03361823071786601,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_matrix_imag": [
+                  [
+                    -0.04870734739715591,
+                    -0.03318515969908863
+                  ],
+                  [
+                    -0.03976214270907357,
+                    0.0005669330527628413
+                  ]
+                ],
+                "C_matrix_real": [
+                  [
+                    -0.034470067518185966,
+                    -0.0074444647403731565
+                  ],
+                  [
+                    -0.03361823071786601,
+                    0.013833021160310289
+                  ]
+                ],
+                "C_sH_imag": -0.03318515969908863,
+                "C_sH_imag_config_stderr": 0.0,
+                "C_sH_real": -0.0074444647403731565,
+                "C_sH_real_config_stderr": 0.0,
+                "C_sH_timeseries": [
+                  {
+                    "C_sH_imag": -0.03318515969908863,
+                    "C_sH_real": -0.0074444647403731565,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_ss_imag": -0.04870734739715591,
+                "C_ss_imag_config_stderr": 0.0,
+                "C_ss_real": -0.034470067518185966,
+                "C_ss_real_config_stderr": 0.0,
+                "C_ss_timeseries": [
+                  {
+                    "C_ss_imag": -0.04870734739715591,
+                    "C_ss_real": -0.034470067518185966,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_sx_imag": -0.03318515969908863,
+                "C_sx_imag_config_stderr": 0.0,
+                "C_sx_matrix_imag_alias": [
+                  [
+                    -0.04870734739715591,
+                    -0.03318515969908863
+                  ],
+                  [
+                    -0.03976214270907357,
+                    0.0005669330527628413
+                  ]
+                ],
+                "C_sx_matrix_real_alias": [
+                  [
+                    -0.034470067518185966,
+                    -0.0074444647403731565
+                  ],
+                  [
+                    -0.03361823071786601,
+                    0.013833021160310289
+                  ]
+                ],
+                "C_sx_real": -0.0074444647403731565,
+                "C_sx_real_config_stderr": 0.0,
+                "C_sx_timeseries": [
+                  {
+                    "C_sx_imag": -0.03318515969908863,
+                    "C_sx_real": -0.0074444647403731565,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xs_imag": -0.03976214270907357,
+                "C_xs_imag_config_stderr": 0.0,
+                "C_xs_real": -0.03361823071786601,
+                "C_xs_real_config_stderr": 0.0,
+                "C_xs_timeseries": [
+                  {
+                    "C_xs_imag": -0.03976214270907357,
+                    "C_xs_real": -0.03361823071786601,
+                    "configuration_index": 0
+                  }
+                ],
+                "C_xx_imag": 0.0005669330527628413,
+                "C_xx_imag_config_stderr": 0.0,
+                "C_xx_real": 0.013833021160310289,
+                "C_xx_real_config_stderr": 0.0,
+                "C_xx_timeseries": [
+                  {
+                    "C_xx_imag": 0.0005669330527628413,
+                    "C_xx_real": 0.013833021160310289,
+                    "configuration_index": 0
+                  }
+                ],
+                "tau": 1
+              }
+            ]
+          }
+        },
+        "operator": {
+          "canonical_higgs_operator_identity_passed": false,
+          "certificate_path": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+          "diagonal_vertex": null,
+          "hunit_used_as_operator": false,
+          "identity_certificate": "same-surface source-vertex certificate only; canonical O_H identity absent",
+          "normalization_certificate": "source_norm_matched: on the cold Cl(3)/Z^3 surface Tr X^dagger X equals Tr I^dagger I over site-color degrees of freedom.  This is not scalar LSZ or canonical Higgs normalization.",
+          "operator_definition": "Gauge-covariant blocked-hypercube taste-radial source X=(X_1+X_2+X_3)/sqrt(3), where X_i flips the spatial parity bit inside each 2^3 Cl(3)/Z^3 block using the connecting SU(3) link.",
+          "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+          "sparse_vertex": {
+            "directions": [
+              1,
+              2,
+              3
+            ],
+            "gauge_covariant_links": true,
+            "kind": "taste_radial_spatial_hypercube_flip",
+            "normalization": "source_norm_matched",
+            "requires_even_spatial_l": true
+          },
+          "static_ew_algebra_used_as_operator": false
+        },
+        "physical_higgs_normalization": "not_derived",
+        "same_ensemble": true,
+        "same_source_coordinate": true,
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "strict_limit": "This default-off harness extension emits same-surface Euclidean-time scalar matrix rows for transfer-kernel/GEVP analysis.  It is not physical y_t evidence until canonical O_H or physical neutral transfer identity, pole/FV/IR/threshold authority, overlap normalization, and retained-route gates pass.",
+        "time_kernel_schema_version": "source_higgs_time_kernel_v1",
+        "two_source_taste_radial_row_aliases": {
+          "C_sx_aliases_C_sH_schema_field": true,
+          "C_xs_aliases_C_Hs_schema_field": true,
+          "C_xx_aliases_C_HH_schema_field": true,
+          "available": true,
+          "source_operator_symbol": "x",
+          "strict_limit": "C_sx/C_xs/C_xx aliases are second-source taste-radial time-kernel rows. They are not canonical-Higgs rows unless a separate canonical O_H/source-overlap bridge passes."
+        },
+        "used_as_physical_yukawa_readout": false
+      },
+      "spatial_L": 2,
+      "thermalization_sweeps": 1,
+      "time_L": 4,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+      "update_engine": "numba",
+      "wz_mass_response_analysis": {
+        "per_source_shift_rows": [],
+        "phase": "disabled",
+        "source_coordinate": "disabled",
+        "used_as_physical_yukawa_readout": false
+      }
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-05-07T07:55:38Z",
+    "evidence_scope": "reduced run is infrastructure evidence only",
+    "fh_lsz_measurement_policy": {
+      "non_selected_masses_scalar_fh_lsz_skipped": [
+        0.45,
+        1.05
+      ],
+      "normal_equation_cache": {
+        "key": "mass/source-shift value",
+        "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+        "scope": "per saved gauge configuration and smeared measurement gauge"
+      },
+      "physical_higgs_normalization": "not_derived",
+      "policy": "selected_mass_only_for_scalar_fh_lsz",
+      "scalar_source_response_selected_mass_only": false,
+      "scalar_two_point_lsz_selected_mass_only": false,
+      "selected_mass_index": 1,
+      "selected_mass_parameter": 0.75,
+      "source_higgs_cross_correlator_selected_mass_only": false,
+      "source_higgs_time_kernel_selected_mass_only": true,
+      "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+      "top_correlator_mass_scan_preserved": true,
+      "used_as_physical_yukawa_readout": false,
+      "wz_mass_response_smoke_selected_mass_only": false
+    },
+    "g_bare": 1.0,
+    "phase": "reduced_scope",
+    "run_control": {
+      "engine": "numba",
+      "fh_lsz_selected_mass_only": true,
+      "fh_lsz_selected_mass_parameter": 0.75,
+      "masses": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "measurement_separation_sweeps": 1,
+      "measurement_sweeps": 1,
+      "momentum_modes": [],
+      "normal_equation_cache_enabled": true,
+      "overrelaxation_sweeps": 1,
+      "pilot_targets": false,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_source_higgs_time_kernel_smoke_numba",
+      "production_targets": false,
+      "scalar_source_shifts": [],
+      "scalar_two_point_modes": [],
+      "scalar_two_point_noises": 0,
+      "seed": 20260430,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "source_higgs_cross_modes": [],
+      "source_higgs_cross_noises": 0,
+      "source_higgs_operator_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+      "source_higgs_time_kernel_max_tau": 1,
+      "source_higgs_time_kernel_modes": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "source_higgs_time_kernel_noises": 1,
+      "source_higgs_time_kernel_origin_count": 1,
+      "thermalization_sweeps": 1,
+      "volumes": "2x4",
+      "wz_boson_channel": "W",
+      "wz_mass_response_smoke": false,
+      "wz_source_shifts": []
+    },
+    "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scalar_source_response": {
+      "enabled": false,
+      "multi_tau_response_serialization": false,
+      "multi_tau_response_serialization_status": "disabled_no_scalar_source_shifts",
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
+      "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": false,
+      "selected_mass_parameter": 0.75,
+      "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+      "target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "used_as_physical_yukawa_readout": false
+    },
+    "scalar_two_point_lsz": {
+      "enabled": false,
+      "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
+      "noise_vectors_per_configuration": 0,
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
+      "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": false,
+      "selected_mass_parameter": 0.75,
+      "used_as_physical_yukawa_readout": false
+    },
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced_scope run",
+    "schur_kprime_kernel_rows": {
+      "enabled": false,
+      "finite_source_only_c_ss_is_not_schur_rows": true,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "neutral scalar kernel partition K=[[A,B^T],[B,C]] on the same Cl3/Z3 surface",
+        "A(pole) and A_prime(pole) for the source-pole coordinate",
+        "B(pole) and B_prime(pole) for source-orthogonal neutral mixing",
+        "C(pole), C_prime(pole), and C_inverse(pole) for the orthogonal neutral block",
+        "pole isolation, finite-volume, finite-spacing, model-class, and identity certificates"
+      ],
+      "strict_limit": "Same-source C_ss(q) rows and finite source-response slopes must not be treated as Schur A/B/C kernel rows or as a K-prime closure certificate.  The Schur sufficiency theorem requires explicit same-surface kernel partition rows and pole derivatives.",
+      "used_as_physical_yukawa_readout": false
+    },
+    "source_higgs_cross_correlator": {
+      "canonical_higgs_operator_realization": "absent",
+      "enabled": false,
+      "firewall": {
+        "used_alpha_lm_or_plaquette": false,
+        "used_hunit_matrix_element_readout": false,
+        "used_observed_targets_as_selectors": false,
+        "used_taste_radial_axis_as_canonical_oh": false,
+        "used_yt_ward_identity": false
+      },
+      "implementation_status": "absent_guarded",
+      "modes": [],
+      "noise_vectors_per_configuration": 0,
+      "operator": {
+        "canonical_higgs_operator_identity_passed": false,
+        "certificate_path": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+        "diagonal_vertex": null,
+        "hunit_used_as_operator": false,
+        "identity_certificate": "same-surface source-vertex certificate only; canonical O_H identity absent",
+        "normalization_certificate": "source_norm_matched: on the cold Cl(3)/Z^3 surface Tr X^dagger X equals Tr I^dagger I over site-color degrees of freedom.  This is not scalar LSZ or canonical Higgs normalization.",
+        "operator_definition": "Gauge-covariant blocked-hypercube taste-radial source X=(X_1+X_2+X_3)/sqrt(3), where X_i flips the spatial parity bit inside each 2^3 Cl(3)/Z^3 block using the connecting SU(3) link.",
+        "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+        "sparse_vertex": {
+          "directions": [
+            1,
+            2,
+            3
+          ],
+          "gauge_covariant_links": true,
+          "kind": "taste_radial_spatial_hypercube_flip",
+          "normalization": "source_norm_matched",
+          "requires_even_spatial_l": true
+        },
+        "static_ew_algebra_used_as_operator": false
+      },
+      "required_measurement_objects": [
+        "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+        "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+        "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+        "same-ensemble C_ss/C_sH/C_HH covariance"
+      ],
+      "selected_mass_only": false,
+      "selected_mass_parameter": 0.75,
+      "strict_limit": "Finite-mode source-Higgs rows are not pole residues and must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence until the source-Higgs certificate builder, Gram-purity postprocessor, and retained-route gates pass.",
+      "used_as_physical_yukawa_readout": false
+    },
+    "source_higgs_time_kernel": {
+      "canonical_higgs_operator_realization": "certificate_supplied_unratified",
+      "enabled": true,
+      "firewall": {
+        "used_alpha_lm_or_plaquette": false,
+        "used_hunit_matrix_element_readout": false,
+        "used_observed_targets_as_selectors": false,
+        "used_taste_radial_axis_as_canonical_oh": false,
+        "used_yt_ward_identity": false
+      },
+      "implementation_status": "same_surface_time_kernel_rows_enabled_support_only",
+      "max_tau": 1,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "noise_vectors_per_configuration": 1,
+      "operator": {
+        "canonical_higgs_operator_identity_passed": false,
+        "certificate_path": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+        "diagonal_vertex": null,
+        "hunit_used_as_operator": false,
+        "identity_certificate": "same-surface source-vertex certificate only; canonical O_H identity absent",
+        "normalization_certificate": "source_norm_matched: on the cold Cl(3)/Z^3 surface Tr X^dagger X equals Tr I^dagger I over site-color degrees of freedom.  This is not scalar LSZ or canonical Higgs normalization.",
+        "operator_definition": "Gauge-covariant blocked-hypercube taste-radial source X=(X_1+X_2+X_3)/sqrt(3), where X_i flips the spatial parity bit inside each 2^3 Cl(3)/Z^3 block using the connecting SU(3) link.",
+        "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+        "sparse_vertex": {
+          "directions": [
+            1,
+            2,
+            3
+          ],
+          "gauge_covariant_links": true,
+          "kind": "taste_radial_spatial_hypercube_flip",
+          "normalization": "source_norm_matched",
+          "requires_even_spatial_l": true
+        },
+        "static_ew_algebra_used_as_operator": false
+      },
+      "origin_count": 1,
+      "physical_higgs_normalization": "not_derived",
+      "required_measurement_objects": [
+        "same-surface Euclidean-time C_ss(t), C_sH(t), C_Hs(t), C_HH(t) rows",
+        "same-source covariance across matrix entries and time lags",
+        "canonical O_H or physical neutral transfer identity certificate",
+        "OS/GEVP pole extraction with FV/IR/threshold authority",
+        "source-overlap and canonical-Higgs normalization authority"
+      ],
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
+      "strict_limit": "Same-surface time-kernel rows are transfer-kernel/GEVP instrumentation only. They must not be treated as physical source-Higgs pole residues, kappa_s, or y_t evidence until canonical O_H or physical neutral transfer identity, pole/FV/IR/threshold authority, overlap normalization, and retained-route gates pass.",
+      "time_kernel_schema_version": "source_higgs_time_kernel_v1",
+      "used_as_physical_yukawa_readout": false
+    },
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false,
+    "wz_mass_response": {
+      "boson_channel": "W",
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "production_wz_rows_written": false,
+      "required_measurement_objects": [
+        "same-source W/Z correlator mass fits",
+        "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+        "covariance with dE_top/ds",
+        "sector-overlap and canonical-Higgs identity certificates"
+      ],
+      "same_source_identity_certified": false,
+      "smoke_schema_status": "disabled",
+      "source_shifts": [],
+      "strict_limit": "The optional W/Z smoke path emits synthetic positive correlators for schema validation only.  This QCD top-correlator harness still does not produce same-source EW W/Z mass-response evidence.  Static EW algebra, smoke slopes, or absent W/Z slopes must not be used as dM_W/ds physics evidence.",
+      "used_as_physical_yukawa_readout": false
+    }
+  },
+  "ratio_check": {
+    "g_s_lattice": null,
+    "g_s_source": "not_measured_reduced_scope",
+    "ratio": null,
+    "uncertainty": null,
+    "used_as_definition": false,
+    "y_t_lattice": 0.014483011632759666
+  },
+  "result": {
+    "m_t_pole_GeV": 2.5215442349316386,
+    "m_t_running_at_v_GeV": 2.5215442349316386,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": 0.5043088469863277,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.3782316352397458,
+      "matching": 0.25215442349316386,
+      "running_bridge": 0.25215442349316386,
+      "scale_setting": 0.12607721174658193,
+      "statistical": 2.9971311630469177e-06,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": -170.03845576506836,
+    "reduced_scope_delta_to_y_t_target": -0.9025169883672404,
+    "total_m_t_pole_uncertainty_GeV": 0.7351501635379851,
+    "total_y_t_uncertainty": 0.004222487245255272,
+    "uncertainties": {
+      "finite_spacing": 0.002896602326551933,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.0021724517449139497,
+      "matching": 0.0014483011632759665,
+      "running_bridge": 0.0014483011632759665,
+      "scale_setting": 0.0007241505816379832,
+      "statistical": 1.7214643668740487e-08,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": 0.014483011632759666
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}

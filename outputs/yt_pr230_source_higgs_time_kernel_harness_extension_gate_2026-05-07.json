@@ -1,0 +1,35 @@
+{
+  "actual_current_surface_status": "source-Higgs time-kernel harness support-only infrastructure; open physics closure",
+  "artifact": "yt_pr230_source_higgs_time_kernel_harness_extension_gate",
+  "bare_retained_allowed": false,
+  "checks": {
+    "FAIL": 0,
+    "PASS": 13
+  },
+  "contract": {
+    "adds_default_off_time_kernel_rows": true,
+    "performance_scope": "future FH/LSZ source-Higgs chunks avoid non-selected-mass time-kernel solves",
+    "preserves_three_mass_scan": true,
+    "production_evidence": false,
+    "schema_version": "source_higgs_time_kernel_v1",
+    "selected_mass_only": true
+  },
+  "created_utc": "2026-05-07T08:05:56Z",
+  "firewall": {
+    "sets_Z_match_to_one": false,
+    "sets_c2_to_one": false,
+    "sets_kappa_s_to_one": false,
+    "treats_taste_radial_x_as_canonical_O_H": false,
+    "treats_time_kernel_smoke_as_physics_evidence": false,
+    "uses_H_unit_matrix_element_readout": false,
+    "uses_alpha_LM_plaquette_or_u0_as_proof_input": false,
+    "uses_observed_top_mass_or_y_t_selector": false,
+    "uses_reduced_pilot_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "physical_higgs_normalization": "not_derived",
+  "proposal_allowed": false,
+  "smoke_artifact": "outputs/yt_pr230_source_higgs_time_kernel_harness_smoke_numba_2026-05-07.json",
+  "strict_limit": "This gate certifies harness/schema support only.  The taste-radial second-source smoke row is not canonical O_H, not kappa_s, and not physical y_t evidence.",
+  "used_as_physical_yukawa_readout": false
+}

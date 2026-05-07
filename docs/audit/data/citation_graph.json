@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T07:44:20.827871+00:00",
+  "generated_at": "2026-05-07T08:04:42.234213+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42818,6 +42818,16 @@
       "runner_path": "scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py",
       "title": "PR #230 Source-Higgs Pole-Row Acceptance Contract Note"
     },
+    "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07": {
+      "claim_id": "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "support-only infrastructure; open physics closure.",
+      "deps": [],
+      "note_hash": "4f214b42441f07186683e1077915e290db815ae10d605f33ac2d7fc5334417b8",
+      "path": "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_HARNESS_EXTENSION_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR #230 Source-Higgs Time-Kernel Harness Extension"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "claim_id": "yt_pr230_source_overlap_route_selection_note_2026-05-03",
       "current_status": "bounded",
@@ -45868,6 +45878,7 @@
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
     "yt_pr230_source_higgs_overlap_kappa_contract_note_2026-05-06",
     "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
+    "yt_pr230_source_higgs_time_kernel_harness_extension_note_2026-05-07",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
     "yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_note_2026-05-07",
@@ -46016,16 +46027,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1124,
-    "node_count": 2077,
-    "root_count": 1590,
+    "leaf_count": 1125,
+    "node_count": 2078,
+    "root_count": 1591,
     "runners_with_path": 1571,
     "status_counts": {
       "bounded": 570,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 450,
+      "support": 451,
       "unknown": 580
     }
   }

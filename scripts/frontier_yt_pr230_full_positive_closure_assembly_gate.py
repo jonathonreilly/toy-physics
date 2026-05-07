@@ -137,6 +137,7 @@ PARENTS = {
     "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
     "pr230_same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "pr230_os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
+    "pr230_source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1410,6 +1411,26 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_time_kernel_harness_support_only = (
+        "source-Higgs time-kernel harness"
+        in statuses["pr230_source_higgs_time_kernel_harness_extension_gate"]
+        and certs["pr230_source_higgs_time_kernel_harness_extension_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_source_higgs_time_kernel_harness_extension_gate"].get(
+            "contract", {}
+        ).get("adds_default_off_time_kernel_rows")
+        is True
+        and certs["pr230_source_higgs_time_kernel_harness_extension_gate"].get(
+            "contract", {}
+        ).get("selected_mass_only")
+        is True
+        and certs["pr230_source_higgs_time_kernel_harness_extension_gate"].get(
+            "used_as_physical_yukawa_readout"
+        )
+        is False
+    )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
@@ -2258,6 +2279,11 @@ def main() -> int:
         "os-transfer-kernel-artifact-absent",
         os_transfer_kernel_artifact_absent,
         statuses["pr230_os_transfer_kernel_artifact_gate"],
+    )
+    report(
+        "source-higgs-time-kernel-harness-support-only",
+        source_higgs_time_kernel_harness_support_only,
+        statuses["pr230_source_higgs_time_kernel_harness_extension_gate"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",
@@ -3213,6 +3239,7 @@ def main() -> int:
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
+        "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "

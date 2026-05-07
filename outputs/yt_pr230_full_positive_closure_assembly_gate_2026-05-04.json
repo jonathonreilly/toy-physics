@@ -190,6 +190,7 @@
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "pr230_source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
@@ -352,6 +353,7 @@
     "pr230_source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "pr230_source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
     "pr230_source_higgs_pole_row_acceptance_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "pr230_source_higgs_time_kernel_harness_extension_gate": "source-Higgs time-kernel harness support-only infrastructure; open physics closure",
     "pr230_source_sector_pattern_transfer_gate": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure",
     "pr230_strict_scalar_lsz_moment_fv_authority_gate": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
     "pr230_taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
@@ -411,7 +413,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 148,
+  "pass_count": 149,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
@@ -559,6 +561,7 @@
   "source_coordinate_transport_completion_blocks": true,
   "source_higgs_overlap_kappa_contract_support_not_closure": true,
   "source_higgs_pole_row_contract_open": true,
+  "source_higgs_time_kernel_harness_support_only": true,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not package or certify chunk outputs",

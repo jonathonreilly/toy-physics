@@ -1,5 +1,43 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 source-Higgs time-kernel harness extension:
+
+- Added default-off scalar time-kernel instrumentation to
+  `scripts/yt_direct_lattice_correlator_production.py`.  The harness keeps the
+  three-mass top correlator scan and only computes the new source-Higgs
+  time-kernel rows for the selected FH/LSZ mass parameter `m=0.75`.
+- New CLI controls:
+  `--source-higgs-time-kernel-modes`,
+  `--source-higgs-time-kernel-noises`,
+  `--source-higgs-time-kernel-max-tau`, and
+  `--source-higgs-time-kernel-origin-count`.  The path remains disabled unless
+  modes, positive noise count, and a source-Higgs operator certificate are
+  supplied.
+- Numba smoke:
+  `outputs/yt_pr230_source_higgs_time_kernel_harness_smoke_numba_2026-05-07.json`
+  preserves `rng_seed_control.seed_control_version = numba_gauge_seed_v1`,
+  emits `source_higgs_time_kernel_v1`, `C_matrix_by_t`, and
+  `C_ss/C_sH/C_Hs/C_HH(t)` rows plus taste-radial
+  `C_sx/C_xs/C_xx(t)` aliases.
+- Added support gate/note:
+  `scripts/frontier_yt_pr230_source_higgs_time_kernel_harness_extension_gate.py`,
+  `docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_HARNESS_EXTENSION_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json`.
+- Validation: time-kernel harness gate `PASS=13 FAIL=0`; assumption/import
+  stress `PASS=89 FAIL=0`; campaign status `PASS=336 FAIL=0`; full assembly
+  `PASS=149 FAIL=0`; retained-route `PASS=303 FAIL=0`; completion audit
+  `PASS=58 FAIL=0`.
+- Claim boundary: support-only infrastructure.  The smoke uses the current
+  taste-radial second-source certificate, which has
+  `canonical_higgs_operator_identity_passed=false`; physical Higgs
+  normalization is still `not_derived`, and no physical `y_t` readout or
+  retained/proposed-retained closure is authorized.
+- Next exact artifact: production same-surface scalar time-lag rows paired
+  with certified canonical `O_H` or a physical neutral/W/Z identity, then
+  OS/GEVP pole extraction, FV/IR/threshold authority, source-overlap
+  normalization, and retained-route approval.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks031-032 package:
 
 - Packaged chunks031-032 after completed root JSONs and per-volume artifacts

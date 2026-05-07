@@ -6057,3 +6057,29 @@ same-surface Euclidean-time `C_ij(t)` transfer kernels.  The exact next
 artifact is scalar time-lag `C_ss(t)/C_sH(t)/C_HH(t)` for certified canonical
 `O_H`, or `C_ss(t)/C_sx(t)/C_xx(t)` plus a same-surface identity theorem.
 No retained/proposed-retained wording is allowed.
+
+## 2026-05-07 - Source-Higgs Time-Kernel Harness Extension
+
+Review stance: support-only infrastructure / no closure.
+
+- Updated `scripts/yt_direct_lattice_correlator_production.py` with a
+  default-off selected-mass-only source-Higgs time-kernel path and normal-cache
+  reuse.
+- Added
+  `scripts/frontier_yt_pr230_source_higgs_time_kernel_harness_extension_gate.py`.
+- Added
+  `docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_HARNESS_EXTENSION_NOTE_2026-05-07.md`.
+- Added
+  `outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json`
+  and the numba smoke artifact.
+- Wired the support gate into assumption/import stress, campaign status, full
+  positive assembly, retained-route, and completion-audit certificates.
+- Validation: harness gate `PASS=13 FAIL=0`, assumption stress
+  `PASS=89 FAIL=0`, campaign status `PASS=336 FAIL=0`, full assembly
+  `PASS=149 FAIL=0`, retained-route `PASS=303 FAIL=0`, completion audit
+  `PASS=58 FAIL=0`.
+
+Disposition: support-only.  The new schema is the right row shape for a future
+OS/GEVP artifact, but the current smoke uses taste-radial `x`, not certified
+canonical `O_H`; no `kappa_s`, physical `y_t`, retained, or proposed-retained
+claim is allowed.
