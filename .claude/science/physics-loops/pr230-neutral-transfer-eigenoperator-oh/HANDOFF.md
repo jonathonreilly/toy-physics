@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-07 08:45 EDT
+Checkpoint: 2026-05-07 post-block04
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -89,16 +89,44 @@ were checked locally.  No independent audit verdict was applied.
 
 ## Next Exact Action
 
-Pivot to the W/Z accepted-action response route at the action-root level:
+## Block04 Result
+
+Created `YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY`.
+
+This block follows the block03 instruction to attack the W/Z accepted-action
+root at the adopted-radial-action level.  It proves the current same-source
+EW/Higgs ansatz cannot be adopted as the accepted radial-spurion action while
+it keeps the existing additive top FH/LSZ source under the same coordinate.
+The derivative is
 
 ```text
-attack current same-source sector-overlap / adopted radial action
+dS/ds = O_top_additive + O_H,
+```
+
+not canonical `O_H` alone.  The W/Z response ratio recovers `y_t` in the pure
+radial-spurion witness but varies when an independent additive top slope is
+present.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
+python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+## Next Exact Action
+
+The W/Z accepted-action root now has two precise repair targets:
+
+```text
+replace the current additive top source with a true same-surface radial-spurion action
 ```
 
 or
 
 ```text
-produce a W/Z correlator mass-fit path certificate
+measure/subtract the independent additive top component with row-level authority
 ```
 
 Do not claim physical W/Z response until accepted action, W/Z response rows,

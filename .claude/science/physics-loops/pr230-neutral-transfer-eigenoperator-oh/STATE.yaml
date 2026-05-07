@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07T08:45:00-04:00"
-branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
+checkpoint_time: "2026-05-07 post-block04"
+branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 3
-active_science_block: block03_canonical_oh_accepted_action_stretch_attempt
-active_route: canonical O_H / accepted EW-Higgs action root stretch attempt
+cycle_count: 4
+active_science_block: block04_additive_source_radial_spurion_incompatibility
+active_route: W/Z accepted-action root / radial-spurion repair
 target_status: best-honest-status
-actual_current_surface_status: exact negative boundary / canonical O_H accepted-action root not derivable from the current PR230 support stack
-conditional_surface_status: conditional-support if a future same-surface canonical O_H identity, accepted EW/Higgs action, or W/Z action-root certificate lands
+actual_current_surface_status: exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure; current surface remains open
+conditional_surface_status: exact-support for future accepted action if the independent additive top source is removed or measured/subtracted with row authority
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block03 checks five current attack frames and none closes the common root: canonical O_H candidate absent, degree-one premise unproved, SM/EW one-Higgs imports rejected, C_sx/C_xx promotion forbidden, and W/Z accepted-action root vertices still open."
+proposal_allowed_reason: "Block04 shows the current same-source ansatz differentiates to O_top_additive + O_H, not canonical O_H alone. The current surface still lacks a replacement radial-spurion action, additive-source subtraction rows, canonical O_H pole rows, W/Z response rows, matched covariance, strict g2, and aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Retire the W/Z accepted-action root without shortcut imports: current same-source sector-overlap/adopted radial action or production W/Z correlator mass-fit path; canonical O_H remains a shared blocker and must not be assumed."
+hard_residual: "Repair the W/Z accepted-action root by either replacing the additive top source with a true radial-spurion action or measuring/subtracting the additive top component; canonical O_H remains a shared blocker and must not be assumed."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface two-source taste-radial action vertex as support only"
@@ -34,8 +34,11 @@ forbidden_imports:
   - "static EW algebra, support contracts, formal GEVP smoke, or response-ratio algebra as accepted physical action/response"
 files_touched:
   - scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py
+  - scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
   - docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md
+  - docs/YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY_NOTE_2026-05-07.md
   - outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json
+  - outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -70,7 +73,9 @@ commands_run:
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=308 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=341 FAIL=0"
   - "git diff --check # clean"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py"
+  - "python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py # PASS=15 FAIL=0"
 review_disposition: pass_exact_negative_boundary
 pr_status: "direct integration into open draft PR #230 landing path; standalone block03 PR not opened unless PR230 integration fails"
-next_exact_action: "Pivot to the W/Z accepted-action response route at the action-root level: attack current same-source sector-overlap/adopted radial action or production W/Z correlator mass-fit path, while keeping canonical O_H as an unassumed shared blocker."
+next_exact_action: "Commit/push block04 to draft PR230, then attack replacement radial-spurion action or additive-source subtraction rows; W/Z mass-fit path remains infrastructure only until accepted action and strict g2 exist."
 stop_condition: "Yield for outer supervisor continuation after this coherent checkpoint push; no-go/open status is not campaign completion."

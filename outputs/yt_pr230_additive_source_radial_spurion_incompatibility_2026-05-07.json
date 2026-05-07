@@ -1,0 +1,179 @@
+{
+  "accepted_action_repair_options": [
+    {
+      "rank": 1,
+      "repair": "replace the current additive top source with a true radial-spurion action",
+      "required_payload": [
+        "same-surface EW/Higgs action certificate",
+        "top Yukawa term whose mass branch is m_t(s)=y_t v(s)/sqrt(2)",
+        "no independent s * tbar t additive source",
+        "W/Z mass-fit rows or source-Higgs C_sH/C_HH pole rows"
+      ],
+      "status": "open"
+    },
+    {
+      "rank": 2,
+      "repair": "measure and subtract the independent additive top component",
+      "required_payload": [
+        "separate source-coordinate Jacobian rows for additive top and radial Higgs directions",
+        "matched covariance of the subtraction",
+        "strict non-observed g2 if using W/Z response",
+        "source-Higgs Gram or W/Z sector-overlap authority"
+      ],
+      "status": "open"
+    },
+    {
+      "rank": 3,
+      "repair": "bypass W/Z response with direct canonical O_H pole rows",
+      "required_payload": [
+        "same-surface canonical O_H certificate",
+        "production C_ss/C_sH/C_HH pole rows",
+        "Gram purity or orthogonal-neutral exclusion",
+        "FV/IR/model-class and scalar-LSZ authority"
+      ],
+      "status": "open"
+    }
+  ],
+  "actual_current_surface_status": "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
+  "additive_source_radial_spurion_incompatibility_passed": true,
+  "additive_top_counterexample_rows": [
+    {
+      "additive_top_slope": -0.4,
+      "dM_W_ds": 0.44099999999999995,
+      "dm_top_ds": 0.5107535341682732,
+      "dv_ds": 1.4,
+      "input_g2": 0.63,
+      "input_y_t": 0.92,
+      "yt_from_topW_if_unsubtracted": 0.5159389821791157
+    },
+    {
+      "additive_top_slope": -0.1,
+      "dM_W_ds": 0.44099999999999995,
+      "dm_top_ds": 0.8107535341682732,
+      "dv_ds": 1.4,
+      "input_g2": 0.63,
+      "input_y_t": 0.92,
+      "yt_from_topW_if_unsubtracted": 0.8189847455447791
+    },
+    {
+      "additive_top_slope": 0.0,
+      "dM_W_ds": 0.44099999999999995,
+      "dm_top_ds": 0.9107535341682732,
+      "dv_ds": 1.4,
+      "input_g2": 0.63,
+      "input_y_t": 0.92,
+      "yt_from_topW_if_unsubtracted": 0.92
+    },
+    {
+      "additive_top_slope": 0.2,
+      "dM_W_ds": 0.44099999999999995,
+      "dm_top_ds": 1.1107535341682733,
+      "dv_ds": 1.4,
+      "input_g2": 0.63,
+      "input_y_t": 0.92,
+      "yt_from_topW_if_unsubtracted": 1.1220305089104423
+    },
+    {
+      "additive_top_slope": 0.5,
+      "dM_W_ds": 0.44099999999999995,
+      "dm_top_ds": 1.4107535341682733,
+      "dv_ds": 1.4,
+      "input_g2": 0.63,
+      "input_y_t": 0.92,
+      "yt_from_topW_if_unsubtracted": 1.4250762722761057
+    }
+  ],
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "audit_status_authority": "independent audit lane only",
+  "bare_retained_allowed": false,
+  "claim_type": "open_gate",
+  "conditional_surface_status": "exact-support for future accepted action: closure may proceed if the action either removes the independent additive top source or measures/subtracts it with same-surface row authority",
+  "derivative_decomposition": {
+    "contains_current_additive_top_source": true,
+    "contains_higgs_composite_source": true,
+    "dS_ds_equals_canonical_OH_only": false,
+    "dS_ds_if_both_present": "O_top_additive + O_H",
+    "obstruction": "A same source label does not make dS/ds canonical O_H when the current additive top source remains in the same derivative.",
+    "same_coordinate": true
+  },
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "renamed_C_sx_C_xx_as_C_sH_C_HH": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_observed_wz_masses_or_g2": false,
+    "used_yt_ward_identity": false,
+    "wrote_accepted_action_certificate": false
+  },
+  "hypothetical_axiom_status": null,
+  "next_exact_action": "Try a replacement-action certificate in which s is a true radial spurion for the top Yukawa branch, or build row-level subtraction authority for the additive top component.  Direct ansatz adoption with both O_top_additive and O_H under the same derivative is blocked.",
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_oh_wz_common_action_cut": "outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
+    "same_source_sector_overlap_obstruction": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "source_higgs_pole_row_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "wz_response_ratio_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
+    "wz_same_source_action_minimal_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
+    "wz_same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_oh_wz_common_action_cut": "exact support/boundary / canonical O_H and WZ accepted-action common-cut certificate; current surface remains open",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+    "radial_spurion_sector_overlap_theorem": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+    "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+    "same_source_sector_overlap_obstruction": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "wz_response_ratio_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
+    "wz_same_source_action_minimal_cut": "exact negative boundary / WZ accepted same-source action minimal certificate cut remains open",
+    "wz_same_source_ew_action_builder": "open / same-source EW action certificate absent"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current PR230 same-source ansatz keeps the additive top source and adds an O_H source under the same coordinate.  The resulting dS/ds is O_top_additive + O_H, not canonical O_H alone, and the top/W response ratio is contaminated unless the additive top component is removed or separately measured.",
+  "pure_radial_response_witness_rows": [
+    {
+      "additive_top_slope": 0.0,
+      "dM_W_ds": 0.075,
+      "dm_top_ds": 0.1237436867076458,
+      "dv_ds": 0.25,
+      "input_g2": 0.6,
+      "input_y_t": 0.7,
+      "yt_from_topW": 0.6999999999999998
+    },
+    {
+      "additive_top_slope": 0.0,
+      "dM_W_ds": 0.7000000000000001,
+      "dm_top_ds": 1.3611805537841042,
+      "dv_ds": 1.75,
+      "input_g2": 0.8,
+      "input_y_t": 1.1,
+      "yt_from_topW": 1.1
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not write or validate an accepted EW/Higgs action certificate",
+    "does not identify the current additive top source with canonical O_H",
+    "does not relabel C_sx/C_xx as C_sH/C_HH",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, or unit normalization conventions",
+    "does not touch the live chunk worker"
+  ]
+}
