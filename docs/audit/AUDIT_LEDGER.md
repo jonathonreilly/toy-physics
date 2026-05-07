@@ -18,13 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 61 |
+| **retained** | 62 |
 | **retained_no_go** | 121 |
 | **retained_bounded** | 225 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
 | unaudited | 807 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 28 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -172,6 +169,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_lepton_synthesis_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
@@ -4586,6 +4584,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** At second order, the return operator on T_1 decomposes exactly as diag(1,0,0) from O_0 plus diag(0,1,1) from T_2, with total I_3.  _(class `A`)_
 - **chain closes:** True — The bounded operator-geometry claim closes by direct finite matrix algebra over the stated basis, sectors, projectors, and Gamma_1. The note explicitly excludes the physical neutrino Dirac Yukawa theorem, so the open chirality, full C^16 embedding, operator-chain, and normalization bridges are outside the audited clean scope.
 - **rationale:** The runner constructs the 8-dimensional basis, Gamma_1, sector projectors, and projected return operators, then verifies the six load-bearing finite algebraic statements with completed cached output: 6 PASS, 0 FAIL. The claim is not a neutrino Yukawa derivation and does not claim a physical Dirac mass, sector normalization, or full chiral embedding closure. Within the bounded scope of exact weak-axis operator geometry, no hidden comparator, tuned numerical input, renaming, or unrun compute is load-bearing.
+- **auditor confidence:** high
+
+### `dm_neutrino_dirac_bridge_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact finite-algebra Dirac-structure claim for the explicit Cl(4)/C^16 Gamma_i and gamma_5 packet: M(phi)=sum_i phi_i Gamma_i is chiral off-diagonal, has zero same-chirality blocks, reduces to Gamma_i at axis inputs, and excludes Xi_5 as a direct chiral off-diagonal Yukawa surface.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-dm-neutrino-dirac-bridge-audit-2-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** {M(phi), gamma_5} = 0, hence P_L M(phi) P_L = P_R M(phi) P_R = 0, and at axis inputs M(e_i) = Gamma_i while Xi_5 is not chiral off-diagonal.  _(class `A`)_
+- **chain closes:** True — The narrowed algebraic claim closes from the explicit Gamma_i/gamma_5 packet and retained_bounded one-hop weak-vector authority. The Higgs-family origin, selector derivation, chirality-framework derivation, and weak-axis convention are not needed for this narrowed algebraic scope; they would be load-bearing only for the broader physical operator-selection narrative.
+- **rationale:** The in-scope theorem is finite matrix algebra, not a definition-as-derivation: after the matrices and projectors are fixed, anticommutation and same-chirality block vanishing follow directly. The primary runner completed with 28 PASS and 0 FAIL; its selector grid check is not an exact proof of the selector theorem, but that selector theorem is explicitly admitted-context and outside this audited scope. The audit companion source Parts 1-7 are valid exact SymPy checks for the algebraic core; Part 8 reads the audit ledger and was neither run nor relied on.
 - **auditor confidence:** high
 
 ### `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16`
