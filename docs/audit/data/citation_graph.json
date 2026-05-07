@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T18:08:17.753043+00:00",
+  "generated_at": "2026-05-07T18:17:25.684474+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42228,7 +42228,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / additive-top row artifact; closure not authorized.",
       "deps": [],
-      "note_hash": "6e6ee3068c65d9505462ea1c6e27f4016aaab232297c1be6ff2851ee41c41c55",
+      "note_hash": "94fc6bd3b2f3124f5074db5225a9a5f3a695ae905fcc6fabad527e6cd8aecb95",
       "path": "docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md",
       "runner_path": null,
       "title": "PR230 Additive-Top Jacobian Row Builder"

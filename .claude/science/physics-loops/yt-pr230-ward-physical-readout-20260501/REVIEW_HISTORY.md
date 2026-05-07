@@ -1,5 +1,27 @@
 # Review History
 
+## 2026-05-07 - Additive-Top Jacobian Current-Prefix Refresh
+
+Review stance: bounded support / infrastructure-adjacent row refresh, no
+closure.
+
+- Updated the additive-top Jacobian row builder to consume completed chunk IDs
+  from the committed package audit instead of a stale chunks001-046 hard limit.
+- The refreshed artifact consumes chunks001-052 and excludes active
+  chunks053-054.  It records 52 chunk-level three-mass
+  `dE_top/dm_bare` rows, `A_top` weighted mean `1.3263445336471822`, weighted
+  stderr `0.0004504696260217704`, and diagnostic `T_total-A_top` median
+  `0.09907662065195189`.
+- Validation: py_compile OK; additive row builder `PASS=12 FAIL=0`; additive
+  subtraction contract `PASS=22 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: support only.  These rows are not per-configuration matched
+covariance, not W/Z response rows, not strict `g2`, not canonical `O_H`, not
+source-Higgs pole rows, and not retained/proposed-retained closure.
+
 ## 2026-05-07 - Fresh-Artifact Intake Current-Head Refresh
 
 Review stance: open / committed-head intake checkpoint, no closure.

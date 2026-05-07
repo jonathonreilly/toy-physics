@@ -31,7 +31,6 @@ INPUT_GLOB = (
     / "yt_pr230_two_source_taste_radial_rows"
     / "yt_pr230_two_source_taste_radial_rows_L12_T24_chunk*_2026-05-06.json"
 )
-MAX_PACKAGED_CHUNK = 46
 OUTPUT = ROOT / "outputs" / "yt_pr230_additive_top_jacobian_rows_2026-05-07.json"
 
 PARENTS = {
@@ -148,11 +147,24 @@ def weighted_mean(rows: list[dict[str, Any]], value_key: str, err_key: str) -> d
     return {"mean": mean, "stderr": math.sqrt(1.0 / norm)}
 
 
-def extract_rows() -> tuple[list[dict[str, Any]], list[str]]:
+def package_chunk_ids() -> tuple[set[int], set[int]]:
+    package = load_json(ROOT / PARENTS["two_source_chunk_package"])
+    completed = package.get("completed_chunk_ids", [])
+    active = package.get("active_chunk_ids", [])
+    completed_ids = {int(chunk) for chunk in completed if isinstance(chunk, int)}
+    active_ids = {int(chunk) for chunk in active if isinstance(chunk, int)}
+    if not completed_ids:
+        # Historical fallback for older package certificates.
+        completed_ids = set(range(1, 47))
+    return completed_ids, active_ids
+
+
+def extract_rows() -> tuple[list[dict[str, Any]], list[str], set[int], set[int]]:
+    completed_ids, active_ids = package_chunk_ids()
     row_paths = [
         Path(path)
         for path in glob.glob(str(INPUT_GLOB))
-        if chunk_id(Path(path)) <= MAX_PACKAGED_CHUNK
+        if chunk_id(Path(path)) in completed_ids and chunk_id(Path(path)) not in active_ids
     ]
     rows: list[dict[str, Any]] = []
     failures: list[str] = []
@@ -209,7 +221,7 @@ def extract_rows() -> tuple[list[dict[str, Any]], list[str]]:
             rows.append(row)
         except Exception as exc:  # pragma: no cover - certificate diagnostics
             failures.append(f"{rel(path)}: {exc}")
-    return rows, failures
+    return rows, failures, completed_ids, active_ids
 
 
 def contiguous_missing(chunks: list[int]) -> list[int]:
@@ -230,7 +242,7 @@ def main() -> int:
     print("PR #230 additive-top Jacobian row builder")
     print("=" * 72)
 
-    rows, failures = extract_rows()
+    rows, failures, completed_ids, active_ids = extract_rows()
     chunks = [int(row["chunk"]) for row in rows]
     missing_contiguous = contiguous_missing(chunks)
     finite_rows = [
@@ -252,7 +264,11 @@ def main() -> int:
     selected_mass_ok = selected_masses == {0.75}
     bracket_ok = all(row["mass_scan_bracket_masses_lat"] == [0.45, 0.75, 1.05] for row in rows)
     cg_ok = finite(max_residual) and max_residual < 1.0e-7
-    row_count_ok = len(rows) >= 46 and not missing_contiguous
+    row_count_ok = (
+        len(rows) == len(completed_ids)
+        and set(chunks) == completed_ids
+        and not missing_contiguous
+    )
     support_rows_passed = all(
         [
             production_metadata_ok,
@@ -276,7 +292,11 @@ def main() -> int:
     report("strict-additive-top-jacobian-not-claimed", not strict_rows_passed, "no per-configuration mass-scan covariance")
     report("proposal-not-authorized", True, "proposal_allowed=false")
     report("forbidden-firewall-clean", True, "no observed target, H_unit, Ward, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or g2=1")
-    report("live-worker-not-touched", True, f"read-only over packaged chunks001-{MAX_PACKAGED_CHUNK:03d}")
+    report(
+        "live-worker-not-touched",
+        True,
+        f"read-only over packaged chunks001-{max(completed_ids):03d}; active={sorted(active_ids)}",
+    )
 
     pass_count = PASS_COUNT
     fail_count = FAIL_COUNT
@@ -308,11 +328,12 @@ def main() -> int:
         "row_schema_version": "pr230_additive_top_jacobian_rows_v1",
         "row_source": {
             "input_glob": rel(INPUT_GLOB),
-            "max_packaged_chunk_consumed": MAX_PACKAGED_CHUNK,
+            "completed_chunk_ids_from_package_audit": sorted(completed_ids),
+            "active_chunk_ids_excluded": sorted(active_ids),
+            "max_packaged_chunk_consumed": max(completed_ids) if completed_ids else None,
             "packaged_chunk_count": len(rows),
             "chunks": chunks,
             "missing_contiguous_chunks": missing_contiguous,
-            "excluded_live_chunks": [47, 48],
             "read_only": True,
         },
         "aggregate_statistics": {
@@ -346,7 +367,7 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, or observed W/Z/g2",
             "does not set kappa_s=1, c2=1, Z_match=1, or g2=1",
             "does not infer matched covariance from chunk-level row errors",
-            "does not touch chunks047-048 or any live worker",
+            "does not touch active chunks or any live worker",
         ],
         "exact_next_action": (
             "Build matched same-source W/Z response rows and per-configuration "

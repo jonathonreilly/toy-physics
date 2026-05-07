@@ -5,7 +5,7 @@
     "path": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
     "present": true,
     "proposal_allowed": false,
-    "row_count": 46,
+    "row_count": 52,
     "status": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
     "strict": false
   },

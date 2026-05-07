@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-07 additive-top Jacobian current-prefix refresh: the additive-top
+builder now tracks the current committed package audit and consumes
+chunks001-052, with active chunks053-054 excluded.  This improves freshness of
+the future W/Z subtraction support surface but does not change the closure
+ranking.  The additive rows are chunk-level `dE_top/dm_bare` support only;
+they are not matched covariance, same-source W/Z rows, strict non-observed
+`g2`, canonical `O_H`, source-Higgs pole rows, scalar-LSZ authority, or
+closure.  Highest-value next action remains the same-surface accepted
+FMS/EW-Higgs action plus canonical `O_H` certificate; the first fallback is a
+real W/Z physical-response packet with accepted action, per-configuration
+covariance, and strict non-observed `g2`.
+
 2026-05-07 fresh-artifact intake current-head refresh: committed PR head
 `0f2b542dc978feb53477a6dba5f3c5a70a0dccd4` has been rechecked after the
 neutral H3/H4 aperture refresh.  The intake consumes the chunks001-052 prefix

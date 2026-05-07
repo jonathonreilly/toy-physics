@@ -1,5 +1,42 @@
 # Claim Status Certificate
 
+Additive-top Jacobian current-prefix refresh:
+
+```text
+actual_current_surface_status: bounded-support / additive-top chunk-level Jacobian rows refreshed to chunks001-052; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The refreshed additive-top rows consume the committed chunks001-052 package
+prefix and explicitly exclude active chunks053-054.  They preserve a
+chunk-level three-mass `dE_top/dm_bare` Jacobian useful for future W/Z
+subtraction design, but they do not supply per-configuration matched
+covariance, same-source W/Z rows, strict non-observed `g2`, canonical `O_H`,
+source-Higgs `C_ss/C_sH/C_HH` pole rows, scalar-LSZ/FV authority, or any
+retained/proposed-retained authorization.
+
 Fresh-artifact intake current-head refresh:
 
 ```text

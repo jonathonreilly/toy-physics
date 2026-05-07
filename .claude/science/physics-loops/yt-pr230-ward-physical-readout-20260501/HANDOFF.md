@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 additive-top Jacobian current-prefix refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`
+  so it reads completed chunk IDs from the committed two-source chunk-package
+  audit instead of a stale hard-coded chunks001-046 limit.
+- Refreshed `docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md`
+  and `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json`.
+- Result: additive-top rows now cover chunks001-052; active chunks053-054 are
+  explicitly excluded as run-control-only state.  The 52-row packet has
+  `A_top` weighted mean `1.3263445336471822`, weighted stderr
+  `0.0004504696260217704`, and diagnostic `T_total-A_top` median
+  `0.09907662065195189`.
+- Validation: additive row builder `PASS=12 FAIL=0`; additive subtraction
+  contract `PASS=22 FAIL=0`; assumption/import stress `PASS=104 FAIL=0`;
+  campaign status `PASS=356 FAIL=0`; full assembly `PASS=163 FAIL=0`;
+  retained-route `PASS=317 FAIL=0`; completion audit `PASS=72 FAIL=0`.
+- Claim boundary: bounded support only.  This is not per-configuration matched
+  covariance, not W/Z response, not strict non-observed `g2`, not canonical
+  `O_H`/source-Higgs pole rows, not scalar-LSZ/FV authority, and not retained
+  or `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 fresh-artifact intake current-head refresh:
 
 - Refreshed `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json`

@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Additive-top Jacobian rows are not W/Z subtraction closure
+
+The 2026-05-07 additive-top Jacobian refresh updates the support artifact from
+the stale chunks001-046 hard limit to the committed chunks001-052 package
+prefix.  Active chunks053-054 are explicitly excluded.  The result is a useful
+52-row chunk-level `dE_top/dm_bare` support packet for future same-source W/Z
+subtraction design, not a strict physical response certificate.
+
+Do not treat the refreshed additive rows, the diagnostic `T_total-A_top`, or
+the chunk-level covariance as per-configuration matched covariance, W/Z
+response rows, strict non-observed `g2`, canonical `O_H`, source-Higgs pole
+rows, scalar-LSZ/FV authority, retained, or proposed-retained closure.  Reopen
+requires either a same-surface canonical `O_H`/source-Higgs pole-row packet or
+a genuine W/Z accepted-action response packet with matched covariance and
+strict `g2` authority.
+
 ## Fresh-artifact intake at current head still finds no closure packet
 
 The refreshed 2026-05-07 fresh-artifact intake checks committed PR head
