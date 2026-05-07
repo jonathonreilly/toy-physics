@@ -1,5 +1,37 @@
 # Claim Status Certificate
 
+Post-FMS source-overlap necessity current-prefix refresh:
+
+```text
+actual_current_surface_status: exact negative boundary / post-FMS source-overlap not derivable from chunks001-052 source-only or C_sx/C_xx rows
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The refreshed gate consumes chunks001-052 through the package/combiner and
+source-Higgs bridge-aperture certificates.  It still blocks source-overlap
+inference: `Res C_sH`, source-Higgs Gram purity, and orthogonal-neutral top
+couplings remain unconstrained by current source-only and taste-radial
+`C_sx/C_xx` rows.  No retained/proposed-retained authorization is present.
+
 Clean source-Higgs selector current-prefix refresh:
 
 ```text

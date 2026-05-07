@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 post-FMS source-overlap necessity current-prefix refresh: the
+post-FMS gate now consumes the current chunks001-052
+package/combiner/bridge-aperture surface.  The negative boundary survives the
+fresh evidence: FMS composite support plus source-only LSZ and taste-radial
+`C_sx/C_xx` rows do not determine `Res C_sH`, do not prove source-Higgs Gram
+purity, and do not exclude orthogonal-neutral top couplings.  Highest-value
+next action is still the positive source-Higgs packet itself: canonical `O_H`
+plus production `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR checks, or a strict
+physical-response bypass.
+
 2026-05-07 clean source-Higgs selector current-prefix refresh: the selector
 now consumes the current committed chunks001-052 row prefix and excludes active
 chunks053-054 as run-control-only state.  The closure ranking is unchanged:

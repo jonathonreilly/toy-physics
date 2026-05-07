@@ -40,11 +40,9 @@ PARENTS = {
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "two_source_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
-    "two_source_chunk001": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
-    "two_source_chunk002": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
-    "two_source_chunk003": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
-    "two_source_chunk004": "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json",
-    "two_source_launcher": "outputs/yt_pr230_two_source_taste_radial_row_wave_launcher_2026-05-06.json",
+    "two_source_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
+    "two_source_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
+    "source_higgs_bridge_aperture": "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json",
     "full_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
@@ -197,6 +195,16 @@ def main() -> int:
         and future_presence["source_higgs_rows"] is False
         and future_presence["source_higgs_production_certificate"] is False
     )
+    two_source_package_current = (
+        certs["two_source_package"].get("chunk_package_audit_passed") is True
+        and certs["two_source_package"].get("proposal_allowed") is False
+        and certs["two_source_package"].get("active_chunks_counted_as_evidence")
+        is False
+        and certs["two_source_package"].get("completed_chunk_count", 0) >= 52
+        and certs["two_source_package"].get("completed_prefix_last") == certs[
+            "two_source_package"
+        ].get("completed_chunk_count")
+    )
     two_source_rows_are_c_sx_not_c_sh = (
         certs["two_source_action"].get("canonical_higgs_operator_identity_passed")
         is False
@@ -205,26 +213,24 @@ def main() -> int:
         )
         is True
         and certs["two_source_row_contract"].get("proposal_allowed") is False
-        and all(
-            certs[name].get("checkpoint_passed") is True
-            and certs[name].get("completed") is True
-            and certs[name].get("chunk_summary", {})
-            .get("source_higgs_aliases", {})
-            .get("C_sx_aliases_C_sH_schema_field")
-            is True
-            and certs[name].get("chunk_summary", {}).get("pole_residue_rows_count")
-            == 0
-            for name in (
-                "two_source_chunk001",
-                "two_source_chunk002",
-                "two_source_chunk003",
-                "two_source_chunk004",
-            )
-        )
+        and two_source_package_current
+        and certs["two_source_combiner"].get("ready_chunks")
+        == certs["two_source_package"].get("completed_chunk_count")
+        and certs["two_source_combiner"].get("expected_chunks") == 63
+        and certs["two_source_combiner"].get("combined_rows_written") is False
+        and certs["source_higgs_bridge_aperture"]
+        .get("two_source_rows", {})
+        .get("ready_chunks")
+        == certs["two_source_package"].get("completed_chunk_count")
+        and "not canonical-Higgs C_sH/C_HH pole rows"
+        in certs["source_higgs_bridge_aperture"]
+        .get("two_source_rows", {})
+        .get("strict_limit", "")
     )
-    current_launcher_run_control_only = (
-        certs["two_source_launcher"].get("proposal_allowed") is False
-        and certs["two_source_launcher"].get("active_process_count", 0) <= 2
+    current_package_run_control_only = (
+        certs["two_source_package"].get("active_chunks_counted_as_evidence")
+        is False
+        and certs["two_source_package"].get("active_chunk_ids") == [53, 54]
     )
     overlap_counterfamily_blocks = (
         len({row["Res_C_sH"] for row in family}) > 1
@@ -256,9 +262,17 @@ def main() -> int:
     report(
         "two-source-rows-are-csx-not-csh",
         two_source_rows_are_c_sx_not_c_sh,
-        "packaged chunks remain C_sx/C_xx support-only",
+        (
+            f"ready={certs['two_source_combiner'].get('ready_chunks')}/"
+            f"{certs['two_source_combiner'].get('expected_chunks')}; "
+            "packaged chunks remain C_sx/C_xx support-only"
+        ),
     )
-    report("current-launcher-run-control-only", current_launcher_run_control_only, statuses["two_source_launcher"])
+    report(
+        "current-package-run-control-only",
+        current_package_run_control_only,
+        f"active={certs['two_source_package'].get('active_chunk_ids')}",
+    )
     report("overlap-counterfamily-blocks-inference", overlap_counterfamily_blocks, str(family))
     report("orthogonal-top-counterfamily-blocks-yukawa-inference", orthogonal_top_counterfamily_blocks, str(orthogonal_family))
     report("assembly-retained-campaign-still-open", assembly_still_open, "proposal_allowed=false")
@@ -291,6 +305,13 @@ def main() -> int:
         "fms_bridge_conditional_not_closure": fms_bridge_conditional_not_closure,
         "canonical_oh_absent": canonical_oh_absent,
         "source_higgs_rows_absent": source_higgs_rows_absent,
+        "two_source_package_current": two_source_package_current,
+        "two_source_ready_chunks": certs["two_source_package"].get(
+            "completed_chunk_count"
+        ),
+        "two_source_active_chunk_ids_excluded": certs["two_source_package"].get(
+            "active_chunk_ids"
+        ),
         "two_source_rows_are_c_sx_not_c_sH": two_source_rows_are_c_sx_not_c_sh,
         "overlap_counterfamily": family,
         "orthogonal_top_counterfamily": orthogonal_family,

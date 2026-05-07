@@ -119,15 +119,13 @@
     "oh_source_higgs_rescan": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "source_functional_lsz": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_bridge_aperture": "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "two_source_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
-    "two_source_chunk001": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
-    "two_source_chunk002": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
-    "two_source_chunk003": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
-    "two_source_chunk004": "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json",
-    "two_source_launcher": "outputs/yt_pr230_two_source_taste_radial_row_wave_launcher_2026-05-06.json",
+    "two_source_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
+    "two_source_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
     "two_source_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json"
   },
   "parent_statuses": {
@@ -138,15 +136,13 @@
     "oh_source_higgs_rescan": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
     "retained_route": "open / retained closure not yet reached",
     "source_functional_lsz": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_bridge_aperture": "bounded-support / source-Higgs bridge aperture checkpoint; 52 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
     "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
     "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
     "source_pole_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
     "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
-    "two_source_chunk001": "bounded-support / two-source taste-radial chunk001 C_sx/C_xx row checkpoint",
-    "two_source_chunk002": "bounded-support / two-source taste-radial chunk002 C_sx/C_xx row checkpoint",
-    "two_source_chunk003": "bounded-support / two-source taste-radial chunk003 C_sx/C_xx row checkpoint",
-    "two_source_chunk004": "bounded-support / two-source taste-radial chunk004 C_sx/C_xx row checkpoint",
-    "two_source_launcher": "bounded-support / two-source taste-radial C_sx/C_xx row wave launcher status; run-control only, not physics evidence",
+    "two_source_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "two_source_package": "bounded-support / two-source taste-radial chunks001-052 packaged; active chunks, logs, and pending checkpoints are not evidence",
     "two_source_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent"
   },
   "pass_count": 14,
@@ -168,5 +164,11 @@
     "does not set kappa_s, c2, or Z_match to one",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
+  "two_source_active_chunk_ids_excluded": [
+    53,
+    54
+  ],
+  "two_source_package_current": true,
+  "two_source_ready_chunks": 52,
   "two_source_rows_are_c_sx_not_c_sH": true
 }

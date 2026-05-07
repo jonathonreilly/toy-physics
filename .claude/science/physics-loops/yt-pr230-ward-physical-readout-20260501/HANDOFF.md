@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 post-FMS source-overlap necessity current-prefix refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py`,
+  `docs/YT_PR230_POST_FMS_SOURCE_OVERLAP_NECESSITY_GATE_NOTE_2026-05-06.md`,
+  and `outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json`
+  against the current committed chunks001-052 package/combiner/bridge-aperture
+  certificates.
+- Result: exact negative boundary remains.  FMS composite support plus current
+  source-only rows and taste-radial `C_sx/C_xx` rows do not determine
+  `Res C_sH`, do not prove source-Higgs Gram purity, and do not exclude
+  orthogonal neutral top couplings.
+- Validation: post-FMS gate `PASS=14 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+- Chunks053-054 remain active run-control only and are excluded from evidence.
+- Reopen requires a same-surface canonical `O_H` certificate plus production
+  `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR checks, or a strict
+  physical-response bypass.
+
 Latest checkpoint, 2026-05-07 clean source-Higgs selector current-prefix refresh:
 
 - Refreshed `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`

@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Post-FMS source-overlap remains underdetermined at chunks001-052
+
+The 2026-05-07 post-FMS source-overlap necessity refresh loads the current
+chunks001-052 package/combiner/bridge-aperture certificates.  The FMS
+composite theorem sharpens the future operator target, but the current PR230
+surface still lacks the source-Higgs overlap row.  Source-only LSZ and
+taste-radial `C_sx/C_xx` rows keep `Res C_ss` and source-side normalization
+compatible with multiple `Res C_sH` values and multiple orthogonal-neutral
+top-coupling completions.
+
+Do not treat the FMS expansion, current source-pole data, chunks001-052
+`C_sx/C_xx` rows, or active chunk053-054 run-control state as source-Higgs
+Gram purity, canonical `O_H`, physical `kappa_s`, W/Z response, retained, or
+proposed-retained closure.  Reopen requires canonical `O_H` plus production
+`C_ss/C_sH/C_HH` pole rows with Gram/FV/IR checks, or a strict physical
+response bypass.
+
 ## Clean source-Higgs route selector remains support-only at chunks001-052
 
 The 2026-05-07 clean source-Higgs selector refresh consumes the current

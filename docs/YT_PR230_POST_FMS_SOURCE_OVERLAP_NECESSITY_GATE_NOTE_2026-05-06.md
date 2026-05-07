@@ -1,6 +1,6 @@
 # PR230 Post-FMS Source-Overlap Necessity Gate
 
-**Date:** 2026-05-06
+**Date:** 2026-05-06; refreshed 2026-05-07 against chunks001-052
 **Status:** exact negative boundary / post-FMS source-overlap not derivable
 from current PR230 source-only or `C_sx/C_xx` rows
 **Claim type:** no_go
@@ -54,11 +54,12 @@ source-overlap or physical-response bridge is load-bearing.
 
 ## Completed Chunk Boundary
 
-Chunks001-004 contain bounded `C_sx/C_xx` taste-radial rows.  Their metadata
-explicitly records that `C_sx/C_xx` aliases are second-source taste-radial
-rows, not canonical-Higgs `C_sH/C_HH` pole rows unless a separate canonical
-`O_H` bridge passes.  They also have zero pole-residue rows.  Active chunks and
-launcher status remain run-control only.
+Chunks001-052 are packaged bounded `C_sx/C_xx` taste-radial rows with
+`ready=52/63` and `combined_rows_written=false`.  The package audit records
+active chunks053-054 as run-control-only state and excludes them from
+evidence.  The source-Higgs bridge aperture still records the strict limit:
+these are two-source taste-radial `C_sx/C_xx` rows, not canonical-Higgs
+`C_sH/C_HH` pole rows unless a separate canonical `O_H` bridge passes.
 
 ## Positive Contract
 

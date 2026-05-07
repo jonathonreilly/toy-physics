@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - Post-FMS Source-Overlap Necessity Current-Prefix Refresh
+
+Review stance: exact negative boundary / source-overlap still open.
+
+- Updated the post-FMS necessity gate to consume the current chunks001-052
+  package/combiner/bridge-aperture certificates instead of chunks001-004 plus
+  stale launcher status.
+- The gate still proves the no-go boundary: current FMS composite support,
+  source-only LSZ rows, and taste-radial `C_sx/C_xx` rows leave `Res C_sH`,
+  source-Higgs Gram purity, and orthogonal-neutral top couplings
+  underdetermined.
+- Validation: post-FMS gate `PASS=14 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: exact negative boundary.  No closure or proposal wording is
+allowed.  Reopen needs canonical `O_H` plus production `C_ss/C_sH/C_HH` pole
+rows with Gram/FV/IR checks, or a strict physical-response bypass.
+
 ## 2026-05-07 - Clean Source-Higgs Selector Current-Prefix Refresh
 
 Review stance: exact support / route selector freshness, no closure.
