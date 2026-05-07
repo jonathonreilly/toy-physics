@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 227 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 802 |
+| unaudited | 801 |
 | meta | 49 |
-| ~~audited_numerical_match~~ | 19 |
+| ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 464 |
 | ~~audited_failed~~ | 8 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 19 |
+| `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 851 |
+| `unaudited` | 850 |
 
 | claim_type | count |
 |---|---:|
@@ -1016,6 +1016,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -5161,6 +5162,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Because gamma_5 anticommutes with each spatial Gamma_i, every even product Gamma_m Gamma_n commutes with gamma_5; hence [B_a,Y_b]=P_R[B_a,Gamma_b]P_L=i sum_c eps_abc Y_c.  _(class `A`)_
 - **chain closes:** True — The scoped theorem closes as finite-dimensional algebra over the explicit matrices supplied in the note. The coefficient/base-normalization question is explicitly outside scope, and the runner confirms the stated commutator, Casimir, trace, projector, and rescaling facts.
 - **rationale:** The load-bearing step is a direct Clifford-algebra identity, not a definition, renaming, tuned numerical match, or external comparator. The runner constructs the Pauli/tensor-product Gamma matrices, bivectors, chirality projectors, and bridge operators, then checks the claimed identities with 18 PASS and 0 FAIL. Because the note confines itself to representation covariance and trace orthogonality while excluding coefficient normalization, the scoped bounded theorem closes from the packet.
+- **auditor confidence:** high
+
+### `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14`
+
+- **Note:** [`DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md`](../../docs/DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claimed structural explanation that a second-order EWSB cascade with stated benchmark base Yukawas accounts for the k_B=8 neutrino Dirac-yukawa scale.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-gpt-5.5-xhigh-dm-neutrino-yukawa-cascade-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** With an O(0.5-0.65) base coupling, the second-order EWSB cascade lands near the k_B=8 target.  _(class `G`)_
+- **chain closes:** False — The packet closes only the bounded second-order operator geometry and the local Gamma_1 Dirac bridge. It does not derive the neutrino-sector base normalization, suppression coefficient, or Majorana/Z3 activation law needed to turn the ballpark candidate into a theorem.
+- **rationale:** Issue: The load-bearing step is a ballpark numerical match after choosing a second-order cascade and O(0.5-0.65) benchmark base Yukawa. Why this blocks: The cited dependencies explicitly leave the physical neutrino Yukawa normalization/suppression and downstream activation law open, and the runner hard-codes benchmark constants then checks closeness rather than deriving the coefficient. Repair target: Provide a retained theorem and runner deriving the neutrino-sector base normalization, suppression law, and Majorana/Z3 activation amplitude without tuned comparator thresholds. Claim boundary until fixed: This may be cited only as a bounded numerical candidate explaining why the two-step surface is worth studying, not as a closed positive theorem for the k_B=8 Dirac Yukawa.
 - **auditor confidence:** high
 
 ### `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15`
