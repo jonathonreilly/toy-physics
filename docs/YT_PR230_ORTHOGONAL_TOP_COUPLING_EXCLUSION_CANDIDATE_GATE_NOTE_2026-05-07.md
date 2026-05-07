@@ -16,7 +16,7 @@ selection rule.
 It does not.
 
 The current finite `C_sx/C_xx` rows are source/complement correlator rows, not
-top-coupling tomography.  Across the 28 ready chunks their finite off-diagonal
+top-coupling tomography.  Across the 30 ready chunks their finite off-diagonal
 entries and positive finite `C_ss/C_sx/C_xx` blocks support the two-source row
 program, but they do not measure or null the top coupling of an orthogonal
 neutral scalar.

@@ -1,5 +1,76 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks029-030 package checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-030 packaged; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 29 --output outputs/yt_pr230_two_source_taste_radial_chunk029_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 30 --output outputs/yt_pr230_two_source_taste_radial_chunk030_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=30/63, combined_rows_written=false
+
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# SUMMARY: PASS=25 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
+# SUMMARY: PASS=20 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=85 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=331 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=144 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=298 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=53 FAIL=0
+```
+
+Chunks001-030 are finite `C_sx/C_xx` row support only.  Successor
+chunks031-032 are active run-control/log state and are not evidence.  The
+current branch still lacks canonical `O_H`, `C_spH/C_HH` pole rows, strict
+scalar-LSZ/FV authority, strict Schur pole rows, W/Z rows with strict
+`g2`/covariance, and any retained-route or campaign proposal authorization.
+
 Two-source taste-radial chunks027-028 package checkpoint:
 
 ```text
@@ -185,13 +256,13 @@ python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 ```
 
 The refresh consumes `O_sp`, radial-spurion action-contract support,
-chunks001-028 partial `C_sx/C_xx` support, finite Schur diagnostics, and the
+chunks001-030 partial `C_sx/C_xx` support, finite Schur diagnostics, and the
 rejected same-surface neutral multiplicity-one candidate.  It keeps them
 support-only, ranks genuine same-source W/Z response rows as the first
 fallback after source-Higgs pole rows, and continues to require canonical
 `O_H`, `C_ss/C_spH/C_HH` pole rows, O_sp-Higgs Gram purity, and
 scalar-LSZ/FV/IR authority before any closure wording.  Successor
-chunks029-030 remain run-control only until completed and packaged.
+chunks031-032 remain run-control only until completed and packaged.
 
 Post-`O_sp` positive-closure completion audit:
 
