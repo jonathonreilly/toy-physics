@@ -4567,3 +4567,36 @@ only as a target for future higher-shell/multivolume diagnostics; closure
 still needs strict scalar-LSZ model-class/FV/IR/threshold authority plus
 canonical `O_H`/source-overlap, or genuine same-source W/Z response rows with
 accepted action, covariance, and strict `g2`.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks037-038 Package
+
+Chunks037-038 are now packaged as bounded support.  The checkpoint commands:
+
+```text
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 37 --output outputs/yt_pr230_two_source_taste_radial_chunk037_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 38 --output outputs/yt_pr230_two_source_taste_radial_chunk038_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=38/63, combined_rows_written=false
+```
+
+The scalar/Schur refresh remains non-closure: strict scalar-LSZ still fails
+first-shell Stieltjes monotonicity (`z=151.05795820785409`), `C_s|x` fails
+(`z=129.56013352763375`), `C_x|s` gives only necessary first-shell support
+(`z=-457.34516684060026`), and complete monotonicity is unavailable with two
+`q_hat^2` levels.  The refreshed `C_x|s` one-pole interpolation is
+`m^2=6.394583011507037`, `R=1.7958102815965453`, but positive two-pole
+endpoint counterfamilies still block model-class/pole authority.
+
+Aggregate gates remain open: assumption `PASS=93 FAIL=0`, campaign
+`PASS=341 FAIL=0`, assembly `PASS=154 FAIL=0`, retained `PASS=308 FAIL=0`,
+completion audit `PASS=63 FAIL=0`.
+
+Chunks039-040 are active run-control only.  No retained or proposed-retained
+closure is authorized.

@@ -19,33 +19,33 @@
     "0,0,0": {
       "all_blocks_positive_definite": true,
       "mixed_signs": true,
-      "negative": 22,
+      "negative": 23,
       "offdiagonal_entry_observed": true,
-      "positive": 12,
+      "positive": 15,
       "zero": 0
     },
     "0,0,1": {
       "all_blocks_positive_definite": true,
       "mixed_signs": true,
-      "negative": 21,
+      "negative": 22,
       "offdiagonal_entry_observed": true,
-      "positive": 13,
+      "positive": 16,
       "zero": 0
     },
     "0,1,0": {
       "all_blocks_positive_definite": true,
       "mixed_signs": true,
-      "negative": 20,
+      "negative": 21,
       "offdiagonal_entry_observed": true,
-      "positive": 14,
+      "positive": 17,
       "zero": 0
     },
     "1,0,0": {
       "all_blocks_positive_definite": true,
       "mixed_signs": true,
-      "negative": 19,
+      "negative": 21,
       "offdiagonal_entry_observed": true,
-      "positive": 15,
+      "positive": 17,
       "zero": 0
     }
   },

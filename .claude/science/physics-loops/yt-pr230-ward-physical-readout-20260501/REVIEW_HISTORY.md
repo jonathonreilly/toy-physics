@@ -6236,3 +6236,29 @@ interpolation, but positive two-pole endpoint counterfamilies match those
 means while changing low-pole residue.  This blocks any physical scalar-pole,
 scalar-LSZ, canonical `O_H`, W/Z, retained, or proposed-retained claim from the
 scout alone.
+
+## 2026-05-07 - Two-Source Taste-Radial Chunks037-038 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks037-038 into the two-source taste-radial row stream.
+- Added
+  `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS037_038_PACKAGE_NOTE_2026-05-07.md`.
+- Refreshed chunk checkpoints, package audit, row combiner, strict scalar-LSZ
+  moment/FV gate, Schur-complement gates, one-pole scout, primitive-transfer
+  candidate, orthogonal-top exclusion gate, assumption stress, campaign
+  status, full assembly, retained-route, and completion audit.
+- Validation: chunk037 `PASS=15 FAIL=0`, chunk038 `PASS=15 FAIL=0`,
+  package audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at
+  `ready=38/63`, strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair
+  `PASS=22 FAIL=0`, complete monotonicity `PASS=15 FAIL=0`, one-pole scout
+  `PASS=13 FAIL=0`, primitive-transfer `PASS=13 FAIL=0`, orthogonal-top
+  `PASS=12 FAIL=0`, assumption stress `PASS=93 FAIL=0`, campaign status
+  `PASS=341 FAIL=0`, full assembly `PASS=154 FAIL=0`, retained-route
+  `PASS=308 FAIL=0`, and completion audit `PASS=63 FAIL=0`.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for route diagnostics, not canonical `O_H`, not canonical
+`C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
+or proposed-retained closure.  Chunks039-040 are run-control only until
+completed.

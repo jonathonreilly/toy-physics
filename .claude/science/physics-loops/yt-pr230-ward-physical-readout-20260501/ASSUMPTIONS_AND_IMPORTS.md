@@ -1027,3 +1027,20 @@ Additional forbidden load-bearing assumptions:
 - two endpoint values = complete Stieltjes/threshold/FV authority
 - `C_x|s` residual = canonical `O_H`
 - one-pole finite-residue scout = retained or proposed-retained closure
+
+2026-05-07 two-source taste-radial chunks037-038 package:
+
+Chunks037-038 are bounded support only.  The package raises the partial row
+packet to `ready=38/63`, but finite `C_ss/C_sx/C_xx` rows, first-shell
+Stieltjes/Schur diagnostics, the refreshed one-pole interpolation, chunk logs,
+live status, and active workers are not proof selectors for canonical `O_H`,
+scalar-LSZ/FV, W/Z response, Schur pole authority, neutral primitive transfer,
+retained, or proposed-retained closure.
+
+Additional forbidden load-bearing assumptions:
+
+- `ready=38/63` = complete production row packet
+- active chunks039-040 = evidence
+- refreshed one-pole interpolation = pole/model-class authority
+- finite `C_sx/C_xx` rows = canonical `C_sH/C_HH`
+- finite first-shell Schur support = scalar-LSZ/FV authority

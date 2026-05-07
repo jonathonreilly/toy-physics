@@ -1694,3 +1694,11 @@ source-Higgs artifact (`O_H/C_spH/C_HH` pole rows) or a hardened same-source
 W/Z physical-response row packet.  The Schur route should move only after
 higher-shell/multivolume or analytic moment/threshold/FV authority can exclude
 the two-pole endpoint counterfamilies.
+
+2026-05-07 update: two-source taste-radial chunks037-038 are now packaged,
+raising the partial row packet to `ready=38/63`.  This improves finite-row
+statistics but does not change the closure order.  The refreshed scalar/Schur
+diagnostics still leave raw `C_ss` rejected, `C_x|s` as first-shell support
+only, and the one-pole interpolation blocked by positive two-pole endpoint
+counterfamilies.  Chunks039-040 are active under the two-worker cap and remain
+run-control only until completed JSON and completed-mode checkpoints exist.

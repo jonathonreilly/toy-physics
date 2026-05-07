@@ -3620,3 +3620,14 @@ authority, threshold/contact and FV/IR control, an isolated physical pole, and
 one accepted bridge: canonical `O_H/C_spH/C_HH` pole rows, same-source W/Z
 physical-response rows, strict Schur A/B/C pole rows, or a neutral primitive
 transfer theorem.
+
+## 2026-05-07 - Chunks001-038 Still Do Not Supply Closure
+
+No-go on the current surface: the finite two-source taste-radial packet is now
+`ready=38/63`, but it remains a partial one-volume finite-row packet.  It has
+no canonical `O_H`, no canonical `C_sH/C_HH` pole rows, no strict scalar-LSZ
+FV/IR/threshold authority, no W/Z response, and no primitive neutral transfer.
+
+Reopen as closure only with a complete same-surface artifact satisfying one of
+the named physical authorities.  Do not reopen because the partial packet grew
+from 36 to 38 chunks.
