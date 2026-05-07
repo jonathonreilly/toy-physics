@@ -18,13 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 62 |
+| **retained** | 63 |
 | **retained_no_go** | 121 |
 | **retained_bounded** | 227 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
 | unaudited | 802 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 28 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 376 |
+| `audited_clean` | 377 |
 | `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -186,6 +183,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electric_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electrostatics_card_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
@@ -5380,6 +5378,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** - boundary sensitivity, so the law vanishes whenever any one Schur channel  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-dimensional supplied-block theorem for a split E_- = E_e (+) E_r: Schur boundary resolvent compression, Feshbach elimination, positive-Hermitian Dirichlet minimum, and Loewner certificate behavior; excludes microscopic D_- evaluation and final DM selector closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-dm-wilson-schur-feshbach-audit-2-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The exact Schur factorization gives I_e^* D_-^(-1) I_e = L_e^(-1), and under D_- = D_-^* > 0 the completed-square identity gives u^* L_e u = min_v [u; v]^* D_- [u; v].  _(class `A`)_
+- **chain closes:** True — The note proves the scoped conclusions directly by finite-dimensional block factorization and positive-Hermitian quadratic completion. There are no one-hop dependencies and no imported physical bridge inside the audited finite-dimensional boundary theorem.
+- **rationale:** The finite-dimensional algebra closes under the note's explicit hypotheses: invertible F and L_e for the resolvent identity, and D_- = D_-^* > 0 for the variational and monotonicity statements. The runner is not a first-principles microscopic computation, but it consistently checks exact Schur/Feshbach/Dirichlet algebra and scope hygiene, with 46 PASS and 0 FAIL in the supplied live summary. Residual risk is limited to scope discipline: this clean verdict covers only the supplied-block theorem and does not certify any Wilson-native construction of D_-, charged support selection, or final DM closure.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19`
