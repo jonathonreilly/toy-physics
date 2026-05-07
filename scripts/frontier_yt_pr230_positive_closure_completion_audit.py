@@ -52,6 +52,7 @@ PARENTS = {
     "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
+    "schur_complement_stieltjes_repair_gate": "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -699,6 +700,32 @@ def main() -> int:
         )
         is True
     )
+    schur_complement_stieltjes_repair_not_closure = (
+        "Schur-complement Stieltjes repair split"
+        in parent_statuses["schur_complement_stieltjes_repair_gate"]
+        and certs["schur_complement_stieltjes_repair_gate"].get("proposal_allowed")
+        is False
+        and certs["schur_complement_stieltjes_repair_gate"].get(
+            "schur_complement_stieltjes_repair_gate_passed"
+        )
+        is True
+        and certs["schur_complement_stieltjes_repair_gate"].get(
+            "source_given_x_stieltjes_first_shell_failed"
+        )
+        is True
+        and certs["schur_complement_stieltjes_repair_gate"].get(
+            "x_given_source_stieltjes_first_shell_passed"
+        )
+        is True
+        and certs["schur_complement_stieltjes_repair_gate"].get(
+            "strict_scalar_lsz_authority_present"
+        )
+        is False
+        and certs["schur_complement_stieltjes_repair_gate"].get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -779,6 +806,7 @@ def main() -> int:
     report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
     report("orthogonal-top-coupling-exclusion-candidate-rejected", orthogonal_top_coupling_exclusion_candidate_rejected, parent_statuses["orthogonal_top_coupling_exclusion_candidate_gate"])
     report("strict-scalar-lsz-moment-fv-authority-absent", strict_scalar_lsz_moment_fv_authority_absent, parent_statuses["strict_scalar_lsz_moment_fv_authority_gate"])
+    report("schur-complement-stieltjes-repair-not-closure", schur_complement_stieltjes_repair_not_closure, parent_statuses["schur_complement_stieltjes_repair_gate"])
     report("future-bridge-artifact-files-support-only-or-absent", no_unclosed_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
@@ -942,6 +970,7 @@ def main() -> int:
             "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
             "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
             "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
+            "schur_complement_stieltjes_repair_not_closure": schur_complement_stieltjes_repair_not_closure,
             "future_bridge_file_presence": future_bridge_presence,
         },
         "bare_retained_allowed": False,

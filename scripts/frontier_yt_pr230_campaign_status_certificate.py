@@ -641,6 +641,9 @@ def main() -> int:
         "pr230_strict_scalar_lsz_moment_fv_authority_gate": load(
             "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
         ),
+        "pr230_schur_complement_stieltjes_repair_gate": load(
+            "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json"
+        ),
         "pr230_two_source_taste_radial_chunk_package": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
         ),
@@ -2952,6 +2955,36 @@ def main() -> int:
         is True,
         statuses["pr230_strict_scalar_lsz_moment_fv_authority_gate"],
     )
+    schur_complement_stieltjes_repair_gate = certificates[
+        "pr230_schur_complement_stieltjes_repair_gate"
+    ]
+    report(
+        "pr230-schur-complement-stieltjes-repair-support-not-closure",
+        "Schur-complement Stieltjes repair split"
+        in str(statuses["pr230_schur_complement_stieltjes_repair_gate"])
+        and schur_complement_stieltjes_repair_gate.get("proposal_allowed") is False
+        and schur_complement_stieltjes_repair_gate.get(
+            "schur_complement_stieltjes_repair_gate_passed"
+        )
+        is True
+        and schur_complement_stieltjes_repair_gate.get(
+            "source_given_x_stieltjes_first_shell_failed"
+        )
+        is True
+        and schur_complement_stieltjes_repair_gate.get(
+            "x_given_source_stieltjes_first_shell_passed"
+        )
+        is True
+        and schur_complement_stieltjes_repair_gate.get(
+            "strict_scalar_lsz_authority_present"
+        )
+        is False
+        and schur_complement_stieltjes_repair_gate.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False,
+        statuses["pr230_schur_complement_stieltjes_repair_gate"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -5058,6 +5091,31 @@ def main() -> int:
             "current_raw_c_ss_proxy_fails_stieltjes_monotonicity"
         )
         is True
+    )
+    result["schur_complement_stieltjes_repair_support_not_closure"] = (
+        "Schur-complement Stieltjes repair split"
+        in str(statuses["pr230_schur_complement_stieltjes_repair_gate"])
+        and schur_complement_stieltjes_repair_gate.get("proposal_allowed") is False
+        and schur_complement_stieltjes_repair_gate.get(
+            "schur_complement_stieltjes_repair_gate_passed"
+        )
+        is True
+        and schur_complement_stieltjes_repair_gate.get(
+            "source_given_x_stieltjes_first_shell_failed"
+        )
+        is True
+        and schur_complement_stieltjes_repair_gate.get(
+            "x_given_source_stieltjes_first_shell_passed"
+        )
+        is True
+        and schur_complement_stieltjes_repair_gate.get(
+            "strict_scalar_lsz_authority_present"
+        )
+        is False
+        and schur_complement_stieltjes_repair_gate.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
     )
     result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
         taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")

@@ -45,6 +45,15 @@ This route now needs a certified contact-subtracted or denominator-derived
 scalar object, threshold and multivolume FV/IR authority, and canonical
 `O_H`/source-overlap or W/Z response authority.
 
+The adjacent Schur-complement repair target is now checked:
+`outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json`
+passes as bounded support.  The source residual `C_s|x` does not repair the
+raw-source Stieltjes failure, but the complement residual `C_x|s` is positive
+and decreases from zero mode to first shell across chunks001-022.  This makes
+`C_x|s` the better finite complement-scalar diagnostic for future row waves;
+it is still only a necessary one-volume finite-shell check and supplies no
+canonical `O_H`, pole/FV/IR authority, or closure.
+
 1. Action-first same-source EW/Higgs action plus gauge-invariant composite
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
    pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree

@@ -1,5 +1,18 @@
 # Claim Status Certificate
 
+2026-05-07 Schur-complement Stieltjes repair update: the new certificate
+`outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json`
+passes with `PASS=22 FAIL=0` as bounded support.  It tests the finite
+Schur-complement residuals from the measured two-source block
+`G=[[C_ss,C_sx],[C_sx,C_xx]]`: `C_s|x=det(G)/C_xx` remains positive but still
+increases from the zero mode to the first shell, so it does not repair the raw
+source Stieltjes failure; `C_x|s=det(G)/C_ss` is positive and decreases across
+the ready chunks, so it survives this necessary first-shell Stieltjes check as
+the better complement-scalar diagnostic.  This is not scalar-LSZ authority and
+does not identify `x` with canonical `O_H`.  Aggregate refresh: assumption
+PASS=82, campaign PASS=328, full assembly PASS=141, retained-route PASS=295,
+completion audit PASS=50, all FAIL=0 and `proposal_allowed=false`.
+
 2026-05-07 chunks021-022 update: completed-mode checkpoints now pass for
 chunks021 and 022.  The two-source taste-radial packet advances to
 `ready=22/63` with `combined_rows_written=false`; source-Higgs readiness scans

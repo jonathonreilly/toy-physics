@@ -1,5 +1,17 @@
 # Review History
 
+2026-05-07 Schur-complement Stieltjes repair gate:
+
+- `frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py`:
+  PASS=22 FAIL=0.  It records `C_s|x` as a failed source-residual repair and
+  `C_x|s` as a positive first-shell Schur-complement diagnostic, while
+  preserving `strict_scalar_lsz_authority_present=false`,
+  `canonical_higgs_operator_identity_passed=false`, and
+  `proposal_allowed=false`;
+- aggregate gates after wiring the new certificate: assumption/import stress
+  PASS=82 FAIL=0, campaign PASS=328 FAIL=0, full assembly PASS=141 FAIL=0,
+  retained route PASS=295 FAIL=0, and completion audit PASS=50 FAIL=0.
+
 2026-05-07 chunks021-022 package:
 
 - completed-mode checkpoint runners PASS=15 FAIL=0 for chunk021 and chunk022;

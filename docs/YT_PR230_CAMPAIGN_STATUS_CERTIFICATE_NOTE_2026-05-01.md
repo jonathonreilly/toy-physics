@@ -1567,6 +1567,17 @@ Latest checkpoint: the campaign runner now includes the
 no-orthogonal-top-coupling import audit and reports `PASS=95 FAIL=0`.  No
 retained/proposed-retained wording is authorized.
 
+Latest Schur-complement Stieltjes repair checkpoint: campaign status now
+includes
+`scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py` and
+reports `PASS=328 FAIL=0` after aggregate reruns.  The new gate tests finite
+Schur residuals from the two-source taste-radial block.  `C_s|x` remains
+positive but increases from zero mode to first shell, so it does not repair
+the source Stieltjes failure.  `C_x|s` is positive and decreases across
+chunks001-022, making it the stronger finite complement-scalar diagnostic for
+future row waves.  This is bounded support only; it is not scalar-LSZ
+authority, canonical `O_H`, `kappa_s`, or retained/proposed-retained closure.
+
 Latest D17 source-pole checkpoint: campaign status now includes the D17
 identity closure attempt and reports `PASS=96 FAIL=0` over 100 certificates.
 No retained/proposed-retained wording is authorized.

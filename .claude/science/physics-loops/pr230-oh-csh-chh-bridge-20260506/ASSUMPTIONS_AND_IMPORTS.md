@@ -34,6 +34,11 @@ Allowed context:
   positive but increase from the zero mode to the first shell, so the raw proxy
   is not the strict unsubtracted Stieltjes scalar two-point object and supplies
   no scalar-LSZ moment/FV authority, canonical `O_H`, `kappa_s`, or closure.
+- the 2026-05-07 Schur-complement Stieltjes repair gate as bounded support
+  only: `C_x|s=det(G)/C_ss` is positive and non-increasing from zero mode to
+  first shell across chunks001-022, while `C_s|x=det(G)/C_xx` fails the same
+  repair; this is a necessary finite-shell diagnostic only, not scalar-LSZ
+  authority, not canonical `O_H`, not `kappa_s`, and not closure.
 - the exact algebra of the taste-shift operators in
   `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`;
 - the PR230 production harness source coordinate, which is the uniform additive

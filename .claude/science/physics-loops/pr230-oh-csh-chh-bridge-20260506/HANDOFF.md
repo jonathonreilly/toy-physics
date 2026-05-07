@@ -1,5 +1,18 @@
 # Handoff
 
+2026-05-07 Schur-complement Stieltjes repair checkpoint: the finite
+two-source block now has a sharper scalar-LSZ diagnostic.  The new runner
+`frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py` passes
+`PASS=22 FAIL=0`: the source residual `C_s|x` is positive but still increases
+from the zero mode to the first shell, while the complement residual `C_x|s`
+is positive and decreases across chunks001-022.  Treat `C_x|s` as the better
+future complement-scalar diagnostic after more chunks complete.  Do not treat
+the first-shell monotonicity pass as scalar-LSZ authority, canonical `O_H`,
+`kappa_s`, retained, or proposed-retained closure.  Aggregate refresh after
+wiring: assumption PASS=82, campaign PASS=328, assembly PASS=141, retained
+route PASS=295, completion audit PASS=50, all FAIL=0 and
+`proposal_allowed=false`.
+
 2026-05-07 chunks021-022 checkpoint: completed-mode checkpoints now pass for
 chunks021 and 022, both `PASS=15 FAIL=0`.  The two-source taste-radial packet
 is now `ready=22/63`, the combiner still writes no combined row packet, and

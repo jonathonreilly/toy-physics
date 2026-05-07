@@ -191,6 +191,9 @@ def main() -> int:
         "strict_scalar_lsz_moment_fv_authority_gate": load(
             "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
         ),
+        "schur_complement_stieltjes_repair_gate": load(
+            "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json"
+        ),
         "two_source_taste_radial_chunk_package": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
         ),
@@ -1203,6 +1206,36 @@ def main() -> int:
         )
         is False,
         strict_scalar_lsz_moment_fv.get("actual_current_surface_status"),
+    )
+    schur_complement_stieltjes = certificates[
+        "schur_complement_stieltjes_repair_gate"
+    ]
+    report(
+        "schur-complement-stieltjes-repair-support-not-closure",
+        "Schur-complement Stieltjes repair split"
+        in str(schur_complement_stieltjes.get("actual_current_surface_status"))
+        and schur_complement_stieltjes.get("proposal_allowed") is False
+        and schur_complement_stieltjes.get(
+            "schur_complement_stieltjes_repair_gate_passed"
+        )
+        is True
+        and schur_complement_stieltjes.get(
+            "source_given_x_stieltjes_first_shell_failed"
+        )
+        is True
+        and schur_complement_stieltjes.get(
+            "x_given_source_stieltjes_first_shell_passed"
+        )
+        is True
+        and schur_complement_stieltjes.get("strict_scalar_lsz_authority_present")
+        is False
+        and schur_complement_stieltjes.get("canonical_higgs_operator_identity_passed")
+        is False
+        and schur_complement_stieltjes.get("forbidden_firewall", {}).get(
+            "treated_first_shell_monotonicity_as_lsz_authority"
+        )
+        is False,
+        schur_complement_stieltjes.get("actual_current_surface_status"),
     )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(

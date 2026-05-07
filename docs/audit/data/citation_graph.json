@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T02:25:03.743637+00:00",
+  "generated_at": "2026-05-07T02:42:49.888713+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "2b672980d9d7f22a953cc0575a272d300a97ba60609f1a1f1dcdfe67173efc0e",
+      "note_hash": "59104172c56f7741306d310297b48ed45607ab5647d9c7c9f657f0fc1f871cad",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -42727,6 +42727,16 @@
       "path": "docs/YT_PR230_SCHUR_ABC_DEFINITION_DERIVATION_ATTEMPT_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py",
       "title": "PR #230 Schur A/B/C Definition Derivation Attempt Note"
+    },
+    "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07": {
+      "claim_id": "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / Schur-complement Stieltjes repair split; scalar-LSZ authority absent",
+      "deps": [],
+      "note_hash": "a548e41cd2e6df8d9ddb544fc05e2cfa878dce67b0fdafe4c360baa0b418cd0f",
+      "path": "docs/YT_PR230_SCHUR_COMPLEMENT_STIELTJES_REPAIR_GATE_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py",
+      "title": "PR #230 Schur-Complement Stieltjes Repair Gate"
     },
     "yt_pr230_schur_route_completion_note_2026-05-06": {
       "claim_id": "yt_pr230_schur_route_completion_note_2026-05-06",
@@ -45789,6 +45799,7 @@
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
     "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
+    "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
     "yt_pr230_schur_route_completion_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
@@ -45939,12 +45950,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1117,
-    "node_count": 2070,
-    "root_count": 1583,
-    "runners_with_path": 1565,
+    "leaf_count": 1118,
+    "node_count": 2071,
+    "root_count": 1584,
+    "runners_with_path": 1566,
     "status_counts": {
-      "bounded": 567,
+      "bounded": 568,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,

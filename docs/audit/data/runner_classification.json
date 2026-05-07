@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T02:25:06.420429+00:00",
+  "generated_at": "2026-05-07T02:42:52.516061+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17208,6 +17208,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py"
+    },
+    "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py"
     },
     "yt_pr230_schur_route_completion_note_2026-05-06": {
       "assert_count": 1,
@@ -35751,6 +35763,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_schur_route_completion.py": {
       "assert_count": 1,
       "claims": [
@@ -41366,13 +41393,13 @@
     "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 238,
+      "B": 239,
       "C": 523,
       "D": 312,
       "none": 404
     },
-    "runners_classified": 1486,
+    "runners_classified": 1487,
     "runners_with_C": 798,
-    "runners_with_D": 576
+    "runners_with_D": 577
   }
 }
