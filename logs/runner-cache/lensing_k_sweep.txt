@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/lensing_k_sweep.py
 runner_sha256: d96e29963c44cd9761ab4b3b7ec82968712cfbc8532d6663bcb0ba4decdf5960
-timeout_sec: 3600
-exit_code: -9
-elapsed_sec: 3600.05
-status: timeout
+timeout_sec: 14400
+exit_code: 0
+elapsed_sec: 5681.52
+status: ok
 ----- stdout -----
 ================================================================================
 LENSING SLOPE vs k (PHASE COUPLING) SWEEP
@@ -13,9 +13,9 @@ LENSING SLOPE vs k (PHASE COUPLING) SWEEP
   b ∈ [3.0, 4.0, 5.0, 6.0]
   Reference: k·H=2.5 gives slope ≈ -1.40
 ================================================================================
-  Grew seed 0: nodes=144061, 8.0s
-  Grew seed 1: nodes=144061, 8.2s
-  Grew seed 2: nodes=144061, 8.3s
+  Grew seed 0: nodes=144061, 13.2s
+  Grew seed 1: nodes=144061, 24.5s
+  Grew seed 2: nodes=144061, 20.0s
 
 ────────────────────────────────────────────────────────────
   k·H = 0.5  (k = 2.0)
@@ -77,6 +77,37 @@ LENSING SLOPE vs k (PHASE COUPLING) SWEEP
   k·H = 5.0  (k = 20.0)
 ────────────────────────────────────────────────────────────
     seed 0: fit failed  signs=['-', '-', '-', '-']  kubos=['-7.166', '-10.038', '-7.545', '-5.181']
+    seed 1: fit failed  signs=['-', '-', '-', '-']  kubos=['-9.478', '-10.909', '-7.978', '-5.488']
+    seed 2: fit failed  signs=['-', '-', '-', '-']  kubos=['-7.534', '-9.996', '-7.385', '-5.051']
+
+================================================================================
+SLOPE vs k·H SUMMARY
+================================================================================
+     k·H  mean slope         σ  n_good  kubo(3) mean
+  --------------------------------------------------
+     0.5      0.5826    0.0199       3        4.4888
+     1.0     -1.4161    0.0107       3        9.4029
+     1.5     -1.1663    0.0261       3        5.1226
+     2.0     -1.2498    0.0505       3        5.3881
+     2.5     -1.3936    0.0275       3        5.7020
+     3.0     -1.1543    0.0973       3        5.3179
+     4.0     -1.4329    0.4815       3        0.9891
+     5.0         N/A
+
+  Slope range across k·H sweep: 2.0155
+  Mean slope across all k·H: -1.0329
+  → Slope is STRONGLY k-dependent (range = 2.02)
+  → The eikonal gap is a wave-coupling effect
+
+  Eikonal baseline: -1.275
+  Eikonal gap vs k·H:
+    k·H=0.5: gap=+1.8576
+    k·H=1.0: gap=-0.1411
+    k·H=1.5: gap=+0.1087
+    k·H=2.0: gap=+0.0252
+    k·H=2.5: gap=-0.1186
+    k·H=3.0: gap=+0.1207
+    k·H=4.0: gap=-0.1579
 
 ----- stderr -----
 
