@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block16 open-surface bridge intake.
+Campaign mode queue after block17 additive-top Jacobian row extraction.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -66,3 +66,13 @@ The concrete next move is not to re-check absence of `O_H`; it is to attempt
 construction of an explicit gauge-invariant `O_H` candidate/action packet from
 the FMS/gauge-Higgs surface and subject it to the existing source-Higgs
 time-kernel and Gram-flatness requirements.
+
+## Block17 Additive-Top Rows
+
+Block17 extracted 46 bounded-support additive-top Jacobian rows from the
+packaged three-mass top scans while explicitly excluding live chunks047-048.
+This narrows the W/Z repair path but does not change the top-ranked closure
+routes: the row packet is chunk-level and coarse, with no per-configuration
+matched covariance, W/Z response rows, strict non-observed `g2`, accepted
+action, or final readout certificate.  The current derivative still contains
+`O_top_additive + O_H`; proposal wording remains unauthorized.

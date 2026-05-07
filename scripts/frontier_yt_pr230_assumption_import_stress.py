@@ -1545,10 +1545,16 @@ def main() -> int:
         and additive_top_contract.get("current_surface_contract_satisfied") is False
         and additive_top_contract.get("subtraction_identity_exact") is True
         and additive_top_contract.get("matched_covariance_delta_method_valid") is True
-        and additive_top_contract.get("future_artifact_presence", {}).get(
-            "additive_top_jacobian_rows"
+        and (
+            additive_top_contract.get("future_artifact_presence", {}).get(
+                "additive_top_jacobian_rows"
+            )
+            is False
+            or additive_top_contract.get("additive_top_jacobian_row_status", {}).get(
+                "strict"
+            )
+            is False
         )
-        is False
         and additive_top_contract.get("future_artifact_presence", {}).get(
             "wz_response_ratio_rows"
         )
@@ -1558,6 +1564,19 @@ def main() -> int:
         )
         is False,
         additive_top_contract.get("actual_current_surface_status"),
+    )
+    report(
+        "additive-top-jacobian-rows-bounded-support-not-current-closure",
+            additive_top_contract.get("additive_top_jacobian_row_status", {}).get(
+                "bounded_support"
+            )
+            is True
+            and additive_top_contract.get("additive_top_jacobian_row_status", {}).get(
+                "strict"
+            )
+            is False
+            and additive_top_contract.get("proposal_allowed") is False,
+        additive_top_contract.get("additive_top_jacobian_row_status", {}),
     )
     wz_ratio_contract = certificates["wz_response_ratio_identifiability_contract"]
     report(

@@ -1,0 +1,1684 @@
+{
+  "actual_current_surface_status": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
+  "additive_top_jacobian_rows_written": true,
+  "admitted_observation_status": null,
+  "aggregate_statistics": {
+    "A_top_dE_dm_lat_mean": 1.3265591120930125,
+    "A_top_dE_dm_lat_median": 1.3258405656745211,
+    "A_top_dE_dm_lat_sample_stderr": 0.0015290010502665677,
+    "A_top_dE_dm_lat_weighted_mean": 1.3267028918044805,
+    "A_top_dE_dm_lat_weighted_stderr": 0.0004749205724715905,
+    "T_total_dE_ds_lat_mean": 2.5085658739827483,
+    "T_total_dE_ds_lat_median": 1.424318655549806,
+    "chunk_level_cov_T_total_A_top": 0.0009697227179543855,
+    "chunk_level_covariance_is_not_matched_configuration_covariance": true,
+    "diagnostic_T_minus_A_lat_mean": 1.1820067618897356,
+    "diagnostic_T_minus_A_lat_median": 0.09765459978503321
+  },
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "bounded_additive_top_jacobian_rows_passed": true,
+  "conditional_surface_status": "Would become a strict additive-top subtraction input only after per-configuration same-source additive Jacobian rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted action authority are supplied.",
+  "exact_next_action": "Build matched same-source W/Z response rows and per-configuration A_top/T_total/W covariance, or replace this coarse mass-scan Jacobian with dedicated same-source additive-top perturbation rows.",
+  "fail_count": 0,
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
+    "additive_top_subtraction_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "two_source_chunk_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "additive_source_radial_spurion_incompatibility": "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
+    "additive_top_subtraction_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "two_source_chunk_package": "bounded-support / two-source taste-radial chunks001-046 packaged; active chunks, logs, and pending checkpoints are not evidence"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "These rows measure a coarse additive-top mass-scan Jacobian with production metadata.  They do not supply matched covariance, W/Z response, strict g2, accepted action authority, or source-Higgs normalization, and they are not physical y_t evidence.",
+  "row_schema_version": "pr230_additive_top_jacobian_rows_v1",
+  "row_source": {
+    "chunks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "excluded_live_chunks": [
+      47,
+      48
+    ],
+    "input_glob": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk*_2026-05-06.json",
+    "max_packaged_chunk_consumed": 46,
+    "missing_contiguous_chunks": [],
+    "packaged_chunk_count": 46,
+    "read_only": true
+  },
+  "rows": [
+    {
+      "A_top_dE_dm_lat": 1.3146256081750156,
+      "A_top_dE_dm_lat_err": 0.005855603914281418,
+      "T_total_dE_ds_lat": 1.432411919737229,
+      "T_total_dE_ds_lat_err": 24.767767600871053,
+      "base_seed": 2026056001,
+      "chunk": 1,
+      "diagnostic_T_minus_A_lat": 0.11778631156221331,
+      "gauge_rng_seed": 2038276261,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0015298655223128317,
+        0.0031627877696708833
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.500517467081754,
+        2.2892928319867636
+      ],
+      "max_cg_residual": 9.997747960246926e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk001_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.318441504363153,
+      "A_top_dE_dm_lat_err": 0.003934676107919962,
+      "T_total_dE_ds_lat": 7.185412333574137,
+      "T_total_dE_ds_lat_err": 13.836504953883765,
+      "base_seed": 2026056002,
+      "chunk": 2,
+      "diagnostic_T_minus_A_lat": 5.866970829210984,
+      "gauge_rng_seed": 2038276262,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010985409755368413,
+        0.0020896437762909716
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.5000129131335616,
+        2.2910778157514535
+      ],
+      "max_cg_residual": 9.99103680400147e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk002_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3039824711470307,
+      "A_top_dE_dm_lat_err": 0.0022997740469188938,
+      "T_total_dE_ds_lat": 1.4281526922363188,
+      "T_total_dE_ds_lat_err": 24.17079521188824,
+      "base_seed": 2026056003,
+      "chunk": 3,
+      "diagnostic_T_minus_A_lat": 0.1241702210892881,
+      "gauge_rng_seed": 2038276263,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0008682363901826006,
+        0.0010724697715274315
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.505798052206642,
+        2.2881875348948606
+      ],
+      "max_cg_residual": 9.972629571467679e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk003_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.324358653855671,
+      "A_top_dE_dm_lat_err": 0.003112742431782176,
+      "T_total_dE_ds_lat": 6.8941315469256015,
+      "T_total_dE_ds_lat_err": 13.368548536269916,
+      "base_seed": 2026056004,
+      "chunk": 4,
+      "diagnostic_T_minus_A_lat": 5.56977289306993,
+      "gauge_rng_seed": 2038276264,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0013084252963951439,
+        0.0013327125738641014
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.494934915452248,
+        2.289550107765651
+      ],
+      "max_cg_residual": 9.992228590825999e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk004_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3201569592423037,
+      "A_top_dE_dm_lat_err": 0.0026034730362054833,
+      "T_total_dE_ds_lat": 7.384324638662807,
+      "T_total_dE_ds_lat_err": 13.791701219634596,
+      "base_seed": 2026056005,
+      "chunk": 5,
+      "diagnostic_T_minus_A_lat": 6.064167679420503,
+      "gauge_rng_seed": 2038276265,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010595316541816987,
+        0.001147823392284995
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4984701539314393,
+        2.2905643294768216
+      ],
+      "max_cg_residual": 9.998363623395389e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk005_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.318158292249783,
+      "A_top_dE_dm_lat_err": 0.0028844454129946964,
+      "T_total_dE_ds_lat": 1.4291582424283897,
+      "T_total_dE_ds_lat_err": 24.28410154495204,
+      "base_seed": 2026056006,
+      "chunk": 6,
+      "diagnostic_T_minus_A_lat": 0.11099995017860675,
+      "gauge_rng_seed": 2038276266,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0012733186382083085,
+        0.0011721214818387858
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.49804368714112,
+        2.28893866249099
+      ],
+      "max_cg_residual": 9.990903848841103e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk006_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.342455143915586,
+      "A_top_dE_dm_lat_err": 0.0037901867285158103,
+      "T_total_dE_ds_lat": 1.4272478141420304,
+      "T_total_dE_ds_lat_err": 24.667810955012744,
+      "base_seed": 2026056007,
+      "chunk": 7,
+      "diagnostic_T_minus_A_lat": 0.08479267022644432,
+      "gauge_rng_seed": 2038276267,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.001090040787863567,
+        0.001995844843197996
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4851535806266423,
+        2.290626666975994
+      ],
+      "max_cg_residual": 9.9947066892879e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk007_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.312493711682032,
+      "A_top_dE_dm_lat_err": 0.0036842747135063486,
+      "T_total_dE_ds_lat": 1.423244375037493,
+      "T_total_dE_ds_lat_err": 24.232365276143636,
+      "base_seed": 2026056008,
+      "chunk": 8,
+      "diagnostic_T_minus_A_lat": 0.11075066335546091,
+      "gauge_rng_seed": 2038276268,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011810236004560991,
+        0.0018686305451895346
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.5006817612062182,
+        2.2881779882154376
+      ],
+      "max_cg_residual": 9.977897692099504e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk008_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3258632762940383,
+      "A_top_dE_dm_lat_err": 0.0032041864658257134,
+      "T_total_dE_ds_lat": 6.8439890996983905,
+      "T_total_dE_ds_lat_err": 13.49540333963548,
+      "base_seed": 2026056009,
+      "chunk": 9,
+      "diagnostic_T_minus_A_lat": 5.518125823404352,
+      "gauge_rng_seed": 2038276269,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0012300445007205525,
+        0.0014775122514037477
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4936276428802553,
+        2.2891456086566784
+      ],
+      "max_cg_residual": 9.979245065126146e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk009_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3291444217833495,
+      "A_top_dE_dm_lat_err": 0.003544586710392844,
+      "T_total_dE_ds_lat": 1.4126036355116756,
+      "T_total_dE_ds_lat_err": 24.078631323866592,
+      "base_seed": 2026056010,
+      "chunk": 10,
+      "diagnostic_T_minus_A_lat": 0.0834592137283261,
+      "gauge_rng_seed": 2038276270,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0014976916129601052,
+        0.0015099649047466775
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4905247608865082,
+        2.288011413956518
+      ],
+      "max_cg_residual": 9.999692133355858e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk010_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3211350084474498,
+      "A_top_dE_dm_lat_err": 0.0045825843098188275,
+      "T_total_dE_ds_lat": 1.245767729118676,
+      "T_total_dE_ds_lat_err": 0.07996404648396056,
+      "base_seed": 2026056011,
+      "chunk": 11,
+      "diagnostic_T_minus_A_lat": -0.07536727932877385,
+      "gauge_rng_seed": 2038276271,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0009654796530024818,
+        0.002574466442588324
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.499039164958905,
+        2.291720170027375
+      ],
+      "max_cg_residual": 9.992734736531251e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk011_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3404586617786864,
+      "A_top_dE_dm_lat_err": 0.0028836096249597798,
+      "T_total_dE_ds_lat": 1.2429821139612027,
+      "T_total_dE_ds_lat_err": 0.2248705022039963,
+      "base_seed": 2026056012,
+      "chunk": 12,
+      "diagnostic_T_minus_A_lat": -0.09747654781748372,
+      "gauge_rng_seed": 2038276272,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.000922340346247033,
+        0.001463817575581995
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4829234129486242,
+        2.287198610015836
+      ],
+      "max_cg_residual": 9.96878426489388e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk012_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3285056806019537,
+      "A_top_dE_dm_lat_err": 0.0030783790631517425,
+      "T_total_dE_ds_lat": 1.424752761778751,
+      "T_total_dE_ds_lat_err": 24.703442739762878,
+      "base_seed": 2026056013,
+      "chunk": 13,
+      "diagnostic_T_minus_A_lat": 0.09624708117679726,
+      "gauge_rng_seed": 2038276273,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010144803690287617,
+        0.001543483053738404
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4927509952976017,
+        2.289854403658774
+      ],
+      "max_cg_residual": 9.995544071186357e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk013_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3419718809358785,
+      "A_top_dE_dm_lat_err": 0.0030709290890720414,
+      "T_total_dE_ds_lat": 1.4222968918611714,
+      "T_total_dE_ds_lat_err": 24.08417801035634,
+      "base_seed": 2026056014,
+      "chunk": 14,
+      "diagnostic_T_minus_A_lat": 0.08032501092529287,
+      "gauge_rng_seed": 2038276274,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011870778159477802,
+        0.0014092069500693753
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4833878022145734,
+        2.2885709307761006
+      ],
+      "max_cg_residual": 9.993679237218535e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk014_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.325817855055004,
+      "A_top_dE_dm_lat_err": 0.0028101386320323637,
+      "T_total_dE_ds_lat": 1.2467520564774566,
+      "T_total_dE_ds_lat_err": 0.08671326512590792,
+      "base_seed": 2026056015,
+      "chunk": 15,
+      "diagnostic_T_minus_A_lat": -0.07906579857754736,
+      "gauge_rng_seed": 2038276275,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011358672624895106,
+        0.0012460666311442765
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4925615441688276,
+        2.28805225720183
+      ],
+      "max_cg_residual": 9.950287182085746e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk015_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3207805363408092,
+      "A_top_dE_dm_lat_err": 0.0026910858130610544,
+      "T_total_dE_ds_lat": 1.2450765194046969,
+      "T_total_dE_ds_lat_err": 0.08503868316604235,
+      "base_seed": 2026056016,
+      "chunk": 16,
+      "diagnostic_T_minus_A_lat": -0.07570401693611228,
+      "gauge_rng_seed": 2038276276,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010808290792017495,
+        0.0011995448839976566
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.496113904060544,
+        2.2885822258650297
+      ],
+      "max_cg_residual": 9.992084895912255e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk016_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3150578729147397,
+      "A_top_dE_dm_lat_err": 0.003092148669303677,
+      "T_total_dE_ds_lat": 1.4225567865016253,
+      "T_total_dE_ds_lat_err": 24.58372652797761,
+      "base_seed": 2026056017,
+      "chunk": 17,
+      "diagnostic_T_minus_A_lat": 0.10749891358688557,
+      "gauge_rng_seed": 2038276277,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.001269918445644131,
+        0.0013525550498668568
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.5010025954402613,
+        2.2900373191891052
+      ],
+      "max_cg_residual": 9.991959869152622e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk017_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3361362863085577,
+      "A_top_dE_dm_lat_err": 0.0034764248572845603,
+      "T_total_dE_ds_lat": 1.4296543684755718,
+      "T_total_dE_ds_lat_err": 24.576677763156688,
+      "base_seed": 2026056018,
+      "chunk": 18,
+      "diagnostic_T_minus_A_lat": 0.09351808216701407,
+      "gauge_rng_seed": 2038276278,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0013385344975523038,
+        0.0015997237644877799
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4872562297548582,
+        2.288938001539993
+      ],
+      "max_cg_residual": 9.970708716142782e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk018_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3080957564322375,
+      "A_top_dE_dm_lat_err": 0.0048303732507850436,
+      "T_total_dE_ds_lat": 1.4306845827590908,
+      "T_total_dE_ds_lat_err": 24.269533996578183,
+      "base_seed": 2026056019,
+      "chunk": 19,
+      "diagnostic_T_minus_A_lat": 0.1225888263268533,
+      "gauge_rng_seed": 2038276279,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0014562109171856303,
+        0.002505823583525638
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.5036669132413456,
+        2.2885243671006883
+      ],
+      "max_cg_residual": 9.976955903757167e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk019_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3256614483938776,
+      "A_top_dE_dm_lat_err": 0.003774203859683685,
+      "T_total_dE_ds_lat": 1.4129894752469252,
+      "T_total_dE_ds_lat_err": 24.593180530545865,
+      "base_seed": 2026056020,
+      "chunk": 20,
+      "diagnostic_T_minus_A_lat": 0.08732802685304764,
+      "gauge_rng_seed": 2038276280,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0014816118706575652,
+        0.0017125675413042936
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.495373543297756,
+        2.2907704123340826
+      ],
+      "max_cg_residual": 9.98320349147822e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk020_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3207148502025094,
+      "A_top_dE_dm_lat_err": 0.00445081091572479,
+      "T_total_dE_ds_lat": 1.419805973113144,
+      "T_total_dE_ds_lat_err": 24.301835921316233,
+      "base_seed": 2026056021,
+      "chunk": 21,
+      "diagnostic_T_minus_A_lat": 0.0990911229106346,
+      "gauge_rng_seed": 2038276281,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.00143809969326017,
+        0.0022501928101737382
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.495832199906975,
+        2.288261110028481
+      ],
+      "max_cg_residual": 9.995252418423813e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk021_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3389113014995522,
+      "A_top_dE_dm_lat_err": 0.0030616860421342276,
+      "T_total_dE_ds_lat": 1.2451592489103376,
+      "T_total_dE_ds_lat_err": 0.10281605356659193,
+      "base_seed": 2026056022,
+      "chunk": 22,
+      "diagnostic_T_minus_A_lat": -0.0937520525892146,
+      "gauge_rng_seed": 2038276282,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011134782740998006,
+        0.0014610878976035525
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4905694898203872,
+        2.2939162707201186
+      ],
+      "max_cg_residual": 9.983124996925473e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk022_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3218220168924848,
+      "A_top_dE_dm_lat_err": 0.002833544113492228,
+      "T_total_dE_ds_lat": 1.4286960898661902,
+      "T_total_dE_ds_lat_err": 25.14077126916915,
+      "base_seed": 2026056023,
+      "chunk": 23,
+      "diagnostic_T_minus_A_lat": 0.10687407297370544,
+      "gauge_rng_seed": 2038276283,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.001167443070815725,
+        0.0012359234134535501
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4997787805414484,
+        2.2928719906769395
+      ],
+      "max_cg_residual": 9.959906163049133e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk023_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3260629444656016,
+      "A_top_dE_dm_lat_err": 0.0033186298700590574,
+      "T_total_dE_ds_lat": 1.4251250628588708,
+      "T_total_dE_ds_lat_err": 24.64658109401146,
+      "base_seed": 2026056024,
+      "chunk": 24,
+      "diagnostic_T_minus_A_lat": 0.09906211839326917,
+      "gauge_rng_seed": 2038276284,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0013549808275621815,
+        0.0014590464263142065
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4940402313638046,
+        2.2896779980431656
+      ],
+      "max_cg_residual": 9.974190007186871e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk024_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3275629567363958,
+      "A_top_dE_dm_lat_err": 0.0022573470423766784,
+      "T_total_dE_ds_lat": 7.2999072965165785,
+      "T_total_dE_ds_lat_err": 13.583211080845155,
+      "base_seed": 2026056025,
+      "chunk": 25,
+      "diagnostic_T_minus_A_lat": 5.972344339780182,
+      "gauge_rng_seed": 2038276285,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0008935787372452302,
+        0.001017810729676616
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4923624464199108,
+        2.2889002204617483
+      ],
+      "max_cg_residual": 9.980509702972992e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk025_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3289474023907015,
+      "A_top_dE_dm_lat_err": 0.0027806637706865307,
+      "T_total_dE_ds_lat": 7.348915893646349,
+      "T_total_dE_ds_lat_err": 13.941808233102378,
+      "base_seed": 2026056026,
+      "chunk": 26,
+      "diagnostic_T_minus_A_lat": 6.019968491255647,
+      "gauge_rng_seed": 2038276286,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010868305324524105,
+        0.001265840493801774
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4962290014559825,
+        2.2935974428904036
+      ],
+      "max_cg_residual": 9.992423398405836e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk026_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3464889543777911,
+      "A_top_dE_dm_lat_err": 0.0032917387139378747,
+      "T_total_dE_ds_lat": 1.4238190730203968,
+      "T_total_dE_ds_lat_err": 24.473506605794405,
+      "base_seed": 2026056027,
+      "chunk": 27,
+      "diagnostic_T_minus_A_lat": 0.07733011864260564,
+      "gauge_rng_seed": 2038276287,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011727999196739871,
+        0.0015891306121002592
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.482175011532012,
+        2.290068384158687
+      ],
+      "max_cg_residual": 9.965310319080302e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk027_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3157912620040177,
+      "A_top_dE_dm_lat_err": 0.003999336914096263,
+      "T_total_dE_ds_lat": 1.4330424055563697,
+      "T_total_dE_ds_lat_err": 24.469713252301204,
+      "base_seed": 2026056028,
+      "chunk": 28,
+      "diagnostic_T_minus_A_lat": 0.117251143552352,
+      "gauge_rng_seed": 2038276288,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010343914824495488,
+        0.0021652077803109137
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.501691420370531,
+        2.2911661775729417
+      ],
+      "max_cg_residual": 9.999966847247645e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk028_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3504900286960067,
+      "A_top_dE_dm_lat_err": 0.004075114270957624,
+      "T_total_dE_ds_lat": 1.4277393894177135,
+      "T_total_dE_ds_lat_err": 24.83934679271973,
+      "base_seed": 2026056029,
+      "chunk": 29,
+      "diagnostic_T_minus_A_lat": 0.07724936072170685,
+      "gauge_rng_seed": 2038276289,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.001483111639314385,
+        0.0019438981817525055
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4805669747790962,
+        2.2908609919967002
+      ],
+      "max_cg_residual": 9.99787050135353e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk029_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.323365503448545,
+      "A_top_dE_dm_lat_err": 0.0077936570582623505,
+      "T_total_dE_ds_lat": 1.431320347551699,
+      "T_total_dE_ds_lat_err": 24.317125936029505,
+      "base_seed": 2026056030,
+      "chunk": 30,
+      "diagnostic_T_minus_A_lat": 0.10795484410315392,
+      "gauge_rng_seed": 2038276290,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0014785371279437988,
+        0.004436295806677078
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.496481413056817,
+        2.290500715125944
+      ],
+      "max_cg_residual": 9.985590265004831e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk030_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3358641022010784,
+      "A_top_dE_dm_lat_err": 0.003377238045588734,
+      "T_total_dE_ds_lat": 1.4238845493208612,
+      "T_total_dE_ds_lat_err": 24.642177665583205,
+      "base_seed": 2026056031,
+      "chunk": 31,
+      "diagnostic_T_minus_A_lat": 0.08802044711978274,
+      "gauge_rng_seed": 2038276291,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0013367592433367725,
+        0.001522872279385118
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4882801631936617,
+        2.289798624514309
+      ],
+      "max_cg_residual": 9.997108283125156e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk031_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3283905176928958,
+      "A_top_dE_dm_lat_err": 0.004456201406625382,
+      "T_total_dE_ds_lat": 7.225426447975113,
+      "T_total_dE_ds_lat_err": 13.743852027901088,
+      "base_seed": 2026056032,
+      "chunk": 32,
+      "diagnostic_T_minus_A_lat": 5.897035930282216,
+      "gauge_rng_seed": 2038276292,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0009619186715937732,
+        0.0024946934923446777
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4926198078826243,
+        2.289654118498362
+      ],
+      "max_cg_residual": 9.9989179472606e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk032_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3403870332661347,
+      "A_top_dE_dm_lat_err": 0.0030578178522165174,
+      "T_total_dE_ds_lat": 1.2432274496731481,
+      "T_total_dE_ds_lat_err": 0.2679299171161317,
+      "base_seed": 2026056033,
+      "chunk": 33,
+      "diagnostic_T_minus_A_lat": -0.0971595835929866,
+      "gauge_rng_seed": 2038276293,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011043267612758513,
+        0.001465111739960554
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4835485624288602,
+        2.287780782388541
+      ],
+      "max_cg_residual": 9.985260202294965e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk033_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3400709522722214,
+      "A_top_dE_dm_lat_err": 0.0024773484479151966,
+      "T_total_dE_ds_lat": 7.210914824647961,
+      "T_total_dE_ds_lat_err": 13.772668869497464,
+      "base_seed": 2026056034,
+      "chunk": 34,
+      "diagnostic_T_minus_A_lat": 5.87084387237574,
+      "gauge_rng_seed": 2038276294,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0009717790257178365,
+        0.001124747724974144
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.487491953565359,
+        2.291534524928692
+      ],
+      "max_cg_residual": 9.954694536937473e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk034_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3316662832128325,
+      "A_top_dE_dm_lat_err": 0.003270322898121506,
+      "T_total_dE_ds_lat": 1.417721890608746,
+      "T_total_dE_ds_lat_err": 24.674201748319213,
+      "base_seed": 2026056035,
+      "chunk": 35,
+      "diagnostic_T_minus_A_lat": 0.08605560739591356,
+      "gauge_rng_seed": 2038276295,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0012230973755317652,
+        0.0015343523320408953
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.49017346302906,
+        2.2891732329567596
+      ],
+      "max_cg_residual": 9.991574621656001e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk035_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.32673478697401,
+      "A_top_dE_dm_lat_err": 0.0038919042322316873,
+      "T_total_dE_ds_lat": 1.4277681885902236,
+      "T_total_dE_ds_lat_err": 24.386016874091546,
+      "base_seed": 2026056036,
+      "chunk": 36,
+      "diagnostic_T_minus_A_lat": 0.10103340161621355,
+      "gauge_rng_seed": 2038276296,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0012696071821018372,
+        0.001959843943324592
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.49223346379104,
+        2.288274335975446
+      ],
+      "max_cg_residual": 9.990432213418991e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk036_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.333935242306987,
+      "A_top_dE_dm_lat_err": 0.003101937964046062,
+      "T_total_dE_ds_lat": 6.7384778951161275,
+      "T_total_dE_ds_lat_err": 13.297196926291173,
+      "base_seed": 2026056037,
+      "chunk": 37,
+      "diagnostic_T_minus_A_lat": 5.40454265280914,
+      "gauge_rng_seed": 2038276297,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011685683886530865,
+        0.0014485768218652443
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4874384858594967,
+        2.287799631243689
+      ],
+      "max_cg_residual": 9.991454186123849e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk037_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3196115788948057,
+      "A_top_dE_dm_lat_err": 0.002740234528560356,
+      "T_total_dE_ds_lat": 1.244593930314673,
+      "T_total_dE_ds_lat_err": 0.16484730075101015,
+      "base_seed": 2026056038,
+      "chunk": 38,
+      "diagnostic_T_minus_A_lat": -0.07501764858013282,
+      "gauge_rng_seed": 2038276298,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.001146060961203135,
+        0.001178873602618758
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4976192981356693,
+        2.289386245472553
+      ],
+      "max_cg_residual": 9.966318682327796e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk038_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3376608113663788,
+      "A_top_dE_dm_lat_err": 0.0035619547259518034,
+      "T_total_dE_ds_lat": 1.4225123166233535,
+      "T_total_dE_ds_lat_err": 24.5030872954395,
+      "base_seed": 2026056039,
+      "chunk": 39,
+      "diagnostic_T_minus_A_lat": 0.08485150525697471,
+      "gauge_rng_seed": 2038276299,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.001395081376591753,
+        0.0016190292405604662
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4887066745340256,
+        2.291303161353853
+      ],
+      "max_cg_residual": 9.999870905181903e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk039_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.317711745930247,
+      "A_top_dE_dm_lat_err": 0.0027333931687255767,
+      "T_total_dE_ds_lat": 1.4337618196374036,
+      "T_total_dE_ds_lat_err": 24.35887830457254,
+      "base_seed": 2026056040,
+      "chunk": 40,
+      "diagnostic_T_minus_A_lat": 0.11605007370715659,
+      "gauge_rng_seed": 2038276300,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011216900720471062,
+        0.001196465268869846
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4989817503510912,
+        2.2896087979092394
+      ],
+      "max_cg_residual": 9.984888861436172e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk040_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.322563774286945,
+      "A_top_dE_dm_lat_err": 0.002746857366612317,
+      "T_total_dE_ds_lat": 1.4151361281640134,
+      "T_total_dE_ds_lat_err": 24.095100315959886,
+      "base_seed": 2026056041,
+      "chunk": 41,
+      "diagnostic_T_minus_A_lat": 0.09257235387706841,
+      "gauge_rng_seed": 2038276301,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0011122798948225167,
+        0.0012161885449543006
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4957177554947765,
+        2.2892560200669436
+      ],
+      "max_cg_residual": 9.98457438618e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk041_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.323676479395912,
+      "A_top_dE_dm_lat_err": 0.0032348624513725954,
+      "T_total_dE_ds_lat": 1.2470004070822187,
+      "T_total_dE_ds_lat_err": 0.10191190452484133,
+      "base_seed": 2026056042,
+      "chunk": 42,
+      "diagnostic_T_minus_A_lat": -0.07667607231369322,
+      "gauge_rng_seed": 2038276302,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010982868028916334,
+        0.001600289576027473
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4924227313985394,
+        2.2866286190360867
+      ],
+      "max_cg_residual": 9.991951111600117e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk042_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3100828779517508,
+      "A_top_dE_dm_lat_err": 0.004727927963806688,
+      "T_total_dE_ds_lat": 1.4227506023876535,
+      "T_total_dE_ds_lat_err": 24.672150891025655,
+      "base_seed": 2026056043,
+      "chunk": 43,
+      "diagnostic_T_minus_A_lat": 0.11266772443590267,
+      "gauge_rng_seed": 2038276303,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0013211543238281088,
+        0.002510326726099729
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.5026656177679385,
+        2.288715344538989
+      ],
+      "max_cg_residual": 9.983799504901388e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk043_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.331387504169646,
+      "A_top_dE_dm_lat_err": 0.003319899558493729,
+      "T_total_dE_ds_lat": 1.4216192518104311,
+      "T_total_dE_ds_lat_err": 24.90024460663121,
+      "base_seed": 2026056044,
+      "chunk": 44,
+      "diagnostic_T_minus_A_lat": 0.09023174764078523,
+      "gauge_rng_seed": 2038276304,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0013323916445830341,
+        0.0014807283389266874
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4910706774984028,
+        2.2899031800001906
+      ],
+      "max_cg_residual": 9.996774428308203e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk044_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.329147510654563,
+      "A_top_dE_dm_lat_err": 0.0028876807056274247,
+      "T_total_dE_ds_lat": 1.415979337538657,
+      "T_total_dE_ds_lat_err": 24.624109633981988,
+      "base_seed": 2026056045,
+      "chunk": 45,
+      "diagnostic_T_minus_A_lat": 0.08683182688409397,
+      "gauge_rng_seed": 2038276305,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0010478323395054522,
+        0.00137984757746701
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4947746405441817,
+        2.2922631469369197
+      ],
+      "max_cg_residual": 9.99339641079934e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk045_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    },
+    {
+      "A_top_dE_dm_lat": 1.3193697050714084,
+      "A_top_dE_dm_lat_err": 0.003434928879428823,
+      "T_total_dE_ds_lat": 1.4155347997189474,
+      "T_total_dE_ds_lat_err": 24.062757201729816,
+      "base_seed": 2026056046,
+      "chunk": 46,
+      "diagnostic_T_minus_A_lat": 0.09616509464753897,
+      "gauge_rng_seed": 2038276306,
+      "mass_scan_bracket_masses_lat": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "mass_scan_endpoint_energy_err_lat": [
+        0.0014538260966451449,
+        0.0014607993658055296
+      ],
+      "mass_scan_endpoint_energy_lat": [
+        1.4964449411922796,
+        2.2880667642351247
+      ],
+      "max_cg_residual": 9.994343155692527e-09,
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "same_coordinate_kind": "uniform additive Dirac mass coordinate; coarse mass scan uses larger bracket than scalar-source response shifts",
+      "same_ensemble_as_total_top_response": true,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "selected_mass_parameter": 0.75,
+      "source_file": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk046_2026-05-06.json",
+      "strict_row_limit": "chunk-level mass-scan Jacobian; no per-configuration mass-scan covariance and no W/Z/g2/action authority",
+      "thermalization_sweeps": 1000,
+      "volume": "L12xT24"
+    }
+  ],
+  "strict_additive_top_jacobian_rows_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not set A_top=0 or infer it from observed top/yukawa data",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, or observed W/Z/g2",
+    "does not set kappa_s=1, c2=1, Z_match=1, or g2=1",
+    "does not infer matched covariance from chunk-level row errors",
+    "does not touch chunks047-048 or any live worker"
+  ],
+  "validation": {
+    "cg_residual_ok": true,
+    "failures": [],
+    "production_metadata_ok": true,
+    "row_count_ok": true,
+    "seed_control_ok": true,
+    "selected_mass_ok": true,
+    "three_mass_bracket_ok": true
+  }
+}

@@ -1,8 +1,8 @@
 # Handoff
 
-Checkpoint: 2026-05-07 10:57 EDT
+Checkpoint: 2026-05-07 11:44 EDT
 
-Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
+Branch: `codex/pr230-wroute-build`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
@@ -367,12 +367,23 @@ the subtraction identity as row evidence, does not set `g2`, `kappa_s`, `c2`,
 or `Z_match` by convention, does not claim matched covariance, and does not
 authorize retained or `proposed_retained` wording.
 
+Block16 is open-surface route guidance only.  It does not import
+FMS/gauge-Higgs, lattice Higgs-Yukawa, OS transfer, positive-cone, or
+Planck-criticality literature as PR230 proof authority.
+
+Block17 is bounded additive-top row support only.  It does not touch or package
+live/untracked chunks beyond 046, does not promote chunk-level `A_top=dE_top/dm_bare` slopes
+to per-configuration covariance, does not supply W/Z response rows, strict
+non-observed `g2`, accepted action authority, source-Higgs normalization, or a
+physical top-Yukawa readout, and does not authorize retained or
+`proposed_retained` wording.
+
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block15 should follow the same direct PR #230 landing path unless
+Block09 through block17 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -406,6 +417,15 @@ closure.  The additive-response blockers are now visible to aggregate gates,
 and proposal language remains denied.  No independent audit verdict was
 applied.
 
+Local review disposition for block16: pass bounded-support open-surface intake
+/ no closure.  The literature/open-surface survey provides route guidance only
+and imports no proof authority.  No independent audit verdict was applied.
+
+Local review disposition for block17: pass bounded-support additive-top rows /
+no closure.  The row artifact preserves production metadata and seed control
+for chunks001-046 while keeping strict subtraction closure open.  No
+independent audit verdict was applied.
+
 ## Next Exact Action
 
 Continue only through a real missing artifact:
@@ -426,7 +446,8 @@ W-response rows
 
 Existing `001-046` `C_sx/C_xx` rows are bounded staging support only.  Do not
 cycle more current-surface shortcut gates, do not promote W/Z scout/smoke rows
-to production evidence, and do not touch the live chunk worker from this lane.
+to production evidence, and do not touch or package live-worker chunks from
+this lane.
 Do not reopen the neutral primitive route without a same-surface H3/H4
 certificate proving physical neutral transfer/off-diagonal dynamics plus
 source/canonical-Higgs coupling authority.
@@ -443,7 +464,13 @@ worker/branch, or keep yielding this lane as waiting on the explicit
 production/certificate inputs while the outer supervisor runs independent
 positive work.
 
-## Block15 Open-Surface Bridge Intake
+Block17 adds one W/Z-repair support input: 46 chunk-level `A_top` rows.  The
+next W/Z move is to replace those with per-configuration same-source
+additive-top perturbation rows or pair them with matched same-source W/Z
+response rows, covariance, strict non-observed `g2`, accepted action, and final
+readout authority.
+
+## Block16 Open-Surface Bridge Intake
 
 Created `YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE`.
 
@@ -454,7 +481,7 @@ Files:
 - `outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json`
 - `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/LITERATURE_BRIDGES.md`
 
-Block15 deliberately broadens the search beyond the current repo surface.  It
+Block16 deliberately broadens the search beyond the current repo surface.  It
 surveys FMS/gauge-Higgs spectroscopy, lattice Higgs-Yukawa methodology,
 Osterwalder-Schrader transfer reconstruction, lattice transfer positivity,
 positive-cone spectral theory, and Planck criticality.  These sources are route
@@ -485,3 +512,53 @@ observed `g2`, `alpha_LM`, plaquette, `u0`, or any unit-overlap convention.
 The next real science move is not another current-surface absence gate; it is
 to attempt the explicit FMS/gauge-Higgs `O_H` candidate/action packet and then
 measure or certify the required time-kernel pole rows and Gram flatness.
+
+## Block17 Additive-Top Jacobian Rows
+
+Created `YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER`.
+
+Files:
+
+- `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`
+- `docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json`
+
+Result:
+
+- 46 rows from packaged chunks001-046 only;
+- selected mass parameter `0.75`;
+- `rng_seed_control.seed_control_version = numba_gauge_seed_v1`;
+- `A_top` mean `1.3265591120930125`;
+- `A_top` sample stderr `0.0015290010502665677`;
+- diagnostic median `T_total - A_top = 0.09765459978503321`;
+- strict additive-subtraction row closure remains false.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+python3 scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+# SUMMARY: PASS=22 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=101 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=160 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=314 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=69 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
+Claim boundary: bounded support only.  `proposal_allowed=false`.  The block
+does not use `yt_ward_identity`, `H_unit`, `y_t_bare`, observed targets,
+observed `g2`, `alpha_LM`, plaquette, `u0`, or any unit-overlap convention.

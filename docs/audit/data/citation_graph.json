@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T15:35:43.938044+00:00",
+  "generated_at": "2026-05-07T15:51:49.024509+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42223,6 +42223,16 @@
       "runner_path": "scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py",
       "title": "PR230 Additive-Source / Radial-Spurion Incompatibility Gate"
     },
+    "yt_pr230_additive_top_jacobian_row_builder_note_2026-05-07": {
+      "claim_id": "yt_pr230_additive_top_jacobian_row_builder_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / additive-top row artifact; closure not authorized.",
+      "deps": [],
+      "note_hash": "6e6ee3068c65d9505462ea1c6e27f4016aaab232297c1be6ff2851ee41c41c55",
+      "path": "docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md",
+      "runner_path": null,
+      "title": "PR230 Additive-Top Jacobian Row Builder"
+    },
     "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07": {
       "claim_id": "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07",
       "current_status": "support",
@@ -46345,6 +46355,7 @@
     "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05",
     "yt_pr230_action_first_route_completion_note_2026-05-06",
     "yt_pr230_additive_response_aggregate_wiring_note_2026-05-07",
+    "yt_pr230_additive_top_jacobian_row_builder_note_2026-05-07",
     "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07",
     "yt_pr230_assumption_import_stress_note_2026-05-01",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
@@ -46598,12 +46609,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1113,
-    "node_count": 2104,
-    "root_count": 1611,
+    "leaf_count": 1114,
+    "node_count": 2105,
+    "root_count": 1612,
     "runners_with_path": 1589,
     "status_counts": {
-      "bounded": 584,
+      "bounded": 585,
       "open": 105,
       "proposed_promoted": 1,
       "proposed_retained": 373,

@@ -1311,10 +1311,16 @@ def main() -> int:
             "matched_covariance_delta_method_valid"
         )
         is True
-        and certs["pr230_additive_top_subtraction_row_contract"].get(
-            "future_artifact_presence", {}
-        ).get("additive_top_jacobian_rows")
-        is False
+        and (
+            certs["pr230_additive_top_subtraction_row_contract"].get(
+                "future_artifact_presence", {}
+            ).get("additive_top_jacobian_rows")
+            is False
+            or certs["pr230_additive_top_subtraction_row_contract"].get(
+                "additive_top_jacobian_row_status", {}
+            ).get("strict")
+            is False
+        )
         and certs["pr230_additive_top_subtraction_row_contract"].get(
             "future_artifact_presence", {}
         ).get("wz_response_ratio_rows")

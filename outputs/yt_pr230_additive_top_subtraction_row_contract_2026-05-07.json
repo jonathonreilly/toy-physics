@@ -1,5 +1,14 @@
 {
-  "actual_current_surface_status": "exact-support / additive-top subtraction row contract; current additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action are absent",
+  "actual_current_surface_status": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
+  "additive_top_jacobian_row_status": {
+    "bounded_support": true,
+    "path": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
+    "present": true,
+    "proposal_allowed": false,
+    "row_count": 46,
+    "status": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
+    "strict": false
+  },
   "additive_top_subtraction_row_contract_passed": true,
   "admitted_observation_status": null,
   "audit_required_before_effective_retained": true,
@@ -100,7 +109,7 @@
   },
   "future_artifact_presence": {
     "accepted_same_source_ew_action": false,
-    "additive_top_jacobian_rows": false,
+    "additive_top_jacobian_rows": true,
     "radial_top_response_rows": false,
     "strict_electroweak_g2_certificate": false,
     "subtracted_response_readout_certificate": false,
@@ -160,7 +169,7 @@
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
     "wz_response_ratio_identifiability_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent"
   },
-  "pass_count": 21,
+  "pass_count": 22,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The subtraction formula is exact support only.  The current PR230 surface lacks additive-top Jacobian rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted radial-spurion action authority.",
   "strict_non_claims": [

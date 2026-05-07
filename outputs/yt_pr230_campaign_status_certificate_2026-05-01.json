@@ -261,7 +261,7 @@
     "pr230_action_first_oh_artifact_attempt": "exact negative boundary / action-first O_H artifact not constructible from current PR230 surface",
     "pr230_action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
     "pr230_additive_source_radial_spurion_incompatibility": "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
-    "pr230_additive_top_subtraction_row_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action are absent",
+    "pr230_additive_top_subtraction_row_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
     "pr230_canonical_oh_accepted_action_stretch_attempt": "exact negative boundary / canonical O_H accepted-action root not derivable from the current PR230 support stack",
     "pr230_canonical_oh_hard_residual_equivalence_gate": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
     "pr230_canonical_oh_wz_common_action_cut": "exact support/boundary / canonical O_H and WZ accepted-action common-cut certificate; current surface remains open",

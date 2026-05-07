@@ -292,6 +292,60 @@ git diff --check
 # OK
 ```
 
+## Block17
+
+Local review run on 2026-05-07 after the additive-top Jacobian row extraction.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`
+- `scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py`
+- `scripts/frontier_yt_pr230_assumption_import_stress.py`
+- `scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `scripts/frontier_yt_pr230_positive_closure_completion_audit.py`
+- `docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json`
+- updated aggregate certificate outputs
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Row builder and aggregate runners compile; row builder, subtraction contract, assumption, campaign, assembly, retained-route, and completion-audit certificates pass. |
+| Physics Claim Boundary | BOUNDED SUPPORT / NO CLOSURE | The rows are chunk-level coarse `A_top` slopes from packaged chunks001-046 only; strict additive subtraction still lacks matched covariance, W/Z rows, strict `g2`, accepted action, and final readout. |
+| Imports / Support | CLEAN / DISCLOSED | No `H_unit`, Ward, observed target, `alpha_LM`, plaquette/u0, `kappa_s=1`, `c2=1`, `Z_match=1`, or `g2=1` shortcut is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | Updates are confined to PR230 runners, outputs, docs note, and loop pack; untracked live chunks beyond 046 are excluded. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# OK
+python3 scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+# SUMMARY: PASS=22 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=101 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=160 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=314 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=69 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
 ## Block12
 
 Local review run on 2026-05-07 10:34 EDT.  Parallel subagents were not spawned
@@ -335,7 +389,7 @@ git diff --check
 # OK
 ```
 
-## Block15
+## Block16
 
 Local review run on 2026-05-07 after the open-surface literature intake.
 Parallel subagents were not spawned because the user requested the broader
@@ -516,7 +570,7 @@ Review results:
 | Physics Claim Boundary | EXACT SUPPORT / NO CLOSURE | Wiring records the additive-source contamination and subtraction-row contract, but no rows or accepted action authority are supplied. |
 | Imports / Support | CLEAN / DISCLOSED | No `H_unit`, Ward, observed target, `alpha_LM`, plaquette/u0, `kappa_s=1`, `c2=1`, `Z_match=1`, or `g2=1` shortcut is used. |
 | Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
-| Repo Governance | PASS | Updates are confined to PR230 runners, outputs, docs note, and loop pack; live chunks047-048 were not touched. |
+| Repo Governance | PASS | Updates are confined to PR230 runners, outputs, docs note, and loop pack; live chunks beyond 046 were not touched. |
 
 Checks:
 

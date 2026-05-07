@@ -322,3 +322,20 @@ time-kernel manifest.  It must state whether the operator/action surface is
 derived from `Cl(3)/Z^3` or is a new external extension, and it must require
 measured `C_ss(t)`, `C_sH(t)`, `C_HH(t)`, GEVP/pole rows, covariance, FV/IR
 checks, and Gram flatness before any PR230 top-Yukawa claim.
+
+Block17 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Additive-top Jacobian note | `docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md` | Created; bounded support only |
+| Additive-top Jacobian row builder | `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py` | Created; PASS=12 FAIL=0 |
+| Additive-top Jacobian row packet | `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json` | Created; 46 chunk-level rows, strict=false |
+| Additive-top subtraction contract | `scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py` | Updated to accept bounded rows without closure; PASS=22 FAIL=0 |
+| Aggregate gates | assumption/assembly/retained/completion runners | Updated or rerun; proposal remains denied |
+
+Follow-on artifact target after block17 is narrower but still open: supply
+matched same-source W/Z response rows plus per-configuration
+`T_total/A_top/W/g2` covariance, or replace the coarse mass-scan `A_top` packet
+with dedicated same-source additive-top perturbation rows.  Block17 does not
+provide strict covariance, W/Z rows, strict `g2`, accepted action authority, or
+any retained/proposal status.

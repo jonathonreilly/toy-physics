@@ -93,6 +93,29 @@ def future_presence() -> dict[str, bool]:
     return {name: (ROOT / path).exists() for name, path in FUTURE_ARTIFACTS.items()}
 
 
+def additive_top_jacobian_row_status() -> dict[str, Any]:
+    path = ROOT / FUTURE_ARTIFACTS["additive_top_jacobian_rows"]
+    rows = load_json(FUTURE_ARTIFACTS["additive_top_jacobian_rows"])
+    if not rows:
+        return {
+            "present": False,
+            "bounded_support": False,
+            "strict": False,
+            "proposal_allowed": False,
+            "path": rel(path),
+            "status": "absent",
+        }
+    return {
+        "present": True,
+        "bounded_support": rows.get("bounded_additive_top_jacobian_rows_passed") is True,
+        "strict": rows.get("strict_additive_top_jacobian_rows_passed") is True,
+        "proposal_allowed": rows.get("proposal_allowed") is True,
+        "path": rel(path),
+        "status": rows.get("actual_current_surface_status", "present"),
+        "row_count": rows.get("row_source", {}).get("packaged_chunk_count"),
+    }
+
+
 def subtraction_contract() -> dict[str, Any]:
     return {
         "contract_kind": "matched additive-top subtraction row contract",
@@ -292,6 +315,7 @@ def main() -> int:
     counter_rows = no_subtraction_counterfamily()
     covariance_witness = covariance_delta_method_witness()
     firewall = forbidden_firewall()
+    additive_rows = additive_top_jacobian_row_status()
 
     incompatibility_loaded = (
         parents["additive_source_radial_spurion_incompatibility"].get(
@@ -364,7 +388,16 @@ def main() -> int:
         parents["retained_route"].get("proposal_allowed") is False
         and parents["campaign_status"].get("proposal_allowed") is False
     )
-    additive_rows_absent = not futures["additive_top_jacobian_rows"]
+    additive_rows_acceptable_support = (
+        additive_rows["present"]
+        and additive_rows["bounded_support"]
+        and additive_rows["proposal_allowed"] is False
+    )
+    additive_rows_strict = (
+        additive_rows["present"]
+        and additive_rows["strict"]
+        and additive_rows["proposal_allowed"] is False
+    )
     readout_absent = not futures["subtracted_response_readout_certificate"]
     subtraction_identity_exact = all_subtracted_rows_recover_input(witness_rows)
     no_subtraction_underdetermined = counterfamily_blocks_identifiability(counter_rows)
@@ -374,7 +407,13 @@ def main() -> int:
         and covariance_witness["variance_y_t"] > 0.0
     )
     current_surface_contract_satisfied = (
-        all(futures.values())
+        additive_rows_strict
+        and futures["radial_top_response_rows"]
+        and futures["wz_response_ratio_rows"]
+        and futures["top_additive_wz_matched_covariance"]
+        and futures["strict_electroweak_g2_certificate"]
+        and futures["accepted_same_source_ew_action"]
+        and futures["subtracted_response_readout_certificate"]
         and not top_response_not_strict
         and not wz_rows_absent
         and not covariance_absent
@@ -389,7 +428,16 @@ def main() -> int:
     report("wz-response-ratio-contract-support-only", wz_ratio_support_only, statuses["wz_response_ratio_identifiability_contract"])
     report("same-source-top-response-not-strict", top_response_not_strict, statuses["same_source_top_response_builder"])
     report("wz-response-rows-absent", wz_rows_absent, FUTURE_ARTIFACTS["wz_response_ratio_rows"])
-    report("additive-top-jacobian-rows-absent", additive_rows_absent, FUTURE_ARTIFACTS["additive_top_jacobian_rows"])
+    report(
+        "additive-top-jacobian-row-status",
+        (not additive_rows["present"]) or additive_rows_acceptable_support,
+        f"{additive_rows['path']}: {additive_rows['status']}",
+    )
+    report(
+        "additive-top-jacobian-not-strict",
+        not additive_rows_strict,
+        "strict rows still require per-configuration same-source covariance",
+    )
     report("matched-three-way-covariance-absent", covariance_absent, FUTURE_ARTIFACTS["top_additive_wz_matched_covariance"])
     report("strict-g2-authority-absent", strict_g2_absent, FUTURE_ARTIFACTS["strict_electroweak_g2_certificate"])
     report("g2-firewall-clean", g2_firewall_clean, statuses["wz_g2_authority_firewall"])
@@ -407,6 +455,10 @@ def main() -> int:
     result = {
         "actual_current_surface_status": (
             "exact-support / additive-top subtraction row contract; current "
+            "additive Jacobian rows are bounded support only, while W/Z rows, "
+            "matched covariance, strict g2, and accepted action remain absent"
+            if additive_rows["present"]
+            else "exact-support / additive-top subtraction row contract; current "
             "additive Jacobian rows, W/Z rows, matched covariance, strict g2, "
             "and accepted action are absent"
         ),
@@ -429,6 +481,7 @@ def main() -> int:
         "additive_top_subtraction_row_contract_passed": passed,
         "current_surface_contract_satisfied": current_surface_contract_satisfied,
         "future_artifact_presence": futures,
+        "additive_top_jacobian_row_status": additive_rows,
         "contract": contract,
         "subtraction_witness_rows": witness_rows,
         "no_subtraction_counterfamily": counter_rows,
