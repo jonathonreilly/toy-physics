@@ -1,0 +1,47 @@
+slug: staggered-dirac-ac-upgrade-20260507
+goal: |
+  Close substep-4 admitted-context AC of the staggered-Dirac realization
+  synthesis. Strategic insight from preflight: Reeh-Schlieder + cluster
+  → H_phys has unique vacuum, no DHR superselection sectors. Block 05's
+  DHR framing was over-complicated. Three matter generations are three
+  quantum-mechanically distinct STATES in H_phys, derivable directly
+  from retained primitives without admitted-context AC.
+
+target_status: best-honest-status
+runtime_budget: 12h
+runtime_used: ~30m (loop pack setup + grounding read)
+mode: campaign
+
+current_block: 01
+current_block_route: DHR-axioms-vs-retained-primitives map
+current_block_branch: physics-loop/staggered-dirac-ac-upgrade-block01-20260507 (to create)
+current_block_status: planning
+
+cycles_completed: 0
+blocks_completed: 0
+prs_opened: 0
+prs_remaining_in_24h_volume_cap: 5
+cluster_cap_status: judgment-based per PR #624
+
+active_route: Block 01 — map DHR axioms to retained primitives + identify forcing gaps; verify the strategic insight that three generations are three states in single H_phys (not DHR sectors)
+active_route_deliverable: STAGGERED_DIRAC_AC_DHR_FRAMING_AUDIT_NOTE_2026-05-07.md
+hard_residual_being_attacked: |
+  Substep 4 currently relies on AC (Hilbert/no-proper-quotient
+  semantics) admitted-context. The strategic insight: this dependency
+  arises from invoking DHR superselection, but Reeh-Schlieder + cluster
+  rule out DHR sectors on canonical surface. The substep can be
+  reformulated as direct three-state derivation in single H_phys.
+
+next_exact_action: |
+  Block 01: write STAGGERED_DIRAC_AC_DHR_FRAMING_AUDIT_NOTE_2026-05-07.md
+  documenting (1) DHR's three classical assumptions, (2) why they fail
+  on the framework's canonical surface (Reeh-Schlieder + cluster →
+  unique vacuum), and (3) the alternative direct three-state framing.
+  Then Block 02: write the reformulated substep-4 theorem without AC.
+
+stop_condition: |
+  Continue until 12h runtime exhausted, corollary exhaustion, value-
+  gate exhaustion, judgment-based cluster cap evaluator says BACKLOG
+  for all queued candidates, or global queue exhaustion.
+
+last_checkpoint: 2026-05-07T~17:00 (initial loop-pack setup)
