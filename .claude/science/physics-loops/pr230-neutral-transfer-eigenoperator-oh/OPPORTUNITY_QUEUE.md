@@ -1,10 +1,10 @@
 # Opportunity Queue
 
-Campaign mode queue after block18 fresh-artifact intake checkpoint.
+Campaign mode queue after block19 FMS `O_H` candidate/action packet.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
-| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh `O_H` artifact or production `C_ss/C_sH/C_HH` row packet appears; blocked on current stack | 2-3 | Block06 contract, block07 hard-residual gate, block09/block14 aperture checkpoints, block16 open-surface intake, and block18 fresh-artifact intake | Medium | Medium | Direct source-Higgs closure root | Proceed only with genuine same-surface `O_H` authority and production `C_ss/C_sH/C_HH` pole rows. Existing 46/63 `C_sx/C_xx` chunks are bounded staging support only. |
+| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh accepted/derived `O_H` artifact or production `C_ss/C_sH/C_HH` row packet appears; blocked on current stack | 2-3 | Block06 contract, block07 hard-residual gate, block09/block14 aperture checkpoints, block16 open-surface intake, block18 fresh-artifact intake, and block19 FMS candidate/action packet | Medium | Medium | Direct source-Higgs closure root | Proceed only after block19 is upgraded into accepted same-surface `O_H` authority and production `C_ss/C_sH/C_HH` pole rows. Existing 46/63 `C_sx/C_xx` chunks are bounded staging support only. |
 | 2 | Strict W/Z physical-response packet with accepted action | Medium-low if real row/action/covariance artifacts appear; blocked by block11/block15/block18 on current branch | 5-7 | Block05 subtraction contract, block08 W/Z checkpoint, block11 packet intake, block15 additive aggregate wiring, block17 additive-top coarse rows, and block18 fresh-artifact intake | High | Medium | W/Z repair | Requires accepted action, canonical `O_H`/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict non-observed `g2`, `delta_perp` authority, and final W-response rows. Existing scout/smoke rows and coarse additive-top rows are non-closure. |
 | 3 | Same-surface neutral primitive/rank-one theorem | Medium-low only with a fresh H3/H4 certificate | 2 | Block07 hard-residual gate, neutral primitive gates, and block10 H3/H4 aperture checkpoint | Medium | Medium | Independent of W/Z covariance and source-Higgs rows | H1/H2 support is loaded, but current finite `C_sx/C_xx` rows do not supply physical transfer. Reopen only with same-surface H3 physical transfer/off-diagonal generator plus H4 source/canonical-Higgs coupling authority. |
 | 4 | Complete/replace source-Higgs production row packet | Medium-low | 3 | Block14 now audits 46/63 current rows | Medium | Medium | Production continuation | Complete the 63/63 packet or replace it with real canonical `C_sH/C_HH` rows only after `O_H` is certified; do not touch the live worker from this lane. |
@@ -86,3 +86,35 @@ same-source W/Z response rows plus per-configuration `A_top/T_total/W`
 covariance, strict non-observed `g2`, accepted action, `delta_perp`, and final
 readout authority; the parallel source-Higgs route remains the explicit
 accepted FMS/gauge-Higgs `O_H` candidate/action packet.
+
+## Block19 FMS `O_H` Candidate/Action Packet
+
+Block19 turns the block16 open-surface route into an explicit candidate packet:
+
+```text
+O_H(x) = Phi(x)^dagger Phi(x) - <Phi^dagger Phi>
+```
+
+The packet is now wired to the source-Higgs time-kernel manifest and records
+the required action/operator surface: a dynamic Higgs doublet `Phi`, a
+gauge-covariant lattice kinetic term, a nonzero radial `v`, canonical radial
+field `h`, and a scalar source coupled to `sum_x O_H(x)` after additive-top
+subtraction or a no-independent-top source theorem.
+
+This is conditional support only.  The current PR230 surface still lacks an
+accepted or derived same-surface EW/Higgs action, a canonical `O_H`
+certificate, production `C_ss/C_sH/C_HH` rows, pole-residue covariance,
+FV/IR/zero-mode authority, and source-Higgs Gram flatness.  The packet should
+therefore be used as the next-build contract, not as proof evidence.
+
+Updated queue after block19:
+
+1. Upgrade the FMS packet into accepted same-surface action/operator authority
+   or derive it from `Cl(3)/Z^3`, then launch production `C_ss/C_sH/C_HH`
+   pole rows and Gram/FV/IR checks.
+2. If that action/operator surface cannot be made same-surface, pivot to
+   strict W/Z matched response rows with accepted action, same-source top/W/Z
+   covariance, strict non-observed `g2`, `delta_perp`, and final readout.
+3. If neither row route is available, attack the neutral primitive H3/H4
+   physical-transfer/irreducibility theorem rather than another source-only
+   alias gate.

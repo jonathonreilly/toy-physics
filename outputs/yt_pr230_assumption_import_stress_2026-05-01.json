@@ -18,6 +18,7 @@
     "finite_source_shift_derivative_no_go": "exact negative boundary / finite source-shift slope not zero-source derivative certificate",
     "fms_composite_oh_conditional_theorem": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
     "fms_literature_source_overlap_intake": "exact negative boundary / FMS literature does not supply PR230 source-overlap or kappa_s on the current surface",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
     "fms_post_degree_route_rescore": "bounded-support / FMS post-degree route rescore; action-first composite O_H route selected as cleanest future artifact, no current closure",
     "fresh_artifact_literature_route_review": "bounded-support / fresh artifact literature route review; selected O_H/C_sH/C_HH action-first FMS contract, no current closure",
     "genuine_source_pole_artifact_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
@@ -99,7 +100,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 101,
+  "pass_count": 102,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

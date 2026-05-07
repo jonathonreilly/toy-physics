@@ -355,3 +355,20 @@ same-source W/Z response rows plus per-configuration `T_total/A_top/W/g2`
 covariance and strict `g2`, or the accepted FMS/gauge-Higgs `O_H`
 candidate/action packet with source-Higgs pole rows and Gram flatness.  The
 fresh-artifact checkpoint does not itself add physics authority.
+
+Block19 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| FMS `O_H` candidate/action packet runner | `scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py` | Created; PASS=13 FAIL=0 |
+| FMS `O_H` candidate/action packet certificate | `outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json` | Created; conditional support only, `closure_authorized=false` |
+| FMS `O_H` candidate/action packet note | `docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md` | Created; explicit claim boundary and forbidden-import firewall |
+| Aggregate gates | assumption/assembly/retained/completion/campaign runners | Updated to consume the packet as support-not-proof |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block19 checkpoint |
+
+Follow-on artifact target after block19 is sharper: either derive/adopt the
+same-surface EW/Higgs action/operator surface and certify canonical `O_H`,
+then generate production `C_ss/C_sH/C_HH` pole rows with pole/Gram/FV/IR
+authority; or pivot to strict W/Z same-source response rows and matched
+covariance.  The FMS packet alone is not a physics readout and does not
+authorize retained or `proposed_retained` closure wording.

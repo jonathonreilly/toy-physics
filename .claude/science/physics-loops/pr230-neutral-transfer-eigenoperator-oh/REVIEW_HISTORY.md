@@ -245,6 +245,53 @@ python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 ```
 
+## Block19
+
+Local review run on 2026-05-07 12:14 EDT.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py`
+- `outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json`
+- `docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md`
+- updated aggregate runners and certificates
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | FMS packet runner compiles and passes; aggregate gates consume it as support-not-proof. |
+| Physics Claim Boundary | CONDITIONAL SUPPORT / NO CLOSURE | The candidate operator/action packet is explicit but not accepted or derived on the PR230 surface. |
+| Imports / Support | CLEAN / DISCLOSED | No Ward, `H_unit`, observed target, observed `g2`, plaquette/u0, `kappa_s=1`, `c2=1`, `Z_match=1`, `g2=1`, or FMS-literature proof import is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | Updates are confined to PR230 runner/certificate/note/loop-pack and aggregate gates; live chunk outputs remain untracked. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py
+# OK
+python3 scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=102 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=354 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=161 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=315 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=70 FAIL=0
+git diff --check
+# OK
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
+
 ## Block11
 
 Review-loop/local review run on 2026-05-07 10:19 EDT.  Parallel subagents were
@@ -290,6 +337,47 @@ python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 git diff --check
 # OK
+```
+
+## Block18
+
+Local review run on 2026-05-07.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py`
+- `docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json`
+- updated aggregate runners/certificates
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | New runner compiles and passes; aggregate runners compile and pass after wiring. |
+| Physics Claim Boundary | CONDITIONAL SUPPORT / NO CLOSURE | Packet defines the FMS gauge-Higgs `O_H` candidate and row contract, but marks `same_surface_cl3_z3_derived=false`, `accepted_current_surface=false`, and `external_extension_required=true`. |
+| Imports / Support | CLEAN / DISCLOSED | No `H_unit`, Ward, observed target, observed `g2`, `alpha_LM`, plaquette/u0, reduced-pilot, `kappa_s=1`, `c2=1`, or `Z_match=1` shortcut is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | Updates are confined to PR230 runner, output, note, aggregate gates, and loop pack; live row-wave chunks were not touched. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=102 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=353 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=161 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=315 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=70 FAIL=0
 ```
 
 ## Block17

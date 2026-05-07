@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T16:06:39.944640+00:00",
+  "generated_at": "2026-05-07T16:17:44.363193+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42393,6 +42393,16 @@
       "runner_path": "scripts/frontier_yt_pr230_fms_literature_source_overlap_intake.py",
       "title": "PR230 FMS Literature Source-Overlap Intake"
     },
+    "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07": {
+      "claim_id": "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "conditional-support / FMS `O_H` candidate-action packet; no current",
+      "deps": [],
+      "note_hash": "8464648498754989d3c6e9c8af7bfd3425d9b7b9e588a93288ee6c8c0c5f9c6b",
+      "path": "docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py",
+      "title": "PR230 FMS `O_H` Candidate/Action Packet"
+    },
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06": {
       "claim_id": "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
       "current_status": "bounded",
@@ -46378,6 +46388,7 @@
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
     "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
     "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07",
+    "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
     "yt_pr230_fresh_artifact_intake_checkpoint_note_2026-05-07",
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
@@ -46620,16 +46631,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1115,
-    "node_count": 2106,
-    "root_count": 1613,
-    "runners_with_path": 1590,
+    "leaf_count": 1116,
+    "node_count": 2107,
+    "root_count": 1614,
+    "runners_with_path": 1591,
     "status_counts": {
       "bounded": 585,
       "open": 106,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 458,
+      "support": 459,
       "unknown": 583
     }
   }

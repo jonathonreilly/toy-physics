@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block18_fresh_artifact_intake_checkpoint`.
+Current block: `block19_fms_oh_candidate_action_packet`.
 
 ```yaml
-actual_current_surface_status: open / fresh-artifact intake checkpoint at PR230 head cde753822 after block17 additive-top Jacobian rows; no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet is present
-conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
-hypothetical_axiom_status: null
+actual_current_surface_status: conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows
+conditional_surface_status: exact support only after the packet is converted into an accepted same-surface Cl(3)/Z^3 EW/Higgs action or explicitly admitted extension, a canonical O_H certificate, production C_ss/C_sH/C_HH time-kernel rows, pole/Gram/FV/IR authority, and aggregate route gates
+hypothetical_axiom_status: external gauge-Higgs extension candidate if the action is adopted rather than derived from Cl(3)/Z^3
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block18 consumes only committed PR-head certificates at cde753822. Block17 additive-top Jacobian rows are bounded support only, and no new positive closure artifact is present. The source-Higgs route still lacks certified O_H, production C_ss/C_sH/C_HH pole rows, strict scalar-LSZ/FV authority, and Gram flatness. The W/Z route still lacks accepted action, production W/Z rows, same-source top/W/Z matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. The live worker was not touched or inspected."
+proposal_allowed_reason: "Block19 supplies only an explicit FMS O_H candidate/action packet. It does not derive or adopt an EW/Higgs action from Cl(3)/Z^3, does not certify canonical O_H, does not produce C_ss/C_sH/C_HH pole rows, and does not prove source-overlap, Gram flatness, FV/IR, or scalar-LSZ authority. Block18 consumed only committed PR-head certificates at cde753822 and remains routing-only. Block17 additive-top Jacobian rows remain bounded W/Z-repair support only."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -51,7 +51,12 @@ Reason:
 7. Block18 does not touch or inspect the live worker, does not treat the
    committed PR-head checkpoint as physics evidence, and does not promote the
    block17 additive-top rows into W/Z closure authority.
-8. No branch-local wording may present this block as closure.
+8. Block19 does not treat the FMS/gauge-Higgs operator shape as adopted
+   PR230 action authority, does not derive the action from `Cl(3)/Z^3`, does
+   not certify canonical `O_H`, does not launch or read closure rows, and does
+   not infer `Res C_sH` from source-only rows, taste-radial rows, or FMS
+   literature.
+9. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
 
@@ -119,5 +124,10 @@ Prior block certificate summary:
   canonical `O_H`, source-Higgs production pole-row packet, accepted W/Z action,
   production W/Z rows, matched covariance, strict non-observed `g2`,
   `delta_perp`, or final W-response rows.
-- Block01 through Block18 all have `proposal_allowed=false`; their boundaries
+- Block19 actual status: conditional-support / FMS `O_H` candidate/action
+  packet; it defines the needed gauge-Higgs composite `O_H` action/operator
+  contract and time-kernel binding, but current PR230 has not derived/adopted
+  the EW/Higgs action, certified canonical `O_H`, produced `C_ss/C_sH/C_HH`
+  pole rows, or proved source-overlap/Gram/FV/IR authority.
+- Block01 through Block19 all have `proposal_allowed=false`; their boundaries
   remain active.

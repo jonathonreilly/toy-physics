@@ -704,6 +704,9 @@ def main() -> int:
         "pr230_fms_composite_oh_conditional_theorem": load(
             "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
         ),
+        "pr230_fms_oh_candidate_action_packet": load(
+            "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json"
+        ),
         "pr230_higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
@@ -3235,6 +3238,27 @@ def main() -> int:
         and fms_composite_oh_conditional_theorem.get("source_higgs_rows_absent")
         is True,
         statuses["pr230_fms_composite_oh_conditional_theorem"],
+    )
+    fms_oh_candidate_action_packet = certificates[
+        "pr230_fms_oh_candidate_action_packet"
+    ]
+    report(
+        "pr230-fms-oh-candidate-action-packet-support-not-proof",
+        "FMS O_H candidate/action packet"
+        in str(statuses["pr230_fms_oh_candidate_action_packet"])
+        and fms_oh_candidate_action_packet.get("proposal_allowed") is False
+        and fms_oh_candidate_action_packet.get(
+            "fms_oh_candidate_action_packet_passed"
+        )
+        is True
+        and fms_oh_candidate_action_packet.get("accepted_current_surface")
+        is False
+        and fms_oh_candidate_action_packet.get("same_surface_cl3_z3_derived")
+        is False
+        and fms_oh_candidate_action_packet.get("external_extension_required")
+        is True
+        and fms_oh_candidate_action_packet.get("closure_authorized") is False,
+        statuses["pr230_fms_oh_candidate_action_packet"],
     )
     higgs_mass_source_action_bridge = certificates[
         "pr230_higgs_mass_source_action_bridge"
@@ -5891,6 +5915,17 @@ def main() -> int:
         is True
         and fms_composite_oh_conditional_theorem.get("source_higgs_rows_absent")
         is True
+    )
+    result["fms_oh_candidate_action_packet_support_not_proof"] = (
+        fms_oh_candidate_action_packet.get("fms_oh_candidate_action_packet_passed")
+        is True
+        and fms_oh_candidate_action_packet.get("proposal_allowed") is False
+        and fms_oh_candidate_action_packet.get("accepted_current_surface") is False
+        and fms_oh_candidate_action_packet.get("same_surface_cl3_z3_derived")
+        is False
+        and fms_oh_candidate_action_packet.get("external_extension_required")
+        is True
+        and fms_oh_candidate_action_packet.get("closure_authorized") is False
     )
     result["higgs_mass_source_action_bridge_support_not_proof"] = (
         higgs_mass_source_action_bridge.get("higgs_mass_source_action_bridge_passed")

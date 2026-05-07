@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 703,
+    "leaf": 704,
     "medium": 323
   },
-  "generated_at": "2026-05-07T16:06:43.113043+00:00",
+  "generated_at": "2026-05-07T16:17:47.449612+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20924,6 +20924,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25957,6 +25974,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 866,
-  "total_pending": 1263
+  "ready_count": 867,
+  "total_pending": 1264
 }

@@ -236,6 +236,9 @@ def main() -> int:
         "fms_composite_oh_conditional_theorem": load(
             "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
         ),
+        "fms_oh_candidate_action_packet": load(
+            "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json"
+        ),
         "higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
@@ -1432,6 +1435,30 @@ def main() -> int:
         )
         is False,
         fms_composite.get("actual_current_surface_status"),
+    )
+    fms_candidate_packet = certificates["fms_oh_candidate_action_packet"]
+    report(
+        "fms-oh-candidate-action-packet-support-not-proof",
+        "FMS O_H candidate/action packet"
+        in str(fms_candidate_packet.get("actual_current_surface_status"))
+        and fms_candidate_packet.get("proposal_allowed") is False
+        and fms_candidate_packet.get("fms_oh_candidate_action_packet_passed")
+        is True
+        and fms_candidate_packet.get("accepted_current_surface") is False
+        and fms_candidate_packet.get("same_surface_cl3_z3_derived") is False
+        and fms_candidate_packet.get("external_extension_required") is True
+        and fms_candidate_packet.get("time_kernel_manifest_wired") is True
+        and fms_candidate_packet.get("strict_rows_required") is True
+        and fms_candidate_packet.get("closure_authorized") is False
+        and fms_candidate_packet.get("forbidden_firewall", {}).get(
+            "used_fms_literature_as_proof_authority"
+        )
+        is False
+        and fms_candidate_packet.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        fms_candidate_packet.get("actual_current_surface_status"),
     )
     mass_source_bridge = certificates["higgs_mass_source_action_bridge"]
     report(

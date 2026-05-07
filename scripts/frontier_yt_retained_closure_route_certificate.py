@@ -189,6 +189,7 @@ def main() -> int:
         "pr230_taste_radial_to_source_higgs_promotion_contract": "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json",
         "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
         "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+        "pr230_fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
         "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
         "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
         "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
@@ -1940,6 +1941,36 @@ def main() -> int:
             "source_higgs_rows_absent"
         )
         is True
+    )
+    fms_oh_candidate_action_packet_support_not_closure = (
+        "FMS O_H candidate/action packet"
+        in certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "fms_oh_candidate_action_packet_passed"
+        )
+        is True
+        and certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "accepted_current_surface"
+        )
+        is False
+        and certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "same_surface_cl3_z3_derived"
+        )
+        is False
+        and certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "external_extension_required"
+        )
+        is True
+        and certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "closure_authorized"
+        )
+        is False
     )
     higgs_mass_source_action_bridge_support_not_closure = (
         "Higgs mass-source action bridge"
@@ -5014,6 +5045,13 @@ def main() -> int:
         ),
     )
     report(
+        "fms-oh-candidate-action-packet-support-not-closure",
+        fms_oh_candidate_action_packet_support_not_closure,
+        certificates["pr230_fms_oh_candidate_action_packet"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "higgs-mass-source-action-bridge-support-not-closure",
         higgs_mass_source_action_bridge_support_not_closure,
         certificates["pr230_higgs_mass_source_action_bridge"].get(
@@ -6565,6 +6603,7 @@ def main() -> int:
         "taste_radial_to_source_higgs_promotion_contract_support_not_closure": taste_radial_to_source_higgs_promotion_contract_support_not_closure,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
+        "fms_oh_candidate_action_packet_support_not_closure": fms_oh_candidate_action_packet_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,

@@ -44,6 +44,7 @@ PARENTS = {
     "taste_radial_to_source_higgs_promotion_contract": "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+    "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
@@ -506,6 +507,28 @@ def main() -> int:
             "source_higgs_rows_absent"
         )
         is True
+    )
+    fms_oh_candidate_action_packet_support_not_closure = (
+        "FMS O_H candidate/action packet"
+        in parent_statuses["fms_oh_candidate_action_packet"]
+        and certs["fms_oh_candidate_action_packet"].get("proposal_allowed")
+        is False
+        and certs["fms_oh_candidate_action_packet"].get(
+            "fms_oh_candidate_action_packet_passed"
+        )
+        is True
+        and certs["fms_oh_candidate_action_packet"].get("accepted_current_surface")
+        is False
+        and certs["fms_oh_candidate_action_packet"].get(
+            "same_surface_cl3_z3_derived"
+        )
+        is False
+        and certs["fms_oh_candidate_action_packet"].get(
+            "external_extension_required"
+        )
+        is True
+        and certs["fms_oh_candidate_action_packet"].get("closure_authorized")
+        is False
     )
     higgs_mass_source_action_bridge_not_closure = (
         "Higgs mass-source action bridge"
@@ -1183,6 +1206,7 @@ def main() -> int:
     report("taste-radial-to-source-higgs-promotion-contract-support-not-closure", taste_radial_to_source_higgs_promotion_contract_support_not_closure, parent_statuses["taste_radial_to_source_higgs_promotion_contract"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
+    report("fms-oh-candidate-action-packet-support-not-closure", fms_oh_candidate_action_packet_support_not_closure, parent_statuses["fms_oh_candidate_action_packet"])
     report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
     report("same-source-ew-higgs-action-ansatz-not-closure", same_source_ew_higgs_action_ansatz_not_closure, parent_statuses["same_source_ew_higgs_action_ansatz_gate"])
     report("same-source-ew-action-adoption-attempt-not-closure", same_source_ew_action_adoption_attempt_not_closure, parent_statuses["same_source_ew_action_adoption_attempt"])
@@ -1365,6 +1389,7 @@ def main() -> int:
             "taste_radial_to_source_higgs_promotion_contract_support_not_closure": taste_radial_to_source_higgs_promotion_contract_support_not_closure,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
+            "fms_oh_candidate_action_packet_support_not_closure": fms_oh_candidate_action_packet_support_not_closure,
             "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,
             "same_source_ew_higgs_action_ansatz_not_closure": same_source_ew_higgs_action_ansatz_not_closure,
             "same_source_ew_action_adoption_attempt_not_closure": same_source_ew_action_adoption_attempt_not_closure,

@@ -1,0 +1,139 @@
+{
+  "accepted_current_surface": false,
+  "actual_current_surface_status": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "candidate_packet_written": true,
+  "closure_authorized": false,
+  "conditional_surface_status": "exact-support only after the packet is converted into an accepted same-surface Cl(3)/Z^3 EW/Higgs action or explicitly admitted extension, a canonical O_H certificate, production C_ss/C_sH/C_HH time-kernel rows, pole/Gram/FV/IR authority, and aggregate route gates",
+  "external_extension_required": true,
+  "fail_count": 0,
+  "fms_oh_candidate_action_packet_passed": true,
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh": false,
+    "claimed_retained_or_proposed_retained": false,
+    "launched_or_touched_live_rows": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_fms_literature_as_proof_authority": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yt": false,
+    "used_observed_wz_or_g2": false,
+    "used_reduced_cold_pilots_as_production": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "accepted_same_surface_ew_higgs_action": false,
+    "canonical_oh_certificate": false,
+    "source_higgs_pole_rows": false,
+    "source_higgs_time_kernel_combined_rows": false
+  },
+  "generated_at_utc": "2026-05-07T16:17:05.743577+00:00",
+  "hypothetical_axiom_status": "external gauge-Higgs extension candidate if the action is adopted rather than derived from Cl(3)/Z^3",
+  "launch_authorized_now": false,
+  "packet": {
+    "acceptance_contract": {
+      "must_not_use": [
+        "H_unit matrix-element readout",
+        "yt_ward_identity",
+        "observed top/y_t or W/Z/g2 selectors",
+        "alpha_LM, plaquette, u0",
+        "kappa_s=1, c2=1, Z_match=1, or g2=1 by convention"
+      ],
+      "must_pass": [
+        "accepted same-surface EW/Higgs action or native Cl(3)/Z^3 derivation",
+        "canonical O_H identity and normalization certificate",
+        "production C_ss/C_sH/C_HH time-kernel rows",
+        "pole-residue and covariance certificate",
+        "Gram-flatness or non-overlap-exclusion theorem",
+        "aggregate retained-route and completion-audit gates"
+      ]
+    },
+    "action_surface_contract": {
+      "normalizations_not_assumed": [
+        "kappa_s",
+        "c2",
+        "Z_match",
+        "g2"
+      ],
+      "required_fields": [
+        "dynamic Higgs doublet Phi with gauge-covariant lattice kinetic term",
+        "Higgs radial potential or equivalent substrate derivation producing nonzero v",
+        "canonical radial field h with LSZ/kinetic normalization",
+        "same-source scalar perturbation coupled to O_H, not to O_top_additive + O_H",
+        "gauge action and update/ensemble semantics on the same PR230 configurations"
+      ],
+      "required_source_derivative": "dS/ds = sum_x O_H(x) after additive-top subtraction or a no-independent-top source theorem"
+    },
+    "claim_class": "candidate_action_contract_only",
+    "current_surface_classification": {
+      "accepted_current_surface": false,
+      "external_extension_kind": "gauge-Higgs/FMS candidate action surface",
+      "external_extension_required": true,
+      "reason": "The packet specifies the operator/action needed for the FMS route, but PR230 has not derived or adopted that action from the Cl(3)/Z^3 substrate.",
+      "same_surface_cl3_z3_derived": false
+    },
+    "operator_contract": {
+      "definition": "O_H(x) = Phi(x)^dagger Phi(x) - <Phi^dagger Phi>",
+      "fms_local_expansion": "O_H = v h + h^2/2 + pi^a pi^a/2 after choosing radial variables on an accepted BEH surface",
+      "gauge_invariance_condition": "Phi transforms in the accepted EW/Higgs representation and Phi^dagger Phi is a gauge singlet",
+      "one_particle_residue_shape": "Res C_HH = v^2 Z_h; source overlap still requires Res C_sH or a source-coordinate theorem",
+      "operator_id": "O_H_fms_composite_candidate"
+    },
+    "packet_id": "pr230_fms_gauge_higgs_oh_candidate_action_packet_v1",
+    "time_kernel_binding": {
+      "chunk_count": 63,
+      "launch_authorized_now": false,
+      "manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
+      "operator_certificate_is_canonical_oh_now": false,
+      "required_analysis": [
+        "same-ensemble covariance",
+        "GEVP or isolated-pole residue extraction",
+        "FV/IR and zero-mode limiting order",
+        "Gram-flatness or equivalent source-overlap theorem",
+        "strict scalar-LSZ/model-class authority before physical y_t readout"
+      ],
+      "required_rows": [
+        "C_ss(t)",
+        "C_sH(t)",
+        "C_HH(t)"
+      ],
+      "schema_version": "source_higgs_time_kernel_v1"
+    }
+  },
+  "parent_certificates": {
+    "action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+    "open_surface_bridge_intake": "outputs/yt_pr230_open_surface_bridge_intake_2026-05-07.json",
+    "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "source_higgs_time_kernel_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json"
+  },
+  "parent_statuses": {
+    "action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "fms_composite_oh_conditional_theorem": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
+    "open_surface_bridge_intake": "bounded-support / open-surface bridge intake; no current PR230 closure",
+    "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "source_higgs_pole_row_acceptance_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "source_higgs_time_kernel_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This packet makes the FMS O_H route concrete but does not adopt or derive the EW/Higgs action on the current PR230 surface, does not supply canonical O_H authority, and does not supply C_ss/C_sH/C_HH pole rows or Gram flatness.",
+  "same_surface_cl3_z3_derived": false,
+  "strict_rows_required": true,
+  "time_kernel_manifest_wired": true
+}

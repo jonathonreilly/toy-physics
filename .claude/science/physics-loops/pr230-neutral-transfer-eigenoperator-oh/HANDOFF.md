@@ -620,3 +620,51 @@ bash docs/audit/scripts/run_pipeline.sh
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 ```
+
+## Block19 FMS `O_H` Candidate/Action Packet
+
+Created `YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET`.
+
+Files:
+
+- `scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py`
+- `docs/YT_PR230_FMS_OH_CANDIDATE_ACTION_PACKET_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json`
+
+Result:
+
+- defines explicit candidate `O_H(x)=Phi(x)^dagger Phi(x)-<Phi^dagger Phi>`;
+- binds it to the source-Higgs time-kernel manifest;
+- records required action surface: dynamic `Phi`, gauge-covariant kinetic
+  term, nonzero radial `v`, canonical radial `h`, and scalar source coupled to
+  `sum_x O_H(x)` after additive-top subtraction or no-independent-top theorem;
+- marks `same_surface_cl3_z3_derived=false`,
+  `accepted_current_surface=false`, `external_extension_required=true`,
+  `launch_authorized_now=false`, and `closure_authorized=false`.
+
+Claim boundary: conditional support only.  `proposal_allowed=false`.  The
+packet is a next-build contract, not proof evidence.  It does not use Ward,
+`H_unit`, observed target values, observed `g2`, plaquette/u0, unit-normalizing
+assumptions, FMS literature as proof authority, or `C_sx -> C_sH` aliasing.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py
+python3 scripts/frontier_yt_pr230_fms_oh_candidate_action_packet.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=354 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=102 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=161 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=315 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=70 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
