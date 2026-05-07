@@ -1,16 +1,17 @@
 # Opportunity Queue
 
-Campaign mode queue after block04.
+Campaign mode queue after block08.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
-| 1 | Certified `O_H` plus production `C_sH/C_HH` pole rows | Medium-low | 1-2 | Block06/07 contracts | Medium | Medium | Direct source-Higgs closure root | Needs real same-surface `O_H` artifact and row production; no current shortcut remains. |
-| 2 | Same-surface neutral scalar primitive-cone theorem | Low-medium | 1 | Block07 and conditional Perron support | Medium | Medium | Derivation-first route | Must prove positivity-improving/primitive neutral scalar transfer; reflection positivity and symmetry are insufficient. |
-| 3 | W/Z physical-response row packet | Low-medium | 4 | Block05/07 contracts | Medium | Medium | Observable fallback | Needs accepted EW action, sector-overlap/correction, matched covariance, and strict `g2`. |
-| 4 | Production chunk / future row generation | Medium | 2-4 | Active chunk worker | High | Medium | Empirical route | Keep chunk waves isolated and package only completed root JSONs/checkpoints. |
+| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh artifact appears; blocked on current stack | 2-3 | Block06 contract plus block07 hard-residual gate | Medium | Medium | Direct source-Higgs closure root | Only proceed with a genuine same-surface `O_H` certificate and production `C_ss/C_sH/C_HH` rows; do not alias `C_sx/C_xx`. |
+| 2 | Same-surface neutral primitive/rank-one theorem | Medium-low | 1-2 | Block07 hard-residual gate identifies exact theorem target | Medium | Medium | Independent of W/Z covariance | Must force rank one/irreducibility at the lowest isolated scalar pole, not merely positivity preservation. |
+| 3 | W/Z physical-response row packet with accepted action | Medium-low | 4 | Block05 subtraction contract plus block08 checkpoint | High | Medium | W/Z repair | Requires accepted action, sector-overlap correction, production top/W or top/Z rows, matched covariance, and strict non-observed `g2`. |
+| 4 | Replacement radial-spurion action certificate | Medium-low | 2 | Block04 plus block08 W/Z checkpoint | High | Medium | Direct W/Z action repair | Current certificate is absent; build only if a real same-surface action artifact exists. |
 | 5 | Same-surface source-radial off-diagonal generator/action row | Medium-low | 2 | Block01 runner gives exact target | High | Small | Direct continuation | Reopen only if a genuine off-diagonal neutral transfer/action artifact appears. |
-| 6 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract | Medium | Medium | Support-only | Use only if it materially supports ranks 1-4 without touching the live chunk worker. |
+| 6 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract | Medium | Medium | Support-only | Use only if it materially supports ranks 1-5 without touching the live chunk worker. |
 
-No global stop is justified, but Block07 closes the current-surface shortcut
-queue.  A positive PR230 science artifact now has to supply one of the listed
-future disjuncts rather than another process gate or source-only reformulation.
+No global stop is justified, but current-surface shortcut cycling should stop.
+Block07 identifies the explicit future disjunct artifacts, and block08 confirms
+the W/Z action-root shortcut is still blocked.  Positive work now requires one
+of those future artifacts or continued production row generation.

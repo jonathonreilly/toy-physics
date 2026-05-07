@@ -1,53 +1,47 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-07 post-block07"
-branch: codex/pr230-canonical-oh-action-cert-20260507
+checkpoint_time: "2026-05-07T09:28:47-04:00"
+branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 7
-active_science_block: block07_canonical_oh_hard_residual_equivalence_gate
-active_route: canonical O_H hard residual / flat-extension equivalence
+cycle_count: 8
+active_science_block: block08_wz_accepted_action_response_root_checkpoint
+active_route: W/Z accepted-action response root fan-out after additive-source, additive-top subtraction, source-Higgs direct-pole, and canonical O_H hard-residual gates
 target_status: best-honest-status
-actual_current_surface_status: exact negative boundary / canonical O_H hard residual not closed on current PR230 surface
-conditional_surface_status: exact-support equivalence for future source-Higgs Gram flatness, neutral primitive-cone rank-one authority, or W/Z physical-response rows
+actual_current_surface_status: exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, subtraction-row, or mass-fit candidates
+conditional_surface_status: conditional-support if a future same-surface no-independent-top radial action, sector-overlap identity, canonical O_H certificate, additive-top subtraction rows, and production W/Z mass-fit path land
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block07 sharpens the hard residual but supplies none of the required future artifacts: certified O_H plus C_sH/C_HH rows, neutral primitive-cone authority, or W/Z physical-response authority."
+proposal_allowed_reason: "Block08 checks the W/Z action-root fan-out after the additive-source, additive-top subtraction, direct source-Higgs pole-row, and canonical O_H hard-residual gates. Every attack remains support-only or blocked: current sector-overlap identity absent, radial action not adopted on the actual additive-source surface, additive top contamination not removed or measured by rows, production W/Z mass fits absent, canonical O_H absent, and downstream covariance/strict g2 absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Supply one of the non-shortcut disjuncts: certified O_H plus production C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar primitive-cone/rank-one theorem; or W/Z physical-response rows with accepted action, sector-overlap, covariance, and strict g2."
+hard_residual: "Do not cycle more current-surface shortcut gates. Positive work now requires one of the explicit block07 future disjunct artifacts: certified O_H plus production source-Higgs pole rows with Gram flatness; same-surface neutral scalar primitive-cone/rank-one authority; or W/Z physical-response rows with accepted action, sector-overlap, covariance, and strict g2."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
-  - "same-surface two-source taste-radial action vertex as support only"
-  - "degree-one radial-tangent O_H theorem only under its explicit future action premise"
-  - "canonical-Higgs certificate schema and repo authority audit"
-  - "source-Higgs pole-row and promotion contracts as acceptance gates"
-  - "W/Z same-source action cut and response-ratio algebra as support gates"
+  - "same-surface W/Z action-root support contracts at their stated support-only status"
+  - "additive-source radial-spurion incompatibility at exact support/boundary status"
+  - "additive-top subtraction row contract as future-row support only"
+  - "source-Higgs direct pole-row contract as future-row support only"
+  - "canonical O_H hard-residual equivalence gate as exact negative boundary"
+  - "conditional radial-spurion sector-overlap theorem only under an adopted no-independent-top action"
+  - "W/Z correlator mass-fit path gate as future row schema, not production evidence"
+  - "canonical-Higgs certificate gate and source-Higgs pole-row contracts as acceptance gates"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
   - "alpha_LM/u0/plaquette chain, kappa_s=1, c2=1, Z_match=1, g2=1"
   - "renaming C_sx/C_xx as C_sH/C_HH before x=canonical O_H is certified"
   - "static EW algebra, support contracts, formal GEVP smoke, or response-ratio algebra as accepted physical action/response"
+  - "assuming k_top=k_gauge or top/W covariance without a same-surface theorem or matched rows"
 files_touched:
-  - scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py
-  - scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
-  - scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
-  - scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py
-  - scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py
-  - docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md
-  - docs/YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY_NOTE_2026-05-07.md
-  - docs/YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT_NOTE_2026-05-07.md
-  - docs/YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT_NOTE_2026-05-07.md
-  - docs/YT_PR230_CANONICAL_OH_HARD_RESIDUAL_EQUIVALENCE_GATE_NOTE_2026-05-07.md
-  - outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json
-  - outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json
-  - outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json
-  - outputs/yt_pr230_source_higgs_direct_pole_row_contract_2026-05-07.json
-  - outputs/yt_pr230_canonical_oh_hard_residual_equivalence_gate_2026-05-07.json
+  - scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py
+  - docs/YT_PR230_WZ_ACCEPTED_ACTION_RESPONSE_ROOT_CHECKPOINT_NOTE_2026-05-07.md
+  - outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md
@@ -58,6 +52,7 @@ files_touched:
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK08.md
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -68,29 +63,24 @@ files_touched:
   - docs/audit/data/runner_classification.json
 commands_run:
   - "sed -n read of physics-loop SKILL.md, STATE.yaml, and HANDOFF.md before other work"
-  - "git status --short --branch; branch/log/remotes/PR view inspection"
-  - "repo grounding reads: REPO_ORGANIZATION, CONTROLLED_VOCABULARY, ACTIVE_REVIEW_QUEUE, REVIEW_FEEDBACK_WORKFLOW, CANONICAL_HARNESS_INDEX, LANE_REGISTRY, LANE_STATUS_BOARD, docs/audit/README"
-  - "targeted reads of canonical O_H, source-Higgs, W/Z, and EW/Higgs current surfaces"
-  - "python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py"
-  - "python3 scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py # PASS=11 FAIL=0"
+  - "git status --short --branch; branch/log/remotes inspection"
+  - "git fetch origin"
+  - "repo grounding reads and targeted reads of canonical O_H, source-Higgs, W/Z accepted action, sector-overlap, radial-spurion, additive-source incompatibility, additive-top subtraction, source-Higgs direct pole-row, canonical O_H hard-residual, covariance, g2, and mass-fit surfaces"
+  - "python3 scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py # PASS=12 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_wz_response_ratio_identifiability_contract.py # PASS=18 FAIL=0"
+  - "python3 scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py # PASS=17 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "python3 scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py # PASS=12 FAIL=0"
   - "python3 link check for new theorem note # missing_links=[]"
-  - "python3 certificate firewall check # proposal_allowed=false, no_root_closures=[], forbidden_firewall clean"
-  - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; regenerated 1994-row audit surface with 1 newly seeded row"
+  - "python3 certificate firewall check # proposal_allowed=false, root_closures_found=[], forbidden_firewall clean"
+  - "bash docs/audit/scripts/run_pipeline.sh # OK, 5 known warnings; regenerated audit surface"
   - "python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
   - "python3 scripts/frontier_yt_pr230_assumption_import_stress.py # PASS=93 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py # PASS=154 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=308 FAIL=0"
-  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=341 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=346 FAIL=0"
   - "git diff --check # clean"
-  - "python3 -m py_compile scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py"
-  - "python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py # PASS=15 FAIL=0"
-  - "python3 -m py_compile scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py"
-  - "python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py # PASS=21 FAIL=0"
-  - "python3 -m py_compile scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py"
-  - "python3 scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py # PASS=18 FAIL=0"
-  - "python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py"
-  - "python3 scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py # PASS=21 FAIL=0"
 review_disposition: pass_exact_negative_boundary
-pr_status: "direct integration into open draft PR #230 landing path; standalone block03 PR not opened unless PR230 integration fails"
-next_exact_action: "Commit/push block07 to draft PR230. Do not cycle more current-surface shortcut gates; positive work now requires one of the explicit future disjunct artifacts or continued production row generation."
+pr_status: "direct integration into open draft PR #230 landing path; standalone block08 PR not opened unless PR230 integration fails"
+next_exact_action: "Do not cycle more current-surface shortcut gates; positive work now requires one of the explicit block07 future disjunct artifacts or continued production row generation."
 stop_condition: "Yield for outer supervisor continuation after this coherent checkpoint push; no-go/open status is not campaign completion."

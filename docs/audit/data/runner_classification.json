@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T12:48:17.141957+00:00",
+  "generated_at": "2026-05-07T13:31:19.275810+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16525,6 +16525,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_action_first_route_completion.py"
     },
+    "yt_pr230_additive_source_radial_spurion_incompatibility_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py"
+    },
+    "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 17
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py"
+    },
     "yt_pr230_assumption_import_stress_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -16560,6 +16584,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py"
+    },
+    "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py"
     },
     "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07": {
       "assert_count": 1,
@@ -17365,6 +17401,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_source_coordinate_transport_gate.py"
     },
+    "yt_pr230_source_higgs_direct_pole_row_contract_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py"
+    },
     "yt_pr230_source_higgs_overlap_kappa_contract_note_2026-05-06": {
       "assert_count": 1,
       "counts": {
@@ -17628,6 +17676,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py"
+    },
+    "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py"
     },
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05": {
       "assert_count": 1,
@@ -35064,6 +35124,36 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_additive_source_radial_spurion_incompatibility_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 17
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_assumption_import_stress.py": {
       "assert_count": 1,
       "claims": [
@@ -35107,6 +35197,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py": {
@@ -36114,6 +36219,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_higgs_direct_pole_row_contract_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py": {
       "assert_count": 1,
       "claims": [
@@ -36442,6 +36562,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py": {
@@ -41745,12 +41880,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 243,
-      "C": 528,
-      "D": 316,
+      "C": 530,
+      "D": 319,
       "none": 404
     },
-    "runners_classified": 1500,
-    "runners_with_C": 810,
-    "runners_with_D": 585
+    "runners_classified": 1505,
+    "runners_with_C": 815,
+    "runners_with_D": 590
   }
 }

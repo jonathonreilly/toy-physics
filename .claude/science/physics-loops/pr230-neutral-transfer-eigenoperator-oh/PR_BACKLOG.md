@@ -17,6 +17,29 @@ stretch-attempt boundary for the canonical `O_H` / accepted-action root and
 pivots the next exact action toward W/Z action-root work.  No standalone
 block03 review PR should be opened unless PR #230 integration fails.
 
+Block04 follows the same direct PR #230 landing path.  It adds the additive
+source radial-spurion incompatibility checkpoint.  No standalone block04 review
+PR should be opened unless PR #230 integration fails.
+
+Block05 follows the same direct PR #230 landing path.  It adds the additive-top
+subtraction row contract.  No standalone block05 review PR should be opened
+unless PR #230 integration fails.
+
+Block06 follows the same direct PR #230 landing path.  It adds the
+source-Higgs direct pole-row contract.  No standalone block06 review PR should
+be opened unless PR #230 integration fails.
+
+Block07 follows the same direct PR #230 landing path.  It adds the canonical
+`O_H` hard-residual equivalence gate.  No standalone block07 review PR should
+be opened unless PR #230 integration fails.
+
+Block08 follows the same direct PR #230 landing path.  It adds a W/Z
+accepted-action response root checkpoint, blocks the current sector-overlap /
+radial-action / subtraction-row / mass-fit shortcut after the new support and
+hard-residual gates, and records that positive work now requires one of the
+explicit block07 future disjunct artifacts.  No standalone block08 review PR
+should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

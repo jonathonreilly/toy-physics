@@ -719,11 +719,26 @@ def main() -> int:
         "pr230_radial_spurion_action_contract": load(
             "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json"
         ),
+        "pr230_additive_source_radial_spurion_incompatibility": load(
+            "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json"
+        ),
+        "pr230_additive_top_subtraction_row_contract": load(
+            "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json"
+        ),
+        "pr230_source_higgs_direct_pole_row_contract": load(
+            "outputs/yt_pr230_source_higgs_direct_pole_row_contract_2026-05-07.json"
+        ),
+        "pr230_canonical_oh_hard_residual_equivalence_gate": load(
+            "outputs/yt_pr230_canonical_oh_hard_residual_equivalence_gate_2026-05-07.json"
+        ),
         "pr230_wz_response_ratio_identifiability_contract": load(
             "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
         ),
         "pr230_wz_same_source_action_minimal_certificate_cut": load(
             "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json"
+        ),
+        "pr230_wz_accepted_action_response_root_checkpoint": load(
+            "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json"
         ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
@@ -3306,6 +3321,88 @@ def main() -> int:
         is False,
         statuses["pr230_radial_spurion_action_contract"],
     )
+    additive_source_radial_spurion_incompatibility = certificates[
+        "pr230_additive_source_radial_spurion_incompatibility"
+    ]
+    report(
+        "pr230-additive-source-radial-spurion-incompatibility-blocks-current-action",
+        "current additive source is incompatible"
+        in str(statuses["pr230_additive_source_radial_spurion_incompatibility"])
+        and additive_source_radial_spurion_incompatibility.get("proposal_allowed")
+        is False
+        and additive_source_radial_spurion_incompatibility.get(
+            "additive_source_radial_spurion_incompatibility_passed"
+        )
+        is True
+        and all(
+            value is False
+            for value in additive_source_radial_spurion_incompatibility.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_additive_source_radial_spurion_incompatibility"],
+    )
+    additive_top_subtraction_row_contract = certificates[
+        "pr230_additive_top_subtraction_row_contract"
+    ]
+    report(
+        "pr230-additive-top-subtraction-row-contract-support-not-closure",
+        "additive-top subtraction row contract"
+        in str(statuses["pr230_additive_top_subtraction_row_contract"])
+        and additive_top_subtraction_row_contract.get("proposal_allowed") is False
+        and additive_top_subtraction_row_contract.get(
+            "additive_top_subtraction_row_contract_passed"
+        )
+        is True
+        and all(
+            value is False
+            for value in additive_top_subtraction_row_contract.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_additive_top_subtraction_row_contract"],
+    )
+    source_higgs_direct_pole_row_contract = certificates[
+        "pr230_source_higgs_direct_pole_row_contract"
+    ]
+    report(
+        "pr230-source-higgs-direct-pole-row-contract-support-not-closure",
+        "direct source-Higgs pole-row contract"
+        in str(statuses["pr230_source_higgs_direct_pole_row_contract"])
+        and source_higgs_direct_pole_row_contract.get("proposal_allowed") is False
+        and source_higgs_direct_pole_row_contract.get(
+            "source_higgs_direct_pole_row_contract_passed"
+        )
+        is True
+        and all(
+            value is False
+            for value in source_higgs_direct_pole_row_contract.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_source_higgs_direct_pole_row_contract"],
+    )
+    canonical_oh_hard_residual_equivalence_gate = certificates[
+        "pr230_canonical_oh_hard_residual_equivalence_gate"
+    ]
+    report(
+        "pr230-canonical-oh-hard-residual-equivalence-gate-blocks-current-surface",
+        "canonical O_H hard residual not closed"
+        in str(statuses["pr230_canonical_oh_hard_residual_equivalence_gate"])
+        and canonical_oh_hard_residual_equivalence_gate.get("proposal_allowed")
+        is False
+        and canonical_oh_hard_residual_equivalence_gate.get(
+            "canonical_oh_hard_residual_equivalence_gate_passed"
+        )
+        is True
+        and all(
+            value is False
+            for value in canonical_oh_hard_residual_equivalence_gate.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_canonical_oh_hard_residual_equivalence_gate"],
+    )
     wz_response_ratio_contract = certificates[
         "pr230_wz_response_ratio_identifiability_contract"
     ]
@@ -3350,6 +3447,36 @@ def main() -> int:
             "wz_correlator_mass_fit_path_certificate",
         },
         statuses["pr230_wz_same_source_action_minimal_certificate_cut"],
+    )
+    wz_accepted_action_response_root_checkpoint = certificates[
+        "pr230_wz_accepted_action_response_root_checkpoint"
+    ]
+    report(
+        "pr230-wz-accepted-action-response-root-checkpoint-blocks-current-root",
+        "WZ accepted-action response root not closed"
+        in str(statuses["pr230_wz_accepted_action_response_root_checkpoint"])
+        and wz_accepted_action_response_root_checkpoint.get("proposal_allowed")
+        is False
+        and wz_accepted_action_response_root_checkpoint.get(
+            "wz_accepted_action_response_root_checkpoint_passed"
+        )
+        is True
+        and wz_accepted_action_response_root_checkpoint.get("current_route_blocked")
+        is True
+        and wz_accepted_action_response_root_checkpoint.get("root_closures_found")
+        == []
+        and not any(
+            wz_accepted_action_response_root_checkpoint.get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+        and all(
+            value is False
+            for value in wz_accepted_action_response_root_checkpoint.get(
+                "forbidden_firewall", {}
+            ).values()
+        ),
+        statuses["pr230_wz_accepted_action_response_root_checkpoint"],
     )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"

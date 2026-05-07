@@ -1,271 +1,147 @@
 # Handoff
 
-Checkpoint: 2026-05-07 post-block04
+Checkpoint: 2026-05-07 09:28 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
 
-## Block01 Result
+## Blocks 01-04
 
-Created `YT_PR230_NEUTRAL_TRANSFER_EIGENOPERATOR_SOURCE_MIXING_NO_GO`.
-
-The runner proves the current same-surface Z3/taste eigenoperator data do not
-certify the physical neutral transfer bridge.  The source-radial mixing
-coefficient is an independent transfer/action datum.
+- Block01 created `YT_PR230_NEUTRAL_TRANSFER_EIGENOPERATOR_SOURCE_MIXING_NO_GO`
+  and proved the source-radial transfer/action datum is independent.
+- Block02 created `YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT` and exposed the
+  shared canonical `O_H` / accepted EW-Higgs action root.
+- Block03 created `YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT` and
+  blocked current support-stack composition into the shared root.
+- Block04 created `YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY` and
+  showed the current source differentiates to `O_top_additive + O_H`, not clean
+  canonical `O_H` alone.
 
 Review PR opened for block01:
 https://github.com/jonathonreilly/cl3-lattice-framework/pull/639
-
-## Block02 Result
-
-Created `YT_PR230_CANONICAL_OH_WZ_COMMON_ACTION_CUT`.
-
-This block pivoted from the blocked neutral-transfer shortcut to the requested
-canonical `O_H` / source-Higgs bridge and W/Z accepted-action response routes.
-It showed that the strict common vertex is a non-shortcut same-surface
-canonical `O_H` / accepted EW-Higgs action certificate.
-
-## Block03 Result
-
-Created `YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT`.
-
-This block attacked the common root itself.  The stretch attempt loaded five
-attack frames:
-
-- schema completion;
-- degree-one radial tangent;
-- SM/EW one-Higgs import;
-- source-Higgs pole promotion;
-- W/Z accepted action.
-
-No frame closes the shared root on the actual current surface.  The honest
-status is exact negative boundary / canonical `O_H` accepted-action root not
-derivable from the current PR230 support stack.  `proposal_allowed=false`.
-
-## Verification So Far
-
-```bash
-python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py
-python3 scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py
-# SUMMARY: PASS=11 FAIL=0
-bash docs/audit/scripts/run_pipeline.sh
-python3 docs/audit/scripts/audit_lint.py --strict
-python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-python3 scripts/frontier_yt_retained_closure_route_certificate.py
-python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-```
-
-The audit pipeline seeded one new unaudited support row for block03 and strict
-lint passed with the known 5 warnings.  The PR230 assumption/import,
-full-positive assembly, retained-route, and campaign-status gates also pass.
-
-## Claim Boundary
-
-No retained or `proposed_retained` wording is authorized.
-
-Block03 does not identify taste-radial `x` with canonical `O_H`, does not
-relabel `C_sx/C_xx` as `C_sH/C_HH`, does not treat SM/EW one-Higgs algebra or
-support contracts as current action authority, does not use `H_unit`,
-`yt_ward_identity`, observed targets, `alpha_LM`, plaquette, `u0`, observed
-`g2`, or unit normalization conventions, and did not touch or relaunch the
-live chunk worker.
-
-## Delivery
-
-User direction remains that PR230-specific block artifacts land in draft PR
-#230 rather than accumulating as parallel standalone review PRs.  Block02
-science content is already present on the draft PR #230 head as commit
-`6308a320e` (`Add PR230 canonical O_H WZ common action cut`).  Block03 should
-follow the same direct PR #230 landing path.
-
-## Review
-
-Local review-loop disposition for block03: pass exact negative boundary.  Code,
-claim boundary, import firewall, repo-governance links, and audit compatibility
-were checked locally.  No independent audit verdict was applied.
-
-## Next Exact Action
-
-## Block04 Result
-
-Created `YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY`.
-
-This block follows the block03 instruction to attack the W/Z accepted-action
-root at the adopted-radial-action level.  It proves the current same-source
-EW/Higgs ansatz cannot be adopted as the accepted radial-spurion action while
-it keeps the existing additive top FH/LSZ source under the same coordinate.
-The derivative is
-
-```text
-dS/ds = O_top_additive + O_H,
-```
-
-not canonical `O_H` alone.  The W/Z response ratio recovers `y_t` in the pure
-radial-spurion witness but varies when an independent additive top slope is
-present.
-
-Verification:
-
-```bash
-python3 -m py_compile scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
-python3 scripts/frontier_yt_pr230_additive_source_radial_spurion_incompatibility.py
-# SUMMARY: PASS=15 FAIL=0
-```
-
-## Next Exact Action
-
-The W/Z accepted-action root now has two precise repair targets:
-
-```text
-replace the current additive top source with a true same-surface radial-spurion action
-```
-
-or
-
-```text
-measure/subtract the independent additive top component with row-level authority
-```
-
-Do not claim physical W/Z response until accepted action, W/Z response rows,
-same-source top rows, matched covariance, and strict non-observed `g2` exist.
-Canonical `O_H` remains a shared blocker and must not be assumed.
 
 ## Block05 Result
 
 Created `YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT`.
 
-This block follows the second repair target from block04.  It proves the exact
-algebraic form of the subtraction repair if PR230 keeps the current mixed
-source convention:
+The corrected readout
 
 ```text
-T_total = dE_top/ds = y_t dv/ds / sqrt(2) + A_top
-W       = dM_W/ds   = g2 dv/ds / 2
-y_t     = g2 (T_total - A_top) / (sqrt(2) W).
+y_t = g2 (T_total - A_top) / (sqrt(2) W)
 ```
 
-The runner verifies that the corrected ratio recovers the input `y_t` and is
-invariant under source reparameterization.  It also records the matched
-covariance gradient for `y_t(T,A,W,g2)` and proves that without a measured
-`A_top` the fixed total top/W slopes admit multiple candidate `y_t` values.
-
-Verification:
-
-```bash
-python3 -m py_compile scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
-python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
-# SUMMARY: PASS=21 FAIL=0
-```
-
-Block05 is exact support only.  It does not claim retained or
-`proposed_retained` closure.  The current surface still lacks additive-top
-Jacobian rows, W/Z response rows, matched covariance, strict non-observed `g2`,
-and accepted radial-spurion action authority.
-
-## Next Exact Action
-
-After block05, the non-chunk positive routes are:
-
-```text
-build an absent-certificate gate for a replacement radial-spurion action
-```
-
-and
-
-```text
-turn the subtraction contract into an executable future row schema for
-T_total/A_top/W/g2 covariance rows.
-```
-
-Probe A found no hidden current-surface radial-spurion certificate; any
-replacement-action artifact must be a builder/gate with `proposal_allowed=false`
-until a real same-surface action certificate exists.
+is exact support if same-coordinate `T_total/A_top/W/g2` rows and matched
+covariance are supplied.  Current PR230 has the contract, not those rows.
 
 ## Block06 Result
 
 Created `YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT`.
 
-This block follows the consolidated parallel-probe result: W/Z is still a
-fallback infrastructure lane, while the direct source-Higgs Gram-purity route
-is the best positive next non-chunk artifact.  It records the future row
-contract for a certified same-surface `O_H_candidate` plus production
-`C_ss/C_sH/C_HH` pole residues:
-
-```text
-Delta = Res(C_ss) Res(C_HH) - Res(C_sH)^2
-rho   = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH)).
-```
-
-The runner verifies pure, sign-flipped pure, and mixed witnesses.  Pure rows
-pass `Delta=0` and `abs(rho)=1`; mixed rows fail.  The contract attaches the
-existing `O_sp` LSZ-normalized source-side construction and routes future rows
-through the existing extractor, builder, Gram postprocessor, full assembly,
-retained-route, and campaign gates.
-
-Verification:
-
-```bash
-python3 -m py_compile scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py
-python3 scripts/frontier_yt_pr230_source_higgs_direct_pole_row_contract.py
-# SUMMARY: PASS=18 FAIL=0
-```
-
-Block06 is exact support only.  It does not construct `O_H`, promote
-`C_sx/C_xx` aliases, set `kappa_s=1` or `cos(theta)=1`, use `H_unit` or
-Ward identity authority, or claim retained/proposed-retained closure.
-
-## Next Exact Action
-
-The best remaining non-chunk target is now the hard one: derive or supply a
-same-surface canonical `O_H` certificate, or find a genuine neutral rank-one /
-irreducibility theorem that makes the future pole-row contract launchable.
+This block records the future direct source-Higgs pole-row surface for a
+certified same-surface `O_H_candidate` plus production `C_ss/C_sH/C_HH` rows.
+Current PR230 still lacks canonical `O_H` and production pole rows.
 
 ## Block07 Result
 
 Created `YT_PR230_CANONICAL_OH_HARD_RESIDUAL_EQUIVALENCE_GATE`.
 
-This block packages the second parallel-probe consensus into one hard-residual
-gate.  It proves no new closure, but it makes the blocker exact.  With
-`Res(C_sp,sp)=1`, positivity gives only
+This block packages the hard residual.  With `Res(C_sp,sp)=1`, PSD positivity
+allows `b >= |a|^2`; closure needs flatness `b=|a|^2`, neutral rank-one
+authority, or full W/Z physical-response authority.  None is present.
 
-```text
-M = [[1, a], [a*, b]],        b >= |a|^2.
-```
+## Block08 Result
 
-The bridge needs the flat-extension equality
+Created `YT_PR230_WZ_ACCEPTED_ACTION_RESPONSE_ROOT_CHECKPOINT`.
 
-```text
-b = |a|^2,
-Delta_spH = Res(C_HH) - |Res(C_sp,H)|^2 = 0,
-|rho_spH| = 1.
-```
+This block continued after block07 and fanned out the W/Z action-root route:
 
-The runner verifies PSD-but-not-flat witnesses and flat witnesses, then checks
-that none of the three non-shortcut closure disjuncts is present:
+- current same-source sector-overlap identity;
+- adopted no-independent-top radial action after additive-source incompatibility;
+- additive-top subtraction rows after the block05 contract;
+- production W/Z correlator mass-fit path;
+- response-ratio packet after accepted action;
+- canonical `O_H` as the shared action-builder root.
 
-1. certified `O_H` plus production `C_ss/C_sH/C_HH` pole rows;
-2. same-surface neutral scalar primitive-cone / positivity-improving theorem;
-3. W/Z physical-response rows with accepted action, sector-overlap, covariance,
-   and strict `g2`.
+No frame closes on the actual current surface.  The honest status is exact
+negative boundary / W/Z accepted-action response root not closed by current
+sector-overlap, radial-action, subtraction-row, or mass-fit candidates.
+`proposal_allowed=false`.
 
-Verification:
+## Verification
 
 ```bash
-python3 -m py_compile scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py
-python3 scripts/frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py
-# SUMMARY: PASS=21 FAIL=0
+python3 -m py_compile scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py
+# SUMMARY: PASS=12 FAIL=0
+python3 link check for new theorem note
+# missing_links=[]
+python3 certificate firewall check
+# proposal_allowed=false, root_closures_found=[], forbidden_firewall clean
+bash docs/audit/scripts/run_pipeline.sh
+python3 docs/audit/scripts/audit_lint.py --strict
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=93 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=154 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=308 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=346 FAIL=0
+git diff --check
 ```
 
-Block07 is an exact negative boundary for the current surface, not a permanent
-no-go.  It preserves all real future reopen paths and blocks only source-only,
-representation-theory, static-EW, PSD-only, H_unit/Ward, and aliasing
-shortcuts.
+The audit pipeline was rerun after block08 integration and strict lint passed
+with the known 5 warnings.
+
+## Claim Boundary
+
+No retained or `proposed_retained` wording is authorized.
+
+Block08 does not claim physical W/Z response closure, does not write or
+validate an accepted same-source EW/Higgs action certificate, does not assume
+`k_top = k_gauge`, does not treat the conditional radial-spurion theorem or
+additive-source boundary as current action authority, does not use the
+block05-block07 support/boundary contracts as current row evidence, does not
+identify taste-radial `x` with canonical `O_H`, does not relabel
+`C_sx/C_xx` as `C_sH/C_HH`, and does not use `H_unit`, `yt_ward_identity`,
+observed targets, observed `g2`, `alpha_LM`, plaquette, `u0`, or unit
+conventions.  It did not touch or relaunch the live chunk worker.
+
+## Delivery
+
+User direction remains that PR230-specific block artifacts land in draft PR
+#230 rather than accumulating as parallel standalone review PRs.  Block02
+through block07 science content is already present on the draft PR #230 head.
+Block08 should follow the same direct PR #230 landing path unless PR230
+integration fails.
+
+## Review
+
+Local review-loop disposition for block08: pass exact negative boundary.  Code,
+claim boundary, import firewall, repo-governance links, audit compatibility,
+and PR230 assembly gates were checked locally.  No independent audit verdict
+was applied.
 
 ## Next Exact Action
 
-Do not cycle more current-surface shortcut gates.  A positive PR230 science
-artifact now has to supply one of the future disjuncts named above, or else
-the work should stay focused on production chunks / future row generation.
+Do not cycle more current-surface shortcut gates.  Positive work now requires
+one of the explicit block07 future disjunct artifacts:
+
+```text
+certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness
+```
+
+or
+
+```text
+same-surface neutral primitive-cone / rank-one authority
+```
+
+or
+
+```text
+W/Z physical-response rows with accepted action, sector-overlap, matched
+covariance, and strict non-observed g2
+```

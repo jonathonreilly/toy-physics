@@ -116,3 +116,153 @@
      action-root attack on current same-source sector-overlap/adopted radial
      action or production W/Z correlator mass-fit path, not a physical
      response claim.
+
+## Selected Block04 Route
+
+**Additive-source radial-spurion incompatibility**
+
+- Type: accepted-action compatibility boundary.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: attacks the W/Z accepted-action root at the adopted
+  radial-action level.  It shows that the current same-source EW/Higgs ansatz
+  cannot be used as the accepted no-independent-top radial-spurion action
+  while the actual source variation still contains `O_top_additive + O_H`.
+- Artifact: `YT_PR230_ADDITIVE_SOURCE_RADIAL_SPURION_INCOMPATIBILITY`.
+
+## Block04 Fan-Out Synthesis
+
+1. **Current additive-source surface**
+   - Result: blocked for adoption as a clean radial-spurion action.  The
+     current `dS/ds` contains an additive top source and canonical `O_H`, not
+     canonical `O_H` alone.
+
+2. **Pure radial-spurion witness**
+   - Result: conditional support.  The W/Z response ratio recovers `y_t` only
+     in the no-independent-top witness, which is not the current action
+     surface.
+
+3. **W/Z route consequence**
+   - Result: the accepted-action root still needs a replacement
+     radial-spurion action certificate or additive-top subtraction rows before
+     the response packet can become physical response authority.
+
+## Selected Block05 Route
+
+**Additive-top subtraction row contract**
+
+- Type: exact support / future-row contract.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: turns the additive-source incompatibility into a
+  precise repair formula, while proving that current PR230 still lacks the
+  `A_top` subtraction rows, W/Z response rows, matched covariance, strict
+  non-observed `g2`, and accepted action authority.
+- Artifact: `YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT`.
+
+## Block05 Fan-Out Synthesis
+
+1. **Corrected response formula**
+   - Result: exact support.  If same-coordinate `T_total`, `A_top`, W/Z rows,
+     strict `g2`, and matched covariance are supplied, the subtraction formula
+     is invariant under source reparameterization.
+
+2. **Current-row status**
+   - Result: absent.  Current PR230 has the contract but not the additive-top
+     Jacobian rows, W/Z response rows, strict `g2`, or covariance packet.
+
+## Selected Block06 Route
+
+**Source-Higgs direct pole-row contract**
+
+- Type: exact support / future-row contract.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 5.
+- Claim-state movement: records the direct `O_sp` to canonical `O_H` pole-row
+  surface for a future `C_ss/C_sH/C_HH` packet, while preserving the hard
+  blocker that canonical `O_H` and production pole rows are absent.
+- Artifact: `YT_PR230_SOURCE_HIGGS_DIRECT_POLE_ROW_CONTRACT`.
+
+## Block06 Fan-Out Synthesis
+
+1. **Pure pole-row witness**
+   - Result: exact support.  The future row packet must pass `Delta=0` and
+     `abs(rho)=1`, including sign convention control.
+
+2. **Mixed witness**
+   - Result: blocker.  Source-only LSZ normalization does not prove source-Higgs
+     purity; a mixed pole has `abs(rho)<1`.
+
+3. **Launch blocker**
+   - Result: current surface remains open.  The contract requires a certified
+     same-surface `O_H_candidate` plus production `C_sH/C_HH` rows.
+
+## Selected Block07 Route
+
+**Canonical `O_H` hard-residual equivalence gate**
+
+- Type: exact negative boundary / hard-residual gate.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 5.
+- Claim-state movement: proves the current `O_sp/O_H` bridge is not closed by
+  source-only positivity, source-Higgs rows, neutral primitive-cone authority,
+  or W/Z physical-response rows, and identifies the three non-shortcut future
+  disjuncts that could close it.
+- Artifact: `YT_PR230_CANONICAL_OH_HARD_RESIDUAL_EQUIVALENCE_GATE`.
+
+## Block07 Fan-Out Synthesis
+
+1. **Source-Higgs Gram flatness**
+   - Result: absent.  Future certified `O_H` plus `C_ss/C_sH/C_HH` rows must
+     prove the flat-extension equality, not merely PSD positivity.
+
+2. **Neutral primitive/rank-one authority**
+   - Result: absent.  Positivity preservation is not positivity improvement or
+     irreducibility on the current surface.
+
+3. **W/Z physical-response disjunct**
+   - Result: absent.  Accepted action, sector-overlap correction, response
+     rows, matched covariance, and strict non-observed `g2` are all missing.
+
+## Selected Block08 Route
+
+**W/Z accepted-action response root checkpoint**
+
+- Type: action-root exact negative boundary.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: attacks the W/Z action-root fan-out named by block03:
+  current sector-overlap identity, adopted no-independent-top radial action,
+  production W/Z mass-fit path, downstream response packet, and canonical
+  `O_H` shared root.  It blocks the current W/Z action-root shortcut even after
+  the block05/block06 support contracts and the block07 hard-residual
+  equivalence gate, then records that positive work now requires one of the
+  explicit future disjunct artifacts.
+- Artifact: `YT_PR230_WZ_ACCEPTED_ACTION_RESPONSE_ROOT_CHECKPOINT`.
+
+## Block08 Fan-Out Synthesis
+
+1. **Same-source sector-overlap identity**
+   - Result: blocked.  The radial-spurion theorem supplies only a conditional
+     clean-action identity; the current top FH/LSZ source is still an
+     additive top mass shift, so `k_top = k_gauge` is not derived or measured.
+
+2. **Adopted no-independent-top radial action**
+   - Result: support only.  The EW/Higgs ansatz and radial contract do not
+     write the accepted action certificate, and the current radial contract is
+     not satisfied on the additive-source surface.
+
+3. **Production W/Z correlator mass-fit path**
+   - Result: absent.  The mass-fit gate validates a future schema and rejects
+     the current QCD/top harness; production W/Z correlator mass-fit rows and
+     response rows are absent.
+
+4. **Response-ratio packet after action**
+   - Result: support only.  The algebra cancels `dv/ds` only after accepted
+     action, production top/W or top/Z rows, matched covariance, and strict
+     non-observed `g2` exist.
+
+5. **Canonical `O_H` shared action root**
+   - Result: open.  The W/Z builder still requires a non-shortcut canonical
+     Higgs certificate; current taste-radial `x` and `C_sx/C_xx` support
+     cannot be relabeled as canonical `O_H` or `C_sH/C_HH`.
