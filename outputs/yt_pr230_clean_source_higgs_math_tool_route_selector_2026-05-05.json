@@ -8,12 +8,16 @@
   "conditional_surface_status": "conditional-support if a future same-surface O_H certificate, source-Higgs pole rows, and scalar-LSZ authority land and the aggregate gates pass",
   "current_support_intake": {
     "finite_schur_support_only": true,
+    "fms_action_cut_support_only": true,
+    "fresh_intake_current_and_open": true,
     "osp_source_side_available": true,
     "radial_spurion_support_only": true,
     "same_surface_multiplicity_gate_loaded": true,
-    "two_source_partial_rows_support_only": true
+    "two_source_expected_chunks": 63,
+    "two_source_partial_rows_support_only": true,
+    "two_source_ready_chunks": 50
   },
-  "exact_next_action": "For the clean source-Higgs route, the candidate file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json is present but not accepted.  Retire at least one failed obligation with a same-surface artifact: derive a physical primitive/off-diagonal neutral transfer, derive a selection rule excluding the orthogonal neutral top coupling, supply canonical scalar LSZ metric/FV/IR normalization, or measure C_spH/C_HH pole-overlap rows.  After a same-surface artifact retires one of those failed obligations, rerun the same-surface multiplicity-one gate, canonical O_H certificate gate, source-Higgs row builder, Gram-purity postprocessor, scalar-LSZ gates, full assembly gate, retained-route gate, and completion audit.",
+  "exact_next_action": "For the clean source-Higgs route, retire the FMS/action-adoption root first: supply a same-surface accepted EW/Higgs action or native Cl(3)/Z3 action derivation, plus a canonical O_H identity and LSZ normalization certificate.  Only after that root lands, run the source-Higgs time-kernel C_ss/C_sH/C_HH rows, compute the O_sp-Higgs Gram/overlap packet, and rerun scalar-LSZ, full assembly, retained-route, campaign, and completion-audit gates.  Completed taste-radial chunks may continue to be packaged as bounded C_sx/C_xx support, but they are not a closure substitute.",
   "fail_count": 0,
   "forbidden_firewall": {
     "set_c2_equal_one_without_derivation": false,
@@ -146,7 +150,9 @@
     "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
+    "fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
     "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "fresh_artifact_intake": "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json",
     "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
@@ -172,7 +178,9 @@
     "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
     "canonical_higgs_operator_realization_gate": "open / canonical-Higgs operator realization gate not passed",
     "canonical_oh_premise_stretch": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
+    "fms_action_adoption_minimal_cut": "exact-support / FMS action-adoption minimal cut; current PR230 surface has candidate support but no adopted same-surface action, canonical O_H, or strict pole rows",
     "fms_oh_certificate_construction_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
+    "fresh_artifact_intake": "open / fresh-artifact intake checkpoint at PR #230 head; no certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet is present",
     "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
     "genuine_source_pole_artifact_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
     "legendre_source_pole_operator": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
@@ -194,25 +202,27 @@
     "two_source_taste_radial_schur_abc": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
     "wz_smoke_to_production_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
   },
-  "pass_count": 20,
+  "pass_count": 22,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "Outside-math tools are classified only as methods for producing future same-surface certificates.  Current O_H/C_sH/C_HH rows, neutral irreducibility, Schur rows, strict scalar-LSZ authority, and W/Z response rows remain absent.",
+  "proposal_allowed_reason": "Outside-math tools are classified only as methods for producing future same-surface certificates.  Current accepted EW/Higgs action, canonical O_H, O_H/C_sH/C_HH rows, neutral irreducibility, strict Schur pole rows, strict scalar-LSZ authority, and W/Z response rows remain absent.",
   "refresh_date": "2026-05-07",
   "selected_clean_route": {
     "current_genuine_artifact": {
       "artifact": "O_sp",
-      "limit": "source-side exact support only; O_sp = O_H, C_spH/C_HH rows, and Gram purity remain absent",
+      "limit": "source-side exact support only; O_sp = O_H, C_spH/C_HH rows, accepted action, and Gram purity remain absent",
       "role": "LSZ-normalized same-source source-pole operator with unit source-side pole residue"
     },
     "current_status": "future-only / no current closure authority",
-    "id": "source_higgs_invariant_ring_then_gns_pole_rows",
+    "id": "source_higgs_fms_action_then_gram_pole_rows",
     "stage_1": {
       "candidate_tools": [
+        "Cl(3)/Z3 action derivation",
+        "accepted same-surface EW/Higgs extension",
         "invariant-ring multiplicity-one",
         "commutant/irreducibility theorem",
         "primitive-cone transfer theorem"
       ],
-      "goal": "same-surface canonical O_H identity and normalization",
+      "goal": "same-surface accepted EW/Higgs action plus canonical O_H identity and normalization",
       "required_artifact": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json"
     },
     "stage_2": {
@@ -233,7 +243,7 @@
       "goal": "scalar-LSZ analytic authority",
       "required_artifact": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json"
     },
-    "why_cleanest": "It attacks the exact missing map from the PR230 scalar source to canonical Higgs directly, instead of normalizing through W/Z or downstream matching observables."
+    "why_cleanest": "It attacks the exact missing map from the PR230 scalar source to canonical Higgs directly.  The FMS/action-first contract is now the least indirect route because it can make O_H a same-surface action derivative before any physical y_t readout."
   },
   "strict_future_file_presence": {
     "canonical_oh_certificate": false,

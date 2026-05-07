@@ -4,9 +4,11 @@
 positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
-**Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract,
-chunks001-030/two-source finite-Schur support, the same-surface neutral
-multiplicity-one intake gate, and the rejected candidate attempt landed
+**Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract, the FMS
+action-adoption minimal cut, the fresh-artifact intake refresh, chunks001-050
+two-source taste-radial support, two-source finite-Schur support, the
+same-surface neutral multiplicity-one intake gate, and the rejected candidate
+attempt landed.
 
 ## Purpose
 
@@ -24,7 +26,12 @@ The refresh consumes the current genuine support without promoting it:
   source-side pole residue;
 - the radial-spurion action contract is exact future-action support, but the
   current additive source is not that action;
-- the two-source taste-radial campaign has `30/63` chunks combined as partial
+- the FMS action-adoption cut is the cleanest root but remains support-only:
+  no accepted same-surface EW/Higgs action, canonical `O_H`, or strict
+  `C_ss/C_sH/C_HH` pole rows exist;
+- the fresh-artifact intake at the current PR head still rejects retained or
+  `proposed_retained` closure and excludes active worker outputs/logs;
+- the two-source taste-radial campaign has `50/63` chunks packaged as partial
   `C_sx/C_xx` support only;
 - finite Schur `A_f/B_f/C_f` inverse rows are bounded diagnostics, not pole
   `K'(pole)` authority.
@@ -39,8 +46,11 @@ The refresh consumes the current genuine support without promoting it:
 ## Ranking
 
 1. `O_H/C_sH/C_HH` source-Higgs pole rows.
-   Use invariant-ring, commutant, primitive-cone, GNS, moment, or exact tensor
-   tools only if they emit the same-surface `O_H` certificate and pole rows.
+   First retire the FMS/action-adoption root by supplying an accepted
+   same-surface EW/Higgs action or native Cl(3)/Z3 action derivation plus
+   canonical `O_H` identity/normalization.  Use invariant-ring, commutant,
+   primitive-cone, GNS, moment, or exact tensor tools only if they emit the
+   same-surface `O_H` certificate and pole rows.
 2. Genuine same-source W/Z response rows.
    First fallback after source-Higgs, but only with the hardened same-source
    EW action, identity/covariance, strict non-observed `g2`, and
@@ -96,6 +106,8 @@ Forbidden uses:
 No closure is claimed.  The current surface still lacks:
 
 - `outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json`;
+- `outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json` or an
+  equivalent same-surface accepted EW/Higgs action certificate;
 - an accepted same-surface neutral multiplicity-one certificate; the file
   `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`
   exists only as a rejected candidate attempt;
@@ -108,13 +120,13 @@ No closure is claimed.  The current surface still lacks:
 The selected clean next action is:
 
 ```text
-use O_sp as the normalized source side, retire one failed same-surface neutral
-multiplicity-one candidate obligation by deriving a physical primitive/
-off-diagonal transfer, deriving an orthogonal-neutral exclusion selection rule,
-supplying canonical scalar LSZ metric/FV/IR normalization, or measuring
-C_spH/C_HH pole-overlap rows; then rerun the candidate/gate stack before
-producing C_ss/C_spH/C_HH rows and O_sp-Higgs Gram-purity plus scalar-LSZ
-aggregate gates.
+use O_sp as the normalized source side, then retire the FMS/action-adoption
+root by deriving or supplying a same-surface accepted EW/Higgs action and
+canonical O_H identity/LSZ normalization.  Only after that root lands, produce
+C_ss/C_spH/C_HH or C_ss/C_sH/C_HH pole rows and run O_sp-Higgs Gram-purity,
+scalar-LSZ, full assembly, retained-route, campaign, and completion-audit
+gates.  Completed taste-radial chunks may continue as bounded C_sx/C_xx
+support, but they are not a closure substitute.
 ```
 
 ## Verification

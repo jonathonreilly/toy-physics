@@ -1,5 +1,19 @@
 # No-Go Ledger
 
+## Clean Source-Higgs Selector Is Not Closure
+
+The refreshed 2026-05-07 clean source-Higgs outside-math route selector is an
+exact support route-ranking artifact only.  It may rank the FMS/action-first
+route first, but it does not adopt the same-surface EW/Higgs action, does not
+construct canonical `O_H`, does not produce `C_ss/C_sH/C_HH` pole rows, and
+does not authorize retained or `proposed_retained` wording.  PSLQ, motivic,
+tensor, free-probability, D-module, Schur, GNS, FMS literature, and related
+method names remain allowed algorithms only after they emit a same-surface
+row/theorem; they are not proof selectors.
+
+Do not treat the refreshed selector, chunks001-050, finite Schur diagnostics,
+or active chunk051-052 worker state as source-Higgs closure.
+
 ## Fresh-artifact intake at current head still finds no closure packet
 
 The 2026-05-07 fresh-artifact intake refresh checks committed PR head

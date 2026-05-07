@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-07 clean source-Higgs route selector refresh: the selector has been
+refreshed against the current FMS action-adoption minimal cut, fresh-artifact
+intake, and chunks001-050 prefix.  The cleanest positive route remains
+source-Higgs/FMS, but the ordered root is now explicit: accepted same-surface
+EW/Higgs action or native Cl(3)/Z3 action derivation, canonical `O_H`
+identity/LSZ normalization, then production `C_ss/C_sH/C_HH` pole rows and
+`O_sp`-Higgs Gram/overlap gates.  No outside-math tool, literature reference,
+partial row packet, finite Schur diagnostic, or active worker state is current
+closure evidence.  W/Z same-source physical response remains first fallback
+only after accepted-action roots, response rows, matched covariance, and strict
+non-observed `g2` exist.
+
 2026-05-07 fresh-artifact intake refresh: the current committed PR head
 `0dea6f014f5c75ce649e284e49e1940e5bce867d` has been rechecked after the FMS
 action-adoption minimal cut and the chunks001-050 row package.  The refreshed

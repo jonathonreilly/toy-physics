@@ -1,5 +1,26 @@
 # Review History
 
+## 2026-05-07 - Clean Source-Higgs Route Selector Refresh
+
+Review stance: exact support / route selector, no closure.
+
+- Refreshed the clean source-Higgs outside-math route selector against the
+  current FMS action-adoption minimal cut, fresh-artifact intake, and
+  chunks001-050 row prefix.
+- The selector now ranks the source-Higgs/FMS action path as:
+  accepted same-surface EW/Higgs action or native Cl(3)/Z3 action derivation,
+  canonical `O_H` identity/LSZ normalization, then `C_ss/C_sH/C_HH` pole rows
+  and `O_sp`-Higgs Gram/overlap gates.
+- Validation: clean route selector `PASS=22 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: support only.  No current artifact supplies accepted action,
+canonical `O_H`, strict pole rows, W/Z response rows, covariance, strict
+`g2`, or retained/proposed-retained closure.  Chunks051-052 are live
+run-control only and were excluded.
+
 ## 2026-05-07 - Fresh-Artifact Intake Refresh
 
 Review stance: open / committed-head intake checkpoint, no closure.

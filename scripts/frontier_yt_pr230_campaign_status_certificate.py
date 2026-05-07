@@ -2461,7 +2461,7 @@ def main() -> int:
         and certificates["pr230_clean_source_higgs_math_tool_route_selector"]
         .get("selected_clean_route", {})
         .get("id")
-        == "source_higgs_invariant_ring_then_gns_pole_rows",
+        == "source_higgs_fms_action_then_gram_pole_rows",
         statuses["pr230_clean_source_higgs_math_tool_route_selector"],
     )
     report(

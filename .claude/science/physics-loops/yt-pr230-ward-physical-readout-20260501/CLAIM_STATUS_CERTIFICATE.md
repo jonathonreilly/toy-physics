@@ -1,5 +1,39 @@
 # Claim Status Certificate
 
+Clean source-Higgs route selector refresh:
+
+```text
+actual_current_surface_status: exact support / clean source-Higgs outside-math route selector; positive closure still open
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The refreshed selector consumes the current fresh-artifact intake, FMS
+action-adoption minimal cut, `O_sp` support, radial-spurion support,
+chunks001-050 row prefix, finite Schur diagnostics, and same-surface neutral
+multiplicity gate.  It ranks the clean source-Higgs/FMS path first, but only
+after the accepted action/canonical `O_H` root lands.  All current artifacts
+remain support/boundary only; no retained or `proposed_retained` closure is
+allowed.
+
 Fresh-artifact intake refresh:
 
 ```text

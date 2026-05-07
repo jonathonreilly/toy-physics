@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 clean source-Higgs route selector refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`,
+  `docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md`,
+  and `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
+  against the current fresh-artifact intake, FMS action-adoption minimal cut,
+  and chunks001-050 row prefix.
+- Result: cleanest positive route remains source-Higgs/FMS, but the root is
+  now ordered explicitly: same-surface accepted EW/Higgs action or native
+  Cl(3)/Z3 action derivation plus canonical `O_H` identity/LSZ normalization,
+  then production `C_ss/C_sH/C_HH` rows and `O_sp`-Higgs Gram/overlap gates.
+- Validation: clean route selector `PASS=22 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.  No retained or `proposed_retained` closure is
+  authorized.
+- Chunks051-052 remain active run-control only and were not consumed as
+  evidence by the selector refresh.
+
 Latest checkpoint, 2026-05-07 fresh-artifact intake refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py`,

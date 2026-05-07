@@ -43,10 +43,12 @@ PARENTS = {
     "scalar_lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "wz_smoke_to_production_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "two_source_taste_radial_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
     "two_source_taste_radial_schur_abc": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
     "two_source_taste_radial_pole_lift": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
+    "fresh_artifact_intake": "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json",
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
@@ -277,21 +279,24 @@ def user_option_ranking(statuses: dict[str, str]) -> list[dict[str, Any]]:
 
 def selected_clean_route() -> dict[str, Any]:
     return {
-        "id": "source_higgs_invariant_ring_then_gns_pole_rows",
+        "id": "source_higgs_fms_action_then_gram_pole_rows",
         "current_status": "future-only / no current closure authority",
         "why_cleanest": (
             "It attacks the exact missing map from the PR230 scalar source to "
-            "canonical Higgs directly, instead of normalizing through W/Z or "
-            "downstream matching observables."
+            "canonical Higgs directly.  The FMS/action-first contract is now "
+            "the least indirect route because it can make O_H a same-surface "
+            "action derivative before any physical y_t readout."
         ),
         "current_genuine_artifact": {
             "artifact": "O_sp",
             "role": "LSZ-normalized same-source source-pole operator with unit source-side pole residue",
-            "limit": "source-side exact support only; O_sp = O_H, C_spH/C_HH rows, and Gram purity remain absent",
+            "limit": "source-side exact support only; O_sp = O_H, C_spH/C_HH rows, accepted action, and Gram purity remain absent",
         },
         "stage_1": {
-            "goal": "same-surface canonical O_H identity and normalization",
+            "goal": "same-surface accepted EW/Higgs action plus canonical O_H identity and normalization",
             "candidate_tools": [
+                "Cl(3)/Z3 action derivation",
+                "accepted same-surface EW/Higgs extension",
                 "invariant-ring multiplicity-one",
                 "commutant/irreducibility theorem",
                 "primitive-cone transfer theorem",
@@ -404,6 +409,20 @@ def main() -> int:
         and parents["radial_spurion_action_contract"].get("accepted_action_certificate_written") is False
         and parents["same_source_ew_action_adoption_attempt"].get("adoption_allowed_now") is False
     )
+    fms_action_cut_support_only = (
+        "FMS action-adoption minimal cut"
+        in statuses["fms_action_adoption_minimal_cut"]
+        and parents["fms_action_adoption_minimal_cut"].get(
+            "fms_action_adoption_minimal_cut_passed"
+        )
+        is True
+        and parents["fms_action_adoption_minimal_cut"].get("adoption_allowed_now")
+        is False
+        and parents["fms_action_adoption_minimal_cut"].get("closure_authorized")
+        is False
+        and parents["fms_action_adoption_minimal_cut"].get("proposal_allowed")
+        is False
+    )
     two_source_ready_chunks = parents["two_source_taste_radial_combiner"].get(
         "ready_chunks"
     )
@@ -420,6 +439,21 @@ def main() -> int:
         parents["two_source_taste_radial_schur_abc"].get("finite_schur_abc_rows_written") is True
         and parents["two_source_taste_radial_schur_abc"].get("strict_schur_abc_kernel_rows_written") is False
         and parents["two_source_taste_radial_pole_lift"].get("proposal_allowed") is False
+    )
+    fresh_intake_current_and_open = (
+        "fresh-artifact intake checkpoint"
+        in statuses["fresh_artifact_intake"]
+        and parents["fresh_artifact_intake"].get("proposal_allowed") is False
+        and parents["fresh_artifact_intake"]
+        .get("source_higgs_route", {})
+        .get("two_source_prefix", {})
+        .get("ready_chunks")
+        == two_source_ready_chunks
+        and parents["fresh_artifact_intake"]
+        .get("source_higgs_route", {})
+        .get("two_source_prefix", {})
+        .get("first_missing_chunk")
+        == (two_source_ready_chunks + 1 if isinstance(two_source_ready_chunks, int) else None)
     )
     same_surface_multiplicity_gate_loaded = (
         "same-surface neutral multiplicity-one artifact intake gate"
@@ -441,37 +475,28 @@ def main() -> int:
     report("literature-refresh-support-not-proof", literature_refresh_support_not_proof, f"rows={len(LITERATURE_REFRESH_ROWS)}")
     report("osp-source-side-artifact-available-not-closure", osp_source_side_available, statuses["genuine_source_pole_artifact_intake"])
     report("radial-spurion-action-contract-future-only", radial_spurion_support_only, statuses["radial_spurion_action_contract"])
+    report("fms-action-adoption-cut-support-only", fms_action_cut_support_only, statuses["fms_action_adoption_minimal_cut"])
     report("two-source-row-combiner-partial-support-only", two_source_partial_rows_support_only, f"ready={two_source_ready_chunks}/{two_source_expected_chunks}")
     report("finite-schur-abc-support-not-pole-authority", finite_schur_support_only, statuses["two_source_taste_radial_schur_abc"])
+    report("fresh-artifact-intake-current-and-open", fresh_intake_current_and_open, statuses["fresh_artifact_intake"])
     report("same-surface-multiplicity-gate-loaded", same_surface_multiplicity_gate_loaded, statuses["same_surface_neutral_multiplicity_one_gate"])
     report("clean-physics-route-ranks-source-higgs-first", source_higgs_ranked_first, ranking[0]["option"])
     report("wz-response-ranked-first-fallback-for-clean-goal", wz_ranked_first_fallback, ranking[1]["option"])
-    report("selected-route-is-source-higgs-invariant-to-gns", selected["id"] == "source_higgs_invariant_ring_then_gns_pole_rows", selected["id"])
+    report("selected-route-is-fms-action-to-gram-pole-rows", selected["id"] == "source_higgs_fms_action_then_gram_pole_rows", selected["id"])
     report("forbidden-firewall-clean", no_forbidden_imports, str(firewall))
 
     closure_allowed = False
-    same_surface_gate = parents["same_surface_neutral_multiplicity_one_gate"]
-    if same_surface_gate.get("candidate_certificate_present") is True:
-        exact_next_action = (
-            "For the clean source-Higgs route, the candidate file "
-            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json "
-            "is present but not accepted.  "
-            f"{same_surface_gate.get('exact_next_action', '')}  After a same-surface "
-            "artifact retires one of those failed obligations, rerun the "
-            "same-surface multiplicity-one gate, canonical O_H certificate "
-            "gate, source-Higgs row builder, Gram-purity postprocessor, "
-            "scalar-LSZ gates, full assembly gate, retained-route gate, and "
-            "completion audit."
-        )
-    else:
-        exact_next_action = (
-            "For the clean source-Higgs route, produce the actual candidate "
-            "file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json "
-            "satisfying the same-surface neutral multiplicity-one gate.  If "
-            "and only if that certificate lands, rerun the canonical O_H "
-            "certificate gate, produce C_ss/C_spH/C_HH pole rows, and run the "
-            "O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates."
-        )
+    exact_next_action = (
+        "For the clean source-Higgs route, retire the FMS/action-adoption root "
+        "first: supply a same-surface accepted EW/Higgs action or native "
+        "Cl(3)/Z3 action derivation, plus a canonical O_H identity and LSZ "
+        "normalization certificate.  Only after that root lands, run the "
+        "source-Higgs time-kernel C_ss/C_sH/C_HH rows, compute the O_sp-Higgs "
+        "Gram/overlap packet, and rerun scalar-LSZ, full assembly, retained-route, "
+        "campaign, and completion-audit gates.  Completed taste-radial chunks "
+        "may continue to be packaged as bounded C_sx/C_xx support, but they are "
+        "not a closure substitute."
+    )
     result = {
         "actual_current_surface_status": (
             "exact support / clean source-Higgs outside-math route selector; "
@@ -487,9 +512,10 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "Outside-math tools are classified only as methods for producing "
-            "future same-surface certificates.  Current O_H/C_sH/C_HH rows, "
-            "neutral irreducibility, Schur rows, strict scalar-LSZ authority, "
-            "and W/Z response rows remain absent."
+            "future same-surface certificates.  Current accepted EW/Higgs action, "
+            "canonical O_H, O_H/C_sH/C_HH rows, neutral irreducibility, strict "
+            "Schur pole rows, strict scalar-LSZ authority, and W/Z response rows "
+            "remain absent."
         ),
         "bare_retained_allowed": False,
         "audit_required_before_effective_retained": True,
@@ -503,8 +529,12 @@ def main() -> int:
         "current_support_intake": {
             "osp_source_side_available": osp_source_side_available,
             "radial_spurion_support_only": radial_spurion_support_only,
+            "fms_action_cut_support_only": fms_action_cut_support_only,
             "two_source_partial_rows_support_only": two_source_partial_rows_support_only,
+            "two_source_ready_chunks": two_source_ready_chunks,
+            "two_source_expected_chunks": two_source_expected_chunks,
             "finite_schur_support_only": finite_schur_support_only,
+            "fresh_intake_current_and_open": fresh_intake_current_and_open,
             "same_surface_multiplicity_gate_loaded": same_surface_multiplicity_gate_loaded,
         },
         "outside_math_route_rows": rows,

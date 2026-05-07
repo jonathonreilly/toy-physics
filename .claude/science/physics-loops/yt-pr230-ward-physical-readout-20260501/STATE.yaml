@@ -16,11 +16,14 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-271-fresh-artifact-intake-refresh
-blocks_completed: 270
-active_route: "Fresh-artifact intake at current PR230 head after FMS action-adoption cut"
-active_hard_residual: "Refreshed the fresh-artifact intake checkpoint at git head 0dea6f014f5c75ce649e284e49e1940e5bce867d.  The runner now consumes the current FMS action-adoption minimal cut and the chunks001-050 packaged row prefix, verifies committed-head-only intake, and still finds no certified canonical O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet.  Validation: fresh-artifact intake PASS=18 FAIL=0 and campaign status PASS=356 FAIL=0.  proposal_allowed remains false.  Chunks051-052 are active run-control only and remain unstaged until completed and checkpointed."
+current_phase: campaign-block-272-clean-source-higgs-route-selector-refresh
+blocks_completed: 271
+active_route: "Clean source-Higgs/FMS route selector refresh at current PR230 head"
+active_hard_residual: "Refreshed the outside-math clean source-Higgs route selector after the FMS action-adoption minimal cut, fresh-artifact intake refresh, and chunks001-050 packaged row prefix.  The selector now ranks accepted same-surface EW/Higgs action or native Cl(3)/Z3 action derivation plus canonical O_H identity/LSZ normalization as the root, followed by production C_ss/C_sH/C_HH rows and O_sp-Higgs Gram/overlap gates.  Validation: selector PASS=22 FAIL=0; assumption/import stress PASS=104 FAIL=0; campaign PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0.  proposal_allowed remains false.  Chunks051-052 are active run-control only and remain unstaged until completed and checkpointed."
 files_touched:
+  - "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py"
+  - "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md"
+  - "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
   - "scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py"
   - "docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"
