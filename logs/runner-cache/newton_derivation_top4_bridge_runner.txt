@@ -1,0 +1,30 @@
+====================================================================================================
+NEWTON DERIVATION TOP4 BRIDGE RUNNER
+  Principle-3 extensivity bridge on the audit-clean top4 multistage compact object
+====================================================================================================
+top_keep=4, case=baseline (W=3, L=6, source_z=2.0)
+thresholds: alpha in [0.95, 1.05], max_kappa_drift <= 0.10, mean_overlap >= 0.90
+
+PRINCIPLE-3 MEASUREMENTS
+  stage_mean_overlap   = [0.956,0.956,0.956]
+  stage_alpha          = [1.03,1.03,1.03]
+  stage_kappa          = [3.756611e+00,3.756611e+00,3.756611e+00]
+  max_kappa_drift      = 0.000%
+
+PRINCIPLE-3 GATES
+  PERSISTENCE  (mean_overlap >= 0.90)           : PASS
+  EXTENSIVITY  (alpha in [0.95, 1.05])      : PASS
+  STABILITY    (max_kappa_drift <= 0.10)        : PASS
+
+SAFE READ
+  - On the audit-clean top4 multistage baseline case, the persistent compact
+    object satisfies the Principle-3 extensivity premise of the Newton-derivation
+    chain operationally: alpha = 1, the response coefficient is stage-stable,
+    and the same source-strength s is the only scalar parameter.
+  - This is a *bridge* result, not a new persistent-pattern equivalence-principle
+    theorem. The remaining open question is the equivalence-principle test for
+    different persistent compact-object widths under an external field, which
+    matter_inertial_closure_note shows fails for free Gaussian packets.
+
+BRIDGE_ADMISSIBLE = True
+Total runtime: 135.2s

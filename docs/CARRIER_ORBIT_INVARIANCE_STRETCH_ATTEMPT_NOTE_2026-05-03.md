@@ -264,7 +264,7 @@ symmetric trace on `K_R`.
 
 ## What this does not close
 
-- **Absolute retention of the swap-reduction theorem to audited_clean**:
+- **Retained-grade swap-reduction theorem use**:
   blocked on the registry closure meta-premise. Future cycles can
   target this single named obstruction by either (a) auditing the
   retained primitive registry exhaustively, or (b) proving a closure
@@ -288,6 +288,74 @@ If independent audit ratifies cycle 22:
    audit task, not a single-cycle physics derivation.
 4. Cycle 16 sub-B/sub-C and cycle 17 retention routes A/B/C remain
    blocked by the named registry-closure premise.
+
+## Refined precursor chain (2026-05-07 closure-attempt sharpening)
+
+**Bounded verdict:** PARTIAL. The registry-closure meta-premise admits
+no further analytic reduction from `A_min` alone, because closure
+ranges over a registry that is open by repo policy (new framework
+primitives may be added under audit-lane governance). The "no new
+axioms" rule explicitly forbids adopting "all framework primitives
+factor through the swap quotient" as a new axiom.
+
+**Refinement claim.** The registry-closure meta-premise factors
+explicitly through three named upstream items, each currently
+bounded-not-retained. Bounded progress without a new axiom is attainable
+only after those precursors audit into the needed dependency tier:
+
+| Precursor | Current status | What it supplies |
+|---|---|---|
+| Decoupling property `delta_A1 ⊥ {E_x, T1x, E_perp, T1y, T1z}` (S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE upstream dep #1) | bounded-not-retained | Forces row factor `[1, delta_A1]^T` to be orthogonal to the active aligned-bright column space, so the carrier is genuinely a rank-1 outer product on the bright subspace. |
+| Aligned-bright coordinate identification `u_E ↔ <E_x, ·>`, `u_T ↔ <T1x, ·>` (S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE upstream dep #2) | bounded-not-retained | Forces the carrier columns to be inner-product projections onto the `E` and `T1` irrep basis vectors, so any framework primitive acting on the carrier projects through the (E, T1) irrep block decomposition. |
+| Cubic Schur structure (`O_h`-equivariance on the seven-site star) | retained framework constraint | Forces all retained framework primitives on the support algebra to be block-diagonal across non-isomorphic irreps, with independent scalar action on each block. |
+
+**Reduction theorem (precursor-conditional).** If the three precursors
+above are all retained, then any framework-derived primitive whose
+**load-bearing readout** factors through the carrier `K_R(q)` projects
+onto the `(u_E, u_T)` columns as `(c_E u_E, c_T u_T)` for some scalars
+`(c_E, c_T)` determined by the irrep-block action.
+
+This does NOT yet force `c_E = c_T`. The Schur structure permits
+independent scalars on non-isomorphic irreps. The remaining **column
+symmetry** (`c_E = c_T` on the load-bearing readout class) is a
+property of the **active source basis** `(a, b, c, d, T_delta, T_rho)`
+on the H-side `Herm(3)`, which the runner verifies as a finite check
+on the current registry but cannot exhaust over future extensions.
+
+**Honest residual after refinement.** Even with all three precursors
+retained, the registry-closure meta-premise reduces to a **column-
+symmetric source class** premise: the framework's load-bearing
+H-side source basis must contain no element whose carrier-trace
+distinguishes (E, T1) irrep labels. This is a property of the source
+class, not of the carrier algebra.
+
+**Why this refinement is not closure.** The column-symmetric source
+class premise is itself a registry-closure statement, just one level
+removed. The framework retains the H-side basis `(a, b, c, d,
+T_delta, T_rho)` as the current active source class, but the registry
+remains open by design. No analytic argument from `A_min` excludes
+future retained source primitives; that exclusion would itself be a
+new axiom.
+
+**Tractable upgrade path (not pursued in cycle 22).** Audit any one
+of the three precursors to retained-grade via its own theorem chain.
+The most actionable target is the decoupling property (precursor #1),
+which has a candidate Green/Schur derivation flagged in
+`S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE`. This would convert the
+carrier definition itself from definition-only to a retained
+construction, after which the column-symmetry of the active basis on
+the carrier becomes a finite-registry check at retained level rather
+than at bounded level.
+
+**Bounded verdict for cycle 22 (retained discipline).** The Z_2
+isotypic decomposition is rigorous (Maschke / Schur). The registry
+enumeration on the current audited surface is a finite check that
+PASSES. The closure ("no future retained primitive can break this")
+is a meta-statement about the framework registry; under the "no new
+axioms" rule, this meta-statement is not analytically reducible from
+`A_min`. Therefore the cycle 22 stretch attempt remains at PARTIAL,
+with the named residual (registry closure) sharpened by this section
+to the explicit precursor chain.
 
 ## Honesty disclosures
 

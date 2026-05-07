@@ -388,6 +388,132 @@ def test_hierarchy_value_from_internal_observable_principle():
     )
 
 
+def test_conditional_scope_shape():
+    """Part 6 -- conditional-scope verification (2026-05-07 scope narrowing).
+
+    Per the 2026-05-07 scope narrowing recorded in
+    `docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`, the load-bearing claim
+    of the parent note is conditional on four admitted premises:
+
+      P1: scalar additivity on independent subsystems
+          (W[J_1 (+) J_2] = W[J_1] + W[J_2])
+      P2: CPT-even phase blindness
+          (W depends only on |Z|, not on the phase of Z)
+      P3: continuity / minimal regularity (so the multiplicative-to-additive
+          functional equation W(r_1 r_2) = W(r_1) + W(r_2) admits the unique
+          solution W = c log r + const)
+      P4: normalization choice (fixing c and the additive constant)
+
+    This test verifies, *as an empirical statement on the runner's lattice
+    Dirac operator*, that:
+
+      - if the candidate generator W = log|det(D+J)| - log|det D| is adopted,
+        premises P1, P2, P3 hold on the runner's blocks, and the P4
+        baseline convention W(0) = 0 is implemented explicitly (so the
+        conditional implication "P1..P4 hold => W is the unique additive
+        CPT-even scalar generator" is non-vacuous on the verified blocks);
+
+      - any candidate that violates P1 (e.g. raw |Z|) fails to be a unique
+        additive scalar generator, confirming P1 is a load-bearing selection
+        filter rather than a redundant assumption.
+
+    This part does NOT attempt to derive P1-P4 from retained primitives;
+    that is explicitly out of scope per the audit-named conditional scope.
+    It only verifies the conditional shape on the runner's block so
+    reviewers can independently check that the runner's PASS count matches
+    the conditional load-bearing statement of the parent note.
+    """
+    print("\n" + "=" * 78)
+    print("PART 6: CONDITIONAL-SHAPE VERIFICATION (2026-05-07 SCOPE NARROWING)")
+    print("=" * 78)
+
+    u0 = 0.9
+    d2 = build_dirac_4d_apbc(2, 2, u0)
+    d4 = build_dirac_4d_apbc(2, 4, u0)
+    d_tot = block_diag(d2, d4)
+    n2 = d2.shape[0]
+    n4 = d4.shape[0]
+    n_tot = d_tot.shape[0]
+
+    p1_max_err = 0.0
+    for j in [1e-3, 1e-2, 5e-2]:
+        s2 = j * np.eye(n2, dtype=complex)
+        s4 = j * np.eye(n4, dtype=complex)
+        s_tot = j * np.eye(n_tot, dtype=complex)
+        w_tot = observable_generator(d_tot, s_tot)
+        w_split = observable_generator(d2, s2) + observable_generator(d4, s4)
+        p1_max_err = max(p1_max_err, abs(w_tot - w_split))
+
+    p2_max_err = 0.0
+    for lt in [2, 4]:
+        d = build_dirac_4d_apbc(2, lt, u0)
+        n = d.shape[0]
+        for j in [1e-3, 1e-2, 5e-2]:
+            src_pos = j * np.eye(n, dtype=complex)
+            src_neg = -j * np.eye(n, dtype=complex)
+            p2_max_err = max(
+                p2_max_err,
+                abs(observable_generator(d, src_pos) - observable_generator(d, src_neg)),
+            )
+
+    p3_max_err = 0.0
+    p4_baseline_err = 0.0
+    for lt in [2, 4]:
+        d = build_dirac_4d_apbc(2, lt, u0)
+        n = d.shape[0]
+        zero_src = np.zeros((n, n), dtype=complex)
+        p4_baseline_err = max(p4_baseline_err, abs(observable_generator(d, zero_src)))
+        for j in [1e-5, 1e-4, 1e-3]:
+            src = j * np.eye(n, dtype=complex)
+            w = observable_generator(d, src)
+            quad = exact_uniform_coefficient_total(lt, u0) * j**2
+            p3_max_err = max(p3_max_err, abs(w - quad) / max(abs(quad), 1e-30))
+
+    raw_violation = 0.0
+    for j in [1e-2]:
+        s2 = j * np.eye(n2, dtype=complex)
+        s4 = j * np.eye(n4, dtype=complex)
+        s_tot = j * np.eye(n_tot, dtype=complex)
+        z2 = abs(np.linalg.det(d2 + s2))
+        z4 = abs(np.linalg.det(d4 + s4))
+        z_tot = abs(np.linalg.det(d_tot + s_tot))
+        raw_violation = max(raw_violation, abs(z_tot - (z2 + z4)) / z_tot)
+
+    check(
+        "P1 (additivity) holds for the candidate generator W = log|det(D+J)|",
+        p1_max_err < 1e-12,
+        f"max additivity error = {p1_max_err:.2e}",
+    )
+    check(
+        "P2 (CPT-even phase blindness) holds: W(j) = W(-j)",
+        p2_max_err < 1e-12,
+        f"max evenness error = {p2_max_err:.2e}",
+    )
+    check(
+        "P3 (continuity / small-j regularity) holds for the candidate W",
+        p3_max_err < 5e-3,
+        f"max relative quadratic-coefficient consistency = {p3_max_err:.2e}",
+    )
+    check(
+        "P4 (normalization convention) is implemented by zero-source baseline subtraction",
+        p4_baseline_err < 1e-12,
+        f"max zero-source baseline error = {p4_baseline_err:.2e}",
+    )
+    check(
+        "P1 is non-vacuous: raw |Z| violates additivity (so P1 is a real filter)",
+        raw_violation > 0.1,
+        f"raw |Z| additivity violation = {raw_violation:.4f}",
+    )
+    print(
+        "  Note: this part verifies the CONDITIONAL SHAPE only "
+        "(premises P1-P4 hold on the candidate W). It does NOT derive "
+        "P1-P4 from retained-grade primitives; that path is explicitly out of "
+        "scope per the audit-named conditional scope (see "
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md §'Audit-named "
+        "conditional scope')."
+    )
+
+
 def main():
     print("Hierarchy observable principle from the lattice axiom")
     print("=" * 78)
@@ -396,6 +522,7 @@ def main():
     test_uniform_scalar_generator_from_axiom()
     test_orbit_kernel_and_selector()
     test_hierarchy_value_from_internal_observable_principle()
+    test_conditional_scope_shape()
     print("\n" + "=" * 78)
     print(f"SCORECARD: {PASS_COUNT} pass, {FAIL_COUNT} fail out of {PASS_COUNT + FAIL_COUNT}")
     print("=" * 78)

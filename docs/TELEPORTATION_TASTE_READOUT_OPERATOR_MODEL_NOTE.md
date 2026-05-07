@@ -233,3 +233,18 @@ does not audit noisy readout, dynamical preparation, Poisson ground-state
 resource fidelity, or nonideal feed-forward. It also does not turn
 environment-selected branches into protocol resources without an explicit
 heralding and branch-conditioned correction workflow.
+
+## Coordinated Algebraic Closure (2026-05-07)
+
+The case-by-case factorization audit documented above is now subsumed by a
+single algebraic theorem (T1 + T2 + T4 in the companion closure note):
+RALA(a) is the unique closed *-subalgebra of single-site operators that
+factors as `O_logical (x) I_env`; native sublattice parity Z is in RALA
+iff dim = 1.
+
+See [`TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md`](TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md)
+(runner `scripts/frontier_teleportation_retained_axis_operator_algebra_closure.py`)
+for the proof. The closure note supplies bounded algebraic theorem support
+for the operator-factorization content of this note; the physical-implementation
+gate (native apparatus blind to environment labels, noisy readout,
+dynamical preparation, heralded branch protocol) remains open.

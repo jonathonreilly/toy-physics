@@ -252,3 +252,26 @@ This theory raises the closure bar. A future nature-grade package would need:
 
 Until those exist, the lane remains planning / candidate theory, even when the
 small-surface teleportation fidelity is high.
+
+## Coordinated Algebraic Closure (2026-05-07)
+
+The algebraic content of T1 (base/fiber separation) and T2 (Bell connection)
+now has bounded theorem support via the Retained-Axis Operator Algebra (RALA)
+theorem. Independent audit owns any effective-status change. Specifically:
+
+  - T1 base/fiber separation is realized exactly by RALA(a): every
+    correction commutes with every base-ledger observable on the same site
+    (T6 of the closure note).
+  - T2 Bell connection is realized exactly by the four axis Bell projectors
+    P_zx^axis, which form a partition of unity, project to the four
+    logical Bell states, and compose via XOR up to phase (T3 + T7 of the
+    closure note).
+
+See [`TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md`](TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md)
+(runner `scripts/frontier_teleportation_retained_axis_operator_algebra_closure.py`)
+for the proof.
+
+T3 (causal record section), T4 (loop holonomy bookkeeping), T5 (branch
+records as gauge data), and T6 (preparation curvature) of this note
+require physical content beyond the RALA algebra and are *not* resolved by
+the RALA theorem; they remain open in their own gates.

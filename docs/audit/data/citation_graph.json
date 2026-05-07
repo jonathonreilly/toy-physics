@@ -2942,15 +2942,15 @@
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "alpha_s_derived_note"
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -9142,15 +9142,15 @@
     },
     {
       "from": "left_handed_charge_matching_note",
+      "to": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "left_handed_charge_matching_note",
       "to": "graph_first_selector_derivation_note"
     },
     {
       "from": "left_handed_charge_matching_note",
       "to": "graph_first_su3_integration_note"
-    },
-    {
-      "from": "left_handed_charge_matching_note",
-      "to": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
     },
     {
       "from": "legacy_exploratory_drivers_note",
@@ -10875,6 +10875,30 @@
     {
       "from": "newton_derivation_note",
       "to": "equivalence_principle_harness_note"
+    },
+    {
+      "from": "newton_derivation_note",
+      "to": "newton_derivation_top4_bridge_note"
+    },
+    {
+      "from": "newton_derivation_top4_bridge_note",
+      "to": "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16"
+    },
+    {
+      "from": "newton_derivation_top4_bridge_note",
+      "to": "persistent_object_compact_inertial_probe_note_2026-04-16"
+    },
+    {
+      "from": "newton_derivation_top4_bridge_note",
+      "to": "equivalence_principle_harness_note"
+    },
+    {
+      "from": "newton_derivation_top4_bridge_note",
+      "to": "matter_inertial_closure_note"
+    },
+    {
+      "from": "newton_derivation_top4_bridge_note",
+      "to": "newton_derivation_note"
     },
     {
       "from": "newton_law_derived_note",
@@ -13477,6 +13501,114 @@
       "to": "cpt_exact_note"
     },
     {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "s3_taste_cube_decomposition_note"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+    },
+    {
+      "from": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+      "to": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+      "to": "fermion_parity_z2_grading_theorem_note_2026-05-02"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "axiom_first_reeh_schlieder_theorem_note_2026-05-01"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
       "from": "staggered_graph_failure_map_note",
       "to": "staggered_graph_portability_note"
     },
@@ -13873,12 +14005,20 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "teleportation_encoding_portability_note",
+      "to": "teleportation_retained_axis_operator_algebra_closure_note"
+    },
+    {
       "from": "teleportation_end_to_end_poisson_note",
       "to": "teleportation_resource_fidelity_note"
     },
     {
       "from": "teleportation_end_to_end_poisson_note",
       "to": "teleportation_protocol_note"
+    },
+    {
+      "from": "teleportation_native_transport_theory_note",
+      "to": "teleportation_retained_axis_operator_algebra_closure_note"
     },
     {
       "from": "teleportation_preparation_readout_probe_note",
@@ -13903,6 +14043,10 @@
     {
       "from": "teleportation_retention_theorem_attack_note",
       "to": "teleportation_native_record_apparatus_note"
+    },
+    {
+      "from": "teleportation_taste_readout_operator_model_note",
+      "to": "teleportation_retained_axis_operator_algebra_closure_note"
     },
     {
       "from": "teleportation_unconditional_closure_attack_note",
@@ -14031,6 +14175,10 @@
     {
       "from": "three_generation_structure_note",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "three_generation_structure_note",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
     },
     {
       "from": "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03",
@@ -15294,14 +15442,6 @@
     },
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
-    },
-    {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "to": "native_gauge_closure_note"
     },
     {
@@ -15311,6 +15451,14 @@
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "w_mass_derived_note",
@@ -28389,14 +28537,14 @@
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
       "claim_type_author_hint": "bounded_theorem",
-      "claim_type_author_hint_raw": "bounded_theorem proposal moving toward positive_theorem proposal.",
+      "claim_type_author_hint_raw": "bounded_theorem proposal. The earlier \"moving toward",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "native_gauge_closure_note",
         "cpt_exact_note",
         "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
       ],
-      "note_hash": "34a4a17a24f951dfec58f8df059a9b67e76d9b9a754ef4b9060828560ff95253",
+      "note_hash": "ecb30b884ddad593b941e6c8f4d8664dc6587ad2bb86257d866dc8bc9558946d",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": "scripts/frontier_anomaly_forces_time.py",
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
@@ -29869,7 +30017,7 @@
       "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "cfd3c06e41ba9dc3691b90d5fec94eb785c6a1377e14ca3a5dffb9ec56d9fe34",
+      "note_hash": "6570f7bf9aa38f5b79b13d206fcf76f3647cf621b7455d472052e13e9bd3cfa5",
       "path": "docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_carrier_orbit_invariance.py",
       "title": "Carrier Orbit Invariance \u2014 Stretch Attempt with Partial Structural Insight"
@@ -30795,17 +30943,17 @@
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
         "ckm_atlas_axiom_closure_note",
+        "alpha_s_derived_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
-        "alpha_s_derived_note",
         "ckm_first_row_magnitudes_theorem_note_2026-04-24",
         "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "adaaf7d70547c5422d78ada160dd0960b6915021af02fd00ba0e657e59b918a5",
+      "note_hash": "70758b5ff3575eca456e4420c7f812d351ed217df0d0afca7d40fc5552563260",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -36822,7 +36970,7 @@
         "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
         "gauge_scalar_temporal_completion_theorem_note"
       ],
-      "note_hash": "8350b8cb8411adfb551c9262be87307bd3e328c281923fbb4a26d28ac944849b",
+      "note_hash": "8991024dc76f93a92831b9eb96a435dcb8c0e2aef40bfca1ef9d3f3bb276c496",
       "path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "title": "Gauge-Scalar Temporal Observable Bridge Stretch Attempt"
@@ -41166,10 +41314,10 @@
     "lattice_nn_high_precision_note": {
       "claim_id": "lattice_nn_high_precision_note",
       "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4ffe8bf89d532d31369a57f75ae12fabcb6138a012cc38cb5155509b227bf81b",
+      "note_hash": "3be498a637116908da21219bb2933fafb86eaeada8f046d339bcabd8018ecaad",
       "path": "docs/LATTICE_NN_HIGH_PRECISION_NOTE.md",
       "runner_path": null,
       "title": "Lattice NN High-Precision Note"
@@ -41320,15 +41468,15 @@
     },
     "left_handed_charge_matching_note": {
       "claim_id": "left_handed_charge_matching_note",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (audit-pipeline retag from author-hint",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
         "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note",
-        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+        "graph_first_su3_integration_note"
       ],
-      "note_hash": "59b54bd795a2785fb43d485dabbf8577c43140df9417c9961fff22c68a0079be",
+      "note_hash": "dfdb5ad72db11b84d1edbb3f581ec0f5a12abd39555ad197ba81b1521f04381f",
       "path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Left-Handed Charge Matching on the Selected-Axis Surface"
@@ -43579,12 +43727,30 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "equivalence_principle_harness_note"
+        "equivalence_principle_harness_note",
+        "newton_derivation_top4_bridge_note"
       ],
-      "note_hash": "0f556be8867f9e2804f6ab9a3b842c0b4e45b75b85d9fe385d8f43c5e2ea68b3",
+      "note_hash": "ca67ddd017a9b7681588228df57ddf502d45848deefe5243a9a24953eee3e2a0",
       "path": "docs/NEWTON_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)"
+    },
+    "newton_derivation_top4_bridge_note": {
+      "claim_id": "newton_derivation_top4_bridge_note",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16",
+        "persistent_object_compact_inertial_probe_note_2026-04-16",
+        "equivalence_principle_harness_note",
+        "matter_inertial_closure_note",
+        "newton_derivation_note"
+      ],
+      "note_hash": "2c0fd15c8fdefba0212c1fcfcc79ca700102f3cadb061d888f50aec83380ae98",
+      "path": "docs/NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md",
+      "runner_path": "scripts/newton_derivation_top4_bridge_runner.py",
+      "title": "Newton Derivation Top4 Bridge Note (Principle 3 conditional bridge)"
     },
     "newton_law_derived_note": {
       "claim_id": "newton_law_derived_note",
@@ -43710,11 +43876,11 @@
     },
     "observable_principle_from_axiom_note": {
       "claim_id": "observable_principle_from_axiom_note",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (exact lattice algebra given four explicitly",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3c2104ec67e632088845788e36e7af027d7f627a272ef0e18799d90f6e5a83ec",
+      "note_hash": "2cd306e36404b5398f4e55f32cdb6cb1132e147aa81fa771998471a5ccc35282",
       "path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
       "title": "Observable Principle From Axiom Note"
@@ -43781,14 +43947,14 @@
     },
     "one_generation_matter_closure_note": {
       "claim_id": "one_generation_matter_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (audit-pipeline retag from earlier",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "left_handed_charge_matching_note",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "e1fc5ac663fcb33118881c0e58accdba8c660c7b18b17266c8f0e590bae58f77",
+      "note_hash": "68b94e700d1b8eebb66ed37e704e36507ec955d3f254da68c9dba6608d088dca",
       "path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_right_handed_sector.py",
       "title": "One-Generation Matter Closure Note"
@@ -50765,6 +50931,81 @@
       "runner_path": "scripts/frontier_staggered_dag.py",
       "title": "Staggered Fermion on Layered DAG-Derived Family \u2014 Bounded Note"
     },
+    "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07": {
+      "claim_id": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "three_generation_observable_theorem_note",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "three_generation_structure_note",
+        "s3_taste_cube_decomposition_note",
+        "site_phase_cube_shift_intertwiner_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+      ],
+      "note_hash": "3df25fd414c2dee127eb669178c5daab1aa2fb6dfc67561b5c9750c60a1b77ea",
+      "path": "docs/STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/probe_bz_corner_decomposition.py",
+      "title": "Staggered-Dirac Substep 3 \u2014 BZ-Corner Three-Generation Forcing (Block 04)"
+    },
+    "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07": {
+      "claim_id": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "axiom_first_spin_statistics_theorem_note_2026-04-29",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03",
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+      ],
+      "note_hash": "67acf23776cd0448b9c49d6b508f7a7a90d7b466dfc9033e231fdcbc99c2837c",
+      "path": "docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/probe_grassmann_forcing_dependency_chain.py",
+      "title": "Staggered-Dirac Substep 1 \u2014 Grassmann Partition Forcing (Block 02)"
+    },
+    "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07": {
+      "claim_id": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "fermion_parity_z2_grading_theorem_note_2026-05-02"
+      ],
+      "note_hash": "778ae70e18324a97d0ee46da4223b56d4063313dfaaf0e694e73c8613bc57898",
+      "path": "docs/STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/probe_kawamoto_smit_phase_forcing.py",
+      "title": "Staggered-Dirac Substep 2 \u2014 Kawamoto-Smit Phase Forcing (Block 03)"
+    },
+    "staggered_dirac_physical_species_direct_theorem_note_2026-05-07": {
+      "claim_id": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "staggered_dirac_realization_gate_note_2026-05-03"
+      ],
+      "note_hash": "09f053011ed2868bc995539c725f1dba72a8cf4bf5dae33e4ae4c4c2e2a7ac60",
+      "path": "docs/STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/probe_three_states_direct_derivation.py",
+      "title": "Staggered-Dirac Direct Three-State Algebraic Support"
+    },
     "staggered_dirac_realization_gate_note_2026-05-03": {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "claim_type_author_hint": "open_gate",
@@ -51750,8 +51991,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "b3c5dbddaa9f77d0e20b4991d7be97fa81b596cc018a0516011526d1977ac0d7",
+      "deps": [
+        "teleportation_retained_axis_operator_algebra_closure_note"
+      ],
+      "note_hash": "3acde4e9070bcd24d37d1a840502381422503aa6df808a1842c632e7e8ebf8f0",
       "path": "docs/TELEPORTATION_ENCODING_PORTABILITY_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_encoding_portability.py",
       "title": "Taste-Qubit Encoding Portability Note"
@@ -51852,8 +52095,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "6369a5c311dfe16846670cd67623495904d89897fa900e53032fda5927b0929d",
+      "deps": [
+        "teleportation_retained_axis_operator_algebra_closure_note"
+      ],
+      "note_hash": "892c23c42897bec546a534d767ef460acdb474fc28fa6b3ac171c70ab8001820",
       "path": "docs/TELEPORTATION_NATIVE_TRANSPORT_THEORY_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_transport_invariants.py",
       "title": "Native Teleportation Transport Theory Note"
@@ -52010,6 +52255,17 @@
       "runner_path": "scripts/frontier_teleportation_resource_from_poisson.py",
       "title": "Teleportation Resource From Poisson/CHSH: First Audit"
     },
+    "teleportation_retained_axis_operator_algebra_closure_note": {
+      "claim_id": "teleportation_retained_axis_operator_algebra_closure_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded algebraic theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "17ea37d564d61aad6049fc5975536b1867f8e75e5ee9312d0b430c7fe9cd9021",
+      "path": "docs/TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md",
+      "runner_path": "scripts/frontier_teleportation_retained_axis_operator_algebra_closure.py",
+      "title": "Retained-Axis Operator Algebra Closure Note"
+    },
     "teleportation_retention_theorem_attack_note": {
       "claim_id": "teleportation_retention_theorem_attack_note",
       "claim_type_author_hint": null,
@@ -52028,8 +52284,10 @@
       "claim_type_author_hint": "open_gate",
       "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "1a2b9bf306627a2a94b0f3e0db0b1295088a610ca5d5f3a341bad974b7cbd740",
+      "deps": [
+        "teleportation_retained_axis_operator_algebra_closure_note"
+      ],
+      "note_hash": "fec0015611dc0068193214827ec8e2de9a621780fdf9ccacbb50a99f26de585d",
       "path": "docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_taste_readout_operator_model.py",
       "title": "Teleportation Taste Readout/Operator Model"
@@ -52303,9 +52561,10 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "staggered_dirac_realization_gate_note_2026-05-03",
-        "minimal_axioms_2026-05-03"
+        "minimal_axioms_2026-05-03",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
       ],
-      "note_hash": "1461cb14ca37b25723399d12d3ecce371586069cf4ea722ad33d627fda617fff",
+      "note_hash": "bd82a4aacb49fcafd8198150ae51fe58bd4bac37c8814d2dae23102944426fba",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -54120,17 +54379,17 @@
       "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
         "ckm_atlas_axiom_closure_note",
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
-        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
-        "alpha_s_derived_note"
+        "alpha_s_derived_note",
+        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24"
       ],
-      "note_hash": "2f1ea9aebcfa1e03d90bd06e19a81cacbb16218273d4bf46f95df9141f6ff101",
+      "note_hash": "a67e09178420cd8bee17c35ebd1239e23ad4f8bacf9326972cbd3805007248e3",
       "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_wolfenstein_lambda_a_structural_identities.py",
       "title": "Wolfenstein Lambda and A Structural Identities Theorem"
@@ -56601,7 +56860,6 @@
     "teleportation_conclusion_boundary_note",
     "teleportation_cross_encoding_maps_note",
     "teleportation_dynamical_resource_generation_note",
-    "teleportation_encoding_portability_note",
     "teleportation_hard_blocker_attack_note",
     "teleportation_initial_state_preparation_probe_note",
     "teleportation_logical_readout_audit",
@@ -56609,7 +56867,6 @@
     "teleportation_microscopic_closure_note",
     "teleportation_native_axioms_theory_note",
     "teleportation_native_record_apparatus_note",
-    "teleportation_native_transport_theory_note",
     "teleportation_nature_grade_push_note",
     "teleportation_no_signaling_audit",
     "teleportation_noise_fault_controls_note",
@@ -56619,7 +56876,7 @@
     "teleportation_record_field_closure_note",
     "teleportation_resource_fidelity_note",
     "teleportation_resource_from_poisson_note",
-    "teleportation_taste_readout_operator_model_note",
+    "teleportation_retained_axis_operator_algebra_closure_note",
     "teleportation_three_register_cross_encoding_note",
     "tensor_block_closure_test_note",
     "tensor_matching_completion_theorem_note",
@@ -56724,25 +56981,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 90,
+      "bounded_theorem": 94,
       "meta": 10,
       "no_go": 14,
-      "none": 1702,
+      "none": 1706,
       "open_gate": 11,
-      "positive_theorem": 91
+      "positive_theorem": 89
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 589,
+      "bounded_theorem": 599,
       "meta": 10,
       "no_go": 119,
-      "none": 462,
+      "none": 463,
       "open_gate": 112,
-      "positive_theorem": 626
+      "positive_theorem": 621
     },
-    "edge_count": 6740,
-    "leaf_count": 546,
-    "node_count": 1918,
-    "root_count": 859,
-    "runners_with_path": 1495
+    "edge_count": 6777,
+    "leaf_count": 543,
+    "node_count": 1924,
+    "root_count": 857,
+    "runners_with_path": 1501
   }
 }

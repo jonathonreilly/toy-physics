@@ -1,0 +1,144 @@
+==============================================================================
+Retained-Axis Operator Algebra (RALA) closure runner
+Closes (theorem-bounded): TELEPORTATION_ENCODING_PORTABILITY_NOTE,
+  TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE, and
+  TELEPORTATION_NATIVE_TRANSPORT_THEORY_NOTE T1/T2 algebraic content.
+Boundary: ordinary qubit teleportation on encoded taste qubits; no
+matter, mass, charge, energy, object transport, or FTL signaling.
+==============================================================================
+
+--- dim=1 side=2 retained_axis=0 ---
+  PASS  T1 RALA closure (dim=1 side=2 a=0): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=1 side=2 a=0): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=1 side=2): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=1 side=2): dim=1: in_rala=True O_proj_matches_sigma_z=True
+  PASS  T5 fixed pair-hop X membership (dim=1 side=2 a=0): a=0=d-1: in_rala=True O_proj_matches_sigma_x=True
+  PASS  T6 base/fiber separation (dim=1 side=2 a=0): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=1 side=2 a=0): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=1 side=2 a=0): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=1 side=4 retained_axis=0 ---
+  PASS  T1 RALA closure (dim=1 side=4 a=0): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=1 side=4 a=0): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=1 side=4): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=1 side=4): dim=1: in_rala=True O_proj_matches_sigma_z=True
+  PASS  T5 fixed pair-hop X membership (dim=1 side=4 a=0): a=0=d-1: in_rala=True O_proj_matches_sigma_x=True
+  PASS  T6 base/fiber separation (dim=1 side=4 a=0): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=1 side=4 a=0): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=1 side=4 a=0): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=2 side=2 retained_axis=0 ---
+  PASS  T1 RALA closure (dim=2 side=2 a=0): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=2 side=2 a=0): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=2 side=2): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=2 side=2): dim=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=2 side=2 a=0): a=0!=d-1=1: not_in_rala=True O_proj_zero=True rel_residual=1.000000
+  PASS  T6 base/fiber separation (dim=2 side=2 a=0): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=2 side=2 a=0): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=2 side=2 a=0): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=2 side=2 retained_axis=1 ---
+  PASS  T1 RALA closure (dim=2 side=2 a=1): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=2 side=2 a=1): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=2 side=2): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=2 side=2): dim=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=2 side=2 a=1): a=1=d-1: in_rala=True O_proj_matches_sigma_x=True
+  PASS  T6 base/fiber separation (dim=2 side=2 a=1): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=2 side=2 a=1): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=2 side=2 a=1): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=2 side=4 retained_axis=0 ---
+  PASS  T1 RALA closure (dim=2 side=4 a=0): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=2 side=4 a=0): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=2 side=4): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=2 side=4): dim=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=2 side=4 a=0): a=0!=d-1=1: not_in_rala=True O_proj_zero=True rel_residual=1.000000
+  PASS  T6 base/fiber separation (dim=2 side=4 a=0): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=2 side=4 a=0): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=2 side=4 a=0): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=2 side=4 retained_axis=1 ---
+  PASS  T1 RALA closure (dim=2 side=4 a=1): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=2 side=4 a=1): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=2 side=4): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=2 side=4): dim=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=2 side=4 a=1): a=1=d-1: in_rala=True O_proj_matches_sigma_x=True
+  PASS  T6 base/fiber separation (dim=2 side=4 a=1): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=2 side=4 a=1): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=2 side=4 a=1): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=3 side=2 retained_axis=0 ---
+  PASS  T1 RALA closure (dim=3 side=2 a=0): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=3 side=2 a=0): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=3 side=2): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=3 side=2): dim=3: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=3 side=2 a=0): a=0!=d-1=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000
+  PASS  T6 base/fiber separation (dim=3 side=2 a=0): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=3 side=2 a=0): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=3 side=2 a=0): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=3 side=2 retained_axis=1 ---
+  PASS  T1 RALA closure (dim=3 side=2 a=1): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=3 side=2 a=1): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=3 side=2): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=3 side=2): dim=3: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=3 side=2 a=1): a=1!=d-1=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000
+  PASS  T6 base/fiber separation (dim=3 side=2 a=1): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=3 side=2 a=1): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=3 side=2 a=1): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=3 side=2 retained_axis=2 ---
+  PASS  T1 RALA closure (dim=3 side=2 a=2): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=3 side=2 a=2): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=3 side=2): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=3 side=2): dim=3: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=3 side=2 a=2): a=2=d-1: in_rala=True O_proj_matches_sigma_x=True
+  PASS  T6 base/fiber separation (dim=3 side=2 a=2): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=3 side=2 a=2): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=3 side=2 a=2): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=3 side=4 retained_axis=0 ---
+  PASS  T1 RALA closure (dim=3 side=4 a=0): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=3 side=4 a=0): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=3 side=4): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=3 side=4): dim=3: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=3 side=4 a=0): a=0!=d-1=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000
+  PASS  T6 base/fiber separation (dim=3 side=4 a=0): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=3 side=4 a=0): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=3 side=4 a=0): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=3 side=4 retained_axis=1 ---
+  PASS  T1 RALA closure (dim=3 side=4 a=1): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=3 side=4 a=1): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=3 side=4): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=3 side=4): dim=3: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=3 side=4 a=1): a=1!=d-1=2: not_in_rala=True O_proj_zero=True rel_residual=1.000000
+  PASS  T6 base/fiber separation (dim=3 side=4 a=1): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=3 side=4 a=1): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=3 side=4 a=1): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+--- dim=3 side=4 retained_axis=2 ---
+  PASS  T1 RALA closure (dim=3 side=4 a=2): Z_axis=True X_axis=True Y_axis=True sum=True product=True conj=True ZXZ=True
+  PASS  T2 axis-Z/axis-X in RALA (dim=3 side=4 a=2): Z_in=True match_sigma_z=True fro=0.00e+00 | X_in=True match_sigma_x=True fro=0.00e+00
+  PASS  T3 axis-Bell projectors in pair-RALA (dim=3 side=4): max_pair_RALA_residual=0.00e+00 max_logical_block_err=2.22e-16 sum_to_I_err=0.00e+00 ortho_err=0.00e+00 idem_err=0.00e+00
+  PASS  T4 native-Z obstruction (dim=3 side=4): dim=3: not_in_rala=True O_proj_zero=True rel_residual=1.000000 (expect 1.0)
+  PASS  T5 fixed pair-hop X membership (dim=3 side=4 a=2): a=2=d-1: in_rala=True O_proj_matches_sigma_x=True
+  PASS  T6 base/fiber separation (dim=3 side=4 a=2): max_commutator_norm=0.00e+00
+  PASS  T7 Pauli XOR composition (dim=3 side=4 a=2): all_in_RALA=True max_xor_residual_after_phase=0.00e+00
+  PASS  T8 RALA teleportation protocol closure (dim=3 side=4 a=2): min_fidelity=1.000000000000 max_total_prob_err=5.55e-16 max_branch_prob_err=1.39e-16 pre_record_input_dep=4.71e-16
+
+==============================================================================
+PASS=96 FAIL=0
+==============================================================================
+
+RALA bounded algebra: all theorems T1-T8 verified across the audited grid.
+Provides bounded algebraic support for three open-gate notes (finite-grid):
+  - TELEPORTATION_ENCODING_PORTABILITY_NOTE: T5 algebraic membership
+    theorem (current_fixed_x in RALA(a) iff a = d-1).
+  - TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE: T1 + T2 + T4
+    finite operator algebra closure with native-Z obstruction proof.
+  - TELEPORTATION_NATIVE_TRANSPORT_THEORY_NOTE T1/T2 axioms: T6
+    base/fiber separation + T3/T7 Bell connection / XOR composition.
+Physical apparatus, noise, durable measurement record, dynamical
+preparation, and conservation-ledger derivations are explicitly NOT
+resolved by this algebraic theorem; they remain open in their own gates.

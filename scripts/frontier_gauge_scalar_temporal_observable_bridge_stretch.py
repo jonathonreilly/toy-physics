@@ -46,7 +46,7 @@ required = [
     "effective-action",
     "Renormalization-group",
     "non-analytically-derivable",
-    "proposal_allowed: false",
+    "does not set an",
 ]
 for s in required:
     check(f"note contains: {s!r}", s in note_text)
@@ -86,7 +86,7 @@ for f in forbidden:
 section("Part 4: explicit non-closure")
 
 non_closures = [
-    "bridge ⟨P⟩_full = R_O(β_eff) is non-analytically-derivable",
+    "not analytically derived from `A_min`",
     "honest tier",
     "still open",
     "still conditional",
@@ -106,6 +106,26 @@ amin_items = [
 for a in amin_items:
     check(f"A_min item: {a}",
           a in note_text, detail="§1 A_min table")
+
+section("Part 6: 2026-05-07 stretch-attempt bounded verdict (no-go route)")
+
+closure_section_items = [
+    "Closure-attempt verdict (2026-05-07 stretch-attempt closure pass)",
+    "Bounded verdict for the open question",
+    "GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03",
+    "two-witness argument",
+    "Companion bounded result",
+    "GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03",
+    "definition or fit",
+    "audit ratification ≠ demotion",
+    "Escape hatches",
+    "no new axioms",
+    "import → bounded → retire import",
+    "attempted positive bridge is bounded",
+]
+for item in closure_section_items:
+    check(f"closure section item: {item!r}",
+          item in note_text, detail="§9 closure verdict")
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS_COUNT}, FAIL={FAIL_COUNT}\n{'='*88}")
 sys.exit(1 if FAIL_COUNT > 0 else 0)

@@ -1096,7 +1096,7 @@
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 2,
+        "B": 1,
         "C": 10,
         "D": 0
       },
@@ -11292,6 +11292,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_two_amplitude_last_mile.py"
     },
+    "newton_derivation_top4_bridge_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/newton_derivation_top4_bridge_runner.py"
+    },
     "newton_law_derived_note": {
       "assert_count": 0,
       "counts": {
@@ -11393,7 +11405,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 12,
+        "C": 15,
         "D": 0
       },
       "decoration_candidate": false,
@@ -14880,6 +14892,54 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_staggered_dag.py"
     },
+    "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/probe_bz_corner_decomposition.py"
+    },
+    "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/probe_grassmann_forcing_dependency_chain.py"
+    },
+    "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/probe_kawamoto_smit_phase_forcing.py"
+    },
+    "staggered_dirac_physical_species_direct_theorem_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/probe_three_states_direct_derivation.py"
+    },
     "staggered_fermion_card_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -15959,6 +16019,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_teleportation_resource_from_poisson.py"
+    },
+    "teleportation_retained_axis_operator_algebra_closure_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_teleportation_retained_axis_operator_algebra_closure.py"
     },
     "teleportation_retention_theorem_attack_note": {
       "assert_count": 0,
@@ -20724,7 +20796,7 @@
       ],
       "counts": {
         "A": 0,
-        "B": 2,
+        "B": 1,
         "C": 10,
         "D": 0
       },
@@ -26706,7 +26778,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 12,
+        "C": 15,
         "D": 0
       },
       "decoration_candidate": false,
@@ -33163,6 +33235,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_teleportation_retained_axis_operator_algebra_closure.py": {
+      "assert_count": 1,
+      "claims": [
+        "teleportation_retained_axis_operator_algebra_closure_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_teleportation_retention_theorem_attack.py": {
       "assert_count": 0,
       "claims": [
@@ -36784,6 +36871,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/newton_derivation_top4_bridge_runner.py": {
+      "assert_count": 0,
+      "claims": [
+        "newton_derivation_top4_bridge_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/no_per_site_bosonic_ccr_check.py": {
       "assert_count": 0,
       "claims": [
@@ -37299,6 +37401,36 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/probe_bz_corner_decomposition.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/probe_grassmann_forcing_dependency_chain.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/probe_hk_cube_perron_l2_2026_05_06.py": {
       "assert_count": 0,
       "claims": [
@@ -37339,6 +37471,36 @@
         "B": 0,
         "C": 1,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/probe_kawamoto_smit_phase_forcing.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/probe_three_states_direct_derivation.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_physical_species_direct_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -39199,12 +39361,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 581,
+      "C": 586,
       "D": 212,
-      "none": 425
+      "none": 426
     },
-    "runners_classified": 1399,
-    "runners_with_C": 692,
-    "runners_with_D": 348
+    "runners_classified": 1405,
+    "runners_with_C": 697,
+    "runners_with_D": 349
   }
 }

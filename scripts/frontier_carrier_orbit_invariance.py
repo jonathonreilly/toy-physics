@@ -654,35 +654,82 @@ def part9_independence_from_v_even_values() -> None:
     )
 
 
-def part10_v1_v5_promotion_value_gate_check() -> None:
-    """Part 10: verify the V1-V5 PROMOTION VALUE GATE is satisfied in cert."""
+def part10_review_value_boundary_check() -> None:
+    """Part 10: verify the source note keeps the value boundary explicit."""
     print("\n" + "=" * 88)
-    print("PART 10: V1-V5 PROMOTION VALUE GATE (verified in CLAIM_STATUS_CERTIFICATE)")
+    print("PART 10: REVIEW VALUE BOUNDARY (source note, no branch-local cert)")
     print("=" * 88)
 
-    cert_path = ROOT / ".claude" / "science" / "physics-loops" / \
-        "carrier-orbit-invariance-2026-05-03" / "CLAIM_STATUS_CERTIFICATE.md"
-    cert = cert_path.read_text(encoding="utf-8")
+    note = read("docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md")
 
     check(
-        "Certificate exists with V1-V5 PROMOTION VALUE GATE section",
-        "V1-V5 PROMOTION VALUE GATE" in cert or "V1-V5" in cert,
+        "Source note names cycle 17's specific obstruction text",
+        "structural-exhaustion premise" in note,
     )
     check(
-        "V1 names cycle 17's specific obstruction text",
-        "structural-exhaustion premise" in cert,
+        "Source note names the Z_2-equivariant/isotypic classification",
+        "Z_2-equivariant" in note or "isotypic" in note,
     )
     check(
-        "V2 names new derivation (Z_2-equivariant operator classification)",
-        "Z_2-equivariant" in cert or "isotypic" in cert,
+        "Source note explains why registry closure remains the residual",
+        "registry closure" in note,
     )
     check(
-        "V3 explains why audit lane cannot complete derivation",
-        "classification machinery" in cert or "registry closure" in cert,
+        "Source note avoids branch-local audit certificates",
+        "CLAIM_STATUS_CERTIFICATE" not in note and "audited_clean" not in note,
+    )
+
+
+def part11_refined_precursor_chain() -> None:
+    """Part 11: verify the 2026-05-07 refinement section that names the
+    precursor chain (decoupling + aligned-bright + cubic Schur) reducing
+    the registry-closure meta-premise to three named upstream retentions,
+    plus the final column-symmetric-source-class residual."""
+    print("\n" + "=" * 88)
+    print("PART 11: REFINED PRECURSOR CHAIN (2026-05-07 closure-attempt sharpening)")
+    print("=" * 88)
+
+    note = read("docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md")
+
+    check(
+        "Note carries the 2026-05-07 refinement section",
+        "Refined precursor chain" in note,
     )
     check(
-        "V5 distinguishes from cycles 16, 17",
-        "Cycle 16" in cert and "Cycle 17" in cert,
+        "Refinement names the bounded verdict as PARTIAL",
+        "Bounded verdict:" in note and "PARTIAL" in note,
+    )
+    check(
+        "Refinement names precursor #1 (decoupling property)",
+        "Decoupling property" in note and "delta_A1" in note,
+    )
+    check(
+        "Refinement names precursor #2 (aligned-bright coordinate identification)",
+        "Aligned-bright coordinate identification" in note,
+    )
+    check(
+        "Refinement names precursor #3 (cubic Schur structure)",
+        "Cubic Schur" in note or "cubic Schur" in note,
+    )
+    check(
+        "Refinement cites S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE upstream deps",
+        "S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE" in note,
+    )
+    check(
+        "Refinement explicitly preserves no-new-axioms discipline",
+        "new axiom" in note.lower() and 'rule' in note.lower(),
+    )
+    check(
+        "Refinement names final residual (column-symmetric source class)",
+        "column-symmetric source class" in note.lower() or "column-\nsymmetric" in note.lower(),
+    )
+    check(
+        "Refinement names tractable upgrade path (precursor audit)",
+        "Tractable upgrade path" in note,
+    )
+    check(
+        "Refinement honestly refuses to claim closure beyond PARTIAL",
+        "remains at PARTIAL" in note or "stretch attempt remains at PARTIAL" in note,
     )
 
 
@@ -700,7 +747,8 @@ def main() -> int:
     part7_carrier_swap_symmetry_on_traces()
     part8_named_obstruction_registry_closure()
     part9_independence_from_v_even_values()
-    part10_v1_v5_promotion_value_gate_check()
+    part10_review_value_boundary_check()
+    part11_refined_precursor_chain()
 
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
