@@ -16,11 +16,24 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-264-two-source-taste-radial-chunks043-044-package
-blocks_completed: 263
-active_route: "PR230 two-source taste-radial chunks043-044 package"
-active_hard_residual: "Chunks043-044 are packaged, raising the finite C_ss/C_sx/C_xx packet to ready=44/63 with combined_rows_written=false.  The finite Schur row-derived certificates were refreshed at the same readiness: Schur subblock witness PASS=16 FAIL=0, finite-shell K-prime scout PASS=14 FAIL=0, finite Schur A/B/C rows PASS=17 FAIL=0, finite-to-pole lift PASS=13 FAIL=0, Schur complete-monotonicity PASS=15 FAIL=0, and C_x|s one-pole scout PASS=13 FAIL=0.  Source-Higgs readiness remains PASS=25 FAIL=0 but open because canonical O_H and source-Higgs pole rows are absent.  Strict scalar-LSZ still fails raw C_ss first-shell Stieltjes nonincrease (z=163.1563288754601).  Schur C_s|x fails (z=148.50161996122023), while C_x|s survives only a necessary first-shell check (repair-gate z=-501.5228370887908).  The refreshed C_x|s one-pole interpolation gives C(0)=0.28082772941272105, C(0.267949192431123)=0.2695320149102949, m^2=6.3936536032346485, R=1.795515224047849, but positive two-pole endpoint counterfamilies still match the same endpoints.  The row-wave launcher process filter was narrowed so monitor/supervisor shells are not counted as active production workers; chunks045-046 are now active run-control only under the two-worker cap.  This is bounded support only: no scalar-LSZ pole/FV/model authority, canonical O_H/source-overlap, W/Z response, retained, or proposed-retained closure."
+current_phase: campaign-block-265-source-higgs-time-kernel-production-manifest
+blocks_completed: 264
+active_route: "PR230 source-Higgs time-kernel production manifest"
+active_hard_residual: "Added the source-Higgs time-kernel production manifest runner, note, and certificate.  The manifest emits exact non-colliding future commands for 63 L12xT24 C_ss/C_sH/C_HH(t)-shape chunks with fixed seeds 2026058001..2026058063, no --resume, source_higgs_time_kernel_v1 options, selected production settings, and separate output roots.  It records active static taste-radial workers as run-control state but does not require them for pass/fail, because launch is independently blocked by absent canonical O_H / physical neutral identity and the current taste-radial operator certificate is not canonical O_H.  Aggregate gates were wired to treat the manifest as not evidence.  Current chunks045-046 remain active run-control only under the two-worker cap until root JSONs and per-volume artifacts exist.  This is bounded support only: no time-kernel rows launched, no scalar-LSZ pole/FV/model authority, no canonical O_H/source-overlap, no W/Z response, no retained, and no proposed-retained closure."
 files_touched:
+  - "scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py"
+  - "docs/YT_PR230_SOURCE_HIGGS_TIME_KERNEL_PRODUCTION_MANIFEST_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
   - "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNKS043_044_PACKAGE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk043_2026-05-06.json"
   - "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk044_2026-05-06.json"

@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-07 source-Higgs time-kernel production manifest: the cleanest closure
+target remains canonical `O_H` plus production `C_ss/C_sH/C_HH(t)` pole rows.
+The new manifest makes the future row campaign executable with exact commands,
+separate output roots, fixed seeds, and no `--resume`, but it is not evidence
+and does not authorize launch on the current surface.  Highest-value next
+artifact is still a same-surface canonical `O_H` or physical neutral/WZ
+identity certificate; after that, launch the time-kernel rows from the
+manifest and run OS/GEVP pole extraction, FV/IR/threshold, covariance, and
+source-overlap gates.  While chunks045-046 are live under the static
+row-wave cap, do not start colliding workers.
+
 2026-05-07 chunks043-044 package refresh: chunks001-044 are now packaged
 partial `C_sx/C_xx` support with `ready=44/63`; chunks043-044 pass
 completed-mode checkpoints and preserve selected-mass-only FH/LSZ,

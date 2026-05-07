@@ -278,6 +278,9 @@ def main() -> int:
         "source_higgs_time_kernel_gevp_contract": load(
             "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
         ),
+        "source_higgs_time_kernel_production_manifest": load(
+            "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json"
+        ),
         "fms_literature_source_overlap_intake": load(
             "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
         ),
@@ -1628,6 +1631,20 @@ def main() -> int:
         and time_kernel_gevp.get("used_as_physical_yukawa_readout") is False,
         time_kernel_gevp.get("actual_current_surface_status"),
     )
+    time_kernel_manifest = certificates["source_higgs_time_kernel_production_manifest"]
+    report(
+        "source-higgs-time-kernel-production-manifest-not-evidence",
+        "source-Higgs time-kernel production manifest"
+        in str(time_kernel_manifest.get("actual_current_surface_status"))
+        and time_kernel_manifest.get("proposal_allowed") is False
+        and time_kernel_manifest.get("closure_launch_authorized_now") is False
+        and time_kernel_manifest.get("support_launch_authorized_now") is False
+        and time_kernel_manifest.get("operator_certificate_is_canonical_oh") is False
+        and time_kernel_manifest.get("time_kernel_schema_version")
+        == "source_higgs_time_kernel_v1"
+        and time_kernel_manifest.get("chunk_count") == 63,
+        time_kernel_manifest.get("actual_current_surface_status"),
+    )
     fms_lit_intake = certificates["fms_literature_source_overlap_intake"]
     report(
         "fms-literature-source-overlap-intake-non-authority",
@@ -1866,6 +1883,10 @@ def main() -> int:
             "diagnostic, but that diagnostic is not pole authority without "
             "production statistics, canonical O_H or physical neutral identity, "
             "FV/IR/threshold control, and overlap normalization.  "
+            "The time-kernel production manifest makes the future C_ss/C_sH/"
+            "C_HH(t) row commands exact and non-colliding, but records no row "
+            "launch and no physics evidence; launch remains blocked until a "
+            "same-surface canonical O_H or physical neutral identity lands.  "
             "The FMS literature source-overlap intake records FMS and modern "
             "gauge-invariant-field references as non-derivation context only: "
             "they motivate the future O_FMS acceptance shape but do not supply "
@@ -1926,6 +1947,7 @@ def main() -> int:
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",
             "does not treat source-Higgs time-kernel harness support or taste-radial smoke rows as canonical O_H, kappa_s, or y_t evidence",
             "does not treat a formal reduced-smoke GEVP diagnostic as pole, kappa_s, or y_t authority",
+            "does not treat a source-Higgs time-kernel production manifest as launched rows, pole evidence, source-overlap authority, or y_t closure",
             "does not treat FMS or gauge-invariant-field literature as same-surface PR230 O_H/source-overlap/kappa_s proof",
             "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",

@@ -196,6 +196,7 @@
     "pr230_source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
     "pr230_source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
     "pr230_source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
+    "pr230_source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
@@ -364,6 +365,7 @@
     "pr230_source_higgs_pole_row_acceptance_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
     "pr230_source_higgs_time_kernel_gevp_contract": "bounded-support / source-Higgs time-kernel GEVP contract; smoke rows are not physics closure",
     "pr230_source_higgs_time_kernel_harness_extension_gate": "source-Higgs time-kernel harness support-only infrastructure; open physics closure",
+    "pr230_source_higgs_time_kernel_production_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched",
     "pr230_source_sector_pattern_transfer_gate": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure",
     "pr230_strict_scalar_lsz_moment_fv_authority_gate": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
     "pr230_taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
@@ -424,7 +426,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 154,
+  "pass_count": 155,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
@@ -576,6 +578,7 @@
   "source_higgs_pole_row_contract_open": true,
   "source_higgs_time_kernel_gevp_contract_support_only": true,
   "source_higgs_time_kernel_harness_support_only": true,
+  "source_higgs_time_kernel_production_manifest_not_evidence": true,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not package or certify chunk outputs",

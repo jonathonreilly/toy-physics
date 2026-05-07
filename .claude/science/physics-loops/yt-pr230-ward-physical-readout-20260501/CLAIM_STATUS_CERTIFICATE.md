@@ -1,5 +1,38 @@
 # Claim Status Certificate
 
+Source-Higgs time-kernel production manifest checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / time-kernel production manifest; no rows launched and no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=94 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=349 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=155 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=309 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=64 FAIL=0
+```
+
+The manifest is infrastructure only.  It records exact future chunk commands
+for source-Higgs time-kernel rows, fixed seeds, non-colliding paths, and
+current launch blockers.  It does not launch rows, does not identify
+taste-radial `x` with canonical `O_H`, does not measure `C_sH/C_HH`, does
+not supply scalar-LSZ/FV/threshold/source-overlap authority, and does not
+authorize retained or proposed-retained closure.
+
 Two-source taste-radial chunks043-044 package checkpoint:
 
 ```text

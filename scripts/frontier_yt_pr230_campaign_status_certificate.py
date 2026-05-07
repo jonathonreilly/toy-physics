@@ -779,6 +779,9 @@ def main() -> int:
         "pr230_source_higgs_time_kernel_gevp_contract": load(
             "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json"
         ),
+        "pr230_source_higgs_time_kernel_production_manifest": load(
+            "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json"
+        ),
         "pr230_fms_literature_source_overlap_intake": load(
             "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json"
         ),
@@ -3746,6 +3749,34 @@ def main() -> int:
         is False,
         statuses["pr230_source_higgs_time_kernel_gevp_contract"],
     )
+    source_higgs_time_kernel_production_manifest = certificates[
+        "pr230_source_higgs_time_kernel_production_manifest"
+    ]
+    report(
+        "pr230-source-higgs-time-kernel-production-manifest-not-evidence",
+        "source-Higgs time-kernel production manifest"
+        in str(statuses["pr230_source_higgs_time_kernel_production_manifest"])
+        and source_higgs_time_kernel_production_manifest.get("proposal_allowed")
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "closure_launch_authorized_now"
+        )
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "support_launch_authorized_now"
+        )
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "operator_certificate_is_canonical_oh"
+        )
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "time_kernel_schema_version"
+        )
+        == "source_higgs_time_kernel_v1"
+        and source_higgs_time_kernel_production_manifest.get("chunk_count") == 63,
+        statuses["pr230_source_higgs_time_kernel_production_manifest"],
+    )
     fms_literature_source_overlap_intake = certificates[
         "pr230_fms_literature_source_overlap_intake"
     ]
@@ -5439,6 +5470,27 @@ def main() -> int:
         )
         is False
         and source_higgs_time_kernel_gevp_contract.get("proposal_allowed") is False
+    )
+    result["source_higgs_time_kernel_production_manifest_not_evidence"] = (
+        source_higgs_time_kernel_production_manifest.get("proposal_allowed")
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "closure_launch_authorized_now"
+        )
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "support_launch_authorized_now"
+        )
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "operator_certificate_is_canonical_oh"
+        )
+        is False
+        and source_higgs_time_kernel_production_manifest.get(
+            "time_kernel_schema_version"
+        )
+        == "source_higgs_time_kernel_v1"
+        and source_higgs_time_kernel_production_manifest.get("chunk_count") == 63
     )
     result["fms_literature_source_overlap_intake_non_authority"] = (
         fms_literature_source_overlap_intake.get("literature_bridge_scope")

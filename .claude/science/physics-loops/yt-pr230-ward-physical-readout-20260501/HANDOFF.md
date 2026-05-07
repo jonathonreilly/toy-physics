@@ -1,5 +1,28 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 source-Higgs time-kernel production manifest:
+
+- Added the source-Higgs time-kernel production manifest runner, note, and
+  certificate.  It emits exact non-colliding future commands for `63`
+  `L12xT24` chunks under the dedicated time-kernel output roots with seeds
+  `2026058001..2026058063` and no `--resume`.
+- The manifest checks the harness CLI for `source_higgs_time_kernel_v1`,
+  preserves the current production settings, records active worker state, and
+  intentionally sets `closure_launch_authorized_now=false` and
+  `support_launch_authorized_now=false`.
+- Claim boundary: the manifest is not a row packet, pole extraction, or
+  source-overlap normalization.  It does not identify the taste-radial
+  operator with canonical `O_H`, does not relabel `C_sx/C_xx(t)` as
+  canonical `C_sH/C_HH(t)`, and does not authorize retained or
+  proposed-retained closure.
+- Current live chunk state: chunks045-046 remain active run-control only under
+  the row-wave supervisor's two-worker cap until completed root JSONs,
+  per-volume artifacts, and completed-mode checkpoints exist.
+- Validation for this block: source-Higgs time-kernel production manifest
+  `PASS=16 FAIL=0`; assumption/import stress `PASS=94 FAIL=0`; campaign
+  status `PASS=349 FAIL=0`; full assembly `PASS=155 FAIL=0`;
+  retained-route `PASS=309 FAIL=0`; completion audit `PASS=64 FAIL=0`.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks043-044 package:
 
 - Packaged chunks043-044 after completed root JSONs and per-volume artifacts

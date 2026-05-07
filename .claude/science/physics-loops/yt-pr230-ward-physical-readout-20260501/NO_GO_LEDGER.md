@@ -1,5 +1,18 @@
 # No-Go Ledger
 
+## Time-kernel production manifest is not source-Higgs evidence
+
+The 2026-05-07 source-Higgs time-kernel production manifest defines exact
+future `C_ss/C_sH/C_HH(t)`-shape commands and non-colliding paths, but it
+does not launch jobs or produce rows.  Current launch remains blocked by
+absent same-surface canonical `O_H` / physical neutral identity, and the
+available operator certificate is taste-radial support rather than canonical
+`O_H`.
+
+Do not treat the manifest, command list, active-worker state, or future
+time-kernel schema as pole evidence, `kappa_s` authority, canonical
+source-overlap, W/Z response, retained, or proposed-retained closure.
+
 ## Two-source chunks001-044 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks043-044 package moves the finite two-source row packet to

@@ -141,6 +141,7 @@ PARENTS = {
     "pr230_os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "pr230_source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
     "pr230_source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
+    "pr230_source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "pr230_fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "pr230_schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
@@ -1506,6 +1507,34 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_time_kernel_production_manifest_not_evidence = (
+        "source-Higgs time-kernel production manifest"
+        in statuses["pr230_source_higgs_time_kernel_production_manifest"]
+        and certs["pr230_source_higgs_time_kernel_production_manifest"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_source_higgs_time_kernel_production_manifest"].get(
+            "closure_launch_authorized_now"
+        )
+        is False
+        and certs["pr230_source_higgs_time_kernel_production_manifest"].get(
+            "support_launch_authorized_now"
+        )
+        is False
+        and certs["pr230_source_higgs_time_kernel_production_manifest"].get(
+            "operator_certificate_is_canonical_oh"
+        )
+        is False
+        and certs["pr230_source_higgs_time_kernel_production_manifest"].get(
+            "time_kernel_schema_version"
+        )
+        == "source_higgs_time_kernel_v1"
+        and certs["pr230_source_higgs_time_kernel_production_manifest"].get(
+            "chunk_count"
+        )
+        == 63
+    )
     fms_literature_source_overlap_intake_non_authority = (
         "FMS literature does not supply PR230 source-overlap"
         in statuses["pr230_fms_literature_source_overlap_intake"]
@@ -2414,6 +2443,11 @@ def main() -> int:
         "source-higgs-time-kernel-gevp-contract-support-only",
         source_higgs_time_kernel_gevp_contract_support_only,
         statuses["pr230_source_higgs_time_kernel_gevp_contract"],
+    )
+    report(
+        "source-higgs-time-kernel-production-manifest-not-evidence",
+        source_higgs_time_kernel_production_manifest_not_evidence,
+        statuses["pr230_source_higgs_time_kernel_production_manifest"],
     )
     report(
         "fms-literature-source-overlap-intake-non-authority",
@@ -3383,6 +3417,7 @@ def main() -> int:
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
         "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
         "source_higgs_time_kernel_gevp_contract_support_only": source_higgs_time_kernel_gevp_contract_support_only,
+        "source_higgs_time_kernel_production_manifest_not_evidence": source_higgs_time_kernel_production_manifest_not_evidence,
         "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
         "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
         "proposal_allowed": False,

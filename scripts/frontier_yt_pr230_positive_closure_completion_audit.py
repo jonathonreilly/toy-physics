@@ -56,6 +56,7 @@ PARENTS = {
     "os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
     "source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
+    "source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
@@ -756,6 +757,34 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_time_kernel_production_manifest_not_evidence = (
+        "source-Higgs time-kernel production manifest"
+        in parent_statuses["source_higgs_time_kernel_production_manifest"]
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "closure_launch_authorized_now"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "support_launch_authorized_now"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "operator_certificate_is_canonical_oh"
+        )
+        is False
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "time_kernel_schema_version"
+        )
+        == "source_higgs_time_kernel_v1"
+        and certs["source_higgs_time_kernel_production_manifest"].get(
+            "chunk_count"
+        )
+        == 63
+    )
     fms_literature_source_overlap_intake_non_authority = (
         "FMS literature does not supply PR230 source-overlap"
         in parent_statuses["fms_literature_source_overlap_intake"]
@@ -1040,6 +1069,7 @@ def main() -> int:
     report("os-transfer-kernel-artifact-absent", os_transfer_kernel_artifact_absent, parent_statuses["os_transfer_kernel_artifact_gate"])
     report("source-higgs-time-kernel-harness-support-only", source_higgs_time_kernel_harness_support_only, parent_statuses["source_higgs_time_kernel_harness_extension_gate"])
     report("source-higgs-time-kernel-gevp-contract-support-only", source_higgs_time_kernel_gevp_contract_support_only, parent_statuses["source_higgs_time_kernel_gevp_contract"])
+    report("source-higgs-time-kernel-production-manifest-not-evidence", source_higgs_time_kernel_production_manifest_not_evidence, parent_statuses["source_higgs_time_kernel_production_manifest"])
     report("fms-literature-source-overlap-intake-non-authority", fms_literature_source_overlap_intake_non_authority, parent_statuses["fms_literature_source_overlap_intake"])
     report("schur-higher-shell-production-contract-not-evidence", schur_higher_shell_production_contract_not_evidence, parent_statuses["schur_higher_shell_production_contract"])
     report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
@@ -1215,6 +1245,7 @@ def main() -> int:
             "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
             "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
             "source_higgs_time_kernel_gevp_contract_support_only": source_higgs_time_kernel_gevp_contract_support_only,
+            "source_higgs_time_kernel_production_manifest_not_evidence": source_higgs_time_kernel_production_manifest_not_evidence,
             "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
             "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
             "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,

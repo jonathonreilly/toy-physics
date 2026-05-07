@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - Source-Higgs Time-Kernel Production Manifest
+
+Review stance: bounded support / production manifest, no physics evidence.
+
+- Added `scripts/frontier_yt_pr230_source_higgs_time_kernel_production_manifest.py`,
+  its note, and its JSON certificate.
+- The runner emits exact future commands for `63` source-Higgs time-kernel
+  chunks under dedicated output roots with seeds `2026058001..2026058063`,
+  selected production settings, `source_higgs_time_kernel_v1`, and no
+  `--resume`.
+- Validation: manifest `PASS=16 FAIL=0`; assumption stress `PASS=94 FAIL=0`;
+  campaign status `PASS=349 FAIL=0`; full assembly `PASS=155 FAIL=0`;
+  retained-route `PASS=309 FAIL=0`; completion audit `PASS=64 FAIL=0`.
+
+Disposition: bounded support only.  The manifest records no launched rows,
+does not promote the taste-radial operator to canonical `O_H`, does not
+measure canonical `C_sH/C_HH`, and does not supply `kappa_s`, pole/FV/IR,
+W/Z, retained, or proposed-retained authority.  Chunks045-046 remain active
+run-control only until completed and checkpointed.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks043-044 Package
 
 Review stance: bounded support / partial row-wave package.

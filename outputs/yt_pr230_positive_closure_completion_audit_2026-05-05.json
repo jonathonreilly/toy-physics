@@ -73,6 +73,7 @@
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "source_higgs_time_kernel_gevp_contract": "outputs/yt_pr230_source_higgs_time_kernel_gevp_contract_2026-05-07.json",
     "source_higgs_time_kernel_harness_extension_gate": "outputs/yt_pr230_source_higgs_time_kernel_harness_extension_gate_2026-05-07.json",
+    "source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
@@ -135,6 +136,7 @@
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "source_higgs_time_kernel_gevp_contract": "bounded-support / source-Higgs time-kernel GEVP contract; smoke rows are not physics closure",
     "source_higgs_time_kernel_harness_extension_gate": "source-Higgs time-kernel harness support-only infrastructure; open physics closure",
+    "source_higgs_time_kernel_production_manifest": "bounded-support / source-Higgs time-kernel production manifest; canonical O_H or physical neutral identity absent and no rows launched",
     "strict_scalar_lsz_moment_fv_authority_gate": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
     "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
     "taste_radial_canonical_oh_selector_gate": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
@@ -157,7 +159,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 63,
+  "pass_count": 64,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -196,6 +198,7 @@
     "source_higgs_pole_row_contract_open": true,
     "source_higgs_time_kernel_gevp_contract_support_only": true,
     "source_higgs_time_kernel_harness_support_only": true,
+    "source_higgs_time_kernel_production_manifest_not_evidence": true,
     "source_pole_intaken": true,
     "strict_scalar_lsz_moment_fv_authority_absent": true,
     "taste_condensate_oh_bridge_blocked": true,
