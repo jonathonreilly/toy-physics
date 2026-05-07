@@ -139,6 +139,30 @@ So the review branch still lacks a localized state whose inertial response can
 be measured as a closed one-parameter mass. Principle 3 is stronger than a bare
 assumption, but it is not closed for persistent patterns.
 
+### Multistage compact-object bridge (2026-05-07)
+
+Since the original control sweeps, the audit-clean
+`persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` has
+registered a multistage compact-object floor that survives 11/13 widened-
+pocket cases at `top_keep = 4` with `stage_mean_overlap >= 0.90`,
+`stage_alpha in [0.95, 1.05]`, and `max_kappa_drift = 0.000%` on the
+admissible rows. A new bridge note documents how this changes the local
+picture without promoting the gate:
+
+- [`docs/NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md`](NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md)
+  — bounded conditional bridge note; the same scalar `s` controls
+  source strength, linear response (`alpha = 1`), and persistence on
+  the audit-clean multistage compact-object family.
+- [`scripts/newton_derivation_top4_bridge_runner.py`](../scripts/newton_derivation_top4_bridge_runner.py)
+  — primary runner for the bridge note.
+
+The bridge does **not** close `newton_derivation_note`. It narrows the
+residual to a concrete experimental target: does the same multistage
+compact-object family exhibit generator-invariant response under an
+*external* field (i.e. under a field sourced by a different compact
+object), or does the equivalence-principle no-go from
+`matter_inertial_closure_note` recur on the multistage object as well?
+
 ## What This Does NOT Prove
 
 1. It does not derive the dimension d of spacetime
