@@ -1,5 +1,32 @@
 # Review History
 
+## 2026-05-07 - Two-Source Taste-Radial Chunks045-046 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks045-046 into the two-source taste-radial row stream after
+  completed root JSONs and per-volume artifacts landed.
+- Refreshed chunk checkpoints, package audit, row combiner, strict
+  scalar-LSZ moment/FV, Schur subblock/K-prime/A-B-C/pole-lift diagnostics,
+  Schur-complement repair, Schur complete-monotonicity, C_x|s one-pole scout,
+  source-Higgs readiness, primitive-transfer candidate, orthogonal-top
+  exclusion, assumption stress, campaign status, full assembly,
+  retained-route, and completion audit.
+- Validation: chunk045 `PASS=15 FAIL=0`, chunk046 `PASS=15 FAIL=0`, package
+  audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at `ready=46/63`,
+  strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair `PASS=22 FAIL=0`, Schur
+  complete-monotonicity `PASS=15 FAIL=0`, C_x|s one-pole scout `PASS=13
+  FAIL=0`, source-Higgs readiness `PASS=25 FAIL=0`, assumption stress
+  `PASS=97 FAIL=0`, campaign status `PASS=352 FAIL=0`, full assembly
+  `PASS=158 FAIL=0`, retained-route `PASS=312 FAIL=0`, and completion audit
+  `PASS=67 FAIL=0`.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for the route, not canonical `O_H`, not canonical `C_sH/C_HH`,
+not physical `kappa_s`, not scalar-LSZ/FV authority, not W/Z response, and
+not retained or proposed-retained closure.  Successor chunks047-048 are
+active run-control only until completed and checkpointed.
+
 ## 2026-05-07 - Common O_H/WZ Root-Cut Aggregate Refresh
 
 Review stance: exact support / exact negative boundary, no closure.

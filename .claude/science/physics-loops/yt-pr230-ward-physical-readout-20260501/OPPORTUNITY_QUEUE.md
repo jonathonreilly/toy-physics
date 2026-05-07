@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-07 chunks045-046 package refresh: chunks001-046 are now packaged
+partial `C_sx/C_xx` support with `ready=46/63`; chunks045-046 pass
+completed-mode checkpoints and preserve selected-mass-only FH/LSZ,
+normal-equation cache metadata, `numba_gauge_seed_v1`, fixed seeds, and
+non-readout source-Higgs metadata.  Strict scalar-LSZ still fails on raw
+`C_ss` (`z=170.33620497910093`); Schur-complement repair keeps `C_x|s` as a
+useful finite candidate but only as a necessary one-volume check
+(`z=-513.0902824488198`).  The `C_x|s` one-pole interpolation remains
+model-class support only because positive two-pole endpoint counterfamilies
+match the same two points.  The cleanest closure target remains certified
+canonical `O_H` plus `C_ss/C_spH/C_HH` pole rows, with genuine same-source
+W/Z rows as first fallback.  Successor chunks047-048 are active run-control
+only until completed, checkpointed, and packaged.
+
 2026-05-07 common `O_H`/WZ root-cut aggregate refresh: the common root is now
 explicitly wired through assumption stress, campaign status, full assembly,
 retained-route, and completion audit.  The refreshed common cut includes the

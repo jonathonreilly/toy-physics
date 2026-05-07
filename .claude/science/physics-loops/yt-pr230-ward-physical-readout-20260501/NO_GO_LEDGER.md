@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Two-source chunks001-046 are not source-Higgs or scalar-LSZ closure
+
+The 2026-05-07 chunks045-046 package moves the finite two-source row packet to
+`ready=46/63`, but the added rows do not change the claim boundary.  The raw
+`C_ss` proxy still violates the strict scalar-LSZ Stieltjes nonincrease
+direction (`z=170.33620497910093`).  Schur `C_s|x` still fails
+(`z=155.053312483403`); Schur `C_x|s` survives only the necessary
+first-shell check (`z=-513.0902824488198`) and lacks complete-monotonicity,
+threshold, pole, FV/IR, and source-bridge authority.  The one-pole
+interpolation remains model-class support only because positive two-pole
+counterfamilies match the same endpoints.
+
+Chunks047-048 are active run-control only until completed and checkpointed.
+Do not treat chunks001-046, live-status rows, active worker logs, or finite
+`C_sx/C_xx` blocks as canonical `O_H`, canonical `C_sH/C_HH`, scalar-LSZ/FV
+authority, W/Z response, retained, or proposed-retained closure.
+
 ## Common `O_H`/WZ root cut still blocks current closure
 
 The 2026-05-07 aggregate refresh wires the common canonical `O_H` / W/Z

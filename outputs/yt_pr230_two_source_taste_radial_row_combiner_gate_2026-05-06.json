@@ -9,8 +9,6 @@
   "fail_count": 0,
   "manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
   "missing_chunk_indices": [
-    45,
-    46,
     47,
     48,
     49,
@@ -32,139 +30,139 @@
   "partial_mode_diagnostics": {
     "0,0,0": {
       "C_ss_real": {
-        "count": 44,
-        "mean": 0.12240166875639467,
-        "stdev": 9.645364451757945e-05
+        "count": 46,
+        "mean": 0.12240196542286391,
+        "stdev": 9.445206109025217e-05
       },
       "C_sx_real": {
-        "count": 44,
-        "mean": -1.5796453854459422e-05,
-        "stdev": 0.00011777303353448717
+        "count": 46,
+        "mean": -1.9223863453134478e-05,
+        "stdev": 0.000120805162879498
       },
       "C_xx_real": {
-        "count": 44,
-        "mean": 0.2808278422085621,
-        "stdev": 0.00010492949817424116
+        "count": 46,
+        "mean": 0.28083053457956225,
+        "stdev": 0.00010495193635474753
       },
       "configuration_count": {
-        "count": 44,
+        "count": 46,
         "mean": 16.0,
         "stdev": 0.0
       },
       "finite_row_gram_determinant_real": {
-        "count": 44,
-        "mean": 0.0343737840230362,
-        "stdev": 3.147141417020011e-05
+        "count": 46,
+        "mean": 0.03437419590953933,
+        "stdev": 3.083423704536635e-05
       },
       "rho_sx_real": {
-        "count": 44,
-        "mean": -8.525181280678011e-05,
-        "stdev": 0.0006352719427908904
+        "count": 46,
+        "mean": -0.00010373471836118886,
+        "stdev": 0.0006516161216691129
       },
       "strict_limit": "rho_sx_real and finite_row_gram_determinant_real are finite-mode C_sx/C_xx diagnostics on partial chunks. They are not isolated-pole residues, not canonical C_sH/C_HH rows, and not y_t evidence."
     },
     "0,0,1": {
       "C_ss_real": {
-        "count": 44,
-        "mean": 0.1253492523101778,
-        "stdev": 9.437800648003013e-05
+        "count": 46,
+        "mean": 0.12535225713914502,
+        "stdev": 9.379539956711193e-05
       },
       "C_sx_real": {
-        "count": 44,
-        "mean": -9.00765733776589e-06,
-        "stdev": 0.00010861649035952006
+        "count": 46,
+        "mean": -1.2142016061541118e-05,
+        "stdev": 0.0001118152125550869
       },
       "C_xx_real": {
-        "count": 44,
-        "mean": 0.270306014588329,
-        "stdev": 0.00011196058312666839
+        "count": 46,
+        "mean": 0.2703081420287788,
+        "stdev": 0.00011271177212742019
       },
       "configuration_count": {
-        "count": 44,
+        "count": 46,
         "mean": 16.0,
         "stdev": 0.0
       },
       "finite_row_gram_determinant_real": {
-        "count": 44,
-        "mean": 0.033882647249943026,
-        "stdev": 3.144418629600103e-05
+        "count": 46,
+        "mean": 0.03388372521419583,
+        "stdev": 3.116692854730871e-05
       },
       "rho_sx_real": {
-        "count": 44,
-        "mean": -4.8982340759445935e-05,
-        "stdev": 0.0005901036455627425
+        "count": 46,
+        "mean": -6.600280597168458e-05,
+        "stdev": 0.0006074577367102223
       },
       "strict_limit": "rho_sx_real and finite_row_gram_determinant_real are finite-mode C_sx/C_xx diagnostics on partial chunks. They are not isolated-pole residues, not canonical C_sH/C_HH rows, and not y_t evidence."
     },
     "0,1,0": {
       "C_ss_real": {
-        "count": 44,
-        "mean": 0.1253546759992884,
-        "stdev": 9.123646776015158e-05
+        "count": 46,
+        "mean": 0.12535306153999362,
+        "stdev": 8.951588881081396e-05
       },
       "C_sx_real": {
-        "count": 44,
-        "mean": -8.811594775024678e-06,
-        "stdev": 0.00011317551334293565
+        "count": 46,
+        "mean": -1.1422812673666121e-05,
+        "stdev": 0.00011361715127121084
       },
       "C_xx_real": {
-        "count": 44,
-        "mean": 0.26945023909271576,
-        "stdev": 0.00011444322297293596
+        "count": 46,
+        "mean": 0.2694525310387183,
+        "stdev": 0.00011347137067564107
       },
       "configuration_count": {
-        "count": 44,
+        "count": 46,
         "mean": 16.0,
         "stdev": 0.0
       },
       "finite_row_gram_determinant_real": {
-        "count": 44,
-        "mean": 0.03377683698823274,
-        "stdev": 3.097826317165957e-05
+        "count": 46,
+        "mean": 0.03377668892632983,
+        "stdev": 3.0343393800896346e-05
       },
       "rho_sx_real": {
-        "count": 44,
-        "mean": -4.8011368937140487e-05,
-        "stdev": 0.0006158375284779809
+        "count": 46,
+        "mean": -6.222054194007394e-05,
+        "stdev": 0.0006182427884743517
       },
       "strict_limit": "rho_sx_real and finite_row_gram_determinant_real are finite-mode C_sx/C_xx diagnostics on partial chunks. They are not isolated-pole residues, not canonical C_sH/C_HH rows, and not y_t evidence."
     },
     "1,0,0": {
       "C_ss_real": {
-        "count": 44,
-        "mean": 0.12535846584178978,
-        "stdev": 9.67838432517948e-05
+        "count": 46,
+        "mean": 0.1253569934576398,
+        "stdev": 9.501014902198116e-05
       },
       "C_sx_real": {
-        "count": 44,
-        "mean": -1.9798967313907284e-05,
-        "stdev": 0.00011466285398229778
+        "count": 46,
+        "mean": -2.1783328418493834e-05,
+        "stdev": 0.00011731941310404989
       },
       "C_xx_real": {
-        "count": 44,
-        "mean": 0.2688400898014954,
-        "stdev": 0.00010758897300968635
+        "count": 46,
+        "mean": 0.26884236901700886,
+        "stdev": 0.00010698491542458469
       },
       "configuration_count": {
-        "count": 44,
+        "count": 46,
         "mean": 16.0,
         "stdev": 0.0
       },
       "finite_row_gram_determinant_real": {
-        "count": 44,
-        "mean": 0.03370137124890356,
-        "stdev": 3.293101605688694e-05
+        "count": 46,
+        "mean": 0.03370126013020066,
+        "stdev": 3.220175490557211e-05
       },
       "rho_sx_real": {
-        "count": 44,
-        "mean": -0.00010790577448215802,
-        "stdev": 0.0006246438872828917
+        "count": 46,
+        "mean": -0.00011871489932897592,
+        "stdev": 0.0006391144500430937
       },
       "strict_limit": "rho_sx_real and finite_row_gram_determinant_real are finite-mode C_sx/C_xx diagnostics on partial chunks. They are not isolated-pole residues, not canonical C_sH/C_HH rows, and not y_t evidence."
     }
   },
   "pass_count": 13,
-  "present_chunks": 44,
+  "present_chunks": 46,
   "proposal_allowed": false,
   "ready_chunk_indices": [
     1,
@@ -210,9 +208,11 @@
     41,
     42,
     43,
-    44
+    44,
+    45,
+    46
   ],
-  "ready_chunks": 44,
+  "ready_chunks": 46,
   "row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
   "strict_non_claims": [
     "does not treat partial chunks as combined L12 row evidence",

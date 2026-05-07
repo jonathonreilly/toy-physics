@@ -1,25 +1,25 @@
 {
   "active_chunk_ids": [
-    45,
-    46
+    47,
+    48
   ],
   "active_chunks_counted_as_evidence": false,
   "active_process_rows": [
     {
-      "chunk_index": 45,
-      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk045 --seed 2026056045 --output outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk045_2026-05-06.json",
-      "pid": 73711
+      "chunk_index": 47,
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk047 --seed 2026056047 --output outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk047_2026-05-06.json",
+      "pid": 29894
     },
     {
-      "chunk_index": 46,
-      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk046 --seed 2026056046 --output outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk046_2026-05-06.json",
-      "pid": 73712
+      "chunk_index": 48,
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk048 --seed 2026056048 --output outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk048_2026-05-06.json",
+      "pid": 29895
     }
   ],
-  "actual_current_surface_status": "bounded-support / two-source taste-radial chunks001-044 packaged; active chunks, logs, and pending checkpoints are not evidence",
+  "actual_current_surface_status": "bounded-support / two-source taste-radial chunks001-046 packaged; active chunks, logs, and pending checkpoints are not evidence",
   "bare_retained_allowed": false,
   "chunk_package_audit_passed": true,
-  "completed_chunk_count": 44,
+  "completed_chunk_count": 46,
   "completed_chunk_ids": [
     1,
     2,
@@ -64,9 +64,11 @@
     41,
     42,
     43,
-    44
+    44,
+    45,
+    46
   ],
-  "completed_prefix_last": 44,
+  "completed_prefix_last": 46,
   "completed_rows": [
     {
       "artifact": "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk001/L12xT24/ensemble_measurement.json",
@@ -771,6 +773,38 @@
         "source_operator_symbol": "x",
         "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
       }
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk045/L12xT24/ensemble_measurement.json",
+      "checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk045_checkpoint_2026-05-06.json",
+      "checkpoint_passed": true,
+      "chunk_index": 45,
+      "pole_residue_rows_count": 0,
+      "proposal_allowed": false,
+      "row": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk045_2026-05-06.json",
+      "source_higgs_aliases": {
+        "C_sx_aliases_C_sH_schema_field": true,
+        "C_xx_aliases_C_HH_schema_field": true,
+        "available": true,
+        "source_operator_symbol": "x",
+        "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
+      }
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk046/L12xT24/ensemble_measurement.json",
+      "checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk046_checkpoint_2026-05-06.json",
+      "checkpoint_passed": true,
+      "chunk_index": 46,
+      "pole_residue_rows_count": 0,
+      "proposal_allowed": false,
+      "row": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk046_2026-05-06.json",
+      "source_higgs_aliases": {
+        "C_sx_aliases_C_sH_schema_field": true,
+        "C_xx_aliases_C_HH_schema_field": true,
+        "available": true,
+        "source_operator_symbol": "x",
+        "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
+      }
     }
   ],
   "fail_count": 0,
@@ -835,7 +869,9 @@
     41,
     42,
     43,
-    44
+    44,
+    45,
+    46
   ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained PR230 closure",
