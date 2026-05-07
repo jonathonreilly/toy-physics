@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 235 |
+| **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 787 |
+| unaudited | 786 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 390 |
+| `audited_clean` | 391 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 836 |
+| `unaudited` | 835 |
 
 | claim_type | count |
 |---|---:|
@@ -287,6 +287,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_nn_continuum_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `lattice_nn_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `lattice_nn_rg_alpha_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -8658,6 +8659,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The supplied runner explicitly evaluates the fixed h grid {1.0, 0.5, 0.25, 0.125, 0.0625} on the raw three-edge nearest-neighbor lattice using a deterministic per-edge scale factor spacing/sqrt(3), then computes the displayed Born |I3|/P, k=0, MI, 1-purity, d_TV, and gravity rows; the completed stdout shows machine-scale Born residuals at every tested spacing including the sub-0.25 rows.  _(class `C`)_
 - **chain closes:** True — Within the bounded scope, the packet contains the note, the complete runner source, and completed runner stdout. The source implements the asserted fixed schedule and finite h list, and the stdout supplies the rows on which the conclusion rests. No external authority, hidden dependency, or long-running missing computation is needed for the finite claim.
 - **rationale:** The bounded conclusion is supported on its own terms: the runner is deterministic for the stated constants, applies step_scale = spacing/sqrt(3) independent of amplitudes and blocked-set configuration, completes for all claimed spacings, and reports Born residuals of order 1e-16 through h=0.0625. The note also explicitly limits the conclusion and warns against continuum overstatement. The phrase about smooth convergence is acceptable only as a finite-row trend inside this scope, not as an asymptotic theorem.
+- **auditor confidence:** high
+
+### `lattice_nn_distance_law_note`
+
+- **Note:** [`LATTICE_NN_DISTANCE_LAW_NOTE.md`](../../docs/LATTICE_NN_DISTANCE_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded barrier-harness distance-law claim for raw nearest-neighbor h={1.0,0.5,0.25}, b={3,5,7,10,13,16,19}: signed centroid shifts and far-field |delta| power-law fits for fixed strength and alpha=1.5, inheriting Born-clean finite-window support from lattice_nn_continuum_note.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-lattice-nn-distance-law-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the raw NN barrier refinement path, refined h=0.5 and h=0.25 retain a positive far-field distance signal with fixed-strength decay slopes near -1, while alpha=1.5 preserves but flattens the decay.  _(class `C`)_
+- **chain closes:** True — The current runner completed and reproduces the source note's distance rows, signs, slopes, and R^2 values. The cited one-hop dependency is now retained_bounded/audited_clean for the same raw NN finite window including h=1.0,0.5,0.25, so the prior upstream Born/k=0 bridge is closed within the restricted packet.
+- **rationale:** The claim is bounded to the barrier harness and finite h,b grid actually executed by the runner. The live output supports the far-field sign statements, fixed-strength near-1/b decay through h=0.25, and alpha=1.5 flattening comparison, while the audited-clean continuum note supplies the raw NN finite-window Born/k=0 controls. No continuum, universal attraction, or no-barrier branch claim is needed for closure.
 - **auditor confidence:** high
 
 ### `lattice_nn_high_precision_note`
