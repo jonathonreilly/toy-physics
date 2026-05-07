@@ -5,6 +5,7 @@
   "blocked_requirements": {
     "delta_perp_or_orthogonal_control": true,
     "matched_top_w_covariance": true,
+    "physical_response_packet_absent": true,
     "radial_spurion_action_contract_currently_unadopted": true,
     "same_source_ew_action": true,
     "same_source_top_response": true,
@@ -13,7 +14,7 @@
   },
   "conditional_surface_status": "The W/Z physical-response bypass can reopen only with a same-source EW action, production W/Z mass-response rows, matched top/W covariance or identity, strict non-observed g2, and delta_perp/orthogonal-scalar control.",
   "exact_negative_boundary_passed": true,
-  "exact_next_action": "Treat W/Z same-source response as closed on the current surface. Move next to Schur A/B/C rows or the neutral primitive/rank-one theorem unless a real W/Z response packet appears.",
+  "exact_next_action": "Treat the W/Z same-source response shortcut as exhausted on the current surface, not as closure.  Reopen only if a strict W/Z physical-response packet appears with accepted action, production rows, matched covariance, strict non-observed g2, and delta_perp/orthogonal control; otherwise prioritize canonical O_H/source-Higgs pole rows, Schur A/B/C rows, or the neutral primitive/rank-one theorem.",
   "fail_count": 0,
   "forbidden_firewall": {
     "assumed_top_w_covariance_or_factorization": false,
@@ -57,6 +58,7 @@
     "wz_goldstone_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_physical_response_packet_intake": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json",
     "wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_same_source_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
     "wz_same_source_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
@@ -86,12 +88,13 @@
     "wz_goldstone_no_go": "exact negative boundary / WZ Goldstone equivalence does not identify PR230 source coordinate",
     "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_physical_response_packet_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist",
     "wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
     "wz_same_source_action_builder": "open / same-source EW action certificate absent",
     "wz_same_source_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 14,
+  "pass_count": 15,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current W/Z artifacts are support, manifests, and no-go boundaries. No strict W/Z physical response packet exists.",
   "strict_non_claims": [

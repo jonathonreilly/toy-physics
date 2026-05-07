@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-07 W/Z route completion intake-wire refresh: the W/Z route completion
+gate now consumes the physical-response packet intake checkpoint directly and
+records current-surface exhaustion, not physics closure.  The shortcut remains
+blocked by missing accepted action, production W/Z response rows, same-source
+top rows, matched covariance, strict non-observed `g2`, `delta_perp` authority,
+and final response packet.  Reopen W/Z only with that strict packet; otherwise
+the highest-value target remains canonical `O_H/C_sH/C_HH` pole rows, with
+Schur A/B/C or neutral primitive/rank-one artifacts as fallback support routes.
+
 2026-05-07 source-Higgs overlap/kappa current-prefix refresh: the overlap
 contract now verifies that its post-FMS parent is current at chunks001-052 with
 active chunks053-054 excluded.  The useful positive object is explicit:

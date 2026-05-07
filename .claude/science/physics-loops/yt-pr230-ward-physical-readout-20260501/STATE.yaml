@@ -16,11 +16,21 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-279-source-higgs-overlap-kappa-current-prefix-refresh
-blocks_completed: 278
-active_route: "Source-Higgs overlap/kappa contract current-prefix refresh"
-active_hard_residual: "Refreshed the source-Higgs overlap/kappa contract so it verifies the post-FMS boundary is current at chunks001-052 with active chunks053-054 excluded.  The contract still derives only the future overlap object kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH)); it does not set kappa_s=1 and does not close because canonical O_H and production C_sH/C_HH pole rows remain absent.  Validation: overlap/kappa contract PASS=14 FAIL=0; assumption stress PASS=104 FAIL=0; campaign status PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0."
+current_phase: campaign-block-280-wz-route-completion-intake-wire-refresh
+blocks_completed: 279
+active_route: "W/Z route completion intake-wire refresh"
+active_hard_residual: "Refreshed the W/Z response route completion gate so it consumes the W/Z physical-response packet intake checkpoint directly and avoids wording that could be mistaken for successful closure.  The W/Z shortcut is exhausted on the current surface, not closed as physics: no accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, or final response packet exists.  Validation: W/Z route completion PASS=15 FAIL=0; assumption stress PASS=104 FAIL=0; campaign status PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0."
 files_touched:
+  - "scripts/frontier_yt_pr230_wz_response_route_completion.py"
+  - "docs/YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION_NOTE_2026-05-06.md"
+  - "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py"
   - "docs/YT_PR230_SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT_NOTE_2026-05-06.md"
   - "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json"

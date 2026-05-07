@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 W/Z route completion intake-wire refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_wz_response_route_completion.py`,
+  `docs/YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION_NOTE_2026-05-06.md`, and
+  `outputs/yt_pr230_wz_response_route_completion_2026-05-06.json`.
+- The completion gate now consumes the W/Z physical-response packet intake
+  checkpoint directly and uses exhaustion/open-boundary wording rather than
+  wording that could be read as successful closure.
+- Result: exact negative boundary.  The W/Z physical-response shortcut still
+  lacks accepted action, production W/Z rows, same-source top rows, matched
+  covariance, strict non-observed `g2`, `delta_perp` authority, and final
+  response packet.
+- Validation: W/Z route completion `PASS=15 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+- Claim boundary: no physical-response closure, no retained or
+  `proposed_retained` closure, and no convention-setting for `g2`,
+  `delta_perp`, `kappa_s`, `c2`, or `Z_match`.
+
 Latest checkpoint, 2026-05-07 source-Higgs overlap/kappa current-prefix refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py`,

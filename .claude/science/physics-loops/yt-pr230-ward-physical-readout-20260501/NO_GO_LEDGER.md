@@ -1,5 +1,19 @@
 # No-Go Ledger
 
+## W/Z route completion is current-surface exhaustion, not closure
+
+The 2026-05-07 W/Z route completion refresh consumes the W/Z physical-response
+packet intake checkpoint and records that no strict packet exists.  This is an
+exact negative boundary for the shortcut on the current surface.  It is not a
+positive W/Z response readout.
+
+Do not treat W/Z response-ratio support, smoke/scout rows, row-builder schemas,
+the completion gate, or the packet intake no-go as physical-response closure.
+Reopen requires accepted action, production W/Z rows, same-source top rows,
+matched covariance, strict non-observed `g2`, `delta_perp` authority, and final
+response packet.  No `g2`, `delta_perp`, `kappa_s`, `c2`, or `Z_match` value is
+set by convention.
+
 ## Source-Higgs overlap/kappa contract is not a `kappa_s=1` shortcut
 
 The 2026-05-07 source-Higgs overlap/kappa refresh verifies that the post-FMS

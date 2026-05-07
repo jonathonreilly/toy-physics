@@ -1,5 +1,22 @@
 # Review History
 
+## 2026-05-07 - W/Z Route Completion Intake-Wire Refresh
+
+Review stance: exact negative boundary / W/Z shortcut exhausted, no closure.
+
+- Updated the W/Z route completion gate to consume the physical-response packet
+  intake checkpoint directly.
+- Reworded the next action so the current W/Z route is described as exhausted
+  on the current surface, not as successful physics closure.
+- Validation: W/Z route completion `PASS=15 FAIL=0`; assumption/import stress
+  `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: no W/Z physical-response closure.  Missing roots remain accepted
+action, production W/Z rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp` authority, and final response packet.
+
 ## 2026-05-07 - Source-Higgs Overlap/Kappa Current-Prefix Refresh
 
 Review stance: exact support / future overlap contract, no closure.

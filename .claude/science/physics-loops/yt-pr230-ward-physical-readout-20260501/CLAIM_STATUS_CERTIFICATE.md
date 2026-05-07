@@ -1,5 +1,37 @@
 # Claim Status Certificate
 
+W/Z route completion intake-wire refresh:
+
+```text
+actual_current_surface_status: exact negative boundary / W/Z same-source response route not complete and no physical-response packet present
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_wz_response_route_completion.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The refreshed W/Z completion gate consumes the physical-response packet intake
+checkpoint directly.  It records exhaustion of the W/Z shortcut on the current
+surface, not physics closure: accepted action, production W/Z rows,
+same-source top rows, matched covariance, strict non-observed `g2`,
+`delta_perp` authority, and final response packet are absent.
+
 Source-Higgs overlap/kappa current-prefix refresh:
 
 ```text

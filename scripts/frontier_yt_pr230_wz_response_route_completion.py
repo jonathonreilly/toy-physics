@@ -48,6 +48,7 @@ PARENTS = {
     "wz_g2_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "wz_g2_casimir_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_bare_running_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
+    "wz_physical_response_packet_intake": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json",
     "candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
 }
 
@@ -275,6 +276,16 @@ def main() -> int:
         is False
         and not futures["electroweak_g2_certificate"]
     )
+    physical_packet_intake_blocks = (
+        "WZ physical-response packet not present"
+        in statuses["wz_physical_response_packet_intake"]
+        and parents["wz_physical_response_packet_intake"].get(
+            "production_packet_present"
+        )
+        is False
+        and parents["wz_physical_response_packet_intake"].get("proposal_allowed")
+        is False
+    )
     clean_firewall = all(value is False for value in forbidden_firewall().values())
 
     report("parent-certificates-present", not missing, f"missing={missing}")
@@ -290,6 +301,7 @@ def main() -> int:
     report("source-transport-shortcuts-closed", source_transport_shortcuts_closed, statuses["wz_source_coordinate_transport_no_go"])
     report("matched-top-w-covariance-absent", covariance_absent, statuses["top_wz_matched_covariance_builder"])
     report("strict-nonobserved-g2-absent", strict_g2_absent, statuses["electroweak_g2_builder"])
+    report("physical-response-packet-intake-blocks", physical_packet_intake_blocks, statuses["wz_physical_response_packet_intake"])
     report("forbidden-firewall-clean", clean_firewall, str(forbidden_firewall()))
 
     exact_negative_boundary_passed = (
@@ -306,6 +318,7 @@ def main() -> int:
         and source_transport_shortcuts_closed
         and covariance_absent
         and strict_g2_absent
+        and physical_packet_intake_blocks
         and clean_firewall
     )
 
@@ -337,6 +350,7 @@ def main() -> int:
             "matched_top_w_covariance": covariance_absent,
             "strict_nonobserved_g2": strict_g2_absent,
             "delta_perp_or_orthogonal_control": orthogonal_control_absent,
+            "physical_response_packet_absent": physical_packet_intake_blocks,
         },
         "parent_certificates": PARENTS,
         "parent_statuses": statuses,
@@ -348,9 +362,12 @@ def main() -> int:
             "does not set delta_perp=0 or assume top/W covariance by convention",
         ],
         "exact_next_action": (
-            "Treat W/Z same-source response as closed on the current surface. "
-            "Move next to Schur A/B/C rows or the neutral primitive/rank-one "
-            "theorem unless a real W/Z response packet appears."
+            "Treat the W/Z same-source response shortcut as exhausted on the "
+            "current surface, not as closure.  Reopen only if a strict W/Z "
+            "physical-response packet appears with accepted action, production "
+            "rows, matched covariance, strict non-observed g2, and delta_perp/"
+            "orthogonal control; otherwise prioritize canonical O_H/source-Higgs "
+            "pole rows, Schur A/B/C rows, or the neutral primitive/rank-one theorem."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

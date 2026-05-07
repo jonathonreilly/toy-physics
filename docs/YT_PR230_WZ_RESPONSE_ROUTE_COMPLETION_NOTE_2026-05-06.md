@@ -14,6 +14,8 @@ Higgs operator by notation.
 ## Result
 
 The route is not complete on the current PR230 surface.
+The 2026-05-07 refresh also consumes the W/Z physical-response packet intake
+checkpoint, which confirms that no strict production packet is present.
 
 Current artifacts provide support:
 
@@ -34,6 +36,7 @@ They do not provide the required physical packet:
 - no matched top/W covariance or identity certificate;
 - no strict non-observed `g2` certificate;
 - no `delta_perp` / orthogonal-scalar correction authority.
+- no final W/Z physical-response packet accepted by the intake checkpoint.
 
 ## Boundary
 
@@ -52,5 +55,5 @@ observed W/Z masses, `H_unit`, `yt_ward_identity`, `alpha_LM`, plaquette, or
 
 ```bash
 python3 scripts/frontier_yt_pr230_wz_response_route_completion.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=15 FAIL=0
 ```
