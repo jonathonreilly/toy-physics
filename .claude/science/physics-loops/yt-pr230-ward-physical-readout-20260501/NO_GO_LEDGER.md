@@ -3,10 +3,14 @@
 ## Clean-route selector refresh is not closure
 
 The 2026-05-07 refresh consumes `O_sp`, the radial-spurion action contract,
-chunks001-018 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics, and
-FMS/outside-math literature.  It still forbids treating any of those as
-canonical `O_H`, `C_spH/C_HH` pole rows, W/Z response rows, strict
-scalar-LSZ/FV/IR authority, or retained/proposed-retained closure.
+chunks001-024 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics, the
+rejected same-surface neutral multiplicity-one candidate, and FMS/outside-math
+literature.  It ranks genuine same-source W/Z response rows as the first
+fallback after source-Higgs pole rows, but still forbids treating any of those
+inputs as canonical `O_H`, `C_spH/C_HH` pole rows, W/Z response rows, strict
+scalar-LSZ/FV/IR authority, or retained/proposed-retained closure.  Chunks025
+and 026 are active run-control only until completed, checkpointed, and
+packaged.
 
 ## Genuine `O_sp` plus completed L12 support is not physical `y_t` closure
 

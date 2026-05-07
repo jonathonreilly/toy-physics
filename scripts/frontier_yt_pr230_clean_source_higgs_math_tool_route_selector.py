@@ -246,10 +246,10 @@ def user_option_ranking(statuses: dict[str, str]) -> list[dict[str, Any]]:
         },
         {
             "rank": 2,
-            "option": "neutral-sector primitive-cone or irreducibility certificate",
-            "clean_physics_role": "theorem route that can collapse the neutral top-coupled scalar sector to one component",
-            "current_status": statuses["neutral_scalar_primitive_cone_stretch_no_go"],
-            "needed": "same-surface neutral transfer sector with strong connectivity or primitive positive power",
+            "option": "genuine same-source W/Z response rows",
+            "clean_physics_role": "physical-response fallback after source-Higgs; requires the hardened same-source EW action, covariance, and strict g2 authority",
+            "current_status": statuses["wz_smoke_to_production_promotion_no_go"],
+            "needed": "production W/Z mass-response rows plus source identity, matched covariance, strict non-observed g2, and orthogonal-correction authority",
         },
         {
             "rank": 3,
@@ -267,10 +267,10 @@ def user_option_ranking(statuses: dict[str, str]) -> list[dict[str, Any]]:
         },
         {
             "rank": 5,
-            "option": "genuine same-source W/Z response rows",
-            "clean_physics_role": "robust physical-response fallback; less clean because it adds EW action, g2, covariance, and delta_perp obligations",
-            "current_status": statuses["wz_smoke_to_production_promotion_no_go"],
-            "needed": "production W/Z mass-response rows plus source identity, covariance, g2, and orthogonal-correction authority",
+            "option": "neutral-sector primitive-cone or irreducibility certificate",
+            "clean_physics_role": "theorem route that can collapse the neutral top-coupled scalar sector to one component after a real same-surface transfer artifact exists",
+            "current_status": statuses["neutral_scalar_primitive_cone_stretch_no_go"],
+            "needed": "same-surface neutral transfer sector with strong connectivity or primitive positive power",
         },
     ]
 
@@ -384,7 +384,7 @@ def main() -> int:
     )
     no_forbidden_imports = all(value is False for value in firewall.values())
     source_higgs_ranked_first = ranking[0]["option"] == "O_H/C_sH/C_HH source-Higgs pole rows"
-    wz_fallback_not_primary = ranking[-1]["option"] == "genuine same-source W/Z response rows"
+    wz_ranked_first_fallback = ranking[1]["option"] == "genuine same-source W/Z response rows"
     literature_refresh_support_not_proof = (
         len(LITERATURE_REFRESH_ROWS) == 3
         and all(row["url"].startswith(("https://arxiv.org/abs/", "https://doi.org/")) for row in LITERATURE_REFRESH_ROWS)
@@ -445,7 +445,7 @@ def main() -> int:
     report("finite-schur-abc-support-not-pole-authority", finite_schur_support_only, statuses["two_source_taste_radial_schur_abc"])
     report("same-surface-multiplicity-gate-loaded", same_surface_multiplicity_gate_loaded, statuses["same_surface_neutral_multiplicity_one_gate"])
     report("clean-physics-route-ranks-source-higgs-first", source_higgs_ranked_first, ranking[0]["option"])
-    report("wz-response-demoted-to-fallback-for-clean-goal", wz_fallback_not_primary, ranking[-1]["option"])
+    report("wz-response-ranked-first-fallback-for-clean-goal", wz_ranked_first_fallback, ranking[1]["option"])
     report("selected-route-is-source-higgs-invariant-to-gns", selected["id"] == "source_higgs_invariant_ring_then_gns_pole_rows", selected["id"])
     report("forbidden-firewall-clean", no_forbidden_imports, str(firewall))
 

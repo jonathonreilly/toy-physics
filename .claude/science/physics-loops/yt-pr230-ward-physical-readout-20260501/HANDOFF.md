@@ -6,11 +6,21 @@ Latest checkpoint, 2026-05-07 clean-route selector refresh:
   `docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md`,
   and `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`.
 - The selector now consumes `O_sp`, radial-spurion action-contract support,
-  chunks001-018 partial `C_sx/C_xx` support, and finite Schur A/B/C
-  diagnostics.  All remain support-only.
+  chunks001-024 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics,
+  and the rejected same-surface neutral multiplicity-one candidate.  All
+  remain support-only.
+- The clean ordering is now source-Higgs first, genuine same-source W/Z
+  response rows as first fallback, then strict scalar-LSZ authority, Schur
+  `A/B/C` rows, and neutral primitive-cone/irreducibility.
 - Clean closure target remains certified canonical `O_H` plus
   `C_ss/C_spH/C_HH` pole rows and O_sp-Higgs Gram purity.  No
   retained/proposed-retained closure is authorized.
+- Validation: selector `PASS=20 FAIL=0`; assumption/import stress `PASS=85
+  FAIL=0`; campaign status `PASS=331 FAIL=0`; full assembly `PASS=144
+  FAIL=0`; retained-route `PASS=298 FAIL=0`; completion audit `PASS=53
+  FAIL=0`.
+- Run-control note: chunks025-026 are active and not evidence until completed,
+  checkpointed, and packaged.
 
 Latest checkpoint, 2026-05-06 post-`O_sp` positive-closure completion audit:
 

@@ -16,11 +16,24 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-243-same-source-ew-action-contract-hardening
-blocks_completed: 242
-active_route: "PR230 same-source EW action certificate hardening for W/Z response route"
-active_hard_residual: "The same-source EW action certificate builder and gate now consume the W/Z response-ratio identifiability contract and require one no-independent-top-source radial spurion controlling top/W/Z responses.  Current additive-source PR230 action remains rejected as an accepted same-source EW/Higgs action.  Builder PASS=12 FAIL=0; gate PASS=26 FAIL=0; aggregate gates remain campaign PASS=331 FAIL=0, assumption PASS=85 FAIL=0, assembly PASS=144 FAIL=0, retained PASS=298 FAIL=0, completion PASS=53 FAIL=0.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-244-clean-route-selector-refresh
+blocks_completed: 243
+active_route: "PR230 clean source-Higgs route selector refresh"
+active_hard_residual: "The clean route selector now reflects chunks001-024 packaged support, keeps O_sp and two-source taste-radial rows support-only, and ranks genuine same-source W/Z response rows as the first fallback after source-Higgs pole rows.  Selector PASS=20 FAIL=0; aggregate gates remain assumption PASS=85 FAIL=0, campaign PASS=331 FAIL=0, assembly PASS=144 FAIL=0, retained PASS=298 FAIL=0, completion PASS=53 FAIL=0.  Chunks025-026 are active run-control only and are not evidence until completed and packaged.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py"
+  - "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md"
+  - "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py"
   - "scripts/frontier_yt_wz_same_source_ew_action_gate.py"
   - "docs/YT_WZ_SAME_SOURCE_EW_ACTION_CERTIFICATE_BUILDER_NOTE_2026-05-04.md"

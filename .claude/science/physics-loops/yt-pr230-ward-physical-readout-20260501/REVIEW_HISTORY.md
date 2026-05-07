@@ -7,11 +7,14 @@ Review stance: route selection / no closure promotion.
 - Updated `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`,
   its note, and its JSON certificate.
 - The selector now records `O_sp` as the genuine source-side artifact and
-  keeps radial-spurion, partial chunk, finite Schur, FMS, and outside-math
-  inputs support-only.
-- Validation: selector `PASS=19 FAIL=0`; assumption/import stress PASS=77
-  FAIL=0; campaign PASS=323 FAIL=0; full assembly PASS=136 FAIL=0;
-  retained-route PASS=290 FAIL=0; completion audit PASS=45 FAIL=0.  No
+  keeps radial-spurion, chunks001-024 partial row support, finite Schur, FMS,
+  rejected neutral-candidate, and outside-math inputs support-only.
+- Re-ranked genuine same-source W/Z response rows as the first fallback after
+  source-Higgs pole rows, with identity/covariance/strict non-observed `g2`
+  and orthogonal-correction obligations still load-bearing.
+- Validation: selector `PASS=20 FAIL=0`; assumption/import stress PASS=85
+  FAIL=0; campaign PASS=331 FAIL=0; full assembly PASS=144 FAIL=0;
+  retained-route PASS=298 FAIL=0; completion audit PASS=53 FAIL=0.  No
   retained or `proposed_retained` wording authorized.
 - Hygiene: py_compile passed for the selector/assumption/campaign scripts;
   `git diff --check` passed; exact conflict-marker scan passed; audit pipeline

@@ -263,10 +263,10 @@
       "rank": 1
     },
     {
-      "clean_physics_role": "theorem route that can collapse the neutral top-coupled scalar sector to one component",
-      "current_status": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
-      "needed": "same-surface neutral transfer sector with strong connectivity or primitive positive power",
-      "option": "neutral-sector primitive-cone or irreducibility certificate",
+      "clean_physics_role": "physical-response fallback after source-Higgs; requires the hardened same-source EW action, covariance, and strict g2 authority",
+      "current_status": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
+      "needed": "production W/Z mass-response rows plus source identity, matched covariance, strict non-observed g2, and orthogonal-correction authority",
+      "option": "genuine same-source W/Z response rows",
       "rank": 2
     },
     {
@@ -284,10 +284,10 @@
       "rank": 4
     },
     {
-      "clean_physics_role": "robust physical-response fallback; less clean because it adds EW action, g2, covariance, and delta_perp obligations",
-      "current_status": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
-      "needed": "production W/Z mass-response rows plus source identity, covariance, g2, and orthogonal-correction authority",
-      "option": "genuine same-source W/Z response rows",
+      "clean_physics_role": "theorem route that can collapse the neutral top-coupled scalar sector to one component after a real same-surface transfer artifact exists",
+      "current_status": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+      "needed": "same-surface neutral transfer sector with strong connectivity or primitive positive power",
+      "option": "neutral-sector primitive-cone or irreducibility certificate",
       "rank": 5
     }
   ]

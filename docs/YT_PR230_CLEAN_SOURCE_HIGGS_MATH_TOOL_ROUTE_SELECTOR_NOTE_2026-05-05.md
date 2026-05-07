@@ -5,7 +5,7 @@ positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
 **Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract,
-chunks001-020/two-source finite-Schur support, the same-surface neutral
+chunks001-024/two-source finite-Schur support, the same-surface neutral
 multiplicity-one intake gate, and the rejected candidate attempt landed
 
 ## Purpose
@@ -24,7 +24,7 @@ The refresh consumes the current genuine support without promoting it:
   source-side pole residue;
 - the radial-spurion action contract is exact future-action support, but the
   current additive source is not that action;
-- the two-source taste-radial campaign has `20/63` chunks combined as partial
+- the two-source taste-radial campaign has `24/63` chunks combined as partial
   `C_sx/C_xx` support only;
 - finite Schur `A_f/B_f/C_f` inverse rows are bounded diagnostics, not pole
   `K'(pole)` authority.
@@ -41,17 +41,19 @@ The refresh consumes the current genuine support without promoting it:
 1. `O_H/C_sH/C_HH` source-Higgs pole rows.
    Use invariant-ring, commutant, primitive-cone, GNS, moment, or exact tensor
    tools only if they emit the same-surface `O_H` certificate and pole rows.
-2. Neutral primitive-cone or irreducibility certificate.
-   This is the theorem variant of the clean route if it proves the neutral
-   top-coupled scalar sector has no orthogonal component.
+2. Genuine same-source W/Z response rows.
+   First fallback after source-Higgs, but only with the hardened same-source
+   EW action, identity/covariance, strict non-observed `g2`, and
+   orthogonal-correction obligations.
 3. Strict scalar-LSZ moment/threshold/FV authority.
    Necessary for physical readout, but not by itself an overlap proof.
 4. Schur `A/B/C` kernel rows.
    Useful denominator/orthogonal-sector authority, but source-only compressed
    denominator data is already blocked.
-5. Genuine same-source W/Z response rows.
-   Strong fallback, but less clean because it adds EW action, `g2`, covariance,
-   and orthogonal-correction obligations.
+5. Neutral primitive-cone or irreducibility certificate.
+   This theorem route can repair source-Higgs purity only after a real
+   same-surface primitive/off-diagonal transfer or equivalent irreducibility
+   artifact exists.
 
 ## Outside-Math Boundary
 
@@ -98,9 +100,10 @@ No closure is claimed.  The current surface still lacks:
   `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`
   exists only as a rejected candidate attempt;
 - `outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json`;
-- neutral irreducibility or primitive-cone certificates;
+- matched same-source W/Z response rows and strict `g2`/covariance authority;
 - Schur kernel rows;
 - strict scalar-LSZ moment/threshold/FV certificates.
+- neutral irreducibility or primitive-cone certificates;
 
 The selected clean next action is:
 
