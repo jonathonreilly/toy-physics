@@ -1,47 +1,95 @@
 slug: staggered-dirac-ac-upgrade-20260507
 goal: |
-  Close substep-4 admitted-context AC of the staggered-Dirac realization
-  synthesis. Strategic insight from preflight: Reeh-Schlieder + cluster
-  → H_phys has unique vacuum, no DHR superselection sectors. Block 05's
-  DHR framing was over-complicated. Three matter generations are three
-  quantum-mechanically distinct STATES in H_phys, derivable directly
-  from retained primitives without admitted-context AC.
+  Close substep-4 admitted-context AC of the staggered-Dirac
+  realization synthesis. Originally aimed for full positive_theorem
+  upgrade (AC retirement). Hostile review identified this as
+  over-ambitious; net delivery is AC SHARPENING (broad DHR-based →
+  narrow species-identification single-clause bridge).
 
 target_status: best-honest-status
 runtime_budget: 12h
-runtime_used: ~30m (loop pack setup + grounding read)
+runtime_used: ~5h
 mode: campaign
+campaign_status: STOPPED — clean stopping state with 4 PRs OPEN; AC sharpening delivered; further closure requires research-target work (mass operator, species-identification primitive, Yukawa coupling)
 
-current_block: 01
-current_block_route: DHR-axioms-vs-retained-primitives map
-current_block_branch: physics-loop/staggered-dirac-ac-upgrade-block01-20260507 (to create)
-current_block_status: planning
+current_block: -- (campaign closed)
+last_completed_block: 04 (synthesis AC sharpening note)
+final_branch_head: physics-loop/staggered-dirac-ac-upgrade-block04-20260507
 
-cycles_completed: 0
-blocks_completed: 0
-prs_opened: 0
-prs_remaining_in_24h_volume_cap: 5
-cluster_cap_status: judgment-based per PR #624
+cycles_completed: 4
+blocks_completed: 4
+prs_opened: 4  # #641, #642, #644, #645
+prs_remaining_in_24h_volume_cap: 1  # 5 - 4
 
-active_route: Block 01 — map DHR axioms to retained primitives + identify forcing gaps; verify the strategic insight that three generations are three states in single H_phys (not DHR sectors)
-active_route_deliverable: STAGGERED_DIRAC_AC_DHR_FRAMING_AUDIT_NOTE_2026-05-07.md
-hard_residual_being_attacked: |
-  Substep 4 currently relies on AC (Hilbert/no-proper-quotient
-  semantics) admitted-context. The strategic insight: this dependency
-  arises from invoking DHR superselection, but Reeh-Schlieder + cluster
-  rule out DHR sectors on canonical surface. The substep can be
-  reformulated as direct three-state derivation in single H_phys.
+prior_blocks_summary:
+  block01:
+    deliverable: docs/STAGGERED_DIRAC_AC_DHR_FRAMING_AUDIT_NOTE_2026-05-07.md
+    branch: physics-loop/staggered-dirac-ac-upgrade-block01-20260507
+    pr: '#641 OPEN, base=main'
+    status: scoping audit
+    key_result: |
+      Block 05 of prior campaign was misframed: DHR superselection
+      sectors are incompatible with retained Reeh-Schlieder + cluster
+      decomposition (which together imply unique vacuum, no DHR
+      sectors on canonical surface). Identifies AC upgrade path via
+      direct three-state in single H_phys.
+  block02:
+    deliverable: docs/STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md
+    runner: scripts/probe_three_states_direct_derivation.py PASS=15/0
+    branch: physics-loop/staggered-dirac-ac-upgrade-block02-20260507
+    pr: '#642 OPEN, stacked on #641'
+    status: positive_theorem (algebraic content); species-identification overclaimed (per Block 03)
+    key_result: |
+      Direct three-state derivation: three matter generations as
+      three quantum-mechanically distinct STATES in single H_phys
+      via RP+RS+CD+M_3(C)+no-proper-quotient. Hostile review found
+      gap in C_3[111]∈A(Λ) precision and species-identification
+      semantic gap.
+  block03:
+    deliverable: docs/STAGGERED_DIRAC_AC_HOSTILE_REVIEW_RECORD_NOTE_2026-05-07.md
+    branch: physics-loop/staggered-dirac-ac-upgrade-block03-20260507
+    pr: '#644 OPEN, stacked on #642'
+    status: hostile-review record (FAIL at positive tier)
+    key_result: |
+      External hostile-review agent applied 7 challenges. Two real
+      gaps: C_3[111]∈A(Λ) hand-waved; species-identification needs
+      new narrow AC. Recommended bounded with sharpened AC.
+  block04:
+    deliverable: docs/STAGGERED_DIRAC_REALIZATION_SYNTHESIS_UPGRADE_NOTE_2026-05-07.md
+    branch: physics-loop/staggered-dirac-ac-upgrade-block04-20260507
+    pr: '#645 OPEN, stacked on #644'
+    status: synthesis tier-update meta-note
+    key_result: |
+      Synthesis (Block 06 of prior campaign, PR #637) updates from
+      bounded with broad AC (DHR-based) to bounded with NEW NARROW
+      AC (species-identification single-clause bridge). HK+DHR
+      retired. RS+cluster newly load-bearing. Three research paths
+      for full AC_narrow closure identified.
+
+review_findings:
+  block01: PASS — correctly identifies Block 05 misframing
+  block02: FAIL at positive_theorem tier (Block 03 hostile review); algebraic content sound
+  block03: hostile-review record itself — PASS (correctly identifies gaps)
+  block04: PASS as synthesis tier-update; honestly reflects bounded with narrow AC
+
+pr_status:
+  block01: '#641 OPEN, awaiting independent audit'
+  block02: '#642 OPEN, stacked on #641; needs revision per Block 03 verdict (drop Physical Species from title; narrow AC)'
+  block03: '#644 OPEN, stacked on #642'
+  block04: '#645 OPEN, stacked on #644'
 
 next_exact_action: |
-  Block 01: write STAGGERED_DIRAC_AC_DHR_FRAMING_AUDIT_NOTE_2026-05-07.md
-  documenting (1) DHR's three classical assumptions, (2) why they fail
-  on the framework's canonical surface (Reeh-Schlieder + cluster →
-  unique vacuum), and (3) the alternative direct three-state framing.
-  Then Block 02: write the reformulated substep-4 theorem without AC.
+  Campaign CLOSED. See HANDOFF.md for next-campaign priorities. Top
+  priority: in-place update of synthesis (PR #637) to reflect AC
+  sharpening from Block 04. Future research: AC_narrow closure via
+  mass operator forcing, species-identification primitive, or Yukawa
+  coupling mechanism.
 
-stop_condition: |
-  Continue until 12h runtime exhausted, corollary exhaustion, value-
-  gate exhaustion, judgment-based cluster cap evaluator says BACKLOG
-  for all queued candidates, or global queue exhaustion.
+stop_condition_reached: |
+  Clean stopping state. All four planned blocks complete; hostile
+  review identified honest tier outcome (AC sharpening, not full
+  retirement). Pushing further into AC_narrow closure paths would
+  require multi-cycle research targets best deferred to a fresh
+  campaign.
 
-last_checkpoint: 2026-05-07T~17:00 (initial loop-pack setup)
+last_checkpoint: 2026-05-07T~22:00 (campaign close, HANDOFF written)
