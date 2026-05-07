@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `fourth_family_complex_boundary_note` | no_go | unaudited | critical | 503 | 9.48 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FOURTH_FAMILY_COMPLEX.py` |
+| 1 | `fourth_family_complex_boundary_note` | no_go | audit_in_progress | critical | 503 | 9.48 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FOURTH_FAMILY_COMPLEX.py` |
 | 2 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 502 | 11.47 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
 | 3 | `dm_neutrino_weak_vector_theorem_note_2026-04-15` | bounded_theorem | unaudited | critical | 299 | 8.73 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 4 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 295 | 8.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/su3_casimir_fundamental_check.py` |
