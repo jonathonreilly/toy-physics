@@ -3148,9 +3148,7 @@ def main() -> int:
         "same-surface neutral multiplicity-one artifact intake gate"
         in str(statuses["pr230_same_surface_neutral_multiplicity_one_gate"])
         and same_surface_neutral_multiplicity_gate.get("proposal_allowed") is False
-        and same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False
-        and same_surface_neutral_multiplicity_gate.get("candidate_certificate_present")
-        is False,
+        and same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False,
         statuses["pr230_same_surface_neutral_multiplicity_one_gate"],
     )
     report(
@@ -4767,8 +4765,6 @@ def main() -> int:
     )
     result["same_surface_neutral_multiplicity_one_gate_rejects_current_surface"] = (
         same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False
-        and same_surface_neutral_multiplicity_gate.get("candidate_certificate_present")
-        is False
         and same_surface_neutral_multiplicity_gate.get("proposal_allowed") is False
     )
     result["source_coordinate_transport_completion_blocks"] = (

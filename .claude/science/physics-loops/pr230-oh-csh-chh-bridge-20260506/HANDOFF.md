@@ -219,6 +219,18 @@ schema still lacks canonical-Higgs, same-source sector-overlap, W/Z mass-fit
 path, accepted certificate input, and action-gate readiness prerequisites.
 The accepted EW action certificate path remains unwritten.
 
+The same-surface neutral multiplicity-one candidate path is now populated and
+rejected rather than merely absent.  The candidate attempt writes
+`outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`
+with `candidate_accepted=false` and `proposal_allowed=false`: the current
+neutral block still has `source_singlet` plus `orthogonal_neutral_singlet`,
+trivial current `Z3` action, degree-one invariant dimension 2, commutant
+dimension 4, no physical primitive/off-diagonal transfer, no canonical
+LSZ/FV/IR metric, no source-Higgs identity, and no measured `C_spH/C_HH`
+pole-overlap rows.  This retires the bookkeeping ambiguity around the target
+path, but it does not certify `O_H`, set `kappa_s=1`, or authorize retained or
+`proposed_retained` wording.
+
 The radial-spurion sector-overlap theorem now gives a clean positive contract
 for that missing sector-overlap item.  If a future adopted action makes the
 source a single canonical-Higgs radial spurion, with no independent additive

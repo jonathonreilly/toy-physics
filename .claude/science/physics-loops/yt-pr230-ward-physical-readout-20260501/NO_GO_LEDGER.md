@@ -3374,3 +3374,14 @@ Reopen only with
 or equivalent same-surface representation/action plus multiplicity-one or
 primitive-generator proof, canonical metric/LSZ normalization, and
 source-to-Higgs overlap rows.
+
+## 2026-05-07 - Candidate Path Present But Rejected
+
+No-go on the current surface: the candidate path now exists, but the candidate
+is rejected.  It records degree-one invariant dimension 2, commutant dimension
+4, no physical primitive/off-diagonal transfer, no orthogonal-neutral
+top-coupling exclusion, no canonical LSZ/FV/IR metric, and no measured
+`C_spH/C_HH` pole-overlap rows.
+
+Reopen only by retiring one of those failed obligations with a same-surface
+artifact.  Do not reopen merely because the target JSON file exists.

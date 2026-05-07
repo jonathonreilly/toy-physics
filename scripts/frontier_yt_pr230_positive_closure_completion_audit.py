@@ -607,10 +607,6 @@ def main() -> int:
             "candidate_accepted"
         )
         is False
-        and certs["same_surface_neutral_multiplicity_one_gate"].get(
-            "candidate_certificate_present"
-        )
-        is False
     )
 
     completion_criteria = {

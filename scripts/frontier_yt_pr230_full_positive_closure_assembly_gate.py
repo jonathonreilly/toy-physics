@@ -1164,10 +1164,6 @@ def main() -> int:
             "candidate_accepted"
         )
         is False
-        and certs["pr230_same_surface_neutral_multiplicity_one_gate"].get(
-            "candidate_certificate_present"
-        )
-        is False
     )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False

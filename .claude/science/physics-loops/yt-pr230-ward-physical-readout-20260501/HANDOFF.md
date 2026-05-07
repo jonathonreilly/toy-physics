@@ -3959,3 +3959,22 @@ remain fixed while candidate `O_H` rotates, so no canonical-Higgs identity,
 `kappa_s=1`, retained, or proposed-retained claim is authorized.  Chunks019-020
 remain active under the two-worker cap and are non-evidence until completed
 JSON exists and completed-mode checkpoints pass.
+
+## 2026-05-07 - Same-Surface Neutral Multiplicity-One Candidate Attempt
+
+The target candidate path now exists, but it is a rejected certificate rather
+than proof authority:
+
+```text
+python3 scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+The candidate records `candidate_accepted=false` and `proposal_allowed=false`.
+The current neutral block still has `source_singlet` plus
+`orthogonal_neutral_singlet`, degree-one invariant dimension 2, commutant
+dimension 4, no physical primitive/off-diagonal transfer, no canonical
+LSZ/FV/IR metric, no source-Higgs identity, no measured `C_spH/C_HH` rows, and
+no orthogonal-neutral top-coupling exclusion.  File presence is not evidence;
+the next action is to retire one of those failed obligations with a
+same-surface artifact.

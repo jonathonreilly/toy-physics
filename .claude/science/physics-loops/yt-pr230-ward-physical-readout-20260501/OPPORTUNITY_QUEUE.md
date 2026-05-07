@@ -1478,3 +1478,10 @@ neutral representation/action, top-coupled neutral-sector coordinates,
 multiplicity-one or primitive-generator proof, canonical metric/LSZ
 normalization, and either `O_sp = O_H` or measured `C_spH/C_HH` pole-overlap
 rows.  The current two-singlet neutral surface is rejected.
+
+2026-05-07 update: the candidate path has now been populated and rejected, so
+the next opportunity is sharper.  Retire at least one failed obligation with a
+same-surface physical primitive/off-diagonal transfer, an orthogonal-neutral
+top-coupling exclusion, canonical scalar LSZ/FV/IR metric authority, or
+measured `C_spH/C_HH` pole-overlap rows.  The file path itself is no longer the
+target; passing one of those obligations is.

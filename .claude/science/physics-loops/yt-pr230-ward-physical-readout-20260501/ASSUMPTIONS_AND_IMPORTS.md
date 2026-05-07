@@ -833,6 +833,16 @@ pole-overlap rows.  The current two-singlet neutral surface is rejected and
 cannot be used as canonical `O_H`, source-Higgs overlap, scalar-LSZ
 normalization, `kappa_s=1`, retained, or proposed-retained authority.
 
+2026-05-07 same-surface neutral multiplicity-one candidate attempt:
+
+The target candidate file is not a proof selector.  The current candidate is
+rejected until the PR230 surface supplies a physical primitive/off-diagonal
+transfer, a selection rule excluding the orthogonal neutral top coupling,
+canonical scalar LSZ/FV/IR metric authority, or measured `C_spH/C_HH`
+pole-overlap rows.  Candidate file presence alone cannot certify canonical
+`O_H`, source-Higgs overlap, scalar-LSZ normalization, `kappa_s=1`, retained,
+or proposed-retained authority.
+
 2026-05-05 O_H/source-Higgs authority rescan:
 
 O_H/source-Higgs authority rescan is an exact current-surface inventory gate,

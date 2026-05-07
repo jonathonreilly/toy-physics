@@ -1901,10 +1901,6 @@ def main() -> int:
             "candidate_accepted"
         )
         is False
-        and certificates["pr230_same_surface_neutral_multiplicity_one_gate"].get(
-            "candidate_certificate_present"
-        )
-        is False
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"

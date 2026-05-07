@@ -419,8 +419,6 @@ def main() -> int:
         in statuses["same_surface_neutral_multiplicity_one_gate"]
         and parents["same_surface_neutral_multiplicity_one_gate"].get("proposal_allowed") is False
         and parents["same_surface_neutral_multiplicity_one_gate"].get("candidate_accepted") is False
-        and parents["same_surface_neutral_multiplicity_one_gate"].get("candidate_certificate_present")
-        is False
     )
 
     report("parent-certificates-present", not missing, f"missing={missing}")
@@ -445,6 +443,28 @@ def main() -> int:
     report("forbidden-firewall-clean", no_forbidden_imports, str(firewall))
 
     closure_allowed = False
+    same_surface_gate = parents["same_surface_neutral_multiplicity_one_gate"]
+    if same_surface_gate.get("candidate_certificate_present") is True:
+        exact_next_action = (
+            "For the clean source-Higgs route, the candidate file "
+            "outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json "
+            "is present but not accepted.  "
+            f"{same_surface_gate.get('exact_next_action', '')}  After a same-surface "
+            "artifact retires one of those failed obligations, rerun the "
+            "same-surface multiplicity-one gate, canonical O_H certificate "
+            "gate, source-Higgs row builder, Gram-purity postprocessor, "
+            "scalar-LSZ gates, full assembly gate, retained-route gate, and "
+            "completion audit."
+        )
+    else:
+        exact_next_action = (
+            "For the clean source-Higgs route, produce the actual candidate "
+            "file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json "
+            "satisfying the same-surface neutral multiplicity-one gate.  If "
+            "and only if that certificate lands, rerun the canonical O_H "
+            "certificate gate, produce C_ss/C_spH/C_HH pole rows, and run the "
+            "O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates."
+        )
     result = {
         "actual_current_surface_status": (
             "exact support / clean source-Higgs outside-math route selector; "
@@ -492,14 +512,7 @@ def main() -> int:
             "does not import H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, c2=1, Z_match=1, or kappa_s=1",
             "does not use reduced pilots, smoke rows, or exact toy contractions as production evidence",
         ],
-        "exact_next_action": (
-            "For the clean source-Higgs route, produce the actual candidate "
-            "file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json "
-            "satisfying the same-surface neutral multiplicity-one gate.  If "
-            "and only if that certificate lands, rerun the canonical O_H "
-            "certificate gate, produce C_ss/C_spH/C_HH pole rows, and run the "
-            "O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates."
-        ),
+        "exact_next_action": exact_next_action,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

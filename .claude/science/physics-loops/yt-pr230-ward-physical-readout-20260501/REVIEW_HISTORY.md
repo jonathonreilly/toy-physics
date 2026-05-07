@@ -5806,3 +5806,23 @@ Disposition: support-only.  The gate rejects the current two-singlet neutral
 surface and names the future same-surface candidate artifact.  It does not
 certify `O_H`, set `kappa_s=1`, or authorize retained/proposed-retained
 wording.
+
+## 2026-05-07 - Same-Surface Neutral Multiplicity-One Candidate Attempt
+
+Review stance: exact negative boundary / target path present but rejected.
+
+- Added `scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py`.
+- Added `docs/YT_PR230_SAME_SURFACE_NEUTRAL_MULTIPLICITY_ONE_CANDIDATE_ATTEMPT_NOTE_2026-05-07.md`.
+- Added `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`.
+- Refreshed the same-surface neutral multiplicity-one gate and clean route
+  selector so file presence is treated as rejected-boundary evidence, not
+  closure.
+- Validation: candidate attempt `PASS=15 FAIL=0`, gate `PASS=17 FAIL=0`,
+  route selector `PASS=20 FAIL=0`, assumption stress `PASS=78 FAIL=0`,
+  campaign status `PASS=324 FAIL=0`, full assembly `PASS=137 FAIL=0`,
+  retained-route `PASS=291 FAIL=0`, and completion audit `PASS=46 FAIL=0`.
+
+Disposition: exact negative boundary.  The candidate file is present but
+records `candidate_accepted=false`; physical transfer, orthogonal-neutral
+exclusion, canonical LSZ/FV/IR metric, and `C_spH/C_HH` overlap rows remain
+absent.

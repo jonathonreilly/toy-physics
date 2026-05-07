@@ -13,7 +13,7 @@
     "same_surface_multiplicity_gate_loaded": true,
     "two_source_partial_rows_support_only": true
   },
-  "exact_next_action": "For the clean source-Higgs route, produce the actual candidate file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json satisfying the same-surface neutral multiplicity-one gate.  If and only if that certificate lands, rerun the canonical O_H certificate gate, produce C_ss/C_spH/C_HH pole rows, and run the O_sp-Higgs Gram-purity plus scalar-LSZ aggregate gates.",
+  "exact_next_action": "For the clean source-Higgs route, the candidate file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json is present but not accepted.  Retire at least one failed obligation with a same-surface artifact: derive a physical primitive/off-diagonal neutral transfer, derive a selection rule excluding the orthogonal neutral top coupling, supply canonical scalar LSZ metric/FV/IR normalization, or measure C_spH/C_HH pole-overlap rows.  After a same-surface artifact retires one of those failed obligations, rerun the same-surface multiplicity-one gate, canonical O_H certificate gate, source-Higgs row builder, Gram-purity postprocessor, scalar-LSZ gates, full assembly gate, retained-route gate, and completion audit.",
   "fail_count": 0,
   "forbidden_firewall": {
     "set_c2_equal_one_without_derivation": false,
@@ -240,7 +240,7 @@
     "matched_top_wz_rows": false,
     "neutral_irreducibility_certificate": false,
     "neutral_primitive_cone_certificate": false,
-    "same_surface_neutral_multiplicity_one_certificate": false,
+    "same_surface_neutral_multiplicity_one_certificate": true,
     "schur_kernel_rows": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,

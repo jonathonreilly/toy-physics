@@ -4,7 +4,8 @@
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
   "candidate_accepted": false,
-  "candidate_certificate_present": false,
+  "candidate_certificate_present": true,
+  "candidate_certificate_status": "exact negative boundary / same-surface neutral multiplicity-one candidate attempt rejected on current PR230 surface",
   "candidate_schema": {
     "accepted_status_after_independent_review": "proposed_retained may be requested only by downstream aggregate gates, never by this intake gate alone",
     "must_have_boolean_false_fields": [
@@ -127,10 +128,10 @@
       ]
     }
   ],
-  "exact_next_action": "Produce the actual candidate file outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json with a same-surface representation/action and a multiplicity-one or primitive-generator proof.  If it passes this gate, rerun the canonical O_H certificate gate, source-Higgs row builder, Gram-purity postprocessor, scalar-LSZ gates, full assembly gate, retained-route gate, and completion audit.",
+  "exact_next_action": "Retire at least one failed obligation with a same-surface artifact: derive a physical primitive/off-diagonal neutral transfer, derive a selection rule excluding the orthogonal neutral top coupling, supply canonical scalar LSZ metric/FV/IR normalization, or measure C_spH/C_HH pole-overlap rows.",
   "fail_count": 0,
   "future_file_presence": {
-    "candidate_same_surface_multiplicity_one_certificate": false,
+    "candidate_same_surface_multiplicity_one_certificate": true,
     "canonical_higgs_operator_certificate": false,
     "neutral_irreducibility_certificate": false,
     "neutral_primitive_cone_certificate": false,
@@ -172,7 +173,7 @@
   },
   "pass_count": 17,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "This gate defines the positive artifact contract but no candidate certificate is present.  The current two-singlet neutral completion keeps source-only data fixed while changing the source-to-Higgs overlap, so it cannot certify canonical O_H or kappa_s.",
+  "proposal_allowed_reason": "This gate defines the positive artifact contract.  The current candidate is not accepted: the two-singlet neutral completion keeps source-only data fixed while changing the source-to-Higgs overlap, so it cannot certify canonical O_H or kappa_s.",
   "required_artifact_contract": [
     {
       "acceptance_rule": "basis/action/source coordinates are present and use the same surface, not a cross-lane or literature carrier",

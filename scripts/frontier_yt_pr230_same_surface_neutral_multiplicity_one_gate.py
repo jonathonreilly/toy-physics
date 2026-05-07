@@ -231,6 +231,9 @@ def main() -> int:
         name for name, cert in parents.items() if cert.get("proposal_allowed") is True
     ]
     future_present = future_presence()
+    candidate_certificate = load_json(
+        FUTURE_FILES["candidate_same_surface_multiplicity_one_certificate"]
+    )
     contract = required_artifact_contract()
     counterfamily = current_two_singlet_counterfamily()
     schema = candidate_schema()
@@ -275,8 +278,34 @@ def main() -> int:
         and parents["source_higgs_builder"].get("candidate_written") is False
         and parents["source_higgs_postprocess"].get("candidate_present") is False
     )
-    current_candidate_absent = (
-        not future_present["candidate_same_surface_multiplicity_one_certificate"]
+    candidate_certificate_present = bool(candidate_certificate)
+    candidate_accepted = (
+        candidate_certificate_present
+        and candidate_certificate.get("candidate_accepted") is True
+        and candidate_certificate.get("proposal_allowed") is False
+        and candidate_certificate.get("same_surface_cl3_z3_representation", {}).get("present")
+        is True
+        and candidate_certificate.get(
+            "multiplicity_one_or_primitive_generator_proof", {}
+        ).get("passed")
+        is True
+        and candidate_certificate.get("canonical_metric_lsz_normalization", {}).get(
+            "passed"
+        )
+        is True
+        and candidate_certificate.get("source_to_canonical_higgs_overlap", {}).get(
+            "passed"
+        )
+        is True
+        and candidate_certificate.get("forbidden_import_firewall", {}).get("passed")
+        is True
+    )
+    candidate_currently_not_accepted = (
+        not candidate_certificate_present
+        or (
+            candidate_certificate.get("candidate_accepted") is False
+            and candidate_certificate.get("proposal_allowed") is False
+        )
     )
     contract_missing_now = [
         item["id"] for item in contract if item.get("current_satisfied") is not True
@@ -287,7 +316,23 @@ def main() -> int:
     overlap_varies = len({round(row["source_to_candidate_overlap"], 12) for row in counterfamily}) > 1
     source_only_fixed = all(row["source_only_observables_change"] is False for row in counterfamily)
     firewall_clean = all(item.get("current_satisfied") is True for item in contract if item["id"] == "claim_firewall")
-    candidate_accepted = False
+    if candidate_certificate_present:
+        exact_next_action = str(
+            candidate_certificate.get(
+                "exact_next_action",
+                "Retire the failed candidate obligations with a same-surface physical transfer, canonical LSZ metric, or C_spH/C_HH pole-overlap rows.",
+            )
+        )
+    else:
+        exact_next_action = (
+            "Produce the actual candidate file "
+            f"{FUTURE_FILES['candidate_same_surface_multiplicity_one_certificate']} "
+            "with a same-surface representation/action and a multiplicity-one or "
+            "primitive-generator proof.  If it passes this gate, rerun the "
+            "canonical O_H certificate gate, source-Higgs row builder, Gram-purity "
+            "postprocessor, scalar-LSZ gates, full assembly gate, retained-route "
+            "gate, and completion audit."
+        )
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed_parents, f"proposal_allowed={proposal_allowed_parents}")
@@ -299,7 +344,15 @@ def main() -> int:
     report("z3-h2-support-not-physical-transfer", z3_h2_support_not_transfer, statuses["z3_positive_cone_support"])
     report("kappa-contract-requires-cross-overlap", kappa_contract_is_overlap_only, statuses["source_higgs_overlap_kappa_contract"])
     report("source-higgs-cross-rows-absent", source_higgs_rows_absent, statuses["source_higgs_builder"])
-    report("future-candidate-certificate-absent", current_candidate_absent, FUTURE_FILES["candidate_same_surface_multiplicity_one_certificate"])
+    report(
+        "candidate-certificate-currently-not-accepted",
+        candidate_currently_not_accepted,
+        (
+            "absent"
+            if not candidate_certificate_present
+            else candidate_certificate.get("actual_current_surface_status", "")
+        ),
+    )
     report("contract-records-all-open-positive-obligations", len(contract_missing_now) == 5, f"missing_now={contract_missing_now}")
     report("two-singlet-counterfamily-rejected", counterfamily_rejected, "current two-singlet completion fails multiplicity-one")
     report("source-only-data-fixed-in-counterfamily", source_only_fixed, "source-only rows do not distinguish candidate O_H angle")
@@ -321,15 +374,20 @@ def main() -> int:
         "admitted_observation_status": None,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
-            "This gate defines the positive artifact contract but no candidate "
-            "certificate is present.  The current two-singlet neutral completion "
-            "keeps source-only data fixed while changing the source-to-Higgs "
-            "overlap, so it cannot certify canonical O_H or kappa_s."
+            "This gate defines the positive artifact contract.  The current "
+            "candidate is not accepted: the two-singlet neutral completion keeps "
+            "source-only data fixed while changing the source-to-Higgs overlap, "
+            "so it cannot certify canonical O_H or kappa_s."
         ),
         "bare_retained_allowed": False,
         "audit_required_before_effective_retained": True,
         "candidate_accepted": candidate_accepted,
-        "candidate_certificate_present": not current_candidate_absent,
+        "candidate_certificate_present": candidate_certificate_present,
+        "candidate_certificate_status": candidate_certificate.get(
+            "actual_current_surface_status"
+        )
+        if candidate_certificate_present
+        else None,
         "parent_certificates": PARENTS,
         "parent_statuses": statuses,
         "future_file_presence": future_present,
@@ -344,15 +402,7 @@ def main() -> int:
             "does not set kappa_s, c2, or Z_match to one",
             "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, or PSLQ/value recognition as authority",
         ],
-        "exact_next_action": (
-            "Produce the actual candidate file "
-            f"{FUTURE_FILES['candidate_same_surface_multiplicity_one_certificate']} "
-            "with a same-surface representation/action and a multiplicity-one or "
-            "primitive-generator proof.  If it passes this gate, rerun the "
-            "canonical O_H certificate gate, source-Higgs row builder, Gram-purity "
-            "postprocessor, scalar-LSZ gates, full assembly gate, retained-route "
-            "gate, and completion audit."
-        ),
+        "exact_next_action": exact_next_action,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

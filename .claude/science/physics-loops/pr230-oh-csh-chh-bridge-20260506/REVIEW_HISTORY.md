@@ -443,3 +443,20 @@ Local verification completed:
   assumption/import stress PASS=77 FAIL=0, full assembly PASS=136 FAIL=0,
   campaign status PASS=323 FAIL=0, retained route PASS=290 FAIL=0, and
   positive-closure completion audit PASS=45 FAIL=0.
+- same-surface neutral multiplicity-one candidate attempt packaged:
+  `frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py`
+  PASS=15 FAIL=0.  The target candidate output path is now present but
+  rejected with `candidate_accepted=false`: the current two-singlet neutral
+  block leaves degree-one invariant dimension 2, commutant dimension 4,
+  no physical primitive/off-diagonal transfer, no canonical LSZ/FV/IR metric,
+  no source-Higgs identity, no measured `C_spH/C_HH` pole-overlap rows, and no
+  orthogonal-neutral top-coupling exclusion;
+- same-surface neutral multiplicity-one gate refreshed after the candidate
+  attempt: PASS=17 FAIL=0 with `candidate_certificate_present=true`,
+  `candidate_accepted=false`, and `proposal_allowed=false`;
+- clean source-Higgs outside-math route selector refreshed to treat the
+  candidate file as present-but-rejected: PASS=20 FAIL=0;
+- aggregate gates after the candidate-attempt block:
+  assumption/import stress PASS=78 FAIL=0, full assembly PASS=137 FAIL=0,
+  campaign status PASS=324 FAIL=0, retained route PASS=291 FAIL=0, and
+  positive-closure completion audit PASS=46 FAIL=0.

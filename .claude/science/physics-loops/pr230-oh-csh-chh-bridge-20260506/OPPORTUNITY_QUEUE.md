@@ -10,15 +10,15 @@ same-surface canonical `O_H`, production `C_ss/C_spH/C_HH` pole rows,
 O_sp-Higgs Gram purity, and scalar-LSZ/FV/IR authority.  FMS/lattice and
 outside-math tools are route engines only until they emit those artifacts.
 
-Immediate intake target.  Produce
+Immediate intake target.  The target candidate path
 `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`
-with PR230 same-surface `Cl(3)/Z3` neutral representation/action data,
-top-coupled neutral-sector coordinates, a multiplicity-one or primitive/
-irreducible generator proof, canonical metric/LSZ normalization, and either an
-`O_sp = O_H` identity or measured `C_spH/C_HH` pole-overlap rows.  The intake
-gate now rejects the current two-singlet neutral completion, so more
-source-only rows, method names, Z3 cone support, or finite endpoint Schur
-diagnostics cannot substitute for that candidate.
+is now populated but rejected on the current surface.  Retire at least one
+failed obligation with a same-surface artifact: a physical primitive/
+off-diagonal neutral transfer, a selection rule excluding the orthogonal
+neutral top coupling, canonical scalar LSZ metric/FV/IR normalization, or
+measured `C_spH/C_HH` pole-overlap rows.  More source-only rows, method names,
+Z3 cone support, or finite endpoint Schur diagnostics cannot substitute for
+one of those obligations.
 
 1. Action-first same-source EW/Higgs action plus gauge-invariant composite
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T01:00:48.450630+00:00",
+  "generated_at": "2026-05-07T01:17:31.697729+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17136,6 +17136,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py"
+    },
+    "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py"
     },
     "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06": {
       "assert_count": 1,
@@ -35589,6 +35601,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_same_surface_z3_taste_triplet_artifact.py": {
       "assert_count": 1,
       "claims": [
@@ -41206,11 +41233,11 @@
       "A": 9,
       "B": 237,
       "C": 521,
-      "D": 309,
+      "D": 310,
       "none": 404
     },
-    "runners_classified": 1480,
-    "runners_with_C": 792,
-    "runners_with_D": 570
+    "runners_classified": 1481,
+    "runners_with_C": 793,
+    "runners_with_D": 571
   }
 }

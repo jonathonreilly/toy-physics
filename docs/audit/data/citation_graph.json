@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T01:00:45.563447+00:00",
+  "generated_at": "2026-05-07T01:17:29.046299+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41993,7 +41993,7 @@
       "current_status": "support",
       "current_status_raw": "exact support / clean source-Higgs outside-math route selector;",
       "deps": [],
-      "note_hash": "91525e0ae8ad0abc965fa1bb771f8c5a7cf91d487e9da2837711cee71ebc8f06",
+      "note_hash": "a159d6b559b1fae10b3d7463d45e4db4260da8e2f602027c73d28c2215687013",
       "path": "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py",
       "title": "PR230 Clean Source-Higgs Math-Tool Route Selector"
@@ -42658,12 +42658,22 @@
       "runner_path": "scripts/frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py",
       "title": "YT PR230 Same-Source EW/Higgs Action Ansatz Gate Note"
     },
+    "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07": {
+      "claim_id": "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / candidate attempt rejected on the current",
+      "deps": [],
+      "note_hash": "2fe12a04ac61dbc56cbca731ddf503f4cc70db3a81ae85164f298d5478b7c7bf",
+      "path": "docs/YT_PR230_SAME_SURFACE_NEUTRAL_MULTIPLICITY_ONE_CANDIDATE_ATTEMPT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py",
+      "title": "PR230 Same-Surface Neutral Multiplicity-One Candidate Attempt"
+    },
     "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07",
       "current_status": "support",
       "current_status_raw": "exact support / same-surface neutral multiplicity-one artifact",
       "deps": [],
-      "note_hash": "df8430da4a423cda828c74e94ea099d2246bb11a5580141fba0d4be2183efd91",
+      "note_hash": "ba992ebb604f688441023124a5ae64e15655f0b1e57bafd50b9af278c1d57b08",
       "path": "docs/YT_PR230_SAME_SURFACE_NEUTRAL_MULTIPLICITY_ONE_GATE_NOTE_2026-05-07.md",
       "runner_path": null,
       "title": "PR230 Same-Surface Neutral Multiplicity-One Gate"
@@ -45722,6 +45732,7 @@
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
     "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06",
     "yt_pr230_same_source_ew_higgs_action_ansatz_gate_note_2026-05-06",
+    "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07",
     "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07",
     "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
@@ -45873,17 +45884,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1111,
-    "node_count": 2064,
-    "root_count": 1577,
-    "runners_with_path": 1559,
+    "leaf_count": 1112,
+    "node_count": 2065,
+    "root_count": 1578,
+    "runners_with_path": 1560,
     "status_counts": {
       "bounded": 565,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 447,
-      "unknown": 576
+      "unknown": 577
     }
   }
 }

@@ -33,17 +33,23 @@ A future candidate must provide all of the following on the PR230 same surface:
 
 ## Current Surface Result
 
-The current PR230 surface fails this intake gate.  It admits a two-singlet
-neutral completion with basis
+The current PR230 surface fails this intake gate.  The candidate path now has
+an explicit rejected certificate:
+
+```text
+outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json
+```
+
+That certificate admits a two-singlet neutral completion with basis
 
 ```text
 source_singlet, orthogonal_neutral_singlet
 ```
 
-and trivial current action on both singlets.  The source-only observables remain
-fixed while a candidate canonical-Higgs vector rotates through the orthogonal
-neutral slot.  Therefore the source-to-candidate overlap varies, but the
-current source-only data do not distinguish the candidate.
+and trivial current action on both singlets.  The source-only observables
+remain fixed while a candidate canonical-Higgs vector rotates through the
+orthogonal neutral slot.  Therefore the source-to-candidate overlap varies,
+but the current source-only data do not distinguish the candidate.
 
 That is exactly the scalar-source reparametrization/orthogonal-neutral blocker
 in executable form.
@@ -58,6 +64,9 @@ rows as source-Higgs overlap evidence.
 ## Verification
 
 ```bash
+python3 scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+
 python3 scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_gate.py
 # SUMMARY: PASS=17 FAIL=0
 
@@ -67,14 +76,11 @@ python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
 
 ## Exact Next Action
 
-Produce the actual candidate file
-
-```text
-outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json
-```
-
-with a same-surface representation/action and a multiplicity-one or
-primitive-generator proof.  If that candidate passes this gate, rerun the
+Retire at least one failed obligation with a same-surface artifact: derive a
+physical primitive/off-diagonal neutral transfer, derive a selection rule
+excluding the orthogonal neutral top coupling, supply canonical scalar
+LSZ metric/FV/IR normalization, or measure `C_spH/C_HH` pole-overlap rows.
+After such an artifact lands, rerun the candidate attempt, this gate, the
 canonical `O_H` certificate gate, source-Higgs row builder, Gram-purity
 postprocessor, scalar-LSZ gates, full assembly gate, retained-route gate, and
 completion audit.

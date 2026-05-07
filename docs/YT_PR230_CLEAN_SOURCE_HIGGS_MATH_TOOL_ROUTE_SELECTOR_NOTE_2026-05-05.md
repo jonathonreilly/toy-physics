@@ -5,8 +5,8 @@ positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
 **Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract,
-chunks001-018/two-source finite-Schur support, and the same-surface neutral
-multiplicity-one intake gate landed
+chunks001-018/two-source finite-Schur support, the same-surface neutral
+multiplicity-one intake gate, and the rejected candidate attempt landed
 
 ## Purpose
 
@@ -31,6 +31,10 @@ The refresh consumes the current genuine support without promoting it:
 - the same-surface neutral multiplicity-one intake gate now records the exact
   future positive artifact contract and rejects the current two-singlet
   completion.
+- the same-surface neutral multiplicity-one candidate path is now populated,
+  but the candidate is rejected because multiplicity-one/primitive transfer,
+  canonical LSZ metric, source-Higgs overlap rows, and the orthogonal-neutral
+  exclusion remain absent.
 
 ## Ranking
 
@@ -90,7 +94,9 @@ Forbidden uses:
 No closure is claimed.  The current surface still lacks:
 
 - `outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json`;
-- `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`;
+- an accepted same-surface neutral multiplicity-one certificate; the file
+  `outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json`
+  exists only as a rejected candidate attempt;
 - `outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json`;
 - neutral irreducibility or primitive-cone certificates;
 - Schur kernel rows;
@@ -99,10 +105,13 @@ No closure is claimed.  The current surface still lacks:
 The selected clean next action is:
 
 ```text
-use O_sp as the normalized source side, derive a same-surface canonical O_H
-identity/normalization certificate by first satisfying the same-surface neutral
-multiplicity-one gate, then produce C_ss/C_spH/C_HH rows and run O_sp-Higgs
-Gram purity plus scalar-LSZ aggregate gates.
+use O_sp as the normalized source side, retire one failed same-surface neutral
+multiplicity-one candidate obligation by deriving a physical primitive/
+off-diagonal transfer, deriving an orthogonal-neutral exclusion selection rule,
+supplying canonical scalar LSZ metric/FV/IR normalization, or measuring
+C_spH/C_HH pole-overlap rows; then rerun the candidate/gate stack before
+producing C_ss/C_spH/C_HH rows and O_sp-Higgs Gram-purity plus scalar-LSZ
+aggregate gates.
 ```
 
 ## Verification

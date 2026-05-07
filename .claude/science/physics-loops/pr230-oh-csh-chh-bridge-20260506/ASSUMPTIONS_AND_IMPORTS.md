@@ -219,6 +219,11 @@ Open imports after this block:
 - Source-Higgs overlap/kappa formula rows are not proof selectors until a
   same-surface certified `O_H/C_sH/C_HH` pole-row packet exists and passes
   Gram/FV/IR/model-class and retained-route gates.
+- Same-surface neutral multiplicity-one candidate file presence is not a proof
+  selector; the current candidate is rejected until a same-surface physical
+  primitive/off-diagonal transfer, an orthogonal-neutral top-coupling
+  exclusion, canonical scalar LSZ/FV/IR metric authority, or measured
+  `C_spH/C_HH` pole-overlap rows retire the failed obligations.
 - W/Z same-source response route completion is a current-surface boundary, not
   a global theorem against the future physical-response bypass.
 - W/Z same-source response is not proof selectors until same-source EW action, W/Z response rows, matched covariance, strict g2, and delta_perp control exist.

@@ -1339,8 +1339,7 @@ def main() -> int:
         "same-surface neutral multiplicity-one artifact intake gate"
         in str(same_surface_neutral_gate.get("actual_current_surface_status"))
         and same_surface_neutral_gate.get("proposal_allowed") is False
-        and same_surface_neutral_gate.get("candidate_accepted") is False
-        and same_surface_neutral_gate.get("candidate_certificate_present") is False,
+        and same_surface_neutral_gate.get("candidate_accepted") is False,
         same_surface_neutral_gate.get("actual_current_surface_status"),
     )
 

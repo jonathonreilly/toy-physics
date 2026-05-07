@@ -4261,3 +4261,21 @@ python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
 The gate writes no canonical `O_H` certificate, no source-Higgs pole-row
 packet, and no `kappa_s=1` authority.  It only defines the future candidate
 contract and rejects current source-only two-singlet shortcuts.
+
+Same-surface neutral multiplicity-one candidate attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / target candidate
+certificate present but rejected
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+The target candidate certificate is a no-go artifact on the current surface,
+not proof authority.  It lacks a physical primitive/off-diagonal transfer,
+orthogonal-neutral top-coupling exclusion, canonical LSZ/FV/IR metric, and
+measured `C_spH/C_HH` pole-overlap rows.  No retained or proposed-retained
+wording is authorized.

@@ -1680,3 +1680,9 @@ checkpoint_2026_05_07_same_surface_neutral_multiplicity_one_gate:
   aggregate_refresh: "selector 20/0; assumption stress 78/0; campaign 324/0; full assembly 137/0; retained route 291/0; completion audit 46/0"
   current_active_chunks: "two-source taste-radial chunks019-020 active under two-worker cap; active workers are non-evidence"
   next_exact_action: "Produce outputs/yt_pr230_same_surface_neutral_multiplicity_one_certificate_2026-05-07.json with same-surface Cl(3)/Z3 neutral representation/action data, multiplicity-one or primitive-generator proof, canonical metric/LSZ normalization, and O_sp=O_H identity or C_spH/C_HH pole-overlap rows."
+checkpoint_2026_05_07_same_surface_neutral_multiplicity_one_candidate_attempt:
+  actual_current_surface_status: "exact negative boundary / target candidate certificate present but rejected; proposal_allowed=false"
+  runner_pass_fail: "15/0"
+  aggregate_refresh: "gate 17/0 with candidate_certificate_present=true and candidate_accepted=false; selector 20/0; assumption stress 78/0; campaign 324/0; full assembly 137/0; retained route 291/0; completion audit 46/0"
+  current_active_chunks: "two-source taste-radial chunks021-022 active under two-worker cap; active workers are non-evidence; chunks019-020 raw outputs exist but completed-mode checkpoint packaging is pending"
+  next_exact_action: "Retire one failed candidate obligation with a same-surface physical primitive/off-diagonal transfer, an orthogonal-neutral top-coupling exclusion, canonical scalar LSZ/FV/IR metric authority, or measured C_spH/C_HH pole-overlap rows; then rerun the candidate/gate stack."
