@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 121 |
-| **retained_bounded** | 227 |
+| **retained_bounded** | 228 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 799 |
+| unaudited | 798 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 379 |
+| `audited_clean` | 380 |
 | `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 848 |
+| `unaudited` | 847 |
 
 | claim_type | count |
 |---|---:|
@@ -294,6 +294,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_inertial_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `matter_self_focusing_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `minimal_source_driven_field_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `moving_source_cross_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
@@ -8993,6 +8994,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the table and safe read are consistent with the cited frozen log, but there is no primary runner registered for this note. Why this blocks: the audit lane cannot verify that the localization-family sweep still reproduces the reported score/capture tradeoff or classify its load-bearing checks from a current run. Repair target: restore or register the sweep runner that produced the log and emit classified PASS lines for top-N baseline, degenerate point-source exclusions, non-degenerate localized rows, and the broad-control comparison. Claim boundary until fixed: this is a bounded frozen-log summary, not a fully auditable current localization result.
 - **open / conditional deps cited:**
   - `logs/2026-04-04-mesoscopic-surrogate-localization-family-sweep.txt`
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_threshold_2d_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the implemented 2D ordered-lattice harness and topN=(1,2,3,4,5,6,7,8,9,10,12,16,20,25,32,40,49,64,81), every scanned support meets rel_err<=0.01 and carry>=0.99, so no collapse is observed in that finite sweep.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-mesoscopic-surrogate-threshold-2d-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Every scanned `topN` value stayed stable.  _(class `C`)_
+- **chain closes:** True — The note confines the claim to a fixed finite support sweep with explicit stability thresholds. The runner recomputes the lattice rows, two-stage sourced-response ratios, support carry, and stable set, and live/cached output match the reported max_rel_err=0.0066069 and min_carry=1.
+- **rationale:** The scoped bounded claim closes as a finite-compute result: the runner constructs the stated 2D harness and derives the reported sweep values rather than importing a target threshold or external comparator. The clean verdict is limited to the implemented parameter set, support list, and stability rule. Residual risk is implementation-model dependence on the helper lattice generator and chosen thresholds, not a closure gap for the finite no-collapse claim.
 - **auditor confidence:** high
 
 ### `minimal_absorbing_horizon_probe_note`
