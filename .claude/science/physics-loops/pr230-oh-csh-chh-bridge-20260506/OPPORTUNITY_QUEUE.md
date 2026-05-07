@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 W/Z response-ratio contract refresh: the physical-response bypass
+now has an exact executable acceptance contract in
+`outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json`.
+The contract is useful because it names the minimal row packet and covariance
+schema that would make the W/Z route testable, but it does not move the route
+above action-first source-Higgs closure: the accepted same-source EW/Higgs
+action, production W/Z/top response rows, matched covariance, strict
+non-observed `g2`, and no-independent-top-source action authority are still
+absent on the current surface.
+
 2026-05-07 refresh: the clean source-Higgs outside-math route selector now
 consumes the latest genuine support surface: `O_sp` is the real source-side
 artifact; the radial-spurion contract is future-action support only;

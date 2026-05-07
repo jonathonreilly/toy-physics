@@ -122,6 +122,7 @@ PARENTS = {
     "pr230_same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "pr230_radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
     "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
@@ -1151,6 +1152,34 @@ def main() -> int:
         and certs["pr230_radial_spurion_action_contract"].get("proposal_allowed")
         is False
     )
+    wz_response_ratio_identifiability_contract_support_not_closure = (
+        "WZ response-ratio identifiability contract"
+        in statuses["pr230_wz_response_ratio_identifiability_contract"]
+        and certs["pr230_wz_response_ratio_identifiability_contract"].get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and certs["pr230_wz_response_ratio_identifiability_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certs["pr230_wz_response_ratio_identifiability_contract"].get(
+            "future_response_ratio_row_packet_present"
+        )
+        is False
+        and certs["pr230_wz_response_ratio_identifiability_contract"].get(
+            "strict_g2_authority_present"
+        )
+        is False
+        and certs["pr230_wz_response_ratio_identifiability_contract"].get(
+            "matched_covariance_authority_present"
+        )
+        is False
+        and certs["pr230_wz_response_ratio_identifiability_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in statuses["pr230_post_fms_source_overlap_necessity_gate"]
@@ -2064,6 +2093,11 @@ def main() -> int:
         "radial-spurion-action-contract-support-not-closure",
         radial_spurion_action_contract_support_not_closure,
         statuses["pr230_radial_spurion_action_contract"],
+    )
+    report(
+        "wz-response-ratio-identifiability-contract-support-not-closure",
+        wz_response_ratio_identifiability_contract_support_not_closure,
+        statuses["pr230_wz_response_ratio_identifiability_contract"],
     )
     report(
         "post-fms-source-overlap-necessity-blocks-current-inference",
@@ -3055,6 +3089,7 @@ def main() -> int:
         "same_source_ew_action_adoption_attempt_blocks_shortcut": same_source_ew_action_adoption_attempt_blocks_shortcut,
         "radial_spurion_sector_overlap_support_not_closure": radial_spurion_sector_overlap_support_not_closure,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
+        "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

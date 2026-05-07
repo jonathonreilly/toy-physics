@@ -189,6 +189,7 @@ def main() -> int:
         "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
         "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
         "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+        "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1905,6 +1906,36 @@ def main() -> int:
         is False
         and certificates["pr230_radial_spurion_action_contract"].get(
             "accepted_action_certificate_written"
+        )
+        is False
+    )
+    wz_response_ratio_identifiability_contract_support_not_closure = (
+        "WZ response-ratio identifiability contract"
+        in certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "future_response_ratio_row_packet_present"
+        )
+        is False
+        and certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "strict_g2_authority_present"
+        )
+        is False
+        and certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "matched_covariance_authority_present"
+        )
+        is False
+        and certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "proposal_allowed"
         )
         is False
     )
@@ -4557,6 +4588,13 @@ def main() -> int:
             "actual_current_surface_status", ""
         ),
     )
+    report(
+        "wz-response-ratio-identifiability-contract-support-not-closure",
+        wz_response_ratio_identifiability_contract_support_not_closure,
+        certificates["pr230_wz_response_ratio_identifiability_contract"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
     for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items():
         cert_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
         report(
@@ -5986,6 +6024,7 @@ def main() -> int:
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
+        "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "two_source_taste_radial_chunk_checkpoint_not_closure": {
             f"chunk{idx:03d}": not_closure
             for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items()

@@ -1,5 +1,17 @@
 # Review History
 
+2026-05-07 W/Z response-ratio identifiability contract:
+
+- `frontier_yt_pr230_wz_response_ratio_identifiability_contract.py`:
+  PASS=18 FAIL=0.  It proves the top/W and top/Z `dv/ds` cancellation under
+  the future single-radial-spurion/no-independent-top-source contract, records
+  the matched-covariance delta-method schema, and blocks the additive-top and
+  unknown-`g2` shortcuts;
+- aggregate gates after wiring the new certificate: assumption/import stress
+  PASS=85 FAIL=0, campaign PASS=331 FAIL=0, full assembly PASS=144 FAIL=0,
+  retained route PASS=298 FAIL=0, and completion audit PASS=53 FAIL=0, all
+  with `proposal_allowed=false`.
+
 2026-05-07 Schur-complement Stieltjes repair gate:
 
 - `frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py`:

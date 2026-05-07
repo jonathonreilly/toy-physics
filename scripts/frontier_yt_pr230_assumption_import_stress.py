@@ -227,6 +227,9 @@ def main() -> int:
         "radial_spurion_action_contract": load(
             "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json"
         ),
+        "wz_response_ratio_identifiability_contract": load(
+            "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -1386,6 +1389,31 @@ def main() -> int:
         )
         is False,
         radial_spurion_action_contract.get("actual_current_surface_status"),
+    )
+    wz_ratio_contract = certificates["wz_response_ratio_identifiability_contract"]
+    report(
+        "wz-response-ratio-identifiability-contract-support-not-closure",
+        "WZ response-ratio identifiability contract"
+        in str(wz_ratio_contract.get("actual_current_surface_status"))
+        and wz_ratio_contract.get("proposal_allowed") is False
+        and wz_ratio_contract.get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and wz_ratio_contract.get("current_surface_contract_satisfied") is False
+        and wz_ratio_contract.get("future_response_ratio_row_packet_present")
+        is False
+        and wz_ratio_contract.get("strict_g2_authority_present") is False
+        and wz_ratio_contract.get("matched_covariance_authority_present") is False
+        and wz_ratio_contract.get("forbidden_firewall", {}).get(
+            "used_observed_wz_masses_or_g2"
+        )
+        is False
+        and wz_ratio_contract.get("forbidden_firewall", {}).get(
+            "assumed_top_wz_covariance_or_factorization"
+        )
+        is False,
+        wz_ratio_contract.get("actual_current_surface_status"),
     )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(

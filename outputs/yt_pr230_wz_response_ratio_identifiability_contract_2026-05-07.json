@@ -1,0 +1,203 @@
+{
+  "acceptance_schema": {
+    "accepted_readouts": [
+      "y_t = (g2/sqrt(2)) * (dE_top/ds)/(dM_W/ds)",
+      "y_t = (sqrt(g2^2+gY^2)/sqrt(2)) * (dE_top/ds)/(dM_Z/ds)"
+    ],
+    "future_row_packet": "outputs/yt_pr230_wz_response_ratio_rows_2026-05-07.json",
+    "required_action_contract": [
+      "accepted same-source EW/Higgs action certificate",
+      "single radial branch v(s)",
+      "no independent additive s * tbar t top source"
+    ],
+    "required_authority": [
+      "strict non-observed g2 or sqrt(g2^2+gY^2) certificate",
+      "W/Z mass-fit path certificate",
+      "sector-overlap identity or radial-spurion action contract satisfaction",
+      "retained-route/assembly gates rerun before proposal wording"
+    ],
+    "required_rows": [
+      "production dE_top/ds row with uncertainty",
+      "production dM_W/ds or dM_Z/ds row with uncertainty",
+      "matched top/W or top/Z covariance from the same ensemble/source shifts",
+      "nonzero W/Z slope with fit-window and bootstrap/jackknife metadata"
+    ],
+    "required_source": "one same scalar source s for top, W, and Z responses"
+  },
+  "actual_current_surface_status": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
+  "additive_top_counterfamily": [
+    {
+      "candidate_y_t": 0.55,
+      "g2": 0.64,
+      "implied_dv_ds_from_W": 1.28125,
+      "measured_dM_W_ds": 0.41,
+      "measured_dm_top_ds": 0.88,
+      "required_independent_additive_top_slope": 0.38171069013260484
+    },
+    {
+      "candidate_y_t": 0.95,
+      "g2": 0.64,
+      "implied_dv_ds_from_W": 1.28125,
+      "measured_dM_W_ds": 0.41,
+      "measured_dm_top_ds": 0.88,
+      "required_independent_additive_top_slope": 0.01931846477449939
+    },
+    {
+      "candidate_y_t": 1.35,
+      "g2": 0.64,
+      "implied_dv_ds_from_W": 1.28125,
+      "measured_dM_W_ds": 0.41,
+      "measured_dm_top_ds": 0.88,
+      "required_independent_additive_top_slope": -0.3430737605836064
+    }
+  ],
+  "additive_top_counterfamily_blocks_shortcut": true,
+  "bare_retained_allowed": false,
+  "covariance_delta_method_contract_valid": true,
+  "covariance_delta_method_witness": {
+    "covariance_inputs": {
+      "cov_top_g2": 0.0,
+      "cov_top_w": 3.5e-05,
+      "cov_w_g2": 0.0,
+      "var_g2": 4e-05,
+      "var_top_slope": 0.00016,
+      "var_w_slope": 9e-05
+    },
+    "g2": 0.62,
+    "gradient": {
+      "d_y_d_g2": 1.4964352811157167,
+      "d_y_d_top_slope": 1.0195493124085102,
+      "d_y_d_w_slope": -2.157650870445917
+    },
+    "observable": "y_t = g2 * (dE_top/ds) / (sqrt(2) * dM_W/ds)",
+    "sigma_y_t": 0.022823072161335566,
+    "top_slope": 0.91,
+    "top_w_covariance_psd": true,
+    "variance_y_t": 0.0005208926228815305,
+    "w_slope": 0.43
+  },
+  "current_surface_contract_satisfied": false,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "assumed_top_wz_covariance_or_factorization": false,
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_delta_perp_equal_zero_by_fiat": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_observed_wz_masses_or_g2": false,
+    "used_reduced_cold_pilots_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "future_artifact_presence": {
+    "accepted_same_source_ew_action": false,
+    "same_source_top_response_certificate": false,
+    "strict_electroweak_g2_certificate": false,
+    "top_wz_matched_covariance_certificate": false,
+    "wz_mass_fit_response_rows": false,
+    "wz_response_ratio_row_packet": false
+  },
+  "future_response_ratio_row_packet_present": false,
+  "g2_unknown_counterfamily": [
+    {
+      "candidate_g2": 0.48,
+      "candidate_y_t": 0.5769991334482227,
+      "fixed_top_over_w_response_ratio": 1.7
+    },
+    {
+      "candidate_g2": 0.65,
+      "candidate_y_t": 0.7813529932111349,
+      "fixed_top_over_w_response_ratio": 1.7
+    },
+    {
+      "candidate_g2": 0.92,
+      "candidate_y_t": 1.1059150057757603,
+      "fixed_top_over_w_response_ratio": 1.7
+    }
+  ],
+  "matched_covariance_authority_present": false,
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+    "top_wz_covariance_import_audit": "outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "same_source_top_response_builder": "open / same-source top-response identity or covariance inputs absent",
+    "top_wz_covariance_import_audit": "exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_response_route_completion": "exact negative boundary / WZ same-source response route not complete on current PR230 surface"
+  },
+  "pass_count": 18,
+  "production_wz_response_rows_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The algebraic response-ratio contract is exact support only.  The current surface lacks the required production top/W/Z rows, matched covariance certificate, strict non-observed g2 certificate, and accepted same-source radial-spurion action.",
+  "radial_spurion_action_contract_support_present": true,
+  "ratio_identity_exact": true,
+  "response_ratio_witnesses": [
+    {
+      "dM_W_ds": 0.0765,
+      "dM_Z_ds": 0.08163638894512666,
+      "dm_top_ds": 0.15273506473629425,
+      "dv_ds": 0.3,
+      "input_g2": 0.51,
+      "input_gY": 0.19,
+      "input_y_t": 0.72,
+      "yt_from_top_W": 0.7199999999999999,
+      "yt_from_top_Z": 0.7199999999999999
+    },
+    {
+      "dM_W_ds": 0.36300000000000004,
+      "dM_Z_ds": 0.3922005226921556,
+      "dm_top_ds": 0.8011519830843584,
+      "dv_ds": 1.1,
+      "input_g2": 0.66,
+      "input_gY": 0.27,
+      "input_y_t": 1.03,
+      "yt_from_top_W": 1.03,
+      "yt_from_top_Z": 1.03
+    },
+    {
+      "dM_W_ds": 0.9959999999999999,
+      "dM_Z_ds": 1.0809329303893003,
+      "dm_top_ds": 2.2231437200505053,
+      "dv_ds": 2.4,
+      "input_g2": 0.83,
+      "input_gY": 0.35,
+      "input_y_t": 1.31,
+      "yt_from_top_W": 1.3099999999999998,
+      "yt_from_top_Z": 1.3099999999999998
+    }
+  ],
+  "same_source_ew_action_accepted": false,
+  "same_source_top_response_present": false,
+  "strict_g2_authority_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat the current additive FH/LSZ top mass source as a radial spurion",
+    "does not use W/Z smoke rows as production mass-response rows",
+    "does not infer covariance from marginal top and W/Z rows",
+    "does not use observed g2, observed W/Z masses, or observed y_t",
+    "does not set kappa_s, c2, Z_match, g2, or delta_perp to one or zero by fiat"
+  ],
+  "unknown_g2_counterfamily_blocks_absolute_yukawa": true,
+  "wz_response_ratio_identifiability_contract_passed": true
+}

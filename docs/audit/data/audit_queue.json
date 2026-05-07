@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 690,
+    "leaf": 691,
     "medium": 301
   },
-  "generated_at": "2026-05-07T02:42:52.935175+00:00",
+  "generated_at": "2026-05-07T02:54:30.623367+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21874,6 +21874,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_WZ_RESPONSE_RATIO_IDENTIFIABILITY_CONTRACT_NOTE_2026-05-07.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_wz_response_ratio_identifiability_contract.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_wz_response_route_completion_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25299,6 +25316,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 837,
-  "total_pending": 1228
+  "ready_count": 838,
+  "total_pending": 1229
 }

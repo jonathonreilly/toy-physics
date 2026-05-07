@@ -77,6 +77,7 @@
     "two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_smoke_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
@@ -128,6 +129,7 @@
     "two_source_taste_radial_row_production_manifest": "bounded-support / two-source taste-radial C_sx/C_xx production manifest; rows absent",
     "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_response_ratio_identifiability_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "z3_generation_action_lift_attempt": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
@@ -135,7 +137,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 52,
+  "pass_count": 53,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -176,6 +178,7 @@
     "two_source_taste_radial_row_contract_not_closure": true,
     "two_source_taste_radial_row_manifest_not_closure": true,
     "two_source_taste_radial_support_not_closure": true,
+    "wz_response_ratio_identifiability_contract_not_closure": true,
     "z3_generation_action_lift_not_derived": true,
     "z3_lazy_transfer_promotion_not_derived": true,
     "z3_triplet_conditional_primitive_not_closure": true,

@@ -1,5 +1,21 @@
 # Claim Status Certificate
 
+2026-05-07 W/Z response-ratio identifiability update: the new certificate
+`outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json`
+passes with `PASS=18 FAIL=0` as exact support.  It packages the clean
+physical-response readout:
+`y_t=(g2/sqrt(2))*(dE_top/ds)/(dM_W/ds)` and the analogous top/Z formula,
+plus the matched covariance delta-method contract.  It also records two
+counterfamilies: an independent additive top source leaves fixed measured
+top/W slopes compatible with different `y_t`, and an unknown `g2` leaves the
+absolute Yukawa undetermined.  Current status remains open because the
+accepted same-source EW/Higgs action, production W/Z/top response rows,
+matched covariance certificate, strict non-observed `g2` certificate, and
+future response-ratio row packet are absent.  Aggregate refresh: W/Z contract
+PASS=18, assumption PASS=85, campaign PASS=331, assembly PASS=144,
+retained-route PASS=298, completion audit PASS=53, all FAIL=0 and
+`proposal_allowed=false`.
+
 2026-05-07 Schur-complement Stieltjes repair update: the new certificate
 `outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json`
 passes with `PASS=22 FAIL=0` as bounded support.  It tests the finite

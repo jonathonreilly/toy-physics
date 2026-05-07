@@ -707,6 +707,9 @@ def main() -> int:
         "pr230_radial_spurion_action_contract": load(
             "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json"
         ),
+        "pr230_wz_response_ratio_identifiability_contract": load(
+            "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3173,6 +3176,27 @@ def main() -> int:
         is False,
         statuses["pr230_radial_spurion_action_contract"],
     )
+    wz_response_ratio_contract = certificates[
+        "pr230_wz_response_ratio_identifiability_contract"
+    ]
+    report(
+        "pr230-wz-response-ratio-identifiability-contract-support-not-closure",
+        "WZ response-ratio identifiability contract"
+        in str(statuses["pr230_wz_response_ratio_identifiability_contract"])
+        and wz_response_ratio_contract.get("proposal_allowed") is False
+        and wz_response_ratio_contract.get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and wz_response_ratio_contract.get("current_surface_contract_satisfied")
+        is False
+        and wz_response_ratio_contract.get("future_response_ratio_row_packet_present")
+        is False
+        and wz_response_ratio_contract.get("strict_g2_authority_present") is False
+        and wz_response_ratio_contract.get("matched_covariance_authority_present")
+        is False,
+        statuses["pr230_wz_response_ratio_identifiability_contract"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -5228,6 +5252,20 @@ def main() -> int:
         and radial_spurion_action_contract.get("current_surface_contract_satisfied")
         is False
         and radial_spurion_action_contract.get("accepted_action_certificate_written")
+        is False
+    )
+    result["wz_response_ratio_identifiability_contract_support_not_closure"] = (
+        wz_response_ratio_contract.get(
+            "wz_response_ratio_identifiability_contract_passed"
+        )
+        is True
+        and wz_response_ratio_contract.get("proposal_allowed") is False
+        and wz_response_ratio_contract.get("current_surface_contract_satisfied")
+        is False
+        and wz_response_ratio_contract.get("future_response_ratio_row_packet_present")
+        is False
+        and wz_response_ratio_contract.get("strict_g2_authority_present") is False
+        and wz_response_ratio_contract.get("matched_covariance_authority_present")
         is False
     )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (

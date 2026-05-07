@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T02:42:52.516061+00:00",
+  "generated_at": "2026-05-07T02:54:30.153083+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17508,6 +17508,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py"
+    },
+    "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_wz_response_ratio_identifiability_contract.py"
     },
     "yt_pr230_wz_response_route_completion_note_2026-05-06": {
       "assert_count": 1,
@@ -36138,6 +36150,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_wz_response_ratio_identifiability_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_wz_response_route_completion.py": {
       "assert_count": 1,
       "claims": [
@@ -41395,11 +41422,11 @@
       "A": 9,
       "B": 239,
       "C": 523,
-      "D": 312,
+      "D": 313,
       "none": 404
     },
-    "runners_classified": 1487,
-    "runners_with_C": 798,
-    "runners_with_D": 577
+    "runners_classified": 1488,
+    "runners_with_C": 799,
+    "runners_with_D": 578
   }
 }

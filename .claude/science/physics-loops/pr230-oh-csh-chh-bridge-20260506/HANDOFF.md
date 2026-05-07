@@ -1,5 +1,20 @@
 # Handoff
 
+2026-05-07 W/Z response-ratio identifiability checkpoint: the new runner
+`frontier_yt_pr230_wz_response_ratio_identifiability_contract.py` passes
+`PASS=18 FAIL=0` and packages the clean physical-response acceptance contract.
+It proves the top/W and top/Z response-ratio formulas under a single
+same-source radial spurion and records the matched-covariance delta-method
+schema.  It also blocks two shortcuts: with an independent additive top source
+fixed top/W slopes do not determine `y_t`, and without strict non-observed
+`g2` a fixed response ratio gives different absolute `y_t`.  Treat this as
+exact support only.  It supplies no production W/Z rows, no matched covariance
+certificate, no strict `g2`, no accepted same-source EW/Higgs action, no
+canonical `O_H`, and no retained/proposed-retained closure.  Aggregate gates
+after wiring: assumption PASS=85, campaign PASS=331, assembly PASS=144,
+retained-route PASS=298, completion audit PASS=53, all FAIL=0 and
+`proposal_allowed=false`.
+
 2026-05-07 Schur-complement Stieltjes repair checkpoint: the finite
 two-source block now has a sharper scalar-LSZ diagnostic.  The new runner
 `frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py` passes

@@ -39,6 +39,13 @@ Allowed context:
   first shell across chunks001-022, while `C_s|x=det(G)/C_xx` fails the same
   repair; this is a necessary finite-shell diagnostic only, not scalar-LSZ
   authority, not canonical `O_H`, not `kappa_s`, and not closure.
+- the 2026-05-07 W/Z response-ratio identifiability contract as exact support
+  only: the algebraic top/W and top/Z response ratios cancel `dv/ds` only
+  after an accepted single-radial-spurion same-source action exists, no
+  independent additive top source is present, production top/W/Z response rows
+  and matched covariance exist, and strict non-observed `g2` authority exists.
+  The contract is not W/Z row evidence, not `g2` authority, not
+  `delta_perp=0`, not canonical `O_H`, and not closure.
 - the exact algebra of the taste-shift operators in
   `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`;
 - the PR230 production harness source coordinate, which is the uniform additive
