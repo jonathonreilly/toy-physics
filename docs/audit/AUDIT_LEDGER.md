@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 228 |
+| **retained_bounded** | 229 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 797 |
+| unaudited | 796 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 381 |
+| `audited_clean` | 382 |
 | `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 846 |
+| `unaudited` | 845 |
 
 | claim_type | count |
 |---|---:|
@@ -297,6 +297,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `minimal_source_driven_field_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_chokepoint_boundary_fit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `moving_source_cross_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -9095,6 +9096,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The exact 2D mirror family is Born-clean and retains a strong bounded joint coexistence pocket, strongest at N = 60.  _(class `C`)_
 - **chain closes:** False — The runner performs a real finite computation rather than printing constants, and its main MI/decoherence/gravity rows support the bounded-pocket read. The restricted packet does not provide or derive the imported gen_2d_mirror and propagate_LINEAR implementation from the stated axiom, so the exact-generator and linear-propagator premise remains unclosed.
 - **rationale:** Issue: the load-bearing computation imports the exact 2D mirror generator and linear propagator from scripts/mirror_born_audit.py, but that authority or derivation is not included in the restricted packet. Why this blocks: the note’s bounded-pocket conclusion depends on those imported operators being the claimed exact linear family, not merely on the visible aggregation code. Repair target: add and audit the generator/propagator dependency or provide an independent derivation from the axiom; also refresh the stale Born table entries against the current runner stdout. Claim boundary until fixed: the visible runner supports a bounded numerical pocket conditional on the imported mirror generator and propagator being valid.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_boundary_fit_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Fixed finite-window certificate for the named mirror chokepoint card: N=40,60,80,100 pass the stated internal retention gates, N=120 is a zero-gravity wall excluded before fitting, and the quoted weak OLS fit is arithmetic over those retained rows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-mirror-chokepoint-boundary-fit-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The certificate replays the fixed dense-boundary command, verifies the pre-fit gates for mirror rows N=40,60,80,100, excludes N=120 as a zero-gravity wall, and only then fits log(1 - pur_cl) versus log(N) on the four retained rows.  _(class `C`)_
+- **chain closes:** True — The chain closes within the stated bounded scope: the certificate runs the companion generator, parses the replayed finite rows, checks the gates, and recomputes the fit from the selected rows. It imports no one-hop dependencies and makes no external comparator, mirror-family, or asymptotic-law claim.
+- **rationale:** The clean result covers only the deterministic finite-window certificate under the named command and runner definitions. I count the finite replay gate checks as C because the companion runner generates the mirror DAGs and computes Born, k=0, gravity, purity, and wall metrics rather than reading them from another note; the header, post-retention fit arithmetic, extrapolation arithmetic, and selector-firewall sequencing checks are A. Residual risk is limited to implementation fidelity and the deliberate named-card choice; the note explicitly excludes physical-comparator, family, and asymptotic claims.
 - **auditor confidence:** high
 
 ### `mirror_gravity_probe_note`
