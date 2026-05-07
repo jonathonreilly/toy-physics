@@ -1092,6 +1092,18 @@
       "dominant_class": null,
       "runner": "scripts/broken_graph_action_power_robustness.py"
     },
+    "c_iso_derived_theorem_note_2026-05-07_w3": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py"
+    },
     "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -6036,6 +6048,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_g_bare_canonical_convention_narrow.py"
     },
+    "g_bare_constraint_vs_convention_restatement_note_2026-05-07": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 19,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_g_bare_audit_residual_closure.py"
+    },
     "g_bare_constraint_vs_convention_theorem_note_2026-05-03": {
       "assert_count": 0,
       "counts": {
@@ -6083,6 +6107,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_g_bare_critical_feature_scan.py"
+    },
+    "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 19,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_g_bare_audit_residual_closure.py"
     },
     "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03": {
       "assert_count": 0,
@@ -10667,6 +10703,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_n_eff_from_three_generations.py"
+    },
+    "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py"
     },
     "native_gauge_closure_note": {
       "assert_count": 2,
@@ -15516,6 +15564,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py"
     },
+    "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_su5_embedding_from_graph_first_surface.py"
+    },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
       "counts": {
@@ -19604,6 +19664,36 @@
         "B": 0,
         "C": 2,
         "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py": {
+      "assert_count": 1,
+      "claims": [
+        "c_iso_derived_theorem_note_2026-05-07_w3"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -25562,6 +25652,22 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_g_bare_audit_residual_closure.py": {
+      "assert_count": 0,
+      "claims": [
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 19,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_g_bare_canonical_convention_narrow.py": {
@@ -32703,6 +32809,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su5_embedding_from_graph_first_surface.py": {
+      "assert_count": 1,
+      "claims": [
+        "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_substrate_to_p_a_forcing.py": {
       "assert_count": 2,
       "claims": [
@@ -39415,12 +39536,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 587,
-      "D": 212,
+      "C": 590,
+      "D": 213,
       "none": 427
     },
-    "runners_classified": 1407,
-    "runners_with_C": 698,
-    "runners_with_D": 349
+    "runners_classified": 1411,
+    "runners_with_C": 702,
+    "runners_with_D": 351
   }
 }

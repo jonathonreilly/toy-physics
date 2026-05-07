@@ -1,0 +1,180 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su5_embedding_from_graph_first_surface.py
+runner_sha256: e736838120923438d1437216658c8ff512b706e49a70ae9df0e08526ce84e71b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: theorem note structure
+----------------------------------------------------------------------------------------
+  [PASS] note contains required string: 'SU(5) Embedding Consistency from Graph-First Surface'
+  [PASS] note contains required string: 'bounded_theorem'
+  [PASS] note contains required string: 'staggered-Dirac realization derivation target'
+  [PASS] note contains required string: '5̄  ⊕  10  ⊕  1'
+  [PASS] note contains required string: 'diag(−2, −2, −2, +3, +3)'
+  [PASS] note contains required string: 'Y_GUT  =  √(3/5) · Y_min'
+  [PASS] note contains required string: 'Tr[Y_GUT²]_5̄+10'
+  [PASS] note contains required string: 'proposal_allowed: false'
+  [PASS] note contains required string: 'What this addresses'
+  [PASS] note contains required string: 'What this does NOT claim'
+  [PASS] note contains required string: 'FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02'
+  [PASS] note contains required string: 'SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02'
+  [PASS] note contains required string: 'HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25'
+  [PASS] note contains required string: 'STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24'
+  [PASS] note contains required string: "Schur's lemma"
+  [PASS] note contains required string: 'SU(5) Killing-form normalization convention'
+  [PASS] note contains required string: 'canonical up to inner automorphisms'
+
+----------------------------------------------------------------------------------------
+Part 2: LHCM doubled-convention hypercharges (input audit)
+----------------------------------------------------------------------------------------
+  [PASS] Y(Q_L)  = +1/3  (LHCM)
+  [PASS] Y(L_L)  = -1    (LHCM)
+  [PASS] Y(u_R)  = +4/3  (SM_HYPERCHARGE_UNIQUENESS y_1)
+  [PASS] Y(d_R)  = -2/3  (SM_HYPERCHARGE_UNIQUENESS y_2)
+  [PASS] Y(e_R)  = -2    (SM_HYPERCHARGE_UNIQUENESS y_3)
+  [PASS] Y(nu_R) = 0     (SM_HYPERCHARGE_UNIQUENESS y_4 + ν_R singlet)
+
+----------------------------------------------------------------------------------------
+Part 3: LH-form transcription (RH → LH conjugate)
+----------------------------------------------------------------------------------------
+  [PASS] Q_L  unchanged: (3, 2)_{Y_min=+1/6}  (states=6)
+  [PASS] L_L  unchanged: (1, 2)_{Y_min=-1/2}  (states=2)
+  [PASS] u^c_L (RH conjugate): (3̄, 1)_{Y_min=-2/3}  (y_min=-2/3 (expected -2/3))
+  [PASS] d^c_L (RH conjugate): (3̄, 1)_{Y_min=+1/3}  (y_min=1/3 (expected 1/3))
+  [PASS] e^c_L (RH conjugate): (1, 1)_{Y_min=+1}  (y_min=1 (expected 1))
+  [PASS] nu^c_L (RH conjugate): (1, 1)_{Y_min=0}  (y_min=0 (expected 0))
+  [PASS] LH-form total states per generation = 16  (states = 16)
+
+----------------------------------------------------------------------------------------
+Part 3b: derive 5 branching from T_24 eigenvalues (rather than assert)
+----------------------------------------------------------------------------------------
+  [PASS] Y_GUT² on (3, 1) block of defining 5 = 4/60 = 1/15  (got 1/15)
+  [PASS] Y_GUT² on (1, 2) block of defining 5 = 9/60 = 3/20  (got 3/20)
+  [PASS] Y_min² on (3, 1) block via Y_min² = Y_GUT² · (5/3) = 1/9  (got 1/9  (so Y_min(3,1) = ±1/3))
+  [PASS] Y_min² on (1, 2) block via Y_min² = Y_GUT² · (5/3) = 1/4  (got 1/4  (so Y_min(1,2) = ±1/2))
+  [PASS] derived 5 branching: (3, 1)_{Y_min=-1/3} ⊕ (1, 2)_{Y_min=+1/2}  (signs fixed by T_24 = (1/√60)·diag(-2,-2,-2,+3,+3))
+  [PASS] conjugate 5̄ branching: (3̄, 1)_{Y_min=+1/3} ⊕ (1, 2)_{Y_min=-1/2}  (all signs flip under conjugation)
+
+----------------------------------------------------------------------------------------
+Part 3c: derive 10 = ∧²(5) branching from antisymmetric tensor (rather than assert)
+----------------------------------------------------------------------------------------
+  [PASS] ∧²(3, 1) block has Y_min = 2 · (-1/3) = -2/3, rep = (3̄, 1)  (got -2/3)
+  [PASS] (3, 1) ⊗ (1, 2) cross block has Y_min = -1/3 + 1/2 = +1/6, rep = (3, 2)  (got 1/6)
+  [PASS] ∧²(1, 2) block has Y_min = 2 · (1/2) = +1, rep = (1, 1)  (got 1)
+  [PASS] |∧²(5)| = 3 + 6 + 1 = 10  (= C(5, 2))  (got 10)
+  [PASS] derived 10 branching: (3̄, 1)_{Y_min=-2/3} ⊕ (3, 2)_{Y_min=+1/6} ⊕ (1, 1)_{Y_min=+1}
+
+----------------------------------------------------------------------------------------
+Part 4: SU(5) 5̄ ⊕ 10 ⊕ 1 slot table (cross-check with derived branching)
+----------------------------------------------------------------------------------------
+  [PASS] table 5̄ slot (3̄, 1) has Y_min = +1/3 (from derived 5 conjugate)  (got 1/3, expected 1/3)
+  [PASS] table 5̄ slot (1, 2) has Y_min = -1/2 (from derived 5 conjugate)  (got -1/2, expected -1/2)
+  [PASS] table 10 slot (3̄, 1) has Y_min = -2/3 (from ∧²(3, 1))
+  [PASS] table 10 slot (3, 2) has Y_min = +1/6 (from (3, 1) ⊗ (1, 2))
+  [PASS] table 10 slot (1, 1) has Y_min = +1 (from ∧²(1, 2))
+  [PASS] |5̄| = 5  (3̄ + 2)  (states_5bar = 5)
+  [PASS] |10| = 10  (6 + 3 + 1)  (states_10 = 10)
+  [PASS] |1| = 1  (states_1 = 1)
+  [PASS] |5̄ ⊕ 10 ⊕ 1| = 16  per Weyl family  (total = 16)
+
+----------------------------------------------------------------------------------------
+Part 5: slot-by-slot match between LHCM and SU(5) 5̄ ⊕ 10 ⊕ 1 (★)
+----------------------------------------------------------------------------------------
+  [PASS] every LHCM chirality matches exactly one SU(5) slot  (matched=6/6, unmatched=[])
+  [PASS] Q_L → 10 (3, 2)_{Y_min=1/6}
+  [PASS] u^c_L → 10 (3bar, 1)_{Y_min=-2/3}
+  [PASS] d^c_L → 5bar (3bar, 1)_{Y_min=1/3}
+  [PASS] L_L → 5bar (1, 2)_{Y_min=-1/2}
+  [PASS] e^c_L → 10 (1, 1)_{Y_min=1}
+  [PASS] nu^c_L → 1 (1, 1)_{Y_min=0}
+  [PASS] every SU(5) slot in 5̄ ⊕ 10 ⊕ 1 is filled exactly once  (filled=6, total=6)
+
+----------------------------------------------------------------------------------------
+Part 6: hypercharge-generator embedding (✦) — diag(-2,-2,-2,+3,+3)/6
+----------------------------------------------------------------------------------------
+  [PASS] Y_GUT_unnorm: traceless on defining 5  (sum = 0)
+  [PASS] Y_GUT_unnorm: equal entries on (3, 1) block (SU(3) commutativity)  ((3, 1) entries = (Fraction(-2, 1), Fraction(-2, 1), Fraction(-2, 1)))
+  [PASS] Y_GUT_unnorm: equal entries on (1, 2) block (SU(2) commutativity)  ((1, 2) entries = (Fraction(3, 1), Fraction(3, 1)))
+  [PASS] Y_GUT_diag /6 on (3, 1): -1/3  (got -1/3)
+  [PASS] Y_GUT_diag /6 on (1, 2): +1/2  (got 1/2)
+  [PASS] traceless ratio 3·(-1/3) + 2·(+1/2) = 0  (got 0)
+  [PASS] Tr[T_24²]_5 = 1/2 with normalization 1/√60  (got 1/2 (= 30/60))
+
+----------------------------------------------------------------------------------------
+Part 7: trace consistency (✧) — Tr[Y_GUT²]_5̄+10 = Tr[T_a²]_5̄+10 = 2
+----------------------------------------------------------------------------------------
+  [PASS] Tr[Y_min²]_5̄ = 5/6  (got 5/6)
+  [PASS] Tr[Y_min²]_10 = 5/2  (got 5/2)
+  [PASS] Tr[Y_min²]_5̄+10 = 10/3 per Weyl family  (got 10/3)
+  [PASS] T(5̄)  = 1/2  (SU(5) fundamental Dynkin index)
+  [PASS] T(10) = 3/2  (SU(5) antisymmetric ∧²(5) Dynkin index)
+  [PASS] Tr[T_a²]_5̄+10 = 2 per Weyl family  (got 2)
+  [PASS] c² = Tr[T_a²]_5̄+10 / Tr[Y_min²]_5̄+10 = 2 / (10/3) = 3/5  (c² = 3/5)
+  [PASS] Y_GUT = √(3/5) · Y_min  (✧)
+  [PASS] Y_GUT² / Y² = 3/20 in doubled convention  (HYPERCHARGE_SQUARED_TRACE_CATALOG (Y5))  (got 3/20)
+  [PASS] Tr[Y_GUT²]_5̄+10 = (3/5) · 10/3 = 2 per Weyl family  (got 2)
+
+----------------------------------------------------------------------------------------
+Part 8: three-generation lift
+----------------------------------------------------------------------------------------
+  [PASS] Tr[Y_GUT²]_three_gen = 3 · 2 = 6  (got 6)
+  [PASS] Tr[T_a²]_SU(2),per_gen = 3/2 + 1/2 = 2  (got 2)
+  [PASS] Tr[T_a²]_SU(3),per_gen = 1 + 1/2 + 1/2 = 2  (got 2)
+  [PASS] Tr[T_a²]_SU(2),three_gen = 6
+  [PASS] Tr[T_a²]_SU(3),three_gen = 6
+  [PASS] trace catalog (Y5) match: Tr[Y_GUT²]_three_gen = Tr[T_a²]_SU(2),three_gen = Tr[T_a²]_SU(3),three_gen = 6
+
+----------------------------------------------------------------------------------------
+Part 9: scope guards (positive checks for explicit non-claim language)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly states: 'Does not claim SU(5) is uniquely forced'
+  [PASS] note explicitly states: 'Does not claim coupling unification'
+  [PASS] note explicitly states: 'Does not derive the GUT scale'
+  [PASS] note explicitly states: 'Does not derive proton decay'
+  [PASS] note acknowledges SO(10) as a compatible alternative embedding
+  [PASS] note locates GUT-scale-unification assumption at cycle 19's surface, not this one
+  [PASS] §5 records BOTH residual cycle 19 admissions: coupling unification AND SU(5)-choice
+
+----------------------------------------------------------------------------------------
+Part 10: cycle 16 / cycle 19 admission-replacement scope
+----------------------------------------------------------------------------------------
+  [PASS] note records admission-replacement scope: 'cycle 16 / cycle 19 chain'
+  [PASS] note records admission-replacement scope: 'What this addresses'
+  [PASS] note records admission-replacement scope: 'GUT-unification assumption'
+  [PASS] admission-replacement scope includes SU(5) gauge-group embedding admission
+  [PASS] admission-replacement scope includes Y_GUT = √(3/5)·Y_SM normalization admission
+  [PASS] note explicitly preserves residual GUT-scale unification assumption
+
+----------------------------------------------------------------------------------------
+Part 11: forbidden-import audit
+----------------------------------------------------------------------------------------
+  [PASS] runner does not consume forbidden import: 'PDG-measured value'
+  [PASS] runner does not consume forbidden import: 'alpha_EM observed'
+  [PASS] runner does not consume forbidden import: 'g_1 measured'
+  [PASS] runner does not consume forbidden import: 'g_2 measured'
+  [PASS] runner does not consume forbidden import: 'g_3 measured'
+  [PASS] runner does not consume forbidden import: 'fit to observed'
+  [PASS] runner does not import numpy
+  [PASS] runner does not import scipy
+  [PASS] runner does not import sympy
+  [PASS] runner does not import torch
+  [PASS] runner does not import tensorflow
+  [PASS] runner does not import pandas
+
+========================================================================================
+  TOTAL: PASS=106, FAIL=0
+  VERDICT: SU(5) embedding consistency derived from LHCM hypercharges +
+           representation-theory of 5̄ ⊕ 10 ⊕ 1; Y_GUT = √(3/5)·Y_min
+           trace-forced under SU(5) Killing-form normalization convention.
+           Cycles 16/19 SU(5)-embedding and Y_GUT-normalization admissions
+           addressed as audit-pending bounded algebraic replacements;
+           residual cycle 19 admissions: (5) g_3 = g_2 = g_1 at GUT scale,
+           (6) choice of SU(5) (vs SO(10), E6) as the GUT group.
+========================================================================================
+
+----- stderr -----
+

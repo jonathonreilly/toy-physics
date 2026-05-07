@@ -3857,6 +3857,18 @@
       "to": "cycle_battery_scaled_note_2026-04-10"
     },
     {
+      "from": "c_iso_derived_theorem_note_2026-05-07_w3",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "c_iso_derived_theorem_note_2026-05-07_w3",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "c_iso_derived_theorem_note_2026-05-07_w3",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
       "from": "dark_energy_eos_retained_corollary_theorem_note",
       "to": "universal_gr_discrete_global_closure_note"
     },
@@ -6438,6 +6450,10 @@
     },
     {
       "from": "full_y_squared_trace_su5_gut_note_2026-05-02",
+      "to": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
+    },
+    {
+      "from": "full_y_squared_trace_su5_gut_note_2026-05-02",
       "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
     },
     {
@@ -7345,6 +7361,14 @@
       "to": "graph_first_su3_integration_note"
     },
     {
+      "from": "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
       "from": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
       "to": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
     },
@@ -7367,6 +7391,18 @@
     {
       "from": "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
       "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+      "to": "physical_lattice_necessity_note"
+    },
+    {
+      "from": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
     },
     {
       "from": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
@@ -10933,6 +10969,26 @@
       "to": "neutrino_mass_derived_note"
     },
     {
+      "from": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+      "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+    },
+    {
       "from": "observable_principle_audit_note_2026-05-02",
       "to": "observable_principle_from_axiom_note"
     },
@@ -13401,6 +13457,10 @@
       "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
     },
     {
+      "from": "sin_squared_theta_w_gut_from_su5_note_2026-05-02",
+      "to": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
+    },
+    {
       "from": "sixth_family_distance_law_third_vs_sixth_quick_note",
       "to": "sixth_family_sheared_note"
     },
@@ -13987,6 +14047,38 @@
     {
       "from": "su3_z3_apbc_variant_probe_2026-05-04",
       "to": "su3_cube_full_rho_perron_2026-05-04"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "symmetry_head_to_head_note",
@@ -29707,6 +29799,21 @@
       "runner_path": "scripts/broken_graph_action_power_robustness.py",
       "title": "Broken-Graph Action-Power Robustness Note"
     },
+    "c_iso_derived_theorem_note_2026-05-07_w3": {
+      "claim_id": "c_iso_derived_theorem_note_2026-05-07_w3",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+      ],
+      "note_hash": "2df126b441880beed571409f5e0f844c32bad35446de1461dcb52de278784765",
+      "path": "docs/C_ISO_DERIVED_THEOREM_NOTE_2026-05-07_w3.md",
+      "runner_path": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py",
+      "title": "Convention C-iso Temporal-Step Boundary"
+    },
     "canonical_harness_index": {
       "claim_id": "canonical_harness_index",
       "claim_type_author_hint": null,
@@ -36297,9 +36404,10 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "hypercharge_identification_note",
+        "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
         "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
       ],
-      "note_hash": "8bdc7179b16494af2992b1e35c432bc30cacaf6526e2e469edc47e8ab6f6ae0d",
+      "note_hash": "2e846c605f1e1b608cb95868a8e2838473a4dc9ffb1baa9ba0e65c43f5d4f936",
       "path": "docs/FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_full_y_squared_trace_su5_gut.py",
       "title": "Full One-Generation Tr[Y\u00b2] = 40/3 and SU(5) GUT Normalization Check"
@@ -36316,6 +36424,20 @@
       "path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
       "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem"
+    },
+    "g_bare_constraint_vs_convention_restatement_note_2026-05-07": {
+      "claim_id": "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "g_bare_structural_normalization_theorem_note_2026-04-18"
+      ],
+      "note_hash": "d7fa98005aa8980727913ffa2f75175099b719fd2ea368f40d2d7ff2e87b58c4",
+      "path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_g_bare_audit_residual_closure.py",
+      "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement"
     },
     "g_bare_constraint_vs_convention_theorem_note_2026-05-03": {
       "claim_id": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
@@ -36370,6 +36492,21 @@
       "path": "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
       "title": "g_bare = 1 Dynamical Fixation Obstruction \u2014 Path 3 Scan"
+    },
+    "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07": {
+      "claim_id": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "physical_lattice_necessity_note",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "su3_casimir_fundamental_theorem_note_2026-05-02"
+      ],
+      "note_hash": "7fcc2748d0d20824cf86fd5a663e04940325391e960ac050a0dad1046073055a",
+      "path": "docs/G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_g_bare_audit_residual_closure.py",
+      "title": "g_bare Hilbert\u2013Schmidt Rigidity Theorem (Independent Rescaling-Freedom Closure)"
     },
     "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03": {
       "claim_id": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
@@ -42691,6 +42828,23 @@
       "path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_n_eff_from_three_generations.py",
       "title": "N_eff From Retained Three Generations"
+    },
+    "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2": {
+      "claim_id": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "cl3_color_automorphism_theorem",
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+      ],
+      "note_hash": "74d662540199db9451a88622cdbfdaa85116f4532ab9aa2ed9a50a13a73549d1",
+      "path": "docs/N_F_BOUNDED_Z2_REDUCTION_THEOREM_NOTE_2026-05-07_w2.md",
+      "runner_path": "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py",
+      "title": "N_F Bounded Z2 Reduction Theorem"
     },
     "native_gauge_closure_note": {
       "claim_id": "native_gauge_closure_note",
@@ -50391,9 +50545,10 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "lhcm_repair_atlas_consolidation_note_2026-05-02",
-        "full_y_squared_trace_su5_gut_note_2026-05-02"
+        "full_y_squared_trace_su5_gut_note_2026-05-02",
+        "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
       ],
-      "note_hash": "dc66a998f5ae771f3352ac91e9960076926899052460156c470562e197adc581",
+      "note_hash": "e9d6d7ef78495c5f881a26c0c4a5c0cf7c8161718acf8271b8fc143832c1bbf0",
       "path": "docs/SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_sin2_theta_w_gut_from_su5.py",
       "title": "sin\u00b2\u03b8_W^GUT = 3/8 from SU(5) Embedding + LHCM-Derived Tr[Y\u00b2]"
@@ -51736,6 +51891,26 @@
       "path": "docs/SU3_Z3_APBC_VARIANT_PROBE_2026-05-04.md",
       "runner_path": "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py",
       "title": "SU(3) L_s=2 Z3 APBC Variant Probe"
+    },
+    "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07": {
+      "claim_id": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "hypercharge_identification_note",
+        "graph_first_su3_integration_note",
+        "left_handed_charge_matching_note",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
+        "three_generation_structure_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "9e5e37ce1e7c90068e6795a048600a2bcf809162a03d99e021ac80342c488591",
+      "path": "docs/SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_su5_embedding_from_graph_first_surface.py",
+      "title": "SU(5) Embedding Consistency from Graph-First Surface"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
@@ -56991,25 +57166,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 97,
+      "bounded_theorem": 99,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
-      "open_gate": 11,
-      "positive_theorem": 89
+      "open_gate": 12,
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 600,
+      "bounded_theorem": 602,
       "meta": 10,
       "no_go": 119,
       "none": 462,
-      "open_gate": 112,
-      "positive_theorem": 621
+      "open_gate": 113,
+      "positive_theorem": 623
     },
-    "edge_count": 6779,
-    "leaf_count": 543,
-    "node_count": 1924,
+    "edge_count": 6802,
+    "leaf_count": 545,
+    "node_count": 1929,
     "root_count": 855,
-    "runners_with_path": 1503
+    "runners_with_path": 1508
   }
 }

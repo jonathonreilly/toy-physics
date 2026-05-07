@@ -1,9 +1,10 @@
 # Full One-Generation Tr[Y²] = 40/3 and SU(5) GUT Normalization Check
 
 **Date:** 2026-05-02
-**Status:** exact algebraic identity / support theorem on retained
-graph-first surface + LHCM closure trio (cycles 1-3) + STANDARD_MODEL_HYPERCHARGE_UNIQUENESS.
-NOT proposed_retained — see CLAIM_STATUS_CERTIFICATE.md.
+**Status:** exact algebraic identity / support theorem conditional on the
+graph-first surface + LHCM closure trio (cycles 1-3) +
+STANDARD_MODEL_HYPERCHARGE_UNIQUENESS. This note is not a retained-status
+authority; independent audit owns effective status.
 **Primary runner:** `scripts/frontier_full_y_squared_trace_su5_gut.py`
 **Authority role:** extends [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)'s LH-only
 Tr[Y²] = 8/3 result to the full one-generation (LH + RH) content.
@@ -161,6 +162,20 @@ The SU(5) GUT consistency holds in both conventions.
 - The retention of LHCM (still gated on SM-definition convention reclassification).
 - Promotion of any sister theorem.
 
+## 5a. SU(5) embedding admission status (2026-05-07 update)
+
+The §2 "admitted SU(5) GUT normalization" line (`Y_GUT = √(3/5)·Y_SM`) is
+addressed by the bounded-theorem follow-on
+[`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md).
+That note derives the SU(5) embedding consistency and the
+`Y_GUT = √(3/5)·Y_min` rescaling under the standard SU(5) Killing-form
+normalization convention `Tr[T_a T_b]_5 = (1/2) δ_{ab}`. After that note
+is independently audited, this note's "admitted SU(5) GUT
+normalization" item moves to a derived dependency rather than a free
+admission. This subsection does not change the present note's claim
+status; it records the cross-reference for the audit graph and signals
+the load-bearing relationship to the embedding-consistency note.
+
 ## 6. Status
 
 ```yaml
@@ -168,8 +183,12 @@ actual_current_surface_status: exact algebraic identity / support theorem
 proposal_allowed: false
 proposal_allowed_reason: |
   Conditional on LHCM atlas (modulo SM-definition conventions) and
-  STANDARD_MODEL_HYPERCHARGE_UNIQUENESS (proposed_retained, unaudited).
+  STANDARD_MODEL_HYPERCHARGE_UNIQUENESS (unaudited).
   Convention A vs B distinction is itself an admitted convention.
+  SU(5) GUT normalization Y_GUT = √(3/5)·Y_SM is now derived by
+  SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md
+  (bounded_theorem, unaudited) under SU(5) Killing-form normalization
+  convention.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -179,4 +198,5 @@ bare_retained_allowed: false
 - LHCM atlas: PR [#262](https://github.com/jonathonreilly/cl3-lattice-framework/pull/262) (cycle 6)
 - Sister: [`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md) (audited_renaming)
 - Sister: [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) (audited_renaming)
+- Embedding-consistency derivation: [`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md) (bounded_theorem, unaudited)
 - Cycles 1-15 prior PRs.

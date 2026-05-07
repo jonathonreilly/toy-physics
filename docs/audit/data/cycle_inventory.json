@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 547,
+      "max_transitive_descendants": 549,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 547
+          "transitive_descendants": 549
         },
         {
           "audit_status": "unaudited",
@@ -33,7 +33,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 547
+          "transitive_descendants": 549
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 540,
+      "max_transitive_descendants": 542,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "audited_conditional",
@@ -70,7 +70,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         }
       ],
       "requires_lemma_extraction": false
@@ -109,7 +109,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 540,
+      "max_transitive_descendants": 542,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -118,7 +118,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "audited_conditional",
@@ -127,7 +127,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "audited_conditional",
@@ -136,7 +136,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "unaudited",
@@ -145,7 +145,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "audited_conditional",
@@ -154,7 +154,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "unaudited",
@@ -163,7 +163,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         },
         {
           "audit_status": "audited_renaming",
@@ -172,7 +172,7 @@
           "effective_status": "audited_renaming",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 540
+          "transitive_descendants": 542
         }
       ],
       "requires_lemma_extraction": false
@@ -195,7 +195,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 428,
+      "max_transitive_descendants": 431,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -204,7 +204,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -213,7 +213,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -222,7 +222,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         }
       ],
       "requires_lemma_extraction": false
@@ -249,7 +249,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 428,
+      "max_transitive_descendants": 431,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -258,7 +258,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -267,7 +267,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -276,7 +276,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -285,7 +285,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         }
       ],
       "requires_lemma_extraction": false
@@ -316,7 +316,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 428,
+      "max_transitive_descendants": 431,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -325,7 +325,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -334,7 +334,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -343,7 +343,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -352,7 +352,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -361,7 +361,7 @@
           "effective_status": "meta",
           "note_path": "docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         }
       ],
       "requires_lemma_extraction": false
@@ -396,7 +396,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 428,
+      "max_transitive_descendants": 431,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -405,7 +405,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -414,7 +414,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -423,7 +423,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -432,7 +432,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -441,7 +441,7 @@
           "effective_status": "meta",
           "note_path": "docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         },
         {
           "audit_status": "unaudited",
@@ -450,7 +450,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_SCALAR_BRIDGE_3PLUS1_NATIVE_TUBE_STAGING_GATE_2026-05-03.md",
           "title": "Gauge-Scalar Bridge 3+1 Native Tube Staging Gate",
-          "transitive_descendants": 428
+          "transitive_descendants": 431
         }
       ],
       "requires_lemma_extraction": false
@@ -469,7 +469,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -478,7 +478,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -487,7 +487,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Hypercharge Squared Trace Catalog Theorem",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false
@@ -506,7 +506,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -515,7 +515,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -524,7 +524,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false
@@ -547,7 +547,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -556,7 +556,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -565,7 +565,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -574,7 +574,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false
@@ -597,7 +597,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -606,7 +606,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
           "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -615,7 +615,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -624,7 +624,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Hypercharge Squared Trace Catalog Theorem",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false
@@ -651,7 +651,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -660,7 +660,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -669,7 +669,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -678,7 +678,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -687,7 +687,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Left-Handed-Content Anomaly Trace Catalog Theorem",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false
@@ -714,7 +714,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -723,7 +723,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
           "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -732,7 +732,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -741,7 +741,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Hypercharge Squared Trace Catalog Theorem",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -750,7 +750,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md",
           "title": "B-L Anomaly-Freedom Theorem With Retained nu_R",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false
@@ -777,7 +777,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 400,
+      "max_transitive_descendants": 401,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -786,7 +786,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
           "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -795,7 +795,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -804,7 +804,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         },
         {
           "audit_status": "unaudited",
@@ -813,7 +813,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
-          "transitive_descendants": 400
+          "transitive_descendants": 401
         }
       ],
       "requires_lemma_extraction": false

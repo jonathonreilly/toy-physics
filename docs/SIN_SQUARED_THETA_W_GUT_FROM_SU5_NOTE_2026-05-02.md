@@ -1,10 +1,10 @@
 # sin²θ_W^GUT = 3/8 from SU(5) Embedding + LHCM-Derived Tr[Y²]
 
 **Date:** 2026-05-02
-**Status:** exact algebraic identity / support theorem on retained
+**Status:** exact algebraic identity / support theorem conditional on the
 graph-first surface + cycle 16 (Tr[Y²] = 40/3 + SU(5) GUT consistency) +
-admitted SU(5) gauge-group embedding. NOT proposed_retained — see
-CLAIM_STATUS_CERTIFICATE.md.
+the SU(5) embedding input. This note is not a retained-status authority;
+independent audit owns effective status.
 **Primary runner:** `scripts/frontier_sin2_theta_w_gut_from_su5.py`
 **Authority role:** exact-support theorem deriving the GUT-scale Weinberg
 angle prediction from cycle 16's SU(5) consistency.
@@ -96,12 +96,48 @@ boundary condition `sin²θ_W^GUT = 3/8`.
 
 ## 5. What this does NOT close
 
-- The SU(5) unification itself (admitted GUT structure)
+- **(coupling unification)** The SU(5) unification at GUT scale —
+  `g_3 = g_2 = g_1` is an admitted physical assumption about RG running.
+- **(GUT-group choice)** The choice of SU(5) (vs. SO(10), E6, ...) as the
+  GUT group. The matter content also fits 16 of SO(10) and so on; this
+  note does not derive *which* simple group containing
+  `su(3) ⊕ su(2) ⊕ u(1)` is the correct GUT group. (See 5a.)
 - The running of sin²θ_W from GUT scale to M_Z (requires RG running,
   not derived here)
 - The GUT scale itself (~10^16 GeV is observational/external input)
 - The retention of cycle 16 (still depends on Convention A vs B
-  reclassification + admitted SU(5) embedding)
+  reclassification)
+
+## 5a. SU(5) embedding admission status (2026-05-07 update)
+
+The §3 admitted inputs (3) "SU(5) GUT-group embedding" and (4)
+"`Y_GUT = √(3/5) · Y_SM` normalization" are addressed by the
+bounded-theorem follow-on
+[`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md).
+That note derives:
+
+- **Embedding consistency.** All 16 LH-form chiralities per generation map
+  to unique `5̄ ⊕ 10 ⊕ 1` slots, with the hypercharge generator
+  `T_24 ∝ diag(−2,−2,−2,+3,+3)` forced by Schur's lemma on the
+  `su(3) ⊕ su(2)` block embedding.
+- **Y_GUT normalization.** `Y_GUT = √(3/5) · Y_min` is trace-forced from
+  `Tr[Y_GUT²]_5̄+10 = Tr[T_a²]_5̄+10 = 2` per Weyl family, under the
+  standard SU(5) Killing-form normalization convention
+  `Tr[T_a T_b]_5 = (1/2) δ_{ab}`.
+
+After that note is independently audited, the §3 admissions (3)
+and (4) move to derived-dependency status. The two **residual physical
+admissions** at this note's surface are then:
+
+- **(5)** SU(5) unification at GUT scale (`g_3 = g_2 = g_1`) — coupling
+  unification physical assumption, not representation theory.
+- **(6)** Choice of SU(5) (vs. SO(10), E6) as the GUT group — embedding
+  *consistency* is derived; embedding *minimality* is not. Same matter
+  content fits 16 of SO(10).
+
+This subsection does not change the present note's claim status; it
+records the cross-reference for the audit graph and signals the
+load-bearing relationship to the embedding-consistency note.
 
 ## 6. Status
 
@@ -109,9 +145,14 @@ boundary condition `sin²θ_W^GUT = 3/8`.
 actual_current_surface_status: exact algebraic identity / support theorem
 proposal_allowed: false
 proposal_allowed_reason: |
-  Conditional on cycle 16 (Tr[Y²] = 10/3 / 40/3) and admitted SU(5)
-  gauge-group embedding. SU(5) embedding is a standard GUT structure
-  not derivable from the graph-first framework alone.
+  Conditional on cycle 16 (Tr[Y²] = 10/3 / 40/3). The §3 admitted SU(5)
+  embedding + Y_GUT normalization items are now derived by
+  SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md
+  (bounded_theorem, unaudited) under the SU(5) Killing-form normalization
+  convention. Two residual physical
+  admissions remain: (5) g_3 = g_2 = g_1 at GUT scale; (6) choice of
+  SU(5) vs SO(10)/E6 as the GUT group. Both are physical / external
+  choices, not representation theory.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -121,4 +162,5 @@ bare_retained_allowed: false
 - Cycle 16 / PR [#279](https://github.com/jonathonreilly/cl3-lattice-framework/pull/279) — [`FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md`](FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md)
 - Cycles 1-3 LHCM closure — [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md)
 - Cycle 6 / PR #262 — [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md)
+- Embedding-consistency derivation: [`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md) (bounded_theorem, unaudited)
 - Standard references: Georgi-Glashow SU(5) (1974); Buras-Ellis-Gaillard-Nanopoulos (1978); PDG GUT review.
