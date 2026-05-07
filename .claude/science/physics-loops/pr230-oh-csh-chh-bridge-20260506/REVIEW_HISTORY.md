@@ -386,3 +386,18 @@ Local verification completed:
   reported no errors and the same five pre-existing warnings.  Audit metadata
   was kept intentionally because edited PR230 note hashes must be seeded for
   strict lint in the committed state.
+- radial-spurion action contract packaged:
+  `frontier_yt_pr230_radial_spurion_action_contract.py` PASS=13 FAIL=0.  The
+  contract makes the clean W/Z physical-response action target explicit:
+  the shared source `s` must move one Higgs radial branch `v(s)` for top/W/Z
+  responses and must forbid an independent additive top bare-mass source.  It
+  checks the response-ratio algebra and additive-source counterexample while
+  leaving the accepted action, W/Z rows, strict `g2`, canonical `O_H`,
+  source-Higgs pole rows, `kappa_s`, and closure absent;
+- action-first and W/Z route gates refreshed to consume the contract:
+  action-first PASS=16 FAIL=0 and W/Z route PASS=14 FAIL=0, both with
+  proposal disallowed;
+- aggregate gates after the radial-spurion action-contract block:
+  assumption/import stress PASS=77 FAIL=0, full assembly PASS=136 FAIL=0,
+  campaign status PASS=323 FAIL=0, retained route PASS=290 FAIL=0, and
+  positive-closure completion audit PASS=45 FAIL=0.

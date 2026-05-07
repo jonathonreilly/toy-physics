@@ -686,6 +686,9 @@ def main() -> int:
         "pr230_radial_spurion_sector_overlap_theorem": load(
             "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json"
         ),
+        "pr230_radial_spurion_action_contract": load(
+            "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -2996,6 +2999,26 @@ def main() -> int:
         is False,
         statuses["pr230_radial_spurion_sector_overlap_theorem"],
     )
+    radial_spurion_action_contract = certificates[
+        "pr230_radial_spurion_action_contract"
+    ]
+    report(
+        "pr230-radial-spurion-action-contract-support-not-closure",
+        "no-independent-top-source radial-spurion action contract"
+        in str(statuses["pr230_radial_spurion_action_contract"])
+        and radial_spurion_action_contract.get("proposal_allowed") is False
+        and radial_spurion_action_contract.get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and radial_spurion_action_contract.get("current_surface_contract_satisfied")
+        is False
+        and radial_spurion_action_contract.get(
+            "accepted_action_certificate_written"
+        )
+        is False,
+        statuses["pr230_radial_spurion_action_contract"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -4945,6 +4968,15 @@ def main() -> int:
         )
         is False
         and radial_spurion_sector_overlap_theorem.get("current_surface_closure_authorized")
+        is False
+    )
+    result["radial_spurion_action_contract_support_not_closure"] = (
+        radial_spurion_action_contract.get("radial_spurion_action_contract_passed")
+        is True
+        and radial_spurion_action_contract.get("proposal_allowed") is False
+        and radial_spurion_action_contract.get("current_surface_contract_satisfied")
+        is False
+        and radial_spurion_action_contract.get("accepted_action_certificate_written")
         is False
     )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (

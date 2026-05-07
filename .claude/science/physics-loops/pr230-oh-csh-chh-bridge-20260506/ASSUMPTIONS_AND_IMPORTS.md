@@ -144,6 +144,12 @@ Allowed context:
   source, then `dv/ds` cancels in top/W and top/Z response ratios.  The current
   PR230 additive mass FH source is not that contract, and the theorem does not
   supply W/Z mass-fit rows, canonical `O_H`, `kappa_s`, or closure.
+- the radial-spurion action contract as exact support only: it makes the future
+  action requirement explicit by requiring `s` to move one Higgs radial branch
+  `v(s)` and forbidding an independent additive top bare-mass source.  It
+  checks the top/W and top/Z response-ratio algebra and the additive-source
+  counterexample, but it is not an adopted EW/Higgs action, not W/Z row
+  evidence, not strict `g2` authority, and not closure.
 - the post-FMS source-overlap necessity gate as exact current-surface boundary
   only: it proves current source-only rows, FMS `C_HH` support, and
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an

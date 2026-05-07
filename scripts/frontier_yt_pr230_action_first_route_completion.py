@@ -29,6 +29,7 @@ PARENTS = {
     "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
     "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
@@ -144,6 +145,23 @@ def main() -> int:
         is False
         and not futures["same_source_ew_action_certificate"]
     )
+    radial_spurion_action_contract_support_only = (
+        "no-independent-top-source radial-spurion action contract"
+        in statuses["radial_spurion_action_contract"]
+        and parents["radial_spurion_action_contract"].get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and parents["radial_spurion_action_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and parents["radial_spurion_action_contract"].get(
+            "accepted_action_certificate_written"
+        )
+        is False
+        and parents["radial_spurion_action_contract"].get("proposal_allowed") is False
+    )
     canonical_oh_absent = (
         "canonical-Higgs operator certificate absent" in statuses["canonical_higgs_operator_gate"]
         and parents["canonical_higgs_operator_gate"].get("candidate_valid") is False
@@ -203,6 +221,7 @@ def main() -> int:
     report("action-first-artifact-attempt-closed", action_attempt_closed, statuses["action_first_oh_artifact_attempt"])
     report("fms-oh-certificate-attempt-closed", fms_attempt_closed, statuses["fms_oh_certificate_construction_attempt"])
     report("same-source-ew-action-absent", same_source_action_absent, statuses["same_source_ew_action_gate"])
+    report("radial-spurion-action-contract-support-only", radial_spurion_action_contract_support_only, statuses["radial_spurion_action_contract"])
     report("canonical-oh-certificate-absent", canonical_oh_absent, statuses["canonical_higgs_operator_gate"])
     report("source-higgs-production-rows-absent", source_higgs_rows_absent, statuses["source_higgs_builder"])
     report("source-higgs-gram-purity-absent", gram_purity_absent, statuses["source_higgs_gram_gate"])
@@ -220,6 +239,7 @@ def main() -> int:
         and action_attempt_closed
         and fms_attempt_closed
         and same_source_action_absent
+        and radial_spurion_action_contract_support_only
         and canonical_oh_absent
         and source_higgs_rows_absent
         and gram_purity_absent
@@ -254,6 +274,7 @@ def main() -> int:
         "future_artifact_presence": futures,
         "blocked_requirements": {
             "same_source_ew_action_certificate": not same_source_action_absent,
+            "radial_spurion_action_contract_currently_unadopted": radial_spurion_action_contract_support_only,
             "canonical_oh_certificate": not canonical_oh_absent,
             "source_higgs_rows": not source_higgs_rows_absent,
             "source_higgs_gram_purity_certificate": not gram_purity_absent,

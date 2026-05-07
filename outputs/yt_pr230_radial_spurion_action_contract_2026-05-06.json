@@ -1,0 +1,186 @@
+{
+  "accepted_action_certificate_path": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+  "accepted_action_certificate_written": false,
+  "actual_current_surface_status": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+  "additive_top_source_counterexample": [
+    {
+      "dM_W_ds": 0.403,
+      "dm_top_ds": 0.6232768747653861,
+      "dv_ds": 1.3,
+      "independent_additive_top_slope": -0.25,
+      "input_g2": 0.62,
+      "input_y_t": 0.95,
+      "yt_inferred_if_contract_ignored": 0.6780358533897892
+    },
+    {
+      "dM_W_ds": 0.403,
+      "dm_top_ds": 0.8732768747653861,
+      "dv_ds": 1.3,
+      "independent_additive_top_slope": 0.0,
+      "input_g2": 0.62,
+      "input_y_t": 0.95,
+      "yt_inferred_if_contract_ignored": 0.9499999999999997
+    },
+    {
+      "dM_W_ds": 0.403,
+      "dm_top_ds": 1.2232768747653862,
+      "dv_ds": 1.3,
+      "independent_additive_top_slope": 0.35,
+      "input_g2": 0.62,
+      "input_y_t": 0.95,
+      "yt_inferred_if_contract_ignored": 1.3307498052542948
+    }
+  ],
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "If this contract is adopted by a same-surface EW/Higgs action and production top/W or top/Z response rows plus strict gauge-coupling authority are supplied, the common dv/ds source overlap cancels in the response ratio.",
+  "contract": {
+    "contract_kind": "same_surface_radial_spurion_action_contract",
+    "forbidden_action_terms": [
+      "independent additive top bare-mass source under the same s",
+      "separate source coordinate for top response",
+      "observed-mass or observed-y_t selector",
+      "H_unit or yt_ward_identity operator authority"
+    ],
+    "mass_branches": {
+      "W": "M_W(s) = g2 * v(s) / 2",
+      "Z": "M_Z(s) = sqrt(g2^2 + gY^2) * v(s) / 2",
+      "top": "m_t(s) = y_t * v(s) / sqrt(2)"
+    },
+    "required_action_terms": [
+      "SU(2)xU(1) gauge action on the same lattice surface",
+      "gauge-covariant Higgs doublet kinetic term",
+      "Higgs potential/source term with dS/ds = sum_x O_H(x)",
+      "top Yukawa term y_t * qbar_L Phi t_R + h.c.",
+      "no independent s * tbar t additive top bare-mass term"
+    ],
+    "response_readout_rows_required": [
+      "same-source top response dE_top/ds with no additive-top component",
+      "same-source W or Z mass response under the same source shift",
+      "matched top/W or top/Z covariance rows",
+      "strict non-observed g2 or g2/gY authority",
+      "accepted action certificate and W/Z mass-fit path"
+    ],
+    "same_source_coordinate": "s",
+    "source_meaning": "s perturbs the Higgs radial branch through the centered composite O_H = Phi^dagger Phi - <Phi^dagger Phi>; top, W, and Z masses respond only through the induced v(s)."
+  },
+  "contract_kind": "same_surface_radial_spurion_action_contract",
+  "current_surface_contract_satisfied": false,
+  "exact_next_action": "Either replace the current additive top-source ansatz with an accepted no-independent-top-source EW/Higgs action certificate and run matched top/WZ response rows, or use the action-first O_H path to generate C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_observed_wz_masses_or_g2": false,
+    "used_reduced_cold_pilots_as_production_evidence": false,
+    "used_yt_ward_identity": false,
+    "wrote_accepted_action_certificate": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_statuses": {
+    "action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
+    "radial_spurion_sector_overlap_theorem": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+    "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+    "wz_response_route_completion": "exact negative boundary / WZ same-source response route not complete on current PR230 surface",
+    "wz_same_source_ew_action_certificate_builder": "open / same-source EW action certificate absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The contract is a future action target only.  The current ansatz still includes an additive top source, the accepted EW action certificate is absent, W/Z rows are absent, and retained/campaign gates deny proposal wording.",
+  "radial_spurion_action_contract_passed": true,
+  "required_future_rows": [
+    "same-source top response dE_top/ds with no additive-top component",
+    "same-source W or Z mass response under the same source shift",
+    "matched top/W or top/Z covariance rows",
+    "strict non-observed g2 or g2/gY authority",
+    "accepted action certificate and W/Z mass-fit path"
+  ],
+  "response_ratio_witnesses": [
+    {
+      "dM_W_ds": 0.05500000000000001,
+      "dM_Z_ds": 0.05923681287847955,
+      "dm_top_ds": 0.09192388155425117,
+      "dv_ds": 0.2,
+      "input_g2": 0.55,
+      "input_gY": 0.22,
+      "input_y_t": 0.65,
+      "yt_from_top_W_ratio": 0.6499999999999999,
+      "yt_from_top_Z_ratio": 0.6499999999999999
+    },
+    {
+      "dM_W_ds": 0.085,
+      "dM_Z_ds": 0.09047651629014017,
+      "dm_top_ds": 0.1626345596729059,
+      "dv_ds": 0.2,
+      "input_g2": 0.85,
+      "input_gY": 0.31,
+      "input_y_t": 1.15,
+      "yt_from_top_W_ratio": 1.1499999999999995,
+      "yt_from_top_Z_ratio": 1.1499999999999995
+    },
+    {
+      "dM_W_ds": 0.275,
+      "dM_Z_ds": 0.29618406439239775,
+      "dm_top_ds": 0.4596194077712559,
+      "dv_ds": 1.0,
+      "input_g2": 0.55,
+      "input_gY": 0.22,
+      "input_y_t": 0.65,
+      "yt_from_top_W_ratio": 0.65,
+      "yt_from_top_Z_ratio": 0.6499999999999999
+    },
+    {
+      "dM_W_ds": 0.425,
+      "dM_Z_ds": 0.4523825814507008,
+      "dm_top_ds": 0.8131727983645295,
+      "dv_ds": 1.0,
+      "input_g2": 0.85,
+      "input_gY": 0.31,
+      "input_y_t": 1.15,
+      "yt_from_top_W_ratio": 1.1499999999999997,
+      "yt_from_top_Z_ratio": 1.1499999999999997
+    },
+    {
+      "dM_W_ds": 0.6875,
+      "dM_Z_ds": 0.7404601609809944,
+      "dm_top_ds": 1.1490485194281397,
+      "dv_ds": 2.5,
+      "input_g2": 0.55,
+      "input_gY": 0.22,
+      "input_y_t": 0.65,
+      "yt_from_top_W_ratio": 0.6499999999999999,
+      "yt_from_top_Z_ratio": 0.6499999999999998
+    },
+    {
+      "dM_W_ds": 1.0625,
+      "dM_Z_ds": 1.130956453626752,
+      "dm_top_ds": 2.032931995911324,
+      "dv_ds": 2.5,
+      "input_g2": 0.85,
+      "input_gY": 0.31,
+      "input_y_t": 1.15,
+      "yt_from_top_W_ratio": 1.15,
+      "yt_from_top_Z_ratio": 1.15
+    }
+  ],
+  "strict_non_claims": [
+    "does not adopt the EW/Higgs action on the current surface",
+    "does not write the accepted same-source EW action certificate",
+    "does not use the current additive top FH source as a radial spurion",
+    "does not provide W/Z rows, top/W covariance, or strict g2 authority",
+    "does not provide canonical O_H or C_sH/C_HH pole rows",
+    "does not claim retained or proposed_retained closure"
+  ]
+}

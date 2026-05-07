@@ -28,8 +28,34 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=322 FAIL=0
+# SUMMARY: PASS=323 FAIL=0
 ```
+
+## 2026-05-06 Radial-Spurion Action Contract Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json`.
+This contract sharpens the clean W/Z physical-response route: the same scalar
+source must move one canonical-Higgs radial branch `v(s)` for top, W, and Z
+mass responses, and must not add an independent top bare-mass source.
+
+Under that future contract, `dv/ds` cancels from the response ratios:
+
+```text
+y_t = g2 (dm_t/ds) / (sqrt(2) dM_W/ds)
+y_t = sqrt(g2^2 + gY^2) (dm_t/ds) / (sqrt(2) dM_Z/ds)
+```
+
+The runner also checks that an additive top source changes the inferred value.
+That blocks reusing the current additive FH/LSZ top source as a radial spurion.
+The contract is not action adoption, not W/Z row evidence, not strict `g2`,
+not canonical `O_H`, and not closure.
+
+Validation: radial-spurion action contract `PASS=13 FAIL=0`; action-first
+route completion `PASS=16 FAIL=0`; W/Z route completion `PASS=14 FAIL=0`;
+assumption/import stress `PASS=77 FAIL=0`; full positive closure assembly
+`PASS=136 FAIL=0`; retained-route `PASS=290 FAIL=0`; campaign status
+`PASS=323 FAIL=0`; completion audit `PASS=45 FAIL=0`.
 
 ## 2026-05-06 Two-Source Taste-Radial Schur Pole-Lift Update
 

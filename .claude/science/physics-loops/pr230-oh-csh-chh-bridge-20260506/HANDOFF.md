@@ -211,6 +211,14 @@ therefore not just "same source"; it is a no-independent-top-source radial
 spurion action plus production W/Z mass-fit rows, or a separate row theorem
 that measures/subtracts the additive component.
 
+The radial-spurion action contract now packages that target explicitly.  It
+requires `s` to move one Higgs radial branch `v(s)` for top, W, and Z mass
+responses, forbids an independent additive top bare-mass source, and checks
+the top/W and top/Z response-ratio algebra plus the additive-source
+counterexample.  It is exact support only: the current same-source EW/Higgs
+ansatz is still not adopted, the accepted action certificate is unwritten, and
+W/Z rows, strict `g2`, canonical `O_H`, and closure remain absent.
+
 The post-FMS source-overlap necessity gate now checks the next inference
 directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
 and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a
@@ -347,6 +355,12 @@ closure remains open because the accepted same-surface EW/Higgs action,
 canonical-Higgs operator certificate, sector-overlap certificate, and W/Z
 mass-fit/response rows are still absent.
 
+The radial-spurion action contract is now checkpointed too.  It records the
+clean future action shape more sharply than the earlier ansatz: no independent
+top-source term may appear under the shared scalar source.  This blocks using
+the current additive FH/LSZ top source as the W/Z bypass source while keeping
+the future physical-response route open.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
@@ -360,8 +374,9 @@ Best next work:
 	   blocked until canonical-Higgs, sector-overlap, and W/Z mass-fit path
 	   certificates exist.  The radial-spurion theorem supplies the future algebra
 	   that would cancel a common `dv/ds` only after that clean same-source
-	   contract is actually certified; it does not license the current additive
-	   top-source rows.  The row builder/postprocessor are now ready to consume
+	   contract is actually certified; the radial-spurion action contract now
+	   names that no-independent-top-source action target, but it does not
+	   license the current additive top-source rows.  The row builder/postprocessor are now ready to consume
 	   the overlap/kappa contract when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-016 are

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 681,
+    "leaf": 682,
     "medium": 301
   },
-  "generated_at": "2026-05-06T23:51:13.736402+00:00",
+  "generated_at": "2026-05-07T00:12:04.442903+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21211,6 +21211,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_radial_spurion_action_contract_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_RADIAL_SPURION_ACTION_CONTRACT_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_radial_spurion_action_contract.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25146,6 +25163,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 828,
-  "total_pending": 1219
+  "ready_count": 829,
+  "total_pending": 1220
 }

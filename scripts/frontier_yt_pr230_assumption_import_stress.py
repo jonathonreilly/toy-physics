@@ -206,6 +206,9 @@ def main() -> int:
         "radial_spurion_sector_overlap_theorem": load(
             "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json"
         ),
+        "radial_spurion_action_contract": load(
+            "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -1224,6 +1227,26 @@ def main() -> int:
         )
         is False,
         radial_spurion.get("actual_current_surface_status"),
+    )
+    radial_spurion_action_contract = certificates["radial_spurion_action_contract"]
+    report(
+        "radial-spurion-action-contract-support-not-current-closure",
+        "no-independent-top-source radial-spurion action contract"
+        in str(radial_spurion_action_contract.get("actual_current_surface_status"))
+        and radial_spurion_action_contract.get("proposal_allowed") is False
+        and radial_spurion_action_contract.get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and radial_spurion_action_contract.get("current_surface_contract_satisfied")
+        is False
+        and radial_spurion_action_contract.get("accepted_action_certificate_written")
+        is False
+        and radial_spurion_action_contract.get("forbidden_firewall", {}).get(
+            "used_observed_wz_masses_or_g2"
+        )
+        is False,
+        radial_spurion_action_contract.get("actual_current_surface_status"),
     )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(

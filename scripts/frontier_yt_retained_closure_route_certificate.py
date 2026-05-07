@@ -182,6 +182,7 @@ def main() -> int:
         "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
         "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
         "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
+        "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1748,6 +1749,28 @@ def main() -> int:
         and certificates["pr230_source_higgs_overlap_kappa_contract"].get(
             "forbidden_firewall", {}
         ).get("set_kappa_s_equal_one")
+        is False
+    )
+    radial_spurion_action_contract_support_not_closure = (
+        "no-independent-top-source radial-spurion action contract"
+        in certificates["pr230_radial_spurion_action_contract"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_radial_spurion_action_contract"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_radial_spurion_action_contract"].get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and certificates["pr230_radial_spurion_action_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certificates["pr230_radial_spurion_action_contract"].get(
+            "accepted_action_certificate_written"
+        )
         is False
     )
     two_source_taste_radial_chunk_checkpoint_not_closure = {}
@@ -4336,6 +4359,13 @@ def main() -> int:
             "actual_current_surface_status", ""
         ),
     )
+    report(
+        "radial-spurion-action-contract-support-not-closure",
+        radial_spurion_action_contract_support_not_closure,
+        certificates["pr230_radial_spurion_action_contract"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
     for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items():
         cert_key = f"pr230_two_source_taste_radial_chunk{idx:03d}_checkpoint"
         report(
@@ -5746,6 +5776,7 @@ def main() -> int:
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
+        "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "two_source_taste_radial_chunk_checkpoint_not_closure": {
             f"chunk{idx:03d}": not_closure
             for idx, not_closure in two_source_taste_radial_chunk_checkpoint_not_closure.items()

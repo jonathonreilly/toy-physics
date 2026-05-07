@@ -115,6 +115,7 @@ PARENTS = {
     "pr230_same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "pr230_same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
     "pr230_radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
+    "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
@@ -1005,6 +1006,24 @@ def main() -> int:
         )
         is False
     )
+    radial_spurion_action_contract_support_not_closure = (
+        "no-independent-top-source radial-spurion action contract"
+        in statuses["pr230_radial_spurion_action_contract"]
+        and certs["pr230_radial_spurion_action_contract"].get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and certs["pr230_radial_spurion_action_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certs["pr230_radial_spurion_action_contract"].get(
+            "accepted_action_certificate_written"
+        )
+        is False
+        and certs["pr230_radial_spurion_action_contract"].get("proposal_allowed")
+        is False
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in statuses["pr230_post_fms_source_overlap_necessity_gate"]
@@ -1871,6 +1890,11 @@ def main() -> int:
         "radial-spurion-sector-overlap-support-not-closure",
         radial_spurion_sector_overlap_support_not_closure,
         statuses["pr230_radial_spurion_sector_overlap_theorem"],
+    )
+    report(
+        "radial-spurion-action-contract-support-not-closure",
+        radial_spurion_action_contract_support_not_closure,
+        statuses["pr230_radial_spurion_action_contract"],
     )
     report(
         "post-fms-source-overlap-necessity-blocks-current-inference",
@@ -2850,6 +2874,7 @@ def main() -> int:
         "same_source_ew_higgs_action_ansatz_support_not_closure": same_source_ew_higgs_action_ansatz_support_not_closure,
         "same_source_ew_action_adoption_attempt_blocks_shortcut": same_source_ew_action_adoption_attempt_blocks_shortcut,
         "radial_spurion_sector_overlap_support_not_closure": radial_spurion_sector_overlap_support_not_closure,
+        "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

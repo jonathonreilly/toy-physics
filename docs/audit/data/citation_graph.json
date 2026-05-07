@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T23:51:10.425444+00:00",
+  "generated_at": "2026-05-07T00:12:01.476268+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41963,7 +41963,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / action-first `O_H/C_sH/C_HH` route not complete on current PR230 surface",
       "deps": [],
-      "note_hash": "79e5005d405e99b0f9419b3023578d40566af5463b4cbd6c0cec0516c22ae2c3",
+      "note_hash": "5bb757e2079299b2eefff09b6f5680d145dc38661d5a22206ff5e44072a7ce8a",
       "path": "docs/YT_PR230_ACTION_FIRST_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_action_first_route_completion.py",
       "title": "PR230 Action-First Route Completion"
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "d0512ec23b4b371e67ce464a4e09c8ec1f9c5f22e0f589d4299bd0dbfd928c45",
+      "note_hash": "a02beb26b098e831d6d1b958ff3b43f360f01985f8ac1e8e36623fe8e7b1c313",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -42598,6 +42598,16 @@
       "runner_path": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py",
       "title": "YT PR230 Queue Exhaustion Certificate Note"
     },
+    "yt_pr230_radial_spurion_action_contract_note_2026-05-06": {
+      "claim_id": "yt_pr230_radial_spurion_action_contract_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "exact-support / no-independent-top-source radial-spurion action",
+      "deps": [],
+      "note_hash": "ca1293bf45c675bdec53c33f0b169d33793b9eb12fee26023f0e8e0b818414ef",
+      "path": "docs/YT_PR230_RADIAL_SPURION_ACTION_CONTRACT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_radial_spurion_action_contract.py",
+      "title": "PR230 Radial-Spurion Action Contract"
+    },
     "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06": {
       "claim_id": "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06",
       "current_status": "support",
@@ -42903,7 +42913,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / WZ same-source response route not complete on current PR230 surface",
       "deps": [],
-      "note_hash": "506d05cb9f0d23dcc8e72ac74be65db5cd2c702320ce928abdf40e61b3ede99f",
+      "note_hash": "8afc32028357934194d22bc4c4d579a53602bb1da317cea6fb6cd1082acb5580",
       "path": "docs/YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_wz_response_route_completion.py",
       "title": "PR230 W/Z Response Route Completion"
@@ -45696,6 +45706,7 @@
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
     "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
+    "yt_pr230_radial_spurion_action_contract_note_2026-05-06",
     "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06",
     "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
@@ -45851,16 +45862,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1109,
-    "node_count": 2062,
-    "root_count": 1575,
-    "runners_with_path": 1558,
+    "leaf_count": 1110,
+    "node_count": 2063,
+    "root_count": 1576,
+    "runners_with_path": 1559,
     "status_counts": {
       "bounded": 565,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 445,
+      "support": 446,
       "unknown": 576
     }
   }

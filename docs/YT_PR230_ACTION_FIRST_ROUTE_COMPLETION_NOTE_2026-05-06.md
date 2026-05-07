@@ -34,9 +34,15 @@ The existing repository has useful support:
 It does not have the load-bearing artifacts:
 
 - no same-source EW/Higgs production action certificate;
+- no accepted no-independent-top-source radial-spurion action certificate;
 - no canonical `O_H` identity/normalization certificate;
 - no production `C_ss/C_sH/C_HH` row packet;
 - no Gram-purity or isolated-pole residue certificate.
+
+The radial-spurion action contract now sharpens the future action target:
+the same scalar source must move one canonical-Higgs radial branch `v(s)` and
+must not also add an independent top bare-mass source.  This is support only;
+the current same-source ansatz is still not adopted as action authority.
 
 Writing the standard EW/Higgs action by hand would be a hypothetical new
 surface unless it is tied back to the PR230 `Cl(3)/Z^3` source coordinate.
@@ -58,5 +64,5 @@ plaquette, or `u0`.
 
 ```bash
 python3 scripts/frontier_yt_pr230_action_first_route_completion.py
-# SUMMARY: PASS=15 FAIL=0
+# SUMMARY: PASS=16 FAIL=0
 ```

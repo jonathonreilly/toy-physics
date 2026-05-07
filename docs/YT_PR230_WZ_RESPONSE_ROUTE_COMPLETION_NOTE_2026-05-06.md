@@ -19,13 +19,16 @@ Current artifacts provide support:
 
 - a gauge-normalized response formula shape;
 - a same-source W-response decomposition theorem;
+- a no-independent-top-source radial-spurion action contract for the future
+  clean response route;
 - row builders and smoke schemas;
 - no-go boundaries for static EW algebra, Goldstone equivalence, response-only
   `g2` self-normalization, and covariance shortcuts.
 
 They do not provide the required physical packet:
 
-- no same-source EW/Higgs production action;
+- no accepted same-source EW/Higgs production action satisfying that
+  no-independent-top-source contract;
 - no production W/Z mass-fit response rows;
 - no same-source top-response certificate;
 - no matched top/W covariance or identity certificate;
@@ -49,5 +52,5 @@ observed W/Z masses, `H_unit`, `yt_ward_identity`, `alpha_LM`, plaquette, or
 
 ```bash
 python3 scripts/frontier_yt_pr230_wz_response_route_completion.py
-# SUMMARY: PASS=13 FAIL=0
+# SUMMARY: PASS=14 FAIL=0
 ```

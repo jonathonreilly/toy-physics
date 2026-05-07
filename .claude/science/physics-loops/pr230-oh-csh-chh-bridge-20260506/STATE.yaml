@@ -1,11 +1,11 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: codex/pr230-wroute-build
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: two_source_taste_radial_schur_pole_lift_gate
+active_route: radial_spurion_action_contract
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-016 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=16/63, finite-mode rho_sx/Delta_sx scouts, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, bounded finite Schur A/B/C inverse-block row support, exact finite-to-pole Schur lift boundary, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks017-018 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
-latest_support_artifact: exact negative boundary / finite Schur A/B/C pole-lift gate; completed chunks001-016 supply finite K(q)=G(q)^(-1) rows with A_f=K_ss, B_f=K_sx, and C_f=K_xx for the measured C_ss/C_sx/C_xx source/complement correlator block, but endpoint-preserving interpolation keeps finite zero/shell values fixed while changing f'(0), so finite endpoints and secants are not strict K'(pole) authority without model-class, isolated-pole, and FV/IR authority; strict neutral-kernel A/B/C pole rows, canonical O_H authority, kappa_s, and y_t closure remain absent
-latest_route_gate_refresh: exact negative boundary plus support / Schur route completion PASS=15 FAIL=0, assumption/import stress PASS=76 FAIL=0, full assembly PASS=135 FAIL=0, campaign PASS=322 FAIL=0, and retained-route PASS=289 FAIL=0 now consume the finite-to-pole Schur lift boundary while preserving proposal_allowed=false
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-016 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=16/63, finite-mode rho_sx/Delta_sx scouts, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, bounded finite Schur A/B/C inverse-block row support, exact finite-to-pole Schur lift boundary, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks017-018 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact no-independent-top-source radial-spurion action contract support added for the W/Z physical-response route, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+latest_support_artifact: exact-support / no-independent-top-source radial-spurion action contract; the future W/Z physical-response route now has an explicit same-source action target requiring s to move one Higgs radial branch v(s) for top/W/Z responses while forbidding an independent additive top bare-mass source, with response-ratio witnesses and additive-source counterexample checked; accepted EW/Higgs action, W/Z rows, strict g2, canonical O_H, source-Higgs pole rows, kappa_s, and y_t closure remain absent
+latest_route_gate_refresh: exact support plus boundary / radial-spurion action contract PASS=13 FAIL=0, action-first route PASS=16 FAIL=0, W/Z route PASS=14 FAIL=0, assumption/import stress PASS=77 FAIL=0, full assembly PASS=136 FAIL=0, campaign PASS=323 FAIL=0, retained-route PASS=290 FAIL=0, and completion audit PASS=45 FAIL=0 while preserving proposal_allowed=false
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -187,6 +187,12 @@ hard_residual: >
   contract.  Current closure remains open because the accepted action,
   canonical `O_H`, W/Z mass-fit rows, source-Higgs pole rows, and retained
   route certificate are absent.
+  The radial-spurion action contract now packages that future action target:
+  the shared source must move one Higgs radial branch v(s), the action must
+  forbid an independent additive top bare-mass source, and the top/W and top/Z
+  response-ratio formulas recover y_t only under that no-independent-source
+  condition.  This is exact support only; the current additive FH/LSZ source is
+  not licensed as a W/Z bypass source.
 files_touched:
   - scripts/frontier_yt_pr230_neutral_primitive_route_completion.py
   - docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md
@@ -241,6 +247,9 @@ files_touched:
   - scripts/frontier_yt_pr230_radial_spurion_sector_overlap_theorem.py
   - docs/YT_PR230_RADIAL_SPURION_SECTOR_OVERLAP_THEOREM_NOTE_2026-05-06.md
   - outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json
+  - scripts/frontier_yt_pr230_radial_spurion_action_contract.py
+  - docs/YT_PR230_RADIAL_SPURION_ACTION_CONTRACT_NOTE_2026-05-06.md
+  - outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json
   - scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_SUBBLOCK_WITNESS_NOTE_2026-05-06.md
   - outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json
@@ -383,8 +392,8 @@ files_touched:
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
   source_coordinate_transport_completion_pass_fail: "20/0"
-  action_first_route_completion_pass_fail: "15/0"
-  wz_response_route_completion_pass_fail: "13/0"
+  action_first_route_completion_pass_fail: "16/0"
+  wz_response_route_completion_pass_fail: "14/0"
   schur_route_completion_pass_fail: "15/0"
   neutral_primitive_route_completion_pass_fail: "12/0"
   origin_main_composite_higgs_intake_guard_pass_fail: "19/0"
@@ -432,17 +441,18 @@ verification:
   same_source_ew_action_semantic_firewall_pass_fail: "12/0"
   same_source_ew_action_gate_pass_fail: "25/0"
   post_fms_source_overlap_necessity_gate_pass_fail: "14/0"
+  radial_spurion_action_contract_pass_fail: "13/0"
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "5/0"
   source_higgs_gram_postprocessor_pass_fail: "3/0"
   source_higgs_production_readiness_pass_fail: "25/0"
-  completion_audit_pass_fail: "44/0"
+  completion_audit_pass_fail: "45/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "76/0"
-  full_positive_assembly_pass_fail: "135/0"
-  retained_route_certificate_pass_fail: "289/0"
-  campaign_status_certificate_pass_fail: "322/0"
+  assumption_import_stress_pass_fail: "77/0"
+  full_positive_assembly_pass_fail: "136/0"
+  retained_route_certificate_pass_fail: "290/0"
+  campaign_status_certificate_pass_fail: "323/0"
   audit_pipeline: "complete; audit metadata regenerated and kept intentionally because edited PR230 note hashes must be seeded for strict audit lint"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
@@ -489,7 +499,12 @@ next_exact_action: >
   rows, Gram purity, or kappa_s=1 by itself.  The adoption-attempt gate now
   blocks direct ansatz promotion into the accepted EW action certificate until
   canonical-Higgs, sector-overlap, W/Z mass-fit path, accepted input, and
-  action-gate readiness prerequisites are supplied.  The post-FMS source-overlap
+  action-gate readiness prerequisites are supplied.  The radial-spurion action
+  contract now adds the clean W/Z bypass target: no independent additive top
+  source may appear under the shared scalar source.  The next W/Z action work
+  is therefore an accepted no-independent-top-source EW/Higgs action plus
+  matched top/WZ response rows and strict g2, not reuse of the current additive
+  top-source FH rows.  The post-FMS source-overlap
   necessity gate now proves that FMS C_HH plus source-only rows or C_sx/C_xx
   chunks still do not determine Res C_sH; do not use FMS literature, method
   names, degree, odd parity, Z3 invariance, or C_sx/C_xx aliases alone as
@@ -568,4 +583,7 @@ stop_condition: >
   the conditional Higgs mass-source action bridge that derives dS/ds=sum O_H
   for a future centered Phi^dagger Phi source term while leaving the
   same-surface action, canonical O_H certificate, source-Higgs rows, LSZ,
-  kappa_s, and closure open.
+  kappa_s, and closure open, then packaging the no-independent-top-source
+  radial-spurion action contract while leaving the accepted EW/Higgs action,
+  W/Z rows, strict g2, canonical O_H, source-Higgs rows, kappa_s, and closure
+  open.

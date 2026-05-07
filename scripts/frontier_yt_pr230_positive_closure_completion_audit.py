@@ -43,6 +43,7 @@ PARENTS = {
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
@@ -451,6 +452,23 @@ def main() -> int:
         )
         is False
     )
+    radial_spurion_action_contract_not_closure = (
+        "no-independent-top-source radial-spurion action contract"
+        in parent_statuses["radial_spurion_action_contract"]
+        and certs["radial_spurion_action_contract"].get("proposal_allowed") is False
+        and certs["radial_spurion_action_contract"].get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and certs["radial_spurion_action_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and certs["radial_spurion_action_contract"].get(
+            "accepted_action_certificate_written"
+        )
+        is False
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in parent_statuses["post_fms_source_overlap_necessity_gate"]
@@ -644,6 +662,7 @@ def main() -> int:
     report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
     report("same-source-ew-higgs-action-ansatz-not-closure", same_source_ew_higgs_action_ansatz_not_closure, parent_statuses["same_source_ew_higgs_action_ansatz_gate"])
     report("same-source-ew-action-adoption-attempt-not-closure", same_source_ew_action_adoption_attempt_not_closure, parent_statuses["same_source_ew_action_adoption_attempt"])
+    report("radial-spurion-action-contract-not-closure", radial_spurion_action_contract_not_closure, parent_statuses["radial_spurion_action_contract"])
     report("post-fms-source-overlap-necessity-blocks-current-inference", post_fms_source_overlap_necessity_blocks_current_inference, parent_statuses["post_fms_source_overlap_necessity_gate"])
     report("source-higgs-overlap-kappa-contract-not-closure", source_higgs_overlap_kappa_contract_not_closure, parent_statuses["source_higgs_overlap_kappa_contract"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
@@ -701,6 +720,7 @@ def main() -> int:
                 "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
                 "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
                 "source_higgs_overlap_kappa_contract_not_closure": source_higgs_overlap_kappa_contract_not_closure,
+                "radial_spurion_action_contract_not_closure": radial_spurion_action_contract_not_closure,
                 "future_bridge_file_presence": future_bridge_presence,
                 "needed": [
                     "same-surface canonical O_H identity/normalization certificate",
@@ -800,6 +820,7 @@ def main() -> int:
             "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,
             "same_source_ew_higgs_action_ansatz_not_closure": same_source_ew_higgs_action_ansatz_not_closure,
             "same_source_ew_action_adoption_attempt_not_closure": same_source_ew_action_adoption_attempt_not_closure,
+            "radial_spurion_action_contract_not_closure": radial_spurion_action_contract_not_closure,
             "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,

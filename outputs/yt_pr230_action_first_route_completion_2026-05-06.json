@@ -5,6 +5,7 @@
   "bare_retained_allowed": false,
   "blocked_requirements": {
     "canonical_oh_certificate": false,
+    "radial_spurion_action_contract_currently_unadopted": true,
     "same_source_ew_action_certificate": false,
     "source_higgs_gram_purity_certificate": false,
     "source_higgs_rows": false
@@ -35,6 +36,7 @@
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
     "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
@@ -50,6 +52,7 @@
     "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
     "canonical_oh_premise_stretch": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
     "fms_oh_certificate_construction_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
     "same_source_ew_action_builder": "open / same-source EW action certificate absent",
     "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "source_coordinate_transport_completion": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
@@ -59,7 +62,7 @@
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority"
   },
-  "pass_count": 15,
+  "pass_count": 16,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current PR230 artifacts supply structural EW context and a guarded source-Higgs row shell, but not the same-source action, canonical O_H, source-Higgs rows, or Gram-purity certificate needed for a physical y_t readout.",
   "strict_non_claims": [

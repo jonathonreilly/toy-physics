@@ -35,6 +35,7 @@
     "origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
     "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
     "radial_spurion_sector_overlap_theorem": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
     "reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
@@ -74,7 +75,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 76,
+  "pass_count": 77,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

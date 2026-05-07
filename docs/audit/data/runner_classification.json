@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T23:51:13.273256+00:00",
+  "generated_at": "2026-05-07T00:12:04.030863+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17076,6 +17076,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py"
+    },
+    "yt_pr230_radial_spurion_action_contract_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_radial_spurion_action_contract.py"
     },
     "yt_pr230_radial_spurion_sector_overlap_theorem_note_2026-05-06": {
       "assert_count": 1,
@@ -35502,6 +35514,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_radial_spurion_action_contract.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_radial_spurion_action_contract_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_radial_spurion_sector_overlap_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -41179,11 +41206,11 @@
       "A": 9,
       "B": 237,
       "C": 521,
-      "D": 308,
+      "D": 309,
       "none": 404
     },
-    "runners_classified": 1479,
-    "runners_with_C": 791,
-    "runners_with_D": 569
+    "runners_classified": 1480,
+    "runners_with_C": 792,
+    "runners_with_D": 570
   }
 }

@@ -35,6 +35,7 @@ PARENTS = {
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "wz_same_source_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
     "wz_goldstone_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
@@ -192,6 +193,23 @@ def main() -> int:
         is False
         and not futures["same_source_ew_action_certificate"]
     )
+    radial_spurion_action_contract_support_only = (
+        "no-independent-top-source radial-spurion action contract"
+        in statuses["radial_spurion_action_contract"]
+        and parents["radial_spurion_action_contract"].get(
+            "radial_spurion_action_contract_passed"
+        )
+        is True
+        and parents["radial_spurion_action_contract"].get(
+            "current_surface_contract_satisfied"
+        )
+        is False
+        and parents["radial_spurion_action_contract"].get(
+            "accepted_action_certificate_written"
+        )
+        is False
+        and parents["radial_spurion_action_contract"].get("proposal_allowed") is False
+    )
     source_transport_shortcuts_closed = (
         parents["wz_source_coordinate_transport_no_go"].get(
             "wz_source_coordinate_transport_no_go_passed"
@@ -268,6 +286,7 @@ def main() -> int:
     report("same-source-wz-rows-absent", w_rows_absent, statuses["wz_response_certificate_gate"])
     report("wz-mass-fit-rows-absent", wz_mass_fit_absent, statuses["wz_mass_fit_response_row_builder"])
     report("same-source-ew-action-absent", same_source_action_absent, statuses["wz_same_source_action_gate"])
+    report("radial-spurion-action-contract-support-only", radial_spurion_action_contract_support_only, statuses["radial_spurion_action_contract"])
     report("source-transport-shortcuts-closed", source_transport_shortcuts_closed, statuses["wz_source_coordinate_transport_no_go"])
     report("matched-top-w-covariance-absent", covariance_absent, statuses["top_wz_matched_covariance_builder"])
     report("strict-nonobserved-g2-absent", strict_g2_absent, statuses["electroweak_g2_builder"])
@@ -283,6 +302,7 @@ def main() -> int:
         and w_rows_absent
         and wz_mass_fit_absent
         and same_source_action_absent
+        and radial_spurion_action_contract_support_only
         and source_transport_shortcuts_closed
         and covariance_absent
         and strict_g2_absent
@@ -311,6 +331,7 @@ def main() -> int:
         "future_artifact_presence": futures,
         "blocked_requirements": {
             "same_source_ew_action": same_source_action_absent,
+            "radial_spurion_action_contract_currently_unadopted": radial_spurion_action_contract_support_only,
             "wz_mass_fit_response_rows": w_rows_absent or wz_mass_fit_absent,
             "same_source_top_response": top_response_absent,
             "matched_top_w_covariance": covariance_absent,

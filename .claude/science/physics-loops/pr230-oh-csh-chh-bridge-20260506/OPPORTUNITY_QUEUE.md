@@ -32,6 +32,11 @@
    cancels from top/W and top/Z response ratios.  It also blocks treating the
    current additive top mass FH source as that radial spurion.  This tightens
    the future action contract; it is not current closure.
+   The radial-spurion action contract now packages that future action target:
+   `s` must move one Higgs radial branch `v(s)` for top, W, and Z responses,
+   and the action must forbid an independent additive top bare-mass source.
+   This is exact support only, not action adoption, W/Z row evidence, strict
+   `g2` authority, canonical `O_H`, or closure.
    The post-FMS source-overlap necessity gate shows that even with FMS `C_HH`
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a
