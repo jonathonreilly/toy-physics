@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 830
+**Total pending:** 829
 **Ready (all deps already at retained-grade or metadata tiers):** 7
 
 By criticality:
-- `critical`: 504
+- `critical`: 503
 - `high`: 24
 - `medium`: 126
 - `leaf`: 176
@@ -16,7 +16,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 313 | 10.79 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
-| 2 | `higgs_from_lattice_note` | bounded_theorem | unaudited | critical | 310 | 8.78 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 2 | `higgs_mass_derived_note` | positive_theorem | claim_type_backfill_reaudit | critical | 309 | 16.78 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_full_3loop.py` |
 | 3 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded_theorem | unaudited | critical | 303 | 8.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py` |
 | 4 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | unaudited | critical | 292 | 9.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
 | 5 | `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19` | bounded_theorem | unaudited | critical | 290 | 8.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_abcc_chamber_dple_closure.py` |

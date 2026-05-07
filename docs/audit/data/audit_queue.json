@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 504,
+    "critical": 503,
     "high": 24,
     "leaf": 176,
     "medium": 126
@@ -5780,24 +5780,28 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
+      "audit_status": "audited_conditional",
       "blocker": null,
-      "claim_id": "higgs_from_lattice_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_id": "higgs_mass_derived_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "backfilled_pending_reaudit",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.781,
-      "note_path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
-      "queue_reason": "unaudited",
+      "deps": [
+        "taste_scalar_isotropy_theorem_note",
+        "higgs_mechanism_note",
+        "higgs_from_lattice_note"
+      ],
+      "direct_in_degree": 17,
+      "effective_status": "audited_conditional",
+      "load_bearing_score": 16.776,
+      "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
+      "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
-      "runner_path": "scripts/frontier_higgs_mass_derived.py",
-      "transitive_descendants": 310
+      "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
+      "transitive_descendants": 309
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7860,31 +7864,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "transitive_descendants": 310
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "higgs_mass_derived_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "taste_scalar_isotropy_theorem_note",
-        "higgs_mechanism_note",
-        "higgs_from_lattice_note"
-      ],
-      "direct_in_degree": 17,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 16.776,
-      "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": false,
-      "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
-      "transitive_descendants": 309
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27865,5 +27844,5 @@
     }
   ],
   "ready_count": 7,
-  "total_pending": 830
+  "total_pending": 829
 }

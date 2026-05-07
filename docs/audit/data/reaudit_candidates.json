@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 0,
+    "critical": 1,
     "high": 0,
     "leaf": 0,
     "medium": 0
@@ -11,7 +11,61 @@
     "leaf": 0,
     "medium": 0
   },
-  "candidates": [],
+  "candidates": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "higgs_mass_derived_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "current_dep_effective_status": {
+        "higgs_from_lattice_note": "retained_bounded",
+        "higgs_mechanism_note": "retained_bounded",
+        "taste_scalar_isotropy_theorem_note": "retained"
+      },
+      "deps": [
+        "taste_scalar_isotropy_theorem_note",
+        "higgs_mechanism_note",
+        "higgs_from_lattice_note"
+      ],
+      "direct_in_degree": 17,
+      "effective_status": "audited_conditional",
+      "generated_order": 1,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "audited_conditional",
+          "claim_id": "higgs_from_lattice_note",
+          "rank_delta": 85
+        },
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "audited_conditional",
+          "claim_id": "higgs_mechanism_note",
+          "rank_delta": 85
+        },
+        {
+          "after_effective_status": "retained",
+          "before_effective_status": "audited_conditional",
+          "claim_id": "taste_scalar_isotropy_theorem_note",
+          "rank_delta": 90
+        }
+      ],
+      "load_bearing_score": 16.776,
+      "note_hash": "ce3eefa82df02d439a2dc1cbc77a994dba3d07e856d83095bc179d903667c656",
+      "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
+      "reraudit_after_claim_ids": [
+        "higgs_from_lattice_note",
+        "higgs_mechanism_note",
+        "taste_scalar_isotropy_theorem_note"
+      ],
+      "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
+      "transitive_descendants": 309
+    }
+  ],
   "eligible_audit_statuses": [
     "audited_conditional",
     "audited_decoration",
@@ -58,6 +112,6 @@
       "transitive_descendants": 314
     }
   ],
-  "total_candidates": 0,
+  "total_candidates": 1,
   "total_runner_drift_candidates": 1
 }
