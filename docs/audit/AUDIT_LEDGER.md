@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 813 |
+| unaudited | 812 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 444 |
+| ~~audited_conditional~~ | 445 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 444 |
+| `audited_conditional` | 445 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 862 |
+| `unaudited` | 861 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 660 |
+| `bounded_theorem` | 661 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 109 |
-| `positive_theorem` | 786 |
+| `positive_theorem` | 785 |
 
 | criticality | count |
 |---|---:|
@@ -896,6 +896,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `su3_adjoint_casimir_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -12347,6 +12348,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The safe read is that structureless causal DAGs can show TOWARD rows, and when they do the source-strength response stays close to linear on this pocket.  _(class `C`)_
 - **chain closes:** True — The runner directly constructs the stated random DAG pocket, propagates with the stated valley-linear field and kernel, and reports the TOWARD counts, local power-law fits, and no-field controls. No external dependency or graph-universality claim is needed for the narrowed harness-level statement.
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
+- **auditor confidence:** high
+
+### `su3_adjoint_casimir_theorem_note_2026-05-02`
+
+- **Note:** [`SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Gell-Mann-normalized adjoint Casimir C_2(adj)=3 for the direct dependency's retained-bounded algebraic SU(3) embedding; physical SM color, gluon, and QCD readouts are not retained by this scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-su3-adjoint-casimir`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Taking the trace of C_2(adj)=c I_8 after Tr[T^a_adj T^b_adj]=N delta^{ab} gives 8c=8N, hence c=N=3.  _(class `A`)_
+- **chain closes:** False — The algebraic adjoint Casimir computation closes on the retained-bounded SU(3) embedding. The source note's gluon color-charge and QCD corollary language does not close because the direct dependency explicitly excludes the physical SM color-carrier bridge.
+- **rationale:** Issue: The note proves the algebraic SU(3) adjoint Casimir value but also identifies it with gluon color-charge squared and perturbative QCD color factors. Why this blocks: the cited dependency retains only an algebraic SU(3) embedding/channel-count scope and explicitly defers physical SM color identification. Repair target: narrow the note to the bounded algebraic adjoint Casimir theorem or add a retained bridge deriving the physical color/gluon readout. Claim boundary until fixed: C_2(adj)=3 for the algebraic Gell-Mann-normalized SU(3) carrier; physical gluon and QCD language is conditional or excluded.
+- **open / conditional deps cited:**
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high
 
 ### `su3_casimir_fundamental_theorem_note_2026-05-02`
