@@ -1,0 +1,121 @@
+{
+  "actual_current_surface_status": "bounded support plus exact boundary / C_x|s Schur residual passes the necessary first-shell Stieltjes direction but lacks complete monotonicity, threshold, pole, FV/IR, and source-bridge authority",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_higgs_or_physical_response_bridge_present": false,
+  "complete_monotonicity_authority_passed": false,
+  "conditional_surface_status": null,
+  "exact_next_action": "Use C_x|s as a targeted diagnostic while the 63-chunk row packet finishes, but for closure add higher-shell/multivolume Schur rows plus a pole/threshold theorem, or supply canonical O_H/C_spH/C_HH rows or a genuine W/Z response bridge.",
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "finite_difference_requirements": [
+    {
+      "current_C_x_given_source": "passed on zero-to-first shell",
+      "id": "stieltjes_first_difference",
+      "required": "C(x2) - C(x1) <= 0 for x2 > x1",
+      "sufficient_for_authority": false
+    },
+    {
+      "current_C_x_given_source": "not testable: current rows have only zero and first-shell momenta",
+      "id": "complete_monotonicity_higher_differences",
+      "required": "alternating finite-difference signs across at least three ordered q_hat^2 levels, or an analytic moment theorem",
+      "sufficient_for_authority": false
+    },
+    {
+      "current_C_x_given_source": "absent",
+      "id": "threshold_or_measure_certificate",
+      "required": "positive spectral measure / threshold support with contact-subtraction convention",
+      "sufficient_for_authority": false
+    },
+    {
+      "current_C_x_given_source": "absent",
+      "id": "pole_and_residue_certificate",
+      "required": "isolated pole location, derivative/residue, and model-class authority",
+      "sufficient_for_authority": false
+    },
+    {
+      "current_C_x_given_source": "absent: current packet is single volume L12xT24",
+      "id": "fv_ir_limiting_order",
+      "required": "multivolume FV/IR/zero-mode limiting order",
+      "sufficient_for_authority": false
+    },
+    {
+      "current_C_x_given_source": "absent",
+      "id": "canonical_source_bridge",
+      "required": "canonical O_H/source-overlap or W/Z physical-response bridge",
+      "sufficient_for_authority": false
+    }
+  ],
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_C_x_given_source_as_canonical_O_H": false,
+    "treated_first_shell_check_as_scalar_lsz_authority": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_reduced_pilot_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "fv_ir_multivolume_authority_present": false,
+  "higher_momentum_shells_present": false,
+  "hypothetical_axiom_status": null,
+  "p_hat_sq_levels": [
+    0.0,
+    0.267949192431123
+  ],
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "retained_route": "open / retained closure not yet reached",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "schur_abc": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
+    "schur_kprime": "bounded-support / finite-shell Schur inverse-slope scout from two-source taste-radial rows; strict K-prime pole authority absent",
+    "schur_pole_lift": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
+    "schur_repair": "bounded-support / Schur-complement Stieltjes repair split: C_s|x fails first-shell monotonicity while C_x|s survives the necessary first-shell check; scalar-LSZ authority absent",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "strict_scalar_lsz": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+  },
+  "pass_count": 15,
+  "pole_model_class_authority_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A zero-to-first-shell decrease is only a necessary Stieltjes check. The current packet has two q_hat^2 levels, incomplete chunks, no pole/model-class rows, no spectral threshold theorem, no multivolume FV/IR limit, and no canonical O_H or W/Z bridge.",
+  "ready_chunks": 30,
+  "schur_complement_complete_monotonicity_gate_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat C_x|s as canonical O_H",
+    "does not treat a first-shell Stieltjes check as scalar-LSZ authority",
+    "does not supply C_spH/C_HH pole rows",
+    "does not supply a W/Z physical-response bridge",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "threshold_or_measure_authority_present": false,
+  "x_given_source_first_shell_stieltjes_support": true,
+  "x_given_source_summary": {
+    "shell": {
+      "count": 30,
+      "max": 0.2697468820611708,
+      "mean": 0.2695483699599989,
+      "min": 0.269397809985968,
+      "stderr": 1.7732875915815088e-05
+    },
+    "shell_minus_zero": {
+      "count": 30,
+      "max": -0.01124889363522047,
+      "mean": -0.01129314476652999,
+      "min": -0.011332724280825102,
+      "stderr": 4.029023775068568e-06
+    },
+    "shell_minus_zero_z_score_from_chunk_scatter": -459.08170655875074,
+    "zero": {
+      "count": 30,
+      "max": 0.2810229245536583,
+      "mean": 0.2808415147265289,
+      "min": 0.28068870370685767,
+      "stderr": 1.704924305923733e-05
+    }
+  }
+}

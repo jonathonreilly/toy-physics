@@ -194,6 +194,9 @@ def main() -> int:
         "schur_complement_stieltjes_repair_gate": load(
             "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json"
         ),
+        "schur_complement_complete_monotonicity_gate": load(
+            "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json"
+        ),
         "two_source_taste_radial_chunk_package": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
         ),
@@ -385,6 +388,8 @@ def main() -> int:
         "finite C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows",
         "finite-shell Schur inverse-slope scout",
         "finite zero-to-first-shell inverse slopes are not isolated-pole K'(pole) rows",
+        "Schur-complement complete-monotonicity/threshold gate",
+        "first-shell C_x|s support is not strict scalar-LSZ authority",
         "two-source taste-radial chunks001-022 packaged",
         "active chunks, logs, and pending checkpoints are not evidence",
         "source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract",

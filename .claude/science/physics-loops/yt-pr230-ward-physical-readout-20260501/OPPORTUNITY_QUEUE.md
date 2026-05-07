@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-07 Schur complete-monotonicity refresh: the current Schur
+`C_x|s` residual is a real finite diagnostic, not closure.  It passes the
+necessary first-shell Stieltjes direction on chunks001-030
+(`diff=-0.01129314476652999`, `z=-459.08170655875074`), but the packet has
+only two ordered `q_hat^2` levels and no complete-monotonicity, threshold
+measure, pole/residue, multivolume FV/IR, canonical-Higgs, or W/Z response
+authority.  Keep `C_x|s` as a targeted diagnostic while the 63-chunk packet
+finishes.  The cleanest closure target remains certified canonical `O_H` plus
+`C_ss/C_spH/C_HH` pole rows; first fallback remains genuine same-source W/Z
+response rows with identity/covariance/strict non-observed `g2`; then strict
+scalar-LSZ authority, higher-shell/multivolume Schur rows, or neutral
+primitive/irreducibility authority.
+
 2026-05-07 chunks029-030 package refresh: chunks001-030 are now packaged
 partial `C_sx/C_xx` support with `ready=30/63`; chunks029-030 pass
 completed-mode checkpoints and preserve selected-mass-only FH/LSZ,

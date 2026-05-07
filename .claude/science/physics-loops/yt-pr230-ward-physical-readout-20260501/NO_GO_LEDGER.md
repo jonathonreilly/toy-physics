@@ -1,5 +1,16 @@
 # No-Go Ledger
 
+## First-shell `C_x|s` Schur support is not scalar-LSZ authority
+
+The 2026-05-07 Schur-complement complete-monotonicity gate shows that
+`C_x|s` decreases from zero mode to first shell on chunks001-030, but the
+current row packet has only two ordered `q_hat^2` levels.  A one-step
+decrease is a necessary finite Stieltjes direction only; it does not prove
+complete monotonicity, a positive threshold measure, isolated pole/residue
+dominance, FV/IR limiting order, or a canonical `O_H`/W/Z physical-response
+bridge.  Do not treat `C_x|s`, Schur repair language, or first-shell z scores
+as retained/proposed-retained evidence or as strict scalar-LSZ authority.
+
 ## Two-source chunks001-030 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks029-030 package moves the finite two-source row packet to

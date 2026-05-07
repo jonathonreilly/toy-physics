@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T06:23:44.826703+00:00",
+  "generated_at": "2026-05-07T06:41:22.456336+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42728,6 +42728,16 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py",
       "title": "PR #230 Schur A/B/C Definition Derivation Attempt Note"
     },
+    "yt_pr230_schur_complement_complete_monotonicity_gate_note_2026-05-07": {
+      "claim_id": "yt_pr230_schur_complement_complete_monotonicity_gate_note_2026-05-07",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support plus exact boundary / `C_x|s` first-shell support is",
+      "deps": [],
+      "note_hash": "58bb5327873a4c986a7ee55e634774369fdaa67848be0b6a337063fe7c9f4c3f",
+      "path": "docs/YT_PR230_SCHUR_COMPLEMENT_COMPLETE_MONOTONICITY_GATE_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py",
+      "title": "PR230 Schur-Complement Complete-Monotonicity Gate"
+    },
     "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
       "current_status": "bounded",
@@ -45809,6 +45819,7 @@
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
     "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
+    "yt_pr230_schur_complement_complete_monotonicity_gate_note_2026-05-07",
     "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
     "yt_pr230_schur_route_completion_note_2026-05-06",
     "yt_pr230_source_coordinate_transport_completion_attempt_note_2026-05-06",
@@ -45961,12 +45972,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1119,
-    "node_count": 2072,
-    "root_count": 1585,
-    "runners_with_path": 1567,
+    "leaf_count": 1120,
+    "node_count": 2073,
+    "root_count": 1586,
+    "runners_with_path": 1568,
     "status_counts": {
-      "bounded": 568,
+      "bounded": 569,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,

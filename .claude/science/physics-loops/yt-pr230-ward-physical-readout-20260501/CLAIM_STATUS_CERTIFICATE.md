@@ -1,5 +1,39 @@
 # Claim Status Certificate
 
+Schur-complement complete-monotonicity gate checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / C_x|s first-shell diagnostic; no scalar-LSZ authority
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=85 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=332 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=145 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=299 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=54 FAIL=0
+```
+
+`C_x|s` survives the necessary first-shell Stieltjes direction on
+chunks001-030, but that is not complete monotonicity and not threshold,
+pole/residue, FV/IR, canonical-Higgs, W/Z response, or matching authority.
+Chunks031-032 are run-control/log state only until completed and checkpointed.
+The current branch still lacks canonical `O_H`, `C_spH/C_HH` pole rows,
+strict scalar-LSZ/FV authority, strict Schur pole rows, W/Z rows with strict
+`g2`/covariance, and any retained-route or campaign proposal authorization.
+
 Two-source taste-radial chunks029-030 package checkpoint:
 
 ```text

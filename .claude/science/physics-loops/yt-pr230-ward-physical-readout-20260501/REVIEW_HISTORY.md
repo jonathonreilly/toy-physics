@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - Schur-Complement Complete-Monotonicity Gate
+
+Review stance: bounded support plus exact boundary / no closure promotion.
+
+- Added `scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py`,
+  its note, and its JSON certificate.
+- The gate tests whether the Schur `C_x|s` residual can be promoted from a
+  finite first-shell diagnostic to strict scalar-LSZ
+  complete-monotonicity/threshold authority.
+- Validation: Schur complete-monotonicity gate `PASS=15 FAIL=0`; assumption
+  stress `PASS=85 FAIL=0`; campaign status `PASS=332 FAIL=0`; full assembly
+  `PASS=145 FAIL=0`; retained-route `PASS=299 FAIL=0`; completion audit
+  `PASS=54 FAIL=0`.
+
+Disposition: bounded support only.  `C_x|s` has useful first-shell support on
+chunks001-030, but current data have only two ordered momentum levels and no
+higher-shell complete-monotonicity, threshold, pole/residue, FV/IR,
+canonical-Higgs, W/Z response, or matching authority.  No retained or
+proposed-retained wording is allowed.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks029-030 Package
 
 Review stance: bounded support / partial row-wave package.

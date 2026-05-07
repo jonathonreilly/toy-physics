@@ -644,6 +644,9 @@ def main() -> int:
         "pr230_schur_complement_stieltjes_repair_gate": load(
             "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json"
         ),
+        "pr230_schur_complement_complete_monotonicity_gate": load(
+            "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json"
+        ),
         "pr230_two_source_taste_radial_chunk_package": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json"
         ),
@@ -2987,6 +2990,32 @@ def main() -> int:
         )
         is False,
         statuses["pr230_schur_complement_stieltjes_repair_gate"],
+    )
+    schur_complete_monotonicity_gate = certificates[
+        "pr230_schur_complement_complete_monotonicity_gate"
+    ]
+    report(
+        "pr230-schur-complement-complete-monotonicity-authority-absent",
+        "C_x|s Schur residual passes"
+        in str(statuses["pr230_schur_complement_complete_monotonicity_gate"])
+        and schur_complete_monotonicity_gate.get("proposal_allowed") is False
+        and schur_complete_monotonicity_gate.get(
+            "schur_complement_complete_monotonicity_gate_passed"
+        )
+        is True
+        and schur_complete_monotonicity_gate.get(
+            "x_given_source_first_shell_stieltjes_support"
+        )
+        is True
+        and schur_complete_monotonicity_gate.get(
+            "complete_monotonicity_authority_passed"
+        )
+        is False
+        and schur_complete_monotonicity_gate.get(
+            "canonical_higgs_or_physical_response_bridge_present"
+        )
+        is False,
+        statuses["pr230_schur_complement_complete_monotonicity_gate"],
     )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"

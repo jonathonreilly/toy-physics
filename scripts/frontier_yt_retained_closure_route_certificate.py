@@ -169,6 +169,7 @@ def main() -> int:
         "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
         "pr230_strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
         "pr230_schur_complement_stieltjes_repair_gate": "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json",
+        "pr230_schur_complement_complete_monotonicity_gate": "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json",
         "pr230_two_source_taste_radial_chunk_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
         "pr230_source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
@@ -1719,6 +1720,28 @@ def main() -> int:
         and certificates[
             "pr230_schur_complement_stieltjes_repair_gate"
         ].get("canonical_higgs_operator_identity_passed")
+        is False
+    )
+    schur_complement_complete_monotonicity_support_not_closure = (
+        "C_x|s Schur residual passes"
+        in certificates[
+            "pr230_schur_complement_complete_monotonicity_gate"
+        ].get("actual_current_surface_status", "")
+        and certificates[
+            "pr230_schur_complement_complete_monotonicity_gate"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_schur_complement_complete_monotonicity_gate"
+        ].get("schur_complement_complete_monotonicity_gate_passed")
+        is True
+        and certificates[
+            "pr230_schur_complement_complete_monotonicity_gate"
+        ].get("complete_monotonicity_authority_passed")
+        is False
+        and certificates[
+            "pr230_schur_complement_complete_monotonicity_gate"
+        ].get("canonical_higgs_or_physical_response_bridge_present")
         is False
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
@@ -4516,6 +4539,13 @@ def main() -> int:
         schur_complement_stieltjes_repair_support_not_closure,
         certificates[
             "pr230_schur_complement_stieltjes_repair_gate"
+        ].get("actual_current_surface_status", ""),
+    )
+    report(
+        "schur-complement-complete-monotonicity-support-not-closure",
+        schur_complement_complete_monotonicity_support_not_closure,
+        certificates[
+            "pr230_schur_complement_complete_monotonicity_gate"
         ].get("actual_current_surface_status", ""),
     )
     report(

@@ -1,5 +1,34 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 Schur-complement complete-monotonicity gate:
+
+- Added `scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py`,
+  `docs/YT_PR230_SCHUR_COMPLEMENT_COMPLETE_MONOTONICITY_GATE_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json`.
+- The gate tests whether the one promising Schur residual,
+  `C_x|s = det([[C_ss, C_sx], [C_sx, C_xx]]) / C_ss`, can be promoted from
+  a first-shell finite diagnostic into strict scalar-LSZ
+  complete-monotonicity/threshold/FV authority.
+- Result: bounded support plus exact boundary.  On chunks001-030,
+  `C_x|s` decreases from zero mode to the first shell with diff
+  `-0.01129314476652999` and z score `-459.08170655875074`, but the packet
+  has only two ordered `q_hat^2` levels.  That is only a necessary
+  first-difference check; it is not complete monotonicity, not a threshold
+  measure, not an isolated pole/residue theorem, not multivolume FV/IR
+  authority, and not a canonical-Higgs or W/Z response bridge.
+- Validation: Schur complete-monotonicity gate `PASS=15 FAIL=0`; assumption
+  stress `PASS=85 FAIL=0`; campaign status `PASS=332 FAIL=0`; full assembly
+  `PASS=145 FAIL=0`; retained-route `PASS=299 FAIL=0`; completion audit
+  `PASS=54 FAIL=0`.
+- Chunks031-032 remain active/run-control status only until completed root
+  JSONs and completed-mode checkpoints exist.
+- Claim boundary: no retained/proposed-retained closure is authorized.  Use
+  `C_x|s` as a targeted diagnostic while the 63-chunk packet finishes, but
+  closure still needs higher-shell/multivolume Schur rows plus a
+  pole/threshold theorem, canonical `O_H/C_spH/C_HH` rows, or a genuine W/Z
+  response bridge.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks029-030 package:
 
 - Packaged chunks029-030 after completed root JSONs and per-volume artifacts
