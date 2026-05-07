@@ -60,6 +60,13 @@ scout/schema rows and support contracts are not the strict accepted-action
 production packet.  No standalone block11 review PR should be opened unless
 PR #230 integration fails.
 
+Block12 follows the same direct PR #230 landing path.  It is a loop-pack
+routing checkpoint after resume/fetch: PR #230 remains open/draft at
+`0b3623a91`, no fresh certified `O_H` / source-Higgs pole-row packet or strict
+W/Z physical-response packet is present, and the next exact action remains
+waiting on those production/certificate inputs.  No standalone block12 review
+PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

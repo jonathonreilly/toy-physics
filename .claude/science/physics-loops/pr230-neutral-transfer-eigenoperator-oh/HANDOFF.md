@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-07 10:19 EDT
+Checkpoint: 2026-05-07 10:34 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -122,6 +122,28 @@ Honest status: exact negative boundary / WZ physical-response packet not
 present on the current PR230 surface; current surface remains open.
 `proposal_allowed=false`.
 
+## Block12 Resume Checkpoint
+
+This checkpoint resumed the campaign after block11, fetched `origin`, and
+verified that the draft PR #230 head did not advance:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 0b3623a91
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The queue was refreshed against the current PR head and the same-day support
+surfaces were re-read.  The source-Higgs time-kernel production manifest is
+infrastructure support only, not a canonical `O_H` certificate or production
+`C_ss/C_sH/C_HH` pole-row packet.  The W/Z same-source action minimal
+certificate cut remains an exact negative boundary, not an accepted action.
+The strict scalar-LSZ/FV and W/Z response-ratio artifacts remain support or
+boundary surfaces only.
+
+Honest status: open / supervisor resume checkpoint.  No new retained,
+`proposed_retained`, exact-support closure, or production physical-response
+packet is authorized.  `proposal_allowed=false`.
+
 ## Verification
 
 ```bash
@@ -142,6 +164,11 @@ python3 link check for new theorem note
 # missing_links=[]
 rg forbidden/status firewall review
 # hits are non-claim/firewall exclusions only
+git fetch origin
+git rev-parse HEAD origin/claude/yt-direct-lattice-correlator-2026-04-30 origin/main
+# 0b3623a91 / 0b3623a91 / 8f98c2e5
+gh pr view 230 --json number,title,state,isDraft,headRefName,baseRefName,headRefOid,url
+# open draft PR #230 at head 0b3623a91
 git diff --check
 # OK
 ```
@@ -166,12 +193,18 @@ does not set `delta_perp`, `kappa_s`, `c2`, `Z_match`, or `g2` by convention,
 does not identify taste-radial `x` with canonical `O_H`, and does not relabel
 `C_sx/C_xx` as `C_sH/C_HH`.
 
+Block12 is routing-only.  It does not reopen shortcut gates, does not treat
+unchanged PR head state as new physics evidence, does not promote the
+source-Higgs time-kernel manifest to production rows, does not treat the W/Z
+same-source action cut as an accepted action, and does not touch the live chunk
+worker.
+
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block11 should follow the same direct PR #230 landing path unless
+Block09 through block12 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -180,6 +213,11 @@ Local review-loop disposition for block11: pass exact negative boundary / W/Z
 packet absence.  Code, claim boundary, import firewall, repo-governance links,
 and campaign status compatibility were checked locally.  No independent audit
 verdict was applied.
+
+Local review disposition for block12: pass routing checkpoint / no fresh
+artifact.  The checkpoint changes only the loop pack and records unchanged PR
+head state plus the exact artifact conditions required for continuation.  No
+independent audit verdict was applied.
 
 ## Next Exact Action
 
@@ -204,3 +242,9 @@ to production evidence, and do not touch the live chunk worker from this lane.
 Do not reopen the neutral primitive route without a same-surface H3/H4
 certificate proving physical neutral transfer/off-diagonal dynamics plus
 source/canonical-Higgs coupling authority.
+
+If neither artifact exists on resume, do not spend the next block re-proving
+the same absence.  Either supply one of the required artifacts from another
+worker/branch, or keep yielding this lane as waiting on the explicit
+production/certificate inputs while the outer supervisor runs independent
+positive work.

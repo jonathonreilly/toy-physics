@@ -287,3 +287,46 @@ python3 docs/audit/scripts/audit_lint.py --strict
 git diff --check
 # OK
 ```
+
+## Block12
+
+Local review run on 2026-05-07 10:34 EDT.  Parallel subagents were not spawned
+because this checkpoint is routing-only and the supervisor did not explicitly
+request sub-agents for this turn.
+
+Scope:
+
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ARTIFACT_PLAN.md`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | No production runner changed. Existing campaign runner remains the verification surface for the PR230 packet. |
+| Physics Claim Boundary | OPEN / ROUTING CHECKPOINT | The checkpoint records unchanged PR head state and does not attempt another current-surface shortcut gate. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; the source-Higgs time-kernel manifest and W/Z action cut are recorded as support/boundary only. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | Updates are confined to the loop pack and preserve PR #230 as the direct landing path. |
+| Audit Compatibility | PASS | No repo-wide audit surfaces were modified by this loop-pack checkpoint. |
+
+Checks:
+
+```bash
+git fetch origin
+git rev-parse HEAD origin/claude/yt-direct-lattice-correlator-2026-04-30 origin/main
+# 0b3623a91 / 0b3623a91 / 8f98c2e5
+gh pr view 230 --json number,title,state,isDraft,headRefName,baseRefName,headRefOid,url
+# open draft PR #230 at head 0b3623a91
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=350 FAIL=0
+rg forbidden/status firewall review
+# hits are non-claim/firewall exclusions only
+git diff --check
+# OK
+```

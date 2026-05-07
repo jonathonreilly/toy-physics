@@ -382,3 +382,41 @@
      packet roots above, or return to canonical `O_H`/source-Higgs only after
      a same-surface `O_H` certificate or production `C_ss/C_sH/C_HH` pole-row
      packet appears.
+
+## Selected Block12 Route
+
+**Supervisor resume fresh-artifact checkpoint**
+
+- Type: routing checkpoint / no new physics gate.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 3.
+- Claim-state movement: verifies that after fetch the draft PR #230 head is
+  still block11 (`0b3623a91`) and that the same-day source-Higgs and W/Z
+  support surfaces do not satisfy the explicit future-artifact disjuncts.
+  This prevents duplicate shortcut cycling and preserves the exact next action
+  for the outer supervisor.
+- Artifact: loop-pack checkpoint only.
+
+## Block12 Fan-Out Synthesis
+
+1. **Fresh PR-head artifact frame**
+   - Result: absent.  `HEAD` and
+     `origin/claude/yt-direct-lattice-correlator-2026-04-30` are both
+     `0b3623a91`, so no new branch artifact appeared after block11.
+
+2. **Source-Higgs manifest frame**
+   - Result: infrastructure support only.  The time-kernel production manifest
+     defines future commands but is not a canonical `O_H` certificate,
+     production `C_ss/C_sH/C_HH` pole-row packet, Gram-flatness certificate,
+     FV/IR authority, or overlap normalization.
+
+3. **W/Z accepted-action frame**
+   - Result: exact negative boundary remains.  The minimal accepted-action cut
+     still requires canonical Higgs operator, sector-overlap/adopted radial
+     action, and W/Z mass-fit roots before response rows can matter.
+
+4. **Next admissible route**
+   - Result: do not run another current-surface absence gate.  Continue only
+     after a genuine certified `O_H` / source-Higgs production packet or strict
+     W/Z physical-response packet appears; otherwise yield this lane while the
+     outer supervisor allocates independent positive work.

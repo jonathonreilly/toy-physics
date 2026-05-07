@@ -231,3 +231,23 @@ outputs/yt_same_source_w_response_rows_2026-05-04.json
 ```
 
 Scout/smoke rows are non-production and must not be promoted.
+
+Block12 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Resume/fresh-artifact checkpoint | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md` | Updated; PR #230 head unchanged at `0b3623a91` |
+| Claim certificate | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md` | Updated; `proposal_allowed=false` |
+| Queue | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md` | Refreshed; no current-surface shortcut gate authorized |
+| PR backlog | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md` | Updated; direct PR #230 landing path retained |
+| Loop state | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml` | Updated |
+
+Follow-on artifact target after block12 remains exactly one of:
+
+```text
+outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
+```
+
+plus production `C_ss/C_sH/C_HH` pole rows with Gram flatness, or the strict
+W/Z packet listed above.  If neither artifact exists on resume, this lane
+should yield rather than re-prove the same current-surface absence.

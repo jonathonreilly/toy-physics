@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block11_wz_physical_response_packet_intake_checkpoint`.
+Current block: `block12_supervisor_resume_fresh_artifact_checkpoint`.
 
 ```yaml
-actual_current_surface_status: exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist
-conditional_surface_status: exact support if future same-surface artifacts supply accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, and final W-response rows without scout/smoke promotion
+actual_current_surface_status: open / supervisor resume checkpoint; fetched PR230 head is unchanged at block11 and contains no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
+conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block11 consumes only existing W/Z accepted-action, response-ratio, row-builder, covariance, g2, smoke/scout, and aggregate certificates. No accepted action, canonical O_H/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present; scout/smoke artifacts are explicitly non-production."
+proposal_allowed_reason: "Block12 is routing-only: after fetch, HEAD and origin/claude/yt-direct-lattice-correlator-2026-04-30 both remain 0b3623a91. The source-Higgs time-kernel production manifest is infrastructure support only, the W/Z same-source action minimal cut is an exact negative boundary, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -24,10 +24,10 @@ Reason:
    accepted same-source EW/Higgs action, sector-overlap, W/Z response rows,
    matched covariance, strict non-observed `g2`, and aggregate retained-route
    approval.
-2. Block11 verifies dependency classes and forbidden-input firewalls, but it is
-   an intake checkpoint over current W/Z scout/schema rows and support
-   contracts, not a positive retained proposal.
-3. Block11 does not touch the live worker, does not promote scout/smoke rows to
+2. Block12 verifies route state and dependency classes by reading the current
+   PR head and same-day support/boundary surfaces, but it is a supervisor
+   resume checkpoint, not a positive retained proposal.
+3. Block12 does not touch the live worker, does not promote scout/smoke rows to
    production evidence, does not use static EW mass algebra as response rows,
    does not assume `k_top = k_gauge` or top/W covariance, does not identify
    taste-radial `x` with canonical `O_H`, does not relabel `C_sx/C_xx` as
@@ -69,5 +69,9 @@ Prior block certificate summary:
   supply accepted action, production W/Z rows, same-source top rows, matched
   covariance, strict non-observed `g2`, `delta_perp` authority, or final
   W-response rows.
-- Block01 through Block11 all have `proposal_allowed=false`; their boundaries
+- Block12 actual status: open / supervisor resume checkpoint; fetched PR230
+  head is unchanged at block11 and contains no fresh certified `O_H` /
+  source-Higgs production pole-row packet or strict W/Z accepted-action
+  physical-response packet.
+- Block01 through Block12 all have `proposal_allowed=false`; their boundaries
   remain active.
