@@ -1,0 +1,98 @@
+======================================================================
+Extended basis: product characters + linked invariants
+======================================================================
+
+=== Extended-basis 2-plaquette dumbbell, g²=0.5 ===
+  Extended basis size: 42
+  Building Gram matrix and magnetic matrix...
+  Building Casimir matrix (analytical for products, spin-network estimate for linked)...
+  E_0 = -0.938671
+  ⟨P_1⟩ = 0.242684
+  ⟨P_2⟩ = 0.481363
+  ⟨P⟩_avg = 0.362024
+  (kept 42/42 basis modes)
+  Top 5 GS components:
+    χ_(0, 0)(AD)·χ_(0, 0)(BE)                amplitude -0.4187
+    χ_(0, 0)(AD)·χ_(0, 1)(BE)                amplitude -0.3673
+    χ_(0, 0)(AD)·χ_(1, 0)(BE)                amplitude -0.3673
+    χ_(0, 0)(AD)·χ_(1, 1)(BE)                amplitude -0.2436
+    χ_(0, 1)(AD)·χ_(0, 1)(BE)                amplitude -0.2219
+
+=== Extended-basis 2-plaquette dumbbell, g²=0.75 ===
+  Extended basis size: 42
+  Building Gram matrix and magnetic matrix...
+  Building Casimir matrix (analytical for products, spin-network estimate for linked)...
+  E_0 = -0.350131
+  ⟨P_1⟩ = 0.155032
+  ⟨P_2⟩ = 0.340647
+  ⟨P⟩_avg = 0.247840
+  (kept 42/42 basis modes)
+  Top 5 GS components:
+    χ_(0, 0)(AD)·χ_(0, 0)(BE)                amplitude -0.7317
+    χ_(0, 0)(AD)·χ_(1, 0)(BE)                amplitude -0.3770
+    χ_(0, 0)(AD)·χ_(0, 1)(BE)                amplitude -0.3770
+    χ_(0, 1)(U_BE U_AD^-1)                   amplitude -0.1668
+    χ_(1, 0)(U_BE U_AD^-1)                   amplitude -0.1668
+
+=== Extended-basis 2-plaquette dumbbell, g²=1.0 ===
+  Extended basis size: 42
+  Building Gram matrix and magnetic matrix...
+  Building Casimir matrix (analytical for products, spin-network estimate for linked)...
+  E_0 = -0.149592
+  ⟨P_1⟩ = 0.098359
+  ⟨P_2⟩ = 0.206281
+  ⟨P⟩_avg = 0.152320
+  (kept 42/42 basis modes)
+  Top 5 GS components:
+    χ_(0, 0)(AD)·χ_(0, 0)(BE)                amplitude -0.8975
+    χ_(0, 0)(AD)·χ_(1, 0)(BE)                amplitude -0.2633
+    χ_(0, 0)(AD)·χ_(0, 1)(BE)                amplitude -0.2633
+    χ_(1, 0)(U_BE U_AD^-1)                   amplitude -0.1200
+    χ_(0, 1)(U_BE U_AD^-1)                   amplitude -0.1200
+
+=== Extended-basis 2-plaquette dumbbell, g²=1.5 ===
+  Extended basis size: 42
+  Building Gram matrix and magnetic matrix...
+  Building Casimir matrix (analytical for products, spin-network estimate for linked)...
+  E_0 = -0.042686
+  ⟨P_1⟩ = 0.045004
+  ⟨P_2⟩ = 0.084910
+  ⟨P⟩_avg = 0.064957
+  (kept 42/42 basis modes)
+  Top 5 GS components:
+    χ_(0, 0)(AD)·χ_(0, 0)(BE)                amplitude +0.9802
+    χ_(0, 0)(AD)·χ_(1, 0)(BE)                amplitude +0.1192
+    χ_(0, 0)(AD)·χ_(0, 1)(BE)                amplitude +0.1192
+    χ_(1, 0)(U_BE U_AD^-1)                   amplitude +0.0570
+    χ_(0, 1)(U_BE U_AD^-1)                   amplitude +0.0570
+
+=== Extended-basis 2-plaquette dumbbell, g²=2.0 ===
+  Extended basis size: 42
+  Building Gram matrix and magnetic matrix...
+  Building Casimir matrix (analytical for products, spin-network estimate for linked)...
+  E_0 = -0.017951
+  ⟨P_1⟩ = 0.025551
+  ⟨P_2⟩ = 0.045456
+  ⟨P⟩_avg = 0.035503
+  (kept 42/42 basis modes)
+  Top 5 GS components:
+    χ_(0, 0)(AD)·χ_(0, 0)(BE)                amplitude +0.9938
+    χ_(0, 0)(AD)·χ_(1, 0)(BE)                amplitude +0.0654
+    χ_(0, 0)(AD)·χ_(0, 1)(BE)                amplitude +0.0654
+    χ_(0, 1)(U_BE U_AD^-1)                   amplitude +0.0320
+    χ_(1, 0)(U_BE U_AD^-1)                   amplitude +0.0320
+
+======================================================================
+Summary table:
+======================================================================
+    g²         E_0       ⟨P_1⟩       ⟨P_2⟩     ⟨P⟩_avg
+  0.50   -0.938671    0.242684    0.481363    0.362024
+  0.75   -0.350131    0.155032    0.340647    0.247840
+  1.00   -0.149592    0.098359    0.206281    0.152320
+  1.50   -0.042686    0.045004    0.084910    0.064957
+  2.00   -0.017951    0.025551    0.045456    0.035503
+
+Comparison:
+  Single-plaq toy (g²=1):     ⟨P⟩ = 0.218 (this is per-plaquette)
+  Product-basis dumbbell:     ⟨P⟩ ≈ 0.120 (P_1 ≈ 0, basis-limited)
+  Extended-basis dumbbell:    ⟨P⟩ = see table (g²=1)

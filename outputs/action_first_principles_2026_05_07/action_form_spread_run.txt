@@ -1,0 +1,41 @@
+=== Sanity: clean builder vs original ===
+  Sanity: |H_old - H_new|_max = 0.00e+00
+
+--- canonical g² = 1 ---
+
+=== Cl(3) → KS single-plaquette: action-form spread ===
+g² = 1.0, cutoff C_2 ≤ 20.0, 32 irreps
+
+Action choice                              cont match      <P>_GS             E_0
+------------------------------------------------------------------------------------
+Wilson (pure fundamental)                    8.000000    0.218104       -0.102352
+Manton-like (10% adjoint admix)              8.000000    0.163561       -0.054394
+HK-like (Casimir-graded, rescaled)           8.000000    0.027688       -0.003656
+
+Spread across magnetic-operator choices: absolute 0.190416, relative 139.5%
+
+--- weaker coupling g² = 0.5 ---
+
+=== Cl(3) → KS single-plaquette: action-form spread ===
+g² = 0.5, cutoff C_2 ≤ 20.0, 32 irreps
+
+Action choice                              cont match      <P>_GS             E_0
+------------------------------------------------------------------------------------
+Wilson (pure fundamental)                    8.000000    0.588862       -0.730211
+Manton-like (10% adjoint admix)              8.000000    0.588399       -0.541477
+HK-like (Casimir-graded, rescaled)           8.000000    0.364107       -0.074752
+
+Spread across magnetic-operator choices: absolute 0.224755, relative 43.7%
+
+--- stronger coupling g² = 2.0 ---
+
+=== Cl(3) → KS single-plaquette: action-form spread ===
+g² = 2.0, cutoff C_2 ≤ 20.0, 32 irreps
+
+Action choice                              cont match      <P>_GS             E_0
+------------------------------------------------------------------------------------
+Wilson (pure fundamental)                    8.000000    0.045616       -0.011074
+Manton-like (10% adjoint admix)              8.000000    0.031909       -0.005558
+HK-like (Casimir-graded, rescaled)           8.000000    0.005481       -0.000394
+
+Spread across magnetic-operator choices: absolute 0.040135, relative 145.1%

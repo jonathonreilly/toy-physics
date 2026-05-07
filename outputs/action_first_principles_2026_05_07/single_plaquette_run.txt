@@ -1,0 +1,34 @@
+=== Sanity checks ===
+  C_2(1,0) = 4/3 ✓
+  C_2(1,1) = 3 ✓
+  dim(8) = 8 ✓
+  fund tensor products ✓
+All sanity checks passed.
+
+
+=== Cl(3) → KS single-plaquette, g^2 = 1.0 ===
+C2_cut   #irreps             E_0        <P>_GS
+     4         6   -0.1021130831  0.2166744424
+     6        10   -0.1023499140  0.2180844632
+     8        11   -0.1023510862  0.2180937847
+    10        15   -0.1023522946  0.2181036694
+    12        19   -0.1023523056  0.2181037800
+    16        24   -0.1023523057  0.2181037813
+    20        32   -0.1023523057  0.2181037813
+
+=== Cl(3) → KS single-plaquette, coupling sweep (cutoff C_2 ≤ 20.0, 32 irreps) ===
+   g^2             E_0        <P>_GS
+  0.25   -2.5448645108  0.7938667467
+  0.50   -0.7302105627  0.5888619775
+  1.00   -0.1023523057  0.2181037813
+  2.00   -0.0110744681  0.0456157155
+  4.00   -0.0013225114  0.0106620992
+
+=== Summary at canonical g^2 = 1 ===
+<P>_KS, ground-state spatial plaquette, single-link toy:
+  0.2181037813  (cutoff C_2 ≤ 20)
+
+Reference comparators:
+  Wilson Euclidean MC, β=6:    0.5934 (from existing repo notes)
+  Heat-kernel single-plaquette: 0.5134 (= exp(-2/3))
+  Wilson 1-plaq V=1 PF certified: 0.4225
