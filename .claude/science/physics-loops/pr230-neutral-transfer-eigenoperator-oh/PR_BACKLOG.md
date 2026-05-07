@@ -67,6 +67,13 @@ W/Z physical-response packet is present, and the next exact action remains
 waiting on those production/certificate inputs.  No standalone block12 review
 PR should be opened unless PR #230 integration fails.
 
+Block13 follows the same direct PR #230 landing path.  It records that PR #230
+head is now `1e365eb2285b851ff6c420feb312ec4774206022`; the post-block11
+common `O_H`/WZ root-cut wiring remains exact support/boundary and not closure.
+Block13 refreshes the strict scalar-LSZ note to the existing 44/63 row-prefix
+certificate and preserves the direct PR #230 landing path.  No standalone
+block13 review PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

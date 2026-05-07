@@ -251,3 +251,22 @@ outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
 plus production `C_ss/C_sH/C_HH` pole rows with Gram flatness, or the strict
 W/Z packet listed above.  If neither artifact exists on resume, this lane
 should yield rather than re-prove the same current-surface absence.
+
+Block13 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Scalar-LSZ note refresh | `docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md` | Updated to current 44/63 prefix and current diagnostic values |
+| Existing scalar-LSZ certificate | `outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json` | Reused; already records `ready_chunks=44`, all-ready nonincrease violation, single-volume boundary |
+| Common root-cut rebase intake | `outputs/yt_pr230_canonical_oh_wz_common_action_cut_2026-05-07.json` | Re-run after PR head `1e365eb`; PASS=11 FAIL=0, exact support/boundary, `proposal_allowed=false` |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block13 checkpoint |
+
+Follow-on artifact target after block13 remains exactly one of:
+
+```text
+outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
+```
+
+plus production `C_ss/C_sH/C_HH` pole rows with Gram flatness, or the strict
+W/Z packet listed under block11.  The scalar-LSZ refresh is support only and
+does not authorize another current-surface shortcut gate.

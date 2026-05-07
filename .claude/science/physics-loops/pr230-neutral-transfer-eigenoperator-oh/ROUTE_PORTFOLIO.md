@@ -420,3 +420,46 @@
      after a genuine certified `O_H` / source-Higgs production packet or strict
      W/Z physical-response packet appears; otherwise yield this lane while the
      outer supervisor allocates independent positive work.
+
+## Selected Block13 Route
+
+**Scalar-LSZ current-prefix refresh checkpoint**
+
+- Type: bounded-support / exact-boundary refresh.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 3.
+- Claim-state movement: updates the strict scalar-LSZ support boundary to the
+  actual current `44/63` row prefix and records that PR #230 head movement
+  after block11 adds only the block12 checkpoint plus exact support/boundary
+  common `O_H`/WZ root-cut wiring.  This avoids a stale `30`-chunk note while
+  preserving the firewall: raw `C_ss` rows are not a strict Stieltjes/FV
+  authority object, the common root cut still has `proposal_allowed=false`, and
+  no certified `O_H` or W/Z production packet landed.
+- Artifact: refreshed
+  `YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE`.
+
+## Block13 Fan-Out Synthesis
+
+1. **PR-head artifact frame**
+   - Result: no closure artifact.  `HEAD =
+     origin/claude/yt-direct-lattice-correlator-2026-04-30 = 1e365eb...`;
+     `0b3623a91..HEAD` contains the block12 loop-pack checkpoint and
+     `Wire PR230 common OH WZ root cuts`.  Rerunning the common root,
+     accepted-action root, and W/Z intake checks keeps the route open.
+
+2. **Remote-branch frame**
+   - Result: no relevant PR230 source-Higgs/WZ artifact branch was found in the
+     recent remote scan; recent branches are unrelated audit/science-fix work.
+
+3. **Scalar-LSZ current-prefix frame**
+   - Result: support-boundary refresh.  The existing certificate parses 44/63
+     ready chunks, all at volume `12x24`, and every ready chunk has first-shell
+     raw `C_ss` above zero-mode raw `C_ss`.  The note was corrected from
+     `30` chunks to `44` chunks and current summary values.
+
+4. **Next admissible route**
+   - Result: unchanged.  Continue only with a genuine certified `O_H` plus
+     production `C_ss/C_sH/C_HH` Gram-flat packet, or a strict W/Z
+     physical-response packet with accepted action, production rows, matched
+     covariance, strict non-observed `g2`, `delta_perp` authority, and final
+     W-response rows.

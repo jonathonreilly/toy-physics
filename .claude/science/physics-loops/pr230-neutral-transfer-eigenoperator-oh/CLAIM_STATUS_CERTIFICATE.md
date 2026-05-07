@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block12_supervisor_resume_fresh_artifact_checkpoint`.
+Current block: `block13_scalar_lsz_current_prefix_refresh_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / supervisor resume checkpoint; fetched PR230 head is unchanged at block11 and contains no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
+actual_current_surface_status: bounded-support / scalar-LSZ current-prefix refresh plus PR-head checkpoint; PR230 head is 1e365eb after block12 plus a common O_H/WZ root-cut support commit, with no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block12 is routing-only: after fetch, HEAD and origin/claude/yt-direct-lattice-correlator-2026-04-30 both remain 0b3623a91. The source-Higgs time-kernel production manifest is infrastructure support only, the W/Z same-source action minimal cut is an exact negative boundary, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block13 refreshed the strict scalar-LSZ note against the existing 44/63 ready chunk prefix and rebased over PR #230 head 1e365eb. The new common O_H/WZ root-cut support remains exact support/boundary with proposal_allowed=false, and the scalar-LSZ result is bounded support/exact boundary only: raw C_ss rows remain positive but increase from zero mode to first shell across all 44 ready chunks, the row prefix is single-volume 12x24, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -24,10 +24,12 @@ Reason:
    accepted same-source EW/Higgs action, sector-overlap, W/Z response rows,
    matched covariance, strict non-observed `g2`, and aggregate retained-route
    approval.
-2. Block12 verifies route state and dependency classes by reading the current
-   PR head and same-day support/boundary surfaces, but it is a supervisor
-   resume checkpoint, not a positive retained proposal.
-3. Block12 does not touch the live worker, does not promote scout/smoke rows to
+2. Block13 verifies route state and dependency classes by reading the current
+   PR head, remote branch recency, and the existing strict scalar-LSZ
+   certificate; it is a support-boundary refresh/checkpoint, not a positive
+   retained proposal.
+3. Block13 does not touch the live worker, does not promote raw `C_ss` rows to
+   strict scalar-LSZ/FV authority, does not promote scout/smoke rows to
    production evidence, does not use static EW mass algebra as response rows,
    does not assume `k_top = k_gauge` or top/W covariance, does not identify
    taste-radial `x` with canonical `O_H`, does not relabel `C_sx/C_xx` as
@@ -73,5 +75,11 @@ Prior block certificate summary:
   head is unchanged at block11 and contains no fresh certified `O_H` /
   source-Higgs production pole-row packet or strict W/Z accepted-action
   physical-response packet.
-- Block01 through Block12 all have `proposal_allowed=false`; their boundaries
+- Block13 actual status: bounded-support / scalar-LSZ current-prefix refresh
+  plus PR-head checkpoint; the existing 44/63 raw `C_ss` prefix strengthens the
+  strict scalar-LSZ/FV boundary, and PR head 1e365eb adds only exact
+  support/boundary common `O_H`/WZ root-cut wiring.  Neither supplies certified
+  canonical `O_H`, source-Higgs Gram flatness, or W/Z physical-response
+  authority.
+- Block01 through Block13 all have `proposal_allowed=false`; their boundaries
   remain active.

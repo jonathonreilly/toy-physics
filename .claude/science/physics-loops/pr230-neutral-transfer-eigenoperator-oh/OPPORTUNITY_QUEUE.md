@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block12 supervisor resume checkpoint.
+Campaign mode queue after block13 scalar-LSZ current-prefix refresh checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -10,7 +10,7 @@ Campaign mode queue after block12 supervisor resume checkpoint.
 | 4 | Complete/replace source-Higgs production row packet | Medium-low | 3 | Block09 now audits 44/63 current rows | Medium | Medium | Production continuation | Complete the 63/63 packet or replace it with real canonical `C_sH/C_HH` rows only after `O_H` is certified; do not touch the live worker from this lane. |
 | 5 | Replacement radial-spurion action certificate | Medium-low | 2 | Block04 plus block08 W/Z checkpoint | High | Medium | Direct W/Z action repair | Build only if a real same-surface clean radial action artifact exists. |
 | 6 | Same-surface source-radial off-diagonal generator/action row | Medium-low | 2 | Block01 runner gives exact target | High | Small | Direct continuation | Reopen only if a genuine off-diagonal neutral transfer/action artifact appears. |
-| 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract | Medium | Medium | Support-only | Use only if it materially supports ranks 1-5 without touching the live chunk worker. |
+| 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract | Medium | Medium | Support-only | Block13 used this only to refresh the strict scalar-LSZ note to the current 44/63 prefix without touching the live worker; it remains support-only and not a closure route. |
 
 No global stop is justified, but the refreshed queue does not authorize another
 current-surface shortcut gate.  Block09 confirmed the source-Higgs route has a
@@ -22,14 +22,20 @@ coupling.  Block11 checked the W/Z physical-response intake: current W/Z
 scout/smoke rows and support contracts do not constitute the accepted-action
 production packet.
 
-Block12 fetched `origin` and verified the draft PR #230 head is unchanged:
-`HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 0b3623a91`.
-The source-Higgs time-kernel production manifest remains infrastructure
-support only, and the W/Z same-source action minimal certificate cut remains an
-exact negative boundary.  The next positive move should consume a fresh
-certified `O_H` plus production `C_ss/C_sH/C_HH` Gram-flat packet, or a
-genuinely strict W/Z packet with accepted action, production rows, matched
-covariance, strict `g2`, `delta_perp` authority, and final W-response rows.
-If neither artifact is present on resume, yield this lane as waiting on those
-explicit production/certificate inputs and let the outer supervisor allocate
-independent positive work.
+Block13 verified the draft PR #230 head is now
+`1e365eb2285b851ff6c420feb312ec4774206022`.  The post-block11 head movement is
+block12 plus `Wire PR230 common OH WZ root cuts`; the latter reruns the common
+root cut as exact support/boundary, but still has `proposal_allowed=false` and
+still lacks certified canonical `O_H`, accepted same-source EW/Higgs action,
+source-Higgs pole rows, W/Z production rows, matched covariance, strict `g2`,
+and aggregate approval.  The scalar-LSZ support item was consumed only as a
+note/certificate alignment checkpoint: the existing certificate parses 44/63
+ready chunks, all 44 violate the strict raw-Stieltjes nonincrease shortcut, and
+only a single `12x24` volume is present.  This does not change the priority:
+the next positive move should consume a fresh certified `O_H` plus production
+`C_ss/C_sH/C_HH` Gram-flat packet, or a genuinely strict W/Z packet with
+accepted action, production rows, matched covariance, strict `g2`,
+`delta_perp` authority, and final W-response rows.  If neither artifact is
+present on resume, yield this lane as waiting on those explicit
+production/certificate inputs and let the outer supervisor allocate independent
+positive work.

@@ -330,3 +330,66 @@ rg forbidden/status firewall review
 git diff --check
 # OK
 ```
+
+## Block13
+
+Local review run on 2026-05-07 10:49 EDT.  Parallel subagents were not spawned
+because this checkpoint is narrow and the supervisor did not explicitly request
+sub-agents for this turn.
+
+Scope:
+
+- `docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ARTIFACT_PLAN.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/NO_GO_LEDGER.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Existing scalar-LSZ runner compiles and reproduces PASS=13 FAIL=0; common root, accepted-action root, W/Z intake, campaign, assembly, retained-route, and completion-audit runners pass after rebase; no live worker was touched. |
+| Physics Claim Boundary | BOUNDED SUPPORT / EXACT BOUNDARY | The note now matches the existing 44/63 certificate and keeps raw `C_ss` out of strict scalar-LSZ/FV authority; PR head 1e365eb adds exact support/boundary common `O_H`/WZ wiring, not closure. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, or `C_sx -> C_sH` alias is load-bearing. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized; the route still needs certified `O_H` plus production pole rows or strict W/Z response. |
+| Repo Governance | PASS | Updates are confined to the note and branch-local loop pack; PR #230 remains the direct landing path. |
+| Audit Compatibility | PASS | Campaign status certificate remains PASS=352 FAIL=0 after the common root-cut rebase, and `git diff --check` is clean. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+gh pr view 230 --repo jonathonreilly/cl3-lattice-framework --json number,title,state,isDraft,headRefName,baseRefName,headRefOid,url,updatedAt
+# open draft PR #230 at head 1e365eb2285b851ff6c420feb312ec4774206022
+git log --oneline 0b3623a91..HEAD
+# 1e365eb22 Wire PR230 common OH WZ root cuts
+# 842eaee34 Record PR230 neutral route resume checkpoint
+python3 scripts/frontier_yt_pr230_canonical_oh_wz_common_action_cut.py
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_pr230_wz_accepted_action_response_root_checkpoint.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=158 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=312 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=67 FAIL=0
+jq scalar-LSZ certificate summary
+# ready_chunks=44 expected_chunks=63 all_ready_chunks_violate_nonincrease=true z=163.1563288754601
+rg forbidden/status firewall review
+# hits are non-claim/firewall exclusions only
+git diff --check
+# OK
+```
