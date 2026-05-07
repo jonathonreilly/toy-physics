@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 229 |
+| **retained_bounded** | 230 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 795 |
+| unaudited | 794 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 382 |
+| `audited_clean` | 383 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 844 |
+| `unaudited` | 843 |
 
 | claim_type | count |
 |---|---:|
@@ -251,6 +251,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -7616,6 +7617,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The supplied runner genuinely computes Clifford/projector identities and numerical comparisons, but it also imports the G1 observational chamber pin and PDG charged-lepton masses for comparator scoring. Its own caveat states that the H-lift and lambda choice are not retained primitives, so the numerical near-match cannot be treated as a closed retained derivation. With no cited authorities supplied, the note's references to Theorem 2, the Dirac-bridge theorem, variational surveys, S_2-breaking surveys, and observational-pin closure remain open dependencies rather than closed inputs.
 - **open / conditional deps cited:**
   - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
+- **auditor confidence:** high
+
+### `higher_symmetry_gravity_probe_note`
+
+- **Note:** [`HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md`](../../docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the default dense Z2xZ2 runner surface N={80,100,120}, 16 seeds, z2z2_quarter=16, connect_radius=5.2, anchor_b=5.0, mass_count=4, the SHA-matched completed runner produces the stated finite mass-window rows, positive-row subfits inside M={2,3,5,8}, and positive but weak fixed-distance sweep rows; it does not establish rowwise/global gravity positivity, Born safety, or a gravity law.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-higher-symmetry-gravity-probe-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Inside the declared fit window M in {2,3,5,8}, the dense Z2 x Z2 extension shows a positive-row mass-bump fit, with in-window negative rows disclosed and excluded by the runner's delta > 0 guard.  _(class `C`)_
+- **chain closes:** True — The source note's scoped numerical statements match the completed SHA-pinned cache, and the runner source computes the Z2xZ2 DAG rows and applies the declared delta > 0 fit filter rather than hard-coding the stated coefficients. The disclosed negative rows keep the claim bounded to the positive-row subfit and weak distance-sweep observations.
+- **rationale:** The clean result is limited to the exact finite runner surface and the explicitly narrowed positive-row subfit/distance-sweep facts. Residual risk is that the fit window and positive-row filter are analysis choices and do not by themselves imply a physical gravity law, rowwise positivity, Born safety, or upstream coexistence closure; those broader readings are outside the audited scope.
 - **auditor confidence:** high
 
 ### `holographic_probe_note_2026-04-11`
