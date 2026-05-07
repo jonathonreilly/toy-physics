@@ -1,5 +1,5 @@
 {
-  "cycle_count": 274,
+  "cycle_count": 257,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -321,6 +321,43 @@
       "decision": null,
       "edges": [
         {
+          "from": "universal_qg_projective_schur_closure_note",
+          "to": "universal_qg_canonical_refinement_net_note"
+        },
+        {
+          "from": "universal_qg_canonical_refinement_net_note",
+          "to": "universal_qg_projective_schur_closure_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 539,
+      "nodes": [
+        {
+          "audit_status": "audited_conditional",
+          "claim_id": "universal_qg_projective_schur_closure_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
+          "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
+          "title": "Universal QG Projective Schur Closure Note",
+          "transitive_descendants": 539
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_qg_canonical_refinement_net_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
+          "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
+          "transitive_descendants": 539
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0007",
+      "decision": null,
+      "edges": [
+        {
           "from": "universal_qg_uv_finite_partition_note",
           "to": "universal_qg_projective_schur_closure_note"
         },
@@ -354,13 +391,9 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
-        {
-          "from": "universal_qg_canonical_refinement_net_note",
-          "to": "universal_qg_uv_finite_partition_note"
-        },
         {
           "from": "universal_qg_uv_finite_partition_note",
           "to": "universal_qg_projective_schur_closure_note"
@@ -368,20 +401,15 @@
         {
           "from": "universal_qg_projective_schur_closure_note",
           "to": "universal_qg_canonical_refinement_net_note"
+        },
+        {
+          "from": "universal_qg_canonical_refinement_net_note",
+          "to": "universal_qg_uv_finite_partition_note"
         }
       ],
       "length": 3,
       "max_transitive_descendants": 539,
       "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_refinement_net_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
-          "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
-          "transitive_descendants": 539
-        },
         {
           "audit_status": "unaudited",
           "claim_id": "universal_qg_uv_finite_partition_note",
@@ -399,12 +427,21 @@
           "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
           "title": "Universal QG Projective Schur Closure Note",
           "transitive_descendants": 539
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_qg_canonical_refinement_net_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
+          "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
+          "transitive_descendants": 539
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -441,7 +478,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -478,118 +515,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "broad_gravity_derivation_note"
-        },
-        {
-          "from": "broad_gravity_derivation_note",
-          "to": "gravity_clean_derivation_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "broad_gravity_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/BROAD_GRAVITY_DERIVATION_NOTE.md",
-          "title": "Broad Gravity Bundle: Per-Signature Derivation Chains",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
       "cycle_id": "cycle-0011",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "gravity_signed_source_density_boundary_note"
-        },
-        {
-          "from": "gravity_signed_source_density_boundary_note",
-          "to": "gravity_clean_derivation_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
-          "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0012",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "newton_law_derived_note"
-        },
-        {
-          "from": "newton_law_derived_note",
-          "to": "gravity_clean_derivation_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "newton_law_derived_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
-          "title": "Newton's Law Derived from Cl(3) on Z^3",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -626,7 +552,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -663,9 +589,13 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
+        {
+          "from": "antigravity_sign_selector_boundary_note",
+          "to": "gravity_signed_source_density_boundary_note"
+        },
         {
           "from": "gravity_signed_source_density_boundary_note",
           "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
@@ -673,15 +603,20 @@
         {
           "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
           "to": "antigravity_sign_selector_boundary_note"
-        },
-        {
-          "from": "antigravity_sign_selector_boundary_note",
-          "to": "gravity_signed_source_density_boundary_note"
         }
       ],
       "length": 3,
       "max_transitive_descendants": 531,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "antigravity_sign_selector_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
+          "title": "Signed Gravitational Response Selector Boundary Note",
+          "transitive_descendants": 531
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
@@ -699,21 +634,12 @@
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
           "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
-          "title": "Signed Gravitational Response Selector Boundary Note",
-          "transitive_descendants": 531
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -763,7 +689,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -813,7 +739,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -863,7 +789,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -913,7 +839,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -963,7 +889,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1013,7 +939,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1063,7 +989,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1113,7 +1039,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1163,13 +1089,9 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
         {
           "from": "universal_qg_external_fe_smooth_equivalence_note",
           "to": "universal_qg_continuum_bridge_reduction_note"
@@ -1177,20 +1099,15 @@
         {
           "from": "universal_qg_continuum_bridge_reduction_note",
           "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+        },
+        {
+          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+          "to": "universal_qg_external_fe_smooth_equivalence_note"
         }
       ],
       "length": 3,
       "max_transitive_descendants": 531,
       "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
         {
           "audit_status": "unaudited",
           "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
@@ -1208,16 +1125,75 @@
           "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
           "title": "Universal QG Continuum Bridge Reduction Note",
           "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
+          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
+          "transitive_descendants": 531
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
-          "from": "gravity_clean_derivation_note",
+          "from": "universal_qg_external_fe_smooth_equivalence_note",
+          "to": "universal_qg_continuum_bridge_reduction_note"
+        },
+        {
+          "from": "universal_qg_continuum_bridge_reduction_note",
+          "to": "universal_qg_smooth_gravitational_local_identification_note"
+        },
+        {
+          "from": "universal_qg_smooth_gravitational_local_identification_note",
+          "to": "universal_qg_external_fe_smooth_equivalence_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 531,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
+          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
+          "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_qg_continuum_bridge_reduction_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
+          "title": "Universal QG Continuum Bridge Reduction Note",
+          "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
+          "title": "Universal QG Smooth Gravitational Local Identification",
+          "transitive_descendants": 531
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0025",
+      "decision": null,
+      "edges": [
+        {
+          "from": "antigravity_sign_selector_boundary_note",
           "to": "gravity_signed_source_density_boundary_note"
         },
         {
@@ -1226,11 +1202,11 @@
         },
         {
           "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "antigravity_sign_selector_boundary_note"
+          "to": "signed_gravity_response_backlog_2026-04-25"
         },
         {
-          "from": "antigravity_sign_selector_boundary_note",
-          "to": "gravity_clean_derivation_note"
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "antigravity_sign_selector_boundary_note"
         }
       ],
       "length": 4,
@@ -1238,11 +1214,11 @@
       "nodes": [
         {
           "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_id": "antigravity_sign_selector_boundary_note",
+          "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
+          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
+          "title": "Signed Gravitational Response Selector Boundary Note",
           "transitive_descendants": 531
         },
         {
@@ -1265,18 +1241,18 @@
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "antigravity_sign_selector_boundary_note",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
-          "title": "Signed Gravitational Response Selector Boundary Note",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
           "transitive_descendants": 531
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1339,7 +1315,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1402,7 +1378,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1465,7 +1441,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1528,7 +1504,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1591,7 +1567,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -1654,817 +1630,83 @@
       "requires_lemma_extraction": false
     },
     {
+      "cycle_id": "cycle-0032",
+      "decision": null,
+      "edges": [
+        {
+          "from": "gravity_signed_source_density_boundary_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        },
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_boundary_coframe_chi_probe_note"
+        },
+        {
+          "from": "signed_gravity_boundary_coframe_chi_probe_note",
+          "to": "signed_gravity_source_action_escape_hatch_note"
+        },
+        {
+          "from": "signed_gravity_source_action_escape_hatch_note",
+          "to": "gravity_signed_source_density_boundary_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 531,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gravity_signed_source_density_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
+          "title": "Gravity Signed Source-Density Boundary Note",
+          "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_boundary_coframe_chi_probe_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
+          "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
+          "transitive_descendants": 531
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_source_action_escape_hatch_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md",
+          "title": "Signed Gravity Source-Action Escape Hatch Audit",
+          "transitive_descendants": 531
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
       "cycle_id": "cycle-0033",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
-        },
-        {
-          "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-          "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0034",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0035",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0036",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "gravity_signed_source_density_boundary_note"
-        },
-        {
-          "from": "gravity_signed_source_density_boundary_note",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        },
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "antigravity_sign_selector_boundary_note"
-        },
-        {
-          "from": "antigravity_sign_selector_boundary_note",
-          "to": "frontier_extension_lane_opening_note_2026-04-25"
-        },
-        {
-          "from": "frontier_extension_lane_opening_note_2026-04-25",
-          "to": "gravity_clean_derivation_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
-          "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
-          "title": "Signed Gravitational Response Selector Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "frontier_extension_lane_opening_note_2026-04-25",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md",
-          "title": "Frontier Extension Lane Opening Note",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0037",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gravity_signed_source_density_boundary_note",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        },
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
-        },
-        {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "signed_gravity_boundary_coframe_chi_probe_note"
-        },
-        {
-          "from": "signed_gravity_boundary_coframe_chi_probe_note",
-          "to": "signed_gravity_source_action_escape_hatch_note"
-        },
-        {
-          "from": "signed_gravity_source_action_escape_hatch_note",
-          "to": "gravity_signed_source_density_boundary_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
-          "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_boundary_coframe_chi_probe_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
-          "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_source_action_escape_hatch_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md",
-          "title": "Signed Gravity Source-Action Escape Hatch Audit",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0038",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
-        },
-        {
-          "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "to": "universal_qg_smooth_gravitational_global_atlas_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_global_atlas_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-          "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_global_atlas_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Global Atlas Identification",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0039",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Continuum Gravitational Closure",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0040",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_smooth_gravitational_global_solution_class_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Global Solution Class",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0041",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
-        },
-        {
-          "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-          "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0042",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0043",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "gravity_signed_source_density_boundary_note"
-        },
-        {
-          "from": "gravity_signed_source_density_boundary_note",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        },
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
-        },
-        {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "signed_gravity_boundary_coframe_chi_probe_note"
-        },
-        {
-          "from": "signed_gravity_boundary_coframe_chi_probe_note",
-          "to": "signed_gravity_source_action_escape_hatch_note"
-        },
-        {
-          "from": "signed_gravity_source_action_escape_hatch_note",
-          "to": "gravity_clean_derivation_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
-          "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_boundary_coframe_chi_probe_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
-          "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_source_action_escape_hatch_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md",
-          "title": "Signed Gravity Source-Action Escape Hatch Audit",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2553,274 +1795,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
-        },
-        {
-          "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "to": "universal_qg_smooth_gravitational_global_solution_class_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Global Solution Class",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-          "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0046",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
-        },
-        {
-          "from": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "to": "universal_qg_smooth_gravitational_global_atlas_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_global_atlas_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-          "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_global_atlas_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Global Atlas Identification",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0047",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Continuum Gravitational Closure",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -2922,612 +1897,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "to": "universal_qg_canonical_textbook_continuum_gr_closure_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "to": "universal_qg_smooth_gravitational_global_solution_class_note"
-        }
-      ],
-      "length": 7,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Global Solution Class",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Continuum Gravitational Closure",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0050",
-      "decision": null,
-      "edges": [
-        {
-          "from": "anomaly_forces_time_theorem",
-          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
-        },
-        {
-          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-          "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
-        },
-        {
-          "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-          "to": "lorentz_kernel_positive_closure_note"
-        },
-        {
-          "from": "lorentz_kernel_positive_closure_note",
-          "to": "lorentz_boost_covariance_3plus1d_theorem_note"
-        },
-        {
-          "from": "lorentz_boost_covariance_3plus1d_theorem_note",
-          "to": "planck_scale_lane_status_note_2026-04-23"
-        },
-        {
-          "from": "planck_scale_lane_status_note_2026-04-23",
-          "to": "gravity_clean_derivation_note"
-        },
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "gravity_signed_source_density_boundary_note"
-        },
-        {
-          "from": "gravity_signed_source_density_boundary_note",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        },
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "antigravity_sign_selector_boundary_note"
-        },
-        {
-          "from": "antigravity_sign_selector_boundary_note",
-          "to": "frontier_extension_lane_opening_note_2026-04-25"
-        },
-        {
-          "from": "frontier_extension_lane_opening_note_2026-04-25",
-          "to": "anomaly_forces_time_theorem"
-        }
-      ],
-      "length": 11,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "anomaly_forces_time_theorem",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
-          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
-          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
-          "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lorentz_kernel_positive_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
-          "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
-          "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "planck_scale_lane_status_note_2026-04-23",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
-          "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
-          "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
-          "title": "Signed Gravitational Response Selector Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "frontier_extension_lane_opening_note_2026-04-25",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md",
-          "title": "Frontier Extension Lane Opening Note",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0051",
-      "decision": null,
-      "edges": [
-        {
-          "from": "anomaly_forces_time_theorem",
-          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
-        },
-        {
-          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-          "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
-        },
-        {
-          "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-          "to": "lorentz_kernel_positive_closure_note"
-        },
-        {
-          "from": "lorentz_kernel_positive_closure_note",
-          "to": "lorentz_boost_covariance_3plus1d_theorem_note"
-        },
-        {
-          "from": "lorentz_boost_covariance_3plus1d_theorem_note",
-          "to": "planck_scale_lane_status_note_2026-04-23"
-        },
-        {
-          "from": "planck_scale_lane_status_note_2026-04-23",
-          "to": "gravity_clean_derivation_note"
-        },
-        {
-          "from": "gravity_clean_derivation_note",
-          "to": "gravity_signed_source_density_boundary_note"
-        },
-        {
-          "from": "gravity_signed_source_density_boundary_note",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        },
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
-        },
-        {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "signed_gravity_cl3z3_source_character_derivation_note"
-        },
-        {
-          "from": "signed_gravity_cl3z3_source_character_derivation_note",
-          "to": "signed_gravity_source_character_uniqueness_theorem_note"
-        },
-        {
-          "from": "signed_gravity_source_character_uniqueness_theorem_note",
-          "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
-        },
-        {
-          "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
-          "to": "signed_gravity_remaining_closure_gates_note"
-        },
-        {
-          "from": "signed_gravity_remaining_closure_gates_note",
-          "to": "signed_gravity_continuum_graded_einstein_localization_note"
-        },
-        {
-          "from": "signed_gravity_continuum_graded_einstein_localization_note",
-          "to": "universal_qg_smooth_gravitational_global_solution_class_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "to": "universal_qg_smooth_gravitational_local_identification_note"
-        },
-        {
-          "from": "universal_qg_smooth_gravitational_local_identification_note",
-          "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
-        },
-        {
-          "from": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "to": "universal_qg_external_fe_smooth_equivalence_note"
-        },
-        {
-          "from": "universal_qg_external_fe_smooth_equivalence_note",
-          "to": "universal_qg_continuum_bridge_reduction_note"
-        },
-        {
-          "from": "universal_qg_continuum_bridge_reduction_note",
-          "to": "universal_qg_canonical_smooth_geometric_action_note"
-        },
-        {
-          "from": "universal_qg_canonical_smooth_geometric_action_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        },
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_tensor_quotient_uniqueness_note"
-        },
-        {
-          "from": "universal_gr_tensor_quotient_uniqueness_note",
-          "to": "s3_time_spacetime_tensor_primitive_note"
-        },
-        {
-          "from": "s3_time_spacetime_tensor_primitive_note",
-          "to": "anomaly_forces_time_theorem"
-        }
-      ],
-      "length": 26,
-      "max_transitive_descendants": 531,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "anomaly_forces_time_theorem",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
-          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
-          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
-          "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lorentz_kernel_positive_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
-          "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
-          "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "planck_scale_lane_status_note_2026-04-23",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
-          "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-          "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
-          "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_cl3z3_source_character_derivation_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
-          "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_source_character_uniqueness_theorem_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
-          "title": "Signed Gravity Source-Character Uniqueness Theorem Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_nature_grade_closure_blocker_audit_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
-          "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_remaining_closure_gates_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
-          "title": "Signed Gravity Remaining Closure Gates Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_continuum_graded_einstein_localization_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md",
-          "title": "Signed Gravity Continuum Graded Einstein Localization Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_global_solution_class_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Global Solution Class",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-          "title": "Universal QG Smooth Gravitational Local Identification",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_textbook_weak_measure_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG Canonical Textbook Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_external_fe_smooth_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-          "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_continuum_bridge_reduction_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-          "title": "Universal QG Continuum Bridge Reduction Note",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_qg_canonical_smooth_geometric_action_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md",
-          "title": "Universal QG Canonical Smooth Geometric/Action Equivalence",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
-          "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
-          "transitive_descendants": 531
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "s3_time_spacetime_tensor_primitive_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md",
-          "title": "Route 2 Spacetime Tensor Primitive Candidate on `PL S^3 x R`",
-          "transitive_descendants": 531
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -3564,7 +1934,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -3601,7 +1971,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -3651,7 +2021,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -3701,7 +2071,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -3764,7 +2134,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -3827,7 +2197,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -3890,7 +2260,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -3927,7 +2297,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -3964,7 +2334,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -4001,7 +2371,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -4038,7 +2408,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -4075,7 +2445,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -4125,7 +2495,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -4175,7 +2545,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -4225,7 +2595,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -4275,7 +2645,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -4312,7 +2682,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -4349,7 +2719,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -4386,7 +2756,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -4423,7 +2793,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -4473,7 +2843,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -4510,7 +2880,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -4547,7 +2917,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -4584,7 +2954,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -4621,7 +2991,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -4658,7 +3028,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -4708,7 +3078,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -4745,7 +3115,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -4782,7 +3152,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -4819,7 +3189,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -4856,7 +3226,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -4893,7 +3263,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -4930,7 +3300,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -4967,7 +3337,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -5004,7 +3374,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -5041,7 +3411,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -5078,7 +3448,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -5115,7 +3485,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -5152,7 +3522,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -5189,7 +3559,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -5226,7 +3596,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -5263,7 +3633,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -5300,7 +3670,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -5337,7 +3707,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -5374,7 +3744,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -5411,7 +3781,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -5448,7 +3818,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -5485,7 +3855,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -5522,7 +3892,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -5572,7 +3942,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -5622,7 +3992,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -5672,7 +4042,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0104",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -5722,7 +4092,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -5772,7 +4142,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -5822,7 +4192,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0107",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -5872,7 +4242,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0108",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -5922,7 +4292,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0109",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -5972,7 +4342,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0110",
+      "cycle_id": "cycle-0093",
       "decision": null,
       "edges": [
         {
@@ -6022,7 +4392,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0094",
       "decision": null,
       "edges": [
         {
@@ -6072,7 +4442,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0095",
       "decision": null,
       "edges": [
         {
@@ -6122,7 +4492,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0096",
       "decision": null,
       "edges": [
         {
@@ -6172,7 +4542,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0097",
       "decision": null,
       "edges": [
         {
@@ -6222,7 +4592,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0098",
       "decision": null,
       "edges": [
         {
@@ -6272,7 +4642,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0099",
       "decision": null,
       "edges": [
         {
@@ -6322,7 +4692,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0100",
       "decision": null,
       "edges": [
         {
@@ -6372,7 +4742,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -6435,7 +4805,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -6498,7 +4868,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -6561,7 +4931,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -6624,7 +4994,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -6687,7 +5057,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0106",
       "decision": null,
       "edges": [
         {
@@ -6750,7 +5120,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0107",
       "decision": null,
       "edges": [
         {
@@ -6813,7 +5183,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0108",
       "decision": null,
       "edges": [
         {
@@ -6876,7 +5246,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0109",
       "decision": null,
       "edges": [
         {
@@ -6939,7 +5309,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0110",
       "decision": null,
       "edges": [
         {
@@ -7002,7 +5372,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0111",
       "decision": null,
       "edges": [
         {
@@ -7065,7 +5435,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0112",
       "decision": null,
       "edges": [
         {
@@ -7128,7 +5498,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0113",
       "decision": null,
       "edges": [
         {
@@ -7191,7 +5561,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0114",
       "decision": null,
       "edges": [
         {
@@ -7267,7 +5637,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0115",
       "decision": null,
       "edges": [
         {
@@ -7343,7 +5713,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0133",
+      "cycle_id": "cycle-0116",
       "decision": null,
       "edges": [
         {
@@ -7419,7 +5789,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0134",
+      "cycle_id": "cycle-0117",
       "decision": null,
       "edges": [
         {
@@ -7495,7 +5865,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0135",
+      "cycle_id": "cycle-0118",
       "decision": null,
       "edges": [
         {
@@ -7571,7 +5941,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0136",
+      "cycle_id": "cycle-0119",
       "decision": null,
       "edges": [
         {
@@ -7647,7 +6017,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0137",
+      "cycle_id": "cycle-0120",
       "decision": null,
       "edges": [
         {
@@ -7736,7 +6106,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0138",
+      "cycle_id": "cycle-0121",
       "decision": null,
       "edges": [
         {
@@ -7825,7 +6195,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0139",
+      "cycle_id": "cycle-0122",
       "decision": null,
       "edges": [
         {
@@ -7914,7 +6284,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0140",
+      "cycle_id": "cycle-0123",
       "decision": null,
       "edges": [
         {
@@ -8003,7 +6373,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0141",
+      "cycle_id": "cycle-0124",
       "decision": null,
       "edges": [
         {
@@ -8092,7 +6462,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0142",
+      "cycle_id": "cycle-0125",
       "decision": null,
       "edges": [
         {
@@ -8181,7 +6551,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0143",
+      "cycle_id": "cycle-0126",
       "decision": null,
       "edges": [
         {
@@ -8270,7 +6640,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0144",
+      "cycle_id": "cycle-0127",
       "decision": null,
       "edges": [
         {
@@ -8372,7 +6742,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0145",
+      "cycle_id": "cycle-0128",
       "decision": null,
       "edges": [
         {
@@ -8474,7 +6844,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0146",
+      "cycle_id": "cycle-0129",
       "decision": null,
       "edges": [
         {
@@ -8576,7 +6946,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0147",
+      "cycle_id": "cycle-0130",
       "decision": null,
       "edges": [
         {
@@ -8678,7 +7048,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0148",
+      "cycle_id": "cycle-0131",
       "decision": null,
       "edges": [
         {
@@ -8780,7 +7150,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0149",
+      "cycle_id": "cycle-0132",
       "decision": null,
       "edges": [
         {
@@ -8882,7 +7252,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0150",
+      "cycle_id": "cycle-0133",
       "decision": null,
       "edges": [
         {
@@ -8984,7 +7354,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0151",
+      "cycle_id": "cycle-0134",
       "decision": null,
       "edges": [
         {
@@ -9099,7 +7469,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0152",
+      "cycle_id": "cycle-0135",
       "decision": null,
       "edges": [
         {
@@ -9214,7 +7584,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0153",
+      "cycle_id": "cycle-0136",
       "decision": null,
       "edges": [
         {
@@ -9329,7 +7699,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0154",
+      "cycle_id": "cycle-0137",
       "decision": null,
       "edges": [
         {
@@ -9457,7 +7827,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0155",
+      "cycle_id": "cycle-0138",
       "decision": null,
       "edges": [
         {
@@ -9585,7 +7955,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0156",
+      "cycle_id": "cycle-0139",
       "decision": null,
       "edges": [
         {
@@ -9713,7 +8083,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0157",
+      "cycle_id": "cycle-0140",
       "decision": null,
       "edges": [
         {
@@ -9854,7 +8224,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0158",
+      "cycle_id": "cycle-0141",
       "decision": null,
       "edges": [
         {
@@ -9995,7 +8365,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0159",
+      "cycle_id": "cycle-0142",
       "decision": null,
       "edges": [
         {
@@ -10149,7 +8519,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0160",
+      "cycle_id": "cycle-0143",
       "decision": null,
       "edges": [
         {
@@ -10303,7 +8673,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0161",
+      "cycle_id": "cycle-0144",
       "decision": null,
       "edges": [
         {
@@ -10470,7 +8840,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0162",
+      "cycle_id": "cycle-0145",
       "decision": null,
       "edges": [
         {
@@ -10637,7 +9007,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0163",
+      "cycle_id": "cycle-0146",
       "decision": null,
       "edges": [
         {
@@ -10804,7 +9174,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0164",
+      "cycle_id": "cycle-0147",
       "decision": null,
       "edges": [
         {
@@ -10984,7 +9354,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0165",
+      "cycle_id": "cycle-0148",
       "decision": null,
       "edges": [
         {
@@ -11164,7 +9534,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0166",
+      "cycle_id": "cycle-0149",
       "decision": null,
       "edges": [
         {
@@ -11357,7 +9727,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0167",
+      "cycle_id": "cycle-0150",
       "decision": null,
       "edges": [
         {
@@ -11550,7 +9920,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0168",
+      "cycle_id": "cycle-0151",
       "decision": null,
       "edges": [
         {
@@ -11743,7 +10113,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0169",
+      "cycle_id": "cycle-0152",
       "decision": null,
       "edges": [
         {
@@ -11949,7 +10319,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0170",
+      "cycle_id": "cycle-0153",
       "decision": null,
       "edges": [
         {
@@ -12155,7 +10525,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0171",
+      "cycle_id": "cycle-0154",
       "decision": null,
       "edges": [
         {
@@ -12361,7 +10731,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0172",
+      "cycle_id": "cycle-0155",
       "decision": null,
       "edges": [
         {
@@ -12567,7 +10937,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0173",
+      "cycle_id": "cycle-0156",
       "decision": null,
       "edges": [
         {
@@ -12786,7 +11156,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0174",
+      "cycle_id": "cycle-0157",
       "decision": null,
       "edges": [
         {
@@ -13005,7 +11375,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0175",
+      "cycle_id": "cycle-0158",
       "decision": null,
       "edges": [
         {
@@ -13224,7 +11594,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0176",
+      "cycle_id": "cycle-0159",
       "decision": null,
       "edges": [
         {
@@ -13456,7 +11826,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0177",
+      "cycle_id": "cycle-0160",
       "decision": null,
       "edges": [
         {
@@ -13688,7 +12058,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0178",
+      "cycle_id": "cycle-0161",
       "decision": null,
       "edges": [
         {
@@ -13920,7 +12290,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0179",
+      "cycle_id": "cycle-0162",
       "decision": null,
       "edges": [
         {
@@ -14152,7 +12522,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0180",
+      "cycle_id": "cycle-0163",
       "decision": null,
       "edges": [
         {
@@ -14384,7 +12754,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0181",
+      "cycle_id": "cycle-0164",
       "decision": null,
       "edges": [
         {
@@ -14629,7 +12999,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0182",
+      "cycle_id": "cycle-0165",
       "decision": null,
       "edges": [
         {
@@ -14874,7 +13244,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0183",
+      "cycle_id": "cycle-0166",
       "decision": null,
       "edges": [
         {
@@ -15132,7 +13502,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0184",
+      "cycle_id": "cycle-0167",
       "decision": null,
       "edges": [
         {
@@ -15390,7 +13760,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0185",
+      "cycle_id": "cycle-0168",
       "decision": null,
       "edges": [
         {
@@ -15661,7 +14031,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0186",
+      "cycle_id": "cycle-0169",
       "decision": null,
       "edges": [
         {
@@ -15932,7 +14302,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0187",
+      "cycle_id": "cycle-0170",
       "decision": null,
       "edges": [
         {
@@ -16203,7 +14573,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0188",
+      "cycle_id": "cycle-0171",
       "decision": null,
       "edges": [
         {
@@ -16474,7 +14844,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0189",
+      "cycle_id": "cycle-0172",
       "decision": null,
       "edges": [
         {
@@ -16758,7 +15128,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0190",
+      "cycle_id": "cycle-0173",
       "decision": null,
       "edges": [
         {
@@ -17042,7 +15412,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0191",
+      "cycle_id": "cycle-0174",
       "decision": null,
       "edges": [
         {
@@ -17326,7 +15696,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0192",
+      "cycle_id": "cycle-0175",
       "decision": null,
       "edges": [
         {
@@ -17610,7 +15980,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0193",
+      "cycle_id": "cycle-0176",
       "decision": null,
       "edges": [
         {
@@ -17894,7 +16264,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0194",
+      "cycle_id": "cycle-0177",
       "decision": null,
       "edges": [
         {
@@ -18178,7 +16548,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0195",
+      "cycle_id": "cycle-0178",
       "decision": null,
       "edges": [
         {
@@ -18462,7 +16832,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0196",
+      "cycle_id": "cycle-0179",
       "decision": null,
       "edges": [
         {
@@ -18759,7 +17129,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0197",
+      "cycle_id": "cycle-0180",
       "decision": null,
       "edges": [
         {
@@ -19056,7 +17426,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0198",
+      "cycle_id": "cycle-0181",
       "decision": null,
       "edges": [
         {
@@ -19353,7 +17723,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0199",
+      "cycle_id": "cycle-0182",
       "decision": null,
       "edges": [
         {
@@ -19650,7 +18020,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0200",
+      "cycle_id": "cycle-0183",
       "decision": null,
       "edges": [
         {
@@ -19960,7 +18330,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0201",
+      "cycle_id": "cycle-0184",
       "decision": null,
       "edges": [
         {
@@ -20270,7 +18640,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0202",
+      "cycle_id": "cycle-0185",
       "decision": null,
       "edges": [
         {
@@ -20580,7 +18950,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0203",
+      "cycle_id": "cycle-0186",
       "decision": null,
       "edges": [
         {
@@ -20903,7 +19273,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0204",
+      "cycle_id": "cycle-0187",
       "decision": null,
       "edges": [
         {
@@ -21226,7 +19596,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0205",
+      "cycle_id": "cycle-0188",
       "decision": null,
       "edges": [
         {
@@ -21549,7 +19919,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0206",
+      "cycle_id": "cycle-0189",
       "decision": null,
       "edges": [
         {
@@ -21872,7 +20242,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0207",
+      "cycle_id": "cycle-0190",
       "decision": null,
       "edges": [
         {
@@ -22195,7 +20565,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0208",
+      "cycle_id": "cycle-0191",
       "decision": null,
       "edges": [
         {
@@ -22518,7 +20888,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0209",
+      "cycle_id": "cycle-0192",
       "decision": null,
       "edges": [
         {
@@ -22854,7 +21224,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0210",
+      "cycle_id": "cycle-0193",
       "decision": null,
       "edges": [
         {
@@ -23190,7 +21560,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0211",
+      "cycle_id": "cycle-0194",
       "decision": null,
       "edges": [
         {
@@ -23526,7 +21896,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0212",
+      "cycle_id": "cycle-0195",
       "decision": null,
       "edges": [
         {
@@ -23875,7 +22245,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0213",
+      "cycle_id": "cycle-0196",
       "decision": null,
       "edges": [
         {
@@ -24224,7 +22594,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0214",
+      "cycle_id": "cycle-0197",
       "decision": null,
       "edges": [
         {
@@ -24573,7 +22943,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0215",
+      "cycle_id": "cycle-0198",
       "decision": null,
       "edges": [
         {
@@ -24922,7 +23292,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0216",
+      "cycle_id": "cycle-0199",
       "decision": null,
       "edges": [
         {
@@ -25271,7 +23641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0217",
+      "cycle_id": "cycle-0200",
       "decision": null,
       "edges": [
         {
@@ -25633,7 +24003,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0218",
+      "cycle_id": "cycle-0201",
       "decision": null,
       "edges": [
         {
@@ -25995,7 +24365,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0219",
+      "cycle_id": "cycle-0202",
       "decision": null,
       "edges": [
         {
@@ -26357,7 +24727,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0220",
+      "cycle_id": "cycle-0203",
       "decision": null,
       "edges": [
         {
@@ -26719,7 +25089,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0221",
+      "cycle_id": "cycle-0204",
       "decision": null,
       "edges": [
         {
@@ -27081,7 +25451,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0222",
+      "cycle_id": "cycle-0205",
       "decision": null,
       "edges": [
         {
@@ -27443,7 +25813,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0223",
+      "cycle_id": "cycle-0206",
       "decision": null,
       "edges": [
         {
@@ -27818,7 +26188,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0224",
+      "cycle_id": "cycle-0207",
       "decision": null,
       "edges": [
         {
@@ -28193,7 +26563,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0225",
+      "cycle_id": "cycle-0208",
       "decision": null,
       "edges": [
         {
@@ -28568,7 +26938,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0226",
+      "cycle_id": "cycle-0209",
       "decision": null,
       "edges": [
         {
@@ -28943,7 +27313,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0227",
+      "cycle_id": "cycle-0210",
       "decision": null,
       "edges": [
         {
@@ -29318,7 +27688,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0228",
+      "cycle_id": "cycle-0211",
       "decision": null,
       "edges": [
         {
@@ -29706,7 +28076,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0229",
+      "cycle_id": "cycle-0212",
       "decision": null,
       "edges": [
         {
@@ -30094,7 +28464,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0230",
+      "cycle_id": "cycle-0213",
       "decision": null,
       "edges": [
         {
@@ -30482,7 +28852,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0231",
+      "cycle_id": "cycle-0214",
       "decision": null,
       "edges": [
         {
@@ -30870,7 +29240,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0232",
+      "cycle_id": "cycle-0215",
       "decision": null,
       "edges": [
         {
@@ -31258,7 +29628,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0233",
+      "cycle_id": "cycle-0216",
       "decision": null,
       "edges": [
         {
@@ -31646,7 +30016,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0234",
+      "cycle_id": "cycle-0217",
       "decision": null,
       "edges": [
         {
@@ -32034,7 +30404,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0235",
+      "cycle_id": "cycle-0218",
       "decision": null,
       "edges": [
         {
@@ -32422,7 +30792,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0236",
+      "cycle_id": "cycle-0219",
       "decision": null,
       "edges": [
         {
@@ -32823,7 +31193,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0237",
+      "cycle_id": "cycle-0220",
       "decision": null,
       "edges": [
         {
@@ -33224,7 +31594,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0238",
+      "cycle_id": "cycle-0221",
       "decision": null,
       "edges": [
         {
@@ -33625,7 +31995,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0239",
+      "cycle_id": "cycle-0222",
       "decision": null,
       "edges": [
         {
@@ -34026,7 +32396,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0240",
+      "cycle_id": "cycle-0223",
       "decision": null,
       "edges": [
         {
@@ -34427,7 +32797,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0241",
+      "cycle_id": "cycle-0224",
       "decision": null,
       "edges": [
         {
@@ -34828,7 +33198,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0242",
+      "cycle_id": "cycle-0225",
       "decision": null,
       "edges": [
         {
@@ -35229,7 +33599,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0243",
+      "cycle_id": "cycle-0226",
       "decision": null,
       "edges": [
         {
@@ -35643,7 +34013,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0244",
+      "cycle_id": "cycle-0227",
       "decision": null,
       "edges": [
         {
@@ -36057,7 +34427,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0245",
+      "cycle_id": "cycle-0228",
       "decision": null,
       "edges": [
         {
@@ -36471,7 +34841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0246",
+      "cycle_id": "cycle-0229",
       "decision": null,
       "edges": [
         {
@@ -36885,7 +35255,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0247",
+      "cycle_id": "cycle-0230",
       "decision": null,
       "edges": [
         {
@@ -37299,7 +35669,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0248",
+      "cycle_id": "cycle-0231",
       "decision": null,
       "edges": [
         {
@@ -37726,7 +36096,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0249",
+      "cycle_id": "cycle-0232",
       "decision": null,
       "edges": [
         {
@@ -38153,7 +36523,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0250",
+      "cycle_id": "cycle-0233",
       "decision": null,
       "edges": [
         {
@@ -38580,7 +36950,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0251",
+      "cycle_id": "cycle-0234",
       "decision": null,
       "edges": [
         {
@@ -38617,7 +36987,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0252",
+      "cycle_id": "cycle-0235",
       "decision": null,
       "edges": [
         {
@@ -38680,7 +37050,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0253",
+      "cycle_id": "cycle-0236",
       "decision": null,
       "edges": [
         {
@@ -38756,7 +37126,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0254",
+      "cycle_id": "cycle-0237",
       "decision": null,
       "edges": [
         {
@@ -38793,7 +37163,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0255",
+      "cycle_id": "cycle-0238",
       "decision": null,
       "edges": [
         {
@@ -38830,7 +37200,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0256",
+      "cycle_id": "cycle-0239",
       "decision": null,
       "edges": [
         {
@@ -38880,7 +37250,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0257",
+      "cycle_id": "cycle-0240",
       "decision": null,
       "edges": [
         {
@@ -38930,7 +37300,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0258",
+      "cycle_id": "cycle-0241",
       "decision": null,
       "edges": [
         {
@@ -38980,7 +37350,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0259",
+      "cycle_id": "cycle-0242",
       "decision": null,
       "edges": [
         {
@@ -39030,7 +37400,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0260",
+      "cycle_id": "cycle-0243",
       "decision": null,
       "edges": [
         {
@@ -39093,7 +37463,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0261",
+      "cycle_id": "cycle-0244",
       "decision": null,
       "edges": [
         {
@@ -39169,7 +37539,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0262",
+      "cycle_id": "cycle-0245",
       "decision": null,
       "edges": [
         {
@@ -39258,7 +37628,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0263",
+      "cycle_id": "cycle-0246",
       "decision": null,
       "edges": [
         {
@@ -39295,7 +37665,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0264",
+      "cycle_id": "cycle-0247",
       "decision": null,
       "edges": [
         {
@@ -39332,7 +37702,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0265",
+      "cycle_id": "cycle-0248",
       "decision": null,
       "edges": [
         {
@@ -39369,7 +37739,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0266",
+      "cycle_id": "cycle-0249",
       "decision": null,
       "edges": [
         {
@@ -39419,7 +37789,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0267",
+      "cycle_id": "cycle-0250",
       "decision": null,
       "edges": [
         {
@@ -39469,7 +37839,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0268",
+      "cycle_id": "cycle-0251",
       "decision": null,
       "edges": [
         {
@@ -39532,7 +37902,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0269",
+      "cycle_id": "cycle-0252",
       "decision": null,
       "edges": [
         {
@@ -39595,7 +37965,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0270",
+      "cycle_id": "cycle-0253",
       "decision": null,
       "edges": [
         {
@@ -39632,7 +38002,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0271",
+      "cycle_id": "cycle-0254",
       "decision": null,
       "edges": [
         {
@@ -39682,7 +38052,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0272",
+      "cycle_id": "cycle-0255",
       "decision": null,
       "edges": [
         {
@@ -39719,7 +38089,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0273",
+      "cycle_id": "cycle-0256",
       "decision": null,
       "edges": [
         {
@@ -39756,7 +38126,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0274",
+      "cycle_id": "cycle-0257",
       "decision": null,
       "edges": [
         {
@@ -39795,7 +38165,7 @@
   ],
   "length_counts": {
     "10": 2,
-    "11": 3,
+    "11": 2,
     "12": 3,
     "13": 2,
     "14": 3,
@@ -39804,25 +38174,25 @@
     "17": 5,
     "18": 2,
     "19": 2,
-    "2": 57,
+    "2": 55,
     "20": 4,
     "21": 7,
     "22": 4,
     "23": 3,
     "24": 6,
     "25": 3,
-    "26": 6,
+    "26": 5,
     "27": 6,
     "28": 5,
     "29": 8,
-    "3": 45,
+    "3": 46,
     "30": 7,
     "31": 5,
     "32": 3,
-    "4": 31,
-    "5": 16,
-    "6": 14,
-    "7": 9,
+    "4": 28,
+    "5": 10,
+    "6": 10,
+    "7": 8,
     "8": 3,
     "9": 3
   },

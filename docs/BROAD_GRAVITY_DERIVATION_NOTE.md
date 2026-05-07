@@ -561,5 +561,15 @@ python3 scripts/frontier_broad_gravity.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [gravity_clean_derivation_note](GRAVITY_CLEAN_DERIVATION_NOTE.md)
+- [gravity_clean_derivation_note](GRAVITY_CLEAN_DERIVATION_NOTE.md) —
+  this note's Step 1 ("Cl(3) on Z^3 uniquely gives the staggered
+  Hamiltonian whose square is the negative graph Laplacian") and Step 5
+  ("the propagator action S = kL(1 - phi)") consume gravity_clean's
+  Steps 1 and 5 directly (see inline references at lines ~27-29 and
+  ~59 above). gravity_clean is the upstream chain composer; this note
+  is downstream. Direction in citation graph: broad_gravity →
+  gravity_clean (consumer → producer). The reverse edge in
+  gravity_clean's Citations section was removed in 2026-05-05 as a
+  misattribution that created a length-2 cycle.
 - [gravity_full_self_consistency_note](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+  — supplies the broader self-consistency surface; correct upstream.

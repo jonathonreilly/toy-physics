@@ -18,9 +18,9 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 1 | `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | unaudited | critical | 598 | 11.23 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py` |
 | 2 | `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 588 | 10.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_fusion_engine.py` |
 | 3 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 532 | 11.56 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
-| 4 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | - | unaudited | critical | 303 | 8.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py` |
+| 4 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded_theorem | unaudited | critical | 303 | 8.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py` |
 | 5 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | unaudited | critical | 292 | 9.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
-| 6 | `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19` | - | unaudited | critical | 290 | 8.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_abcc_chamber_dple_closure.py` |
+| 6 | `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19` | bounded_theorem | unaudited | critical | 290 | 8.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_abcc_chamber_dple_closure.py` |
 | 7 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | unaudited | critical | 589 | 10.21 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py` |
 | 8 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 587 | 12.70 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
 | 9 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 587 | 10.70 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_wigner_l3_cube_partition.py` |
@@ -68,7 +68,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 ## Citation cycle break targets
 
-274 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
+257 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
 
 | # | cycle_id | length | max_desc | primary break target | criticality | audit_status |
 |---:|---|---:|---:|---|---|---|
@@ -77,25 +77,25 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 3 | `cycle-0003` | 5 | 587 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
 | 4 | `cycle-0004` | 6 | 587 | `gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03` | critical | unaudited |
 | 5 | `cycle-0005` | 2 | 542 | `yt_explicit_systematic_budget_note` | critical | audited_conditional |
-| 6 | `cycle-0006` | 2 | 539 | `universal_qg_projective_schur_closure_note` | critical | audited_conditional |
-| 7 | `cycle-0007` | 3 | 539 | `universal_qg_canonical_refinement_net_note` | critical | unaudited |
-| 8 | `cycle-0008` | 2 | 538 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | unaudited |
-| 9 | `cycle-0009` | 2 | 531 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
-| 10 | `cycle-0010` | 2 | 531 | `broad_gravity_derivation_note` | critical | unaudited |
-| 11 | `cycle-0011` | 2 | 531 | `gravity_clean_derivation_note` | critical | unaudited |
-| 12 | `cycle-0012` | 2 | 531 | `gravity_clean_derivation_note` | critical | unaudited |
-| 13 | `cycle-0013` | 2 | 531 | `universal_gr_tensor_quotient_uniqueness_note` | critical | unaudited |
-| 14 | `cycle-0014` | 2 | 531 | `universal_qg_canonical_textbook_continuum_gr_closure_note` | critical | unaudited |
-| 15 | `cycle-0015` | 3 | 531 | `antigravity_sign_selector_boundary_note` | critical | unaudited |
-| 16 | `cycle-0016` | 3 | 531 | `gravity_signed_source_density_boundary_note` | critical | unaudited |
-| 17 | `cycle-0017` | 3 | 531 | `signed_gravity_aps_action_origin_superselection_stability_note` | critical | unaudited |
-| 18 | `cycle-0018` | 3 | 531 | `signed_gravity_aps_locked_axiom_extension_note` | critical | unaudited |
-| 19 | `cycle-0019` | 3 | 531 | `signed_gravity_aps_boundary_index_chi_probe_note` | critical | unaudited |
+| 6 | `cycle-0006` | 2 | 539 | `universal_qg_canonical_refinement_net_note` | critical | unaudited |
+| 7 | `cycle-0007` | 2 | 539 | `universal_qg_projective_schur_closure_note` | critical | audited_conditional |
+| 8 | `cycle-0008` | 3 | 539 | `universal_qg_canonical_refinement_net_note` | critical | unaudited |
+| 9 | `cycle-0009` | 2 | 538 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | unaudited |
+| 10 | `cycle-0010` | 2 | 531 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
+| 11 | `cycle-0011` | 2 | 531 | `universal_gr_tensor_quotient_uniqueness_note` | critical | unaudited |
+| 12 | `cycle-0012` | 2 | 531 | `universal_qg_canonical_textbook_continuum_gr_closure_note` | critical | unaudited |
+| 13 | `cycle-0013` | 3 | 531 | `antigravity_sign_selector_boundary_note` | critical | unaudited |
+| 14 | `cycle-0014` | 3 | 531 | `gravity_signed_source_density_boundary_note` | critical | unaudited |
+| 15 | `cycle-0015` | 3 | 531 | `signed_gravity_aps_action_origin_superselection_stability_note` | critical | unaudited |
+| 16 | `cycle-0016` | 3 | 531 | `signed_gravity_aps_locked_axiom_extension_note` | critical | unaudited |
+| 17 | `cycle-0017` | 3 | 531 | `signed_gravity_aps_boundary_index_chi_probe_note` | critical | unaudited |
+| 18 | `cycle-0018` | 3 | 531 | `signed_gravity_chi_selector_theorem_or_nogo_note` | critical | unaudited |
+| 19 | `cycle-0019` | 3 | 531 | `signed_gravity_chi_selector_theorem_or_nogo_note` | critical | unaudited |
 | 20 | `cycle-0020` | 3 | 531 | `signed_gravity_chi_selector_theorem_or_nogo_note` | critical | unaudited |
-| 21 | `cycle-0021` | 3 | 531 | `signed_gravity_chi_selector_theorem_or_nogo_note` | critical | unaudited |
-| 22 | `cycle-0022` | 3 | 531 | `signed_gravity_chi_selector_theorem_or_nogo_note` | critical | unaudited |
-| 23 | `cycle-0023` | 3 | 531 | `signed_gravity_native_boundary_complex_containment_note` | critical | unaudited |
-| 24 | `cycle-0024` | 3 | 531 | `signed_gravity_aps_locked_source_action_proposal_note` | critical | unaudited |
-| 25 | `cycle-0025` | 3 | 531 | `universal_qg_canonical_textbook_weak_measure_equivalence_note` | critical | unaudited |
+| 21 | `cycle-0021` | 3 | 531 | `signed_gravity_native_boundary_complex_containment_note` | critical | unaudited |
+| 22 | `cycle-0022` | 3 | 531 | `signed_gravity_aps_locked_source_action_proposal_note` | critical | unaudited |
+| 23 | `cycle-0023` | 3 | 531 | `universal_qg_canonical_textbook_weak_measure_equivalence_note` | critical | unaudited |
+| 24 | `cycle-0024` | 3 | 531 | `universal_qg_continuum_bridge_reduction_note` | critical | unaudited |
+| 25 | `cycle-0025` | 4 | 531 | `antigravity_sign_selector_boundary_note` | critical | unaudited |
 
 Full queue lives in `data/audit_queue.json`.
