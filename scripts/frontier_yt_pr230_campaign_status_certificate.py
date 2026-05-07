@@ -743,6 +743,9 @@ def main() -> int:
         "pr230_same_surface_neutral_multiplicity_one_gate": load(
             "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json"
         ),
+        "pr230_os_transfer_kernel_artifact_gate": load(
+            "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -3412,6 +3415,20 @@ def main() -> int:
         and same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False,
         statuses["pr230_same_surface_neutral_multiplicity_one_gate"],
     )
+    os_transfer_kernel_artifact_gate = certificates[
+        "pr230_os_transfer_kernel_artifact_gate"
+    ]
+    report(
+        "pr230-os-transfer-kernel-artifact-absent",
+        "OS transfer-kernel artifact absent"
+        in str(statuses["pr230_os_transfer_kernel_artifact_gate"])
+        and os_transfer_kernel_artifact_gate.get("proposal_allowed") is False
+        and os_transfer_kernel_artifact_gate.get("os_transfer_kernel_artifact_present")
+        is False
+        and os_transfer_kernel_artifact_gate.get("same_surface_transfer_or_gevp_present")
+        is False,
+        statuses["pr230_os_transfer_kernel_artifact_gate"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -5018,7 +5035,12 @@ def main() -> int:
         "candidate routes and keeps them open without authorizing closure.  "
         "The same-surface neutral multiplicity-one intake gate now makes "
         "the cleanest missing positive artifact executable and rejects the "
-        "current two-singlet surface without authorizing O_H closure."
+        "current two-singlet surface without authorizing O_H closure.  "
+        "The OS transfer-kernel artifact gate now adds the time-direction "
+        "boundary: scalar source/taste-radial rows are configuration "
+        "timeseries at fixed finite covariance definitions, not same-surface "
+        "C_ij(t) transfer/GEVP kernels, so static C_ss/C_sx/C_xx cannot "
+        "determine the off-diagonal generator or source-Higgs pole overlap."
     )
     result["oh_bridge_candidate_portfolio_open"] = (
         oh_bridge_candidate_portfolio.get("candidate_portfolio_passed") is True
@@ -5027,6 +5049,13 @@ def main() -> int:
     result["same_surface_neutral_multiplicity_one_gate_rejects_current_surface"] = (
         same_surface_neutral_multiplicity_gate.get("candidate_accepted") is False
         and same_surface_neutral_multiplicity_gate.get("proposal_allowed") is False
+    )
+    result["os_transfer_kernel_artifact_absent"] = (
+        os_transfer_kernel_artifact_gate.get("os_transfer_kernel_artifact_present")
+        is False
+        and os_transfer_kernel_artifact_gate.get("same_surface_transfer_or_gevp_present")
+        is False
+        and os_transfer_kernel_artifact_gate.get("proposal_allowed") is False
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")

@@ -263,6 +263,9 @@ def main() -> int:
         "same_surface_neutral_multiplicity_one_gate": load(
             "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json"
         ),
+        "os_transfer_kernel_artifact_gate": load(
+            "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1566,6 +1569,16 @@ def main() -> int:
         and same_surface_neutral_gate.get("candidate_accepted") is False,
         same_surface_neutral_gate.get("actual_current_surface_status"),
     )
+    os_transfer_kernel = certificates["os_transfer_kernel_artifact_gate"]
+    report(
+        "os-transfer-kernel-artifact-absent",
+        "OS transfer-kernel artifact absent"
+        in str(os_transfer_kernel.get("actual_current_surface_status"))
+        and os_transfer_kernel.get("proposal_allowed") is False
+        and os_transfer_kernel.get("os_transfer_kernel_artifact_present") is False
+        and os_transfer_kernel.get("same_surface_transfer_or_gevp_present") is False,
+        os_transfer_kernel.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -1746,6 +1759,12 @@ def main() -> int:
             "clean source-Higgs positive artifact contract executable and "
             "rejects the current two-singlet neutral completion without "
             "claiming O_H authority.  "
+            "The OS transfer-kernel artifact gate then separates static "
+            "equal-time covariance from a transfer/action kernel: the top "
+            "correlator has a tau axis, but the scalar source/taste-radial "
+            "matrix rows are configuration timeseries, not same-surface "
+            "C_ij(t) rows, and static C(0) admits multiple positive transfer "
+            "candidates.  "
             "The radial-spurion sector-overlap theorem gives a clean conditional "
             "positive contract for the W/Z response route, but it also blocks "
             "using the current additive top bare-mass source as if it were "
@@ -1792,6 +1811,7 @@ def main() -> int:
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
+            "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

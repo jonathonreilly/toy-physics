@@ -86,6 +86,7 @@
   "origin_main_composite_higgs_not_closure": true,
   "origin_main_ew_m_residual_not_closure": true,
   "orthogonal_top_coupling_exclusion_candidate_rejected": true,
+  "os_transfer_kernel_artifact_absent": true,
   "parent_certificates": {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
@@ -171,6 +172,7 @@
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
+    "pr230_os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "pr230_radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
@@ -332,6 +334,7 @@
     "pr230_origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
     "pr230_origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
     "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "exact negative boundary / orthogonal-neutral top-coupling exclusion candidate rejected on current PR230 surface",
+    "pr230_os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
     "pr230_post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
     "pr230_radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
     "pr230_radial_spurion_sector_overlap_theorem": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
@@ -408,7 +411,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 147,
+  "pass_count": 148,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",

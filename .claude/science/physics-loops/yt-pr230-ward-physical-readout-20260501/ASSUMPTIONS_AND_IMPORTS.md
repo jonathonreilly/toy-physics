@@ -906,3 +906,28 @@ diagnostics as scalar-LSZ authority.  The same forbidden imports remain
 forbidden: `H_unit`, `yt_ward_identity`, observed top or `y_t`, `alpha_LM`,
 plaquette/`u0`, reduced pilots as production evidence, and fiat
 `c2 = 1`, `Z_match = 1`, or `kappa_s = 1`.
+
+2026-05-07 OS transfer-kernel artifact gate:
+
+The OS/transfer/GEVP route is an artifact contract, not a shortcut.  The
+current finite scalar `C_ss/C_sx/C_xx` rows are equal-time covariance
+diagnostics with configuration timeseries.  They must not be treated as
+same-surface Euclidean-time scalar correlation matrices `C_ij(t)`, transfer
+matrices, action generators, pole-residue rows, or source-Higgs overlap
+authority.  Top-correlator `tau` rows do not supply scalar source/Higgs
+matrix rows.
+
+Forbidden load-bearing assumptions for this route:
+
+- `configuration_timeseries = Euclidean-time kernel`
+- `static C(0) covariance = transfer/action generator`
+- `finite C_sx/C_xx = canonical C_sH/C_HH`
+- `taste-radial x = canonical O_H`
+- `OS/transfer/GEVP/D-module/tensor/PSLQ method name = proof authority`
+- `kappa_s = 1`, `c2 = 1`, or `Z_match = 1` by convention
+
+The only admissible reopen is a same-surface scalar time-lag row packet
+`C_ss(t)`, `C_sH(t)`, `C_HH(t)` for certified canonical `O_H`, or
+`C_ss(t)`, `C_sx(t)`, `C_xx(t)` plus a theorem identifying `x` with canonical
+`O_H` or a physical neutral transfer, with pole/FV/IR/threshold authority,
+overlap normalization, covariance, seed metadata, and all claim firewalls.

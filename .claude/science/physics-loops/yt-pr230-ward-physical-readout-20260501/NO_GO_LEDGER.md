@@ -3490,3 +3490,24 @@ written.  The raw `C_ss` proxy still fails the strict scalar-LSZ first-shell
 Stieltjes necessary condition, while the Schur `C_x|s` residual is only a
 one-volume finite-row candidate.  Reopen this as closure only with a complete
 same-surface artifact that supplies one of the named missing authorities.
+
+## 2026-05-07 - Equal-Time Covariance Is Not An OS Transfer Kernel
+
+No-go on the current surface: the current two-source taste-radial rows are
+equal-time finite `C_ss/C_sx/C_xx` covariance diagnostics with configuration
+timeseries.  They are not same-surface Euclidean-time scalar correlation
+matrices `C_ij(t)` and cannot determine a transfer/action generator,
+isolated-pole residue vector, or source-to-canonical-Higgs overlap.
+
+The top correlator stream has a `tau` axis, but that does not supply scalar
+source/Higgs matrix rows.  A positive static Gram `C(0)` admits multiple
+positive self-adjoint transfer candidates with different `C(1)`, so OS,
+transfer-matrix, GEVP, D-module, tensor, or value-recognition method names
+cannot promote static covariance to closure.
+
+Reopen only with same-surface scalar time-lag rows `C_ss(t)`, `C_sH(t)`,
+`C_HH(t)` for a certified canonical `O_H`, or `C_ss(t)`, `C_sx(t)`, `C_xx(t)`
+plus a theorem identifying `x` with canonical `O_H` or a physical neutral
+transfer.  The reopen artifact must include pole extraction, FV/IR/threshold
+authority, overlap normalization, covariance, seed metadata, and all claim
+firewalls.

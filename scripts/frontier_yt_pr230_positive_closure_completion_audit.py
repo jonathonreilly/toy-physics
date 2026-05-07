@@ -52,6 +52,7 @@ PARENTS = {
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
+    "os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
@@ -702,6 +703,19 @@ def main() -> int:
         )
         is False
     )
+    os_transfer_kernel_artifact_absent = (
+        "OS transfer-kernel artifact absent"
+        in parent_statuses["os_transfer_kernel_artifact_gate"]
+        and certs["os_transfer_kernel_artifact_gate"].get("proposal_allowed") is False
+        and certs["os_transfer_kernel_artifact_gate"].get(
+            "os_transfer_kernel_artifact_present"
+        )
+        is False
+        and certs["os_transfer_kernel_artifact_gate"].get(
+            "same_surface_transfer_or_gevp_present"
+        )
+        is False
+    )
     two_source_taste_radial_primitive_transfer_candidate_not_h3 = (
         "finite C_sx rows do not certify a physical primitive neutral transfer"
         in parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"]
@@ -906,6 +920,7 @@ def main() -> int:
     report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
     report("same-surface-neutral-multiplicity-one-gate-rejects-current-surface", same_surface_neutral_multiplicity_gate_rejects_current_surface, parent_statuses["same_surface_neutral_multiplicity_one_gate"])
+    report("os-transfer-kernel-artifact-absent", os_transfer_kernel_artifact_absent, parent_statuses["os_transfer_kernel_artifact_gate"])
     report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
     report("orthogonal-top-coupling-exclusion-candidate-rejected", orthogonal_top_coupling_exclusion_candidate_rejected, parent_statuses["orthogonal_top_coupling_exclusion_candidate_gate"])
     report("strict-scalar-lsz-moment-fv-authority-absent", strict_scalar_lsz_moment_fv_authority_absent, parent_statuses["strict_scalar_lsz_moment_fv_authority_gate"])
@@ -1074,6 +1089,7 @@ def main() -> int:
             "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
             "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
             "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
+            "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
             "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
             "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
             "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,

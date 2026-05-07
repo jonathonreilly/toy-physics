@@ -1,0 +1,336 @@
+{
+  "actual_current_surface_status": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "combined_rows_written": false,
+  "conditional_surface_status": "conditional-support if future production supplies same-surface Euclidean-time C_ij(t) matrices for source and canonical O_H or a certified physical neutral basis, then OS/transfer/GEVP pole and overlap authority can be evaluated",
+  "current_schema_boundary": {
+    "chunks_with_scalar_time_kernel": 0,
+    "chunks_with_top_tau_correlators": 32,
+    "source_mode_keys_seen": {
+      "0,0,0": [
+        "C_HH_imag",
+        "C_HH_imag_config_stderr",
+        "C_HH_real",
+        "C_HH_real_config_stderr",
+        "C_HH_timeseries",
+        "C_sH_imag",
+        "C_sH_imag_config_stderr",
+        "C_sH_real",
+        "C_sH_real_config_stderr",
+        "C_sH_timeseries",
+        "C_ss_imag",
+        "C_ss_imag_config_stderr",
+        "C_ss_real",
+        "C_ss_real_config_stderr",
+        "C_ss_timeseries",
+        "C_sx_imag",
+        "C_sx_imag_config_stderr",
+        "C_sx_real",
+        "C_sx_real_config_stderr",
+        "C_sx_timeseries",
+        "C_xx_imag",
+        "C_xx_imag_config_stderr",
+        "C_xx_real",
+        "C_xx_real_config_stderr",
+        "C_xx_timeseries",
+        "configuration_count",
+        "finite_row_gram",
+        "momentum_mode",
+        "p_hat_sq"
+      ],
+      "0,0,1": [
+        "C_HH_imag",
+        "C_HH_imag_config_stderr",
+        "C_HH_real",
+        "C_HH_real_config_stderr",
+        "C_HH_timeseries",
+        "C_sH_imag",
+        "C_sH_imag_config_stderr",
+        "C_sH_real",
+        "C_sH_real_config_stderr",
+        "C_sH_timeseries",
+        "C_ss_imag",
+        "C_ss_imag_config_stderr",
+        "C_ss_real",
+        "C_ss_real_config_stderr",
+        "C_ss_timeseries",
+        "C_sx_imag",
+        "C_sx_imag_config_stderr",
+        "C_sx_real",
+        "C_sx_real_config_stderr",
+        "C_sx_timeseries",
+        "C_xx_imag",
+        "C_xx_imag_config_stderr",
+        "C_xx_real",
+        "C_xx_real_config_stderr",
+        "C_xx_timeseries",
+        "configuration_count",
+        "finite_row_gram",
+        "momentum_mode",
+        "p_hat_sq"
+      ],
+      "0,1,0": [
+        "C_HH_imag",
+        "C_HH_imag_config_stderr",
+        "C_HH_real",
+        "C_HH_real_config_stderr",
+        "C_HH_timeseries",
+        "C_sH_imag",
+        "C_sH_imag_config_stderr",
+        "C_sH_real",
+        "C_sH_real_config_stderr",
+        "C_sH_timeseries",
+        "C_ss_imag",
+        "C_ss_imag_config_stderr",
+        "C_ss_real",
+        "C_ss_real_config_stderr",
+        "C_ss_timeseries",
+        "C_sx_imag",
+        "C_sx_imag_config_stderr",
+        "C_sx_real",
+        "C_sx_real_config_stderr",
+        "C_sx_timeseries",
+        "C_xx_imag",
+        "C_xx_imag_config_stderr",
+        "C_xx_real",
+        "C_xx_real_config_stderr",
+        "C_xx_timeseries",
+        "configuration_count",
+        "finite_row_gram",
+        "momentum_mode",
+        "p_hat_sq"
+      ],
+      "1,0,0": [
+        "C_HH_imag",
+        "C_HH_imag_config_stderr",
+        "C_HH_real",
+        "C_HH_real_config_stderr",
+        "C_HH_timeseries",
+        "C_sH_imag",
+        "C_sH_imag_config_stderr",
+        "C_sH_real",
+        "C_sH_real_config_stderr",
+        "C_sH_timeseries",
+        "C_ss_imag",
+        "C_ss_imag_config_stderr",
+        "C_ss_real",
+        "C_ss_real_config_stderr",
+        "C_ss_timeseries",
+        "C_sx_imag",
+        "C_sx_imag_config_stderr",
+        "C_sx_real",
+        "C_sx_real_config_stderr",
+        "C_sx_timeseries",
+        "C_xx_imag",
+        "C_xx_imag_config_stderr",
+        "C_xx_real",
+        "C_xx_real_config_stderr",
+        "C_xx_timeseries",
+        "configuration_count",
+        "finite_row_gram",
+        "momentum_mode",
+        "p_hat_sq"
+      ]
+    }
+  },
+  "exact_next_action": "Implement a same-surface scalar correlation-matrix production row: C_ss(t), C_sH(t), and C_HH(t) for certified canonical O_H, or C_ss(t), C_sx(t), and C_xx(t) plus a same-surface theorem identifying x with canonical O_H/physical neutral transfer.  The certificate must include reflection-positive/GEVP pole extraction, FV/IR/threshold authority, overlap normalization, covariance, seed metadata, and all claim firewalls.",
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "finite_equal_time_gram_rows": {
+    "positive_definite": true,
+    "row_count": 128,
+    "zero_mode_mean_gram": [
+      [
+        0.12240429599042713,
+        -3.0266873080226556e-05
+      ],
+      [
+        -3.0266873080226556e-05,
+        0.28084540401011865
+      ]
+    ]
+  },
+  "forbidden_firewall": {
+    "sets_c2_to_one": false,
+    "sets_kappa_s_to_one": false,
+    "sets_z_match_to_one": false,
+    "treats_configuration_timeseries_as_euclidean_time_kernel": false,
+    "treats_equal_time_covariance_as_transfer_matrix": false,
+    "treats_taste_radial_x_as_canonical_O_H": false,
+    "uses_H_unit_matrix_element_readout": false,
+    "uses_alpha_lm_plaquette_u0": false,
+    "uses_observed_targets": false,
+    "uses_pslq_or_value_recognition_selector": false,
+    "uses_reduced_pilot_evidence": false,
+    "uses_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "literature_refresh": [
+    {
+      "citation": "K. Osterwalder and R. Schrader, Axioms for Euclidean Green's functions. II, Commun. Math. Phys. 42 (1975) 281-305.",
+      "id": "osterwalder_schrader_1975",
+      "pr230_boundary": "does not turn PR230 equal-time C_sx covariance rows into an action generator or canonical O_H overlap",
+      "route_use": "reflection-positive Euclidean functions reconstruct the physical Hilbert/transfer structure only when the required Euclidean correlation functions are supplied",
+      "url": "https://www.osti.gov/biblio/4131077"
+    },
+    {
+      "citation": "M. Luscher, Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories, Commun. Math. Phys. 54 (1977) 283-292.",
+      "id": "luscher_transfer_matrix_1977",
+      "pr230_boundary": "transfer positivity by itself is not neutral-sector irreducibility, source-Higgs identity, or kappa_s authority",
+      "route_use": "supports asking for an actual same-surface transfer kernel or time-lag correlator, not a static covariance proxy",
+      "url": "https://doi.org/10.1007/BF01614090"
+    },
+    {
+      "citation": "M. Luscher and U. Wolff, How to calculate the elastic scattering matrix in two-dimensional quantum field theories by numerical simulation, Nucl. Phys. B339 (1990) 222-252.",
+      "id": "luscher_wolff_1990_gevp",
+      "pr230_boundary": "current source/taste rows are configuration timeseries at fixed row definitions, not C_ij(t) matrices",
+      "route_use": "the GEVP route uses correlation matrices C(t) and C(t0) to extract levels and overlaps",
+      "url": "https://courses.physics.ucsd.edu/2016/Spring/physics142/Labs/FinalProjects/LuscherWolff.pdf"
+    }
+  ],
+  "os_transfer_kernel_artifact_present": false,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "clean_source_higgs_route_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "neutral_offdiagonal_generator_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "orthogonal_top_exclusion_candidate": "exact negative boundary / orthogonal-neutral top-coupling exclusion candidate rejected on current PR230 surface",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_neutral_candidate": "exact negative boundary / same-surface neutral multiplicity-one candidate attempt rejected on current PR230 surface",
+    "same_surface_neutral_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_promotion_contract": "exact-support / taste-radial-to-source-Higgs promotion contract; current promotion blocked by absent canonical O_H identity/action/LSZ premise",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "strict_scalar_lsz_moment_fv": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
+    "two_source_primitive_transfer_candidate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
+    "two_source_row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current finite row packet is an equal-time source/taste-radial covariance diagnostic.  It is not a time-lag transfer kernel, not a canonical O_H row packet, and not scalar-LSZ normalization authority.",
+  "ready_chunks": 32,
+  "required_future_artifact_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_operator_basis",
+      "required_evidence": "operators O_i include source and canonical O_H, or a certified physical neutral transfer basis with source/canonical-Higgs coordinates"
+    },
+    {
+      "current_satisfied": false,
+      "id": "euclidean_time_correlation_matrix",
+      "required_evidence": "same-ensemble C_ij(t) matrix for at least two positive Euclidean time separations plus C_ij(t0), with configuration covariance and seed/provenance metadata"
+    },
+    {
+      "current_satisfied": false,
+      "id": "reflection_positive_transfer_or_gevp",
+      "required_evidence": "OS/transfer-matrix or GEVP certificate extracting energies and overlap vectors from C(t) rather than static covariance"
+    },
+    {
+      "current_satisfied": false,
+      "id": "pole_fv_ir_threshold_authority",
+      "required_evidence": "isolated pole, threshold separation, FV/IR/zero-mode limiting order"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_to_canonical_higgs_overlap",
+      "required_evidence": "O_sp = O_H identity/normalization or Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))"
+    },
+    {
+      "current_satisfied": true,
+      "id": "claim_firewall",
+      "required_evidence": "no H_unit, Ward identity, observed target, alpha/plaquette/u0, pilot, unit-normalization, or value-recognition selector"
+    }
+  ],
+  "same_surface_transfer_or_gevp_present": false,
+  "static_gram_underdetermination_witness": {
+    "C1_kernel_delta_norm": 0.04478705861076843,
+    "candidate_A_C1_kernel": [
+      [
+        0.08042535296697331,
+        -1.3027958104811618e-05
+      ],
+      [
+        -1.302795810481162e-05,
+        0.0788702707224036
+      ]
+    ],
+    "candidate_A_C1_symmetric_error": 1.6940658945086007e-21,
+    "candidate_A_offdiagonal_transfer_norm": 3.699268140529516e-05,
+    "candidate_A_transfer_in_source_x_basis": [
+      [
+        0.6570468222164314,
+        -3.699268140529516e-05
+      ],
+      [
+        2.4421958034720673e-05,
+        0.2808316193770049
+      ]
+    ],
+    "candidate_A_whitened_transfer": [
+      [
+        0.6570468198150567,
+        0.0
+      ],
+      [
+        0.0,
+        0.2808316217783798
+      ]
+    ],
+    "candidate_B_C1_kernel": [
+      [
+        0.07241923232181516,
+        0.02641779395117851
+      ],
+      [
+        0.02641779395117852,
+        0.0972265074238887
+      ]
+    ],
+    "candidate_B_C1_symmetric_error": 1.0408340855860843e-17,
+    "candidate_B_offdiagonal_transfer_norm": 0.21590968355358295,
+    "candidate_B_transfer_in_source_x_basis": [
+      [
+        0.5916629046948001,
+        0.21590968355358295
+      ],
+      [
+        0.09412901674641162,
+        0.34621553689863616
+      ]
+    ],
+    "candidate_B_whitened_transfer": [
+      [
+        0.5916676664426616,
+        0.1425559449401347
+      ],
+      [
+        0.1425559449401347,
+        0.3462107751507748
+      ]
+    ],
+    "interpretation": "The same equal-time positive Gram C(0)=G admits multiple positive self-adjoint transfer candidates once the Euclidean-time kernel is not supplied.  Static C_ss/C_sx/C_xx rows therefore cannot select the physical off-diagonal generator, pole residue, or O_H overlap.",
+    "minimum_gram_eigenvalue": 0.12240429020857176,
+    "offdiagonal_transfer_delta_norm": 0.21587269087217764,
+    "same_C0_gram": [
+      [
+        0.12240429599042713,
+        -3.0266873080226556e-05
+      ],
+      [
+        -3.0266873080226556e-05,
+        0.28084540401011865
+      ]
+    ],
+    "static_gram_positive_definite": true,
+    "witness_valid": true
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, c2=1, Z_match=1, or kappa_s=1",
+    "does not treat configuration timeseries as Euclidean-time correlation kernels",
+    "does not treat finite C_sx covariance as a transfer/action matrix",
+    "does not treat taste-radial x as canonical O_H",
+    "does not use OS, transfer-matrix, GEVP, D-module, tensor, PSLQ, or value-recognition method names as proof authority"
+  ]
+}

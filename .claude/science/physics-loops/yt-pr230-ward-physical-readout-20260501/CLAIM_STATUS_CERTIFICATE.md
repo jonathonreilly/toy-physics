@@ -4715,3 +4715,39 @@ The new packet is finite `C_ss/C_sx/C_xx` row support only.  It is not
 canonical `O_H`, not canonical `C_sH/C_HH`, not scalar-LSZ normalization, not
 `kappa_s`, not W/Z physical response, and not retained or proposed-retained
 closure.  Active chunks025-026, logs, and live status are run-control only.
+
+OS transfer-kernel artifact gate:
+
+```text
+actual_current_surface_status: exact support plus negative boundary / OS
+transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do
+not determine a same-surface transfer generator, pole residue, or
+source-Higgs overlap
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=88 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=335 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=148 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=302 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=57 FAIL=0
+```
+
+The artifact is a claim firewall, not evidence for closure.  The current
+scalar source/taste-radial rows are configuration timeseries, not
+same-surface `C_ij(t)` transfer/GEVP kernels.  Do not claim retained or
+proposed-retained closure until a future same-surface time-lag matrix row
+packet, canonical `O_H` or physical neutral-transfer identity, pole/FV/IR
+authority, overlap normalization, and retained-route approval all pass.

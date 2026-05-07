@@ -4264,3 +4264,51 @@ and checkpoints exist.
 The support packet is finite `C_ss/C_sx/C_xx` data only.  It does not define
 canonical `O_H`, does not supply `C_sH/C_HH` pole rows, does not derive
 `kappa_s`, and does not authorize retained/proposed-retained closure.
+
+## 2026-05-07 - OS Transfer-Kernel Artifact Gate
+
+The current clean source-Higgs route has a sharper artifact target: a
+same-surface Euclidean-time scalar correlation matrix, not another static
+finite covariance row.  The new runner is:
+
+```text
+python3 scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+It writes
+`outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json` and
+records `proposal_allowed=false`.  The current top correlator has a `tau`
+axis, but the scalar source/taste-radial matrix rows are configuration
+timeseries at fixed row definitions; no same-surface `C_ij(t)` transfer/GEVP
+kernel is present.  The certificate includes a static-Gram witness showing
+that the same equal-time `C(0)` admits multiple positive self-adjoint transfer
+candidates with different `C(1)`.
+
+Validation after wiring:
+
+```text
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=88 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=335 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=148 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=302 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=57 FAIL=0
+```
+
+Exact next artifact: produce same-surface scalar time-lag rows
+`C_ss(t)`, `C_sH(t)`, `C_HH(t)` for certified canonical `O_H`, or
+`C_ss(t)`, `C_sx(t)`, `C_xx(t)` plus a theorem identifying `x` with canonical
+`O_H` or a physical neutral transfer.  The certificate must include
+reflection-positive/GEVP pole extraction, FV/IR/threshold authority, overlap
+normalization, covariance, seed metadata, and the usual forbidden-import
+firewalls.  Chunks033-034 remain active run-control only; no retained or
+proposed-retained wording is authorized.

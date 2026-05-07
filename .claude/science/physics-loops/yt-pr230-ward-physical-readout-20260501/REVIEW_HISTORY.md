@@ -6037,3 +6037,23 @@ row evidence for the route, not canonical `O_H`, not canonical `C_sH/C_HH`,
 not scalar-LSZ/FV authority, not W/Z response, and not retained or
 proposed-retained closure.  Active chunks025-026 are run-control only until
 their completed artifacts and checkpoints exist.
+
+## 2026-05-07 - OS Transfer-Kernel Artifact Gate
+
+Review stance: exact support plus negative boundary / artifact target sharpened.
+
+- Added `scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py`.
+- Added `docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md`.
+- Added `outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json`.
+- Wired the gate into assumption/import stress, campaign status, full positive
+  assembly, retained-route, and completion-audit certificates.
+- Validation: OS gate `PASS=12 FAIL=0`, assumption stress `PASS=88 FAIL=0`,
+  campaign status `PASS=335 FAIL=0`, full assembly `PASS=148 FAIL=0`,
+  retained-route `PASS=302 FAIL=0`, and completion audit `PASS=57 FAIL=0`.
+
+Disposition: support-only boundary.  The current rows are equal-time scalar
+source/taste-radial covariance diagnostics with configuration timeseries, not
+same-surface Euclidean-time `C_ij(t)` transfer kernels.  The exact next
+artifact is scalar time-lag `C_ss(t)/C_sH(t)/C_HH(t)` for certified canonical
+`O_H`, or `C_ss(t)/C_sx(t)/C_xx(t)` plus a same-surface identity theorem.
+No retained/proposed-retained wording is allowed.

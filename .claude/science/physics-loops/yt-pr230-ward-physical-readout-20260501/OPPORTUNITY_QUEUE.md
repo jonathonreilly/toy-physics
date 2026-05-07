@@ -1599,3 +1599,14 @@ primitive-transfer candidate, orthogonal-top exclusion gate, and aggregate
 claim gates all pass their support-only checks while still blocking closure.
 Chunks027-028 are active under the two-worker cap and remain non-evidence
 until completed outputs and completed-mode checkpoints exist.
+
+2026-05-07 update: the OS transfer-kernel artifact gate is now wired into the
+claim stack.  The clean source-Higgs route should target same-surface scalar
+Euclidean-time matrix rows, not another equal-time covariance diagnostic.
+Priority remains certified `O_H/C_sH/C_HH` pole rows, but the precise row
+shape is now `C_ss(t)`, `C_sH(t)`, `C_HH(t)` with OS/GEVP pole extraction,
+FV/IR/threshold authority, and overlap normalization.  A neutral fallback may
+use `C_ss(t)`, `C_sx(t)`, `C_xx(t)` only if a same-surface theorem identifies
+`x` with canonical `O_H` or a physical neutral transfer.  Do not treat
+configuration timeseries, static `C_sx/C_xx`, or transfer/GEVP method names as
+closure.
