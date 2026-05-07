@@ -3,7 +3,7 @@
     "critical": 504,
     "high": 23,
     "leaf": 181,
-    "medium": 129
+    "medium": 128
   },
   "cycle_break_target_count": 254,
   "cycle_break_targets": [
@@ -19941,29 +19941,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "teleportation_taste_readout_operator_model_note",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "teleportation_retained_axis_operator_algebra_closure_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
-      "note_path": "docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_teleportation_taste_readout_operator_model.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "persistent_inertial_response_readiness_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -28076,6 +28053,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 5,
-  "total_pending": 837
+  "ready_count": 4,
+  "total_pending": 836
 }

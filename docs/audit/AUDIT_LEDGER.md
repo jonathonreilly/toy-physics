@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 242 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 7 |
-| unaudited | 825 |
+| open_gate | 8 |
+| unaudited | 824 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 394 |
+| `audited_clean` | 395 |
 | `audited_conditional` | 443 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 874 |
+| `unaudited` | 873 |
 
 | claim_type | count |
 |---|---:|
@@ -457,6 +457,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_resource_fidelity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_retained_axis_operator_algebra_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `teleportation_three_register_cross_encoding_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -12899,6 +12900,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The encoded basis is two-dimensional, RALA(a) acts on this subspace as the full M_2(C) algebra of single-qubit Paulis, the encoded Bell state is the standard Bell resource on this 2-qubit logical space, and the axis Bell projectors equal the standard Bell projectors on it.  _(class `A`)_
 - **chain closes:** True — Within the scoped finite algebra, T1-T7 follow from explicit tensor-factor definitions and T8 reduces to the standard qubit teleportation identity on the encoded two-dimensional subspace. No unretained dependency or physical readout/apparatus bridge is needed for this bounded theorem scope.
 - **rationale:** The source note defines RALA, axis Pauli operators, Bell projectors, native Z, and X_fixed explicitly, then proves the advertised closure by finite tensor-product algebra and the standard teleportation identity. The runner source constructs the site/taste permutation, projectors, corrections, residuals, probabilities, and fidelities directly rather than merely printing constants; the completed cache reports PASS=96 FAIL=0, and a bounded smoke run also passed. This clean verdict is only for the algebraic theorem set T1-T8 and does not audit physical implementation gates or independently verify historical prior-runner usage of X_fixed.
+- **auditor confidence:** high
+
+### `teleportation_taste_readout_operator_model_note`
+
+- **Note:** [`TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`](../../docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Finite-grid retained-last-taste operator-factorization gate for dim in {1,2,3} and side in {2,4}: axis logical Z/X and axis Bell/fixed-XX operators are environment-blind, native sublattice Z and native-Z Bell/ZZ operators fail in dim > 1, and physical apparatus, noisy readout, dynamical preparation, and heralding remain open.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-fresh-teleportation-taste-readout-auditor-20260507-f161`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For an operator to be usable after tracing cells and spectator tastes, every environment diagonal block must be the same 2 x 2 logical operator and all environment off-diagonal blocks must vanish.  _(class `A`)_
+- **chain closes:** True — The note's bounded operator classifications follow from explicit block projection onto O_logical tensor I_env and from the retained_bounded RALA closure dependency. The unresolved physical implementation work is explicitly outside the closed algebraic surface and remains an open gate.
+- **rationale:** The runner constructs the finite site/taste operators, projects them onto the environment-blind logical-operator subspace, and checks the expected classifications rather than treating printed FAIL obstruction lines as tool failure. The 60 printed PASS lines are class-A finite algebra/factorization checks; the native-Z, native-Z Bell, native ZZ, fixed-site, and fixed-environment FAIL lines are the advertised obstruction evidence and the script exits 0 only when those classifications match expectation. The retained_bounded RALA dependency supplies the coordinated algebraic closure for the same finite surface, while this note avoids promoting physical detector, noise, preparation, or heralding assumptions to theorem status. Clean as an open_gate.
 - **auditor confidence:** high
 
 ### `teleportation_three_register_cross_encoding_note`
