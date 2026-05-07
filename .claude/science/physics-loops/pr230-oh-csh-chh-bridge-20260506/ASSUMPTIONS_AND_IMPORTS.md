@@ -29,6 +29,11 @@ Allowed context:
   an exact negative boundary only: finite `C_sx/C_xx` rows are not top-coupling
   tomography, current labels do not forbid the orthogonal coupling, and
   post-FMS counterfamilies still vary canonical `y_t` at fixed source response.
+- the 2026-05-07 strict scalar-LSZ moment/FV authority gate as an exact
+  negative boundary only: completed two-source taste-radial raw `C_ss` rows are
+  positive but increase from the zero mode to the first shell, so the raw proxy
+  is not the strict unsubtracted Stieltjes scalar two-point object and supplies
+  no scalar-LSZ moment/FV authority, canonical `O_H`, `kappa_s`, or closure.
 - the exact algebra of the taste-shift operators in
   `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`;
 - the PR230 production harness source coordinate, which is the uniform additive
@@ -233,6 +238,11 @@ Open imports after this block:
   primitive/off-diagonal transfer, an orthogonal-neutral top-coupling
   exclusion, canonical scalar LSZ/FV/IR metric authority, or measured
   `C_spH/C_HH` pole-overlap rows retire the failed obligations.
+- Raw two-source taste-radial `C_ss` rows are not a scalar-LSZ proof selector;
+  the current raw proxy fails the necessary non-increase property for an
+  unsubtracted positive Stieltjes two-point object and still requires a
+  certified contact-subtracted/denominator object, threshold authority,
+  multivolume FV/IR authority, and canonical `O_H` or physical-response bridge.
 - W/Z same-source response route completion is a current-surface boundary, not
   a global theorem against the future physical-response bypass.
 - W/Z same-source response is not proof selectors until same-source EW action, W/Z response rows, matched covariance, strict g2, and delta_perp control exist.

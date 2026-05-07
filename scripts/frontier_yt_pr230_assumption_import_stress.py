@@ -188,6 +188,9 @@ def main() -> int:
         "orthogonal_top_coupling_exclusion_candidate_gate": load(
             "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json"
         ),
+        "strict_scalar_lsz_moment_fv_authority_gate": load(
+            "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -1143,6 +1146,32 @@ def main() -> int:
         is False,
         orthogonal_top_exclusion_candidate.get("actual_current_surface_status"),
     )
+    strict_scalar_lsz_moment_fv = certificates[
+        "strict_scalar_lsz_moment_fv_authority_gate"
+    ]
+    report(
+        "strict-scalar-lsz-moment-fv-authority-absent",
+        "raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+        in str(strict_scalar_lsz_moment_fv.get("actual_current_surface_status"))
+        and strict_scalar_lsz_moment_fv.get("proposal_allowed") is False
+        and strict_scalar_lsz_moment_fv.get(
+            "strict_scalar_lsz_moment_fv_authority_gate_passed"
+        )
+        is True
+        and strict_scalar_lsz_moment_fv.get(
+            "strict_scalar_lsz_moment_fv_authority_present"
+        )
+        is False
+        and strict_scalar_lsz_moment_fv.get(
+            "current_raw_c_ss_proxy_fails_stieltjes_monotonicity"
+        )
+        is True
+        and strict_scalar_lsz_moment_fv.get("forbidden_firewall", {}).get(
+            "treated_raw_C_ss_as_strict_stieltjes_certificate"
+        )
+        is False,
+        strict_scalar_lsz_moment_fv.get("actual_current_surface_status"),
+    )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -1555,6 +1584,11 @@ def main() -> int:
             "the current surface: finite C_sx rows are not top-coupling "
             "tomography, and the post-FMS counterfamily still varies canonical "
             "y_t at fixed source response with finite orthogonal coupling.  "
+            "The strict scalar-LSZ moment/FV authority gate checks the current "
+            "two-source taste-radial raw C_ss rows directly and blocks their "
+            "promotion to a Stieltjes moment certificate: the rows are positive "
+            "but increase from the zero mode to the first shell, while the "
+            "strict unsubtracted positive Stieltjes object must be non-increasing.  "
             "The same-surface neutral multiplicity-one intake gate makes the "
             "clean source-Higgs positive artifact contract executable and "
             "rejects the current two-singlet neutral completion without "

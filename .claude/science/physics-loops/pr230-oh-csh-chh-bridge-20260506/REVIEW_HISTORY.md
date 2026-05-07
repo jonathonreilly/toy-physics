@@ -496,3 +496,15 @@ Local verification completed:
   PASS=78 FAIL=0, full assembly PASS=137 FAIL=0, campaign status
   PASS=324 FAIL=0, retained route PASS=291 FAIL=0, and positive-closure
   completion audit PASS=46 FAIL=0.
+- strict scalar-LSZ moment/FV authority gate packaged:
+  `frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py`
+  PASS=13 FAIL=0.  The gate reads completed two-source taste-radial
+  chunks001-020 and checks the current raw selected-mass `C_ss` proxy against
+  the necessary Stieltjes non-increase condition.  The proxy is positive but
+  increases from zero mode to first shell, so it is diagnostic support only and
+  not strict scalar-LSZ moment/FV/model-class authority, canonical `O_H`,
+  `kappa_s`, retained, or `proposed_retained` closure;
+- aggregate gates after the strict scalar-LSZ block:
+  assumption/import stress PASS=81 FAIL=0, full assembly PASS=140 FAIL=0,
+  campaign status PASS=327 FAIL=0, retained route PASS=294 FAIL=0, and
+  positive-closure completion audit PASS=49 FAIL=0.

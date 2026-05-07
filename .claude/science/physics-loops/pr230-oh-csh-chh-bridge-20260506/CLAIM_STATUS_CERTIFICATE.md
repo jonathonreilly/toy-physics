@@ -1,5 +1,17 @@
 # Claim Status Certificate
 
+2026-05-07 strict scalar-LSZ moment/FV update: the new certificate
+`outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json`
+passes with `PASS=13 FAIL=0` as an exact negative boundary.  It checks the
+completed two-source taste-radial selected-mass raw `C_ss` rows directly:
+chunks001-020 are positive, but the first-shell mean exceeds the zero-mode
+mean (`0.1253330240740323` vs `0.1223815736511032`), violating the necessary
+non-increase property for an unsubtracted positive Stieltjes scalar two-point
+object.  The raw proxy is diagnostic support only, not scalar-LSZ moment/FV
+authority.  Aggregate refresh: assumption PASS=81, campaign PASS=327, assembly
+PASS=140, retained-route PASS=294, completion audit PASS=49, all FAIL=0 and
+`proposal_allowed=false`.
+
 2026-05-07 orthogonal top-coupling exclusion update: the new certificate
 `outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json`
 passes with `PASS=12 FAIL=0` as an exact negative boundary.  It rejects the

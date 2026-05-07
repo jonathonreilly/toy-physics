@@ -494,3 +494,21 @@ refreshed on chunks001-020 and remain support/firewall artifacts only: no
 63/63 packet, strict pole rows, FV/IR/model-class theorem, canonical `O_H`,
 `kappa_s`, W/Z rows, retained, or `proposed_retained` closure is authorized.
 Chunks021-022 are active under the two-worker supervisor cap.
+
+2026-05-07 strict scalar-LSZ moment/FV update: the current raw selected-mass
+`C_ss` proxy from completed two-source taste-radial chunks001-020 is now
+checked directly.  `frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py`
+passes `PASS=13 FAIL=0` and records an exact boundary: the rows are positive,
+but first-shell `C_ss` exceeds zero-mode `C_ss` across the ready chunks, while
+an unsubtracted positive Stieltjes scalar two-point object must be
+non-increasing in `q_hat^2`.  The raw proxy is therefore diagnostic row support
+only, not strict scalar-LSZ moment/FV/model-class authority, canonical `O_H`,
+`kappa_s`, retained, or `proposed_retained` closure.
+
+Aggregate refresh after the scalar-LSZ boundary: assumption/import stress
+`PASS=81 FAIL=0`, campaign status `PASS=327 FAIL=0`, full assembly
+`PASS=140 FAIL=0`, retained route `PASS=294 FAIL=0`, and completion audit
+`PASS=49 FAIL=0`.  The next scalar-LSZ-positive action is a certified
+contact-subtracted or denominator-derived scalar two-point object with
+threshold and multivolume FV/IR authority, or a bypass through real
+`O_H/C_sH/C_HH` pole rows or same-source W/Z response rows.

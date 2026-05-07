@@ -638,6 +638,9 @@ def main() -> int:
         "pr230_orthogonal_top_coupling_exclusion_candidate_gate": load(
             "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json"
         ),
+        "pr230_strict_scalar_lsz_moment_fv_authority_gate": load(
+            "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2886,6 +2889,29 @@ def main() -> int:
         is False,
         statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"],
     )
+    strict_scalar_lsz_moment_fv_authority_gate = certificates[
+        "pr230_strict_scalar_lsz_moment_fv_authority_gate"
+    ]
+    report(
+        "pr230-strict-scalar-lsz-moment-fv-authority-absent",
+        "raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+        in str(statuses["pr230_strict_scalar_lsz_moment_fv_authority_gate"])
+        and strict_scalar_lsz_moment_fv_authority_gate.get("proposal_allowed")
+        is False
+        and strict_scalar_lsz_moment_fv_authority_gate.get(
+            "strict_scalar_lsz_moment_fv_authority_gate_passed"
+        )
+        is True
+        and strict_scalar_lsz_moment_fv_authority_gate.get(
+            "strict_scalar_lsz_moment_fv_authority_present"
+        )
+        is False
+        and strict_scalar_lsz_moment_fv_authority_gate.get(
+            "current_raw_c_ss_proxy_fails_stieltjes_monotonicity"
+        )
+        is True,
+        statuses["pr230_strict_scalar_lsz_moment_fv_authority_gate"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -4974,6 +5000,24 @@ def main() -> int:
             "finite_c_sx_rows_are_top_coupling_tomography"
         )
         is False
+    )
+    result["strict_scalar_lsz_moment_fv_authority_absent"] = (
+        "raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+        in str(statuses["pr230_strict_scalar_lsz_moment_fv_authority_gate"])
+        and strict_scalar_lsz_moment_fv_authority_gate.get("proposal_allowed")
+        is False
+        and strict_scalar_lsz_moment_fv_authority_gate.get(
+            "strict_scalar_lsz_moment_fv_authority_gate_passed"
+        )
+        is True
+        and strict_scalar_lsz_moment_fv_authority_gate.get(
+            "strict_scalar_lsz_moment_fv_authority_present"
+        )
+        is False
+        and strict_scalar_lsz_moment_fv_authority_gate.get(
+            "current_raw_c_ss_proxy_fails_stieltjes_monotonicity"
+        )
+        is True
     )
     result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
         taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")

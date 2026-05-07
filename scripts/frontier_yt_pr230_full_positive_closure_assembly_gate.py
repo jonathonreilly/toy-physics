@@ -109,6 +109,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_schur_pole_lift_gate": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
     "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
+    "pr230_strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -876,6 +877,26 @@ def main() -> int:
             "finite_c_sx_rows_are_top_coupling_tomography"
         )
         is False
+    )
+    strict_scalar_lsz_moment_fv_authority_absent = (
+        "raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+        in statuses["pr230_strict_scalar_lsz_moment_fv_authority_gate"]
+        and certs["pr230_strict_scalar_lsz_moment_fv_authority_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_strict_scalar_lsz_moment_fv_authority_gate"].get(
+            "strict_scalar_lsz_moment_fv_authority_gate_passed"
+        )
+        is True
+        and certs["pr230_strict_scalar_lsz_moment_fv_authority_gate"].get(
+            "strict_scalar_lsz_moment_fv_authority_present"
+        )
+        is False
+        and certs["pr230_strict_scalar_lsz_moment_fv_authority_gate"].get(
+            "current_raw_c_ss_proxy_fails_stieltjes_monotonicity"
+        )
+        is True
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
         "degree-one taste-radial uniqueness"
@@ -1913,6 +1934,11 @@ def main() -> int:
         statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"],
     )
     report(
+        "strict-scalar-lsz-moment-fv-authority-absent",
+        strict_scalar_lsz_moment_fv_authority_absent,
+        statuses["pr230_strict_scalar_lsz_moment_fv_authority_gate"],
+    )
+    report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         statuses["pr230_taste_radial_canonical_oh_selector_gate"],
@@ -2934,6 +2960,7 @@ def main() -> int:
         "two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion": two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion,
         "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
         "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
+        "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

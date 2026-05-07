@@ -35,6 +35,16 @@ rows, current labels, FMS support, or primitive-cone support to set the
 orthogonal neutral top coupling to zero.  A genuine same-surface charge/
 representation theorem or real source-Higgs/W/Z rows remain required.
 
+The strict scalar-LSZ moment/FV shortcut is now checked against the current
+completed two-source taste-radial `C_ss` rows too:
+`outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json`
+passes as an exact boundary.  The raw selected-mass `C_ss` proxy is positive
+but increases from the zero mode to the first shell across chunks001-020, so
+it is not the strict unsubtracted positive Stieltjes scalar two-point object.
+This route now needs a certified contact-subtracted or denominator-derived
+scalar object, threshold and multivolume FV/IR authority, and canonical
+`O_H`/source-overlap or W/Z response authority.
+
 1. Action-first same-source EW/Higgs action plus gauge-invariant composite
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
    pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree
