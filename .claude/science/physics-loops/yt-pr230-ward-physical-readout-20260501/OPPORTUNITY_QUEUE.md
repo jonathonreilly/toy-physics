@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-07 chunks055-056 package refresh: chunks001-056 are now packaged partial
+`C_sx/C_xx` support with `ready=56/63`; chunks055-056 pass completed-mode
+checkpointing and preserve selected-mass-only FH/LSZ, normal-equation cache
+metadata, `numba_gauge_seed_v1`, fixed seeds `2026056055`/`2026056056`, and
+non-readout source-Higgs/taste-radial metadata.  Strict scalar-LSZ still fails
+on raw `C_ss` (`z=187.2423613818199`); Schur-complement repair keeps `C_x|s`
+as a useful finite candidate but only as a necessary one-volume check
+(`z=-599.894620437061`).  The cleanest closure target remains certified
+canonical `O_H` plus `C_ss/C_sH/C_HH` pole rows, with genuine same-source W/Z
+rows as first fallback.  Chunks057-058 are active run-control only until
+completed, checkpointed, and packaged; chunks059-063 remain pending.
+
 2026-05-07 chunks053-054 package refresh: chunks001-054 are now packaged partial
 `C_sx/C_xx` support with `ready=54/63`; chunks053-054 pass completed-mode
 checkpointing and preserves selected-mass-only FH/LSZ, normal-equation cache
@@ -14,7 +26,7 @@ completed, checkpointed, and packaged; chunks057-063 remain pending.
 
 2026-05-07 neutral primitive H3/H4 intake-wire refresh: the neutral
 primitive/rank-one completion gate now consumes the H3/H4 aperture checkpoint
-directly.  H1/H2 Z3 support and the current chunks001-054 `C_sx/C_xx` prefix
+directly.  H1/H2 Z3 support and the current chunks001-056 `C_sx/C_xx` prefix
 remain bounded staging support only; H3 physical neutral transfer or
 off-diagonal generator, H3 primitive-cone/irreducibility authority, and H4
 source/canonical-Higgs coupling are still absent.  Reopen this route only with

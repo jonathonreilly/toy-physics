@@ -1,5 +1,27 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 two-source taste-radial chunks055-056 package:
+
+- Packaged chunks055-056 after the completed root JSONs and per-volume
+  artifacts landed.  Checkpoints:
+  `outputs/yt_pr230_two_source_taste_radial_chunk055_checkpoint_2026-05-06.json`
+  and `outputs/yt_pr230_two_source_taste_radial_chunk056_checkpoint_2026-05-06.json`.
+- The two-source taste-radial packet is now `ready=56/63` with
+  `combined_rows_written=false`; chunks057-058 are active run-control only
+  and chunks059-063 remain pending.
+- Refreshed row-derived gates: strict scalar-LSZ, source-Higgs bridge
+  aperture, Schur subblock/K-prime/A-B-C/pole-lift, Schur repair,
+  Schur complete-monotonicity, one-pole scout, source-Higgs readiness,
+  primitive-transfer candidate, orthogonal-top exclusion, neutral H3/H4
+  aperture, and aggregate closure firewalls.
+- Current row diagnostics remain non-closure: raw `C_ss` first-shell
+  Stieltjes failure `z=187.2423613818199`; Schur `C_s|x` failure
+  `z=168.26716885147343`; Schur `C_x|s` first-shell support only
+  `z=-599.894620437061`.
+- Claim boundary: finite `C_ss/C_sx/C_xx` support only; no canonical `O_H`, no
+  canonical `C_sH/C_HH`, no scalar-LSZ/FV authority, no W/Z response, no
+  neutral primitive closure, and no retained or `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks053-054 package:
 
 - Packaged chunks053-054 after the completed root JSONs and per-volume
@@ -27,7 +49,7 @@ Latest checkpoint, 2026-05-07 neutral primitive H3/H4 intake-wire refresh:
   `docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md`, and
   `outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json`.
 - The completion gate now consumes the H3/H4 aperture checkpoint directly,
-  including the current `54/63` taste-radial row prefix.
+  including the current `56/63` taste-radial row prefix.
 - Result: exact negative boundary on the current surface, not a global theorem
   no-go.  H1/H2 Z3 support is loaded, but H3 physical neutral transfer or
   off-diagonal generator, H3 primitive-cone/irreducibility authority, and H4

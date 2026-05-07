@@ -21,7 +21,7 @@
       "mixed_signs": true,
       "negative": 28,
       "offdiagonal_entry_observed": true,
-      "positive": 26,
+      "positive": 28,
       "zero": 0
     },
     "0,0,1": {
@@ -29,7 +29,7 @@
       "mixed_signs": true,
       "negative": 28,
       "offdiagonal_entry_observed": true,
-      "positive": 26,
+      "positive": 28,
       "zero": 0
     },
     "0,1,0": {
@@ -37,7 +37,7 @@
       "mixed_signs": true,
       "negative": 26,
       "offdiagonal_entry_observed": true,
-      "positive": 28,
+      "positive": 30,
       "zero": 0
     },
     "1,0,0": {
@@ -45,7 +45,7 @@
       "mixed_signs": true,
       "negative": 28,
       "offdiagonal_entry_observed": true,
-      "positive": 26,
+      "positive": 28,
       "zero": 0
     }
   },
