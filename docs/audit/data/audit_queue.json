@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 506,
+    "critical": 505,
     "high": 23,
     "leaf": 181,
     "medium": 131
@@ -5791,29 +5791,6 @@
       "ready": true,
       "runner_path": "scripts/lensing_k_sweep.py",
       "transitive_descendants": 313
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "s3_time_constructed_support_tensor_primitive_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "tensor_support_center_excess_law_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.705,
-      "note_path": "docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py",
-      "transitive_descendants": 294
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -28164,6 +28141,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 6,
-  "total_pending": 841
+  "ready_count": 5,
+  "total_pending": 840
 }
