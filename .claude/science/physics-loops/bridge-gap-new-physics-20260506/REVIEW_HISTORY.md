@@ -138,3 +138,139 @@ Independent audit required.
 
 - Open stacked PR (base = Block 01 branch) with explicit "depends on Block 01" notice.
 - Continue to Block 03 (thermodynamic Casimir-diagonal closure attempt).
+
+---
+
+## Block 03 review (2026-05-06)
+
+**Artifact:** `docs/BRIDGE_GAP_HK_THERMODYNAMIC_STRETCH_NOTE_2026-05-06.md`
+**Type:** internal hostile-review on stretch + named obstruction
+
+### Semantic challenges
+
+**Challenge A — Casimir-diagonal factorization claim is correct?**
+Response: (T3.a) factorization Z = Σ (Π W_λ) F_Λ is a structural fact
+about HK character expansion. W_λ(t) = d_λ exp(-t·C_2/2) is the
+per-plaquette character expansion coefficient under HK measure (Step 2
+of Block 01). F_Λ is the t-INDEPENDENT Wigner-Racah graph trace —
+it depends only on the lattice geometry and irrep labels, not on β/t.
+This separation is NOT possible for Wilson (whose Bessel-determinant
+character coefficients couple t/β nontrivially with d_λ). PASS.
+
+**Challenge B — Named obstruction (cluster-decomposition) genuinely
+identifies the gap?** Response: per
+[`GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`](../../../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md),
+the framework's primitives don't pin Perron moments tightly enough.
+The cluster-decomposition / exponential-clustering estimate for HK
+would need to come from RP-A11 + Lieb-Robinson + per-site Cl(3) dim 2,
+but per Block 04's no-go these primitives don't resolve action-form
+uniqueness either. The named obstruction is genuine. PASS.
+
+**Disposition:** PASS at named-obstruction tier. No closure claim.
+
+---
+
+## Block 04 review (2026-05-06)
+
+**Artifact:** `docs/BRIDGE_GAP_ACTION_FORM_UNIQUENESS_NO_GO_NOTE_2026-05-06.md`
+**Type:** internal hostile-review on no-go theorem
+
+### Semantic challenges
+
+**Challenge A — Are {Wilson, HK, Manton} truly all jointly compatible?**
+Response: each is a well-defined gauge action. Wilson per
+G_BARE_DERIVATION's "accepted Wilson surface". HK derived in Block 01
+under canonical Tr-form. Manton uses canonical bi-invariant metric
+(Block 01 Step 1). All three give the same continuum limit at small a
+(Step 1.1 in note). At finite β, they give distinct ⟨P⟩(6) values
+(Block 02 + Block 06 confirm: HK ≠ Wilson). PASS.
+
+**Challenge B — No-new-axiom rule applied correctly?**
+Response: the protocol forbids enlarging the axiom stack (A1+A2). The
+no-go shows that under A1+A2 + currently-retained primitives + standard
+machinery + continuum-limit matching, action-form is not pinned. To
+pin it would require a NEW PRIMITIVE (forbidden) or a CONVENTION-LAYER
+ADMISSION (governance, Resolution B). The no-go is structural. PASS.
+
+**Challenge C — Range-bounding ~5-10% is honest?**
+Response: u_0 = ⟨P⟩^(1/4) under Wilson 1-plaq 0.4225 vs HK 1-plaq
+0.5134 gives u_0_W = 0.806 vs u_0_HK = 0.847 (~5% range). α_s ~ u_0²
+gives ~10% range. These are honest scaling estimates; tight bounds
+require Block 06+'s thermodynamic-limit values, but Block 03's named
+obstruction means those values are themselves open. Honest framing. PASS.
+
+**Disposition:** PASS at named-obstruction no-go tier. Reusable
+negative evidence.
+
+---
+
+## Block 05 review (2026-05-06)
+
+**Artifact:** `docs/BRIDGE_GAP_GAUGE_GROUP_TASTE_CUBE_EXPLORATION_NOTE_2026-05-06.md`
+**Type:** internal hostile-review on exploratory finding
+
+### Semantic challenges
+
+**Challenge A — gl(3) ⊕ gl(1) commutant claim is correct?**
+Response: standard Lie-algebra commutant analysis on the tensor
+product C^2 ⊗ V_8 (per-site dim × taste cube) gives the commutant of
+SU(3)_c on V_8 = sum of trivial+standard S_3 reps on each Hamming
+weight stratum. The 4-dim "trivial" part has 4 independent U(1) factors;
+the 4-dim "standard" part is acted on by SU(3) traceless generators.
+Commutant has rank 4 (four independent U(1)) plus 8 SU(3) generators.
+PASS.
+
+**Challenge B — SU(3)×U(1)^k → SM hypercharge identification?**
+Response: the note explicitly DOES NOT make this identification load-
+bearing. Section 4 lists three required structural arguments (collapse
+to single generator, taste-vertex SM-fermion assignment, Y = T_3 - Q
+match) — none in retained chain. Honest open-gate framing. PASS.
+
+**Challenge C — Does this break Block 04's no-go?**
+Response: Step 5 explicitly checks this. Adding U(1)-symmetry to the
+gauge action constrains the U(1) sector but doesn't break SU(3)
+action-form ambiguity (Wilson/HK/Manton are all SU(3)-invariant by
+construction). Block 04's no-go stands. PASS.
+
+**Disposition:** PASS at exploration / open-gate tier. Useful for
+future research direction; not a Resolution-A closure.
+
+---
+
+## Block 06 review (2026-05-06)
+
+**Artifact:** `docs/BRIDGE_GAP_HK_CUBE_PERRON_NOTE_2026-05-06.md`
+**Runner:** `scripts/probe_hk_cube_perron_l2_2026_05_06.py`
+**Type:** internal hostile-review on numerical artifact
+
+### Semantic challenges
+
+**Challenge A — Candidate ρ ansatz transfers from Wilson to HK?**
+Response: per the existing Block 5 / `SU3_CUBE_FULL_RHO_PERRON_2026-05-04`,
+the formula `(d c/c_00)^12 · d^(-16)` is justified by the cube's
+8-component / 24-link topology (`d^(N_components - N_links) = d^(-16)`)
+and per-plaquette character contributions (`(d c/c_00)^12` for 12
+plaquettes). The topology factor is character-coefficient-agnostic.
+PASS.
+
+**Challenge B — Numerical convergence at NMAX 7-8?**
+Response: runner shows P_cube_HK stable to 12 decimal places across
+NMAX ∈ {6, 7, 8}: 0.5223243151. The HK Casimir-suppression factor
+exp(-6t·C_2) at high (p,q) is exponentially small, so NMAX truncation
+converges fast. PASS.
+
+**Challenge C — Suggestive observation that HK is closer to MC?**
+Response: at L_s=2, |HK_cube - MC| / ε_witness = 235; |Wilson_cube - MC|
+/ ε_witness = 543. Factor 2.3× closer. The note explicitly labels this
+as suggestive comparator, not load-bearing for action-form selection.
+Honest framing. PASS.
+
+**Challenge D — Does this break Block 04's no-go?**
+Response: Block 06's L_s=2 result is consistent with Block 04 — the
+two actions give different finite-β values (0.5223 vs 0.4291). It
+DOES NOT prove HK is "the right" action; both are computed. Block 06
+adds empirical comparator data; doesn't close the structural ambiguity.
+PASS.
+
+**Disposition:** PASS at bounded-support tier. Numerical comparator
+artifact under HK candidate action.
