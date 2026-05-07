@@ -460,3 +460,15 @@ derivatives.
 Do not close it by treating Z3 positive-cone H2 support as a physical neutral
 transfer, primitive irreducibility theorem, source-Higgs coupling, or
 canonical-Higgs authority.
+
+2026-05-07 chunk checkpoint update: chunks019-020 of the two-source
+taste-radial row wave are now packaged as bounded support.  Completed-mode
+checkpoints pass `PASS=15 FAIL=0` for each chunk, the combiner reports
+`ready=20/63` with `combined_rows_written=false`, and the source-Higgs
+readiness gate scans 20 taste-radial row artifacts while continuing to
+classify their source-Higgs-shaped fields as explicit `C_sx/C_xx` aliases.
+Schur-subblock, finite-shell, finite A/B/C, and pole-lift certificates were
+refreshed on chunks001-020 and remain support/firewall artifacts only: no
+63/63 packet, strict pole rows, FV/IR/model-class theorem, canonical `O_H`,
+`kappa_s`, W/Z rows, retained, or `proposed_retained` closure is authorized.
+Chunks021-022 are active under the two-worker supervisor cap.

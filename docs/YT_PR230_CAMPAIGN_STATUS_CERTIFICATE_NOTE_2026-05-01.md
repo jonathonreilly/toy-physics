@@ -57,6 +57,33 @@ assumption/import stress `PASS=77 FAIL=0`; full positive closure assembly
 `PASS=136 FAIL=0`; retained-route `PASS=290 FAIL=0`; campaign status
 `PASS=323 FAIL=0`; completion audit `PASS=45 FAIL=0`.
 
+## 2026-05-07 Two-Source Taste-Radial Chunks019-020 Update
+
+Completed-mode chunk checkpoints now pass for chunks019 and 020:
+`PASS=15 FAIL=0` each.  The two-source row combiner now records
+`ready=20/63`, no bad chunk audits, and `combined_rows_written=false`; it
+still writes no combined row packet.  The source-Higgs readiness gate scans 20
+taste-radial row artifacts and still classifies their source-Higgs-shaped
+fields as `C_sx/C_xx` aliases, not canonical `C_sH/C_HH` rows.
+
+The Schur-subblock witness, finite-shell K-prime scout, finite Schur A/B/C
+rows, and pole-lift gate were rerun on the ready chunks001-020 packet.  This
+remains bounded support only: no 63/63 combined row packet, strict Schur pole
+rows, FV/IR/model-class authority, canonical `O_H`, source-Higgs pole
+residues, W/Z rows, `kappa_s`, retained, or proposed-retained closure is
+authorized.  Chunks021-022 are active under the two-worker supervisor cap and
+remain run-control state only until completed JSON and completed-mode
+checkpoints pass.
+
+Validation: chunk019 checkpoint `PASS=15 FAIL=0`; chunk020 checkpoint
+`PASS=15 FAIL=0`; row combiner `PASS=13 FAIL=0`; source-Higgs readiness
+`PASS=25 FAIL=0`; Schur-subblock witness `PASS=16 FAIL=0`; finite-shell
+K-prime scout `PASS=14 FAIL=0`; finite Schur A/B/C rows `PASS=17 FAIL=0`;
+pole-lift gate `PASS=13 FAIL=0`; clean route selector `PASS=20 FAIL=0`;
+assumption/import stress `PASS=78 FAIL=0`; full positive closure assembly
+`PASS=137 FAIL=0`; retained-route `PASS=291 FAIL=0`; campaign status
+`PASS=324 FAIL=0`; completion audit `PASS=46 FAIL=0`.
+
 ## 2026-05-06 Two-Source Taste-Radial Chunks017-018 Update
 
 Completed-mode chunk checkpoints now pass for chunks017 and 018:

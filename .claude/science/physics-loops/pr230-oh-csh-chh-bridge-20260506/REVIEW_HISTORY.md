@@ -460,3 +460,22 @@ Local verification completed:
   assumption/import stress PASS=78 FAIL=0, full assembly PASS=137 FAIL=0,
   campaign status PASS=324 FAIL=0, retained route PASS=291 FAIL=0, and
   positive-closure completion audit PASS=46 FAIL=0.
+- completed two-source taste-radial chunks019-020 packaged:
+  completed-mode chunk checkpoints PASS=15 FAIL=0 for each chunk.  The
+  checkpointed artifacts preserve production metadata, `numba_gauge_seed_v1`,
+  the three-mass scan, selected-mass-only FH/LSZ/source rows, and finite
+  `C_sx/C_xx` timeseries; chunks021-022 are active under the two-worker cap;
+- row-combiner and Schur supports refreshed on chunks001-020:
+  combiner PASS=13 FAIL=0 with `ready=20/63` and
+  `combined_rows_written=false`; source-Higgs readiness PASS=25 FAIL=0 with 20
+  taste-radial row artifacts classified as `C_sx/C_xx` aliases;
+  Schur-subblock witness PASS=16 FAIL=0, finite-shell K-prime scout
+  PASS=14 FAIL=0, finite Schur A/B/C rows PASS=17 FAIL=0, and pole-lift gate
+  PASS=13 FAIL=0.  The refreshed packet is bounded support only: no combined
+  63/63 row packet, strict pole rows, FV/IR/model-class authority, canonical
+  `O_H`, `kappa_s`, W/Z rows, or closure;
+- aggregate gates after the chunks019-020 block:
+  clean source-Higgs route selector PASS=20 FAIL=0, assumption/import stress
+  PASS=78 FAIL=0, full assembly PASS=137 FAIL=0, campaign status
+  PASS=324 FAIL=0, retained route PASS=291 FAIL=0, and positive-closure
+  completion audit PASS=46 FAIL=0.

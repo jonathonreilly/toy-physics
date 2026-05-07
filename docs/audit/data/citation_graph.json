@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T01:17:29.046299+00:00",
+  "generated_at": "2026-05-07T01:28:24.779058+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "dbe5f0a73469b805a007640752df23547743bdf18cffa6bb8b6d5feff85bb8b0",
+      "note_hash": "77e0ede6681fa1d924ee4ec65dd0aac4cc109a2ca39753322ff937d74480bae4",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41993,7 +41993,7 @@
       "current_status": "support",
       "current_status_raw": "exact support / clean source-Higgs outside-math route selector;",
       "deps": [],
-      "note_hash": "a159d6b559b1fae10b3d7463d45e4db4260da8e2f602027c73d28c2215687013",
+      "note_hash": "6eff171c0b165bfd509fb47c8746ccb816f0e69b3e829531b02b2072cb3d7c36",
       "path": "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py",
       "title": "PR230 Clean Source-Higgs Math-Tool Route Selector"
@@ -42823,7 +42823,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / row-chunk schema checkpoint infrastructure.",
       "deps": [],
-      "note_hash": "a3c8ad3d47c9ce3c3881c03297a2951fb388fdce5ae529a073254a99ef08ea4f",
+      "note_hash": "20df05aaa5c704a118267ed5a352441b03011b1a2390ca36a212d339bab840a9",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"
@@ -42833,7 +42833,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / partial `C_sx/C_xx` row combiner gate.",
       "deps": [],
-      "note_hash": "fb16a740b21bcb0b23f4d377eb18494997478041f29654a0e40871f650384d20",
+      "note_hash": "d271889960bcc58743c0f3406ca018da578c2996b19011c67a301b79f53208d4",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_COMBINER_GATE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py",
       "title": "PR230 Two-Source Taste-Radial Row Combiner Gate"
@@ -42873,7 +42873,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / finite Schur A/B/C inverse-block rows from",
       "deps": [],
-      "note_hash": "37702982302a27da52391b97ced0bc2e100d63d3706d0ad8f50241e4ace26598",
+      "note_hash": "a9a726737c09eb7864758273d525e9d241e860a2b96a27990da405608c37fc76",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_ABC_FINITE_ROWS_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py",
       "title": "PR230 Two-Source Taste-Radial Schur A/B/C Finite Rows"
@@ -42883,7 +42883,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / finite-shell Schur inverse-slope scout from",
       "deps": [],
-      "note_hash": "bc286955d5f7423a6c06aa8acb83d66d3633dd4f48c2ae7e7149752fc957151e",
+      "note_hash": "392fdd6c4db5754a09bda28cfaf7f90315ceb32f4c95024b001f9f863e13e477",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_KPRIME_FINITE_SHELL_SCOUT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py",
       "title": "PR230 Two-Source Taste-Radial Schur K-Prime Finite-Shell Scout"
@@ -42893,7 +42893,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / finite Schur A/B/C rows do not lift to",
       "deps": [],
-      "note_hash": "717bc02cde8b13963985c7c21f990a829a4205906e4a9958bd7fc79687d04525",
+      "note_hash": "d086fad38d63757db23d94e4b31a735f6baee95f49423f8349be5f79324d6e07",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_POLE_LIFT_GATE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_pole_lift_gate.py",
       "title": "PR230 Two-Source Taste-Radial Schur Pole-Lift Gate"
@@ -42903,7 +42903,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / two-source taste-radial Schur-subblock witness; strict Schur `K'(pole)` rows and canonical `O_H` authority absent",
       "deps": [],
-      "note_hash": "f96fe35247e6ae65d7644a09580c7648b09a77eb1390f5c6cd437615069baf32",
+      "note_hash": "a324159ecdcef3a2187b148565c4a81e201a7749794e486fcc8035fd6583e6b3",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_SUBBLOCK_WITNESS_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py",
       "title": "PR230 Two-Source Taste-Radial Schur-Subblock Witness"
@@ -43699,7 +43699,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "c0eb055ba5e73f87d53af478102ce253106486d4b8c8a8bffd2e300ed1d6d6ce",
+      "note_hash": "f879ffd0a969625f8b152b1c26f89752b09c4f9da4d996b3fdad73257a18a91e",
       "path": "docs/YT_SOURCE_HIGGS_PRODUCTION_READINESS_GATE_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_source_higgs_production_readiness_gate.py",
       "title": "PR #230 Source-Higgs Production Readiness Gate"

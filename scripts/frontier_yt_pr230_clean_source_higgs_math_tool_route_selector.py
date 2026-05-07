@@ -404,9 +404,16 @@ def main() -> int:
         and parents["radial_spurion_action_contract"].get("accepted_action_certificate_written") is False
         and parents["same_source_ew_action_adoption_attempt"].get("adoption_allowed_now") is False
     )
+    two_source_ready_chunks = parents["two_source_taste_radial_combiner"].get(
+        "ready_chunks"
+    )
+    two_source_expected_chunks = parents["two_source_taste_radial_combiner"].get(
+        "expected_chunks"
+    )
     two_source_partial_rows_support_only = (
-        parents["two_source_taste_radial_combiner"].get("ready_chunks") == 18
-        and parents["two_source_taste_radial_combiner"].get("expected_chunks") == 63
+        isinstance(two_source_ready_chunks, int)
+        and isinstance(two_source_expected_chunks, int)
+        and 0 < two_source_ready_chunks < two_source_expected_chunks
         and parents["two_source_taste_radial_combiner"].get("combined_rows_written") is False
     )
     finite_schur_support_only = (
@@ -434,7 +441,7 @@ def main() -> int:
     report("literature-refresh-support-not-proof", literature_refresh_support_not_proof, f"rows={len(LITERATURE_REFRESH_ROWS)}")
     report("osp-source-side-artifact-available-not-closure", osp_source_side_available, statuses["genuine_source_pole_artifact_intake"])
     report("radial-spurion-action-contract-future-only", radial_spurion_support_only, statuses["radial_spurion_action_contract"])
-    report("two-source-row-combiner-partial-support-only", two_source_partial_rows_support_only, f"ready={parents['two_source_taste_radial_combiner'].get('ready_chunks')}/63")
+    report("two-source-row-combiner-partial-support-only", two_source_partial_rows_support_only, f"ready={two_source_ready_chunks}/{two_source_expected_chunks}")
     report("finite-schur-abc-support-not-pole-authority", finite_schur_support_only, statuses["two_source_taste_radial_schur_abc"])
     report("same-surface-multiplicity-gate-loaded", same_surface_multiplicity_gate_loaded, statuses["same_surface_neutral_multiplicity_one_gate"])
     report("clean-physics-route-ranks-source-higgs-first", source_higgs_ranked_first, ranking[0]["option"])

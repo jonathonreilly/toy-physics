@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 2026-05-07 clean-route refresh: `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
-now consumes `O_sp`, radial-spurion action-contract support, chunks001-018,
+now consumes `O_sp`, radial-spurion action-contract support, chunks001-020,
 and finite Schur A/B/C diagnostics.  The selector remains support-only and
 keeps `proposal_allowed=false`; clean closure still requires certified
 canonical `O_H`, `C_ss/C_spH/C_HH` pole rows, O_sp-Higgs Gram purity, and
@@ -16,6 +16,20 @@ no source-Higgs identity, no measured `C_spH/C_HH` pole-overlap rows, and no
 orthogonal-neutral top-coupling exclusion.  This remains an exact negative
 boundary with `proposal_allowed=false`; it supplies no canonical `O_H`, no
 `kappa_s=1`, and no retained/proposed-retained closure wording.
+
+2026-05-07 chunks019-020 update: completed-mode checkpoints now pass for
+chunks019 and 020.  The two-source taste-radial packet advances to
+`ready=20/63` with `combined_rows_written=false`; source-Higgs readiness scans
+20 taste-radial row artifacts and still classifies their schema fields as
+`C_sx/C_xx` aliases.  Schur-subblock, finite-shell, finite A/B/C, and pole-lift
+certificates were refreshed on chunks001-020.  This remains bounded support
+only: no 63/63 packet, strict pole rows, FV/IR/model-class authority,
+canonical `O_H`, source-Higgs pole rows, W/Z rows, `kappa_s`, retained, or
+proposed-retained closure wording is authorized.
+
+This chunks019-020 update is the live current checkpoint and supersedes older
+cumulative text below that referred to `ready=18/63` and chunks019-020 as
+active run-control state.
 
 ```yaml
 actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-018 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=18/63 and no combined row packet written, bounded two-source taste-radial Schur-subblock witness support, bounded finite-shell Schur inverse-slope scout support, bounded finite Schur A/B/C inverse-block row support, exact finite-to-pole Schur lift boundary, chunks019-020 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, conditional FMS composite-O_H theorem, conditional Higgs mass-source action bridge, same-source EW action contract refresh requiring centered Phi-dagger-Phi source coupling plus bridge attachment, conditional same-source EW/Higgs action-extension ansatz specified but not adopted on the actual current surface, exact same-source EW action ansatz-only adoption shortcut boundary against the accepted builder schema, exact no-independent-top-source radial-spurion action contract support, exact post-FMS source-overlap necessity boundary, exact source-Higgs overlap/kappa row-contract support with the future kappa_spH formula integrated into the source-Higgs builder/postprocessor and current row packet absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
