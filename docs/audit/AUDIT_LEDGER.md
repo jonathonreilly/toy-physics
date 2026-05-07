@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 242 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 9 |
-| unaudited | 823 |
+| open_gate | 10 |
+| unaudited | 822 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 396 |
+| `audited_clean` | 397 |
 | `audited_conditional` | 443 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 872 |
+| `unaudited` | 871 |
 
 | claim_type | count |
 |---|---:|
@@ -132,6 +132,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
@@ -2043,6 +2044,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The one-hop dependencies are now retained-grade and support the bounded 2-body branch-entanglement interpretation and corrected 3-body W-type interpretation. The current source note and runner output close the scoped robustness claim without relying on full BMV witness status or an external comparator.
 - **rationale:** The clean verdict applies only to the bounded numerical protocol theorem stated in the note. The load-bearing runner output gives positive 2-body delta_S across all audited sweeps and confirms the corrected 3-body W-type, non-GHZ interpretation with tau_3 = 0 and positive bipartite entropies. The prior dependency block is resolved because both cited one-hop dependencies now have retained-grade status. Plot generation failed due to missing matplotlib, but that does not affect the load-bearing numerical checks.
 - **auditor confidence:** medium
+
+### `carrier_orbit_invariance_stretch_attempt_note_2026-05-03`
+
+- **Note:** [`CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md`](../../docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only that the note gives a partial Z_2/isotypic carrier classification, verifies the current-surface registry check, and honestly leaves registry closure / column-symmetric source-class closure as an open obstruction; no retained exact E/T-exhaustion theorem is claimed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-fresh-carrier-orbit-auditor-20260507-f161`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The closure ('no future retained primitive can break this') is a meta-statement about the framework registry; under the no-new-axioms rule, this meta-statement is not analytically reducible from A_min.  _(class `A`)_
+- **chain closes:** True — The chain closes for the scoped open_gate: the note explicitly remains a stretch attempt and names registry closure as the residual meta-premise. It does not close retained carrier-orbit invariance or downstream swap-reduction closure.
+- **rationale:** The current cached PASS=52 output is stale relative to the supplied current runner sha, so the current PASS=59 FAIL=2 run controls. Both live failures are brittle literal-string checks for 'not exact' in the constructed Xi note; the allowed source text instead says 'not an exact tensor observable' and identifies Xi_R^(0) as a bounded support-response Jacobian, which supports the same bounded-not-exact meaning. Under the hostile standard this would block a positive retained theorem, but this row is an open_gate and the source note accurately records the obstruction rather than claiming closure.
+- **auditor confidence:** high
 
 ### `causal_escape_window_note`
 
