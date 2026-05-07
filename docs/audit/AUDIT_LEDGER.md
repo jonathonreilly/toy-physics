@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 62 |
 | **retained_no_go** | 121 |
-| **retained_bounded** | 226 |
+| **retained_bounded** | 227 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
 | unaudited | 803 |
-| audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 28 |
@@ -39,8 +38,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 375 |
+| `audited_clean` | 376 |
 | `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
@@ -111,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -318,6 +315,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `persistent_object_compact_update_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_green_scout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `persistent_object_readout_localization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_readout_taper_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_top3_multistage_probe_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -9596,6 +9594,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The repeated self-consistent Green-like source object survives three updates with positive weak-field response and F~M=1.00 while remaining broad rather than sharply localized.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen scout table: source N_eff stays about 4.788, detector N_eff stays about 497, all deltas are positive, and each update step has F~M=1.00 with 4/4 TOWARD. The note correctly keeps the claim at bounded quasi-persistent source-object scope.
 - **rationale:** The bounded Green-scout claim is current with the primary runner and the output supports repeated source-object survival plus weak-field linear response. The object remains broad, with source N_eff near 4.788 out of 5 and detector response still broad, so the note does not claim a persistent inertial object or mass theorem. Residual risk is limited to the stated minimal exact-lattice loop rather than a hidden closure claim.
+- **auditor confidence:** high
+
+### `persistent_object_multistage_floor_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the fixed exact-lattice setup h=0.25, blend=0.25, four source strengths, three updates per segment, three chained segments, and the same five stable widened-regime rows, top4 is the first configured multistage-admissible object width among top3/top4/top5/top6; top6 is only the exact five-source-node identity with top5.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-persistent-object-multistage-floor-audit-2-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The bounded floor comparison reports top3: 0/5, top4: 5/5, top5: 5/5, top6: 5/5, so the first honest self-maintaining floor on this exact-lattice branch is top4, not top3.  _(class `C`)_
+- **chain closes:** True — The bounded finite certificate closes from the packet: the primary runner verifies fresh SHA-pinned top3/top4 caches, parses the completed top5 log, checks the same five stable widened-regime rows, and derives top6 only from the five-node source-cardinality cap. The note does not claim full-pocket transfer, persistent inertial-mass closure, or matter closure as proved by this certificate.
+- **rationale:** The clean result is bounded to the five-row configured floor certificate only. Top4 uses the same five stable widened-regime rows as the top3/top5 comparison, and top6 is correctly treated as an identity with top5 rather than independent extra evidence. The source note explicitly excludes full widened-pocket transfer, persistent inertial-mass closure, and matter closure, so the note does not overreach beyond the packet-supported bounded theorem.
 - **auditor confidence:** high
 
 ### `persistent_object_readout_localization_note`
