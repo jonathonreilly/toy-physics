@@ -5,7 +5,7 @@ two-source taste-radial rows; strict `K'(pole)` authority absent
 **Runner:** `scripts/frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py`
 **Certificate:** `outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json`
 
-The completed chunks001-026 contain finite rows for the certified
+The completed chunks001-028 contain finite rows for the certified
 source/complement block
 
 ```text
@@ -22,7 +22,7 @@ K_{s|x}(q) = C_xx(q) / Delta_sx(q)
 dK_{s|x}/d p_hat^2 ~= (K_shell - K_0) / (p_hat^2_shell - p_hat^2_0)
 ```
 
-On chunks001-026, the finite-shell `K_{s|x}` slope is finite across all ready
+On chunks001-028, the finite-shell `K_{s|x}` slope is finite across all ready
 chunks.  The certificate records the chunk-level rows and summary statistics.
 
 This is not closure.  A zero-to-first-shell finite difference is not an

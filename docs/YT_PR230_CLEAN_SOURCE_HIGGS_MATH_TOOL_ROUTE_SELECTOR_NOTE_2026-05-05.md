@@ -5,7 +5,7 @@ positive closure still open
 **Runner:** `scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py`
 **Certificate:** `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
 **Refresh:** 2026-05-07, after `O_sp`, radial-spurion action-contract,
-chunks001-026/two-source finite-Schur support, the same-surface neutral
+chunks001-028/two-source finite-Schur support, the same-surface neutral
 multiplicity-one intake gate, and the rejected candidate attempt landed
 
 ## Purpose
@@ -24,7 +24,7 @@ The refresh consumes the current genuine support without promoting it:
   source-side pole residue;
 - the radial-spurion action contract is exact future-action support, but the
   current additive source is not that action;
-- the two-source taste-radial campaign has `26/63` chunks combined as partial
+- the two-source taste-radial campaign has `28/63` chunks combined as partial
   `C_sx/C_xx` support only;
 - finite Schur `A_f/B_f/C_f` inverse rows are bounded diagnostics, not pole
   `K'(pole)` authority.

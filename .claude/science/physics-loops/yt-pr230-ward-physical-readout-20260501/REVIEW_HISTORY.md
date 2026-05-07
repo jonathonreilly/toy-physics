@@ -1,5 +1,33 @@
 # Review History
 
+## 2026-05-07 - Two-Source Taste-Radial Chunks027-028 Package
+
+Review stance: bounded support / partial row-wave package.
+
+- Packaged chunks027-028 into the two-source taste-radial row stream after
+  completed root JSONs and per-volume artifacts landed.
+- Refreshed chunk checkpoints, package audit, row combiner, strict
+  scalar-LSZ moment/FV, Schur subblock/K-prime/A-B-C/pole-lift diagnostics,
+  Schur-complement repair, source-Higgs readiness, primitive-transfer
+  candidate, orthogonal-top exclusion, clean-route selector, assumption stress,
+  campaign status, full assembly, retained-route, and completion audit.
+- Validation: chunk027 `PASS=15 FAIL=0`, chunk028 `PASS=15 FAIL=0`, package
+  audit `PASS=10 FAIL=0`, row combiner `PASS=13 FAIL=0` at `ready=28/63`,
+  strict scalar-LSZ `PASS=13 FAIL=0`, Schur repair `PASS=22 FAIL=0`,
+  source-Higgs readiness `PASS=25 FAIL=0`, assumption stress `PASS=85
+  FAIL=0`, campaign status `PASS=331 FAIL=0`, full assembly `PASS=144
+  FAIL=0`, retained-route `PASS=298 FAIL=0`, and completion audit `PASS=53
+  FAIL=0`.
+- Permission profile hardening: global/home/repo `AGENTS.md` now states that
+  full-access/no-approval work must never include `sandbox_permissions` in
+  `functions.exec_command` calls.
+
+Disposition: bounded support only.  The package is finite `C_ss/C_sx/C_xx`
+row evidence for the route, not canonical `O_H`, not canonical
+`C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
+or proposed-retained closure.  Successor chunks029-030 are run-control only
+until their completed artifacts and checkpoints exist.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks025-026 Package
 
 Review stance: bounded support / partial row-wave package.

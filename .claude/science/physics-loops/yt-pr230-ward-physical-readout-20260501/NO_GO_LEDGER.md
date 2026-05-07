@@ -1,15 +1,27 @@
 # No-Go Ledger
 
+## Two-source chunks001-028 are not source-Higgs or scalar-LSZ closure
+
+The 2026-05-07 chunks027-028 package moves the finite two-source row packet to
+`ready=28/63`, but the added rows do not change the claim boundary.  The raw
+`C_ss` proxy still fails the strict scalar-LSZ first-shell nonincrease test,
+the finite `C_ss/C_sx/C_xx` block still lacks pole/FV/IR authority, and
+finite Schur A/B/C rows still do not determine strict pole derivatives.
+Successor chunks029-030 are run-control/log/empty-directory state only until
+completed and checkpointed.  Do not treat chunks001-028, live-status rows, or
+finite Schur diagnostics as canonical `O_H`, `C_spH/C_HH`, W/Z response rows,
+or retained/proposed-retained evidence.
+
 ## Clean-route selector refresh is not closure
 
 The 2026-05-07 refresh consumes `O_sp`, the radial-spurion action contract,
-chunks001-026 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics, the
+chunks001-028 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics, the
 rejected same-surface neutral multiplicity-one candidate, and FMS/outside-math
 literature.  It ranks genuine same-source W/Z response rows as the first
 fallback after source-Higgs pole rows, but still forbids treating any of those
 inputs as canonical `O_H`, `C_spH/C_HH` pole rows, W/Z response rows, strict
-scalar-LSZ/FV/IR authority, or retained/proposed-retained closure.  Chunks027
-and 028 are active run-control only until completed, checkpointed, and
+scalar-LSZ/FV/IR authority, or retained/proposed-retained closure.  Successor
+chunks029-030 are run-control only until completed, checkpointed, and
 packaged.
 
 ## Genuine `O_sp` plus completed L12 support is not physical `y_t` closure

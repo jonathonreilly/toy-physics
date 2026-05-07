@@ -1,5 +1,40 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 two-source taste-radial chunks027-028 package:
+
+- Packaged chunks027-028 after completed root JSONs and per-volume artifacts
+  landed.  Both chunks preserve production metadata, fixed seeds
+  `2026056027`/`2026056028`, selected-mass-only FH/LSZ at `m=0.75`,
+  `numba_gauge_seed_v1`, and explicit non-readout source-Higgs metadata.
+- Completed-mode checkpoints: chunk027 `PASS=15 FAIL=0`; chunk028
+  `PASS=15 FAIL=0`.
+- Package/row status: chunk package audit `PASS=10 FAIL=0`; row combiner
+  `PASS=13 FAIL=0`; ready packet is now `28/63` and
+  `combined_rows_written=false`.
+- Refreshed row-derived gates: strict scalar-LSZ moment/FV `PASS=13 FAIL=0`
+  with raw `C_ss` still failing the first-shell Stieltjes nonincrease
+  (`z=122.86868233770126`); Schur subblock witness `PASS=16 FAIL=0`;
+  finite-shell Schur K-prime scout `PASS=14 FAIL=0`; finite Schur A/B/C rows
+  `PASS=17 FAIL=0`; Schur finite-to-pole lift `PASS=13 FAIL=0`;
+  Schur-complement repair `PASS=22 FAIL=0`, with `C_s|x` still failing
+  (`z=128.3306239325716`) and `C_x|s` surviving only the necessary
+  first-shell check (`z=-438.55215485628264`); source-Higgs readiness
+  `PASS=25 FAIL=0`; primitive-transfer candidate `PASS=13 FAIL=0`;
+  orthogonal-top exclusion gate `PASS=12 FAIL=0`.
+- Aggregate gates remain open/support-only: assumption/import stress
+  `PASS=85 FAIL=0`; campaign status `PASS=331 FAIL=0`; full assembly
+  `PASS=144 FAIL=0`; retained-route `PASS=298 FAIL=0`; completion audit
+  `PASS=53 FAIL=0`.
+- Successor chunks029-030 are run-control/log/empty-directory state only.
+  They are not evidence until completed JSONs and completed-mode checkpoints
+  exist.
+- Permission profile hardening: global/home/repo `AGENTS.md` files now carry
+  a hard invariant forbidding `sandbox_permissions` in `functions.exec_command`
+  calls under full-access/no-approval policy.
+- Claim boundary: no canonical `O_H`, no `C_ss/C_spH/C_HH` pole rows, no
+  strict scalar-LSZ/FV authority, no W/Z rows with strict `g2`/covariance, no
+  retained/proposed-retained closure.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks025-026 package:
 
 - Packaged chunks025-026 after completed root JSONs and per-volume artifacts
@@ -34,7 +69,7 @@ Latest checkpoint, 2026-05-07 clean-route selector refresh:
   `docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md`,
   and `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`.
 - The selector now consumes `O_sp`, radial-spurion action-contract support,
-  chunks001-026 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics,
+  chunks001-028 partial `C_sx/C_xx` support, finite Schur A/B/C diagnostics,
   and the rejected same-surface neutral multiplicity-one candidate.  All
   remain support-only.
 - The clean ordering is now source-Higgs first, genuine same-source W/Z
@@ -47,7 +82,8 @@ Latest checkpoint, 2026-05-07 clean-route selector refresh:
   FAIL=0`; campaign status `PASS=331 FAIL=0`; full assembly `PASS=144
   FAIL=0`; retained-route `PASS=298 FAIL=0`; completion audit `PASS=53
   FAIL=0`.
-- Run-control note: chunks027-028 are active and not evidence until completed,
+- Run-control note: successor chunks029-030 are run-control/log/
+  empty-directory state only and are not evidence until completed,
   checkpointed, and packaged.
 
 Latest checkpoint, 2026-05-06 post-`O_sp` positive-closure completion audit:

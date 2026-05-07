@@ -6,7 +6,7 @@
 
 ## Claim
 
-The completed two-source taste-radial chunks001-026 contain a stricter finite
+The completed two-source taste-radial chunks001-028 contain a stricter finite
 object than the raw `C_ss` proxy:
 
 ```text
@@ -26,11 +26,11 @@ C(x2) - C(x1) <= 0        for x2 > x1,        x = q_hat^2.
 
 The source residual `C_s|x` does not repair the raw-source problem.  It is
 positive, but it increases from the zero mode to the first shell across the
-26 ready chunks (`z=119.23982245754414`).
+28 ready chunks (`z=128.3306239325716`).
 
 The complement residual `C_x|s` is the useful new artifact: it is positive and
-decreases from the zero mode to the first shell across the 26 ready chunks
-(`z=-461.1939948783171`).  This
+decreases from the zero mode to the first shell across the 28 ready chunks
+(`z=-438.55215485628264`).  This
 survives the first-shell necessary Stieltjes check and gives a targeted
 candidate for later complement-scalar diagnostics.
 

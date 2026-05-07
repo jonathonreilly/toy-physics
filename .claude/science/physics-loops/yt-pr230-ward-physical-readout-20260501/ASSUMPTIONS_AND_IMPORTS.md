@@ -24,7 +24,7 @@
 | Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
 | Same-source scalar pole derivative `D'_ss(pole)` | removes source-coordinate normalization with `dE/ds` | sufficiency theorem support only; production pole data absent | open import until postprocess/model-class/FV/IR/Higgs-identity gates pass |
 | Genuine source-pole `O_sp` artifact | same-source source-pole normalization inside the `O_H/C_sH/C_HH` contract | exact support | real source-side artifact only; it does not identify `O_sp` with canonical `O_H` and remains support-only until same-surface `O_H` identity/normalization plus `C_spH/C_HH` pole rows pass |
-| Clean source-Higgs outside-math route refresh | route selector after `O_sp`, radial-spurion support, chunks001-018, and finite Schur diagnostics | exact support only | selects `O_sp`-Higgs pole rows as cleanest target; forbids using literature/FMS/math-tool names, partial chunks, radial-spurion algebra, or finite Schur rows as proof selectors |
+| Clean source-Higgs outside-math route refresh | route selector after `O_sp`, radial-spurion support, chunks001-028, and finite Schur diagnostics | exact support only | selects `O_sp`-Higgs pole rows as cleanest target; forbids using literature/FMS/math-tool names, partial chunks, radial-spurion algebra, or finite Schur rows as proof selectors |
 | Source-Higgs cross-correlator `C_sH` and canonical `C_HH` residue | possible source-pole purity observable | open gate; no hidden current authority | open import; requires a canonical-Higgs source operator and cross-correlator implementation, not assumed |
 | FMS/action-first source-Higgs artifact route | possible clean route to `O_H/C_sH/C_HH` rows | bounded support only; no current artifact | allowed only after a same-source EW/Higgs action, gauge-invariant `O_H`, canonical pole normalization, and production `C_ss/C_sH/C_HH` rows exist; FMS literature, gauge-invariant-composite language, and action names are not proof selectors |
 | Exact tensor/PEPS Schur row production | possible outside-math row engine | exact negative boundary for current PR230 surface | allowed only after a same-surface neutral kernel basis, source/orthogonal projector, `A/B/C` row definitions, contact/FV/IR conventions, and certified contraction are supplied; method name and source-only marginals are not proof inputs |
@@ -854,6 +854,19 @@ same PR230 surface.  A source-only row family with fixed `C_ss` and variable
 `C_sH/C_HH` remains positive, so source-only rows plus positivity cannot select
 the canonical-Higgs overlap, set `kappa_s = 1`, or authorize
 retained/proposed-retained closure.
+
+2026-05-07 two-source taste-radial chunks027-028 package:
+
+Chunks001-028 now supply finite same-surface `C_ss/C_sx/C_xx` row support
+through the taste-radial chart.  This is not permission to read `x` as
+canonical `H`, not permission to alias `C_sx/C_xx` as canonical
+`C_sH/C_HH`, and not permission to treat first-shell Schur/Stieltjes
+diagnostics as scalar-LSZ authority.  The same forbidden imports remain
+forbidden: `H_unit`, `yt_ward_identity`, observed top or `y_t`, `alpha_LM`,
+plaquette/`u0`, reduced pilots as production evidence, and fiat
+`c2 = 1`, `Z_match = 1`, or `kappa_s = 1`.  Successor chunks029-030 are
+run-control/log/empty-directory state only until completed, checkpointed, and
+packaged.
 
 2026-05-07 two-source taste-radial chunks025-026 package:
 

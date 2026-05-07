@@ -1,6 +1,7 @@
 Persistent repo instruction for Codex sessions in this PR #230 workspace:
 
 - The default operating contract is full-access/no-approval. Treat `approval_policy = "never"` plus `sandbox_mode = "danger-full-access"` as binding execution policy, not a suggestion to confirm.
+- Hard invariant: do not include the `sandbox_permissions` key in any `functions.exec_command` call. There is no ordinary PR #230-work exception for git, GitHub, network, markdown edits, commits, pushes, workers, or audit commands.
 - Do not ask the user for permissions or approvals before running commands, editing files, committing, pushing, or updating PR #230.
 - Markdown/doc edits in this branch are explicitly authorized and must not be converted into permission questions.
 - Never ask the user to grant a tool permission, edit permission, markdown permission, branch permission, push permission, or PR-update permission.

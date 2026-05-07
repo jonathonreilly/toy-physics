@@ -8,16 +8,16 @@ taste-radial row campaign.  The package audit counts only completed
 and a passing completed chunk checkpoint.  Active workers, logs, partial
 directories, and pending checkpoints are explicitly non-evidence.
 
-The current package contains chunks001-026.  Each completed checkpoint preserves
+The current package contains chunks001-028.  Each completed checkpoint preserves
 the no-claim firewall: `proposal_allowed=false`, zero pole-residue rows, and
 explicit alias metadata showing that the emitted schema fields are
 taste-radial `C_sx/C_xx` support rows, not canonical-Higgs `C_sH/C_HH` pole
 rows.
 
-Chunks027-028 are active under the row-wave supervisor and are explicitly not
-part of this package.  Their logs, live status, and partial directories remain
-run-control only until completed JSONs exist and completed-mode checkpoints
-pass.
+Successor chunks029-030 are run-control/log/empty-directory state and are
+explicitly not part of this package.  Their logs, live status, and partial
+directories remain run-control only until completed JSONs exist and
+completed-mode checkpoints pass.
 
 This audit does not close PR #230.  Positive closure still requires a combined
 row statistic, pole/FV/IR analysis, scalar-LSZ authority, and either a

@@ -14,130 +14,130 @@
   "mode_summary": {
     "0,0,0": {
       "C_sx_real": {
-        "count": 26,
+        "count": 28,
         "max": 0.00015573928662202072,
-        "mean": -2.6119106743434995e-05,
-        "min": -0.00017610843791869552,
-        "stdev": 9.124055798167226e-05
+        "mean": -2.8839183250082205e-05,
+        "min": -0.00021072330617011374,
+        "stdev": 9.694446842872265e-05
       },
       "C_sx_sign_counts": {
-        "negative": 16,
-        "positive": 10,
-        "zero": 0
-      },
-      "all_blocks_positive_definite": true,
-      "gram_determinant": {
-        "count": 26,
-        "max": 0.03443592420766044,
-        "mean": 0.03437248743301401,
-        "min": 0.034316582471396566,
-        "stdev": 2.8611460497204958e-05
-      },
-      "offdiagonal_entry_observed": true,
-      "rho_sx": {
-        "count": 26,
-        "max": 0.0008395823086115359,
-        "mean": -0.00014096446164431353,
-        "min": -0.0009500004592309483,
-        "stdev": 0.0004921665092894475
-      },
-      "row_count": 26,
-      "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
-    },
-    "0,0,1": {
-      "C_sx_real": {
-        "count": 26,
-        "max": 0.000202931992194099,
-        "mean": -1.7234656036714154e-05,
-        "min": -0.0001826668847958663,
-        "stdev": 9.682977951927306e-05
-      },
-      "C_sx_sign_counts": {
-        "negative": 15,
+        "negative": 17,
         "positive": 11,
         "zero": 0
       },
       "all_blocks_positive_definite": true,
       "gram_determinant": {
-        "count": 26,
-        "max": 0.033947435240421556,
-        "mean": 0.03388276700516769,
-        "min": 0.033838164981038005,
-        "stdev": 2.8130723624956715e-05
+        "count": 28,
+        "max": 0.03443592420766044,
+        "mean": 0.034373877760739226,
+        "min": 0.034316582471396566,
+        "stdev": 2.8002114638175377e-05
       },
       "offdiagonal_entry_observed": true,
       "rho_sx": {
-        "count": 26,
-        "max": 0.001101404308940309,
-        "mean": -9.372292105666575e-05,
-        "min": -0.0009923711191002188,
-        "stdev": 0.0005260113745756879
+        "count": 28,
+        "max": 0.0008395823086115359,
+        "mean": -0.0001556221640394483,
+        "min": -0.0011362588316600646,
+        "stdev": 0.000522897024459767
       },
-      "row_count": 26,
+      "row_count": 28,
       "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
     },
-    "0,1,0": {
+    "0,0,1": {
       "C_sx_real": {
-        "count": 26,
-        "max": 0.0002204249021318783,
-        "mean": -1.8152922375298897e-05,
-        "min": -0.00019150870829394567,
-        "stdev": 0.00010625014738465509
+        "count": 28,
+        "max": 0.000202931992194099,
+        "mean": -1.7499222485354053e-05,
+        "min": -0.0001826668847958663,
+        "stdev": 9.928105072730085e-05
       },
       "C_sx_sign_counts": {
-        "negative": 14,
+        "negative": 16,
         "positive": 12,
         "zero": 0
       },
       "all_blocks_positive_definite": true,
       "gram_determinant": {
-        "count": 26,
-        "max": 0.03382809941874459,
-        "mean": 0.033774097247058064,
-        "min": 0.03371064535389779,
-        "stdev": 2.9482147388920475e-05
+        "count": 28,
+        "max": 0.033947435240421556,
+        "mean": 0.0338844952943714,
+        "min": 0.033838164981038005,
+        "stdev": 2.7836743218010558e-05
       },
       "offdiagonal_entry_observed": true,
       "rho_sx": {
-        "count": 26,
-        "max": 0.0011987200649805207,
-        "mean": -9.889994455609408e-05,
-        "min": -0.001042165835772107,
-        "stdev": 0.0005781588000173917
+        "count": 28,
+        "max": 0.001101404308940309,
+        "mean": -9.514700027806597e-05,
+        "min": -0.0009923711191002188,
+        "stdev": 0.0005393068856912518
       },
-      "row_count": 26,
+      "row_count": 28,
       "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
     },
-    "1,0,0": {
+    "0,1,0": {
       "C_sx_real": {
-        "count": 26,
-        "max": 0.00014059692879366014,
-        "mean": -3.424947457854126e-05,
-        "min": -0.00022224996656396842,
-        "stdev": 9.442838978261333e-05
+        "count": 28,
+        "max": 0.0002204249021318783,
+        "mean": -1.8828689062603427e-05,
+        "min": -0.00019150870829394567,
+        "stdev": 0.0001065767812840256
       },
       "C_sx_sign_counts": {
-        "negative": 13,
+        "negative": 15,
         "positive": 13,
         "zero": 0
       },
       "all_blocks_positive_definite": true,
       "gram_determinant": {
-        "count": 26,
-        "max": 0.03376377487020449,
-        "mean": 0.03369962813285599,
-        "min": 0.0336471369546762,
-        "stdev": 2.8060568093925047e-05
+        "count": 28,
+        "max": 0.03382809941874459,
+        "mean": 0.033776445331508254,
+        "min": 0.03371064535389779,
+        "stdev": 2.9688693868807593e-05
       },
       "offdiagonal_entry_observed": true,
       "rho_sx": {
-        "count": 26,
-        "max": 0.0007655918501494505,
-        "mean": -0.00018663572824090854,
-        "min": -0.0012109740601922983,
-        "stdev": 0.000514411709225312
+        "count": 28,
+        "max": 0.0011987200649805207,
+        "mean": -0.00010255950435423984,
+        "min": -0.001042165835772107,
+        "stdev": 0.0005799103876258756
       },
-      "row_count": 26,
+      "row_count": 28,
+      "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
+    },
+    "1,0,0": {
+      "C_sx_real": {
+        "count": 28,
+        "max": 0.00014059692879366014,
+        "mean": -3.189872563589989e-05,
+        "min": -0.00022224996656396842,
+        "stdev": 9.618351411494945e-05
+      },
+      "C_sx_sign_counts": {
+        "negative": 14,
+        "positive": 14,
+        "zero": 0
+      },
+      "all_blocks_positive_definite": true,
+      "gram_determinant": {
+        "count": 28,
+        "max": 0.03376377487020449,
+        "mean": 0.03370126116317151,
+        "min": 0.0336471369546762,
+        "stdev": 2.7696792371970243e-05
+      },
+      "offdiagonal_entry_observed": true,
+      "rho_sx": {
+        "count": 28,
+        "max": 0.0007655918501494505,
+        "mean": -0.00017382884160319035,
+        "min": -0.0012109740601922983,
+        "stdev": 0.0005239531429789394
+      },
+      "row_count": 28,
       "strict_transfer_obstruction": "C_sx is a finite correlator/covariance entry.  Mixed signs or near-zero means cannot be converted into a positive primitive transfer by absolute values or stochastic normalization without an additional same-surface action/transfer theorem."
     }
   },
@@ -187,7 +187,7 @@
   ],
   "proposal_allowed": false,
   "proposal_allowed_reason": "The finite C_sx rows are real same-ensemble off-diagonal correlator entries, but they are not a transfer/action matrix, positive primitive cone certificate, isolated-pole kernel derivative, canonical O_H row, or kappa_s authority.",
-  "ready_chunks": 26,
+  "ready_chunks": 28,
   "strict_non_claims": [
     "does not claim retained or proposed_retained closure",
     "does not treat finite C_sx/C_xx rows as canonical C_sH/C_HH rows",
