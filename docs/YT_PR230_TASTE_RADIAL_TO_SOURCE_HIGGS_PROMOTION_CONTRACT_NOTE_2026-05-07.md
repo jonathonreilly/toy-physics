@@ -55,7 +55,7 @@ The current branch is blocked:
 - the canonical `O_H` certificate is absent;
 - source-Higgs `C_sH/C_HH` pole rows are absent;
 - source-Higgs production remains blocked by the missing `O_H` certificate;
-- the row combiner is still partial taste-radial support at `30/63` chunks;
+- the row combiner is still partial taste-radial support at `32/63` chunks;
 - the full assembly, retained-route, and campaign gates deny proposal
   authorization.
 

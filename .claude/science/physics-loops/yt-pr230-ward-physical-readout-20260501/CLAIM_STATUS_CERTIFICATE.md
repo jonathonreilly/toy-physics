@@ -1,5 +1,58 @@
 # Claim Status Certificate
 
+Two-source taste-radial chunks031-032 package checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / chunks001-032 packaged; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 31 --output outputs/yt_pr230_two_source_taste_radial_chunk031_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 32 --output outputs/yt_pr230_two_source_taste_radial_chunk032_checkpoint_2026-05-06.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=32/63, combined_rows_written=false
+
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=87 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=334 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=147 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=301 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=56 FAIL=0
+```
+
+Chunks001-032 are finite `C_ss/C_sx/C_xx` row support only.  Chunks033-034
+are active run-control state and are not evidence.  The current branch still
+lacks canonical `O_H`, `C_sH/C_HH` pole rows, strict scalar-LSZ/FV authority,
+strict Schur pole rows, W/Z rows with strict `g2`/covariance, and any
+retained-route or campaign proposal authorization.
+
 Taste-radial-to-source-Higgs promotion contract checkpoint:
 
 ```text

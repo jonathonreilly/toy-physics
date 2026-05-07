@@ -1,5 +1,20 @@
 # Opportunity Queue
 
+2026-05-07 chunks031-032 package refresh: chunks001-032 are now packaged
+partial `C_sx/C_xx` support with `ready=32/63`; chunks031-032 pass
+completed-mode checkpoints and preserve selected-mass-only FH/LSZ,
+normal-equation cache metadata, `numba_gauge_seed_v1`, fixed seeds, and
+non-readout source-Higgs metadata.  Strict scalar-LSZ still fails on raw
+`C_ss` (`z=129.6442275547381`); Schur-complement repair keeps `C_x|s` as a
+useful finite candidate but only as a necessary one-volume check
+(`z=-478.2217012807756`).  The promotion contract now accepts the dynamic
+partial packet at `32/63` while continuing to block any `C_sx/C_xx` to
+`C_sH/C_HH` relabeling without same-surface `x=canonical O_H` identity,
+action/LSZ, pole/FV/IR, and Gram authority.  The cleanest closure target
+remains certified canonical `O_H` plus `C_ss/C_sH/C_HH` pole rows, with
+genuine same-source W/Z rows as first fallback.  Successor chunks033-034 are
+active run-control only until completed, checkpointed, and packaged.
+
 2026-05-07 taste-radial-to-source-Higgs promotion contract: the finite
 `C_sx/C_xx` row campaign now has an exact relabeling firewall.  The rows can
 be promoted to canonical `C_sH/C_HH` only after a same-surface certificate

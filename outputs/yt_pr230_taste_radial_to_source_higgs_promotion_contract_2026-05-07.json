@@ -80,7 +80,7 @@
     "canonical_source_higgs_rows_present": false,
     "combined_rows_written": false,
     "expected_chunks": 63,
-    "ready_chunks": 30,
+    "ready_chunks": 32,
     "row_kind": "taste_radial_C_sx_C_xx"
   },
   "strict_non_claims": [

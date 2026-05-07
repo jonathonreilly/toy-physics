@@ -124,10 +124,14 @@ def main() -> int:
         and certs["degree_one_radial_tangent"].get("source_higgs_pole_rows_present")
         is False
     )
+    ready_chunks = count_or_value(certs["row_combiner"].get("ready_chunks"))
+    ready_indices = certs["row_combiner"].get("ready_chunk_indices", [])
+    expected_chunks = count_or_value(certs["row_combiner"].get("expected_chunks"))
     row_packet_is_partial_taste_radial = (
-        certs["row_combiner"].get("ready_chunks") == 30
-        and len(certs["row_combiner"].get("ready_chunk_indices", [])) == 30
-        and count_or_value(certs["row_combiner"].get("expected_chunks")) == 63
+        ready_chunks is not None
+        and expected_chunks == 63
+        and 1 <= ready_chunks < expected_chunks
+        and len(ready_indices) == ready_chunks
         and certs["row_combiner"].get("combined_rows_written") is False
         and "C_sx/C_xx" in statuses["row_combiner"]
     )
@@ -199,7 +203,11 @@ def main() -> int:
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
     report("two-source-taste-radial-axis-realized", action_axis_realized, statuses["two_source_action"])
     report("degree-one-theorem-support-only", degree_one_support_only, statuses["degree_one_radial_tangent"])
-    report("row-packet-is-partial-taste-radial", row_packet_is_partial_taste_radial, f"ready={certs['row_combiner'].get('ready_chunks')}/63")
+    report(
+        "row-packet-is-partial-taste-radial",
+        row_packet_is_partial_taste_radial,
+        f"ready={ready_chunks}/{expected_chunks}",
+    )
     report("source-higgs-pole-contract-open", strict_pole_contract_open, statuses["source_higgs_pole_row_contract"])
     report("overlap-kappa-contract-support-only", overlap_contract_support_only, statuses["source_higgs_overlap_kappa_contract"])
     report("canonical-oh-identity-absent", canonical_identity_absent, statuses["canonical_higgs_gate"])
@@ -241,8 +249,8 @@ def main() -> int:
         ],
         "promotion_rule": promotion_rule,
         "row_packet_status": {
-            "ready_chunks": certs["row_combiner"].get("ready_chunks"),
-            "expected_chunks": count_or_value(certs["row_combiner"].get("expected_chunks")),
+            "ready_chunks": ready_chunks,
+            "expected_chunks": expected_chunks,
             "combined_rows_written": certs["row_combiner"].get(
                 "combined_rows_written"
             ),
