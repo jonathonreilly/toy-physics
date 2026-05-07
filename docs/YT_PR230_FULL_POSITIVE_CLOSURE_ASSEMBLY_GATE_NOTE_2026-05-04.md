@@ -43,6 +43,13 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
+2026-05-07 orthogonal top-coupling exclusion candidate update: the gate now
+also consumes
+`outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json`.
+Current finite `C_sx/C_xx` rows do not measure or null the orthogonal neutral
+top coupling, and the post-FMS counterfamily still varies canonical `y_t` at
+fixed source response.  The assembly gate remains open with `PASS=139 FAIL=0`.
+
 2026-05-07 two-source primitive-transfer candidate update: the gate now also
 consumes
 `outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`.

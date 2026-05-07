@@ -1,5 +1,16 @@
 # Handoff
 
+2026-05-07 orthogonal-top-coupling candidate checkpoint: the new
+`YT_PR230_ORTHOGONAL_TOP_COUPLING_EXCLUSION_CANDIDATE_GATE` checks whether
+the finite two-source rows, FMS support, or primitive-cone support repair the
+same-surface candidate by excluding orthogonal neutral top coupling.  It
+rejects that route on the current surface.  Finite `C_sx/C_xx` rows are not
+top-coupling tomography, current labels still do not distinguish `h tbar t`
+from `chi tbar t`, and post-FMS counterfamilies keep the source response fixed
+while changing canonical `y_t`.  Aggregate gates remain open with
+proposal_allowed=false: assumption PASS=80, campaign PASS=326, assembly
+PASS=139, retained-route PASS=293, completion audit PASS=48, all FAIL=0.
+
 2026-05-07 primitive-transfer candidate checkpoint: the new
 `YT_PR230_TWO_SOURCE_TASTE_RADIAL_PRIMITIVE_TRANSFER_CANDIDATE_GATE` consumes
 the ready chunks001-020 finite `C_ss/C_sx/C_xx` packet and confirms the exact

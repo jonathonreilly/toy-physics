@@ -20,6 +20,12 @@ correlator blocks are support only; H3 still needs a same-surface physical
 transfer/action row, off-diagonal generator, or theorem converting those rows
 into primitive neutral transfer authority.
 
+2026-05-07 second refresh: the audit also consumes the orthogonal-neutral
+top-coupling exclusion candidate gate.  The selection-rule repair is still
+absent: finite `C_sx/C_xx` rows are not top-coupling tomography, and fixed
+source-response counterfamilies still allow finite orthogonal neutral top
+couplings.
+
 ## Audit Result
 
 The production chunk work is complete as support:
@@ -43,6 +49,8 @@ The current strongest positive artifact is also recorded:
   absent.
 - the ready taste-radial `C_sx` rows do not count as a physical primitive
   neutral transfer or canonical-Higgs bridge.
+- the same finite rows do not exclude or measure orthogonal-neutral top
+  coupling.
 
 The completion audit still rejects positive closure because these required
 items remain missing:
@@ -81,7 +89,7 @@ python3 -m py_compile \
   scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 
 python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
-# SUMMARY: PASS=47 FAIL=0
+# SUMMARY: PASS=48 FAIL=0
 ```
 
 Certificate:

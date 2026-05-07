@@ -1,5 +1,15 @@
 # Claim Status Certificate
 
+2026-05-07 orthogonal top-coupling exclusion update: the new certificate
+`outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json`
+passes with `PASS=12 FAIL=0` as an exact negative boundary.  It rejects the
+selection-rule repair on the current surface: finite `C_sx/C_xx` rows are not
+top-coupling tomography, current labels do not forbid the orthogonal neutral
+coupling, and fixed-source-response counterfamilies still vary canonical
+`y_t`.  Aggregate refresh: assumption PASS=80, campaign PASS=326, assembly
+PASS=139, retained-route PASS=293, completion audit PASS=48, all FAIL=0 and
+`proposal_allowed=false`.
+
 2026-05-07 primitive-transfer candidate update: the new certificate
 `outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json`
 passes with `PASS=13 FAIL=0` as support/no-go only.  It confirms that finite

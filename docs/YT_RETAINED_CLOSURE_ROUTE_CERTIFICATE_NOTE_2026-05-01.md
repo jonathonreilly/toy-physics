@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=292 FAIL=0
+# SUMMARY: PASS=293 FAIL=0
 ```
+
+## 2026-05-07 Orthogonal Top-Coupling Exclusion Candidate Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json`.
+
+The candidate is rejected on the current surface.  Finite taste-radial
+`C_sx/C_xx` rows are not top-coupling tomography, and current labels do not
+provide a selection rule that allows the Higgs radial top coupling while
+forbidding the orthogonal neutral scalar top coupling.  The post-FMS
+counterfamily keeps the measured source response fixed while changing
+canonical `y_t` through finite orthogonal couplings.
+
+Validation: orthogonal top-coupling exclusion candidate gate `PASS=12 FAIL=0`;
+full positive closure assembly `PASS=139 FAIL=0`; retained-route
+`PASS=293 FAIL=0`; campaign status `PASS=326 FAIL=0`; completion audit
+`PASS=48 FAIL=0`.
 
 ## 2026-05-07 Two-Source Primitive-Transfer Candidate Update
 

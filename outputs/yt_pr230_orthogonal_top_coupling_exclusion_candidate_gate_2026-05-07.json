@@ -1,0 +1,99 @@
+{
+  "actual_current_surface_status": "exact negative boundary / orthogonal-neutral top-coupling exclusion candidate rejected on current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface charge/representation theorem, physical response row, source-Higgs Gram-purity packet, or neutral primitive transfer proves the orthogonal neutral top component is absent or measured",
+  "current_blockers": {
+    "finite_rows_not_top_tomography": true,
+    "legacy_selection_rule_still_blocks": true,
+    "neutral_primitive_still_missing_h3_h4": true,
+    "post_fms_counterfamily_blocks": true,
+    "same_surface_candidate_rejected": true,
+    "source_higgs_rows_absent": true
+  },
+  "exact_next_action": "Supply a same-surface charge/representation theorem that forbids orthogonal neutral top couplings while allowing the Higgs radial top coupling, or measure/source-Higgs-purify the orthogonal component through real C_spH/C_HH or W/Z response rows.",
+  "fail_count": 0,
+  "finite_c_sx_rows_are_top_coupling_tomography": false,
+  "finite_mode_sign_summary": {
+    "0,0,0": {
+      "all_blocks_positive_definite": true,
+      "mixed_signs": true,
+      "negative": 12,
+      "offdiagonal_entry_observed": true,
+      "positive": 8,
+      "zero": 0
+    },
+    "0,0,1": {
+      "all_blocks_positive_definite": true,
+      "mixed_signs": true,
+      "negative": 11,
+      "offdiagonal_entry_observed": true,
+      "positive": 9,
+      "zero": 0
+    },
+    "0,1,0": {
+      "all_blocks_positive_definite": true,
+      "mixed_signs": true,
+      "negative": 10,
+      "offdiagonal_entry_observed": true,
+      "positive": 10,
+      "zero": 0
+    },
+    "1,0,0": {
+      "all_blocks_positive_definite": true,
+      "mixed_signs": true,
+      "negative": 9,
+      "offdiagonal_entry_observed": true,
+      "positive": 11,
+      "zero": 0
+    }
+  },
+  "hypothetical_axiom_status": null,
+  "orthogonal_top_counterfamily": [
+    {
+      "canonical_y_t": 0.5,
+      "orthogonal_y_chi_required": 0.944911182523068,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    },
+    {
+      "canonical_y_t": 1.0,
+      "orthogonal_y_chi_required": 0.3779644730092272,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    },
+    {
+      "canonical_y_t": 1.5,
+      "orthogonal_y_chi_required": -0.1889822365046136,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    }
+  ],
+  "orthogonal_top_coupling_exclusion_candidate_accepted": false,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "legacy_selection_rule_no_go": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+    "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "post_fms_source_overlap": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+    "primitive_transfer_candidate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_candidate": "exact negative boundary / same-surface neutral multiplicity-one candidate attempt rejected on current PR230 surface",
+    "same_surface_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Current labels, FMS support, finite C_sx rows, and primitive-cone support do not force the orthogonal neutral scalar top coupling to zero or measure it.",
+  "same_surface_selection_rule_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not set the orthogonal neutral top coupling to zero",
+    "does not use finite C_sx/C_xx rows as top-coupling tomography",
+    "does not use finite C_sx/C_xx rows as C_sH/C_HH pole rows",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, or value recognition"
+  ]
+}

@@ -28,8 +28,25 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=325 FAIL=0
+# SUMMARY: PASS=326 FAIL=0
 ```
+
+## 2026-05-07 Orthogonal Top-Coupling Exclusion Candidate Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json`.
+
+This checks the selection-rule repair path for the same-surface neutral
+multiplicity-one candidate.  The current finite `C_sx/C_xx` rows are not
+top-coupling tomography, and the post-FMS counterfamily still varies
+canonical `y_t` at fixed measured source response by adjusting a finite
+orthogonal neutral top coupling.  No current same-surface charge,
+representation, action, or row packet excludes that coupling.
+
+Validation: orthogonal top-coupling exclusion candidate gate `PASS=12 FAIL=0`;
+assumption/import stress `PASS=80 FAIL=0`; full positive closure assembly
+`PASS=139 FAIL=0`; retained-route `PASS=293 FAIL=0`; campaign status
+`PASS=326 FAIL=0`; completion audit `PASS=48 FAIL=0`.
 
 ## 2026-05-07 Two-Source Primitive-Transfer Candidate Update
 

@@ -4,6 +4,14 @@ No external review-loop has been run yet for this block.
 
 Local verification completed:
 
+- `frontier_yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate.py`:
+  PASS=12 FAIL=0.  It rejects the current selection-rule repair and preserves
+  `proposal_allowed=false`.
+- Follow-on aggregate gates after wiring the orthogonal-coupling candidate:
+  assumption/import stress PASS=80 FAIL=0, campaign PASS=326 FAIL=0, full
+  assembly PASS=139 FAIL=0, retained-route PASS=293 FAIL=0, and completion
+  audit PASS=48 FAIL=0.
+
 - `frontier_yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate.py`:
   PASS=13 FAIL=0.  It records finite `C_sx` row support and positive finite
   blocks while rejecting H3 physical transfer authority and preserving

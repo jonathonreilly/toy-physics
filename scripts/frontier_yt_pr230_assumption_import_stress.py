@@ -185,6 +185,9 @@ def main() -> int:
         "two_source_taste_radial_primitive_transfer_candidate_gate": load(
             "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
         ),
+        "orthogonal_top_coupling_exclusion_candidate_gate": load(
+            "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -1120,6 +1123,26 @@ def main() -> int:
         is True,
         primitive_transfer_candidate_gate.get("actual_current_surface_status"),
     )
+    orthogonal_top_exclusion_candidate = certificates[
+        "orthogonal_top_coupling_exclusion_candidate_gate"
+    ]
+    report(
+        "orthogonal-top-coupling-exclusion-candidate-rejected",
+        "orthogonal-neutral top-coupling exclusion candidate rejected"
+        in str(orthogonal_top_exclusion_candidate.get("actual_current_surface_status"))
+        and orthogonal_top_exclusion_candidate.get("proposal_allowed") is False
+        and orthogonal_top_exclusion_candidate.get(
+            "orthogonal_top_coupling_exclusion_candidate_accepted"
+        )
+        is False
+        and orthogonal_top_exclusion_candidate.get("same_surface_selection_rule_present")
+        is False
+        and orthogonal_top_exclusion_candidate.get(
+            "finite_c_sx_rows_are_top_coupling_tomography"
+        )
+        is False,
+        orthogonal_top_exclusion_candidate.get("actual_current_surface_status"),
+    )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -1527,6 +1550,11 @@ def main() -> int:
             "finite correlator blocks are not a same-surface action/transfer "
             "matrix, primitive cone certificate, pole/FV/IR transfer limit, "
             "canonical O_H row, or kappa_s authority.  "
+            "The orthogonal-neutral top-coupling exclusion candidate gate "
+            "then checks the adjacent selection-rule repair and rejects it on "
+            "the current surface: finite C_sx rows are not top-coupling "
+            "tomography, and the post-FMS counterfamily still varies canonical "
+            "y_t at fixed source response with finite orthogonal coupling.  "
             "The same-surface neutral multiplicity-one intake gate makes the "
             "clean source-Higgs positive artifact contract executable and "
             "rejects the current two-singlet neutral completion without "
@@ -1572,6 +1600,7 @@ def main() -> int:
             "does not treat finite C_ss/C_sx/C_xx Schur subblocks as strict K-prime pole rows or canonical O_H evidence",
             "does not treat finite zero-to-first-shell Schur inverse slopes as isolated-pole K'(pole) evidence",
             "does not treat finite C_sx/C_xx correlator blocks as a physical primitive neutral transfer",
+            "does not treat finite C_sx/C_xx rows as orthogonal-neutral top-coupling tomography",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",

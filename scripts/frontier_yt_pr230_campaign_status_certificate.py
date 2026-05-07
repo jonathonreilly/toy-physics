@@ -635,6 +635,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": load(
             "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
         ),
+        "pr230_orthogonal_top_coupling_exclusion_candidate_gate": load(
+            "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2860,6 +2863,29 @@ def main() -> int:
         is True,
         statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"],
     )
+    orthogonal_top_coupling_exclusion_candidate_gate = certificates[
+        "pr230_orthogonal_top_coupling_exclusion_candidate_gate"
+    ]
+    report(
+        "pr230-orthogonal-top-coupling-exclusion-candidate-rejected",
+        "orthogonal-neutral top-coupling exclusion candidate rejected"
+        in str(statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"])
+        and orthogonal_top_coupling_exclusion_candidate_gate.get("proposal_allowed")
+        is False
+        and orthogonal_top_coupling_exclusion_candidate_gate.get(
+            "orthogonal_top_coupling_exclusion_candidate_accepted"
+        )
+        is False
+        and orthogonal_top_coupling_exclusion_candidate_gate.get(
+            "same_surface_selection_rule_present"
+        )
+        is False
+        and orthogonal_top_coupling_exclusion_candidate_gate.get(
+            "finite_c_sx_rows_are_top_coupling_tomography"
+        )
+        is False,
+        statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -4930,6 +4956,24 @@ def main() -> int:
             "finite_correlator_blocks_positive"
         )
         is True
+    )
+    result["orthogonal_top_coupling_exclusion_candidate_rejected"] = (
+        "orthogonal-neutral top-coupling exclusion candidate rejected"
+        in str(statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"])
+        and orthogonal_top_coupling_exclusion_candidate_gate.get("proposal_allowed")
+        is False
+        and orthogonal_top_coupling_exclusion_candidate_gate.get(
+            "orthogonal_top_coupling_exclusion_candidate_accepted"
+        )
+        is False
+        and orthogonal_top_coupling_exclusion_candidate_gate.get(
+            "same_surface_selection_rule_present"
+        )
+        is False
+        and orthogonal_top_coupling_exclusion_candidate_gate.get(
+            "finite_c_sx_rows_are_top_coupling_tomography"
+        )
+        is False
     )
     result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
         taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")

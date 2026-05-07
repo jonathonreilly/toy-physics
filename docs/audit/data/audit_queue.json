@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 685,
+    "leaf": 686,
     "medium": 301
   },
-  "generated_at": "2026-05-07T01:42:47.651046+00:00",
+  "generated_at": "2026-05-07T01:50:43.195565+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21160,6 +21160,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_ORTHOGONAL_TOP_COUPLING_EXCLUSION_CANDIDATE_GATE_NOTE_2026-05-07.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -25214,6 +25231,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 832,
-  "total_pending": 1223
+  "ready_count": 833,
+  "total_pending": 1224
 }

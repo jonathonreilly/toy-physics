@@ -108,6 +108,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_schur_abc_finite_rows": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_pole_lift_gate": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
     "pr230_two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
+    "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -859,6 +860,22 @@ def main() -> int:
             "finite_correlator_blocks_positive"
         )
         is True
+    )
+    orthogonal_top_coupling_exclusion_candidate_rejected = (
+        "orthogonal-neutral top-coupling exclusion candidate rejected"
+        in statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"]
+        and certs["pr230_orthogonal_top_coupling_exclusion_candidate_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_orthogonal_top_coupling_exclusion_candidate_gate"].get(
+            "orthogonal_top_coupling_exclusion_candidate_accepted"
+        )
+        is False
+        and certs["pr230_orthogonal_top_coupling_exclusion_candidate_gate"].get(
+            "finite_c_sx_rows_are_top_coupling_tomography"
+        )
+        is False
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
         "degree-one taste-radial uniqueness"
@@ -1891,6 +1908,11 @@ def main() -> int:
         statuses["pr230_two_source_taste_radial_primitive_transfer_candidate_gate"],
     )
     report(
+        "orthogonal-top-coupling-exclusion-candidate-rejected",
+        orthogonal_top_coupling_exclusion_candidate_rejected,
+        statuses["pr230_orthogonal_top_coupling_exclusion_candidate_gate"],
+    )
+    report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         statuses["pr230_taste_radial_canonical_oh_selector_gate"],
@@ -2911,6 +2933,7 @@ def main() -> int:
         "two_source_taste_radial_schur_abc_finite_rows_not_closure": two_source_taste_radial_schur_abc_finite_rows_not_closure,
         "two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion": two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion,
         "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
+        "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

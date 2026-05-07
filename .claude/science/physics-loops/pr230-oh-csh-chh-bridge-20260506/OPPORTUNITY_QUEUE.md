@@ -28,6 +28,13 @@ same-surface action/transfer row, off-diagonal generator theorem, or
 model-class/pole/FV/IR theorem tying the finite correlator block to a
 primitive neutral transfer and canonical `O_H`.
 
+The adjacent orthogonal-top-coupling selection-rule repair is also checked:
+`outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json`
+passes as a support/no-go certificate.  It rejects using finite `C_sx/C_xx`
+rows, current labels, FMS support, or primitive-cone support to set the
+orthogonal neutral top coupling to zero.  A genuine same-surface charge/
+representation theorem or real source-Higgs/W/Z rows remain required.
+
 1. Action-first same-source EW/Higgs action plus gauge-invariant composite
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
    pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree
