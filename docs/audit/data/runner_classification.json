@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T06:41:25.379924+00:00",
+  "generated_at": "2026-05-07T06:58:14.803125+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16572,6 +16572,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_degree_one_higgs_action_premise_gate.py"
+    },
+    "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 6,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py"
     },
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05": {
       "assert_count": 1,
@@ -34992,6 +35004,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 6,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py": {
       "assert_count": 1,
       "claims": [
@@ -41448,12 +41475,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 240,
-      "C": 522,
+      "C": 523,
       "D": 314,
       "none": 404
     },
-    "runners_classified": 1489,
-    "runners_with_C": 799,
-    "runners_with_D": 578
+    "runners_classified": 1490,
+    "runners_with_C": 800,
+    "runners_with_D": 579
   }
 }

@@ -1,0 +1,104 @@
+{
+  "actual_current_surface_status": "exact-support / degree-one radial-tangent O_H uniqueness theorem; same-surface action/LSZ premise and pole rows absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_oh_identity_derived": false,
+  "conditional_surface_status": "exact-support for O_H axis selection if a future same-surface EW/Higgs action proves canonical O_H is a linear Z3-covariant radial tangent in span{S0,S1,S2} and supplies canonical kinetic/LSZ normalization",
+  "degree_one_radial_tangent_oh_theorem_passed": true,
+  "degree_one_tangent_unique": true,
+  "exact_next_action": "Use this theorem as the action-first O_H axis selector only after deriving the same-surface EW/Higgs action and canonical LSZ normalization; then run source-Higgs pole rows and Gram/FV/IR gates.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_taste_radial_source_as_canonical_oh": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_degree_one_premise_as_current_oh_proof": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_reduced_pilot_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "higher_degree_boundary": {
+    "basis": [
+      "E1=S0+S1+S2",
+      "E2=S0S1+S1S2+S2S0",
+      "E3=S0S1S2"
+    ],
+    "boundary": "Z3 symmetry over the full commuting trace-zero taste algebra is nonunique; the degree-one tangent premise is load-bearing.",
+    "z3_tracezero_invariant_rank": 3
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "degree_one_premise": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+    "fms_composite_oh": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_pole_row_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "taste_radial_selector": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
+    "two_source_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_gate": "open / canonical-Higgs operator certificate absent",
+    "degree_one_premise": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
+    "fms_composite_oh": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
+    "retained_route": "open / retained closure not yet reached",
+    "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "taste_radial_selector": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The theorem selects the degree-one tangent axis under a named future action premise, but the current surface lacks the action premise, canonical O_H certificate, C_ss/C_sH/C_HH pole rows, and retained-route approval.",
+  "radial_axis": {
+    "coefficient_basis": [
+      "S0",
+      "S1",
+      "S2"
+    ],
+    "coefficients_source_norm_matched": [
+      0.5773502691896258,
+      0.5773502691896258,
+      0.5773502691896258
+    ],
+    "hilbert_schmidt_norm": 2.8284271247461903,
+    "hilbert_schmidt_unit_norm": 1.0,
+    "hilbert_schmidt_unit_operator": "(S0 + S1 + S2) / sqrt(24)",
+    "operator": "(S0 + S1 + S2) / sqrt(3)",
+    "source_identity_overlap": 0.0,
+    "spectrum": [
+      -1.7320508075688776,
+      -0.5773502691896261,
+      -0.5773502691896258,
+      -0.5773502691896254,
+      0.5773502691896248,
+      0.5773502691896255,
+      0.577350269189626,
+      1.732050807568878
+    ],
+    "trace": 0.0
+  },
+  "same_surface_linear_tangent_premise_derived": false,
+  "source_higgs_pole_rows_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained closure",
+    "does not identify the current taste-radial source with canonical O_H on the actual surface",
+    "does not derive the same-surface EW/Higgs action or canonical kinetic/LSZ normalization",
+    "does not supply C_ss/C_sH/C_HH pole rows",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, or value recognition"
+  ],
+  "z3_action_errors": {
+    "U3_minus_I": 0.0,
+    "US0Udag_minus_S1": 0.0,
+    "US1Udag_minus_S2": 0.0,
+    "US2Udag_minus_S0": 0.0
+  }
+}

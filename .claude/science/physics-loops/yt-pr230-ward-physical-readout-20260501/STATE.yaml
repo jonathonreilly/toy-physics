@@ -16,11 +16,14 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-248-schur-complement-complete-monotonicity-gate
-blocks_completed: 247
-active_route: "PR230 Schur-complement complete-monotonicity/threshold gate"
-active_hard_residual: "The Schur C_x|s residual is a useful finite diagnostic but not scalar-LSZ authority.  The complete-monotonicity gate passes PASS=15 FAIL=0 and records chunks001-030 ready, C_x|s first-shell diff=-0.01129314476652999 with z=-459.08170655875074, but the packet has only two ordered q_hat^2 levels and no higher-shell complete-monotonicity, spectral threshold/measure, pole/residue/model-class, multivolume FV/IR, canonical O_H, or W/Z physical-response authority.  Aggregate gates remain open/support-only: assumption PASS=85 FAIL=0, campaign PASS=332 FAIL=0, assembly PASS=145 FAIL=0, retained PASS=299 FAIL=0, completion PASS=54 FAIL=0.  Chunks031-032 remain run-control/log state only until completed JSONs and completed-mode checkpoints exist.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-249-degree-one-radial-tangent-oh-theorem
+blocks_completed: 248
+active_route: "PR230 degree-one radial-tangent O_H theorem"
+active_hard_residual: "The degree-one radial-tangent theorem proves an exact action-first axis selector: if a future same-surface EW/Higgs action derives canonical O_H as a linear Z3-covariant radial tangent in span{S0,S1,S2}, the unique axis is (S0+S1+S2)/sqrt(3), matching the two-source taste-radial source axis.  The theorem passes PASS=14 FAIL=0 and is now consumed by aggregate gates: assumption PASS=86 FAIL=0, campaign PASS=333 FAIL=0, assembly PASS=146 FAIL=0, retained PASS=300 FAIL=0, completion PASS=55 FAIL=0.  The action/LSZ premise, canonical O_H certificate, C_ss/C_sH/C_HH pole rows, FV/IR/model-class authority, W/Z physical-response rows, and matching/running bridge remain absent.  Chunks031-032 remain run-control/log state only until completed JSONs and completed-mode checkpoints exist.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py"
+  - "docs/YT_PR230_DEGREE_ONE_RADIAL_TANGENT_OH_THEOREM_NOTE_2026-05-07.md"
+  - "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json"
   - "scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py"
   - "docs/YT_PR230_SCHUR_COMPLEMENT_COMPLETE_MONOTONICITY_GATE_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json"

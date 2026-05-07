@@ -1,5 +1,23 @@
 # Review History
 
+## 2026-05-07 - Degree-One Radial-Tangent O_H Theorem
+
+Review stance: exact support / axis-selection theorem only.
+
+- Added `scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py`,
+  its note, and its JSON certificate.
+- The theorem proves that, inside the degree-one span of the three Cl(3)/Z3
+  taste axes, Z3 covariance selects a unique radial line
+  `(S0+S1+S2)/sqrt(3)`.
+- Validation: degree-one theorem `PASS=14 FAIL=0`; assumption stress
+  `PASS=86 FAIL=0`; campaign status `PASS=333 FAIL=0`; full assembly
+  `PASS=146 FAIL=0`; retained-route `PASS=300 FAIL=0`; completion audit
+  `PASS=55 FAIL=0`.
+
+Disposition: exact support only.  The action/LSZ premise is still absent, so
+this cannot be used as canonical `O_H`, source-Higgs pole rows, W/Z response,
+scalar-LSZ authority, or retained/proposed-retained closure.
+
 ## 2026-05-07 - Schur-Complement Complete-Monotonicity Gate
 
 Review stance: bounded support plus exact boundary / no closure promotion.

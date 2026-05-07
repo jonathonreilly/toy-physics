@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T06:41:22.456336+00:00",
+  "generated_at": "2026-05-07T06:58:11.970460+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42008,6 +42008,16 @@
       "runner_path": "scripts/frontier_yt_pr230_degree_one_higgs_action_premise_gate.py",
       "title": "PR230 Degree-One Higgs-Action Premise Gate"
     },
+    "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07": {
+      "claim_id": "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact-support / degree-one radial-tangent `O_H` uniqueness theorem;",
+      "deps": [],
+      "note_hash": "4a7df58e73da3d4b67b1d769a3b9665cc8e843f1388fe48e62d79b05118acf27",
+      "path": "docs/YT_PR230_DEGREE_ONE_RADIAL_TANGENT_OH_THEOREM_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py",
+      "title": "PR230 Degree-One Radial-Tangent O_H Theorem"
+    },
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05": {
       "claim_id": "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
       "current_status": "support",
@@ -42733,7 +42743,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support plus exact boundary / `C_x|s` first-shell support is",
       "deps": [],
-      "note_hash": "58bb5327873a4c986a7ee55e634774369fdaa67848be0b6a337063fe7c9f4c3f",
+      "note_hash": "a3ed0106accac4bed48eac177acf1b8bb8314ba64ac18d1b851956466e687671",
       "path": "docs/YT_PR230_SCHUR_COMPLEMENT_COMPLETE_MONOTONICITY_GATE_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py",
       "title": "PR230 Schur-Complement Complete-Monotonicity Gate"
@@ -45747,6 +45757,7 @@
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
     "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
+    "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
     "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
@@ -45972,16 +45983,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1120,
-    "node_count": 2073,
-    "root_count": 1586,
-    "runners_with_path": 1568,
+    "leaf_count": 1121,
+    "node_count": 2074,
+    "root_count": 1587,
+    "runners_with_path": 1569,
     "status_counts": {
       "bounded": 569,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 448,
+      "support": 449,
       "unknown": 579
     }
   }

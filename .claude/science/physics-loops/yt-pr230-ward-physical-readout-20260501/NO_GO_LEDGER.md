@@ -1,5 +1,15 @@
 # No-Go Ledger
 
+## Degree-one radial-tangent uniqueness is not canonical `O_H` closure
+
+The 2026-05-07 degree-one radial-tangent theorem proves a useful exact
+selector only after a future same-surface EW/Higgs action supplies the
+degree-one radial-tangent premise.  It does not derive that action, canonical
+LSZ normalization, canonical `O_H`, source-Higgs pole rows, FV/IR authority,
+or matching/running.  Do not treat the two-source taste-radial axis,
+`(S0+S1+S2)/sqrt(3)`, Z3 covariance, or degree-one uniqueness as a current
+`O_H` identity or as retained/proposed-retained top-Yukawa evidence.
+
 ## First-shell `C_x|s` Schur support is not scalar-LSZ authority
 
 The 2026-05-07 Schur-complement complete-monotonicity gate shows that

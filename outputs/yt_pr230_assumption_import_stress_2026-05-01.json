@@ -7,6 +7,7 @@
     "canonical_higgs_operator_realization_gate": "open / canonical-Higgs operator realization gate not passed",
     "clean_source_higgs_math_tool_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
     "degree_one_higgs_action_premise_gate": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
+    "degree_one_radial_tangent_oh_theorem": "exact-support / degree-one radial-tangent O_H uniqueness theorem; same-surface action/LSZ premise and pole rows absent",
     "derived_bridge_rank_one_closure_attempt": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
     "det_positivity_bridge_intake_gate": "bounded-support / staggered-Wilson determinant positivity is useful positivity-preservation support, not PR230 y_t closure",
     "fh_lsz_complete_bernstein_inverse_diagnostic": "exact negative boundary / current polefit8x8 inverse proxy fails complete-Bernstein monotonicity",
@@ -84,7 +85,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 85,
+  "pass_count": 86,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

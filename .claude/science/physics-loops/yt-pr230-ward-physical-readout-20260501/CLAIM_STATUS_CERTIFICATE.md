@@ -1,5 +1,40 @@
 # Claim Status Certificate
 
+Degree-one radial-tangent `O_H` theorem checkpoint:
+
+```text
+actual_current_surface_status: exact-support / degree-one radial-tangent O_H uniqueness theorem; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=86 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=333 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=146 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=300 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=55 FAIL=0
+```
+
+The theorem proves a unique degree-one Z3-covariant radial line
+`(S0+S1+S2)/sqrt(3)` under the explicit future premise that canonical `O_H`
+is a linear same-surface radial tangent.  It does not derive that EW/Higgs
+action premise, canonical LSZ normalization, canonical `O_H`, or
+`C_ss/C_sH/C_HH` pole rows.  It is therefore axis-selection support only.
+The current branch still lacks strict scalar-LSZ/FV authority, strict Schur
+pole rows, W/Z response rows with strict identity/covariance/`g2`, matching
+and running, and any retained-route or campaign proposal authorization.
+
 Schur-complement complete-monotonicity gate checkpoint:
 
 ```text

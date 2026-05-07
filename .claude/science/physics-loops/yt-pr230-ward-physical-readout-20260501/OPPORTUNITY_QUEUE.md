@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-07 degree-one radial-tangent `O_H` theorem: the degree-one source-axis
+selection problem is now exactly solved under a future action premise.  If a
+same-surface EW/Higgs action derives canonical `O_H` as a linear
+Z3-covariant radial tangent in `span{S0,S1,S2}`, the unique axis is
+`(S0+S1+S2)/sqrt(3)`, matching the two-source taste-radial source.  This is
+support only because the current surface does not derive the EW/Higgs action,
+canonical LSZ normalization, canonical `O_H`, or `C_ss/C_sH/C_HH` pole rows.
+The highest-value positive artifact is now narrower: derive the same-surface
+EW/Higgs action plus canonical LSZ and run source-Higgs pole rows, or pivot to
+genuine same-source W/Z response rows with identity/covariance/strict
+non-observed `g2`.  Strict scalar-LSZ authority, higher-shell/multivolume
+Schur rows, and neutral primitive/irreducibility remain fallback routes.
+
 2026-05-07 Schur complete-monotonicity refresh: the current Schur
 `C_x|s` residual is a real finite diagnostic, not closure.  It passes the
 necessary first-shell Stieltjes direction on chunks001-030

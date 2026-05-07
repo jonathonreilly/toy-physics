@@ -40,6 +40,7 @@ PARENTS = {
     "source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
     "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+    "degree_one_radial_tangent_oh_theorem": "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
@@ -406,6 +407,32 @@ def main() -> int:
             "degree_one_filter_selects_e1"
         )
         is True
+    )
+    degree_one_radial_tangent_oh_theorem_support_not_closure = (
+        "degree-one radial-tangent O_H uniqueness theorem"
+        in parent_statuses["degree_one_radial_tangent_oh_theorem"]
+        and certs["degree_one_radial_tangent_oh_theorem"].get("proposal_allowed")
+        is False
+        and certs["degree_one_radial_tangent_oh_theorem"].get(
+            "degree_one_radial_tangent_oh_theorem_passed"
+        )
+        is True
+        and certs["degree_one_radial_tangent_oh_theorem"].get(
+            "degree_one_tangent_unique"
+        )
+        is True
+        and certs["degree_one_radial_tangent_oh_theorem"].get(
+            "same_surface_linear_tangent_premise_derived"
+        )
+        is False
+        and certs["degree_one_radial_tangent_oh_theorem"].get(
+            "canonical_oh_identity_derived"
+        )
+        is False
+        and certs["degree_one_radial_tangent_oh_theorem"].get(
+            "source_higgs_pole_rows_present"
+        )
+        is False
     )
     fms_post_degree_route_support_not_closure = (
         "FMS post-degree route rescore"
@@ -836,6 +863,7 @@ def main() -> int:
     report("source-higgs-pole-row-contract-open", source_higgs_pole_row_contract_open, parent_statuses["source_higgs_pole_row_acceptance_contract"])
     report("taste-radial-canonical-oh-selector-blocks-symmetry-shortcut", taste_radial_canonical_oh_selector_blocks_symmetry_shortcut, parent_statuses["taste_radial_canonical_oh_selector_gate"])
     report("degree-one-higgs-action-premise-not-derived", degree_one_higgs_action_premise_not_derived, parent_statuses["degree_one_higgs_action_premise_gate"])
+    report("degree-one-radial-tangent-oh-theorem-support-not-closure", degree_one_radial_tangent_oh_theorem_support_not_closure, parent_statuses["degree_one_radial_tangent_oh_theorem"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
     report("higgs-mass-source-action-bridge-not-closure", higgs_mass_source_action_bridge_not_closure, parent_statuses["higgs_mass_source_action_bridge"])
@@ -1003,6 +1031,7 @@ def main() -> int:
             "source_higgs_pole_row_contract_open": source_higgs_pole_row_contract_open,
             "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
             "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
+            "degree_one_radial_tangent_oh_theorem_support_not_closure": degree_one_radial_tangent_oh_theorem_support_not_closure,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
             "higgs_mass_source_action_bridge_not_closure": higgs_mass_source_action_bridge_not_closure,

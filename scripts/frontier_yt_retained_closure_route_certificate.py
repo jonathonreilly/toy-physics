@@ -184,6 +184,7 @@ def main() -> int:
         "pr230_two_source_taste_radial_chunk010_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk010_checkpoint_2026-05-06.json",
         "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
         "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+        "pr230_degree_one_radial_tangent_oh_theorem": "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json",
         "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
         "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
         "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
@@ -1789,6 +1790,36 @@ def main() -> int:
         is True
         and certificates["pr230_degree_one_higgs_action_premise_gate"].get(
             "degree_one_premise_authorized_on_current_surface"
+        )
+        is False
+    )
+    degree_one_radial_tangent_oh_theorem_support_not_closure = (
+        "degree-one radial-tangent O_H uniqueness theorem"
+        in certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "degree_one_radial_tangent_oh_theorem_passed"
+        )
+        is True
+        and certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "degree_one_tangent_unique"
+        )
+        is True
+        and certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "same_surface_linear_tangent_premise_derived"
+        )
+        is False
+        and certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "canonical_oh_identity_derived"
+        )
+        is False
+        and certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "source_higgs_pole_rows_present"
         )
         is False
     )
@@ -4577,6 +4608,13 @@ def main() -> int:
         ),
     )
     report(
+        "degree-one-radial-tangent-oh-theorem-support-not-closure",
+        degree_one_radial_tangent_oh_theorem_support_not_closure,
+        certificates["pr230_degree_one_radial_tangent_oh_theorem"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "fms-post-degree-route-rescore-support-not-closure",
         fms_post_degree_route_support_not_closure,
         certificates["pr230_fms_post_degree_route_rescore"].get(
@@ -6049,6 +6087,7 @@ def main() -> int:
         "source_higgs_pole_row_contract_open": source_higgs_pole_row_contract_open,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
+        "degree_one_radial_tangent_oh_theorem_support_not_closure": degree_one_radial_tangent_oh_theorem_support_not_closure,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,

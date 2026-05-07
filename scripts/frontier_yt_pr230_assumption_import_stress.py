@@ -209,6 +209,9 @@ def main() -> int:
         "degree_one_higgs_action_premise_gate": load(
             "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json"
         ),
+        "degree_one_radial_tangent_oh_theorem": load(
+            "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json"
+        ),
         "fms_post_degree_route_rescore": load(
             "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
         ),
@@ -396,6 +399,8 @@ def main() -> int:
         "strict rows absent on current surface",
         "Degree-one Higgs-action premise",
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
+        "Degree-one radial-tangent O_H theorem",
+        "action/LSZ premise and pole rows absent",
         "FMS post-degree route rescore",
         "FMS/lattice literature is route guidance only, not PR230 proof authority",
         "Same-source EW/Higgs action ansatz",
@@ -1272,6 +1277,29 @@ def main() -> int:
         and degree_one_premise.get("odd_parity_filter_nonunique") is True
         and degree_one_premise.get("production_bridge_absent") is True,
         degree_one_premise.get("actual_current_surface_status"),
+    )
+    degree_one_radial_tangent = certificates["degree_one_radial_tangent_oh_theorem"]
+    report(
+        "degree-one-radial-tangent-oh-theorem-support-not-closure",
+        "degree-one radial-tangent O_H uniqueness theorem"
+        in str(degree_one_radial_tangent.get("actual_current_surface_status"))
+        and degree_one_radial_tangent.get("proposal_allowed") is False
+        and degree_one_radial_tangent.get(
+            "degree_one_radial_tangent_oh_theorem_passed"
+        )
+        is True
+        and degree_one_radial_tangent.get("degree_one_tangent_unique") is True
+        and degree_one_radial_tangent.get(
+            "same_surface_linear_tangent_premise_derived"
+        )
+        is False
+        and degree_one_radial_tangent.get("canonical_oh_identity_derived") is False
+        and degree_one_radial_tangent.get("source_higgs_pole_rows_present") is False
+        and degree_one_radial_tangent.get("forbidden_firewall", {}).get(
+            "treated_taste_radial_source_as_canonical_oh"
+        )
+        is False,
+        degree_one_radial_tangent.get("actual_current_surface_status"),
     )
     fms_post_degree = certificates["fms_post_degree_route_rescore"]
     report(

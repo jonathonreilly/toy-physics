@@ -1,5 +1,34 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 degree-one radial-tangent `O_H` theorem:
+
+- Added `scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py`,
+  `docs/YT_PR230_DEGREE_ONE_RADIAL_TANGENT_OH_THEOREM_NOTE_2026-05-07.md`,
+  and
+  `outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json`.
+- The theorem proves the exact degree-one action-first axis selector.  On
+  `C^8=(C^2)^3`, with `S0=sigma_x I I`, `S1=I sigma_x I`, and
+  `S2=I I sigma_x`, the tensor-factor Z3 cycle maps
+  `S0 -> S1 -> S2 -> S0`.  A linear tangent
+  `T=a0 S0+a1 S1+a2 S2` is Z3-invariant only when `a0=a1=a2`, so the unique
+  degree-one radial line is `(S0+S1+S2)/sqrt(3)`.
+- Result: exact support only.  The theorem selects the two-source
+  taste-radial source axis only under a future same-surface EW/Higgs action
+  premise that canonical `O_H` is a degree-one radial tangent.  The current
+  branch still lacks that action premise, canonical LSZ normalization,
+  canonical `O_H`, source-Higgs pole rows, FV/IR/model-class authority, W/Z
+  physical-response rows, and matching/running.
+- Validation: degree-one theorem `PASS=14 FAIL=0`; assumption stress
+  `PASS=86 FAIL=0`; campaign status `PASS=333 FAIL=0`; full assembly
+  `PASS=146 FAIL=0`; retained-route `PASS=300 FAIL=0`; completion audit
+  `PASS=55 FAIL=0`.
+- Chunks031-032 remain active/run-control status only until completed root
+  JSONs and completed-mode checkpoints exist.
+- Claim boundary: no retained/proposed-retained closure is authorized.  The
+  next clean positive artifact remains a same-surface EW/Higgs action plus
+  canonical LSZ and `C_ss/C_sH/C_HH` pole rows, or a genuine W/Z physical
+  response bridge with strict identity/covariance/`g2` authority.
+
 Latest checkpoint, 2026-05-07 Schur-complement complete-monotonicity gate:
 
 - Added `scripts/frontier_yt_pr230_schur_complement_complete_monotonicity_gate.py`,
