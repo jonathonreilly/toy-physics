@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 234 |
+| **retained_bounded** | 235 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 788 |
+| unaudited | 787 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 389 |
+| `audited_clean` | 390 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 837 |
+| `unaudited` | 836 |
 
 | claim_type | count |
 |---|---:|
@@ -171,6 +171,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_neutrino_operator_selection_obstruction_note_2026-04-14` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
@@ -4684,6 +4685,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** With P_23 S P_23 = S^2, the exchange leaves I and S + S^2 invariant and flips the sign of i(S - S^2), so c_odd is the unique residual-Z2-odd local slot; Im[(K_01)^2] = 2 c_even c_odd.  _(class `A`)_
 - **chain closes:** True — The claim is a finite-dimensional algebraic decomposition once S, S^2, P23, K, and the local CP-kernel readout Im[(K01)^2] are specified. The note does not claim a nonzero activation law for c_odd, and the runner verifies the bounded local statements directly.
 - **rationale:** The load-bearing theorem is an exact algebraic identity on a specified Hermitian circulant coefficient space, not a numerical fit or a physical bridge to an external observable. The cached runner completes with PASS=10 FAIL=0 and checks the P23 generator exchange, even/odd decomposition, coefficient readout, CP-kernel algebra, and U_Z3 1+2 even-slice construction. Residual risk is only scope discipline: this clean verdict covers the local slot theorem and zero-odd-slice statement, not any future nonzero c_odd activation law or independent derivation of leptogenesis phenomenology.
+- **auditor confidence:** high
+
+### `dm_neutrino_operator_selection_obstruction_note_2026-04-14`
+
+- **Note:** [`DM_NEUTRINO_OPERATOR_SELECTION_OBSTRUCTION_NOTE_2026-04-14.md`](../../docs/DM_NEUTRINO_OPERATOR_SELECTION_OBSTRUCTION_NOTE_2026-04-14.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact operator-inequivalence obstruction between Gamma_1 and Xi_5 on the stated 3+1 completed 16-state Clifford/taste-cube realization; not a proof that operator selection remains open after later bridge authorities.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-dm-operator-selection-obstruction-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The runner establishes that Gamma_1 and Xi_5 are genuinely different operator surfaces: Gamma_1 is chiral off-diagonal, single-hop, and follows the adjacent-Hamming cascade, while Xi_5 is chiral diagonal, four-hop, and pairs opposite sectors.  _(class `C`)_
+- **chain closes:** True — The runner source and current output close the exact inequivalence claims with 10 passing matrix/rank/hop checks. The later audited-clean Dirac bridge changes the live physics interpretation but does not invalidate the older bounded obstruction fact that the two surfaces are inequivalent.
+- **rationale:** The audited scope is the exact obstruction: Gamma_1 and Xi_5 are not the same operator under chirality behavior, hop order, and orbit action. That chain closes from the supplied runner source and zero-fail live output, with the later audited-clean bridge only resolving which local chiral surface wins rather than erasing the inequivalence result. No hidden bridge is needed for the bounded obstruction statement itself.
 - **auditor confidence:** high
 
 ### `dm_neutrino_schur_suppression_theorem_note_2026-04-15`
