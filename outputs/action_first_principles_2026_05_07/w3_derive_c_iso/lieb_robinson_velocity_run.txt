@@ -1,0 +1,85 @@
+==============================================================================
+C-iso derivation attack — Lieb-Robinson and single-clock attack vectors
+==============================================================================
+
+Attack vector 1: Lieb-Robinson velocity v_LR = 2 e r J
+------------------------------------------------------------
+  At canonical g^2 = 1, a_s = 1:
+    J (proxy operator norm)     = 1.0000
+    v_LR = 2 e r J              = 5.4366  (units: a_s / time)
+    a_tau,LR = a_s / v_LR       = 0.1839
+    xi,LR = a_s / a_tau,LR      = 5.4366
+
+  Conclusion (Attack 1): v_LR is NOT a dimensionless 1.
+  v_LR depends on the operator-norm bound J, which is itself a
+  function of g^2 and the basis truncation. There is no canonical
+  value of v_LR = 1 derivable from Cl(3) primitives without further
+  unit choices. Hence a_tau = a_s/v_LR != a_s in general units.
+
+  Sweep over g^2 to see scaling:
+         g^2       J(g^2)         v_LR   a_tau,LR/a_s
+        0.10      10.0000      54.3656       0.018394
+        0.50       2.0000      10.8731       0.091970
+        1.00       1.0000       5.4366       0.183940
+        2.00       1.3333       7.2488       0.137955
+        4.00       2.6667      14.4975       0.068977
+
+  v_LR is g^2-dependent. No fixed dimensionless value emerges.
+
+
+Attack vector 2: Single-clock codimension-1 evolution
+------------------------------------------------------------
+
+  Per AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE:
+  - The reconstructed transfer matrix T : H_phys -> H_phys is
+    obtained from Stone's theorem on the RP-reconstructed Hamiltonian.
+  - For ANY chosen a_tau > 0, the iteration U_n = T^n extends to
+    a strongly-continuous unitary group U(t) = exp(-itH).
+  - The single-clock structure does NOT pin a_tau: it pins
+    'there is exactly one time generator H', not 'a_tau equals a_s'.
+
+  The mathematical content is:
+    For each a_tau > 0, T(a_tau) = exp(-a_tau H) is a valid transfer
+    matrix on the same H_phys. The Hamiltonian H has its own
+    intrinsic scale (set by g^2, a_s, J). a_tau is a free parameter
+    of the discretization, NOT determined by single-clock structure.
+
+  Conclusion (Attack 2): Single-clock fixes the *form* of evolution
+  (one-parameter unitary group), but not the *step* a_tau.
+
+
+Attack vectors 5/6 sub-check: heat-kernel-vs-Wilson at canonical xi=1
+------------------------------------------------------------
+
+      xi        s_t   O(s_t) error
+     1.0     0.5000         0.5000
+     2.0     0.2500         0.2500
+     4.0     0.1250         0.1250
+     8.0     0.0625         0.0625
+
+  At xi = 1 (Convention C-iso target), s_t = 0.5; heat-kernel
+  vs Wilson temporal-plaquette weight differs at O(0.5) = 50% relative
+  to leading Wilson form, with verified ~7-9% systematic error in
+  numerical comparison (per DICTIONARY_DERIVED_THEOREM Corollary T-AT.3).
+
+
+Synthesis
+------------------------------------------------------------
+
+Convention C-iso has two parts:
+  (i)  a_tau = a_s (time-discretization at the spatial scale).
+  (ii) Wilson-replace heat-kernel temporal plaquettes.
+
+From the analysis above:
+  (i)  a_tau = a_s is NOT derivable from Cl(3) primitives:
+       - v_LR is g^2-dependent (Attack 1 fails).
+       - Single-clock fixes form but not step (Attack 2 fails).
+  (ii) Wilson-replace at xi=1 has explicit O(g^2) ~ 7-9% error;
+       this is bounded but NOT derivable as exact identity.
+
+Result: C-iso remains a genuinely admitted convention. The two
+       components are bounded by O(g^2) but not eliminated.
+
+==============================================================================
+All checks completed.
+==============================================================================
