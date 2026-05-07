@@ -12485,7 +12485,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 17,
+        "C": 30,
         "D": 0
       },
       "decoration_candidate": false,
@@ -13547,6 +13547,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_s3_time_bilinear_tensor_primitive.py"
+    },
+    "s3_time_constructed_support_tensor_primitive_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py"
     },
     "s3_time_observable_hessian_route_note": {
       "assert_count": 1,
@@ -30541,7 +30553,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 17,
+        "C": 30,
         "D": 0
       },
       "decoration_candidate": false,
@@ -31525,6 +31537,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_s3_time_constructed_support_tensor_primitive.py": {
+      "assert_count": 1,
+      "claims": [
+        "s3_time_constructed_support_tensor_primitive_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_s3_time_spacetime_tensor_primitive.py": {
@@ -39388,12 +39415,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 586,
+      "C": 587,
       "D": 212,
       "none": 427
     },
-    "runners_classified": 1406,
-    "runners_with_C": 697,
+    "runners_classified": 1407,
+    "runners_with_C": 698,
     "runners_with_D": 349
   }
 }

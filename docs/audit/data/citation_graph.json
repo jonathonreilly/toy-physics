@@ -11861,6 +11861,10 @@
       "to": "pmns_uniform_scalar_deformation_boundary_note"
     },
     {
+      "from": "pmns_sole_axiom_hw1_source_transfer_boundary_note",
+      "to": "pmns_lower_level_end_to_end_closure_note"
+    },
+    {
       "from": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
       "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     },
@@ -12639,6 +12643,10 @@
     {
       "from": "s3_time_bilinear_tensor_primitive_note",
       "to": "oh_schur_boundary_action_note"
+    },
+    {
+      "from": "s3_time_constructed_support_tensor_primitive_note",
+      "to": "tensor_support_center_excess_law_note"
     },
     {
       "from": "s3_time_observable_hessian_route_note",
@@ -45309,11 +45317,13 @@
     },
     "pmns_sole_axiom_hw1_source_transfer_boundary_note": {
       "claim_id": "pmns_sole_axiom_hw1_source_transfer_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "a7a5d5a579aa98fe8ff092b63d394e617b4f607b0da20c8a8536aa1f1b81a6ed",
+      "deps": [
+        "pmns_lower_level_end_to_end_closure_note"
+      ],
+      "note_hash": "cfcc63f56611722267629cbca08a4f1f674c92e7207111f2589b2c4345d3d726",
       "path": "docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py",
       "title": "PMNS Sole-Axiom `hw=1` Source/Transfer Boundary"
@@ -49237,14 +49247,16 @@
     },
     "s3_time_constructed_support_tensor_primitive_note": {
       "claim_id": "s3_time_constructed_support_tensor_primitive_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "216afda747abab954d95dbfbf216dc51a37e43b94b63ee43b3f731779f09f07a",
+      "deps": [
+        "tensor_support_center_excess_law_note"
+      ],
+      "note_hash": "ef9dd087a811fb3c3950cd8ea361ead1d1c467412dbef6c9b58372e09a752c80",
       "path": "docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
-      "title": "Constructed Route-2 Support Tensor Primitive: Response Jacobian of the Bounded Prototype"
+      "runner_path": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py",
+      "title": "Constructed Route-2 Support Tensor Primitive: Bounded Response Jacobian"
     },
     "s3_time_observable_hessian_route_note": {
       "claim_id": "s3_time_observable_hessian_route_note",
@@ -56713,7 +56725,6 @@
     "pmns_lower_level_end_to_end_closure_note",
     "pmns_oriented_cycle_channel_value_law_note",
     "pmns_selector_three_identity_support_note_2026-04-21",
-    "pmns_sole_axiom_hw1_source_transfer_boundary_note",
     "pmns_transfer_operator_dominant_mode_note",
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_exhaustive_uniqueness_note",
@@ -56750,7 +56761,6 @@
     "s3_boundary_link_theorem_note",
     "s3_cap_uniqueness_note",
     "s3_mass_matrix_no_go_note",
-    "s3_time_constructed_support_tensor_primitive_note",
     "s3_time_primitive_chain_note",
     "s3_time_tensor_build_memo",
     "s3_time_tensor_primitive_prototype_note",
@@ -56981,10 +56991,10 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 95,
+      "bounded_theorem": 97,
       "meta": 10,
       "no_go": 14,
-      "none": 1705,
+      "none": 1703,
       "open_gate": 11,
       "positive_theorem": 89
     },
@@ -56996,10 +57006,10 @@
       "open_gate": 112,
       "positive_theorem": 621
     },
-    "edge_count": 6777,
+    "edge_count": 6779,
     "leaf_count": 543,
     "node_count": 1924,
-    "root_count": 857,
-    "runners_with_path": 1502
+    "root_count": 855,
+    "runners_with_path": 1503
   }
 }

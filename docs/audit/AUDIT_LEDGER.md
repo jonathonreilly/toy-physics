@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 6 |
-| unaudited | 830 |
+| unaudited | 832 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 27 |
+| ~~audited_renaming~~ | 25 |
 | ~~audited_conditional~~ | 440 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 27 |
-| `unaudited` | 879 |
+| `audited_renaming` | 25 |
+| `unaudited` | 881 |
 
 | claim_type | count |
 |---|---:|
@@ -67,8 +67,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1406
-- runners with (C) first-principles compute hits: 697
+- runners classified: 1407
+- runners with (C) first-principles compute hits: 698
 - runners with (D) external comparator hits: 349
 - decoration candidates (no C, no D): 120
 
@@ -1035,12 +1035,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5.5 | E | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `s3_time_bilinear_tensor_action_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_information_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -10060,19 +10058,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** No runner stdout or source is available, so the code cannot be credited as a first-principles computation. The note itself explicitly labels the determinant and product equations as proposed selector laws and lists their retained derivations as open promotion requirements. The reported solution and NuFit agreement may be useful support, but the conclusion depends on open premises inside the restricted packet.
 - **auditor confidence:** high
 
-### `pmns_sole_axiom_hw1_source_transfer_boundary_note`
-
-- **Note:** [`PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`](../../docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the restricted claim that the canonical hw=1 source/transfer construction, as implemented, produces basis-source columns, a cycle support frame, and is rejected by the retained PMNS closure stack.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-pmns_sole_axiom_hw1_sour-024`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The sole-axiom active/passive blocks are therefore exactly (I3, I3), so source insertion and graph-first transfer only produce the trivial free pack.  _(class `E`)_
-- **chain closes:** False — The runner hard-codes the active and passive blocks as I3 and imports the graph/closure machinery, rather than deriving those blocks from Cl(3) on Z^3 inside the restricted packet. The algebraic consequences of that definition are checked, but the advertised sole-axiom derivation is missing.
-- **rationale:** The provided runner performs mostly algebraic consistency checks after defining the canonical pack with active_block = I3 and passive_block = I3. It does not instantiate the Clifford/lattice axiom or compute the identity resolvent result from first principles, and key support/closure functions are imported without their sources. The bounded conclusion is true for the defined trivial pack, but the load-bearing claim that this pack is derived from the sole axiom is not closed by the restricted packet.
-- **auditor confidence:** high
-
 ### `pmns_transfer_operator_dominant_mode_note`
 
 - **Note:** [`PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md`](../../docs/PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md)
@@ -10679,19 +10664,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md`
   - `S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md`
-- **auditor confidence:** high
-
-### `s3_time_constructed_support_tensor_primitive_note`
-
-- **Note:** [`S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md`](../../docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the note's claim that Xi_R^(0), defined as the response Jacobian of the bounded prototype with respect to delta_A1, is a nonzero bounded tensor primitive compatible with Theta_R^(0).
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-s3_time_constructed_supp-032`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Define the bounded support-response tensor primitive candidate Xi_R^(0) := d Theta_R^(0) / d delta_A1 on the microscopic support block A1 x {E_x, T1x}.  _(class `E`)_
-- **chain closes:** False — The central object is introduced by definition, and the note imports the bounded prototype, exact support scalar, projective A1 support law, no-go results, affine law, and endpoint normalization without cited retained inputs. The nonzero Jacobian is not derived from the restricted packet because delta_A1 endpoint values and the asserted affine dependence are not supplied.
-- **rationale:** The load-bearing step is a definition of a new symbol as a derivative of an already named bounded prototype with respect to an already named support scalar. No runner or cited authority is provided, and the note does not perform a first-principles computation or an algebraic closure from independent retained inputs. The affine compatibility and nonzero-direction claims rely on imported structure and endpoint context absent from the restricted packet, so the presented chain does not close as a derivation.
 - **auditor confidence:** high
 
 ### `s3_time_primitive_chain_note`

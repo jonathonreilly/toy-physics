@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Constructed Route-2 support tensor primitive candidate.
 
-This runner defines the smallest new tensor-valued object that survives the
-current scalar/rank-one support no-go without reusing the blocked mixed
-support block:
+This runner computes the endpoint-fixed bounded affine response object that
+does not use a mixed support block:
 
     Xi_R^(0) = d Theta_R^(0) / d delta_A1
 
@@ -22,6 +21,7 @@ from _frontier_loader import load_frontier
 import numpy as np
 
 
+AUDIT_TIMEOUT_SEC = 180
 R_TEST = [0.25, 0.5, 0.75, 1.0, 1.5, 2.0]
 
 
@@ -42,6 +42,11 @@ def record(name: str, ok: bool, detail: str, status: str = "BOUNDED") -> None:
     print(f"[{status}] {tag}: {name}")
     if detail:
         print(f"    {detail}")
+
+
+def pair_text(values: np.ndarray | tuple[float, float]) -> str:
+    a, b = float(values[0]), float(values[1])
+    return f"({a:+.12e}, {b:+.12e})"
 
 
 same = load_frontier("same_source_metric", "frontier_same_source_metric_ansatz_scan.py")
@@ -66,7 +71,8 @@ def main() -> int:
     theta_e0 = np.array(center.gamma_pair(e0, e_x, t1x), dtype=float)
     theta_s = np.array(center.gamma_pair(s_unit, e_x, t1x), dtype=float)
 
-    xi = (theta_e0 - theta_s) / (delta_e0 - delta_s)
+    delta_gap = float(delta_e0 - delta_s)
+    xi = (theta_e0 - theta_s) / delta_gap
     theta_shell = theta_s.copy()
 
     print("Exact support scalar:")
@@ -74,11 +80,20 @@ def main() -> int:
     print(f"  delta_A1(s/sqrt(6)) = {delta_s:.12e}")
     print()
     print("Bounded prototype endpoint values:")
-    print(f"  Theta_R^(0)(e0)        = ({theta_e0[0]:+.12e}, {theta_e0[1]:+.12e})")
-    print(f"  Theta_R^(0)(s/sqrt(6)) = ({theta_s[0]:+.12e}, {theta_s[1]:+.12e})")
+    print(f"  Theta_R^(0)(e0)        = {pair_text(theta_e0)}")
+    print(f"  Theta_R^(0)(s/sqrt(6)) = {pair_text(theta_s)}")
     print()
     print("Constructed support-response Jacobian:")
-    print(f"  Xi_R^(0) = d Theta_R^(0) / d delta_A1 = ({xi[0]:+.12e}, {xi[1]:+.12e})")
+    print(
+        "  Xi_R^(0) = "
+        "(Theta_R^(0)(e0) - Theta_R^(0)(s/sqrt(6))) / "
+        "(delta_A1(e0) - delta_A1(s/sqrt(6)))"
+    )
+    print(f"             = {pair_text(xi)}")
+    print(f"  endpoint denominator = {delta_gap:.12e}")
+
+    theta_e0_from_xi = theta_shell + xi * delta_gap
+    theta_s_from_xi = theta_shell + xi * float(delta_s)
 
     max_canon_err_e = 0.0
     max_canon_err_t = 0.0
@@ -118,9 +133,24 @@ def main() -> int:
     )
 
     record(
+        "the endpoint support gap is nonzero and fixed by the exact support scalar",
+        abs(delta_gap - (1.0 / 6.0)) < 1e-12,
+        f"delta_gap={delta_gap:.12e}",
+        status="EXACT",
+    )
+    record(
+        "the endpoint finite-difference formula reconstructs both bounded endpoint values",
+        float(np.max(np.abs(theta_e0_from_xi - theta_e0))) < 1e-15
+        and float(np.max(np.abs(theta_s_from_xi - theta_s))) < 1e-15,
+        (
+            f"center residual={float(np.max(np.abs(theta_e0_from_xi - theta_e0))):.3e}, "
+            f"shell residual={float(np.max(np.abs(theta_s_from_xi - theta_s))):.3e}"
+        ),
+    )
+    record(
         "the constructed support-response Jacobian is nonzero",
         float(np.linalg.norm(xi)) > 0.0,
-        f"Xi_R^(0)={tuple(xi)}",
+        f"Xi_R^(0)={pair_text(xi)}, norm={float(np.linalg.norm(xi)):.12e}",
     )
     record(
         "the constructed primitive has two bright channels and no hidden mixed support block",
@@ -140,17 +170,17 @@ def main() -> int:
     record(
         "the bounded primitive is compatible with the existing Theta_R^(0) staging object",
         np.all(np.isfinite(xi)) and np.all(np.isfinite(theta_shell)),
-        f"Theta_shell={tuple(theta_shell)}, Xi_R^(0)={tuple(xi)}",
+        f"Theta_shell={pair_text(theta_shell)}, Xi_R^(0)={pair_text(xi)}",
     )
 
     print()
     print("Verdict:")
     print(
-        "The smallest new tensor-valued object that survives the scalar/rank-one "
-        "support no-go is the response Jacobian of the bounded prototype, "
-        "Xi_R^(0) = d Theta_R^(0) / d delta_A1. It is nonzero, structurally clean, "
-        "and compatible with the current Theta_R^(0) staging law, but it is still "
-        "bounded rather than an exact tensor observable."
+        "The endpoint-fixed affine response Jacobian of the bounded prototype, "
+        "Xi_R^(0) = d Theta_R^(0) / d delta_A1, is nonzero and compatible with "
+        "the current Theta_R^(0) staging law. This runner checks that bounded "
+        "response object; it does not prove an exact tensor observable or a "
+        "first-principles endpoint coefficient theorem."
     )
 
     print("\n" + "=" * 78)
