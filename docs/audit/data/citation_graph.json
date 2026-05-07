@@ -8493,6 +8493,42 @@
       "to": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01"
     },
     {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_canonical_higgs_repo_authority_audit_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_sm_one_higgs_oh_import_boundary_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "to": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07"
+    },
+    {
       "from": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
       "to": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07"
     },
@@ -18593,7 +18629,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T12:37:59.985844+00:00",
+  "generated_at": "2026-05-07T12:48:14.077370+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42052,6 +42088,26 @@
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
     },
+    "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07": {
+      "claim_id": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
+      "current_status": "support",
+      "current_status_raw": "exact negative boundary / canonical `O_H` accepted-action root not",
+      "deps": [
+        "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03",
+        "yt_canonical_higgs_repo_authority_audit_note_2026-05-03",
+        "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
+        "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
+        "yt_sm_one_higgs_oh_import_boundary_note_2026-05-03",
+        "yt_pr230_one_higgs_taste_axis_completeness_attempt_note_2026-05-06",
+        "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
+        "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
+        "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07"
+      ],
+      "note_hash": "8f402add01bfa79eac7c61b6b1e6d1d96280e80959519c43f15bdf0aa116861b",
+      "path": "docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py",
+      "title": "PR230 Canonical O_H / Accepted-Action Stretch Attempt"
+    },
     "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07": {
       "claim_id": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
       "current_status": "support",
@@ -46238,17 +46294,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4648,
-    "leaf_count": 1123,
-    "node_count": 2090,
+    "edge_count": 4657,
+    "leaf_count": 1118,
+    "node_count": 2091,
     "root_count": 1601,
-    "runners_with_path": 1578,
+    "runners_with_path": 1579,
     "status_counts": {
       "bounded": 578,
       "open": 104,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 452,
+      "support": 453,
       "unknown": 582
     }
   }

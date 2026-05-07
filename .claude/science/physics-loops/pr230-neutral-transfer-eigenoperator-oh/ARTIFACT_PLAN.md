@@ -38,3 +38,22 @@ or an equivalent non-shortcut same-surface accepted EW-Higgs action
 certificate.  If that lands, the next production targets are
 `C_ss/C_sH/C_HH(t)` source-Higgs rows or W/Z response/covariance/strict-`g2`
 rows on the accepted action.
+
+Block03 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py` | Created; PASS=11 FAIL=0 |
+| Certificate | `outputs/yt_pr230_canonical_oh_accepted_action_stretch_attempt_2026-05-07.json` | Created |
+| Stretch/boundary note | `docs/YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT_NOTE_2026-05-07.md` | Created |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block03:
+
+```text
+outputs/yt_pr230_wz_same_source_sector_overlap_or_radial_action_certificate_2026-05-07.json
+```
+
+or a production W/Z correlator mass-fit path certificate.  This is an
+action-root target only; physical W/Z response still needs response rows,
+same-source top rows, matched covariance, and strict non-observed `g2`.

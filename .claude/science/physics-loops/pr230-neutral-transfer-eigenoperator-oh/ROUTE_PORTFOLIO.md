@@ -76,3 +76,43 @@
    - Result: the strict common vertex is a non-shortcut same-surface canonical
      `O_H` / accepted EW-Higgs action certificate.  After that vertex lands,
      the two routes fork into separate production row obligations.
+
+## Selected Block03 Route
+
+**Canonical `O_H` / accepted-action root stretch attempt**
+
+- Type: stretch-attempt exact negative boundary.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: tests whether the current PR230 support stack can be
+  recomposed into the shared canonical `O_H` / accepted EW-Higgs action root.
+  It blocks that composition shortcut and pivots the next queue item toward a
+  W/Z accepted-action root vertex.
+- Artifact: `YT_PR230_CANONICAL_OH_ACCEPTED_ACTION_STRETCH_ATTEMPT`.
+
+## Block03 Fan-Out Synthesis
+
+1. **Schema-completion frame**
+   - Result: blocked.  The canonical-Higgs operator schema exists, but the
+     candidate certificate is absent and the repo authority audit finds no
+     hidden same-surface `O_H` proof.
+
+2. **Degree-one radial-tangent frame**
+   - Result: support only.  The taste-radial source is the unique degree-one
+     Z3 line only under the missing EW/Higgs action premise.
+
+3. **SM/EW one-Higgs import frame**
+   - Result: exact negative boundary.  One-Higgs and EW gauge-mass theorems
+     assume canonical `H` after supplied; they do not identify a PR230
+     taste/source operator or kill orthogonal neutral top couplings.
+
+4. **Source-Higgs pole-promotion frame**
+   - Result: support only.  `C_sx/C_xx` cannot be promoted to `C_sH/C_HH`
+     before `x=canonical O_H`, LSZ/metric, pole, FV/IR, and Gram-purity
+     authority exist.
+
+5. **W/Z accepted-action frame**
+   - Result: root cut still open.  The next non-shallow move is an
+     action-root attack on current same-source sector-overlap/adopted radial
+     action or production W/Z correlator mass-fit path, not a physical
+     response claim.

@@ -26,3 +26,18 @@ transfer/action datum is independent of the current Z3/eigenoperator facts.
 
 The result is an exact negative boundary and a sharper future artifact target,
 not campaign completion.
+
+Block02 pivot:
+
+```text
+The shared source-Higgs/W/Z root is a non-shortcut same-surface canonical
+O_H / accepted EW-Higgs action certificate.
+```
+
+Block03 answer:
+
+```text
+No current support-stack composition supplies that root.  The next coherent
+campaign move is a W/Z accepted-action root attack, not a physical-response
+claim.
+```

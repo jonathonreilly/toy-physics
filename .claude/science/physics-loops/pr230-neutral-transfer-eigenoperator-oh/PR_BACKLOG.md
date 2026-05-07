@@ -12,6 +12,11 @@ The science packet is already present on the PR #230 head as commit
 block02 review PR should be opened unless PR #230 integration fails and the
 packet needs separate review.
 
+Block03 follows the same direct PR #230 landing path.  It adds a branch-local
+stretch-attempt boundary for the canonical `O_H` / accepted-action root and
+pivots the next exact action toward W/Z action-root work.  No standalone
+block03 review PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash
