@@ -161,6 +161,21 @@ The SU(5) GUT consistency holds in both conventions.
 - The retention of LHCM (still gated on SM-definition convention reclassification).
 - Promotion of any sister theorem.
 
+## 5a. SU(5) embedding admission status (2026-05-07 update)
+
+The §2 "admitted SU(5) GUT normalization" line (`Y_GUT = √(3/5)·Y_SM`) is
+addressed by the bounded-theorem follow-on
+[`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md)
+(PR [#655](https://github.com/jonathonreilly/cl3-lattice-framework/pull/655)).
+That note derives the SU(5) embedding consistency and the
+`Y_GUT = √(3/5)·Y_min` rescaling under the standard SU(5) Killing-form
+normalization convention `Tr[T_a T_b]_5 = (1/2) δ_{ab}`. After that PR
+lands and is independently audited, this note's "admitted SU(5) GUT
+normalization" item moves to a derived dependency rather than a free
+admission. This subsection does not change the present note's claim
+status; it records the cross-reference for the audit graph and signals
+the load-bearing relationship to PR #655.
+
 ## 6. Status
 
 ```yaml
@@ -170,6 +185,10 @@ proposal_allowed_reason: |
   Conditional on LHCM atlas (modulo SM-definition conventions) and
   STANDARD_MODEL_HYPERCHARGE_UNIQUENESS (proposed_retained, unaudited).
   Convention A vs B distinction is itself an admitted convention.
+  SU(5) GUT normalization Y_GUT = √(3/5)·Y_SM is now derived by
+  SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md
+  (PR #655, bounded_theorem, awaiting audit) under SU(5) Killing-form
+  normalization convention.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -179,4 +198,5 @@ bare_retained_allowed: false
 - LHCM atlas: PR [#262](https://github.com/jonathonreilly/cl3-lattice-framework/pull/262) (cycle 6)
 - Sister: [`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md) (audited_renaming)
 - Sister: [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) (audited_renaming)
+- Embedding-consistency derivation: [`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md) (PR [#655](https://github.com/jonathonreilly/cl3-lattice-framework/pull/655), bounded_theorem, awaiting audit)
 - Cycles 1-15 prior PRs.
