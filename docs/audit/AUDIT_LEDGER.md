@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 233 |
+| **retained_bounded** | 234 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 789 |
+| unaudited | 788 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 388 |
+| `audited_clean` | 389 |
 | `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 838 |
+| `unaudited` | 837 |
 
 | claim_type | count |
 |---|---:|
@@ -452,6 +452,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `teleportation_resource_fidelity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | C | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -13049,6 +13050,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: The note's closure claim depends load-bearingly on the imported native apparatus/transducer model and on finite proxy gates for routing, durability, thermal stability, and ledger commutation. Why this blocks: A conditional upstream apparatus plus discrete/proxy checks do not close a retained theorem or standalone physical bridge; the runner verifies internal consistency of the candidate stack rather than deriving the Bell transducer, readout, hardware carrier, bath model, or conservation theorem. Repair target: Declare the native apparatus row as a dependency and close it cleanly, then replace the eikonal carrier, pointer bath, and ledger split with retained derivations or narrow the claim to an explicit finite-model planning gate. Claim boundary until fixed: It may be cited as a planning-level open gate showing that the proposed finite record-sector stack passes the listed local routing, bounded error, no-early-decode, correction-fidelity, and algebraic ledger checks under ideal imported premises.
 - **open / conditional deps cited:**
   - `teleportation_native_record_apparatus_note`
+- **auditor confidence:** high
+
+### `teleportation_resource_fidelity_note`
+
+- **Note:** [`TELEPORTATION_RESOURCE_FIDELITY_NOTE.md`](../../docs/TELEPORTATION_RESOURCE_FIDELITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Supplied-density-matrix, ordinary qubit-state teleportation under an ideal fixed Bell measurement, ideal two-bit classical record, and fixed Bob-side Pauli correction convention; no optimization over local frames or measurements and no claim about preparation dynamics, matter/mass/charge/energy transport, field-theoretic communication, or FTL signaling.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-gpt-5.5-xhigh-teleportation-resource-fidelity-audit-1-2026-05-07`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For an arbitrary supplied physical two-qubit resource density matrix rho_RB, the fixed Bell-basis measurement with fixed Bob Pauli correction induces a Pauli channel whose weights are the Bell-basis diagonal overlaps p_g=<beta_g|rho_RB|beta_g>; hence the identity entanglement fidelity is p_00=<Phi+|rho_RB|Phi+> and the qubit average fidelity is F_avg=(1+2 p_00)/3, giving the fixed-protocol threshold p_00>1/2 for beating 2/3.  _(class `C`)_
+- **chain closes:** True — Within the stated fixed protocol, the note supplies the algebraic channel reduction and the completed runner independently implements the same three-qubit protocol, exact Choi average fidelity, threshold brackets, no-record Bob diagnostics, and trace-preservation checks. The reported formula error is numerical roundoff scale and all acceptance gates pass. The broader native resource-preparation and non-ideal operational questions are explicitly outside scope rather than hidden premises for this bounded theorem.
+- **rationale:** The claim is narrowly bounded and does not overstate beyond the fixed supplied-resource protocol. The load-bearing formula and threshold follow from the stated teleportation-channel derivation and are corroborated by the completed runner across representative resource families and arbitrary random density matrices. No external comparator, tuned numerical match, unsupported physical identification, or unclosed dependency is needed for the scoped conclusion.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
