@@ -210,6 +210,18 @@ def main() -> int:
         )
         is False
     )
+    post_fms_current_prefix_loaded = (
+        parents["post_fms_source_overlap_necessity"].get("two_source_package_current")
+        is True
+        and parents["post_fms_source_overlap_necessity"].get(
+            "two_source_ready_chunks"
+        )
+        == 52
+        and parents["post_fms_source_overlap_necessity"].get(
+            "two_source_active_chunk_ids_excluded"
+        )
+        == [53, 54]
+    )
     aggregate_still_open = (
         parents["retained_route"].get("proposal_allowed") is False
         and parents["campaign_status"].get("proposal_allowed") is False
@@ -243,6 +255,14 @@ def main() -> int:
     report("gram-postprocessor-awaits-production", postprocessor_waits, status(parents["source_higgs_gram_postprocess"]))
     report("source-only-kappa-closure-blocked", source_only_blocked, status(parents["source_functional_lsz_identifiability"]))
     report("fms-and-csx-proxy-overlap-blocked", fms_proxy_blocked, status(parents["post_fms_source_overlap_necessity"]))
+    report(
+        "post-fms-current-prefix-loaded",
+        post_fms_current_prefix_loaded,
+        (
+            f"ready={parents['post_fms_source_overlap_necessity'].get('two_source_ready_chunks')}; "
+            f"active={parents['post_fms_source_overlap_necessity'].get('two_source_active_chunk_ids_excluded')}"
+        ),
+    )
     report("aggregate-route-still-open", aggregate_still_open, "retained/campaign proposal_allowed=false")
     report("forbidden-firewall-clean", firewall_clean, str(firewall))
 
@@ -258,6 +278,7 @@ def main() -> int:
         and postprocessor_waits
         and source_only_blocked
         and fms_proxy_blocked
+        and post_fms_current_prefix_loaded
         and aggregate_still_open
         and firewall_clean
     )
@@ -294,6 +315,13 @@ def main() -> int:
             "gram_postprocessor_waits": postprocessor_waits,
             "source_only_identifiability_blocked": source_only_blocked,
             "fms_c_hh_and_c_sx_proxy_blocked": fms_proxy_blocked,
+            "post_fms_current_prefix_loaded": post_fms_current_prefix_loaded,
+            "two_source_ready_chunks": parents["post_fms_source_overlap_necessity"].get(
+                "two_source_ready_chunks"
+            ),
+            "two_source_active_chunk_ids_excluded": parents[
+                "post_fms_source_overlap_necessity"
+            ].get("two_source_active_chunk_ids_excluded"),
             "aggregate_retained_route_open": aggregate_still_open,
         },
         "parent_certificates": PARENTS,

@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T18:27:53.403044+00:00",
+  "generated_at": "2026-05-07T18:33:10.989428+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43258,7 +43258,7 @@
       "current_status": "support",
       "current_status_raw": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
       "deps": [],
-      "note_hash": "9c46a7fac9f3883fdb6cc0bde6748094776f5f6c4ce0b7762dcd726e5cd2e5df",
+      "note_hash": "ae95cdf14d63042d6ef9f10a3f2f693596cbab774bd31492b1dac98521f2c099",
       "path": "docs/YT_PR230_SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py",
       "title": "PR230 Source-Higgs Overlap/Kappa Contract"

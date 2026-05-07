@@ -1,5 +1,38 @@
 # Claim Status Certificate
 
+Source-Higgs overlap/kappa current-prefix refresh:
+
+```text
+actual_current_surface_status: exact support / source-Higgs overlap-kappa row contract refreshed to current chunks001-052 boundary; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The refreshed contract derives the exact future row object
+`kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` and verifies that the
+post-FMS proxy-overlap boundary is current at chunks001-052 with active
+chunks053-054 excluded.  The current branch still lacks canonical `O_H`,
+production `C_sH/C_HH` pole rows, source-Higgs Gram purity, and proposal
+authorization.
+
 Post-FMS source-overlap necessity current-prefix refresh:
 
 ```text

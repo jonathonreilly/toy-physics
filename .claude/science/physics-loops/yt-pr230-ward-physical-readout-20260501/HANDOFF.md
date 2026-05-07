@@ -1,5 +1,23 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 source-Higgs overlap/kappa current-prefix refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py`,
+  `docs/YT_PR230_SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT_NOTE_2026-05-06.md`,
+  and `outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json`
+  so the contract verifies the post-FMS boundary is current at chunks001-052
+  and active chunks053-054 are excluded.
+- Result: exact support only.  The contract derives the future overlap object
+  `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` and confirms it cannot be
+  populated by FMS `C_HH`, source-only rows, or taste-radial `C_sx/C_xx` rows.
+- Validation: overlap/kappa contract `PASS=14 FAIL=0`; assumption/import
+  stress `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+- Claim boundary: no canonical `O_H`, no production `C_sH/C_HH` pole rows, no
+  source-Higgs Gram-purity packet, no scalar-LSZ/FV closure, and no retained
+  or `proposed_retained` closure.
+
 Latest checkpoint, 2026-05-07 post-FMS source-overlap necessity current-prefix refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py`,

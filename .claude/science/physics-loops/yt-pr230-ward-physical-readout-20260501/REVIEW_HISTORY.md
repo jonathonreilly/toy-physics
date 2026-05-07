@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-07 - Source-Higgs Overlap/Kappa Current-Prefix Refresh
+
+Review stance: exact support / future overlap contract, no closure.
+
+- Updated the source-Higgs overlap/kappa contract to assert that its
+  post-FMS parent is refreshed to chunks001-052 and excludes active
+  chunks053-054.
+- The contract still supplies only the future row formula
+  `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))`; it does not set
+  `kappa_s=1` and does not infer `Res C_sH` from FMS `C_HH`, source-only
+  rows, or taste-radial `C_sx/C_xx` rows.
+- Validation: overlap/kappa contract `PASS=14 FAIL=0`; assumption/import
+  stress `PASS=104 FAIL=0`; campaign status `PASS=356 FAIL=0`; full assembly
+  `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion audit
+  `PASS=72 FAIL=0`.
+
+Disposition: support only.  No canonical `O_H`, no `C_sH/C_HH` production
+rows, no Gram-purity packet, no scalar-LSZ/FV closure, and no
+retained/proposed-retained closure.
+
 ## 2026-05-07 - Post-FMS Source-Overlap Necessity Current-Prefix Refresh
 
 Review stance: exact negative boundary / source-overlap still open.

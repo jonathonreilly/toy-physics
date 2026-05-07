@@ -32,13 +32,16 @@ canonical `y_t`.
 The executable runner is
 `scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py`; it writes
 `outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json` with
-`PASS=13 FAIL=0`.
+`PASS=14 FAIL=0` after the 2026-05-07 refresh.
 
 Current blockers remain:
 
 - no same-surface certified canonical `O_H` row packet;
 - no production `C_sH/C_HH` pole residues;
 - the `O_sp`-Higgs Gram postprocessor is awaiting production rows;
+- the refreshed post-FMS overlap gate consumes the current chunks001-052
+  package and still blocks `C_sx/C_xx` proxy overlap; active chunks053-054 are
+  excluded as run-control-only state;
 - the full retained/campaign gates still have `proposal_allowed=false`.
 
 No closure claim is made.  The next exact action is to produce a same-surface

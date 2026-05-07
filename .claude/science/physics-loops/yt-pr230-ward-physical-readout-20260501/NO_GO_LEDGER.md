@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## Source-Higgs overlap/kappa contract is not a `kappa_s=1` shortcut
+
+The 2026-05-07 source-Higgs overlap/kappa refresh verifies that the post-FMS
+proxy-overlap boundary is current at chunks001-052 and excludes active
+chunks053-054.  The contract derives the exact future same-pole object
+
+```text
+kappa_spH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))
+```
+
+but the current branch has no canonical `O_H` and no production
+`C_sH/C_HH` pole rows.  FMS `C_HH`, source-only LSZ rows, and taste-radial
+`C_sx/C_xx` rows do not populate `Res C_sH`.
+
+Do not treat the contract, the formula, FMS support, current chunks001-052, or
+active chunk053-054 run-control state as `kappa_s=1`, source-Higgs Gram
+purity, canonical `O_H`, retained, or proposed-retained closure.
+
 ## Post-FMS source-overlap remains underdetermined at chunks001-052
 
 The 2026-05-07 post-FMS source-overlap necessity refresh loads the current

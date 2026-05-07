@@ -7,8 +7,14 @@
     "aggregate_retained_route_open": true,
     "fms_c_hh_and_c_sx_proxy_blocked": true,
     "gram_postprocessor_waits": true,
+    "post_fms_current_prefix_loaded": true,
     "source_higgs_row_packet_absent": true,
-    "source_only_identifiability_blocked": true
+    "source_only_identifiability_blocked": true,
+    "two_source_active_chunk_ids_excluded": [
+      53,
+      54
+    ],
+    "two_source_ready_chunks": 52
   },
   "exact_next_action": "Produce a same-surface certified O_H/C_sH/C_HH pole-row packet, compute kappa_spH from the normalized cross residue, then rerun the source-Higgs builder, Gram postprocessor, full assembly, retained-route, and campaign gates.",
   "fail_count": 0,
@@ -48,7 +54,7 @@
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_gram_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json"
   },
-  "pass_count": 13,
+  "pass_count": 14,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The contract derives the overlap object but current PR230 has no canonical O_H certificate or source-Higgs C_sH/C_HH production rows.",
   "source_higgs_overlap_kappa_contract_passed": true,

@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-07 source-Higgs overlap/kappa current-prefix refresh: the overlap
+contract now verifies that its post-FMS parent is current at chunks001-052 with
+active chunks053-054 excluded.  The useful positive object is explicit:
+`kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))`, computed from future
+same-pole source-Higgs rows.  This is not the forbidden shortcut
+`kappa_s=1`; the current branch still lacks canonical `O_H`, production
+`C_sH/C_HH` pole rows, and Gram-purity/FV/IR checks.  Highest-value next
+artifact remains the actual canonical `O_H/C_sH/C_HH` row packet or a strict
+physical-response bypass.
+
 2026-05-07 post-FMS source-overlap necessity current-prefix refresh: the
 post-FMS gate now consumes the current chunks001-052
 package/combiner/bridge-aperture surface.  The negative boundary survives the

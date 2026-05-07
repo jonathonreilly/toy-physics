@@ -16,11 +16,21 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-278-post-fms-source-overlap-necessity-current-prefix-refresh
-blocks_completed: 277
-active_route: "Post-FMS source-overlap necessity current-prefix refresh"
-active_hard_residual: "Refreshed the post-FMS source-overlap necessity gate so it consumes the committed chunks001-052 package/combiner/bridge-aperture certificates instead of only chunks001-004 and stale launcher status.  The gate remains an exact negative boundary: the FMS composite theorem plus current source-only and taste-radial C_sx/C_xx rows do not determine Res C_sH or exclude orthogonal neutral top couplings.  The exact reopen remains a same-surface canonical O_H certificate plus C_ss/C_sH/C_HH pole rows with Gram/FV/IR checks, or a strict physical-response bypass.  Validation: post-FMS gate PASS=14 FAIL=0; assumption stress PASS=104 FAIL=0; campaign status PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0."
+current_phase: campaign-block-279-source-higgs-overlap-kappa-current-prefix-refresh
+blocks_completed: 278
+active_route: "Source-Higgs overlap/kappa contract current-prefix refresh"
+active_hard_residual: "Refreshed the source-Higgs overlap/kappa contract so it verifies the post-FMS boundary is current at chunks001-052 with active chunks053-054 excluded.  The contract still derives only the future overlap object kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH)); it does not set kappa_s=1 and does not close because canonical O_H and production C_sH/C_HH pole rows remain absent.  Validation: overlap/kappa contract PASS=14 FAIL=0; assumption stress PASS=104 FAIL=0; campaign status PASS=356 FAIL=0; full assembly PASS=163 FAIL=0; retained-route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0."
 files_touched:
+  - "scripts/frontier_yt_pr230_source_higgs_overlap_kappa_contract.py"
+  - "docs/YT_PR230_SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT_NOTE_2026-05-06.md"
+  - "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py"
   - "docs/YT_PR230_POST_FMS_SOURCE_OVERLAP_NECESSITY_GATE_NOTE_2026-05-06.md"
   - "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
