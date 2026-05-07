@@ -3833,6 +3833,16 @@ def main() -> int:
         "two_source_rows", {}
     )
     neutral_h3h4_diagnostics = neutral_h3h4_rows.get("diagnostics", {})
+    neutral_h3h4_ready_chunks = neutral_h3h4_rows.get("ready_chunks")
+    neutral_h3h4_current_prefix = (
+        isinstance(neutral_h3h4_ready_chunks, int)
+        and neutral_h3h4_ready_chunks >= 44
+        and neutral_h3h4_rows.get("present_chunks") == neutral_h3h4_ready_chunks
+        and neutral_h3h4_rows.get("expected_chunks") == 63
+        and neutral_h3h4_rows.get("combined_rows_written") is False
+        and neutral_h3h4_diagnostics.get("chunk_counts_seen")
+        == [neutral_h3h4_ready_chunks]
+    )
     report(
         "pr230-neutral-primitive-h3h4-aperture-support-not-closure",
         "neutral primitive H3/H4 aperture checkpoint"
@@ -3847,9 +3857,7 @@ def main() -> int:
             "current_surface_closure_satisfied"
         )
         is False
-        and neutral_h3h4_rows.get("ready_chunks") == 44
-        and neutral_h3h4_rows.get("expected_chunks") == 63
-        and neutral_h3h4_rows.get("combined_rows_written") is False
+        and neutral_h3h4_current_prefix
         and neutral_h3h4_diagnostics.get("finite_rows_rank_one_flat") is False
         and not any(
             neutral_primitive_h3h4_aperture_checkpoint.get(
@@ -6328,9 +6336,7 @@ def main() -> int:
             "current_surface_closure_satisfied"
         )
         is False
-        and neutral_h3h4_rows.get("ready_chunks") == 44
-        and neutral_h3h4_rows.get("expected_chunks") == 63
-        and neutral_h3h4_rows.get("combined_rows_written") is False
+        and neutral_h3h4_current_prefix
         and neutral_h3h4_diagnostics.get("finite_rows_rank_one_flat") is False
     )
     result["strict_non_claims"] = [

@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Neutral primitive H3/H4 aperture remains open at 52 rows
+
+The 2026-05-07 neutral primitive H3/H4 aperture refresh removes the old
+`44/63` hard-coded prefix assumption and checks the current `52/63` row prefix.
+This changes the freshness of the evidence, not the physics boundary.  H1/H2
+Z3 support is present, and finite `C_ss/C_sx/C_xx` rows remain useful staging
+support, but they are not a physical neutral transfer matrix or
+off-diagonal-generator certificate.
+
+Do not treat the refreshed 52-row prefix, positive finite Gram determinants,
+or tiny finite `rho_sx` means as H3 physical transfer, H4 source/canonical-Higgs
+coupling, canonical `O_H`, W/Z response, retained, or proposed-retained
+closure.  Reopen requires a same-surface H3/H4 certificate or a separate
+canonical `O_H`/W/Z response packet.
+
 ## Two-source chunks001-052 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks051-052 package moves the finite two-source row packet to

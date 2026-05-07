@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-07 neutral primitive H3/H4 aperture refresh:
+
+- Updated `scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py`
+  so the two-source row-prefix check is dynamic instead of hard-coded to the
+  old `44/63` prefix.
+- Updated `scripts/frontier_yt_pr230_campaign_status_certificate.py` so the
+  aggregate guard accepts the current contiguous prefix when it is at least
+  `44/63` and its diagnostics match the same count.
+- Refreshed `docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md`
+  and `outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json`.
+- Result: neutral H3/H4 aperture `PASS=9 FAIL=0` at `ready=52/63`; campaign
+  status remains `PASS=356 FAIL=0`; assumption/import stress `PASS=104
+  FAIL=0`; full assembly `PASS=163 FAIL=0`; retained-route `PASS=317
+  FAIL=0`; completion audit `PASS=72 FAIL=0`.
+- Claim boundary: this is bounded support plus boundary only.  H1/H2 Z3
+  support and 52 finite `C_ss/C_sx/C_xx` rows are not H3 physical transfer,
+  not H4 source/canonical-Higgs coupling, not canonical `O_H`, not W/Z
+  response, and not retained/proposed-retained closure.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks051-052 package:
 
 - Packaged chunks051-052 after completed root JSONs and per-volume artifacts

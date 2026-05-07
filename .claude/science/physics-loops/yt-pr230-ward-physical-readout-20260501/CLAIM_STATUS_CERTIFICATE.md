@@ -1,5 +1,39 @@
 # Claim Status Certificate
 
+Neutral primitive H3/H4 aperture refresh:
+
+```text
+actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 52 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 -m py_compile scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The refreshed aperture now consumes the current `ready=52/63` prefix instead
+of stale `44/63` assumptions.  The neutral primitive route remains open:
+there is no same-surface H3 physical neutral transfer/off-diagonal generator
+and no H4 coupling to PR230 source/canonical-Higgs or W/Z response.
+
 Two-source taste-radial chunks051-052 package checkpoint:
 
 ```text

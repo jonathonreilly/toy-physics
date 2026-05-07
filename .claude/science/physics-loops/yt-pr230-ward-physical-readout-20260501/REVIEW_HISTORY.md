@@ -1,5 +1,24 @@
 # Review History
 
+## 2026-05-07 - Neutral Primitive H3/H4 Aperture Refresh
+
+Review stance: bounded support / stale-prefix guard refresh.
+
+- Updated the neutral primitive H3/H4 aperture runner to validate the current
+  two-source row prefix dynamically instead of requiring exactly `44/63`.
+- Updated the campaign status guard to require a contiguous prefix of at least
+  `44/63` with matching finite-row diagnostics; current checkpoint is
+  `52/63`.
+- Validation: py_compile OK; neutral H3/H4 aperture `PASS=9 FAIL=0`; campaign
+  status `PASS=356 FAIL=0`; assumption stress `PASS=104 FAIL=0`; full
+  assembly `PASS=163 FAIL=0`; retained-route `PASS=317 FAIL=0`; completion
+  audit `PASS=72 FAIL=0`.
+
+Disposition: support only.  The refreshed 52-row prefix still does not supply
+H3 physical neutral transfer/off-diagonal dynamics, H4 source/canonical-Higgs
+coupling, canonical `O_H`, W/Z response, or retained/proposed-retained
+closure.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks051-052 Package
 
 Review stance: bounded support / partial row-wave package.

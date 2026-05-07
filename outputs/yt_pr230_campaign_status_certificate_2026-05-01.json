@@ -289,7 +289,7 @@
     "pr230_matching_running_bridge_gate": "open / PR230 matching-running bridge awaits certified physical input",
     "pr230_minimal_axioms_yukawa_summary_firewall": "exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority",
     "pr230_negative_route_applicability_review": "exact support / selected PR230 negative-route applicability review passed",
-    "pr230_neutral_primitive_h3h4_aperture_checkpoint": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 44 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "pr230_neutral_primitive_h3h4_aperture_checkpoint": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 52 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
     "pr230_neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
     "pr230_nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
     "pr230_nonchunk_cycle14_route_selector": "exact negative boundary / PR230 non-chunk cycle-14 route-selector gate: no executable current-surface non-chunk route remains after the W/Z covariance-theorem import no-go; positive closure still open",

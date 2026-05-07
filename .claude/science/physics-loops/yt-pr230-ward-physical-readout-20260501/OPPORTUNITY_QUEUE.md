@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-07 neutral primitive H3/H4 aperture refresh: the neutral aperture gate
+now consumes the current dynamic two-source prefix and reports `ready=52/63`
+instead of the stale `44/63` checkpoint.  The route is still bounded support
+plus boundary: H1/H2 Z3 support is present and finite `C_ss/C_sx/C_xx` rows are
+useful staging evidence, but H3 physical neutral transfer/off-diagonal
+generator authority and H4 source/canonical-Higgs coupling remain absent.
+Do not reopen the neutral primitive route without a same-surface H3/H4
+certificate.  Highest-value closure target remains canonical `O_H` plus
+`C_ss/C_sH/C_HH` pole rows; first fallback remains W/Z physical-response rows
+with accepted action, matched covariance, and strict non-observed `g2`.
+
 2026-05-07 chunks051-052 package refresh: chunks001-052 are now packaged
 partial `C_sx/C_xx` support with `ready=52/63`; chunks051-052 pass
 completed-mode checkpoints and preserve selected-mass-only FH/LSZ,

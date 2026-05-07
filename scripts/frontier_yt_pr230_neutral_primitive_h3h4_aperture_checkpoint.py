@@ -8,7 +8,7 @@ same-surface Z3 support plus the completed two-source taste-radial rows can
 now supply the missing H3/H4 physical-transfer premises.
 
 The result is bounded support plus an exact boundary.  H1/H2 algebraic support
-is real, and the 44 completed C_sx/C_xx chunks are useful staging evidence,
+is real, and the completed C_sx/C_xx chunk prefix is useful staging evidence,
 but the current surface still lacks a physical neutral transfer/off-diagonal
 generator and a coupling to the PR230 source/canonical-Higgs sector.
 """
@@ -271,16 +271,27 @@ def main() -> int:
         and conditional_z3.get("proposal_allowed") is False
         and z3_h2.get("proposal_allowed") is False
     )
+    expected_chunks = combiner.get("expected_chunks")
+    ready_chunks = combiner.get("ready_chunks")
+    present_chunks = combiner.get("present_chunks")
+    missing_chunk_indices = combiner.get("missing_chunk_indices", [])
+    first_missing = missing_chunk_indices[0] if missing_chunk_indices else None
+    ready_prefix_is_current = (
+        isinstance(expected_chunks, int)
+        and isinstance(ready_chunks, int)
+        and isinstance(present_chunks, int)
+        and ready_chunks == present_chunks
+        and ready_chunks >= 44
+        and (first_missing == ready_chunks + 1 or ready_chunks == expected_chunks)
+    )
     two_source_rows_current_prefix = (
-        combiner.get("expected_chunks") == 63
-        and combiner.get("ready_chunks") == 44
-        and combiner.get("present_chunks") == 44
+        expected_chunks == 63
+        and ready_prefix_is_current
         and combiner.get("combined_rows_written") is False
-        and combiner.get("missing_chunk_indices", [None])[0] == 45
     )
     finite_rows_not_rank_one_transfer = (
         diagnostics["mode_count"] >= 4
-        and diagnostics["chunk_counts_seen"] == [44]
+        and diagnostics["chunk_counts_seen"] == [ready_chunks]
         and isinstance(diagnostics["determinant_min"], float)
         and diagnostics["determinant_min"] > 0.0
         and diagnostics["finite_rows_rank_one_flat"] is False
@@ -333,7 +344,7 @@ def main() -> int:
     result = {
         "actual_current_surface_status": (
             "bounded-support / neutral primitive H3/H4 aperture checkpoint; "
-            "H1/H2 support and 44 C_sx/C_xx chunks do not supply physical "
+            f"H1/H2 support and {ready_chunks} C_sx/C_xx chunks do not supply physical "
             "neutral transfer or source-canonical-Higgs coupling"
         ),
         "claim_type": "open_gate",
