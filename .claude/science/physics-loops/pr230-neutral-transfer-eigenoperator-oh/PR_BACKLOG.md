@@ -74,6 +74,14 @@ Block13 refreshes the strict scalar-LSZ note to the existing 44/63 row-prefix
 certificate and preserves the direct PR #230 landing path.  No standalone
 block13 review PR should be opened unless PR #230 integration fails.
 
+Block14 follows the same direct PR #230 landing path.  It records that PR #230
+head is now `0fb8403672b3b30bc5bef0aec9160e62f75d45b7` after the live-worker
+chunks045-046 support package; the source-Higgs aperture and scalar-LSZ notes
+now match the 46/63 row prefix, but the rows remain bounded `C_sx/C_xx`
+staging support only and not canonical `O_H`, `C_sH/C_HH`, or W/Z
+physical-response closure.  No standalone block14 review PR should be opened
+unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

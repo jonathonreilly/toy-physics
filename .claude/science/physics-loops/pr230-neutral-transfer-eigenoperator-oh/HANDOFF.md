@@ -188,6 +188,38 @@ alignment between the note and the existing certificate only; it is not scalar
 LSZ closure, canonical `O_H`, source-Higgs Gram flatness, or W/Z response
 authority.  `proposal_allowed=false`.
 
+## Block14 Chunks045-046 Intake Checkpoint
+
+This checkpoint resumed after block13 and fast-forwarded over the live-worker
+PR #230 support commit:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 0fb8403672b3b30bc5bef0aec9160e62f75d45b7
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The new commit packages chunks045-046 into the two-source taste-radial row
+stream.  This lane did not touch, relaunch, or modify the live chunk worker; it
+only consumed the completed package and reran the branch-local source-Higgs
+aperture, strict scalar-LSZ, and campaign status certificates.
+
+Result:
+
+- `ready_chunks = 46`, `expected_chunks = 63`;
+- `combined_rows_written = false`, with chunks047-063 absent as evidence;
+- the current finite rows remain `C_sx/C_xx` taste-radial staging rows, not
+  canonical `C_sH/C_HH` pole rows;
+- raw `C_ss` still fails the strict scalar-LSZ first-shell nonincrease shortcut
+  across all 46 ready chunks, with `z = 170.33620497910093`;
+- only volume `12x24` is present, so no multivolume FV/IR authority exists;
+- canonical `O_H`, production `C_ss/C_sH/C_HH` rows, source-Higgs Gram
+  flatness, accepted W/Z action, production W/Z rows, same-source top rows,
+  matched covariance, strict non-observed `g2`, `delta_perp` authority, and
+  final W-response rows remain absent.
+
+Honest status: bounded-support / chunks045-046 intake checkpoint.  The current
+surface remains open and `proposal_allowed=false`.
+
 ## Verification
 
 ```bash
@@ -234,6 +266,12 @@ python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 # SUMMARY: PASS=67 FAIL=0
 jq scalar-LSZ certificate summary
 # ready_chunks=44 expected_chunks=63 all_ready_chunks_violate_nonincrease=true z=163.1563288754601
+python3 scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0, ready=46/63
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=46/63, z=170.33620497910093
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
 ```
 
 ## Claim Boundary
@@ -269,12 +307,19 @@ single-volume `12x24` prefix as FV/IR authority, does not claim canonical
 block12 loop-pack commit or the common root-cut support wiring into closure,
 and does not touch the live chunk worker.
 
+Block14 is a support-boundary intake and PR-head checkpoint.  It does not touch
+the live chunk worker, does not promote chunks045-046 or the current 46/63
+`C_sx/C_xx` prefix to canonical `C_sH/C_HH` evidence, does not promote raw
+`C_ss` rows to strict scalar-LSZ/FV authority, and does not use the chunk
+package as canonical `O_H`, source-Higgs Gram flatness, W/Z action/response,
+matched covariance, strict `g2`, or `delta_perp` authority.
+
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block13 should follow the same direct PR #230 landing path unless
+Block09 through block14 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -296,6 +341,13 @@ block11 adds only exact support/boundary common `O_H`/WZ root-cut wiring rather
 than a production/certificate closure artifact.  No independent audit verdict
 was applied.
 
+Local review disposition for block14: pass bounded-support checkpoint / no
+fresh positive artifact.  The source-Higgs aperture and scalar-LSZ certificates
+now match the current 46/63 row prefix, forbidden imports remain excluded, and
+PR #230 head movement after block13 adds only live-worker finite-row support
+rather than a certified `O_H`, source-Higgs pole-row, or strict W/Z
+physical-response artifact.  No independent audit verdict was applied.
+
 ## Next Exact Action
 
 Continue only through a real missing artifact:
@@ -313,7 +365,7 @@ matched covariance, strict non-observed g2, delta_perp authority, and final
 W-response rows
 ```
 
-Existing `001-044` `C_sx/C_xx` rows are bounded staging support only.  Do not
+Existing `001-046` `C_sx/C_xx` rows are bounded staging support only.  Do not
 cycle more current-surface shortcut gates, do not promote W/Z scout/smoke rows
 to production evidence, and do not touch the live chunk worker from this lane.
 Do not reopen the neutral primitive route without a same-surface H3/H4

@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block13_scalar_lsz_current_prefix_refresh_checkpoint`.
+Current block: `block14_chunks045_046_intake_checkpoint`.
 
 ```yaml
-actual_current_surface_status: bounded-support / scalar-LSZ current-prefix refresh plus PR-head checkpoint; PR230 head is 1e365eb after block12 plus a common O_H/WZ root-cut support commit, with no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
+actual_current_surface_status: bounded-support / chunks045-046 intake plus PR-head checkpoint; PR230 head is 0fb840367 after live-worker chunks045-046 packaging, with no fresh certified O_H/source-Higgs pole-row packet or strict W/Z accepted-action physical-response packet
 conditional_surface_status: exact support if future same-surface artifacts supply certified O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, or accepted EW/Higgs action, canonical O_H/sector-overlap authority, production W/Z correlator mass-fit rows, same-source top-response rows, matched top/W or top/Z covariance, strict non-observed g2, delta_perp authority, and final W-response rows without scout/smoke promotion
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block13 refreshed the strict scalar-LSZ note against the existing 44/63 ready chunk prefix and rebased over PR #230 head 1e365eb. The new common O_H/WZ root-cut support remains exact support/boundary with proposal_allowed=false, and the scalar-LSZ result is bounded support/exact boundary only: raw C_ss rows remain positive but increase from zero mode to first shell across all 44 ready chunks, the row prefix is single-volume 12x24, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
+proposal_allowed_reason: "Block14 fast-forwarded over the live-worker chunks045-046 package and reran the source-Higgs aperture, strict scalar-LSZ, and campaign status certificates without touching the live chunk worker. The row prefix is now 46/63, but it remains bounded C_sx/C_xx staging support only: raw C_ss rows are positive but increase from zero mode to first shell across all 46 ready chunks, the row prefix is single-volume 12x24, and no certified canonical O_H, production C_ss/C_sH/C_HH pole rows, accepted W/Z action packet, production W/Z rows, same-source top rows, matched covariance, strict g2 certificate, delta_perp authority, or final W-response rows are present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -24,11 +24,11 @@ Reason:
    accepted same-source EW/Higgs action, sector-overlap, W/Z response rows,
    matched covariance, strict non-observed `g2`, and aggregate retained-route
    approval.
-2. Block13 verifies route state and dependency classes by reading the current
-   PR head, remote branch recency, and the existing strict scalar-LSZ
-   certificate; it is a support-boundary refresh/checkpoint, not a positive
-   retained proposal.
-3. Block13 does not touch the live worker, does not promote raw `C_ss` rows to
+2. Block14 verifies route state and dependency classes by reading the current
+   PR head, the chunks045-046 package, the source-Higgs aperture certificate,
+   the strict scalar-LSZ certificate, and the campaign status certificate; it
+   is a support-boundary intake/checkpoint, not a positive retained proposal.
+3. Block14 does not touch the live worker, does not promote raw `C_ss` rows to
    strict scalar-LSZ/FV authority, does not promote scout/smoke rows to
    production evidence, does not use static EW mass algebra as response rows,
    does not assume `k_top = k_gauge` or top/W covariance, does not identify
@@ -81,5 +81,11 @@ Prior block certificate summary:
   support/boundary common `O_H`/WZ root-cut wiring.  Neither supplies certified
   canonical `O_H`, source-Higgs Gram flatness, or W/Z physical-response
   authority.
-- Block01 through Block13 all have `proposal_allowed=false`; their boundaries
+- Block14 actual status: bounded-support / chunks045-046 intake plus PR-head
+  checkpoint; the current 46/63 `C_sx/C_xx` prefix and refreshed raw `C_ss`
+  scalar-LSZ boundary remain support only.  The PR head 0fb840367 chunk package
+  does not supply certified canonical `O_H`, production `C_ss/C_sH/C_HH` rows,
+  Gram flatness, accepted W/Z action, W/Z production rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, or final W-response rows.
+- Block01 through Block14 all have `proposal_allowed=false`; their boundaries
   remain active.

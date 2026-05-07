@@ -463,3 +463,45 @@
      physical-response packet with accepted action, production rows, matched
      covariance, strict non-observed `g2`, `delta_perp` authority, and final
      W-response rows.
+
+## Selected Block14 Route
+
+**Chunks045-046 support intake checkpoint**
+
+- Type: bounded-support / exact-boundary intake.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 3.
+- Claim-state movement: consumes the live-worker chunks045-046 package after
+  PR #230 advanced to `0fb840367`, refreshes the source-Higgs aperture and
+  scalar-LSZ certificates to the current `46/63` row prefix, and records that
+  the new rows remain `C_sx/C_xx` staging support only.  The route is still
+  blocked on certified canonical `O_H` plus production `C_ss/C_sH/C_HH` rows
+  with Gram flatness, or a strict W/Z physical-response packet.
+- Artifact: refreshed source-Higgs aperture note/certificate, strict
+  scalar-LSZ note/certificate, campaign certificate, and loop pack checkpoint.
+
+## Block14 Fan-Out Synthesis
+
+1. **PR-head artifact frame**
+   - Result: support only.  `HEAD =
+     origin/claude/yt-direct-lattice-correlator-2026-04-30 = 0fb840367...`;
+     the new post-block13 commit packages chunks045-046, not a certified
+     `O_H`, source-Higgs pole-row, or strict W/Z response packet.
+
+2. **Source-Higgs aperture frame**
+   - Result: bounded support.  The current prefix is 46/63 with
+     `combined_rows_written=false`; chunks047-063 are absent as evidence and
+     the rows remain taste-radial `C_sx/C_xx`, not canonical `C_sH/C_HH`.
+
+3. **Scalar-LSZ current-prefix frame**
+   - Result: exact negative boundary remains.  The refreshed certificate
+     parses 46 ready chunks, all at volume `12x24`; every ready chunk has
+     first-shell raw `C_ss` above zero-mode raw `C_ss` with
+     `z=170.33620497910093`.
+
+4. **Next admissible route**
+   - Result: unchanged.  Continue only with a genuine certified `O_H` plus
+     production `C_ss/C_sH/C_HH` Gram-flat packet, or a strict W/Z
+     physical-response packet with accepted action, production rows, matched
+     covariance, strict non-observed `g2`, `delta_perp` authority, and final
+     W-response rows.  Do not touch the live chunk worker from this lane.

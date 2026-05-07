@@ -239,6 +239,10 @@ python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 git diff --check
 # OK
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings; newly seeded=1, re-audit required=2
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
 ```
 
 ## Block11
@@ -388,6 +392,66 @@ python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 # SUMMARY: PASS=67 FAIL=0
 jq scalar-LSZ certificate summary
 # ready_chunks=44 expected_chunks=63 all_ready_chunks_violate_nonincrease=true z=163.1563288754601
+rg forbidden/status firewall review
+# hits are non-claim/firewall exclusions only
+git diff --check
+# OK
+```
+
+## Block14
+
+Local review run on 2026-05-07 11:05 EDT.  Parallel subagents were not spawned
+because this checkpoint is a narrow intake of a live-worker support commit and
+the supervisor did not explicitly request sub-agents for this turn.
+
+Scope:
+
+- `docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md`
+- `docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md`
+- `outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json`
+- `outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Source-Higgs aperture, strict scalar-LSZ, and campaign status runners compile/pass after fast-forward to PR head `0fb840367`; no live chunk worker was touched. |
+| Physics Claim Boundary | BOUNDED SUPPORT / EXACT BOUNDARY | The current prefix is 46/63, `combined_rows_written=false`, and raw `C_ss` still violates the strict scalar-LSZ first-shell nonincrease shortcut across all ready chunks; no canonical `O_H`, source-Higgs pole rows, Gram flatness, or W/Z physical-response packet is present. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, or `C_sx -> C_sH` alias is load-bearing. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized; the route still needs certified `O_H` plus production pole rows or strict W/Z response. |
+| Repo Governance | PASS | Updates are confined to branch-local notes/loop pack plus regenerated certificates; PR #230 remains the direct landing path. |
+| Audit Compatibility | PASS | Campaign status certificate remains PASS=352 FAIL=0 and the block is compatible with the existing support-only chunk package. |
+
+Checks:
+
+```bash
+git fetch origin
+git merge --ff-only origin/claude/yt-direct-lattice-correlator-2026-04-30
+# fast-forwarded to 0fb840367 Package PR230 taste-radial chunks 045-046
+python3 -m py_compile scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0, ready=46/63
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0, ready=46/63, z=170.33620497910093
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=352 FAIL=0
+python3 scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=158 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=312 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=67 FAIL=0
+python3 link check for updated notes/handoff/queue
+# missing_links=[]
 rg forbidden/status firewall review
 # hits are non-claim/firewall exclusions only
 git diff --check
