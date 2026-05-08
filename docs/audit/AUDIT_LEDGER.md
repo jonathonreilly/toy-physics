@@ -23,13 +23,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 881 |
+| unaudited | 880 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 415 |
 | ~~audited_failed~~ | 9 |
-| `decoration_under_cl3_color_automorphism_theorem` | 2 |
+| `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -40,20 +40,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audited_clean` | 395 |
 | `audited_conditional` | 415 |
-| `audited_decoration` | 9 |
+| `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 934 |
+| `unaudited` | 933 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 705 |
-| `decoration` | 10 |
+| `decoration` | 11 |
 | `meta` | 60 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 781 |
+| `positive_theorem` | 780 |
 
 | criticality | count |
 |---|---:|
@@ -920,6 +920,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5 | A | `alpha_s_derived_note` |
+| `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | fresh_context | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | `docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `gellmann_completeness_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
@@ -2953,6 +2954,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** SU(3) is embedded as Gell-Mann generators on the 3D symmetric base subspace, giving the Fierz channel-count fraction R_conn = (N_c^2 - 1) / N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
 - **chain closes:** True — Within the narrowed algebraic scope, the construction closes: a chosen 3D carrier supports the standard SU(3) generators and the Fierz identity gives the adjoint fraction 8/9. The physical identification of this carrier with SM color remains outside the audited claim.
 - **rationale:** The source note has narrowed the claim to an algebraic embedding/channel-count theorem and explicitly removes the physical SM color bridge from the load-bearing scope. The runner source constructs the symmetric/antisymmetric base split, embeds standard Gell-Mann generators, checks commutators, trace normalization, and the Fierz identity rather than merely printing constants. The remaining assertions about physical color and EW correction are stated as conditional/deferred, so they do not block the bounded algebraic theorem.
+- **auditor confidence:** high
+
+### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
+
+- **Note:** [`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Algebraic SU(3) representation-theory corollary that the fundamental-conjugate tensor product on the framework color carrier decomposes as 1 ⊕ 8 with a unique normalized trace singlet.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_cl3_color_automorphism_theorem`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-audit-loop-019e0934-ba9d-7472-a318-0c43a70ee23f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Apply the standard SU(N) Clebsch-Gordan rule N ⊗ N̄ = 1 ⊕ adj with N_c = 3 from the cited color-automorphism theorem, giving 3 ⊗ 3̄ = 1 ⊕ 8.  _(class `A`)_
+- **chain closes:** True — Within the algebraic carrier, the decomposition follows from the cited N_c = 3 SU(3) structure plus standard SU(N) representation theory. The packet does not close the separate physical identification of this carrier with SM color, so the audited closure is only the algebraic corollary.
+- **rationale:** Issue: the note proves a standard SU(3) algebraic corollary of one upstream color-carrier theorem, with no independent physical comparator or new first-principles computation. Why this blocks a clean positive-theorem verdict: the load-bearing content is class A representation theory over a single parent, and the cited parent explicitly bounds the physical SM-color bridge outside its scope. Repair target: either box this as a corollary under the parent algebraic SU(3) embedding or add a retained bridge deriving the quark/physical-color carrier identification plus an independent audited surface. Claim boundary until fixed: unique 1 ⊕ 8 decomposition on the abstract/framework SU(3) carrier only.
+- **open / conditional deps cited:**
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+- **decoration parent:** `cl3_color_automorphism_theorem`
 - **auditor confidence:** high
 
 ### `cl3_taste_generation_theorem`
