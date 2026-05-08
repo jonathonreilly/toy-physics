@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 824 |
+| unaudited | 823 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 449 |
+| ~~audited_conditional~~ | 450 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 449 |
+| `audited_conditional` | 450 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 873 |
+| `unaudited` | 872 |
 
 | claim_type | count |
 |---|---:|
@@ -936,6 +936,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `wave_direct_dm_h025_fam2_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_direct_dm_h025_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `wave_retarded_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -13721,6 +13722,24 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `no_ledger_runner_for_live_wave_direct_dm_family_scout`
   - `multi_seed_family_portability_batch_missing`
   - `null_linearity_and_continuum_control_stack_missing`
+- **auditor confidence:** high
+
+### `wave_direct_dm_h025_fam2_two_point_synthesis_note`
+
+- **Note:** [`WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](../../docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the synthesis claim that the H = 0.25 Fam2 seed-0/seed-1 pair shows controlled direct-dM survival and late-gain asymmetry without supporting a portability extension.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0578-7fb7-7b53-bbe1-f44c97ba0782`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the current Fam2 fine-H pair, the direct-dM matched-history effect survives with controls on both seeds, the seed-conditioned late-gain asymmetry survives, and the old coarse amplitude bands do not survive refinement.  _(class `B`)_
+- **chain closes:** False — The note depends on sibling seed boundary/control/follow-up artifacts and logs, but no one-hop cited authorities or runner are included in the restricted packet. The missing step is verification that the tabulated seed/control values and coarse-to-fine comparisons are retained outputs rather than asserted inputs.
+- **rationale:** The load-bearing step is a cross-artifact synthesis of seed-level numerical results and controls, not a first-principles computation from the restricted packet. The source note explicitly names upstream seed/control notes and logs as the artifact chain, but the packet provides none of them as cited authorities and provides no runner source or stdout. Therefore the family-pair conclusion may be correct, but it is conditional on missing dependency evidence.
+- **open / conditional deps cited:**
+  - `WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`
 - **auditor confidence:** high
 
 ### `wave_direct_dm_h025_two_point_synthesis_note`
