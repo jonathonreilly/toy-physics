@@ -37,21 +37,43 @@ Boundary scan logs:
 ## Retained Rows
 
 The bounded mirror pocket is Born-clean and gravity-positive on the strict
-`NPL_HALF = 25` probe, and the denser strict `NPL_HALF = 50` probe retains the
-same pocket through `N = 60` before failing at larger sizes. The later
-boundary scan extends that retained pocket to `N = 80` and `N = 100` on the
-dense `NPL_HALF = 55/60` probes:
+`NPL_HALF = 25` probe at small `N`, and the dense `NPL_HALF = 60`,
+`connect_radius = 5.0` boundary card extends the same pocket to `N = 40`,
+`N = 60`, `N = 80`, and `N = 100`. Each retained row in the table below is
+tied to exactly one of the two runner-cache artifacts that are presently
+checked in:
 
-| N | `d_TV` | `pur_cl` | `S_norm` | gravity | Born `|I3|/P` | `k=0` |
-|---|---:|---:|---:|---:|---:|---:|
-| 15 | `0.9716` | `0.5769±0.02` | `1.0006` | `+1.2927±0.691` | `5.84e-16` | `0.00e+00` |
-| 25 | `0.8014` | `0.7329±0.05` | `0.9986` | `+2.2748±0.525` | `6.54e-16` | `0.00e+00` |
-| 40 | `0.8006` | `0.8764±0.03` | `0.9965` | `+4.6161±0.721` | `1.01e-15` | `0.00e+00` |
-| 60 | `0.5443` | `0.8971±0.03` | `1.0021` | `+3.6663±0.698` | `1.18e-15` | `0.00e+00` |
-| 80 | `0.4291` | `0.8182±0.03` | `1.0029` | `+3.0551±0.672` | `2.43e-15` | `0.00e+00` |
-| 100 | `0.2308` | `0.9043±0.02` | `1.0058` | `+1.3089±0.570` | `1.13e-15` | `0.00e+00` |
+- `logs/runner-cache/mirror_chokepoint_joint.txt` — strict default card
+  (`NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0`, 16 seeds).
+- `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` —
+  dense boundary card (`NPL_HALF=60`, `connect_radius=5.0`,
+  `layer2_prob=0.0`, 16 seeds).
 
-## Exploratory Rows
+| N | `d_TV` | `pur_cl` | `S_norm` | gravity | Born `|I3|/P` | `k=0` | parameter card | runner-cache artifact |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| 15 | `0.9716` | `0.5769±0.02` | `1.0006` | `+1.2927±0.691` | `5.84e-16` | `0.00e+00` | `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_joint.txt` |
+| 25 | `0.8014` | `0.7329±0.05` | `0.9986` | `+2.2748±0.525` | `6.54e-16` | `0.00e+00` | `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_joint.txt` |
+| 40 | `0.8006` | `0.8764±0.03` | `0.9965` | `+4.6161±0.721` | `1.01e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
+| 60 | `0.5443` | `0.8971±0.03` | `1.0021` | `+3.6663±0.698` | `1.18e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
+| 80 | `0.4291` | `0.8182±0.03` | `1.0029` | `+3.0551±0.672` | `2.43e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
+| 100 | `0.2308` | `0.9043±0.02` | `1.0058` | `+1.3089±0.570` | `1.13e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
+
+Note: the retained table is stitched across two parameter cards, not a
+single registered runner invocation. The `NPL_HALF = 50` scaling probe and
+the sparse same-side layer-2 rescue (`layer2_prob = 0.02`) referenced below
+are reported only as exploratory / out-of-scope — no runner-cache artifact
+is presently checked in for those surfaces, so they are not part of the
+retained provenance.
+
+## Exploratory Rows (out-of-scope: no runner-cache artifact)
+
+The numbers below are **out-of-scope for this note's bounded claim**. They
+are kept here only as historical context — no runner-cache artifact is
+presently checked in for the `NPL_HALF=50` scaling probe or for the
+`NPL_HALF=55` boundary scans, so neither is part of the retained-row
+provenance and neither should be relied upon by downstream consumers. The
+in-scope runner-cache replays are listed in the "Retained Rows" table
+above.
 
 At the default strict settings and the denser `NPL_HALF=50` scaling probe,
 the higher-N rows still did not retain enough successful seeds to freeze as a
@@ -59,32 +81,36 @@ bounded large-N joint result:
 
 | N | verdict |
 |---|---|
-| 80 | FAIL |
-| 100 | FAIL |
+| 80 | FAIL (out-of-scope: no `NPL_HALF=50` runner-cache artifact) |
+| 100 | FAIL (out-of-scope: no `NPL_HALF=50` runner-cache artifact) |
 
-The dense `NPL_HALF = 55` and `NPL_HALF = 60` boundary scans close the
-retained pocket:
+The dense `NPL_HALF = 55` boundary scan rows below are also out-of-scope
+for the same reason; only the `NPL_HALF = 60`, `connect_radius = 5.0` rows
+in this table have a corresponding runner-cache artifact
+(`logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt`):
 
 | npl_half | connect_radius | N | verdict |
 |---|---:|---:|---|
-| 55 | `5.0` | 80 | retained, Born clean, gravity positive |
-| 55 | `5.0` | 100 | gravity collapses to zero; not retained |
-| 55 | `5.2` | 80 | retained, Born clean, gravity positive |
-| 55 | `5.2` | 100 | gravity collapses to zero; not retained |
-| 60 | `5.0` | 80 | retained, Born clean, gravity positive |
-| 60 | `5.0` | 100 | retained, Born clean, gravity positive |
-| 60 | `5.0` | 120 | Born still clean, but gravity collapses to zero; not retained |
+| 55 | `5.0` | 80 | retained, Born clean, gravity positive (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
+| 55 | `5.0` | 100 | gravity collapses to zero; not retained (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
+| 55 | `5.2` | 80 | retained, Born clean, gravity positive (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
+| 55 | `5.2` | 100 | gravity collapses to zero; not retained (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
+| 60 | `5.0` | 80 | retained, Born clean, gravity positive (in-scope; matches retained-row N=80) |
+| 60 | `5.0` | 100 | retained, Born clean, gravity positive (in-scope; matches retained-row N=100) |
+| 60 | `5.0` | 120 | Born still clean, but gravity collapses to zero; not retained (in-scope wall row) |
 
-The sparse same-side layer-2 rescue (`layer2_prob = 0.02`) was also only
-partially helpful:
+The sparse same-side layer-2 rescue (`layer2_prob = 0.02`) is **also
+out-of-scope**: no runner-cache artifact for `layer2_prob=0.02` is checked
+in, so the rows below are exploratory only and not part of the retained
+provenance:
 
 | N | `pur_cl` | gravity | verdict |
 |---|---:|---:|---|
-| 25 | `0.7128±0.05` | `+1.1909±0.800` | retained, but weaker than strict mirror |
-| 40 | `0.8272±0.05` | `+2.5460±1.031` | retained, still below strict mirror gravity |
-| 60 | `0.8718±0.04` | `+2.7086±0.937` | retained, but weaker than strict mirror |
-| 80 | `0.9031±0.04` | `+1.9444±1.268` | exploratory only; Born not certified (`nan`) |
-| 100 | FAIL | FAIL | no retained row |
+| 25 | `0.7128±0.05` | `+1.1909±0.800` | retained, but weaker than strict mirror (out-of-scope: no sparse-rescue runner-cache artifact) |
+| 40 | `0.8272±0.05` | `+2.5460±1.031` | retained, still below strict mirror gravity (out-of-scope: no sparse-rescue runner-cache artifact) |
+| 60 | `0.8718±0.04` | `+2.7086±0.937` | retained, but weaker than strict mirror (out-of-scope: no sparse-rescue runner-cache artifact) |
+| 80 | `0.9031±0.04` | `+1.9444±1.268` | exploratory only; Born not certified (`nan`) (out-of-scope: no sparse-rescue runner-cache artifact) |
+| 100 | FAIL | FAIL | no retained row (out-of-scope: no sparse-rescue runner-cache artifact) |
 
 ## Narrow Read
 
@@ -109,8 +135,10 @@ The current safe statement is:
 - **retained bounded mirror pocket:** yes
 - **large-N mirror scaling:** yes, through `N=100`
 - **Born + gravity + decoherence coexistence:** yes, through `N=100`
-- **strict `NPL_HALF = 50` scaling probe:** retained through `N=60`, then
-  fails at `N=80/100`
+- **strict `NPL_HALF = 50` scaling probe:** out-of-scope (no runner-cache
+  artifact is presently checked in for `NPL_HALF=50`); the historical
+  exploratory note that this probe retained through `N=60` and failed at
+  `N=80/100` is not part of the retained provenance for this note
 
 The dense large-`N` boundary extension is reproducible directly from the live
 script with:
