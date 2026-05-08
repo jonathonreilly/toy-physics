@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 825 |
+| unaudited | 824 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 25 |
+| ~~audited_renaming~~ | 26 |
 | ~~audited_conditional~~ | 452 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,17 +43,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 25 |
-| `unaudited` | 874 |
+| `audited_renaming` | 26 |
+| `unaudited` | 873 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 682 |
 | `decoration` | 10 |
-| `meta` | 56 |
+| `meta` | 57 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 783 |
+| `positive_theorem` | 782 |
 
 | criticality | count |
 |---|---:|
@@ -1041,6 +1041,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_nonlocal_corrections_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_ew_coupling_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `ai_methodology.ai_accountability_and_disclosure_note_2026-04-25` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `dark_energy_eos_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -1217,6 +1218,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Since T_m, T_delta, and T_q are all real, their imaginary parts vanish entrywise, so Im(H(m, delta, q_+)_{ij}) = Im(H_base_{ij}) for all entries.  _(class `A`)_
 - **chain closes:** True — The conclusions follow directly from the explicitly given matrices and ordinary matrix algebra. No cited upstream authority, physical identification, fitted value, or external comparator is needed.
 - **rationale:** The load-bearing step is a genuine algebraic identity over the explicit real matrices supplied in the note. The runner source performs symbolic/exact checks of symmetry, rank, traces, trace dependence, and entrywise imaginary-part invariance rather than merely printing constants. The framework instance is only a specialization of the same algebraic closure and does not import a contested external premise.
+- **auditor confidence:** high
+
+### `ai_methodology.ai_accountability_and_disclosure_note_2026-04-25`
+
+- **Note:** [`ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](../../docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audited only the package-level AI-use disclosure and accountability posture stated in the note, with no cited dependencies or runner.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e057d-a6ea-7ec3-b5ad-8c9ea20bdc13`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** AI systems were used as research and engineering instruments inside the author's decision structure, not as final authority on scientific truth.  _(class `E`)_
+- **chain closes:** True — The note does not present a physics derivation; it defines and discloses a methodology/accountability posture. Within that meta scope, there is no upstream scientific chain to close.
+- **rationale:** The load-bearing content is a disclosure/definition of process responsibility, not a first-principles computation or algebraic closure over retained inputs. There are no cited authorities or runner evidence, so the note cannot be audited as a positive theorem. The safe reduced result is only that this note records the repository's declared AI-use and human-responsibility policy.
 - **auditor confidence:** high
 
 ### `ai_methodology.raw.prompts_session_04c820e1`
