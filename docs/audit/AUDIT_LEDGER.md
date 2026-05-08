@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 828 |
+| unaudited | 827 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 445 |
+| ~~audited_conditional~~ | 446 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 445 |
+| `audited_conditional` | 446 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 877 |
+| `unaudited` | 876 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 676 |
+| `bounded_theorem` | 677 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 785 |
+| `positive_theorem` | 784 |
 
 | criticality | count |
 |---|---:|
@@ -834,6 +834,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_lower_level_pairing_nogo_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `neutrino_mass_reduction_to_dirac_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -9404,6 +9405,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the doubled nu_R line, the charge-(+2) adjoint eigenspace is exactly the one-dimensional slot E12, whose antisymmetric/Nambu completion is m J2 and whose phase is removed by local rephasing.  _(class `A`)_
 - **chain closes:** False — The local 2x2 algebra closes, but the claim that the current scalar transfer / response bank still misses exactly that slot imports the premise that the bank spans only diagonal Nambu lifts. No cited authority or runner data derives the actual bank span from the restricted packet.
 - **rationale:** The runner performs genuine elementary algebra checks for the doubled-line charge eigenspace, antisymmetric completion, and rephasing normal form. However, the final bank-missing conclusion is not derived from provided bank data; the code hard-codes the diagonal span as the relevant bank subspace and checks that J2 is not diagonal. Because the source note explicitly relies on prior branch facts about retained nu_R support and scalar/Nambu lifts that are not included as cited authorities, the full chain does not close within the restricted packet.
+- **auditor confidence:** high
+
+### `neutrino_mass_reduction_to_dirac_note`
+
+- **Note:** [`NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`](../../docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the stated reduction that, assuming the retained Majorana zero boundary and an admitted electroweak Higgs doublet lane, neutrino mass in general can be treated as a Dirac Yukawa activation problem while Majorana/seesaw closure still needs a charge-2 primitive.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0571-6a75-7801-906e-e7e104f43fe9`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Because the retained current-stack Majorana matrix is exactly zero, the current neutrino-mass closure problem reduces to deriving the Dirac Yukawa activation law Y_nu on the admitted Higgs lane.  _(class `A`)_
+- **chain closes:** False — The algebraic reduction itself is coherent once the Higgs doublet, matter representations, and M_R,current = 0 are granted. The restricted packet does not close those imported inputs, and the note explicitly marks the Higgs/CW electroweak-scalar lane as admitted but open/bounded.
+- **rationale:** The runner labels all checks as class C, but its source mainly performs finite-dimensional algebra after hard-coding the SU(2), hypercharge, generation, Higgs, and Majorana-zero premises; it does not compute the reduction from the Cl(3) axiom. The note itself states that the theorem is conditional on an admitted Higgs/CW electroweak-scalar lane and also imports retained toolkit inputs not included in the restricted authority packet. Therefore the presented chain is a conditional reduction, not a closed positive theorem from retained inputs alone.
+- **open / conditional deps cited:**
+  - `Higgs / CW electroweak-scalar lane`
 - **auditor confidence:** high
 
 ### `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28`

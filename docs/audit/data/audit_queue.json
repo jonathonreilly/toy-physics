@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 59,
-    "high": 307,
+    "high": 306,
     "leaf": 193,
     "medium": 281
   },
@@ -2176,29 +2176,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_cosmology_open_number_reduction.py",
       "transitive_descendants": 47
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_mass_reduction_to_dirac_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "charged_lepton_two_higgs_canonical_reduction_note"
-      ],
-      "direct_in_degree": 13,
-      "effective_status": "unaudited",
-      "load_bearing_score": 14.107,
-      "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
-      "transitive_descendants": 194
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -22931,6 +22908,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 11,
-  "total_pending": 840
+  "ready_count": 10,
+  "total_pending": 839
 }
