@@ -8,7 +8,7 @@ surface remains open
 **Certificate:** `outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json`
 
 ```yaml
-actual_current_surface_status: bounded-support / source-Higgs bridge aperture checkpoint; 46 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness
+actual_current_surface_status: bounded-support / source-Higgs bridge aperture checkpoint; 62 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness
 conditional_surface_status: exact support if a future same-surface canonical O_H certificate, production C_ss/C_sH/C_HH pole rows, complete row/FV/IR authority, and Gram flatness land without forbidden imports
 proposal_allowed: false
 bare_retained_allowed: false
@@ -36,20 +36,20 @@ worker.
 - The direct source-Higgs pole-row contract is exact support, but current
   production `C_sH/C_HH` rows are absent.
 - The completed two-source taste-radial packet is now the contiguous
-  `001-046` prefix out of `63` manifest chunks.
+  `001-062` prefix out of `63` manifest chunks.
 - Those rows are still `C_sx/C_xx` second-source rows.  The row metadata marks
   them as not canonical `C_sH/C_HH`, with
   `canonical_higgs_operator_identity_passed=false` and
   `used_as_physical_yukawa_readout=false`.
-- The combined measurement-row file is not written because chunks `047-063`
-  are absent.
+- The combined measurement-row file is not written because chunk `063` is
+  absent as completed checkpoint evidence.
 - The time-kernel/GEVP and strict scalar-LSZ/FV gates remain support/boundary
   surfaces, not physical pole authority.
 - The source-Higgs builder and Gram-purity postprocessor still have no
   production row certificate.
 
 The current source-Higgs bridge therefore remains bounded support plus an exact
-open boundary.  The 46 chunks are real staging evidence, but they do not close
+open boundary.  The 62 chunks are real staging evidence, but they do not close
 canonical `O_H`, source-Higgs pole rows, or Gram flatness.
 
 ## Claim Boundary

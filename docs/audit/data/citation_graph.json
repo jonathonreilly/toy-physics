@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-07T23:03:08.296557+00:00",
+  "generated_at": "2026-05-08T10:17:36.396143+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42438,7 +42438,7 @@
       "current_status": "open",
       "current_status_raw": "open / fresh-artifact intake checkpoint; no certified `O_H` or strict W/Z production packet is present on the committed PR head",
       "deps": [],
-      "note_hash": "f1d66fff971cfb1c2267a20ab2d2f35b4247121559e3f3431efd4f0bd7c04068",
+      "note_hash": "b5da179e7607eef899adc9a9693de4c02eee820cc6dd59494395fea44997334b",
       "path": "docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py",
       "title": "PR230 Fresh Artifact Intake Checkpoint"
@@ -42612,6 +42612,16 @@
       "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py",
       "title": "PR230 Neutral Primitive Route Completion"
+    },
+    "yt_pr230_neutral_transfer_chunks051_062_current_head_checkpoint_note_2026-05-08": {
+      "claim_id": "yt_pr230_neutral_transfer_chunks051_062_current_head_checkpoint_note_2026-05-08",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / current-head checkpoint; chunks001-062 are finite",
+      "deps": [],
+      "note_hash": "b8b614952aa7c5f36a3a5b08a0de974d3e86af443d11a1472c141afbf3b3a7df",
+      "path": "docs/YT_PR230_NEUTRAL_TRANSFER_CHUNKS051_062_CURRENT_HEAD_CHECKPOINT_NOTE_2026-05-08.md",
+      "runner_path": null,
+      "title": "PR230 Neutral Transfer Current-Head Checkpoint After Chunks051-062"
     },
     "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07": {
       "claim_id": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
@@ -43238,7 +43248,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / source-Higgs bridge aperture checkpoint; current",
       "deps": [],
-      "note_hash": "44eab0199bdaa14064e1c67cfb2af716c3ff2c687dc37d4aacd660bb552850ab",
+      "note_hash": "4924c7cc73bfbdcace2849aba567d7d47fddfe03c1b154bcce78e0d8edffdf4a",
       "path": "docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py",
       "title": "PR230 Source-Higgs Bridge Aperture Checkpoint"
@@ -43328,7 +43338,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / current two-source taste-radial raw `C_ss` rows do not supply strict scalar-LSZ moment/FV authority",
       "deps": [],
-      "note_hash": "2593160d7e9f52a7c8834a677e1f733533432fff51f950a9b5f326bcc39d9528",
+      "note_hash": "be54f45312108bd3edb58253fc944db7fffa421d986f47d88989e3854d5e31d0",
       "path": "docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py",
       "title": "PR #230 Strict Scalar-LSZ Moment/FV Authority Gate"
@@ -46500,6 +46510,7 @@
     "yt_pr230_negative_route_applicability_review_note_2026-05-06",
     "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07",
     "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
+    "yt_pr230_neutral_transfer_chunks051_062_current_head_checkpoint_note_2026-05-08",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle14_route_selector_gate_note_2026-05-05",
@@ -46730,12 +46741,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1125,
-    "node_count": 2116,
-    "root_count": 1623,
+    "leaf_count": 1126,
+    "node_count": 2117,
+    "root_count": 1624,
     "runners_with_path": 1593,
     "status_counts": {
-      "bounded": 592,
+      "bounded": 593,
       "open": 106,
       "proposed_promoted": 1,
       "proposed_retained": 373,

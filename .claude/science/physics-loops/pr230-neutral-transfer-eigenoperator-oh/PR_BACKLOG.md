@@ -94,6 +94,17 @@ post-block17 PR head for a fresh certified `O_H`/source-Higgs pole-row packet or
 strict W/Z physical-response packet and records that neither is present.  No
 standalone block18 review PR should be opened unless PR #230 integration fails.
 
+Block19 through block22 follow the same direct PR #230 landing path.  Block19
+adds the conditional FMS `O_H` candidate/action packet; block20 adds the exact
+future `kappa_sH` pole-residue readout gate while keeping it inactive; block21
+packages chunks047-050 as bounded row support; and block22 refreshes the
+neutral-transfer loop against current PR head `376e3e2f1` with chunks001-062
+packaged.  None authorizes closure without accepted same-surface canonical
+`O_H`, strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a strict
+W/Z physical-response packet, or neutral primitive H3/H4 physical-transfer
+authority.  No standalone block19-block22 review PR should be opened unless
+PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block21_chunks047_050_intake`.
+Current block: `block22_current_head_chunks051_062_intake`.
 
 ```yaml
-actual_current_surface_status: bounded-support / two-source taste-radial chunks001-050 packaged; finite C_ss/C_sx/C_xx rows remain non-closure staging evidence
+actual_current_surface_status: bounded-support / two-source taste-radial chunks001-062 packaged; finite C_ss/C_sx/C_xx rows remain non-closure staging evidence
 conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block21 packages completed chunks047-050 and refreshes source-Higgs, strict scalar-LSZ, Schur, primitive-transfer, and readiness gates to the 50/63 prefix. It does not count active chunks051-052, does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, does not prove Gram flatness, FV/IR, scalar-LSZ, or physical-response authority, and does not authorize retained or proposed_retained wording."
+proposal_allowed_reason: "Block22 refreshes the current-head neutral-transfer intake after chunks051-062 were committed. It records the 62/63 C_ss/C_sx/C_xx prefix with combined_rows_written=false and chunk063 absent as completed checkpoint evidence. It does not certify canonical O_H, does not produce strict C_ss/C_sH/C_HH pole rows, does not prove Gram flatness, FV/IR, scalar-LSZ, or physical-response authority, and does not authorize retained or proposed_retained wording."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -66,7 +66,12 @@ Reason:
     `C_ss/C_sx/C_xx` prefix as canonical `C_sH/C_HH` pole rows, does not treat
     raw `C_ss` as strict scalar-LSZ authority, and does not use Schur
     first-shell or one-pole scouts as model-class/pole/FV/IR authority.
-11. No branch-local wording may present this block as closure.
+11. Block22 consumes only committed current-head row files and certificates
+    after chunks051-062 were packaged, does not touch live worker output, does
+    not treat the 62/63 finite `C_ss/C_sx/C_xx` prefix as canonical
+    `C_sH/C_HH` pole rows, and leaves chunk063 completion as support-only even
+    if it later lands without accepted `O_H`/pole-row/Gram/FV/IR authority.
+12. No branch-local wording may present this block as closure.
 
 Prior block certificate summary:
 
@@ -147,5 +152,10 @@ Prior block certificate summary:
   50/63 `C_ss/C_sx/C_xx` prefix is schema-clean staging evidence only.  It is
   not canonical `O_H`, not canonical `C_sH/C_HH`, not strict scalar-LSZ/FV/IR
   authority, not W/Z response evidence, and not physical top-Yukawa closure.
-- Block01 through Block21 all have `proposal_allowed=false`; their boundaries
+- Block22 actual status: bounded-support / current-head chunks051-062 intake;
+  the current 62/63 `C_ss/C_sx/C_xx` prefix is schema-clean staging evidence
+  only.  It is not canonical `O_H`, not canonical `C_sH/C_HH`, not strict
+  scalar-LSZ/FV/IR authority, not W/Z response evidence, and not physical
+  top-Yukawa closure.
+- Block01 through Block22 all have `proposal_allowed=false`; their boundaries
   remain active.

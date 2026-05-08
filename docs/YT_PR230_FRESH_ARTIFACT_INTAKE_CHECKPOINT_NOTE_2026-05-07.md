@@ -7,7 +7,7 @@
 
 ## Question
 
-After the chunks059-060 package landed on draft PR #230, does the
+After the chunks061-062 package landed on draft PR #230, does the
 committed head contain either of the two high-priority campaign inputs?
 
 1. certified canonical `O_H` plus production `C_ss/C_sH/C_HH` pole rows with
@@ -24,8 +24,8 @@ active chunk-worker output, pending checkpoints, or live logs.
 The current committed head is:
 
 ```text
-e7548e1c6ad77f63299df57e63de8aff35f5c59a
-Package PR230 two-source chunks059-060
+376e3e2f1dca58a04ade8b042ae80b310f6a5905
+Package PR230 two-source chunks061-062
 ```
 
 The current head contains a real FMS route sharpening.  It loads the `O_sp`
@@ -42,9 +42,9 @@ subtracted-response readout.
 
 The source-Higgs side remains open:
 
-- `ready_chunks = 60`, `expected_chunks = 63`;
+- `ready_chunks = 62`, `expected_chunks = 63`;
 - `combined_rows_written = false`;
-- the first missing chunk is `61`;
+- the first missing chunk is `63`;
 - the current rows are still `C_sx/C_xx` staging rows, not canonical
   `C_sH/C_HH` pole rows;
 - canonical `O_H`, source-Higgs measurement rows, production certificate, and
@@ -93,7 +93,6 @@ and accepted, pivot only to a real strict W/Z packet or an H3/H4 physical
 positivity-improving transfer-kernel rank-one theorem.  Until then, this lane
 is waiting on explicit production/certificate inputs.
 
-Refresh note: this checkpoint now consumes committed head `e7548e1c6` and the
-packaged chunks001-060 prefix.  Chunks061-062 are active run-control only and
-remain excluded from evidence until completed and checkpointed; chunk063 is
-pending.
+Refresh note: this checkpoint now consumes committed head `376e3e2f1` and the
+packaged chunks001-062 prefix.  Chunk063 is absent as completed checkpoint
+evidence, and no active or pending worker output is consumed.

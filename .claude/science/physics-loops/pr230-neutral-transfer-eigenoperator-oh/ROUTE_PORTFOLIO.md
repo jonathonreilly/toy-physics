@@ -555,3 +555,49 @@
    - Result: work matched W/Z response/covariance rows or the explicit accepted
      FMS/gauge-Higgs `O_H` candidate/action packet.  Do not touch the live chunk
      worker from this lane.
+
+## Selected Block22 Route
+
+**Current-head chunks051-062 support intake checkpoint**
+
+- Type: bounded-support / exact-boundary intake.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 3.
+- Claim-state movement: consumes current draft PR #230 head `376e3e2f1` after
+  chunks051-062 were packaged, refreshes the source-Higgs aperture,
+  strict scalar-LSZ, fresh-artifact, W/Z packet, and campaign certificates to
+  the current `62/63` row prefix, and records that the larger prefix remains
+  finite `C_ss/C_sx/C_xx` staging support only.
+- Artifact: `YT_PR230_NEUTRAL_TRANSFER_CHUNKS051_062_CURRENT_HEAD_CHECKPOINT`.
+
+## Block22 Fan-Out Synthesis
+
+1. **PR-head artifact frame**
+   - Result: support only.  The post-block21 head packages chunks051-062, not
+     a certified `O_H`, source-Higgs pole-row packet, accepted W/Z action, or
+     strict W/Z response packet.
+
+2. **Source-Higgs aperture frame**
+   - Result: bounded support.  The current prefix is 62/63 with
+     `combined_rows_written=false`; chunk063 is absent as completed checkpoint
+     evidence, and the rows remain taste-radial `C_sx/C_xx`, not canonical
+     `C_sH/C_HH`.
+
+3. **Scalar-LSZ current-prefix frame**
+   - Result: exact negative boundary remains.  The refreshed certificate parses
+     62 ready chunks, all at volume `12x24`; every ready chunk has first-shell
+     raw `C_ss` above zero-mode raw `C_ss`, with
+     `z=193.5686242048355`.
+
+4. **W/Z accepted-action frame**
+   - Result: open.  Accepted action, production W/Z rows, same-source top rows,
+     matched covariance, strict non-observed `g2`, `delta_perp`, and final
+     W-response rows are absent; scout/smoke rows and coarse additive-top rows
+     remain non-production support.
+
+5. **Next admissible route**
+   - Result: unchanged.  Continue only with accepted same-surface canonical
+     `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a
+     strict W/Z physical-response packet with matched covariance and strict
+     non-observed `g2`, or a neutral primitive H3/H4 physical-transfer
+     certificate.  Chunk063 completion alone is support-only.

@@ -1,8 +1,8 @@
 # Handoff
 
-Checkpoint: 2026-05-07 11:56 EDT
+Checkpoint: 2026-05-08 06:11 EDT
 
-Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
+Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
@@ -761,3 +761,77 @@ Next exact action: checkpoint future chunks only after they finish, while the
 cleanest closure route remains a genuine row/authority artifact: certified
 canonical `O_H` plus strict source-Higgs pole rows, strict W/Z physical-response
 rows, or neutral primitive H3/H4 physical-transfer authority.
+
+## Block22 Current-Head Chunks051-062 Intake Checkpoint
+
+Resumed on 2026-05-08 and fast-forwarded the local loop branch to the current
+draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 376e3e2f1dca58a04ade8b042ae80b310f6a5905
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The committed PR head now includes packaged chunks051-062.  Block22 consumes
+only committed row files and certificates; it does not touch or inspect live
+worker output.
+
+Result:
+
+- `ready_chunks = 62`, `expected_chunks = 63`;
+- `combined_rows_written = false`, with chunk063 still absent as completed
+  checkpoint evidence;
+- source-Higgs aperture passes with `PASS=18 FAIL=0`, but the 62 chunks remain
+  finite `C_sx/C_xx` staging rows;
+- strict scalar-LSZ still fails as authority: raw `C_ss` shell-minus-zero is
+  positive with `z=193.5686242048355`;
+- fresh-artifact intake passes with `PASS=18 FAIL=0` and records no certified
+  `O_H`/source-Higgs pole-row packet and no strict W/Z accepted-action
+  physical-response packet;
+- W/Z packet intake passes with `PASS=10 FAIL=0`; accepted action, production
+  W/Z rows, same-source top rows, matched covariance, strict non-observed
+  `g2`, `delta_perp`, and final W-response rows remain absent.
+
+Files updated:
+
+- `docs/YT_PR230_NEUTRAL_TRANSFER_CHUNKS051_062_CURRENT_HEAD_CHECKPOINT_NOTE_2026-05-08.md`
+- `docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md`
+- `docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md`
+- `docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md`
+- refreshed certificates under `outputs/`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact plan,
+  review history, and PR backlog
+
+Honest status: bounded-support / current-head chunks051-062 intake checkpoint.
+The current surface still lacks certified canonical `O_H`, production
+`C_ss/C_sH/C_HH` pole rows, source-Higgs Gram flatness, strict
+scalar-LSZ/FV/IR authority, accepted W/Z action, production W/Z response rows,
+matched covariance, strict non-observed `g2`, `delta_perp`, and final
+W-response authority.  `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0
+python3 scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_wz_physical_response_packet_intake_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_fresh_artifact_intake_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=356 FAIL=0
+```
+
+Next exact action: do not treat chunk063 completion as closure by itself.
+Continue only with accepted same-surface canonical `O_H` plus strict
+`C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a strict W/Z matched
+physical-response packet with covariance, `delta_perp`, and strict
+non-observed `g2`, or neutral primitive H3/H4 physical-transfer authority.

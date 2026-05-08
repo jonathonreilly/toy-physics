@@ -47,9 +47,9 @@
     "used_y_t_bare": false,
     "used_yt_ward_identity": false
   },
-  "generated_at": "2026-05-07T22:05:54.344597+00:00",
-  "git_head": "e7548e1c6ad77f63299df57e63de8aff35f5c59a",
-  "git_head_subject": "Package PR230 two-source chunks059-060",
+  "generated_at": "2026-05-08T10:11:13.058269+00:00",
+  "git_head": "376e3e2f1dca58a04ade8b042ae80b310f6a5905",
+  "git_head_subject": "Package PR230 two-source chunks061-062",
   "hypothetical_axiom_status": null,
   "live_chunk_worker": {
     "inspected_active_output": false,
@@ -66,18 +66,18 @@
     "open_surface_bridge_intake": "bounded-support / open-surface bridge intake; no current PR230 closure",
     "positive_completion_audit": "open / positive closure completion audit: retained closure not achieved",
     "retained_route_certificate": "open / retained closure not yet reached",
-    "source_higgs_aperture": "bounded-support / source-Higgs bridge aperture checkpoint; 60 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+    "source_higgs_aperture": "bounded-support / source-Higgs bridge aperture checkpoint; 62 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
     "strict_scalar_lsz": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
     "two_source_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
-    "two_source_package": "bounded-support / two-source taste-radial chunks001-060 packaged; active chunks, logs, and pending checkpoints are not evidence",
+    "two_source_package": "bounded-support / two-source taste-radial chunks001-062 packaged; active chunks, logs, and pending checkpoints are not evidence",
     "wz_accepted_action_root": "exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, or mass-fit candidates",
     "wz_physical_response_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist"
   },
   "pass_count": 18,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The committed PR head contains a 60/63 C_sx/C_xx staging prefix, additive-response aggregate wiring, open-surface bridge intake, additive-top coarse Jacobian rows, and the FMS action-adoption minimal cut, all at support/boundary or route-guidance status.  The source-Higgs closure roots, W/Z accepted-action roots, W/Z production roots, matched covariance, strict g2 certificate, delta_perp authority, and final W-response rows remain absent.",
+  "proposal_allowed_reason": "The committed PR head contains a 62/63 C_sx/C_xx staging prefix, additive-response aggregate wiring, open-surface bridge intake, additive-top coarse Jacobian rows, and the FMS action-adoption minimal cut, all at support/boundary or route-guidance status.  The source-Higgs closure roots, W/Z accepted-action roots, W/Z production roots, matched covariance, strict g2 certificate, delta_perp authority, and final W-response rows remain absent.",
   "source_higgs_route": {
-    "aperture_status": "bounded-support / source-Higgs bridge aperture checkpoint; 60 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+    "aperture_status": "bounded-support / source-Higgs bridge aperture checkpoint; 62 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
     "closure_artifact_present": false,
     "root_presence": {
       "canonical_higgs_operator_certificate": false,
@@ -89,9 +89,9 @@
     "two_source_prefix": {
       "combined_rows_written": false,
       "expected_chunks": 63,
-      "first_missing_chunk": 61,
-      "package_status": "bounded-support / two-source taste-radial chunks001-060 packaged; active chunks, logs, and pending checkpoints are not evidence",
-      "ready_chunks": 60
+      "first_missing_chunk": 63,
+      "package_status": "bounded-support / two-source taste-radial chunks001-062 packaged; active chunks, logs, and pending checkpoints are not evidence",
+      "ready_chunks": 62
     }
   },
   "summary": {

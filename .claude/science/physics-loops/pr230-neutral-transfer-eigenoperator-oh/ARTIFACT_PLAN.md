@@ -408,3 +408,24 @@ reserving closure language for a certified canonical `O_H` plus strict
 physical-response packet, or a neutral primitive H3/H4 physical-transfer
 certificate.  The 50/63 finite `C_ss/C_sx/C_xx` packet remains staging support
 only.
+
+Block22 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Current-head chunks051-062 checkpoint note | `docs/YT_PR230_NEUTRAL_TRANSFER_CHUNKS051_062_CURRENT_HEAD_CHECKPOINT_NOTE_2026-05-08.md` | Created; bounded support only |
+| Package audit | `outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json` | Refreshed to chunks001-062; PASS=10 FAIL=0 |
+| Row combiner | `outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json` | Refreshed to ready=62/63; PASS=13 FAIL=0; combined rows not written |
+| Source-Higgs aperture note/certificate | `docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md`, `outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json` | Refreshed to 62/63; PASS=18 FAIL=0; still no canonical `O_H` or `C_sH/C_HH` rows |
+| Strict scalar-LSZ note/certificate | `docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md`, `outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json` | Refreshed to 62/63; PASS=13 FAIL=0; raw proxy still rejected |
+| Fresh-artifact intake note/certificate | `docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md`, `outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json` | Refreshed to PR head `376e3e2f1`; PASS=18 FAIL=0 |
+| W/Z packet intake | `outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json` | Rerun; PASS=10 FAIL=0; strict packet absent |
+| Campaign status | `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Rerun; PASS=356 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block22 checkpoint |
+
+Follow-on artifact target after block22 is unchanged in kind: complete chunk063
+only as bounded row support, while reserving closure language for accepted
+same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with
+Gram/FV/IR authority, a strict W/Z physical-response packet with matched
+covariance and strict non-observed `g2`, or a neutral primitive H3/H4
+physical-transfer certificate.
