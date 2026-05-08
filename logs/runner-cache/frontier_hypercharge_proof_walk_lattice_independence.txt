@@ -1,0 +1,87 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hypercharge_proof_walk_lattice_independence.py
+runner_sha256: c4a34100510ca24835847c6bc7e7eb9479b5e29506b3bee5bfd59f8e434e1ea3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+frontier_hypercharge_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: does not use lattice-action machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-
+  [PASS] contains marker: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+  [PASS] dependency exists: docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  [PASS] dependency exists: docs/HYPERCHARGE_IDENTIFICATION_NOTE.md
+  [PASS] dependency exists: docs/ANOMALY_FORCES_TIME_THEOREM.md
+  [PASS] dependency exists: docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md
+  [PASS] dependency exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+exact hypercharge arithmetic
+----------------------------------------------------------------------------------------
+  [PASS] discriminant = 324 (324)
+  [PASS] discriminant square root = 18
+  [PASS] positive root = 4/3 (4/3)
+  [PASS] negative root = -2/3 (-2/3)
+  [PASS] Q_L = 1/3 (1/3)
+  [PASS] L_L = -1 (-1)
+  [PASS] u_R = 4/3 (4/3)
+  [PASS] d_R = -2/3 (-2/3)
+  [PASS] e_R = -2 (-2)
+  [PASS] nu_R = 0 (0)
+  [PASS] Q_L multiplicity = 3 colors * 2 isospin
+  [PASS] L_L multiplicity = 1 color * 2 isospin
+  [PASS] u_R multiplicity = 3 colors * 1 isospin
+  [PASS] d_R multiplicity = 3 colors * 1 isospin
+  [PASS] e_R multiplicity = 1
+  [PASS] nu_R multiplicity = 1
+  [PASS] Tr[Y] = 0 (0)
+  [PASS] Tr[SU(3)^2 Y] = 0 per color (0)
+  [PASS] Tr[Y^3] = 0 (0)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] allowed input named: chiral-content multiplicities
+  [PASS] allowed input named: SU(2) and SU(3) Dynkin-index bookkeeping
+  [PASS] allowed input named: exact rational arithmetic
+  [PASS] allowed input named: electric-charge convention
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] boundary names non-closed item: derivation of the chiral matter content itself
+  [PASS] boundary names non-closed item: the staggered-Dirac realization gate
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+
+TOTAL: PASS=55 FAIL=0
+VERDICT: bounded proof-walk passes; hypercharge uniqueness uses no
+lattice-action quantity as a load-bearing input.
+
+----- stderr -----
+

@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/cl3_ks_full_spinnet_ed_loop_basis_2026_05_07_w1exactv2.py
+runner_sha256: e83df051f72d6f47170b834cdd953a0eb2ecd38a3beabaca22173c45ea5145aa
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.53
+status: ok
+----- stdout -----
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+[Quick test]
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=0, max_active=0, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 0 (1 irreps), max_active = 0, cas_cap = None
+    irreps: [(0, 0)]
+    Loop-supporting subsets up to size 0: 1
+    by size: {0: 1}
+  Final: 1 configs (1 raw attempts), total basis dim = 1
+    D-matrix cache: 8 entries
+    Built 1 unique vertex Q matrices, 4 lookups in 0.0s
+    Evaluating wavefunctions for 1 configs...
+    Wavefunction eval: 0.0s total
+  Building H and Gram (1 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.0s
+  E_0 = -0.008794  (1/1 kept)
+  <P>_avg = 0.002198
+  per-plaq P = [0.0083, 0.0005, 0.0057, -0.0058]
+  Runtime: 0.1s
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=1, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 1 (3 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (1, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 65 configs (369 raw attempts), total basis dim = 81
+    D-matrix cache: 24 entries
+    Built 8 unique vertex Q matrices, 260 lookups in 0.1s
+    Evaluating wavefunctions for 65 configs...
+    Wavefunction eval: 0.1s total
+  Building H and Gram (81 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.0s
+  E_0 = -0.109249  (81/81 kept)
+  <P>_avg = 0.045028
+  per-plaq P = [0.0481, 0.0467, 0.0443, 0.0411]
+  Runtime: 0.3s
+
+Summary at g^2=1:
+  Lambda=0, max_active=0: <P> = 0.0022, n=1
+  Lambda=1, max_active=4: <P> = 0.0450, n=81
+
+----- stderr -----
+

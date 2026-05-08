@@ -17,12 +17,12 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| high | `unaudited` | 196 |
+| high | `unaudited` | 195 |
 | medium | `unaudited` | 95 |
 | medium | `audited_conditional` | 58 |
 | critical | `audited_conditional` | 56 |
 | high | `audited_conditional` | 56 |
-| critical | `unaudited` | 39 |
+| critical | `unaudited` | 40 |
 | high | `audited_renaming` | 10 |
 | medium | `audited_failed` | 6 |
 | critical | `audited_renaming` | 5 |
@@ -74,6 +74,7 @@ publication tables phrase it.
 | critical | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `down_type_mass_ratio_ckm_dual_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md |
 | critical | `emergent_lorentz_invariance_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `g_bare_structural_normalization_theorem_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | critical | `gauge_vacuum_plaquette_bridge_support_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
@@ -243,7 +244,6 @@ publication tables phrase it.
 | high | `fractional_charge_denominator_from_n_c_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | high | `frontier_extension_lane_opening_note_2026-04-25` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | high | `g_bare_rigidity_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
-| high | `g_bare_structural_normalization_theorem_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | high | `g_bare_two_ward_closure_note_2026-04-18` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
 | high | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
 | high | `grav_decoherence_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |

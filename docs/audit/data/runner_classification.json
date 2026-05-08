@@ -5772,6 +5772,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_ewsb_pattern_from_higgs_y.py"
     },
+    "exact_tier_path_integral_bounded_note_2026-05-07_exact": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 25,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_exact_tier_path_integral_2026_05_07_exact.py"
+    },
     "family_companion_compare_note": {
       "assert_count": 0,
       "counts": {
@@ -8256,6 +8268,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hypercharge_identification.py"
     },
+    "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hypercharge_proof_walk_lattice_independence.py"
+    },
     "hypercharge_squared_trace_catalog_theorem_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -9515,6 +9539,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/kubo_range_of_validity.py"
+    },
+    "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 21,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_l3a_v3_check_2026_05_07_l3a.py"
     },
     "lanes.action-law.readme": {
       "assert_count": 0,
@@ -14892,6 +14928,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py"
     },
+    "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_ks_full_spinnet_ed_loop_basis_2026_05_07_w1exactv2.py"
+    },
     "staggered_3d_self_gravity_sign_note_2026-04-11": {
       "assert_count": 0,
       "counts": {
@@ -19744,6 +19792,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_exact_tier_path_integral_2026_05_07_exact.py": {
+      "assert_count": 0,
+      "claims": [
+        "exact_tier_path_integral_bounded_note_2026-05-07_exact"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 25,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py": {
       "assert_count": 0,
       "claims": [
@@ -19759,6 +19822,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_ks_full_spinnet_ed_loop_basis_2026_05_07_w1exactv2.py": {
+      "assert_count": 0,
+      "claims": [
+        "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/cl3_ks_full_spinnet_ed_v4_2026_05_07_w1full.py": {
       "assert_count": 0,
       "claims": [
@@ -19768,6 +19846,21 @@
         "A": 0,
         "B": 0,
         "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_l3a_v3_check_2026_05_07_l3a.py": {
+      "assert_count": 0,
+      "claims": [
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 21,
         "D": 0
       },
       "decoration_candidate": false,
@@ -27467,6 +27560,21 @@
       "counts": {
         "A": 2,
         "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hypercharge_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
         "C": 3,
         "D": 0
       },
@@ -39671,12 +39779,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 595,
+      "C": 599,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1416,
-    "runners_with_C": 706,
-    "runners_with_D": 351
+    "runners_classified": 1420,
+    "runners_with_C": 710,
+    "runners_with_D": 352
   }
 }

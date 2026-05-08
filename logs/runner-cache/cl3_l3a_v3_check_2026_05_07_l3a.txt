@@ -1,0 +1,221 @@
+===== runner cache v1 =====
+runner: scripts/cl3_l3a_v3_check_2026_05_07_l3a.py
+runner_sha256: 28a27463ec05608bd6faaeda3d23574746377b7a176b1da7adbeadaa8e293ca9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+========================================================================================
+L3a Trace-Surface (V_3 vs V_full) — Verification Runner (W2 / l3a closure)
+========================================================================================
+
+========================================================================================
+SECTION 0 — Setup: V_3 (3D) and V_full = V (8D) trace surfaces
+========================================================================================
+  [PASS] Tr_{V_3}(T_a T_b) = (1/2) δ_ab (canonical Gell-Mann on V_3)  (max |Gram3 - (1/2)I| = 1.11e-16)
+  [PASS] Tr_V(T_a^V T_b^V) = δ_ab (full taste cube V_full)  (max |GramV - I| = 2.22e-16)
+  [PASS] Ratio Tr_V / Tr_{V_3} = 2 (fiber multiplicity)  (ratio = 2.0)
+
+========================================================================================
+SHARPENING S1 — Trace-surface inflation = uniform global × 2
+========================================================================================
+
+  Test: every polynomial-in-T_a observable on V_full equals
+        exactly 2 × the same polynomial on V_3.
+
+  [PASS] Tr_{V_3}(C_2) = 4 = 3 × 4/3 (Casimir × dim(V_3))  (Tr_V3(C_2) = 4.000000)
+  [PASS] Tr_V(C_2) = 8 = 6 × 4/3 (Casimir × dim(V_color))  (Tr_V(C_2) = 8.000000)
+  [PASS] S1: Tr_V(C_2) / Tr_{V_3}(C_2) = 2 (uniform inflation)  (ratio = 2.000000)
+  [PASS] S1: Tr_V(T_a T_b T_c) = 2 × Tr_{V_3}(T_a T_b T_c) for all a,b,c  (max |Tr_V - 2 Tr_V3| = 0.00e+00)
+  [PASS] S1: Tr_V(T_1 T_2 T_3 T_4) = 2 × Tr_{V_3}(T_1 T_2 T_3 T_4) (quartic)  (V8 = 0.000000+0.000000j,  2*V3 = 0.000000+0.000000j)
+  [PASS] S1: Wilson-loop polynomial Tr([T_1,T_2]^2): V_full = 2 × V_3  (V_full = -1.000000,  2*V_3 = -1.000000)
+
+  S1 conclusion: all polynomial-in-T_a observables scale by
+  uniform factor dim(V_fiber) = 2 between V_3 and V_full.
+  Trace-surface choice is an OVERALL SCALE FACTOR, not a
+  structural discriminator.
+
+========================================================================================
+ATTACK 1 — Matter / quark rep V_3
+========================================================================================
+  [PASS] Gauge generators non-trivial on V_3 (faithful matter rep)  (Σ ||T_a|| = 5.6569)
+  [PASS] All T_a^V vanish on V_lepton (gauge generators are 0 on lepton sector)  (Verified for all 8 generators)
+  [PASS] P_color + P_lepton = I_V (V_full splits as V_color ⊕ V_lepton)  (max |P_c + P_l - I| = 0.00e+00)
+
+  STATUS: PARTIAL / CONDITIONAL
+  Residual: matter rep = V_3 is the staggered-Dirac realization gate (open).
+  Same as W2.binary V1.
+
+========================================================================================
+ATTACK 2 — Color singlet uniqueness on V_3
+========================================================================================
+  [PASS] V_3 singlet δ_ij/√3 is SU(3)-invariant ([T_a, singlet] = 0)  (max ||[T_a, singlet]|| = 0.00e+00)
+  [PASS] Tr(singlet · singlet†) = 1 (normalized)  (Tr = 1.000000)
+  [PASS] V_full singlet projector P_color/3 is SU(3)^V-invariant  (max ||[T_a^V, singlet_V]|| = 0.00e+00)
+
+  STATUS: PARTIAL / CONDITIONAL
+  Both V_3 and V_full admit a color singlet structure; uniqueness on V_3
+  follows from the IRREDUCIBILITY of the carrier, but identifying the
+  carrier with V_3 again requires the matter-rep identification.
+  Residual: same as Attack 1.
+
+========================================================================================
+ATTACK 3 — Z³ point-group O_h(3) = S_3 ⋉ (Z_2)^3
+========================================================================================
+  [PASS] S_3 cyclic permutation σ on V_3 is unitary  (max |UU† - I| = 0.00e+00)
+  [PASS] S_3 cyclic σ has order 3 on V_3 (σ³ = I)  (max |σ³ - I| = 0.00e+00)
+  [PASS] Tr_{V_3}(σ_cyc) = 0 (sum of 3rd roots of unity)  (Tr = 0.000000)
+  [PASS] V_3 carries trivial ⊕ E of S_3 (eigenvalues {1, ω, ω̄})  (eigs = [np.complex128(-0.5000000000000001-0.866025403784439j), np.complex128(1-1.3256180803817732e-34j), np.complex128(-0.5000000000000001+0.866025403784439j)])
+
+  V_3 = trivial ⊕ E_2 of S_3 (under axis permutation).
+  V_lepton (1D antisym) carries the SIGN rep of S_3.
+  V_full inherits both reps.
+
+  STATUS: PARTIAL / NEW STRUCTURAL CONTENT
+  S_3-invariance argument distinguishes V_3 from V_full but does not
+  by itself FORCE the gauge action to be S_3-invariant. Residual:
+  action form (A2.5 / Wilson plaquette) is a separate framework choice.
+  Same as W2.bridge V5_NEW.
+
+========================================================================================
+ATTACK 4 — Anomaly cancellation (NEW SHARPENING S3)
+========================================================================================
+  [PASS] d^118 on V_3 = 1/√3 ≈ 0.5774 (canonical)  (d_118^V3 = 0.577350)
+  [PASS] S3: d^abc on V_full = 2 × d^abc on V_3 (uniform inflation)  (max |d_V - 2 d_V3| = 0.00e+00)
+  [PASS] Anomaly cancellation 3 + 3̄ on V_3: d(3) + d(3̄) = 0  (Σ d = 0 with q + q̄ matter content)
+  [PASS] Anomaly cancellation 3 + 3̄ on V_full: same condition holds  (Σ d_V = 0 with q + q̄ matter content (factor 2 inflated))
+
+  STATUS: OBSTRUCTION (NEW SHARPENING S3)
+  Anomaly cancellation is matter-content driven, NOT trace-surface
+  driven. Both V_3 and V_full satisfy cancellation IDENTICALLY
+  (cancellation condition = matter-content sum). The residual:
+  matter-rep identification.
+
+========================================================================================
+ATTACK 5 — Cl(3) ⊗ Cl(3) → Spin(6) → SU(3) chain
+========================================================================================
+  [PASS] SU(3) adjoint dim = 8 (matches our generator count)  (|T| = 8)
+
+  Spin(6) → SU(4) → SU(3)×U(1) chain: 4 = 3 + 1 of SU(3)
+  Framework realization: V_color = (V_3 ⊕ V_antisym) ⊗ V_fiber
+  with V_3 = '3 of SU(3)' and V_antisym = '1 trivial'
+
+  [PASS] V_full carries reducible 4 = 3 + 1 of SU(3) (matches Spin(6) chain)  (Algebraic embedding consistent)
+
+  STATUS: OBSTRUCTION
+  The Spin(6) embedding LIVES WITHIN the matter sector and depends on
+  matter-rep identification. The chain itself does not single out
+  V_3 as the canonical trace surface — it just provides a consistent
+  algebraic embedding compatible with either V_3 or V_full trace.
+  Same as W2.bridge V3.
+
+========================================================================================
+ATTACK 6 — K-theory / Grothendieck-Witt (NEW, no prior)
+========================================================================================
+  [PASS] rank V_3 = 3, rank V_full = 8  (Verified as Clifford modules)
+  [PASS] V_full is a stable extension of V_3 (no new K-theory class)  (V_full = V_3 ⊕ V_3 ⊕ V_lepton in same stable class)
+
+  STATUS: OBSTRUCTION
+  K-theory does NOT discriminate V_3 from V_full at the level of
+  the gauge bundle. Both are in the same stable class. The
+  Grothendieck-Witt argument fails because the framework's gauge
+  bundle has no twist (Z³ is flat, trivial K-theory class).
+  This is a NEW obstruction beyond W2.binary / W2.bridge.
+
+========================================================================================
+ATTACK 7 — Reflection positivity (NEW, no prior)
+========================================================================================
+  [PASS] Tr_{V_3}(T_a²) > 0 for all 8 generators (RP semipositive)  (All Tr_{V_3}(T_a T_a) = 1/2 > 0)
+  [PASS] Tr_V(T_a^V²) > 0 for all 8 generators (RP semipositive)  (All Tr_V(T_a^V T_a^V) = 1 > 0)
+  [PASS] Tr_{V_3}(Re U) > 0 for sample unitary on V_3  (Tr Re U = 2.877500)
+  [PASS] Tr_V(Re U) > 0 for sample unitary on V_full  (Tr Re U^V = 7.755000)
+
+  STATUS: OBSTRUCTION
+  Both V_3 and V_full traces are RP-compatible (positive-definite HS
+  forms; positive Wilson actions). RP forces semipositivity, which
+  is ALREADY guaranteed by Killing rigidity (R1). It does NOT
+  discriminate between the two trace surfaces — both surfaces yield
+  positive Wilson actions, with ratio uniformly factor 2 (S1).
+  This is a NEW obstruction beyond W2.binary / W2.bridge.
+
+========================================================================================
+ATTACK 8 — Operational reconstruction (Hardy-style; NEW)
+========================================================================================
+  [PASS] All gauge generators T_a^V vanish on V_lepton  (V_lepton is gauge-invariant (informationally redundant))
+  [PASS] Gauge generators do NOT distinguish V_fiber states (informationally redundant)  (Same gauge expectation values for fiber-distinct states)
+
+  Operational completeness reasoning:
+  - V_lepton: gauge generators vanish; operationally redundant.
+  - V_fiber: gauge generators act as I; redundant for gauge sector.
+  - V_3: irreducibly distinguished by gauge generators.
+
+  STATUS: PARTIAL / CONDITIONAL (NEW)
+  Operational completeness REDUCES V_full to V_color (factoring V_lepton).
+  But the further reduction V_color → V_3 (factoring V_fiber) requires
+  identifying matter with V_3 alone — the matter-rep gate.
+  This is new structural content beyond W2.binary / W2.bridge.
+
+========================================================================================
+ATTACK 9 — Per-site Pauli rep direct construction (W2.bridge B1/B3)
+========================================================================================
+  [PASS] Per-site σ_3 (factor 0) has eigenvalues {+1 mult 4, -1 mult 4}  (eigs = [np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)])
+  [PASS] T_3^V on V (color SU(2)) has eigenvalues {+1/2 mult 2, -1/2 mult 2, 0 mult 4}  (eigs = [np.float64(-0.5), np.float64(-0.5), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.5), np.float64(0.5)])
+  [PASS] Per-site σ_3/2 (factor 0) on V has {+1/2 mult 4, -1/2 mult 4}  (eigs = [np.float64(-0.5), np.float64(-0.5), np.float64(-0.5), np.float64(-0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5)])
+  [PASS] Per-site σ_3/2 has 0 zero modes; color T_3^V has 4  (Different multiplicities — operator-INEQUIVALENT on V)
+
+  STATUS: OBSTRUCTION
+  Per-site Cl(3) bivector SU(2) and color SU(2) sub on V_3 are
+  operator-INEQUIVALENT on V_full (different T_3 spectra).
+  This is exactly W2.bridge B1: the bridge is a non-trivial
+  identification, not a Cl(3) + Z³ primitive.
+
+========================================================================================
+ATTACK 10 — Quark-number conservation (NEW SHARPENING S2)
+========================================================================================
+  [PASS] Quark-number N_q = I_3 commutes with all 8 gauge generators on V_3  ([T_a, N_q] = 0 ∀a)
+  [PASS] Quark-number N_q^V = P_color commutes with all 8 gauge generators on V_full  ([T_a^V, N_q^V] = 0 ∀a (gauge generators block-diagonal on V_color))
+  [PASS] Tr_{V_3}(N_q) = 3.0000 (= dim V_3 = 3 quarks)  (3 colors, 1 quark each)
+  [PASS] Tr_V(N_q^V) = 6.0000 (= dim V_color = 6 quarks: 3 colors × 2 fiber)  (Factor 2 fiber inflation)
+  [PASS] S2: Tr_V(N_q^V) / Tr_{V_3}(N_q) = 2 (uniform inflation, same as S1)  (ratio = 2.000000)
+
+  STATUS: OBSTRUCTION (NEW SHARPENING S2)
+  Quark-number conservation works on BOTH V_3 and V_full identically.
+  The fiber inflation (factor 2) is uniform across all matter-content
+  conserved quantities (anomaly d-symbols, quark number, baryon number,
+  etc.). The trace-surface choice is an OVERALL multiplicative scale,
+  NOT a structural discriminator.
+  Residual: matter-rep identification (= staggered-Dirac realization gate).
+
+========================================================================================
+META — Bridge gap admission count
+========================================================================================
+
+  Four-layer stratification (G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT):
+  - L1 (axiom A1): Cl(3) on V = C^8 — DERIVED
+  - L2 (Killing rigidity): HS form unique up to scalar — DERIVED
+  - L3 (convention layer):
+    - L3a: trace-surface choice (V_3 vs V_full) — ADMITTED
+    - L3b: per-site SU(2) ↔ V_3 SU(2) sub bridge — equiv L3a (W2.bridge)
+  - L4 (g_bare = 1): DERIVED constraint
+
+  [PASS] Bridge gap admission count = 1 (L3a only, after this analysis)  (L3b ≡ L3a (W2.bridge); per-site N_F=1/2 unconditional (W2.norm))
+  [PASS] L3a closure ≡ matter-rep identification (= staggered-Dirac realization gate)  (All 4 partial vectors converge on the matter-rep gate)
+
+  Three new structural sharpenings beyond W2.binary / W2.bridge:
+  - S1: trace-surface inflation = uniform global × 2 (verified Section 1)
+  - S2: quark-number conservation is trace-surface independent (Attack 10)
+  - S3: anomaly cancellation is trace-surface independent (Attack 4)
+
+  Six clean obstructions (Attacks 4, 5, 6, 7, 9, 10).
+  Four partials, all bridge-conditional (Attacks 1, 2, 3, 8).
+  Zero unconditional positive arrows.
+
+========================================================================================
+EXACT      : PASS = 44, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 44, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

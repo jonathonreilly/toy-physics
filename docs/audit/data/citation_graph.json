@@ -6193,6 +6193,34 @@
       "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
     },
     {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full"
+    },
+    {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact"
+    },
+    {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2"
+    },
+    {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
       "from": "exponent_derivation",
       "to": "matched_2d_4d_decoherence_note"
     },
@@ -7905,6 +7933,34 @@
       "to": "graph_first_su3_integration_note"
     },
     {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
       "to": "hypercharge_identification_note"
     },
@@ -8895,6 +8951,62 @@
     {
       "from": "kubo_range_of_validity_note",
       "to": "linear_response_true_kubo_note"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
     },
     {
       "from": "lattice_3d_nyquist_diffraction_note",
@@ -13374,6 +13486,18 @@
     },
     {
       "from": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2",
       "to": "c_iso_derived_theorem_note_2026-05-07_w3"
     },
     {
@@ -35725,6 +35849,25 @@
       "runner_path": "scripts/frontier_ewsb_pattern_from_higgs_y.py",
       "title": "Electroweak Symmetry Breaking Pattern from Higgs Y_H = +1"
     },
+    "exact_tier_path_integral_bounded_note_2026-05-07_exact": {
+      "claim_id": "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "c_iso_derived_theorem_note_2026-05-07_w3",
+        "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+        "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+        "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+      ],
+      "note_hash": "5fd2e6eef85b0e4a64aad89c5ecdd10a0881f812caec4413818712972c70e724",
+      "path": "docs/EXACT_TIER_PATH_INTEGRAL_BOUNDED_NOTE_2026-05-07_exact.md",
+      "runner_path": "scripts/cl3_exact_tier_path_integral_2026_05_07_exact.py",
+      "title": "Path-Integral W1 Bounded-Tier Tightening Note"
+    },
     "experiment_backmatch_query_pack_note": {
       "claim_id": "experiment_backmatch_query_pack_note",
       "claim_type_author_hint": null,
@@ -38851,6 +38994,25 @@
       "runner_path": "scripts/frontier_hypercharge_identification.py",
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
     },
+    "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07": {
+      "claim_id": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "left_handed_charge_matching_note",
+        "hypercharge_identification_note",
+        "anomaly_forces_time_theorem",
+        "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "08085332ae4dbd4ec96876ae07ff5847e21d6dcb6cce2606ec9e8a416895005c",
+      "path": "docs/HYPERCHARGE_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-07.md",
+      "runner_path": "scripts/frontier_hypercharge_proof_walk_lattice_independence.py",
+      "title": "Hypercharge Proof-Walk Lattice-Independence Bounded Note"
+    },
     "hypercharge_squared_trace_catalog_theorem_note_2026-04-25": {
       "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -40492,6 +40654,32 @@
       "path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
       "runner_path": "scripts/kubo_range_of_validity.py",
       "title": "First-Order Kubo Range of Validity \u2014 F~M \u2248 1 Derived on Linearity-Regime Subset"
+    },
+    "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a": {
+      "claim_id": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+        "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+        "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "cl3_color_automorphism_theorem",
+        "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
+        "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02",
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "g_bare_structural_normalization_theorem_note_2026-04-18"
+      ],
+      "note_hash": "385bd072b368c5a6bc3daa5bf233d7db2cb89d5c4e9eeecb46c03a01ee43094a",
+      "path": "docs/L3A_V3_TRACE_SURFACE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_l3a.md",
+      "runner_path": "scripts/cl3_l3a_v3_check_2026_05_07_l3a.py",
+      "title": "L3a Trace-Surface (V_3 vs V_full) \u2014 Bounded Obstruction (10-Vector Consolidation)"
     },
     "lanes.action-law.readme": {
       "claim_id": "lanes.action-law.readme",
@@ -50693,6 +50881,21 @@
       "runner_path": "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py",
       "title": "Full SU(3) Spin-Network ED \u2014 \u039b=2 Compute Frontier Broken (W1.exact)"
     },
+    "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2": {
+      "claim_id": "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "c_iso_derived_theorem_note_2026-05-07_w3"
+      ],
+      "note_hash": "82821cb721671484d4ca3db879c815c77750a8d604d9b77c83247ba4b0d944f3",
+      "path": "docs/SPINNETWORK_FULL_ED_LOOP_BASIS_BOUNDED_THEOREM_NOTE_2026-05-07_w1exactv2.md",
+      "runner_path": "scripts/cl3_ks_full_spinnet_ed_loop_basis_2026_05_07_w1exactv2.py",
+      "title": "Spin-Network Full ED \u2014 Loop-Supporting Basis Theorem Note (W1.exactv2)"
+    },
     "staggered_3d_self_gravity_sign_note_2026-04-11": {
       "claim_id": "staggered_3d_self_gravity_sign_note_2026-04-11",
       "claim_type_author_hint": null,
@@ -56801,7 +57004,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 103,
+      "bounded_theorem": 107,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
@@ -56809,17 +57012,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 606,
+      "bounded_theorem": 610,
       "meta": 10,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6717,
-    "leaf_count": 552,
-    "node_count": 1934,
+    "edge_count": 6748,
+    "leaf_count": 551,
+    "node_count": 1938,
     "root_count": 864,
-    "runners_with_path": 1513
+    "runners_with_path": 1517
   }
 }
