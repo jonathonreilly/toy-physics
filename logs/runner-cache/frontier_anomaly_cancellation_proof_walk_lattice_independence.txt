@@ -1,0 +1,119 @@
+===== runner cache v1 =====
+runner: scripts/frontier_anomaly_cancellation_proof_walk_lattice_independence.py
+runner_sha256: b07d393594ba6417002fff9c42c92dedc35888071a808c9e03f56a2fc43b799d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.02
+status: ok
+----- stdout -----
+frontier_anomaly_cancellation_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: do not use lattice-action machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: ANOMALY_FORCES_TIME_THEOREM
+  [PASS] contains marker: LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25
+  [PASS] contains marker: STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-
+  [PASS] contains marker: HYPERCHARGE_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE
+  [PASS] contains marker: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] contains marker: (E1)
+  [PASS] contains marker: (E2)
+  [PASS] contains marker: (E3)
+  [PASS] contains marker: (E4)
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/ANOMALY_FORCES_TIME_THEOREM.md
+  [PASS] dependency exists: docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md
+  [PASS] dependency exists: docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+  [PASS] dependency exists: docs/HYPERCHARGE_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-07.md
+  [PASS] dependency exists: docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  [PASS] dependency exists: docs/HYPERCHARGE_IDENTIFICATION_NOTE.md
+  [PASS] dependency exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+exact anomaly trace arithmetic
+----------------------------------------------------------------------------------------
+  [PASS] Q_L hypercharge = 1/3 (1/3)
+  [PASS] L_L hypercharge = -1 (-1)
+  [PASS] u_R hypercharge = 4/3 (4/3)
+  [PASS] d_R hypercharge = -2/3 (-2/3)
+  [PASS] e_R hypercharge = -2 (-2)
+  [PASS] nu_R hypercharge = 0 (0)
+  [PASS] Q_L multiplicity = 3 colors * 2 isospin
+  [PASS] L_L multiplicity = 1 color * 2 isospin
+  [PASS] u_R multiplicity = 3 colors * 1 isospin
+  [PASS] d_R multiplicity = 3 colors * 1 isospin
+  [PASS] e_R multiplicity = 1
+  [PASS] nu_R multiplicity = 1
+  [PASS] E1 LH partial Tr[Y]_LH = 0 (0)
+  [PASS] E1 RH partial Tr[Y]_RH = 0 (0)
+  [PASS] E1 full Tr[Y] = 0 (0)
+  [PASS] E2 Dynkin index T(fund) = 1/2
+  [PASS] E2 LH-quark Tr[SU(3)^2 Y]_LH = 1/3 (1/3)
+  [PASS] E2 RH-quark Tr[SU(3)^2 Y]_RH = -1/3 (-1/3)
+  [PASS] E2 full Tr[SU(3)^2 Y] = 0 (0)
+  [PASS] E3 Q_L cubic = 2/9 (2/9)
+  [PASS] E3 L_L cubic = -2 (-2)
+  [PASS] E3 Tr[Y^3]_LH = -16/9 (-16/9)
+  [PASS] E4 Tr[Y^3]_RH = 16/9 (16/9)
+  [PASS] E4 full Tr[Y^3] = 0 (0)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] allowed input named: electric-charge convention
+  [PASS] allowed input named: chiral-content multiplicities
+  [PASS] allowed input named: Dynkin-index normalization
+  [PASS] allowed input named: exact rational arithmetic
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] boundary names non-closed item: Adler-Bell-Jackiw anomaly-to-inconsistency
+  [PASS] boundary names non-closed item: the right-handed completion existence statement
+  [PASS] boundary names non-closed item: derivation of the chiral matter content itself
+  [PASS] boundary names non-closed item: the staggered-Dirac realization gate
+  [PASS] boundary names non-closed item: Witten SU(2) `Z_2` integer count
+  [PASS] boundary names non-closed item: pure-color SU(3)^3 cubic gauge-anomaly cancellation
+  [PASS] boundary names non-closed item: `B - L` anomaly-freedom closure
+  [PASS] boundary names non-closed item: 3+1 spacetime-forcing downstream step
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+
+----------------------------------------------------------------------------------------
+proof-walk table coverage (one per identity)
+----------------------------------------------------------------------------------------
+  [PASS] per-identity proof-walk heading present: (E1)
+  [PASS] per-identity proof-walk heading present: (E2)
+  [PASS] per-identity proof-walk heading present: (E3)
+  [PASS] per-identity proof-walk heading present: (E4)
+  [PASS] all proof-walk rows answer 'no' to lattice-action input (row count = 13)
+  [PASS] no proof-walk row answers 'yes' to lattice-action input (bad row count = 0)
+
+TOTAL: PASS=81 FAIL=0
+VERDICT: bounded proof-walk passes; the four anomaly cancellation
+identities Tr[Y]=0, Tr[SU(3)^2 Y]=0, Tr[Y^3]_LH = -16/9, and
+Tr[Y^3]=0 use no lattice-action quantity as a load-bearing input in
+their cited proofs.
+
+----- stderr -----
+
