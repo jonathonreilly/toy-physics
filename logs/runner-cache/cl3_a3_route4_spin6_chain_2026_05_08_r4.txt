@@ -1,0 +1,125 @@
+
+========================================================================================
+V1.  Cl(3) tensor Cl(3) ~ Cl(6) algebra isomorphism
+========================================================================================
+  [PASS] V1.1 Cl(6) generators satisfy {e_i, e_j} = 2 delta_{ij}  (Brauer-Weyl construction of Cl(6) on C^8)
+  [PASS] V1.2 All Cl(6) generators are Hermitian
+  [PASS] V1.3 dim(Cl(6) bivectors) = 15  (Spin(6) Lie algebra dimension)
+  [PASS] V1.4 Cl(6) bivectors are anti-Hermitian  (Lie algebra so(6) condition)
+
+========================================================================================
+V2.  so(6) Lie algebra structure  /  Spin(6) ~ SU(4)
+========================================================================================
+  [PASS] V2.1 so(6) Cartan subalgebra has rank 3  ([H_1, H_2] = [H_1, H_3] = [H_2, H_3] = 0)
+  [PASS] V2.2 i H_1 has spectrum (-1/2)^4, (+1/2)^4  (actual sorted: [-0.5 -0.5 -0.5 -0.5  0.5  0.5  0.5  0.5])
+  [PASS] V2.3 Hermitian so(6) generators (15)
+  [PASS] V2.4 so(6) closure: i*[T_a, T_b] in span(T)  (spot-checked on 4 commutator pairs)
+  [PASS] V2.5 gamma_7^2 = I (chirality involution)
+  [PASS] V2.6 dim(S+) = 4 (irreducible SU(4) rep)
+  [PASS] V2.7 Bivectors restrict to Hermitian on S+
+  [PASS] V2.8 Bivectors on S+ are traceless (su(4) Lie algebra)  (15 Hermitian traceless 4x4: dim su(4))
+
+========================================================================================
+V3.  SU(4) -> SU(3) x U(1) maximal embedding
+========================================================================================
+  [PASS] V3.1 dim(SU(4)) = 15  (8 SU(3) + 6 off-diagonal + 1 hypercharge)
+  [PASS] V3.2 SU(4) generators Hermitian + traceless
+  [PASS] V3.3 Standard normalization Tr(T_a T_b) = (1/2) delta_ab
+
+========================================================================================
+V4.  U(1)_(B-L) generator and charges on 4 of SU(4)
+========================================================================================
+  [PASS] V4.1 U(1)_(B-L) charges on 4 of SU(4) = (1/3, 1/3, 1/3, -1)  (Pati-Salam B-L assignment)
+  [PASS] V4.2 [U_(B-L), SU(3)] = 0 (residual subgroup)  (U(1) lives in centralizer of SU(3))
+  [PASS] V4.3 [U_(B-L), off-diagonal SU(4)/SU(3)xU(1)] != 0  (off-diagonal generators broken by U(1) projection)
+
+========================================================================================
+V5.  Branching of 4 of SU(4) under SU(3) x U(1)_(B-L)
+========================================================================================
+  [PASS] V5.1 Quark sector: B-L charge = +1/3 on three corner states  ([0.333333 0.333333 0.333333])
+  [PASS] V5.2 Lepton sector: B-L charge = -1 on singlet  ([-1.])
+  [PASS] V5.3 SU(3) acts non-trivially on quark 3-subspace  (lambda_3/2 restricts cleanly)
+  [PASS] V5.4 SU(3) annihilates lepton singlet  (all 8 SU(3) generators kill leptonic component)
+
+========================================================================================
+V6.  Branching of 6 of SU(4) under SU(3) x U(1)
+========================================================================================
+  [PASS] V6.1 6 of SU(4) -> (3-bar, +2/3) + (3, -2/3) under U(1)_(B-L)  (sorted eigs: [-0.666667 -0.666667 -0.666667  0.666667  0.666667  0.666667])
+  [PASS] V6.2 SU(3) lambda_3/2 has rank 4 in 6 of SU(4)  (rank = 4; consistent with (3 + 3-bar) decomposition)
+
+========================================================================================
+V7.  Action of SU(3) x U(1)_(B-L) on H_{hw=1} = C^3
+========================================================================================
+  [PASS] V7.1 U(1)_(B-L) acts as constant +1/3 on three quark corners  (all three corners share U(1) charge)
+  [PASS] V7.2 SU(3) on quark 3-subspace is irreducible (Schur)  (random traceless M has nonzero commutator: 17.2406)
+
+========================================================================================
+V8.  CRITICAL: Do three corners carry distinguishing U(1) charges?
+========================================================================================
+  [PASS] V8.1 All three corners have equal U(1)_(B-L) charge (= +1/3)  (corner charges: [0.333333 0.333333 0.333333])
+  [PASS] V8.2 U(1)_(B-L) commutes with C_3[111] on hw=1  (U(1) is C_3-symmetric -- cannot break AC_phi obstruction)
+  [PASS] V8.3 C_3 is in SU(3) (det = 1)  (det = (1+0j))
+  [PASS] V8.4 C_3 eigenvalues = {1, omega, omega-bar}  (trivial + 2-dim E rep of S_3)
+
+========================================================================================
+V9.  Alternative branching: SU(4) -> SU(2) x SU(2) x U(1)
+========================================================================================
+  [PASS] V9.1 SU(2) x SU(2) embedding is INCOMPATIBLE with SU(3) on V_3  (framework's CL3_COLOR_AUTOMORPHISM forces SU(3), not SU(2)xSU(2))
+
+========================================================================================
+V10.  Final AC_phi assessment under SU(3) x U(1) residual
+========================================================================================
+  [PASS] V10.1 SU(3) Casimir is constant on irrep (no corner distinction)  (diag: [1.333333 1.333333 1.333333])
+  [PASS] V10.2 Combined SU(3)-Casimir + U(1)^2 is constant on corners  (C_3-symmetric polynomial in residual generators is generation-blind)
+  [PASS] V10.3 C_3 commutes with SU(3)-Casimir on corners  (Casimir is in center of SU(3), trivially C_3-symmetric)
+
+========================================================================================
+V11.  Sharpened obstruction -- the structural barrier
+========================================================================================
+  [PASS] V11.1 Route 4: SU(3) x U(1) residual is structurally available  (from V1-V6)
+  [PASS] V11.2 Route 4: U(1) charge is GENERATION-BLIND on hw=1  (from V7-V8)
+  [PASS] V11.3 Route 4: C_3-symmetric observables in SU(3) x U(1) cannot distinguish corners  (from V10)
+  [PASS] V11.4 Route 4: AC_phi obstruction REPRODUCED via Pati-Salam residual  (Route 4 does NOT close AC_phi)
+
+========================================================================================
+V12.  Triality of Spin(8) does NOT extend to Spin(6)
+========================================================================================
+  [PASS] V12.1 Spin(6) center contains Z_2 generated by gamma_7  (Z_4 = Z_2 (gamma_7) x Z_2 (overall sign))
+  [PASS] V12.2 SU(4) outer automorphism group is Z_2, not Z_3  (no Z_3 triality at Spin(6) level)
+  [PASS] V12.3 C_3[111] in Z^3 substrate does NOT lift to Spin(6) outer  (Spin(6) has only Z_2 outer; C_3 cannot distinguish corners via Spin(6) outer action)
+
+========================================================================================
+V13.  Outer Z_2 involution on Spin(6) -- conjugate-rep exchange
+========================================================================================
+  [PASS] V13.1 Z_2 outer maps U(1)_(B-L) to -U(1)_(B-L)  (swaps quark/antiquark charges)
+  [PASS] V13.2 After Z_2 outer, three corners still share charge (=-1/3)  (diag: [-0.333333 -0.333333 -0.333333])
+
+========================================================================================
+SUMMARY
+========================================================================================
+  EXACT      : PASS = 43, FAIL = 0
+  BOUNDED    : PASS = 0, FAIL = 0
+  TOTAL      : PASS = 43, FAIL = 0
+
+Conclusion (Route 4):
+---------------------
+The Cl(3) tensor Cl(3) -> Cl(6) -> Spin(6) ~ SU(4) -> SU(3) x U(1)_(B-L)
+chain is structurally available; the SU(3) x U(1)_(B-L) (Pati-Salam-style)
+residual is FORCED uniquely once we require compatibility with retained
+CL3_COLOR_AUTOMORPHISM SU(3) on V_3.
+
+However, all three corners on H_{hw=1} sit inside a SINGLE (3, 1/3)
+irrep of SU(3) x U(1)_(B-L).  The U(1)_(B-L) charge is shared.  C_3[111]
+permutes the three corners within this irrep but commutes with U(1)_(B-L)
+and with the SU(3) quadratic Casimir.
+
+Substep 4 AC_phi obstruction is REPRODUCED:  no C_3[111]-symmetric
+observable in SU(3) x U(1) distinguishes the three corner states.
+
+Route 4 therefore yields a SHARPENED OBSTRUCTION, not a positive
+closure.  The breaking pattern is derivable; the species
+distinguishability is not.
+
+The framework's identification of corners with three SM generations
+remains the load-bearing residual (= AC_phi-lambda).
+
