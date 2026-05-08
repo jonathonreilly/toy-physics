@@ -18,6 +18,19 @@
 
 ## Artifact chain
 
+The retained load-bearing result is the H=0.25 Lane L+ slope fit on
+`b ∈ {3,4,5,6}`. The original Lane L H=0.5/0.35 sweep is preserved
+below for context but is no longer the load-bearing artifact.
+
+**Load-bearing (Lane L+, H=0.25):**
+
+- [`scripts/lensing_deflection_fine_single.py`](../scripts/lensing_deflection_fine_single.py) — single-b H=0.25 runner (run per b in a bash loop because of the OOM workaround documented under "Lane L+ — H=0.25 fine refinement")
+- [`scripts/lensing_deflection_lane_lplus.py`](../scripts/lensing_deflection_lane_lplus.py) — combined-analysis runner that fits the slope on the H=0.25 asymptotic subset
+- [`logs/2026-04-07-lensing-fine-asymptotic.txt`](../logs/2026-04-07-lensing-fine-asymptotic.txt) — cached single-b H=0.25 outputs for `b ∈ {3,4,5,6}`
+- [`logs/2026-04-07-lensing-deflection-lane-lplus.txt`](../logs/2026-04-07-lensing-deflection-lane-lplus.txt) — cached combined-analysis output (slope = −1.434, R² = 0.998)
+
+**Original Lane L (H=0.5, H=0.35) — context only:**
+
 - [`scripts/lensing_deflection_sweep.py`](../scripts/lensing_deflection_sweep.py)
 - [`logs/2026-04-07-lensing-deflection-sweep.txt`](../logs/2026-04-07-lensing-deflection-sweep.txt)
 
