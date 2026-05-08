@@ -1,6 +1,6 @@
 # Lattice NN High-Precision Note
 
-**Date:** 2026-04-03 (closure addendum 2026-05-07)
+**Date:** 2026-04-03 (closure addendum 2026-05-07; audit-scope split 2026-05-08)
 **Type:** bounded support theorem
 **Claim type:** bounded_theorem
 **Status:** bounded source support. The gate's narrow open question is
@@ -10,6 +10,33 @@ not by a physics inconsistency. The framework's canonical Born-clean
 observable-equivalent to the raw kernel on the float64-clean window via
 the step-scale invariance theorem (see addendum). Audit verdict and
 effective status are set only by the independent audit lane.
+
+## Audit scope
+
+This note was flagged `audited_conditional` with verdict `scope_too_broad`
+by the independent audit lane. The auditor's repair target was:
+
+> scope_too_broad: split the clean overflow plus detector-layer invariance
+> core from the broader all-observables canonical-equivalence statement, or
+> add a full theorem/runner that proves every deterministic-rescale
+> observable matches the raw kernel and verifies equality from current
+> cache data.
+
+This note has been split accordingly. The retained-grade bounded core is:
+
+- **Retained core:** the float64 overflow bound at `h = 0.125` (Section 2)
+  and the step-scale (detector-layer) invariance theorem as verified on
+  the closure runner's specific normalized-probability and centroid
+  observables on a small NN lattice (Section 1).
+
+The broader claim, that the deterministic-rescale lane is
+observable-equivalent to the raw-kernel-no-rescale row across **all**
+framework observables at `h = 0.125`, is **not** retained at this audit
+grade. It is moved below to `## Conditional extension` and is not
+established by the closure runner's current cache data, which only
+verifies equality on a small NN lattice for normalized probabilities and
+centroid. A full per-observable theorem/runner over the cache would be
+required to lift it.
 
 This note records the narrow high-precision follow-up to the raw nearest-
 neighbor lattice refinement result.
@@ -123,7 +150,44 @@ For the raw NN kernel with no rescale at `h = 0.125`:
 The overflow at `h = 0.125` reported by `lattice_nn_continuum.py` is therefore
 a numerical-format limit, not a physics gate.
 
-### 3. Deterministic-rescale lane fits float64
+### 3. Closure artifacts (retained core)
+
+- closure runner:
+  [`scripts/lattice_nn_high_precision_closure.py`](../scripts/lattice_nn_high_precision_closure.py)
+- runner cache:
+  [`logs/runner-cache/lattice_nn_high_precision_closure.txt`](../logs/runner-cache/lattice_nn_high_precision_closure.txt)
+
+### Retained bounded read (core)
+
+The retained-grade bounded statement after the audit-scope split is:
+
+- the raw-kernel-no-rescale row at `h = 0.125` cannot be evaluated in
+  float64 because the amplitude scale exceeds the representable range by
+  ~`10^135` orders of magnitude (Section 2)
+- the step-scale invariance theorem (Section 1) is verified on the
+  closure runner for normalized probabilities and centroid on a small
+  NN lattice, with max abs diff at float64 precision (~`10^-16`)
+
+The narrow gate ("does the raw kernel without rescaling extend to
+`h = 0.125`") is bounded by the float64 overflow, not by a physics
+inconsistency. The canonical-equivalence claim across all framework
+observables on the deterministic-rescale lane is treated below as a
+**conditional extension**, not as part of the retained bounded core.
+
+Do not overstate this as a finished continuum theory. The continuum question
+itself remains open; this closure resolves only the narrow `h = 0.125`
+existence question that names this gate.
+
+## Conditional extension
+
+The following statements were part of the original closure addendum but
+have been moved here because they were flagged `scope_too_broad` by the
+independent audit lane. They are **not** retained at this audit grade.
+Lifting them requires a full per-observable theorem and a runner that
+verifies equality from current cache data (the auditor's alternative
+repair target).
+
+### Deterministic-rescale lane fits float64 (conditional)
 
 The deterministic rescale `step_scale = h / sqrt(3)` cancels the per-edge
 `1 / h` factor:
@@ -139,47 +203,43 @@ same raw NN geometry. The cached output reproduces the canonical raw-kernel
 observable values bit-equal at `h = 1.0, 0.5, 0.25` (only Born residual
 differs in the last decimal due to float roundoff order).
 
-### 4. Bounded support statement
+This claim is conditional because the bit-equal cross-check covers only
+the float64-clean window (`h = 1.0, 0.5, 0.25`), not the `h = 0.125` and
+`h = 0.0625` rows themselves where the raw-kernel-no-rescale row cannot
+be evaluated.
+
+### Broader bounded support statement (conditional)
 
 By the step-scale invariance theorem (Section 1), the deterministic-rescale
-runner's `h = 0.125` row is observable-equivalent to the unobtainable raw-
-kernel-no-rescale row. By the overflow bound (Section 2), the raw-kernel-
-no-rescale row cannot be evaluated in float64 at `h = 0.125` because the
-amplitudes exceed the representable range by ~135 orders of magnitude. By
-Section 3, the deterministic-rescale lane evaluates the same observables
-inside float64.
+runner's `h = 0.125` row would be observable-equivalent to the unobtainable
+raw-kernel-no-rescale row. By the overflow bound (Section 2), the
+raw-kernel-no-rescale row cannot be evaluated in float64 at `h = 0.125`
+because the amplitudes exceed the representable range by ~135 orders of
+magnitude. By the previous subsection, the deterministic-rescale lane
+evaluates the same observables inside float64.
 
-So the gate's narrow open question — does the raw kernel without rescaling
-extend to `h = 0.125` — is bounded by:
+If extended to all framework observables, this would mean the gate's
+narrow open question is bounded by:
 
-- the canonical Born-clean `h = 0.125` observable values exist on the
+- canonical Born-clean `h = 0.125` observable values existing on the
   deterministic-rescale lane
-- they are observable-equivalent to the raw-kernel-no-rescale values by the
-  step-scale invariance theorem
-- the raw-kernel-no-rescale path cannot be evaluated at `h = 0.125` in
-  float64 by structural overflow, so the only role of a separate raw run is
-  cosmetic numerical format
+- those values being observable-equivalent to the raw-kernel-no-rescale
+  values by the step-scale invariance theorem
+- the raw-kernel-no-rescale path being unevaluable at `h = 0.125` in
+  float64 by structural overflow, so the only role of a separate raw run
+  being cosmetic numerical format
 
-### Closure artifacts
+The reason this is conditional rather than retained: the closure runner
+verifies invariance only on normalized probabilities and centroid for a
+small NN lattice. The full list of framework observables (gravity
+centroid, mutual information, classical purity, total-variation distance,
+Born residual) is argued by the same-degree-ratio structural argument
+(Section 1) but is not directly verified per-observable from the current
+deterministic-rescale cache at `h = 0.125`. A separate theorem/runner
+covering each observable would be required to retain this claim.
 
-- closure runner:
-  [`scripts/lattice_nn_high_precision_closure.py`](../scripts/lattice_nn_high_precision_closure.py)
-- runner cache:
-  [`logs/runner-cache/lattice_nn_high_precision_closure.txt`](../logs/runner-cache/lattice_nn_high_precision_closure.txt)
-- equivalent canonical rows live in
-  [`logs/runner-cache/lattice_nn_deterministic_rescale.txt`](../logs/runner-cache/lattice_nn_deterministic_rescale.txt).
+### Conditional cache pointers
 
-### Safe bounded read
-
-- the raw NN lattice extends to a Born-clean `h = 0.125` row via the
-  deterministic-rescale lane
-- the gate's open question (a literal raw-kernel-no-rescale `h = 0.125`
-  row) is bounded by a float64 overflow of ~`10^135` above the
-  representable range, not by a physics gate
-- the deterministic-rescale lane's `h = 0.125` and `h = 0.0625` rows are
-  the canonical Born-clean observable values for the raw NN family at
-  those spacings
-
-Do not overstate this as a finished continuum theory. The continuum question
-itself remains open; this closure resolves only the narrow `h = 0.125`
-existence question that names this gate.
+- equivalent canonical rows would live in
+  [`logs/runner-cache/lattice_nn_deterministic_rescale.txt`](../logs/runner-cache/lattice_nn_deterministic_rescale.txt)
+  (referenced for context only; not used to lift the audit grade).
