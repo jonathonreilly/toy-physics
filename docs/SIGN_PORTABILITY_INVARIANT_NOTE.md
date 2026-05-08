@@ -10,6 +10,28 @@
 - retained family notes: [`archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md), [`docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md), [`docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md), [`docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md), [`docs/FOURTH_FAMILY_QUADRANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
 - holdout confirmation: [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md), [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md), [`docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md)
 
+### Primary runner behavior (2026-05-08)
+
+`scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py` no longer prints
+hard-coded comparison rows. It now reads the registered per-row outputs
+of each one-hop family runner (the runner-cache files when populated,
+the dated logs in `logs/` as fallback) and asserts the four common
+thresholds that the note proposes as the signed-control fixed point:
+
+- G1 zero-source cancellation: `|zero| <= 1e-12` on every row
+- G2 neutral same-point cancellation: `|neutral| <= 1e-12` on every row
+- G3 plus/minus antisymmetry: `|plus+minus| / max(|plus|,|minus|) <= 5e-3`
+  on every row
+- G4 unit-slope tolerance: `|exp-1| <= 5e-3` on every row the family
+  runner itself accepted (sign orientation OK)
+
+Rows the family runner rejected for sign orientation are surfaced as
+explicit basin/seed exclusions in the runner output, per family. The
+runner exits 0 only when all four gates pass on all six families
+(five core + one holdout); otherwise it exits 1. The claim scope of
+this note is unchanged: it remains a bounded conditional comparison
+invariant, not a tier-ratifiable portability theorem.
+
 ## Question
 
 What is the smallest invariant that explains why signed-source transfer now
