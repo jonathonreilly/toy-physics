@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 823 |
+| unaudited | 822 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 450 |
+| ~~audited_conditional~~ | 451 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 450 |
+| `audited_conditional` | 451 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 872 |
+| `unaudited` | 871 |
 
 | claim_type | count |
 |---|---:|
@@ -810,6 +810,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lensing_deflection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `lensing_finite_path_explanation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -8786,6 +8787,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `logs/2026-04-07-lensing-deflection-lane-lplus.txt`
   - `scripts/lensing_deflection_fine_single.py`
   - `scripts/lensing_deflection_lane_lplus.py`
+- **auditor confidence:** high
+
+### `lensing_finite_path_explanation_note`
+
+- **Note:** [`LENSING_FINITE_PATH_EXPLANATION_NOTE.md`](../../docs/LENSING_FINITE_PATH_EXPLANATION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the packet's claim that the centered finite-path explanation is only heuristic/open and is falsified by literal-geometry and second-T_phys checks.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e057a-474b-75b3-9f27-2e3de7750848`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note asserts that the centered finite-path surrogate is falsified because a Lane L++ short-path measurement at T_phys = 7.5 gives slope ≈ -1.44, essentially identical to the T_phys = 15 measurement, rather than the predicted ≈ -1.73.  _(class `B`)_
+- **chain closes:** False — The literal-geometry mismatch is supported by the included runner, but the second-T_phys falsifying measurement is imported from LENSING_LONG_PATH_TEST_NOTE, which is not provided as a one-hop authority. The packet also lacks a closed layer-weighted derivation from detector-centroid observable to the analytical formula.
+- **rationale:** The note is explicitly framed as an open diagnostic narrowing rather than a closed derivation. The runner substantively computes centered and full-path surrogate slopes and supports the claim that the centered L=10 match is not the literal harness geometry, but it hard-codes the measured H=0.25 data and does not include the Lane L++ T_phys=7.5 falsifying dataset. Because the load-bearing second-T_phys falsification and the detector-centroid bridge are not closed inside the restricted packet, the chain is conditional.
+- **open / conditional deps cited:**
+  - `LENSING_LONG_PATH_TEST_NOTE.md`
 - **auditor confidence:** high
 
 ### `lensing_k_sweep_note`
