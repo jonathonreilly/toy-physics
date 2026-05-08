@@ -3,7 +3,7 @@
     "critical": 89,
     "high": 304,
     "leaf": 199,
-    "medium": 296
+    "medium": 295
   },
   "cycle_break_target_count": 66,
   "cycle_break_targets": [
@@ -11853,27 +11853,6 @@
       "ready": true,
       "runner_path": "scripts/decoherence_action_independence.py",
       "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "graph_laplacian_core_card_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.322,
-      "note_path": "docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_graph_kg_16card.py",
-      "transitive_descendants": 4
     },
     {
       "audit_independence_required": "any_non_self",
@@ -24849,6 +24828,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 9,
-  "total_pending": 888
+  "ready_count": 8,
+  "total_pending": 887
 }

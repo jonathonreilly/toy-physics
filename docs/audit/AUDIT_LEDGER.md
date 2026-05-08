@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 69 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 238 |
+| **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 876 |
+| unaudited | 875 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 396 |
+| `audited_clean` | 397 |
 | `audited_conditional` | 417 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 929 |
+| `unaudited` | 928 |
 
 | claim_type | count |
 |---|---:|
@@ -231,6 +231,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `graph_laplacian_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `graph_scalar_plus_spinor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `graph_true_kg_vs_cn_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
@@ -6750,6 +6751,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Imposing the residual complementary-axis swap restricts the weak-su(2) commutant from gl(4) to gl(3) plus gl(1), whose compact semisimple part is su(3).  _(class `A`)_
 - **chain closes:** True — Within the bounded structural scope, the conclusion is finite-dimensional algebra after an axis is selected. The runner checks the load-bearing relations, commutant dimensions, swap eigenspaces, su(3) closure, and U(1) spectrum for all three selected axes.
 - **rationale:** Issue checked: whether the selected graph axis gives a canonical route to su(3), not a full physical Standard Model identification. The finite graph construction closes: the selected-axis fiber operators generate weak su(2), the residual swap splits the base as 3+1, and the joint commutant has compact semisimple part su(3). The abelian factor remains explicitly bounded as hypercharge-like, so no anomaly-complete physical bridge is imported.
+- **auditor confidence:** high
+
+### `graph_laplacian_core_card_note`
+
+- **Note:** [`GRAPH_LAPLACIAN_CORE_CARD_NOTE.md`](../../docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited claim is the fixed-parameter checked-in graph-Laplacian KG core-card result: 13/16 on the listed C1-C16 runner rows, not a perfect card or full physical-retention theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0941-0247-7cc2-8a46-04206737b691`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Rerunning scripts/frontier_graph_kg_16card.py gives SCORE: 13/16, with C1, C13, and C14 failing and the other thirteen rows passing.  _(class `C`)_
+- **chain closes:** True — For this bounded script-card claim, the runner source actually constructs the finite graph-Laplacian/leapfrog model and computes the listed row outcomes rather than merely printing constants. The stdout matches the note's 13/16 result and the stated failing rows.
+- **rationale:** The narrow bounded claim closes: the note reports the corrected runner result, and the included source reproduces the same 13 pass / 3 fail card without hard-coding the final score. The clean verdict is only for that fixed-parameter card readout and its listed corrections. It does not promote the graph-Laplacian lane to a retained physical derivation; C12 is still labeled a proxy and the note itself preserves the Born, carrier-k, and mass/gravity split failures as open carry-forward items.
 - **auditor confidence:** high
 
 ### `graph_scalar_plus_spinor_note`
