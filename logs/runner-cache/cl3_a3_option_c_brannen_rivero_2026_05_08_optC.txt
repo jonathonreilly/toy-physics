@@ -1,0 +1,78 @@
+A3 Option C — Brannen-Rivero / Physical-Lattice Re-identification
+Bounded-obstruction runner for AC_phi_lambda closure path
+Source: docs/A3_OPTION_C_BRANNEN_RIVERO_PHYSICAL_LATTICE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_optC.md
+
+
+=== Section 1 — R1+R2 retention (circulant + Brannen-Rivero spectrum) ===
+  PASS : R1: H = aI + bU + b_bar U^{-1} is Hermitian (8/8) | 8/8
+  PASS : R1: H commutes with U_C3 (8/8) | 8/8
+  PASS : R2: Eigenvalues match Brannen-Rivero a + 2|b| cos(arg b + 2pi k/3) (8/8) | 8/8
+  PASS : Generic Hermitian C_3-equivariant family has dim 3 (circulant) | kernel_dim = 3, expected 3
+  PASS : Circulant H is diagonal in Fourier basis | ||H_fourier - diag(H_fourier)|| = 8.075e-16
+  PASS : Generic (a, b) gives 3 distinct eigenvalues (20/20 trials) | 20/20
+
+Verdict S1: R1+R2 retention CONFIRMED. The circulant theorem and Brannen-Rivero
+spectrum are axiom-clean retained per KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md.
+
+=== Section 2 — Fourier basis re-identification: relocates AC_phi_lambda, does not eliminate ===
+  PASS : C_3 permutes Fourier-basis eigenvalues; SET is invariant; LABELS are not
+  PASS : C_3-symmetric H has equal corner-basis expectations (substep-4 AC_phi obstruction) | corner expectations = [np.float64(1.5), np.float64(1.5), np.float64(1.5)]
+  PASS : C_3-symmetric H has distinct Fourier-basis eigenvalues (no degeneracy for generic b) | Fourier eigenvalues = [2.9, 0.280384757729337, 1.3196152422706624]
+
+Verdict S2: Fourier-basis re-identification RELOCATES the AC_phi_lambda
+identification step, does not ELIMINATE it. The Fourier eigenvalues form an
+unlabeled SET; matching {k=0, k=1, k=2} ↔ {tau, e, mu} requires either a
+C_3-breaking selector (none retained) or PDG comparison (forbidden as derivation).
+
+=== Section 3 — Five named admissions for Option C closure ===
+  PASS : admit_1: substrate-semantic physical-lattice: non-retained | PHYSICAL_LATTICE_NECESSITY_NOTE.md narrowed 2026-05-02; sibling open
+  PASS : admit_2: A1 (sqrt(2) equipartition): non-retained | KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md flags as 'not retained'
+  PASS : admit_3: P1 (sqrt(m) identification): non-retained | Same note: 'outside audit-ratified tier today'; positive-parent route in flight
+  PASS : admit_4: delta = 2/9 rad-unit bridge: non-retained | Same note: ratio exact; rad-unit bridge 'is not supplied by the retained axiom set'
+  PASS : admit_5: v_0 scale derivation: heuristic | Same note: 'HEURISTIC NEAR-MATCH ONLY via v * alpha_LM^2 * (7/8)'
+
+Verdict S3: All 5 admissions are confirmed as non-retained per the upstream
+Koide circulant character derivation note's Appendix A.5 'Updated status summary'.
+
+=== Section 4 — Empirical match to PDG (numerical anchor; not derivation input) ===
+
+  PDG charged-lepton sqrt-mass values (sqrt(MeV)):
+    sqrt(m_e)   = 0.714842
+    sqrt(m_mu)   = 10.279026
+    sqrt(m_tau)   = 42.152817
+  v_0 = (sum sqrt(m_k))/3 = 17.715562 sqrt(MeV)
+
+  Brannen-Rivero predictions at delta = 2/9 = 0.222222 rad:
+    k   angle (rad)  cos        1+sqrt2*cos    predict    observe    resid     
+    0   0.222222     +0.975410 2.379438       42.15308   42.15282   +0.0006%
+    1   2.316617     -0.678575 0.040350       0.71482    0.71484    -0.0029%
+    2   4.411012     -0.296835 0.580212       10.27878   10.27903   -0.0024%
+  PASS : Per-generation sqrt(m) residual < 0.005% relative | max relative residual = 2.884e-05 (0.0029%)
+  PASS : Koide Q matches 2/3 to 1e-5 relative | |Q - 2/3| = 6.154e-06
+  PASS : Best-fit delta matches 2/9 to 1e-4 | best-fit = 0.222227, 2/9 = 0.222222, |delta_best - 2/9| = 5.223e-06
+  PASS : A1 envelope: sqrt(m_tau) / v_0 < 1 + sqrt(2) (charged-lepton-specific) | sqrt(m_tau)/v_0 = 2.3794, 1 + sqrt(2) = 2.4142 (98.5% of envelope)
+  PASS : Quark counterfactual: A1 envelope FAILS for top (charged-lepton-specific) | sqrt(m_t)/v_0_up = 2.7543 > 1 + sqrt(2) = 2.4142
+
+Verdict S4: Empirical match is GENUINE and EXTRAORDINARY (< 0.003% per-generation residual,
+Q to 6e-6, best-fit delta to 5e-5). However, this match is FORBIDDEN as derivation input
+per the framework's no-PDG-import-as-derivation rule (substep-4 AC narrowing). It serves
+as: numerical anchor / falsifiability test / lane-prioritization input. It does NOT
+promote any of the 5 admissions to retained.
+
+=== Section 5 — Falsifiability anchors ===
+  PASS : admit_1 falsifier characterized: Close SINGLE_AXIOM_HILBERT/INFORMATION sibling notes to retained-grade
+  PASS : admit_2 falsifier characterized: Derive A1 from charged-lepton-specific selection principle
+  PASS : admit_3 falsifier characterized: Construct positive parent M with M^(1/2) = circulant amplitude
+  PASS : admit_4 falsifier characterized: Derive canonical rad-unit identification for 2/9 ratio
+  PASS : admit_5 falsifier characterized: Derive non-double-counted lepton-sector v_0 selector
+
+Verdict S5: Each admission has a concrete falsifiability path.
+Closing any one tightens the bound by one notch; closing all five closes AC_phi_lambda.
+
+=== TOTAL: PASS=24, FAIL=0 ===
+
+Bounded-obstruction verified: Option C does NOT close AC_phi_lambda
+under retained content alone. 5 named admissions remain. R1+R2
+retention is genuine progress vs Routes 1-5 of the prior 10-probe
+campaign. Empirical match < 0.003% per-generation is an extraordinary
+numerical anchor for future work but is forbidden as derivation input.
