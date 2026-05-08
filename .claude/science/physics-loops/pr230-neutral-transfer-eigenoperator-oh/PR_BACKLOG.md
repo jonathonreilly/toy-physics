@@ -105,6 +105,10 @@ W/Z physical-response packet, or neutral primitive H3/H4 physical-transfer
 authority.  No standalone block19-block22 review PR should be opened unless
 PR #230 integration fails.
 
+The draft PR #230 body was updated from
+`.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK22.md`
+after block22 delivery.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash
