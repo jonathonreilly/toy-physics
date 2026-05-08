@@ -183,7 +183,7 @@ def _measure_row(drift: float) -> RowResult:
     )
 
 
-def main() -> None:
+def main() -> int:
     print("=" * 98)
     print("SECOND GROWN FAMILY COMPLEX")
     print("  no-restore grown family + geometry-sector stencil")
@@ -216,13 +216,16 @@ def main() -> None:
     anchor = next(r for r in rows if abs(r.drift - 0.20) < 1e-12)
     anchor_ok = anchor.anchor_ok
     crossover_ok = anchor.crossover_ok
-    print(f"  anchor retained gamma=0 + Born proxy: {anchor_ok}")
-    print(f"  anchor TOWARD@0.1 -> AWAY@0.5: {crossover_ok}")
+    print(f"  anchor retained gamma=0 + Born proxy: {'PASS' if anchor_ok else 'FAIL'}  ({anchor_ok})")
+    print(f"  anchor TOWARD@0.1 -> AWAY@0.5: {'PASS' if crossover_ok else 'FAIL'}  ({crossover_ok})")
     if anchor_ok and crossover_ok:
         print("  the retained anchor row carries the complex-action companion narrowly")
-    else:
-        print("  the second grown-family candidate does not retain the complex-action companion cleanly")
+        print("OVERALL: PASS")
+        return 0
+    print("  the second grown-family candidate does not retain the complex-action companion cleanly")
+    print("OVERALL: FAIL")
+    return 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

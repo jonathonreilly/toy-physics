@@ -3809,6 +3809,22 @@
       "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     },
     {
+      "from": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+      "to": "exact_tier_path_integral_bounded_note_2026-05-07_exact"
+    },
+    {
+      "from": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
       "from": "dark_energy_eos_retained_corollary_theorem_note",
       "to": "universal_gr_discrete_global_closure_note"
     },
@@ -13122,7 +13138,19 @@
     },
     {
       "from": "session_synthesis_2026-04-10_graph_axioms",
+      "to": "graph_laplacian_core_card_note"
+    },
+    {
+      "from": "session_synthesis_2026-04-10_graph_axioms",
+      "to": "graph_true_kg_vs_cn_note"
+    },
+    {
+      "from": "session_synthesis_2026-04-10_graph_axioms",
       "to": "staggered_fermion_card_2026-04-10"
+    },
+    {
+      "from": "session_synthesis_2026-04-10_graph_axioms",
+      "to": "staggered_graph_portability_note"
     },
     {
       "from": "shapiro_delay_note",
@@ -14447,6 +14475,82 @@
     {
       "from": "symmetry_head_to_head_note",
       "to": "higher_symmetry_gravity_probe_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "gravity_law_cleanup_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "gravity_observable_hierarchy_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "hard_geometry_gravity_window_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "decoherence_decision_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "decoherence_action_independence_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "matched_2d_4d_decoherence_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "mirror_chokepoint_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "mirror_chokepoint_boundary_fit_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "mirror_mutual_information_chokepoint_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "asymmetry_persistence_born_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "asymmetry_persistence_collapse_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "asymmetry_persistence_joint_card_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "asymmetry_persistence_mass_scaling_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "asymmetry_persistence_mass_window_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "asymmetry_persistence_pilot_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "antigravity_sign_selector_boundary_note"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "synthesis_note_3d"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "dimensional_gravity_table"
+    },
+    {
+      "from": "synthesis_note",
+      "to": "hierarchy_dimensional_compression_note"
     },
     {
       "from": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
@@ -30166,6 +30270,22 @@
       "runner_path": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py",
       "title": "Convention C-iso Temporal-Step Boundary"
     },
+    "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo": {
+      "claim_id": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "c_iso_derived_theorem_note_2026-05-07_w3",
+        "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+      ],
+      "note_hash": "cf2f282e378b032b1c2224048d0a5021cbd32264fa7468a5d6f340f29a47db5a",
+      "path": "docs/C_ISO_SU3_NLO_CLOSURE_BOUNDED_NOTE_2026-05-08_su3nlo.md",
+      "runner_path": "scripts/cl3_c_iso_su3_nlo_2026_05_08_su3nlo.py",
+      "title": "SU(3) NLO Convention C-iso Closure \u2014 Bounded Theorem Note"
+    },
     "canonical_harness_index": {
       "claim_id": "canonical_harness_index",
       "claim_type_author_hint": null,
@@ -35636,14 +35756,14 @@
     },
     "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18": {
       "claim_id": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "acf983f2a787175112560d96ed1edcaf27db0dfda0ecdad81a92644baf45f3f8",
+      "note_hash": "edc8965b9c0f311089295b0cb4d80fecf040e2728dba441483da2f71e7e05543",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py",
-      "title": "DM Wilson Direct-Descendant Constructive Positive Closure Manifold Theorem"
+      "title": "DM Wilson Direct-Descendant Constructive Positive Closure Manifold Support"
     },
     "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18": {
       "claim_id": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
@@ -38212,7 +38332,7 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "334a5e3363e9f5252d547a9f228f0f2527a32445e7306e0feea36c199931c5ec",
+      "note_hash": "a7c7c40a78732dd1e33d8b20e00c270966c51f957b090c633be7d62494766883",
       "path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_axiom_boundary.py",
       "title": "Generation Axiom Boundary Note"
@@ -40930,11 +41050,11 @@
     },
     "koide_q_readout_factorization_theorem_2026-04-22": {
       "claim_id": "koide_q_readout_factorization_theorem_2026-04-22",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "7b18f36a021a396426f6046adc9f5ebc52484b6e5fb866396b194a83747c5fbd",
+      "note_hash": "28e127c39e9af2b164c8ffd7eb1ac6be952d9d61155211f76f52094e56b31767",
       "path": "docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md",
       "runner_path": "scripts/frontier_koide_q_readout_factorization_theorem.py",
       "title": "Koide Q Readout Factorization Theorem"
@@ -41926,7 +42046,7 @@
       "claim_type_author_hint_raw": "bounded support theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3be498a637116908da21219bb2933fafb86eaeada8f046d339bcabd8018ecaad",
+      "note_hash": "0ce6a3492aada9f59f1a8f48d49197df54a0afbb8db8f033a91ff92e41337de3",
       "path": "docs/LATTICE_NN_HIGH_PRECISION_NOTE.md",
       "runner_path": null,
       "title": "Lattice NN High-Precision Note"
@@ -41976,7 +42096,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "611df22bcdbc3a47a14a44217bc40e4c2ee0ba743499288331b0e5e064d87a52",
+      "note_hash": "a9006b589dceb8c2c9739e994929428fb9b1102bc12288865c54b1f32f4c97d3",
       "path": "docs/LATTICE_NN_RG_GRAVITY_NOTE.md",
       "runner_path": null,
       "title": "NN Lattice RG-Style Gravity Note"
@@ -42176,9 +42296,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4274289deba7b4d33bbeeee12fa76d5075d40921309e44024b9862d6499075ad",
+      "note_hash": "f4b077e8448394a1c2dafa3ac8e3b329cc8e787c4897a04848a71e285945c3d8",
       "path": "docs/LENSING_DEFLECTION_NOTE.md",
-      "runner_path": "scripts/lensing_deflection_sweep.py",
+      "runner_path": "scripts/lensing_deflection_fine_single.py",
       "title": "Gravitational Deflection / Lensing Sweep \u2014 Power-Law Positive (NOT 1/b)"
     },
     "lensing_finite_path_explanation_note": {
@@ -42906,7 +43026,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2a2d938f380a205acbadcfa98af76083a6c689d1348b997fcc466fb95805321a",
+      "note_hash": "7b2a8ac81610436b69c1b07c0940c6c2c035c00644c2ba35d52b6d982d6e189b",
       "path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
       "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note"
@@ -42941,7 +43061,7 @@
       "deps": [
         "mirror_chokepoint_boundary_fit_note"
       ],
-      "note_hash": "f9bb9452cae52f710b8eb2458498397d1e44c2ee8417a26ef5e90b39bec79584",
+      "note_hash": "402d1a60f90093bbfb83fb3f54b7073355cb444ce82f56688bbc3b15a590345a",
       "path": "docs/MIRROR_CHOKEPOINT_NOTE.md",
       "runner_path": "scripts/mirror_chokepoint_joint.py",
       "title": "Mirror Chokepoint Note"
@@ -44870,7 +44990,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c0675dca06164c10666b5c3831e6a0781d1d80ce654338e4d7b5a1297289c9bc",
+      "note_hash": "6a62d9bf19f36a4cb148e3c8b6f664564bf1dc2ec4f5643de1387966e46bd212",
       "path": "docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md",
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "title": "Persistent Object Blended Readout Transfer Sweep"
@@ -50413,15 +50533,18 @@
     },
     "session_synthesis_2026-04-10_graph_axioms": {
       "claim_id": "session_synthesis_2026-04-10_graph_axioms",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [
-        "staggered_fermion_card_2026-04-10"
+        "graph_laplacian_core_card_note",
+        "graph_true_kg_vs_cn_note",
+        "staggered_fermion_card_2026-04-10",
+        "staggered_graph_portability_note"
       ],
-      "note_hash": "c88f0905ae4b4ea86b3cf603be42fcf964851d9a9e8708fe1d333e051fed27c2",
+      "note_hash": "0d30488cbdf1dcca63321578d4d8bb18a36dccfb13d7bd0669ee98f74d8f20b8",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
-      "runner_path": "scripts/frontier_axioms_16card.py",
+      "runner_path": "scripts/frontier_staggered_17card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
     },
     "session_synthesis_2026-04-11": {
@@ -50593,7 +50716,7 @@
         "fourth_family_quadrant_note",
         "fifth_family_radial_boundary_note"
       ],
-      "note_hash": "e09c8eb4df55e49a787e19e817a155ec52c4d2dcf4e66f7c84e3171ece2ad8eb",
+      "note_hash": "f14194bdbcc2484847f086d15d2ccf3cb3293b58e9c73fa5032326f8835dbaf1",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "title": "Sign Portability Invariant Note"
@@ -52142,7 +52265,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2ddd9c0b02c63d912074ac6ce26104cecab1db9d7ddbe0df2f5f161676102f66",
+      "note_hash": "679e3f15035bba8efce3963d63673c8872316e3035c19d2c78458cac111ac3f8",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
       "runner_path": "scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py",
       "title": "Structured Mirror Born-Safe Scan Note"
@@ -52218,13 +52341,13 @@
     },
     "su3_adjoint_casimir_theorem_note_2026-05-02": {
       "claim_id": "su3_adjoint_casimir_theorem_note_2026-05-02",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "cl3_color_automorphism_theorem"
       ],
-      "note_hash": "cdd1da918b37749c02ac42dbcbb6fc75aa08c6540f0c49c92090f5f36ae4270d",
+      "note_hash": "ba69676e85c4ad1238106de459172b1a23311359dc62ce4548a550cce9dc85ba",
       "path": "docs/SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/su3_adjoint_casimir_check.py",
       "title": "SU(3) Quadratic Casimir on Adjoint Equals N = 3"
@@ -52565,11 +52688,31 @@
     },
     "synthesis_note": {
       "claim_id": "synthesis_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "e8ec555d98b036b6360a28e92275c55242bc9f354c10ebb7323b03457b973441",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "gravity_law_cleanup_note",
+        "gravity_observable_hierarchy_note",
+        "hard_geometry_gravity_window_note",
+        "decoherence_decision_note",
+        "decoherence_action_independence_note",
+        "matched_2d_4d_decoherence_note",
+        "mirror_chokepoint_note",
+        "mirror_chokepoint_boundary_fit_note",
+        "mirror_mutual_information_chokepoint_note",
+        "asymmetry_persistence_born_note",
+        "asymmetry_persistence_collapse_note",
+        "asymmetry_persistence_joint_card_note",
+        "asymmetry_persistence_mass_scaling_note",
+        "asymmetry_persistence_mass_window_note",
+        "asymmetry_persistence_pilot_note",
+        "antigravity_sign_selector_boundary_note",
+        "synthesis_note_3d",
+        "dimensional_gravity_table",
+        "hierarchy_dimensional_compression_note"
+      ],
+      "note_hash": "35b9dd942b110b4f4ad0fb1ec2a30dc32edb12564b7421256f861ab3c657e60d",
       "path": "docs/SYNTHESIS_NOTE.md",
       "runner_path": null,
       "title": "Synthesis Note: Emergent Physics on Discrete Causal DAGs"
@@ -57652,7 +57795,6 @@
     "substrate_to_p_a_forcing_theorem_note_2026-04-30",
     "symmetry_generated_paired_chokepoint_note",
     "symmetry_spectrum_mirror_compare_note",
-    "synthesis_note",
     "synthesis_note_3d",
     "taste_scalar_isotropy_theorem_note",
     "teleportation_3d1_causal_record_channel_note",
@@ -57787,25 +57929,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 116,
-      "meta": 10,
+      "bounded_theorem": 120,
+      "meta": 12,
       "no_go": 14,
-      "none": 1703,
+      "none": 1699,
       "open_gate": 13,
-      "positive_theorem": 91
+      "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 619,
-      "meta": 10,
+      "bounded_theorem": 623,
+      "meta": 12,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
-      "positive_theorem": 623
+      "positive_theorem": 618
     },
-    "edge_count": 6883,
-    "leaf_count": 554,
-    "node_count": 1947,
-    "root_count": 838,
-    "runners_with_path": 1526
+    "edge_count": 6909,
+    "leaf_count": 545,
+    "node_count": 1948,
+    "root_count": 837,
+    "runners_with_path": 1527
   }
 }

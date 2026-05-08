@@ -12,10 +12,10 @@ The question is narrow:
 
 Artifacts:
 
-- [`scripts/lattice_nn_rg_gravity.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_nn_rg_gravity.py)
-- [`logs/2026-04-03-lattice-nn-rg-gravity.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-lattice-nn-rg-gravity.txt)
+- [`scripts/lattice_nn_rg_gravity.py`](../scripts/lattice_nn_rg_gravity.py)
+- [`logs/2026-04-03-lattice-nn-rg-gravity.txt`](../logs/2026-04-03-lattice-nn-rg-gravity.txt) — cached stdout covering h ∈ {2.0, 1.0, 0.5, 0.25} on all three schedules and the h=0.125 FAIL row
 - upstream refinement note:
-  [`scripts/lattice_nn_continuum.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_nn_continuum.py)
+  [`scripts/lattice_nn_continuum.py`](../scripts/lattice_nn_continuum.py)
 
 ## Setup
 

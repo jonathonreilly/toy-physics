@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 867
-**Ready (all deps already at retained-grade or metadata tiers):** 1
+**Total pending:** 886
+**Ready (all deps already at retained-grade or metadata tiers):** 19
 
 By criticality:
 - `critical`: 84
-- `high`: 301
-- `medium`: 285
-- `leaf`: 197
+- `high`: 304
+- `medium`: 300
+- `leaf`: 198
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -15,29 +15,29 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 534 | 15.06 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
-| 2 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 534 | 10.06 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
-| 3 | `dispersion_relation_note` | positive_theorem | unaudited | critical | 532 | 10.06 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/lattice_dispersion_relation.py` |
-| 4 | `lensing_combined_invariant_note` | positive_theorem | unaudited | critical | 532 | 10.06 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 5 | `3d_correction_master_note` | positive_theorem | unaudited | critical | 532 | 9.56 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/dispersion_3d_lattice.py` |
-| 6 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 528 | 14.05 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 7 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 528 | 12.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
-| 8 | `anomaly_forces_time_theorem` | bounded_theorem | unaudited | critical | 526 | 27.54 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_anomaly_forces_time.py` |
-| 9 | `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 526 | 16.54 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_target3_clifford_phase_bridge.py` |
-| 10 | `planck_scale_lane_status_note_2026-04-23` | positive_theorem | unaudited | critical | 526 | 16.04 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 11 | `lorentz_kernel_positive_closure_note` | positive_theorem | unaudited | critical | 526 | 15.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_kernel_positive_closure.py` |
-| 12 | `angular_kernel_underdetermination_no_go_note` | no_go | unaudited | critical | 526 | 14.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_angular_kernel_underdetermination_nogo.py` |
-| 13 | `area_law_multipocket_selector_no_go_note_2026-04-25` | no_go | unaudited | critical | 526 | 14.04 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_multipocket_selector_no_go.py` |
-| 14 | `area_law_native_car_semantics_tightening_note_2026-04-25` | positive_theorem | unaudited | critical | 526 | 13.54 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_native_car_semantics_tightening.py` |
-| 15 | `area_law_primitive_car_edge_identification_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 526 | 13.54 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_primitive_car_edge_identification.py` |
+| 1 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 536 | 15.07 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
+| 2 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 536 | 10.07 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
+| 3 | `dispersion_relation_note` | positive_theorem | unaudited | critical | 534 | 10.06 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/lattice_dispersion_relation.py` |
+| 4 | `lensing_combined_invariant_note` | positive_theorem | unaudited | critical | 534 | 10.06 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 5 | `3d_correction_master_note` | positive_theorem | unaudited | critical | 534 | 9.56 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/dispersion_3d_lattice.py` |
+| 6 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 530 | 14.05 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 7 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 530 | 12.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
+| 8 | `anomaly_forces_time_theorem` | bounded_theorem | unaudited | critical | 528 | 27.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_anomaly_forces_time.py` |
+| 9 | `planck_target3_clifford_phase_bridge_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 528 | 16.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_target3_clifford_phase_bridge.py` |
+| 10 | `planck_scale_lane_status_note_2026-04-23` | positive_theorem | unaudited | critical | 528 | 16.05 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 11 | `lorentz_kernel_positive_closure_note` | positive_theorem | unaudited | critical | 528 | 15.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_kernel_positive_closure.py` |
+| 12 | `angular_kernel_underdetermination_no_go_note` | no_go | unaudited | critical | 528 | 14.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_angular_kernel_underdetermination_nogo.py` |
+| 13 | `area_law_multipocket_selector_no_go_note_2026-04-25` | no_go | unaudited | critical | 528 | 14.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_multipocket_selector_no_go.py` |
+| 14 | `area_law_native_car_semantics_tightening_note_2026-04-25` | positive_theorem | unaudited | critical | 528 | 13.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_native_car_semantics_tightening.py` |
+| 15 | `area_law_primitive_car_edge_identification_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 528 | 13.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_primitive_car_edge_identification.py` |
 | 16 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 440 | 26.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
-| 17 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 414 | 12.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
+| 17 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 415 | 12.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
 | 18 | `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 382 | 10.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py` |
 | 19 | `three_generation_structure_note` | bounded_theorem | unaudited | critical | 381 | 26.08 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_fermi_point.py` |
 | 20 | `one_generation_matter_closure_note` | bounded_theorem | unaudited | critical | 364 | 24.01 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_right_handed_sector.py` |
 | 21 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 350 | 16.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_cap_uniqueness.py` |
 | 22 | `s3_time_spacetime_tensor_primitive_note` | bounded_theorem | unaudited | critical | 346 | 10.44 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_spacetime_tensor_primitive.py` |
-| 23 | `yt_explicit_systematic_budget_note` | positive_theorem | unaudited | critical | 291 | 10.19 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
+| 23 | `yt_explicit_systematic_budget_note` | positive_theorem | unaudited | critical | 292 | 10.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
 | 24 | `neutrino_majorana_operator_axiom_first_note` | positive_theorem | unaudited | critical | 282 | 14.64 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_operator.py` |
 | 25 | `neutrino_majorana_native_gaussian_no_go_note` | positive_theorem | unaudited | critical | 280 | 11.63 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
 | 26 | `neutrino_majorana_finite_normal_grammar_no_go_note` | positive_theorem | unaudited | critical | 278 | 12.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
@@ -72,10 +72,10 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | cycle_id | length | max_desc | primary break target | criticality | audit_status |
 |---:|---|---:|---:|---|---|---|
-| 1 | `cycle-0001` | 2 | 534 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | unaudited |
-| 2 | `cycle-0002` | 2 | 532 | `3d_correction_master_note` | critical | unaudited |
-| 3 | `cycle-0003` | 2 | 526 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
-| 4 | `cycle-0004` | 7 | 526 | `anomaly_forces_time_theorem` | critical | unaudited |
+| 1 | `cycle-0001` | 2 | 536 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | unaudited |
+| 2 | `cycle-0002` | 2 | 534 | `3d_correction_master_note` | critical | unaudited |
+| 3 | `cycle-0003` | 2 | 528 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
+| 4 | `cycle-0004` | 7 | 528 | `anomaly_forces_time_theorem` | critical | unaudited |
 | 5 | `cycle-0005` | 4 | 265 | `universal_gr_constraint_action_stationarity_note` | critical | unaudited |
 | 6 | `cycle-0006` | 5 | 265 | `universal_gr_constraint_action_stationarity_note` | critical | unaudited |
 | 7 | `cycle-0007` | 6 | 265 | `universal_gr_a1_invariant_section_note` | critical | unaudited |

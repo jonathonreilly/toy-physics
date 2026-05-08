@@ -482,6 +482,32 @@ class AuditLintTest(unittest.TestCase):
         self.assertEqual(rc, 0)
         self.assertIn("audited_conditional notes_for_re_audit_if_any", out)
 
+    def test_backfill_scope_reports_notice_not_warning(self):
+        m = _import("audit_lint")
+        _patch_repo_root(m, self.tmp_root)
+        rows = {
+            "legacy_scope": {
+                "claim_id": "legacy_scope",
+                "audit_status": "audited_conditional",
+                "claim_type": "positive_theorem",
+                "claim_scope": f"{m.BACKFILL_SCOPE_PREFIX}; placeholder",
+                "effective_status": "audited_conditional",
+                "notes_for_re_audit_if_any": "missing_bridge_theorem: repair",
+                "auditor_family": "codex-gpt-5.5",
+                "criticality": "leaf",
+            },
+        }
+        self._write_minimal_ledger(rows)
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = m.main()
+        out = buf.getvalue()
+        self.assertEqual(rc, 0)
+        self.assertIn("legacy_backfill_scope", out)
+        self.assertIn("notices", out)
+        self.assertNotIn("warnings:", out)
+
     def test_legacy_auditor_family_warns(self):
         m = _import("audit_lint")
         _patch_repo_root(m, self.tmp_root)

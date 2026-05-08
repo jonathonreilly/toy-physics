@@ -16,6 +16,14 @@ so the bounded null-result claim is consistent with the scan evidence.
 config + 6-seed confirmation on the best candidate). Reproducible but
 too slow to be the audit-lane runner.
 
+**Cached scan log:** [`logs/2026-04-03-structured-mirror-bornsafe-scan.txt`](../logs/2026-04-03-structured-mirror-bornsafe-scan.txt)
+— completed stdout from the slow scan covering all 540 configurations.
+The documented best near-Born candidate
+`N=40, npl_half=12, connect_radius=3.0, grid_spacing=1.25, layer_jitter=0.0`
+appears at line ~225 with the documented `Born=8.79e-03, d_TV=0.1208, pur_cl=0.9992,
+S_norm=0.0009, gravity=+0.3811`, including the 6-seed confirmation.
+RETAINED POCKET: none found.
+
 ## Review-loop runner attachment (2026-05-03)
 
 The 2026-05-03 audit flagged the note's null-result claim as lacking

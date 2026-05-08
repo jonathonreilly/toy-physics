@@ -1,33 +1,86 @@
 ===== runner cache v1 =====
 runner: scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py
-runner_sha256: 22d0301c8c825a5fe20edd95649eed664aa9b122ab0b6b1aa92868df54c594ce
+runner_sha256: 5be9e0deded1ad1037eacf79f2fe655be1ae2900f9a28ff0e7bc1c30e1483966
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.04
+elapsed_sec: 0.05
 status: ok
 ----- stdout -----
 # Sign Portability Invariant Comparison
 
-Core comparison across the first five retained sign-law basins.
+Reading registered one-hop family outputs and asserting common
+thresholds for the signed-control fixed point.
 
-| family | slice | exact controls | sign orientation | weak-field response | basin shape |
-| --- | --- | --- | --- | --- | --- |
-| Grown transfer basin | nearby grown rows around the retained moderate-drift basin | exact zero-source and neutral same-point cancellation | retained on nearby rows | F~M = 1.000 | narrow and selective |
-| Alternative connectivity family | no-restore grown slice with parity-rotated sector transitions | exact zero-source and neutral same-point cancellation | retained on passing rows | F~M = 0.999994 | bounded but broadest of the retained sign-law families |
-| Second grown-family sign | no-restore geometry-sector slice | exact zero-source and neutral same-point cancellation | retained on all tested rows | mean exponent = 1.000072 | independent basin, still narrow in architecture space |
-| Third grown-family sign | cross-quadrant load-balanced no-restore slice | exact zero-source and neutral same-point cancellation | retained on passing rows | mean exponent = 0.999842 | bounded drift basin |
-| Fourth family quadrant | quadrant-reflection connectivity on the grown slice | exact zero-source and neutral same-point cancellation | retained on passing rows; mixed at drift=0.2 | alpha near 1.0 | narrow and seed-selective |
+thresholds: ZERO_TOL=1e-12 NEUTRAL_TOL=1e-12 ANTISYM_TOL=5e-03 EXP_TOL=5e-03
 
-Out-of-band confirmation from the later radial-shell basin:
-| family | slice | exact controls | sign orientation | weak-field response | basin shape |
-| --- | --- | --- | --- | --- | --- |
-| Fifth family radial | radial-shell no-restore grown slice | exact zero-source and neutral same-point cancellation | retained on sampled rows; flips at the interior boundary | mean exponent = 0.999439 | narrow holdout confirmation |
+## Core families
 
-Order parameter candidate:
-The portable quantity is the signed-control fixed point: exact zero-source null, exact neutral cancellation, and plus/minus antisymmetry with weak-field response pinned near unit slope.
+## family: Grown transfer basin
+   log: 2026-04-06-nonlabel-grown-drift-basin-sweep.txt
+   rows parsed: 9 ; excluded by family: 0
+   [PASS] G1_zero_source_cancellation: max|zero|=0.000e+00 <= 1e-12 ; offenders=0/9
+   [PASS] G2_neutral_cancellation: max|neutral|=0.000e+00 <= 1e-12 ; offenders=0/9
+   [PASS] G3_plus_minus_antisymmetry: max|plus+minus|/max(|plus|,|minus|)=5.583e-04 <= 5e-03 ; offenders=0/9
+   [PASS] G4_unit_slope_tolerance: max|exp-1|=0.000e+00 <= 5e-03 on 9 passing rows ; offenders=0
 
-Final verdict:
-retained narrow comparison positive: signed-source transfer is portable across the retained structured families, while basin width and selectivity vary by connectivity rule
+## family: Alternative connectivity family
+   log: ALT_CONNECTIVITY_FAMILY_SIGN_SWEEP.txt
+   rows parsed: 15 ; excluded by family: 5
+   [PASS] G1_zero_source_cancellation: max|zero|=0.000e+00 <= 1e-12 ; offenders=0/15
+   [PASS] G2_neutral_cancellation: max|neutral|=0.000e+00 <= 1e-12 ; offenders=0/15
+   [PASS] G3_plus_minus_antisymmetry: max|plus+minus|/max(|plus|,|minus|)=5.229e-04 <= 5e-03 ; offenders=0/15
+   [PASS] G4_unit_slope_tolerance: max|exp-1|=0.000e+00 <= 5e-03 on 10 passing rows ; offenders=0
+   basin/seed exclusions (drift, seed): (0.1,1), (0.1,2), (0.3,1), (0.3,2), (0.5,2)
+
+## family: Second grown-family sign
+   log: SECOND_GROWN_FAMILY_SIGN_SWEEP.txt
+   rows parsed: 15 ; excluded by family: 0
+   [PASS] G1_zero_source_cancellation: max|zero|=0.000e+00 <= 1e-12 ; offenders=0/15
+   [PASS] G2_neutral_cancellation: max|neutral|=0.000e+00 <= 1e-12 ; offenders=0/15
+   [PASS] G3_plus_minus_antisymmetry: max|plus+minus|/max(|plus|,|minus|)=1.449e-03 <= 5e-03 ; offenders=0/15
+   [PASS] G4_unit_slope_tolerance: max|exp-1|=1.000e-03 <= 5e-03 on 15 passing rows ; offenders=0
+
+## family: Third grown-family sign
+   log: THIRD_GROWN_FAMILY_SIGN_SWEEP.txt
+   rows parsed: 15 ; excluded by family: 10
+   [PASS] G1_zero_source_cancellation: max|zero|=0.000e+00 <= 1e-12 ; offenders=0/15
+   [PASS] G2_neutral_cancellation: max|neutral|=0.000e+00 <= 1e-12 ; offenders=0/15
+   [PASS] G3_plus_minus_antisymmetry: max|plus+minus|/max(|plus|,|minus|)=8.565e-04 <= 5e-03 ; offenders=0/15
+   [PASS] G4_unit_slope_tolerance: max|exp-1|=1.000e-03 <= 5e-03 on 5 passing rows ; offenders=0
+   basin/seed exclusions (drift, seed): (0,0), (0,1), (0,2), (0.1,1), (0.2,0), (0.2,1), (0.3,1), (0.5,0), (0.5,1), (0.5,2)
+
+## family: Fourth family quadrant
+   log: FOURTH_FAMILY_QUADRANT_SWEEP.txt
+   rows parsed: 45 ; excluded by family: 22
+   [PASS] G1_zero_source_cancellation: max|zero|=0.000e+00 <= 1e-12 ; offenders=0/45
+   [PASS] G2_neutral_cancellation: max|neutral|=0.000e+00 <= 1e-12 ; offenders=0/45
+   [PASS] G3_plus_minus_antisymmetry: max|plus+minus|/max(|plus|,|minus|)=4.204e-03 <= 5e-03 ; offenders=0/45
+   [PASS] G4_unit_slope_tolerance: max|exp-1|=3.000e-03 <= 5e-03 on 23 passing rows ; offenders=0
+   basin/seed exclusions (drift, seed): (0.05,1), (0.1,1), (0.1,3), (0.1,4), (0.15,0), (0.15,1), (0.15,4), (0.2,0), (0.2,1), (0.2,3), (0.2,4), (0.25,0), (0.25,3), (0.25,4), (0.3,4), (0.4,0), (0.4,1), (0.4,3), (0.5,0), (0.5,1), (0.5,3), (0.5,4)
+
+## Holdout (out-of-band confirmation)
+
+## family: Fifth family radial
+   log: 2026-04-06-fifth-family-radial.txt
+   rows parsed: 3 ; excluded by family: 1
+   [PASS] G1_zero_source_cancellation: max|zero|=0.000e+00 <= 1e-12 ; offenders=0/3
+   [PASS] G2_neutral_cancellation: max|neutral|=0.000e+00 <= 1e-12 ; offenders=0/3
+   [PASS] G3_plus_minus_antisymmetry: max|plus+minus|/max(|plus|,|minus|)=1.326e-03 <= 5e-03 ; offenders=0/3
+   [PASS] G4_unit_slope_tolerance: max|exp-1|=1.000e-03 <= 5e-03 on 2 passing rows ; offenders=0
+   basin/seed exclusions (drift, seed): (0.2,0)
+
+## Summary
+
+  Grown transfer basin                 G1G2G3G4 = PPPP
+  Alternative connectivity family      G1G2G3G4 = PPPP
+  Second grown-family sign             G1G2G3G4 = PPPP
+  Third grown-family sign              G1G2G3G4 = PPPP
+  Fourth family quadrant               G1G2G3G4 = PPPP
+  Fifth family radial                  G1G2G3G4 = PPPP
+
+Order parameter candidate (unchanged): the portable quantity is the signed-control fixed point — exact zero-source null, exact neutral cancellation, plus/minus antisymmetry, and weak-field response near unit slope. Basin width and seed selectivity remain family-dependent and are reported above as basin/seed exclusions.
+
+OVERALL: PASS
 
 ----- stderr -----
 

@@ -10,6 +10,29 @@
 - Transfer script: [`scripts/persistent_object_blended_readout_transfer_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_blended_readout_transfer_sweep.py)
 - Transfer log: [`logs/2026-04-16-persistent-object-blended-readout-transfer-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-blended-readout-transfer-sweep.txt)
 
+## Runner/log evidence (audit repair, 2026-05-08)
+
+The cited transfer-sweep runner was re-executed via the canonical
+`scripts/precompute_audit_runners.py` mechanism to close the auditor's
+runner-artifact gap on the bounded outer-transfer claim. The SHA-pinned
+runner-cache file is:
+
+- [`logs/runner-cache/persistent_object_blended_readout_transfer_sweep.txt`](../logs/runner-cache/persistent_object_blended_readout_transfer_sweep.txt)
+
+The runner is annotated with `AUDIT_TIMEOUT_SEC = 1800` (representative
+runtime ~500 s on this hardware; the default 120 s ceiling was too tight).
+The cached run reproduces the six fixed-blend top2/top3 cases at
+`blend = 0.25` with the frozen setup (`h = 0.25`, source strengths
+`0.001, 0.002, 0.004, 0.008`, three repeated updates, `field max = 0.02`).
+The bottom-line totals match the note's headline:
+
+- `top3` admissible on `6 / 6` cases
+- `top2` admissible on `1 / 6` cases (only `length7`)
+
+This evidence supports only the bounded outer-transfer portion of the headline.
+The note's stronger inward-source boundary phrasing remains conditional and is
+not promoted by this repair.
+
 ## Question
 
 The compact inertial probe left one clean bottleneck:

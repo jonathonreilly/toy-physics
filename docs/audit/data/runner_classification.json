@@ -1128,6 +1128,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py"
     },
+    "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_c_iso_su3_nlo_2026_05_08_su3nlo.py"
+    },
     "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -7265,7 +7277,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 20,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
@@ -10054,7 +10066,7 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
-      "runner": "scripts/lensing_deflection_sweep.py"
+      "runner": "scripts/lensing_deflection_fine_single.py"
     },
     "lensing_finite_path_explanation_note": {
       "assert_count": 0,
@@ -14057,12 +14069,12 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 3,
+        "C": 21,
         "D": 0
       },
       "decoration_candidate": false,
       "dominant_class": "C",
-      "runner": "scripts/frontier_axioms_16card.py"
+      "runner": "scripts/frontier_staggered_17card.py"
     },
     "seventh_family_diagonal_boundary_note": {
       "assert_count": 0,
@@ -14224,12 +14236,12 @@
       "assert_count": 0,
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "runner": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py"
     },
     "signed_gravity_aps_action_origin_superselection_stability_note": {
@@ -18974,12 +18986,12 @@
       ],
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK.py": {
@@ -19894,6 +19906,21 @@
         "A": 0,
         "B": 0,
         "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_c_iso_su3_nlo_2026_05_08_su3nlo.py": {
+      "assert_count": 0,
+      "claims": [
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 15,
         "D": 0
       },
       "decoration_candidate": false,
@@ -21009,21 +21036,6 @@
         "B": 2,
         "C": 3,
         "D": 1
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
-    "scripts/frontier_axioms_16card.py": {
-      "assert_count": 0,
-      "claims": [
-        "session_synthesis_2026-04-10_graph_axioms"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 3,
-        "D": 0
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -26836,7 +26848,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 20,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
@@ -32467,6 +32479,7 @@
       "assert_count": 0,
       "claims": [
         "lanes.staggered.readme",
+        "session_synthesis_2026-04-10_graph_axioms",
         "staggered_fermion_card_2026-04-10",
         "staggered_fermion_card_2026-04-11"
       ],
@@ -36958,7 +36971,7 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/lensing_deflection_sweep.py": {
+    "scripts/lensing_deflection_fine_single.py": {
       "assert_count": 0,
       "claims": [
         "lensing_deflection_note"
@@ -40018,13 +40031,13 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 120,
+    "decoration_candidates": 121,
     "dominant_class_distribution": {
       "A": 14,
-      "B": 168,
+      "B": 169,
       "C": 607,
       "D": 213,
-      "none": 427
+      "none": 426
     },
     "runners_classified": 1429,
     "runners_with_C": 719,

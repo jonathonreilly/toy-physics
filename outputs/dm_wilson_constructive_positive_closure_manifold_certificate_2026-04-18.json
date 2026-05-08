@@ -1,0 +1,58 @@
+{
+  "base_point": {
+    "a": 1.16845863,
+    "b": 0.46803892,
+    "c": 0.77107315,
+    "d": 0.05539671,
+    "e_base": 1.88733851171
+  },
+  "bracket": {
+    "F_hi": 3.446009704344277e-05,
+    "F_lo": -3.448839492214972e-05,
+    "F_mid": -7.993605777301127e-15,
+    "delta_e": 0.001,
+    "e_hi": 1.88833851171,
+    "e_lo": 1.8863385117100002,
+    "floating_point_noise_floor_used": 1e-12,
+    "sign_change": true,
+    "sign_change_margin": 3.446009704344277e-05
+  },
+  "central_fd_step_stability": {
+    "max_value": 0.03447425067637511,
+    "min_value": 0.03447424598279625,
+    "span": 4.693578858905312e-09,
+    "step_sizes": [
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07
+    ],
+    "step_stability_threshold_used": 1e-06,
+    "values": [
+      0.03447424598279625,
+      0.03447424782865305,
+      0.034474247878613085,
+      0.034474247845306394,
+      0.03447425067637511
+    ]
+  },
+  "certificate_kind": "validated_numerics_regular_root_with_uniform_slope_lower_bound",
+  "claim_id": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+  "constructive_positive_branch_on_bracket": {
+    "min_Delta_src": 0.0007990900600199524,
+    "min_E1": 0.30266301883942304,
+    "min_E2": 2.00340048277831,
+    "min_gamma": 0.10382241684998877
+  },
+  "produced_by": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.py",
+  "uniform_slope_lower_bound": {
+    "grid_max_discrete_slope": 0.034501125762979507,
+    "grid_mid_discrete_slope": 0.034472832932678686,
+    "grid_min_discrete_slope": 0.034447359824611355,
+    "grid_slope_span": 5.37659383681513e-05,
+    "n_grid_points": 21,
+    "slope_threshold_used": 0.001
+  },
+  "verdict": "F changes sign on the bracket and its discrete slope is uniformly bounded away from zero on the same bracket, so a regular root of F exists in the bracket. This is the validated-numerics version of the regular-root hypothesis used by the manifold theorem."
+}

@@ -1,0 +1,124 @@
+===== runner cache v1 =====
+runner: scripts/cl3_c_iso_su3_nlo_2026_05_08_su3nlo.py
+runner_sha256: 4226676cecb16de88a3a405816f47b7f7c8ad381078a6d412431fb9cb41cb8d0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.28
+status: ok
+----- stdout -----
+
+=== SU(3) NLO Convention C-iso Closure ===
+Date: 2026-05-08  |  Workspace: outputs/action_first_principles_2026_05_08/c_iso_su3_nlo_closure
+Hamilton-limit input: <P>_KS = 0.441 ± 0.0006
+
+
+======================================================================
+SELF-TEST: SU(3) NLO Analytic Derivation
+======================================================================
+  beta=    12  <P>_W = 0.3223280  (P_W*beta-4)*beta = -1.58477
+  beta=    24  <P>_W = 0.1645476  (P_W*beta-4)*beta = -1.22059
+  beta=    48  <P>_W = 0.0828563  (P_W*beta-4)*beta = -1.09917
+  beta=    96  <P>_W = 0.0415530  (P_W*beta-4)*beta = -1.04725
+  beta=   192  <P>_W = 0.0208056  (P_W*beta-4)*beta = -1.02308
+  beta=   384  <P>_W = 0.0104098  (P_W*beta-4)*beta = -1.01141
+  beta=   768  <P>_W = 0.0052066  (P_W*beta-4)*beta = -1.00567
+  beta=  1500  <P>_W = 0.0026662  (P_W*beta-4)*beta = -1.00290
+  beta=  3000  <P>_W = 0.0013332  (P_W*beta-4)*beta = -1.00145
+
+  Fit: y = c_2 + c_3/beta + c_4/beta^2
+    c_2 = -1.00000  (analytic prediction: -1)
+    c_3 = -4.32820
+    c_4 = -19.89960
+
+  At beta=3000: <P>_W = 0.0013332, LO 0.0013333  (rel err 0.01%)
+
+  PASS = True
+
+======================================================================
+PATH A: SU(3) Convention C-iso analytic NLO comparison
+======================================================================
+  At g^2 = 1; s_t = g^2 / (2 xi) = 1/(2 xi);  beta_W = 3/s_t
+
+     xi        s_t     beta_W     <P>_HK    <P>_W (num)   <P>_W (NLO)      (W-HK)  rel_shift
+  ------------------------------------------------------------------------------------------
+    1.0    0.50000      6.000    0.48658      0.5774683     0.6388889    +0.09089   +18.678%
+    2.0    0.25000     12.000    0.28347      0.3223280     0.3263889    +0.03886   +13.708%
+    4.0    0.12500     24.000    0.15352      0.1645476     0.1649306    +0.01103    +7.184%
+    8.0    0.06250     48.000    0.07996      0.0828563     0.0828993    +0.00290    +3.628%
+   16.0    0.03125     96.000    0.04081      0.0415530     0.0415582    +0.00074    +1.819%
+   32.0    0.01562    192.000    0.02062      0.0208056     0.0208062    +0.00019    +0.911%
+   64.0    0.00781    384.000    0.01036      0.0104098     0.0104099    +0.00005    +0.456%
+  128.0    0.00391    768.000    0.00519      0.0052066     0.0052066    +0.00001    +0.228%
+
+  Polynomial fit of rel_shift(s_t) for s_t < 0.3 (no constant):
+    Order 1: a_1=+0.55533
+    Order 2: a_1=+0.59578, a_2=-0.18879
+    Order 3: a_1=+0.58195, a_2=+0.01854, a_3=-0.61199
+
+  Analytic LO of rel_shift_SU(3): 7/12 = 0.583333
+  (vs SU(2) proxy: 1/4 = 0.250000; ratio SU(3)/SU(2) = 2.33)
+
+======================================================================
+PATH B: SU(3) C-iso absolute shift on <P>_KS
+======================================================================
+  Hamilton-limit input: <P>_KS = 0.441 ± 0.0006
+  (from PR #685 thermodynamic-limit extrapolation L=3,4,6)
+
+     xi        s_t    rel(LO)   rel(num)    abs_shift   <P>_KS bound
+  ------------------------------------------------------------------------
+      1    0.50000   29.1667%   18.6783%    +0.082371         0.4410 ± 0.0824
+      2    0.25000   14.5833%   13.7085%    +0.060454         0.4410 ± 0.0605
+      4    0.12500    7.2917%    7.1844%    +0.031683         0.4410 ± 0.0317
+      8    0.06250    3.6458%    3.6279%    +0.015999         0.4410 ± 0.0160
+     16    0.03125    1.8229%    1.8194%    +0.008023         0.4410 ± 0.0080
+     32    0.01562    0.9115%    0.9107%    +0.004016         0.4410 ± 0.0040
+     64    0.00781    0.4557%    0.4555%    +0.002009         0.4410 ± 0.0020
+
+  ε_witness target absolute shift: 0.0003
+  → C-iso shift above ε_witness for all xi tested (max xi = 64)
+  → Projected: xi ≈ 429 required to drop C-iso below ε_witness.
+
+======================================================================
+PATH C: Total error budget on Hamilton-limit <P>_KS
+======================================================================
+  ε_stat (PR #685 multi-seed)        = 0.0002
+  ε_vol  (PR #685 L→∞ extrapolation) = 0.0006
+
+  ε_C-iso (this work, SU(3) NLO):
+    xi=  1: ε_C-iso = 0.08237  ε_total = 0.08237  (C-iso dominates)
+    xi=  2: ε_C-iso = 0.06045  ε_total = 0.06046  (C-iso dominates)
+    xi=  4: ε_C-iso = 0.03168  ε_total = 0.03169  (C-iso dominates)
+    xi=  8: ε_C-iso = 0.01600  ε_total = 0.01601  (C-iso dominates)
+    xi= 16: ε_C-iso = 0.00802  ε_total = 0.00805  (C-iso dominates)
+    xi= 32: ε_C-iso = 0.00402  ε_total = 0.00407  (C-iso dominates)
+    xi= 64: ε_C-iso = 0.00201  ε_total = 0.00211  (C-iso dominates)
+
+  Target ε_witness ~ 0.0003 absolute.
+  → ε_stat^2 + ε_vol^2 = 4.00e-07 = (6.3246e-04)^2
+  → ε_total cannot reach ε_witness with current stat+vol; need to tighten those first.
+
+======================================================================
+CLOSURE SUMMARY
+======================================================================
+Path A (SU(3) NLO analytic):
+  rel_shift_SU(3)(s_t) = (7/12) s_t + O(s_t^2) ≈ 0.5833 s_t
+  vs SU(2) proxy used in PR #685: rel_shift = (1/4) s_t = 0.25 s_t
+  Ratio SU(3)/SU(2) = 7/3 ≈ 2.33  (C-iso is LARGER than prior estimate)
+
+Path B (absolute shift on <P>_KS = 0.441):
+  xi=  4: |Δ<P>| = 0.03168 (7.184% relative)
+  xi= 16: |Δ<P>| = 0.00802 (1.819% relative)
+  xi= 32: |Δ<P>| = 0.00402 (0.911% relative)
+  xi= 64: |Δ<P>| = 0.00201 (0.456% relative)
+
+Path C (total error budget):
+  xi=  4: ε_total = 0.03169  (C-iso dominates)
+  xi= 16: ε_total = 0.00805  (C-iso dominates)
+  xi= 32: ε_total = 0.00407  (C-iso dominates)
+  xi= 64: ε_total = 0.00211  (C-iso dominates)
+
+Wall time: 0.1 s
+Saved: outputs/action_first_principles_2026_05_08/c_iso_su3_nlo_closure/results_mode-all.json
+
+----- stderr -----
+

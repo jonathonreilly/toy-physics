@@ -1,0 +1,37 @@
+
+numba_available = True
+
+======================================================================
+PATH A: high-statistics multi-seed anisotropic xi=8.0 on 4^3 x 16
+======================================================================
+
+  --- seed 1 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=8.0 beta_sigma=0.7500 beta_tau=48.0000 seed=1 numba=True
+  thermalized in 5.3s (100 sweeps)
+  measured in 28.6s (1200 sweeps, 600 measurements)
+
+  --- seed 2 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=8.0 beta_sigma=0.7500 beta_tau=48.0000 seed=2 numba=True
+  thermalized in 2.2s (100 sweeps)
+  measured in 30.2s (1200 sweeps, 600 measurements)
+
+  --- seed 3 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=8.0 beta_sigma=0.7500 beta_tau=48.0000 seed=3 numba=True
+  thermalized in 2.4s (100 sweeps)
+  measured in 29.0s (1200 sweeps, 600 measurements)
+
+  --- seed 4 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=8.0 beta_sigma=0.7500 beta_tau=48.0000 seed=4 numba=True
+  thermalized in 2.3s (100 sweeps)
+  measured in 29.0s (1200 sweeps, 600 measurements)
+
+  --- seed 5 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=8.0 beta_sigma=0.7500 beta_tau=48.0000 seed=5 numba=True
+  thermalized in 2.5s (100 sweeps)
+  measured in 30.7s (1200 sweeps, 600 measurements)
+
+  Multi-seed combined:
+    <P_sigma> = 0.40949 ± 0.00050  (seed-std: 0.00107)
+    <P_tau>   = 0.92149 ± 0.00002  (seed-std: 0.00006)
+
+Saved results to outputs/action_first_principles_2026_05_08/c_iso_su3_nlo_closure/results_mode-path_a.json
