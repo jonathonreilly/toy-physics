@@ -1,0 +1,99 @@
+======================================================================
+SELF-TEST: isotropic SU(3) Wilson, beta=6 on 2^4 lattice
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 2) vol=16 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000
+  thermalized in 0.7s (60 sweeps)
+  measured in 1.2s (100 sweeps, 50 measurements)
+  <P_sigma> = 0.6227 ± 0.0078
+  <P_tau>   = 0.6182 ± 0.0047
+  Engels1990 reference: <P> ~ 0.594 at beta=6, large volume.
+  PASS: <P_sigma> within finite-size band (0.55-0.65) of literature
+
+======================================================================
+PATH A_iso: spatial-volume scaling at xi=1 isotropic (g^2=1.0)
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 4) vol=32 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000
+  thermalized in 1.6s (80 sweeps)
+  measured in 4.2s (200 sweeps, 100 measurements)
+  dims=(2, 2, 2, 4): <P_sigma>=0.6216 ± 0.0019, <P_tau>=0.6027 ± 0.0028 (wall=5.8s)
+[run_anisotropic] dims=(3, 3, 3, 4) vol=108 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000
+  thermalized in 5.7s (80 sweeps)
+  measured in 14.4s (200 sweeps, 100 measurements)
+  dims=(3, 3, 3, 4): <P_sigma>=0.6016 ± 0.0016, <P_tau>=0.5973 ± 0.0010 (wall=20.1s)
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000
+  thermalized in 13.5s (80 sweeps)
+  measured in 34.6s (200 sweeps, 100 measurements)
+  dims=(4, 4, 4, 4): <P_sigma>=0.5970 ± 0.0010, <P_tau>=0.5975 ± 0.0010 (wall=48.2s)
+
+======================================================================
+PATH A: spatial-volume scaling at xi=4 (g^2=1.0)
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 8) vol=64 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000
+  thermalized in 3.5s (80 sweeps)
+  measured in 8.9s (200 sweeps, 100 measurements)
+  dims=(2, 2, 2, 8): <P_sigma> = 0.4531 ± 0.0049 (wall=12.4s)
+[run_anisotropic] dims=(3, 3, 3, 8) vol=216 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000
+  thermalized in 12.0s (80 sweeps)
+  measured in 30.5s (200 sweeps, 100 measurements)
+  dims=(3, 3, 3, 8): <P_sigma> = 0.4129 ± 0.0038 (wall=42.5s)
+[run_anisotropic] dims=(4, 4, 4, 8) vol=512 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000
+  thermalized in 28.4s (80 sweeps)
+  measured in 71.9s (200 sweeps, 100 measurements)
+  dims=(4, 4, 4, 8): <P_sigma> = 0.4137 ± 0.0021 (wall=100.3s)
+
+======================================================================
+PATH B: anisotropy sweep on 2^3 spatial (g^2=1.0)
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 4) vol=32 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000
+  thermalized in 1.6s (80 sweeps)
+  measured in 4.2s (200 sweeps, 100 measurements)
+  xi= 1.00 T_lat=4 : <P_sigma>=0.6216 ± 0.0019  (wall=5.8s)
+[run_anisotropic] dims=(2, 2, 2, 4) vol=32 g2=1.0 xi=2.0 beta_sigma=3.0000 beta_tau=12.0000
+  thermalized in 1.7s (80 sweeps)
+  measured in 4.3s (200 sweeps, 100 measurements)
+  xi= 2.00 T_lat=4 : <P_sigma>=0.4943 ± 0.0024  (wall=6.0s)
+[run_anisotropic] dims=(2, 2, 2, 8) vol=64 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000
+  thermalized in 3.5s (80 sweeps)
+  measured in 9.1s (200 sweeps, 100 measurements)
+  xi= 4.00 T_lat=8 : <P_sigma>=0.4531 ± 0.0049  (wall=12.6s)
+[run_anisotropic] dims=(2, 2, 2, 16) vol=128 g2=1.0 xi=8.0 beta_sigma=0.7500 beta_tau=48.0000
+  thermalized in 7.7s (80 sweeps)
+  measured in 19.2s (200 sweeps, 100 measurements)
+  xi= 8.00 T_lat=16 : <P_sigma>=0.4530 ± 0.0068  (wall=26.8s)
+
+=== Path C: Analytic refinement of Convention C-iso ===
+  g^2 = 1.0000
+  Compare HK temporal plaquette <P_tau>_HK = 1 - exp(-s_t * C_F)
+  with Wilson temporal plaquette <P_tau>_W (single-plaquette Bessel form).
+
+      xi       s_t    beta_W      <P>_HK       <P>_W      |HK-W|   rel.shift
+  ------------------------------------------------------------------------------
+    1.00    0.5000     4.000     0.31271     0.34195     0.02924       9.35%
+    2.00    0.2500     8.000     0.17097     0.18075     0.00978       5.72%
+    4.00    0.1250    16.000     0.08949     0.09219     0.00270       3.01%
+    8.00    0.0625    32.000     0.04579     0.04650     0.00070       1.54%
+
+  Leading scaling: rel_shift ≈ 0.214 · s_t^0.948
+  At xi=4 (s_t=0.1250):  predicted rel_shift ≈ 0.0298
+  At xi=8 (s_t=0.0625): predicted rel_shift ≈ 0.0154
+
+  Convention C-iso single-plaquette bound on |<P_sigma>_iso - <P_sigma>_HK|:
+    bounded above by |<P_tau>_HK - <P_tau>_W| in the leading-order matching.
+    This is a CONSERVATIVE upper bound; the actual shift in <P_sigma>
+    propagates through the Boltzmann weight and is typically smaller.
+
+Saved results to outputs/action_first_principles_2026_05_07/exact_tier_path_integral_tightening/results_mode-consolidated.json
+
+======================================================================
+PATH A_addendum: N_t scan at 3^3 spatial, xi=4 (g^2=1.0)
+======================================================================
+[run_anisotropic] dims=(3, 3, 3, 8) vol=216 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000
+  -> <P_sigma> = 0.4129 ± 0.0038
+[run_anisotropic] dims=(3, 3, 3, 16) vol=432 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000
+  -> <P_sigma> = 0.4441 ± 0.0024 (60 thermalize + 150 measure sweeps)
+
+======================================================================
+PATH B_addendum: high-xi (16) confirmation
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 32) vol=256 g2=1.0 xi=16.0 beta_sigma=0.3750 beta_tau=96.0000
+  -> <P_sigma>=0.4373 ± 0.0073 (200 sweeps)
