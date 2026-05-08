@@ -1,0 +1,160 @@
+===== runner cache v1 =====
+runner: scripts/cl3_a3_route5_no_proper_quotient_2026_05_08_r5.py
+runner_sha256: 0ce9993f48347849e66a9de0f13b5b346ae36508d591aee8ee6303d4e3946e60
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+==============================================================================
+A3 Route 5 — No-Proper-Quotient Species-Disclaimer
+Sharpened-Obstruction Structural Verification
+==============================================================================
+
+Loop: action-first-principles-a3-route5-20260508
+Companion source-note:
+  docs/A3_ROUTE5_NO_PROPER_QUOTIENT_SHARPENED_OBSTRUCTION_NOTE_2026-05-08_r5.md
+
+==============================================================================
+Section 0: hw=1 BZ corner setup
+==============================================================================
+hw=1 corners: [(1, 0, 0), (0, 1, 0), (0, 0, 1)]
+Translation eigenvalues:
+  |(1, 0, 0)>: (T_x, T_y, T_z) = (-1, 1, 1)
+  |(0, 1, 0)>: (T_x, T_y, T_z) = (1, -1, 1)
+  |(0, 0, 1)>: (T_x, T_y, T_z) = (1, 1, -1)
+C_3[111] action on corners:
+  (1, 0, 0) -> (0, 1, 0)
+  (0, 1, 0) -> (0, 0, 1)
+  (0, 0, 1) -> (1, 0, 0)
+
+==============================================================================
+Vector 1 — C_3[111] as global unitary automorphism (constructive fix)
+Per Bratteli-Robinson 1979 §2.3.16: alpha_{C_3} *-automorphism of A(Lambda)
+lifts to U_{C_3} on H_phys via GNS, with U_{C_3}^3 = I, vacuum-preserving,
+Ad U_{C_3} acts as *-automorphism on Mat(3, C).
+==============================================================================
+  [PASS] U_C3_cubed_is_identity: True
+  [PASS] U_C3_maps_e1_to_e2: True
+  [PASS] U_C3_maps_e2_to_e3: True
+  [PASS] U_C3_maps_e3_to_e1: True
+  [PASS] Ad_U_C3_maps_Tx_to_Ty: True
+  [PASS] Ad_U_C3_maps_Ty_to_Tz: True
+  [PASS] Ad_U_C3_maps_Tz_to_Tx: True
+  [PASS] U_C3_is_unitary: True
+  [PASS] U_C3_preserves_H_hw1_subspace: True
+
+Vector 1 — structural orthogonality to species-disclaimer
+(verifies the unitary-fix does not change algebraic content)
+  [PASS] E12_nonzero: True
+  [PASS] E21_nonzero: True
+  [PASS] E13_nonzero: True
+  [PASS] E31_nonzero: True
+  [PASS] E23_nonzero: True
+  [PASS] E32_nonzero: True
+  [PASS] algebra_dim_is_9_M3C: True
+
+==============================================================================
+Vector 2 — NQ + 1+2 incompatibility (negative; internal to NQ)
+M_3(C) acts irreducibly on C^3; no proper invariant subspace
+(in particular no 1+2 split). This is exactly NQ's content.
+==============================================================================
+  [PASS] corner_1_span_NOT_C3_invariant: True
+  [PASS] corner_2_span_NOT_C3_invariant: True
+  [PASS] corner_3_span_NOT_C3_invariant: True
+  [PASS] pair_12_NOT_C3_invariant: True
+  [PASS] pair_13_NOT_C3_invariant: True
+  [PASS] pair_23_NOT_C3_invariant: True
+  [PASS] vector2_internal_to_NQ: True
+
+==============================================================================
+Vector 3 — DHR superselection (negative; retired by RS+CD)
+DHR sectors require disjoint representations. RS cyclicity + CD unique
+vacuum force a single sector; 3 hw=1 corners are inside one sector.
+==============================================================================
+  [PASS] RS_cyclicity_present: True
+  [PASS] CD_unique_vacuum: True
+  [PASS] combined_single_DHR_sector: True
+  [PASS] corners_e1_e2_orthogonal: True
+  [PASS] corners_e2_e3_orthogonal: True
+  [PASS] corners_e1_e3_orthogonal: True
+  [PASS] DHR_retired_by_Block_01_audit: True
+
+==============================================================================
+Vector 4 — Algebraic compactness on H_{hw=1} (negative; Type I_3)
+Murray-von Neumann classification: M_3(C) on C^3 is Type I_3 factor.
+All Type I_3 factors are isomorphic; classification gives unique algebra,
+not unique physical interpretation.
+==============================================================================
+  [PASS] dim_algebra_is_9: True
+  [PASS] Type_I3_classification_holds: True
+  [PASS] Type_I3_does_not_imply_species: True
+
+==============================================================================
+Vector 5 — Bicommutant theorem on M_3(C) (negative; trivial center)
+Z(M_3(C)) = C * I; no internal classical labels.
+Species require external content (which is AC_phi_lambda).
+==============================================================================
+  [PASS] center_is_1_dimensional: True
+  [PASS] identity_in_center: True
+  [PASS] trivial_center_implies_species_external: True
+
+==============================================================================
+Vector 6 — Spectrum condition on hw=1 (negative)
+H >= 0 (positivity) does NOT imply [H, U_{C_3}] != 0 (symmetry-breaking).
+Both C_3-symmetric and C_3-broken H >= 0 exist; spectrum is independent.
+==============================================================================
+  [PASS] H_sym_is_Hermitian: True
+  [PASS] H_sym_positive_spectrum: True
+  [PASS] H_sym_commutes_with_U_C3: True
+  [PASS] H_sym_equal_corner_expectations: True
+  [PASS] H_broken_is_Hermitian: True
+  [PASS] H_broken_positive_spectrum: True
+  [PASS] H_broken_does_not_commute_with_U_C3: True
+  [PASS] H_broken_distinct_corner_expectations: True
+  [PASS] spectrum_condition_independent_of_symmetry: True
+
+==============================================================================
+Vector 7 — Lattice-to-continuum reconstruction (negative)
+Algebraic content is basis-independent and survives reconstruction.
+Continuum axioms supply same kinematic structure; no species content.
+SM 3-generations: empirical input per Weinberg QFT vol II §22.
+==============================================================================
+  [PASS] test_unitary_basis_change: True
+  [PASS] algebra_invariant_under_basis_change: True
+  [PASS] continuum_axioms_no_species_identification: True
+  [PASS] SM_3_generations_empirical_input: True
+
+==============================================================================
+Aggregate: sharpened obstruction theorem
+==============================================================================
+  [PASS] vector1_closes_challenge2_but_orthogonal_to_disclaimer: True
+  [PASS] vector2_negative_NQ_internal: True
+  [PASS] vector3_negative_DHR_blocked: True
+  [PASS] vector4_negative_TypeI3: True
+  [PASS] vector5_negative_trivial_center: True
+  [PASS] vector6_negative_spectrum_independent_of_symmetry: True
+  [PASS] vector7_negative_continuum_preserves: True
+  [PASS] sharpened_obstruction_proven: True
+
+==============================================================================
+SUMMARY: 57 PASS, 0 FAIL
+==============================================================================
+ROUTE 5 SHARPENED OBSTRUCTION: VERIFIED
+
+Vector 1 fixes Block 02 Challenge 2 (rigorous GNS unitary-
+implementation per Bratteli-Robinson 1979 §2.3.16).
+
+Vectors 2-7 each fail to remove the species-disclaimer,
+for distinct structural reasons:
+  V2: tautology vs NQ;
+  V3: DHR retired by RS+CD;
+  V4: Type I_3 classification basis-independent;
+  V5: trivial center -> no internal labels;
+  V6: spectrum positivity != symmetry-breaking;
+  V7: continuum reconstruction preserves but does not extend.
+
+Conclusion: species-disclaimer cannot be removed from retained
+primitives alone. Removal requires either:
+  (a) admitting AC_phi_lambda as a new framework axiom; or
+  (b) introducing C_3-breaking dynamics not in retained stack.
