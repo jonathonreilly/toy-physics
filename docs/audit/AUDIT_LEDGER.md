@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 862 |
+| unaudited | 861 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 425 |
+| ~~audited_conditional~~ | 426 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 425 |
+| `audited_conditional` | 426 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 27 |
-| `unaudited` | 911 |
+| `unaudited` | 910 |
 
 | claim_type | count |
 |---|---:|
@@ -664,6 +664,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4660,6 +4661,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The note asserts that a previous split-2 boundary-band scan already pinned the broad-box minimum to m = -0.14 and the lower active-slack edge, so the danger reduces to R_split2(s)=min_delta Lambda_+(-0.14,delta,s).  _(class `B`)_
 - **chain closes:** False — The restricted packet contains no cited retained authority proving the prior boundary-band scan or the upper-m/lower-slack pinning. The runner hard-codes that reduction premise as a True check and imports the preferred lift and quotient-gauge construction from source not included in the packet.
 - **rationale:** Issue: the three-real to one-dimensional reduction rests on an uncited previous scan, and the runner accepts the edge-pinning premise rather than computing it. Why this blocks: the threshold and margin only establish the edge profile after the missing pinning theorem and imported carrier/readout definitions are granted. Repair target: provide a retained dependency proving the broad-box minimum is pinned to m = -0.14 and the lower active-slack edge, with runner source that constructs the required operators and preferred floor inside the audit packet. Claim boundary until fixed: this is a numerical candidate on the tested broad edge, not a closed bounded theorem for the full tested split-2 broad bundle.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded numerical obstruction claim that the tested split-2 edge interval 0 <= s <= s_*^edge is transport-incompatible with the preferred recovered packet lane.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0730-62fc-7203-a188-9456b35cad76`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the full tested edge interval, the maximum eta_best/eta_obs is 0.847299300834 and the minimum packet distance to Q_pref is 0.293939334980, so the edge stays off the preferred recovered transport lane.  _(class `B`)_
+- **chain closes:** False — The packet contains no runner, no cited retained authority, and no derivation of the preferred lane, edge minimization, or interval extrema. The missing step is a retained computation or certificate that actually scans/certifies the stated interval quantities from defined inputs.
+- **rationale:** Issue: the note imports the preferred recovered point/lane, the edge construction, delta_edge minimization, and interval extrema without any cited retained source or runner. Why this blocks: the conclusion is a bounded numerical obstruction and depends entirely on those imported/certified numerical claims. Repair target: provide a retained dependency or runner/cached certificate that constructs the edge, minimizes Lambda_+, computes P_best and eta_best, and certifies the interval extrema. Claim boundary until fixed: at most an uncached numerical candidate for the sampled dangerous edge, not an audited bounded theorem.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18`
