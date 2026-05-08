@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 69 |
 | **retained_no_go** | 121 |
-| **retained_bounded** | 237 |
+| **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 883 |
+| unaudited | 882 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 394 |
+| `audited_clean` | 395 |
 | `audited_conditional` | 414 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 936 |
+| `unaudited` | 935 |
 
 | claim_type | count |
 |---|---:|
@@ -272,6 +272,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7890,6 +7891,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The scoped no-go closes as exact finite-dimensional algebra: C diag(a,b,c) C^(-1)=diag(a,b,c) forces a=b=c, while Z=P_plus-P_perp commutes with C, squares to I, is not diagonal in the site basis, and the onsite/commutant intersection is only span{I}. With the note's stated reduced-carrier readout, the admitted commutant value z=-1/3 gives Q=1, so the current commutant/projected source grammar does not force Q=2/3.
 - **rationale:** The load-bearing result is not a numerical Koide fit or a physical-source closure claim; it is the source-domain separation and no-go that the broader commutant/projected grammar leaves a non-onsite Z direction available. The cached runner completed successfully and verifies the finite C3 matrix algebra, the onsite/commutant intersection, the non-onsite nature of Z, and the counterdomain value z=-1/3 -> Q=1. The runner also includes documentation guardrails confirming the note explicitly rejects native retained Q closure and identifies the remaining source-domain theorem. Residual risk is confined to any later attempt to promote the onsite source domain to the physical undeformed charged-lepton source domain, which this scoped claim explicitly does not assert.
 - **auditor confidence:** high
+
+### `koide_q_readout_factorization_theorem_2026-04-22`
+
+- **Note:** [`KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded linear-algebra quotient for the defined first-live second-order readout map L on the stated Gamma_1/T_1 grammar, not the conditional selector-admissibility extension or physical charged-lepton identification.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0930-d7f6-7bc2-b80f-f2d19eb0311d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The exact single-slot images make the readout map L(u,v,w,z)=diag(u,v,w), so L has rank 3, kernel span(e_z), and quotient R^4/span(e_z) is isomorphic to Diag_3(R).  _(class `A`)_
+- **chain closes:** True — Within the narrowed scope, the rank, kernel, image, and fiber claims follow directly from the displayed matrix L = [[1,0,0,0],[0,1,0,0],[0,0,1,0]]. The note explicitly excludes the broader admissibility-implies-constancy and physical-identification claims from the theorem under audit.
+- **rationale:** The bounded theorem is a genuine algebraic closure: once the source note defines the single-slot images and hence L(u,v,w,z)=diag(u,v,w), the rank/kernel quotient follows by elementary linear algebra. The runner verifies the operator single-slot images and the quotient/fiber statements, although its C.3 factorization line overstates the note's narrowed theorem by asserting the conditional extension. Claim boundary: clean only for the exact rank/kernel quotient of L; selector admissibility and physical Q-route identification remain outside this audited theorem.
+- **auditor confidence:** medium
 
 ### `koide_q_reduced_observable_restriction_theorem_2026-04-22`
 
