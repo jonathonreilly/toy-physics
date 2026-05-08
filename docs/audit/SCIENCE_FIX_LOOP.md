@@ -71,6 +71,11 @@ python3 scripts/science_fix_loop.py --n 5 --category failed
 python3 scripts/science_fix_loop.py --n 5 --category numerical_match
 python3 scripts/science_fix_loop.py --n 5 --category open_gate
 
+# Auditor-written audited_conditional cohorts (added 2026-05-08)
+python3 scripts/science_fix_loop.py --n 5 --category conditional_runner_artifact_issue
+python3 scripts/science_fix_loop.py --n 5 --category conditional_scope_too_broad
+python3 scripts/science_fix_loop.py --n 5 --category conditional_missing_bridge_theorem
+
 # Try a specific row
 python3 scripts/science_fix_loop.py --claim-id <claim_id>
 
