@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 60,
     "high": 302,
-    "leaf": 192,
+    "leaf": 191,
     "medium": 279
   },
   "cycle_break_target_count": 35,
@@ -17796,7 +17796,7 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_graph_gauge_closure_results_2026-04-10",
+      "claim_id": "staggered_graph_observables_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "migration_hint",
@@ -17804,17 +17804,17 @@
       "criticality_rank": 0,
       "cross_confirmation_status": null,
       "deps": [
-        "staggered_graph_gauge_closure_note",
-        "staggered_graph_portability_note"
+        "staggered_graph_portability_note",
+        "staggered_graph_gauge_closure_results_2026-04-10"
       ],
-      "direct_in_degree": 1,
+      "direct_in_degree": 0,
       "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_staggered_graph_gauge_closure.py",
-      "transitive_descendants": 1
+      "runner_path": "scripts/frontier_staggered_graph_observables.py",
+      "transitive_descendants": 0
     },
     {
       "audit_independence_required": "any_non_self",
@@ -22132,30 +22132,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_graph_observables_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "staggered_graph_portability_note",
-        "staggered_graph_gauge_closure_results_2026-04-10"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_staggered_graph_observables.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "su3_bridge_clean_tube_k12_support_2026-05-04",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -22814,5 +22790,5 @@
     }
   ],
   "ready_count": 1,
-  "total_pending": 833
+  "total_pending": 832
 }
