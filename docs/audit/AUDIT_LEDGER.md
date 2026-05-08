@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 861 |
+| unaudited | 860 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 426 |
+| ~~audited_conditional~~ | 427 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 426 |
+| `audited_conditional` | 427 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 27 |
-| `unaudited` | 910 |
+| `unaudited` | 909 |
 
 | claim_type | count |
 |---|---:|
@@ -665,6 +665,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | D | - |
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4674,6 +4675,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the full tested edge interval, the maximum eta_best/eta_obs is 0.847299300834 and the minimum packet distance to Q_pref is 0.293939334980, so the edge stays off the preferred recovered transport lane.  _(class `B`)_
 - **chain closes:** False — The packet contains no runner, no cited retained authority, and no derivation of the preferred lane, edge minimization, or interval extrema. The missing step is a retained computation or certificate that actually scans/certifies the stated interval quantities from defined inputs.
 - **rationale:** Issue: the note imports the preferred recovered point/lane, the edge construction, delta_edge minimization, and interval extrema without any cited retained source or runner. Why this blocks: the conclusion is a bounded numerical obstruction and depends entirely on those imported/certified numerical claims. Repair target: provide a retained dependency or runner/cached certificate that constructs the edge, minimizes Lambda_+, computes P_best and eta_best, and certifies the interval extrema. Claim boundary until fixed: at most an uncached numerical candidate for the sampled dangerous edge, not an audited bounded theorem.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A numerical candidate that no lower-repair, transport-compatible rival lane is visible on the stated tested broad split-2 low-slack box.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0732-da0d-78b0-80a8-55300dfbf6d0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Seeded global searches over the full tested broad split-2 low-slack box found no lower-repair point with transport compatibility, with the strongest rival at eta_best/eta_obs about 0.884523453538 and the closest packet distance about 0.233468501596.  _(class `D`)_
+- **chain closes:** False — The restricted packet gives no retained dependencies or runner/certificate establishing the definitions, preferred lane, observational readout, global-search coverage, or interval-style exclusion. The missing step is a reproducible retained computation or interval proof certifying the full tested box rather than reporting seeded search outcomes.
+- **rationale:** Issue: the load-bearing evidence is an uncited seeded numerical search and comparator report, while the preferred lane, Lambda_+, eta_obs readout, packet quotient, low-slack boundary, and search coverage are all imported without retained support in the packet. Why this blocks: the conclusion requires those bridges and the global-search/exclusion certificate to be closed before the absence of a compatible rival can be audited as more than a bounded candidate. Repair target: add retained dependency edges for the inputs/readouts and a runner or interval certificate that constructs the scan/exclusion over the stated box. Claim boundary until fixed: only a numerical incompatibility candidate on the tested broad box is supported, not certified carrier exclusion or exact-carrier closure.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18`
