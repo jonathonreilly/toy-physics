@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_tensor_action_blocker.py
+runner_sha256: 860a4f5efb8184346adeb962360e5025a5ac5d39fc59f4f980be43cfcc2f3f49
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+UNIVERSAL GR TENSOR ACTION BLOCKER AUDIT
+==============================================================================
+[PASS] scalar generator is exact
+    observable principle gives the exact scalar generator
+[PASS] route-2 kinematic lift is exact
+    route-2 gives the exact PL S^3 x R selector
+[PASS] observable principle remains scalar-only on route-2
+    the route-2 Hessian remains scalar-valued
+[PASS] tensor-valued candidate is exact but not yet identified
+    candidate is exact as a construction, but the curvature-localization primitive is still open
+[PASS] missing identification is now sharp
+    blocker note names the exact remaining identification problem
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+Blocker confirmed: exact scalar observable principle and exact 3+1 kinematic lift are in hand, but no exact tensor-valued action or uniqueness theorem has been built.
+
+----- stderr -----
+

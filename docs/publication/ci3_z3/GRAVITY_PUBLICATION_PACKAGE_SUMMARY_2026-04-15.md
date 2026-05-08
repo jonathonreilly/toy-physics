@@ -144,8 +144,14 @@ The partition and refinement theorems sharpen that remaining issue:
 
 Use this summary to orient the package documents:
 
-- [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md)
-- [README.md](./README.md)
+- `EXTERNAL_REVIEWER_GUIDE.md` (sibling publication-package artifact;
+  backticked to avoid length-3 cycles through CLAIMS_TABLE and README —
+  the reviewer guide already lists this gravity summary in its body, so
+  citation graph direction is *external_reviewer_guide → this_summary*)
+- `README.md` (sibling publication-package artifact; backticked to avoid
+  length-3 cycle through EXTERNAL_REVIEWER_GUIDE — README already lists
+  this gravity summary in its body, so citation graph direction is
+  *readme → this_summary*)
 - `CLAIMS_TABLE.md` (sibling artifact; cross-reference only — not a one-hop
   dep of this note)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)

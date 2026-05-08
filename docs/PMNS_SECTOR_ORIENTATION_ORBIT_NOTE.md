@@ -121,7 +121,9 @@ python3 scripts/frontier_pmns_sector_orientation_orbit.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator;
+  backticked to avoid length-2 cycle — citation graph direction is
+  *atlas → this_note*)
 - [pmns_minimal_branch_nonselection_note](PMNS_MINIMAL_BRANCH_NONSELECTION_NOTE.md)
 - [lepton_shared_higgs_universality_underdetermination_note](LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md)
 - [pmns_selector_bank_nonrealization_note](PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md)

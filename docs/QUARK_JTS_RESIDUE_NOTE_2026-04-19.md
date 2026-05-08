@@ -264,7 +264,7 @@ closure.
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [quark_jts_affine_physical_carrier_theorem_note_2026-04-19](QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
-- [quark_issr1_bicac_forcing_theorem_note_2026-04-19](QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md)
+- `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
 - [strc_lo_collinearity_theorem_note_2026-04-19](STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md)
 - [quark_route2_exact_readout_map_note_2026-04-19](QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md)
 - [quark_route2_exact_time_coupling_note_2026-04-19](QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md)

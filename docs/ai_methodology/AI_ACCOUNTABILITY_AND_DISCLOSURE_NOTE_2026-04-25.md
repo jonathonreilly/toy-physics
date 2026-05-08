@@ -60,4 +60,8 @@ make the repo decide what is live.
 - For the short manuscript paragraph, use
   `CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md`.
 - For the broader process description, use
-  [`../AI_METHODOLOGY_NOTE_2026-04-25.md`](../AI_METHODOLOGY_NOTE_2026-04-25.md).
+  `../AI_METHODOLOGY_NOTE_2026-04-25.md` (sibling parent surface; backticked
+  to avoid length-3 cycles through CANONICAL_FRAMING_PARAGRAPH and
+  METHODOLOGY_PAPER_SOURCE_PACKET — citation graph direction is
+  *ai_methodology_note → this_accountability* via the parent's downstream
+  packet inventory).

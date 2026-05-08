@@ -133,6 +133,6 @@ Expected: `PASS = 24, FAIL = 0`.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [abcc_cp_phase_no_go_theorem_note_2026-04-19](ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md)
+- `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
 - [dm_sigma_hier_closure_packet_note_2026-04-20](DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md)
 - [neutrino_dirac_pmns_retained_lane_packet_2026-04-16](NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md)

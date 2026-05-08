@@ -168,7 +168,10 @@ exact reductions visible.
   ("DM flagship lane" row)
 - [`docs/repo/CONTROLLED_VOCABULARY.md`](../../repo/CONTROLLED_VOCABULARY.md)
   (claim-strength labels and `historical / diagnostic` definition)
-- [`docs/publication/ci3_z3/DERIVATION_ATLAS.md`](../../publication/ci3_z3/DERIVATION_ATLAS.md)
+- `docs/publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator;
+  backticked to avoid length-3 cycle through
+  `DM_WILSON_DIRECT_DESCENDANT_BATCH_AUTHORITY_NOTE_2026-05-03.md` —
+  citation graph direction is *atlas → dm_wilson → triage*)
   (section `G. DM and cosmology tools`, ~50 already-woven DM rows)
 - [`CANONICAL_WEAVE_AUDIT_2026-05-03.md`](CANONICAL_WEAVE_AUDIT_2026-05-03.md)
   (companion audit packet, PR `#448`)

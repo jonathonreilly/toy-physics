@@ -1,0 +1,114 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_cube_full_rho_perron_2026_05_04.py
+runner_sha256: 16707dcd81f0d8421e5d160ab0e583f8deca589c85fe1f9d71b281626be2185f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 15.23
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) L_s=2 APBC Cube — Full Candidate-ρ Perron Solve
+==============================================================================
+
+--- Section A: tabulate candidate ρ_(p,q)(6) for various NMAX ---
+
+  NMAX_rho = 2: building ρ...
+    ρ_(0, 0)(6) = 1.000000e+00
+    ρ_(0, 1)(6) = 2.124624e-01
+    ρ_(1, 0)(6) = 2.124624e-01
+    ρ_(1, 1)(6) = 5.587932e-03
+    ρ_(0, 2)(6) = 6.702087e-05
+    ρ_(2, 0)(6) = 6.702087e-05
+    Perron eigenvalue: 3.516942
+    P(6) = 0.4291049969
+
+  NMAX_rho = 3: building ρ...
+    ρ_(0, 0)(6) = 1.000000e+00
+    ρ_(0, 1)(6) = 2.124624e-01
+    ρ_(1, 0)(6) = 2.124624e-01
+    ρ_(1, 1)(6) = 5.587932e-03
+    ρ_(0, 2)(6) = 6.702087e-05
+    ρ_(2, 0)(6) = 6.702087e-05
+    Perron eigenvalue: 3.516942
+    P(6) = 0.4291049969
+
+  NMAX_rho = 4: building ρ...
+    ρ_(0, 0)(6) = 1.000000e+00
+    ρ_(0, 1)(6) = 2.124624e-01
+    ρ_(1, 0)(6) = 2.124624e-01
+    ρ_(1, 1)(6) = 5.587932e-03
+    ρ_(0, 2)(6) = 6.702087e-05
+    ρ_(2, 0)(6) = 6.702087e-05
+    Perron eigenvalue: 3.516942
+    P(6) = 0.4291049969
+
+  NMAX_rho = 5: building ρ...
+    ρ_(0, 0)(6) = 1.000000e+00
+    ρ_(0, 1)(6) = 2.124624e-01
+    ρ_(1, 0)(6) = 2.124624e-01
+    ρ_(1, 1)(6) = 5.587932e-03
+    ρ_(0, 2)(6) = 6.702087e-05
+    ρ_(2, 0)(6) = 6.702087e-05
+    Perron eigenvalue: 3.516942
+    P(6) = 0.4291049969
+
+  NMAX_rho = 6: building ρ...
+    ρ_(0, 0)(6) = 1.000000e+00
+    ρ_(0, 1)(6) = 2.124624e-01
+    ρ_(1, 0)(6) = 2.124624e-01
+    ρ_(1, 1)(6) = 5.587932e-03
+    ρ_(0, 2)(6) = 6.702087e-05
+    ρ_(2, 0)(6) = 6.702087e-05
+    Perron eigenvalue: 3.516942
+    P(6) = 0.4291049969
+
+--- Section B: convergence at NMAX_rho = 4 vs reference value ---
+
+  NMAX_rho = 4: P(6) = 0.4291049969
+  Reference (PR #501 Block 5 candidate): 0.4291049969
+  Difference: 4.694e-11
+  PASS: matches Block 5 candidate value to 1e-6.
+
+--- Section C: bridge comparison (full-ρ Perron) ---
+
+  Reference values:
+    P_triv (ρ = δ):                     0.4225317396
+    P_loc (ρ = 1):                      0.4524071590
+    P_candidate (full ρ, NMAX=4):       0.4291049969
+    Bridge support upper:               0.5935306800
+    ε_witness:                           3.030e-04
+
+  This Block (full candidate-ρ at NMAX=4): P = 0.4291049969
+  Gap to bridge target:               0.164426 = 543× ε_witness
+
+  Verdict: full candidate-ρ value lies in [0.4225, 0.4524] support envelope.
+  L_s=2 APBC cube alone CANNOT close to bridge support upper
+  (0.5935); the gap stays at
+  ~ 0.16 = ~ 543× ε_witness across the tested NMAX_rho values.
+
+  SUPPORT: confirms L_s=2 cube does not close bridge witness
+--- Section D: higher-NMAX_rho convergence study ---
+
+  NMAX_rho =  3: P(6) = 0.429104996947
+  NMAX_rho =  4: P(6) = 0.429104996947
+  NMAX_rho =  5: P(6) = 0.429104996947
+  NMAX_rho =  6: P(6) = 0.429104996947
+  NMAX_rho =  7: P(6) = 0.429104996947
+  NMAX_rho =  8: P(6) = 0.429104996947
+
+==============================================================================
+SUMMARY: THEOREM PASS=1 SUPPORT=1 FAIL=0
+==============================================================================
+
+Headline:
+  L_s=2 APBC cube full-candidate-ρ Perron value: P(6) = 0.429105
+  Wigner Block 5 reference: 0.429105
+  Match: True
+  Gap to bridge target 0.5935: 0.1644 = 543× ε_witness
+  Conclusion: L_s=2 APBC cube alone CANNOT close the no-go ε_witness
+             under the existing implementation.
+  Existing L_s=2 target label evaluated: value computed, but not
+  closing — consistent with prior Wigner Block 5 finding.
+
+----- stderr -----
+

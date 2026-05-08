@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/probe_grassmann_forcing_dependency_chain.py
+runner_sha256: 5f38ed30fef6dec3faa6f933c09bc8da15598feacf156b0d3335ab39f20c4668
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+Block 02 — Grassmann Partition Forcing Dependency-Chain Verification
+Loop: staggered-dirac-realization-gate-20260507
+Companion: docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md
+========================================================================
+
+[PASS] K1 A1 (Cl(3) local algebra): retained per MINIMAL_AXIOMS_2026-05-03
+[PASS] K2 A2 (Z^3 substrate): retained per MINIMAL_AXIOMS_2026-05-03
+[PASS] K3 U2 (Cl(3) per-site uniqueness): retained per AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29 (chirality repair 2026-05-03)
+[PASS] K4 U4 (per-site Hilbert dim 2): retained per CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02
+[PASS] K5 S2 (spin-statistics): support tier per AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29; awaiting re-audit after upstream chirality repair
+[PASS] K6 Bosonic 2nd-quantization compatibility: INCOMPATIBLE (correct): Bosonic Fock dim = ∞ per site, but U4 (per-site Hilbert dim 2) requires dim = 2. INCOMPATIBLE.
+[PASS] K7 Grassmann compatibility: Grassmann Fock dim = 2 per site matches U4 required dim = 2. COMPATIBLE.
+[PASS] K8 Grassmann uniqueness: Standard QFT exhausts to CCR (bosonic) ⊕ CAR (Grassmann). Bosonic ruled out by U4 incompatibility. Grassmann is forced.
+[PASS] K9 Theorem (T1) — Grassmann partition forcing: Bosonic ruled out by U4; Grassmann compatible with U4; standard QFT exhausts; therefore Grassmann is forced. QED.
+
+SUMMARY: PASS=9 FAIL=0
+
+Bounded theorem (T1) — Grassmann Partition Forcing — verified via dependency chain.
+On A1+A2 + U2 + U4 + S2: matter measure is uniquely Grassmann.
+Bosonic 2nd-quantization is ruled out (∞-dim Fock incompatible with U4 dim 2).
+
+Substep 1 has bounded source support; retained-grade use awaits
+independent audit of S2 and the dependency chain.
+
+----- stderr -----
+

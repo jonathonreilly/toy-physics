@@ -126,7 +126,8 @@ them as one-hop dependency edges in the citation graph.
   — exact symmetric positive slice generator `Lambda_R` used in the
   product `K_GR(D) = H_D ⊗ Lambda_R`. The note defines `Lambda_R`'s
   algebraic and analytic properties.
-- [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+  (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
   — discrete-global stationary family carrying the same `K_GR(D)`
   operator across positive-background and Lorentzian sectors; the
   invertibility / unique-stationary-bridge theorem on the discrete

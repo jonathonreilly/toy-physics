@@ -154,7 +154,7 @@ python3 scripts/frontier_gravity_cosmology_tower_lambda_spectral_bridge.py
 - use the note paired with each runner as the claim boundary
 - use [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) to see
   which derivation note and release artifact each runner supports
-- use [RESULTS_INDEX.md](./RESULTS_INDEX.md) when you want the canonical
+- use `RESULTS_INDEX.md` (sibling artifact; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*) when you want the canonical
   note/runner path for a specific lane
 - do not elevate bounded or support lanes from raw stdout alone
 - treat the first three validation blocks above as the release-grade public
