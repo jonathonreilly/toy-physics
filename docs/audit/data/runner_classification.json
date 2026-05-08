@@ -11640,6 +11640,18 @@
       "dominant_class": "C",
       "runner": "scripts/pauli_group_order_check.py"
     },
+    "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_per_site_su2_bridge_check_2026_05_07_w2bridge.py"
+    },
     "per_site_su2_spin_half_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -19789,6 +19801,21 @@
         "A": 0,
         "B": 0,
         "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_per_site_su2_bridge_check_2026_05_07_w2bridge.py": {
+      "assert_count": 0,
+      "claims": [
+        "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
         "D": 0
       },
       "decoration_candidate": false,
@@ -39617,12 +39644,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 593,
+      "C": 594,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1414,
-    "runners_with_C": 704,
+    "runners_classified": 1415,
+    "runners_with_C": 705,
     "runners_with_D": 351
   }
 }

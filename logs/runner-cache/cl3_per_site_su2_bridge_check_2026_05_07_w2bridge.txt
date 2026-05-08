@@ -1,0 +1,344 @@
+===== runner cache v1 =====
+runner: scripts/cl3_per_site_su2_bridge_check_2026_05_07_w2bridge.py
+runner_sha256: c5ad62f94964a95c272f6bac1fe355a0794df7f71d9d41cea3d2fd8355e2fa4a
+timeout_sec: 60
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+
+========================================================================================
+Cl(3) per-site SU(2) ↔ color-SU(3) (1,2)-block SU(2) bridge — verification
+========================================================================================
+
+Goal: sharpen the W2.binary V8 obstruction by precisely characterizing
+the bridge identification between the two algebraically-isomorphic SU(2)'s.
+
+Result classification: bounded theorem / open-gate sharpening
+Net effect: L3b admission reduces to L3a; no second bridge scalar is exhibited.
+
+========================================================================================
+SECTION 0 — Setup: per-site SU(2)'s and color SU(2) sub on V_3
+========================================================================================
+  [PASS] site_0 T_1 is Hermitian  (site 0, generator 1)
+  [PASS] site_0 T_2 is Hermitian  (site 0, generator 2)
+  [PASS] site_0 T_3 is Hermitian  (site 0, generator 3)
+  [PASS] site_1 T_1 is Hermitian  (site 1, generator 1)
+  [PASS] site_1 T_2 is Hermitian  (site 1, generator 2)
+  [PASS] site_1 T_3 is Hermitian  (site 1, generator 3)
+  [PASS] site_2 T_1 is Hermitian  (site 2, generator 1)
+  [PASS] site_2 T_2 is Hermitian  (site 2, generator 2)
+  [PASS] site_2 T_3 is Hermitian  (site 2, generator 3)
+  [PASS] color SU(2) sub T_1 is Hermitian on V
+  [PASS] color SU(2) sub T_2 is Hermitian on V
+  [PASS] color SU(2) sub T_3 is Hermitian on V
+
+  Per-site SU(2) algebra check:
+  [PASS] site_0: [T_1, T_2] = i T_3 (su(2) algebra)  (||comm - i T_3|| = 0.00e+00)
+  [PASS] site_1: [T_1, T_2] = i T_3 (su(2) algebra)  (||comm - i T_3|| = 0.00e+00)
+  [PASS] site_2: [T_1, T_2] = i T_3 (su(2) algebra)  (||comm - i T_3|| = 0.00e+00)
+
+  Color SU(2) sub algebra check:
+  [PASS] color SU(2) sub: [T_1, T_2] = i T_3 (su(2) algebra)  (||comm - i T_3|| = 0.00e+00)
+
+========================================================================================
+SECTION 1 — Structural fact: per-site SU(2)'s are TENSOR-LOCAL
+========================================================================================
+
+  Per-site Cl(3) bivectors at site j act on the j-th tensor factor
+  of V = (C^2)^{⊗3} = C^8. They are tensor-LOCAL operators.
+
+  In particular:
+    site 0: T_a^{(0)} = (sigma_a/2) ⊗ I ⊗ I  (acts on factor 0 only)
+    site 1: T_a^{(1)} = I ⊗ (sigma_a/2) ⊗ I  (acts on factor 1 only)
+    site 2: T_a^{(2)} = I ⊗ I ⊗ (sigma_a/2)  (acts on factor 2 only)
+
+  Verification: the 3 per-site SU(2)'s commute pairwise.
+
+  [PASS] [T_1^{site_0}, T_1^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_0}, T_2^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_0}, T_3^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_0}, T_1^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_0}, T_2^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_0}, T_3^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_0}, T_1^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_0}, T_2^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_0}, T_3^{site_1}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_0}, T_1^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_0}, T_2^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_0}, T_3^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_0}, T_1^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_0}, T_2^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_0}, T_3^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_0}, T_1^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_0}, T_2^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_0}, T_3^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_1}, T_1^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_1}, T_2^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_1^{site_1}, T_3^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_1}, T_1^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_1}, T_2^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_2^{site_1}, T_3^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_1}, T_1^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_1}, T_2^{site_2}] = 0  (max |comm| = 0.00e+00)
+  [PASS] [T_3^{site_1}, T_3^{site_2}] = 0  (max |comm| = 0.00e+00)
+
+  This confirms: per-site SU(2)'s are factor-local and pairwise commute.
+  They generate (su(2))^3 = su(2) ⊕ su(2) ⊕ su(2) ON V.
+  They do NOT generate a single SU(2) acting non-trivially via tensor product.
+
+========================================================================================
+SECTION 2 — Structural fact: color SU(2) sub is not a per-site SU(2)
+========================================================================================
+
+  The SU(2) sub of color-SU(3) on V_3's (1,2)-block acts as Gell-Mann
+  T_1, T_2, T_3 on the (1,2)-subspace of V_3 = sym base subspace of V.
+
+  The checked invariant is representation-theoretic: on V, the
+  color SU(2) sub and any single per-site SU(2) have different
+  T_3 eigenvalue multiplicities.
+
+  Commutator norms between color SU(2) sub and per-site SU(2)'s:
+    max |[T_color, T_site_0]| = 0.2500
+    max |[T_color, T_site_1]| = 0.5000
+    max |[T_color, T_site_2]| = 0.0000
+
+  OBSERVATION: color SU(2) sub commutes with site_2 SU(2)
+  (this is the standard color/weak commutativity, consistent with
+  CL3_COLOR_AUTOMORPHISM Sec. C: [SU(3)_c, SU(2)_weak] = 0).
+  [PASS] Color SU(2) sub commutes with site_2 (weak) SU(2)  (structural consistency with color-weak factorization)
+
+  Eigenvalues of color SU(2) T_3:  [-0.5 -0.5  0.   0.   0.   0.   0.5  0.5]
+  Eigenvalues of site 0 SU(2) T_3: [-0.5 -0.5 -0.5 -0.5  0.5  0.5  0.5  0.5]
+
+  [PASS] color SU(2) T_3 spectrum: {±1/2 with mult 2, 0 with mult 4}  (color spectrum: [-0.5 -0.5  0.   0.   0.   0.   0.5  0.5])
+  [PASS] site_0 SU(2) T_3 spectrum: {±1/2 with mult 4}  (site spectrum: [-0.5 -0.5 -0.5 -0.5  0.5  0.5  0.5  0.5])
+
+  CRUCIAL CONCLUSION: spectra DIFFER (mult counts differ).
+  ==> color SU(2) sub on V_3's (1,2)-block is NOT unitarily equivalent
+      to any single per-site SU(2) on V, AS REPRESENTATIONS ON V.
+
+  They ARE algebraically isomorphic as ABSTRACT su(2) Lie algebras,
+  but their action on the framework's Hilbert space V differs:
+    color SU(2) sub: a single SU(2) acting on (1,2)-block of V_3 ⊂ V
+                     (one 2-dim irrep + 6 trivial directions)
+    site_j SU(2):   a single SU(2) acting on tensor factor j
+                     (4 copies of the 2-dim irrep, no trivial action)
+
+
+========================================================================================
+SECTION 3 — The bridge: identification requires structural admission
+========================================================================================
+
+  The W2.binary task identifies V8 as the residual obstruction:
+    'per-site Cl(3) SU(2) bivectors' = 'SU(2) sub of color-SU(3) on V_3'?
+
+  Sections 1-2 above show: these are different operators on V.
+  The per-site SU(2)'s are tensor-local; the color SU(2) sub has
+  a different representation multiplicity profile on V.
+
+  HOWEVER: the bridge reduces to the same named admission once
+  the trace surface V_3 is admitted.
+  Here's the structural chain:
+
+    (1) From Cl(3) per-site (axiom A1): site has H_x = C^2.
+    (2) From Z^3 substrate (axiom A2): three spatial axes give 3 sites.
+    (3) Tensor product: V = (C^2)^{⊗3} = C^8 is the 3-site block
+        Hilbert space (CL3_TASTE_GENERATION_THEOREM).
+    (4) S_3 axis-permutation acts on V; hw=1 sector V_3 = 3D
+        (CL3_COLOR_AUTOMORPHISM_THEOREM).
+    (5) SU(3) is built on V_3 via Gell-Mann embedding M_3_sym ⊗ I_2.
+        ==> the SU(3) on V_3 is NOT 'a separate construction' — it
+            is defined ON the 3-site block built from per-site C^2's.
+    (6) Trace surface admission L3a: gauge action traces on V_3.
+        (Equivalent to matter-rep identification: matter lives on V_3.)
+
+  Under (1)-(6), the 'SU(2) sub of color-SU(3) on V_3' acts on a
+  subspace built from the same per-site C^2's as the per-site SU(2)'s.
+  The IDENTIFICATION is:
+
+    color SU(2) sub on V_3 (1,2)-block
+       = (image under V_3 ⊂ V embedding) of canonical SU(2) on
+         the 2-dim subspace of V_3 spanned by |sym_1⟩, |sym_2⟩,
+    where |sym_1⟩, |sym_2⟩ are SPECIFIC Z^3 axis-permutation-
+    symmetric superpositions of |b_1 b_2 b_3⟩ basis states.
+
+  This identification is fixed at the level of the V_3 subspace
+  construction (steps 4-5), conditional on the trace surface V_3.
+
+  The remaining structural admission L3b therefore reduces to
+  the trace surface admission L3a: 'the gauge-action trace is
+  taken on the IRREDUCIBLE color carrier V_3, not on the full
+  taste cube V.' This runner does not derive L3a.
+  [PASS] (1,2)-block of color T_1 on V_3 = sigma_1/2 (Pauli/2)  (||block - sigma/2|| = 0.00e+00)
+  [PASS] (1,2)-block of color T_2 on V_3 = sigma_2/2 (Pauli/2)  (||block - sigma/2|| = 0.00e+00)
+  [PASS] (1,2)-block of color T_3 on V_3 = sigma_3/2 (Pauli/2)  (||block - sigma/2|| = 0.00e+00)
+
+  ==> The (1,2)-block of color SU(2) sub IS the canonical sigma/2.
+      So the algebraic identification with per-site sigma/2 IS unique
+      (up to U(1) phase, which is a trivial overall scalar).
+
+  CONCLUSION: bridge L3b reduces to the same V_3 trace-surface admission
+  as L3a. The checked bridge exhibits no independent normalization
+  scalar separate from L3a.
+
+========================================================================================
+SECTION 4 — Attack vector evaluation (7 angles for sharpening V8)
+========================================================================================
+
+  We re-evaluate the 7 attack vectors for closing the bridge L3b
+  (per-site C^2 bivector SU(2) <-> V_3 (1,2)-block SU(2)).
+
+
+  [+ PARTIAL] V1: Substrate-locality argument
+      V_3 IS built from per-site C^2's via Z^3 tensor product, but the SU(3) embedding requires the V_3 ⊂ V_color split (sym base subspace) plus trace surface restriction to V_3. So this is V_3-trace-surface-admission shaped, not direct identification.
+
+  [- OBSTRUCTION] V2: Anomaly cancellation in color sector
+      Per W2.binary V2 result: anomaly cancellation is matter-content dependent, not generator-normalization dependent. No new closure for L3b.
+
+  [+ PARTIAL] V3: Cl(3) ⊗ Cl(3) → Spin(6) → SU(3) × U(1)
+      The Spin(6)-spinor 4-dim rep has SU(3) on its 3-dim (1,2,3)-block. The per-site Cl(3) SU(2) sub of the Spin(6) construction CAN be identified with the color SU(2) sub on V_3's (1,2)-block. But this identification lives entirely WITHIN the trace-on-V_3 surface; it does not derive that surface.
+
+  [- OBSTRUCTION] V4: Operational reconstruction via gauge-theory observables
+      Wilson-loop observables on V_3 are SAME as on V_color via the trace decomposition Tr_V = Tr_{V_color} (V_lepton trivial). But the V_color vs V_3 distinction (factor 2 fiber multiplicity) survives. No new closure beyond what V4 of W2.binary gave.
+
+  [+ PARTIAL_NEW] V5: Z^3 rotation invariance constraint
+      Z^3 / O_h symmetry acts on V via tensor-position permutation (S_3) and axis-reflections (Z_2)^3. The hw=1 triplet V_3 transforms as the permutation rep A_1 ⊕ E. The color SU(2) sub on V_3's (1,2)-block is the E component; the per-site SU(2)'s are NOT in the E component individually. So Z^3 rotation invariance distinguishes color SU(2) sub from per-site SU(2)'s — but does NOT identify them.
+
+  [- OBSTRUCTION] V6: Double-cover argument (Spin(3)/Z_2 = SO(3))
+      The 1/2 factor in T_a = sigma_a/2 IS forced by the Spin(3) double cover at the per-site level. But this only fixes the SCALE of the per-site SU(2), not the IDENTIFICATION with color SU(2) sub on V_3.
+
+  [- OBSTRUCTION] V7: Hilbert-Schmidt projection π: V → V_3
+      Defining a canonical projection π: V → V_3 via the symmetric-base construction is well-defined. But the projection π is exactly the construction that admits L3a (V_3 trace surface). So V7 IS L3a.
+
+  Tally: 3 partials/positives, 4 obstructions.
+  None of the 7 attacks gives an UNCONDITIONAL bridge closure;
+  each either reduces to the V_3 trace-surface admission L3a, or
+  identifies a new feature that doesn't bridge the per-site / V_3 gap.
+
+  [PASS] [STRUCTURAL] All 7 attack vectors evaluated; bridge closure REDUCES to L3a (V_3 admission)
+
+========================================================================================
+SECTION 5 — Reduction theorem: L3b reduces to L3a
+========================================================================================
+
+  THEOREM: under the L3a admission (gauge action trace surface = V_3),
+  the checked L3b bridge identification has no independent
+  normalization scalar.
+
+  PROOF SKETCH:
+    1. By L3a, Tr_gauge = Tr_{V_3}.
+    2. The SU(3) generators on V_3 are uniquely determined (up to
+       Cl(3) outer automorphism + Killing-form scalar) per the
+       structural normalization theorem.
+    3. Their SU(2) sub on the (1,2)-block of V_3 is also uniquely
+       determined (sigma_a/2 on the upper-left 2x2 sub-block of V_3).
+    4. By Cl(3) per-site uniqueness theorem, the per-site Cl(3)
+       bivector SU(2) generators are fixed to sigma_a/2 on per-site C^2
+       (Spin(3) double cover, Step 7 of W2.binary V8).
+    5. Both SU(2)'s have the SAME normalization (sigma_a/2), the SAME
+       Killing form (1/2 delta_ab), and the same Casimir (3/4 on the
+       fundamental 2-dim irrep).
+    6. Per Killing rigidity on simple su(2), the SU(2) Lie algebra is
+       unique up to scalar. With the SAME normalization, the algebra
+       structures are identical.
+    7. The remaining question is whether the two SU(2)'s, ACTING on
+       different parts of V, agree as ABSTRACT Lie algebras with same
+       normalization. They DO, by points 5-6.
+    ==> L3b reduces to L3a for this checked normalization bridge.
+        The runner does not derive L3a itself.
+
+  [PASS] Color SU(2) sub on V_3: Tr_{V_3}(T_a T_b) = (1/2) delta_ab (a,b ∈ {1,2,3})  (max |Gram - 1/2 I| = 0.00e+00)
+  [PASS] Per-site SU(2) on C^2: Tr_{C^2}(sigma_a/2 sigma_b/2) = (1/2) delta_ab  (max |Gram - 1/2 I| = 0.00e+00)
+  [PASS] Both SU(2)'s have SAME (1/2) delta_ab Killing form on fundamental  (color SU(2) sub Gram == per-site SU(2) Gram (modulo trace surface))
+
+  Both SU(2)'s have the same Killing form (1/2 delta_ab) on their
+  fundamental (2-dim irrep). The remaining 'identification' is then
+  a Killing-rigidity / Schur-lemma identification of two 2-dim
+  faithful irreducible reps of su(2) — UNIQUE up to unitary equivalence.
+
+========================================================================================
+SECTION 6 — Remaining admissions after L3a closes (full scope summary)
+========================================================================================
+
+  After this analysis, the framework's normalization-layer admissions
+  in the g_bare chain are:
+
+    L1 (axiom A1): Cl(3) algebra structure -- DERIVED
+    L2 (Killing rigidity): unique HS form up to scalar -- DERIVED
+    L3 (overall scalar N_F): admission, with two surfaces:
+       L3a: choice of trace surface V_3 vs V (this work + W2.binary)
+       L3b: SU(2) sub bridge identification (this work reduces to L3a)
+    L4 (g_bare = 1): DERIVED from L3 (constraint-vs-convention theorem)
+
+  This work shows: L3b reduces to L3a for the checked bridge.
+  It does not exhibit a second L3 bridge scalar beyond the L3a
+  trace-surface choice (V_3 vs V).
+
+  The remaining open foundational question (per W2.binary):
+  is the V_3 trace surface uniquely forced by Cl(3) + Z^3 primitives?
+  Per the W2.binary open-gate boundary, this question is NOT
+  closed by Cl(3) + Z^3 alone — V_3 selection requires either:
+    - matter-rep identification (matter = V_3),
+    - irrep-trace convention (trace on irreducible carrier),
+    - per-site / lattice Wilson-loop identification.
+
+  All of these are framework-level structural admissions imported
+  from upstream (staggered-Dirac realization gate, standard QCD
+  Wilson-loop convention, irrep-canonical trace convention).
+  [PASS] [STRUCTURAL] Bridge gap L3b reduced to L3a: no second normalization scalar exhibited
+  [PASS] [STRUCTURAL] Checked L3 bridge scalar count: no second scalar beyond L3a
+
+========================================================================================
+SECTION 7 — Comparison with W2.binary result and sharpening
+========================================================================================
+
+  W2.binary V8 attack: 'per-site Cl(3) bivector SU(2) on per-site C^2
+  vs SU(2) sub of color-SU(3) on (1,2)-block of V_3 ⊂ V'
+  -- classified as PARTIAL (with bridge gap).
+
+  This work SHARPENS the W2.binary result:
+
+    BEFORE (W2.binary V8): the bridge identification is non-trivial
+    and not currently on the retained surface; it may require a new
+    independent structural admission L3b.
+
+    AFTER (this work, W2.bridge):
+      (a) The two SU(2)'s ARE inequivalent operators on V (different
+          eigenvalue multiplicities; per-site SU(2)'s act with four
+          doublets, while the color SU(2) sub has one doublet plus
+          trivial directions).
+      (b) HOWEVER, the IDENTIFICATION as ABSTRACT Lie algebras with
+          the same Killing form is fixed by Killing rigidity on
+          simple su(2) and the matching normalization (1/2 delta_ab
+          on the 2-dim fundamental).
+      (c) The bridge gap L3b reduces to the L3a trace-surface admission;
+          this check does not introduce a new independent admission.
+      (d) Therefore: no second L3 bridge scalar is exhibited beyond
+          the L3a trace-surface choice.
+
+  This is a bounded structural tightening of the W2.binary obstruction:
+  the checked bridge gap reduces to the L3a surface.
+
+  [PASS] [STRUCTURAL] W2.bridge sharpening: L3b reduces to L3a for the checked bridge
+
+========================================================================================
+FINAL SUMMARY
+========================================================================================
+
+EXACT      : PASS = 52, FAIL = 0
+STRUCTURAL : PASS = 4, FAIL = 0
+TOTAL      : PASS = 56, FAIL = 0
+
+Verdict: BOUNDED THEOREM / OPEN-GATE SHARPENING
+
+Per-site Cl(3) bivector SU(2) and color-SU(3) (1,2)-block SU(2) are
+algebraically isomorphic (Killing rigidity + matching normalization).
+As OPERATORS on V they differ (tensor-local vs sym-base-block).
+The IDENTIFICATION reduces to the V_3 trace-surface admission L3a;
+no independent normalization scalar separate from L3a.
+
+This is a bounded tightening of the W2.binary open-gate boundary.
+
+----- stderr -----
+

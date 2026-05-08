@@ -11193,6 +11193,38 @@
       "to": "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16"
     },
     {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "cl3_taste_generation_theorem"
+    },
+    {
+      "from": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "per_site_su2_spin_half_theorem_note_2026-05-02",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -44340,6 +44372,26 @@
       "runner_path": "scripts/pauli_group_order_check.py",
       "title": "Pauli Group P_1 = \u27e8\u03c3_i\u27e9 Has Order 16 on Per-Site Cl(3) Hilbert"
     },
+    "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge": {
+      "claim_id": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "cl3_color_automorphism_theorem",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+        "cl3_taste_generation_theorem",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "f40008f3e48ada7811230cc0e2c73102eecd0c3785788b3dd5181d0af404da04",
+      "path": "docs/PER_SITE_SU2_BRIDGE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_w2bridge.md",
+      "runner_path": "scripts/cl3_per_site_su2_bridge_check_2026_05_07_w2bridge.py",
+      "title": "Per-Site SU(2) \u2194 Color-SU(3) (1,2)-Block SU(2) Bridge \u2014 Bounded Characterization"
+    },
     "per_site_su2_spin_half_theorem_note_2026-05-02": {
       "claim_id": "per_site_su2_spin_half_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -57292,7 +57344,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 101,
+      "bounded_theorem": 102,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
@@ -57300,17 +57352,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 604,
+      "bounded_theorem": 605,
       "meta": 10,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6820,
-    "leaf_count": 545,
-    "node_count": 1932,
+    "edge_count": 6828,
+    "leaf_count": 546,
+    "node_count": 1933,
     "root_count": 855,
-    "runners_with_path": 1511
+    "runners_with_path": 1512
   }
 }
