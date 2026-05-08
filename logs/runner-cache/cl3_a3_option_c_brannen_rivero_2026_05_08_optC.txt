@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/cl3_a3_option_c_brannen_rivero_2026_05_08_optC.py
+runner_sha256: ef1c823b234336c254fb68e2c4e631d57db35fc6cf6ef4cdc3e17ac344c5fe89
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+A3 Option C bounded decomposition runner
+Physical Cl(3) on Z^3 is baseline semantics, not an admission.
+
+==============================================================================
+1. Circulant / Brannen-Rivero finite algebra
+==============================================================================
+PASS: circulant form is Hermitian in 12/12 trials | 12/12
+PASS: circulant form commutes with C3 in 12/12 trials | 12/12
+PASS: eigenvalues match closed Brannen-Rivero form | 12/12
+PASS: generic Hermitian C3-commuting family has 3 real dimensions | dim=3
+PASS: circulant operator is diagonal in Fourier basis | off_diag=8.075e-16
+
+==============================================================================
+2. Fourier basis relocates, but does not remove, identification
+==============================================================================
+PASS: corner-basis expectations remain equal for C3-symmetric H | expectations=[np.float64(1.5), np.float64(1.5), np.float64(1.5)]
+PASS: Fourier-basis eigenvalues are generically distinct | eigvals=[2.9, 0.280385, 1.319615]
+PASS: eigenvalue set is invariant under cyclic relabeling
+Boundary: distinct Fourier eigenvalues still need a physical label/readout map.
+
+==============================================================================
+3. Remaining non-retained inputs
+==============================================================================
+PASS: remaining gate named: A1_sqrt2_equipartition
+PASS: remaining gate named: P1_sqrtm_identification
+PASS: remaining gate named: delta_rad_unit_bridge
+PASS: remaining gate named: v_0_scale_derivation
+PASS: physical lattice baseline is not counted as an admission
+
+==============================================================================
+4. Charged-lepton numerical anchor (not derivation input)
+==============================================================================
+PASS: benchmark residual below 0.005 percent | max=2.884e-05
+PASS: Koide Q anchor near 2/3 | |Q-2/3|=6.154e-06
+Boundary: these observed masses are falsifiability anchors, not derivation premises.
+
+TOTAL: PASS=15 FAIL=0
+Bounded decomposition verified; full closure still needs the four named inputs.
+
+----- stderr -----
+

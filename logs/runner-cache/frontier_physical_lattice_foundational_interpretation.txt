@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_physical_lattice_foundational_interpretation.py
+runner_sha256: b6d1fe84a7b69eac3d206017068f285e46635cd5506d99b48ab87d8d6374690e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+Physical Cl(3) on Z^3 baseline interpretation check
+note: docs/PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md
+
+PASS: source note is meta
+PASS: does not declare pipeline status
+PASS: does not declare audit-clean verdict token
+PASS: does not call baseline a new axiom
+PASS: states physical local algebra Cl(3)
+PASS: states physical spatial substrate Z^3
+PASS: states not a regulator/formal bookkeeping device
+PASS: keeps downstream theorem promotion out of scope
+PASS: keeps audit lane authority explicit
+PASS: keeps extra species/readout inputs explicit
+PASS: minimal axioms note has physical Cl(3) A1
+PASS: minimal axioms note has physical Z^3 A2
+PASS: forbidden promotion absent: bridge-gap count zero
+PASS: forbidden promotion absent: physical baseline as positive theorem
+PASS: forbidden promotion absent: physical baseline as effective status
+PASS: forbidden promotion absent: AC closure by declaration
+
+TOTAL: PASS=16 FAIL=0
+Baseline semantics check passed: physical Cl(3) on Z^3 is restored as repo language, not promoted science.
+
+----- stderr -----
+

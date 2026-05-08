@@ -25,6 +25,16 @@ explicit user approval. Imports are allowed for bounded theorem surfaces when
 they are scoped, labelled, and dependency-checked; repo-wide axiom additions
 are not review-loop fixes.
 
+The framework baseline is physical `Cl(3)` on `Z^3`: A1 is the physical
+local algebra and A2 is the physical spatial substrate. Review-loop must
+not treat that baseline as a new axiom, new admitted premise, regulator
+interpretation, or optional theory language. Correcting a PR back to this
+repo language is allowed. This does not promote downstream science by
+itself: physical-species identifications, `C_3`-breaking selectors,
+readout/scale/unit bridges, and empirical matches remain separate
+bounded/open inputs unless they have their own retained-grade derivation and
+independent audit closure.
+
 The bar is intentionally high: if review-loop is doing its job, the later
 fresh-context audit should be mostly confirmatory. Do not pass branches that
 leave the audit lane to discover basic claim-boundary, dependency-graph,

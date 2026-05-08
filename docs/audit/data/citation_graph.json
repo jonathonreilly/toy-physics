@@ -13,6 +13,34 @@
       "to": "lensing_combined_invariant_note"
     },
     {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr"
+    },
+    {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "physical_lattice_necessity_note"
+    },
+    {
+      "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
       "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
       "to": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1"
     },
@@ -11919,6 +11947,14 @@
     {
       "from": "per_site_su2_spin_half_theorem_note_2026-05-02",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "physical_lattice_foundational_interpretation_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "physical_lattice_foundational_interpretation_note_2026-05-08",
+      "to": "physical_lattice_necessity_note"
     },
     {
       "from": "physical_lattice_necessity_dep_declaration_audit_note_2026-05-02",
@@ -28101,6 +28137,25 @@
       "runner_path": "scripts/dispersion_3d_lattice.py",
       "title": "3D Correction Master Note"
     },
+    "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc": {
+      "claim_id": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (bounded decomposition / obstruction)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "physical_lattice_necessity_note",
+        "three_generation_observable_theorem_note"
+      ],
+      "note_hash": "be75c19c3beb3f46cb4c9605d5ddebd27bf79ce8c8cb6e88bf5f83590ad90676",
+      "path": "docs/A3_OPTION_C_BRANNEN_RIVERO_PHYSICAL_LATTICE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_optC.md",
+      "runner_path": "scripts/cl3_a3_option_c_brannen_rivero_2026_05_08_optC.py",
+      "title": "A3 Option C - Brannen-Rivero / Physical-Lattice Baseline Bounded Decomposition"
+    },
     "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr": {
       "claim_id": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
       "claim_type_author_hint": "bounded_theorem",
@@ -29535,7 +29590,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "330bc1d6da24abf81746fc1ac03aae64feddc7c36742e24954ec7704f8c2e4d7",
+      "note_hash": "9e02da581a585c8f70b9fc7b8d5f64c02cb0e53efdeffb5023fbc98b1664970a",
       "path": "docs/ai_methodology/skills/review-loop/SKILL.md",
       "runner_path": null,
       "title": "Review Loop"
@@ -45867,6 +45922,20 @@
       "runner_path": "scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py",
       "title": "Physical Hermitian Hamiltonian And SME Bridge"
     },
+    "physical_lattice_foundational_interpretation_note_2026-05-08": {
+      "claim_id": "physical_lattice_foundational_interpretation_note_2026-05-08",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "physical_lattice_necessity_note"
+      ],
+      "note_hash": "092cc2431526e34d98cc06c980f9ae2b900fc5935a4472e5ee3df109524db3f8",
+      "path": "docs/PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_physical_lattice_foundational_interpretation.py",
+      "title": "Physical Cl(3) on Z^3 Baseline Interpretation Note"
+    },
     "physical_lattice_necessity_dep_declaration_audit_note_2026-05-02": {
       "claim_id": "physical_lattice_necessity_dep_declaration_audit_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -58609,25 +58678,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 130,
-      "meta": 12,
+      "bounded_theorem": 131,
+      "meta": 13,
       "no_go": 14,
       "none": 1699,
       "open_gate": 13,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 633,
-      "meta": 12,
+      "bounded_theorem": 634,
+      "meta": 13,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 618
     },
-    "edge_count": 7021,
+    "edge_count": 7030,
     "leaf_count": 543,
-    "node_count": 1958,
+    "node_count": 1960,
     "root_count": 837,
-    "runners_with_path": 1537
+    "runners_with_path": 1539
   }
 }

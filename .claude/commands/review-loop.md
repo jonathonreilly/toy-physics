@@ -61,6 +61,12 @@ Run the repo-native physics review loop from:
   salvageable, land the source-only salvage and dependency-chain/audit-queue
   repairs as part of the current landing path; otherwise close or reject the
   existing PR with a clear reason.
+- The repo baseline is physical `Cl(3)` on `Z^3` (physical local algebra
+  plus physical spatial substrate). Do not classify that baseline as a
+  new axiom, new admitted premise, regulator interpretation, or optional
+  theory language. Do not let that baseline silently promote separate
+  species identifications, selectors, readout bridges, empirical matches,
+  or parent theorem/status surfaces.
 - Nature-grade retention requires derived or explicitly admitted inputs,
   decisive artifact support, clear falsifiers, and no hidden semantic bridge.
 - Closing a PR must not discard durable science. Salvage narrow
