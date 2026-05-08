@@ -210,5 +210,6 @@ qualifiers explicitly.
 
 If a result family is not listed here, it is not yet publication-captured.
 
-If it is listed here but not in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md), then it is
+If it is listed here but not in `CLAIMS_TABLE.md` (sibling
+publication-package artifact; backticked to avoid length-2 cycle), then it is
 not on the retained flagship claim surface.

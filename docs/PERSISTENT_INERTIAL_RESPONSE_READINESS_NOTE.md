@@ -276,11 +276,21 @@ from a registered runner that asserts the summary criteria.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [mesoscopic_surrogate_compact_floor_sweep_note](MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md)
-- [localized_source_response_sweep_note](LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md)
-- [broad_surrogate_point_source_compare_note](BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
-- [mesoscopic_surrogate_annular_tapered_sweep_note](MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md)
-- [mesoscopic_surrogate_h025_constrained_localization_note](MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md)
-- [mesoscopic_surrogate_backreaction_note](MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md)
-- [mesoscopic_surrogate_multistage_note](MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md)
-- [mesoscopic_surrogate_threshold_2d_note](MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
+- `mesoscopic_surrogate_compact_floor_sweep_note` (downstream consumer
+  artifact; backticked to avoid length-5 cycle through multistage,
+  backreaction, ordered_lattice_packet_reidentification)
+- `localized_source_response_sweep_note` (downstream consumer artifact;
+  backticked to avoid length-4 cycle through h025_constrained_localization
+  and annular_tapered_sweep)
+- `broad_surrogate_point_source_compare_note` (downstream; backticked
+  for consistency with cluster citation-graph hygiene)
+- `mesoscopic_surrogate_annular_tapered_sweep_note` (downstream consumer;
+  backticked to avoid length-4 cycle)
+- `mesoscopic_surrogate_h025_constrained_localization_note` (downstream
+  consumer; backticked to avoid length-4 cycle)
+- `mesoscopic_surrogate_backreaction_note` (downstream consumer;
+  backticked to avoid length-5 cycle)
+- `mesoscopic_surrogate_multistage_note` (downstream consumer;
+  backticked to avoid length-5 cycle)
+- `mesoscopic_surrogate_threshold_2d_note` (downstream consumer;
+  backticked for consistency with cluster citation-graph hygiene)

@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 830 |
+| unaudited | 831 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 25 |
+| ~~audited_renaming~~ | 24 |
 | ~~audited_conditional~~ | 443 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 25 |
-| `unaudited` | 879 |
+| `audited_renaming` | 24 |
+| `unaudited` | 880 |
 
 | claim_type | count |
 |---|---:|
@@ -57,13 +57,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 168 |
-| `high` | 471 |
-| `medium` | 525 |
-| `leaf` | 663 |
+| `critical` | 155 |
+| `high` | 428 |
+| `medium` | 549 |
+| `leaf` | 695 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 34
+- **Citation cycles detected:** 2
 
 ### Runner classification (static heuristic)
 
@@ -78,31 +78,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 384 | 36.59 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 647 | 35.84 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 558 | 33.63 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 350 | 31.95 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `minimal_axioms_2026-05-03` | meta | critical | 657 | 29.36 | `unaudited` | meta |
-| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 635 | 29.31 | `audited_clean` | **retained_bounded** |
-| 7 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `unaudited` | unaudited |
-| 8 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 647 | 28.34 | `audited_clean` | open_gate |
-| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 152 | 28.26 | `unaudited` | unaudited |
-| 10 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
-| 11 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 234 | 25.88 | `audited_clean` | **retained_bounded** |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 501 | 25.47 | `unaudited` | unaudited |
-| 13 | `three_generation_structure_note` | bounded_theorem | critical | 357 | 24.98 | `unaudited` | unaudited |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 227 | 24.83 | `unaudited` | unaudited |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 416 | 24.20 | `unaudited` | unaudited |
-| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 213 | 23.74 | `unaudited` | unaudited |
-| 17 | `one_generation_matter_closure_note` | bounded_theorem | critical | 343 | 23.43 | `unaudited` | unaudited |
-| 18 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 70 | 23.15 | `unaudited` | unaudited |
-| 19 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 386 | 22.10 | `audited_clean` | **retained** |
-| 20 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 416 | 21.70 | `audited_clean` | **retained_bounded** |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 389 | 21.61 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 192 | 20.59 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 149 | 20.23 | `unaudited` | unaudited |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 123 | 19.95 | `unaudited` | unaudited |
-| 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 84 | 19.91 | `unaudited` | unaudited |
+| 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 364 | 36.51 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 599 | 35.73 | `audited_clean` | **retained_bounded** |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 516 | 33.51 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 340 | 31.91 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `minimal_axioms_2026-05-03` | meta | critical | 595 | 29.22 | `unaudited` | meta |
+| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 587 | 29.20 | `audited_clean` | **retained_bounded** |
+| 7 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 88 | 28.98 | `unaudited` | unaudited |
+| 8 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 585 | 28.20 | `audited_clean` | open_gate |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 113 | 27.83 | `unaudited` | unaudited |
+| 10 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 83 | 27.39 | `unaudited` | unaudited |
+| 11 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 197 | 25.63 | `audited_clean` | **retained_bounded** |
+| 12 | `three_generation_structure_note` | bounded_theorem | critical | 347 | 24.94 | `unaudited` | unaudited |
+| 13 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 224 | 24.81 | `unaudited` | unaudited |
+| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 426 | 24.74 | `unaudited` | unaudited |
+| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 406 | 24.17 | `unaudited` | unaudited |
+| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 202 | 23.66 | `unaudited` | unaudited |
+| 17 | `one_generation_matter_closure_note` | bounded_theorem | critical | 333 | 23.38 | `unaudited` | unaudited |
+| 18 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 69 | 23.13 | `unaudited` | unaudited |
+| 19 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 383 | 22.09 | `audited_clean` | **retained** |
+| 20 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 405 | 21.66 | `audited_clean` | **retained_bounded** |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 378 | 21.57 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 182 | 20.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 129 | 20.02 | `unaudited` | unaudited |
+| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 122 | 19.94 | `unaudited` | unaudited |
+| 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 83 | 19.89 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -1044,7 +1044,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_full_self_consistency_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5.5 | E | - |
@@ -9877,21 +9876,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the fiber parent=(c_cell,delta), C(parent)=c_cell is constant while p_Schur(parent)=c_cell+delta and p_event(parent)=c_cell, so p_Schur=p_event iff delta=0.  _(class `A`)_
 - **chain closes:** True — The chain closes on its own scoped terms as an algebraic counterexample to carrier-only promotion. The runner confirms the nontrivial kernel, same carrier/different scalar pair, impossibility of carrier-only recovery on the fiber, equivalence of equality to delta=0, and normalization sensitivity.
 - **rationale:** The audited claim is a negative carrier-only no-go, not a positive Planck derivation. Within the supplied packet, the obstruction closes algebraically: two parents with identical carrier data can have different Schur scalars, so no function of carrier data alone can force the Schur/event equality without the extra no-hidden-character law delta=0. The Planck-normalization discussion is used only to show non-harmlessness of the hidden scalar if promoted as a coefficient, not to derive a physical coefficient from hidden assumptions.
-- **auditor confidence:** high
-
-### `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30`
-
-- **Note:** [`PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md`](../../docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited whether the cited retained Cl(3)/SU(2) bivectors, graph-first SU(3) surface, anomaly-forced time axis, complex Hilbert packet, and rank-four Hamming-weight-one packet derive an invariant irreducible Cl_4(C)/two-mode CAR carrier on P_A H_cell.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-planck_primitive_cliffor-022`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The note identifies rank(P_A H_cell)=4 with the unique irreducible complex Cl_4(C) module and thereby assigns the displayed gamma generators to P_A H_cell.  _(class `F`)_
-- **chain closes:** False — The algebraic Cl_4(C) and CAR construction on an abstract C^4 closes, but the cited substrate inputs do not prove that the event-cell action preserves P_A or induces those generators on that block. The missing step is the substrate-to-P_A forcing theorem, and the supplied no-go authorities explicitly refute uniqueness from the stated symmetries.
-- **rationale:** The runner genuinely verifies an explicit matrix representation of Cl_4(C), its CAR pairing, and coefficient cross-checks, but it hard-wires the contested carrier by constructing gamma matrices directly on C^4 and setting rank(P_A)=4. That verifies consistency of the assigned carrier, not derivation of that carrier from the event-cell substrate. The cited no-go notes further show P_A is not uniquely forced because P_3 and other rank-four local equivariant projectors satisfy the same stated substrate tests.
-- **open / conditional deps cited:**
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
 - **auditor confidence:** high
 
 ### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`

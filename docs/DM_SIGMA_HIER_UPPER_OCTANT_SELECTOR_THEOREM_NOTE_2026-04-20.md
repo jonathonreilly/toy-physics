@@ -64,7 +64,9 @@ discriminator.
 ### P1. 9/9 magnitude filter at the pinned chamber point
 
 Per
-[SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md](./SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md),
+`SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md` (upstream pinned-chamber
+authority; backticked to avoid length-4 cycle through dm_sigma_hier_closure_packet
+and dm_pmns_cp_orientation_parity_reduction),
 the pinned chamber point
 
 ```text

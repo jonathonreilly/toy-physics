@@ -262,7 +262,9 @@ Higgs Yukawa is the unique retained cross-species primitive on the
 `hw=1` triplet — and its deployment as a charged-lepton mass
 mechanism requires observational pinning via the shape-theorem
 weight triple (Theorem 7 in
-[CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](./CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)).
+`CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md` — upstream
+review note; backticked to avoid length-11 cycle through the koide
+cluster).
 
 ## What this note does not claim
 

@@ -294,7 +294,9 @@ tensor-source transport, and ordinary gravitational stability.
 ## Native Boundary-Complex Containment Follow-Up
 
 The decisive containment audit is recorded in
-[`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md`](SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md)
+`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md` (downstream
+follow-up artifact; cross-reference only — that note cites this
+source-character derivation as its predecessor, not vice versa)
 with runner
 [`../scripts/signed_gravity_native_boundary_complex_containment.py`](../scripts/signed_gravity_native_boundary_complex_containment.py).
 
@@ -334,7 +336,10 @@ control, not a retained APS selector.
 ## Naturally Hosted Orientation-Line Follow-Up
 
 The remaining host-versus-selector distinction is recorded in
-[`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`](SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md)
+`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md` (downstream
+follow-up artifact; cross-reference only — that note cites
+`native_boundary_complex_containment` as its predecessor, not this
+source-character derivation)
 with runner
 [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py).
 

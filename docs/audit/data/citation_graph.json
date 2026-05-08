@@ -2858,10 +2858,6 @@
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
     },
     {
@@ -5418,10 +5414,6 @@
     },
     {
       "from": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
-      "to": "sigma_hier_uniqueness_theorem_note_2026-04-19"
-    },
-    {
-      "from": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
       "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
     },
     {
@@ -6599,10 +6591,6 @@
     {
       "from": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
       "to": "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
-      "to": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
     },
     {
       "from": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17",
@@ -8207,10 +8195,6 @@
     {
       "from": "koide_circulant_character_derivation_note_2026-04-18",
       "to": "koide_cyclic_wilson_descendant_law_note_2026-04-18"
-    },
-    {
-      "from": "koide_circulant_character_derivation_note_2026-04-18",
-      "to": "koide_positive_paths_first_principles_note_2026-04-18"
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
@@ -10701,10 +10685,6 @@
       "to": "equivalence_principle_harness_note"
     },
     {
-      "from": "newton_derivation_note",
-      "to": "newton_derivation_top4_bridge_note"
-    },
-    {
       "from": "newton_derivation_top4_bridge_note",
       "to": "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16"
     },
@@ -10937,38 +10917,6 @@
       "to": "bmv_threebody_note_2026-04-11"
     },
     {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "mesoscopic_surrogate_compact_floor_sweep_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "localized_source_response_sweep_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "broad_surrogate_point_source_compare_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "mesoscopic_surrogate_annular_tapered_sweep_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "mesoscopic_surrogate_h025_constrained_localization_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "mesoscopic_surrogate_backreaction_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "mesoscopic_surrogate_multistage_note"
-    },
-    {
-      "from": "persistent_inertial_response_readiness_note",
-      "to": "mesoscopic_surrogate_threshold_2d_note"
-    },
-    {
       "from": "persistent_object_exact_lattice_park_note_2026-04-16",
       "to": "persistent_object_compact_inertial_probe_note_2026-04-16"
     },
@@ -11099,10 +11047,6 @@
     {
       "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
       "to": "graph_first_su3_integration_note"
-    },
-    {
-      "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "to": "anomaly_forces_time_theorem"
     },
     {
       "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
@@ -12786,10 +12730,6 @@
     },
     {
       "from": "signed_gravity_aps_action_origin_superselection_stability_note",
-      "to": "signed_gravity_source_line_origin_tensor_lift_note"
-    },
-    {
-      "from": "signed_gravity_aps_action_origin_superselection_stability_note",
       "to": "signed_gravity_source_character_uniqueness_theorem_note"
     },
     {
@@ -12890,14 +12830,6 @@
     },
     {
       "from": "signed_gravity_cl3z3_source_character_derivation_note",
-      "to": "signed_gravity_native_boundary_complex_containment_note"
-    },
-    {
-      "from": "signed_gravity_cl3z3_source_character_derivation_note",
-      "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
-      "from": "signed_gravity_cl3z3_source_character_derivation_note",
       "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
     },
     {
@@ -12969,24 +12901,8 @@
       "to": "signed_gravity_cl3z3_source_character_derivation_note"
     },
     {
-      "from": "signed_gravity_naturally_hosted_orientation_line_note",
-      "to": "signed_gravity_native_boundary_complex_containment_note"
-    },
-    {
-      "from": "signed_gravity_naturally_hosted_orientation_line_note",
-      "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
-    },
-    {
       "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
       "to": "signed_gravity_remaining_closure_gates_note"
-    },
-    {
-      "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
-      "to": "signed_gravity_native_boundary_complex_containment_note"
-    },
-    {
-      "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
-      "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
     },
     {
       "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
@@ -13078,75 +12994,11 @@
     },
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_cl3z3_source_character_derivation_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_source_character_uniqueness_theorem_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_oriented_tensor_source_lift_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_tensor_source_transport_retention_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_continuum_graded_einstein_localization_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_remaining_closure_gates_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_native_boundary_complex_containment_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
       "to": "scalar_trace_tensor_no_go_note"
     },
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
       "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_boundary_coframe_chi_probe_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_source_line_origin_tensor_lift_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_boundary_z2_flux_chi_probe_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_source_action_escape_hatch_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_aps_locked_source_action_proposal_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_non_claim_gate_note"
     },
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
@@ -13663,10 +13515,6 @@
     {
       "from": "structural_no_go_survey_note",
       "to": "hw1_second_order_return_shape_theorem_note"
-    },
-    {
-      "from": "structural_no_go_survey_note",
-      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
     },
     {
       "from": "structural_no_go_survey_note",
@@ -14323,22 +14171,6 @@
     {
       "from": "universal_gr_constraint_action_stationarity_note",
       "to": "s3_anomaly_spacetime_lift_note"
-    },
-    {
-      "from": "universal_gr_constraint_action_stationarity_note",
-      "to": "universal_gr_tensor_variational_candidate_note"
-    },
-    {
-      "from": "universal_gr_constraint_action_stationarity_note",
-      "to": "universal_gr_tensor_quotient_uniqueness_note"
-    },
-    {
-      "from": "universal_gr_constraint_action_stationarity_note",
-      "to": "universal_gr_a1_invariant_section_note"
-    },
-    {
-      "from": "universal_gr_constraint_action_stationarity_note",
-      "to": "universal_gr_curvature_localization_blocker_note"
     },
     {
       "from": "universal_gr_curvature_localization_blocker_note",
@@ -16286,10 +16118,6 @@
     },
     {
       "from": "yt_qfp_insensitivity_support_note",
-      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
-    },
-    {
-      "from": "yt_qfp_insensitivity_support_note",
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
@@ -18147,10 +17975,6 @@
     {
       "from": "publication.ci3_z3.claims_table",
       "to": "publication.ci3_z3.publication_matrix"
-    },
-    {
-      "from": "publication.ci3_z3.claims_table",
-      "to": "publication.ci3_z3.derivation_validation_map"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -22913,14 +22737,6 @@
       "to": "universal_qg_canonical_smooth_gravitational_weak_measure_note"
     },
     {
-      "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-      "to": "publication.ci3_z3.derivation_validation_map"
-    },
-    {
-      "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-      "to": "publication.ci3_z3.publication_matrix"
-    },
-    {
       "from": "publication.ci3_z3.inputs_and_qualifiers_note",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -24103,10 +23919,6 @@
     {
       "from": "publication.ci3_z3.publication_matrix",
       "to": "koide_reviewer_stress_test_note_2026-04-21"
-    },
-    {
-      "from": "publication.ci3_z3.publication_matrix",
-      "to": "publication.ci3_z3.claims_table"
     },
     {
       "from": "publication.ci3_z3.quantitative_summary_table",
@@ -30695,11 +30507,10 @@
       "deps": [
         "ckm_atlas_axiom_closure_note",
         "alpha_s_derived_note",
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "bba12eb3da3c6fc92eee578b2fc5d48dc5fedbf4414fb6a16bab4d5585c88c70",
+      "note_hash": "714444a3ed87ac67c3ec413b9437f06efdf71b0788ef4e8893e4bbe033b544fc",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -34667,7 +34478,7 @@
         "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
         "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
       ],
-      "note_hash": "0262a70a9dfc361ac3484bb26e4a19e0b6707cd9823293e95d95a3d4068ce291",
+      "note_hash": "36ca7627de3098a6e3e8679c79e5031fd1fdb15c843e34ecb27ad9f23fe129ed",
       "path": "docs/DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md",
       "runner_path": null,
       "title": "DM Sigma-Hier Closure Packet"
@@ -34689,10 +34500,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "sigma_hier_uniqueness_theorem_note_2026-04-19",
         "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
       ],
-      "note_hash": "734fe38b29fe78d15ff25cb489890dd25515e2ac32d902f5d73737f7addc9804",
+      "note_hash": "80fadf7a5baddf4370903339320cdb98f07efd3bca94e854849edb9b193bcb69",
       "path": "docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py",
       "title": "DM \u03c3_hier Upper-Octant Selector Theorem"
@@ -36751,10 +36561,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
-        "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
-        "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
+        "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17"
       ],
-      "note_hash": "3c46e5a47a511ebd61ed099571955bd172f996f2bf9090fb37c42fc276003033",
+      "note_hash": "8373e10a488660eb594ad2359a4a7e8f8ee96ae49708626d8ad61c7a35e86367",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BETA6_EVALUATION_SEAM_REDUCTION_SCIENCE_ONLY_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
       "title": "Gauge-Vacuum Plaquette Beta=6 Evaluation-Seam Reduction"
@@ -39318,10 +39127,9 @@
       "claim_type_seed_hint": null,
       "deps": [
         "koide_circulant_wilson_target_note_2026-04-18",
-        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_positive_paths_first_principles_note_2026-04-18"
+        "koide_cyclic_wilson_descendant_law_note_2026-04-18"
       ],
-      "note_hash": "7f92cc4629271426789c9354de12aefecf29554116a2c7b642b2b64c18eb1b8b",
+      "note_hash": "fd6aeed6dd8fc37cc567eeeda9512cfef7295f7c58c3e3fd17b7c353287f0f9b",
       "path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
       "runner_path": null,
       "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note"
@@ -43524,10 +43332,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "equivalence_principle_harness_note",
-        "newton_derivation_top4_bridge_note"
+        "equivalence_principle_harness_note"
       ],
-      "note_hash": "ca67ddd017a9b7681588228df57ddf502d45848deefe5243a9a24953eee3e2a0",
+      "note_hash": "aed96bdcc2c363275b5de8b182d64202a9410ebd81df86a173f7fa8dce2b731a",
       "path": "docs/NEWTON_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)"
@@ -43951,17 +43758,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "mesoscopic_surrogate_compact_floor_sweep_note",
-        "localized_source_response_sweep_note",
-        "broad_surrogate_point_source_compare_note",
-        "mesoscopic_surrogate_annular_tapered_sweep_note",
-        "mesoscopic_surrogate_h025_constrained_localization_note",
-        "mesoscopic_surrogate_backreaction_note",
-        "mesoscopic_surrogate_multistage_note",
-        "mesoscopic_surrogate_threshold_2d_note"
-      ],
-      "note_hash": "b7a1ec1a99a8e3d981a58e7d7308065c99a3ca935fe6e3dc5a05a5d775b32ec6",
+      "deps": [],
+      "note_hash": "f2652f00bca766fed0fc90dfe4ca8dc1c85734ad4ae5f185c74051b1c1f5ed49",
       "path": "docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md",
       "runner_path": null,
       "title": "Persistent Inertial-Response Readiness Note"
@@ -44347,10 +44145,9 @@
         "minimal_axioms_2026-04-11",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
-        "anomaly_forces_time_theorem",
         "i3_zero_exact_theorem_note"
       ],
-      "note_hash": "27aa34923d2d8692cc334ea73619629965bb1be36dc3a83fd2473b69b2c769f4",
+      "note_hash": "9c4071494708a8d8cd1f5a4e33ce48571f673b9f3eb7ec2bc62fcbd7b72d2a1d",
       "path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
       "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem"
@@ -45524,10 +45321,9 @@
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "publication.ci3_z3.prediction_surface_2026-04-15",
-        "publication.ci3_z3.publication_matrix",
-        "publication.ci3_z3.derivation_validation_map"
+        "publication.ci3_z3.publication_matrix"
       ],
-      "note_hash": "5439d41add21e8314ecbe765adb720a5221ae85ccd298bdcaeeabf6930174427",
+      "note_hash": "c5ae40c1e992463baff9bb7ac50cc3b0055651dcb4c8ba5696835751ad19ec9e",
       "path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
       "runner_path": null,
       "title": "Manuscript Claims Surface"
@@ -46799,11 +46595,9 @@
         "universal_qg_smooth_gravitational_local_identification_note",
         "universal_qg_smooth_gravitational_global_atlas_note",
         "universal_qg_smooth_gravitational_global_solution_class_note",
-        "universal_qg_canonical_smooth_gravitational_weak_measure_note",
-        "publication.ci3_z3.derivation_validation_map",
-        "publication.ci3_z3.publication_matrix"
+        "universal_qg_canonical_smooth_gravitational_weak_measure_note"
       ],
-      "note_hash": "add19b4eb9220c9ef164f04a297c75ee85ea2aee8bdebf146e95bb4fff958bc0",
+      "note_hash": "692f3a1828e1ea73e5d9ce74874ab453d6ae922ad70615ba94c9c940147bf6e7",
       "path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
       "runner_path": null,
       "title": "Gravity Publication Package Summary"
@@ -47145,10 +46939,9 @@
         "vacuum_critical_stability_note",
         "monopole_derived_note",
         "gw_echo_null_result_note",
-        "koide_reviewer_stress_test_note_2026-04-21",
-        "publication.ci3_z3.claims_table"
+        "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "358fbc217733893ccee9839a38c52704f7650828e060b7298ac6eeb33e37632a",
+      "note_hash": "6c8225fe3aec85c1c2aa36cf930e17bf329914558820c639eb3cacda9f172f65",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -49735,11 +49528,10 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "signed_gravity_aps_locked_source_action_proposal_note",
-        "signed_gravity_source_line_origin_tensor_lift_note",
         "signed_gravity_source_character_uniqueness_theorem_note",
         "signed_gravity_cl3z3_source_character_derivation_note"
       ],
-      "note_hash": "cb9110e448f58cc027c6150bd426343a93957e911df6e79b87d2d5df7599cb9e",
+      "note_hash": "06889551a621eecac4fb1f71908dfa349534c35c01ea3701f339590c9efea866",
       "path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
       "runner_path": "scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py",
       "title": "Signed Gravity APS Action Origin / Superselection / Stability Note"
@@ -49857,11 +49649,9 @@
       "claim_type_seed_hint": null,
       "deps": [
         "signed_gravity_source_character_uniqueness_theorem_note",
-        "signed_gravity_native_boundary_complex_containment_note",
-        "signed_gravity_naturally_hosted_orientation_line_note",
         "signed_gravity_nature_grade_closure_blocker_audit_note"
       ],
-      "note_hash": "a4fee94a3ad7f6cdfcac4fe7fd8be926217d551b60ad7cffdc806de2e63f165b",
+      "note_hash": "e793a62d547ecd0a7dee93f35e0761c22295b7caa3fd434ff63a51478d2f2257",
       "path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
       "runner_path": "scripts/signed_gravity_cl3z3_source_character_derivation.py",
       "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note"
@@ -49924,11 +49714,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "signed_gravity_native_boundary_complex_containment_note",
-        "signed_gravity_staggered_dirac_aps_boundary_realization_note"
-      ],
-      "note_hash": "e992f5e5b2eca4c2eb149ecea394ba9127d92e2a249538b2927217bb230adcfe",
+      "deps": [],
+      "note_hash": "93de52dd28bcc280f3d4b64fe22aa3fe8e39f360dff4bc8bd919c38d40563e35",
       "path": "docs/SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md",
       "runner_path": "scripts/signed_gravity_naturally_hosted_orientation_line.py",
       "title": "Signed Gravity Naturally Hosted Orientation-Line Note"
@@ -49940,13 +49727,11 @@
       "claim_type_seed_hint": null,
       "deps": [
         "signed_gravity_remaining_closure_gates_note",
-        "signed_gravity_native_boundary_complex_containment_note",
-        "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_naturally_hosted_orientation_line_note",
         "signed_gravity_tensor_source_transport_retention_note",
         "signed_gravity_continuum_graded_einstein_localization_note"
       ],
-      "note_hash": "268d391cb0d2f209529efac7c0b0d06086d7afd50e485bc7c3a62e7ed3ba9333",
+      "note_hash": "2fe46d5ba8c5258a15324ba0bb4d5eb803694b5dc92e327ebefc568fb903c37e",
       "path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
       "runner_path": "scripts/signed_gravity_nature_grade_closure_blockers.py",
       "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note"
@@ -50036,28 +49821,12 @@
       "claim_type_seed_hint": null,
       "deps": [
         "antigravity_sign_selector_boundary_note",
-        "signed_gravity_cl3z3_source_character_derivation_note",
-        "signed_gravity_source_character_uniqueness_theorem_note",
-        "signed_gravity_nature_grade_closure_blocker_audit_note",
-        "signed_gravity_oriented_tensor_source_lift_note",
-        "signed_gravity_tensor_source_transport_retention_note",
-        "signed_gravity_continuum_graded_einstein_localization_note",
-        "signed_gravity_remaining_closure_gates_note",
-        "signed_gravity_native_boundary_complex_containment_note",
-        "signed_gravity_staggered_dirac_aps_boundary_realization_note",
-        "signed_gravity_naturally_hosted_orientation_line_note",
         "scalar_trace_tensor_no_go_note",
         "planck_source_unit_normalization_support_theorem_note_2026-04-25",
-        "signed_gravity_boundary_coframe_chi_probe_note",
-        "signed_gravity_source_line_origin_tensor_lift_note",
-        "signed_gravity_boundary_z2_flux_chi_probe_note",
-        "signed_gravity_source_action_escape_hatch_note",
-        "signed_gravity_aps_locked_source_action_proposal_note",
-        "signed_gravity_non_claim_gate_note",
         "lensing_k_sweep_note",
         "complex_action_note"
       ],
-      "note_hash": "9091d672c589fb1edbc6aaea84955d3c5162839d14a880b3026225907d542847",
+      "note_hash": "9081da036c205008599f17557927241b869c2bbb9b72b89fa198a682d5c7c074",
       "path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
       "runner_path": null,
       "title": "Signed Gravitational Response Lane Backlog"
@@ -51173,10 +50942,9 @@
       "claim_type_seed_hint": "no_go",
       "deps": [
         "hw1_second_order_return_shape_theorem_note",
-        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
         "higher_order_structural_theorems_note"
       ],
-      "note_hash": "3780de4b4b0ea8d06a6702fafffe4fbbf765a2bde393a2ca03196fb22963e5bb",
+      "note_hash": "e7995b7e499273fc07e21447b864d7d99dad5cc5c3bb77db7315e10795cab4f3",
       "path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
       "runner_path": "scripts/frontier_charged_lepton_z3_source_response_crosscheck.py",
       "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy"
@@ -52697,13 +52465,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "observable_principle_from_axiom_note",
-        "s3_anomaly_spacetime_lift_note",
-        "universal_gr_tensor_variational_candidate_note",
-        "universal_gr_tensor_quotient_uniqueness_note",
-        "universal_gr_a1_invariant_section_note",
-        "universal_gr_curvature_localization_blocker_note"
+        "s3_anomaly_spacetime_lift_note"
       ],
-      "note_hash": "295828f02d4506812ba922a102ca2b93dee2e5ffc4e4d87b59e71b031ccf18b5",
+      "note_hash": "5686928f0c68c13ca333cc1ce0241c1ad83964281e13c88fc089847482e575f0",
       "path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`"
@@ -55726,12 +55490,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
         "yt_ward_identity_derivation_theorem",
         "yt_boundary_theorem",
         "yt_zero_import_authority_note"
       ],
-      "note_hash": "e4b1b5cde1e8a9a12aaf000bb24a0381f71df091911d45b8c84fea58f04ded0b",
+      "note_hash": "aeeb3f9b25bdebef8de7ec6b54966cf43cd595ed4fc86fb3aef45ddb2d35a362",
       "path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
       "title": "y_t Quasi-Fixed-Point Insensitivity Support Note"
@@ -56493,6 +56256,7 @@
     "packet_memory_note",
     "paper_outline_2026-04-12",
     "persistent_inertial_object_probe_note",
+    "persistent_inertial_response_readiness_note",
     "persistent_object_adaptive_readout_note",
     "persistent_object_adaptive_readout_v2_note",
     "persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16",
@@ -56599,6 +56363,7 @@
     "seventh_family_diagonal_note",
     "shapiro_static_discriminator_note",
     "sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28",
+    "signed_gravity_naturally_hosted_orientation_line_note",
     "signed_gravity_response_lane_status_note_2026-04-26",
     "single_axiom_hilbert_note",
     "single_axiom_information_note",
@@ -56816,10 +56581,10 @@
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6717,
-    "leaf_count": 552,
+    "edge_count": 6670,
+    "leaf_count": 562,
     "node_count": 1934,
-    "root_count": 864,
+    "root_count": 866,
     "runners_with_path": 1513
   }
 }

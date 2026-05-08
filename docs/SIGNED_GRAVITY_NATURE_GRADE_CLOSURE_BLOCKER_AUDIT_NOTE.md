@@ -120,7 +120,9 @@ Updated remaining work:
 > themselves.
 
 The decisive containment follow-up is recorded in
-[`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md`](SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md)
+`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md` (downstream
+follow-up artifact; cross-reference only — that note cites this
+nature-grade audit as predecessor, not vice versa)
 with runner
 [`../scripts/signed_gravity_native_boundary_complex_containment.py`](../scripts/signed_gravity_native_boundary_complex_containment.py).
 
@@ -136,7 +138,9 @@ and `eta=0`; the orientation-line APS source character was added as an
 extension unless a future retained boundary theorem derives that line.
 
 The staggered-Dirac boundary follow-up is recorded in
-[`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`](SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md)
+`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`
+(downstream follow-up artifact; cross-reference only — that note cites
+this nature-grade audit as predecessor, not vice versa)
 with runner
 [`../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py`](../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py).
 

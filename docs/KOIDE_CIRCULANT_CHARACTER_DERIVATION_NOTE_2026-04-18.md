@@ -276,7 +276,10 @@ and
 [KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md](./KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md).
 For the ranked positive-path map, with fresh axiom-only routes placed ahead of
 transplant routes, see
-[KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md](./KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md).
+`KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md` (positive-paths
+hub aggregator; backticked to avoid 5+ length-N cycles through the koide
+cluster — citation graph direction is *positive_paths_hub →
+this_circulant_character* as a downstream reference, not vice versa).
 
 ## Relation to the current retained charged-lepton status
 

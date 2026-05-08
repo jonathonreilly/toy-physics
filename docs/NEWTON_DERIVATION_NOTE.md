@@ -149,7 +149,10 @@ pocket cases at `top_keep = 4` with `stage_mean_overlap >= 0.90`,
 admissible rows. A new bridge note documents how this changes the local
 picture without promoting the gate:
 
-- [`docs/NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md`](NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md)
+- `docs/NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md` (downstream bounded
+  conditional bridge note; backticked to avoid length-2 cycle — that
+  bridge note already cites this newton-derivation gate as predecessor,
+  so citation graph direction is *top4_bridge → this_newton_derivation*)
   — bounded conditional bridge note; the same scalar `s` controls
   source strength, linear response (`alpha = 1`), and persistence on
   the audit-clean multistage compact-object family.

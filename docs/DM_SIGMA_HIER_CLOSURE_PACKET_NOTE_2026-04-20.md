@@ -119,7 +119,11 @@ The hierarchy-permutation ambiguity is closed on this package surface.
 
 The authoritative theorem to cite for the closeout is:
 
-- [DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md](./DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+- `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  (downstream authoritative closeout; backticked to avoid length-4
+  cycle through DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION — that
+  upper-octant theorem cites this packet via the parity-reduction note,
+  so citation graph direction is *upper_octant_selector → this_packet*)
 
 The earlier theorem that first closed it on the exact chamber root set is:
 
@@ -127,7 +131,9 @@ The earlier theorem that first closed it on the exact chamber root set is:
 
 The intermediate reduction note is not the closure note:
 
-- [DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md](./DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md)
+- `DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md`
+  (intermediate reduction; backticked to avoid length-4 cycle through
+  DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM)
 
 ## Verification
 

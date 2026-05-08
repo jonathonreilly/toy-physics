@@ -137,4 +137,5 @@ These rows are in the public package, but they are not manuscript-core claims.
 No manuscript-facing claim is ready unless it is present in both:
 
 - this file
-- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+- `DERIVATION_VALIDATION_MAP.md` (sibling publication-package artifact;
+  backticked to avoid length-3 cycle through DERIVATION_ATLAS)

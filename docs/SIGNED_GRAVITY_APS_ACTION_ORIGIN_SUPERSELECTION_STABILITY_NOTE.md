@@ -239,7 +239,9 @@ This is an internally coherent extension candidate, not a retained origin
 theorem.
 
 The follow-up source-line pass then sharpens the origin premise in
-[`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md`](SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md)
+`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md` (downstream
+follow-up artifact; cross-reference only — that note cites
+`aps_locked_axiom_extension` as its predecessor, not this audit)
 with runner
 [`../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py`](../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py):
 

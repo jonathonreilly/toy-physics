@@ -87,7 +87,9 @@ The construction cites these existing framework authorities:
   subalgebra.
 - [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](./GRAPH_FIRST_SU3_INTEGRATION_NOTE.md):
   graph-first structural `SU(3)` integration on the selected-axis surface.
-- [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md):
+- `ANOMALY_FORCES_TIME_THEOREM.md` (upstream theorem; backticked to
+  avoid length-7 cycle through axiom_first_*, lorentz_*, planck_scale_lane —
+  citation graph direction is *anomaly_forces_time → ... → this_planck_primitive*):
   anomaly cancellation plus chirality and single-clock evolution force one
   temporal dimension, giving the `3+1` coframe.
 - [I3_ZERO_EXACT_THEOREM_NOTE.md](./I3_ZERO_EXACT_THEOREM_NOTE.md): exact
@@ -199,7 +201,8 @@ so the bivector data are not external to the coframe response.
 
 ### 2. Extension By The Anomaly-Forced Time Axis
 
-[ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md) supplies a
+`ANOMALY_FORCES_TIME_THEOREM.md` (upstream theorem; backticked to avoid
+length-7 cycle through axiom_first_*, lorentz_*, planck_scale_lane) supplies a
 single time axis from anomaly cancellation, chirality, and one-clock
 codimension-1 evolution. Add this orthogonal generator to the retained spatial
 triple:

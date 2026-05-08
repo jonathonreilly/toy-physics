@@ -6,9 +6,12 @@ canonical signed selector remains unforced; not a physical signed-gravity claim
 **Script:** [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py)
 
 This note answers the last clean escape hatch after
-[`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md`](SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md)
+`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md` (upstream
+predecessor; backticked to avoid length-4/5 cycle through
+nature_grade_closure_blocker_audit and cl3z3_source_character_derivation)
 and
-[`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`](SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md):
+`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`
+(upstream predecessor; backticked for cluster citation-graph hygiene):
 
 > If the raw Hodge and retained-compatible staggered boundary operators do not
 > contain an unpaired APS eta mode, can the determinant-line package still

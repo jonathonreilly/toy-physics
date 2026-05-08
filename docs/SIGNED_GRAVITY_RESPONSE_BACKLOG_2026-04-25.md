@@ -43,16 +43,16 @@ Current closure/blocker artifacts:
 - [`../scripts/signed_gravity_native_boundary_complex_containment.py`](../scripts/signed_gravity_native_boundary_complex_containment.py)
 - [`../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py`](../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py)
 - [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py)
-- [`SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md`](SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md)
-- [`SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md`](SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md)
-- [`SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md`](SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md)
-- [`SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md`](SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md)
-- [`SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md`](SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md)
-- [`SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md`](SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md)
-- [`SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md`](SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md)
-- [`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md`](SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md)
-- [`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`](SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md)
-- [`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`](SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md)
+- `SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
+- `SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 
 Current first-pass result:
 
@@ -364,7 +364,7 @@ Artifacts:
   artifact derived from this backlog; cross-reference only — that probe
   cites this backlog and `chi_selector` as its predecessors, not vice versa)
 - [`../scripts/signed_gravity_boundary_coframe_chi_probe.py`](../scripts/signed_gravity_boundary_coframe_chi_probe.py)
-- [`SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md)
+- `SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 - [`../scripts/signed_gravity_aps_boundary_index_probe.py`](../scripts/signed_gravity_aps_boundary_index_probe.py)
 - `SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md` (downstream consumer
   artifact derived from this backlog; cross-reference only — that probe
@@ -392,21 +392,21 @@ Artifacts:
   artifact derived from this backlog; cross-reference only — that extension
   cites the boundary-principle no-go as its predecessor, not vice versa)
 - [`../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py`](../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py)
-- [`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md`](SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md)
+- `SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 - [`../scripts/signed_gravity_source_character_uniqueness_theorem.py`](../scripts/signed_gravity_source_character_uniqueness_theorem.py)
-- [`SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md`](SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md)
+- `SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 - [`../scripts/signed_gravity_cl3z3_source_character_derivation.py`](../scripts/signed_gravity_cl3z3_source_character_derivation.py)
-- [`SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md`](SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md)
+- `SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 - [`../scripts/signed_gravity_nature_grade_closure_blockers.py`](../scripts/signed_gravity_nature_grade_closure_blockers.py)
-- [`SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md`](SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md)
+- `SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 - [`../scripts/signed_gravity_boundary_z2_flux_probe.py`](../scripts/signed_gravity_boundary_z2_flux_probe.py)
-- [`SIGNED_GRAVITY_BOUNDARY_Z2_FLUX_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_BOUNDARY_Z2_FLUX_CHI_PROBE_NOTE.md)
+- `SIGNED_GRAVITY_BOUNDARY_Z2_FLUX_CHI_PROBE_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 - [`../scripts/signed_gravity_nonlocal_projector_charge_probe.py`](../scripts/signed_gravity_nonlocal_projector_charge_probe.py)
 - `SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md` (downstream
   consumer artifact derived from this backlog; cross-reference only — that
   probe cites `chi_selector` and the boundary-target as its predecessors,
   not vice versa)
-- [`SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md`](SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md)
+- `SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
 
 First result table:
 
@@ -446,7 +446,10 @@ APS-locked source action proposal:
 
 - [`../scripts/signed_gravity_aps_locked_source_action_proposal.py`](../scripts/signed_gravity_aps_locked_source_action_proposal.py)
   and
-  [`SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md)
+  `SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md` (downstream
+  consumer artifact derived from this backlog; cross-reference only —
+  that proposal cites the wald-gauss bridge audit as predecessor, not
+  vice versa)
   define the smallest action that would close the APS source/response gap:
 
   ```text
@@ -701,7 +704,7 @@ First result:
 - `SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md` (downstream consumer artifact
   derived from this backlog; cross-reference only — that note cites
   `chi_selector` as its predecessor, not vice versa)
-  and [`SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md`](SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md)
+  and `SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md` (downstream consumer artifact derived from this backlog; cross-reference only — that note cites this backlog as predecessor, not vice versa)
   are landed
 - [`../scripts/signed_gravity_mechanism_separator.py`](../scripts/signed_gravity_mechanism_separator.py)
   classifies rows as `locked_chi_response`, `lensing_phase_flip`,

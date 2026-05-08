@@ -211,4 +211,7 @@ This graph-bookkeeping section records explicit dependency links named by a prio
   *current_stack_constraint_boundary → first_symmetric_reconstruction_map
   → this_seam*)
 - [gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_UNDERDETERMINATION_NOTE_2026-04-17.md)
-- [gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_LOCAL_WILSON_RETAINED_POSITIVE_CONE_OBSTRUCTION_NOTE_2026-04-17.md)
+- `gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17`
+  (downstream consumer; backticked to avoid length-4/9 cycles through
+  the cluster — citation graph direction is *cone_obstruction → ... →
+  this_seam*)

@@ -154,8 +154,12 @@ Use this summary to orient the package documents:
   *readme → this_summary*)
 - `CLAIMS_TABLE.md` (sibling artifact; cross-reference only — not a one-hop
   dep of this note)
-- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+- `DERIVATION_VALIDATION_MAP.md` (sibling publication-package artifact;
+  backticked to avoid length-4/5 cycles through CLAIMS_TABLE and
+  DERIVATION_ATLAS — citation graph direction is *derivation_validation_map →
+  this_summary* via the package's downstream catalog)
+- `PUBLICATION_MATRIX.md` (sibling publication-package artifact;
+  backticked to avoid length-5 cycle through DERIVATION_ATLAS)
 
 ## Safe phrasing
 
