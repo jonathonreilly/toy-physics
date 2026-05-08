@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 866 |
+| unaudited | 865 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 422 |
+| ~~audited_conditional~~ | 423 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,22 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 422 |
+| `audited_conditional` | 423 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 27 |
-| `unaudited` | 915 |
+| `unaudited` | 914 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 678 |
+| `bounded_theorem` | 689 |
 | `decoration` | 10 |
 | `meta` | 58 |
 | `no_go` | 189 |
-| `open_gate` | 109 |
+| `open_gate` | 110 |
 | `positive_theorem` | 784 |
-| `unset` | 12 |
 
 | criticality | count |
 |---|---:|
@@ -663,6 +662,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_triplet_normalization_target_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4618,6 +4618,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** That does not prove the local dominance theorem, but it does move the split-1  _(class `B`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded claim that the two explicitly tested local 3D neighborhoods around the split-2 upper-face extremals contain no transport-compatible lower-repair rival under the runner's imported point_data, preferred_column, and repair threshold.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0728-e98e-7353-acdb-9eb0e857cd61`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the two tested local boxes around the cap and endpoint upper-face extremals, the grid scan finds no lower-repair point with eta/eta_obs reaching transport closure and records closest-lane distances still far from the preferred quotient.  _(class `B`)_
+- **chain closes:** False — The local grid checks close only relative to imported upstream functions and constants that are not provided as cited authorities in the packet. The missing step is a retained derivation or included dependency establishing point_data, the preferred quotient/readout, the repair threshold, and the prior compression to these two extremals.
+- **rationale:** Issue: the runner performs bounded local scans, but it imports the load-bearing geometry, preferred column, repair threshold, and upper-face extremal constants from upstream scripts not included as cited retained authorities. Why this blocks: the note's conclusion that the carrier-side pressure is exhausted to these two local neighborhoods depends on those upstream reductions and physical readouts, not on the restricted packet alone. Repair target: cite and retain the upstream split-2 reduction/extremal and transport-readout theorems, or include a runner that constructs those objects from retained primitives. Claim boundary until fixed: the packet supports only a conditional local grid exclusion on the two named boxes under the imported current-branch data.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16`
