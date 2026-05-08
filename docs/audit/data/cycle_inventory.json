@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 547,
+      "max_transitive_descendants": 549,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 547
+          "transitive_descendants": 549
         },
         {
           "audit_status": "unaudited",
@@ -33,7 +33,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 547
+          "transitive_descendants": 549
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 545,
+      "max_transitive_descendants": 547,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/3D_CORRECTION_MASTER_NOTE.md",
           "title": "3D Correction Master Note",
-          "transitive_descendants": 545
+          "transitive_descendants": 547
         },
         {
           "audit_status": "unaudited",
@@ -70,7 +70,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DISPERSION_RELATION_NOTE.md",
           "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic",
-          "transitive_descendants": 545
+          "transitive_descendants": 547
         }
       ],
       "requires_lemma_extraction": false
@@ -89,7 +89,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 539,
+      "max_transitive_descendants": 541,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -98,7 +98,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_conditional",
@@ -107,7 +107,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         }
       ],
       "requires_lemma_extraction": false
@@ -142,7 +142,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 539,
+      "max_transitive_descendants": 541,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -151,7 +151,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_conditional",
@@ -160,7 +160,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "unaudited",
@@ -169,7 +169,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_renaming",
@@ -178,7 +178,7 @@
           "effective_status": "audited_renaming",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "unaudited",
@@ -187,7 +187,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_conditional",
@@ -196,7 +196,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         }
       ],
       "requires_lemma_extraction": false
@@ -235,7 +235,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 539,
+      "max_transitive_descendants": 541,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -244,7 +244,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "unaudited",
@@ -253,7 +253,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_conditional",
@@ -262,7 +262,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "unaudited",
@@ -271,7 +271,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_renaming",
@@ -280,7 +280,7 @@
           "effective_status": "audited_renaming",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "unaudited",
@@ -289,7 +289,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         },
         {
           "audit_status": "audited_conditional",
@@ -298,7 +298,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 539
+          "transitive_descendants": 541
         }
       ],
       "requires_lemma_extraction": false
@@ -325,7 +325,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 270,
+      "max_transitive_descendants": 272,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -334,7 +334,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -343,7 +343,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -352,7 +352,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -361,7 +361,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         }
       ],
       "requires_lemma_extraction": false
@@ -392,7 +392,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 270,
+      "max_transitive_descendants": 272,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -401,7 +401,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -410,7 +410,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -419,7 +419,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -428,7 +428,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -437,7 +437,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         }
       ],
       "requires_lemma_extraction": false
@@ -472,7 +472,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 270,
+      "max_transitive_descendants": 272,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -481,7 +481,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
           "title": "Universal GR A1 Invariant Section on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -490,7 +490,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -499,7 +499,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -508,7 +508,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -517,7 +517,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -526,7 +526,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         }
       ],
       "requires_lemma_extraction": false
@@ -561,7 +561,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 270,
+      "max_transitive_descendants": 272,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -570,7 +570,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -579,7 +579,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -588,7 +588,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -597,7 +597,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -606,7 +606,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         },
         {
           "audit_status": "unaudited",
@@ -615,7 +615,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
           "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
-          "transitive_descendants": 270
+          "transitive_descendants": 272
         }
       ],
       "requires_lemma_extraction": false
@@ -634,7 +634,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 265,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -643,7 +643,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 263
+          "transitive_descendants": 265
         },
         {
           "audit_status": "unaudited",
@@ -652,7 +652,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 263
+          "transitive_descendants": 265
         }
       ],
       "requires_lemma_extraction": false
@@ -679,7 +679,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 129,
+      "max_transitive_descendants": 131,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -688,7 +688,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
           "title": "P2 Taste-Staircase Beta Functions: Retained No-Go",
-          "transitive_descendants": 129
+          "transitive_descendants": 131
         },
         {
           "audit_status": "unaudited",
@@ -697,7 +697,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
           "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
-          "transitive_descendants": 129
+          "transitive_descendants": 131
         },
         {
           "audit_status": "unaudited",
@@ -706,7 +706,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
           "title": "Taste-Staircase Transport Theorem (P2 Narrowing)",
-          "transitive_descendants": 129
+          "transitive_descendants": 131
         },
         {
           "audit_status": "unaudited",
@@ -715,7 +715,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
-          "transitive_descendants": 129
+          "transitive_descendants": 131
         }
       ],
       "requires_lemma_extraction": false
@@ -742,7 +742,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -751,7 +751,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -760,7 +760,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -769,7 +769,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -778,7 +778,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_DERIVATION_STATUS_NOTE.md",
           "title": "A1 derivation status \u2014 full landscape audit",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -805,7 +805,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -814,7 +814,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -823,7 +823,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -832,7 +832,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -841,7 +841,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
           "title": "A1 Derivation \u2014 /loop investigation summary",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -872,7 +872,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -881,7 +881,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -890,7 +890,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -899,7 +899,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -908,7 +908,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -917,7 +917,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_DERIVATION_STATUS_NOTE.md",
           "title": "A1 derivation status \u2014 full landscape audit",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -948,7 +948,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -957,7 +957,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -966,7 +966,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -975,7 +975,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -984,7 +984,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -993,7 +993,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
           "title": "A1 Derivation \u2014 /loop investigation summary",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1028,7 +1028,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1037,7 +1037,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1046,7 +1046,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1055,7 +1055,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1064,7 +1064,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1073,7 +1073,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1082,7 +1082,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1121,7 +1121,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1130,7 +1130,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1139,7 +1139,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1148,7 +1148,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1157,7 +1157,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1166,7 +1166,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1175,7 +1175,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1184,7 +1184,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1223,7 +1223,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1232,7 +1232,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1241,7 +1241,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1250,7 +1250,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1259,7 +1259,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1268,7 +1268,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1277,7 +1277,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1286,7 +1286,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md",
           "title": "Koide Qubit\u2013Lattice-Dimension Algebraic Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1329,7 +1329,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1338,7 +1338,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1347,7 +1347,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1356,7 +1356,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1365,7 +1365,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1374,7 +1374,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1383,7 +1383,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1392,7 +1392,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1401,7 +1401,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md",
           "title": "Koide Qubit\u2013Lattice-Dimension Algebraic Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1444,7 +1444,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1453,7 +1453,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1462,7 +1462,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1471,7 +1471,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1480,7 +1480,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1489,7 +1489,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1498,7 +1498,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1507,7 +1507,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1516,7 +1516,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1559,7 +1559,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1568,7 +1568,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1577,7 +1577,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1586,7 +1586,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1595,7 +1595,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1604,7 +1604,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1613,7 +1613,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1622,7 +1622,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1631,7 +1631,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1674,7 +1674,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1683,7 +1683,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1692,7 +1692,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1701,7 +1701,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1710,7 +1710,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1719,7 +1719,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1728,7 +1728,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1737,7 +1737,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1746,7 +1746,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md",
           "title": "Koide A1 \u2014 O13 Cheeger-Simons R/Z Period Inheritance No-Go",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1793,7 +1793,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1802,7 +1802,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1811,7 +1811,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1820,7 +1820,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1829,7 +1829,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1838,7 +1838,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1847,7 +1847,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1856,7 +1856,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1865,7 +1865,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1874,7 +1874,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -1921,7 +1921,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1930,7 +1930,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1939,7 +1939,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1948,7 +1948,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1957,7 +1957,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1966,7 +1966,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1975,7 +1975,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1984,7 +1984,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -1993,7 +1993,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2002,7 +2002,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2049,7 +2049,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2058,7 +2058,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2067,7 +2067,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2076,7 +2076,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2085,7 +2085,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2094,7 +2094,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2103,7 +2103,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2112,7 +2112,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2121,7 +2121,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2130,7 +2130,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_C3_CONSTANT_SINGLET_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `C_3` Constant-Singlet Reparameterization Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2177,7 +2177,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2186,7 +2186,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2195,7 +2195,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2204,7 +2204,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2213,7 +2213,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2222,7 +2222,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2231,7 +2231,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2240,7 +2240,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2249,7 +2249,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2258,7 +2258,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `C_3` Singlet-Extension Reduction Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2305,7 +2305,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2314,7 +2314,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2323,7 +2323,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2332,7 +2332,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2341,7 +2341,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2350,7 +2350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2359,7 +2359,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2368,7 +2368,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2377,7 +2377,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2386,7 +2386,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Eigenvalue `Q = 2/3` Surface Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2433,7 +2433,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2442,7 +2442,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2451,7 +2451,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2460,7 +2460,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2469,7 +2469,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2478,7 +2478,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2487,7 +2487,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2496,7 +2496,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2505,7 +2505,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2514,7 +2514,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md",
           "title": "Koide Microscopic Scalar Selector Target",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2561,7 +2561,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2570,7 +2570,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2579,7 +2579,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2588,7 +2588,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2597,7 +2597,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2606,7 +2606,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2615,7 +2615,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2624,7 +2624,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2633,7 +2633,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2642,7 +2642,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Selected-Slice Spectral Completion and Minimal Local Spectral-Law No-Go",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2693,7 +2693,7 @@
         }
       ],
       "length": 10,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2702,7 +2702,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2711,7 +2711,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2720,7 +2720,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2729,7 +2729,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2738,7 +2738,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2747,7 +2747,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2756,7 +2756,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2765,7 +2765,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md",
           "title": "Koide Lane Explicit Calculations",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2774,7 +2774,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md",
           "title": "Koide Brannen Geometry / Dirac Support Note (2026-04-22)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2783,7 +2783,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md",
           "title": "Koide Brannen Callan-Harvey Candidate Note (2026-04-22)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2834,7 +2834,7 @@
         }
       ],
       "length": 10,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2843,7 +2843,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2852,7 +2852,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2861,7 +2861,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2870,7 +2870,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2879,7 +2879,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2888,7 +2888,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2897,7 +2897,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2906,7 +2906,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2915,7 +2915,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2924,7 +2924,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -2975,7 +2975,7 @@
         }
       ],
       "length": 10,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2984,7 +2984,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -2993,7 +2993,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3002,7 +3002,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3011,7 +3011,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3020,7 +3020,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3029,7 +3029,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3038,7 +3038,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3047,7 +3047,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3056,7 +3056,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Eigenvalue `Q = 2/3` Surface Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3065,7 +3065,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Scale-Selector Reparameterization Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -3120,7 +3120,7 @@
         }
       ],
       "length": 11,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3129,7 +3129,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3138,7 +3138,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3147,7 +3147,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3156,7 +3156,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3165,7 +3165,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3174,7 +3174,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3183,7 +3183,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3192,7 +3192,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3201,7 +3201,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3210,7 +3210,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3219,7 +3219,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Eigenvalue `Q = 2/3` Surface Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -3274,7 +3274,7 @@
         }
       ],
       "length": 11,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3283,7 +3283,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3292,7 +3292,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3301,7 +3301,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3310,7 +3310,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3319,7 +3319,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3328,7 +3328,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3337,7 +3337,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3346,7 +3346,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3355,7 +3355,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3364,7 +3364,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3373,7 +3373,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -3432,7 +3432,7 @@
         }
       ],
       "length": 12,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3441,7 +3441,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3450,7 +3450,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3459,7 +3459,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3468,7 +3468,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3477,7 +3477,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3486,7 +3486,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3495,7 +3495,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3504,7 +3504,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3513,7 +3513,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3522,7 +3522,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3531,7 +3531,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Eigenvalue `Q = 2/3` Surface Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3540,7 +3540,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Scale-Selector Reparameterization Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -3607,7 +3607,7 @@
         }
       ],
       "length": 14,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3616,7 +3616,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3625,7 +3625,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3634,7 +3634,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3643,7 +3643,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3652,7 +3652,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3661,7 +3661,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3670,7 +3670,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3679,7 +3679,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3688,7 +3688,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3697,7 +3697,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3706,7 +3706,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3715,7 +3715,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3724,7 +3724,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3733,7 +3733,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
           "title": "A1 Derivation \u2014 /loop investigation summary",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false
@@ -3800,7 +3800,7 @@
         }
       ],
       "length": 14,
-      "max_transitive_descendants": 112,
+      "max_transitive_descendants": 114,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3809,7 +3809,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3818,7 +3818,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3827,7 +3827,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3836,7 +3836,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3845,7 +3845,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3854,7 +3854,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3863,7 +3863,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3872,7 +3872,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3881,7 +3881,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
           "title": "Koide Berry Bundle Obstruction / Uniqueness Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3890,7 +3890,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3899,7 +3899,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3908,7 +3908,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3917,7 +3917,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         },
         {
           "audit_status": "unaudited",
@@ -3926,7 +3926,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md",
           "title": "Koide One-Scalar Obstruction Triangulation Theorem",
-          "transitive_descendants": 112
+          "transitive_descendants": 114
         }
       ],
       "requires_lemma_extraction": false

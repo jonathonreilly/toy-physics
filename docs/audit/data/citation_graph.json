@@ -1517,6 +1517,50 @@
       "to": "action_power_scaling_sweep_note"
     },
     {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4"
+    },
+    {
+      "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "to": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
+    },
+    {
       "from": "canonical_harness_index",
       "to": "self_consistency_forces_poisson_note"
     },
@@ -8935,6 +8979,62 @@
     {
       "from": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
       "to": "koide_berry_phase_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "koide_a1_derivation_status_note"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "koide_explicit_calculations_note"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "to": "higher_order_structural_theorems_note"
     },
     {
       "from": "koide_axiom_native_support_batch_note_2026-04-22",
@@ -30990,6 +31090,29 @@
       "runner_path": "scripts/broken_graph_action_power_robustness.py",
       "title": "Broken-Graph Action-Power Robustness Note"
     },
+    "c3_symmetry_preserved_interpretation_note_2026-05-08": {
+      "claim_id": "c3_symmetry_preserved_interpretation_note_2026-05-08",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+        "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+        "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+        "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+        "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
+      ],
+      "note_hash": "01aa5ec5733c88f4d93e182ada9bcb3d37900088f7a3f6f02adeaa8d6da46533",
+      "path": "docs/C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_c3_symmetry_preserved_interpretation.py",
+      "title": "C_3 Symmetry Preserved Interpretation Note"
+    },
     "c_iso_derived_theorem_note_2026-05-07_w3": {
       "claim_id": "c_iso_derived_theorem_note_2026-05-07_w3",
       "claim_type_author_hint": "open_gate",
@@ -40857,6 +40980,32 @@
       "path": "docs/KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py",
       "title": "Koide A1 radian-bridge irreducibility audit"
+    },
+    "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef": {
+      "claim_id": "koide_a1_route_f_casimir_difference_bounded_obstruction_note_2026-05-08_routef",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_a1_derivation_status_note",
+        "minimal_axioms_2026-05-03",
+        "cl3_sm_embedding_theorem",
+        "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
+        "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_explicit_calculations_note",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "higher_order_structural_theorems_note"
+      ],
+      "note_hash": "04edd807f59a76fd305a8469dea12e453d2143d9fcc4a4652cf6bb212a69c62d",
+      "path": "docs/KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routef.md",
+      "runner_path": "scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py",
+      "title": "Koide A1 Route F \u2014 Yukawa Casimir-Difference Bounded Obstruction"
     },
     "koide_aps_block_by_block_forcing_note_2026-04-21": {
       "claim_id": "koide_aps_block_by_block_forcing_note_2026-04-21",
@@ -58678,25 +58827,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 131,
-      "meta": 13,
+      "bounded_theorem": 132,
+      "meta": 14,
       "no_go": 14,
       "none": 1699,
       "open_gate": 13,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 634,
-      "meta": 13,
+      "bounded_theorem": 635,
+      "meta": 14,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 618
     },
-    "edge_count": 7030,
-    "leaf_count": 543,
-    "node_count": 1960,
+    "edge_count": 7055,
+    "leaf_count": 544,
+    "node_count": 1962,
     "root_count": 837,
-    "runners_with_path": 1539
+    "runners_with_path": 1541
   }
 }

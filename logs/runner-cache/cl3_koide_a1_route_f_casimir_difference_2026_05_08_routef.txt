@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py
+runner_sha256: fec859aa35e4c467c87e464d7de6a8ccb050e5a9ba2aec6ed46ce5dbd7d9bb1c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+======================================================================
+Koide A1 Route F — Yukawa Casimir-Difference Bounded Obstruction
+Source note:
+  docs/KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routef.md
+======================================================================
+Section 1 — Numerical match: T(T+1) - Y^2 = 1/2 in Q = T_3 + Y convention
+           (anchor for Route F's candidate identity claim)
+  PASS : Lepton doublet (PDG conv): T(T+1) - Y^2 = 1/2 | 3/4 - 1/4 = 1/2 (target 1/2)
+  PASS : Higgs (PDG conv): T(T+1) - Y^2 = 1/2 | 3/4 - 1/4 = 1/2 (target 1/2)
+  PASS : Other SM particles: T(T+1) - Y^2 != 1/2 | Quark doublet, e_R, u_R, d_R all give different values
+Section 2 — Barrier 1: T(T+1) - Y^2 = 1/2 is convention-dependent
+  PASS : CL3_SM_EMBEDDING conv (Y_L = -1): T(T+1) - Y^2 = -1/4 (NOT 1/2) | 3/4 - 1 = -1/4 (NOT the A1 target 1/2)
+  PASS : PDG conv (Y_L = -1/2): T(T+1) - Y^2 = 1/2 (different result) | 3/4 - 1/4 = 1/2
+  PASS : Both conventions give same physical Q = -1 for e_L | Q_pdg = -1, Q_su5 = -1
+       NOTE: A genuine structural identity must be convention-invariant.
+       The numerical value 1/2 depends on the hypercharge normalization,
+       so it cannot be a structural Casimir-difference identity.
+
+Section 3 — Barrier 2: a, b are free parameters in retained Yukawa
+  PASS : Two distinct (a, b) circulants both Hermitian and C_3-equivariant | |b1|/a1 = 0.300, |b2|/a2 = 0.806 — both compatible with retained Y_e structure
+  PASS : Different (a, b) give different |b|^2/a^2 ratios | |b1|^2/a1^2 = 0.0900, |b2|^2/a2^2 = 0.6500
+  PASS : Casimir-difference is a single fixed value, but |b|^2/a^2 is free | Single Casimir-diff = 0.5, but |b|^2/a^2 ranges freely
+  PASS : Counterexample: (a=1, b=1) circulant has |b|^2/a^2 = 1 (NOT 1/2) | r = 1.000; this satisfies all retained constraints but violates A1
+  PASS : Counterexample: (a=1, b=0) circulant is degenerate (all m_k equal) | eigenvalues = [1. 1. 1.] — no Koide structure at all, yet retained-compatible
+Section 4 — Barrier 3: SU(2)_L doublet sector vs hw=1 generation triple
+  PASS : SU(2)_L Casimir on doublet: J^2 = (3/4) I_2 acts on 2-dim space | J^2 = 0.75 I_2, dim = 2
+  PASS : hw=1 sector has dim 3 (3 generations / corner states) | dim(hw=1) = 3 != 2 = dim(doublet)
+  PASS : Casimir-to-circulant bridge is not present in the represented sectors | doublet (2-dim, T,Y) and hw=1 (3-dim, C_3) are separate represented sectors; a bridge theorem would be additional input
+  PASS : Casimir T(T+1) acting on flavor sector is a scalar multiplier | T(T+1) commutes with flavor structure; cannot constrain |b|^2/a^2
+Section 5 — Barrier 4: LHS and RHS are different categories of objects
+  PASS : |b|^2/a^2 is invariant under uniform rescaling of (a, b) | r(a,b) = 0.2500, r(2a, 2b) = 0.2500
+  PASS : |b|^2/a^2 changes under independent rescaling of a alone | r(a, b) = 0.2500, r(2a, b) = 0.0625
+  PASS : T(T+1) - Y^2 is a state-independent group-theoretic scalar | RHS depends only on representation labels (T, Y), not on operator content
+  PASS : Route F still needs an extra normalization principle for (a, b) | The coefficient ratio has its own operator normalization behavior; a gauge-to-flavor normalization map would be additional input
+Section 6 — Alternative multiplets satisfying T(T+1) - Y^2 = 1/2
+  PASS : Hypothetical T=1/2, Y=+1/2 multiplet matches identity | T(T+1) - Y^2 = 1/2; matches numerical value but no SM role
+  PASS : T=1 multiplet with Y^2 = 3/2 also matches identity (BSM scenario) | any non-doublet Y with right Y^2 satisfies the identity; not exclusive to L
+  PASS : Identity uniqueness is SM-content-specific, not axiom-native | Within SM, only (L, H) match; but adding any BSM multiplet with right T, Y also matches. The 1/2 value is an arithmetic consequence of T = 1/2, not a structural lock.
+Section 7 — Falsifiability anchor (PDG values are NOT derivation input)
+  PASS : ANCHOR ONLY: PDG charged-lepton masses give Koide Q ~ 2/3 | Q(PDG) = 0.666661, target = 0.666667; falsifiability anchor not derivation
+       NOTE: PDG match (Q ~ 2/3) confirms A1 is OBSERVATIONALLY consistent
+       but does NOT derive A1 from retained content. A1 remains an
+       admission on the current surface.
+
+Section 8 — Bounded-obstruction theorem verification
+  PASS : All four structural barriers independently block Route F closure | Convention-dep + free Yukawa + sector-orth + category-mismatch = no retained-content path to derive |b|^2/a^2 = 1/2 from T(T+1) - Y^2 = 1/2
+       VERDICT: Route F lemma |b|^2/a^2 = T(T+1) - Y^2 cannot close
+       on the retained Cl(3)/Z^3 framework. The numerical match
+       1/2 = 1/2 is a coincidence between independently-defined
+       quantities, not a structural identity.
+
+       AC_φλ residual (from substep 4) is unaffected by this analysis.
+       The A1 admission count remains unchanged.
+
+  PASS : Route F bounded-obstruction theorem holds | Four-barrier structural argument: no closure path from retained content
+
+======================================================================
+EXACT      : PASS = 25, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 25, FAIL = 0
+=== TOTAL: PASS=25, FAIL=0 ===
+======================================================================
+
+Bounded-obstruction verdict:
+  Route F structurally barred: |b|^2/a^2 = T(T+1) - Y^2 cannot
+  close from retained content alone. Four independent structural
+  barriers (convention-dep + free Yukawa + sector-orth +
+  category-mismatch) each block the proposed lemma.
+
+  A1 admission count UNCHANGED (Route F closure not achieved).
+  No new axiom proposed.
+
+  Falsifiability anchor: PDG charged-lepton masses fit Brannen
+  circulant with A1 at 0.1% precision (consistent but not
+  derivation).
+
+----- stderr -----
+
