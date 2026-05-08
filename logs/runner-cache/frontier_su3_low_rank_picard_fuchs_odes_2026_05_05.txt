@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_low_rank_picard_fuchs_odes_2026_05_05.py
+runner_sha256: 1dc670652a4b043906452c56fcce6fbf3d9e27fbb76805026fa3acce85fff905
+timeout_sec: 120
+exit_code: -9
+elapsed_sec: 120.04
+status: timeout
+----- stdout -----
+
+--- Deriving PF ODE for c_(0,0)(beta) ---
+  Taylor leading: beta**5/31104 + beta**4/2592 + beta**3/648 + beta**2/36 + 1
+  Found: order r = 3, polynomial degree d <= 2
+    P_0(beta) = -beta**2 - 10*beta
+    P_1(beta) = -4*beta**2 - 2*beta + 120
+    P_2(beta) = -beta**2 + 60*beta
+    P_3(beta) = 6*beta**2
+  Max relative error vs Bessel-det numerics on [1,8]: 8.328e-11
+
+--- Deriving PF ODE for c_(1,0)(beta) ---
+  Taylor leading: 13*beta**5/186624 + 5*beta**4/10368 + beta**3/216 + beta**2/72 + beta/6
+  Found: order r = 3, polynomial degree d <= 4
+    P_0(beta) = -beta**4 - 20*beta**3 - 138*beta**2 - 240*beta - 1200
+    P_1(beta) = -4*beta**4 - 42*beta**3 + 30*beta**2 + 1200*beta
+    P_2(beta) = -beta**4 + 50*beta**3 + 660*beta**2
+    P_3(beta) = 6*beta**4 + 60*beta**3
+  Max relative error vs Bessel-det numerics on [1,8]: 5.850e-12
+
+--- Deriving PF ODE for c_(1,1)(beta) ---
+  Taylor leading: beta**5/11664 + beta**4/1296 + beta**3/324 + beta**2/36
+  Found: order r = 3, polynomial degree d <= 3
+    P_0(beta) = -beta**3 - 13*beta**2 - 30*beta - 288
+    P_1(beta) = -4*beta**3 - 5*beta**2 + 78*beta
+    P_2(beta) = -beta**3 + 66*beta**2
+    P_3(beta) = 6*beta**3
+  Max relative error vs Bessel-det numerics on [1,8]: 5.112e-12
+
+--- Deriving PF ODE for c_(2,0)(beta) ---
+  Taylor leading: 7*beta**5/116640 + 7*beta**4/15552 + beta**3/432 + beta**2/72
+  Found: order r = 3, polynomial degree d <= 5
+    P_0(beta) = -beta**5 - 17*beta**4 - 27*beta**3 + 540*beta**2 + 2100*beta + 30240
+    P_1(beta) = -4*beta**5 - 30*beta**4 + 321*beta**3 + 1428*beta**2 - 9072*beta
+    P_2(beta) = -beta**5 + 53*beta**4 + 546*beta**3 - 6048*beta**2
+    P_3(beta) = 6*beta**5 + 42*beta**4 - 504*beta**3
+  Max relative error vs Bessel-det numerics on [1,8]: 1.578e-08
+
+--- Deriving PF ODE for c_(2,1)(beta) ---
+  Taylor leading: 13*beta**5/186624 + 11*beta**4/31104 + beta**3/432
+  Found: order r = 3, polynomial degree d <= 5
+    P_0(beta) = -beta**5 - 50*beta**4 - 1320*beta**3 - 14304*beta**2 - 64224*beta - 483840
+    P_1(beta) = -4*beta**5 - 162*beta**4 - 3312*beta**3 - 6048*beta**2 + 41472*beta
+    P_2(beta) = -beta**5 + 20*beta**4 + 1872*beta**3 + 55296*beta**2
+    P_3(beta) = 6*beta**5 + 240*beta**4 + 4608*beta**3
+  Max relative error vs Bessel-det numerics on [1,8]: 2.906e-11
+
+--- Deriving PF ODE for c_(2,2)(beta) ---
+  Taylor leading: beta**5/31104 + beta**4/5184
+  Found: order r = 3, polynomial degree d <= 5
+    P_0(beta) = -beta**5 - 22*beta**4 - 924*beta**3 - 12960*beta**2 - 69696*beta - 691200
+    P_1(beta) = -4*beta**5 - 50*beta**4 - 3060*beta**3 - 6624*beta**2 - 8640*beta
+    P_2(beta) = -beta**5 + 48*beta**4 + 72*beta**3 + 51840*beta**2
+    P_3(beta) = 6*beta**5 + 72*beta**4 + 4320*beta**3
+  Max relative error vs Bessel-det numerics on [1,8]: 3.067e-11
+
+--- Deriving PF ODE for c_(3,0)(beta) ---
+
+----- stderr -----
+

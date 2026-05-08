@@ -201,7 +201,7 @@ The curated methodology lane on `main` now consists of:
 - a canonical per-paper disclosure paragraph:
   [`docs/ai_methodology/CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md`](./ai_methodology/CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md);
 - a package-level accountability note:
-  [`docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md);
+  `docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*);
 - a raw methodology annex:
   [`docs/ai_methodology/raw/README.md`](./ai_methodology/raw/README.md);
 - a synthesized methodology surface:

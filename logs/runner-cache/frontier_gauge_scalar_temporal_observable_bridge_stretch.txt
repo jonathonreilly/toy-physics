@@ -1,6 +1,6 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py
-runner_sha256: bb4c5b7b23ae156ab1c9f4df7de282a19883e28edcdbc2ad3058b02b06502881
+runner_sha256: 347ca689815582b62efdfd53aee8570e2a99dc6fafb474779405268eea3ed2cf
 timeout_sec: 120
 exit_code: 0
 elapsed_sec: 0.04
@@ -24,7 +24,7 @@ Part 1: stretch-attempt note structure
   [PASS (A)] note contains: 'effective-action'  ()
   [PASS (A)] note contains: 'Renormalization-group'  ()
   [PASS (A)] note contains: 'non-analytically-derivable'  ()
-  [PASS (A)] note contains: 'proposal_allowed: false'  ()
+  [PASS (A)] note contains: 'does not set an'  ()
 
 ----------------------------------------------------------------------------------------
 Part 2: 3 obstruction routes documented
@@ -47,7 +47,7 @@ Part 3: forbidden imports listed
 ----------------------------------------------------------------------------------------
 Part 4: explicit non-closure
 ----------------------------------------------------------------------------------------
-  [PASS (A)] non-closure: bridge ⟨P⟩_full = R_O(β_eff) is non-analytically-derivable  ()
+  [PASS (A)] non-closure: not analytically derived from `A_min`  ()
   [PASS (A)] non-closure: honest tier  ()
   [PASS (A)] non-closure: still open  ()
   [PASS (A)] non-closure: still conditional  ()
@@ -60,8 +60,24 @@ Part 5: A_min explicitly enumerated
   [PASS (A)] A_min item: A_inf / A_2 = 2/√3  (§1 A_min table)
   [PASS (A)] A_min item: 1/N_c topological expansion  (§1 A_min table)
 
+----------------------------------------------------------------------------------------
+Part 6: 2026-05-07 stretch-attempt bounded verdict (no-go route)
+----------------------------------------------------------------------------------------
+  [PASS (A)] closure section item: 'Closure-attempt verdict (2026-05-07 stretch-attempt closure pass)'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'Bounded verdict for the open question'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'two-witness argument'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'Companion bounded result'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'definition or fit'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'audit ratification ≠ demotion'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'Escape hatches'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'no new axioms'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'import → bounded → retire import'  (§9 closure verdict)
+  [PASS (A)] closure section item: 'attempted positive bridge is bounded'  (§9 closure verdict)
+
 ========================================================================================
-  TOTAL: PASS=33, FAIL=0
+  TOTAL: PASS=45, FAIL=0
 ========================================================================================
 
 ----- stderr -----

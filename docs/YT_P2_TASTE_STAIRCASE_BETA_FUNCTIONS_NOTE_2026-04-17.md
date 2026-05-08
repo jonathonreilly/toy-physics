@@ -622,7 +622,11 @@ and v-matching notes remain canonical.**
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [yt_p2_taste_staircase_transport_note_2026-04-17](YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md)
+- `yt_p2_taste_staircase_transport_note_2026-04-17` (downstream consumer;
+  backticked to avoid length-3 cycles through yt_qfp_insensitivity and
+  yt_uv_to_ir_transport_obstruction — citation graph direction is
+  *transport → beta_functions*, body of beta_functions cites transport
+  and v_matching as priors)
 - [yt_p2_v_matching_theorem_note_2026-04-17](YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md)
 - [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [yt_boundary_theorem](YT_BOUNDARY_THEOREM.md)

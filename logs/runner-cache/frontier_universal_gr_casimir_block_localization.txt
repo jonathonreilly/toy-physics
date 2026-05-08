@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_casimir_block_localization.py
+runner_sha256: c5a083df65acce488cb6bff71b524452838db1a058578f02fdbf89fd8dbb0536
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.68
+status: ok
+----- stdout -----
+UNIVERSAL GR CASIMIR BLOCK LOCALIZATION
+==============================================================================
+basis_order = [lapse, shift_x, shift_y, shift_z, trace, shear_1, shear_2, shear_xy, shear_xz, shear_yz]
+basis_orthonormal = True
+so3_closure_exact = True
+A1_complement_mixing_zero = True
+Casimir diagonal on complement = [-2, -2, -2, -6, -6, -6, -6, -6]
+Casimir off-diagonal zero on complement = True
+ranks = {'lapse': 1, 'shift': 3, 'trace': 1, 'shear': 5}
+projector complete = True
+projector orthogonal = True
+projector idempotent = True
+commutes: lapse=True, trace=True, shift=True, shear=True
+diag P_shift on complement = [1, 1, 1, 0, 0, 0, 0, 0]
+diag P_shear on complement = [0, 0, 0, 1, 1, 1, 1, 1]
+[EXACT] PASS: the displayed 10D polarization basis is exactly orthonormal
+    Frobenius Gram matrix equals the 10D identity
+[EXACT] PASS: the lifted spatial generators close the SO(3) Lie algebra exactly
+    all three commutators match the embedded generators up to orientation sign
+[EXACT] PASS: Pi_A1 is invariant and its complement is an invariant subrepresentation
+    Pi_A1 G (I-Pi_A1) and (I-Pi_A1) G Pi_A1 are zero for all generators
+[EXACT] PASS: the complement Casimir has exactly the j=1 and j=2 split
+    Casimir diagonal=[-2, -2, -2, -6, -6, -6, -6, -6]
+[EXACT] PASS: the spectral projectors define a canonical shift/shear split on the complement
+    ranks={'lapse': 1, 'shift': 3, 'trace': 1, 'shear': 5}
+[EXACT] PASS: the four block projectors are exact, orthogonal, and complete
+    complete=True, orthogonal=True, idempotent=True
+[EXACT] PASS: the block projectors commute with the universal SO(3) generators
+    commutes=(True,True,True,True)
+[EXACT] PASS: in the current canonical basis the Casimir projectors land on the expected coordinates
+    P_shift selects h0i and P_shear selects spatial traceless-symmetric channels
+
+Boundary:
+This proves the representation-level lapse/shift/trace/shear block split. It does not prove Einstein/Regge dynamics for the block-localized Hessian.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=8 FAIL=0 TOTAL=8
+
+----- stderr -----
+

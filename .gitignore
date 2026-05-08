@@ -27,3 +27,4 @@ env/
 .claude/science/physics-loops/**/supervisor.lock
 .claude/science/physics-loops/**/supervisor.log
 .claude/science/physics-loops/**/supervisor_status.json
+.claude/scheduled_tasks.lock

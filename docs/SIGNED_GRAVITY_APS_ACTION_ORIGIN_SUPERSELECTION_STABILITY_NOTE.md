@@ -216,7 +216,9 @@ new dynamical zero-crossing exclusion theorem.
 ## New-Axiom Continuation
 
 The explicit new-axiom package is recorded in
-[`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md)
+`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md` (downstream follow-up
+artifact; cross-reference only — that note cites the retained-boundary
+no-go as its predecessor, not this audit)
 with runner
 [`../scripts/signed_gravity_aps_locked_axiom_extension_audit.py`](../scripts/signed_gravity_aps_locked_axiom_extension_audit.py).
 

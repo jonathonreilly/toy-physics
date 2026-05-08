@@ -292,7 +292,9 @@ First result:
 - [`../scripts/frontier_signed_gravity_source_variational_audit.py`](../scripts/frontier_signed_gravity_source_variational_audit.py)
   identifies the scalar-coupling variational source:
   `delta E / delta Phi = response_sign * epsilon|psi|^2`
-- [`GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md`](GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md)
+- `GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md` (downstream consumer
+  artifact derived from this backlog; cross-reference only — that note
+  cites `chi_selector` as its predecessor, not vice versa)
   records the local source-primitive block
 - positive Born/inertial density remains clean, with normalized packet Born
   charge `1.000000`
@@ -358,23 +360,37 @@ sector rather than by a local Pauli/taste label.
 
 Artifacts:
 
-- [`SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md`](SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md)
+- `SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md` (downstream consumer
+  artifact derived from this backlog; cross-reference only — that probe
+  cites this backlog and `chi_selector` as its predecessors, not vice versa)
 - [`../scripts/signed_gravity_boundary_coframe_chi_probe.py`](../scripts/signed_gravity_boundary_coframe_chi_probe.py)
 - [`SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md)
 - [`../scripts/signed_gravity_aps_boundary_index_probe.py`](../scripts/signed_gravity_aps_boundary_index_probe.py)
-- [`SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md)
+- `SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md` (downstream consumer
+  artifact derived from this backlog; cross-reference only — that probe
+  cites this backlog and `chi_selector` as its predecessors, not vice versa)
 - [`../scripts/signed_gravity_aps_wald_gauss_bridge_audit.py`](../scripts/signed_gravity_aps_wald_gauss_bridge_audit.py)
 - `SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md` (downstream consumer
   audit derived from this backlog; cross-reference only — that audit cites
   this backlog as its source target, not vice versa)
 - [`../scripts/signed_gravity_aps_locked_source_action_proposal.py`](../scripts/signed_gravity_aps_locked_source_action_proposal.py)
-- [`SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md)
+- `SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md` (downstream
+  consumer artifact derived from this backlog; cross-reference only — that
+  proposal cites the bridge audit as its predecessor, not vice versa)
 - [`../scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py`](../scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py)
-- [`SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md`](SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md)
+- `SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md`
+  (downstream consumer artifact derived from this backlog; cross-reference
+  only — that audit cites the locked-source-action proposal as its
+  predecessor, not vice versa)
 - [`../scripts/signed_gravity_retained_boundary_source_principle_nogo.py`](../scripts/signed_gravity_retained_boundary_source_principle_nogo.py)
-- [`SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md`](SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md)
+- `SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md`
+  (downstream consumer artifact derived from this backlog; cross-reference
+  only — that no-go cites the action-origin audit as its predecessor, not
+  vice versa)
 - [`../scripts/signed_gravity_aps_locked_axiom_extension_audit.py`](../scripts/signed_gravity_aps_locked_axiom_extension_audit.py)
-- [`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md)
+- `SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md` (downstream consumer
+  artifact derived from this backlog; cross-reference only — that extension
+  cites the boundary-principle no-go as its predecessor, not vice versa)
 - [`../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py`](../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py)
 - [`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md`](SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md)
 - [`../scripts/signed_gravity_source_character_uniqueness_theorem.py`](../scripts/signed_gravity_source_character_uniqueness_theorem.py)
@@ -386,7 +402,10 @@ Artifacts:
 - [`../scripts/signed_gravity_boundary_z2_flux_probe.py`](../scripts/signed_gravity_boundary_z2_flux_probe.py)
 - [`SIGNED_GRAVITY_BOUNDARY_Z2_FLUX_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_BOUNDARY_Z2_FLUX_CHI_PROBE_NOTE.md)
 - [`../scripts/signed_gravity_nonlocal_projector_charge_probe.py`](../scripts/signed_gravity_nonlocal_projector_charge_probe.py)
-- [`SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md)
+- `SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md` (downstream
+  consumer artifact derived from this backlog; cross-reference only — that
+  probe cites `chi_selector` and the boundary-target as its predecessors,
+  not vice versa)
 - [`SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md`](SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md)
 
 First result table:
@@ -679,7 +698,9 @@ Proposed artifacts:
 
 First result:
 
-- [`SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md`](SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md)
+- `SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md` (downstream consumer artifact
+  derived from this backlog; cross-reference only — that note cites
+  `chi_selector` as its predecessor, not vice versa)
   and [`SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md`](SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md)
   are landed
 - [`../scripts/signed_gravity_mechanism_separator.py`](../scripts/signed_gravity_mechanism_separator.py)
