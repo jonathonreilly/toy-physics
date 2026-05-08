@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 884 |
+| unaudited | 883 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 413 |
+| ~~audited_conditional~~ | 414 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 394 |
-| `audited_conditional` | 413 |
+| `audited_conditional` | 414 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 937 |
+| `unaudited` | 936 |
 
 | claim_type | count |
 |---|---:|
@@ -812,6 +812,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
@@ -9178,6 +9179,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `scripts/persistent_object_blended_readout_inner_source_boundary_probe.py`
   - `scripts/persistent_object_blended_readout_transfer_sweep.py`
 - **auditor confidence:** high
+
+### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded claim that a fixed blend = 0.25 top3 readout is admissible on the six nearby exact-family cases under the frozen gates, with no persistent inertial-mass closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e092e-b5d7-7383-a049-3f31cbcb5316`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The cached transfer sweep is asserted to reproduce the six fixed-blend top2/top3 cases at blend = 0.25, giving top3 admissible on 6/6 cases and top2 admissible on 1/6.  _(class `C`)_
+- **chain closes:** False — The restricted packet does not contain a completed transfer-sweep stdout or the transfer-sweep runner source for the six-case top2/top3 claim. The provided runner source is a boundary probe over four cases, top3 only, and multiple blends, so it does not establish the headline totals.
+- **rationale:** Issue: the note's decisive evidence is an unprovided cached transfer-sweep run, while the included runner is the boundary probe and timed out at the audit ceiling. Why this blocks: the supplied code cannot verify the six-case fixed-blend top2/top3 totals that make the bounded transfer claim true. Repair target: provide the actual transfer-sweep runner source and SHA-pinned completed cache/stdout, or rerun that exact six-case computation under the declared 1800 s budget. Claim boundary until fixed: at most the packet supports that a bounded transfer claim was asserted, not that the transfer sweep closed in this audit packet.
+- **auditor confidence:** medium
 
 ### `persistent_object_compact_inertial_probe_note_2026-04-16`
 
