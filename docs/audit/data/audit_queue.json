@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 59,
-    "high": 304,
+    "high": 303,
     "leaf": 193,
     "medium": 281
   },
@@ -2176,29 +2176,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_cosmology_open_number_reduction.py",
       "transitive_descendants": 47
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.268,
-      "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 108
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -22866,6 +22843,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 8,
-  "total_pending": 837
+  "ready_count": 7,
+  "total_pending": 836
 }

@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 825 |
+| unaudited | 824 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 448 |
+| ~~audited_conditional~~ | 449 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 448 |
+| `audited_conditional` | 449 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 874 |
+| `unaudited` | 873 |
 
 | claim_type | count |
 |---|---:|
@@ -784,6 +784,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -7920,6 +7921,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
   - `KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `koide_cl3_selector_gap_note_2026-04-19`
+
+- **Note:** [`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`](../../docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded selector-gap claim that the displayed Cl(3) doublet, baryon-Schur, SU(3)-coupling, and eigenvalue-degeneracy routes do not derive the charged-lepton point m_* ≈ -1.1605.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0576-df8a-74c2-81b9-9f0b991702a9`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The physical m_* is selected by phenomenological H_* witness kappa_* ≈ -0.608, and no Cl(3)-algebraic derivation of kappa_* has been found.  _(class `B`)_
+- **chain closes:** False — The packet supports an honest gap relative to the cited scalar-potential note, but the negative closeout imports uncited embedding machinery, H_sel/H_* witness data, baryon-coupling symmetry, and numerical route checks. The missing step is a retained theorem or runner showing these candidate routes are exactly exhausted from the stated Cl(3) primitives.
+- **rationale:** The cited authority is retained, but it explicitly limits its in-scope result to the local V(m) coefficient assignment and treats m_* and H_* witness inputs as out of scope. This source note relies on those admitted-context quantities and additional Cl(3)→SM embedding route checks without a runner or retained upstream authority in the restricted packet. The note is appropriately framed as a bounded gap/support note, but the stronger route-exhaustion claim does not close from the provided inputs alone.
 - **auditor confidence:** high
 
 ### `koide_cone_completing_root_narrow_theorem_note_2026-05-02`
