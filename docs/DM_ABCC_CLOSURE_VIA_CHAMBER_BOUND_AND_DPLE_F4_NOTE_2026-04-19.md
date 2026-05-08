@@ -410,3 +410,11 @@ asking for an intrinsic sign rule on `det H`. A-BCC is therefore no
 longer an independent axiom on the DM gate; it collapses into the
 intersection of two retained ingredients that the gate already
 requires.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_abcc_chamber_bound_derivation_note_2026-04-20](DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md)
+- [dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18](DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md)
+- [dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19](DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md)

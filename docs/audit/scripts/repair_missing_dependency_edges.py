@@ -44,16 +44,30 @@ def load_rows() -> dict[str, dict]:
     return ledger.get("rows", {})
 
 
-def build_resolvers(rows: dict[str, dict]) -> tuple[dict[str, str], dict[str, list[str]]]:
+def build_resolvers(
+    rows: dict[str, dict],
+) -> tuple[dict[str, str], dict[str, list[str]], dict[str, list[str]]]:
+    """Return (note_path_to_id, note_stem_to_ids, runner_path_to_ids).
+
+    The third map lets us resolve script paths (e.g. scripts/X.py) cited in
+    open_dependency_paths back to the docs/*.md row whose runner_path is
+    that script. The audit citation graph operates on docs notes, so the
+    correct repair edge is the owning docs note of the missing runner
+    script.
+    """
     path_to_id: dict[str, str] = {}
     stem_to_ids: dict[str, list[str]] = collections.defaultdict(list)
+    runner_to_ids: dict[str, list[str]] = collections.defaultdict(list)
     for cid, row in rows.items():
         note_path = row.get("note_path") or ""
         if not is_repairable_note_path(note_path):
             continue
         path_to_id[note_path.lower()] = cid
         stem_to_ids[PurePosixPath(note_path).stem.lower()].append(cid)
-    return path_to_id, stem_to_ids
+        runner_path = (row.get("runner_path") or "").strip()
+        if runner_path:
+            runner_to_ids[runner_path.lower()].append(cid)
+    return path_to_id, stem_to_ids, runner_to_ids
 
 
 def resolve_open_dependency_path(
@@ -61,6 +75,7 @@ def resolve_open_dependency_path(
     rows: dict[str, dict],
     path_to_id: dict[str, str],
     stem_to_ids: dict[str, list[str]],
+    runner_to_ids: dict[str, list[str]],
 ) -> str | None:
     raw = str(raw_path).strip()
     if not raw:
@@ -68,23 +83,36 @@ def resolve_open_dependency_path(
     raw = raw.replace("_not_registered_one_hop", "")
     if " -> " in raw:
         raw = raw.split(" -> ", 1)[0]
-    if not raw.lower().endswith(".md"):
-        return None
+    raw_low = raw.lower()
 
-    cid = path_to_id.get(raw.lower())
-    if cid is None:
-        matches = stem_to_ids.get(PurePosixPath(raw).stem.lower(), [])
-        if len(matches) != 1:
+    # Case 1: direct docs/*.md path
+    if raw_low.endswith(".md"):
+        cid = path_to_id.get(raw_low)
+        if cid is None:
+            matches = stem_to_ids.get(PurePosixPath(raw).stem.lower(), [])
+            if len(matches) != 1:
+                return None
+            cid = matches[0]
+        if not is_repairable_note_path(rows[cid].get("note_path") or ""):
+            return None
+        return cid
+
+    # Case 2: scripts/*.py path — resolve via runner_path of an existing row
+    if raw_low.endswith(".py"):
+        normalized = raw_low if raw_low.startswith("scripts/") else f"scripts/{raw_low}"
+        matches = runner_to_ids.get(normalized) or runner_to_ids.get(raw_low)
+        if not matches or len(matches) != 1:
             return None
         cid = matches[0]
+        if not is_repairable_note_path(rows[cid].get("note_path") or ""):
+            return None
+        return cid
 
-    if not is_repairable_note_path(rows[cid].get("note_path") or ""):
-        return None
-    return cid
+    return None
 
 
 def candidate_repairs(rows: dict[str, dict]) -> dict[str, list[str]]:
-    path_to_id, stem_to_ids = build_resolvers(rows)
+    path_to_id, stem_to_ids, runner_to_ids = build_resolvers(rows)
     repairs: dict[str, list[str]] = {}
     for cid, row in rows.items():
         if row.get("audit_status") != "audited_conditional":
@@ -95,7 +123,9 @@ def candidate_repairs(rows: dict[str, dict]) -> dict[str, list[str]]:
         direct_deps = set(row.get("deps") or [])
         targets: list[str] = []
         for open_path in row.get("open_dependency_paths") or []:
-            target = resolve_open_dependency_path(open_path, rows, path_to_id, stem_to_ids)
+            target = resolve_open_dependency_path(
+                open_path, rows, path_to_id, stem_to_ids, runner_to_ids
+            )
             if target and target != cid and target not in direct_deps and target not in targets:
                 targets.append(target)
         if targets:

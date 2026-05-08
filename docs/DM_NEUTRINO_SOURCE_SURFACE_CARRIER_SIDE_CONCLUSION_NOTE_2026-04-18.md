@@ -37,3 +37,10 @@ So the remaining carrier-side theorem gap is now minimal:
   two explicit split-2 upper-face neighborhoods.
 
 That is the honest carrier-side stopping point on the current branch.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17](DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md)
+- [dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18](DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md)

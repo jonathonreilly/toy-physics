@@ -130,3 +130,11 @@ normal-form bundle.
 ```bash
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16](DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_PREIMAGE_BUNDLE_THEOREM_NOTE_2026-04-16.md)
+- [dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15](DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md)

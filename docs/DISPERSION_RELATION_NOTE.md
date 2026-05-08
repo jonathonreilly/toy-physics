@@ -128,3 +128,9 @@ The original analysis (2D only) concluded "decisively non-relativistic." The 3D 
 > actual geometry, we cannot rule out either relativistic or non-relativistic
 > dispersion. The lensing slope −1.43 cannot be attributed to either
 > regime with current data."
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [3d_correction_master_note](3D_CORRECTION_MASTER_NOTE.md)

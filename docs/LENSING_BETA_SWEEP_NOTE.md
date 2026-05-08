@@ -156,3 +156,10 @@ Promoting from bounded conditional to retained would require:
 3. Replacing absolute-path artifact links with relative paths inside
    the audit packet.
 4. Extending or explicitly bounding the family / `b` coverage.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [lensing_deflection_note](LENSING_DEFLECTION_NOTE.md)
+- [kubo_continuum_limit_note](KUBO_CONTINUUM_LIMIT_NOTE.md)

@@ -82,3 +82,10 @@ What it *does* prove is the stronger tested-scale statement needed now:
 
 That means the remaining status question is no longer structural. It is purely
 about the size and interpretation of the remaining explicit bridge budget.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_exact_coarse_grained_bridge_operator_note](YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md)
+- [yt_exact_schur_normal_form_uniqueness_note](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md)
