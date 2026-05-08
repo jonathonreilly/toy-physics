@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 856 |
+| unaudited | 855 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 430 |
+| ~~audited_conditional~~ | 431 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 430 |
+| `audited_conditional` | 431 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 905 |
+| `unaudited` | 904 |
 
 | claim_type | count |
 |---|---:|
@@ -828,6 +828,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | E | - |
@@ -9547,6 +9548,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The corrected persistent-record refinement stack improves the residual-connection soft lane modestly, with side+packet+entry at N=18 and gamma=1.0 reaching purity 0.7213, but it still does not beat the node-label baseline at 0.7121.  _(class `C`)_
 - **chain closes:** True — Fresh runner executions reproduced both load-bearing checks: the corrected matched N=8,12,18 table for node, side+packet, and side+packet+entry variants, and the targeted N=18 gamma sweep showing gamma=1.0 beats exact trace while gamma=1.5 and 2.0 worsen.
 - **rationale:** Clean within the note's bounded refinement scope. The note does not claim a new raw decoherence winner; it claims the corrected first-hit side/packet/entry marker stack is a modest real improvement in the residual-connection architecture while still trailing node-label on the tested N=18 row. Current runner output reproduces the matched table and the targeted gamma sweep exactly, including node=0.7121 versus side+packet+entry gamma=1.0 at 0.7213 and worse results at gamma=1.5 and 2.0. Residual risk is the declared bounded two-seed matched slice and the lack of asymptotic or broader-geometry closure.
+- **auditor confidence:** high
+
+### `persistent_record_sidebit_note`
+
+- **Note:** [`PERSISTENT_RECORD_SIDEBIT_NOTE.md`](../../docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that adding one persistent packet-side bit modestly improves the soft-overlap persistent-record lane on the N=8,12,18 matched slice without becoming the raw purity winner.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0741-3fd7-7880-8303-da186742c63c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The side-bit soft-overlap lane improves the persistent gamma=1.0 values on the bounded matched slice, e.g. N=12: 0.6099 -> ~0.569 and N=18: 0.7314 -> ~0.727, while still not beating node-label.  _(class `B`)_
+- **chain closes:** False — The packet contains retained bounded parents for the baseline matched comparison and overlap-kernel model, but it does not include the side-bit runner output or log that generated the new side-bit values. The missing step is an included computation or retained authority verifying the side-bit table and its implementation.
+- **rationale:** Issue: the load-bearing improvement rests on new side-bit numerical rows that are asserted in the note but not backed by runner stdout, runner source, or an included retained log in the restricted packet. Why this blocks: the cited parents establish only the baseline persistent-record and matched-comparison context, not the claimed side-bit refinement results. Repair target: include the side-bit matched-compare log or runner output/source as a primary artifact showing the side-bit rows are computed from the stated geometry. Claim boundary until fixed: this remains a plausible bounded refinement note, not an audited closed bounded theorem.
 - **auditor confidence:** high
 
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`

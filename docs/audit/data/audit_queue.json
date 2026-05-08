@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 84,
     "high": 301,
-    "leaf": 198,
+    "leaf": 197,
     "medium": 285
   },
   "cycle_break_target_count": 46,
@@ -18687,30 +18687,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "persistent_record_sidebit_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "persistent_record_matched_compare_note",
-        "persistent_record_overlap_kernel_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "fermion_parity_z2_grading_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -23874,6 +23850,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 2,
-  "total_pending": 868
+  "ready_count": 1,
+  "total_pending": 867
 }
