@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 830 |
+| unaudited | 829 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 443 |
+| ~~audited_conditional~~ | 444 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 443 |
+| `audited_conditional` | 444 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 879 |
+| `unaudited` | 878 |
 
 | claim_type | count |
 |---|---:|
@@ -537,6 +537,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -1772,6 +1773,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
   - `AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
   - `MINIMAL_AXIOMS_2026-04-11.md`
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claimed lattice reflection positivity, Hilbert reconstruction, and vacuum-subtracted transfer-matrix spectrum condition for the canonical staggered+Wilson plus Wilson-plaquette A_min action.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e056b-9ef7-7523-8302-1de85e03f7c8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The combined-sector RP proof quotes det(M) >= 0 on the canonical staggered+Wilson surface as the input that makes the gauge and fermion factorisations combine into a positive measure.  _(class `B`)_
+- **chain closes:** False — The chain closes for the staggered-only determinant argument as stated, but not for the full canonical staggered+Wilson claim. The missing step is a retained closed-form bridge deriving det(M_KS + M_W + mI) >= 0 and the full STW/Menotti factorisation for that exact operator from the restricted A_min inputs.
+- **rationale:** The note itself says the full staggered+Wilson determinant-positivity step is runner-supported rather than derived in closed form, and the cited bridge note that is supposed to repair this is not provided as a retained one-hop authority. The supplied runner checks simplified or finite representatives, including U(1), 1+1D free staggered systems, and well-conditioned determinant samples; it does not construct a first-principles proof of RP for the full SU(3) staggered+Wilson A_min action. Therefore the theorem-level claim imports an unclosed determinant-positivity and factorisation bridge for the full canonical surface.
+- **open / conditional deps cited:**
+  - `STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`
 - **auditor confidence:** high
 
 ### `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03`
