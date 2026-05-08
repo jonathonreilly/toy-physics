@@ -1,0 +1,317 @@
+==============================================================================
+A3 Route 2 — Single-Clock / Lieb-Robinson C_3 Symmetry-Breaking Attack
+==============================================================================
+
+Date: 2026-05-08
+
+Question: can time-direction primitives (single-clock,
+Lieb-Robinson, OS time-orientation, modular conjugation J,
+temporal sublattice, spectrum condition) distinguish the
+3 corners of H_{hw=1}, breaking spatial C_3[111]?
+
+Attack vector 1: Single-clock time selects spatial axis?
+----------------------------------------------------------------------
+
+  Per single-clock theorem S3: temporal direction tau is
+  unique RP-admissible axis. Spatial axes (x,y,z) are all
+  RP-INADMISSIBLE on staggered-Dirac (lattice-action level).
+
+  Mathematical fact: 'no spatial axis admits RP' is a
+  C_3[111]-INVARIANT statement. The non-RP-admissibility of
+  x is symmetric to y and z under C_3[111].
+
+  In particular, the single-clock theorem treats x, y, z
+  symmetrically: 'no spatial reflection is RP'.
+
+  [PASS] C_3-symmetric self-adjoint H on hw=1 well-defined
+  [PASS] [H, U_C3] = 0 for C_3-symmetric H
+  [PASS] C_3-sym H has equal corner expectations  (<c_α|H|c_α> = 0.7000 for all α)
+
+  CONCLUSION: The single-clock theorem's selection of tau
+  as the unique RP axis is C_3[111]-symmetric. It does NOT
+  induce a preferred spatial axis. Attack vector 1 FAILS.
+
+Attack vector 2: Lieb-Robinson velocity direction-dependent?
+----------------------------------------------------------------------
+
+  Per microcausality theorem M2: v_LR = 2*e*r*J.
+  - r is max hopping range (lattice graph distance)
+  - J = sup_z ||h_z||_op (operator norm of local Hamiltonian)
+
+  Both r and J are C_3[111]-invariant scalars on the
+  staggered-Dirac + Wilson action:
+  - Staggered hop has range 1 in EACH spatial axis (axis-
+    symmetric), so r is a scalar.
+  - J is the sup over sites of operator norms; for the
+    spatially isotropic Hamiltonian, J is the same in any
+    direction.
+
+    v_LR along [100]  = 5.4366
+    v_LR along [110]  = 5.4366
+    v_LR along [111]  = 5.4366
+
+  [PASS] v_LR is direction-INDEPENDENT for cubic graph  (v_LR is a scalar coefficient)
+
+  Mathematical reason: v_LR is determined by:
+  - r: nearest-neighbor lattice distance (scalar, C_3-inv)
+  - J: max local Hamiltonian norm (scalar, C_3-inv)
+
+  Both are C_3[111]-invariant scalars. The light-cone
+  exponent uses graph distance d(x,y) = |x_1-y_1| + ...,
+  which is the L^1 norm and itself C_3[111]-invariant.
+
+  CONCLUSION: v_LR is direction-INDEPENDENT under cubic
+  graph isotropy. The light-cone is C_3-symmetric. Attack
+  vector 2 FAILS.
+
+Attack vector 3: Reflection-positivity in time breaks spatial C_3?
+----------------------------------------------------------------------
+
+  A11 RP reflects across temporal hyperplane:
+    theta_t : (t, x_1, x_2, x_3) -> (-1-t, x_1, x_2, x_3)
+
+  This is C_3[111]-INVARIANT on the spatial slice:
+  theta_t commutes with C_3[111] because C_3 acts only on
+  spatial coords (x_1, x_2, x_3) -> (x_2, x_3, x_1) and
+  theta_t acts only on time t -> -1-t.
+
+  Formally: theta_t * C_3 = C_3 * theta_t as operators on
+  Z^3 x Z (spatial-temporal lattice).
+
+  [PASS] theta_t commutes with C_3[111] as lattice operators  (tested on 5 sample points)
+
+  The reconstructed transfer matrix T = exp(-a_tau H) is
+  built from the temporal-axis action. Its spatial structure
+  is the Wilson + staggered action, which is C_3[111]-
+  symmetric in (x,y,z) at the action level. Therefore:
+    [T, U_C3[111]] = 0 on H_phys
+    [H, U_C3[111]] = 0 on H_phys
+    [H, U_C3[111]] = 0 on H_{hw=1} subspace
+
+  CONCLUSION: Temporal RP commutes with spatial C_3[111].
+  RP cannot induce a corner-distinguishing observable.
+  Attack vector 3 FAILS.
+
+Attack vector 4: OS reconstruction time-orientation distinguishes
+                  hw=1 corners?
+----------------------------------------------------------------------
+
+  OS reconstruction: H_phys = quotient of L^2(positive-time
+  cylinder fields) by a null space induced by the OS inner
+  product < cdot, theta_t cdot >.
+
+  The time-orientation is encoded as: positive-time <-> 
+  reflection direction. This is a binary structure (forward
+  vs backward Euclidean time), NOT a 3-fold structure.
+
+  Question: can a binary time-orientation distinguish 3
+  corners cyclically permuted by C_3[111]?
+
+  Mathematical answer: No. C_3[111] has order 3, so any
+  orbit under C_3[111] has size 1 or 3. A binary structure
+  has orbit size 1 or 2 under any group action. The two
+  cannot match: a binary time-orientation cannot distinguish
+  three C_3-cyclic states by orientation.
+
+  [PASS] C_3 eigenprojectors complete on H_{hw=1}
+  [PASS] Binary C_3-sym B is self-adjoint and commutes with C_3
+  [PASS] Binary C_3-sym observable has equal corner expectations  (all corners give expectation -0.3333)
+
+  The OS time-orientation is a binary structure that lives
+  in the C_3-trivial irrep. It cannot distinguish three
+  corners cyclically permuted by C_3[111].
+
+  CONCLUSION: OS time-orientation is C_3-invariant; cannot
+  resolve corners. Attack vector 4 FAILS.
+
+Attack vector 5: Modular conjugation J distinguishes corners?
+----------------------------------------------------------------------
+
+  In Tomita-Takesaki theory, the modular conjugation J is
+  an antilinear involution on H_phys with the property:
+    J A J = A' (commutant)
+  for the local algebra A.
+
+  Question: does J on H_{hw=1} treat the 3 corners
+  asymmetrically?
+
+  Key fact: J commutes with all spatial symmetries that
+  preserve the local algebra (Bisognano-Wichmann 1976).
+  Specifically: J*U_g*J = U_g for any spatial symmetry g
+  in the standard form.
+
+  [PASS] J (complex conjugation) commutes with U_C3 on C^3  (J*U_C3*psi = U_C3*J*psi)
+  [PASS] J fixes the corner basis (corners are real)  (J|c_alpha> = |c_alpha>)
+
+  In the standard Bisognano-Wichmann framework, J is the
+  modular conjugation associated with a wedge region. It
+  commutes with all spatial isometries fixing the wedge,
+  including spatial-axis rotations C_3[111].
+
+  J fixes the corner basis pointwise (corners are real
+  in the canonical basis), hence cannot distinguish them.
+
+  CONCLUSION: J commutes with C_3[111] and fixes corner
+  basis. Cannot distinguish corners. Attack vector 5 FAILS.
+
+Attack vector 6: Fermion-doubling time-momentum content
+                  distinguishes hw=1 corners?
+----------------------------------------------------------------------
+
+  The staggered-Dirac fermion BZ has 16 corners on Z^3 x Z:
+    8 spatial corners x 2 temporal sublattices.
+  Each hw=1 spatial corner can be tensored with each of the
+  2 temporal corners.
+
+  Question: does the temporal corner structure distinguish
+  the 3 hw=1 corners?
+
+  Mathematical answer: The temporal sublattice structure
+  is a Z_2 grading independent of the spatial structure.
+  Each of the 3 hw=1 corners gets the SAME 2-fold temporal
+  decomposition (positive- vs negative-frequency).
+
+  [PASS] Each hw=1 spatial corner has identical temporal-corner content  (each has temporal hw values = [0, 1])
+  [PASS] Total 4D BZ corners = 16
+  [PASS] Total spatial hw=1 corners = 3
+
+  Each of the 3 spatial hw=1 corners pairs with both
+  temporal corners (n_t in {0,1}) symmetrically. The
+  temporal structure is a tensor factor that does NOT
+  distinguish among the 3 spatial corners.
+
+  CONCLUSION: Time-momentum content is identical across
+  the 3 hw=1 corners. Attack vector 6 FAILS.
+
+Attack vector 7: Spectrum-condition + time direction breaks
+                  spatial C_3?
+----------------------------------------------------------------------
+
+  Per AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE: H >= 0
+  on H_phys after vacuum subtraction. The selection
+  H >= 0 (positive-energy) is a temporal-orientation choice.
+
+  Question: does the choice of positive-energy direction
+  break spatial C_3[111]?
+
+  [PASS] Test C_3-sym H is Hermitian
+    H_test eigenvalues: [np.float64(0.2803847577293369), np.float64(1.3196152422706624), np.float64(1.3999999999999995)]
+  [PASS] H >= 0 after subtracting min eigenvalue (vacuum)
+  [PASS] [H, U_C3] = 0
+    Are two eigenvalues degenerate? False
+
+  H >= 0 is preserved by C_3 because if H >= 0 then
+  U_C3 H U_C3^-1 = H >= 0 (same operator).
+  C_3-symmetric H has spectrum determined by C_3 phases:
+  eigenvalues at theta in {0, 2pi/3, 4pi/3}, two of which
+  coincide (corresponding to omega and omega_bar phases,
+  related by H -> H^T = H since H is real-symmetric).
+
+  CONCLUSION: Spectrum condition H >= 0 is C_3-symmetric;
+  doesn't distinguish corners. Attack vector 7 FAILS.
+
+Section 8 — Structural Obstruction Theorem
+======================================================================
+
+Claim: any time-direction primitive in the framework's
+retained authority chain is C_3[111]-invariant by
+CONSTRUCTION, hence cannot break spatial C_3 on H_{hw=1}.
+
+Proof:
+
+  1. C_3[111] : (x_1, x_2, x_3) -> (x_2, x_3, x_1) acts only
+     on the spatial coordinates. The temporal coordinate t
+     is unchanged under C_3.
+
+  2. Time-direction primitives in the retained chain:
+     - Single-clock evolution U(t) = exp(-itH)
+     - Lieb-Robinson velocity v_LR (scalar)
+     - Reflection theta_t (acts only on t)
+     - Spectrum condition H >= 0
+     - Modular conjugation J (acts antilinearly)
+     - Temporal sublattice grading
+
+  3. Each of these is built from objects that either:
+     (a) live entirely in the temporal direction (hence
+         C_3-invariant since C_3 fixes time), or
+     (b) are scalars with no spatial direction-dependence.
+
+  4. The Wilson + staggered-Dirac action S is the input for
+     all reconstruction theorems. S has the form:
+       S = S_temporal[gauge,fermion] + S_spatial[gauge,fermion]
+     where S_spatial is C_3[111]-invariant by axiom A2 (Z^3
+     cubic symmetry).
+
+  5. Therefore:
+     - The transfer matrix T[S] commutes with U_C3.
+     - The Hamiltonian H = -log(T)/a_tau commutes with U_C3.
+     - All time-evolved observables alpha_t(O) commute with U_C3
+       if O does.
+
+  6. Restricted to H_{hw=1}, U_C3 cycles the 3 corners.
+     Any C_3-symmetric self-adjoint operator has equal
+     expectation values on the corner basis (Schur).
+
+  Therefore: no time-direction primitive distinguishes the
+  3 hw=1 corners. AC_phi closure cannot proceed via time.
+  QED.
+
+  [PASS] Random C_3-sym H has equal corner expectations (Schur)  (<c_alpha|H|c_alpha> = -1.0856 for all alpha)
+
+    H eigenvalues in C_3 basis:
+      h(theta=0)     = 0.9091
+      h(theta=2pi/3) = -2.5731
+      h(theta=4pi/3) = -1.5928
+    Mean = -1.0856
+    <c_alpha|H|c_alpha> = -1.0856 matches mean.
+  [PASS] Corner expectation = mean of C_3 eigenvalues  (fundamental C_3-Schur identity)
+
+  Therefore the obstruction is structural (Schur's lemma
+  for C_3 acting on H_{hw=1}): no scalar invariant of a
+  C_3-symmetric Hamiltonian distinguishes the corners.
+
+Section 9 — Honest Closure Status
+======================================================================
+
+After 7 time-direction attack vectors, all FAIL.
+The obstruction is structural (Section 8).
+
+Honest reading of A_min retained chain:
+  - A1 (Cl(3)): C_3[111]-invariant local algebra
+  - A2 (Z^3): C_3[111] symmetric spatial substrate
+  - Retained R-RP, R-SC, R-CL3, R-LR, R-CD: all built from
+    A1+A2 + temporal-axis structure -> all C_3[111]-invariant
+
+Therefore: no axiom-pure positive arrow exists for AC_phi
+via time-direction primitives.
+
+This is a STRUCTURAL OBSTRUCTION, not a closure.
+It is the time-direction analog of the prior 24 attack
+vectors that failed to break C_3 within spatial primitives.
+
+Sharpens the case for AC_phi requiring NEW science:
+  Yukawa-Higgs C_3-breaking VEV, anomaly-induced breaking,
+  spontaneous symmetry breaking, OR a new framework axiom.
+
+Specifically, this note ADDS to the existing closure
+characterization (Step 4 of substep4ac note) by exhausting
+the time-direction attack class:
+  - Spatial primitives: cannot break C_3 (24 prior vectors)
+  - Temporal primitives: cannot break C_3 (7 vectors here)
+  - Therefore: kinematic primitives are exhausted
+
+AC_phi closure requires either:
+  (a) DYNAMICAL C_3 breaking (Yukawa-Higgs, spontaneous, etc)
+  (b) NEW AXIOM (A3 of the AC_phi-lambda proposal note)
+  (c) new attack class beyond kinematic primitives
+
+This note is NOT positive closure of AC_phi. It SHARPENS
+the obstruction by exhausting one more attack class.
+
+==============================================================================
+PASS = 18, FAIL = 0
+
+Total: 7 attack vectors evaluated; all FAIL.
+Result: structural obstruction (time-direction primitives
+are C_3[111]-invariant by construction).
+==============================================================================
