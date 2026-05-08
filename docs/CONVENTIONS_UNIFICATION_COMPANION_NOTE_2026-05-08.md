@@ -108,20 +108,23 @@ This note is explicit that the import-elimination story above is
   retained on main as a closed derivation. Whether the framework's
   primitive layer (`Cl(3)/Z³` + 3+1 single-clock + Lieb-Robinson +
   retained gravitational-phase content) forces a unique fundamental
-  length is open; relevant work is in flight in the
-  `outputs/` directory and prior gravity-from-phase notes.
+  length is open; the audit-lane status of relevant notes (e.g.,
+  `PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30`)
+  is currently `audited_renaming` rather than retained.
 - **Dimensionless ratio derivations** for charged-lepton masses (the
   Option C parameter targets A1, P1, δ, v_0) are open research
   targets, not retained closures. Their reclassification under
   preserved-`C_3` (per the C_3 preserved interpretation note) tracks
-  them as parameter-pinning frontiers; this companion note adds that
-  the *form* of those frontiers is dimensionless-ratio derivation,
-  not scale-anchor admission, *if* Planck-from-structure closes.
-- **Hierarchy-problem-class ratios** (e.g., `m_e / m_P ≈ 4 × 10⁻²³`)
-  are a known hard problem in physics generally. This note does not
-  claim the framework solves them; it observes that under the
-  Planck-derived framing, such ratios are the *form* of what's open,
-  not a separate scale-anchor admission.
+  them as parameter-pinning frontiers.
+
+**On the EW–Planck hierarchy**: the framework retains the structural
+derivation `v_EW = M_Pl × (7/8)^(1/4) × α_LM^16 = 246.28 GeV` per
+`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`. Under that retained
+derivation, `v_EW / M_Pl` is *not* a separate import; it is a
+structural consequence of the taste-determinant exponent and α_LM. This
+note does not opine on which dimensionless ratios across physics
+generally are "hard"; it tracks only what the audit ledger marks as
+retained, bounded, or open on the framework's own surface.
 
 ## Application to ongoing review
 

@@ -14,7 +14,7 @@ PASS: labeling-convention analogue cited: K_S
 PASS: Planck-from-structure escape mentioned
 PASS: Planck escape stated conditionally
 PASS: Planck-derivation explicitly NOT claimed retained
-PASS: hierarchy-problem-class ratios disclaimer present
+PASS: EW-Planck hierarchy retained-derivation cited (no opining)
 PASS: no PDG numerical mass values inserted as derivation input
 PASS: explicitly references substep-4 AC narrowing
 PASS: explicitly disclaims PDG-input use

@@ -125,8 +125,8 @@ def main() -> int:
         "is not retained on main" in note or "not retained" in note,
     )
     check(
-        "hierarchy-problem-class ratios disclaimer present",
-        "hierarchy-problem" in note.lower() or "Hierarchy-problem-class" in note,
+        "EW-Planck hierarchy retained-derivation cited (no opining)",
+        "v_EW = M_Pl" in note and "COMPLETE_PREDICTION_CHAIN_2026_04_15" in note,
     )
 
     # ---- audit hygiene: no PDG numerical loading ----
