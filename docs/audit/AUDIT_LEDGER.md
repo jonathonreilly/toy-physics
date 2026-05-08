@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 69 |
-| **retained_no_go** | 121 |
+| **retained_no_go** | 122 |
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 878 |
+| unaudited | 877 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 395 |
+| `audited_clean` | 396 |
 | `audited_conditional` | 417 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 931 |
+| `unaudited` | 930 |
 
 | claim_type | count |
 |---|---:|
@@ -134,6 +134,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
@@ -2227,6 +2228,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
+
+### `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26`
+
+- **Note:** [`CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md`](../../docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the negative boundary that one-Higgs gauge selection plus the existing top-Ward template permits the charged-lepton operator but leaves Y_e free and does not derive y_tau.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0939-7e97-7fa1-844e-1a8e8bf1ed87`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Gauge selection leaves Y_e as an arbitrary complex 3 x 3 generation matrix, so it cannot select a tau Yukawa eigenvalue or lift the top Ward factor without an additional generation/source primitive.  _(class `A`)_
+- **chain closes:** True — The no-go closes as an algebraic obstruction: the allowed charged-lepton monomial is generation-blind, all Y_e entries have the same gauge quantum numbers, and the colorless charged-lepton normalization gives 1 or 2 rather than the top-sector 6. Thus a direct top-Ward lift cannot determine y_tau without an extra primitive.
+- **rationale:** The load-bearing step is an algebraic no-go, not a positive mass derivation: gauge invariance selects the operator skeleton but leaves the generation matrix free. The runner materially checks the hypercharge sums, entrywise generation freedom, basis-rotation invariance, and normalization mismatch rather than hard-coding a target y_tau value. Comparator charged-lepton masses are explicitly firewalled from the proof inputs, so the audited boundary is only that the direct lift fails, not any charged-lepton mass closure.
+- **auditor confidence:** medium
 
 ### `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27`
 
