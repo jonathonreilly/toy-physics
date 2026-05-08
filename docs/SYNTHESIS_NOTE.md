@@ -1,5 +1,100 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
+## Audit scope
+
+This file is an **overview / index** of an earlier program-phase
+synthesis. It is **not** a single retained theorem and **must not** be
+audited as one. The auditor (`synthesis_note`,
+`audit_status=audited_conditional`, `claim_type=meta`) flagged this row
+as `scope_too_broad`. The auditor's repair target reads, verbatim:
+
+> scope_too_broad: split this synthesis note into atomic retained
+> claims and provide each claim's cited runner note, frozen runner
+> source, stdout/certificate, and current audit-ledger row.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an overview/index rather than to physically split it into atomic
+retained-claim files. Splitting is editorial work that belongs in a
+dedicated review-loop pass (it would create new audit rows, runner
+manifests, and certificates per claim, none of which can be safely
+fabricated here). Until that split is performed:
+
+- This file makes **no** retained-claim assertions of its own.
+- Every quantitative readout, table, and "established" / "publishable"
+  enumeration below is **historical program memory only**.
+- The retained-status surface is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-runner notes, **not**
+  this file.
+- Where a sub-claim has a dedicated audit-clean note, this index
+  points to it; where it does not, it is marked as having no
+  separate audit-clean claim yet.
+
+### Per-claim index (sub-claims referenced in this synthesis)
+
+The list below pairs each thematic sub-claim mentioned in this file
+with the dedicated note(s) where its current audit-clean status, if
+any, lives. Inclusion in this index is **not** a status assertion:
+the live status is whatever the audit ledger row for the linked note
+says today.
+
+- **Gravity signal on uniform DAGs (peaked response, sublinear mass
+  window, distance falloff)** — see
+  [`GRAVITY_LAW_CLEANUP_NOTE.md`](GRAVITY_LAW_CLEANUP_NOTE.md),
+  [`GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md),
+  [`HARD_GEOMETRY_GRAVITY_WINDOW_NOTE.md`](HARD_GEOMETRY_GRAVITY_WINDOW_NOTE.md).
+  The narrative `F ∝ M`, `delta ~ b^(-1.93)`, and `5.1 SE @ N=30`
+  rollups in this file are program-memory, not retained law.
+- **Linear-path-sum decoherence ceiling, `(1 - pur_min) ≈ 1.64 × N^(-1.01)`** —
+  see [`DECOHERENCE_DECISION_NOTE.md`](DECOHERENCE_DECISION_NOTE.md),
+  [`DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md),
+  [`MATCHED_2D_4D_DECOHERENCE_NOTE.md`](MATCHED_2D_4D_DECOHERENCE_NOTE.md).
+- **Layer-normalization as Born-safe regulator** — no separate
+  audit-clean retained-claim note tracked here yet; treat as
+  historical program memory.
+- **Hard-geometry / mirror-chokepoint / channel separation as the
+  joint-coexistence enabler** — see
+  [`MIRROR_CHOKEPOINT_NOTE.md`](MIRROR_CHOKEPOINT_NOTE.md),
+  [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md),
+  [`MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`](MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md),
+  [`HARD_GEOMETRY_GRAVITY_WINDOW_NOTE.md`](HARD_GEOMETRY_GRAVITY_WINDOW_NOTE.md).
+- **Generated asymmetry-persistence as a gravity-side lane** — see
+  the `ASYMMETRY_PERSISTENCE_*` family
+  ([`ASYMMETRY_PERSISTENCE_BORN_NOTE.md`](ASYMMETRY_PERSISTENCE_BORN_NOTE.md),
+  [`ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md`](ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md),
+  [`ASYMMETRY_PERSISTENCE_JOINT_CARD_NOTE.md`](ASYMMETRY_PERSISTENCE_JOINT_CARD_NOTE.md),
+  [`ASYMMETRY_PERSISTENCE_MASS_SCALING_NOTE.md`](ASYMMETRY_PERSISTENCE_MASS_SCALING_NOTE.md),
+  [`ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md`](ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md),
+  [`ASYMMETRY_PERSISTENCE_PILOT_NOTE.md`](ASYMMETRY_PERSISTENCE_PILOT_NOTE.md)).
+- **Stochastic collapse as a bounded helper (not asymptotic rescue)** —
+  no separate audit-clean retained-claim note for the collapse-as-rescue
+  reading; treat as historical program memory. The sign/no-go boundary
+  side is partially covered by
+  [`ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md`](ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md).
+- **3D / higher-dimensional generalization** — see
+  [`SYNTHESIS_NOTE_3D.md`](SYNTHESIS_NOTE_3D.md) (itself flagged
+  conditional in the audit ledger),
+  [`DIMENSIONAL_GRAVITY_TABLE.md`](DIMENSIONAL_GRAVITY_TABLE.md),
+  [`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md),
+  [`MATCHED_2D_4D_DECOHERENCE_NOTE.md`](MATCHED_2D_4D_DECOHERENCE_NOTE.md).
+  The "4D escapes the ceiling" and "Dimensional Selection Principle"
+  sub-sections below are program memory, not retained law.
+- **Full Axiom Chain Closure (2026-04-03) rollup** — no separate
+  audit-clean note exists for the axiom-by-axiom closure as a single
+  claim; treat as historical program memory.
+- **Dimensional Selection Principle (d=3 uniqueness)** — no separate
+  audit-clean retained-claim note exists for the uniqueness reading;
+  treat as historical program memory.
+- **Honest-assessment "seven publishable quantitative results"
+  enumeration** — this is a *summary* of the items above and inherits
+  their per-claim status. It is not itself a retained surface.
+
+A future review-loop pass should physically split this document into
+the atomic per-claim files implied above, register a runner manifest
+and certificate per claim, and open one audit row per atomic claim.
+That is **out of scope** for this conditional-row repair.
+
+---
+
 **Date:** 2026-04-03
 **Status:** support - structural narrative / historical synthesis only
 This note is **not** a current retained-claim surface. It is a running
@@ -40,6 +135,11 @@ D = exp(-lambda² × S) where S is bin-resolved contrast of per-slit
 amplitude distributions.
 
 ## Current retained read
+
+> **Index notice:** see the **Audit scope** block at the top of this
+> file. Per that block, every bullet below is *historical program
+> memory* and inherits status from the per-claim notes listed in the
+> per-claim index, not from this file.
 
 This note started as a running synthesis and still contains some historical
 claims below. The review-safe current read is:
@@ -205,6 +305,11 @@ ABSENCE of nodes, not by node properties.
 
 ## What is established
 
+> **Index notice:** see the **Audit scope** block at the top of this
+> file. The items listed below are *historical program memory*; their
+> live retained status is whatever the per-claim notes in the
+> per-claim index report today.
+
 1. **Gravity signal:** retained on uniform DAGs at intermediate `N`, with the
    strongest artifact-backed row at `N=30` (`5.1 SE`). The exact distance-law
    and mass-law story remains narrowed by the later fixed-geometry and
@@ -360,6 +465,12 @@ This is a real physics trade-off, not a parameter-tuning issue.
 
 ## Honest assessment
 
+> **Index notice:** see the **Audit scope** block at the top of this
+> file. The "seven publishable quantitative results" enumeration
+> below is *historical program memory* and is **not** a retained
+> theorem-set surface. Each item inherits status from its per-claim
+> note in the per-claim index above.
+
 This is a reduced computational model with seven publishable quantitative results:
 
 1. **Gravity from phase:** deflection via phase valley mechanism,
@@ -397,6 +508,11 @@ artifact, not a fundamental property of path-sum propagation.
 
 ## Full Axiom Chain Closure (2026-04-03)
 
+> **Index notice:** see the **Audit scope** block at the top of this
+> file. The axiom-by-axiom rollup below is *historical program
+> memory*; no audit-clean note exists for this rollup as a single
+> claim.
+
 ALL axioms now close on locally-grown geometric DAGs:
 
 | Axiom | Implementation | Status |
@@ -418,6 +534,10 @@ N=18: pur_min = 0.949 (5.1% decoherence)
 Nothing imposed. Everything from axioms.
 
 ## Dimensional Selection Principle (2026-04-03)
+
+> **Index notice:** see the **Audit scope** block at the top of this
+> file. The d=3 uniqueness reading below is *historical program
+> memory*; no audit-clean note exists for the uniqueness reading.
 
 d=3 transverse dimensions (3+1 spacetime) is the UNIQUE dimension
 where both gravity and decoherence coexist on grown event-networks:
