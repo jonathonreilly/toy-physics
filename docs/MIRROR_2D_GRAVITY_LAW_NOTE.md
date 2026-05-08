@@ -1,8 +1,10 @@
 # Exact 2D Mirror Gravity-Law Cleanup Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict; cleanup runner cached output added 2026-05-08)
 **Status:** bounded null-result note — gravity-law cleanup found no clean 2D mirror mass law and no clean 2D mirror distance law on the searched windows.
-**Primary runner:** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator; companion: mirror_2d_gravity_law_cleanup.py (slow))
+**Primary runner:** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator)
+**Cleanup runner:** [`scripts/mirror_2d_gravity_law_cleanup.py`](../scripts/mirror_2d_gravity_law_cleanup.py) — slow gravity-law cleanup sweep that produced the N=60/80/100 mass-window and distance-tail fits below.
+**Cached cleanup log:** [`logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt`](../logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt) — completed stdout reproducing every fit row in the "Retained result" section.
 
 This note freezes the exact 2D mirror gravity-law cleanup lane.
 
