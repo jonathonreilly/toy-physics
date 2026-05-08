@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 822 |
+| unaudited | 821 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 451 |
+| ~~audited_conditional~~ | 452 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 451 |
+| `audited_conditional` | 452 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 871 |
+| `unaudited` | 870 |
 
 | claim_type | count |
 |---|---:|
@@ -865,6 +865,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_oriented_cycle_selection_structure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `pmns_selector_unique_amplitude_slot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `pmns_three_flux_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `poisson_exhaustive_uniqueness_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -10240,6 +10241,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note explicitly assumes PMNS selector class-space uniqueness, but the restricted packet lists no one-hop dependencies, so the central premise is not closed inside the audit packet. The runner partly hard-codes the reduced constraints and basis, then performs algebraic reconstruction, and separately checks text in external notes not provided here; it does not independently derive the upstream uniqueness theorem from retained primitives. Within the stated reduced scope, the one-real-amplitude conclusion follows conditionally from a one-dimensional real selector class.
 - **open / conditional deps cited:**
   - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md`
+- **auditor confidence:** high
+
+### `pmns_three_flux_holonomy_closure_note`
+
+- **Note:** [`PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md`](../../docs/PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded linear-algebra closure of reduced coordinates (u,v,w) from three twisted-flux holonomy values, assuming the stated one-angle holonomy functional on the reduced graph-first family.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e057c-87d4-7fe1-9209-b7e21387f58c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the reduced graph-first cycle family A_fwd(u,v,w), the one-angle flux holonomy is the exact linear functional h_phi(A_fwd)=2u cos(phi)+2v sin(phi)+w, so three generic angles form an invertible 3x3 linear system.  _(class `A`)_
+- **chain closes:** False — The matrix inversion step closes algebraically once the holonomy functional is admitted. The restricted packet does not include a retained derivation or cited authority for the functional h_phi(A_fwd)=2u cos(phi)+2v sin(phi)+w or for the reduced graph-first carrier itself.
+- **rationale:** The runner genuinely checks the finite-dimensional linear algebra: the explicit three-angle design matrix has nonzero determinant, reconstructs sample coordinates, and separates sample reduced points. However, the runner imports flux_holonomy_on_reduced_family and reduced_cycle_family from an unprovided module, and the note lists no one-hop retained authority establishing the holonomy readout formula. Thus the audited result is conditional on a missing upstream bridge from the native twisted-flux construction to the stated reduced-family linear functional.
 - **auditor confidence:** high
 
 ### `pmns_transfer_operator_dominant_mode_note`

@@ -18,8 +18,8 @@ publication tables phrase it.
 | criticality | effective_status | count |
 |---|---|---:|
 | high | `unaudited` | 196 |
-| medium | `unaudited` | 96 |
-| medium | `audited_conditional` | 57 |
+| medium | `unaudited` | 95 |
+| medium | `audited_conditional` | 58 |
 | critical | `audited_conditional` | 56 |
 | high | `audited_conditional` | 56 |
 | critical | `unaudited` | 39 |
@@ -528,7 +528,7 @@ publication tables phrase it.
 | medium | `pmns_right_polar_section_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | medium | `pmns_selector_bank_nonrealization_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | medium | `pmns_selector_class_space_uniqueness_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
-| medium | `pmns_three_flux_holonomy_closure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| medium | `pmns_three_flux_holonomy_closure_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `q_integer_spectrum_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
