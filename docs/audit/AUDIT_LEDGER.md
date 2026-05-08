@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 874 |
+| unaudited | 873 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 418 |
+| ~~audited_conditional~~ | 419 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 397 |
-| `audited_conditional` | 418 |
+| `audited_conditional` | 419 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 927 |
+| `unaudited` | 926 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 705 |
+| `bounded_theorem` | 706 |
 | `decoration` | 12 |
 | `meta` | 60 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 779 |
+| `positive_theorem` | 778 |
 
 | criticality | count |
 |---|---:|
@@ -526,6 +526,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_joint_card_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `asymmetry_persistence_mass_scaling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_dm_runner_stale_path_cleanup_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1584,6 +1585,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`
 - **auditor confidence:** high
+
+### `asymmetry_persistence_pilot_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_PILOT_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_PILOT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that an asymmetry-persistence generated-geometry rule improves decoherence/Born cleanliness through dense N=100 and complements layernorm regulation.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0944-a164-7953-b821-eb235508afa0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The reported simulations are asserted to show that asymmetry-based candidate rejection creates a Born-safe generated-geometry decoherence lane that survives dense N=100 and stacks with layernorm.  _(class `B`)_
+- **chain closes:** False — The supplied primary runner reproduces only the sparse N=40/60/80 table and imports the metric/readout implementation from an unprovided script. The dense N=80/100 and layernorm-stacking conclusions lack in-packet runner evidence or a retained bridge theorem for the readouts.
+- **rationale:** Issue: the note's conclusion depends on simulation readouts and dense/layernorm follow-up results that are not closed by the restricted packet; the provided runner computes only sparse rows and imports `measure`/`K_BAND` from unavailable code. Why this blocks: without the metric/readout implementation and the dense/layernorm runner artifacts, the reported Born-safe decoherence lane and stacking conclusion cannot be verified from cited retained inputs. Repair target: provide the measure/harness authority plus completed dense and layernorm runner stdout/source or a retained theorem constructing those readouts. Claim boundary until fixed: the packet supports only that this script generated the sparse rows shown, not the full dense-N100 or complementary layernorm science claim.
+- **auditor confidence:** medium
 
 ### `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29`
 
