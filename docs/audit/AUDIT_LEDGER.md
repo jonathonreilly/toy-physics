@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 864 |
+| unaudited | 863 |
 | meta | 49 |
-| ~~audited_numerical_match~~ | 20 |
+| ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 424 |
 | ~~audited_failed~~ | 8 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 424 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 20 |
+| `audited_numerical_match` | 21 |
 | `audited_renaming` | 27 |
-| `unaudited` | 913 |
+| `unaudited` | 912 |
 
 | claim_type | count |
 |---|---:|
@@ -994,6 +994,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -4632,6 +4633,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** That does not prove the local dominance theorem, but it does move the split-1  _(class `B`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the numerical candidate that the tested broad split-2 box minimum is boundary-pinned, monotone in the active slack floor, and crosses the imported preferred recovered floor only in a narrow low-slack band.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e072c-a4d3-7143-9e04-9d85cef3a958`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The broad split-2 minimum crosses the preferred recovered floor between s_min = 0.1950 and s_min = 0.1975, so the undercut is confined to 0.195 <= s_* <= 0.1975 and is gone by s >= 0.2.  _(class `G`)_
+- **chain closes:** False — The runner numerically optimizes the stated broad box and reproduces the note's values, but the preferred recovered floor and quotient-gauge machinery are imported without one-hop retained authorities in the packet. The result is also explicitly a tested numerical candidate rather than an interval-certified theorem on the true exact carrier.
+- **rationale:** Issue: the decisive step is a sampled numerical crossing of an imported preferred floor at selected slack floors, with expected transition values hard-coded as regression targets. Why this blocks: it supports the reported tested-band localization but not a first-principles or interval-certified derivation that the true exact carrier cannot undercut outside that band. Repair target: supply retained one-hop authorities for the preferred floor and quotient-gauge construction plus an interval/global certificate for the split-2 box or a runner that certifies the crossing without relying on fixed expected samples. Claim boundary until fixed: bounded numerical candidate on the tested broad exact-bundle box only.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18`
