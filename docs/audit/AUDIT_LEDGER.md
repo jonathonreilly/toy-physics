@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 872 |
+| unaudited | 871 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 419 |
+| ~~audited_conditional~~ | 420 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 397 |
-| `audited_conditional` | 419 |
+| `audited_conditional` | 420 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 925 |
+| `unaudited` | 924 |
 
 | claim_type | count |
 |---|---:|
@@ -785,6 +785,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lensing_deflection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -8334,6 +8335,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The current runner completed and reproduces the source note's distance rows, signs, slopes, and R^2 values. The cited one-hop dependency is now retained_bounded/audited_clean for the same raw NN finite window including h=1.0,0.5,0.25, so the prior upstream Born/k=0 bridge is closed within the restricted packet.
 - **rationale:** The claim is bounded to the barrier harness and finite h,b grid actually executed by the runner. The live output supports the far-field sign statements, fixed-strength near-1/b decay through h=0.25, and alpha=1.5 flattening comparison, while the audited-clean continuum note supplies the raw NN finite-window Born/k=0 controls. No continuum, universal attraction, or no-barrier branch claim is needed for closure.
 - **auditor confidence:** high
+
+### `lattice_nn_high_precision_note`
+
+- **Note:** [`LATTICE_NN_HIGH_PRECISION_NOTE.md`](../../docs/LATTICE_NN_HIGH_PRECISION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded core stated in the note: the arithmetic float64 overflow bound for the raw NN kernel at h = 0.125 and the limited step-scale cancellation claim for normalized probabilities and centroid as described in the note.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e094d-804f-70a3-8038-3393bc6fc381`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For h = 0.125, nl = 321 and per-edge amplitude bound 3/h = 24 give cumulative scale 24^321 with log10 about 443, exceeding float64 max log10 about 308 by roughly 10^135.  _(class `A`)_
+- **chain closes:** False — The overflow arithmetic itself closes from quantities stated in the note. The broader retained core also relies on a closure runner and NN observable implementation details that are named but not provided in the restricted packet, so the detector-layer invariance verification cannot be independently checked here.
+- **rationale:** Issue: the overflow margin is a closed arithmetic bound, but the retained core also asserts runner-verified step-scale invariance for normalized probabilities and centroid without providing the runner stdout or source as the primary runner. Why this blocks: the packet does not let the auditor confirm that the quoted max-diff values were computed rather than hard-coded or that the implemented observables match the stated theorem. Repair target: provide the closure runner source/stdout or a self-contained algebraic theorem for those two observables. Claim boundary until fixed: retain only the arithmetic float64 overflow estimate as support, not the runner-verified invariance claim.
+- **auditor confidence:** medium
 
 ### `lattice_nn_light_cone_note`
 
