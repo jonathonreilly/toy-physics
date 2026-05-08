@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 827 |
+| unaudited | 826 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 446 |
+| ~~audited_conditional~~ | 447 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 446 |
+| `audited_conditional` | 447 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 876 |
+| `unaudited` | 875 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 677 |
+| `bounded_theorem` | 678 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 784 |
+| `positive_theorem` | 783 |
 
 | criticality | count |
 |---|---:|
@@ -861,6 +861,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_oriented_cycle_selection_structure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
+| `pmns_selector_unique_amplitude_slot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `poisson_exhaustive_uniqueness_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -10179,6 +10180,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The support proposal assumes the two live candidate selector laws delta * q_+ = Q_Koide and det(H) = E2 and reports a numerically recovered interior solution with PMNS observables in current NuFit 1 sigma bands.  _(class `G`)_
 - **chain closes:** False — The chain does not close because delta * q_+ = Q_Koide and det(H) = E2 are explicitly proposed inputs, not derived retained identities. The numerical PMNS fit is therefore support conditional on those candidate selector laws, not a closure theorem.
 - **rationale:** No runner stdout or source is available, so the code cannot be credited as a first-principles computation. The note itself explicitly labels the determinant and product equations as proposed selector laws and lists their retained derivations as open promotion requirements. The reported solution and NuFit agreement may be useful support, but the conclusion depends on open premises inside the restricted packet.
+- **auditor confidence:** high
+
+### `pmns_selector_unique_amplitude_slot_note`
+
+- **Note:** [`PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`](../../docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given a one-dimensional reduced PMNS selector class spanned by S_cls = chi_N_nu - chi_N_e over R, the reduced bridge has one real amplitude coordinate a_sel.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0572-c81b-7012-8609-9948aff87c33`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Assume the exact PMNS selector class-space uniqueness theorem; then every future microscopic bridge functional, after reduction to X_red, is of the form B_red = a_sel S_cls with one real scalar amplitude.  _(class `A`)_
+- **chain closes:** False — The algebraic reduction from a one-dimensional real class space to one scalar amplitude is straightforward, but the required upstream PMNS selector class-space uniqueness theorem is not provided as a cited authority in the restricted packet. The Majorana structural framing is also referenced but not supplied and is not load-bearing for the algebraic slot count.
+- **rationale:** The note explicitly assumes PMNS selector class-space uniqueness, but the restricted packet lists no one-hop dependencies, so the central premise is not closed inside the audit packet. The runner partly hard-codes the reduced constraints and basis, then performs algebraic reconstruction, and separately checks text in external notes not provided here; it does not independently derive the upstream uniqueness theorem from retained primitives. Within the stated reduced scope, the one-real-amplitude conclusion follows conditionally from a one-dimensional real selector class.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_transfer_operator_dominant_mode_note`
