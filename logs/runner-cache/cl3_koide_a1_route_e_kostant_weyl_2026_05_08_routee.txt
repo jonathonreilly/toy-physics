@@ -1,0 +1,170 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_route_e_kostant_weyl_2026_05_08_routee.py
+runner_sha256: cd05a4f931ba4e3e8c0bbd873d80ca7748288ec91f646d5052c1f6511e4e4698
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+======================================================================
+Koide A1 Route E — Kostant Weyl-Vector / A_1 Root System
+Bounded Obstruction
+Source note:
+  docs/KOIDE_A1_ROUTE_E_KOSTANT_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routee.md
+======================================================================
+
+Section 1 — Lie-algebraic anchor: |rho_{A_1}|^2 = 1/2 via Kostant (|alpha|^2 = 2)
+           (anchor for Route E's candidate identity claim)
+  PASS : Kostant strange formula for A_1: |rho|^2 = 2*3*1/12 = 1/2 in standard norm | |rho_{A_1}|^2 = 1/2 (with |alpha|^2 = 2)
+  PASS : Kostant strange formula for A_2: |rho|^2 = 3*4*2/12 = 2 in standard norm | |rho_{A_2}|^2 = 2 (with |alpha|^2 = 2)
+  PASS : A1 condition target |b|^2/a^2 = 1/2 numerically equals |rho_{A_1}|^2 = 1/2 | |b|^2/a^2 = 1/2, |rho_{A_1}|^2 = 1/2, match
+       NOTE: This is an arithmetic anchor.  Whether the equation is a
+             structural identity is the question of Route E.
+
+Section 2 — Barrier 1: |rho_{A_1}|^2 is Cartan-Killing-normalization dependent
+           (the very value 1/2 depends on a convention)
+  PASS : Alternative normalization |alpha|^2 = 1: |rho_{A_1}|^2 = 1/4 (NOT 1/2) | With |alpha|^2 = 1 (unit-length-root convention): |rho_{A_1}|^2 = 1/4
+  PASS : Alternative normalization |alpha|^2 = 4: |rho_{A_1}|^2 = 1 (NOT 1/2) | With |alpha|^2 = 4 (double-length convention): |rho_{A_1}|^2 = 1
+
+       NOTE: A genuine structural identity must be normalization-invariant.
+       The numerical value 1/2 of |rho_{A_1}|^2 depends on which
+       Cartan-Killing normalization is used (|alpha|^2 = 1, 2, 4, etc.).
+       Different (equivalent) conventions give |rho_{A_1}|^2 values
+       1/4, 1/2, 1 respectively — none of which is preferred by
+       retained Cl(3)/Z^3 framework primitives.
+
+       The standard textbook |alpha|^2 = 2 is a convention; the framework
+       does not derive it.  Compare Route F barrier 1 (Y_L = -1 vs -1/2).
+  PASS : B1 verified: |rho_{A_1}|^2 takes 3 different values under 3 normalizations | |alpha|^2=1 -> 1/4; |alpha|^2=2 -> 1/2; |alpha|^2=4 -> 1
+
+Section 3 — Barrier 2: A_1 fundamental rep is 2-dim; hw=1 generation sector is 3-dim
+           (no natural A_1 imprint on the 3-dim circulant operator algebra)
+  PASS : A_1 fundamental representation has dimension 2 (spin-1/2) | A_1 = sl(2); fundamental irrep is 2-dim (spinor)
+  PASS : A_1 adjoint representation has dimension 3 (spin-1) | A_1 adjoint = vector representation of SO(3), spin-1, 3-dim
+  PASS : Framework hw=1 generation sector has dimension 3 (BZ corners) | hw=1 ≅ C^3 carries 3 BZ-corner states under C_3[111] cycle
+  PASS : B2 verified: A_1 has no fundamental irrep matching dim(hw=1) = 3 | dim(A_1 fund) = 2, dim(hw=1) = 3
+       The 3-dim irrep of A_1 (adjoint) has integer weights {-2, 0, +2}
+       which do NOT match the C_3 character decomposition of hw=1
+       (trivial + omega + omega-bar = 1 + e^{2pi*i/3} + e^{-2pi*i/3}).
+       There is no canonical A_1 irrep isomorphism with the hw=1 sector.
+
+Section 4 — Barrier 3: Gauge sector (A_1 ⊂ Cl^+(3)) is orthogonal to flavor sector (hw=1)
+           (no retained bridge transfers Weyl geometry to circulant coefficients)
+  PASS : A_1 doublet action commutes with generation-sector circulant operator | max|[J_3, H_circ]| = 0.00e+00
+       The gauge A_1 acts as a scalar multiplier on flavor indices.
+       No retained mechanism transfers |rho_{A_1}|^2 (a gauge-sector
+       Cartan-Killing length) to the circulant coefficient ratio (a, b)
+       (a flavor-sector operator decomposition).
+  PASS : B3 verified: dim(doublet) = 2 ≠ 3 = dim(hw=1) (sectors are orthogonal) | doublet (gauge SU(2)_L = A_1) is 2-dim; generation hw=1 is 3-dim
+
+Section 5 — Barrier 4: |rho|^2 is a length-squared; |b|^2/a^2 is a coefficient ratio
+           (different mathematical categories — no canonical identification)
+  PASS : Two circulants with same |b|^2/a^2 = 1/2 differ in operator content | H1 eigs ≈ [0.293 0.293 2.414], H2 eigs ≈ [0.586 0.586 4.828]; both at ratio = 0.5000
+       Even with the SAME ratio |b|^2/a^2 = 1/2, the underlying operators
+       differ.  The ratio is invariant under uniform rescaling.
+       |rho_{A_1}|^2, by contrast, is fixed by the Lie algebra alone.
+  PASS : B4 verified: rho appears in Weyl character formula, not as amplitude | rho is the half-sum of positive roots; it shifts highest weights
+       in the Weyl character / Kostant multiplicity formulas.
+       Identifying |rho|^2 with an operator-coefficient ratio requires a
+       structural map not present in retained framework content.
+
+Section 6 — Barrier 5: A_2 = sl(3) hidden family structure is NOT retained content
+           (the 'double match' relies on un-retained framework extension)
+  PASS : A_2 = sl(3) requires 8 generators (Gell-Mann); framework retains 0 of them | Required dim(sl(3)) = 8, retained = 0
+  PASS : Z_3 (retained) = center of SU(3); center alone does not generate the Lie algebra | C_3 = Z_3 is a 3-element discrete group; sl(3) is an 8-dim Lie algebra
+       The retained C_3[111] gives a finite cyclic permutation, NOT the
+       infinitesimal generators of an SU(3) action.  Z_3 ⊂ SU(3) is
+       discrete; no continuous SU(3) action exists on hw=1 in retained
+       content.
+  PASS : B5 verified: the 'A_1 + A_2 double match' extension requires non-retained content | A_1 sector exists (Cl^+(3) ≅ H ⟹ Spin(3)); A_2 sector does NOT
+       Even granting the A_1 imprint on the gauge sector (which fails B3),
+       extending the match to A_2 demands a hidden SU(3)_family structure
+       absent from retained Cl(3)/Z^3 axioms.  The 'double Weyl-vector
+       match' is therefore not a structural framework prediction; it is a
+       numerical observation about the C_3 ⊂ SU(3) inclusion plus an
+       uninstantiated SU(3)_family hypothesis.
+
+Section 7 — Counterexample sweep: many distinct Lie algebras give same |rho|^2 = 1/2
+           (Route E's RHS is not unique to A_1, even at |alpha|^2 = 2)
+  PASS : Multiple Lie-algebra choices give |rho|^2 = 1/2 with |alpha|^2 = 2 | matches: ['A_1 (sl(2))', 'D_2 (so(4)), one factor']
+       D_2 ≅ A_1 ⊕ A_1, so each factor's rho has |rho|^2 = 1/2.
+       The value 1/2 is not unique to A_1.
+  PASS : A_2 with |alpha|^2 = 1/2 ALSO gives |rho|^2 = 1/2 (= |rho_{A_1}|^2 standard) | |rho_{A_2}|^2 = 1/2 with |alpha|^2 = 1/2
+       By tuning the Cartan-Killing normalization, ANY Lie algebra can be
+       made to give |rho|^2 = 1/2.  Without a retained selection of
+       (Lie algebra, normalization), the value 1/2 is not predictive.
+
+Section 8 — Falsifiability anchor — PDG charged-lepton masses (anchor-only)
+           NOT used as derivation input; substep-4 AC-narrowing rule
+  PASS : ANCHOR ONLY (not derivation input): observed Koide Q = 2/3 to sub-percent | Q = 0.666661, target 2/3 = 0.666667, residual 6.15e-06
+       Per substep-4 AC-narrowing rule, this anchor is for falsifiability
+       only.  No derivation in this note uses these PDG values as input.
+
+Section 9 — Bounded obstruction theorem: Route E does not close A1
+       Theorem (Route E bounded obstruction).  On A1+A2 + retained
+       CL3_SM_EMBEDDING + retained C_3-equivariance + retained
+       circulant character derivation + standard Lie-algebra textbook
+       machinery, the structural identification
+
+           |b|^2 / a^2  =  |rho_{A_1}|^2  =  1/2
+
+       cannot be derived from retained Cl(3)/Z^3 content alone.
+       Five independent structural barriers each block the
+       identification:
+
+         (B1) Cartan-Killing normalization dependence: |rho_{A_1}|^2
+              takes 3 distinct values {1/4, 1/2, 1} under three
+              equivalent root-length conventions.
+         (B2) A_1 fundamental rep is 2-dim; hw=1 sector is 3-dim;
+              no canonical A_1 irrep isomorphism exists.
+         (B3) A_1 ⊂ Cl^+(3) is a gauge-sector statement; (a, b)
+              live in the orthogonal flavor (generation) sector.
+              No retained cross-sector bridge exists.
+         (B4) Category mismatch: |rho|^2 is a Cartan-Killing length;
+              |b|^2/a^2 is an operator-coefficient ratio.
+              Equating them needs a structural normalization map
+              not supplied by retained content.
+         (B5) Hidden A_2 = sl(3) for the 'double match' extension
+              is not retained content.  Z_3 ⊂ SU(3) center is
+              retained, but sl(3) is an 8-dim Lie algebra of which
+              zero generators are retained on hw=1.
+
+       Therefore Route E closure of A1 is structurally barred under
+       the stated retained-content surface.  The A1 admission count
+       is unchanged.
+  PASS : Theorem statement: Route E is structurally barred for A1 closure | 5 independent barriers each independently block the identification
+
+Section 10 — Comparison table: Route F (Casimir-difference) vs Route E (Kostant)
+       +-----------+----------------------------+----------------------------+
+       | Barrier   | Route F                    | Route E                    |
+       +-----------+----------------------------+----------------------------+
+       | B1        | Y_L convention dependence  | Cartan-Killing |alpha|^2   |
+       | B2        | Y_e free (a, b unforced)   | A_1 fund dim 2 != hw=1     |
+       | B3        | Sector orthogonality       | Sector orthogonality       |
+       |           | (gauge vs flavor)          | (gauge vs flavor)          |
+       | B4        | Category mismatch          | Category mismatch          |
+       |           | (op coeff vs scalar)       | (op coeff vs length)       |
+       | B5        | (no analog)                | A_2 hidden, not retained   |
+       +-----------+----------------------------+----------------------------+
+
+       Route E's barriers are STRUCTURALLY ANALOGOUS to Route F's,
+       with one new barrier (B5) specific to the 'double match'.
+       Both routes fail at the same place: the proposed 'structural
+       identity' is in fact two convention-dependent quantities
+       defined in independent sectors of the framework, equated only
+       by an arithmetic coincidence.
+
+======================================================================
+=== TOTAL: PASS=21, FAIL=0 ===
+======================================================================
+
+VERDICT: Route E (Kostant Weyl-vector) is structurally barred.
+
+The numerical match |rho_{A_1}|^2 = 1/2 = |b|^2/a^2 holds, but
+five barriers (one inherited from Route F, four new) prevent it
+from being a structural identity derivable from retained Cl(3)/Z^3
+content.  Routes A (Koide-Nishiura quartic) and D (Newton-Girard)
+remain open; Routes E (Kostant Weyl) and F (Casimir difference)
+are now both bounded-obstruction closures.
+
+A1 admission count is unchanged.
