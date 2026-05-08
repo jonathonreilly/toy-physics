@@ -1,0 +1,317 @@
+=== W1.exactv2 cached output (complete) ===
+Generated: Thu May  7 21:20:53 EDT 2026
+
+===========================================================
+Self-test: loop-supporting subset enumeration on 2x2 torus
+===========================================================
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+[1] Loop-supporting subset enumeration self-test
+  max_active = 0: 1 loop-supporting subsets, by size: {0: 1}
+  max_active = 2: 5 loop-supporting subsets, by size: {0: 1, 2: 4}
+  max_active = 4: 27 loop-supporting subsets, by size: {0: 1, 2: 4, 4: 22}
+  max_active = 6: 31 loop-supporting subsets, by size: {0: 1, 2: 4, 4: 22, 6: 4}
+  max_active = 8: 32 loop-supporting subsets, by size: {0: 1, 2: 4, 4: 22, 6: 4, 8: 1}
+
+  Detail at max_active=4: 27
+    0: ()
+    2: ('x_00', 'x_10')
+    2: ('x_01', 'x_11')
+    2: ('y_00', 'y_01')
+    2: ('y_10', 'y_11')
+    4: ('x_00', 'x_10', 'x_01', 'x_11')
+    4: ('x_00', 'x_10', 'y_00', 'y_01')
+    4: ('x_00', 'x_10', 'y_10', 'y_11')
+    4: ('x_00', 'x_01', 'y_00', 'y_10')
+    4: ('x_00', 'x_01', 'y_00', 'y_11')
+    4: ('x_00', 'x_01', 'y_10', 'y_01')
+    4: ('x_00', 'x_01', 'y_01', 'y_11')
+    4: ('x_00', 'x_11', 'y_00', 'y_10')
+    4: ('x_00', 'x_11', 'y_00', 'y_11')
+    4: ('x_00', 'x_11', 'y_10', 'y_01')
+    4: ('x_00', 'x_11', 'y_01', 'y_11')
+    4: ('x_10', 'x_01', 'y_00', 'y_10')
+    4: ('x_10', 'x_01', 'y_00', 'y_11')
+    4: ('x_10', 'x_01', 'y_10', 'y_01')
+    4: ('x_10', 'x_01', 'y_01', 'y_11')
+    4: ('x_10', 'x_11', 'y_00', 'y_10')
+    4: ('x_10', 'x_11', 'y_00', 'y_11')
+    4: ('x_10', 'x_11', 'y_10', 'y_01')
+    4: ('x_10', 'x_11', 'y_01', 'y_11')
+    4: ('x_01', 'x_11', 'y_00', 'y_01')
+    4: ('x_01', 'x_11', 'y_10', 'y_11')
+    4: ('y_00', 'y_10', 'y_01', 'y_11')
+
+===========================================================
+Λ=2 sweep_g (full range): cas_cap=None, max_active=4
+===========================================================
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+[Sweep g^2 at irrep_cutoff=2, max_active=4]
+
+--- SN-ED w1exactv2, g^2=0.25, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=9.8s
+      Q-build progress: 200/251, unique Q=27, t_q=9.9s
+    Built 27 unique vertex Q matrices, 1004 lookups in 9.9s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 2.1s; est total 5.4s)
+      (200/251 configs in 3.1s; est total 3.9s)
+    Wavefunction eval: 4.0s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.3s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.2s
+  E_0 = -3.810145  (439/439 kept)
+  <P>_avg = 0.311882
+  per-plaq P = [0.2208, 0.2252, 0.5227, 0.2788]
+  Runtime: 28.2s
+  g^2=0.25: <P>=0.3119, n_basis=439, n_configs=251, E_0=-3.8101, runtime=28.2s
+
+--- SN-ED w1exactv2, g^2=0.5, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=0.0s
+      Q-build progress: 200/251, unique Q=27, t_q=0.0s
+    Built 27 unique vertex Q matrices, 1004 lookups in 0.0s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 1.4s; est total 3.5s)
+      (200/251 configs in 2.3s; est total 2.9s)
+    Wavefunction eval: 3.2s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.1s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.2s
+  E_0 = -0.788637  (439/439 kept)
+  <P>_avg = 0.145146
+  per-plaq P = [0.1493, 0.1470, 0.1687, 0.1156]
+  Runtime: 23.8s
+  g^2=0.50: <P>=0.1451, n_basis=439, n_configs=251, E_0=-0.7886, runtime=23.8s
+
+--- SN-ED w1exactv2, g^2=0.75, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=0.0s
+      Q-build progress: 200/251, unique Q=27, t_q=0.0s
+    Built 27 unique vertex Q matrices, 1004 lookups in 0.0s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 1.3s; est total 3.3s)
+      (200/251 configs in 2.1s; est total 2.6s)
+    Wavefunction eval: 2.8s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.2s
+  E_0 = -0.467382  (439/439 kept)
+  <P>_avg = 0.068088
+  per-plaq P = [0.0730, 0.0712, 0.0713, 0.0569]
+  Runtime: 16.9s
+  g^2=0.75: <P>=0.0681, n_basis=439, n_configs=251, E_0=-0.4674, runtime=16.9s
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=0.0s
+      Q-build progress: 200/251, unique Q=27, t_q=0.0s
+    Built 27 unique vertex Q matrices, 1004 lookups in 0.0s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 1.3s; est total 3.3s)
+      (200/251 configs in 2.1s; est total 2.6s)
+    Wavefunction eval: 2.9s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.2s
+  E_0 = -0.458587  (439/439 kept)
+  <P>_avg = 0.037560
+  per-plaq P = [0.0411, 0.0385, 0.0399, 0.0308]
+  Runtime: 17.5s
+  g^2=1.00: <P>=0.0376, n_basis=439, n_configs=251, E_0=-0.4586, runtime=17.5s
+
+--- SN-ED w1exactv2, g^2=1.5, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=0.0s
+      Q-build progress: 200/251, unique Q=27, t_q=0.0s
+    Built 27 unique vertex Q matrices, 1004 lookups in 0.0s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 1.2s; est total 3.0s)
+      (200/251 configs in 1.9s; est total 2.4s)
+    Wavefunction eval: 2.7s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.1s
+  E_0 = -0.598937  (439/439 kept)
+  <P>_avg = 0.015961
+  per-plaq P = [0.0188, 0.0158, 0.0180, 0.0113]
+  Runtime: 17.0s
+  g^2=1.50: <P>=0.0160, n_basis=439, n_configs=251, E_0=-0.5989, runtime=17.0s
+
+--- SN-ED w1exactv2, g^2=2.0, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=0.0s
+      Q-build progress: 200/251, unique Q=27, t_q=0.0s
+    Built 27 unique vertex Q matrices, 1004 lookups in 0.0s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 1.2s; est total 3.0s)
+      (200/251 configs in 1.9s; est total 2.4s)
+    Wavefunction eval: 2.6s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.1s
+  E_0 = -0.779432  (439/439 kept)
+  <P>_avg = 0.008695
+  per-plaq P = [0.0113, 0.0082, 0.0106, 0.0046]
+  Runtime: 15.9s
+  g^2=2.00: <P>=0.0087, n_basis=439, n_configs=251, E_0=-0.7794, runtime=15.9s
+
+--- SN-ED w1exactv2, g^2=3.0, p+q<=2, max_active=4, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 2 (6 irreps), max_active = 4, cas_cap = None
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 251 configs (13851 raw attempts), total basis dim = 439
+    D-matrix cache: 48 entries
+      Q-build progress: 100/251, unique Q=27, t_q=0.0s
+      Q-build progress: 200/251, unique Q=27, t_q=0.0s
+    Built 27 unique vertex Q matrices, 1004 lookups in 0.0s
+    Evaluating wavefunctions for 251 configs...
+      (100/251 configs in 1.2s; est total 3.0s)
+      (200/251 configs in 1.9s; est total 2.4s)
+    Wavefunction eval: 2.6s total
+  Building H and Gram (439 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.1s
+  E_0 = -1.158888  (439/439 kept)
+  <P>_avg = 0.003638
+  per-plaq P = [0.0061, 0.0030, 0.0055, -0.0001]
+  Runtime: 15.8s
+  g^2=3.00: <P>=0.0036, n_basis=439, n_configs=251, E_0=-1.1589, runtime=15.8s
+
+===========================================================
+Λ=1, M=6 single (NEW frontier)
+===========================================================
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=1, max_active=6, cas_cap=None, N=2000 ---
+  Basis: irreps p+q <= 1 (3 irreps), max_active = 6, cas_cap = None
+    irreps: [(0, 0), (0, 1), (1, 0)]
+    Loop-supporting subsets up to size 6: 31
+    by size: {0: 1, 2: 4, 4: 22, 6: 4}
+  Final: 97 configs (625 raw attempts), total basis dim = 209
+    D-matrix cache: 24 entries
+    Built 8 unique vertex Q matrices, 388 lookups in 0.0s
+    Evaluating wavefunctions for 97 configs...
+    Wavefunction eval: 41.4s total
+  Building H and Gram (209 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.0s
+  E_0 = -0.188285  (209/209 kept)
+  <P>_avg = 0.043470
+  per-plaq P = [0.0467, 0.0450, 0.0433, 0.0389]
+  Runtime: 41.6s
+
+===========================================================
+Λ=3 M=4 cap=8.0 single (NEW)
+===========================================================
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=3, max_active=4, cas_cap=8.0, N=800 ---
+  Basis: irreps p+q <= 3 (10 irreps), max_active = 4, cas_cap = 8.0
+    irreps: [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (3, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 77 configs (144667 raw attempts), total basis dim = 93
+    D-matrix cache: 48 entries
+    Built 11 unique vertex Q matrices, 308 lookups in 0.2s
+    Evaluating wavefunctions for 77 configs...
+    Wavefunction eval: 0.1s total
+  Building H and Gram (93 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.0s
+  E_0 = -0.185044  (93/93 kept)
+  <P>_avg = 0.041612
+  per-plaq P = [0.0418, 0.0393, 0.0420, 0.0434]
+  Runtime: 11.1s
+
+===========================================================
+Λ=3 M=4 cap=10.0 single (NEW)
+===========================================================
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=3, max_active=4, cas_cap=10.0, N=1000 ---
+  Basis: irreps p+q <= 3 (10 irreps), max_active = 4, cas_cap = 10.0
+    irreps: [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (3, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 149 configs (144667 raw attempts), total basis dim = 229
+    D-matrix cache: 48 entries
+      Q-build progress: 100/149, unique Q=17, t_q=1.7s
+    Built 17 unique vertex Q matrices, 596 lookups in 1.7s
+    Evaluating wavefunctions for 149 configs...
+      (100/149 configs in 0.1s; est total 0.2s)
+    Wavefunction eval: 0.2s total
+  Building H and Gram (229 basis)...
+  H/Gram: 0.0s
+  Diagonalizing (lanczos=False)...
+  Diag: 0.0s
+  E_0 = -0.336458  (229/229 kept)
+  <P>_avg = 0.037424
+  per-plaq P = [0.0382, 0.0397, 0.0313, 0.0405]
+  Runtime: 15.2s
+
+===========================================================
+Λ=3 M=4 cap=11.0 single (basis built; Q construction
+exceeded 90s budget)
+===========================================================
+========================================================================
+Full SU(3) spin-network ED w1exactv2 (loop-supporting enumeration)
+========================================================================
+
+--- SN-ED w1exactv2, g^2=1.0, p+q<=3, max_active=4, cas_cap=11.0, N=800 ---
+  Basis: irreps p+q <= 3 (10 irreps), max_active = 4, cas_cap = 11.0
+    irreps: [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (3, 0)]
+    Loop-supporting subsets up to size 4: 27
+    by size: {0: 1, 2: 4, 4: 22}
+  Final: 157 configs (144667 raw attempts), total basis dim = 237
