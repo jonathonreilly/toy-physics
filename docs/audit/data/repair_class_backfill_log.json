@@ -1,0 +1,1946 @@
+[
+  {
+    "claim_id": "accessible_prediction_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "action_geometry_bridge_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "action_uniqueness_audit_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "adaptive_coevolving_geometry_no_go",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ai_methodology.raw.prompts_session_04c820e1",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ai_methodology.raw.prompts_session_9fc3990b_jonreilly",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ai_methodology.raw.prompts_session_current",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "alternative_coupled_field_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "architecture_portability_sweep_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "asymmetry_persistence_born_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "asymmetry_persistence_collapse_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "compute_required",
+    "prior_notes": "",
+    "new_notes": "compute_required: rerun within compute budget or supply cached completed artifact.",
+    "source": "fallback_template",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "asymmetry_persistence_joint_card_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "asymmetry_persistence_mass_scaling_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "asymmetry_persistence_mass_window_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "asymmetry_persistence_pilot_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add a compact registered hygiene runner that checks the stale paths are absent, executes or samples the eight affected runners, and asserts the no-new-physics boundary.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a compact audit-strategy runner that consumes the exact ledger/queue JSON fields and PR-fix artifacts to regenerate the cohort tables, or declare generated audit data as dependencies.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "axiom_change_proposal_2026-04-10",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "Re-audit should separate the LR theorem from the clustering corollary. The runner's numerical decay on a selected 1D free-fermion lattice should be treated as illustration only, not evidence for the 3D Cl(3) theorem or for SU(3)/A_min mass-gap input.",
+    "new_notes": "scope_too_broad: either restrict the audited theorem to L1/L3/L4 LR consequences, or add a separate retained theorem proving the required spectral gap/thermal clustering hypotheses for the canonical Hamiltonian and then verify the exact Hastings-Koma assumptions and constants.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "axiom_first_cpt_theorem_stretch_note_2026-04-29",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "Re-audit after an explicit SU(3) link/plaquette CPT construction is supplied and the note reconciles the target M^* with the displayed composition line yielding M^dagger.",
+    "new_notes": "missing_bridge_theorem: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "b_independence_mechanism_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "Re-check after the underlying 4D modular DAG generator, field construction, and distance-law closure are supplied as retained one-hop dependencies or a self-contained certificate.",
+    "new_notes": "missing_dependency_edge: add explicit retained dependencies or a self-contained derivation/runner certificate for the graph family, field law, and distance-law closure used by the diagnostics.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "beyond_lattice_qcd_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "bh_entropy_derived_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: add the Widom no-go proof/note or a retained-grade asymptotic certificate as an explicit audited dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "bmv_bounded_negative_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "born_lane_comparison_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "born_rule_analysis_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the Hartree alpha-sweep runner and/or add a proof note deriving the Lipschitz/contraction ordering and explicitly separating the measurement postulate from the gravitational dynamics map.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "boundary_law_robustness_note_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit should check the actual runner for hard-coded outputs, separate side=6 two-point fits from multi-radius fits, and verify whether the claim text is explicitly numerical/finite-grid rather than theorem-general.",
+    "new_notes": "runner_artifact_issue: Recast as a bounded numerical robustness result, exclude or separately report two-point R^2 fits, pre-register/justify the audited parameter and partition surface, and add broader independent partition and size checks or analytic closure if theorem status is intended.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_born_dense_sweep_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_born_largen_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_collapse_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_collapse_strength_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_dense_boundary_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_dense_joint_highn_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_dense_joint_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_dense_largen_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_layernorm_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "central_band_mass_window_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "charged_lepton_lane6_theorem_plan_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_3plus1d_boundary_phase_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_3plus1d_mixing_period_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add a live runner reproducing the n/L decoherence sweep and derive a predictive recurrence/phase-offset law across lattice sizes.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_3plus1d_recurrence_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_bottleneck_card_proposal",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_layer_oscillation_2026-04-09",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_split_mass_gravity_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_walk_synthesis_2026-04-09",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the chiral-walk synthesis runner or split the synthesis into explicit dependencies on the relevant audited closure-card, gauge, distance-law, convergence, and carrier-k rows, with current replay logs for the exact numbers quoted.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "chiral_walk_synthesis_2026-04-10_addendum",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "confinement_string_tension_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "Re-check whether the missing graph-first SU(3), canonical-normalization, alpha_s(M_Z), and EFT/lattice bridge authorities are later registered as one-hop dependencies; none were available in this restricted audit.",
+    "new_notes": "missing_dependency_edge: register and cite retained authorities for the SU(3) YM equivalence and alpha_s theorem, and state the bounded EFT/lattice bridge as an audited dependency or explicit bounded premise.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "continuum_bridge_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: split or register explicit runners/dependencies for the DAG size-growth, emergence, lattice refinement, kernel, and distance-tail artifacts, then restate the synthesis against their audited effective statuses.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "continuum_limit_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: implement the per-node T normalization or another boundary-leakage repair, rerun at least one finer h with stable P_det, add a fine-h Born/linearity proof or computation, include uncertainty/extrapolation for the weak-field limit, and make the runner assert the exact retained gates.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "coupled_field_generated_family_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or sliced certificate for the load-bearing step.",
+    "source": "fallback_template",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "cross_family_universality_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "decoherence_action_independence_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "decoherence_decision_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "decoherence_failure_analysis",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dense_prune_guard_seed_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dimension_selection_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dirac_decoherence_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dirac_field_smoothing_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dirac_observable_panel_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit with the actual default-sweep panel table or logs for centroid, peak, first-arrival, early accumulation, projected current, and shell imbalance.",
+    "new_notes": "runner_artifact_issue: provide the actual panel output for the stated default sweep, including sign agreement/disagreement by readout and recurrence-window interpretation.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dirac_source_smoothing_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dirac_v4_convergence_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dirac_weak_coupling_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "directional_b_density_stencil_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dispersion_high_p_tiebreaker_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dispersion_relation_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit with the grown-DAG and 3D dispersion scripts/logs as the primary restricted evidence packet.",
+    "new_notes": "runner_artifact_issue: promote the grown-DAG and 3D dispersion scripts or their completed logs into the row's load-bearing runner/dependency packet, with current outputs showing the stated R\u00b2 comparisons.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "distance_law_definitive_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "distance_law_portability_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "Re-audit should focus on whether a runner computes the table from retained structured-family definitions without hard-coding the source-centroid readout, and whether the observable bridge is proved rather than inherited from the grown-family replay.",
+    "new_notes": "missing_bridge_theorem: Provide a retained theorem or explicit dependency justifying the source-centroid observable for each listed family, plus a runner that constructs the families, computes the sampled responses, fits alpha, and reports direction counts from retained inputs.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "distracted_napier_reconciliation_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_abcc_basin_finite_search_support_note_2026-04-30",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_chamber_signature_structure_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_leptogenesis_projection_theorem_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_leptogenesis_washout_axiom_boundary_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner that reconstructs the edge parameterization, scans or certifies the full interval, and emits the endpoint/maximum/minimum values used in the note.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the coarse and seeded global-search runner, record seeds/tolerances, and ideally add interval-style exclusion or dominance certification on the exact carrier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register the grid/ridge runner and add interval or adaptive-refinement checks around the upper-m, low-slack boundary.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: attach a runner that solves delta_edge, samples or certifies monotonicity on the feasible line, and emits the endpoint packet/eta values.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_triplet_even_response_theorem_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_triplet_normalization_target_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_pns_attack_cascade_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_strong_cp_gamma_transfer_no_go_note_2026-04-15",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "down_type_mass_ratio_ckm_dual_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "edge_deletion_boundary_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "edge_deletion_boundary_sweep_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "em_gravity_coexistence_2x2_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "emergent_geometry_growth_note_2026-04-10",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: register the hardened v2/k=4 multi-seed runner or narrow the note to the current seed-42 output, and emit classified C PASS lines for the effective-dimension, peak-density, clustering, and retained operating-point checks.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "emergent_lorentz_invariance_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "Re-audit after audit-clean dependency notes or runners construct the CPT, parity-protection, and hierarchy-scale bridges rather than asserting them.",
+    "new_notes": "missing_bridge_theorem: add audit-clean dependency rows or a runner that constructs the CPT, parity-protection, and hierarchy-scale bridges.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "emergent_product_law_audit_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "evolving_network_prototype_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "evolving_network_prototype_v2_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "field_equation_derivation_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "fine_h_family_universality_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: add the missing raw log or a deterministic aggregate runner that executes/caches all 15 family/seed cases, computes the slopes, R^2 values, eikonal gaps, population/sample statistics, and t-tests, and emits explicit PASS thresholds for the bounded portability claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "flagship_paper_contribution_statement_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "g_bare_two_ward_closure_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gap_physics_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gate_b_farfield_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "Re-check whether a separate retained Gate B observable/source-law theorem exists outside this restricted packet. If a clean theorem is attempted later, rerun or optimize the current long harness so the current-output table is captured directly.",
+    "new_notes": "missing_bridge_theorem: add a retained theorem deriving the source law, propagation/readout map, and far-field Gate B criterion from accepted primitives, with a runner that constructs rather than assumes that bridge.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gate_b_grown_propagating_field_radical_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gate_b_nonlabel_sign_grown_transfer_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check with a runner that emits explicit PASS/FAIL lines and completes current output capture for the seed-0 replay.",
+    "new_notes": "other: cite or derive the retained grown-row construction and an explicit transfer theorem whose runner checks pass/fail criteria rather than only printing replay values.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check after an explicit upstream theorem or completed runner proves first-Hankel minimality and the Wilson/PF packet-to-DM boundary map.",
+    "new_notes": "other: provide a retained derivation or runner that constructs the boundary map and proves first-Hankel minimality without text checks of the contested premise.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check whether a retained finite-Wilson compact-Laplace concentration theorem is intended as an implicit dependency; none was provided in the restricted packet.",
+    "new_notes": "other: add a self-contained finite-lattice proof, or a retained dependency, deriving P_L(0)=0 and lim_(t->infinity) P_L(t)=1 for the exact Wilson source surface, with a runner that checks something stronger than condition=True for the contested step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check if retained one-hop authorities are provided for temporal-gauge mixed-kernel link factorization and the accepted Wilson 3+1 marked-plaquette source surface, or if the runner is strengthened to build the compression operator rather than comparing hard-coded diagonal forms.",
+    "new_notes": "other: supply retained one-hop theorem inputs or an expanded proof/runner that constructs the mixed kernel on the marked plaquette sector and verifies non-marked-link scalar collapse without hard-coding the contested compression.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gauge_vacuum_plaquette_perron_reduction_theorem_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check whether the ledger should include the exact transfer-operator / character-recurrence theorem as an explicit dependency; if that dependency is retained and proves strict kernel positivity for the exact Wilson operator, the Perron/Jacobi reduction may become clean.",
+    "new_notes": "other: cite and audit the exact transfer-operator/character-recurrence theorem proving the compact self-adjoint positivity-improving kernel, or extend the runner to construct/check the exact finite Wilson transfer object rather than a proxy.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check whether a later source packet supplies the explicit slice-transfer construction and verifies the actual boundary-coefficient map rather than a single chosen tensor word.",
+    "new_notes": "other: provide an explicit finite-volume slice construction with Haar integrations yielding the actual transfer matrix elements and boundary state, plus a runner that constructs those objects rather than testing one chosen word.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "generated_geometry_synthesis_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "geometry_lane_head_to_head_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "geometry_superposition_dag_ensemble_note_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add classified C PASS checks for the normalized contrast >1%, phase differences, centroid/width diagnostics, and added-edge candidate validity without changing the computation.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "global_coherence_held_out2_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "global_coherence_predictor_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit after obtaining current runner output or a retained archived log for the primary scaffolded comparison.",
+    "new_notes": "runner_artifact_issue: provide a successful registered runner replay or archived deterministic output for the scaffolded swept/cross-generator comparison.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "Re-audit after a retained local Yang-Mills gauge-action/propagator bridge exists for the graph-first structural SU(3) surface.",
+    "new_notes": "missing_bridge_theorem: add a retained bridge theorem and runner deriving the local SU(3) gauge connection/action and quadratic propagator surface from the graph-first structural su(3) closure.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gravitational_wave_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "gravity_observable_hierarchy_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "growing_graph_expansion_card_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "grown_wavefield_companion_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "h0125_wider_replay_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-check with current stdout for scripts/lattice_3d_l2_wide_h0125_replay.py or an equivalent narrowed deterministic replay that emits the load-bearing full-window row.",
+    "new_notes": "runner_artifact_issue: provide a current completed runner output or a faster deterministic runner path that reproduces the exact phys_l=6, phys_w=4, h=0.125, full-window z=3.0 row and its alpha~0.5 fit.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "h0125_wider_w4_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-run with sufficient resources and compare the completed Born, k=0, gravity, and alpha rows against the source note.",
+    "new_notes": "runner_artifact_issue: provide a current completed runner output or a faster deterministic runner path that reproduces the exact retained width-4 row and justifies why that full-window z=3.0 readout is decisive.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "h0125_wider_w4_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "h2t_h0125_narrow_bridge_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "",
+    "new_notes": "missing_bridge_theorem: update the runner to emit classified C PASS lines for h=0.125 Born cleanliness, AWAY/no-TOWARD failure of F~M, and the bounded-negative conclusion; optionally register the bridge-family companion checks separately.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "hard_geometry_head_to_head_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "higher_dimension_status_2026-04-01",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: add the parity-gate carrier theorem as a cited authority or make the runner parse/check the stated assumption from that source.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: derive the selector and metrology maps from retained primitives, or register the prior route notes as dependencies and keep C1 explicitly axiom-conditional.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: attach explicit proof notes or audited dependencies for the S4 permutation-unitary, Hamming-weight Clifford obstruction, information-theoretic indistinguishability, Stinespring projection, and finite type-I cyclicity claims.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register the Cycle 3 taxonomy and candidate notes as deps, or add a runner/checklist that verifies each route disposition against the current retained surface.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "inverse_problem_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "k_dependence_review_safe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "koide_a1_loop_final_status_2026-04-22",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "koide_theta_hierarchy_open_scalar_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "lattice_3d_dense_refinement_reconciliation_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check after the harness constants and gravity-observable hierarchy are included as retained dependencies or inlined audited inputs.",
+    "new_notes": "other: make the load-bearing constants/readouts explicit or cite retained dependency notes deriving them, then rerun a deterministic checker with explicit PASS assertions for the h=1.0/h=0.5 comparison.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "lattice_3d_l2_numpy_h0125_audit_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "lattice_3d_l2_numpy_h0125_bridge_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "lattice_3d_l2_tail_stats_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit with the runner/log and exact width-6 comparator authority included; check the exponent and R^2 computations against the stated post-peak rows.",
+    "new_notes": "other: provide the runner output/log as audit evidence and cite the exact width-6 comparator note/status, or include the reproducible fit calculation in the note.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "lattice_synthesis_guard_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register a runner/proof note for the load-bearing step or cite an audited retained dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "light_cone_framing_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-check whether a future source note adds an actual operator-norm/Lieb-Robinson derivation for the Crank-Nicolson kernel; if so, the class and verdict may change.",
+    "new_notes": "other: add a retained theorem and runner that compute the Lieb-Robinson/operator-norm bound for the specific Crank-Nicolson operator used elsewhere.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "linear_response_derivation_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: provide a symbolic or numerical true-Kubo derivation that differentiates the path-sum at s=0, includes the edge action perturbation and phase cross-terms, and compares that literal first-order observable on the same 44-family set.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "linear_response_second_order_kubo_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: either narrow the source claim to the computed second-order null result, or add a theorem/computation bounding the Taylor remainder or demonstrating non-convergence/non-analyticity for the failing families, with the first-order and range-of-validity inputs explicitly audited.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "local_zsym_predictor_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: either narrow the note to the local_z_asym negative, or add an exhaustive classifier-search theorem/computation specifying the metric universe, Boolean grammar, train/held-out protocol, and multiple-testing control that rules out the claimed simple-classifier class.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "matched_2d_4d_decoherence_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: register the matched-sweep runner or attach a frozen log that reproduces the pur_min table, degree matching, and alpha fits.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "memory_decay_diagnosis_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register the memory-screening runner/log and include the mu=0 comparison or a proof that the observable is quadratic in Phi over this setup.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "mesoscopic_surrogate_alternate_family_scout_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the cited mesoscopic notes/results as dependencies or attach a runner/log that reproduces the family comparison and compact-floor check.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "mesoscopic_surrogate_localization_sweep_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: restore or register the sweep runner that produced the log and emit classified PASS lines for top-N baseline, degenerate point-source exclusions, non-degenerate localized rows, and the broad-control comparison.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "mirror_gravity_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: restore/register the tail sweep artifact or runner arguments and cite the comparator hard-geometry lane results used for the ranking.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "mirror_grown_combined_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: add classified C PASS lines for the grown-scout metrics and cite/register the mirror and Z2xZ2 comparison rows, or narrow the note to a standalone finite negative control.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "mirror_program_synthesis",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: add explicit ledger dependencies or split the synthesis into separately audited Born, MI, ceiling/rank, gravity, exact-2D, and structured-growth rows.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "mirror_vs_central_head_to_head_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: cite the source rows for the dense central-band and mirror chokepoint artifacts, or replace the script with one that reads those frozen outputs directly.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "neutrino_lane4_theorem_plan_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the actual one-hop authorities and separately audit the 4D globalization, 4E mass mechanism, and downstream arithmetic targets.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "neutrino_lane4_workstream_closeout_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: register the cycle artifacts as dependencies and audit the C2-X gate or the named SR attack frame that closes it.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: prove substrate-class admissibility from A_min, or supply a retained no-go theorem for Pfaffian/pairing extensions.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "newton_persistent_pattern_control_note_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: restore or register the persistent-pattern control runner and its frozen log, including the capture/carry/shift threshold definitions and sweep domain.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "ordered_lattice_quasi_persistent_relaunch_2d_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit should focus on whether a formal acceptance theorem has been added for the proxy-to-relaunch bridge, especially the top-k reidentification rule, the low capture fraction, and the claimed family-generic scope.",
+    "new_notes": "other: Add a retained theorem or bounded lemma specifying the packet class, reidentification rule, acceptance thresholds, and stability/invariance guarantee, or revise the claim to a purely numerical replay statement.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "persistent_record_sidebit_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: register `persistent_record_matched_compare.py --seeds 2 --gamma 1.0 --methods node,pr_trace,pr_soft,pr_side_trace,pr_side_soft` or a wrapper as the primary runner, and emit classified C PASS lines for the side-bit soft improvement and failure to beat node-label.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit should focus on whether a complete SME bilinear dictionary is supplied and whether the all-even-periodic-lattice claim is proven symbolically rather than only checked at L=4 and L=6.",
+    "new_notes": "other: add a first-principles or cited-but-contained derivation of the SME bilinear operator basis represented on the staggered Hamiltonian substrate, prove that the checked full and direction-resolved sectors span every CPT-odd bilinear source in the stated boundary, and separate finite-runner checks from all-even-lattice symbolic closure.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit should separate the clean algebraic extension theorem from the physical carrier-identification step. The former is class A under the packet; the latter remains open and must not be inferred from runner examples or from equating densities.",
+    "new_notes": "other: provide an independent derivation that the primitive one-step boundary/worldtube count is the gravitational boundary/action carrier, or demote all Planck-normalization language to a conditional corollary.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit should focus on whether future notes derive, rather than assume, unit primitive response normalization and the physical gravitational boundary/action density bridge.",
+    "new_notes": "other: derive or independently justify first-order locality and unit coframe-slot response from retained primitive axioms, then separately prove the physical bridge identifying gravitational boundary/action density with this carrier.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit after the primitive boundary/Wald carrier premise and sufficient coframe-response bridge are retained-grade dependencies for this row.",
+    "new_notes": "other: audit and register the primitive boundary/Wald carrier or Target 3 Clifford/coframe-response bridge as retained-grade upstream authority, then re-audit this source-unit theorem.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "retardation_discriminator_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: add a fast deterministic runner with explicit assertions for the nulls, delay law, family/seed robustness, and global-delay fit residual, and add a theorem specifying the model class in which no instantaneous/static response can reproduce the first-harmonic delayed-response observable.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "retarded_field_compact_refinement_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "s3_time_primitive_chain_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the cited Route-2 theorem notes as dependencies and add a runner or structured checker that verifies the endpoint-ratio reduction and the dependency ordering from those inputs.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "s3_time_tensor_build_memo",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: register the cited Route-2 theorem notes as one-hop dependencies and add a structured checker for the readout triple/equivalence and induced time-coupling obstruction.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "same_family_3d_closure_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit after frozen evidence is represented by retained ledger dependencies or the runner recomputes the closure rows live.",
+    "new_notes": "other: declare the actual log/runner dependency chain and audit it, or replace this wrapper with a live recomputation harness for rows 1-10.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "scalar_selector_cycle13_meta_closure_status_note_2026-04-19",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: register the four route notes and the DIM-UNIQ/STRC theorem notes as dependencies, add a structured accounting checker for the route-to-meta-principle compression, and clarify the status line to match the reviewer-bar caveat.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "scalar_selector_reviewer_package_2026-04-20",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: keep this as historical handoff context or split/register the current package claims with per-lane dependencies and runners.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "scaling_failure_mechanisms",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: attach the scaling/decoherence logs or scripts that compute Q_sat, H, purity, and the reported correlations, and emit asserted runner checks.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "science_3plus1_line_law_known_limits_note_2026-04-20",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_dependency_edge",
+    "prior_notes": "",
+    "new_notes": "missing_dependency_edge: add explicit audited dependency edges or a primary runner/proof bundle for each step of the closure chain and no-go.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "seventh_family_diagonal_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit should check an assertion-backed runner and a comparator/ablation demonstrating that routing, rather than fallback or control structure, is load-bearing.",
+    "new_notes": "runner_artifact_issue: add enforced pass/fail checks plus routing/control comparators, or state the claim purely as a reproduced finite sweep table.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "source_resolved_generated_support_mass_scaling_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit after adding assertion thresholds for linear-class recovery and a PASS/FAIL wrapper around the runner.",
+    "new_notes": "runner_artifact_issue: add explicit acceptance/rejection bounds and executable assertions for support broadening, sign rescue, and mass-scaling failure.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "spectral_trajectory_theorem_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: split the theorem into explicit dependencies on audited spectral-success notes, audited trajectory-failure notes, and a separate derivation of the one-body-trace versus many-body-expectation bridge, with runner or proof artifacts for each load-bearing step.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "staggered_backreaction_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "Re-audit after adding explicit assertions and modest lattice-size or graph-variant sweeps.",
+    "new_notes": "runner_artifact_issue: add asserted acceptance thresholds plus size or graph-family perturbation sweeps.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "staggered_backreaction_shell_spectral_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: update the note and archived output to the current force readouts, or restore the old runner state; add assertions for the shell span ratios, low-mode fractions, spectral centroids, force gaps, and norm drift so future drift is caught.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "synthesis_note_3d",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add a registered synthesis runner or manifest that invokes the required 3D scripts, records the exact commands, and asserts the combined gravity, decoherence, Born, and interference predicates.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_3d_resource_probe_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit after the source note is regenerated from current runner output; specifically re-check G=500 table values and the G=1000 sampled fidelity summary.",
+    "new_notes": "other: refresh docs/TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md from the current runner output and rerun the compile/run commands, preserving the explicit Psi+ Bell-frame boundary.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_hard_blocker_attack_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit after splitting the mixed row into separate no-go/open-gate/bounded claim objects.",
+    "new_notes": "other: split into separate ledger rows for the apparatus no-go, amplitude no-go, sparse side-6 scaling control, ideal pulse schedule, and spin-bath detector model, each with its own scoped claim_type.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_nature_grade_push_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit should focus on whether the added principles have become retained postulates or derived theorems, whether the G=-1000 finite branch has an asymptotic preparation/cooling proof, and whether the noise/detector models include correlated errors, calibration drift, bandwidth, leakage spectra, and material/thermal limits.",
+    "new_notes": "other: Derive the selection principles from retained axioms or promote them explicitly as defended physical postulates, prove an asymptotic/preparation theorem for the signed sparse branch, and replace independent-error pulse/detector proxies with a fabricated controller/material-medium model or a theorem bounding the omitted correlations.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_open_item_attack_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "missing_bridge_theorem",
+    "prior_notes": "Re-audit after the bridge principles are no longer hard-coded assumptions and after finite-size/proxy models are replaced by retained asymptotic and material/hardware closure results.",
+    "new_notes": "missing_bridge_theorem: Derive the bridge rules from the original axiom or promote them through independently retained theorems, add a rigorous asymptotic preparation/cooling theorem, and replace the pulse/detector proxies with specified hardware/material models or bounded theorems.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_operator_consistent_end_to_end_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit after adding declared dependency paths for scripts/frontier_teleportation_end_to_end_poisson.py, scripts/frontier_teleportation_resource_from_poisson.py, and scripts/frontier_teleportation_taste_readout_operator_model.py, or after making this runner self-contained for the resource, channel, and operator-factorization checks.",
+    "new_notes": "other: Declare the exact upstream dependency claims for the Poisson resource construction/end-to-end evaluator and retained-axis operator factorization, or inline a self-contained derivation/computation in this runner that removes those imports as scientific premises.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_poisson_resource_sweep_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "Re-audit after the ledger declares and closes the upstream Poisson-resource machinery dependency; then check that the note numerics remain current with the default runner output and that the bounded claim remains limited to deterministic quantum state teleportation resource windows.",
+    "new_notes": "other: Add the Poisson-resource construction as an explicit dependency, ensure its audit status closes for the ground-state construction, logical extraction, and teleportation-resource metrics, then re-audit this sweep as a bounded finite-grid corollary.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "teleportation_record_field_closure_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "Re-audit after the native record apparatus/transducer dependency is declared and no longer conditional, and after any claimed physical field, thermal bath, detector/readout, or conservation-ledger bridge is derived rather than represented by finite proxy checks.",
+    "new_notes": "scope_too_broad: Declare the native apparatus row as a dependency and close it cleanly, then replace the eikonal carrier, pointer bath, and ledger split with retained derivations or narrow the claim to an explicit finite-model planning gate.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "tensor_network_connection_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "scope_too_broad",
+    "prior_notes": "",
+    "new_notes": "scope_too_broad: either narrow the note to the audited tensor-network diagnostics or add a theorem/runner that derives the claimed holographic/RT correspondence from retained primitives.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "unified_basin_signed_source_control_support_note_2026-04-30",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: attach or register the exact signed-source-only runner/log that recomputes the three seed rows, and declare the archived wrapper or extracted table as an explicit dependency.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "universal_gr_invariant_frame_obstruction_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "universal_gr_polarization_frame_bundle_attempt",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register the frame-dependence runner and cite the exact scalar generator, 3+1 lift, and symmetric quotient-kernel authorities used as inputs.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "vector_sector_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add an audited observable theorem or acceptance harness that fixes the lock-in reference phase, reports/proves the scalar-exposure equality used to rule out scalar confounding, and states the family/parameter domain with tolerances.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "wave_3plus1d_promotions_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: replace the I branch with an actual layerwise elliptic/Poisson instantaneous solve, or prove and numerically bound convergence of the frozen-wave late-time slice to the c->infinity comparator; then add hard assertions for the lightcone and gap gates and audit the Lane 8 radiation lane separately for the combined three-signature statement.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "wave_direct_dm_family_scout_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: run and audit a full Fam1/Fam2/Fam3 portability batch with multiple seeds, S=0 nulls, weak-strength sweeps, and both retained H values.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "compute_required",
+    "prior_notes": "",
+    "new_notes": "compute_required: rerun within compute budget or supply cached completed artifact.",
+    "source": "fallback_template",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "wave_static_matrixfree_shared_geometry_compare_note",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: add an audited acceptance criterion for drop-in replacement, such as field and propagated-response tolerances tied to solver residuals, or prove both algorithms converge to the same finite-grid Poisson solution with a runner pass/fail threshold.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "wilson_two_body_open_note_2026-04-11",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "runner_artifact_issue",
+    "prior_notes": "",
+    "new_notes": "runner_artifact_issue: register the relevant Wilson runners/logs and emit a single current machine-checkable summary for the bounded surface and both-masses failure.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "work_history.potential_publication_discoveries_log",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "other",
+    "prior_notes": "",
+    "new_notes": "other: either gate this work-history inventory out of the audit ledger or register/verify the cited evidence notes and runners item by item.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  },
+  {
+    "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
+    "applied_at": "2026-05-08T10:00:18.915809+00:00",
+    "repair_class": "dependency_not_retained",
+    "prior_notes": "",
+    "new_notes": "dependency_not_retained: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences.",
+    "source": "verdict_rationale.Repair_target",
+    "policy_basis": "docs/audit/README.md \u00a7Workflow audited_conditional repair-class prefix"
+  }
+]
