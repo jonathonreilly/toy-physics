@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 858 |
+| unaudited | 857 |
 | meta | 49 |
-| ~~audited_numerical_match~~ | 21 |
+| ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 429 |
 | ~~audited_failed~~ | 8 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 429 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 21 |
+| `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 907 |
+| `unaudited` | 906 |
 
 | claim_type | count |
 |---|---:|
@@ -1000,6 +1000,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -4730,6 +4731,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The local grid checks close only relative to imported upstream functions and constants that are not provided as cited authorities in the packet. The missing step is a retained derivation or included dependency establishing point_data, the preferred quotient/readout, the repair threshold, and the prior compression to these two extremals.
 - **rationale:** Issue: the runner performs bounded local scans, but it imports the load-bearing geometry, preferred column, repair threshold, and upper-face extremal constants from upstream scripts not included as cited retained authorities. Why this blocks: the note's conclusion that the carrier-side pressure is exhausted to these two local neighborhoods depends on those upstream reductions and physical readouts, not on the restricted packet alone. Repair target: cite and retain the upstream split-2 reduction/extremal and transport-readout theorems, or include a runner that constructs those objects from retained primitives. Claim boundary until fixed: the packet supports only a conditional local grid exclusion on the two named boxes under the imported current-branch data.
 - **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that, on the tested upper-m slack-floor line m=-0.14, s=0, the residual split-2 lower-repair pressure localizes to the numerical endpoint delta_edge ≈ 1.188955544069.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0739-19ed-7432-9f5e-cc558ca01b5d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the tested interval delta in [1.05, delta_edge] with m=-0.14 and s=0, repair and the best lower-repair transport value are strictly increasing while packet distance is strictly decreasing, so both objectives are driven to delta_edge.  _(class `G`)_
+- **chain closes:** False — The packet gives no cited retained inputs and no runner source/stdout establishing the numerical endpoint, monotonicity, winning packet, or comparator values. The missing step is an auditable computation or retained theorem certifying the tested-line scan and endpoint definition from the stated primitives.
+- **rationale:** Issue: the load-bearing endpoint reduction rests on specific numerical scan values along a chosen tested line, with no runner or cited retained authority in the restricted packet. Why this blocks: the audit cannot verify that delta_edge, monotonicity, the winning packet quotient, or the distance trend follow from framework primitives rather than from a selected input scale/line. Repair target: provide a runner or retained dependency that computes Lambda_+, eta_best, packet labels, and distance over the interval and certifies monotonic endpoint selection. Claim boundary until fixed: this remains a tested-line endpoint candidate, not an audited derivation of carrier localization or closure.
+- **auditor confidence:** medium
 
 ### `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16`
 
