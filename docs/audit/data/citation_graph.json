@@ -593,6 +593,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+    },
+    {
       "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -3983,6 +3987,18 @@
     {
       "from": "dm_abcc_chamber_bound_derivation_note_2026-04-20",
       "to": "dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
+      "to": "dm_abcc_chamber_bound_derivation_note_2026-04-20"
+    },
+    {
+      "from": "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
+      "to": "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
+      "to": "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19"
     },
     {
       "from": "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21",
@@ -9149,6 +9165,10 @@
       "to": "born_scattering_comparison_note"
     },
     {
+      "from": "lensing_finite_path_explanation_note",
+      "to": "lensing_long_path_test_note"
+    },
+    {
       "from": "lensing_long_path_test_note",
       "to": "lensing_finite_path_explanation_note"
     },
@@ -11847,6 +11867,10 @@
     {
       "from": "pmns_selector_three_identity_support_proposal_readme_2026-04-21",
       "to": "pmns_selector_three_identity_support_note_2026-04-21"
+    },
+    {
+      "from": "pmns_selector_unique_amplitude_slot_note",
+      "to": "pmns_selector_class_space_uniqueness_note"
     },
     {
       "from": "pmns_sigma_zero_nogo_note",
@@ -15153,6 +15177,14 @@
       "to": "wave_3plus1d_promotions_note"
     },
     {
+      "from": "wave_direct_dm_h025_fam1_seed0_control_note",
+      "to": "wave_direct_dm_h025_high_band_boundary_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_fam1_seed0_control_note",
+      "to": "wave_direct_dm_h025_seed0_crossfamily_note"
+    },
+    {
       "from": "wave_direct_dm_h025_fam1_seed1_control_note",
       "to": "wave_direct_dm_h025_two_point_synthesis_note"
     },
@@ -15183,6 +15215,22 @@
     {
       "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
       "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam2_seed1_control_note"
     },
     {
       "from": "wave_direct_dm_h025_fam3_seed0_control_note",
@@ -29083,8 +29131,10 @@
       "claim_type_author_hint": "positive_theorem",
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "8c23a3c5cd16cca92c585325f30808c1e0cc366dbde3ea74c179902f45051c92",
+      "deps": [
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "note_hash": "e89d47ffc09b246ef57de44ec2950e4f508b9cec288a633848037807c272a18f",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -32480,8 +32530,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "2ea717d1e7e46d7778acc39861e6ec9c49535a3822ecbd9d236624bbf335239c",
+      "deps": [
+        "dm_abcc_chamber_bound_derivation_note_2026-04-20",
+        "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
+        "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19"
+      ],
+      "note_hash": "c2859eb461d7f4fe1512fcba67a524b3a62e514d5ed1993213f495811881dc8e",
       "path": "docs/DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_abcc_chamber_dple_closure.py",
       "title": "A-BCC Axiom-Level Closure via Chamber Bound and DPLE F_4"
@@ -41567,8 +41621,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "4b0e5a7f258f2bc543048ad6856f04eb8bfef40b16d37c064aeabb13efc89a52",
+      "deps": [
+        "lensing_long_path_test_note"
+      ],
+      "note_hash": "89bfcaeafc5cbd3fc735ba7dd8c4868dd83d180e541ac781089db632526f2d3e",
       "path": "docs/LENSING_FINITE_PATH_EXPLANATION_NOTE.md",
       "runner_path": "scripts/lensing_analytical_finite_path.py",
       "title": "Lensing Slope \u2014 Finite-Path Surrogate FALSIFIED at a Second T_phys"
@@ -45333,8 +45389,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "c6e2453f1f771196a3c4d125d9bf742ca42ae6c1fbcd9d0df8720558fad4139b",
+      "deps": [
+        "pmns_selector_class_space_uniqueness_note"
+      ],
+      "note_hash": "16cdcf2c58e71bf6f1d88d95a00f77853d6c146e1d4fdad46ee7b6bd622be9c0",
       "path": "docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md",
       "runner_path": "scripts/frontier_pmns_selector_unique_amplitude_slot.py",
       "title": "PMNS Selector Unique Amplitude Slot"
@@ -53865,8 +53923,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "969628a7ca5247a1720fd9355592ac74d045d8d47cc76506f0f10d6a9bd9f062",
+      "deps": [
+        "wave_direct_dm_h025_high_band_boundary_note",
+        "wave_direct_dm_h025_seed0_crossfamily_note"
+      ],
+      "note_hash": "1518e0d0196efd226afbcdd86dd7448d25a141bd27b73af8c23078faa5b30249",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note"
@@ -53944,8 +54005,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "18a78c955a77307b6ecba7e0c2194110254d72f0bc17a8bcd2dca4580ae80af5",
+      "deps": [
+        "wave_direct_dm_h025_fam2_seed0_boundary_note",
+        "wave_direct_dm_h025_fam2_seed0_control_note",
+        "wave_direct_dm_h025_fam2_seed1_followup_note",
+        "wave_direct_dm_h025_fam2_seed1_control_note"
+      ],
+      "note_hash": "aac0b368fedcc27298770e29dac681ca457a0ba60519e9eeea10a72561a59287",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
       "runner_path": null,
       "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note"
@@ -56325,7 +56391,6 @@
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
-    "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
     "background_independence_note",
@@ -56416,7 +56481,6 @@
     "distracted_napier_reconciliation_note",
     "dm_abcc_assumptions_audit_note_2026-04-19",
     "dm_abcc_basin_finite_search_support_note_2026-04-30",
-    "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
     "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
     "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
     "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
@@ -56714,7 +56778,6 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_beta_sweep_note",
     "lensing_deflection_note",
-    "lensing_finite_path_explanation_note",
     "lensing_k_sweep_note",
     "light_cone_framing_note",
     "linear_response_derivation_note",
@@ -56815,7 +56878,6 @@
     "pmns_lower_level_end_to_end_closure_note",
     "pmns_oriented_cycle_channel_value_law_note",
     "pmns_selector_three_identity_support_note_2026-04-21",
-    "pmns_selector_unique_amplitude_slot_note",
     "pmns_three_flux_holonomy_closure_note",
     "pmns_transfer_operator_dominant_mode_note",
     "pmns_uniform_scalar_deformation_boundary_note",
@@ -57018,8 +57080,6 @@
     "wave_3plus1d_promotions_note",
     "wave_amplification_near_horizon_note",
     "wave_direct_dm_family_scout_note",
-    "wave_direct_dm_h025_fam1_seed0_control_note",
-    "wave_direct_dm_h025_fam2_two_point_synthesis_note",
     "wave_direct_dm_h025_two_point_synthesis_note",
     "wave_equation_gravity_note",
     "wave_equation_self_field_note",
@@ -57101,10 +57161,10 @@
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6762,
-    "leaf_count": 551,
+    "edge_count": 6774,
+    "leaf_count": 550,
     "node_count": 1939,
-    "root_count": 864,
+    "root_count": 858,
     "runners_with_path": 1518
   }
 }

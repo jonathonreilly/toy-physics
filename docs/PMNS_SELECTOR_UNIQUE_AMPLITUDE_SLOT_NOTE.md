@@ -118,3 +118,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - `pmns_selector_class_space_uniqueness_note` (upstream parent;
   backticked to avoid length-3 cycle through publication.ci3_z3.derivation_atlas
   — citation graph direction is *class_space_uniqueness → atlas → this_amplitude_slot*)
+- [pmns_selector_class_space_uniqueness_note](PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md)

@@ -570,3 +570,9 @@ mutually consistent on `A_min`.
   references; we do not import any numerical input):
   Osterwalder–Seiler 1978; Sharatchandra–Thun–Weisz 1981;
   Menotti–Pelissetto 1987; Lüscher 1977.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05](STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md)

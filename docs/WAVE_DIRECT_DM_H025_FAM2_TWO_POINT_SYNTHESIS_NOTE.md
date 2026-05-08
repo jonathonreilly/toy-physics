@@ -91,3 +91,7 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - `wave_direct_dm_h025_fam2_seed1_control_note` (sibling input artifact;
   backticked to avoid length-2 cycle — citation graph direction is
   *seed1_control → this_synthesis*)
+- [wave_direct_dm_h025_fam2_seed0_boundary_note](WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md)
+- [wave_direct_dm_h025_fam2_seed0_control_note](WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
+- [wave_direct_dm_h025_fam2_seed1_followup_note](WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md)
+- [wave_direct_dm_h025_fam2_seed1_control_note](WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md)
