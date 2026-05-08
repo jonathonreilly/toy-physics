@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 67 |
+| **retained** | 68 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 823 |
+| unaudited | 822 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 26 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 399 |
+| `audited_clean` | 400 |
 | `audited_conditional` | 453 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 26 |
-| `unaudited` | 872 |
+| `unaudited` | 871 |
 
 | claim_type | count |
 |---|---:|
@@ -414,6 +414,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_graph_failure_map_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
+| `staggered_graph_gauge_closure_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_graph_portability_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_graph_portability_stress_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_layered_backreaction_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -12189,6 +12190,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Odd-cycle defects and parity wrap inconsistencies are structural breaks, while dense shortcuts and high-degree contamination are graceful degradations as long as the retained force battery stays intact.  _(class `B`)_
 - **chain closes:** True — The cited portability note is retained and supplies the retained force-battery baseline. The provided runner constructs the adversarial graph cases, measures the portability battery through the upstream runner, detects same-color/parity defects and graph irregularity metrics, and classifies the cases according to the note's stated boundary-map rule.
 - **rationale:** The claim is not a first-principles physics derivation; it is a bounded computational boundary-map claim over a retained upstream battery. The runner source does more than print constants: it constructs modified graph families, computes defect counts, long-edge fraction, max degree, retained-battery pass counts, force observables, and gauge status, then classifies the cases. The upstream authority is retained, and no open or non-retained dependency is present in the restricted packet.
+- **auditor confidence:** medium
+
+### `staggered_graph_gauge_closure_note`
+
+- **Note:** [`STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md`](../../docs/STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited whether the provided gauge-closure runner computes a native flux-threaded persistent-current response on cycle-bearing staggered graph families and reports periodic closure without 1D helpers or proxy rows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0584-7515-7f02-97fa-a42166b11c33`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The closure condition is that a cycle-bearing family shows nontrivial current span under threaded flux and periodic closure at phi=0 and phi=2pi, with the runner selecting the best geometry/operator/observable from that frozen run.  _(class `C`)_
+- **chain closes:** True — The cited portability authority is retained, and the included runner constructs flux-threaded Hamiltonians, diagonalizes them, computes ground-state current spans and endpoint residuals, and reports multiple cycle-bearing PASS cases. No missing bridge is apparent within the restricted packet for this scoped native graph-current closure probe.
+- **rationale:** The load-bearing computation is not a hard-coded numerical match: the runner builds a flux-threaded Hamiltonian for each graph, diagonalizes it over phi in [0, 2pi], and computes current span and periodic residual from the ground-state vector. The retained upstream portability note supplies the staggered transport law and prior retained side battery, and the current observable is separately scored on cycle-bearing graphs while acyclic graphs are N/A. One cycle-bearing layered stress case fails, but the note's stated closure criterion only requires a cycle-bearing family with nontrivial span and periodic closure, which the frozen runner output provides.
 - **auditor confidence:** medium
 
 ### `staggered_graph_portability_note`

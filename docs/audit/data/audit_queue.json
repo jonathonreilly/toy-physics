@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 60,
     "high": 302,
-    "leaf": 194,
+    "leaf": 193,
     "medium": 279
   },
   "cycle_break_target_count": 35,
@@ -17796,7 +17796,7 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_graph_gauge_closure_note",
+      "claim_id": "staggered_graph_gauge_closure_results_2026-04-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "migration_hint",
@@ -17804,16 +17804,17 @@
       "criticality_rank": 0,
       "cross_confirmation_status": null,
       "deps": [
+        "staggered_graph_gauge_closure_note",
         "staggered_graph_portability_note"
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 2.085,
-      "note_path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md",
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_staggered_graph_gauge_closure.py",
-      "transitive_descendants": 2
+      "transitive_descendants": 1
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19041,30 +19042,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/probe_bz_corner_decomposition.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "staggered_graph_gauge_closure_results_2026-04-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "staggered_graph_gauge_closure_note",
-        "staggered_graph_portability_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_staggered_graph_gauge_closure.py",
       "transitive_descendants": 1
     },
     {
@@ -22858,5 +22835,5 @@
     }
   ],
   "ready_count": 2,
-  "total_pending": 835
+  "total_pending": 834
 }
