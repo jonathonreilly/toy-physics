@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 826 |
+| unaudited | 825 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 447 |
+| ~~audited_conditional~~ | 448 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 447 |
+| `audited_conditional` | 448 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 875 |
+| `unaudited` | 874 |
 
 | claim_type | count |
 |---|---:|
@@ -786,6 +786,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -8050,6 +8051,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Given E_+ + E_perp = Tr(M^2) = N, AM-GM uniquely maximizes log(E_+ E_perp) at E_+ = E_perp = N/2, hence kappa = 2 and Q = 2/3.  _(class `A`)_
 - **chain closes:** False — The AM-GM algebra closes once the Frobenius energy split and functional are admitted. The broader asserted uniqueness/forcing of the Frobenius form does not close: positive-definiteness does not rule out other Ad-invariant scalar/traceless weightings, and the runner only checks a sample alternative.
 - **rationale:** The runner verifies many algebraic identities for the chosen trace/Frobenius split and one PDG interior positivity check. But the note's stronger claim that the building blocks are structurally fixed is not established: the uniqueness argument for the Frobenius inner product is incomplete, since checking that (tr A)(tr B) alone is degenerate does not exclude positive combinations with Tr(AB). Therefore the presented chain does not close on its own terms as a uniqueness theorem, although the conditional AM-GM calculation is algebraically correct.
+- **auditor confidence:** high
+
+### `koide_gamma_orbit_selector_bridge_note_2026-04-18`
+
+- **Note:** [`KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md`](../../docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The audited claim is the algebraic pullback of the cyclic Koide selector to the stated orbit-slot variables, plus the conditional identification with the standard sqrt(m) Koide cone.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0574-14b6-7df0-a006-b0c7abe71e08`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Substituting r0 = u+v+w, r1 = 2u-v-w, and r2 = sqrt(3)(v-w) gives 2 r0^2 - r1^2 - r2^2 = 2[4(uv+uw+vw) - (u^2+v^2+w^2)], so the cyclic selector is equivalent to the symmetric orbit-slot cone.  _(class `A`)_
+- **chain closes:** False — The symbolic pullback itself closes, but the physical Gamma/orbit bridge relies on the unprovided retained proof that the stated linear map is the physical orbit-return readout and that the slots are the charged-lepton sqrt(m) amplitudes. The note also explicitly leaves the value law and selector dynamics open.
+- **rationale:** The runner verifies the stated symbolic identities and two numerical observed-witness checks, but it hard-codes the orbit-to-cyclic map and does not derive the Gamma/orbit readout or selector law from retained primitives. With no one-hop cited authorities in the restricted packet, the physical bridge and slot identification are imported premises. The safe retained content is only the algebraic coordinate pullback conditional on those inputs.
 - **auditor confidence:** high
 
 ### `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20`
