@@ -15120,6 +15120,18 @@
       "dominant_class": "C",
       "runner": "scripts/probe_three_states_direct_derivation.py"
     },
+    "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac": {
+      "assert_count": 6,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py"
+    },
     "staggered_fermion_card_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -19951,6 +19963,21 @@
         "A": 0,
         "B": 0,
         "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py": {
+      "assert_count": 6,
+      "claims": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
@@ -39779,12 +39806,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 599,
+      "C": 600,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1420,
-    "runners_with_C": 710,
+    "runners_classified": 1421,
+    "runners_with_C": 711,
     "runners_with_D": 352
   }
 }

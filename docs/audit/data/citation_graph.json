@@ -13613,6 +13613,62 @@
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "axiom_first_reeh_schlieder_theorem_note_2026-05-01"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "to": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07"
+    },
+    {
       "from": "staggered_graph_failure_map_note",
       "to": "staggered_graph_portability_note"
     },
@@ -51039,6 +51095,32 @@
       "runner_path": null,
       "title": "Staggered-Dirac Realization Gate Note"
     },
+    "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac": {
+      "claim_id": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_physical_species_direct_theorem_note_2026-05-07"
+      ],
+      "note_hash": "64505a741a647361419a682412e516134d5475cd6c3671a4065dca132765f675",
+      "path": "docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md",
+      "runner_path": "scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py",
+      "title": "Staggered-Dirac Substep 4 \u2014 AC Narrowing (Atomic Decomposition, Bounded)"
+    },
     "staggered_fermion_card_2026-04-10": {
       "claim_id": "staggered_fermion_card_2026-04-10",
       "claim_type_author_hint": null,
@@ -57004,7 +57086,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 107,
+      "bounded_theorem": 108,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
@@ -57012,17 +57094,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 610,
+      "bounded_theorem": 611,
       "meta": 10,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6748,
+    "edge_count": 6762,
     "leaf_count": 551,
-    "node_count": 1938,
+    "node_count": 1939,
     "root_count": 864,
-    "runners_with_path": 1517
+    "runners_with_path": 1518
   }
 }
