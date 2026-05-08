@@ -1,0 +1,124 @@
+
+----------------------------------------------------------------------------------------
+Part 1: declaration structure (frontmatter + scope)
+----------------------------------------------------------------------------------------
+  [PASS (A)] declaration has required frontmatter element: 'Physical-Lattice Foundational Interpretation Note'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'foundational interpretive commitment'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'not a mathematical axiom'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'Claim type'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'foundational_interpretation'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'Effective status'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'foundational'  (len=14271)
+  [PASS (A)] declaration has section: 'What this note declares'  ()
+  [PASS (A)] declaration has section: 'Why this is not a mathematical axiom'  ()
+  [PASS (A)] declaration has section: 'What this commits to'  ()
+  [PASS (A)] declaration has section: 'What this does NOT commit to'  ()
+  [PASS (A)] declaration has section: 'How this shifts AC_φλ-class evaluations'  ()
+  [PASS (A)] declaration has section: 'Why the A3 derivation-campaign obstructions remain valid'  ()
+  [PASS (A)] declaration has section: 'Application across the framework'  ()
+  [PASS (A)] declaration has section: 'Audit-grade defensibility'  ()
+  [PASS (A)] declaration has section: 'Relation to existing notes'  ()
+  [PASS (A)] declaration has section: 'Validation'  ()
+  [PASS (A)] declaration has section: 'Conclusion'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: foundational-vs-mathematical-axiom distinction
+----------------------------------------------------------------------------------------
+  [PASS (A)] distinction anchor present: 'Formal system (mathematical)'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'Foundational interpretation'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'Empirical content'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'wavefunction interpretation in QM'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'Copenhagen vs Everett'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'spacetime is real'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'substantivalist'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'does not modify the mathematical content'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'It does not introduce'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'new mathematical structure'  (audit-coherence: layer separation explicit)
+  [PASS (A)] distinction anchor present: 'It does not add a new axiom'  (audit-coherence: layer separation explicit)
+  [PASS (A)] no formal-system claim of type: /new theorem proof depends on/  (matches=0)
+  [PASS (A)] no formal-system claim of type: /new mathematical axiom/  (matches=0)
+  [PASS (A)] no formal-system claim of type: /adds an axiom/  (matches=0)
+  [PASS (A)] no formal-system claim of type: /replaces A1/  (matches=0)
+  [PASS (A)] no formal-system claim of type: /replaces A2/  (matches=0)
+  [PASS (A)] no formal-system claim of type: /modifies A1/  (matches=0)
+  [PASS (A)] no formal-system claim of type: /modifies A2/  (matches=0)
+
+----------------------------------------------------------------------------------------
+Part 3: AC_φλ reframing coherence (algebra + empirical → realization)
+----------------------------------------------------------------------------------------
+  [PASS (A)] reframing anchor present: 'AC_φ is provably impossible from retained primitives'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'C_3-symmetric'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'hw=1 sector'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'exactly 3 C_3-orbit'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'physical realization breaks C_3'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'mass hierarchy'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'LEP'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'empirically witnessed'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'Bridge-gap admission count'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: '0 (physical-lattice reading)'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: '1 (formalist reading)'  (logical structure: algebra ⊕ empirical → realization)
+
+----------------------------------------------------------------------------------------
+Part 4: A3 derivation-campaign obstructions remain valid
+----------------------------------------------------------------------------------------
+  [PASS (A)] route R1 (Higgs/Yukawa) referenced and reframed  (obstruction theorem citation)
+  [PASS (A)] route R2 (single-clock) referenced and reframed  (obstruction theorem citation)
+  [PASS (A)] route R3 (anomaly inflow) referenced and reframed  (obstruction theorem citation)
+  [PASS (A)] route R4 (Spin(6) chain) referenced and reframed  (obstruction theorem citation)
+  [PASS (A)] route R5 (no-proper-quotient) referenced and reframed  (obstruction theorem citation)
+  [PASS (A)] hostile reviews (R1.HR-R5.HR) referenced  (all 5 hostile reviews)
+  [PASS (A)] obstruction-theorem retention: 'obstruction theorems remain mathematically valid'  (no contradictions with retained theorems)
+  [PASS (A)] obstruction-theorem retention: 'not falsified by this declaration'  (no contradictions with retained theorems)
+  [PASS (A)] obstruction-theorem retention: 'What changes is their *interpretation*'  (no contradictions with retained theorems)
+  [PASS (A)] obstruction-theorem retention: 'structural features'  (no contradictions with retained theorems)
+
+----------------------------------------------------------------------------------------
+Part 5: empirical compatibility (3 generations, mass hierarchy, CKM/PMNS)
+----------------------------------------------------------------------------------------
+  [PASS (A)] empirical compatibility anchor: 'm_t'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'm_c'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'm_u'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'm_τ'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'm_μ'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'm_e'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'LEP'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'Z-width'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'CKM'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: 'PMNS'  (empirical witness for C_3-breaking on physical lattice)
+  [PASS (A)] empirical compatibility anchor: '2.984'  (empirical witness for C_3-breaking on physical lattice)
+
+----------------------------------------------------------------------------------------
+Part 6: three-layer separation (foundational / formal / empirical)
+----------------------------------------------------------------------------------------
+  [PASS (A)] layer-separation anchor: 'Formal system (mathematical)'  ()
+  [PASS (A)] layer-separation anchor: 'Foundational interpretation'  ()
+  [PASS (A)] layer-separation anchor: 'Empirical content'  ()
+  [PASS (A)] layer-separation anchor: 'A1 (Cl(3))'  ()
+  [PASS (A)] layer-separation anchor: 'A2 (Z³)'  ()
+  [PASS (A)] layer-separation anchor: 'mass hierarchy'  ()
+  [PASS (A)] layer-separation anchor: 'CKM/PMNS structure'  ()
+  [PASS (A)] layer-separation anchor: 'three-generation count'  ()
+  [PASS (A)] A1+A2 declared unchanged  (minimal-axiom hygiene preserved)
+
+----------------------------------------------------------------------------------------
+Part 7: reversibility (formalist reading recoverable)
+----------------------------------------------------------------------------------------
+  [PASS (A)] reversibility anchor: 'Reversibility'  (audit-grade reversibility commitment)
+  [PASS (A)] reversibility anchor: 'audit lane rejects'  (audit-grade reversibility commitment)
+  [PASS (A)] reversibility anchor: 'formalist reading'  (audit-grade reversibility commitment)
+  [PASS (A)] reversibility anchor: 'does not corrupt'  (audit-grade reversibility commitment)
+
+----------------------------------------------------------------------------------------
+Part 8: coherence with existing retained notes
+----------------------------------------------------------------------------------------
+  [PASS (A)] MINIMAL_AXIOMS_2026-05-03 still declares A1+A2 as the framework axioms  (this declaration does not modify the axiom list)
+  [PASS (A)] this declaration acknowledges minimal-axioms note explicitly  (cross-reference present)
+  [PASS (A)] PHYSICAL_LATTICE_NECESSITY_NOTE narrowing referenced  (honest delegation to existing narrowed scope)
+  [PASS (A)] necessity-note algebraic content unchanged  (retained algebraic rigidity unchanged)
+  [PASS (A)] SUBSTEP4 AC narrowing referenced  (substep-4 AC-narrowing context preserved)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+PASS=86  FAIL=0
+VERDICT: declaration verified.
