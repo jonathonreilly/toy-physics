@@ -1,0 +1,111 @@
+==============================================================================
+Staggered-Dirac Substep 4 — AC Narrowing Structural Verification
+==============================================================================
+
+Loop: staggered-dirac-substep4-ac-narrow-20260507
+Companion theorem note:
+  outputs/action_first_principles_2026_05_07/
+    staggered_dirac_substep4_ac_narrow/THEOREM_NOTE.md
+Companion analysis:
+  outputs/action_first_principles_2026_05_07/
+    staggered_dirac_substep4_ac_narrow/AC_ANALYSIS.md
+
+==============================================================================
+Section 0: hw=1 BZ corner setup
+==============================================================================
+hw=1 corners: [(1, 0, 0), (0, 1, 0), (0, 0, 1)]
+Translation eigenvalues:
+  |(1, 0, 0)⟩: (T_x, T_y, T_z) = (-1, 1, 1)
+  |(0, 1, 0)⟩: (T_x, T_y, T_z) = (1, -1, 1)
+  |(0, 0, 1)⟩: (T_x, T_y, T_z) = (1, 1, -1)
+All three corners have distinct (T_x, T_y, T_z) eigenvalues: True
+C_3[111] is a 3-cycle on corners: True
+
+==============================================================================
+Section 1: Decomposition validity
+AC_narrow = AC_phi ∧ AC_lambda ∧ AC_phi_lambda
+==============================================================================
+  AC_phi_fails_alone_self_consistent: True
+  AC_lambda_fails_alone_self_consistent: True
+  AC_phi_lambda_fails_alone_self_consistent: True
+DECOMPOSITION VALIDITY: True
+
+==============================================================================
+Section 2: AC_lambda provability from retained substep 2
+(Kawamoto-Smit form gives free propagator block-diagonality)
+==============================================================================
+  kinetic_block_diagonal: True
+  propagator_block_diagonal: True
+  AC_lambda_provable_from_retained_substep_2: True
+  off_diagonal_max_abs: 0.0
+AC_LAMBDA PROVABLE FROM RETAINED SUBSTEP 2: True
+
+==============================================================================
+Section 3: AC_phi forced-failure under retained C_3[111] symmetry
+(Self-adjoint operator commuting with 3-cycle has equal expectation
+ on cycle's orbit)
+==============================================================================
+  H_C3_symmetric_constructed: True
+  [H, U_C3]_commutator_norm: 0.0
+  commutator_zero: True
+  H_eigenvalues_full_3D: [0.7999999999999996, 0.7999999999999999, 2.8999999999999995]
+  H_expectation_on_each_corner: [1.5, 1.5, 1.5]
+  expectation_equal_on_corners: True
+  AC_phi_forced_to_fail_under_retained_C3: True
+AC_PHI FORCED TO FAIL UNDER RETAINED C_3: True
+
+==============================================================================
+Section 4: Standard-QFT axiom correspondence
+==============================================================================
+  AC_phi:
+    Spectrum condition non-degeneracy on hw=1 — sub-clause of W2 (Wightman spectrum condition) restricted to specific subspace; audit-defensible: standard QFT input
+
+  AC_lambda:
+    Free fermion propagator block-diagonality on species index — standard property of fermion field decomposition (Wightman Streater-Wightman §2.4 + §4.5); audit-defensible: standard QFT property
+
+  AC_phi_lambda:
+    NO STANDARD QFT AXIOM EQUIVALENT — this is the SM-flavor-generation identification, an empirical SM input not derivable from any standard QFT axiom (SU(5), SO(10), strings all take the count '3' as input, not output); the framework's non-trivial scientific claim
+
+AC_PHI_LAMBDA HAS NO STANDARD QFT AXIOM EQUIVALENT: True
+
+==============================================================================
+Section 5: Premise dependency (retained primitives load-bearing)
+==============================================================================
+  A1: Cl(3) local algebra (framework axiom, retained)
+  A2: Z^3 spatial substrate (framework axiom, retained)
+  RP_A11: Reflection positivity → H_phys via OS reconstruction (retained)
+  RS: Reeh-Schlieder cyclicity (retained, A(O)|Omega⟩ dense)
+  CD: Cluster decomposition (retained, unique vacuum / single sector)
+  LR: Lieb-Robinson microcausality (retained)
+  LN: Lattice Noether (retained, fermion-number Q̂ on H_phys)
+  SC: Single-clock codimension-1 evolution (retained, unitary one-parameter)
+  BlockT3: M_3(C) on hw=1 (retained, three-generation observable theorem)
+  NQ: M_3(C) no-proper-quotient (retained, narrow theorem)
+  Substep_1: Grassmann partition forcing (positive, retained)
+  Substep_2: Kawamoto-Smit form forcing (positive, retained — load-bearing for AC_lambda)
+  Substep_3: BZ-corner doubler structure 1+1+3+3 (positive, retained — load-bearing for AC_residual structure)
+  C3_111: C_3[111] cyclic permutation of coordinate axes (forced by Z^3 point group, retained as A2 corollary)
+
+==============================================================================
+FINAL VERIFICATION SUMMARY
+==============================================================================
+
+  [OK]  decomposition_valid: True
+  [OK]  AC_lambda_provable_from_retained_substep_2: True
+  [OK]  AC_phi_forced_to_fail_under_retained_C3: True
+  [OK]  AC_phi_lambda_no_standard_qft_equivalent: True
+
+ALL CHECKS PASS — substep 4 AC-narrowing is structurally
+sound. Status: bounded_theorem (AC narrowing).
+
+Net narrowing:
+  Pre-narrow (Block 04):  1 opaque AC clause (single-clause
+                          'physical-species reading')
+  Post-narrow (this note): 3 atoms with explicit fates →
+                           1 residual atom (AC_phi_lambda =
+                           SM-flavor-generation identification)
+
+Substep 4 status: bounded_theorem (UNCHANGED; AC sharpened)
+AC_lambda extracted to positive corollary (conditional on audit)
+AC_phi forced-failure obstruction identified
+AC_residual = AC_phi_lambda is the genuine residual
