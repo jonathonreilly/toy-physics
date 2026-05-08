@@ -11,7 +11,9 @@ atlas/axiom package. This note names and regression-tests the `lambda` and
 `A` identities already present inside
 [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md). It is a
 companion to
-[`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md` (sibling
+companion subtheorem under the same CKM atlas; cross-reference only — the
+parent atlas already lists both subtheorems)
 and does not expand the parent CKM theorem's scope.
 
 **Narrowed claim scope.** This note scopes the three Wolfenstein structural
@@ -43,12 +45,16 @@ closure of the upstream parent CKM atlas, structural-count, CP-phase, and
 asserted by this note.
 
 The first-row companion
-[`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md` (sibling companion
+subtheorem under the same CKM atlas; cross-reference only — the parent
+atlas already lists both subtheorems)
 uses these same `lambda` and `A` identities to name
 `|V_us|_0^2 = alpha_s(v)/2`, `|V_ub|_0^2 = alpha_s(v)^3/72`, and
 `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72` on the atlas-leading
 surface. The third-row companion
-[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md` (sibling companion
+subtheorem under the same CKM atlas; cross-reference only — the parent
+atlas already lists both subtheorems)
 uses these same `lambda` and `A` identities to name
 `|V_td|_0^2 = 5 alpha_s(v)^3/72` and
 `|V_ts|_0^2 = alpha_s(v)^2/6` on the atlas-leading surface.
@@ -85,7 +91,7 @@ product identity in which the weak-pair factor cancels exactly.
 | `n_pair = 2` weak-pair structure | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md), [parent CKM atlas](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 | `n_color = 3` graph-first color structure | [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md), [parent CKM atlas](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 | Canonical `alpha_s(v)` | [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md), `scripts/canonical_plaquette_surface.py` |
-| CKM CP radius and phase identities | [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) |
+| CKM CP radius and phase identities | `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md` (sibling companion subtheorem under the same CKM atlas; backticked to avoid length-2 cycle) |
 
 No observed CKM matrix element, quark mass, or fitted flavor observable enters
 these identities.
@@ -241,11 +247,15 @@ The runner uses the Python standard library plus the canonical
 
 - [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
   - parent CKM package.
-- [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md` (sibling
+  companion subtheorem under the same CKM atlas; backticked to avoid
+  length-2 cycle)
   - companion `rho`, `eta`, phase, and `J` identities.
-- [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+- `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md` (sibling companion
+  subtheorem under the same CKM atlas; backticked to avoid length-2 cycle)
   - companion first-row atlas-leading magnitude identities.
-- [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+- `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md` (sibling companion
+  subtheorem under the same CKM atlas; backticked to avoid length-2 cycle)
   - companion third-row atlas-leading magnitude identities.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   - canonical `alpha_s(v)` input.

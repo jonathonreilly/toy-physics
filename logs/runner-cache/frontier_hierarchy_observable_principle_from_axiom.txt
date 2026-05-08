@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_hierarchy_observable_principle_from_axiom.py
-runner_sha256: 189dcdad977bf03bd6c301c5368e8915866d9759a1805ba6b98cd6360c418e87
+runner_sha256: 98dd83213670a297d4821ac7ecd8ed49d0e6c41c8694b74534d24bb1578874fe
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.08
+elapsed_sec: 0.13
 status: ok
 ----- stdout -----
 Hierarchy observable principle from the lattice axiom
@@ -90,20 +90,23 @@ PART 5: INTERNAL OBSERVABLE PRINCIPLE FIXES THE HIERARCHY CORRECTION
          relative error = 0.025513%
 
 ==============================================================================
-SCORECARD: 13 pass, 0 fail out of 13
+PART 6: CONDITIONAL-SHAPE VERIFICATION (2026-05-07 SCOPE NARROWING)
+==============================================================================
+  [PASS] P1 (additivity) holds for the candidate generator W = log|det(D+J)|
+         max additivity error = 7.11e-15
+  [PASS] P2 (CPT-even phase blindness) holds: W(j) = W(-j)
+         max evenness error = 0.00e+00
+  [PASS] P3 (continuity / small-j regularity) holds for the candidate W
+         max relative quadratic-coefficient consistency = 7.28e-06
+  [PASS] P4 (normalization convention) is implemented by zero-source baseline subtraction
+         max zero-source baseline error = 0.00e+00
+  [PASS] P1 is non-vacuous: raw |Z| violates additivity (so P1 is a real filter)
+         raw |Z| additivity violation = 0.9999
+  Note: this part verifies the CONDITIONAL SHAPE only (premises P1-P4 hold on the candidate W). It does NOT derive P1-P4 from retained-grade primitives; that path is explicitly out of scope per the audit-named conditional scope (see docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md §'Audit-named conditional scope').
+
+==============================================================================
+SCORECARD: 18 pass, 0 fail out of 18
 ==============================================================================
 
 ----- stderr -----
-/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: divide by zero encountered in det
-  r = _umath_linalg.det(a, signature=signature)
-/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: overflow encountered in det
-  r = _umath_linalg.det(a, signature=signature)
-/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: invalid value encountered in det
-  r = _umath_linalg.det(a, signature=signature)
-/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: divide by zero encountered in slogdet
-  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
-/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: overflow encountered in slogdet
-  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
-/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: invalid value encountered in slogdet
-  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
 

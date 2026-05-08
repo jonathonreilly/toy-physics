@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py
-runner_sha256: 9ea107e7d2d1815f968450c618477349f529e830dfb54474e76614e18e9c8ea6
+runner_sha256: 3508dbdce305f3f57f2b2698ef91aaf0331a397e93a7ad315b1cf4849625c6c6
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.69
+elapsed_sec: 2.61
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -16,8 +16,12 @@ PART 1: NOTE SCOPE AND AUTHORITY HYGIENE
   [PASS] The theorem note exists on the package surface  (DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
   [PASS] The theorem note points to this object-level verifier  (frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py)
   [PASS] Scope phrase present: does not evaluate `D_-`
-  [PASS] Scope phrase present: does not by itself select the final DM source point
+  [PASS] Scope phrase present: does not by itself select
   [PASS] Scope phrase present: The positive variational assumption is explicit
+  [PASS] Scope phrase present: Finite-dimensional closure certificate
+  [PASS] Scope phrase present: **Claim type:** `positive_theorem`
+  [PASS] Scope phrase present: fitted selector
+  [PASS] Scope phrase present: not a hidden Wilson-native construction
   [PASS] Scope phrase present: does not claim Wilson-native parent closure
   [PASS] Scope phrase present: does not independently close the DM flagship lane
 
@@ -87,8 +91,8 @@ PART 8: PACKAGE WIRING AND NEGATIVE-CLOSURE FLAGS
 ========================================================================================
 SUMMARY
 ========================================================================================
-PASSED: 42/42
-FAILED: 0/42
+PASSED: 46/46
+FAILED: 0/46
 DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL=TRUE
 DM_BOUNDARY_RESOLVENT_CERTIFICATE=TRUE
 DM_POSITIVE_DIRICHLET_CERTIFICATE=TRUE

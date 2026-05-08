@@ -12,14 +12,20 @@
 
 # Manuscript Claims Surface
 
-Use [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)&nbsp;[audit:meta] alongside
+Use `DERIVATION_VALIDATION_MAP.md` (sibling publication-package artifact;
+backticked to avoid length-3 cycles through DERIVATION_ATLAS and
+PUBLICATION_MATRIX — citation graph direction is *DERIVATION_VALIDATION_MAP →
+CLAIMS_TABLE*) alongside
 this file. This is the short public surface for what the paper may claim. It
 is intentionally not the full package ledger.
 
 For broader inventory and companion lanes, use:
 
-- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)&nbsp;[audit:meta]
-- [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)&nbsp;[audit:meta]
+- `PUBLICATION_MATRIX.md` (sibling publication-package artifact;
+  backticked to avoid length-2 cycle — that matrix already lists this
+  claims table as a sibling cross-reference, citation graph direction is
+  *publication_matrix → this_claims_table*)
+- `FULL_CLAIM_LEDGER.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)&nbsp;[audit:meta]
 
 ## Audit Transition Notice

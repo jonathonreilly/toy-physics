@@ -9,18 +9,10 @@
   },
   "cycle_examples": [
     [
-      "abcc_cp_phase_no_go_theorem_note_2026-04-19",
-      "sigma_hier_uniqueness_theorem_note_2026-04-19"
-    ],
-    [
       "sigma_hier_uniqueness_theorem_note_2026-04-19",
       "dm_sigma_hier_closure_packet_note_2026-04-20",
       "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
       "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
-    ],
-    [
-      "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     ],
     [
       "anomaly_forces_time_theorem",
@@ -34,9 +26,20 @@
     [
       "angular_kernel_underdetermination_no_go_note",
       "architecture_note_directional_measure"
+    ],
+    [
+      "hypercharge_identification_note",
+      "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    ],
+    [
+      "universal_gr_tensor_variational_candidate_note",
+      "universal_gr_curvature_localization_blocker_note",
+      "universal_gr_discrete_global_closure_note",
+      "universal_gr_lorentzian_signature_extension_note",
+      "universal_gr_constraint_action_stationarity_note"
     ]
   ],
-  "cycles_detected": 251,
+  "cycles_detected": 34,
   "effective_status_counts": {
     "audited_conditional": 443,
     "audited_failed": 8,

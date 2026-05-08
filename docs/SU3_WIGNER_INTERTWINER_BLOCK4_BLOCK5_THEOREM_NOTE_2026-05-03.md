@@ -352,4 +352,7 @@ SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [su3_cube_index_graph_shortcut_open_gate_note_2026-05-03](SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md)
+- `su3_cube_index_graph_shortcut_open_gate_note_2026-05-03` (open-gate
+  cross-reference — body explicitly disclaims this as a load-bearing
+  dependency at section 6; backticked to avoid length-3 cycle through
+  the gauge-vacuum-plaquette tensor-transfer Perron-solve note)

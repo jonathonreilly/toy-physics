@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_v1_picard_fuchs_minimality_2026_05_06.py
+runner_sha256: 0c8217ebdce80e05d82697c257af4ac11609415421b2f489d061cec908bdd0ef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.91
+status: ok
+----- stdout -----
+==============================================================================
+V=1 SU(3) Wilson Picard-Fuchs ODE: Minimality Certificate
+==============================================================================
+
+Candidate ODE (from PR #541):
+  6β² J''' + β(60-β) J'' + (-4β² - 2β + 120) J' - β(β+10) J = 0
+
+Building Bessel-determinant Taylor series of J(β) to order 40...
+  a_0 = 1, a_1 = 0, a_2 = 1/36, a_3 = 1/648, a_4 = 1/2592
+
+[A] Deep Taylor annihilation certificate:
+    L * J truncated to degree 36: IDENTICALLY ZERO
+
+[D] Recurrence consistency certificate:
+    Recurrence verified for N = 2 to 39: ALL HOLD EXACTLY
+
+[B] Lower-order exclusion certificate (no order ≤ 2 ODE with deg ≤ 12):
+    Lower-order exclusion certificate: ALL (r <= 2, d <= 12) EXCLUDED
+    r=1,d=0: unknowns=2, equations=10, rank=2, kernel_dim=0 -> OK: no annihilator
+    r=1,d=1: unknowns=4, equations=12, rank=4, kernel_dim=0 -> OK: no annihilator
+    r=1,d=2: unknowns=6, equations=14, rank=6, kernel_dim=0 -> OK: no annihilator
+    r=1,d=3: unknowns=8, equations=16, rank=8, kernel_dim=0 -> OK: no annihilator
+    r=1,d=4: unknowns=10, equations=18, rank=10, kernel_dim=0 -> OK: no annihilator
+    r=1,d=5: unknowns=12, equations=20, rank=12, kernel_dim=0 -> OK: no annihilator
+    r=1,d=6: unknowns=14, equations=22, rank=14, kernel_dim=0 -> OK: no annihilator
+    r=1,d=7: unknowns=16, equations=24, rank=16, kernel_dim=0 -> OK: no annihilator
+    r=1,d=8: unknowns=18, equations=26, rank=18, kernel_dim=0 -> OK: no annihilator
+    r=1,d=9: unknowns=20, equations=28, rank=20, kernel_dim=0 -> OK: no annihilator
+    r=1,d=10: unknowns=22, equations=30, rank=22, kernel_dim=0 -> OK: no annihilator
+    r=1,d=11: unknowns=24, equations=32, rank=24, kernel_dim=0 -> OK: no annihilator
+    r=1,d=12: unknowns=26, equations=34, rank=26, kernel_dim=0 -> OK: no annihilator
+    r=2,d=0: unknowns=3, equations=11, rank=3, kernel_dim=0 -> OK: no annihilator
+    r=2,d=1: unknowns=6, equations=14, rank=6, kernel_dim=0 -> OK: no annihilator
+    r=2,d=2: unknowns=9, equations=17, rank=9, kernel_dim=0 -> OK: no annihilator
+    r=2,d=3: unknowns=12, equations=20, rank=12, kernel_dim=0 -> OK: no annihilator
+    r=2,d=4: unknowns=15, equations=23, rank=15, kernel_dim=0 -> OK: no annihilator
+    r=2,d=5: unknowns=18, equations=26, rank=18, kernel_dim=0 -> OK: no annihilator
+    r=2,d=6: unknowns=21, equations=29, rank=21, kernel_dim=0 -> OK: no annihilator
+    r=2,d=7: unknowns=24, equations=32, rank=24, kernel_dim=0 -> OK: no annihilator
+    r=2,d=8: unknowns=27, equations=35, rank=27, kernel_dim=0 -> OK: no annihilator
+    r=2,d=9: unknowns=30, equations=36, rank=30, kernel_dim=0 -> OK: no annihilator
+    r=2,d=10: unknowns=33, equations=36, rank=33, kernel_dim=0 -> OK: no annihilator
+    r=2,d=11: unknowns=36, equations=36, rank=36, kernel_dim=0 -> OK: no annihilator
+
+[C] Uniqueness at (r=3, d=2) certificate:
+    Uniqueness at (r=3, d=2): kernel = 1D, matches published ODE
+    info: {'unknowns': 12, 'equations': 20, 'rank': 11, 'kernel_dim': 1, 'scalar': '6', 'status': 'OK: kernel is 1-dimensional and matches published ODE'}
+
+[E] Higher-degree (r=3, d > 2) consistency:
+    Higher-degree (r=3, d > 2) consistency: ALL kernels match polynomial-multiple bound
+    r=3,d=2: kernel_dim=1, expected=1 -> OK
+    r=3,d=3: kernel_dim=2, expected=2 -> OK
+    r=3,d=4: kernel_dim=3, expected=3 -> OK
+    r=3,d=5: kernel_dim=4, expected=4 -> OK
+    r=3,d=6: kernel_dim=5, expected=5 -> OK
+
+==============================================================================
+SUMMARY: CERTIFICATE PASS=5 FAIL=0
+==============================================================================
+
+Exact finite certificates passed. All-order minimality remains conditioned
+on the external holonomicity/rank and creative-telescoping inputs named
+in the companion note; audit status is set only by the independent lane.
+Output written: outputs/su3_v1_picard_fuchs_minimality_2026_05_06.json
+
+----- stderr -----
+
