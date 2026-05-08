@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 873 |
+| unaudited | 872 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
-| ~~audited_renaming~~ | 27 |
+| ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 419 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
-| `audited_renaming` | 27 |
-| `unaudited` | 926 |
+| `audited_renaming` | 28 |
+| `unaudited` | 925 |
 
 | claim_type | count |
 |---|---:|
@@ -1023,6 +1023,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_full_self_consistency_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
+| `gravity_observable_hierarchy_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -6899,6 +6900,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 1 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
+
+### `gravity_observable_hierarchy_note`
+
+- **Note:** [`GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](../../docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded sign-interpretation hierarchy for the rows the registered runner computes, especially dense 3D z=3 and z=5.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0946-c5a6-75f0-9d24-94433695b59e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** A negative centroid can be re-read as mass-side enhancement only when P_near is positive and channel bias is positive; otherwise the hierarchy classifies rows by the three detector observables.  _(class `E`)_
+- **chain closes:** False — The runner computes centroid shift, P_near, and channel bias for the stated rows, but the mapping from those signs to physical labels such as genuine attraction or away/depletion is introduced as an interpretation rule rather than derived from retained physics in the restricted packet.
+- **rationale:** Issue: the load-bearing hierarchy assigns physical sign labels by definition of an interpretation rule. Why this blocks: the computed observables support the reported signs for the runner rows, but they do not derive that the labels 'genuine attraction' or 'away / depletion' are forced physical observables rather than a chosen readout convention. Repair target: provide a retained bridge theorem deriving the sign-classification rule from the detector metric and gravity observable definitions, with a runner that tests the bridge rather than only applying the rule. Claim boundary until fixed: the note can report the computed observable triples for the bounded rows and define a proposed interpretation hierarchy.
+- **auditor confidence:** medium
 
 ### `gravity_sign_audit_2026-04-10`
 
