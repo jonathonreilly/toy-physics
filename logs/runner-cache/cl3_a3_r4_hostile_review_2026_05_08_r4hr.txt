@@ -1,0 +1,131 @@
+===== runner cache v1 =====
+runner: scripts/cl3_a3_r4_hostile_review_2026_05_08_r4hr.py
+runner_sha256: de31e7b20024317a5ab6c1119251521776c3f60f57f537636477573b4ece556b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.23
+status: ok
+----- stdout -----
+
+========================================================================================
+HR4.1  Are there OTHER maximal subgroups of SU(4) compatible with retained SU(3) on V_3?
+========================================================================================
+  [PASS] HR4.1.1 Sp(2)~Sp(4) symplectic form Omega has det=1, antisym  (Sp(2) preserves a non-degenerate antisymmetric form on C^4)
+  [PASS] HR4.1.2 At least one SU(3) generator is NOT in sp(4)  (5/8 SU(3) generators violate Sp(4) condition)
+  [PASS] HR4.1.3 Sp(4) does not contain SU(3) x U(1) as subgroup  (Sp(4) maximal subgroups: SU(2)xSU(2), SU(2)xU(1) — no SU(3))
+  [PASS] HR4.1.4 SU(3) (dim 8) cannot be subgroup of SU(2)xSU(2)xU(1) (dim 7)  (8 > 7: dimensional impossibility)
+  [PASS] HR4.1.5 SU(3) cannot be subgroup of SO(4)~SU(2)xSU(2) (dim 6)  (dimensional impossibility)
+  [PASS] HR4.1.6 SU(3) x U(1) is the UNIQUE maximal SU(4) subgroup containing SU(3)  (No counter-example: dim(SU(3))=8 forces dim(parent)>=8; dim(maximal SU(4) subgroups other than SU(3)xU(1)) <= 7)
+
+========================================================================================
+HR4.2  Could there be a DIFFERENT branching with non-uniform U(1) charge?
+========================================================================================
+  [PASS] HR4.2.1 Centralizer of SU(3) in su(4) is 1-dimensional  (dim = 1: U(1) generator is unique up to scale)
+  [PASS] HR4.2.2 Centralizer generator is proportional to T_15 (= U(1)_(B-L))  (U(1)_(B-L) is the unique centralizer up to scale)
+  [PASS] HR4.2.3 U(1)_(B-L) acts as constant +1/3 on 3 corner subspace  (diag = [0.333333 0.333333 0.333333] (Schur's lemma: scalar on irrep))
+  [PASS] HR4.2.4 Schur's lemma forbids non-uniform U(1) on SU(3)-irrep  (Any U(1) commuting with SU(3) acts as scalar on each irrep)
+
+========================================================================================
+HR4.3  Could Z_3 triality of Spin(8) be inherited at Spin(6) level?
+========================================================================================
+  [PASS] HR4.3.1 Spin(6) has only 2 distinct 4-dim irreps (4 and 4-bar)  (4-dim irreps: ['4', '4-bar'] -- Z_2 symmetry, not Z_3)
+  [PASS] HR4.3.2 Spin(8) has 3 distinct 8-dim irreps (8_v, 8_s, 8_c)  (8-dim irreps: ['8_v', '8_s', '8_c'] -- S_3 triality)
+  [PASS] HR4.3.3 Bott periodicity does NOT transport Spin(8) triality to Spin(6)  (Cl(6) and Cl(14) have different Dynkin types (A_3 vs D_7))
+  [PASS] HR4.3.4 Cl(3) tensor Cl(3) embedding into Cl(8) does not pull Spin(8) triality back to the Spin(6) sub-algebra  (Outer automorphisms are subgroup-of-the-Dynkin-diagram, not algebra-Morita)
+
+========================================================================================
+HR4.4  C_3[111] as Weyl element of SU(3) — conjugacy class
+========================================================================================
+  [PASS] HR4.4.1 C_3[111] is in SU(3): det = 1  (det = (1+0j))
+  [PASS] HR4.4.2 C_3[111] has trace 0 (sum of eigenvalues 1+omega+omega-bar)  (trace = 0j)
+  [PASS] HR4.4.3 C_3[111] eigenvalues = {1, omega, omega-bar}
+  [PASS] HR4.4.4 C_3 acts on SU(3) Cartan as cyclic permutation (= S_3 Coxeter)  (C_3 in (123)-conjugacy class of W(SU(3))=S_3)
+  [PASS] HR4.4.5 C_3 center element omega*I commutes with all SU(3); acts as scalar on corners; cannot distinguish  (Non-Weyl C_3 is in center of SU(3) -> uniform on corners)
+  [PASS] HR4.4.6 No non-Weyl realization of C_3 distinguishes corners  (Order-3 elements of SU(3) are either Weyl (conjugate to cyclic permutation, R4's case) or central (uniform action))
+
+========================================================================================
+HR4.5  Branching multiplicities — multi-irrep alternatives?
+========================================================================================
+  [PASS] HR4.5.1 SU(3) action on V_3 (fundamental rep) has 1-dim centralizer  (nullity = 1; centralizer = scalar multiples of I)
+  [PASS] HR4.5.2 Centralizer is span of identity matrix  (Confirms SU(3) on V_3 is the fundamental (irreducible))
+  [PASS] HR4.5.3 SU(3) has NO 2-dim irrep; (1,q1)+(2,q2) impossible  (SU(3) irreps: 1, 3, 3-bar, 6, 8, 10, ... (no 2))
+  [PASS] HR4.5.4 The 3-corner subspace is a single SU(3)-irrep (3 or 3-bar)  (Forced by SU(3) irrep dimensions and 3-dim subspace)
+
+========================================================================================
+HR4.6  Could a different Cl(6) substructure give a different breaking?
+========================================================================================
+  [PASS] HR4.6.1 Cl(6) over C ~ M_8(C); only inner automorphisms (mod center)  (Cl_6(C) is simple matrix algebra; outer = trivial)
+  [PASS] HR4.6.2 Spin(6) ~ SU(4): no separate path through SO(6) gives different reduction  (Universal cover Spin(6) = SU(4); SO(6) is Spin(6)/Z_2)
+  [PASS] HR4.6.3 Cl(6) ↪ Cl(8) embedding does NOT inherit Spin(8) triality  (Triality acts on 8_v, 8_s, 8_c — not on the 6+2 split of Cl(6) tensor Cl(2) ~ Cl(8))
+
+========================================================================================
+HR4.7  Higher reps of SU(3) x U(1) — corner-distinguishing matrix elements?
+========================================================================================
+  [PASS] HR4.7.1 Centralizer of C_3 in u(3) is 3-dim (eigenspace projectors)  (C_3 has 3 distinct eigenvalues -> 3 projectors)
+  [PASS] HR4.7.2 C_3-invariant projectors P_k have uniform expectation 1/3 on each corner  (expect[n,k] = 1/3 for all n, k (corners share C_3-invariant data))
+  [PASS] HR4.7.3 Random linear combo of C_3-eigenspace projectors is C_3-invariant
+  [PASS] HR4.7.4 C_3-invariant A_test has equal expectation on 3 corners  (expect = [0.633333 0.633333 0.633333]: equal as substep 4 AC narrowing predicts)
+  [PASS] HR4.7.5 (3-bar, -1/3) has same SU(3) Casimir as (3, 1/3) — no new corner distinction  (Casimir depends on irrep type, not signature)
+
+========================================================================================
+HR4.8  Embedding rigidity — does choice of SU(3) ↪ SU(4) matter?
+========================================================================================
+  [PASS] HR4.8.1 SU(3) on random 3-subspace W has rank<=3 in C^4  (SU(3) action restricts to W)
+  [PASS] HR4.8.2 Centralizer of random SU(3)_on_W in su(4) is 1-dim  (dim = 1: U(1) generator unique)
+  [PASS] HR4.8.3 Centralizer eigenvalues on random W: 3 equal + 1 different  (eigenvalues sorted: [-0.204124 -0.204124 -0.204124  0.612372])
+  [PASS] HR4.8.4 U(1) charge is uniform on the 3-dim W subspace  (diag on W: [-0.204124 -0.204124 -0.204124] (Schur on irrep))
+  [PASS] HR4.8.5 ALL embeddings SU(3) ↪ SU(4) yield uniform U(1) on V_3  (Schur's lemma + 1-dim centralizer + 3-dim irrep)
+
+========================================================================================
+HR4.9  Stress test — can ANY framework primitive give non-uniform charge?
+========================================================================================
+  [PASS] HR4.9.1 BZ Bloch phase is the AC_λ track, not AC_φ; not in SU(3) x U(1) residual  (Translation eigenvalue is upstream, not residual gauge data)
+  [PASS] HR4.9.2 SU(3) Cartan T_3 is NOT C_3-invariant (as expected)  (T_3 distinguishes corners but breaks C_3; not allowed by substep 4)
+  [PASS] HR4.9.3 U(1)_(B-L)^2 on corners: uniform 1/9  ([0.111111 0.111111 0.111111])
+  [PASS] HR4.9.4 No combination of {SU(3) generators, U(1)_(B-L)} distinguishes corners under C_3 invariance  (Substep 4 AC narrowing applies inside SU(3) x U(1) residual)
+
+========================================================================================
+HR4.10  Summary of hostile review verdict
+========================================================================================
+  [PASS] HR4.1: SU(3)xU(1) is unique maximal SU(4) subgroup containing SU(3).
+  [PASS] HR4.2: Schur forces uniform U(1) on SU(3)-irrep; non-uniform impossible.
+  [PASS] HR4.3: Spin(8) triality is a D_4-only feature; not inherited at A_3.
+  [PASS] HR4.4: C_3[111] is in (123) Weyl class of S_3 ⊂ SU(3); only alternative is center, which is uniform.
+  [PASS] HR4.5: SU(3) has no 2-dim irrep; (1,q1)+(2,q2) impossible; 3-corner subspace is single (3) of SU(3).
+  [PASS] HR4.6: Cl(6) ↪ Cl(8) does not transport triality; no other route to Z_3.
+  [PASS] HR4.7: All C_3-invariant operators in {SU(3), U(1)} are scalar on (3, 1/3); substep 4 AC narrowing applies.
+  [PASS] HR4.8: Embedding choice is moduli only; all give uniform U(1) (Stiefel manifold rigidity).
+
+HOSTILE REVIEW VERDICT
+======================
+R4's "U(1) centrality" obstruction claim SURVIVES the hostile review.
+
+Each of the 8 attack vectors HR4.1-HR4.8 reduces to a clean
+representation-theory fact:
+  - The maximal subgroup chain SU(4) -> SU(3) x U(1) is unique (HR4.1).
+  - Schur's lemma forces uniform U(1) on the 3-corner irrep (HR4.2).
+  - Triality (Z_3 outer of Spin(8)) does not propagate to Spin(6) (HR4.3).
+  - C_3[111] is exactly the Weyl/Coxeter element R4 identified (HR4.4).
+  - SU(3) has no 2-dim irrep so 3 = (1)+(2) is impossible (HR4.5).
+  - Cl(6) substructure does not yield Z_3 by any path (HR4.6).
+  - C_3-invariant observables in {SU(3), U(1)} are uniform on
+    (3, 1/3) by substep 4 AC narrowing (HR4.7).
+  - Embedding moduli rigidity: all SU(3) ↪ SU(4) give same physics (HR4.8).
+
+The "U(1) centrality + C_3 ⊂ SU(3) Weyl + Schur on 3-irrep" trio
+forms a closed obstruction.  No escape route through Spin(6)
+representation theory exists.
+
+R4's note can be promoted as a SHARPENED bounded obstruction: it
+correctly identifies the structural barrier and the result is
+mathematically rigid.
+
+Status proposal: bounded source note queued for independent audit
+(hostile review confirms R4's bounded obstruction claim).
+
+  EXACT      : PASS = 49, FAIL = 0
+  BOUNDED    : PASS = 0, FAIL = 0
+  TOTAL      : PASS = 49, FAIL = 0
+
+----- stderr -----
+

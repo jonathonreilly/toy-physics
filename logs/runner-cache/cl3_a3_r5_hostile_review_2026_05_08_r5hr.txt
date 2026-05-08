@@ -1,0 +1,151 @@
+===== runner cache v1 =====
+runner: scripts/cl3_a3_r5_hostile_review_2026_05_08_r5hr.py
+runner_sha256: 7c0e19d93e09e61c1b9d4a772fcadce7e93d098551bd87c60b02d4301b46df99
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+==============================================================================
+A3 R5 Hostile Review — numerical stress-test of seven-vector
+species-disclaimer non-removability claim (PR #712).
+==============================================================================
+
+Loop: action-first-principles-r5-hostile-review-20260508
+Companion source-note:
+  docs/A3_R5_HOSTILE_REVIEW_<status>_NOTE_2026-05-08_r5hr.md
+
+==============================================================================
+HR5.1 -- GNS rigor (V1 stress-test)
+==============================================================================
+  [PASS] U_C3_cubed_is_strict_identity_no_phase: True
+  [PASS] U_C3_determinant_is_plus_1: True
+  [PASS] no_projective_ambiguity: True
+  [PASS] c3_symmetric_vector_is_U_invariant: True
+  [PASS] c3_antisymmetric_vector_not_U_invariant: True
+  [PASS] ad_U_maps_Tx_to_Ty: True
+  [PASS] ad_U_maps_Ty_to_Tz: True
+  [PASS] ad_U_maps_Tz_to_Tx: True
+
+==============================================================================
+HR5.2 -- C_3 in A(Lambda) consistency (V1 reframe vs DHR retirement)
+==============================================================================
+  [PASS] U_C3_constructible_from_matrix_units: True
+  [PASS] U_C3_in_M3C_span: True
+  [PASS] U_C3_has_three_nonzero_M3C_coords: True
+  [PASS] c3_dual_reading_consistent_on_hw1: True
+  [PASS] dhr_retirement_robust_to_v1_reframing: True
+
+==============================================================================
+HR5.3 -- Modular structure (Tomita-Takesaki on Type I_3)
+==============================================================================
+  [PASS] tracial_state_Delta_is_I: True
+  [PASS] asymmetric_state_Delta_nontrivial: True
+  [PASS] asym_state_breaks_C3_symmetry: True
+  [PASS] tracial_state_C3_symmetric: True
+  [PASS] modular_labels_require_C3_breaking_state: True
+
+==============================================================================
+HR5.4 -- Bare retained Hamiltonian C_3 symmetry
+==============================================================================
+  [PASS] bare_KS_kinetic_C3_symmetric: True
+  [PASS] KS_kinetic_equal_corner_expectations: True
+  [PASS] H_commutes_with_Tx: True
+  [PASS] H_commutes_with_Ty: True
+  [PASS] H_commutes_with_Tz: True
+  [PASS] retained_constraint_set_is_C3_symmetric: True
+
+==============================================================================
+HR5.5 -- Continuum-only effects and species labels
+==============================================================================
+  [PASS] A_dim_hermitian: True
+  [PASS] A_dim_C3_symmetric: True
+  [PASS] anomalous_dim_equal_corners: True
+  [PASS] A_dim_eigs_in_C3_basis_distinct: True
+  [PASS] asymptotic_freedom_uniform_across_corners: True
+  [PASS] continuum_effects_preserve_C3_symmetry: True
+
+==============================================================================
+HR5.6 -- Embedding non-uniqueness on Type I_3
+==============================================================================
+  [PASS] V_is_unitary: True
+  [PASS] Tx2_squared_is_I: True
+  [PASS] Ty2_squared_is_I: True
+  [PASS] Tz2_squared_is_I: True
+  [PASS] Tx2_Ty2_commute: True
+  [PASS] U2_cubed_is_I: True
+  [PASS] Ad_U2_maps_Tx2_to_Ty2: True
+  [PASS] Ad_U2_maps_Ty2_to_Tz2: True
+  [PASS] Tx_eigvals_invariant_across_embeddings: True
+  [PASS] embedding_choice_does_not_supply_species: True
+
+==============================================================================
+HR5.7 -- Full S_3 vs C_3 -- transpositions and 1+2 decomposition
+==============================================================================
+  [PASS] omega_invariant_under_C3: True
+  [PASS] omega_NOT_invariant_under_Tx: True
+  [PASS] NQ_robust_against_omega_line: True
+  [PASS] S3_element_e_is_unitary: True
+  [PASS] S3_element_C3_is_unitary: True
+  [PASS] S3_element_C3_inv_is_unitary: True
+  [PASS] S3_element_T_xy_is_unitary: True
+  [PASS] S3_element_T_yz_is_unitary: True
+  [PASS] S3_element_T_xz_is_unitary: True
+  [PASS] S3_closed_under_multiplication: True
+  [PASS] Ad_Txy_swaps_Tx_Ty: True
+  [PASS] psi1_orth_omega: True
+  [PASS] psi2_orth_omega: True
+  [PASS] Tx_psi1_NOT_in_2_dim_subrep: True
+  [PASS] full_S3_plus_D3_irreducible: True
+  [PASS] transpositions_no_additional_species_label: True
+
+==============================================================================
+HR5.8 -- Species-disclaimer preservation under V1 reframe
+==============================================================================
+  [PASS] M3C_dim_is_9: True
+  [PASS] disclaimer_preserved_under_v1_reframing: True
+  [PASS] disclaimer_substrate_physicality_match: True
+
+==============================================================================
+AGGREGATE VERDICT
+==============================================================================
+  HR5.1: PASS
+  HR5.2: PASS
+  HR5.3: PASS
+  HR5.4: PASS
+  HR5.5: PASS
+  HR5.6: PASS
+  HR5.7: PASS
+  HR5.8: PASS
+  VERDICT: CONFIRMS_OBSTRUCTION_with_sharpenings
+
+SUMMARY: 59 PASS, 0 FAIL
+
+HOSTILE REVIEW VERDICT: CONFIRMS_OBSTRUCTION (with sharpenings)
+
+R5's species-disclaimer non-removability claim is structurally robust.
+All seven attack vectors withstand numerical stress-testing.
+
+Sharpenings identified by hostile review:
+
+  1. HR5.2: R5's V1 reframe ('C_3 is automorphism alpha_{C_3}') is
+     consistent with prior reading ('C_3 is in A(Lambda)') because
+     U_{C_3} sits inside M_3(C) on hw=1. The 'fix' is sufficient
+     but not necessary -- both readings give the SAME object.
+
+  2. HR5.4: V6 understates the obstruction. The BARE retained
+     Hamiltonian on hw=1 is exactly C_3-symmetric (Kawamoto-Smit
+     kinetic + cubic isotropy + APBC). This is STRONGER than 
+     'spectrum-positivity is independent of C_3-symmetry'.
+
+  3. HR5.7: The FULL S_3 = Weyl(SU(3)) lifts to H_phys, not just
+     C_3. S_3 has a 1+2 invariant decomposition on C^3, but the
+     translation algebra D_3 forbids this decomposition. NQ stands.
+     Transpositions add NO new species labels.
+
+Conclusion: R5's seven-vector enumeration is COMPLETE and the
+structural-orthogonality claim is verified. Species-disclaimer
+cannot be removed from retained primitives alone.
+
+----- stderr -----
+

@@ -12,6 +12,126 @@
       "dominant_class": null,
       "runner": "scripts/dispersion_3d_lattice.py"
     },
+    "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_r1_hostile_review_2026_05_08_r1hr.py"
+    },
+    "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_r2_hostile_review_2026_05_08_r2hr.py"
+    },
+    "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_r3_hostile_review_2026_05_08_r3hr.py"
+    },
+    "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_r4_hostile_review_2026_05_08_r4hr.py"
+    },
+    "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 27,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_r5_hostile_review_2026_05_08_r5hr.py"
+    },
+    "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_route1_higgs_yukawa_2026_05_08_r1.py"
+    },
+    "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_route2_single_clock_2026_05_08_r2.py"
+    },
+    "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_route3_anomaly_inflow_2026_05_08_r3.py"
+    },
+    "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 16,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_route4_spin6_chain_2026_05_08_r4.py"
+    },
+    "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_a3_route5_no_proper_quotient_2026_05_08_r5.py"
+    },
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "assert_count": 0,
       "counts": {
@@ -19880,6 +20000,156 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/cl3_a3_r1_hostile_review_2026_05_08_r1hr.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_r2_hostile_review_2026_05_08_r2hr.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_r3_hostile_review_2026_05_08_r3hr.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_r4_hostile_review_2026_05_08_r4hr.py": {
+      "assert_count": 1,
+      "claims": [
+        "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_r5_hostile_review_2026_05_08_r5hr.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 27,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_route1_higgs_yukawa_2026_05_08_r1.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_route2_single_clock_2026_05_08_r2.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_route3_anomaly_inflow_2026_05_08_r3.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_route4_spin6_chain_2026_05_08_r4.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 16,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_a3_route5_no_proper_quotient_2026_05_08_r5.py": {
+      "assert_count": 0,
+      "claims": [
+        "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_baryon_qqq_color_singlet_check.py": {
@@ -40035,12 +40305,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 169,
-      "C": 607,
+      "C": 617,
       "D": 213,
       "none": 426
     },
-    "runners_classified": 1429,
-    "runners_with_C": 719,
-    "runners_with_D": 352
+    "runners_classified": 1439,
+    "runners_with_C": 729,
+    "runners_with_D": 354
   }
 }

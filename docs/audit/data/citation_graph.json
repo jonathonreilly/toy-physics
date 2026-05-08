@@ -13,6 +13,454 @@
       "to": "lensing_combined_invariant_note"
     },
     {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "yt_class_6_c3_breaking_operator_note_2026-04-18"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "yt_class_7_spontaneous_c3_breaking_note_2026-04-18"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "strong_cp_theta_zero_note"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "s3_mass_matrix_no_go_note"
+    },
+    {
+      "from": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "su2_witten_z2_anomaly_theorem_note_2026-04-24"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "to": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "axiom_first_reeh_schlieder_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "axiom_first_kms_condition_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_reeh_schlieder_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "koide_brannen_callan_harvey_candidate_note_2026-04-22"
+    },
+    {
+      "from": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "axiom_first_reeh_schlieder_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07"
+    },
+    {
+      "from": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
       "from": "abcc_cp_phase_no_go_theorem_note_2026-04-19",
       "to": "sigma_hier_uniqueness_theorem_note_2026-04-19"
     },
@@ -27652,6 +28100,238 @@
       "path": "docs/3D_CORRECTION_MASTER_NOTE.md",
       "runner_path": "scripts/dispersion_3d_lattice.py",
       "title": "3D Correction Master Note"
+    },
+    "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr": {
+      "claim_id": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (hostile-review confirmation)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "yt_class_6_c3_breaking_operator_note_2026-04-18",
+        "yt_class_7_spontaneous_c3_breaking_note_2026-04-18",
+        "strong_cp_theta_zero_note",
+        "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "z2_hw1_mass_matrix_parametrization_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "s3_mass_matrix_no_go_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "5996832038cd9f2ca0d9f5d5cb6fe66ce7991070ffff1dce3a0ac81e32382529",
+      "path": "docs/A3_R1_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r1hr.md",
+      "runner_path": "scripts/cl3_a3_r1_hostile_review_2026_05_08_r1hr.py",
+      "title": "A3 R1 Hostile Review \u2014 C_3-Equivariance Theorem Confirms Bounded Obstruction"
+    },
+    "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr": {
+      "claim_id": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (hostile-review confirmation; sharpens R2's structural argument)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "cpt_exact_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+      ],
+      "note_hash": "1506874cc791d1b031f5a4bf9cf8de85d46e9b21cb8c94e491199506f51dfe77",
+      "path": "docs/A3_R2_HOSTILE_REVIEW_CONFIRMS_EXHAUSTION_NOTE_2026-05-08_r2hr.md",
+      "runner_path": "scripts/cl3_a3_r2_hostile_review_2026_05_08_r2hr.py",
+      "title": "A3 R2 Hostile Review \u2014 Confirms Kinematic-Primitive Exhaustion (Bounded)"
+    },
+    "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr": {
+      "claim_id": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (hostile review confirmation)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
+        "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "041295719991e84d577dbf56bf5c9d0309a3470e1e732449b2937a58b38a5818",
+      "path": "docs/A3_R3_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r3hr.md",
+      "runner_path": "scripts/cl3_a3_r3_hostile_review_2026_05_08_r3hr.py",
+      "title": "A3 / Route 3 Hostile Review \u2014 Universal C_3-Orbit Functorial Obstruction CONFIRMED"
+    },
+    "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr": {
+      "claim_id": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (hostile-review confirmation)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "cl3_color_automorphism_theorem",
+        "three_generation_observable_theorem_note",
+        "minimal_axioms_2026-05-03",
+        "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+      ],
+      "note_hash": "6d7873a33af4d8b2fd98996bc708b4a1657970464f10c6fc46be7c013e47c8e7",
+      "path": "docs/A3_R4_HOSTILE_REVIEW_CONFIRMED_NOTE_2026-05-08_r4hr.md",
+      "runner_path": "scripts/cl3_a3_r4_hostile_review_2026_05_08_r4hr.py",
+      "title": "A3 Route 4 (Spin(6) Chain) \u2014 Hostile Review CONFIRMED Bounded Obstruction Note"
+    },
+    "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr": {
+      "claim_id": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (hostile-review confirmation, with structural sharpenings)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "1f1bf242534ffe2152ae9c9c07d25f8428f54b81b2c134cd91703d22fc32dbf1",
+      "path": "docs/A3_R5_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r5hr.md",
+      "runner_path": "scripts/cl3_a3_r5_hostile_review_2026_05_08_r5hr.py",
+      "title": "A3 R5 Hostile Review \u2014 Confirms Obstruction (with Sharpenings)"
+    },
+    "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1": {
+      "claim_id": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "minimal_axioms_2026-05-03",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
+        "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+        "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+      ],
+      "note_hash": "f75782b0bf426b4e1ae393ad48662fc2ea4037e54115ea7c0cea4d25a60d8aca",
+      "path": "docs/A3_ROUTE1_HIGGS_YUKAWA_C3_BREAKING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r1.md",
+      "runner_path": "scripts/cl3_a3_route1_higgs_yukawa_2026_05_08_r1.py",
+      "title": "A3 Route 1 \u2014 Higgs/Yukawa C_3-Breaking Dynamics Bounded Obstruction"
+    },
+    "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2": {
+      "claim_id": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "axiom_first_kms_condition_theorem_note_2026-05-01",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_realization_gate_note_2026-05-03"
+      ],
+      "note_hash": "3ab320800b25db6f1dd29e8974ccc5aa2fbea0120a6b4344baab5fc6d6372f10",
+      "path": "docs/A3_ROUTE2_SINGLE_CLOCK_C3_OBSTRUCTION_NOTE_2026-05-08_r2.md",
+      "runner_path": "scripts/cl3_a3_route2_single_clock_2026_05_08_r2.py",
+      "title": "A3 Route 2 \u2014 Single-Clock / Lieb-Robinson C_3[111] Symmetry-Breaking Attack (Bounded Obstruction)"
+    },
+    "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3": {
+      "claim_id": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+        "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+        "cpt_exact_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+        "anomaly_forces_time_theorem",
+        "koide_brannen_callan_harvey_candidate_note_2026-04-22",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "ceafc04067376a06943f453fb4f6eeffa22bea633a9aa29b41696b4aabd583d3",
+      "path": "docs/A3_ROUTE3_ANOMALY_INFLOW_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r3.md",
+      "runner_path": "scripts/cl3_a3_route3_anomaly_inflow_2026_05_08_r3.py",
+      "title": "A3 / AC_phi Route 3 \u2014 Anomaly Inflow (Bounded Obstruction, 7-Vector Sweep)"
+    },
+    "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4": {
+      "claim_id": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+        "three_generation_observable_theorem_note",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "d0e352171eaa0bbff4cd9420e27f2fdca58101d61b5825687902f8df135397cd",
+      "path": "docs/A3_ROUTE4_SPIN6_CHAIN_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r4.md",
+      "runner_path": "scripts/cl3_a3_route4_spin6_chain_2026_05_08_r4.py",
+      "title": "A3 Route 4 \u2014 Cl(3) tensor Cl(3) -> Spin(6) -> SU(3) x U(1) Chain \u2014 Sharpened Bounded Obstruction"
+    },
+    "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5": {
+      "claim_id": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened-obstruction class)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+        "staggered_dirac_realization_gate_note_2026-05-03"
+      ],
+      "note_hash": "285e33974a63206cce2708b06a15129603d1cd887456b0d9a7a205c4756a3ab2",
+      "path": "docs/A3_ROUTE5_NO_PROPER_QUOTIENT_SHARPENED_OBSTRUCTION_NOTE_2026-05-08_r5.md",
+      "runner_path": "scripts/cl3_a3_route5_no_proper_quotient_2026_05_08_r5.py",
+      "title": "A3 Route 5 \u2014 No-Proper-Quotient Species-Disclaimer (Sharpened Obstruction, Bounded)"
     },
     "abcc_cp_phase_no_go_theorem_note_2026-04-19": {
       "claim_id": "abcc_cp_phase_no_go_theorem_note_2026-04-19",
@@ -57929,7 +58609,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 120,
+      "bounded_theorem": 130,
       "meta": 12,
       "no_go": 14,
       "none": 1699,
@@ -57937,17 +58617,17 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 623,
+      "bounded_theorem": 633,
       "meta": 12,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 618
     },
-    "edge_count": 6909,
-    "leaf_count": 545,
-    "node_count": 1948,
+    "edge_count": 7021,
+    "leaf_count": 543,
+    "node_count": 1958,
     "root_count": 837,
-    "runners_with_path": 1527
+    "runners_with_path": 1537
   }
 }

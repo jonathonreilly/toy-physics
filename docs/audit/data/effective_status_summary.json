@@ -1,6 +1,6 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 692,
+    "bounded_theorem": 702,
     "decoration": 10,
     "meta": 58,
     "no_go": 189,
@@ -13,32 +13,34 @@
       "dispersion_relation_note"
     ],
     [
-      "sigma_hier_uniqueness_theorem_note_2026-04-19",
-      "dm_sigma_hier_closure_packet_note_2026-04-20",
-      "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-      "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
-    ],
-    [
       "axiom_first_reflection_positivity_theorem_note_2026-04-29",
       "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     ],
     [
-      "anomaly_forces_time_theorem",
-      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
       "lorentz_kernel_positive_closure_note",
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
-      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    ],
+    [
+      "lorentz_kernel_positive_closure_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
       "angular_kernel_underdetermination_no_go_note",
       "architecture_note_directional_measure"
     ]
   ],
-  "cycles_detected": 45,
+  "cycles_detected": 65,
   "effective_status_counts": {
-    "audited_conditional": 412,
+    "audited_conditional": 410,
     "audited_failed": 8,
     "audited_numerical_match": 22,
     "audited_renaming": 27,
@@ -54,7 +56,7 @@
     "retained_bounded": 236,
     "retained_no_go": 122,
     "retained_pending_chain": 2,
-    "unaudited": 874
+    "unaudited": 886
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

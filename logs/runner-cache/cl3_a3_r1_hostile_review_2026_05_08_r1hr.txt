@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/cl3_a3_r1_hostile_review_2026_05_08_r1hr.py
+runner_sha256: f5436a4caa3c09738b2d1dd2df96ffa3ebcb920dd9c0309b8eb9eafe8a918078
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+======================================================================
+A3 R1 HOSTILE REVIEW — C_3-equivariance theorem stress-test
+Source note:
+  docs/A3_R1_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r1hr.md
+======================================================================
+HR1.1 — Quantization measure / RG / scheme dependence
+  PASS : Sampled C_3-symmetrized matrices commute with U_C3 (measure preserves C_3) | max |[<H>, U_C3]| = 2.08e-17
+  PASS : RG block-spin average of circulants is circulant | max |[H_avg, U_C3]| = 0.00e+00
+  PASS : Multiplicatively renormalized circulant remains C_3-equivariant | max |[Y_renorm, U_C3]| = 0.00e+00
+  PASS : Anisotropic-scheme renorm breaks C_3 (counterfactual; not derivable) | max |[Y_anisotropic, U_C3]| = 2.20e-01 — but Z_axis is not derivable from C_3-symm primitives
+
+HR1.2 — Non-perturbative: theta-sectors, twisted BC, WZW
+  PASS : theta-sector vacuum-energy contribution is c-number (C_3-symm) | max |[H_theta, U_C3]| = 0.00e+00
+  PASS : Symmetric Z3-twist on all axes commutes with U_C3 | max |[Twist, U_C3]| = 0.00e+00
+  PASS : Anisotropic per-axis twist breaks C_3 (counterfactual; not derivable) | max |[Twist_aniso, U_C3]| = 1.73e+00 — but anisotropic BC is not C_3-symm primitive
+  PASS : WZW-like topological trace is C_3-invariant | |Tr - Tr_rot| = 0.00e+00
+
+HR1.3 — Quantum effects: anomalous dim, dim reg, Wilson coefs
+  PASS : Anomalous-dim renorm in Fourier-irrep basis preserves C_3 of corner-basis matrix | max |[Y_renormed, U_C3]| = 2.29e-16
+  PASS : Discrete C_3-symm integration measure is C_3-invariant | |integral - integral_perm| = 0.00e+00
+  PASS : Higher-dim operator Tr(Y^3) is C_3-invariant (Wilson coef context) | |Tr(Y^3) - Tr(Y_rot^3)| = 0.00e+00
+  PASS : Framework has no IR-scale-anisotropy primitive (Lorentz-on-Z³ or single-clock SC is C_3-symm spatially) | single-clock SC singles out time, not any spatial axis (cf. AXIOM_FIRST_SINGLE_CLOCK note)
+
+HR1.4 — Missing attack vectors (beyond R1's six)
+  PASS : A. Higher-dim operators Tr(Y^n) for n=2..5 are C_3-invariant
+  PASS : B. Symanzik improvement (universal coef) preserves C_3
+  PASS : C. Symmetric APBC across all 3 spatial axes preserves C_3 (per Block 03 K-S note) | per-axis-asym BC requires explicit C_3-breaking input — not derivable
+  PASS : D. External sources / probes are non-primitive (not derivable) | external probe distinguishing one axis = explicit C_3-breaking input
+  PASS : E. Oriented C_3-splitter K_C3 is Hermitian, C_3-equivariant, α-symm diag (= 0) | diag K_C3 = [np.float64(0.0), np.float64(0.0), np.float64(0.0)], herm=True, [K, U_C3]=0: True
+  PASS : F. Z_2 axis-selected mass matrix has α-dep diagonals AND breaks C_3 (counterfactual) | diag = [np.float64(1.0), np.float64(0.5), np.float64(0.5)], breaks_C3 = True; requires explicit Z_2-axis-selection input
+
+HR1.5 — Functoriality assumption
+  PASS : Composition of C_3-equivariant ops is C_3-equivariant | max |[f1·f2, U_C3]| = 2.22e-16
+  PASS : State-dependent expectations of C_3-equivariant op are state-invariant under C_3-rotated states | ⟨c_1|Y|c_1⟩ = 0.7, ⟨U c_1|Y|U c_1⟩ = 0.7
+  PASS : Three C_3-related corner-state vacua are mutually orthogonal (SSB non-functorial) | if these were all vacua, would contradict CD uniqueness — confirms R1 Step 7
+
+HR1.6 — Brannen-Rivero implicit usage check
+  PASS : Brannen-Rivero formula matches numerical eigenvalues (per Koide circulant character note) | closed_form = [np.float64(-0.2928203230275509), np.float64(1.0928203230275506), np.float64(1.2999999999999998)], numerical = [-0.29282032302755134, 1.0928203230275508, 1.2999999999999996]
+  PASS : Brannen-Rivero / Fourier-basis path is already in retained framework (Koide candidate) | see docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
+  PASS : AC_φλ residual is the species-identification (Fourier vs corner) | docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md
+
+HR1.7 — Existing C_3-violations in retained framework
+  PASS : YT Class #6 — no retained C_3-breaking operator confirms R1 | see docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md (revised 2026-04-18)
+  PASS : YT Class #7 — composite Higgs H_unit = (1/√6) Σ ψ̄_α,a ψ_α,a is generation-singlet | no generation index in D9 / D17 definition — confirms R1 Corollary 1
+  PASS : C_3 outer automorphism on Cl(3) preserves Killing form (Block 02 + R1 confirm) | max |K - K_perm| = 0.00e+00
+  PASS : C_3 is external point-group symmetry (NOT local in A(Λ)) — strengthens R1 functoriality | see docs/STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md Step 3
+
+HR1.8 — Cluster decomposition uniqueness
+  PASS : CD axiom forces unique vacuum (per AXIOM_FIRST_CLUSTER_DECOMPOSITION note) | docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md
+  PASS : θ_eff = 0 closure rules out theta-vacuum sector (Strong CP note) | docs/STRONG_CP_THETA_ZERO_NOTE.md (bounded conditional closure)
+  PASS : Three corner states in single superselection sector (RS+CD) | STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md Step 4
+  PASS : Three corner states are mutually orthogonal (cannot all be the unique vacuum) | if all three were vacua, the three orthogonal vacua would violate CD
+
+======================================================================
+EXACT      : PASS = 32, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 32, FAIL = 0
+======================================================================
+
+Hostile review verdict:
+  R1's C_3-equivariance theorem is CONFIRMED across 8 attack vectors.
+
+  Key findings:
+  - HR1.1: quantization measure / RG / scheme dependence preserves C_3
+    (anisotropic schemes break C_3 but are non-derivable inputs)
+  - HR1.2: theta-sectors / WZW / twisted-BC are C_3-symm on
+    framework-allowed configs (per-axis-asym BC is non-primitive)
+  - HR1.3: anomalous dim / dim reg / Wilson coefs preserve C_3
+  - HR1.4: 6 NEW attack vectors (higher-dim, Symanzik, BC, sources,
+    oriented Ward, Z_2 axis-select) — none derivable from C_3-symm primitives
+  - HR1.5: functoriality holds; SSB non-functoriality is exactly the
+    issue R1 closes via unique-vacuum (RP+CD)
+  - HR1.6: Brannen-Rivero / Fourier-basis path already in retained
+    framework (Koide circulant character note)
+  - HR1.7: existing retained C_3-breaking notes (YT Class #6, #7)
+    INDEPENDENTLY confirm R1; Block 02 'C_3 not in A(Λ)' STRENGTHENS R1
+  - HR1.8: CD + theta=0 closure rules out theta-vacuum and three-sector vacua
+
+  R1 obstruction CONFIRMED. Route 1 closes negatively.
+  No escape route found.
+
+----- stderr -----
+

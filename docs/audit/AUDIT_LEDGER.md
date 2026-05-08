@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 874 |
+| unaudited | 886 |
 | meta | 51 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 412 |
+| ~~audited_conditional~~ | 410 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,16 +39,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 394 |
-| `audited_conditional` | 412 |
+| `audited_conditional` | 410 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 925 |
+| `unaudited` | 937 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 692 |
+| `bounded_theorem` | 702 |
 | `decoration` | 10 |
 | `meta` | 58 |
 | `no_go` | 189 |
@@ -57,19 +57,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 198 |
-| `high` | 468 |
+| `critical` | 202 |
+| `high` | 471 |
 | `medium` | 524 |
-| `leaf` | 651 |
+| `leaf` | 654 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 45
+- **Citation cycles detected:** 65
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1429
-- runners with (C) first-principles compute hits: 719
-- runners with (D) external comparator hits: 352
+- runners classified: 1439
+- runners with (C) first-principles compute hits: 729
+- runners with (D) external comparator hits: 354
 - decoration candidates (no C, no D): 121
 
 ## Top 25 by load-bearing score (topology only)
@@ -78,30 +78,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 402 | 36.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 676 | 36.40 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-05-03` | meta | critical | 686 | 34.42 | `unaudited` | meta |
-| 4 | `minimal_axioms_2026-04-11` | meta | critical | 592 | 33.71 | `unaudited` | meta |
-| 5 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 676 | 32.40 | `audited_clean` | open_gate |
-| 6 | `alpha_s_derived_note` | bounded_theorem | critical | 366 | 32.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 664 | 29.88 | `audited_clean` | **retained_bounded** |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 696 | 39.45 | `unaudited` | meta |
+| 2 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 406 | 36.67 | `audited_conditional` | ~~audited_conditional~~ |
+| 3 | `graph_first_su3_integration_note` | bounded_theorem | critical | 686 | 36.42 | `audited_clean` | **retained_bounded** |
+| 4 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 686 | 34.42 | `audited_clean` | open_gate |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 602 | 33.74 | `unaudited` | meta |
+| 6 | `alpha_s_derived_note` | bounded_theorem | critical | 376 | 32.06 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 674 | 29.90 | `audited_clean` | **retained_bounded** |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `unaudited` | unaudited |
-| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 155 | 28.29 | `unaudited` | unaudited |
-| 10 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
-| 11 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 528 | 27.55 | `unaudited` | unaudited |
-| 12 | `left_handed_charge_matching_note` | bounded_theorem | critical | 440 | 26.79 | `unaudited` | unaudited |
-| 13 | `three_generation_structure_note` | bounded_theorem | critical | 381 | 26.08 | `unaudited` | unaudited |
-| 14 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 245 | 25.94 | `audited_clean` | **retained_bounded** |
-| 15 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 243 | 25.43 | `unaudited` | unaudited |
-| 16 | `one_generation_matter_closure_note` | bounded_theorem | critical | 364 | 24.01 | `unaudited` | unaudited |
-| 17 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 213 | 23.74 | `unaudited` | unaudited |
-| 18 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 70 | 23.15 | `unaudited` | unaudited |
-| 19 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 436 | 22.77 | `audited_clean` | **retained_bounded** |
-| 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 130 | 22.53 | `unaudited` | unaudited |
-| 21 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 414 | 22.20 | `audited_clean` | **retained** |
-| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 409 | 21.68 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 200 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 265 | 21.05 | `unaudited` | unaudited |
+| 9 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 253 | 28.99 | `unaudited` | unaudited |
+| 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 165 | 28.38 | `unaudited` | unaudited |
+| 11 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 538 | 28.07 | `unaudited` | unaudited |
+| 12 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
+| 13 | `left_handed_charge_matching_note` | bounded_theorem | critical | 450 | 26.82 | `unaudited` | unaudited |
+| 14 | `three_generation_structure_note` | bounded_theorem | critical | 391 | 26.11 | `unaudited` | unaudited |
+| 15 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 255 | 26.00 | `audited_clean` | **retained_bounded** |
+| 16 | `one_generation_matter_closure_note` | bounded_theorem | critical | 368 | 24.03 | `unaudited` | unaudited |
+| 17 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 446 | 23.80 | `audited_clean` | **retained_bounded** |
+| 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 217 | 23.77 | `unaudited` | unaudited |
+| 19 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 70 | 23.15 | `unaudited` | unaudited |
+| 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 134 | 22.58 | `unaudited` | unaudited |
+| 21 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 424 | 22.23 | `audited_clean` | **retained** |
+| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 419 | 21.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 204 | 21.68 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 269 | 21.08 | `unaudited` | unaudited |
 | 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 84 | 19.91 | `unaudited` | unaudited |
 
 
@@ -585,8 +585,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `cl3_taste_generation_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2935,21 +2933,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
-### `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02`
-
-- **Note:** [`CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Conditional algebraic SU(3) statement that three fundamental color triplets contain exactly one totally antisymmetric singlet ε_{abc} q^a q^b q^c.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-cl3_baryon_qqq_color_sin-283`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** For SU(3), the Clebsch-Gordan decomposition gives 3 ⊗ 3 ⊗ 3 = 1 ⊕ 8 ⊕ 8 ⊕ 10, with the singlet represented by ε_{abc} q^a q^b q^c.  _(class `A`)_
-- **chain closes:** False — The SU(3) representation-theory step closes algebraically once a physical fundamental SU(3)_c triplet carrier is granted. The cited authority explicitly defers the bridge identifying its 3D symmetric base SU(3) with physical SM color, so the physical baryon-color claim does not close in this restricted packet.
-- **rationale:** The runner performs real finite-dimensional SU(3) algebra checks: normalization, generator invariance, permutation antisymmetry, and null-space uniqueness of the singlet. These support the algebraic representation-theory claim but do not derive the physical identification of the cited Cl(3) carrier with SM color. The sole upstream authority is retained_bounded yet explicitly says that physical-color identification is deferred to a separate bridge theorem, which is load-bearing for the note's SU(3)_c and baryon readout language.
-- **open / conditional deps cited:**
-  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
-- **auditor confidence:** high
-
 ### `cl3_color_automorphism_theorem`
 
 - **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
@@ -2961,21 +2944,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** SU(3) is embedded as Gell-Mann generators on the 3D symmetric base subspace, giving the Fierz channel-count fraction R_conn = (N_c^2 - 1) / N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
 - **chain closes:** True — Within the narrowed algebraic scope, the construction closes: a chosen 3D carrier supports the standard SU(3) generators and the Fierz identity gives the adjoint fraction 8/9. The physical identification of this carrier with SM color remains outside the audited claim.
 - **rationale:** The source note has narrowed the claim to an algebraic embedding/channel-count theorem and explicitly removes the physical SM color bridge from the load-bearing scope. The runner source constructs the symmetric/antisymmetric base split, embeds standard Gell-Mann generators, checks commutators, trace normalization, and the Fierz identity rather than merely printing constants. The remaining assertions about physical color and EW correction are stated as conditional/deferred, so they do not block the bounded algebraic theorem.
-- **auditor confidence:** high
-
-### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
-
-- **Note:** [`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Algebraic SU(3) fundamental-antifundamental decomposition on the cited 3D framework color carrier, including the unique normalized trace singlet and 8-dimensional adjoint complement.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-cl3_quark_antiquark_colo-284`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The standard Clebsch-Gordan decomposition for SU(N) gives N ⊗ N̄ = 1 ⊕ adj(N), and CL3_COLOR_AUTOMORPHISM_THEOREM.md fixes N_c = 3, so 3 ⊗ 3̄ = 1 ⊕ 8.  _(class `A`)_
-- **chain closes:** False — The SU(3) algebraic decomposition closes from the admitted SU(N) representation theory plus the cited N_c = 3 carrier. However, the cited authority explicitly leaves open the bridge identifying the 3D symmetric base carrier with physical SM color/quark color, so the claim does not close as an unconditional SU(3)_c quark-antiquark theorem.
-- **rationale:** The runner genuinely checks algebraic facts about the constructed 3 ⊗ 3̄ space: normalization, invariance under Gell-Mann generators, projector idempotence, and complement rank. Those are class A algebraic identity checks, not first-principles derivations of the physical color carrier. The one-hop authority is retained_bounded but explicitly states that identifying the 3D symmetric base with physical SM color SU(3)_c remains a separate bridge requirement, while this note uses quark/antiquark and SU(3)_c language. Therefore the theorem is valid only conditional on that bridge or under a purely algebraic carrier-only reading.
-- **open / conditional deps cited:**
-  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high
 
 ### `cl3_taste_generation_theorem`
