@@ -2,13 +2,13 @@
 ----------------------------------------------------------------------------------------
 Part 1: declaration structure (frontmatter + scope)
 ----------------------------------------------------------------------------------------
-  [PASS (A)] declaration has required frontmatter element: 'Physical-Lattice Foundational Interpretation Note'  (len=14271)
-  [PASS (A)] declaration has required frontmatter element: 'foundational interpretive commitment'  (len=14271)
-  [PASS (A)] declaration has required frontmatter element: 'not a mathematical axiom'  (len=14271)
-  [PASS (A)] declaration has required frontmatter element: 'Claim type'  (len=14271)
-  [PASS (A)] declaration has required frontmatter element: 'foundational_interpretation'  (len=14271)
-  [PASS (A)] declaration has required frontmatter element: 'Effective status'  (len=14271)
-  [PASS (A)] declaration has required frontmatter element: 'foundational'  (len=14271)
+  [PASS (A)] declaration has required frontmatter element: 'Physical-Lattice Foundational Interpretation Note'  (len=18002)
+  [PASS (A)] declaration has required frontmatter element: 'foundational interpretive commitment'  (len=18002)
+  [PASS (A)] declaration has required frontmatter element: 'not a mathematical axiom'  (len=18002)
+  [PASS (A)] declaration has required frontmatter element: 'Claim type'  (len=18002)
+  [PASS (A)] declaration has required frontmatter element: 'foundational_interpretation'  (len=18002)
+  [PASS (A)] declaration has required frontmatter element: 'Effective status'  (len=18002)
+  [PASS (A)] declaration has required frontmatter element: 'foundational'  (len=18002)
   [PASS (A)] declaration has section: 'What this note declares'  ()
   [PASS (A)] declaration has section: 'Why this is not a mathematical axiom'  ()
   [PASS (A)] declaration has section: 'What this commits to'  ()
@@ -50,7 +50,8 @@ Part 3: AC_φλ reframing coherence (algebra + empirical → realization)
   [PASS (A)] reframing anchor present: 'C_3-symmetric'  (logical structure: algebra ⊕ empirical → realization)
   [PASS (A)] reframing anchor present: 'hw=1 sector'  (logical structure: algebra ⊕ empirical → realization)
   [PASS (A)] reframing anchor present: 'exactly 3 C_3-orbit'  (logical structure: algebra ⊕ empirical → realization)
-  [PASS (A)] reframing anchor present: 'physical realization breaks C_3'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'Born-rule'  (logical structure: algebra ⊕ empirical → realization)
+  [PASS (A)] reframing anchor present: 'operational correspondence'  (logical structure: algebra ⊕ empirical → realization)
   [PASS (A)] reframing anchor present: 'mass hierarchy'  (logical structure: algebra ⊕ empirical → realization)
   [PASS (A)] reframing anchor present: 'LEP'  (logical structure: algebra ⊕ empirical → realization)
   [PASS (A)] reframing anchor present: 'empirically witnessed'  (logical structure: algebra ⊕ empirical → realization)
@@ -69,8 +70,8 @@ Part 4: A3 derivation-campaign obstructions remain valid
   [PASS (A)] hostile reviews (R1.HR-R5.HR) referenced  (all 5 hostile reviews)
   [PASS (A)] obstruction-theorem retention: 'obstruction theorems remain mathematically valid'  (no contradictions with retained theorems)
   [PASS (A)] obstruction-theorem retention: 'not falsified by this declaration'  (no contradictions with retained theorems)
-  [PASS (A)] obstruction-theorem retention: 'What changes is their *interpretation*'  (no contradictions with retained theorems)
-  [PASS (A)] obstruction-theorem retention: 'structural features'  (no contradictions with retained theorems)
+  [PASS (A)] obstruction-theorem retention: 'remain valid as algebra-layer mathematical results'  (no contradictions with retained theorems)
+  [PASS (A)] obstruction-theorem retention: 'cleanly localize the obstruction to the algebra layer'  (no contradictions with retained theorems)
 
 ----------------------------------------------------------------------------------------
 Part 5: empirical compatibility (3 generations, mass hierarchy, CKM/PMNS)
@@ -118,7 +119,24 @@ Part 8: coherence with existing retained notes
   [PASS (A)] SUBSTEP4 AC narrowing referenced  (substep-4 AC-narrowing context preserved)
 
 ----------------------------------------------------------------------------------------
+Part 9: framework-internal scoping & operational-physics compatibility
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework-internal scoping anchor: 'framework-internal foundational'  (audience-aware framing for working physicists)
+  [PASS (A)] framework-internal scoping anchor: 'not a metaphysical declaration'  (audience-aware framing for working physicists)
+  [PASS (A)] framework-internal scoping anchor: 'primitive layer'  (audience-aware framing for working physicists)
+  [PASS (A)] framework-internal scoping anchor: 'primitive substrate'  (audience-aware framing for working physicists)
+  [PASS (A)] framework-internal scoping anchor: 'Mainstream lattice gauge theory'  (audience-aware framing for working physicists)
+  [PASS (A)] framework-internal scoping anchor: 'coherent foundational choices'  (audience-aware framing for working physicists)
+  [PASS (A)] wavefunction-realism explicitly NOT committed to: 'Commit to wavefunction-realism'  (compatible with operational/epistemic/realist QM readings)
+  [PASS (A)] wavefunction-realism explicitly NOT committed to: 'operationally agnostic'  (compatible with operational/epistemic/realist QM readings)
+  [PASS (A)] wavefunction-realism explicitly NOT committed to: 'Born-rule'  (compatible with operational/epistemic/realist QM readings)
+  [PASS (A)] wavefunction-realism explicitly NOT committed to: 'QBist'  (compatible with operational/epistemic/realist QM readings)
+  [PASS (A)] wavefunction-realism explicitly NOT committed to: 'hidden-variable'  (compatible with operational/epistemic/realist QM readings)
+  [PASS (A)] wavefunction-realism explicitly NOT committed to: 'does not require taking sides'  (compatible with operational/epistemic/realist QM readings)
+  [PASS (A)] Born-rule operational correspondence is the explicit closure mechanism  (operational anchors present: 3/3)
+
+----------------------------------------------------------------------------------------
 Summary
 ----------------------------------------------------------------------------------------
-PASS=86  FAIL=0
+PASS=100  FAIL=0
 VERDICT: declaration verified.

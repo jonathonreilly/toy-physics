@@ -12,19 +12,41 @@ commitment underlying A1+A2.
 ## What this note declares
 
 This note declares the framework's **foundational interpretive
-commitment**:
+commitment** about its own primitive layer:
 
-> **The Cl(3)/Z³ algebraic structure (A1 + A2) is interpreted as
-> physical. The lattice is not a regulator, not a calculational device,
-> and not an effective description of an underlying continuum theory.
-> It is the actual physical structure of nature, and observed
-> phenomenology consists of measurements on this physical lattice.**
+> **The Cl(3)/Z³ algebraic structure (A1 + A2) is taken as primitive
+> at the framework's foundational layer. The lattice is treated as the
+> substrate of physical observables in this framework — not as a
+> regulator that flows away in a continuum limit, and not as an
+> effective description of an underlying continuum theory. Observed
+> phenomenology consists of physical manifestations of structure on
+> this primitive substrate.**
 
-This commitment specifies what the symbols of A1 and A2 *refer to*. It
-does not modify the mathematical content of A1 (the local algebra is
-`Cl(3)`) or A2 (the spatial substrate is `Z³`). It does not introduce
-new mathematical structure. It does not add a new axiom to the
-framework's algebraic axiom set.
+This commitment specifies what the symbols of A1 and A2 *refer to
+within the framework*. It does not modify the mathematical content of
+A1 (the local algebra is `Cl(3)`) or A2 (the spatial substrate is
+`Z³`). It does not introduce new mathematical structure. It does not
+add a new axiom to the framework's algebraic axiom set.
+
+**Scope of the commitment.** This is a framework-internal foundational
+choice, not a metaphysical declaration about reality at large.
+Mainstream lattice gauge theory and continuum QFT take a continuum
+field theory as primitive and treat lattices as numerical regulators;
+this framework takes A1+A2 as primitive instead. Both are coherent
+foundational choices for the corresponding research program. This note
+records the choice this framework makes and traces its consequences.
+It does not assert that other foundational choices are wrong.
+
+**Operational compatibility.** Working physicists in lattice QCD,
+phenomenology, and quantum information typically remain operationally
+agnostic about the ontology of |ψ⟩, using Born-rule expectation values
+to connect theory to experiment. This note is *compatible* with that
+operational stance: it commits to the framework's substrate (A1+A2)
+being primitive, but does *not* commit to wavefunction-realism (the
+stronger claim that |ψ⟩ itself is the physical state). The closure
+argument below uses Born-rule empirical correspondence in the standard
+operational way; it does not require taking sides in the QM
+interpretation debate.
 
 ## Why this is not a mathematical axiom
 
@@ -38,7 +60,7 @@ Concretely:
 | Layer | Type of claim | Examples |
 |---|---|---|
 | Formal system (mathematical) | Axioms + derived theorems | A1 (Cl(3)), A2 (Z³), Casimir theorems, BZ-corner theorem, Hilbert-Schmidt rigidity, etc. |
-| Foundational interpretation | What the symbols refer to | **This note**: the lattice is physical |
+| Foundational interpretation | What the symbols refer to within the framework | **This note**: the lattice is the framework's primitive substrate |
 | Empirical content | Observable predictions | mass hierarchy, CKM/PMNS structure, three-generation count |
 
 Standard QFT analogues:
@@ -59,21 +81,28 @@ what A1+A2 refer to, not a mathematical axiom inside the formal system.
 
 Under the physical-lattice foundational interpretation:
 
-1. **The lattice is physical.** The cubic substrate `Z³` is the actual
-   spatial structure of nature at the framework's primitive layer, not
-   a numerical regulator that flows away in a continuum limit.
-2. **The local algebra is physical.** `Cl(3)` is the actual local
-   algebraic structure of physical degrees of freedom at each lattice
-   site, not an abstract algebraic skeleton.
-3. **Observed phenomenology is measurement on this lattice.** Mass
-   measurements, CKM mixing, PMNS mixing, generation count, and all
-   other Standard Model observables are physical measurements made on
-   the physical Cl(3)/Z³ structure.
+1. **The lattice is the framework's primitive substrate.** The cubic
+   substrate `Z³` is the spatial substrate of physical observables at
+   the framework's foundational layer, not a numerical regulator that
+   flows away in a continuum limit, and not an effective description
+   of an underlying continuum theory.
+2. **The local algebra is the framework's primitive algebra.** `Cl(3)`
+   is the local algebraic structure of physical degrees of freedom at
+   each lattice site, taken as primitive rather than derived from a
+   coarser-grained continuum description.
+3. **Observed phenomenology corresponds to structure on this
+   substrate.** Mass measurements, CKM mixing, PMNS mixing, generation
+   count, and all other Standard Model observables are physical
+   manifestations of structure on the framework's primitive Cl(3)/Z³
+   substrate. The correspondence operates via Born-rule expectation
+   values in the standard operational way — no commitment to
+   wavefunction-realism is required.
 4. **Empirical observations are admissible witnesses.** When the
    mathematical algebra exhibits a symmetry that observed phenomenology
    breaks, the empirical breaking is admissible as a witness of
-   physical-realization-level structure (not a contradiction with the
-   algebra, and not requiring an axiomatic addition to the algebra).
+   substrate-level structure compatible with the algebra (not a
+   contradiction with the algebra, and not requiring an axiomatic
+   addition to the algebra).
 
 ## What this does NOT commit to
 
@@ -90,6 +119,18 @@ This note explicitly does **not**:
 5. Constitute an admission that the algebra is incomplete (the algebra
    is C_3-symmetric by theorem; the empirical breaking lives at the
    realization level, not at the algebraic level).
+6. **Commit to wavefunction-realism.** The stronger claim that the
+   Hilbert-space state |ψ⟩ on the framework's substrate IS the physical
+   state (Everett-style state-realism, ψ-ontic readings) is *not*
+   adopted here. The framework remains compatible with operationalist,
+   epistemic-Bayesian (QBist), and hidden-variable readings of |ψ⟩.
+   The closure argument below uses Born-rule empirical correspondence
+   in the standard working-physics manner; it does not require taking
+   sides in the QM interpretation debate.
+7. Assert that other foundational choices (continuum-as-primitive,
+   lattice-as-regulator) are wrong. Those are coherent foundational
+   choices for different research programs. This note records *this
+   framework's* primitive layer.
 
 ## How this shifts AC_φλ-class evaluations
 
@@ -116,23 +157,28 @@ Under the **physical-lattice foundational interpretation**:
 - The algebra `Cl(3)/Z³` is C_3-symmetric (by theorem; this is not
   contested).
 - The hw=1 sector contains exactly 3 C_3-orbit corners (theorem).
-- The physical realization breaks C_3, evidenced by the observed mass
-  hierarchy: `m_t ≫ m_c ≫ m_u`, `m_τ ≫ m_μ ≫ m_e` (LEP +
-  precision-flavor measurements).
-- The identification "the 3-fold structure IS the 3 SM generations" is
-  forced empirically, not axiomatically:
-  - The lattice is physical (foundational commitment).
+- Born-rule expectation values on this substrate connect the algebra
+  to observable phenomenology in the standard operational way.
+- The observed mass hierarchy (`m_t ≫ m_c ≫ m_u`, `m_τ ≫ m_μ ≫ m_e`,
+  per LEP and precision flavor measurements) corresponds to
+  C_3-distinguished structure at the substrate level — empirically
+  witnessed via Born-rule expectation values, not derivable from
+  algebra-symmetry alone.
+- The identification "the 3-fold structure corresponds to the 3 SM
+  generations" is empirically witnessed, not axiomatically admitted:
+  - A1+A2 is taken as primitive (foundational commitment).
   - The hw=1 sector contains exactly 3 corners (theorem).
   - Empirically, exactly 3 generations exist with C_3-broken masses
     (LEP Z-width: `N_ν = 2.984 ± 0.008`).
-  - Therefore the only consistent physical realization of the algebra
-    on the physical lattice IS the three-generation structure with
-    empirically-witnessed C_3 breaking.
+  - The 3-corner ↔ 3-generation correspondence is the unique
+    empirically-consistent operational mapping between the algebra
+    and observed phenomenology, given the framework's primitive
+    substrate.
 
 The AC_φλ "admission" is not an axiomatic addition to the formal
-system; it is the empirical confirmation that the unique physical
-realization compatible with both the algebra and observed phenomenology
-is the three-generation identification. The bridge-gap admission count
+system; it is the empirical correspondence between the algebra's
+3-corner structure and the observed 3-generation phenomenology under
+the framework's primitive substrate. The bridge-gap admission count
 under physical-lattice reading is **0**.
 
 ## Why the A3 derivation-campaign obstructions remain valid
@@ -146,18 +192,19 @@ What changes is their *interpretation*:
 
 | Probe | Algebra-only verdict | Physical-lattice verdict |
 |---|---|---|
-| R1 (Higgs/Yukawa) | C_3-equivariance theorem blocks derivation | Confirms algebra is C_3-symmetric; empirical mass hierarchy IS the physical C_3-breaking |
-| R2 (single-clock) | Kinematic-primitive class exhausted | Confirms time direction is C_3-trivial in algebra; empirical breaking is realization-level |
-| R3 (anomaly inflow) | Anomalies are functorial on G-orbits, not states | Confirms standard QFT structure; consistent with physical-realization species labels |
-| R4 (Spin(6) chain) | U(1) centrality forces uniform charge across orbits | Algebra-level uniformity; empirical mass-distinction is realization-level |
-| R5 (no-proper-quotient) | Species-disclaimer structurally not removable from algebra | Disclaimer applies to algebra-level identification; physical-lattice realization is empirically witnessed |
+| R1 (Higgs/Yukawa) | C_3-equivariance theorem blocks derivation | Confirms algebra is C_3-symmetric; empirical mass hierarchy supplies the C_3-distinguished correspondence |
+| R2 (single-clock) | Kinematic-primitive class exhausted | Confirms time direction is C_3-trivial in algebra; the empirically-distinguished structure enters via Born-rule correspondence, not algebra |
+| R3 (anomaly inflow) | Anomalies are functorial on G-orbits, not states | Confirms standard QFT structure; species labels enter via Born-rule operational correspondence |
+| R4 (Spin(6) chain) | U(1) centrality forces uniform charge across orbits | Algebra-level uniformity; empirical mass-distinction enters via operational correspondence |
+| R5 (no-proper-quotient) | Species-disclaimer structurally not removable from algebra | Disclaimer applies to algebra-level identification; framework-level correspondence is supplied by Born-rule operational mapping |
 | R1.HR-R5.HR | All five hostile reviews confirm obstructions | All five remain valid; obstructions are at algebra layer only |
 
 In all cases, the obstruction theorems are **strengthened**, not
-weakened, by the physical-lattice reading. They cleanly localize the
-obstruction to the algebra layer and identify where the physical
-realization adds the missing content (empirical mass-hierarchy
-witnesses on the physical lattice).
+weakened, by this layer separation. They cleanly localize the
+obstruction to the algebra layer and identify where the framework
+supplies the missing content (Born-rule operational correspondence
+between the algebra's 3-corner structure and observed mass-hierarchy
+phenomenology).
 
 ## Application across the framework
 
@@ -260,19 +307,31 @@ The runner verifies:
 ## Conclusion
 
 The physical-lattice reading is declared as the framework's foundational
-interpretive commitment. This commitment is structurally distinct from a
-mathematical axiom and does not add to the framework's algebraic axiom
-set (A1+A2 unchanged). Under this commitment, the bridge-gap admission
-count moves from 1 (formalist reading) to 0 (physical-lattice reading),
-because AC_φλ-class identifications are empirically witnessed rather
-than axiomatically admitted.
+interpretive commitment about its own primitive layer. This is a
+framework-internal foundational choice, not a metaphysical declaration
+about reality at large. It is structurally distinct from a mathematical
+axiom and does not add to the framework's algebraic axiom set (A1+A2
+unchanged). It does not commit to wavefunction-realism: the closure
+argument uses Born-rule operational correspondence in the standard
+working-physics manner, compatible with operationalist, epistemic-
+Bayesian, hidden-variable, and state-realist readings of |ψ⟩.
+
+Under this commitment, the bridge-gap admission count moves from 1
+(formalist reading) to 0 (physical-lattice reading), because AC_φλ-class
+identifications are supplied by Born-rule operational correspondence
+between the algebra's structure and observed phenomenology, rather than
+admitted as new axioms inside the formal system.
 
 The 10-probe A3 derivation campaign's obstruction theorems remain
-valid; their interpretation shifts from "blockers preventing closure"
-to "structural features confirming the algebra is C_3-symmetric while
-the physical realization empirically breaks C_3".
+valid as algebra-layer mathematical results; this note's layer
+separation cleanly localizes them to the algebra layer and identifies
+where the framework supplies the missing operational correspondence.
 
 This declaration is audit-defensible on standard layer-separation
-grounds, analogous to interpretive commitments in QM and GR.
+grounds. It is analogous to other foundational research-program
+commitments — e.g., a lattice-gauge program treating the continuum as
+a derived limit of a primitive lattice, vs a continuum-QFT program
+treating lattices as regulators. Both are coherent. This note records
+*this framework's* choice.
 
 ∎

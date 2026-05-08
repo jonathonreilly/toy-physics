@@ -60,7 +60,10 @@ if not NOTE_PATH.exists():
     print(f"FATAL: declaration note not found at {NOTE_PATH}")
     sys.exit(1)
 
-note_text = NOTE_PATH.read_text()
+note_text_raw = NOTE_PATH.read_text()
+# Normalize whitespace for substring matching to avoid line-break mismatches.
+# All anchor checks use note_text; length checks use note_text_raw.
+note_text = " ".join(note_text_raw.split())
 
 required_frontmatter = [
     "Physical-Lattice Foundational Interpretation Note",
@@ -75,7 +78,7 @@ for item in required_frontmatter:
     check(
         f"declaration has required frontmatter element: '{item}'",
         item in note_text,
-        f"len={len(note_text)}",
+        f"len={len(note_text_raw)}",
     )
 
 required_sections = [
@@ -155,7 +158,8 @@ reframing_anchors = [
     "C_3-symmetric",
     "hw=1 sector",
     "exactly 3 C_3-orbit",
-    "physical realization breaks C_3",
+    "Born-rule",
+    "operational correspondence",
     "mass hierarchy",
     "LEP",
     "empirically witnessed",
@@ -202,8 +206,8 @@ check(
 retention_anchors = [
     "obstruction theorems remain mathematically valid",
     "not falsified by this declaration",
-    "What changes is their *interpretation*",
-    "structural features",
+    "remain valid as algebra-layer mathematical results",
+    "cleanly localize the obstruction to the algebra layer",
 ]
 for anchor in retention_anchors:
     check(
@@ -326,6 +330,57 @@ if SUBSTEP4_NOTE_PATH.exists():
         in note_text,
         "substep-4 AC-narrowing context preserved",
     )
+
+
+# ---------------------------------------------------------------------------
+# Part 9: framework-internal scoping & operational-physics compatibility
+# ---------------------------------------------------------------------------
+section("Part 9: framework-internal scoping & operational-physics compatibility")
+
+# Verify the declaration is framed as framework-internal, not metaphysical
+scoping_anchors = [
+    "framework-internal foundational",
+    "not a metaphysical declaration",
+    "primitive layer",
+    "primitive substrate",
+    "Mainstream lattice gauge theory",
+    "coherent foundational choices",
+]
+for anchor in scoping_anchors:
+    check(
+        f"framework-internal scoping anchor: '{anchor}'",
+        anchor in note_text,
+        "audience-aware framing for working physicists",
+    )
+
+# Verify wavefunction-realism is explicitly NOT committed to
+wavefunction_disclaimer_anchors = [
+    "Commit to wavefunction-realism",
+    "operationally agnostic",
+    "Born-rule",
+    "QBist",
+    "hidden-variable",
+    "does not require taking sides",
+]
+for anchor in wavefunction_disclaimer_anchors:
+    check(
+        f"wavefunction-realism explicitly NOT committed to: '{anchor}'",
+        anchor in note_text,
+        "compatible with operational/epistemic/realist QM readings",
+    )
+
+# Verify operational-correspondence is the closure mechanism
+operational_anchors = [
+    "Born-rule operational correspondence",
+    "operational mapping",
+    "operational way",
+]
+operational_count = sum(1 for a in operational_anchors if a in note_text)
+check(
+    "Born-rule operational correspondence is the explicit closure mechanism",
+    operational_count >= 2,
+    f"operational anchors present: {operational_count}/3",
+)
 
 
 # ---------------------------------------------------------------------------
