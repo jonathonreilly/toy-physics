@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 882 |
+| unaudited | 881 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 414 |
+| ~~audited_conditional~~ | 415 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 414 |
+| `audited_conditional` | 415 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 935 |
+| `unaudited` | 934 |
 
 | claim_type | count |
 |---|---:|
@@ -586,6 +586,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_taste_generation_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2924,6 +2925,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02`
+
+- **Note:** [`CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the algebraic SU(3) statement that the triple fundamental contains one antisymmetric singlet constructed with ε_{abc}, assuming the cited N_c = 3 SU(3) carrier.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0933-41fe-7e51-be13-be3bdaacbc46`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For SU(3), 3 ⊗ 3 ⊗ 3 = 1 ⊕ 8 ⊕ 8 ⊕ 10, so there is exactly one singlet, the normalized Levi-Civita state (1/√6) ε_{abc}|q^a q^b q^c⟩.  _(class `A`)_
+- **chain closes:** False — The SU(3) tensor-product and Levi-Civita algebra closes, and the runner checks it. The chain does not close as a physical baryonic color theorem because the cited color authority explicitly defers the bridge identifying the 3D symmetric base SU(3) with physical SM color carried by quark fields.
+- **rationale:** Issue: the proof imports quarks in the fundamental of physical SU(3)_c, while the only cited authority is retained_bounded and explicitly says the physical SM color identification is a separate bridge requirement. Why this blocks: the runner verifies the standard SU(3) triple-fundamental singlet, but it does not construct the physical quark-color carrier from the Cl(3) substrate. Repair target: cite or prove a retained bridge theorem deriving the map from the 3D symmetric base SU(3) carrier to physical SM color for quark fields. Claim boundary until fixed: clean only as an algebraic SU(3) representation-theory result conditional on that bridge.
+- **open / conditional deps cited:**
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high
 
 ### `cl3_color_automorphism_theorem`

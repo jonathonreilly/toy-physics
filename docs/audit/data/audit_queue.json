@@ -3,7 +3,7 @@
     "critical": 89,
     "high": 304,
     "leaf": 199,
-    "medium": 302
+    "medium": 301
   },
   "cycle_break_target_count": 66,
   "cycle_break_targets": [
@@ -11832,29 +11832,6 @@
       "ready": false,
       "runner_path": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py",
       "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_color_automorphism_theorem"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.2,
-      "note_path": "docs/CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/cl3_baryon_qqq_color_singlet_check.py",
-      "transitive_descendants": 12
     },
     {
       "audit_independence_required": "any_non_self",
@@ -24981,6 +24958,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 15,
-  "total_pending": 894
+  "ready_count": 14,
+  "total_pending": 893
 }
