@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 84,
-    "high": 309,
+    "high": 308,
     "leaf": 198,
     "medium": 286
   },
@@ -2975,27 +2975,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_cosmology_open_number_reduction.py",
       "transitive_descendants": 47
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.228,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate.py",
-      "transitive_descendants": 211
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -24063,6 +24042,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 11,
-  "total_pending": 877
+  "ready_count": 10,
+  "total_pending": 876
 }

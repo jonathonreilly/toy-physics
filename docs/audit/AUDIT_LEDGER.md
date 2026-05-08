@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 865 |
+| unaudited | 864 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 423 |
+| ~~audited_conditional~~ | 424 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 423 |
+| `audited_conditional` | 424 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 27 |
-| `unaudited` | 914 |
+| `unaudited` | 913 |
 
 | claim_type | count |
 |---|---:|
@@ -662,6 +662,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4605,6 +4606,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For the full canonical family, the singleton response obeys W(A_mu(H); vv*) = log(1 + v* A_mu(H)^(-1) v), so sup_P W(A_mu(H); P) = log(1 + 1 / lambda_min(A_mu(H))).  _(class `A`)_
 - **chain closes:** False — The internal linear-algebra reduction closes once the determinant-response form of W and the recovered-carrier bank are accepted. The restricted packet does not provide a retained derivation or source for that W definition/source_response bridge or for the imported recovered carrier data.
 - **rationale:** The theorem surface is mostly standard algebra: threshold union semantics force a max, strict monotone recalibration preserves ordering, and Rayleigh-Ritz gives the least-eigenvalue extremum for the stated rank-one response. However, the packet does not independently derive the determinant/Rayleigh response W from the microscopic axiom, and the runner imports source_response, response helpers, probes, and the recovered_bank from modules not provided in the restricted evidence. Thus the bounded selector-class theorem is valid only conditional on those imported response and carrier inputs.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-grid broad exact-bundle edge-profile hierarchy for endpoint, split-1, and split-2 relative to the preferred recovered floor.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e072a-6260-78e1-8fa1-4d75f4b3563f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the tested broad exact shift-quotient bundle, the three rival windows obey the strict edge-profile hierarchy R_endpoint(s) > R_split1(s) > R_split2(s) across the tested slack range, with all profiles strictly increasing in s.  _(class `B`)_
+- **chain closes:** False — The packet supplies no retained one-hop authority for the selected window edges, quotient_gauge_h, preferred recovered floor, split-2 edge profile, or split-2 threshold. The runner verifies finite-grid inequalities after importing those inputs, so the carrier/readout and normalization dependencies are not closed inside the restricted packet.
+- **rationale:** Issue: the load-bearing hierarchy is a finite-grid verification over imported bundle/profile machinery and constants, not a first-principles derivation from retained inputs included here. Why this blocks: with no cited authorities, the audit cannot confirm that the preferred floor, window-edge parameters, quotient gauge operator, or split-2 threshold are retained rather than selected premises. Repair target: add retained one-hop authorities or an included runner that constructs these objects from retained primitives rather than importing them opaque. Claim boundary until fixed: this remains a bounded numerical candidate on the tested broad bundle, not an audited theorem about exact-carrier closure.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17`
