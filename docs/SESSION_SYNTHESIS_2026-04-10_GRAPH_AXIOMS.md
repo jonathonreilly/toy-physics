@@ -1,6 +1,55 @@
 # Session Synthesis: Graph Laplacian Axioms (2026-04-10)
 
-**Status:** **HISTORICAL SYNTHESIS / SUPPORT** — this is a 2026-04-10 session-log document, NOT a current retained positive theorem. The "frozen audited scores" tabulated below are scores **from that session at that time** against `frontier_axioms_16card.py`, which the script itself explicitly prints "Do not use this script as a current-main evidence surface." The note has been formally re-tiered to `support` (2026-04-28) and re-tiered again per the 2026-05-03 audit (fresh-agent-session-graph-axioms) — see "Audit-driven repair (2026-05-03)" below.
+## Audit scope (2026-05-08)
+
+**This document is a session-synthesis / overview / index, NOT a current
+retained theorem.** It is *not* an evidence surface, and no scoped claim
+about graph-KG, force-based staggered, or portability physics should be
+ratified by citing this note alone. It bundles three distinct claim
+families that originated in or were touched by the 2026-04-10 session,
+each of which must stand or fall on its own dedicated note and runner.
+
+The auditor's 2026-05-08 repair target reads (verbatim):
+
+> scope_too_broad: audit the current successor graph-KG, force-based
+> staggered, and portability runners as separate scoped claims if a
+> current retained theorem is wanted.
+
+Per that target, this synthesis note is being explicitly relabeled (not
+re-promoted) as an overview/index. The three sub-claim families that
+were previously implicitly bundled here are enumerated below, each with
+a pointer to its own dedicated note (where one exists) or marked as "no
+separate scoped claim yet" otherwise.
+
+### Sub-claim 1 — graph-KG (corrected successor)
+
+- Dedicated note: [`GRAPH_LAPLACIAN_CORE_CARD_NOTE.md`](GRAPH_LAPLACIAN_CORE_CARD_NOTE.md)
+- Companion lane comparison: [`GRAPH_TRUE_KG_VS_CN_NOTE.md`](GRAPH_TRUE_KG_VS_CN_NOTE.md)
+- Status here: this synthesis note does *not* ratify the graph-KG
+  sub-claim. Cite the dedicated note above for any current scoped
+  graph-KG claim.
+
+### Sub-claim 2 — force-based staggered (current retained card)
+
+- Dedicated note: [`STAGGERED_FERMION_CARD_2026-04-10.md`](STAGGERED_FERMION_CARD_2026-04-10.md)
+- Runner: [`scripts/frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
+- Status here: this synthesis note does *not* ratify the force-based
+  staggered sub-claim. Cite the dedicated card and runner above for
+  any current scoped staggered claim.
+
+### Sub-claim 3 — portability runners (graph-family probes)
+
+- Dedicated note: [`STAGGERED_GRAPH_PORTABILITY_NOTE.md`](STAGGERED_GRAPH_PORTABILITY_NOTE.md)
+- Runner: [`scripts/frontier_staggered_graph_portability.py`](../scripts/frontier_staggered_graph_portability.py)
+- Status here: this synthesis note does *not* ratify the portability
+  sub-claim. Cite the dedicated note and runner above for any current
+  scoped portability claim.
+
+If a current retained theorem on any of these three lanes is wanted,
+audit the corresponding dedicated note and its runner as a separate
+scoped claim — not this overview.
+
+**Status:** **HISTORICAL SYNTHESIS / SUPPORT / OVERVIEW** — this is a 2026-04-10 session-log document and a session-synthesis index over the three sub-claim families above, NOT a current retained positive theorem. The "frozen audited scores" tabulated below are scores **from that session at that time** against `frontier_axioms_16card.py`, which the script itself explicitly prints "Do not use this script as a current-main evidence surface." The note has been formally re-tiered to `support` (2026-04-28), re-tiered again per the 2026-05-03 audit (fresh-agent-session-graph-axioms), and explicitly relabeled as an overview/index (not a theorem) per the 2026-05-08 `scope_too_broad` audit — see "Audit scope (2026-05-08)" above and "Audit-driven repair (2026-05-03)" below.
 
 **Current evidence surface:** the live staggered status is tracked by the
 **force-based staggered card** ([`STAGGERED_FERMION_CARD_2026-04-10.md`](STAGGERED_FERMION_CARD_2026-04-10.md))
