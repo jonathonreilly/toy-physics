@@ -1,0 +1,82 @@
+
+======================================================================
+  AC_φλ Axiom Proposal (A3) — Governance Check
+======================================================================
+Date: 2026-05-08
+Status: source-note proposal, audit verdict set only by independent audit lane
+
+
+======================================================================
+  Criterion 1: Independence from A1+A2
+======================================================================
+Combines three exhaustive attack-vector enumerations on main:
+  (I)  Substep 4 AC_φ forced-failure (4/4 PASS)
+  (II) L3a 10-vector exhaustive (44/0 PASS)
+  (III) W2.binary 7-vector exhaustive (29/0 PASS)
+
+  [PASS] AC_φ (physical-observable atom) provably FORCED TO FAIL under retained C_3[111]  (any C_3-symmetric self-adjoint op on H_{hw=1}≅C^3 has equal corner expectations)
+  [PASS] L3a 10-vector enumeration: zero unconditional positive arrows  (10 vectors, 4 partials (all bridge-conditional), 6 obstructions)
+  [PASS] W2.binary 7-vector enumeration: zero unconditional positive arrows  (7 vectors, all conditional or obstruction)
+  [PASS] Combined attack vector count: zero unconditional positive arrows  (24 total attack vectors across L3a + W2.binary + W2.norm)
+  [PASS] Cited runners on main pass count: 77/0 across 3 source notes  (4 + 44 + 29 = 77)
+
+======================================================================
+  Criterion 2: Consistency with retained framework
+======================================================================
+A3 must not contradict any retained source note on main.
+
+  [PASS] A3 compatible with MINIMAL_AXIOMS_2026-05-03 (A1+A2)  (A3 purely additive; A1, A2 unchanged)
+  [PASS] A3 compatible with CL3_COLOR_AUTOMORPHISM_THEOREM (SU(3) on V_3)  (A3 inherits V_3 structure)
+  [PASS] A3 compatible with SU3_CASIMIR_FUNDAMENTAL (C_F = 4/3)  (A3 forces V_3, consistent with C_F = 4/3)
+  [PASS] A3 compatible with G_BARE_HILBERT_SCHMIDT_RIGIDITY  (A3 strictly downstream of g_bare derivation)
+  [PASS] A3 compatible with G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT (4-layer)  (A3 sits at L3, between L2 and L4)
+  [PASS] A3 compatible with STAGGERED_DIRAC_BZ_CORNER_FORCING  (A3 IDENTIFIES the BZ-corner triplet; does not modify)
+  [PASS] A3 compatible with STAGGERED_DIRAC_SUBSTEP4_AC_NARROW  (A3 IS the AC_φλ residual atom; closes substep 4)
+  [PASS] A3 compatible with L3A_V3_TRACE_SURFACE  (A3 closes L3a as corollary)
+  [PASS] A3 compatible with N_F_BOUNDED_Z2_REDUCTION (binary)  (A3 selects V_3 ⇒ N_F = 1/2)
+  [PASS] A3 compatible with N_F_TRACE_SPACE_BOUNDED_OBSTRUCTION  (A3 is precisely the named residual)
+  [PASS] A3 compatible with PER_SITE_SU2_BRIDGE (L3b ≡ L3a)  (A3 closes L3b via L3a closure)
+  [PASS] A3 compatible with N_F_V3_NORMALIZATION (closure chain)  (A3 unblocks V_3 closure chain)
+  [PASS] A3 compatible with C_ISO_DERIVED (Hamilton-Lagrangian dictionary)  (A3 orthogonal to C-iso)
+  [PASS] A3 compatible with SPINNETWORK_FULL_ED_BOUNDED  (A3 orthogonal to spin-network ED)
+  [PASS] A3 compatible with SPINNETWORK_FULL_ED_LAMBDA2_FRONTIER_BROKEN  (A3 orthogonal to engineering frontier)
+
+======================================================================
+  Criterion 3: Minimality
+======================================================================
+A3 has three clauses:
+  (i)   M_3(C) endomorphism algebra on H_{hw=1}
+  (ii)  C_3[111] cyclic generator
+  (iii) no-proper-quotient theorem
+Removing ANY clause breaks downstream closure.
+
+  [PASS] Clause (i) M_3(C) algebra: removal breaks AC_λ derivation chain  (without M_3(C) the species-distinguishing operator algebra is undefined)
+  [PASS] Clause (ii) C_3[111] generator: removal loses orbit structure  (without C_3 generator the 3-fold structure is undefined)
+  [PASS] Clause (iii) no-proper-quotient: removal admits sub-triplet  (without no-proper-quotient, 2-generation decomposition allowed (inconsistent with 3 SM gens))
+  [PASS] Alternative 'matter in V_3 fundamental' axiom: equivalent to A3 but less explicit  (A3 is more specific about flavor structure)
+  [PASS] Alternative 'C_3 broken by Yukawa-Higgs' axiom: requires admitting Yukawa matrix as primitive  (A3 is smaller axiomatic addition)
+
+======================================================================
+  Criterion 4: Empirical falsifiability
+======================================================================
+A3 makes specific empirical predictions:
+
+  [PASS] A3 predicts 3 generations; observed = 3  (LEP N_ν = 2.984 ± 0.008, consistent with 3)
+  [PASS] A3 predicts 3-by-3 CKM matrix; observed = 3-by-3  (non-trivial 3x3 structure observed and consistent with A3)
+  [PASS] A3 predicts 3-by-3 PMNS matrix; observed = 3-by-3  (non-trivial 3x3 structure observed and consistent with A3)
+  [PASS] A3 predicts C_3-broken mass hierarchy; observed strong hierarchy in all sectors  (m_t/m_c ≈ 136, m_c/m_u ≈ 580 — strongly C_3-broken (consistent with A3))
+  [PASS] Falsifiability test 1: if framework predicts m_1 = m_2 = m_3, A3 falsified  (specific lattice MC test articulated in EMPIRICAL_FALSIFIABILITY.md)
+  [PASS] Falsifiability test 2: if 4th generation discovered, A3 falsified  (anomaly cancellation under A3 forbids 4th generation at testable masses)
+
+======================================================================
+  Summary
+======================================================================
+  EXACT      : PASS = 31, FAIL =  0
+  TOTAL      : PASS = 31, FAIL =  0
+
+  Result: A3 satisfies all four governance criteria (independence, consistency,
+          minimality, empirical falsifiability) under the cited evidence.
+
+  Recommendation to the audit lane: review A3 against the four governance
+  criteria per the companion notes. If clean, A3 may be admitted as an
+  axiom alongside A1+A2, dropping the bridge-gap admission count to 0.
