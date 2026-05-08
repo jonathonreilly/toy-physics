@@ -10993,6 +10993,38 @@
       "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
     },
     {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "observable_principle_audit_note_2026-05-02",
       "to": "observable_principle_from_axiom_note"
     },
@@ -13567,6 +13599,42 @@
     {
       "from": "spectral_symmetry_note",
       "to": "higher_symmetry_joint_validation_note"
+    },
+    {
+      "from": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "to": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full"
+    },
+    {
+      "from": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
     },
     {
       "from": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
@@ -42851,6 +42919,26 @@
       "runner_path": "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py",
       "title": "N_F Bounded Z2 Reduction Theorem"
     },
+    "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary": {
+      "claim_id": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+        "cl3_color_automorphism_theorem",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "f3c3e787d74d57c9b3649760580af4c0e50e3159f0f1ef3d54c0be4683a842ab",
+      "path": "docs/N_F_TRACE_SPACE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_w2binary.md",
+      "runner_path": "scripts/cl3_n_f_v3_trace_check_2026-05-07_w2binary.py",
+      "title": "N_F Trace-Space Bounded Obstruction Note (V_3 vs V Selection)"
+    },
     "native_gauge_closure_note": {
       "claim_id": "native_gauge_closure_note",
       "claim_type_author_hint": null,
@@ -51046,6 +51134,39 @@
       "runner_path": null,
       "title": "The Spectral--Trajectory Dichotomy in Discrete Self-Gravitating Quantum Mechanics"
     },
+    "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full": {
+      "claim_id": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "c_iso_derived_theorem_note_2026-05-07_w3",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+      ],
+      "note_hash": "5ee91a2572b35a060f4afd61e0a796de6d3cec54fc89ff71a745aa27808be3ec",
+      "path": "docs/SPINNETWORK_FULL_ED_BOUNDED_THEOREM_NOTE_2026-05-07_w1full.md",
+      "runner_path": "scripts/cl3_ks_full_spinnet_ed_v4_2026_05_07_w1full.py",
+      "title": "Full SU(3) Spin-Network ED \u2014 Bounded Theorem (Variational Implementation + Compute Frontier)"
+    },
+    "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact": {
+      "claim_id": "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "c_iso_derived_theorem_note_2026-05-07_w3"
+      ],
+      "note_hash": "57943c952a970ad6cc70827f52e3d259317d690b4d1df0cc381f2f8840284693",
+      "path": "docs/SPINNETWORK_FULL_ED_LAMBDA2_FRONTIER_BROKEN_NOTE_2026-05-07_w1exact.md",
+      "runner_path": "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py",
+      "title": "Full SU(3) Spin-Network ED \u2014 \u039b=2 Compute Frontier Broken (W1.exact)"
+    },
     "staggered_3d_self_gravity_sign_note_2026-04-11": {
       "claim_id": "staggered_3d_self_gravity_sign_note_2026-04-11",
       "claim_type_author_hint": null,
@@ -57171,25 +57292,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 99,
+      "bounded_theorem": 101,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
-      "open_gate": 12,
+      "open_gate": 13,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 602,
+      "bounded_theorem": 604,
       "meta": 10,
       "no_go": 119,
       "none": 462,
-      "open_gate": 113,
+      "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6803,
+    "edge_count": 6820,
     "leaf_count": 545,
-    "node_count": 1929,
+    "node_count": 1932,
     "root_count": 855,
-    "runners_with_path": 1508
+    "runners_with_path": 1511
   }
 }

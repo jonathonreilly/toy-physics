@@ -10716,6 +10716,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py"
     },
+    "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_n_f_v3_trace_check_2026-05-07_w2binary.py"
+    },
     "native_gauge_closure_note": {
       "assert_count": 2,
       "counts": {
@@ -14831,6 +14843,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/ceiling_formal_proof.py"
+    },
+    "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_ks_full_spinnet_ed_v4_2026_05_07_w1full.py"
+    },
+    "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py"
     },
     "staggered_3d_self_gravity_sign_note_2026-04-11": {
       "assert_count": 0,
@@ -19684,6 +19720,36 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py": {
+      "assert_count": 0,
+      "claims": [
+        "spinnetwork_full_ed_lambda2_frontier_broken_note_2026-05-07_w1exact"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_ks_full_spinnet_ed_v4_2026_05_07_w1full.py": {
+      "assert_count": 0,
+      "claims": [
+        "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py": {
       "assert_count": 0,
       "claims": [
@@ -19694,6 +19760,21 @@
         "B": 0,
         "C": 3,
         "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_n_f_v3_trace_check_2026-05-07_w2binary.py": {
+      "assert_count": 0,
+      "claims": [
+        "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 0
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -39536,12 +39617,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 590,
+      "C": 593,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1411,
-    "runners_with_C": 701,
+    "runners_classified": 1414,
+    "runners_with_C": 704,
     "runners_with_D": 351
   }
 }

@@ -1,0 +1,112 @@
+===== runner cache v1 =====
+runner: scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py
+runner_sha256: a0b4231fe7b9dcd270da73afbce0a7d33d1ec5e3b4498487d67f5e2409f06715
+timeout_sec: 180
+exit_code: 0
+elapsed_sec: 108.69
+status: ok
+----- stdout -----
+======================================================================
+W1.exact lambda2_max4: testing if matrix-free Lanczos breaks the
+compute frontier at Λ=2, max_active=4 (W1.full was blocked here)
+======================================================================
+
+--- W1.exact: g²=1.0, Λ=1, max_active=4, N=2000 ---
+  Basis: irreps p+q ≤ 1 (3 irreps), max_active = 4
+    irreps: [(0, 0), (0, 1), (1, 0)]
+    Trying n_active = 0...
+    Trying n_active = 1...
+    Trying n_active = 2...
+    Trying n_active = 3...
+    Trying n_active = 4...
+  Configs enumerated: 65, basis dim: 81
+  Evaluating wavefunctions...
+    D-matrix cache: 24 entries
+      Q-build (50/65 configs in 0.2s; est total 0.2s, VQ_cache size 17)
+    Q-build: 0.2s, 17 unique vertex Q matrices
+    Evaluating wavefunctions for 65 configs...
+      Ψ-eval (50/65 configs in 0.0s; est total 0.1s)
+    Ψ-eval: 0.1s
+  Psi shape: (81, 2000), building MC matrix elements...
+  H shape: (81, 81), calling sparse eigsh...
+  E_0 = -0.1078  (kept 81/81)
+  ⟨P⟩_avg = 0.0211
+  Runtime: 0.4s, VQ cache: 17 unique shapes
+
+  Λ=1, max_active=4: ⟨P⟩=0.0211, basis_dim=81, runtime=0.4s, n_VQ=17
+
+--- W1.exact: g²=1.0, Λ=2, max_active=2, N=2000 ---
+  Basis: irreps p+q ≤ 2 (6 irreps), max_active = 2
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Trying n_active = 0...
+    Trying n_active = 1...
+    Trying n_active = 2...
+  Configs enumerated: 21, basis dim: 21
+  Evaluating wavefunctions...
+    D-matrix cache: 48 entries
+    Q-build: 2.0s, 23 unique vertex Q matrices
+    Evaluating wavefunctions for 21 configs...
+    Ψ-eval: 0.0s
+  Psi shape: (21, 2000), building MC matrix elements...
+  H shape: (21, 21), calling sparse eigsh...
+  E_0 = -0.0032  (kept 21/21)
+  ⟨P⟩_avg = -0.0003
+  Runtime: 15.2s, VQ cache: 23 unique shapes
+
+  Λ=2, max_active=2: ⟨P⟩=-0.0003, basis_dim=21, runtime=15.2s, n_VQ=23
+
+--- W1.exact: g²=1.0, Λ=2, max_active=3, N=2000 ---
+  Basis: irreps p+q ≤ 2 (6 irreps), max_active = 3
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Trying n_active = 0...
+    Trying n_active = 1...
+    Trying n_active = 2...
+    Trying n_active = 3...
+  Configs enumerated: 21, basis dim: 21
+  Evaluating wavefunctions...
+    D-matrix cache: 48 entries
+    Q-build: 0.0s, 23 unique vertex Q matrices
+    Evaluating wavefunctions for 21 configs...
+    Ψ-eval: 0.0s
+  Psi shape: (21, 2000), building MC matrix elements...
+  H shape: (21, 21), calling sparse eigsh...
+  E_0 = -0.0032  (kept 21/21)
+  ⟨P⟩_avg = -0.0003
+  Runtime: 13.1s, VQ cache: 23 unique shapes
+
+  Λ=2, max_active=3: ⟨P⟩=-0.0003, basis_dim=21, runtime=13.1s, n_VQ=23
+
+--- W1.exact: g²=1.0, Λ=2, max_active=4, N=2000 ---
+  Basis: irreps p+q ≤ 2 (6 irreps), max_active = 4
+    irreps: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (2, 0)]
+    Trying n_active = 0...
+    Trying n_active = 1...
+    Trying n_active = 2...
+    Trying n_active = 3...
+    Trying n_active = 4...
+  Configs enumerated: 251, basis dim: 439
+  Evaluating wavefunctions...
+    D-matrix cache: 48 entries
+      Q-build (50/251 configs in 7.9s; est total 39.7s, VQ_cache size 26)
+      Q-build (100/251 configs in 63.4s; est total 159.1s, VQ_cache size 56)
+      Q-build (150/251 configs in 63.4s; est total 106.1s, VQ_cache size 56)
+      Q-build (200/251 configs in 63.4s; est total 79.6s, VQ_cache size 56)
+      Q-build (250/251 configs in 63.4s; est total 63.7s, VQ_cache size 56)
+    Q-build: 63.4s, 56 unique vertex Q matrices
+    Evaluating wavefunctions for 251 configs...
+      Ψ-eval (50/251 configs in 0.1s; est total 0.4s)
+      Ψ-eval (100/251 configs in 1.3s; est total 3.3s)
+      Ψ-eval (150/251 configs in 1.4s; est total 2.3s)
+      Ψ-eval (200/251 configs in 2.1s; est total 2.6s)
+      Ψ-eval (250/251 configs in 2.8s; est total 2.8s)
+    Ψ-eval: 2.8s
+  Psi shape: (439, 2000), building MC matrix elements...
+  H shape: (439, 439), calling sparse eigsh...
+  E_0 = -0.4438  (kept 439/439)
+  ⟨P⟩_avg = 0.0160
+  Runtime: 79.6s, VQ cache: 56 unique shapes
+
+  Λ=2, max_active=4: ⟨P⟩=0.0160, basis_dim=439, runtime=79.6s, n_VQ=56
+
+----- stderr -----
+
