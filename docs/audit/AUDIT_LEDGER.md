@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 239 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 875 |
+| unaudited | 874 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 417 |
+| ~~audited_conditional~~ | 418 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 397 |
-| `audited_conditional` | 417 |
+| `audited_conditional` | 418 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 928 |
+| `unaudited` | 927 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 704 |
+| `bounded_theorem` | 705 |
 | `decoration` | 12 |
 | `meta` | 60 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 780 |
+| `positive_theorem` | 779 |
 
 | criticality | count |
 |---|---:|
@@ -525,6 +525,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_collapse_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `asymmetry_persistence_joint_card_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `asymmetry_persistence_mass_scaling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_dm_runner_stale_path_cleanup_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1567,6 +1568,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `asymmetry_persistence_mass_window_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited whether the note's stated mass-response window follows from the restricted packet's supplied fits and dependencies.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0943-233d-7c71-84a2-0227a8f86dc3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The pruned LN rows give the cleanest mass-response windows, with threshold 0.10 fit delta ~= 0.4032 * M^0.420 and R^2 = 0.970, and threshold 0.20 fit delta ~= 0.5332 * M^0.262 and R^2 = 0.892.  _(class `B`)_
+- **chain closes:** False — The chain depends on an external retained log, generated-family construction, pruning rule, and fit calculation that are not included as cited authorities or runner output. The packet does not show the source data or computation establishing the quoted exponents and R^2 values.
+- **rationale:** Issue: the note imports the retained log and summarized fitted mass-scaling rows without providing the log, data, pruning rule, or runner. Why this blocks: the conclusion that the lane has a real bounded mass-response window rests entirely on those quoted fits and their selected thresholds, so the restricted packet cannot verify the computation or selection. Repair target: provide the retained log or a runner that reconstructs the generated family, applies the pruning, and recomputes the fits from raw outputs. Claim boundary until fixed: at most a report that a prior retained summary claimed these mass-response fits, not an independently closed theorem.
+- **open / conditional deps cited:**
+  - `logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`
 - **auditor confidence:** high
 
 ### `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29`
