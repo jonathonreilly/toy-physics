@@ -1,0 +1,106 @@
+==============================================================================
+A3 / AC_phi Route 3 -- Anomaly Inflow Obstruction (Bounded)
+==============================================================================
+
+Loop: a3-route3-anomaly-inflow-20260508
+Companion theorem note:
+  docs/A3_ROUTE3_ANOMALY_INFLOW_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r3.md
+
+==============================================================================
+Section 0: hw=1 BZ corner C_3 orbit verification
+==============================================================================
+  [PASS] hw=1 corners form a single 3-cycle under C_3[111]
+  [PASS] All hw=1 corners have Hamming weight 1
+  orbit path: [(1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 0, 0)]
+
+==============================================================================
+Section 1: Universal C_3-symmetric equal-expectation lemma
+==============================================================================
+  [PASS] H is self-adjoint
+  [PASS] [H, U_{C_3}] = 0
+  [PASS] Corner-basis diagonal equal (substep4ac Lemma)
+  diagonal: [1.5, 1.5, 1.5]
+  full eigenvalues (NOT corner basis): [0.28038475772933735, 1.3196152422706635, 2.8999999999999995]
+  Full eigenvalues are 3 distinct values, but corner-basis expectations are all equal -- this is the C_3-orbit obstruction.
+
+==============================================================================
+Section 2: Random sweep of universal C_3-symmetric operators
+==============================================================================
+  Samples: 200
+  Passing equal-expectation: 200
+  Max diagonal difference across sweep: 0.00e+00
+  Eigenvalue-spread range seen: [0.160, 10.803] (corner expectations equal despite spread)
+  [PASS] Universal equal-expectation lemma holds for 200/200 samples
+
+==============================================================================
+Section 3: Seven anomaly-inflow attack vectors (E1 -- E7)
+==============================================================================
+
+  --- E1: 't Hooft anomaly matching across boundary of Z^3
+      Status: OBSTRUCTION
+      Structural reason: Z^3 (or finite L^3 APBC) has no boundary; adding one is a new axiom. Even with a C_3-symmetric boundary, the matching polynomial is C_3-invariant and gives equal corner expectations.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+  --- E2: Callan-Harvey anomaly inflow from a domain wall
+      Status: OBSTRUCTION
+      Structural reason: A1 + A2 supplies no codimension-1 defect; C_3-symmetric defect gives C_3-symmetric inflow with equal corner expectations.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+  --- E3: SPT phase under C_3 x U(1)_Q
+      Status: OBSTRUCTION
+      Structural reason: An SPT class is a single Z_3-valued invariant of the bulk Hamiltonian, not a function on H_{hw=1}. RP+CD gives a unique C_3-symmetric vacuum, so the SPT-response operator is C_3-symmetric and gives equal corner expectations.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+  --- E4: Discrete (mod-3) anomaly on Z_3
+      Status: OBSTRUCTION
+      Structural reason: Z_3 cohomology class is a property of the GROUP Z_3 (not of individual orbit elements). The corresponding operator is C_3-symmetric on the orbit; its hw=1 corner-basis expectations are equal.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+  --- E5: Wess-Zumino-Witten term on the C_3 orbit
+      Status: OBSTRUCTION
+      Structural reason: WZW term is a topological functional of field configurations. Its operator-expectation on hw=1 is C_3-symmetric (polynomial in U_{C_3}); corner-basis diagonal of cyclic permutation is zero, expectations are equal.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+  --- E6: Atiyah-Singer index for the staggered Dirac operator
+      Status: OBSTRUCTION
+      Structural reason: Index theorem chiral charge is (-1)^hw; all hw=1 corners share hw=1, hence share chiral charge -1. Index theorem groups corners by hw parity and cannot distinguish elements within a fixed hw stratum.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+  --- E7: Nieh-Yan torsion anomaly
+      Status: OBSTRUCTION
+      Structural reason: A1 + A2 supplies no torsion field; Z^3 is flat. Adding torsion is a new axiom. Even with C_3-symmetric torsion, Nieh-Yan integral is a C_3-symmetric scalar with equal corner expectations.
+  [PASS]   expectation equal on hw=1 corners (obstruction confirmed)
+
+==============================================================================
+Section 4: Sanity check -- C_3-breaking operator distinguishes
+==============================================================================
+  Operator: diag(1, 2, 3)
+  Commutator norm: 2.45
+  Corner expectations: [1.0, 2.0, 3.0]
+  [PASS] C_3-breaking operator does NOT commute with U_{C_3}
+  [PASS] C_3-breaking operator distinguishes corners by expectation
+  -> C_3-breaking operators DO distinguish the corners. Seven anomaly-inflow attack vectors fail to distinguish them because they preserve C_3 by construction.
+
+==============================================================================
+Section 5: Result summary
+==============================================================================
+  Total attack vectors checked: 7
+  Obstructions found:           7
+  Unconditional positive arrows: 0
+  Partials:                      0
+
+  ALL SEVEN anomaly-inflow channels yield clean OBSTRUCTION:
+  anomaly inflow CANNOT close A3 / AC_phi from A1+A2 + retained
+  upstream stack without new axioms or new C_3-breaking dynamics.
+
+  Structural reason (universal): anomalies attach functorially
+  to symmetries / orbits / cohomology classes, not to individual
+  states within a single symmetry orbit. Any anomaly-inflow
+  operator constructed from C_3-symmetric primitives respects the
+  substep4ac equal-expectation Lemma.
+
+==============================================================================
+EXACT      : PASS = 15, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 15, FAIL = 0
+==============================================================================
