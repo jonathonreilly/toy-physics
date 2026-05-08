@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 820 |
+| unaudited | 819 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 26 |
+| ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 454 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,17 +43,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 26 |
-| `unaudited` | 869 |
+| `audited_renaming` | 27 |
+| `unaudited` | 868 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 683 |
 | `decoration` | 10 |
-| `meta` | 57 |
+| `meta` | 58 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 781 |
+| `positive_theorem` | 780 |
 
 | criticality | count |
 |---|---:|
@@ -1068,6 +1068,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_information_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
+| `staggered_graph_observables_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -12219,6 +12220,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The cited gauge note supplies the closure criterion and the retained portability note supplies the staggered transport context; the runner then constructs flux-threaded Hamiltonians and computes current spans/residuals for the frozen graph families. The note's qualitative closure claim matches the completed runner despite minor stale table numerics.
 - **rationale:** The load-bearing result is not a mere definition or upstream restatement: the runner computes eigensystems of flux-threaded native staggered Hamiltonians and derives current spans/residuals not present as input constants. Both cited authorities are retained, and the source note explicitly includes the operator, observable, closure rule, positive stress-family results, DAG N/A handling, and the negative layered-cycle case. The table values are slightly stale relative to stdout, but the pass/fail pattern, best family, operator, and observable are unchanged.
 - **auditor confidence:** medium
+
+### `staggered_graph_observables_note`
+
+- **Note:** [`STAGGERED_GRAPH_OBSERVABLES_NOTE.md`](../../docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audited the note's graph-observable bookkeeping rule and reproduced table for the three listed non-cubic graph families, not a new canonical physics prediction.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0589-2288-7e50-a4a6-d3fb5d72e3c9`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The working rule states that gauge/current is retained only on graphs with cycles, is N/A on DAG-compatible graphs, and centroid-based gravity diagnostics remain secondary on non-cubic graphs.  _(class `E`)_
+- **chain closes:** False — The runner and retained cited notes support the listed diagnostic values, but the retained/secondary observable split is stipulated as a working rule. The packet lacks a theorem deriving that scoring rule from the transport law and graph topology.
+- **rationale:** The load-bearing step defines which rows count as retained and which diagnostics are secondary; it is not a first-principles derivation of that observable split. The runner computes graph-family diagnostics and gauge currents, but those computations are downstream of the stipulated classification rule. Both cited authorities are retained, so this is not blocked by open upstream status; the failure is that the note presents bookkeeping as closure.
+- **auditor confidence:** high
 
 ### `staggered_graph_portability_note`
 

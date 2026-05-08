@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 60,
     "high": 302,
-    "leaf": 191,
+    "leaf": 190,
     "medium": 279
   },
   "cycle_break_target_count": 35,
@@ -17796,30 +17796,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_graph_observables_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "staggered_graph_portability_note",
-        "staggered_graph_gauge_closure_results_2026-04-10"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_staggered_graph_observables.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "reproduction_audit_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -22789,6 +22765,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1,
-  "total_pending": 832
+  "ready_count": 0,
+  "total_pending": 831
 }

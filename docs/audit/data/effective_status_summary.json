@@ -2,10 +2,10 @@
   "claim_type_counts": {
     "bounded_theorem": 683,
     "decoration": 10,
-    "meta": 57,
+    "meta": 58,
     "no_go": 190,
     "open_gate": 110,
-    "positive_theorem": 781
+    "positive_theorem": 780
   },
   "cycle_examples": [
     [
@@ -44,7 +44,7 @@
     "audited_conditional": 454,
     "audited_failed": 8,
     "audited_numerical_match": 20,
-    "audited_renaming": 26,
+    "audited_renaming": 27,
     "decoration_under_cl3_color_automorphism_theorem": 2,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_hierarchy_matsubara_decomposition_note": 1,
@@ -57,7 +57,7 @@
     "retained_bounded": 243,
     "retained_no_go": 122,
     "retained_pending_chain": 2,
-    "unaudited": 820
+    "unaudited": 819
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
