@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 859 |
+| unaudited | 858 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 428 |
+| ~~audited_conditional~~ | 429 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 428 |
+| `audited_conditional` | 429 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 27 |
-| `unaudited` | 908 |
+| `unaudited` | 907 |
 
 | claim_type | count |
 |---|---:|
@@ -667,6 +667,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | D | - |
 | `dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4702,6 +4703,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The slice-wise best lower-repair transport value increases monotonically toward the upper-m boundary while the slice-wise minimum packet distance decreases monotonically, so both objectives select m=-0.14 on the tested slices.  _(class `B`)_
 - **chain closes:** False — The monotonicity follows from the listed numbers, but the packet provides no runner, data certificate, or cited authority deriving the slice-wise optima and packet distances. The missing step is an auditable computation from the stated grid and lower-repair constraint to the reported values.
 - **rationale:** Issue: the note imports scan results for best transport values and closest-lane distances without a runner or retained cited authority computing them. Why this blocks: the ridge conclusion depends on those slice-wise extrema being correct, not merely on the arithmetic monotonicity of the printed sequences. Repair target: provide a runner or cached certificate that constructs the grid, applies the lower-repair constraint, computes the extrema and packet distances, and reproduces the six values. Claim boundary until fixed: this remains a coarse-grid candidate pattern conditional on unverified scan outputs, not an audited bounded theorem.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded sampled claim that, on the tested split-2 low-slack lower-repair box, the sampled transport pressure concentrates at two upper-face extremals rather than across a diffuse box or ridge.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0737-b343-78f1-a2b1-4af293ac1bd3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The sampled broad split-2 lower-repair transport pressure reduces to two explicit upper-face extremals: the cap-eta peak and the closest-lane slack-floor endpoint, both transport-incompatible.  _(class `B`)_
+- **chain closes:** False — The runner does recompute sampled grid and cap-profile quantities, but the load-bearing physics/readout objects are imported through `point_data`, `EXPECTED_PREF_REPAIR`, and `PREFERRED_RECOVERED_LIFT` without any cited retained authority in the packet. The missing step is a retained bridge establishing those imported carrier, repair, and preferred-lane definitions for this sampled box.
+- **rationale:** Issue: the numerical sampled extremal reduction is checked only through imported support objects not supplied as cited retained authorities. Why this blocks: without the retained construction of `point_data`, `EXPECTED_PREF_REPAIR`, and the preferred recovered lane, the audit cannot verify that the sampled objectives and constraints are the claimed physical transport/readout quantities rather than an imported bridge. Repair target: cite and include the retained theorem or runner certificate that constructs those objects from accepted primitives for the tested split-2 box. Claim boundary until fixed: this remains a bounded computational observation conditional on the imported carrier, repair cap, and preferred-lane definitions.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18`
