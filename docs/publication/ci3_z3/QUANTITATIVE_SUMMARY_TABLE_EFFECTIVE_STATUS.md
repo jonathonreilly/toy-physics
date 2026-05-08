@@ -31,7 +31,10 @@ In this table:
 
 - `Claim-strength status` says what kind of quantitative row this is
 - `Qualifier` carries the bridge / import / caveat language
-- publication-capture placement lives in [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)&nbsp;[audit:meta]
+- publication-capture placement lives in `PUBLICATION_MATRIX.md`
+  (sibling publication-package artifact; backticked to avoid length-3
+  cycle through CLAIMS_TABLE — citation graph direction is
+  *publication_matrix → this_summary_table → claims_table*)
 
 | Quantity / lane | Predicted / framework result | Observed / comparator | Error / comparison | Claim-strength status | Qualifier | Primary authority |
 |---|---|---|---|---|---|---|

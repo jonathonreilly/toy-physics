@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_v1_picard_fuchs_minimality_extended_2026_05_06.py
+runner_sha256: 9ccad124945b3a82842d22067f05e355d77a1c603c39db7e8e3fa0661629526f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 30.17
+status: ok
+----- stdout -----
+==============================================================================
+V=1 SU(3) Wilson Picard-Fuchs ODE: EXTENDED Minimality Certificate
+==============================================================================
+
+Candidate ODE (from PR #541):
+  6 beta^2 J''' + beta(60-beta) J'' + (-4 beta^2 - 2 beta + 120) J' - beta(beta+10) J = 0
+
+Building Bessel-determinant Taylor series of J(beta) to depth 100...
+  build+taylor: 3.86s
+  a_0 = 1, a_1 = 0, a_2 = 1/36, a_3 = 1/648, a_4 = 1/2592
+
+[A] Deep Taylor annihilation certificate (depth=100):
+    L * J truncated to degree 96: IDENTICALLY ZERO
+
+[D] Recurrence consistency certificate (N=2..99):
+    Recurrence verified for N = 2 to 99: ALL HOLD EXACTLY
+
+[B-EXT] Lower-order exclusion (no order <= 2 ODE with deg <= 30):
+    Lower-order exclusion (extended): ALL (r <= 2, d <= 30) EXCLUDED  (total 23.33s)
+    r=1,d=0: unknowns=2, equations=10, rank=2, kernel_dim=0 -> OK: no annihilator
+    r=1,d=5: unknowns=12, equations=20, rank=12, kernel_dim=0 -> OK: no annihilator
+    r=1,d=10: unknowns=22, equations=30, rank=22, kernel_dim=0 -> OK: no annihilator
+    r=1,d=15: unknowns=32, equations=40, rank=32, kernel_dim=0 -> OK: no annihilator
+    r=1,d=20: unknowns=42, equations=50, rank=42, kernel_dim=0 -> OK: no annihilator
+    r=1,d=25: unknowns=52, equations=60, rank=52, kernel_dim=0 -> OK: no annihilator
+    r=1,d=30: unknowns=62, equations=70, rank=62, kernel_dim=0 -> OK: no annihilator
+    r=2,d=0: unknowns=3, equations=11, rank=3, kernel_dim=0 -> OK: no annihilator
+    r=2,d=5: unknowns=18, equations=26, rank=18, kernel_dim=0 -> OK: no annihilator
+    r=2,d=10: unknowns=33, equations=41, rank=33, kernel_dim=0 -> OK: no annihilator
+    r=2,d=15: unknowns=48, equations=56, rank=48, kernel_dim=0 -> OK: no annihilator
+    r=2,d=20: unknowns=63, equations=71, rank=63, kernel_dim=0 -> OK: no annihilator
+    r=2,d=25: unknowns=78, equations=86, rank=78, kernel_dim=0 -> OK: no annihilator
+    r=2,d=30: unknowns=93, equations=96, rank=93, kernel_dim=0 -> OK: no annihilator
+
+[E-EXT] (r=3) higher-degree consistency to d=12:
+    (r=3) higher-degree consistency to d=12: ALL kernels match polynomial-multiple bound  (total 0.66s)
+    r=3,d=2: kernel_dim=1, expected=1 -> OK
+    r=3,d=3: kernel_dim=2, expected=2 -> OK
+    r=3,d=4: kernel_dim=3, expected=3 -> OK
+    r=3,d=5: kernel_dim=4, expected=4 -> OK
+    r=3,d=6: kernel_dim=5, expected=5 -> OK
+    r=3,d=7: kernel_dim=6, expected=6 -> OK
+    r=3,d=8: kernel_dim=7, expected=7 -> OK
+    r=3,d=9: kernel_dim=8, expected=8 -> OK
+    r=3,d=10: kernel_dim=9, expected=9 -> OK
+    r=3,d=11: kernel_dim=10, expected=10 -> OK
+    r=3,d=12: kernel_dim=11, expected=11 -> OK
+
+[K] Koutschan-style algorithmic guess:
+    Koutschan guess: minimal annihilator at (r=3, d=2), kernel_dim=1, matches published L (after primitive integer normalization)
+    minimal_r = 3, minimal_d = 2, kernel_dim = 1
+    primitive-integer kernel signature: {'k=0,m=1': -10, 'k=0,m=2': -1, 'k=1,m=0': 120, 'k=1,m=1': -2, 'k=1,m=2': -4, 'k=2,m=1': 60, 'k=2,m=2': -1, 'k=3,m=2': 6}
+
+[S] Operator signature primitive-integer match:
+    Operator signature sanity: PRIMITIVE-INTEGER MATCH (8/8 monomials)
+
+[OA] Optional SageMath/ore_algebra cross-check:
+    ore_algebra unavailable (SageMath/ore_algebra not installed)
+
+==============================================================================
+SUMMARY: CERTIFICATE PASS=6 FAIL=0
+==============================================================================
+
+Extended minimality certificate operationally CLOSED.
+- Lower-order exclusion to (r <= 2, d <= 30): no annihilator
+- (r=3, d) higher-degree consistency to d=12: polynomial-multiple bound exact
+- Algorithmic Koutschan guess: minimal at (r=3, d=2), matches PR #541 L
+- Primitive-integer signature: 8/8 coefficient match
+
+Combined with the deep Taylor annihilation (depth 100), the algorithmic
+verification path is self-contained over Q. The Bernstein-Sato existence
+input from D-module theory remains philosophical context, but the bounded
+operational closure of the rank bound is now runner-internal.
+Output written: outputs/su3_v1_picard_fuchs_minimality_extended_2026_05_06.json
+
+----- stderr -----
+

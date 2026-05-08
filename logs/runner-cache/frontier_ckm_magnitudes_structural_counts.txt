@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ckm_magnitudes_structural_counts.py
-runner_sha256: 8b5ecfdb334a3338dfb458689e807fb25012405527e3ea87832f28a4c47ba4af
+runner_sha256: b57b3996745558f6a66071ca7926d0b8eac3396074d09ad3f3c1adeee9790588
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.04
+elapsed_sec: 0.09
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -28,7 +28,7 @@ Authority checks
   [PASS] scope guard present: - any Koide, three-sector, or cross-lane closure;
 
 ----------------------------------------------------------------------------------------
-Retained CKM structural counts
+Cited CKM structural counts
 ----------------------------------------------------------------------------------------
   N_pair   = 2
   N_color  = 3
@@ -94,7 +94,7 @@ Observation-side comparators
 ----------------------------------------------------------------------------------------
 Summary
 ----------------------------------------------------------------------------------------
-  Retained CKM structural-counts surface:
+  Cited CKM structural-counts surface:
     |V_us|_0^2 = alpha_s(v)/N_pair
     |V_cb|_0^2 = alpha_s(v)^2/(N_pair N_color)
     |V_ts|_0^2 = alpha_s(v)^2/(N_pair N_color)

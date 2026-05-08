@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 544,
+      "max_transitive_descendants": 501,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "audited_conditional",
@@ -33,7 +33,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         }
       ],
       "requires_lemma_extraction": false
@@ -72,7 +72,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 544,
+      "max_transitive_descendants": 501,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -81,7 +81,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "audited_conditional",
@@ -90,7 +90,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "audited_conditional",
@@ -99,7 +99,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "unaudited",
@@ -108,7 +108,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "audited_conditional",
@@ -117,7 +117,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "unaudited",
@@ -126,7 +126,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         },
         {
           "audit_status": "audited_renaming",
@@ -135,7 +135,7 @@
           "effective_status": "audited_renaming",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 544
+          "transitive_descendants": 501
         }
       ],
       "requires_lemma_extraction": false
@@ -154,7 +154,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 401,
+      "max_transitive_descendants": 250,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -163,7 +163,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 401
+          "transitive_descendants": 250
         },
         {
           "audit_status": "unaudited",
@@ -172,50 +172,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 401
+          "transitive_descendants": 250
         }
       ],
       "requires_lemma_extraction": false
     },
     {
       "cycle_id": "cycle-0004",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-        },
-        {
-          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 364,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
-          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 364
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 364
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -236,7 +199,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 363,
+      "max_transitive_descendants": 149,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -245,7 +208,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -254,7 +217,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -263,7 +226,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -272,13 +235,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -303,7 +266,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 363,
+      "max_transitive_descendants": 149,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -312,7 +275,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -321,7 +284,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -330,7 +293,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -339,7 +302,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -348,13 +311,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -383,7 +346,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 363,
+      "max_transitive_descendants": 149,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -392,7 +355,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
           "title": "Universal GR A1 Invariant Section on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -401,7 +364,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -410,7 +373,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -419,7 +382,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -428,7 +391,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -437,13 +400,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -472,7 +435,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 363,
+      "max_transitive_descendants": 149,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -481,7 +444,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -490,7 +453,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -499,7 +462,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -508,7 +471,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -517,7 +480,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         },
         {
           "audit_status": "unaudited",
@@ -526,139 +489,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
           "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
-          "transitive_descendants": 363
+          "transitive_descendants": 149
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.derivation_validation_map"
-        },
-        {
-          "from": "publication.ci3_z3.derivation_validation_map",
-          "to": "publication.ci3_z3.derivation_atlas"
-        },
-        {
-          "from": "publication.ci3_z3.derivation_atlas",
-          "to": "publication.ci3_z3.claims_table"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.derivation_validation_map",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
-          "title": "Derivation / Validation Map",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.derivation_atlas",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
-          "title": "Derivation Atlas",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0010",
-      "decision": null,
-      "edges": [
-        {
-          "from": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "to": "dm_sigma_hier_closure_packet_note_2026-04-20"
-        },
-        {
-          "from": "dm_sigma_hier_closure_packet_note_2026-04-20",
-          "to": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20"
-        },
-        {
-          "from": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-          "to": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
-        },
-        {
-          "from": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
-          "to": "sigma_hier_uniqueness_theorem_note_2026-04-19"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
-          "title": "\u03c3_hier Uniqueness Theorem",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_sigma_hier_closure_packet_note_2026-04-20",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md",
-          "title": "DM Sigma-Hier Closure Packet",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md",
-          "title": "DM PMNS CP-Orientation Parity Reduction",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md",
-          "title": "DM \u03c3_hier Upper-Octant Selector Theorem",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -679,7 +516,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 124,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -688,7 +525,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
           "title": "P2 Taste-Staircase Beta Functions: Retained No-Go",
-          "transitive_descendants": 289
+          "transitive_descendants": 124
         },
         {
           "audit_status": "unaudited",
@@ -697,7 +534,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
           "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
-          "transitive_descendants": 289
+          "transitive_descendants": 124
         },
         {
           "audit_status": "unaudited",
@@ -706,7 +543,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
           "title": "Taste-Staircase Transport Theorem (P2 Narrowing)",
-          "transitive_descendants": 289
+          "transitive_descendants": 124
         },
         {
           "audit_status": "unaudited",
@@ -715,89 +552,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 124
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.derivation_validation_map"
-        },
-        {
-          "from": "publication.ci3_z3.derivation_validation_map",
-          "to": "publication.ci3_z3.derivation_atlas"
-        },
-        {
-          "from": "publication.ci3_z3.derivation_atlas",
-          "to": "publication.ci3_z3.publication_matrix"
-        },
-        {
-          "from": "publication.ci3_z3.publication_matrix",
-          "to": "publication.ci3_z3.claims_table"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 289,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.derivation_validation_map",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
-          "title": "Derivation / Validation Map",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.derivation_atlas",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
-          "title": "Derivation Atlas",
-          "transitive_descendants": 289
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.publication_matrix",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
-          "title": "Publication Matrix",
-          "transitive_descendants": 289
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -826,7 +587,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -835,7 +596,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -844,7 +605,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -853,7 +614,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -862,7 +623,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -871,7 +632,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -880,13 +641,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -919,7 +680,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -928,7 +689,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -937,7 +698,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -946,7 +707,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -955,7 +716,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -964,7 +725,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -973,7 +734,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -982,13 +743,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -1021,7 +782,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1030,7 +791,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1039,7 +800,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1048,7 +809,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1057,7 +818,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1066,7 +827,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1075,7 +836,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1084,13 +845,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md",
           "title": "Koide Microscopic Scalar Selector Target",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -1127,7 +888,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1136,7 +897,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1145,7 +906,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1154,7 +915,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1163,7 +924,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1172,7 +933,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1181,7 +942,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1190,7 +951,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1199,13 +960,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -1246,7 +1007,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1255,7 +1016,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1264,7 +1025,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1273,7 +1034,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1282,7 +1043,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1291,7 +1052,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1300,7 +1061,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1309,7 +1070,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1318,7 +1079,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1327,13 +1088,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -1386,7 +1147,7 @@
         }
       ],
       "length": 12,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1395,7 +1156,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1404,7 +1165,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1413,7 +1174,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1422,7 +1183,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1431,7 +1192,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1440,7 +1201,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1449,7 +1210,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1458,7 +1219,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1467,7 +1228,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1476,7 +1237,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1485,7 +1246,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1494,13 +1255,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md",
           "title": "Koide `\u221am` Amplitude Principle Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -1561,7 +1322,7 @@
         }
       ],
       "length": 14,
-      "max_transitive_descendants": 289,
+      "max_transitive_descendants": 107,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1570,7 +1331,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
           "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1579,7 +1340,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
           "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1588,7 +1349,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_POSITIVE_ONE_CLOCK_SEMIGROUP_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Positive One-Clock Semigroup",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1597,7 +1358,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Observable-Selector Generator Line",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1606,7 +1367,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selected-Line Closure",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1615,7 +1376,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Selected-Line Cyclic-Response Bridge",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1624,7 +1385,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide Brannen-Phase Reduction Theorem: Conditional `\u03b4 = Q/d` Route",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1633,7 +1394,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
           "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1642,7 +1403,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
           "title": "Koide `Q` \u2194 `\u03b4` Linking Relation: Partial Closure and Named Residual Postulate",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1651,7 +1412,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
           "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1660,7 +1421,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md",
           "title": "Koide Positive Paths \u2014 First-Principles Attack Map",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1669,7 +1430,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide Circulant / Character Bridge Note",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1678,7 +1439,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
           "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
         },
         {
           "audit_status": "unaudited",
@@ -1687,7 +1448,246 @@
           "effective_status": "unaudited",
           "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
           "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 289
+          "transitive_descendants": 107
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0016",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+          "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+        },
+        {
+          "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+          "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 89,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
+          "title": "Wolfenstein Lambda and A Structural Identities Theorem",
+          "transitive_descendants": 89
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
+          "title": "CKM CP-Phase Structural Identity Theorem",
+          "transitive_descendants": 89
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0017",
+      "decision": null,
+      "edges": [
+        {
+          "from": "sigma_hier_uniqueness_theorem_note_2026-04-19",
+          "to": "dm_sigma_hier_closure_packet_note_2026-04-20"
+        },
+        {
+          "from": "dm_sigma_hier_closure_packet_note_2026-04-20",
+          "to": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20"
+        },
+        {
+          "from": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
+          "to": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
+        },
+        {
+          "from": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
+          "to": "sigma_hier_uniqueness_theorem_note_2026-04-19"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 44,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "sigma_hier_uniqueness_theorem_note_2026-04-19",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
+          "title": "\u03c3_hier Uniqueness Theorem",
+          "transitive_descendants": 44
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_sigma_hier_closure_packet_note_2026-04-20",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md",
+          "title": "DM Sigma-Hier Closure Packet",
+          "transitive_descendants": 44
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md",
+          "title": "DM PMNS CP-Orientation Parity Reduction",
+          "transitive_descendants": 44
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md",
+          "title": "DM \u03c3_hier Upper-Octant Selector Theorem",
+          "transitive_descendants": 44
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0018",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.derivation_validation_map"
+        },
+        {
+          "from": "publication.ci3_z3.derivation_validation_map",
+          "to": "publication.ci3_z3.derivation_atlas"
+        },
+        {
+          "from": "publication.ci3_z3.derivation_atlas",
+          "to": "publication.ci3_z3.claims_table"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 38,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.derivation_validation_map",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
+          "title": "Derivation / Validation Map",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.derivation_atlas",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
+          "title": "Derivation Atlas",
+          "transitive_descendants": 38
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0019",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.derivation_validation_map"
+        },
+        {
+          "from": "publication.ci3_z3.derivation_validation_map",
+          "to": "publication.ci3_z3.derivation_atlas"
+        },
+        {
+          "from": "publication.ci3_z3.derivation_atlas",
+          "to": "publication.ci3_z3.publication_matrix"
+        },
+        {
+          "from": "publication.ci3_z3.publication_matrix",
+          "to": "publication.ci3_z3.claims_table"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 38,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.derivation_validation_map",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
+          "title": "Derivation / Validation Map",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.derivation_atlas",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
+          "title": "Derivation Atlas",
+          "transitive_descendants": 38
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.publication_matrix",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
+          "title": "Publication Matrix",
+          "transitive_descendants": 38
         }
       ],
       "requires_lemma_extraction": false
@@ -1714,7 +1714,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 37,
+      "max_transitive_descendants": 35,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1723,7 +1723,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md",
           "title": "Persistent Inertial-Response Readiness Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1732,7 +1732,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md",
           "title": "Localized Source-Response Sweep Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1741,7 +1741,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md",
           "title": "Mesoscopic Surrogate h=0.25 Constrained Localization Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1750,7 +1750,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md",
           "title": "Mesoscopic Surrogate Annular / Tapered Sweep Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         }
       ],
       "requires_lemma_extraction": false
@@ -1781,7 +1781,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 37,
+      "max_transitive_descendants": 35,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1790,7 +1790,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md",
           "title": "Persistent Inertial-Response Readiness Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1799,7 +1799,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md",
           "title": "Mesoscopic Surrogate Compact Floor Sweep Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1808,7 +1808,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/MESOSCOPIC_SURROGATE_MULTISTAGE_NOTE.md",
           "title": "Mesoscopic Surrogate Multistage Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1817,7 +1817,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md",
           "title": "Mesoscopic Surrogate Backreaction Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         },
         {
           "audit_status": "unaudited",
@@ -1826,7 +1826,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md",
           "title": "Ordered-Lattice Packet Re-Identification Note",
-          "transitive_descendants": 37
+          "transitive_descendants": 35
         }
       ],
       "requires_lemma_extraction": false
@@ -1845,7 +1845,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 28,
+      "max_transitive_descendants": 26,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1854,7 +1854,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/NEWTON_DERIVATION_NOTE.md",
           "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)",
-          "transitive_descendants": 28
+          "transitive_descendants": 26
         },
         {
           "audit_status": "unaudited",
@@ -1863,7 +1863,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md",
           "title": "Newton Derivation Top4 Bridge Note (Principle 3 conditional bridge)",
-          "transitive_descendants": 28
+          "transitive_descendants": 26
         }
       ],
       "requires_lemma_extraction": false
@@ -1890,7 +1890,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 25,
+      "max_transitive_descendants": 23,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1899,7 +1899,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
           "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note",
-          "transitive_descendants": 25
+          "transitive_descendants": 23
         },
         {
           "audit_status": "unaudited",
@@ -1908,7 +1908,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
           "title": "Signed Gravity Source-Character Uniqueness Theorem Note",
-          "transitive_descendants": 25
+          "transitive_descendants": 23
         },
         {
           "audit_status": "unaudited",
@@ -1917,7 +1917,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
           "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note",
-          "transitive_descendants": 25
+          "transitive_descendants": 23
         },
         {
           "audit_status": "unaudited",
@@ -1926,7 +1926,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
           "title": "Signed Gravity Native Boundary-Complex Containment Note",
-          "transitive_descendants": 25
+          "transitive_descendants": 23
         }
       ],
       "requires_lemma_extraction": false
@@ -1953,7 +1953,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1962,7 +1962,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -1971,7 +1971,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -1980,7 +1980,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -1989,7 +1989,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md",
           "title": "Signed Gravity Nonlocal / Boundary `chi_g` Target Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2016,7 +2016,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2025,7 +2025,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2034,7 +2034,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2043,7 +2043,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md",
           "title": "Signed Gravity Non-Claim Gate Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2052,7 +2052,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md",
           "title": "Signed Gravity Mechanism Separation Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2079,7 +2079,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2088,7 +2088,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
           "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2097,7 +2097,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2106,7 +2106,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2115,7 +2115,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2146,7 +2146,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2155,7 +2155,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2164,7 +2164,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2173,7 +2173,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2182,7 +2182,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2191,7 +2191,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md",
           "title": "Signed Gravity Nonlocal / Boundary `chi_g` Target Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2222,7 +2222,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2231,7 +2231,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2240,7 +2240,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2249,7 +2249,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2258,7 +2258,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2267,7 +2267,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md",
           "title": "Signed Gravity Source-Action Escape Hatch Audit",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2298,7 +2298,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2307,7 +2307,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2316,7 +2316,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2325,7 +2325,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2334,7 +2334,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md",
           "title": "Signed Gravity Non-Claim Gate Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2343,7 +2343,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md",
           "title": "Signed Gravity Mechanism Separation Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2382,7 +2382,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2391,7 +2391,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2400,7 +2400,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
           "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2409,7 +2409,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2418,7 +2418,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2427,7 +2427,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2436,7 +2436,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
           "title": "Signed Gravity APS-Locked Source Action Proposal",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2445,7 +2445,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
           "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2492,7 +2492,7 @@
         }
       ],
       "length": 9,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2501,7 +2501,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2510,7 +2510,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2519,7 +2519,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
           "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2528,7 +2528,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2537,7 +2537,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2546,7 +2546,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2555,7 +2555,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
           "title": "Signed Gravity APS-Locked Source Action Proposal",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2564,7 +2564,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
           "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2573,7 +2573,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false
@@ -2624,7 +2624,7 @@
         }
       ],
       "length": 10,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 16,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2633,7 +2633,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2642,7 +2642,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2651,7 +2651,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2660,7 +2660,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
           "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2669,7 +2669,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2678,7 +2678,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2687,7 +2687,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2696,7 +2696,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
           "title": "Signed Gravity APS-Locked Source Action Proposal",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2705,7 +2705,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
           "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         },
         {
           "audit_status": "unaudited",
@@ -2714,7 +2714,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 16
         }
       ],
       "requires_lemma_extraction": false

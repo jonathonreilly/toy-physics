@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_discrete_global_closure.py
+runner_sha256: 098687247d97493659271be792b0a0cc25dc8e0dc824b2af2f55e6d2bb06e318
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.18
+status: ok
+----- stdout -----
+[EXACT] PASS: the branch already contains positive local closure, Lorentzian extension, and global atlas closure
+    the structural-assembly statement is built from already-derived universal route steps
+[EXACT] PASS: the Lorentzian glued operator is nondegenerate on the discrete 3+1 route
+    min |eig K_GR|=2.782578e-02
+[EXACT] PASS: overlap covariance is exact at the operator density level
+    max overlap covariance error=8.327e-17
+[EXACT] PASS: the discrete Lorentzian action is chart-independent on overlaps
+    overlap action mismatch=8.882e-16
+[EXACT] PASS: stationary representatives patch to the same global section
+    overlap stationary mismatch=2.842e-14
+UNIVERSAL GR DISCRETE GLOBAL CLOSURE
+==============================================================================
+min |eig K_GR|              = 2.782578e-02
+max overlap covariance err  = 8.327e-17
+overlap action mismatch     = 8.882e-16
+overlap stationary mismatch = 2.842e-14
+
+Verdict (scope-bounded):
+On the explicit chart change S and Lorentzian background D0 above, the direct-universal route assembles into a runner-verified single-overlap structural-assembly statement for an exact global Lorentzian Einstein/Regge stationary action family on the discrete 3+1 spacetime PL S^3 x R, conditional on the cited support-tier closure-stack notes. See the note's audit boundary for scope.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+
