@@ -1,0 +1,109 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ygut_normalization_proof_walk_lattice_independence.py
+runner_sha256: c52a14d8812f44a7432c736a3b85e39f11fe65271a45f0d40f306830e625b275
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+frontier_ygut_normalization_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: does not use lattice-action machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-2
+  [PASS] contains marker: SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026
+  [PASS] contains marker: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] contains marker: standard Lie-algebra Killing-form normalization conventi
+  [PASS] contains marker: Tr[T_a T_b]_fund = (1/2)
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+  [PASS] broad framing stripped: broad framing phrase 6
+  [PASS] broad framing stripped: broad framing phrase 7
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md
+  [PASS] dependency exists: docs/SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md
+  [PASS] dependency exists: docs/FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+  [PASS] dependency exists: docs/HYPERCHARGE_IDENTIFICATION_NOTE.md
+  [PASS] dependency exists: docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  [PASS] dependency exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+LH-form chirality table (per Weyl family)
+----------------------------------------------------------------------------------------
+  [PASS] total chiralities per generation = 16 (16)
+  [PASS] |5bar| = 5 (3 + 2 states) (5)
+  [PASS] |10| = 10 (6 + 3 + 1 states) (10)
+  [PASS] |1| = 1 (singlet) (1)
+  [PASS] |5bar + 10| = 15 per Weyl family (15)
+
+----------------------------------------------------------------------------------------
+squared Y_min trace per SU(5) rep, per Weyl family
+----------------------------------------------------------------------------------------
+  [PASS] Tr[Y_min^2]_5bar = 5/6 (5/6)
+  [PASS] Tr[Y_min^2]_10 = 5/2 (5/2)
+  [PASS] Tr[Y_min^2]_5bar+10 = 10/3 (per Weyl family) (10/3)
+  [PASS] manual Tr[Y_min^2]_5bar = 5/6 (5/6)
+  [PASS] manual Tr[Y_min^2]_10 = 5/2 (5/2)
+
+----------------------------------------------------------------------------------------
+SU(N) Dynkin-index sum under standard Killing-form normalization
+----------------------------------------------------------------------------------------
+  [PASS] T(5bar) = 1/2 under standard Killing-form normalization (1/2)
+  [PASS] T(10) = 3/2 under standard Killing-form normalization (3/2)
+  [PASS] Tr[T_a^2]_5bar+10 = 2 per Weyl family (2)
+
+----------------------------------------------------------------------------------------
+trace-consistency solve for Y_GUT = c * Y_min rescaling
+----------------------------------------------------------------------------------------
+  [PASS] c^2 = 6/10 = 3/5 (3/5)
+  [PASS] numerator forced = 6 (6)
+  [PASS] denominator forced = 10 (10)
+  [PASS] Y_GUT^2 / Y^2 = 3/20 (doubled convention) (3/20)
+  [PASS] Tr[Y_GUT^2]_5bar+10 = 2 per Weyl family (2)
+  [PASS] Tr[Y_GUT^2]_three_gen = 6 (matches Y5) (6)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] allowed input named: LH-form chirality table
+  [PASS] allowed input named: squared-hypercharge trace identities
+  [PASS] allowed input named: SU(N) Dynkin-index bookkeeping
+  [PASS] allowed input named: exact rational arithmetic
+  [PASS] allowed input named: standard Lie-algebra Killing-form normalization convention
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] boundary names non-closed item: derivation of the chiral matter content itself
+  [PASS] boundary names non-closed item: the staggered-Dirac realization gate
+  [PASS] boundary names non-closed item: minimality of SU(5)
+  [PASS] boundary names non-closed item: any GUT-scale derivation or proton-decay claim
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+
+TOTAL: PASS=65 FAIL=0
+VERDICT: bounded proof-walk passes; Y_GUT = sqrt(3/5) * Y_min uses no
+lattice-action quantity as a load-bearing input.
+
+----- stderr -----
+

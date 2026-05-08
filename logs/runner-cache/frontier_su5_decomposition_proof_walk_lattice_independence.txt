@@ -1,0 +1,141 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su5_decomposition_proof_walk_lattice_independence.py
+runner_sha256: 42b6ac0250c6ae414a6f68c0b9adc826a91405152acfd191d759a90d194719ea
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+frontier_su5_decomposition_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: does not use lattice-action machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026
+  [PASS] contains marker: STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-
+  [PASS] contains marker: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] contains marker: Schur lemma
+  [PASS] contains marker: antisymmetric tensor decomposition
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+  [PASS] broad framing stripped: broad framing phrase 6
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md
+  [PASS] dependency exists: docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+  [PASS] dependency exists: docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  [PASS] dependency exists: docs/HYPERCHARGE_IDENTIFICATION_NOTE.md
+  [PASS] dependency exists: docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md
+  [PASS] dependency exists: docs/THREE_GENERATION_STRUCTURE_NOTE.md
+  [PASS] dependency exists: docs/FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+LHCM 16-chirality LH-form table
+----------------------------------------------------------------------------------------
+  [PASS] Q_L LH-form triple = ('3', 2, Fraction(1, 6)) (('3', 2, Fraction(1, 6)))
+  [PASS] u^c_L LH-form triple = ('3bar', 1, Fraction(-2, 3)) (('3bar', 1, Fraction(-2, 3)))
+  [PASS] d^c_L LH-form triple = ('3bar', 1, Fraction(1, 3)) (('3bar', 1, Fraction(1, 3)))
+  [PASS] L_L LH-form triple = ('1', 2, Fraction(-1, 2)) (('1', 2, Fraction(-1, 2)))
+  [PASS] e^c_L LH-form triple = ('1', 1, Fraction(1, 1)) (('1', 1, Fraction(1, 1)))
+  [PASS] nu^c_L LH-form triple = ('1', 1, Fraction(0, 1)) (('1', 1, Fraction(0, 1)))
+  [PASS] Q_L multiplicity = 6 (6)
+  [PASS] u^c_L multiplicity = 3 (3)
+  [PASS] d^c_L multiplicity = 3 (3)
+  [PASS] L_L multiplicity = 2 (2)
+  [PASS] e^c_L multiplicity = 1 (1)
+  [PASS] nu^c_L multiplicity = 1 (1)
+  [PASS] |LH content| = 16 per generation (16)
+
+----------------------------------------------------------------------------------------
+SU(5) branchings from Schur + tracelessness + ∧²
+----------------------------------------------------------------------------------------
+  [PASS] tracelessness 3a + 2b = 0 (3*-1/3 + 2*1/2 = 0)
+  [PASS] 5 has (3,1) component with Y_min = -1/3
+  [PASS] 5 has (1,2) component with Y_min = +1/2
+  [PASS] 5̄ has (3̄,1) component with Y_min = +1/3
+  [PASS] 5̄ has (1,2) component with Y_min = -1/2
+  [PASS] 10 has (3̄,1) component with Y_min = -2/3
+  [PASS] 10 has (3,2) component with Y_min = +1/6
+  [PASS] 10 has (1,1) component with Y_min = +1
+  [PASS] 1 has (1,1) component with Y_min = 0
+  [PASS] |5| = 3 + 2 = 5 (5)
+  [PASS] |5̄| = 3 + 2 = 5 (5)
+  [PASS] |10| = 3 + 6 + 1 = 10 (10)
+  [PASS] |1| = 1 (1)
+  [PASS] |5̄ ⊕ 10 ⊕ 1| = 5 + 10 + 1 = 16
+
+----------------------------------------------------------------------------------------
+slot-by-slot match
+----------------------------------------------------------------------------------------
+  [PASS] Q_L → 10: slot match exists (matches=1)
+  [PASS] Q_L → 10: rep is 10 (got 10)
+  [PASS] u^c_L → 10: slot match exists (matches=1)
+  [PASS] u^c_L → 10: rep is 10 (got 10)
+  [PASS] d^c_L → 5bar: slot match exists (matches=1)
+  [PASS] d^c_L → 5bar: rep is 5bar (got 5bar)
+  [PASS] L_L → 5bar: slot match exists (matches=1)
+  [PASS] L_L → 5bar: rep is 5bar (got 5bar)
+  [PASS] e^c_L → 10: slot match exists (matches=1)
+  [PASS] e^c_L → 10: rep is 10 (got 10)
+  [PASS] nu^c_L → 1: slot match exists (matches=1)
+  [PASS] nu^c_L → 1: rep is 1 (got 1)
+  [PASS] every SU(5) slot filled exactly once (0 unfilled)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] allowed input named: chiral-content multiplicities
+  [PASS] allowed input named: LHCM-derived hypercharge values
+  [PASS] allowed input named: standard SU(5) representation theory
+  [PASS] allowed input named: Schur lemma
+  [PASS] allowed input named: exact rational arithmetic
+  [PASS] allowed input named: block embedding
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] boundary names non-closed item: derivation of the chiral matter content itself
+  [PASS] boundary names non-closed item: the staggered-Dirac realization gate
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+  [PASS] boundary names non-closed item: SU(5) minimality
+
+----------------------------------------------------------------------------------------
+proof-walk table coverage
+----------------------------------------------------------------------------------------
+  [PASS] proof-walk row present: `Q_L → 10` slot match
+  [PASS] proof-walk row present: `u^c_L → 10` slot match
+  [PASS] proof-walk row present: `e^c_L → 10` slot match
+  [PASS] proof-walk row present: `d^c_L → 5̄` slot match
+  [PASS] proof-walk row present: `L_L → 5̄` slot match
+  [PASS] proof-walk row present: `ν^c_L → 1` slot match
+  [PASS] proof-walk structural row present: LH-form transcription
+  [PASS] proof-walk structural row present: `5 = (3,1) ⊕ (1,2)` branching
+  [PASS] proof-walk structural row present: `10 = ∧²(5)` branching
+  [PASS] proof-walk structural row present: State-count bookkeeping
+  [PASS] proof-walk table has >= 14 'no' cells (every row) (found 15)
+
+TOTAL: PASS=97 FAIL=0
+VERDICT: bounded proof-walk passes; SU(5) 5̄ ⊕ 10 ⊕ 1 slot-matching
+uses no lattice-action quantity as a load-bearing input.
+
+----- stderr -----
+

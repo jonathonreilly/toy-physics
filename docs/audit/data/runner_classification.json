@@ -288,6 +288,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_angular_kernel_underdetermination_nogo.py"
     },
+    "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_anomaly_cancellation_proof_walk_lattice_independence.py"
+    },
     "anomaly_forces_time_theorem": {
       "assert_count": 0,
       "counts": {
@@ -863,6 +875,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_bell_inequality.py"
+    },
+    "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_beta_gbare_squared_rescaling_invariance.py"
     },
     "beyond_lattice_qcd_note": {
       "assert_count": 0,
@@ -5436,6 +5460,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_mass_ratio_ckm_dual.py"
     },
+    "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_dt1_time_dimension_proof_walk_lattice_independence.py"
+    },
     "eigenvalue_anderson_phase_note_2026-04-11": {
       "assert_count": 0,
       "counts": {
@@ -7187,6 +7223,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py"
+    },
+    "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 21,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gbare_wilson_action_internal_proof_walk.py"
     },
     "gellmann_completeness_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -14460,6 +14508,18 @@
       "dominant_class": "C",
       "runner": "scripts/signed_gravity_tensor_source_transport_retention.py"
     },
+    "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_sin2thetaW_proof_walk_lattice_independence.py"
+    },
     "sin_squared_theta_w_gut_from_su5_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -15684,6 +15744,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py"
     },
+    "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su5_decomposition_proof_walk_lattice_independence.py"
+    },
     "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07": {
       "assert_count": 1,
       "counts": {
@@ -16535,6 +16607,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/triple_stack_collapse_scaling.py"
+    },
+    "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_trYsquared_proof_walk_lattice_independence.py"
     },
     "two_field_retarded_family_closure_note_2026-04-10": {
       "assert_count": 0,
@@ -17507,6 +17591,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_gw_echo_derived.py"
+    },
+    "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_ygut_normalization_proof_walk_lattice_independence.py"
     },
     "yt_axiom_first_microscopic_bridge_theorem": {
       "assert_count": 0,
@@ -20678,6 +20774,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_anomaly_cancellation_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_anomaly_forces_time.py": {
       "assert_count": 0,
       "claims": [
@@ -20976,6 +21087,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_beta_gbare_squared_rescaling_invariance.py": {
+      "assert_count": 1,
+      "claims": [
+        "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_beyond_lattice_qcd.py": {
@@ -25578,6 +25704,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_dt1_time_dimension_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_echo_null_result.py": {
       "assert_count": 0,
       "claims": [
@@ -26666,6 +26807,21 @@
         "A": 0,
         "B": 0,
         "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_gbare_wilson_action_internal_proof_walk.py": {
+      "assert_count": 1,
+      "claims": [
+        "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 21,
         "D": 0
       },
       "decoration_candidate": false,
@@ -32187,6 +32343,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_sin2thetaW_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_single_axiom_hilbert.py": {
       "assert_count": 0,
       "claims": [
@@ -33079,6 +33250,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su5_decomposition_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su5_embedding_from_graph_first_surface.py": {
       "assert_count": 1,
       "claims": [
@@ -33921,6 +34107,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_trYsquared_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_two_field_retarded_family_closure.py": {
       "assert_count": 0,
       "claims": [
@@ -34321,6 +34522,21 @@
         "A": 0,
         "B": 0,
         "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_ygut_normalization_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
         "D": 0
       },
       "decoration_candidate": false,
@@ -39805,13 +40021,13 @@
     "decoration_candidates": 120,
     "dominant_class_distribution": {
       "A": 14,
-      "B": 167,
-      "C": 600,
+      "B": 168,
+      "C": 607,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1421,
-    "runners_with_C": 711,
+    "runners_classified": 1429,
+    "runners_with_C": 719,
     "runners_with_D": 352
   }
 }

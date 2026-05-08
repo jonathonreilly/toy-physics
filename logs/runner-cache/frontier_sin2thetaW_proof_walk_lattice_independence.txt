@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_sin2thetaW_proof_walk_lattice_independence.py
+runner_sha256: e8db0c7cbcb8ce49ef74ec7c22e62f1fb60552767c6913d5514b21139e8837d6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+frontier_sin2thetaW_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: does not use lattice-action machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02
+  [PASS] contains marker: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md
+  [PASS] dependency exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+exact sin²θ_W^GUT arithmetic
+----------------------------------------------------------------------------------------
+  [PASS] tan²θ_W^GUT = 3/5 (3/5)
+  [PASS] 1 + tan²θ_W^GUT = 8/5 (8/5)
+  [PASS] sin²θ_W^GUT = (3/5) / (8/5) = 3/8 (= 3/5 / 8/5 = 3/8)
+  [PASS] cos²θ_W^GUT = 1 - 3/8 = 5/8 (= 1 - 3/8 = 5/8)
+  [PASS] sin²θ_W^GUT + cos²θ_W^GUT = 1 (3/8 + 5/8 = 1)
+  [PASS] tan² = sin²/cos² self-consistency (sin²/cos² = 3/8/5/8 = 3/5)
+  [PASS] sin²θ_W^GUT decimal value = 0.375 (3/8 = 0.375)
+  [PASS] Y_GUT² / Y_SM² = 3/5 (rescaling-factor-squared) (3/5)
+
+----------------------------------------------------------------------------------------
+LHCM Tr[Y²] = 40/3 support arithmetic
+----------------------------------------------------------------------------------------
+  [PASS] Tr[Y²] doubled convention = 40/3 (40/3)
+  [PASS] Tr[Y²] per Weyl family (Convention B) = 10/3 (10/3)
+  [PASS] Tr[Y_GUT²]_(5̄+10) = (3/5) · (10/3) = 2 (2)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] allowed input named: LHCM-derived hypercharge values
+  [PASS] allowed input named: standard SU(5) Killing-form normalization
+  [PASS] allowed input named: GUT-unification physical assumption
+  [PASS] allowed input named: SU(5)-vs-other-GUT-group choice
+  [PASS] allowed input named: exact rational arithmetic
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] boundary names non-closed item: GUT-unification physical assumption
+  [PASS] boundary names non-closed item: SU(5)-vs-SO(10)/E6 GUT-group choice
+  [PASS] boundary names non-closed item: running of `sin²θ_W` from the GUT scale
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+
+TOTAL: PASS=49 FAIL=0
+VERDICT: bounded proof-walk passes; sin²θ_W^GUT = 3/8 derivation uses no
+lattice-action quantity as a load-bearing input.
+
+----- stderr -----
+

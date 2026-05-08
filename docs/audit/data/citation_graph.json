@@ -197,6 +197,38 @@
       "to": "emergent_lorentz_invariance_note"
     },
     {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "anomaly_forces_time_theorem",
       "to": "native_gauge_closure_note"
     },
@@ -803,6 +835,14 @@
     {
       "from": "baryon_charge_integrality_note_2026-05-02",
       "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08",
+      "to": "g_bare_two_ward_closure_note_2026-04-18"
+    },
+    {
+      "from": "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08",
+      "to": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
     },
     {
       "from": "bh_entropy_rt_ratio_widom_no_go_note",
@@ -6049,6 +6089,34 @@
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
       "from": "early_family_transfer_connectivity_diagnosis",
       "to": "gate_b_nonlabel_sign_grown_transfer_note"
     },
@@ -6931,6 +6999,38 @@
     {
       "from": "gauge_wilson_isotropy_boundary_note_2026-05-04",
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "g_bare_constraint_vs_convention_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "g_bare_two_ward_closure_note_2026-04-18"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "g_bare_rigidity_theorem_note"
+    },
+    {
+      "from": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "gellmann_completeness_theorem_note_2026-05-02",
@@ -13361,6 +13461,30 @@
       "to": "fifth_family_radial_boundary_note"
     },
     {
+      "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "sin_squared_theta_w_gut_from_su5_note_2026-05-02"
+    },
+    {
+      "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
+    },
+    {
+      "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "lhcm_repair_atlas_consolidation_note_2026-05-02"
+    },
+    {
+      "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
+    },
+    {
+      "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "sin_squared_theta_w_gut_from_su5_note_2026-05-02",
       "to": "lhcm_repair_atlas_consolidation_note_2026-05-02"
     },
@@ -14057,6 +14181,42 @@
       "to": "su3_cube_full_rho_perron_2026-05-04"
     },
     {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -14299,6 +14459,42 @@
     {
       "from": "translation_covariance_local_op_theorem_note_2026-05-02",
       "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "u1_fermion_number_conservation_theorem_note_2026-05-02",
@@ -15563,6 +15759,38 @@
     {
       "from": "w_z_mass_ratio_from_ewsb_note_2026-05-02",
       "to": "sin_squared_theta_w_gut_from_su5_note_2026-05-02"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "yt_axiom_first_microscopic_bridge_theorem",
@@ -28517,6 +28745,26 @@
       "runner_path": "scripts/frontier_angular_kernel_underdetermination_nogo.py",
       "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)"
     },
+    "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "claim_id": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "anomaly_forces_time_theorem",
+        "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+        "left_handed_charge_matching_note",
+        "hypercharge_identification_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "2d98ed38436d5937a885b2321a0040c42f5ecb79c59654362a0bedd94a0e9183",
+      "path": "docs/ANOMALY_CANCELLATION_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_anomaly_cancellation_proof_walk_lattice_independence.py",
+      "title": "Anomaly Cancellation Proof-Walk Lattice-Independence Bounded Note"
+    },
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
       "claim_type_author_hint": "bounded_theorem",
@@ -29330,6 +29578,20 @@
       "path": "docs/BELL_INEQUALITY_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_bell_inequality.py",
       "title": "Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements (Conditional Model Surface)"
+    },
+    "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08": {
+      "claim_id": "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_bare_two_ward_closure_note_2026-04-18",
+        "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
+      ],
+      "note_hash": "763acf8c2b0e3f54c44bb4b46c10e15f5e7d8f5f3926fac564f0abebb016e60a",
+      "path": "docs/BETA_GBARE_SQUARED_RESCALING_INVARIANCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_beta_gbare_squared_rescaling_invariance.py",
+      "title": "\u03b2\u00b7g_bare\u00b2 = 2 N_c Rescaling-Invariance Bounded Identity Note"
     },
     "beyond_lattice_qcd_note": {
       "claim_id": "beyond_lattice_qcd_note",
@@ -35546,6 +35808,25 @@
       "runner_path": "scripts/frontier_mass_ratio_ckm_dual.py",
       "title": "Down-Type Mass Ratios from the CKM Dual"
     },
+    "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "claim_id": "dt1_time_dimension_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "anomaly_forces_time_theorem",
+        "minimal_axioms_2026-05-03",
+        "cpt_exact_note",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "native_gauge_closure_note",
+        "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "staggered_dirac_realization_gate_note_2026-05-03"
+      ],
+      "note_hash": "f003952449ca36e373d75d4827fa4612f018c1503c825cdce32b8b93b3cc6233",
+      "path": "docs/DT1_TIME_DIMENSION_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_dt1_time_dimension_proof_walk_lattice_independence.py",
+      "title": "Time-Dimension d_t = 1 Proof-Walk Lattice-Independence Bounded Note"
+    },
     "early_family_transfer_connectivity_diagnosis": {
       "claim_id": "early_family_transfer_connectivity_diagnosis",
       "claim_type_author_hint": null,
@@ -37621,6 +37902,26 @@
       "path": "docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py",
       "title": "Gauge Wilson Isotropy Boundary Note"
+    },
+    "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08": {
+      "claim_id": "gbare_wilson_action_internal_proof_walk_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
+        "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+        "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
+        "g_bare_two_ward_closure_note_2026-04-18",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "cl3_color_automorphism_theorem",
+        "g_bare_rigidity_theorem_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "9d133d45fad5c3c2fe391deab09bf6891324923a54d9ab2b863e032b4bbf2cde",
+      "path": "docs/GBARE_WILSON_ACTION_INTERNAL_PROOF_WALK_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_gbare_wilson_action_internal_proof_walk.py",
+      "title": "g_bare = 1 Wilson-Action-Internal Proof-Walk Bounded Note"
     },
     "gellmann_completeness_theorem_note_2026-05-02": {
       "claim_id": "gellmann_completeness_theorem_note_2026-05-02",
@@ -50459,6 +50760,24 @@
       "runner_path": "scripts/signed_gravity_tensor_source_transport_retention.py",
       "title": "Signed Gravity Tensor-Source Transport And Retention Note"
     },
+    "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "claim_id": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "sin_squared_theta_w_gut_from_su5_note_2026-05-02",
+        "full_y_squared_trace_su5_gut_note_2026-05-02",
+        "lhcm_repair_atlas_consolidation_note_2026-05-02",
+        "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "05b64c4bb4594d85cfc8830669a16ef34c893ac9b897360feb04957d626b36a0",
+      "path": "docs/SIN2THETAW_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_sin2thetaW_proof_walk_lattice_independence.py",
+      "title": "sin\u00b2\u03b8_W^GUT = 3/8 Proof-Walk Lattice-Independence Bounded Note"
+    },
     "sin_squared_theta_w_gut_from_su5_note_2026-05-02": {
       "claim_id": "sin_squared_theta_w_gut_from_su5_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -51885,6 +52204,27 @@
       "runner_path": "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py",
       "title": "SU(3) L_s=2 Z3 APBC Variant Probe"
     },
+    "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "claim_id": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "left_handed_charge_matching_note",
+        "hypercharge_identification_note",
+        "graph_first_su3_integration_note",
+        "three_generation_structure_note",
+        "full_y_squared_trace_su5_gut_note_2026-05-02",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "a803f4a5d592277bd46af0369e5a8d6bbe956b012536c0dc1d7ef3d5e684596c",
+      "path": "docs/SU5_DECOMPOSITION_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_su5_decomposition_proof_walk_lattice_independence.py",
+      "title": "SU(5) 5\u0304 \u2295 10 \u2295 1 Decomposition Proof-Walk Lattice-Independence Bounded Note"
+    },
     "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07": {
       "claim_id": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
       "claim_type_author_hint": "bounded_theorem",
@@ -52785,6 +53125,27 @@
       "path": "docs/TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md",
       "runner_path": "scripts/triple_stack_collapse_scaling.py",
       "title": "Triple-Stack Collapse Scaling Note"
+    },
+    "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "claim_id": "trysquared_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "left_handed_charge_matching_note",
+        "hypercharge_identification_note",
+        "three_generation_structure_note",
+        "one_generation_matter_closure_note",
+        "anomaly_forces_time_theorem",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "d8a7a3bac28841116815df076b80832655274031b5caff33559ff70227dcea6c",
+      "path": "docs/TRYSQUARED_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_trYsquared_proof_walk_lattice_independence.py",
+      "title": "Tr[Y^2] Proof-Walk Lattice-Independence Bounded Note"
     },
     "two_field_retarded_family_closure_note_2026-04-10": {
       "claim_id": "two_field_retarded_family_closure_note_2026-04-10",
@@ -55116,6 +55477,26 @@
       "runner_path": null,
       "title": "Writing Voice Guide"
     },
+    "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08": {
+      "claim_id": "ygut_normalization_proof_walk_lattice_independence_bounded_note_2026-05-08",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
+        "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
+        "full_y_squared_trace_su5_gut_note_2026-05-02",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "hypercharge_identification_note",
+        "left_handed_charge_matching_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "f2f6a107f05377fece27743597d9f6e1708d16c24693eb84c9745894a0333def",
+      "path": "docs/YGUT_NORMALIZATION_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-08.md",
+      "runner_path": "scripts/frontier_ygut_normalization_proof_walk_lattice_independence.py",
+      "title": "Y_GUT Normalization Proof-Walk Lattice-Independence Bounded Note"
+    },
     "yt_axiom_first_microscopic_bridge_theorem": {
       "claim_id": "yt_axiom_first_microscopic_bridge_theorem",
       "claim_type_author_hint": null,
@@ -57146,7 +57527,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 108,
+      "bounded_theorem": 116,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
@@ -57154,17 +57535,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 611,
+      "bounded_theorem": 619,
       "meta": 10,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6774,
-    "leaf_count": 550,
-    "node_count": 1939,
+    "edge_count": 6831,
+    "leaf_count": 557,
+    "node_count": 1947,
     "root_count": 858,
-    "runners_with_path": 1518
+    "runners_with_path": 1526
   }
 }

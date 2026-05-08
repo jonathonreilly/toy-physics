@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gbare_wilson_action_internal_proof_walk.py
+runner_sha256: b2f9f4feb4f7fe9452a2f40b18cb61f1766d3498f98e7c137c6ce3df1e534430
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+frontier_gbare_wilson_action_internal_proof_walk.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: Wilson-action-form-internal
+  [PASS] contains marker: NOT lattice-action-independent
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: Scope guard
+  [PASS] contains marker: G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03
+  [PASS] contains marker: G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03
+  [PASS] contains marker: G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md
+  [PASS] dependency exists: docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md
+  [PASS] dependency exists: docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md
+  [PASS] dependency exists: docs/G_BARE_RIGIDITY_THEOREM_NOTE.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+  [PASS] dependency exists: docs/HYPERCHARGE_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-07.md
+
+----------------------------------------------------------------------------------------
+exact Wilson plaquette small-a matching arithmetic
+----------------------------------------------------------------------------------------
+  [PASS] N_c = 3 (structural input)
+  [PASS] beta = 2 N_c = 6 (canonical normalization, exact) (6)
+  [PASS] g_bare^2 = 2 N_c / beta = 6/6 (exact) (1)
+  [PASS] g_bare^2 = 1 exact rational (no float)
+  [PASS] g_bare = +1 under positive-sign convention
+  [PASS] alternative beta = 12 gives g_bare^2 = 1/2 != 1 (1/2)
+  [PASS] alternative beta = 3 gives g_bare^2 = 2 != 1 (2)
+  [PASS] alternative beta = 3/2 gives g_bare^2 = 4 != 1 (4)
+  [PASS] alternative beta = 24 gives g_bare^2 = 1/4 != 1 (1/4)
+  [PASS] canonical N_c=1: beta = 2 N_c forces g_bare^2 = 1 (1)
+  [PASS] canonical N_c=2: beta = 2 N_c forces g_bare^2 = 1 (1)
+  [PASS] canonical N_c=3: beta = 2 N_c forces g_bare^2 = 1 (1)
+  [PASS] canonical N_c=4: beta = 2 N_c forces g_bare^2 = 1 (1)
+  [PASS] canonical N_c=5: beta = 2 N_c forces g_bare^2 = 1 (1)
+
+----------------------------------------------------------------------------------------
+Wilson-action-form-internal scope guard
+----------------------------------------------------------------------------------------
+  [PASS] scope marker present: Wilson plaquette small-a matching
+  [PASS] scope marker present: Wilson-action-form-internal
+  [PASS] scope marker present: NOT lattice-action-independent
+  [PASS] scope marker present: canonical Cl(3) connection normalization
+  [PASS] scope marker present: exact rational arithmetic
+  [PASS] scope marker present: Symanzik-improved
+  [PASS] scope marker present: tadpole-improved
+  [PASS] honest contrast marker present: hypercharge proof-walk
+  [PASS] honest contrast marker present: **is** lattice-action-independent
+  [PASS] honest contrast marker present: **not** lattice-action-independent
+  [PASS] boundary names non-closed item: lattice-action-independence of the `g_bare = 1` proof
+  [PASS] boundary names non-closed item: the canonical Cl(3) connection normalization (CN) is its
+  [PASS] boundary names non-closed item: the Wilson plaquette action form is uniquely forced
+  [PASS] boundary names non-closed item: closure of the broader `G_BARE_*` family
+  [PASS] boundary names non-closed item: any retained-status promotion
+
+----------------------------------------------------------------------------------------
+proof-walk table structure
+----------------------------------------------------------------------------------------
+  [PASS] proof-walk table row: (CN) canonical Cl(3) generator normalization
+  [PASS] proof-walk table row: (WM) matching identity
+  [PASS] proof-walk table row: Wilson plaquette small-a expansion
+  [PASS] proof-walk table row: (RR) rescaling-freedom-removal
+  [PASS] proof-walk table row: exact rational arithmetic
+
+----------------------------------------------------------------------------------------
+runner self-consistency
+----------------------------------------------------------------------------------------
+  [PASS] forward (WM): beta = 2 N_c / g_bare^2 = 6/1 = 6 (6)
+  [PASS] reverse (WM): g_bare^2 = 2 N_c / beta = 6/6 = 1 (1)
+  [PASS] stdlib-only runner (Fraction-based, no numpy/scipy/sympy)
+
+TOTAL: PASS=63 FAIL=0
+VERDICT: bounded proof-walk passes; g_bare = 1 derivation depends
+load-bearingly on Wilson plaquette small-a matching, with all other
+steps reduced to canonical normalization (admitted convention) plus
+exact rational arithmetic. Scope is Wilson-action-form-internal,
+NOT lattice-action-independent.
+
+----- stderr -----
+

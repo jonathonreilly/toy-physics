@@ -1,0 +1,123 @@
+===== runner cache v1 =====
+runner: scripts/frontier_beta_gbare_squared_rescaling_invariance.py
+runner_sha256: 210cf3d88f8b481d526078e4b20714681c5c180a4b529f6252e3146e6af41aee
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+frontier_beta_gbare_squared_rescaling_invariance.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: Proposal allowed:** false
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: bounded arithmetic identity
+  [PASS] contains marker: Imported Authorities
+  [PASS] contains marker: Arithmetic Identity Table
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18
+  [PASS] contains marker: G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03
+  [PASS] contains marker: fractions.Fraction
+  [PASS] forbidden framing absent: continuum-limit class
+  [PASS] forbidden framing absent: two-class
+  [PASS] forbidden framing absent: Wilson asymptotic universality
+  [PASS] forbidden framing absent: sub-class (i)
+  [PASS] forbidden framing absent: sub-class (ii)
+  [PASS] forbidden framing absent: algebraic universality
+  [PASS] forbidden framing absent: lattice-realization-invariant
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md
+  [PASS] dependency exists: docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+imported authority content checks
+----------------------------------------------------------------------------------------
+  [PASS] two-ward note carries Wilson small-a matching beta = 2 N_c / g_bare^2
+  [PASS] two-ward note carries the canonical g_bare = 1 closure value
+  [PASS] rescaling note carries the T_a -> c T_a generator-basis rescaling
+  [PASS] rescaling note carries the beta -> c^2 beta mapping
+
+----------------------------------------------------------------------------------------
+arithmetic identity at canonical g_bare^2 = 1, N_c = 3
+----------------------------------------------------------------------------------------
+  [PASS] beta = 2 N_c / g_bare^2 = 6 (6)
+  [PASS] beta * g_bare^2 = 2 N_c (canonical value) (6)
+
+----------------------------------------------------------------------------------------
+rescaling invariance table at exact rational precision
+----------------------------------------------------------------------------------------
+  [PASS] canonical product equals 2 N_c (6)
+  [PASS] c = 1/2: beta'(c) = c^2 * beta (beta'=3/2)
+  [PASS] c = 1/2: g_bare'^2(c) = g_bare^2 / c^2 (g_bare'^2=4)
+  [PASS] c = 1/2: beta'(c) matches expected table value (beta'=3/2 expected=3/2)
+  [PASS] c = 1/2: g_bare'^2(c) matches expected table value (g_bare'^2=4 expected=4)
+  [PASS] c = 1/2: beta'(c) * g_bare'^2(c) = 2 N_c (rescaling-invariant) (product=6)
+  [PASS] c = 1/2: c^2 * (1 / c^2) = 1 (algebraic cancellation) (c^2/c^2=1)
+  [PASS] c = 1: beta'(c) = c^2 * beta (beta'=6)
+  [PASS] c = 1: g_bare'^2(c) = g_bare^2 / c^2 (g_bare'^2=1)
+  [PASS] c = 1: beta'(c) matches expected table value (beta'=6 expected=6)
+  [PASS] c = 1: g_bare'^2(c) matches expected table value (g_bare'^2=1 expected=1)
+  [PASS] c = 1: beta'(c) * g_bare'^2(c) = 2 N_c (rescaling-invariant) (product=6)
+  [PASS] c = 1: c^2 * (1 / c^2) = 1 (algebraic cancellation) (c^2/c^2=1)
+  [PASS] c = 2: beta'(c) = c^2 * beta (beta'=24)
+  [PASS] c = 2: g_bare'^2(c) = g_bare^2 / c^2 (g_bare'^2=1/4)
+  [PASS] c = 2: beta'(c) matches expected table value (beta'=24 expected=24)
+  [PASS] c = 2: g_bare'^2(c) matches expected table value (g_bare'^2=1/4 expected=1/4)
+  [PASS] c = 2: beta'(c) * g_bare'^2(c) = 2 N_c (rescaling-invariant) (product=6)
+  [PASS] c = 2: c^2 * (1 / c^2) = 1 (algebraic cancellation) (c^2/c^2=1)
+  [PASS] c = 3: beta'(c) = c^2 * beta (beta'=54)
+  [PASS] c = 3: g_bare'^2(c) = g_bare^2 / c^2 (g_bare'^2=1/9)
+  [PASS] c = 3: beta'(c) matches expected table value (beta'=54 expected=54)
+  [PASS] c = 3: g_bare'^2(c) matches expected table value (g_bare'^2=1/9 expected=1/9)
+  [PASS] c = 3: beta'(c) * g_bare'^2(c) = 2 N_c (rescaling-invariant) (product=6)
+  [PASS] c = 3: c^2 * (1 / c^2) = 1 (algebraic cancellation) (c^2/c^2=1)
+
+----------------------------------------------------------------------------------------
+identity holds for arbitrary g_bare^2 (symbolic substitution)
+----------------------------------------------------------------------------------------
+  [PASS] beta * g_bare^2 = 2 N_c at g_bare^2 = 1 (6)
+  [PASS] rescaling invariance at g_bare^2 = 1, c = 1/2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 1, c = 2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 1, c = 3 (product=6)
+  [PASS] beta * g_bare^2 = 2 N_c at g_bare^2 = 3/4 (6)
+  [PASS] rescaling invariance at g_bare^2 = 3/4, c = 1/2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 3/4, c = 2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 3/4, c = 3 (product=6)
+  [PASS] beta * g_bare^2 = 2 N_c at g_bare^2 = 5/7 (6)
+  [PASS] rescaling invariance at g_bare^2 = 5/7, c = 1/2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 5/7, c = 2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 5/7, c = 3 (product=6)
+  [PASS] beta * g_bare^2 = 2 N_c at g_bare^2 = 11/13 (6)
+  [PASS] rescaling invariance at g_bare^2 = 11/13, c = 1/2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 11/13, c = 2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 11/13, c = 3 (product=6)
+  [PASS] beta * g_bare^2 = 2 N_c at g_bare^2 = 1/100 (6)
+  [PASS] rescaling invariance at g_bare^2 = 1/100, c = 1/2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 1/100, c = 2 (product=6)
+  [PASS] rescaling invariance at g_bare^2 = 1/100, c = 3 (product=6)
+
+----------------------------------------------------------------------------------------
+boundary clauses present
+----------------------------------------------------------------------------------------
+  [PASS] boundary clause present: bounded arithmetic identity only
+  [PASS] boundary clause present: continuum-limit statement
+  [PASS] boundary clause present: any retention or promotion
+  [PASS] boundary clause present: imported Wilson small-`a` matching relation
+  [PASS] boundary clause present: imported generator-basis rescaling theorem
+  [PASS] boundary clause present: Wilson plaquette vs Symanzik vs
+  [PASS] boundary clause present: canonical Cl(3) connection normalization
+  [PASS] boundary clause present: parent theorem/status promotion
+
+TOTAL: PASS=78 FAIL=0
+VERDICT: bounded arithmetic identity passes; beta * g_bare^2 = 2 N_c is
+invariant under the imported generator-basis rescaling for c in {1/2, 1,
+2, 3} at exact rational precision.
+
+----- stderr -----
+
