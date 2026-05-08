@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 887 |
+| unaudited | 886 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 411 |
+| ~~audited_conditional~~ | 412 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 393 |
-| `audited_conditional` | 411 |
+| `audited_conditional` | 412 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 940 |
+| `unaudited` | 939 |
 
 | claim_type | count |
 |---|---:|
@@ -678,6 +678,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4979,6 +4980,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** canonical transport-column theorem reduces the live object to the  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-precision validated-numerics support, on the fixed native N_e seed surface near the listed base point, for a locally non-isolated constructive positive near-closure branch.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0925-ab3b-7152-be2e-ac266fd4c91e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Under the validated-numerics sign-change plus uniform-slope-lower-bound reading, the bracket evidence is taken to support an implicit-function-style local family e = e(a,b,c,d) inside the constructive positive branch.  _(class `C`)_
+- **chain closes:** False — The packet supports numerical evidence but not a closed retained theorem: the ODE/transport functional has no interval or analytic enclosure here, and the primary runner's final manifold conclusion is asserted rather than rigorously derived. The missing step is an inspectable validated certificate proving the sign-change and slope enclosure for the actual F evaluation.
+- **rationale:** Issue: the note's load-bearing manifold conclusion rests on finite-precision sign, derivative, and Brent-root evidence, while the primary runner's final locally-non-isolated PASS is hard-coded and the imported transport/projected-source kernels are not present in the packet. Why this blocks: without an interval or analytic enclosure for F and its regularity, the evidence does not close as a retained bounded theorem even though it may be strong numerical support. Repair target: provide the companion certificate source or a retained theorem that constructs eta_1 and F, proves the bracket sign-change and uniform slope enclosure, and derives the implicit-function-style family without asserting it. Claim boundary until fixed: numerical support for non-isolation near the specified base point only.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19`
