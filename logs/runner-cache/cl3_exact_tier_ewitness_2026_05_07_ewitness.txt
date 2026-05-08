@@ -1,0 +1,263 @@
+================================================================================
+Cached output for: scripts/cl3_exact_tier_ewitness_2026_05_07_ewitness.py
+Date: 2026-05-07
+Worktree: confident-robinson-5c47a5 / claude/n-f-trace-space-w2binary-2026-05-07
+Environment: Python 3.13, NumPy 2.4.4, scipy 1.17.1, numba 0.65.1
+Hardware: macOS Darwin 25.3.0 / arm64 / single-thread
+================================================================================
+
+================================================================================
+SECTION 1. Self-test (--mode self_test)
+================================================================================
+numba_available = True
+
+======================================================================
+SELF-TEST: isotropic SU(3) Wilson, beta=6 on 2^4 lattice
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 2) vol=16 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=12345 numba=True
+  thermalized in 3.3s (60 sweeps)
+  measured in 0.2s (200 sweeps, 100 measurements)
+  <P_sigma> = 0.6197 +/- 0.0042
+  <P_tau>   = 0.6222 +/- 0.0033
+  ENGELS-1990 BENCHMARK: <P>(beta=6) ~ 0.594 (large vol)
+
+================================================================================
+SECTION 2. Isotropic 4^4 multi-seed validation
+================================================================================
+=== Isotropic validation: 4^4 at beta_W=6 (Engels 1990: 0.594) ===
+
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=1 numba=True
+  thermalized in 4.5s (80 sweeps)
+  measured in 1.5s (400 sweeps, 200 measurements)
+
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=2 numba=True
+  thermalized in 0.3s (80 sweeps)
+  measured in 1.7s (400 sweeps, 200 measurements)
+
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=3 numba=True
+  thermalized in 0.3s (80 sweeps)
+  measured in 1.8s (400 sweeps, 200 measurements)
+
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=4 numba=True
+  thermalized in 0.4s (80 sweeps)
+  measured in 1.9s (400 sweeps, 200 measurements)
+
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=5 numba=True
+  thermalized in 0.4s (80 sweeps)
+  measured in 1.9s (400 sweeps, 200 measurements)
+
+  Multi-seed combined:
+    <P_sigma> = 0.59671 +/- 0.00036
+    <P_tau>   = 0.59659 +/- 0.00033
+    seed-std: sigma=0.00089, tau=0.00053
+
+CONCLUSION: 4^4 at beta_W=6 -> <P_sigma> = 0.59671 +/- 0.00036
+            agrees with Engels 1990 large-volume value 0.594 to 0.7%.
+            This sharpens prior 0.5970 +/- 0.0010 (PR #674) to 3x precision.
+
+================================================================================
+SECTION 3. Path A: high-statistics multi-seed at xi=4, 4^3 x 16
+            (--mode path_a --n_thermalize 100 --n_measure 1500
+             --measure_every 2 --n_overrelax 3 --seeds 1,2,3,4,5 --xi 4)
+================================================================================
+numba_available = True
+
+======================================================================
+PATH A: high-statistics multi-seed anisotropic xi=4.0 on 4^3 x 16
+======================================================================
+
+  --- seed 1 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=1 numba=True
+  thermalized in 5.9s (100 sweeps)
+  measured in 36.4s (1500 sweeps, 750 measurements)
+
+  --- seed 2 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=2 numba=True
+  thermalized in 2.4s (100 sweeps)
+  measured in 36.7s (1500 sweeps, 750 measurements)
+
+  --- seed 3 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=3 numba=True
+  thermalized in 2.5s (100 sweeps)
+  measured in 36.4s (1500 sweeps, 750 measurements)
+
+  --- seed 4 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=4 numba=True
+  thermalized in 2.3s (100 sweeps)
+  measured in 36.2s (1500 sweeps, 750 measurements)
+
+  --- seed 5 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=5 numba=True
+  thermalized in 2.3s (100 sweeps)
+  measured in 37.9s (1500 sweeps, 750 measurements)
+
+  Multi-seed combined:
+    <P_sigma> = 0.44329 +/- 0.00016  (seed-std: 0.00029)
+    <P_tau>   = 0.85194 +/- 0.00002  (seed-std: 0.00006)
+
+CONCLUSION: 4^3 x 16 at xi=4, g^2=1 with 5 seeds x 1500 sweeps gives
+            <P_sigma> = 0.44329 +/- 0.00016 absolute precision.
+            12x tighter than prior 0.414 +/- 0.002 on 4^3 x 8.
+            Wall time: ~3 minutes total.
+
+================================================================================
+SECTION 4. Path B: finite-size scaling at xi=4
+            (separate scripts; volumes 3^3x12, 4^3x16, 6^3x24)
+================================================================================
+=== Path B: 6^3 x 24 at xi=4 ===
+[3 seeds, 80 thermalize, 400 measure, n_overrelax=2]
+
+[run_anisotropic] dims=(6, 6, 6, 24) vol=5184 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=1 numba=True
+  thermalized in 11.5s (80 sweeps)
+  measured in 40.0s (400 sweeps, 200 measurements)
+
+[run_anisotropic] dims=(6, 6, 6, 24) vol=5184 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=2 numba=True
+  thermalized in 8.6s (80 sweeps)
+  measured in 43.1s (400 sweeps, 200 measurements)
+
+[run_anisotropic] dims=(6, 6, 6, 24) vol=5184 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=3 numba=True
+  thermalized in 9.5s (80 sweeps)
+  measured in 47.0s (400 sweeps, 200 measurements)
+
+  6^3 x 24: <P_sigma> = 0.44207 +/- 0.00022
+
+
+=== Path B: 3^3 x 12 at xi=4 ===
+[5 seeds, 100 thermalize, 1500 measure, n_overrelax=3]
+
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=1 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 11.0s (1500 sweeps, 750 measurements)
+
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=2 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 12.4s (1500 sweeps, 750 measurements)
+
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=3 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 10.7s (1500 sweeps, 750 measurements)
+
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=4 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 11.5s (1500 sweeps, 750 measurements)
+
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=5 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 10.9s (1500 sweeps, 750 measurements)
+
+  3^3 x 12: <P_sigma> = 0.44545 +/- 0.00034
+
+
+=== Finite-size scaling fits ===
+Volume scan at xi=4, g^2=1:
+  L=3^3 x 12: <P_sigma> = 0.44545 +/- 0.00034
+  L=4^3 x 16: <P_sigma> = 0.44329 +/- 0.00016     [from Path A]
+  L=6^3 x 24: <P_sigma> = 0.44207 +/- 0.00022
+
+3-point fit P(L) = P_inf + a/L^2 + b/L^4 (exact, 0 dof):
+  P_inf = 0.44129 +/- 0.00062
+  a = +0.02506
+  b = +0.11158
+
+2-point linear-in-1/L^2 fit on L=4,6:
+  P_inf = 0.44109 +/- 0.00042
+  a = +0.03514
+
+3-point fit P(L) = P_inf + a/L^2 (overdetermined, 1 dof):
+  P_inf = 0.44088 +/- 0.00030
+  a = +0.03984
+  chi^2/dof = 0.57/1
+
+CONCLUSION: <P_sigma>_inf(g^2=1, xi=4) = 0.4410 +/- 0.0006 (consensus
+            of three fits). 4^3 x 16 deviates from L=inf by 0.5%,
+            meeting volume-convergence target.
+
+================================================================================
+SECTION 5. Path C: NLO analytic refinement of Convention C-iso
+            (--mode path_c)
+================================================================================
+=== Path C (NLO): Convention C-iso analytic refinement ===
+    Direct comparison of SU(2) Wilson vs HK temporal plaquette
+    extracting linear, quadratic, cubic coefficients in s_t.
+
+    g^2     xi       s_t    beta_W     <P>_HK      <P>_W      (W-HK)   rel.shift
+  --------------------------------------------------------------------------------
+   1.00   1.00   0.50000     4.000    0.31271    0.34195    +0.02924    +9.3511%
+   1.00   2.00   0.25000     8.000    0.17097    0.18075    +0.00978    +5.7201%
+   1.00   4.00   0.12500    16.000    0.08949    0.09219    +0.00270    +3.0121%
+   1.00   8.00   0.06250    32.000    0.04579    0.04650    +0.00070    +1.5363%
+   1.00  16.00   0.03125    64.000    0.02316    0.02334    +0.00018    +0.7749%
+   1.00  32.00   0.01562   128.000    0.01165    0.01170    +0.00005    +0.3891%
+   1.00  64.00   0.00781   256.000    0.00584    0.00585    +0.00001    +0.1949%
+   1.00 128.00   0.00391   512.000    0.00293    0.00293    +0.00000    +0.0976%
+
+  Polynomial fit of rel_shift(s_t) for s_t < 0.6 (no constant term):
+    a_1 (coefficient of s_t^1) = +0.250104
+    a_2 (coefficient of s_t^2) = -0.066483
+    a_3 (coefficient of s_t^3) = -0.030370
+    a_4 (coefficient of s_t^4) = -0.177974
+
+  Compare to leading Taylor expansion of (P_W - P_HK):
+    SU(2) HK: P_HK(s) = 3s/4 - 9s^2/32 + 27s^3/128 - ...
+    SU(2) Wilson at beta = 2/s: P_W(beta) = 1 - I_2(beta)/I_1(beta).
+    For beta -> infinity (s -> 0):
+      I_2(b)/I_1(b) = 1 - 3/(2b) + 15/(8b^2) - 105/(16b^3) + ...
+                    = 1 - 3s/4 + 15 s^2/32 - 105 s^3/128 + ...
+    Hence P_W(2/s) = 3s/4 - 15 s^2/32 + 105 s^3/128 - ...
+
+    (P_W - P_HK)(s) = (15/32 - 9/32) s^2 + (-105/128 + 27/128) s^3 + ...
+                    = (3/16) s^2 - (39/64) s^3 + ...
+                    = 0.1875 s^2 - 0.609 s^3 + ...
+
+    rel_shift(s) = (P_W - P_HK)/P_HK(s)
+                ~ (0.1875 s^2 - 0.609 s^3) / (3s/4 - 9s^2/32)
+                ~ 0.25 s + O(s^2)
+    Leading coefficient: 0.250 (analytic).
+    Numerical fit a_1: +0.2501
+
+  Predicted Convention C-iso shift at canonical operating points:
+    xi=  1.0 (s_t=0.5000): NLO+=+9.3511%   LO-only=+12.5052%
+    xi=  2.0 (s_t=0.2500): NLO+=+5.7201%   LO-only=+6.2526%
+    xi=  4.0 (s_t=0.1250): NLO+=+3.0121%   LO-only=+3.1263%
+    xi=  8.0 (s_t=0.0625): NLO+=+1.5362%   LO-only=+1.5631%
+    xi= 16.0 (s_t=0.0312): NLO+=+0.7750%   LO-only=+0.7816%
+    xi= 32.0 (s_t=0.0156): NLO+=+0.3892%   LO-only=+0.3908%
+
+CONCLUSION: rel_shift(s_t) = 0.2501*s_t - 0.0665*s_t^2 - 0.030*s_t^3 + ...
+            with leading coefficient verified analytically as 1/4.
+            NLO term sharpens the C-iso bound at moderate xi.
+
+================================================================================
+SECTION 6. Final summary
+================================================================================
+
+CLOSURE TARGETS vs ACHIEVED:
+  - sigma < 0.001 absolute on Hamilton-limit <P>     : MET (0.0002)
+  - Volume convergence within 0.5% of L=inf          : MET (0.5%)
+  - C-iso bound at xi=1 sharpened from 9.4% < 5%     : NOT MET
+                                                       (sharpened to 9.35% direct
+                                                        + closed-form polynomial)
+  - Total epsilon_witness ~ 3e-4 exact-tier closure  : NOT MET
+                                                       (stat+vol at 3-7e-4,
+                                                        but C-iso systematic
+                                                        at xi=4 is ~3% relative)
+
+NUMBER LINE:
+  <P_iso>(beta=6, 4^4)    = 0.59671 +/- 0.00036  (Engels 1990: 0.594)
+  <P_sigma>(xi=4, 4^3x16) = 0.44329 +/- 0.00016
+  <P_sigma>(xi=4, L=inf)  = 0.4410  +/- 0.0006   [thermodynamic-limit fit]
+
+  C-iso at xi=4: rel_shift = 3.01%  (was 5-15% prior)
+  C-iso at xi=8: rel_shift = 1.54%
+  C-iso at xi=16: rel_shift = 0.78%
+
+NAMED COMPUTE FRONTIER:
+  - Run at xi=8 or xi=16 on 6^3 x 32 or 6^3 x 64 lattices to push
+    C-iso below 1.5% or 0.8%; estimated wall time ~15 min single core
+    or ~minutes with multi-core/GPU.
+  - Compute analytic SU(3) NLO coefficient (vs. SU(2) proxy used here);
+    closed-form via SU(3) characters / Bessel-J integrals.
+  - GPU acceleration to enable 16^3 x 64 ensembles (modern benchmark).
+
+TOTAL WALL TIME USED: ~10 minutes (under 30 minute budget).
+================================================================================

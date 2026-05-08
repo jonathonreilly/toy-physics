@@ -1,0 +1,28 @@
+=== Path B: 3^3 x 12 at xi=4 ===
+
+  --- seed 1 ---
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=1 numba=True
+  thermalized in 4.6s (100 sweeps)
+  measured in 12.2s (1500 sweeps, 750 measurements)
+
+  --- seed 2 ---
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=2 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 12.4s (1500 sweeps, 750 measurements)
+
+  --- seed 3 ---
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=3 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 10.7s (1500 sweeps, 750 measurements)
+
+  --- seed 4 ---
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=4 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 11.5s (1500 sweeps, 750 measurements)
+
+  --- seed 5 ---
+[run_anisotropic] dims=(3, 3, 3, 12) vol=324 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=5 numba=True
+  thermalized in 0.7s (100 sweeps)
+  measured in 10.9s (1500 sweeps, 750 measurements)
+
+  3^3 x 12: <P_sigma>=0.44545 +/- 0.00034
