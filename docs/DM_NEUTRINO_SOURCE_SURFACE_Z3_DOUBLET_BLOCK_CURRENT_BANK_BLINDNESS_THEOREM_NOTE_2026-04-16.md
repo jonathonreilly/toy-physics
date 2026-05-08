@@ -73,3 +73,14 @@ It is only:
 ```bash
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15](DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_postcanonical_polar_section_note_2026-04-15](DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md)
+- [dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
+- [dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
+- [dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md)
+- [dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)

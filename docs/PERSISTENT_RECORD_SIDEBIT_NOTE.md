@@ -105,3 +105,10 @@ The clean next test is:
 
 That is now more justified than sweeping larger `N` on the current side-bit
 state alone.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [persistent_record_matched_compare_note](PERSISTENT_RECORD_MATCHED_COMPARE_NOTE.md)
+- [persistent_record_overlap_kernel_note](PERSISTENT_RECORD_OVERLAP_KERNEL_NOTE.md)

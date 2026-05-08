@@ -152,7 +152,15 @@ and let the skill drive.
 ============================== PROMPT ==============================
 """
 
-CATEGORIES = ("renaming", "failed", "numerical_match", "open_gate")
+CATEGORIES = (
+    "renaming",
+    "failed",
+    "numerical_match",
+    "open_gate",
+    "conditional_runner_artifact_issue",
+    "conditional_scope_too_broad",
+    "conditional_missing_bridge_theorem",
+)
 CATEGORY_HEADER_RE = re.compile(r"^## audited_(\w+)|^## (open_gate)\b", re.MULTILINE)
 ROW_BLOCK_RE = re.compile(
     r"^### `([^`]+)`\s*\n"
@@ -167,17 +175,26 @@ def parse_prompts():
     text = PROMPTS_FILE.read_text(encoding="utf-8")
     # Find category headers + their byte spans
     categories = []
-    for m in re.finditer(r"^## (audited_renaming|audited_failed|audited_numerical_match|open_gate)\b",
-                         text, re.MULTILINE):
+    header_pattern = (
+        r"^## ("
+        r"audited_renaming|audited_failed|audited_numerical_match|open_gate"
+        r"|audited_conditional_runner_artifact_issue"
+        r"|audited_conditional_scope_too_broad"
+        r"|audited_conditional_missing_bridge_theorem"
+        r")\b"
+    )
+    cat_normalize = {
+        "audited_renaming": "renaming",
+        "audited_failed": "failed",
+        "audited_numerical_match": "numerical_match",
+        "open_gate": "open_gate",
+        "audited_conditional_runner_artifact_issue": "conditional_runner_artifact_issue",
+        "audited_conditional_scope_too_broad": "conditional_scope_too_broad",
+        "audited_conditional_missing_bridge_theorem": "conditional_missing_bridge_theorem",
+    }
+    for m in re.finditer(header_pattern, text, re.MULTILINE):
         cat_raw = m.group(1)
-        # Normalize to short names
-        cat = {
-            "audited_renaming": "renaming",
-            "audited_failed": "failed",
-            "audited_numerical_match": "numerical_match",
-            "open_gate": "open_gate",
-        }[cat_raw]
-        categories.append((m.start(), cat))
+        categories.append((m.start(), cat_normalize[cat_raw]))
     categories.append((len(text), None))   # sentinel
 
     # For each category span, parse rows

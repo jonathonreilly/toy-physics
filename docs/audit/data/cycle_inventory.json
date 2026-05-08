@@ -1,5 +1,5 @@
 {
-  "cycle_count": 45,
+  "cycle_count": 46,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 522,
+      "max_transitive_descendants": 534,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 522
+          "transitive_descendants": 534
         },
         {
           "audit_status": "unaudited",
@@ -33,13 +33,50 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 522
+          "transitive_descendants": 534
         }
       ],
       "requires_lemma_extraction": false
     },
     {
       "cycle_id": "cycle-0002",
+      "decision": null,
+      "edges": [
+        {
+          "from": "3d_correction_master_note",
+          "to": "dispersion_relation_note"
+        },
+        {
+          "from": "dispersion_relation_note",
+          "to": "3d_correction_master_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 532,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "3d_correction_master_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/3D_CORRECTION_MASTER_NOTE.md",
+          "title": "3D Correction Master Note",
+          "transitive_descendants": 532
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dispersion_relation_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DISPERSION_RELATION_NOTE.md",
+          "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic",
+          "transitive_descendants": 532
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0003",
       "decision": null,
       "edges": [
         {
@@ -52,7 +89,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 514,
+      "max_transitive_descendants": 526,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +98,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "audited_conditional",
@@ -70,13 +107,13 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -109,7 +146,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 514,
+      "max_transitive_descendants": 526,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -118,7 +155,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "audited_conditional",
@@ -127,7 +164,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "audited_conditional",
@@ -136,7 +173,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "unaudited",
@@ -145,7 +182,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "audited_conditional",
@@ -154,7 +191,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "unaudited",
@@ -163,7 +200,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         },
         {
           "audit_status": "audited_renaming",
@@ -172,13 +209,330 @@
           "effective_status": "audited_renaming",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 514
+          "transitive_descendants": 526
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0005",
+      "decision": null,
+      "edges": [
+        {
+          "from": "universal_gr_curvature_localization_blocker_note",
+          "to": "universal_gr_discrete_global_closure_note"
+        },
+        {
+          "from": "universal_gr_discrete_global_closure_note",
+          "to": "universal_gr_lorentzian_signature_extension_note"
+        },
+        {
+          "from": "universal_gr_lorentzian_signature_extension_note",
+          "to": "universal_gr_constraint_action_stationarity_note"
+        },
+        {
+          "from": "universal_gr_constraint_action_stationarity_note",
+          "to": "universal_gr_curvature_localization_blocker_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 265,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_curvature_localization_blocker_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
+          "title": "Universal GR Curvature Localization Blocker Note",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_discrete_global_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
+          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_lorentzian_signature_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
+          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_constraint_action_stationarity_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
+          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
+          "transitive_descendants": 265
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0006",
+      "decision": null,
+      "edges": [
+        {
+          "from": "universal_gr_tensor_variational_candidate_note",
+          "to": "universal_gr_curvature_localization_blocker_note"
+        },
+        {
+          "from": "universal_gr_curvature_localization_blocker_note",
+          "to": "universal_gr_discrete_global_closure_note"
+        },
+        {
+          "from": "universal_gr_discrete_global_closure_note",
+          "to": "universal_gr_lorentzian_signature_extension_note"
+        },
+        {
+          "from": "universal_gr_lorentzian_signature_extension_note",
+          "to": "universal_gr_constraint_action_stationarity_note"
+        },
+        {
+          "from": "universal_gr_constraint_action_stationarity_note",
+          "to": "universal_gr_tensor_variational_candidate_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 265,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_tensor_variational_candidate_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
+          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_curvature_localization_blocker_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
+          "title": "Universal GR Curvature Localization Blocker Note",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_discrete_global_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
+          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_lorentzian_signature_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
+          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_constraint_action_stationarity_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
+          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
+          "transitive_descendants": 265
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0007",
+      "decision": null,
+      "edges": [
+        {
+          "from": "universal_gr_a1_invariant_section_note",
+          "to": "universal_gr_tensor_variational_candidate_note"
+        },
+        {
+          "from": "universal_gr_tensor_variational_candidate_note",
+          "to": "universal_gr_curvature_localization_blocker_note"
+        },
+        {
+          "from": "universal_gr_curvature_localization_blocker_note",
+          "to": "universal_gr_discrete_global_closure_note"
+        },
+        {
+          "from": "universal_gr_discrete_global_closure_note",
+          "to": "universal_gr_lorentzian_signature_extension_note"
+        },
+        {
+          "from": "universal_gr_lorentzian_signature_extension_note",
+          "to": "universal_gr_constraint_action_stationarity_note"
+        },
+        {
+          "from": "universal_gr_constraint_action_stationarity_note",
+          "to": "universal_gr_a1_invariant_section_note"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 265,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_a1_invariant_section_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
+          "title": "Universal GR A1 Invariant Section on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_tensor_variational_candidate_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
+          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_curvature_localization_blocker_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
+          "title": "Universal GR Curvature Localization Blocker Note",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_discrete_global_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
+          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_lorentzian_signature_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
+          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_constraint_action_stationarity_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
+          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
+          "transitive_descendants": 265
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0008",
+      "decision": null,
+      "edges": [
+        {
+          "from": "universal_gr_tensor_variational_candidate_note",
+          "to": "universal_gr_curvature_localization_blocker_note"
+        },
+        {
+          "from": "universal_gr_curvature_localization_blocker_note",
+          "to": "universal_gr_discrete_global_closure_note"
+        },
+        {
+          "from": "universal_gr_discrete_global_closure_note",
+          "to": "universal_gr_lorentzian_signature_extension_note"
+        },
+        {
+          "from": "universal_gr_lorentzian_signature_extension_note",
+          "to": "universal_gr_constraint_action_stationarity_note"
+        },
+        {
+          "from": "universal_gr_constraint_action_stationarity_note",
+          "to": "universal_gr_tensor_quotient_uniqueness_note"
+        },
+        {
+          "from": "universal_gr_tensor_quotient_uniqueness_note",
+          "to": "universal_gr_tensor_variational_candidate_note"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 265,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_tensor_variational_candidate_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
+          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_curvature_localization_blocker_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
+          "title": "Universal GR Curvature Localization Blocker Note",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_discrete_global_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
+          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_lorentzian_signature_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
+          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_constraint_action_stationarity_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
+          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
+          "transitive_descendants": 265
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
+          "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
+          "transitive_descendants": 265
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -215,324 +569,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 257,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 257
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0006",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        },
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 257,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 257
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0007",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_a1_invariant_section_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        },
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        },
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_a1_invariant_section_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 257,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_a1_invariant_section_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
-          "title": "Universal GR A1 Invariant Section on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 257
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0008",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        },
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_tensor_quotient_uniqueness_note"
-        },
-        {
-          "from": "universal_gr_tensor_quotient_uniqueness_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 257,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 257
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
-          "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
-          "transitive_descendants": 257
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -595,7 +632,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -684,7 +721,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -786,7 +823,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -888,7 +925,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -1003,7 +1040,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -1131,7 +1168,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -1298,7 +1335,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -1491,7 +1528,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -1528,7 +1565,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1591,7 +1628,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1628,7 +1665,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1691,7 +1728,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1767,7 +1804,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1830,7 +1867,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1906,7 +1943,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1943,7 +1980,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -2006,7 +2043,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -2037,43 +2074,6 @@
           "effective_status": "unaudited",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0027",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
           "transitive_descendants": 17
         }
       ],
@@ -2085,6 +2085,43 @@
       "edges": [
         {
           "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0029",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
           "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
         },
         {
@@ -2117,7 +2154,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -2167,7 +2204,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -2211,69 +2248,6 @@
           "effective_status": "unaudited",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0031",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
           "transitive_descendants": 17
         }
       ],
@@ -2293,6 +2267,69 @@
         },
         {
           "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0033",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
           "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
         },
         {
@@ -2343,7 +2380,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -2406,7 +2443,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -2469,7 +2506,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -2532,7 +2569,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2608,7 +2645,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -2684,7 +2721,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -2760,7 +2797,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -2862,7 +2899,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -2990,7 +3027,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -3131,7 +3168,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -3194,7 +3231,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -3322,7 +3359,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -3359,7 +3396,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -3400,7 +3437,7 @@
     "10": 1,
     "12": 1,
     "14": 1,
-    "2": 11,
+    "2": 12,
     "3": 2,
     "4": 12,
     "5": 6,

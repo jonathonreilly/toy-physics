@@ -114,3 +114,9 @@ The remaining gravity problem is now narrowed to one concrete operator family:
 > boundary kernel on top of the exact scalar shell action.
 
 The scalar bridge is no longer the missing object.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [tensor_matching_completion_theorem_note](TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md)

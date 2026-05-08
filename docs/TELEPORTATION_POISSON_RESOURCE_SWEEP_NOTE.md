@@ -159,3 +159,9 @@ The claim boundary remains strict:
 
 Within that boundary, the earlier positive Poisson-resource result survives
 the bounded sweep as a non-uniform but real parameter window.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [teleportation_resource_from_poisson_note](TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md)

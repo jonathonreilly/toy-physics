@@ -70,3 +70,9 @@ that picks a smaller subclass) or exhibiting a bound on observable
 sensitivity to the residual norm drift. The runner now reports both
 the bounded-direction-uniqueness PASS and the branch-budget FAIL
 explicitly so the residual is auditable rather than hidden.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_exact_schur_normal_form_uniqueness_note](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md)

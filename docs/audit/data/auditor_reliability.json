@@ -76,9 +76,9 @@
     "codex-gpt-5": {
       "audits_with_runner_class": {
         "A": 85,
-        "B": 166,
-        "C": 235,
-        "D": 15,
+        "B": 162,
+        "C": 225,
+        "D": 14,
         "E": 1,
         "F": 7,
         "unsupported_numerical_sweep_and_readout_bridge": 1
@@ -91,7 +91,7 @@
       "criticality_counts": {
         "critical": 39,
         "high": 14,
-        "leaf": 388,
+        "leaf": 373,
         "medium": 69
       },
       "cross_confirmation_agreement_rate": 0.71,
@@ -109,11 +109,11 @@
       "third_pass_decisions_n": 26,
       "third_pass_overturn_rate": 0.385,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 510,
-      "verdict_changed_after_re_audit": 335,
+      "total_audits": 495,
+      "verdict_changed_after_re_audit": 321,
       "verdict_counts": {
-        "audited_clean": 262,
-        "audited_conditional": 202,
+        "audited_clean": 256,
+        "audited_conditional": 193,
         "audited_decoration": 1,
         "audited_failed": 43,
         "audited_renaming": 2
@@ -121,9 +121,9 @@
     },
     "codex-gpt-5.5": {
       "audits_with_runner_class": {
-        "A": 181,
-        "B": 62,
-        "C": 107,
+        "A": 176,
+        "B": 51,
+        "C": 106,
         "D": 6,
         "E": 31,
         "F": 15,
@@ -136,10 +136,10 @@
         "same_severity": 5
       },
       "criticality_counts": {
-        "critical": 83,
-        "high": 132,
+        "critical": 82,
+        "high": 129,
         "leaf": 52,
-        "medium": 168
+        "medium": 155
       },
       "cross_confirmation_agreement_rate": 0.781,
       "cross_confirmation_outcomes": {
@@ -156,11 +156,11 @@
       "third_pass_decisions_n": 36,
       "third_pass_overturn_rate": 0.583,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 435,
+      "total_audits": 418,
       "verdict_changed_after_re_audit": 23,
       "verdict_counts": {
         "audited_clean": 128,
-        "audited_conditional": 245,
+        "audited_conditional": 228,
         "audited_decoration": 8,
         "audited_failed": 9,
         "audited_numerical_match": 20,
@@ -195,7 +195,7 @@
   "totals": {
     "auditor_families_observed": 5,
     "overall_agreement_rate": 0.78,
-    "total_audits_recorded": 957,
+    "total_audits_recorded": 925,
     "total_cross_confirmation_family_participations": 184,
     "total_cross_confirmation_pairs": 141,
     "total_third_pass_decisions": 62

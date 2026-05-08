@@ -102,3 +102,9 @@ lane:
   depth as well as source strength
 - if it does, that is the cleanest exact-lattice step toward a causal-field
   interpretation
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [source_resolved_wavefield_escalation_note](SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md)

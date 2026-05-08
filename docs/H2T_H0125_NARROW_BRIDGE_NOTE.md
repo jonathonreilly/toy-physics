@@ -122,3 +122,9 @@ surface on `main`.
 **bounded negative**
 
 The narrow `h=0.125` bridge claim does not currently survive on `main`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [lattice_3d_l2_numpy_h0125_bridge_note](LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md)
