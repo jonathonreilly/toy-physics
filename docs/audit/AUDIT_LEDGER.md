@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 885 |
+| unaudited | 884 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 412 |
+| ~~audited_conditional~~ | 413 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 394 |
-| `audited_conditional` | 412 |
+| `audited_conditional` | 413 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 938 |
+| `unaudited` | 937 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 704 |
+| `bounded_theorem` | 705 |
 | `decoration` | 10 |
 | `meta` | 60 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 782 |
+| `positive_theorem` | 781 |
 
 | criticality | count |
 |---|---:|
@@ -780,6 +780,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `lensing_deflection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -8300,6 +8301,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The one-term-per-layer reduction fails badly while the exact edge replay matches the first-order observable at the stated H=0.35 setup.  _(class `C`)_
 - **chain closes:** True — The source makes only a bounded negative claim about the first reduced surrogate. The live H=0.35 runner reproduces the archived exact-edge/full-harness spot-check and the layer_signed/layer_abs failures against the exact edge series, with no cited dependencies needed.
 - **rationale:** The retained content is a bounded negative inside the stated harness, not a derivation of the reference lensing slope or a continuum physics claim. The live runner with --h 0.35 reproduces true_kubo=+5.972756 and exact_edge=+5.972756 at b=3 with |Delta|=4.228e-13, then shows the signed and absolute one-term-per-layer reductions miss the b=3..6 exact-edge series by about 98-100%. Because the note explicitly keeps the exact edge factorization as the reference object and rejects only the first reduced surrogate, the claim closes on its own terms.
+- **auditor confidence:** high
+
+### `lensing_deflection_note`
+
+- **Note:** [`LENSING_DEFLECTION_NOTE.md`](../../docs/LENSING_DEFLECTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite Fam1/PW=6 H=0.25 computation claiming kubo_true(b) over b=3..6 follows a clean non-standard power law with exponent about -1.43.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0929-796e-7323-95f5-cfcae7a28b28`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The retained result is that at H=0.25, kubo_true(b) on b ∈ {3,4,5,6} fits a clean power law with slope ≈ -1.43 and R² = 0.998.  _(class `C`)_
+- **chain closes:** False — The provided primary runner stdout is only a usage error, and the provided runner source computes one b value rather than the combined slope/R². The restricted packet lacks a completed combined run or cached certificate closing the four kubo_true values and regression.
+- **rationale:** Issue: the load-bearing H=0.25 b ∈ {3,4,5,6} slope/R² is a finite-scale regression over runner outputs, but the provided primary runner did not execute and the shown source does not perform the combined fit. Why this blocks: the restricted packet does not contain a completed run/cached certificate or retained dependency proving the four kubo_true values and regression, nor does it close the imported Kubo machinery, 1/r source law, Fam1/PW=6 setup, and asymptotic-subset selection from retained inputs. Repair target: provide the combined-analysis runner/stdout or cached certificate for the H=0.25 b=3..6 run, plus the retained dependency/bridge that derives the observable and boundary/asymptotic selection. Claim boundary until fixed: this remains a bounded reported finite-run power-law candidate, not an audited retained gravity-side theorem or standard-lensing derivation.
 - **auditor confidence:** high
 
 ### `lensing_k_sweep_note`
