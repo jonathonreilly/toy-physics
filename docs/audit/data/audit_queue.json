@@ -3,7 +3,7 @@
     "critical": 89,
     "high": 304,
     "leaf": 199,
-    "medium": 297
+    "medium": 296
   },
   "cycle_break_target_count": 66,
   "cycle_break_targets": [
@@ -11853,29 +11853,6 @@
       "ready": true,
       "runner_path": "scripts/decoherence_action_independence.py",
       "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_adjoint_casimir_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_color_automorphism_theorem"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.822,
-      "note_path": "docs/SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/su3_adjoint_casimir_check.py",
-      "transitive_descendants": 4
     },
     {
       "audit_independence_required": "any_non_self",
@@ -24872,6 +24849,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 10,
-  "total_pending": 889
+  "ready_count": 9,
+  "total_pending": 888
 }

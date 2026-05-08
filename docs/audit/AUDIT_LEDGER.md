@@ -23,13 +23,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 877 |
+| unaudited | 876 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 417 |
 | ~~audited_failed~~ | 9 |
-| `decoration_under_cl3_color_automorphism_theorem` | 3 |
+| `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -40,16 +40,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audited_clean` | 396 |
 | `audited_conditional` | 417 |
-| `audited_decoration` | 10 |
+| `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 930 |
+| `unaudited` | 929 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 705 |
-| `decoration` | 11 |
+| `bounded_theorem` | 704 |
+| `decoration` | 12 |
 | `meta` | 60 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
@@ -930,6 +930,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_hierarchy_matsubara_decomposition_note` | fresh_context | codex-gpt-5.5 | A | `hierarchy_matsubara_decomposition_note` |
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | cross_family | codex-gpt-5.5 | A | `koide_dweh_cyclic_compression_note_2026-04-18` |
 | `kubo_range_of_validity_note` | decoration | ~~audited_decoration~~ | `decoration_under_linear_response_true_kubo_note` | cross_family | codex-gpt-5.5 | A | `linear_response_true_kubo_note` |
+| `su3_adjoint_casimir_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | fresh_context | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `wide_lattice_h2t_skeptic_audit_note` | decoration | ~~audited_decoration~~ | `decoration_under_wide_lattice_h2t_distance_law_note` | cross_family | codex-gpt-5.5 | B | `wide_lattice_h2t_distance_law_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | cross_family | codex-gpt-5.5 | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -11977,6 +11978,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The safe read is that structureless causal DAGs can show TOWARD rows, and when they do the source-strength response stays close to linear on this pocket.  _(class `C`)_
 - **chain closes:** True — The runner directly constructs the stated random DAG pocket, propagates with the stated valley-linear field and kernel, and reports the TOWARD counts, local power-law fits, and no-field controls. No external dependency or graph-universality claim is needed for the narrowed harness-level statement.
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
+- **auditor confidence:** high
+
+### `su3_adjoint_casimir_theorem_note_2026-05-02`
+
+- **Note:** [`SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Purely algebraic SU(3) statement that the adjoint quadratic Casimir in Gell-Mann normalization is C_2(adj) = 3 I_8; physical-gluon and QCD readouts are outside the audited scope.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_cl3_color_automorphism_theorem`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-audit-loop-019e093e-8a06-7bd3-8e14-8981dd160753`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using Tr[T_adj^a T_adj^b] = N delta^{ab} and Schur scalarity, Tr[C_2(adj)] = 8N = 8c, hence c = N = 3 and C_2(adj) = 3 I_8.  _(class `A`)_
+- **chain closes:** True — The bounded algebraic adjoint-Casimir identity follows from the retained-bounded SU(3) Gell-Mann normalization plus standard adjoint-representation algebra and Schur's lemma. No physical-color bridge is needed for this narrowed algebraic scope.
+- **rationale:** Issue: the proof is a pure algebraic corollary of the single upstream SU(3) embedding/normalization together with standard Lie-algebra facts. Why this blocks a clean verdict: all load-bearing checks are class A, there is no class C first-principles CL(3) computation or class D independent comparator, and the chain reduces to one parent claim plus mathematics. Repair target: either box this as a corollary under the color-automorphism parent or add a retained independent physical-color bridge/comparator surface. Claim boundary until fixed: C_2(adj)=3 is retained only as an algebraic SU(3) identity, not as a physical gluon or perturbative-QCD consequence.
+- **decoration parent:** `cl3_color_automorphism_theorem`
 - **auditor confidence:** high
 
 ### `su3_casimir_fundamental_theorem_note_2026-05-02`
