@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_blended_readout_transfer_sweep.py
+runner_sha256: cb62ba61c51f6925cbcc4e51e4efb82b25435119230a32c35c3fd6ec66311005
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 500.01
+status: ok
+----- stdout -----
+==========================================================================================================================
+PERSISTENT OBJECT BLENDED READOUT TRANSFER SWEEP
+  single blended readout architecture (blend=0.25) across the nearby exact-family compact-object neighborhood
+==========================================================================================================================
+strengths=[0.001, 0.002, 0.004, 0.008], updates=3, h=0.25, blend=0.25
+gates: overlap>=0.90, drift<=0.10, alpha in [0.95, 1.05], all steps 4/4 TOWARD
+field target max=0.02
+
+CASE: baseline  (h=0.25, W=3, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.788    0.900    305.74    0.513     4.276%         [1.03,1.03,1.03]  False
+    top3    0.876    0.929    305.77    0.513     3.125%         [1.03,1.03,1.03]   True
+  verdict: top3 bridge
+
+CASE: source1.5  (h=0.25, W=3, L=6, source_z=1.5, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.787    0.897    305.18    0.514    15.106%         [1.02,1.01,1.01]  False
+    top3    0.884    0.929    305.25    0.514     9.640%         [1.02,1.01,1.01]   True
+  verdict: top3 bridge
+
+CASE: source2.5  (h=0.25, W=3, L=6, source_z=2.5, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.820    0.895    305.85    0.513     3.961%         [1.03,1.03,1.03]  False
+    top3    0.897    0.921    305.85    0.513     2.875%         [1.03,1.03,1.03]   True
+  verdict: top3 bridge
+
+CASE: width4  (h=0.25, W=4, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.796    0.898    376.02    0.509     2.694%         [1.00,1.00,1.00]  False
+    top3    0.884    0.927    376.04    0.509     1.843%         [1.00,1.00,1.00]   True
+  verdict: top3 bridge
+
+CASE: length5  (h=0.25, W=3, L=5, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.797    0.899    262.15    0.488     1.840%         [1.00,1.00,1.00]  False
+    top3    0.882    0.927    262.16    0.488     1.338%         [1.00,1.00,1.00]   True
+  verdict: top3 bridge
+
+CASE: length7  (h=0.25, W=3, L=7, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.777    0.901    328.11    0.503     2.887%         [1.03,1.03,1.03]   True
+    top3    0.869    0.931    328.13    0.503     2.049%         [1.03,1.03,1.03]   True
+  verdict: top2 bridge
+
+SUMMARY
+  top2 admissible on 1/6 cases
+  top3 admissible on 6/6 cases
+
+SAFE READ
+  - If top3 stays admissible across the full nearby family, the blended readout resolves the earlier complementary split.
+  - If only the miss pair is rescued, the blended readout is still only a local patch.
+  - This is still a bounded compact-object response transfer sweep, not matter closure.
+
+Total runtime: 499.9s
+
+----- stderr -----
+
