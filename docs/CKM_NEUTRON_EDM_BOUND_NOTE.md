@@ -109,7 +109,7 @@ secondary bounded consequence.
 ## Universal Theta-Response Follow-Up
 
 The broader source-scoped corollary is packaged in
-`UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*):
+[UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md):
 all EDM components sourced by QCD `theta_eff` vanish on the retained action
 surface. That theorem does not set CKM weak EDMs or independent BSM CP-odd EFT
 operators to zero.

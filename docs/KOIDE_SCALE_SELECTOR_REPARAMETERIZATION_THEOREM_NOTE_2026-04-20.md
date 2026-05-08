@@ -103,6 +103,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [koide_selected_line_cyclic_response_bridge_note_2026-04-18](KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
 - [koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18](KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md)
-- `koide_eigenvalue_q23_surface_theorem_note_2026-04-20`
-  (sibling/companion theorem; backticked to avoid length-2 cycle —
-  citation graph direction is *eigenvalue_q23_surface → this_scale_selector*)
+- [koide_eigenvalue_q23_surface_theorem_note_2026-04-20](KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md)

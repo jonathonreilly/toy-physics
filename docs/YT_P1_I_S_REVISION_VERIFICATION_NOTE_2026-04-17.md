@@ -583,7 +583,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [yt_p1_i_s_lattice_pt_citation_note_2026-04-17](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md)
 - [uv_gauge_to_yukawa_bridge_sc_vs_pert_note](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md)
 - [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
-- `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17`
-  (master upstream authority; backticked to avoid length-3 cycle through
-  yt_p1_rep_a_rep_b_cancellation_theorem — citation graph direction is
-  *obstruction → rep_a_rep_b → this_revision_verification*)
+- [yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)

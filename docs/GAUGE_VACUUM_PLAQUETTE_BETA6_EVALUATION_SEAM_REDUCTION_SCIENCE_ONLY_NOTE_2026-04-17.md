@@ -197,18 +197,8 @@ Expected summary:
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note](GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md)
-- `gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17`
-  (downstream consumer; backticked to avoid length-3 cycle through
-  beta6_scalar_value_insufficiency — citation graph direction is
-  *compressed_rim_functional_uniqueness → beta6_scalar_value_insufficiency
-  → this_evaluation_seam*)
-- `gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17`
-  (downstream consumer; backticked to avoid length-2 cycle —
-  citation graph direction is *first_symmetric_reconstruction_map → this_seam*)
-- `gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17`
-  (downstream consumer; backticked to avoid length-3 cycle through
-  first_symmetric_reconstruction_map — citation graph direction is
-  *current_stack_constraint_boundary → first_symmetric_reconstruction_map
-  → this_seam*)
+- [gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_FUNCTIONAL_UNIQUENESS_NOTE_2026-04-17.md)
+- [gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_EXACT_RADICAL_RECONSTRUCTION_MAP_NOTE_2026-04-17.md)
+- [gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_CURRENT_STACK_CONSTRAINT_BOUNDARY_NOTE_2026-04-17.md)
 - [gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_UNDERDETERMINATION_NOTE_2026-04-17.md)
 - [gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17](GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_LOCAL_WILSON_RETAINED_POSITIVE_CONE_OBSTRUCTION_NOTE_2026-04-17.md)

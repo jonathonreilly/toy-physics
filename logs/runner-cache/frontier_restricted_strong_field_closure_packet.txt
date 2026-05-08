@@ -1,11 +1,3 @@
-===== runner cache v1 =====
-runner: scripts/frontier_restricted_strong_field_closure_packet.py
-runner_sha256: b0b469629c36d5d57b884b59f015fb1e5d5dedee434ff940cae706f4932922a5
-timeout_sec: 120
-exit_code: 0
-elapsed_sec: 5.91
-status: ok
------ stdout -----
 Restricted strong-field closure packet
 ========================================================================
 ========================================================================
@@ -190,6 +182,3 @@ PACKET SUMMARY
 ========================================================================
 PASS=41 FAIL=0 TOTAL=41
 [EXACT] PASS: restricted strong-field closure packet runners all passed
-
------ stderr -----
-

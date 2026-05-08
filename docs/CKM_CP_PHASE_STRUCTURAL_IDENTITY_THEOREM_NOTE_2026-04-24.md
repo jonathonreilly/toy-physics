@@ -183,13 +183,9 @@ J_0 = lambda^6 A^2 eta
   input already used by the CKM atlas.
 - It does not derive CKM magnitudes beyond the parent atlas package.
 - First- and third-row magnitude identities are named separately in
-  `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md` (sibling companion
-  subtheorem under the same CKM atlas; cross-reference only — the parent
-  atlas already lists both subtheorems)
+  [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
   and
-  `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md` (sibling companion
-  subtheorem under the same CKM atlas; cross-reference only — the parent
-  atlas already lists both subtheorems),
+  [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
   which preserves the finite-`lambda` standard-matrix guardrail.
 - It does not promote the older bounded Cabibbo, mass-basis NNI, or partial
   Jarlskog route-history notes as controlling authority.

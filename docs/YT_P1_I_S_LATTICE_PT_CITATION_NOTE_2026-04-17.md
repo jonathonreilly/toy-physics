@@ -482,16 +482,6 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [plaquette_self_consistency_note](PLAQUETTE_SELF_CONSISTENCY_NOTE.md)
 - [uv_gauge_to_yukawa_bridge_sc_vs_pert_note](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md)
-- `yt_p1_color_factor_retention_note_2026-04-17` (downstream consumer;
-  backticked to avoid length-3 cycles through the YT_P1_DELTA_{1,2,3}_BZ
-  computation notes — those delta-channel notes already cite this
-  citation note as their `I_S` upstream, so citation graph direction is
-  *delta_BZ → color_factor → I_S_citation*)
-- `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17`
-  (master upstream authority; backticked to avoid length-2 cycle —
-  body of this citation note already references the obstruction theorem
-  multiple times as the master primitive-tracking surface, so the
-  citation graph direction is *this_citation_note → obstruction_theorem*
-  via body, not via this dep-repair list; that obstruction theorem in
-  turn lists this citation note in its downstream P1 sub-theorem index)
+- [yt_p1_color_factor_retention_note_2026-04-17](YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+- [yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
 - [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)

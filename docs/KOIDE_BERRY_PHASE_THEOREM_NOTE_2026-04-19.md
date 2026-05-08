@@ -617,4 +617,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
 - [dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
 - [koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20](KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
-- `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [koide_selected_line_cyclic_response_bridge_note_2026-04-18](KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)

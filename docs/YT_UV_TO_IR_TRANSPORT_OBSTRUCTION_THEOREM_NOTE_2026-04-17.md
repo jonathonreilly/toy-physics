@@ -74,9 +74,7 @@ decomposition itself is fixed by this master theorem.
   [`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md) —
   literature bracket `I_S ∈ [4, 10]` with central `I_S ≃ 6`.
 - **I_S revision verification**:
-  `docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md` (downstream
-  revision verification consumer; backticked to avoid length-3 cycle —
-  citation graph direction is *revision_verification → this_obstruction*) —
+  [`docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`](YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md) —
   records the 3× upward revision from packaged `1.92 %` to cited
   `5.77 %` at single-channel (C_F-only) reading.
 - **H-unit renormalization**:
@@ -109,7 +107,7 @@ decomposition itself is fixed by this master theorem.
 ### Downstream P2 sub-theorems (refining the P2 primitive)
 
 - **Taste-staircase transport** (partial):
-  `docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*) —
+  [`docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`](YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md) —
   17-decade transport reduced to a single open matching coefficient
   `M = 1.9734`.
 - **v-matching theorem**:

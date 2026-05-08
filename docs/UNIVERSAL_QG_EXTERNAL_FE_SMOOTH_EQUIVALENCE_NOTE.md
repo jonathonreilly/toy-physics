@@ -90,7 +90,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [universal_qg_pl_sobolev_interface_note](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 - [universal_qg_abstract_gaussian_completion_note](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
 - [universal_qg_pl_field_interface_note](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
-- `universal_qg_continuum_bridge_reduction_note` (downstream consumer
-  cross-reference; backticked to avoid length-3 cycle — that bridge note
-  cites this FE-smooth equivalence as one of its inputs in its own
-  dep-repair list, so citation graph direction is *bridge → fe_smooth*)
+- [universal_qg_continuum_bridge_reduction_note](UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md)

@@ -197,10 +197,7 @@ For the 8 LH states under the chain:
   SU(2) acts diagonally on the color factor.
 - **Tr[Y_α³] ≠ 0 on the LH-doublet surface only:** Expected; full anomaly
   cancellation requires the right-handed fermions, supplied by
-  `RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md` (sister
-  support theorem; backticked to avoid length-2 cycle — that RH-sector
-  note already cites this hypercharge identification's trace algebra in
-  its body, so citation graph direction is *rh_sector → this_hypercharge*).
+  [`RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md`](RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md).
 
 ### 5. GUT Normalization (structural; α-independent ratio)
 
@@ -209,8 +206,7 @@ Tr[Y_α²] / (multiplicity-weighted) is α² × 8/3; the GUT factor √(3/5)
 is a structural consequence of the eigenvalue ratio +1 : (−3) and the
 6 + 2 = 8 multiplicity split, independent of α. The squared-trace
 arithmetic is now packaged as the standalone squared-trace subtheorem
-`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`
-(downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*).
+[`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md).
 
 ## Identification boundary (what is and isn't load-bearing)
 

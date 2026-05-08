@@ -93,6 +93,4 @@ a retained Wilson Newton claim.
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [wilson_two_body_open_note_2026-04-11](WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
-- `wilson_two_body_open_refined_note_2026-04-11` (sibling/companion;
-  backticked to avoid length-2 cycle — that refined note already cites
-  this distance sweep, so citation graph direction is *refined → this_sweep*)
+- [wilson_two_body_open_refined_note_2026-04-11](WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md)

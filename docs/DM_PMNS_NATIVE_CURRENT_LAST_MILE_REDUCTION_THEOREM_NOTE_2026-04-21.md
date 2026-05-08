@@ -25,7 +25,7 @@ builder picks up the edges.
   [`PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`](PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
   — supply the native `C_3` character holonomy / mode reduction / nontrivial-current
   boundary used in §1.3.
-- `DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [`DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md)
   — same-day positive activation theorem on the reduced object identified here.
 - [`DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md)
   — later same-day affine sharpening of the complex current to one real coordinate.

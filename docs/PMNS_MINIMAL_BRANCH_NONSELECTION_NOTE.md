@@ -134,7 +134,5 @@ python3 scripts/frontier_pmns_minimal_branch_nonselection.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator;
-  backticked to avoid length-2 cycle — citation graph direction is
-  *atlas → this_note*)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 - [gauge_matter_closure_gates_2026-04-12](GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)

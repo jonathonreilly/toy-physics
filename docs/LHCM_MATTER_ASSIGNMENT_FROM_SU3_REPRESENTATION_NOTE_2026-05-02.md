@@ -191,11 +191,6 @@ This block (cycle 2) closes item (1) "matter assignment":
 - [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) — parent
 - [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — retained primitive supplying the gl(3)⊕gl(1) commutant
 - [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) — supplies SWAP-decomposition algebra (audited_renaming)
-- `RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md` (sister
-  support theorem; backticked to avoid length-3 cycle through
-  HYPERCHARGE_IDENTIFICATION — that RH-sector note already cites
-  hypercharge_identification's trace algebra in its body, so citation
-  graph direction is *rh_sector → hypercharge → this_lhcm* via the
-  joint hypercharge/LHCM authority pair) — sister support theorem closing (R-A,B,C) of LHCM repair item (3)
+- [`RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md`](RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md) — sister support theorem closing (R-A,B,C) of LHCM repair item (3)
 - PR #253 (open) — sister theorem for SU(2)²×U(1)_Y on LH doublets
 - PR #254 — cycle 1 of audit-backlog campaign closing (R-A,B,C)

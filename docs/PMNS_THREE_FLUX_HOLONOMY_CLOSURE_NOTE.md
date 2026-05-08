@@ -62,7 +62,7 @@ This upgrades the twisted-flux route from a partial value law to a positive
 closure route on the reduced PMNS cycle family.
 
 It is now strengthened further by
-`PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*),
+[PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md](./PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md),
 which shows that the exact `C3` character triple already supplies a canonical
 native three-mode holonomy family. So the result below can now be read in two
 ways:

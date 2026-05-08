@@ -106,9 +106,7 @@ source character. The previous signed APS carrier appears only after adding an
 oriented one-dimensional line and quarantining the raw Hodge zero modes.
 
 The staggered-Dirac boundary escape hatch is now audited in
-`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md` (downstream
-follow-up artifact; cross-reference only — that note cites
-`native_boundary_complex_containment` as its predecessor, not this note)
+[`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`](SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md)
 with runner
 [`../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py`](../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py).
 
@@ -124,9 +122,7 @@ staggering-origin shift and disappears under even refinement, so it is not a
 retained selector.
 
 The hosted-versus-selected follow-up is now recorded in
-`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md` (downstream
-follow-up artifact; cross-reference only — that note cites
-`native_boundary_complex_containment` as its predecessor, not this note)
+[`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`](SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md)
 with runner
 [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py).
 

@@ -179,9 +179,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [neutrino_majorana_local_pfaffian_uniqueness_note](NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md)
 - [neutrino_majorana_z3_nonactivation_theorem_note](NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md)
 - [neutrino_majorana_observable_principle_obstruction_note](NEUTRINO_MAJORANA_OBSERVABLE_PRINCIPLE_OBSTRUCTION_NOTE.md)
-- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator;
-  backticked to avoid length-3 cycle through
-  `NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md` — the atlas's
-  Majorana row already lists `nambu_source_principle` as a downstream
-  authority note, so citation graph direction is *atlas → nambu_source →
-  this_exhaustion*)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)

@@ -289,4 +289,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [structural_no_go_survey_note](STRUCTURAL_NO_GO_SURVEY_NOTE.md)
 - [higher_order_structural_theorems_note](HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
 - [koide_circulant_character_derivation_note_2026-04-18](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
-- `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)

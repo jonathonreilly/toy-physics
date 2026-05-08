@@ -1,11 +1,3 @@
-===== runner cache v1 =====
-runner: scripts/newton_derivation_top4_bridge_runner.py
-runner_sha256: e675f4d8c38c6a867df145626ea4f8b6f9089f51c24514c7773984f2d82de39f
-timeout_sec: 300
-exit_code: 0
-elapsed_sec: 83.20
-status: ok
------ stdout -----
 ====================================================================================================
 NEWTON DERIVATION TOP4 BRIDGE RUNNER
   Principle-3 extensivity bridge on the audit-clean top4 multistage compact object
@@ -35,7 +27,4 @@ SAFE READ
     matter_inertial_closure_note shows fails for free Gaussian packets.
 
 BRIDGE_ADMISSIBLE = True
-Total runtime: 83.1s
-
------ stderr -----
-
+Total runtime: 135.2s

@@ -112,11 +112,7 @@ python3 scripts/frontier_pmns_selector_class_space_uniqueness.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator that
-  catalogs this note as one of its theorem rows; backticked to avoid the
-  length-2 cycle that would form because the atlas's row table contains
-  a markdown link back to this note — citation graph direction is
-  *atlas → this_note*)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 - [pmns_selector_sector_odd_reduction_note](PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md)
 - [pmns_selector_nonuniversal_support_reduction_note](PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md)
 - [neutrino_majorana_unique_source_slot_note](NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md)

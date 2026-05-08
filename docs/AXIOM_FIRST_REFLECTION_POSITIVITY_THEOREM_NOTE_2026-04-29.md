@@ -317,8 +317,7 @@ sesquilinear-pairing rewriting applies term by term.
 **Update 2026-05-05.** The closed-form bridge that the original Step 3a
 left as a runner-supported gap (E6 only) is now supplied by the dedicated
 bridge note
-`STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`
-(downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*).
+[`STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`](STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md).
 The bridge takes this note's own asserted conventions as input
 (`ε M_W ε = M_W`, mass `m · I`, balanced sublattices `n_+ = n_-`) and
 adds one further structural specification — symmetric-canonical

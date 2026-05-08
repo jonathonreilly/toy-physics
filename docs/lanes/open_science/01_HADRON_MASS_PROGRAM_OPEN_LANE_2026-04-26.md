@@ -73,29 +73,23 @@ observables have to be retained or the QCD sector remains incomplete.
 
 ### Support landed 2026-04-28
 
-- `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md](../../HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md)
   maps the lane into phase-ordered dependencies: `sqrt(sigma)` gate work
   can proceed in parallel; `m_pi` via GMOR needs Lane 3 `m_u + m_d` plus
   `Sigma` and `f_pi`; proton/spectroscopy/form factors wait on broader
   quark-mass and lattice-QCD bridges.
-- `HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md`
-  (downstream consumer; backticked to avoid length-3 cycle through
-  `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md` —
-  citation graph direction is *sqrt_sigma_audit → theorem_plan → this_lane*)
+- [HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md](../../HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)
   decomposes the bounded `sqrt(sigma)` readout into the `(B1)`-`(B5)`
   residual budget and isolates `(B2)` quenched-to-dynamical screening as
   the dominant numerical gate.
-- `HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md`
-  (downstream consumer; backticked to avoid length-3 cycle through
-  `HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md` —
-  citation graph direction is *chiral_condensate → theorem_plan → this_lane*)
+- [HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md](../../HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_SUPPORT_NOTE_2026-04-27.md)
   records the Banks-Casher `Sigma` no-active-route result on current
   framework content: existing `L=4,6` data is finite-volume/lattice-free,
   and no structural identity currently pins `rho_Dirac(0)`.
 
 ### Support landed 2026-04-30
 
-- `HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md](../../HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
   sharpens the old `(B2)` target: a single quenched-to-dynamical
   multiplicative factor is not itself a retained observable once full-QCD
   string breaking is handled honestly. The gate splits into `(B2a)`

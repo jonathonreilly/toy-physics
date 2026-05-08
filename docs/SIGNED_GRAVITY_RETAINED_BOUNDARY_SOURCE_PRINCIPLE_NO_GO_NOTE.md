@@ -167,9 +167,7 @@ The retained status remains no-go; the extension status is axiomatic and
 controlled.
 
 The later source-line origin pass in
-`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md` (downstream
-follow-up artifact; cross-reference only — that note cites the
-axiom-extension note as its predecessor, not this no-go)
+[`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md`](SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md)
 does not change this retained no-go. It adds a new determinant-orientation
 source-line principle and then proves that `chi_eta` is forced inside that
 principle:

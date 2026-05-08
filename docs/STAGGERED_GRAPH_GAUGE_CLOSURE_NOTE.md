@@ -49,5 +49,5 @@ from the frozen run, not inferred from the portability probes.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- `STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [staggered_graph_gauge_closure_results_2026-04-10](STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md)
 - [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)

@@ -28,11 +28,7 @@ bounded companions, or publication-surface claims.
 ## Critical Open Science Inventory
 
 The full open-science inventory is tracked in
-`open_science/README.md` (sibling lane index; backticked to avoid length-3
-cycle through 06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26 —
-that lane already cites this active-lanes file in its body, so citation
-graph direction is *open_science_readme/06_lane → active_working_lanes*).
-That file records the
+[open_science/README.md](open_science/README.md). That file records the
 top six active flagship lanes (Lane 6 added 2026-04-26 for charged-lepton
 mass retention full closure) plus deferred open concerns such as muon
 `g-2`, strong-field gravity, BBN, CMB anisotropies, dark-sector follow-ons,

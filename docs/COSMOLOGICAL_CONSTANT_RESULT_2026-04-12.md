@@ -61,7 +61,7 @@ This is **not** the claim that finite lattice vacuum-energy sums automatically
 solve the cosmological-constant problem.
 
 That broader vacuum-energy audit is recorded separately in
-`COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+[COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md](./COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md)
 with
 [frontier_cosmological_constant.py](../scripts/frontier_cosmological_constant.py).
 

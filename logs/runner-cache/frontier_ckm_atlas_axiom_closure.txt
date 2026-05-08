@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ckm_atlas_axiom_closure.py
-runner_sha256: 8cf92b97a7aa986853e4f8c17be69d9371f6d223d8c5546109e3c4e7ab13f4a2
+runner_sha256: b5fb725612895666d5bc0da8ad0a8569b347b9ad52d69cc0d32688a5d0fbe71e
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 0.88
+elapsed_sec: 1.18
 status: ok
 ----- stdout -----
 ==============================================================================

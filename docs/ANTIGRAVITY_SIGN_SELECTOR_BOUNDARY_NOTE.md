@@ -233,9 +233,7 @@ Two follow-up P0 notes now narrow the lane:
   finds no local Pauli-string involution on the retained 8D taste cell that is
   both conserved on the massive parity-scalar surface and able to pin scalar
   source sign.
-- `GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md` (sibling follow-up
-  artifact; cross-reference only — that note cites `chi_selector` as its
-  predecessor, not this note)
+- [`GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md`](GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md)
   finds that the retained scalar coupling varies to `epsilon|psi|^2`, which is
   signed but not branch-stable, not conserved by kinetic hopping, and not a
   smooth continuum monopole. The inserted `chi_g|psi|^2` source remains a

@@ -132,10 +132,5 @@ That is the Koide law in orbit-slot coordinates.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18`
-  (downstream consumer; backticked to avoid length-2 cycle — the
-  axis-covariant note already lists this bridge as one of its earlier
-  inputs in its body, so citation graph direction is *axis_law → bridge*)
-- `koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18`
-  (sibling/downstream consumer; backticked to avoid length-2 cycle —
-  citation graph direction is *cyclic_return → bridge*)
+- [koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18](KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md)
+- [koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18](KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md)

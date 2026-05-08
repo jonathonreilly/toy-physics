@@ -112,7 +112,7 @@ The later screening sweep narrows the interpretation:
   - `-1.857` at `mu^2 = 0.0`
 - so the steep law is not a fixed universality class independent of screening
 
-See `WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+See [`WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md`](WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
 for the screening-controlled crossover.
 
 ## Conclusion

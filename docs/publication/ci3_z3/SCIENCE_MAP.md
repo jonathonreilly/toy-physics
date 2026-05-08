@@ -356,7 +356,7 @@ Validate with:
 
 - fastest public overview:
   [README.md](../../../README.md),
-  `README.md` (publication-package upstream landing page; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*),
+  [README.md](./README.md),
   [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md)
 - paper-facing claim/evidence path:
   [CLAIMS_TABLE.md](./CLAIMS_TABLE.md),

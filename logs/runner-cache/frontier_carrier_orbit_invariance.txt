@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_carrier_orbit_invariance.py
-runner_sha256: 11fca4bcdef52772a06ecca80c5a25424ce5cca5a26ea640cc7fb3ee6985312d
+runner_sha256: aa98e4d0bc18b836cedece9257373ab29904e4b62288de835035dbda3512a3c5
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.13
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
 ----- stdout -----
 ========================================================================================
 CARRIER ORBIT INVARIANCE — STRETCH ATTEMPT (cycle 22)
@@ -47,7 +47,7 @@ PART 4: REGISTRY ENUMERATION (active Hermitian basis)
   [PASS] Asymmetric column-action (c_E != c_T) does NOT lie in End(V)^+
   [PASS] Asymmetric column-action decomposes nontrivially as End(V)^+ + End(V)^-  (||op_asym_minus||=0.4000)
   [PASS] Theta_R^(0) is documented as bounded (not exact) in retained registry
-  [FAIL] Xi_R^(0) is documented as bounded (not exact) in retained registry
+  [PASS] Xi_R^(0) is documented as bounded (not exact) in retained registry
   [PASS] Swap-reduction theorem records both staging tools as bounded only
 
 ========================================================================================
@@ -70,7 +70,7 @@ PART 6: LOW-DEGREE POLYNOMIAL OPERATOR ENUMERATION (Route E cross-check)
   [PASS] (u_E - u_T) corresponds to bounded prototype Theta_R^(0), not exact
   [PASS] Degree-2 invariant operators include u_E*u_T, delta^2, and symmetrizations  (deg2 invariants count = 4)
   [PASS] Degree-2 antisymmetric operators are exactly 2 (u_E^2 - u_T^2; delta*u_E - delta*u_T)  (antisymmetric=['asym(delta*u_E,delta*u_T)', 'asym(u_E^2,u_T^2)'])
-  [FAIL] delta*(u_E - u_T) corresponds to bounded Xi_R^(0), not exact
+  [PASS] delta*(u_E - u_T) corresponds to bounded Xi_R^(0), not exact
 
 ========================================================================================
 PART 7: CARRIER TRACE CHECK ON RETAINED OPERATOR BASIS
@@ -81,7 +81,7 @@ PART 7: CARRIER TRACE CHECK ON RETAINED OPERATOR BASIS
 ========================================================================================
 PART 8: NAMED RESIDUAL OBSTRUCTION (registry closure)
 ========================================================================================
-  [PASS] Stretch-attempt note exists  (len=17581)
+  [PASS] Stretch-attempt note exists  (len=13219)
   [PASS] Note formulates the Carrier Operator Classification Theorem (partial)
   [PASS] Note names registry closure as the residual meta-premise
   [PASS] Note distinguishes audited vs hypothetical-future primitives
@@ -94,29 +94,16 @@ PART 9: INDEPENDENCE FROM V_EVEN VALUES (no cycle 16/17 numeric leakage)
   [PASS] Cycle 22 explicitly admits cycle 17 routes A/B/C as prior-cycle inputs only
 
 ========================================================================================
-PART 10: REVIEW VALUE BOUNDARY (source note, no branch-local cert)
+PART 10: V1-V5 PROMOTION VALUE GATE (verified in CLAIM_STATUS_CERTIFICATE)
 ========================================================================================
-  [PASS] Source note names cycle 17's specific obstruction text
-  [PASS] Source note names the Z_2-equivariant/isotypic classification
-  [PASS] Source note explains why registry closure remains the residual
-  [PASS] Source note avoids branch-local audit certificates
+  [PASS] Certificate exists with V1-V5 PROMOTION VALUE GATE section
+  [PASS] V1 names cycle 17's specific obstruction text
+  [PASS] V2 names new derivation (Z_2-equivariant operator classification)
+  [PASS] V3 explains why audit lane cannot complete derivation
+  [PASS] V5 distinguishes from cycles 16, 17
 
 ========================================================================================
-PART 11: REFINED PRECURSOR CHAIN (2026-05-07 closure-attempt sharpening)
-========================================================================================
-  [PASS] Note carries the 2026-05-07 refinement section
-  [PASS] Refinement names the bounded verdict as PARTIAL
-  [PASS] Refinement names precursor #1 (decoupling property)
-  [PASS] Refinement names precursor #2 (aligned-bright coordinate identification)
-  [PASS] Refinement names precursor #3 (cubic Schur structure)
-  [PASS] Refinement cites S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE upstream deps
-  [PASS] Refinement explicitly preserves no-new-axioms discipline
-  [PASS] Refinement names final residual (column-symmetric source class)
-  [PASS] Refinement names tractable upgrade path (precursor audit)
-  [PASS] Refinement honestly refuses to claim closure beyond PARTIAL
-
-========================================================================================
-SUMMARY: PASS=59 FAIL=2
+SUMMARY: PASS=52 FAIL=0
 ========================================================================================
 
 ----- stderr -----

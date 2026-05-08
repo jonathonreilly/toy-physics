@@ -251,9 +251,7 @@ short-distance gravity UV/core or constraint argument.
 
 The retained route is blocked, so the next honest move is to name the new
 structure directly. That pass is recorded in
-`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md` (downstream follow-up
-artifact; cross-reference only — that note cites the retained-boundary
-no-go as its predecessor, not this proposal)
+[`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md)
 with runner
 [`../scripts/signed_gravity_aps_locked_axiom_extension_audit.py`](../scripts/signed_gravity_aps_locked_axiom_extension_audit.py).
 

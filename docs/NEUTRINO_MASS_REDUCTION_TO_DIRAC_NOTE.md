@@ -89,7 +89,7 @@ Without additional `Z_3` information on the Higgs lane, the unresolved Dirac
 texture is therefore a general complex `3 x 3` matrix.
 
 That broad statement is now sharpened by the exact support companion
-`NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*):
+[NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md](./NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md):
 if a single Higgs doublet with definite generation `Z_3` charge `q_H` is
 admitted, the support of `Y_nu` collapses to one of three exact permutation
 patterns, leaving only three coefficient slots on the selected support.
@@ -108,15 +108,11 @@ Two exact frontier companions now isolate that extra structure more sharply:
 - [NEUTRINO_DIRAC_TWO_HIGGS_ESCAPE_NOTE.md](./NEUTRINO_DIRAC_TWO_HIGGS_ESCAPE_NOTE.md):
   the smallest exact neutrino-side escape from the single-Higgs no-mixing
   theorem is a two-Higgs `Z_3` sector with distinct Higgs charges
-- `LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*):
+- [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md):
   even allowing charged-lepton misalignment does not rescue the full
   single-Higgs monomial lepton sector; at least one lepton sector must leave
   that class to reproduce PMNS
-- `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md` (downstream
-  companion artifact; backticked to avoid length-3 cycle through
-  `LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md` — citation graph
-  direction is *two_higgs_canonical_reduction → lepton_single_higgs →
-  this_reduction*):
+- [NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md](./NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md):
   on the minimal surviving neutrino-side class, all distinct two-Higgs charge
   pairs reduce to one canonical support class and the exact remaining gap is
   seven real quantities: six moduli and one phase

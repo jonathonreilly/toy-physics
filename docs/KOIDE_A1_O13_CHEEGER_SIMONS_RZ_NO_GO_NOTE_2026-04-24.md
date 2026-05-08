@@ -323,6 +323,6 @@ RESIDUAL=postulate P (literal 1-rad period of R/Z is a non-canonical structural 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24](KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md)
-- `KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24](KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md)
 - [koide_z3_qubit_radian_bridge_no_go_note_2026-04-20](KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
 - [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)

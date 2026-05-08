@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py
-runner_sha256: dbd0f002d5e829b5e474718fee399635e1f3ca565407df3454278b14bea67f26
+runner_sha256: 0f8f1cdd8e5f76873ad1e91a055ff0d8d3973beea1b6d502e904176197a461e3
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.09
+elapsed_sec: 0.04
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -12,7 +12,7 @@ See docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
 ========================================================================================
 
 ----------------------------------------------------------------------------------------
-Cited inputs
+Retained inputs
 ----------------------------------------------------------------------------------------
   alpha_s(v)       = 0.103303816122267
   lambda^2         = 0.051651908061134

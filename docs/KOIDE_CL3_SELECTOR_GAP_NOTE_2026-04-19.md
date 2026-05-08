@@ -137,10 +137,5 @@ scale-selector near-miss probes into
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19](KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
-- `charged_lepton_mass_hierarchy_review_note_2026-04-17` (upstream parent
-  review note; backticked to avoid length-3 cycle through
-  `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md` — that hierarchy
-  review note already cites the koide review packet which lists this
-  selector-gap note, so citation graph direction is *hierarchy_review →
-  koide_review_packet → this_selector_gap*)
-- `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [charged_lepton_mass_hierarchy_review_note_2026-04-17](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
+- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)

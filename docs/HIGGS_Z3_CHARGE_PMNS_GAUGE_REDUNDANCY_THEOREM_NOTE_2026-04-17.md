@@ -275,4 +275,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 - [three_generation_observable_theorem_note](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
 - [neutrino_dirac_z3_support_trichotomy_note](NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md)
-- `CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17](CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)

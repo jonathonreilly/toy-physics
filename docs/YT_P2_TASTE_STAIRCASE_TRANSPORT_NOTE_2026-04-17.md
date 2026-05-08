@@ -477,8 +477,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [yt_zero_import_chain_note](YT_ZERO_IMPORT_CHAIN_NOTE.md)
 - [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [yt_qfp_insensitivity_support_note](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17`
-  (downstream consumer; backticked to avoid length-3 cycle through
-  yt_p2_v_matching — that obstruction theorem cites this transport note
-  as one of its inputs in section "Cross-references", so citation graph
-  direction is *uv_to_ir_obstruction → transport*)
+- [yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)

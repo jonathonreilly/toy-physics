@@ -97,8 +97,6 @@ python3 scripts/frontier_pmns_sector_odd_bridge_reduction.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- `publication/ci3_z3/DERIVATION_ATLAS.md` (publication aggregator;
-  backticked to avoid length-2 cycle — citation graph direction is
-  *atlas → this_note*)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 - [pmns_sector_exchange_nonforcing_note](PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md)
 - [pmns_scalar_bridge_nonrealization_note](PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md)

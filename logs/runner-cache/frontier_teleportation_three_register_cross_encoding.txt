@@ -1,13 +1,13 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_teleportation_three_register_cross_encoding.py
-runner_sha256: 55f3b925cbee375c4df63e7387dc53c867fc511817d26f271039d3dcc9f4d59f
+runner_sha256: 4b6ef0418f16d5be6b5d7bef2bac3842efefe8cac41398948bc181895759e9bd
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 12.71
+elapsed_sec: 10.35
 status: ok
 ----- stdout -----
 THREE-REGISTER CROSS-ENCODING TASTE-QUBIT TELEPORTATION AUDIT
-Status: exact-support logical audit; quantum state teleportation only
+Status: numerical planning audit; quantum state teleportation only
 
 Requested dimensions: (1, 2, 3)
 Requested side lengths: (2, 4)

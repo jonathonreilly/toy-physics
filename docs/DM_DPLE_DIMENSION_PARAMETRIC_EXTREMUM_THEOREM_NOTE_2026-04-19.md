@@ -244,5 +244,5 @@ Runner status: PASS=19 FAIL=0.
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18](DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md)
-- `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
-- `SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
+- [scalar_selector_cycle1_science_review_note_2026-04-19](SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md)
+- [scalar_selector_synthesis_note_2026-04-19](SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md)
