@@ -3,7 +3,7 @@
     "critical": 89,
     "high": 304,
     "leaf": 199,
-    "medium": 306
+    "medium": 305
   },
   "cycle_break_target_count": 66,
   "cycle_break_targets": [
@@ -11832,27 +11832,6 @@
       "ready": false,
       "runner_path": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py",
       "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "generation_axiom_boundary_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.959,
-      "note_path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_generation_axiom_boundary.py",
-      "transitive_descendants": 43
     },
     {
       "audit_independence_required": "any_non_self",
@@ -25065,6 +25044,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 19,
-  "total_pending": 898
+  "ready_count": 18,
+  "total_pending": 897
 }

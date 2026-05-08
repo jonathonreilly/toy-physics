@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 69 |
 | **retained_no_go** | 121 |
-| **retained_bounded** | 236 |
+| **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 886 |
+| unaudited | 885 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 393 |
+| `audited_clean` | 394 |
 | `audited_conditional` | 412 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 939 |
+| `unaudited` | 938 |
 
 | claim_type | count |
 |---|---:|
@@ -226,6 +226,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -6572,6 +6573,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Local M_3(C) observable-algebra reconstruction on H_hw=1 from the supplied translation-projector and C3 cycle generators, excluding physical-species and substrate-fundamentality claims.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0927-f67d-7500-a839-e339a64dc598`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The supplied translation-character projectors together with the C3 cycle generate the full 9-dimensional M_3(C) algebra on H_hw=1 and have scalar commutant.  _(class `A`)_
+- **chain closes:** True — Within the stated bounded scope, the runner constructs the specified 3-dimensional operators, verifies rank-one projectors, generated algebra dimension 9, and commutant dimension 1. No physical-species or substrate-fundamentality bridge is needed for the audited claim.
+- **rationale:** The audited claim is explicitly bounded to a local algebraic reconstruction from supplied generators, and the runner actually computes the projector ranks, generated algebra dimension, and commutant dimension rather than printing constants. The physical-species bridge, substrate-fundamentality premise, and historical memo witness are excluded from the claim boundary, so their absence does not block this local theorem. A second auditor should re-check only that the supplied generators are acceptable as in-scope definitions rather than hidden physical premises.
+- **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`
 
