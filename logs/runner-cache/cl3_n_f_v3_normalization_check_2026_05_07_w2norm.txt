@@ -1,0 +1,311 @@
+Cl(3) N_F V_3 Normalization Verification
+Date: 2026-05-07; W2.norm campaign
+
+
+========================================================================================
+SECTION A — Per-site Cl(3) bivector trace: T_a = sigma_a/2 forced
+========================================================================================
+
+  Cl(3) chiral representation on per-site C^2: e_a = sigma_a
+  (the Pauli matrices). Then bivectors e_i e_j = i epsilon_ijk sigma_k.
+
+  [PASS] Cl(3) anticommutator: sigma_1 sigma_1 + sigma_1 sigma_1 = 2 delta_ab I_2  (max err = 0.0e+00)
+  [PASS] Cl(3) anticommutator: sigma_1 sigma_2 + sigma_2 sigma_1 = 0 delta_ab I_2  (max err = 0.0e+00)
+  [PASS] Cl(3) anticommutator: sigma_1 sigma_3 + sigma_3 sigma_1 = 0 delta_ab I_2  (max err = 0.0e+00)
+  [PASS] Cl(3) anticommutator: sigma_2 sigma_2 + sigma_2 sigma_2 = 2 delta_ab I_2  (max err = 0.0e+00)
+  [PASS] Cl(3) anticommutator: sigma_2 sigma_3 + sigma_3 sigma_2 = 0 delta_ab I_2  (max err = 0.0e+00)
+  [PASS] Cl(3) anticommutator: sigma_3 sigma_3 + sigma_3 sigma_3 = 2 delta_ab I_2  (max err = 0.0e+00)
+  [PASS] Bivector dual B_1 = (1/2) eps_1bc sigma_b sigma_c = i sigma_1  (max err = 0.0e+00)
+  [PASS] Bivector dual B_2 = (1/2) eps_2bc sigma_b sigma_c = i sigma_2  (max err = 0.0e+00)
+  [PASS] Bivector dual B_3 = (1/2) eps_3bc sigma_b sigma_c = i sigma_3  (max err = 0.0e+00)
+  [PASS] Per-site SU(2) trace: Tr_{C^2}(sigma_a/2 sigma_b/2) = (1/2) delta_ab  (max |Gram - 1/2 I| = 0.0e+00)
+  [PASS] Spin(3) double cover: 2π rotation of T = sigma/2 gives -I (NOT I)  (||U(2π) - (-I)|| = 1.7e-16; double cover confirmed)
+  [PASS] Spin(3) double cover: 4π rotation gives I (spinor return)  (||U(4π) - I|| = 3.5e-16)
+  [PASS] SU(2) sub: [T_1, T_2] = i T_3  (f_abc = epsilon_abc forced)  (max err = 0.0e+00)
+  [PASS] SU(2) sub: [T_2, T_3] = i T_1  (f_abc = epsilon_abc forced)  (max err = 0.0e+00)
+  [PASS] SU(2) sub: [T_3, T_1] = i T_2  (f_abc = epsilon_abc forced)  (max err = 0.0e+00)
+
+  STRUCTURAL CONCLUSION (Section A):
+    On per-site C^2, the Cl(3) bivector chain forces
+        T_a = sigma_a / 2  with  Tr_{C^2}(T_a T_b) = (1/2) delta_ab.
+    The factor 1/2 is the Spin(3) -> SO(3) double-cover normalization.
+    Equivalently: this is the unique Hermitian generator basis with
+    structure constants f_abc = epsilon_abc (canonical SU(2) sub-block).
+
+========================================================================================
+SECTION B — SU(2) sub-blocks of su(3) on V_3 act as sigma/2 on 2D subspaces
+========================================================================================
+
+  The Gell-Mann generators T_a = lambda_a/2 on V_3 contain three
+  SU(2) sub-algebras (T-spin, U-spin, V-spin). Each acts as the
+  standard sigma/2 representation on a 2D subspace of V_3.
+
+  [PASS] T_1 on (1,2)-subspace = sigma_1/2  (max err = 0.0e+00)
+  [PASS] T_2 on (1,2)-subspace = sigma_2/2  (max err = 0.0e+00)
+  [PASS] T_3 on (1,2)-subspace = sigma_3/2 (NOT counting T_8 mixing)  (max err = 0.0e+00)
+  [PASS] T_3 = (1/2) diag(1,-1,0) on V_3 (T-spin commutator basis)  (max err = 0.0e+00)
+  [PASS] Trace on V_3 of T-spin {T_1,T_2,T_3}: Tr_{V_3}(T_a T_b) = (1/2) delta_ab  (max |Gram - 1/2 I| = 0.0e+00)
+  [PASS] T_1 annihilates |3>: T_1 |3> = 0  (so |3> contributes 0 to trace)  (||T |3>|| = 0.0e+00)
+  [PASS] T_2 annihilates |3>: T_2 |3> = 0  (so |3> contributes 0 to trace)  (||T |3>|| = 0.0e+00)
+  [PASS] T_3 annihilates |3>: T_3 |3> = 0  (so |3> contributes 0 to trace)  (||T |3>|| = 0.0e+00)
+  [PASS] T_4 on (1,3)-subspace = sigma_1/2 (V-spin)  (max err = 0.0e+00)
+  [PASS] T_5 on (1,3)-subspace = sigma_2/2 (V-spin)  (max err = 0.0e+00)
+  [PASS] (T_3 + sqrt(3) T_8)/2 on (1,3)-subspace = sigma_3/2 (V-spin Cartan)  (max err = 0.0e+00)
+  [PASS] T_6 on (2,3)-subspace = sigma_1/2 (U-spin)  (max err = 0.0e+00)
+  [PASS] T_7 on (2,3)-subspace = sigma_2/2 (U-spin)  (max err = 0.0e+00)
+  [PASS] (-T_3 + sqrt(3) T_8)/2 on (2,3)-subspace = sigma_3/2 (U-spin Cartan)  (max err = 0.0e+00)
+
+  STRUCTURAL CONCLUSION (Section B):
+    Each of the THREE su(2) sub-algebras of su(3) (T-spin, V-spin,
+    U-spin) acts on a 2D subspace of V_3 EXACTLY as the standard
+    sigma/2 representation. This is a Lie-algebra structural fact,
+    not a convention: it is the UNIQUE way an irreducible 2D
+    rep of SU(2) embeds into V_3 = C^3 (3 = 2 + 1 decomposition).
+
+========================================================================================
+SECTION C — Killing rigidity propagates SU(2) sub-block trace to all of su(3)
+========================================================================================
+
+  CLAIM: simple su(3) has a 1-dim space of Ad-invariant symmetric
+  bilinear forms (Killing rigidity). So fixing the trace on ANY
+  one generator pair (e.g. (T_1,T_1)) determines the trace on
+  ALL eight generators.
+
+  [PASS] Canonical Gram_{V_3}(T_a, T_b) = (1/2) delta_ab  (max err = 1.1e-16)
+  [PASS] HS form on V_3 is Ad-invariant under random SU(3) (trial 1)  (||Gram_ad - Gram|| = 4.1e-16)
+  [PASS] HS form on V_3 is Ad-invariant under random SU(3) (trial 2)  (||Gram_ad - Gram|| = 3.7e-16)
+  [PASS] HS form on V_3 is Ad-invariant under random SU(3) (trial 3)  (||Gram_ad - Gram|| = 2.9e-16)
+  [PASS]   Rescaling T_a -> sqrt(1.0) T_a: Gram = 1.0*canonical (still Ad-invariant)  (max err = 0.0e+00)
+  [PASS]   Rescaling T_a -> sqrt(2.0) T_a: Gram = 2.0*canonical (still Ad-invariant)  (max err = 2.2e-16)
+  [PASS]   Rescaling T_a -> sqrt(0.5) T_a: Gram = 0.5*canonical (still Ad-invariant)  (max err = 5.6e-17)
+  [PASS]   Rescaling T_a -> sqrt(4.0) T_a: Gram = 4.0*canonical (still Ad-invariant)  (max err = 0.0e+00)
+
+  CONSEQUENCE: pinning the FACTOR via the Cl(3) bivector chain
+  (Section A: Tr_{C^2}(sigma_a/2 sigma_b/2) = 1/2 delta_ab) AND
+  identifying the SU(2) sub-block of V_3 with the per-site Cl(3)
+  bivector SU(2) (BRIDGE - admitted) closes Tr_{V_3}(T_a T_b) = 1/2.
+
+  Bridge admission needed: the SU(2) sub-block of su(3) on V_3
+  (e.g. T-spin) is NORMALIZED THE SAME WAY as the per-site Cl(3)
+  bivector SU(2) on per-site C^2.
+
+========================================================================================
+SECTION D — Casimir-trace identity: dim(g) N_F = dim(V) C_F
+========================================================================================
+
+  For ANY positive scalar k and rescaled generators T'_a = sqrt(k) T_a:
+    Tr_{V_3}(T'_a T'_b) = k * (1/2) delta_ab = N_F^k delta_ab,
+    sum_a (T'_a T'_a) = k * (4/3) I_3 = C_F^k I_3.
+  This gives the identity
+    8 N_F^k = 3 C_F^k  (i.e. dim(su(3)) * N_F = dim(V_3) * C_F).
+  (N_F, C_F) lies on a 1D family for any k > 0.
+
+  [PASS]   k=0.25: N_F = 0.1250, C_F = (8/3)*N_F = 0.3333, Casimir matches
+  [PASS]   k=0.5: N_F = 0.2500, C_F = (8/3)*N_F = 0.6667, Casimir matches
+  [PASS]   k=1.0: N_F = 0.5000, C_F = (8/3)*N_F = 1.3333, Casimir matches
+  [PASS]   k=2.0: N_F = 1.0000, C_F = (8/3)*N_F = 2.6667, Casimir matches
+  [PASS]   k=4.0: N_F = 2.0000, C_F = (8/3)*N_F = 5.3333, Casimir matches
+
+  IMPLICATION: the (N_F, C_F) pair is constrained by a SINGLE
+  identity 8 N_F = 3 C_F. To pin BOTH, we need a SECOND constraint.
+  The framework's second constraint is the Cl(3) bivector chain
+  pinning N_F = 1/2 at the per-site SU(2) level.
+
+  [PASS] Standard normalization: N_F = 0.5 = 1/2; C_F predicted = (8/3)*(1/2) = 4/3  (C_F predicted = 1.3333333333333333)
+  [PASS] Standard normalization Casimir = (4/3) I_3 (matches SU3_CASIMIR_FUNDAMENTAL)  (||Cas - 4/3 I|| = 2.2e-16)
+
+========================================================================================
+SECTION E — Spin double-cover: T = sigma/2 factor 1/2 is structural
+========================================================================================
+
+  In Cl(n), the bivector subspace generates Spin(n). For Spin(n)
+  to be the DOUBLE COVER of SO(n) (rather than SO(n) itself), the
+  bivector exponentiation must give a 2-to-1 map: a 2π rotation in
+  spinor space corresponds to a 4π rotation in vector space.
+
+  This forces the canonical normalization: if R_alpha = exp(alpha B)
+  is the spinor rotation, then R_2pi = -I (NOT +I), and R_4pi = +I.
+  Equivalently: the Hermitian generator T = -i B / 2 = sigma/2 (NOT
+  sigma) is the canonical Lie algebra element.
+
+  [PASS] Generator T = sigma (factor 1): R(2π) = +I — SO(3) on the nose, NOT double cover  (R(2π) = ?)
+  [PASS] Generator T = sigma/2 (factor 1/2): R(2π) = -I — Spin(3) double cover correct  (R(2π) = -I ✓)
+
+  General: R_2pi(c) = cos(2πc) I + i sin(2πc) sigma_3.
+  R_2pi = -I requires c = 1/2 (mod 1). Among small rational c, c = 1/2 is unique.
+
+  [PASS]   c = 1.0: R(2π) = trivial cover (+I)  (R(2π) at c=1.0)
+  [PASS]   c = 0.5: R(2π) = double cover (-I)  (R(2π) at c=0.5)
+  [PASS]   c = 0.3333333333333333: R(2π) = neither  (R(2π) at c=0.3333333333333333)
+  [PASS]   c = 0.25: R(2π) = neither  (R(2π) at c=0.25)
+  [PASS]   c = 0.6666666666666666: R(2π) = neither  (R(2π) at c=0.6666666666666666)
+
+  CONCLUSION: the factor 1/2 in T = sigma/2 is the UNIQUE choice
+  among rational multiples of sigma that gives the Spin(3) double
+  cover R(2π) = -I. This is forced by the Cl(3) bivector structure.
+
+========================================================================================
+SECTION F — V_3 trace surface vs V trace surface (W2.binary boundary)
+========================================================================================
+
+  Recall the prior W2 binary admission: N_F ∈ {1/2, 1} corresponding
+  to trace surfaces V_3 vs V = C^8 = V_3 ⊗ C^2 (color × weak fiber).
+
+  [PASS] Tr_{V_3}(T_a T_b) = (1/2) delta_ab  (max err = 1.1e-16)
+  [PASS] Tr_V(T_a^V T_b^V) = 1 * delta_ab (V_3 ⊗ I_2 inflation by factor 2)  (max err = 2.2e-16)
+  [PASS] Trace ratio V/V_3 = 2 = dim(V_fiber) (weak doublet inflation)  (ratio = 2.0)
+
+  W2.norm SCOPE: assuming V_3 is the trace surface (admit L3a or carry
+  it from W2.bridge), we analyze whether the OVERALL SCALAR within V_3
+  is forced to N_F = 1/2 by Cl(3) + Z^3 primitives.
+
+  The factor 2 between V_3 and V is the FIBER MULTIPLICITY (inflation),
+  NOT the per-V_3 normalization scalar; that's the W2.binary gap.
+
+========================================================================================
+SECTION G — Z^3 substrate fixes N_c = 3; Casimir-trace identity at N=3
+========================================================================================
+
+  Substrate axiom A2: Z^3 has dim = 3, so N_c = 3.
+  This is structural, not a convention.
+
+  [PASS] Substrate: dim(Z^3) = 3 forces N_c = 3 (Z^3 axiom)  (by definition of Z^3)
+  [PASS]   Schur identity at T_F = 1/2: 8*T_F = 3*C_F = 4  (C_F = T_F * (N^2-1)/N = 4/3 = T_F * 8/3 ✓)
+  [PASS]   Schur identity at T_F = 1: 8*T_F = 3*C_F = 8  (C_F = T_F * (N^2-1)/N = 8/3 = T_F * 8/3 ✓)
+  [PASS]   Schur identity at T_F = 1/4: 8*T_F = 3*C_F = 2  (C_F = T_F * (N^2-1)/N = 2/3 = T_F * 8/3 ✓)
+  [PASS]   Schur identity at T_F = 2: 8*T_F = 3*C_F = 16  (C_F = T_F * (N^2-1)/N = 16/3 = T_F * 8/3 ✓)
+
+  SUBSTRATE-LEVEL FACTS:
+    - N_c = 3 forced by dim(Z^3) = 3 (substrate)
+    - dim(su(N)) = N^2 - 1 = 8 at N = 3 (Lie algebra)
+    - dim(V_3) = N = 3 (irreducible carrier)
+    - Schur identity: 8 N_F = 3 C_F (1D family)
+
+  These pin the RATIO of N_F to C_F as 3/8, but NEITHER N_F nor C_F
+  individually. A second constraint (per-site Cl(3) bivector chain
+  via bridge) is needed to pin N_F = 1/2 absolutely.
+
+========================================================================================
+SECTION H — Spin(6) chain: SU(3) ⊂ SU(4) ≅ Spin(6) trace inheritance
+========================================================================================
+
+  Spin(6) ≅ SU(4); SU(3) ⊂ SU(4) embeds via 4 = 3 + 1 (fundamental
+  + singlet on the 4D Spin(6) spinor). The SU(3) generators act as
+  zero on the singlet, so trace on the 4D Spin(6) spinor reduces to
+  trace on V_3 = the 3D fundamental.
+
+  [PASS] Tr on Spin(6) spinor (4D) of SU(3)-embedded T_a^4 = Tr_{V_3}(T_a T_b) = (1/2) delta_ab  (matches V_3 (singlet contributes 0))
+  [PASS] Spin(6) spinor trace value: N_F^{Spin(6)} = 1/2 (matches V_3)  (= 0.5)
+
+  KEY POINT: any SU(N) embedding via fundamental N-rep gives Tr = 1/2.
+  This is the universal canonical normalization for matrix Lie algebras.
+  But this STILL imports the choice of canonical generators (Gell-Mann basis).
+
+  The Spin(6) chain transports the per-site Cl(3) normalization upward
+  to SU(4), then projects to SU(3) ⊂ SU(4). Each step preserves N_F = 1/2.
+  But each step uses an admission (canonical Gell-Mann at each rank).
+
+========================================================================================
+SECTION I — Wilson plaquette consistency: N_F = 1/2 closes g_bare = 1
+========================================================================================
+
+  Wilson lattice gauge: S_W = beta * sum_p (1 - (1/N_c) Re Tr U_p)
+  with beta = 2 N_c / g_bare^2.
+
+  Continuum limit (small a) of S_W reproduces (1/(2 g^2)) Tr_F(F^2)
+  ONLY IF Tr(T_a T_b) = (1/2) delta_ab (canonical Gell-Mann).
+
+  [PASS] At g_bare = 1, beta = 2 N_c / g_bare^2 = 6  (beta = 6)
+  [PASS] At N_F = 1/2: C_F = (8/3)*N_F = 4/3 = 4/3  (C_F = 4/3)
+
+  ALTERNATIVE: N_F' = 1 (V trace) would give kinetic coeff 1/g'^2 in
+  continuum, requiring g' = sqrt(2) g_bare = sqrt(2) for the action
+  to match canonical (1/(2 g_bare^2)). This is not a different physics;
+  it's a different basis-scaling routing into g_bare.
+
+  ROUTING: under HS rigidity (R5), the continuum scale rescaling
+  T -> c T does NOT change physical g_bare; it's coordinate redundancy.
+  So N_F = 1/2 ↔ g_bare = 1 is a self-consistent normalization choice.
+
+  This consistency does NOT independently DERIVE N_F = 1/2; it shows
+  that the framework's L3-L4 stratification is coherent under the
+  canonical normalization. Deriving N_F = 1/2 from primitives requires
+  the per-site Cl(3) bivector bridge admission.
+  [PASS] Consistency: at (N_F, C_F, g_bare) = (1/2, 4/3, 1), Wilson beta = 6  (framework's canonical normalization fixed point)
+
+========================================================================================
+SECTION J — The residual bridge admission: per-site SU(2) ↔ V_3 SU(2) sub-block
+========================================================================================
+
+  W2.norm CLOSURE PATH:
+    Per-site Cl(3) bivector chain (Section A) → T = sigma/2 forced
+    → Tr_{C^2}(T_a T_b) = (1/2) delta_ab (per-site SU(2)).
+    [BRIDGE]: identify per-site SU(2) with SU(2) sub-block of V_3 SU(3).
+    Killing rigidity (Section C) → Tr_{V_3}(T_a T_b) = (1/2) delta_ab
+    for all 8 generators.
+
+  The BRIDGE is the residual admission. It claims:
+    'The per-site Cl(3) bivector SU(2) (which acts on each lattice
+     site C^2) is identified — as a Lie algebra with normalization
+     fixed — with the T-spin (or U-spin or V-spin) sub-algebra of
+     the SU(3) acting on V_3 = C^3 (the 3D symmetric base of the
+     taste cube).'
+
+  Two nuances:
+    (i) The two SU(2)s ARE algebraically isomorphic (both are SU(2)
+        on a 2D faithful rep), so the identification is consistent.
+    (ii) The two C^2's live on different parts of the framework's
+         Hilbert space hierarchy: per-site C^2 is one lattice point;
+         (1,2)-block of V_3 is a 2D subspace of the 3D color carrier
+         on the full taste cube V = C^8.
+
+  The bridge claim says: 'the framework chooses SAME normalization
+  on both SU(2)s' — this is what the parallel W2.bridge work
+  (`outputs/.../w2bridge_per_site_su2/`) is intended to close.
+
+  [PASS] Per-site SU(2) bivector trace: N_F^{per-site} = 1/2  (= 0.5)
+  [PASS] V_3 T-spin sub-block trace: N_F^{T-spin} = 1/2  (= 0.5)
+  [PASS] Numerical match: per-site SU(2) and V_3 T-spin BOTH give N_F = 1/2  (consistency under bridge admission)
+
+  UNDER BRIDGE ADMISSION:
+    (per-site SU(2) N_F = 1/2) ⇒ (V_3 SU(2) sub-block N_F = 1/2)
+    ⇒ (by Killing rigidity on simple su(3)) N_F = 1/2 on ALL 8 generators
+    ⇒ Tr_{V_3}(T_a T_b) = (1/2) delta_ab for the canonical
+       Hilbert-Schmidt form on V_3.
+
+  WITHOUT BRIDGE ADMISSION:
+    Per-site N_F = 1/2 is forced by Cl(3) bivectors (Section A).
+    V_3 N_F = c * (1/2) for some scalar c is admissible by Killing
+    rigidity ALONE (one-form ambiguity). No Cl(3) primitive forces c = 1.
+
+========================================================================================
+SECTION K — Joint summary: per-attack-vector status
+========================================================================================
+
+  Vector                                                      Verdict                                                       Section
+  ----------------------------------------------------------  ------------------------------------------------------------  --------
+  V1: Cl(3) bivector trace at per-site (Spin(3)/SU(2))        POSITIVE — N_F = 1/2 forced for per-site SU(2)                Section A, E
+  V2: Hilbert-Schmidt rigidity on V_3                         PARTIAL — silent on overall scalar (Killing rigidity)         Section C
+  V3: Casimir consistency (C_F = 4/3 ↔ N_F = 1/2)             PARTIAL — bootstraps; one identity, two unknowns              Section D
+  V4: Spin double-cover normalization (T = sigma/2)           POSITIVE — 1/2 forced at per-site C^2                         Section E
+  V5: Z^3 substrate volume normalization (N_c = 3)            PARTIAL — pins N_c, not N_F                                   Section G
+  V6: Lieb-Robinson velocity normalization                    NOT PURSUED — outside Cl(3) primitive surface                 —
+  V7: Spin(6) → SU(3) trace inheritance                       PARTIAL — propagates canonical Gell-Mann; doesn't derive it   Section H
+  Bridge admission (per-site SU(2) ↔ V_3 SU(2) sub-block)     RESIDUAL ADMISSION — closes N_F = 1/2 if accepted             Section J
+
+  VERDICT: BOUNDED THEOREM (closure conditional on bridge admission).
+
+  Three structural findings rise to positive status:
+    (a) Per-site Cl(3) bivectors force N_F = 1/2 on per-site C^2.
+    (b) Spin(3) -> SO(3) double cover forces T = sigma/2 (factor 1/2).
+    (c) Killing rigidity propagates SU(2) sub-block normalization to
+        all 8 Gell-Mann generators on V_3.
+
+  Closure of N_F = 1/2 on V_3 follows from (a)+(b)+(c) PLUS the
+  bridge admission that per-site SU(2) and V_3 SU(2) sub-blocks
+  carry the same Lie-algebra normalization. The bridge is the only
+  residual admission; everything else is derived from Cl(3) + Z^3.
+
+========================================================================================
+TOTAL   : PASS = 67, FAIL = 0
+========================================================================================
