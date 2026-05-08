@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 857 |
+| unaudited | 856 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 429 |
+| ~~audited_conditional~~ | 430 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 429 |
+| `audited_conditional` | 430 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 906 |
+| `unaudited` | 905 |
 
 | claim_type | count |
 |---|---:|
@@ -898,6 +898,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `teleportation_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_record_field_closure_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
+| `teleportation_resource_from_poisson_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `tensor_matching_completion_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
@@ -12701,6 +12702,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For an arbitrary supplied physical two-qubit resource density matrix rho_RB, the fixed Bell-basis measurement with fixed Bob Pauli correction induces a Pauli channel whose weights are the Bell-basis diagonal overlaps p_g=<beta_g|rho_RB|beta_g>; hence the identity entanglement fidelity is p_00=<Phi+|rho_RB|Phi+> and the qubit average fidelity is F_avg=(1+2 p_00)/3, giving the fixed-protocol threshold p_00>1/2 for beating 2/3.  _(class `C`)_
 - **chain closes:** True — Within the stated fixed protocol, the note supplies the algebraic channel reduction and the completed runner independently implements the same three-qubit protocol, exact Choi average fidelity, threshold brackets, no-record Bob diagnostics, and trace-preservation checks. The reported formula error is numerical roundoff scale and all acceptance gates pass. The broader native resource-preparation and non-ideal operational questions are explicitly outside scope rather than hidden premises for this bounded theorem.
 - **rationale:** The claim is narrowly bounded and does not overstate beyond the fixed supplied-resource protocol. The load-bearing formula and threshold follow from the stated teleportation-channel derivation and are corroborated by the completed runner across representative resource families and arbitrary random density matrices. No external comparator, tuned numerical match, unsupported physical identification, or unclosed dependency is needed for the scoped conclusion.
+- **auditor confidence:** high
+
+### `teleportation_resource_from_poisson_note`
+
+- **Note:** [`TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md`](../../docs/TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the small-surface numerical artifact: 1D N=8 and 2D 4x4 Poisson/CHSH ground states at G=1000, with an offline traced last-taste-bit logical extraction tested as a two-qubit teleportation resource.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e073e-2842-7560-a419-50b2fb11876e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The runner keeps the last KS taste bit of each species as the logical qubit, traces over cells and spectator taste bits, and reports high Bell overlap/teleportation fidelity for the two G=1000 Poisson cases.  _(class `C`)_
+- **chain closes:** False — The runner computes the reported reduced-resource diagnostics for the chosen extraction, but the packet does not close the native preparation/readout theorem selecting the last taste bit as a physical deterministic teleportation resource. The note itself keeps that bridge and broader mass/coupling/boundary hardening open.
+- **rationale:** Issue: the numerical artifact supports a chosen offline extraction, but the logical carrier/readout and preparation map are asserted as an extraction choice rather than derived. Why this blocks: high Bell overlap after tracing a selected taste bit is not yet a retained theorem that the Poisson/CHSH lane provides an operational deterministic teleportation resource. Repair target: derive the last-taste-bit logical resource, Bell-measurement readout, and preparation protocol from retained Poisson/CHSH primitives and include the imported machinery source in the audit packet. Claim boundary until fixed: small-surface diagnostic evidence only, not a promoted teleportation-resource derivation.
 - **auditor confidence:** high
 
 ### `teleportation_retained_axis_operator_algebra_closure_note`
