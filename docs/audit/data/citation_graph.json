@@ -11025,6 +11025,38 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "observable_principle_audit_note_2026-05-02",
       "to": "observable_principle_from_axiom_note"
     },
@@ -42971,6 +43003,26 @@
       "runner_path": "scripts/cl3_n_f_v3_trace_check_2026-05-07_w2binary.py",
       "title": "N_F Trace-Space Bounded Obstruction Note (V_3 vs V Selection)"
     },
+    "n_f_v3_normalization_bounded_note_2026-05-07_w2norm": {
+      "claim_id": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "n_f_trace_space_bounded_obstruction_note_2026-05-07_w2binary",
+        "per_site_su2_bridge_bounded_obstruction_note_2026-05-07_w2bridge",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "cl3_color_automorphism_theorem",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "fb154473e5b390f55d3786759c8c5f086d76abd597b3a9be1ffacaf069a9226c",
+      "path": "docs/N_F_V3_NORMALIZATION_BOUNDED_NOTE_2026-05-07_w2norm.md",
+      "runner_path": "scripts/cl3_n_f_v3_normalization_check_2026_05_07_w2norm.py",
+      "title": "N_F = 1/2 V_3 Normalization \u2014 Bounded Theorem"
+    },
     "native_gauge_closure_note": {
       "claim_id": "native_gauge_closure_note",
       "claim_type_author_hint": null,
@@ -57344,7 +57396,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 102,
+      "bounded_theorem": 103,
       "meta": 10,
       "no_go": 14,
       "none": 1703,
@@ -57352,17 +57404,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 605,
+      "bounded_theorem": 606,
       "meta": 10,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6828,
-    "leaf_count": 546,
-    "node_count": 1933,
+    "edge_count": 6836,
+    "leaf_count": 545,
+    "node_count": 1934,
     "root_count": 855,
-    "runners_with_path": 1512
+    "runners_with_path": 1513
   }
 }

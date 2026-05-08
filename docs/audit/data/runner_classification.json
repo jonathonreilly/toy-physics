@@ -10728,6 +10728,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_n_f_v3_trace_check_2026-05-07_w2binary.py"
     },
+    "n_f_v3_normalization_bounded_note_2026-05-07_w2norm": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_n_f_v3_normalization_check_2026_05_07_w2norm.py"
+    },
     "native_gauge_closure_note": {
       "assert_count": 2,
       "counts": {
@@ -19772,6 +19784,21 @@
         "B": 0,
         "C": 3,
         "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_n_f_v3_normalization_check_2026_05_07_w2norm.py": {
+      "assert_count": 0,
+      "claims": [
+        "n_f_v3_normalization_bounded_note_2026-05-07_w2norm"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 0
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -39644,12 +39671,12 @@
     "dominant_class_distribution": {
       "A": 14,
       "B": 167,
-      "C": 594,
+      "C": 595,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1415,
-    "runners_with_C": 705,
+    "runners_classified": 1416,
+    "runners_with_C": 706,
     "runners_with_D": 351
   }
 }

@@ -195,7 +195,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 435,
+      "max_transitive_descendants": 436,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -204,7 +204,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -213,7 +213,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -222,7 +222,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         }
       ],
       "requires_lemma_extraction": false
@@ -249,7 +249,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 435,
+      "max_transitive_descendants": 436,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -258,7 +258,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -267,7 +267,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -276,7 +276,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -285,7 +285,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         }
       ],
       "requires_lemma_extraction": false
@@ -316,7 +316,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 435,
+      "max_transitive_descendants": 436,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -325,7 +325,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -334,7 +334,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -343,7 +343,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -352,7 +352,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -361,7 +361,7 @@
           "effective_status": "meta",
           "note_path": "docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         }
       ],
       "requires_lemma_extraction": false
@@ -396,7 +396,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 435,
+      "max_transitive_descendants": 436,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -405,7 +405,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -414,7 +414,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -423,7 +423,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
           "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -432,7 +432,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -441,7 +441,7 @@
           "effective_status": "meta",
           "note_path": "docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md",
           "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         },
         {
           "audit_status": "unaudited",
@@ -450,7 +450,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_SCALAR_BRIDGE_3PLUS1_NATIVE_TUBE_STAGING_GATE_2026-05-03.md",
           "title": "Gauge-Scalar Bridge 3+1 Native Tube Staging Gate",
-          "transitive_descendants": 435
+          "transitive_descendants": 436
         }
       ],
       "requires_lemma_extraction": false
