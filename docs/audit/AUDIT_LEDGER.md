@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 824 |
+| unaudited | 823 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 452 |
+| ~~audited_conditional~~ | 453 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 452 |
+| `audited_conditional` | 453 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 26 |
-| `unaudited` | 873 |
+| `unaudited` | 872 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 682 |
+| `bounded_theorem` | 683 |
 | `decoration` | 10 |
 | `meta` | 57 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 782 |
+| `positive_theorem` | 781 |
 
 | criticality | count |
 |---|---:|
@@ -938,6 +938,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `wave_direct_dm_h025_fam1_seed0_control_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_direct_dm_h025_fam2_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_direct_dm_h025_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `wave_retarded_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -13766,6 +13767,22 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `no_ledger_runner_for_live_wave_direct_dm_family_scout`
   - `multi_seed_family_portability_batch_missing`
   - `null_linearity_and_continuum_control_stack_missing`
+- **auditor confidence:** high
+
+### `wave_direct_dm_h025_fam1_seed0_control_note`
+
+- **Note:** [`WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md`](../../docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that Fam1 seed 0, H=0.25 has a controlled fine-H replay and, with an existing Fam2 seed 0 ladder, closes the seed-0 cross-family surface without a full portability law.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0583-5786-7d81-a34a-425b9af08a52`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note infers that Fam1 seed 0 at H=0.25 is controlled because the S=0 null and weak-field ladder show exact null, common negative sign, low scaled spread, and R_hist around -20% to -21%.  _(class `B`)_
+- **chain closes:** False — The restricted packet provides no one-hop cited authorities for the earlier retained Fam1 point, the existing Fam2 seed 0 control ladder, or the boundary/high-band context used by the conclusion. The runner also did not complete in the packet, and its default arguments target Fam2 seed 1 rather than the note's Fam1 seed 0 unless invoked with overrides.
+- **rationale:** The load-bearing step is a cross-run computational control claim, not a first-principles derivation from Cl(3) primitives. The note explicitly depends on prior retained points and an existing Fam2 control ladder, but no cited authorities are included in the restricted packet, so the cross-family closure cannot be audited from the provided inputs. The timeout alone is not a terminal scientific failure, but the missing dependency edges and runner argument mismatch are substantive audit blockers.
+- **open / conditional deps cited:**
+  - `WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`
+  - `WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md`
 - **auditor confidence:** high
 
 ### `wave_direct_dm_h025_fam2_two_point_synthesis_note`
