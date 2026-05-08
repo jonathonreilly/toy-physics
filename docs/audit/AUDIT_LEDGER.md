@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 829 |
+| unaudited | 828 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 444 |
+| ~~audited_conditional~~ | 445 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 399 |
-| `audited_conditional` | 444 |
+| `audited_conditional` | 445 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 878 |
+| `unaudited` | 877 |
 
 | claim_type | count |
 |---|---:|
@@ -902,6 +902,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su3_adjoint_casimir_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `synthesis_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
@@ -12428,6 +12429,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** All quantities are computed by exhaustive enumeration in the runner using finite loops over the declared L_s=3 PBC sites, links, plaquettes, incidence maps, adjacency pairs, and tensor slots; each verification is a deterministic equality/cardinality check.  _(class `A`)_
 - **chain closes:** True — The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
 - **rationale:** The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
+- **auditor confidence:** high
+
+### `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded Blocks 4+5 claim that Block 4 stages the L_s=3 SU(3) Wigner cube partition infrastructure and Block 5 narrows the L_s=2 PBC route by all-forward candidate verification plus standard-Wilson degeneracy.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e056f-ff7e-78b0-bbfe-9ff7a3d79555`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note concludes that the all-forward L_s=2 candidate gives P=0.4291049969 far below the bridge target while the standard Wilson L_s=2 PBC traversal has degenerate link multiplicities, so no tested L_s=2 surface closes the bridge gap and L_s>=3 Wigner-Racah work is required.  _(class `B`)_
+- **chain closes:** False — The Block 4 staging claims are supported by the supplied runner/source, but the combined closing verdict depends on Block 5 orientation verification, the L_s=2 candidate ansatz, and bridge target/epsilon witness inputs whose authorities and runner source are not included in the restricted packet. The missing step is a retained bridge/candidate dependency plus the Block 5 runner/source demonstrating the degeneracy and comparison rather than importing them.
+- **rationale:** The supplied primary runner genuinely computes c_(0,0), c_(1,1), rebuilds the rank-8 singlet basis, encodes a plaquette tensor, and reports a scope estimate, but it explicitly defers the full L_s=3 contraction and does not execute Block 5. The note's combined conclusion relies on the L_s=2 candidate value, bridge target, epsilon witness, and standard-Wilson degeneracy verdict without those upstream authorities or Block 5 source being available in the packet. Because the audited claim is framed as a bounded theorem rather than merely a Block 4 staging note, the chain does not close from the provided inputs alone.
 - **auditor confidence:** high
 
 ### `su3_wilson_closed_form_fanout_theorem_note_2026-05-04`
