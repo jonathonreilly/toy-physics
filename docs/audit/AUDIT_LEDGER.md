@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 888 |
+| unaudited | 887 |
 | meta | 53 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 411 |
-| ~~audited_failed~~ | 8 |
+| ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,10 +41,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 393 |
 | `audited_conditional` | 411 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 52 |
+| `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 941 |
+| `unaudited` | 940 |
 
 | claim_type | count |
 |---|---:|
@@ -949,6 +949,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `mirror_chokepoint_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `portable_card_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -8630,6 +8631,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The certificate replays the fixed dense-boundary command, verifies the pre-fit gates for mirror rows N=40,60,80,100, excludes N=120 as a zero-gravity wall, and only then fits log(1 - pur_cl) versus log(N) on the four retained rows.  _(class `C`)_
 - **chain closes:** True — The chain closes within the stated bounded scope: the certificate runs the companion generator, parses the replayed finite rows, checks the gates, and recomputes the fit from the selected rows. It imports no one-hop dependencies and makes no external comparator, mirror-family, or asymptotic-law claim.
 - **rationale:** The clean result covers only the deterministic finite-window certificate under the named command and runner definitions. I count the finite replay gate checks as C because the companion runner generates the mirror DAGs and computes Born, k=0, gravity, purity, and wall metrics rather than reading them from another note; the header, post-retention fit arithmetic, extrapolation arithmetic, and selector-firewall sequencing checks are A. Residual risk is limited to implementation fidelity and the deliberate named-card choice; the note explicitly excludes physical-comparator, family, and asymptotic claims.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded finite mirror-chokepoint diagnostic pocket through N=100 across two named parameter cards, with no single-surface or asymptotic theorem claimed.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0924-64c0-7fe2-8a65-28a87725175a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The retained table is stitched across two parameter cards: N=15/25 from the strict NPL_HALF=25 card and N=40/60/80/100 from the dense NPL_HALF=60, connect_radius=5.0 boundary card.  _(class `B`)_
+- **chain closes:** False — The strict runner stdout supports the N=15 and N=25 rows, and the retained_bounded boundary authority supports a dense-card pocket through N=100, but the source note's N=40 and N=60 retained-table values do not match the cited boundary authority values. The missing step is a closed per-row provenance certificate reconciling the stitched table values with the registered runner-cache artifacts.
+- **rationale:** Issue: the current note claims a specific retained stitched table, but the provided strict runner only recovers N=15/N=25 and the cited dense boundary authority gives different N=40/N=60 values than the table in this note. Why this blocks: the bounded diagnostic claim depends on exact per-row provenance, and a hostile reviewer cannot certify the table as stated from the restricted packet. Repair target: land a per-row certificate or update the retained table so every row matches the named runner-cache artifact. Claim boundary until fixed: only the strict N=15/N=25 rows and the separate retained_bounded dense boundary-card result can be cited, not this exact stitched retained table.
 - **auditor confidence:** high
 
 ### `mirror_gravity_probe_note`
