@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 863 |
+| unaudited | 862 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 424 |
+| ~~audited_conditional~~ | 425 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 424 |
+| `audited_conditional` | 425 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 27 |
-| `unaudited` | 912 |
+| `unaudited` | 911 |
 
 | claim_type | count |
 |---|---:|
@@ -663,6 +663,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4646,6 +4647,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The broad split-2 minimum crosses the preferred recovered floor between s_min = 0.1950 and s_min = 0.1975, so the undercut is confined to 0.195 <= s_* <= 0.1975 and is gone by s >= 0.2.  _(class `G`)_
 - **chain closes:** False — The runner numerically optimizes the stated broad box and reproduces the note's values, but the preferred recovered floor and quotient-gauge machinery are imported without one-hop retained authorities in the packet. The result is also explicitly a tested numerical candidate rather than an interval-certified theorem on the true exact carrier.
 - **rationale:** Issue: the decisive step is a sampled numerical crossing of an imported preferred floor at selected slack floors, with expected transition values hard-coded as regression targets. Why this blocks: it supports the reported tested-band localization but not a first-principles or interval-certified derivation that the true exact carrier cannot undercut outside that band. Repair target: supply retained one-hop authorities for the preferred floor and quotient-gauge construction plus an interval/global certificate for the split-2 box or a runner that certifies the crossing without relying on fixed expected samples. Claim boundary until fixed: bounded numerical candidate on the tested broad exact-bundle box only.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The bounded numerical claim that the tested broad split-2 obstruction reduces to a one-dimensional active-slack edge interval with threshold s_* ~= 0.195041737783 and preferred slack 0.215677476525 outside it.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt55-xhigh-019e072e-1908-7872-97ff-709ad4336634`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note asserts that a previous split-2 boundary-band scan already pinned the broad-box minimum to m = -0.14 and the lower active-slack edge, so the danger reduces to R_split2(s)=min_delta Lambda_+(-0.14,delta,s).  _(class `B`)_
+- **chain closes:** False — The restricted packet contains no cited retained authority proving the prior boundary-band scan or the upper-m/lower-slack pinning. The runner hard-codes that reduction premise as a True check and imports the preferred lift and quotient-gauge construction from source not included in the packet.
+- **rationale:** Issue: the three-real to one-dimensional reduction rests on an uncited previous scan, and the runner accepts the edge-pinning premise rather than computing it. Why this blocks: the threshold and margin only establish the edge profile after the missing pinning theorem and imported carrier/readout definitions are granted. Repair target: provide a retained dependency proving the broad-box minimum is pinned to m = -0.14 and the lower active-slack edge, with runner source that constructs the required operators and preferred floor inside the audit packet. Claim boundary until fixed: this is a numerical candidate on the tested broad edge, not a closed bounded theorem for the full tested split-2 broad bundle.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18`
