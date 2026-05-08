@@ -30,10 +30,13 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
 
   3. Graph health:
      - No dangling deps.
-     - Cycles reported (warning, not failure).
+     - Cycles reported (notice, not failure).
      - Orphaned ledger rows (no source note) reported.
 
-Exit code 0 if clean, 1 if any error-level issue found.
+Exit code 0 if clean, 1 if any error-level issue found. Lint warnings are
+reserved for mechanically actionable metadata problems. Audit-backlog items
+that require a real re-audit are reported as notices so strict lint stays
+useful without implying those rows can be mechanically repaired.
 """
 from __future__ import annotations
 
@@ -41,6 +44,7 @@ import hashlib
 import json
 import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -188,7 +192,14 @@ def main() -> int:
     rows = ledger.get("rows", {})
 
     errors: list[str] = []
-    warnings: list[str] = []
+    warnings: dict[str, list[str]] = defaultdict(list)
+    notices: dict[str, list[str]] = defaultdict(list)
+
+    def add_warning(category: str, message: str) -> None:
+        warnings[category].append(message)
+
+    def add_notice(category: str, message: str) -> None:
+        notices[category].append(message)
 
     # Top-level stale timestamp keys cause PR drift-gate noise and were
     # removed by f383ded3d. compute_effective_status now drops them
@@ -227,12 +238,14 @@ def main() -> int:
                 errors.append(f"{cid}: audited row requires claim_scope")
             scope = row.get("claim_scope") or ""
             if scope.startswith(BACKFILL_SCOPE_PREFIX):
-                warnings.append(
+                add_notice(
+                    "legacy_backfill_scope",
                     f"{cid}: terminal verdict {a!r} carries seeder backfill scope; "
                     "re-audit required to record a real claim_scope"
                 )
         if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
-            warnings.append(
+            add_notice(
+                "legacy_claim_type_backfill",
                 f"{cid}: claim_type was backfilled for a critical legacy audit; queue for re-audit"
             )
         if ind not in ALLOWED_INDEPENDENCE:
@@ -247,7 +260,8 @@ def main() -> int:
             notes = row.get("notes_for_re_audit_if_any") or ""
             first_token = notes.strip().split(":", 1)[0].strip().split()[0].lower() if notes.strip() else ""
             if first_token not in ALLOWED_REPAIR_CLASSES:
-                warnings.append(
+                add_warning(
+                    "conditional_repair_prefix",
                     f"{cid}: audited_conditional notes_for_re_audit_if_any must start with one of "
                     f"{sorted(ALLOWED_REPAIR_CLASSES)} (got {first_token!r}); re-audit required"
                 )
@@ -265,7 +279,8 @@ def main() -> int:
                         f"{sorted(LEGACY_AUDITOR_FAMILIES)}"
                     )
             elif fam in LEGACY_AUDITOR_FAMILIES:
-                warnings.append(
+                add_warning(
+                    "legacy_auditor_family",
                     f"{cid}: auditor_family={fam!r} is legacy; run "
                     "scripts/canonicalize_auditor_family.py migration"
                 )
@@ -275,7 +290,8 @@ def main() -> int:
                 and not codex_family_meets_minimum(fam)
                 and not row.get("previous_auditor_family")
             ):
-                warnings.append(
+                add_warning(
+                    "codex_model_floor",
                     f"{cid}: auditor_family={fam!r} is below the audit-lane "
                     "minimum (gpt-5.5); model provenance is unverified, so "
                     "relabel with explicit operator confirmation or queue for re-audit"
@@ -307,7 +323,8 @@ def main() -> int:
                             other_side_non_claude = True
                             break
                 if not other_side_non_claude:
-                    warnings.append(
+                    add_warning(
+                        "claude_independence",
                         f"{cid}: claude-only audited_clean should record independence='weak' "
                         "per FRESH_LOOK_REQUIREMENTS.md §1, or carry a non-Claude "
                         f"cross-confirmation; got independence={ind!r}, "
@@ -361,7 +378,8 @@ def main() -> int:
                 )
             elif e != expected:
                 if e == "retained_pending_chain":
-                    warnings.append(
+                    add_notice(
+                        "pending_dependency_chain",
                         f"{cid}: audited_clean claim_type={ct!r} waiting on upstream retained-grade closure"
                     )
                 else:
@@ -447,13 +465,17 @@ def main() -> int:
             if not parent:
                 msg = f"{cid}: audited_decoration requires decoration_parent_claim_id"
                 if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
-                    warnings.append(msg + "; legacy row queued for re-audit")
+                    add_notice(
+                        "legacy_decoration_parent",
+                        msg + "; legacy row queued for re-audit",
+                    )
                 else:
                     errors.append(msg)
             else:
                 parent_eff = rows.get(parent, {}).get("effective_status")
                 if parent_eff not in RETAINED_GRADES:
-                    warnings.append(
+                    add_notice(
+                        "decoration_parent_not_retained",
                         f"{cid}: decoration parent {parent!r} is not retained-grade "
                         f"(effective_status={parent_eff!r})"
                     )
@@ -470,7 +492,8 @@ def main() -> int:
             crit_at_audit = snap.get("criticality") or "leaf"
             crit_rank = {"leaf": 0, "medium": 1, "high": 2, "critical": 3}
             if crit_rank.get(crit_now, 0) > crit_rank.get(crit_at_audit, 0):
-                warnings.append(
+                add_warning(
+                    "criticality_bumped",
                     f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
                     "invalidate_stale_audits.py should reset"
                 )
@@ -478,7 +501,10 @@ def main() -> int:
         # Hash drift.
         on_disk = hash_note_on_disk(row.get("note_path", ""))
         if on_disk is None:
-            warnings.append(f"{cid}: source note missing on disk: {row.get('note_path')}")
+            add_warning(
+                "source_note_missing",
+                f"{cid}: source note missing on disk: {row.get('note_path')}",
+            )
         elif on_disk != row.get("note_hash"):
             errors.append(
                 f"{cid}: note_hash mismatch — note edited since seeding; re-run seed_audit_ledger.py"
@@ -487,7 +513,10 @@ def main() -> int:
         # Dangling deps.
         for d in row.get("deps", []):
             if d not in rows:
-                warnings.append(f"{cid}: dangling dep {d!r} (no ledger row)")
+                add_warning(
+                    "dangling_dependency",
+                    f"{cid}: dangling dep {d!r} (no ledger row)",
+                )
 
     # Effective-status propagation sanity. A retained-grade row's deps must
     # themselves be retained-grade. Open gates and retained_pending_chain are
@@ -532,16 +561,33 @@ def main() -> int:
                 color[nxt] = GRAY
                 stack.append((nxt, iter(adj[nxt])))
         if cycle_count:
-            warnings.append(f"graph contains {cycle_count} back-edges (cycles)")
+            add_notice("graph_cycles", f"graph contains {cycle_count} back-edges (cycles)")
 
     # Output.
+    def issue_count(groups: dict[str, list[str]]) -> int:
+        return sum(len(items) for items in groups.values())
+
+    def print_issue_groups(
+        label: str,
+        prefix: str,
+        groups: dict[str, list[str]],
+        max_items_per_group: int = 3,
+    ) -> None:
+        total = issue_count(groups)
+        if not total:
+            return
+        print(f"  {total} {label}:")
+        for category in sorted(groups):
+            items = groups[category]
+            print(f"    {category}: {len(items)}")
+            for item in items[:max_items_per_group]:
+                print(f"      {prefix}: {item}")
+            if len(items) > max_items_per_group:
+                print(f"      ... and {len(items) - max_items_per_group} more")
+
     print(f"audit_lint: {len(rows)} rows checked")
-    if warnings:
-        print(f"  {len(warnings)} warnings:")
-        for w in warnings[:20]:
-            print(f"    WARN: {w}")
-        if len(warnings) > 20:
-            print(f"    ... and {len(warnings) - 20} more")
+    print_issue_groups("warnings", "WARN", warnings)
+    print_issue_groups("notices", "NOTICE", notices)
     if errors:
         print(f"  {len(errors)} errors:")
         for e in errors[:30]:
