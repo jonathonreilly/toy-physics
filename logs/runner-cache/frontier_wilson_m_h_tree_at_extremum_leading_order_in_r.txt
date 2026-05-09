@@ -1,0 +1,158 @@
+
+========================================================================================
+ frontier_wilson_m_h_tree_at_extremum_leading_order_in_r.py
+========================================================================================
+ Bounded source note: m_H_tree^W = (v / (2 u_0)) · sqrt(1 - 3 r^2/u_0^2)
+   at the Wilson-shifted extremum, leading order in r. Reduces m_H below
+   140.3 GeV. Leading-order +12% gap closure at r ≈ 0.235, conditional on
+   the uniform-N_taste=16 channel admission and perturbative validity.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Wilson-Corrected m_H_tree at Extremum  (marker = 'Wilson-Corrected m_H_tree at Extremum')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only; audit verdict and')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: formula (1) per-channel curvature with (1 - 3 r^2 / u_0^2)  (marker = '( 1  -  3 r^2 / u_0^2 )')
+  [PASS] contains: formula (2) sqrt form  (marker = 'sqrt( 1 - 3 r^2 / u_0^2 )')
+  [PASS] contains: formula (3) leading-order Taylor with (3/2)  (marker = '( 3 / 2 ) r^2 / u_0^2')
+  [PASS] contains: reduction at r=0 to 140.3 GeV stated  (marker = '140.3 GeV')
+  [PASS] contains: Wilson correction reduces m_H statement  (marker = 'Wilson correction *reduces* `m_H_tree^W`')
+  [PASS] contains: leading-order closure value r ≈ 0.235 stated  (marker = 'r ≈ 0.235')
+  [PASS] contains: perturbative validity boundary stated  (marker = 'perturbative expansion fails at')
+  [PASS] contains: uniform-N_taste=16 admission cited  (marker = 'uniform-`N_taste = 16`')
+  [PASS] contains: non-derived admission flagged in boundaries  (marker = 'non-derived')
+  [PASS] contains: V_taste^W extremum upstream cited (sister)  (marker = 'WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: V_taste^W formula upstream cited (sister)  (marker = 'WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Wilson staircase upstream cited  (marker = 'WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Higgs note upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: Higgs-channel boundary upstream cited (sister)  (marker = 'HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: PDG comparison input flagged not-load-bearing  (marker = 'comparison input only, not a derivation input')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent
+----------------------------------------------------------------------------------------
+  [PASS] absent (rejected vocabulary): 'algebraic universality'
+  [PASS] absent (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent (rejected vocabulary): 'two-class framing'
+  [PASS] absent (rejected vocabulary): '(CKN)'
+  [PASS] absent (rejected vocabulary): '(LCL)'
+  [PASS] absent (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent (rejected vocabulary): 'imports problem'
+  [PASS] absent (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent (rejected vocabulary): 'retires admission'
+  [PASS] absent (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams (with graceful forward-references)
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+  [INFO] sister forward-reference not yet on this branch: docs/WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md
+         (intentional; audit lane resolves order)
+  [INFO] sister forward-reference not yet on this branch: docs/WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md
+         (intentional; audit lane resolves order)
+  [INFO] sister forward-reference not yet on this branch: docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md
+         (intentional; audit lane resolves order)
+
+----------------------------------------------------------------------------------------
+ Part 4: reduction at r = 0 to parent eq. [6] m_H_tree = 140.3 GeV
+----------------------------------------------------------------------------------------
+  v = 12311/50 GeV = 246.22
+  u_0 = 1097/1250 = 0.8776
+  m_H_tree^{r=0} = v / (2 u_0) = 307775/2194 GeV = 140.2803099361896 GeV
+  parent headline: 140.3 GeV
+  [PASS] m_H_tree^{r=0} = v/(2 u_0) within 0.05 GeV of parent headline 140.3 GeV  (diff = 0.0197 GeV)
+
+----------------------------------------------------------------------------------------
+ Part 5: Wilson correction REDUCES m_H_tree (sign check)
+----------------------------------------------------------------------------------------
+  [PASS] r = 0.010: (m_H^W / m_H^{r=0})^2 = 1 - 3 r^2/u_0^2 < 1 (Wilson REDUCES m_H)  ((m_H^W / m_H^{r=0})^2 = 0.99961)
+  [PASS] r = 0.100: (m_H^W / m_H^{r=0})^2 = 1 - 3 r^2/u_0^2 < 1 (Wilson REDUCES m_H)  ((m_H^W / m_H^{r=0})^2 = 0.96105)
+  [PASS] r = 0.200: (m_H^W / m_H^{r=0})^2 = 1 - 3 r^2/u_0^2 < 1 (Wilson REDUCES m_H)  ((m_H^W / m_H^{r=0})^2 = 0.84419)
+  [PASS] r = 0.235: (m_H^W / m_H^{r=0})^2 = 1 - 3 r^2/u_0^2 < 1 (Wilson REDUCES m_H)  ((m_H^W / m_H^{r=0})^2 = 0.78489)
+  [PASS] leading-order Taylor coefficient is +3/2 (Wilson REDUCES m_H)  (got 3/2)
+
+----------------------------------------------------------------------------------------
+ Part 6: direct extraction of (3/2) leading coefficient at small r
+----------------------------------------------------------------------------------------
+  r = 1/100 (1e-02):  (1 - (m_H^W/m_H^0)^2) / (r^2/u_0^2) = 3.000000
+  r = 1/1000 (1e-03):  (1 - (m_H^W/m_H^0)^2) / (r^2/u_0^2) = 3.000000
+  r = 1/10000 (1e-04):  (1 - (m_H^W/m_H^0)^2) / (r^2/u_0^2) = 3.000000
+  [PASS] coefficient of r^2/u_0^2 in (1 - (m_H^W/m_H^0)^2) is exactly 3 at every r (closed form)  (all extracted = [3.0, 3.0, 3.0])
+  [PASS] structural identity: (1 - ratio_sq)/(r^2/u_0^2) = 3 exactly  (got 3)
+
+----------------------------------------------------------------------------------------
+ Part 7: leading-order closure value r ≈ 0.235 (PDG = comparison only)
+----------------------------------------------------------------------------------------
+  PDG comparison: m_H_PDG = 125.1 GeV
+  (used as comparison input only; NOT load-bearing for derivation)
+  m_H_zero (exact) = 140.280310 GeV  (parent's rounded headline = 140.3)
+  m_H_PDG / m_H_zero = 0.891786
+  1 - m_H_PDG/m_H_zero = 0.108214
+  (r / u_0)^2 = (2/3) · (1 - ratio) = 0.072143
+  expected (r/u_0)^2 ≈ 0.268^2 = 0.071824
+  [PASS] leading-order (r/u_0)^2 ≈ 0.072 (matches r/u_0 ≈ 0.268)  (computed (r/u_0)^2 = 0.072143, expected ≈ 0.072, diff = 0.000319)
+  r^2 = 0.055563
+  expected r^2 ≈ 0.235^2 = 0.055225
+  [PASS] leading-order closure value r ≈ 0.235 (with u_0 = 0.8776)  (computed r^2 = 0.055563, expected ≈ 0.235^2, diff = 0.000338)
+
+----------------------------------------------------------------------------------------
+ Part 8: perturbative-expansion validity (fails at r = O(u_0))
+----------------------------------------------------------------------------------------
+  [PASS] r = 0.100: ratio_sq = 0.9610, valid = True (expected True)  (validity criterion ratio_sq > 0)
+  [PASS] r = 0.235: ratio_sq = 0.7849, valid = True (expected True)  (validity criterion ratio_sq > 0)
+  [PASS] r = 0.500: ratio_sq = 0.0262, valid = True (expected True)  (validity criterion ratio_sq > 0)
+  [PASS] r = 0.600: ratio_sq = -0.4023, valid = False (expected False)  (validity criterion ratio_sq > 0)
+  [PASS] r = 0.800: ratio_sq = -1.4929, valid = False (expected False)  (validity criterion ratio_sq > 0)
+  critical r^2 = u_0^2 / 3 = 0.256727
+  critical r ≈ 0.506683
+  [PASS] critical r at validity boundary ≈ 0.507 (where ratio_sq = 0)  (computed r_crit^2 = 0.256727, expected ≈ 0.507^2)
+
+----------------------------------------------------------------------------------------
+ Part 9: stdlib-only / no PDG pins (other than declared comparison)
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] PDG comparison declared with explicit not-load-bearing label
+  [PASS] no extra PDG pins beyond declared m_H_PDG comparison  (none (clean))
+
+----------------------------------------------------------------------------------------
+ Part 10: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: the +12% Higgs gap chain
+  [PASS] note explicitly does not close: the physical Higgs mass `m_H` numerical value
+  [PASS] note explicitly does not close: the all-orders Wilson correction
+  [PASS] note explicitly does not close: the value of the Wilson coefficient `r` itself
+  [PASS] note explicitly does not close: the plaquette mean-field link `u_0` numerical value
+  [PASS] note explicitly does not close: the staggered-Dirac realization gate
+  [PASS] note explicitly does not close: the `g_bare = 1` derivation
+  [PASS] note explicitly does not close: any parent theorem/status promotion
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+  [PASS] closure value r ≈ 0.235 explicitly flagged as conditional on channel admission
+  [PASS] closure value flagged as conditional on perturbative-expansion validity
+  [PASS] closure value flagged as conditional on non-zero Wilson coefficient r
+
+========================================================================================
+ TOTAL: PASS=74, FAIL=0
+========================================================================================
+
+ VERDICT: m_H_tree^W = (v / (2 u_0)) · sqrt(1 - 3 r^2 / u_0^2) at the
+ Wilson-shifted extremum, leading order in r. Reduces to 140.3 GeV
+ at r=0 (matches parent eq. [6]). Wilson correction REDUCES m_H_tree.
+ Leading-order closure of the +12% gap occurs at r ≈ 0.235 with u_0 ≈
+ 0.8776, conditional on the uniform-N_taste=16 admission (non-derived
+ per HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE) and on the
+ perturbative-expansion validity (which fails at r = O(u_0)).
