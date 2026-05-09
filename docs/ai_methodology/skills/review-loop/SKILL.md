@@ -25,15 +25,20 @@ explicit user approval. Imports are allowed for bounded theorem surfaces when
 they are scoped, labelled, and dependency-checked; repo-wide axiom additions
 are not review-loop fixes.
 
-The framework baseline is physical `Cl(3)` on `Z^3`: A1 is the physical
-local algebra and A2 is the physical spatial substrate. Review-loop must
-not treat that baseline as a new axiom, new admitted premise, regulator
-interpretation, or optional theory language. Correcting a PR back to this
-repo language is allowed. This does not promote downstream science by
-itself: physical-species identifications, `C_3`-breaking selectors,
-readout/scale/unit bridges, and empirical matches remain separate
-bounded/open inputs unless they have their own retained-grade derivation and
-independent audit closure.
+The framework baseline is physical `Cl(3)` on `Z^3`: call these the
+`physical Cl(3) local algebra` and the `Z^3 spatial substrate` on live
+science surfaces. Do not land new science under bare letter-number names
+such as `A1`, `A2`, `G1`, or `R3`; those labels are overloaded with axioms,
+assumptions, Lie types, lane stages, route codes, and branch blocks. If a
+legacy shorthand is unavoidable, define it as an alias after the explicit
+scientific name, for example `Koide Frobenius-equipartition condition
+(legacy alias: A1)`. Review-loop must not treat the framework baseline as a
+new axiom, new admitted premise, regulator interpretation, or optional
+theory language. Correcting a PR back to this repo language is allowed. This
+does not promote downstream science by itself: physical-species
+identifications, `C_3`-breaking selectors, readout/scale/unit bridges, and
+empirical matches remain separate bounded/open inputs unless they have their
+own retained-grade derivation and independent audit closure.
 
 The bar is intentionally high: if review-loop is doing its job, the later
 fresh-context audit should be mostly confirmatory. Do not pass branches that
@@ -192,10 +197,13 @@ locally and report that limitation.
   `docs/repo/CONTROLLED_VOCABULARY.md`, and changed claim notes are compatible
   with the audit lane's propose/ratify split. Also verify that load-bearing
   dependencies are real markdown links that seed the citation graph, not just
-  code-formatted file names in prose. Block repo-wide axiom additions,
-  nonstandard theory vocabulary, or new foundational claims unless the user
-  explicitly approved that change; vocabulary corrections back to repo
-  conventions are allowed.
+  code-formatted file names in prose. Block ambiguous new science names such
+  as bare `A1`, `A2`, `G1`, `R3`, `Route F`, or `Block 2` when they appear as
+  titles, primary table labels, claim scopes, runner headlines, or review
+  findings without an explicit scientific noun phrase. Block repo-wide axiom
+  additions, nonstandard theory vocabulary, or new foundational claims unless
+  the user explicitly approved that change; vocabulary corrections back to
+  repo conventions are allowed.
 
 ### Optional Reviewer
 
@@ -239,6 +247,8 @@ Rules:
   hidden.
 - Do not apply audit verdicts. Review only whether the branch is ready for the
   independent audit worker.
+- Do not approve new bare letter-number science names. Require explicit names
+  from CONTROLLED_VOCABULARY, with shorthand only as a parenthetical alias.
 ````
 
 ## Consolidate Findings
@@ -365,10 +375,14 @@ Otherwise apply the narrowest honest fix:
 5. Make audit-system hygiene fixes only when they do not change the science:
    status-line tier labels, machine-local path removal, stale runner transcript
    refreshes, generated audit queue/ledger seeding, and discoverability wiring.
-6. Update `docs/repo/ACTIVE_REVIEW_QUEUE.md` for live unresolved findings.
-7. Route detailed resolved packets to
+6. Rename ambiguous science shorthand to explicit repo vocabulary without
+   changing the claim boundary. Examples: write `physical Cl(3) local algebra`,
+   `Z^3 spatial substrate`, `Koide Frobenius-equipartition condition`, or
+   `Lie type A_1` instead of bare `A1` / `A2`.
+7. Update `docs/repo/ACTIVE_REVIEW_QUEUE.md` for live unresolved findings.
+8. Route detailed resolved packets to
    `docs/work_history/repo/review_feedback/` only when a long packet is needed.
-8. When a PR is non-landable but salvageable, preserve only the durable
+9. When a PR is non-landable but salvageable, preserve only the durable
    note/runner content, make the claim boundary canonical, and land that source
    salvage through the current requested landing path. If the rejected branch
    contains substantial non-source packet material, use a clean temporary

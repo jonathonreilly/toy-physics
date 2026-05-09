@@ -12,6 +12,38 @@ Goals:
 - avoid vague shorthand on live package surfaces
 - prefer explicit protocol qualifiers over loose adjectives
 
+## Science Naming Rules
+
+Landed science must use domain-explicit names. Do not introduce a bare
+letter-number or route code as the primary name of a theorem, lane, source
+note, runner headline, table row, or review finding when that code could also
+mean an axiom, assumption, algebra type, branch block, route number, or
+workstream index.
+
+Examples of ambiguous primary names to avoid on new landed surfaces:
+
+- `A1`, `A2`, `G1`, `R3`
+- `Route F`, `Block 2`, `Origin B`
+- `Step 1` or `Assumption 1` compressed to `S1` / `A1`
+
+Use the scientific object as the name instead:
+
+- `physical Cl(3) local algebra`, not bare `A1`
+- `Z^3 spatial substrate`, not bare `A2`
+- `Koide Frobenius-equipartition condition`, not bare `A1`
+- `Lie type A_1` or `SU(2) root-system check`, not bare `A1`
+- `DM-eta Coleman-Weinberg residual`, not bare `G1`
+
+Legacy shorthand may be preserved only as an alias after the explicit name,
+for example: `Koide Frobenius-equipartition condition (legacy alias: A1)`.
+If an existing file already uses a shorthand, new edits should define it on
+first use and prefer the explicit name in headings, metadata, claim scopes,
+review summaries, and publication/control-plane rows.
+
+Axioms and assumptions must be written out as `Axiom 1`, `Assumption 1`, or a
+descriptive premise name. Do not abbreviate them to `A1` on live science
+surfaces.
+
 ## Vocabulary Families
 
 There are four different status families in this repo. Do not mix them
