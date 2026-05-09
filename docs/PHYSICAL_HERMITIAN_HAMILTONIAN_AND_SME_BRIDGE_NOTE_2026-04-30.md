@@ -204,3 +204,40 @@ The checks verify:
 4. the physical Hermitian antiunitary representative `Theta_H=P K` preserves
    `H`;
 5. full and direction-resolved CPT-odd SME sectors vanish.
+
+## SME bridge derivation (2026-05-09)
+
+The audit verdict (audited_conditional, 2026-05-03) flagged Section 4
+above:
+
+> the Hermitian-lift algebra is supported, but the final SME-zero
+> statement relies on an asserted physical bridge from vanishing
+> Theta_H-odd lattice Hamiltonian sectors and direction-resolved trace
+> coefficients to all CPT-odd SME bilinear coefficients sourced by the
+> substrate.
+
+That gap is closed by
+[`PHYSICAL_HERMITIAN_HAMILTONIAN_SME_BRIDGE_DERIVATION_NOTE_2026-05-09.md`](PHYSICAL_HERMITIAN_HAMILTONIAN_SME_BRIDGE_DERIVATION_NOTE_2026-05-09.md),
+which:
+
+- Classifies the standard Colladay-Kostelecky free-fermion SME basis
+  by CPT parity, identifying the CPT-odd short-list
+  `Sigma_CPT-odd = {a_mu, b_mu, H_mu_nu, e, f_mu}`.
+- Constructs the long-wavelength expansion of the staggered Hamiltonian
+  `H_mu(k) = -sin(a k_mu)/a` about `k = 0` (only odd `k`-orders).
+- Shows that `Theta_H = P K` acts diagonally on each Taylor order via
+  `K(i) = -i` and `P D_mu P = -D_mu`, with the two signs combining to
+  `+1` term-by-term.
+- Builds an explicit lattice -> SME source dictionary covering each
+  CPT-odd coefficient class.
+- Verifies numerically (`L = 4`) that every dictionary entry's
+  Theta_H-odd projection vanishes identically.
+
+The derivation runner
+`scripts/frontier_physical_hermitian_hamiltonian_sme_bridge_derivation.py`
+returns PASS=34 / FAIL=0. With this derivation, the SME-zero statement
+of Section 4 is no longer an assertion: every CPT-odd SME bilinear
+coefficient sourced by the substrate vanishes term-by-term in the
+long-wavelength expansion of the lattice operator family. Audit
+ratification on the parent and derivation notes remains the audit
+lane's call.
