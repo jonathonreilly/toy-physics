@@ -3,7 +3,17 @@
 Neutrino Yukawa Cascade Candidate
 =================================
 
-STATUS: HISTORICAL BOUNDED PRECURSOR
+STATUS: HISTORICAL BOUNDED PRECURSOR (SUPERSEDED)
+SUPERSEDED BY: docs/DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md
+               scripts/frontier_dm_neutrino_schur_suppression_theorem.py
+
+This runner is preserved as a historical-reference numerical match. It is no
+longer the live authority for the Dirac coefficient on the DM neutrino lane;
+the exact retained-grade local Schur derivation `y_nu^eff = g_weak^2 / 64`
+(giving `k_eff ~ 8.01`) is fixed downstream by the Schur suppression theorem
+runner. Cite this artifact only as a bounded numerical candidate that
+anticipated the correct scale, never as a closed positive theorem for the
+`k_B = 8` Dirac Yukawa.
 
 Purpose:
   Quantify the strongest currently defensible mechanism behind the
