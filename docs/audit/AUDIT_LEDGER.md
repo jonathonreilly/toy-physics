@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 953 |
+| unaudited | 952 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 369 |
+| ~~audited_conditional~~ | 370 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 369 |
+| `audited_conditional` | 370 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1008 |
+| `unaudited` | 1007 |
 
 | claim_type | count |
 |---|---:|
@@ -693,6 +693,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
@@ -6047,6 +6048,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **decoration parent:** `cl3_color_automorphism_theorem`
+- **auditor confidence:** high
+
+### `generated_geometry_synthesis_note`
+
+- **Note:** [`GENERATED_GEOMETRY_SYNTHESIS_NOTE.md`](../../docs/GENERATED_GEOMETRY_SYNTHESIS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded synthesis claim that the listed generated-geometry robustness results are established by the provided note and primary far-field runner packet.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d7b-5a93-7851-8011-2db823a5c76f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note asserts that frozen artifact chains establish transfer of fixed-lattice Newtonian/Born/distance/decoherence results to grown geometry, especially the far-field table with 36/36 TOWARD and F~M=1.00 for each drift/restore row.  _(class `B`)_
+- **chain closes:** False — The packet does not include completed runner stdout for the primary far-field harness and provides no one-hop dependencies or source/output for the other artifact chains named in the synthesis. The missing step is completed artifact evidence for the tabulated non-primary results and a completed primary run matching the far-field table.
+- **rationale:** Issue: the synthesis rests on artifact-chain results, but the restricted packet contains only the primary far-field runner source and a timed-out stdout, while the distance-law, joint-package, no-restore, connectivity, and 2D confirmation artifacts are not provided. Why this blocks: the broad conclusion that full Newtonian physics transfers to grown geometry imports unverified runner outputs and artifact chains not closed inside the packet. Repair target: provide completed cached stdout for the primary harness plus the cited runner sources/logs or retained one-hop notes for each table row. Claim boundary until fixed: at most, the packet shows a concrete far-field harness design that attempts to test grown-geometry gravity and F~M, not the full synthesis.
 - **auditor confidence:** high
 
 ### `generation_axiom_boundary_note`
