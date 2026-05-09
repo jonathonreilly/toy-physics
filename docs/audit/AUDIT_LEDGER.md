@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 889 |
+| unaudited | 888 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 424 |
+| ~~audited_conditional~~ | 425 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 386 |
-| `audited_conditional` | 424 |
+| `audited_conditional` | 425 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 943 |
+| `unaudited` | 942 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 716 |
+| `bounded_theorem` | 717 |
 | `decoration` | 11 |
 | `meta` | 63 |
 | `no_go` | 188 |
 | `open_gate` | 109 |
-| `positive_theorem` | 779 |
+| `positive_theorem` | 778 |
 
 | criticality | count |
 |---|---:|
@@ -858,6 +858,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `second_grown_family_complex_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | C | - |
+| `self_gravity_entropy_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `sign_portability_invariant_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -10793,6 +10794,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The exact zero-coupling reduction is explicit, the snapshot Born check is explicit, and the end-to-end Born check is explicit, but together they still do not justify promoting the lane to a retained self-gravity/backreaction mechanism.  _(class `C`)_
 - **chain closes:** True — The note is a bounded no-go, not a positive retained mechanism claim. With no cited dependencies, the current runner directly reproduces the zero-epsilon identity, the nonzero-coupling non-convergence, and the non-machine-clean end-to-end Born audit that support that bounded conclusion.
 - **rationale:** The bounded claim surface is narrow: it asserts that the exact zero-coupling identity survives while the nonzero self-gravity/backreaction lane does not promote under strict reduction and Born controls. The current runner recomputes those controls from the stated lattice setup and matches the note's reported values, including zero-epsilon identity, failed nonlinear convergence for nonzero couplings, and nonzero end-to-end Born residual. No upstream dependency or hidden retained mechanism is needed for this bounded no-go read; residual risk is only that the runner is slow and has unclassified output lines, not that the stated bounded conclusion overreaches the computed evidence.
+- **auditor confidence:** high
+
+### `self_gravity_entropy_note_2026-04-11`
+
+- **Note:** [`SELF_GRAVITY_ENTROPY_NOTE_2026-04-11.md`](../../docs/SELF_GRAVITY_ENTROPY_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical probe of binary bipartition occupancy entropy on the stated self-gravity operating point and graph/cut families.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c85-3321-76d1-98b9-9cdca7165735`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The runner computes single-particle binary occupancy entropies and boundary correlations for three graph families, then concludes the observable is bounded by ln(2), occupancy-dominated, and does not support a robust area-law claim.  _(class `B`)_
+- **chain closes:** False — The finite entropy arithmetic in the primary runner is internally consistent with the note, but the self-gravity lane, graph constructors, evolution operators, and retained operating point are imported from an uncited upstream module not included in the restricted packet. The packet therefore does not close the physical-computational premise behind the reported states.
+- **rationale:** Issue: the note's conclusion relies on a numerical probe whose state evolution and graph construction are imported from the retained self-gravity lane, but no cited authority or source for that lane is supplied in the packet. Why this blocks: the audit can verify that the displayed entropy readout follows from the runner's imported outputs, but cannot verify that those outputs are generated from retained primitives rather than an unclosed premise. Repair target: cite and include the retained self-gravity theorem/module, or provide a self-contained runner that constructs the graph, Hamiltonian, Poisson solve, and evolution from accepted inputs. Claim boundary until fixed: this is an internally consistent exploratory diagnostic of a stated imported operating point, not an independently closed area-law negative theorem.
 - **auditor confidence:** high
 
 ### `self_gravity_scaling_note_2026-04-10`
