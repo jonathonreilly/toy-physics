@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 892 |
+| unaudited | 891 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 422 |
+| ~~audited_conditional~~ | 423 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 422 |
+| `audited_conditional` | 423 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 946 |
+| `unaudited` | 945 |
 
 | claim_type | count |
 |---|---:|
@@ -732,6 +732,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | F | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `gravity_sign_audit_2026-04-10` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `grown_wavefield_companion_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -6860,6 +6861,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Self-consistency requires L^{-1} = G_0, so L = G_0^{-1} = H = -Delta_lat.  _(class `F`)_
 - **chain closes:** False — The algebraic inversion closes only after accepting L^{-1}=G_0. The restricted packet does not derive that equality from Cl(3) on Z^3; it asserts it as the framework closure condition.
 - **rationale:** The load-bearing move identifies the field Green's function L^{-1} with the propagator Green's function G_0. Once that identity is stipulated, L=G_0^{-1}=H is an algebraic consequence, but the identity itself is not independently derived in the packet. No runner source or stdout is available to upgrade the claim to first-principles computation, and the note's numerical checks as described only verify the stipulated closure and its inversion.
+- **auditor confidence:** high
+
+### `gravity_law_cleanup_note`
+
+- **Note:** [`GRAVITY_LAW_CLEANUP_NOTE.md`](../../docs/GRAVITY_LAW_CLEANUP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited whether the provided fixed-geometry distance runner and restricted packet support the bounded cleanup claim that gravity-like deflection is real but exact distance and mass force-law scaling is unresolved.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c7e-a7c2-77e0-b694-d39406ee058d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Controlled reruns show a peaked distance response with a falling tail and a positive sublinear mass window, so the gravity signal is real while exact force-law scaling remains unresolved.  _(class `B`)_
+- **chain closes:** False — The provided runner only recomputes a different fixed-geometry distance sweep than the note's stated best run and reports no review-safe falling-tail fit. The packet provides no runner output for the fixed-anchor mass sweep or channel-observable follow-up.
+- **rationale:** Issue: the note's load-bearing cleanup rests on specific controlled distance, mass, and channel reruns, but the supplied primary runner stdout uses different distance parameters and does not reproduce the claimed tail fit, while mass and channel results are not supplied. Why this blocks: the bounded conclusion is computational, so the packet must contain the completed matching runs or certificates for each asserted replacement. Repair target: provide runner outputs or cached certificates matching the note's stated parameter sets for distance, fixed-anchor mass scaling, and channel observables. Claim boundary until fixed: only the narrower supplied runner result is supported, namely a fixed-geometry distance scan with positive deflection at larger tested b values but no review-safe falling-tail law.
 - **auditor confidence:** high
 
 ### `gravity_observable_hierarchy_note`
