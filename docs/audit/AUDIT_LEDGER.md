@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 968 |
+| unaudited | 967 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 369 |
+| ~~audited_conditional~~ | 370 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,22 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 369 |
+| `audited_conditional` | 370 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1024 |
+| `unaudited` | 1023 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 747 |
+| `bounded_theorem` | 752 |
 | `decoration` | 12 |
 | `meta` | 63 |
-| `no_go` | 191 |
+| `no_go` | 192 |
 | `open_gate` | 108 |
-| `positive_theorem` | 770 |
-| `unset` | 8 |
+| `positive_theorem` | 772 |
 
 | criticality | count |
 |---|---:|
@@ -640,6 +639,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4187,6 +4187,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the diagnostic radiation branch E_H(z)=1 with K_H = 47.23597962989828, the direct transport solve gives kappa_axiom,ref = 0.004829545290766509 and the formal integral reproduces it.  _(class `G`)_
 - **chain closes:** False — The restricted packet does not derive K_H, E_H(z)=1, the transport equations, or the normalization choices from Cl(3) on Z^3. The runner checks consistency at the chosen imported reference input rather than closing the theorem-native derivation from the axiom.
 - **rationale:** The runner performs useful numerical checks that the direct solve and formal integral agree and that the old fit is larger on the stated branch. However, its load-bearing computation is anchored to a specific imported K_H value and imported common-module constants/functions, while the restricted packet supplies no derivation of those inputs from the axiom. That makes the claim a numerical match or branch-specific consistency check, not a first-principles theorem-native closure.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Under the stated K00 projection input and retained benchmark transport map, the note audits the consistent m_tilde, washout K, eta/eta_obs, DI ceiling ratio, and required transport enhancement.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0db1-0fd0-7660-a558-e58e33e7c255`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The projection theorem forces the physically consistent effective mass to use the same exact denominator channel: (Y^dag Y)11 = K00 = 2, so m_tilde = K00 * y0^2 * v^2 / M1.  _(class `B`)_
+- **chain closes:** False — The restricted packet provides no cited authority deriving the projection theorem, K00 physical-channel identification, or retained transport benchmark map. The runner hard-codes K00 and benchmark constants, then checks downstream arithmetic.
+- **rationale:** Issue: the load-bearing projection/transport inputs are imported rather than closed inside the restricted packet. Why this blocks: the runner verifies arithmetic after setting K00 = 2 and fixed benchmark constants, so it does not establish that the physical effective mass denominator or transport map follows from Cl(3) on Z^3. Repair target: cite or include a retained theorem deriving the K00 channel identification and a retained transport-map authority, with a runner that constructs those objects rather than assigning them. Claim boundary until fixed: this is a conditional benchmark boundary calculation, not an axiom-closed washout theorem.
 - **auditor confidence:** high
 
 ### `dm_lepton_synthesis_note_2026-04-19`
