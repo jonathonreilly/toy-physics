@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "note_date": "2026-05-09",
+  "pass_count": 4,
+  "fail_count": 0,
+  "all_pass": true,
+  "constants": {
+    "r": 1,
+    "d": 4,
+    "r_W": 1.0,
+    "m": 0.3,
+    "beta": 6.0,
+    "N_c": 3,
+    "J_max_tight_formula": "|m| + d/2 + r_W * d + (beta/N_c) * d(d-1)/2",
+    "J_max_tight_value": 18.3,
+    "v_LR_tight_formula": "2 * e * r * J_max_tight",
+    "v_LR_tight_value": 99.48911492160106
+  },
+  "results": [
+    {
+      "name": "F1 \u2014 h_z is supported in radius-1 ball (commutes with operators outside)",
+      "status": "PASS",
+      "detail": "Verified [h_z, O_x] = 0 for d(z, x) > 1"
+    },
+    {
+      "name": "F2 \u2014 closed-form J_max bound holds across all random SU(3) configs",
+      "status": "PASS",
+      "detail": "max_observed/J_max_loose = 0.6708"
+    },
+    {
+      "name": "F3 \u2014 Lieb-Robinson bound holds with explicit v_LR = 2erJ",
+      "status": "PASS",
+      "detail": "v_LR = 2\u00b7e\u00b71\u00b7J = 5.43656365691809 on toy carrier (J_eff = 1.0)"
+    },
+    {
+      "name": "F4 \u2014 outside-lightcone exponential decay",
+      "status": "PASS",
+      "detail": "log(commutator) decreases monotonically with d (microcausal lightcone)"
+    }
+  ]
+}
