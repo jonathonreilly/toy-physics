@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_high_precision_closure.py
+runner_sha256: a0152fa1b0a7cefa48a29b4e36fc85a5f22f14f84306a7c99b7a7ed12a7047fc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.02
+status: ok
+----- stdout -----
 ===============================================================================================
 LATTICE NN HIGH-PRECISION BOUNDED SUPPORT
   Step-scale invariance theorem + raw-kernel float64 overflow bound
@@ -51,3 +59,6 @@ LATTICE NN HIGH-PRECISION BOUNDED SUPPORT
   float64-clean window by the step-scale invariance theorem.
 
   RUNNER STATUS: PASS
+
+----- stderr -----
+

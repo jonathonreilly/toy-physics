@@ -2,6 +2,7 @@
 
 **Status:** support - structural graph-requirements diagnostic
 **Date:** 2026-04-04
+**Primary runner:** [`scripts/inverse_problem_graph_requirements.py`](../scripts/inverse_problem_graph_requirements.py) (validates the perturbation set tabulated below)
 
 ## Answer: almost nothing.
 

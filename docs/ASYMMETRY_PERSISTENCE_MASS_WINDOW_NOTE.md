@@ -3,6 +3,8 @@
 This note records the gravity-side follow-up for the generated hard-geometry
 lane.
 
+**Primary runner:** [`scripts/asymmetry_persistence_mass_scaling.py`](../scripts/asymmetry_persistence_mass_scaling.py)
+
 The retained log is:
 
 - [`logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-02-asymmetry-persistence-mass-scaling.txt)
