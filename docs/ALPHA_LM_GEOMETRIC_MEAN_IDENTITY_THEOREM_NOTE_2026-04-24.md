@@ -2,7 +2,11 @@
 
 Date: 2026-04-24
 
-Status: proposed_retained structural identity on the accepted coupling chain.
+Status: exact algebraic identity on the accepted coupling chain; not an
+independent retained input.
+Type: decoration
+
+**Primary runner:** `scripts/frontier_alpha_lm_geometric_mean_identity.py`
 
 ## Statement
 

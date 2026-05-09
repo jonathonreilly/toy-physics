@@ -288,6 +288,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_affine_imaginary_slot_invariance_narrow.py"
     },
+    "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_alpha_lm_geometric_mean_identity.py"
+    },
     "alpha_s_derived_note": {
       "assert_count": 0,
       "counts": {
@@ -22441,6 +22453,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_alpha_lm_geometric_mean_identity.py": {
+      "assert_count": 1,
+      "claims": [
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_alpha_s_direct_wilson_loop.py": {
       "assert_count": 4,
       "claims": [
@@ -42191,12 +42218,12 @@
     "dominant_class_distribution": {
       "A": 22,
       "B": 174,
-      "C": 640,
+      "C": 641,
       "D": 243,
       "none": 426
     },
-    "runners_classified": 1505,
-    "runners_with_C": 775,
+    "runners_classified": 1506,
+    "runners_with_C": 776,
     "runners_with_D": 398
   }
 }

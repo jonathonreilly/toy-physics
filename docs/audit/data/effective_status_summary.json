@@ -50,7 +50,7 @@
   ],
   "cycles_detected": 172,
   "effective_status_counts": {
-    "audited_conditional": 322,
+    "audited_conditional": 319,
     "audited_failed": 10,
     "audited_numerical_match": 22,
     "audited_renaming": 26,
@@ -67,11 +67,8 @@
     "retained": 64,
     "retained_bounded": 235,
     "retained_no_go": 121,
-    "retained_pending_chain": 1,
-    "unaudited": 1021
+    "unaudited": 1025
   },
-  "retained_pending_chain_count": 1,
-  "retained_pending_chain_examples": [
-    "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
-  ]
+  "retained_pending_chain_count": 0,
+  "retained_pending_chain_examples": []
 }

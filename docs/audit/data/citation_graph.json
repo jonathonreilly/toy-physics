@@ -4049,6 +4049,14 @@
       "to": "newton_derivation_note"
     },
     {
+      "from": "confinement_string_tension_note",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "confinement_string_tension_note",
+      "to": "alpha_s_derived_note"
+    },
+    {
       "from": "connectivity_family_v2_elliptical_duplicate_note",
       "to": "sign_portability_invariant_note"
     },
@@ -19237,6 +19245,10 @@
       "to": "kubo_continuum_limit_note"
     },
     {
+      "from": "wave_static_single_source_compare_note",
+      "to": "wave_retardation_continuum_limit_note"
+    },
+    {
       "from": "wide_family_h0125_bridge_reopen_audit",
       "to": "lattice_3d_l2_numpy_h0125_bridge_note"
     },
@@ -32581,13 +32593,13 @@
     },
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24": {
       "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "decoration",
+      "claim_type_author_hint_raw": "decoration",
+      "claim_type_seed_hint": "decoration",
       "deps": [],
-      "note_hash": "4d27a4224e509f4378a1a7b8b9617c5ef1939b4946c3d5bed2b1624f05600dc1",
+      "note_hash": "415945f8cbff37778594b3dc8c8efddd567c64ac63bbacf3f3fba0a15b13ae60",
       "path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "title": "alpha_LM Geometric-Mean Identity Theorem"
     },
     "alpha_s_derived_note": {
@@ -35941,8 +35953,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "280eab4aa8c631b71a1a4c8188d6abdc78c2052b1460c0025c7de96973a2aa5d",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "alpha_s_derived_note"
+      ],
+      "note_hash": "d2e4cf966ed2b2c8cf9b78a46176e920f03a6e47d7689c10cc9f19c70cb7249f",
       "path": "docs/CONFINEMENT_STRING_TENSION_NOTE.md",
       "runner_path": "scripts/frontier_confinement_string_tension.py",
       "title": "Confinement and String Tension Theorem"
@@ -59165,7 +59180,7 @@
         "universal_qg_projective_schur_closure_note",
         "universal_qg_canonical_refinement_net_note"
       ],
-      "note_hash": "37fbf738ad724f260a46a808a3acd2a86a1e16039b4f12e73fc653f71d6d9e87",
+      "note_hash": "1e143588524fec1d06a976fea52044e752d6fceb1b7d066371e2d228fe880cdb",
       "path": "docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Inverse-Limit Closure on `PL S^3 x R`"
@@ -60132,11 +60147,13 @@
     },
     "wave_static_single_source_compare_note": {
       "claim_id": "wave_static_single_source_compare_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "e0caa202151dc7217bc7f967413327336819b70c13bcaec57287b067c661abc2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "wave_retardation_continuum_limit_note"
+      ],
+      "note_hash": "8e65a81c0dfee9cbac86ccb71ead608d7f9a7a849e015874e7d571de35494a05",
       "path": "docs/WAVE_STATIC_SINGLE_SOURCE_COMPARE_NOTE.md",
       "runner_path": "scripts/wave_static_single_source_compare.py",
       "title": "Wave Static Single-Source Compare"
@@ -62328,7 +62345,6 @@
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
     "complex_action_note",
-    "confinement_string_tension_note",
     "continuum_bridge_note",
     "continuum_limit_note",
     "cosmology_scale_identification_and_reduction_note",
@@ -62919,7 +62935,6 @@
     "wave_static_matrixfree_fixed_beam_boundary_note",
     "wave_static_matrixfree_moving_source_fixed_beam_boundary_note",
     "wave_static_matrixfree_shared_geometry_compare_note",
-    "wave_static_single_source_compare_note",
     "weak_coupling_retention_note_2026-04-11",
     "weak_coupling_sign_sensitivity_note_2026-04-11",
     "wide_lattice_h2t_distance_law_note",
@@ -62970,25 +62985,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 180,
+      "bounded_theorem": 181,
+      "decoration": 1,
       "meta": 22,
       "no_go": 14,
-      "none": 1683,
+      "none": 1681,
       "open_gate": 21,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 685,
+      "bounded_theorem": 686,
+      "decoration": 1,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
-      "positive_theorem": 612
+      "positive_theorem": 610
     },
-    "edge_count": 7766,
+    "edge_count": 7769,
     "leaf_count": 532,
     "node_count": 2011,
-    "root_count": 802,
-    "runners_with_path": 1611
+    "root_count": 800,
+    "runners_with_path": 1612
   }
 }

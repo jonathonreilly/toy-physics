@@ -3,6 +3,24 @@
 **Date:** 2026-04-15
 **Status:** proposed_retained structural theorem + bounded quantitative prediction
 **Script:** `scripts/frontier_confinement_string_tension.py`
+**Primary runner:** `scripts/frontier_confinement_string_tension.py`
+
+## Inputs
+
+This note depends on:
+
+- [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](./GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+- [ALPHA_S_DERIVED_NOTE.md](./ALPHA_S_DERIVED_NOTE.md)
+
+The graph-first SU(3) note supplies the framework's gauge-sector
+identification with standard SU(3) Yang-Mills, used in Step 1 (β = 6.0
+from `g_bare = 1` and `N_c = 3`) and Step 3 (plaquette consistency
+with the framework's `<P> = 0.5934`). The alpha_s derived note supplies
+the `alpha_s(M_Z) = 0.1181` value used by the Step 4 two-loop running
+and the Step 5 EFT/lattice bridge to `sqrt(sigma)`.
+The Sommer-scale lattice numbers are imported standard SU(3) Yang-Mills
+properties (Method 2) and are explicitly bounded as such; this note
+does not derive them from framework primitives.
 
 ## Theorem
 

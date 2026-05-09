@@ -101,3 +101,9 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - [universal_qg_projective_schur_closure_note](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
 - [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+
+The three direct authorities above are not closed inputs for this note
+until each has its own retained-grade audit closure. The closure stated
+in this note is therefore a conditional bounded theorem over the
+discrete route those notes describe, and this note does not bypass that
+upstream gating.
