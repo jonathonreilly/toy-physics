@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 888 |
+| unaudited | 887 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 425 |
-| ~~audited_failed~~ | 9 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,19 +41,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 386 |
 | `audited_conditional` | 425 |
 | `audited_decoration` | 10 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 942 |
+| `unaudited` | 941 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 717 |
+| `bounded_theorem` | 718 |
 | `decoration` | 11 |
 | `meta` | 63 |
 | `no_go` | 188 |
 | `open_gate` | 109 |
-| `positive_theorem` | 778 |
+| `positive_theorem` | 777 |
 
 | criticality | count |
 |---|---:|
@@ -982,6 +982,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_family_card_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `triage_no_promotion_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `unified_basin_freeze_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `wave_static_boundary_sensitivity_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `born_scattering_comparison_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -13375,6 +13376,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The runner genuinely computes the main M-I differences and does not hard-code the contested numbers. The restricted packet does not close the bridge that the stitched late-time frozen-source slices used for I are the c=infinity wave-equation limit or that the source, boundary, and beam-readout choices are retained primitives.
 - **rationale:** Issue: the main numerical comparison is computed, but the note imports the identification of the stitched final frozen-source wave snapshots with the proper c=infinity instantaneous comparator. Why this blocks: the advertised retardation signature requires that asymptotic/static-slice bridge, not just a nonzero difference from an internally defined comparator. Repair target: add a retained theorem or in-run convergence/limit certificate proving the comparator construction and beam-deflection readout from the framework primitives; also refresh the secondary Born value because the note says 2.22e-15 while the runner prints 6.21e-16. Claim boundary until fixed: the packet supports only the bounded numerical difference between retarded evolution and the runner-defined stitched comparator on the listed families.
 - **auditor confidence:** medium
+
+### `wave_static_boundary_sensitivity_note`
+
+- **Note:** [`WAVE_STATIC_BOUNDARY_SENSITIVITY_NOTE.md`](../../docs/WAVE_STATIC_BOUNDARY_SENSITIVITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the finite-box boundary-sensitivity probe for dS and rel_MS under frozen source z_phys = 3.0 when PW is enlarged from 6.0 to 9.0.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c87-c7af-7320-aec2-f42b4a4003ae`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Enlarging PW from 6.0 to 9.0 at the same H = 0.5 does not preserve dS or rel_MS within 5%.  _(class `C`)_
+- **chain closes:** False — The note's stated parameter point is H = 0.5, but the runner stdout and runner default execute H = 0.350 with different numerical values. The missing step is a completed runner result, or corrected note, for the exact H = 0.5 claim.
+- **rationale:** Issue: the runner computes a real finite-grid boundary-sensitivity diagnostic, but not at the note's stated H = 0.5 point, and the reported table does not match the supplied stdout. Why this blocks: the audited numerical claim is parameter-specific, so a qualitative agreement at H = 0.350 does not close the H = 0.5 table as written. Repair target: rerun the artifact at H = 0.5 or update the note to state H = 0.350 and its current stdout values. Claim boundary until fixed: only the weaker statement that the current runner shows material boundary sensitivity at H = 0.350 is supported by this packet.
+- **auditor confidence:** high
 
 ### `wave_static_matrixfree_moving_source_fixed_beam_boundary_note`
 
