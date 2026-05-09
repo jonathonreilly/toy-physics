@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 967 |
+| unaudited | 966 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 363 |
-| ~~audited_failed~~ | 10 |
+| ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -43,19 +43,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 391 |
 | `audited_conditional` | 363 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 54 |
+| `audited_failed` | 55 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1028 |
+| `unaudited` | 1027 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 753 |
+| `bounded_theorem` | 754 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 769 |
+| `positive_theorem` | 768 |
 
 | criticality | count |
 |---|---:|
@@ -900,6 +900,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `inverse_problem_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `kernel_vs_gravity_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -6783,6 +6784,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The in-sample classifier rule (avg_deg >= 10.415 and reach_frac >= 0.859) is applied without refit to nine scripted independent generator families, yielding only 2/9 full-battery passes, 4/9 hard-coded prediction accuracy, and 6/9 no-refit rule accuracy.  _(class `C`)_
 - **chain closes:** True — The live runner rebuilds the nine named generator families, applies the same five-condition battery and frozen rule, and reproduces the negative table: only E1_er_p005 and E2_er_p020 pass, hard-coded predictions score 4/9, and the no-refit classifier rule scores 6/9.
 - **rationale:** The finite negative result closes on its own terms: the checked-in runner contains the nine generator constructors, the hard-coded prediction dictionary, the five-condition battery, and the frozen avg_deg/reach_frac rule, and live replay matches the source note's pass/fail and accuracy claims. The decisive rule failures R1, R3, and X1 all satisfy the frozen structural thresholds but fail the actual battery, while only the two Erdős-Rényi families pass the full package. This clean verdict is narrow: it certifies this deterministic nine-family held-out replay and the checked-in prediction table, not an exhaustive statistical theorem over all independent generator laws or independent timestamp proof beyond the artifact chain.
+- **auditor confidence:** high
+
+### `inverse_problem_note`
+
+- **Note:** [`INVERSE_PROBLEM_NOTE.md`](../../docs/INVERSE_PROBLEM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded inverse-problem claim that the listed graph perturbations preserve Born cleanliness and TOWARD gravity under the valley-linear propagator controls.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0dc9-e387-7a40-b8e0-6393c634074e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note claims that gravity remains TOWARD for all tested graph perturbations, so almost any causal graph with forward edges gives gravitational attraction when field coupling and phase are present.  _(class `C`)_
+- **chain closes:** False — The completed runner contradicts the note's load-bearing table: the heavy_delete_70 row has grav = -2.583639e-05 and sign AWAY, not TOWARD. The broader statement that all tested perturbations preserve attraction therefore does not close even within the bounded harness.
+- **rationale:** Issue: the runner's current output falsifies the note's central empirical-computational step because one listed perturbation points AWAY and the note's table values are stale. Why this blocks: the conclusion that graph structure is almost irrelevant depends on every tested perturbation preserving TOWARD gravity, and the provided computation shows a counterexample. Repair target: update the note around the completed runner output, add an explicit pass/fail criterion for attraction robustness, and either remove the universal-sounding Gate B inference or prove a narrower graph class. Claim boundary until fixed: Born remains machine-clean in these tested rows and k=0/no-field controls vanish, but TOWARD gravity is not robust across the tested perturbation set.
 - **auditor confidence:** high
 
 ### `kernel_vs_gravity_note`
