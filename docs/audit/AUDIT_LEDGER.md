@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 948 |
+| unaudited | 947 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 372 |
+| ~~audited_conditional~~ | 373 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 372 |
+| `audited_conditional` | 373 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1004 |
+| `unaudited` | 1003 |
 
 | claim_type | count |
 |---|---:|
@@ -584,6 +584,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_taste_generation_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `confinement_string_tension_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `continuum_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2973,6 +2974,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The stdout is consistent with the note's reported narrow numerical results, aside from a small Born-proxy value discrepancy within the same machine-clean scale. The runner is not a trivial printout and does perform propagation and scaling checks, but the load-bearing grown geometry comes from an unprovided imported module rather than a closed derivation from the axiom inside the packet. With no cited retained authority supplied for that grown row, the conclusion remains conditional on the missing geometry dependency.
 - **open / conditional deps cited:**
   - `scripts/gate_b_grown_joint_package.py`
+- **auditor confidence:** high
+
+### `clifford_bimodule_ray_saturation_future_target_note_2026-04-19`
+
+- **Note:** [`CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`](../../docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the note's status as an open future target for deriving STRC-LO from Clifford bimodule inputs, not a proven theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0da9-0592-7400-8f2c-b03efcdcb392`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note states that the ray-saturation theorem is a proposed target, no theorem is proven, no runner derives STRC-LO, and no retention is claimed.  _(class `E`)_
+- **chain closes:** False — The theorem chain does not close because the note explicitly supplies no proof or runner deriving STRC-LO from the stated bimodule inputs. As open-gate metadata, it is correctly scoped as future work rather than retained science.
+- **rationale:** Issue: the load-bearing content is an explicit future-target definition of a theorem to be proven later, not a derivation. Why this blocks: STRC-LO is not derived from the Clifford bimodule inputs in the restricted packet, and there is no runner or proof closing the linear amplitude completeness relation. Repair target: provide a theorem note or runner deriving STRC-LO from retained bimodule unitarity, supp = 6/7, and delta_A1 = 1/42 without importing STRC. Claim boundary until fixed: this remains open-gate metadata naming a future research target only.
 - **auditor confidence:** high
 
 ### `complex_action_note`
