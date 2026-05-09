@@ -1,0 +1,171 @@
+
+========================================================================
+Section 0 -- Retained input sanity
+========================================================================
+  PASS  0.1  C is unitary
+  PASS  0.2  C^3 = I
+  PASS  0.3  E_+(a, b) = 3 a^2 (matches direct Frobenius)
+        closed-form=8.67000000, direct=8.67000000
+  PASS  0.4  E_perp(a, b) = 6 |b|^2 (matches direct Frobenius)
+        closed-form=2.16000000, direct=2.16000000
+  PASS  0.5  At BAE (a^2 = 2|b|^2): kappa = 2 and E_+ = E_perp
+
+========================================================================
+Section 1 -- MRU weight-class kappa predictor: extremum of S_{mu,nu}
+========================================================================
+  PASS  1.11  S_(1,1) extremum -> kappa = 2.0000
+        numeric=2.0000, target=2*mu/nu=2.0000
+  PASS  1.12  S_(1,2) extremum -> kappa = 1.0000
+        numeric=1.0010, target=2*mu/nu=1.0000
+  PASS  1.21  S_(2,1) extremum -> kappa = 4.0000
+        numeric=3.9960, target=2*mu/nu=4.0000
+  PASS  1.23  S_(2,3) extremum -> kappa = 1.3333
+        numeric=1.3335, target=2*mu/nu=1.3333
+  PASS  1.31  S_(3,1) extremum -> kappa = 6.0000
+        numeric=5.9973, target=2*mu/nu=6.0000
+  PASS  1.6  MRU corollary: F1 (mu=nu=1) is the ONLY (mu,nu) with kappa=2 (BAE) in canonical class
+        kappa = 2*mu/nu = 2 iff mu = nu, integer minimal: (1, 1).
+  PASS  1.7  MRU corollary: F3 (mu=1, nu=2) gives kappa=1 (degenerate prediction)
+        kappa = 2*1/2 = 1 -> a^2 = |b|^2 -> single eigenvalue triple ratio.
+
+========================================================================
+Section 2 -- KP-AV1: Free Gaussian path-integral on Herm_circ(3)
+========================================================================
+  PASS  2.1  Phi_G (free Gaussian) extremum -> kappa = 1 (NOT BAE)
+        kappa = 1.0010, target = 1.0 (Probe 25 result).
+  PASS  2.2  F3 = log E_+ + 2 log E_perp extremum -> kappa = 1
+        kappa = 1.0010, target = 1.0.
+  PASS  2.3  F1 = log E_+ + log E_perp extremum -> kappa = 2 (BAE) but NOT realized by retained dynamics
+        kappa = 2.0000 = BAE; realized only with mult-weighting (1, 1).
+
+========================================================================
+Section 3 -- KP-AV2: Plancherel-uniform on hat C_3 -> (1, 2)
+========================================================================
+  PASS  3.1  Plancherel-uniform (chi-counting) extremum -> kappa = 1
+        kappa = 1.0010; (1, 2) char count from hat C_3 = (chi_0, chi_1, chi_2).
+  PASS  3.2  Phi_plancherel = F3 algebraically (all sample points)
+        max abs diff = 0.00e+00
+  PASS  3.3  Plancherel-uniform != mult-uniform: chi-count = (1, 2), mult-count = (1, 1)
+        Plancherel gives 2 chars per doublet (chi_+omega + chi_-omega), mult-counting gives 1 doublet irrep total. Distinct retained operations.
+
+========================================================================
+Section 4 -- KP-AV3: Spectrum-level Koide cone (Probe 22 bridge)
+========================================================================
+  PASS  4.1  Bridge identity cone_slack = -9 * bae_slack (verified all delta, sample pts)
+        max |cone_slack - (-9 bae_slack)| = 2.00e-14
+  PASS  4.2  Cone slack = 0  iff  BAE slack = 0
+        At BAE point, both vanish identically.
+  PASS  4.3  Spectrum pivot delta-independent on cone slack (same (a, |b|) constraint as operator)
+        e_1, e_2 delta-independent; cone slack = -9 BAE slack delta-independent. Per Probe 22.
+  PASS  4.5  Q = 2/3 along cone slice corresponds to kappa = 2 (BAE)
+        kappa at Q=2/3: 2.0000; bridge confirms operator-side kappa=2 = BAE.
+  PASS  4.6  Spectrum-level extremization on retained dynamics gives kappa = 1
+        Per Probes 22, 25: spectrum-level pivot reduces to (a, |b|) extremum, retained dynamics gives F3 -> kappa = 1.
+
+========================================================================
+Section 5 -- KP-AV4: Wilson chain m_tau scale -- kappa-neutral
+========================================================================
+  PASS  5.1  kappa scale-invariant (Wilson chain rescaling does not pin kappa)
+        kappa(rH) = kappa(H) for any positive r. Probe 26 verified.
+  PASS  5.2  m_tau Wilson chain pins mass scale (Probe 19) but kappa-neutral (Probe 26)
+        The retained Wilson chain m_tau = M_Pl (7/8)^{1/4} u_0 alpha_LM^{18} fixes M_eff scale; (a, |b|) ratio (kappa) unconstrained.
+
+========================================================================
+Section 6 -- KP-AV5: phi=2/9 retained character algebra -- kappa-neutral
+========================================================================
+  PASS  6.1  phi_dimensionless = 2/9 from retained character algebra (Probe 24)
+        phi = 0.222222 = 2/9 from n_eff/d^2 = 2/9.
+  PASS  6.2  Different (a, |b|) at phi=2/9 give different kappa (phi does not pin kappa)
+        sample kappas at varying (a, |b|): [4.0, 0.605, 25.0, 2.041]
+
+========================================================================
+Section 7 -- KP-AV6: Combined retained content -> Phi_canonical
+========================================================================
+  PASS  7.1  Phi_canonical extremum -> kappa = 1 (NOT 2 = BAE)
+        kappa_canonical = 1.0010; PDG charged-lepton kappa ~= 2.
+  PASS  7.2  Framework's retained-content kappa prediction = 1 (not BAE)
+        Empirical kappa_PDG ~= 2 (charged-lepton Q = 2/3). Framework prediction kappa = 1.0010 != 2.
+  PASS  7.3  Discrepancy: |kappa_predicted - kappa_BAE| ~ 1 (i.e., factor 2)
+        |1.0010 - 2.0000| = 0.9990
+
+========================================================================
+Section 8 -- KP-AV7: MRU image of integer-(mu, nu) class
+========================================================================
+  PASS  8.1  MRU image: only (mu, nu) with mu = nu give kappa = 2
+        BAE pairs: [(1, 1), (2, 2), (3, 3), (4, 4)]; integer-minimal: (1, 1) = F1.
+  PASS  8.2  F1 (mu=nu=1) is the integer-minimal BAE generator in MRU class
+        (1, 1) is the only mu=nu pair with mu, nu <= 2.
+  PASS  8.3  F1 is structurally absent from retained dynamics (Probe 25)
+        Real-dim of doublet block = 2 (Re b, Im b). Multiplicity-1 weighting would require a single mode but the Gaussian measure integrates over both real DOF. F1 cannot arise from retained Gaussian path-integral.
+  PASS  8.4  No (mu, nu) in MRU class gives kappa = 2 AND is realized by retained dynamics
+        Retained dynamics realizes (mu, nu) = (1, 2) only (real-dim count). kappa = 2 requires mu = nu, never compatible with (1, 2). Structural mismatch.
+
+========================================================================
+Section 9 -- KP-AV8: Falsification arrow vs PDG empirical kappa
+========================================================================
+  PASS  9.1  Empirical kappa from PDG charged-lepton masses = 2 (Q = 2/3)
+        PDG observation: kappa_obs = 2.000037, matches BAE = 2 to ~3e-5.
+  PASS  9.2  Framework prediction kappa=1 disagrees with PDG observation kappa~=2 (discrepancy ~ 1)
+        |1.0010 - 2.0000| = 0.9990
+  PASS  9.3  Framework's kappa=1 prediction implies non-PDG charged-lepton ratios
+        Best-fit (over delta) charged-lepton ratios at kappa=1: [np.float64(1.5635383826779088), np.float64(15.946975794089468)]; PDG ratios = (207, 16.8); log-score discrepancy = 4.94.
+  PASS  9.4  At kappa = 1, no delta gives all-positive lambdas (sqrt-mass interpretation fails)
+        kappa=1 -> a = |b| -> lambda_min = a - 2|b| = -|b| < 0, violating sqrt-mass positivity. Even more incompatible with charged-lepton sector.
+
+========================================================================
+Section 10 -- KP-AV9: Admission needed for BAE -- characterization
+========================================================================
+  PASS  10.1  multiplicity-count(doublet) = 1, real-dim-count(doublet) = 2
+        The (1, 1) multiplicity weighting (BAE) and (1, 2) real-dim weighting (retained dynamics) are distinct counting principles.
+  PASS  10.2  No retained derivation of mult-counting principle (Probe 25 closure)
+        Per Probe 25, all retained Gaussian/path-integral/heat-kernel/mode-counting routes give real-dim weighting (1, 2). Multiplicity-counting (1, 1) is not derivable from retained content.
+  PASS  10.3  Minimum admission to close BAE characterized as a single primitive
+        Multiplicity-counting principle for the canonical extremization functional on Herm_circ(3): each rea...
+
+========================================================================
+Section 11 -- Verdict synthesis
+========================================================================
+  PASS  11.1  All retained-content kappa-determining AVs converge on kappa = 1
+        AVs: Phi_G=1.0010, F3=1.0010, Plancherel=1.0010, Canonical=1.0010.
+  PASS  11.2  Framework's retained-content kappa prediction: kappa = 1
+        No retained content gives kappa = 2. The (1, 2) real-dim weighting is structural; (1, 1) mult weighting is not retained.
+  PASS  11.3  Empirical kappa from PDG charged-lepton masses: kappa ~= 2
+        Q = 2/3 at PDG -> kappa = 2 to 3e-5 precision.
+  PASS  11.4  PARTIAL FALSIFICATION: framework predicts kappa = 1, observed kappa ~= 2
+        The framework's free retained dynamics on Herm_circ(3) predicts DEGENERATE charged leptons (kappa=1), contradicting the empirical non-degenerate hierarchy (m_e << m_mu << m_tau, kappa ~= 2).
+  PASS  11.5  BAE admission count UNCHANGED
+        No new axiom; no new admission. The kappa=1 framework prediction is a derived result, not a new admission.
+  PASS  11.6  Honest options characterized: admit mult-counting (BAE closes) OR accept kappa=1 prediction (sector falsified)
+        Both options are explicit; user choice between (a) closure-via-admission or (b) honest partial-falsification documentation.
+
+========================================================================
+Section 12 -- Does-not disclaimers
+========================================================================
+  PASS  12.1  Does NOT add any new axiom
+        Only retained content used: A1, A2, BlockTotalFrob, Probe 12, 18, 21, 22, 24, 25.
+  PASS  12.2  Does NOT close BAE
+        The framework's retained content does NOT give kappa = 2. Closing BAE requires a separate primitive (multiplicity-counting).
+  PASS  12.3  Does NOT use PDG values as derivation input
+        KP-AV1-AV7 are derived from retained content only. PDG appears only in KP-AV8 as the falsification test of the derived prediction.
+  PASS  12.4  Does NOT modify any retained theorem
+        Probe 25, Probe 22, Probe 18 conclusions all stand. This probe synthesizes them into a single kappa-prediction test.
+  PASS  12.5  Does NOT promote the kappa=1 prediction to retained matter-sector law
+        The kappa=1 prediction is a derived consequence of free retained Gaussian dynamics; it is correctly bounded as the framework's matter-sector prediction in the absence of new content. Whether this is the physical kappa is an empirical question the framework currently fails on the charged-lepton sector.
+
+========================================================================
+Section 13 -- Comparison with prior probes (probes 12, 18, 22, 25)
+========================================================================
+  PASS  13.1  Probe 29 vs Probe 12 (Plancherel state -> F3)
+        Probe 12: state-level. Probe 29: integrates state-level + dynamics-level + spectrum-level into single kappa-predictor. Same kappa = 1 conclusion.
+  PASS  13.2  Probe 29 vs Probe 18 (F1-vs-F3 algebraic)
+        Probe 18: algebraic F1 vs F3 ambiguity. Probe 29: combines all retained content; F3 is uniquely selected, F1 is structurally absent (by Probe 25).
+  PASS  13.3  Probe 29 vs Probe 22 (spectrum-cone bridge)
+        Probe 22: spectrum-level pivot is illusory (bridge-equivalent to operator). Probe 29: confirms spectrum-level kappa-extremum gives same kappa = 1 as operator.
+  PASS  13.4  Probe 29 vs Probe 25 (free Gaussian extremization)
+        Probe 25: 7 attack vectors converge on F3 -> kappa=1. Probe 29: synthesizes Probe 25 + Probes 12, 18, 22, 24, 19 into a single canonical kappa-predictor; explicitly tests the predicted kappa against PDG empirical kappa.
+  PASS  13.5  Probe 29 contribution: rigorous test of framework's kappa prediction AGAINST empirical observation
+        Distinct angle: prior probes attack the BAE-closure question (can framework give kappa=2?). This probe takes seriously the framework's own derived prediction (kappa=1) and tests it against PDG (kappa~=2). Verdict: PARTIAL FALSIFICATION of charged-lepton sector unless mult-counting admission.
+
+========================================================================
+=== TOTAL: PASS=57, FAIL=0 ===
+========================================================================
