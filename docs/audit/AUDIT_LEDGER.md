@@ -18,16 +18,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 63 |
+| **retained** | 64 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 233 |
+| **retained_bounded** | 234 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 1003 |
+| unaudited | 998 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 325 |
+| ~~audited_conditional~~ | 328 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,22 +40,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 385 |
-| `audited_conditional` | 325 |
+| `audited_clean` | 387 |
+| `audited_conditional` | 328 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1058 |
+| `unaudited` | 1053 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 735 |
+| `bounded_theorem` | 736 |
 | `decoration` | 12 |
 | `meta` | 62 |
 | `no_go` | 192 |
 | `open_gate` | 108 |
-| `positive_theorem` | 773 |
+| `positive_theorem` | 772 |
 
 | criticality | count |
 |---|---:|
@@ -258,6 +258,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_circulant_wilson_target_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -598,7 +600,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3666,6 +3671,32 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
+### `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_BUNDLE_WINDOW_TRICHOTOMY_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_BUNDLE_WINDOW_TRICHOTOMY_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded numerical trichotomy over delta in [-2.5, 2.5] and r31 in [0.5, 4.0] for the three m windows against the preferred recovered floor.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d3e-b4d7-7971-a322-23382c3447fc`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the broad tested exact bundle box, endpoint and split-1 minima lie above Lambda_+(x_*) = 1.586874714730 while split-2 has minimum 1.500442491658 below that floor, so broad exact-bundle dominance fails.  _(class `B`)_
+- **chain closes:** False — The runner numerically reproduces the stated minima and sign comparisons, but it imports the exact bundle map, repair functional, and preferred recovered floor from modules not supplied or cited as retained authorities. The missing step is a retained dependency closing quotient_gauge_h, repair_from_slack_point, and PREFERRED_RECOVERED_LIFT, plus theorem-grade certification if the note is to exceed candidate status.
+- **rationale:** Issue: the load-bearing comparison relies on imported carrier/readout/floor objects, but the restricted packet lists no one-hop dependencies closing those objects. Why this blocks: the completed runner supports a numerical candidate, yet stdout and source do not establish that the exact bundle, repair normalization, preferred floor, or global minima are retained-grade consequences of the allowed inputs. Repair target: add retained dependency edges for the bundle construction and floor normalization, and add an interval/global-minimum certificate if theorem status is intended. Claim boundary until fixed: this is a broad-box numerical candidate showing split-2 below the imported floor in the tested code, not a closed retained theorem.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded numerical dominance candidate that the endpoint m-window [-1.899713,-1.87] stays above the preferred recovered repair floor on the stated compact exact-bundle box and two stated tail challenges.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d5e-ecf6-7a51-a47a-f029df3e4146`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The endpoint window search on the exact shift-quotient bundle finds a compact-box minimum 3.027555919409 and tail minima above the preferred recovered floor Lambda_+(x_*) = 1.586874714730.  _(class `B`)_
+- **chain closes:** False — The runner computes the scan using imported bundle and preferred-floor machinery, but the restricted packet provides no cited authority closing quotient_gauge_h, PREFERRED_RECOVERED_LIFT, repair_from_slack_point, or the upgrade from tested bundle dominance to local rival-window dominance.
+- **rationale:** Issue: the note's numerical scan is real within the runner, but it depends on uncited imported bundle construction and preferred-floor inputs, and the note itself states the remaining theorem gap from tested bundle dominance to certified local rival-window dominance. Why this blocks: without retained authorities for the exact shift-quotient bundle, floor normalization, and rival-window completeness bridge, the restricted packet cannot close the dominance claim as a theorem. Repair target: cite retained bundle/floor/completeness theorems or provide a runner deriving those inputs inside the packet. Claim boundary until fixed: a bounded numerical candidate on the stated sampled/refined domain and tails, not certified local dominance.
+- **auditor confidence:** high
+
 ### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`
 
 - **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md)
@@ -3677,6 +3708,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For the full canonical family, the singleton response obeys W(A_mu(H); vv*) = log(1 + v* A_mu(H)^(-1) v), so sup_P W(A_mu(H); P) = log(1 + 1 / lambda_min(A_mu(H))).  _(class `A`)_
 - **chain closes:** False — The internal linear-algebra reduction closes once the determinant-response form of W and the recovered-carrier bank are accepted. The restricted packet does not provide a retained derivation or source for that W definition/source_response bridge or for the imported recovered carrier data.
 - **rationale:** The theorem surface is mostly standard algebra: threshold union semantics force a max, strict monotone recalibration preserves ordering, and Rayleigh-Ritz gives the least-eigenvalue extremum for the stated rank-one response. However, the packet does not independently derive the determinant/Rayleigh response W from the microscopic axiom, and the runner imports source_response, response helpers, probes, and the recovered_bank from modules not provided in the restricted evidence. Thus the bounded selector-class theorem is valid only conditional on those imported response and carrier inputs.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT1_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT1_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that the split-1 m window is numerically dominated on the stated exact-bundle core box and two explicit tail challenges relative to the preferred recovered floor.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d60-3343-7233-b623-bf00478d47f0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The split-1 window search on the exact shift-quotient bundle finds a compact-box best repair of 2.308603400914, remaining above the preferred recovered floor Lambda_+(x_*) = 1.586874714730, with tested tails higher.  _(class `B`)_
+- **chain closes:** False — The numerical comparison itself is reproduced by the runner, but the restricted packet does not provide retained authority for the exact shift-quotient bundle, quotient_gauge_h, PREFERRED_RECOVERED_LIFT, or the preferred recovered repair floor. The missing step is a retained bridge/certificate that these imported objects are the correct bundle and comparison floor for local rival-window dominance.
+- **rationale:** Issue: the claim depends on imported bundle and floor objects not supplied as cited retained authorities. Why this blocks: the runner computes and checks the stated box/tails, but it imports quotient_gauge_h, PREFERRED_RECOVERED_LIFT, and repair_from_slack_point rather than deriving or documenting them inside the restricted packet. Repair target: cite retained notes or provide a certificate deriving the exact shift-quotient bundle and preferred recovered floor, plus the upgrade from tested bundle dominance to local rival-window dominance. Claim boundary until fixed: only a conditional numerical dominance candidate on the stated tested domain.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18`
@@ -6191,6 +6235,32 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Applying the stated ABSS fixed-point formula with p = 3 and tangent weights (1,2) gives eta = (1/3)(1/3 + 1/3) = 2/9.  _(class `A`)_
 - **chain closes:** False — The symbolic eta evaluation closes after p = 3, weights (1,2), and the ABSS formula/normalization are accepted. The missing step is a retained or self-contained derivation of the admitted Cl(3)/Z^3-to-ambient APS setup and the exact ABSS fixed-point formula in this restricted packet.
 - **rationale:** The runner is not a trivial printout: it performs symbolic Rodrigues, eigenvalue, fixed-locus, weight, and eta-sum checks. But the load-bearing result is an algebraic closure after the admitted C3 route, the ABSS fixed-point formula, and its normalization are taken as inputs. The packet supplies no cited retained authority or self-contained proof for those imports, and the source explicitly leaves the physical-observable bridge delta_physical = eta_APS open.
+- **auditor confidence:** high
+
+### `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09`
+
+- **Note:** [`KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md`](../../docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone algebraic identities relating a C_3 circulant Hermitian H = aI + bC + bbar C^2 over R x C to the C_3 character coefficients of its eigenvalue triple.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d61-4af7-7a20-9fc8-af418025c1e5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using the root-of-unity cancellations, the character sums give a_0 = sqrt(3) a and z = sqrt(3) b, so a_0^2 - 2|z|^2 = 3a^2 - 6|b|^2.  _(class `A`)_
+- **chain closes:** True — The claim uses only the stated definitions of C, omega, lambda_k, a_0, z, conjugation, and the standard identity 1 + omega + omega^2 = 0. No physical Koide, charged-lepton, Wilson, selector, comparator, or external normalization premise is imported.
+- **rationale:** The load-bearing work is a genuine class-A algebraic identity check over explicitly defined symbols, not a definition substitution or physical bridge. The runner source constructs the matrix, eigenvectors, character sums, and symbolic differences directly in SymPy and reports 16 class-A passes with no failures. Because there are no cited dependencies and no open physical identification is consumed, the narrow algebraic theorem closes exactly as scoped.
+- **auditor confidence:** high
+
+### `koide_circulant_wilson_target_note_2026-04-18`
+
+- **Note:** [`KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`](../../docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the structural algebraic target reduction: the C_3-covariant Hermitian commutant is 3-real, lies in the adjacent-chain path algebra, and the stipulated Koide spectral equation is one real constraint on it.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d62-9638-7141-b7b8-0af39e98a45a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using the retained circulant character bridge, the spectral Koide condition a_0^2 = 2|z|^2 becomes 3a^2 = 6|b|^2 = 6(x^2 + y^2) inside the 3-real C_3-covariant Hermitian family, so the target is 2-real.  _(class `A`)_
+- **chain closes:** True — For the bounded structural target-size claim, the chain closes by direct matrix algebra plus the retained narrow character/operator identity. It does not close a microscopic Wilson law, selector mechanism, or charged-lepton readout, but the note explicitly excludes those.
+- **rationale:** Issue: the note is not a first-principles Koide prediction; it is a structural reduction of the target, with an observed charged-lepton numerical witness in the runner. Why this does not block the audited scope: the note explicitly bounds out the microscopic Wilson law, selector, and readout, while the structural claims close by algebra over retained inputs. Repair target: a separate theorem must derive the cyclic responses, selector equation, and physical readout. Claim boundary until fixed: treat this as a clean bounded target-shape theorem, not as a derivation of lepton masses.
 - **auditor confidence:** high
 
 ### `koide_cl3_selector_gap_note_2026-04-19`
