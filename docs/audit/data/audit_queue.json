@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 186,
+    "critical": 187,
     "high": 321,
     "leaf": 227,
     "medium": 269
@@ -4009,6 +4009,29 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 589
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+      ],
+      "direct_in_degree": 12,
+      "effective_status": "unaudited",
+      "load_bearing_score": 15.205,
+      "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_planck_boundary_density_extension.py",
       "transitive_descendants": 589
     },
     {
@@ -30427,5 +30450,5 @@
     }
   ],
   "ready_count": 48,
-  "total_pending": 1003
+  "total_pending": 1004
 }

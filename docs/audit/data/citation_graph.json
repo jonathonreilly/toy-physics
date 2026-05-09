@@ -14497,6 +14497,10 @@
       "to": "staggered_fermion_card_2026-04-10"
     },
     {
+      "from": "planck_boundary_density_extension_theorem_note_2026-04-24",
+      "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+    },
+    {
       "from": "planck_finite_response_no_go_note_2026-04-24",
       "to": "planck_parent_source_hidden_character_no_go_note_2026-04-24"
     },
@@ -49912,11 +49916,13 @@
     },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "d7ff3666d6ea6b15eb932d3fc51a4b2bb29f6b8f90c699c399a884968c232b3a",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+      ],
+      "note_hash": "8ca7be832c6cfe18fefc1bfe9e362b70f6f318abcc187744742981026bfd669b",
       "path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_planck_boundary_density_extension.py",
       "title": "Planck Boundary-Density Extension Theorem"
@@ -62436,7 +62442,6 @@
     "physical_lattice_necessity_note",
     "physics_first_attack_plan",
     "physics_qa_tracker",
-    "planck_boundary_density_extension_theorem_note_2026-04-24",
     "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
     "planck_parent_source_hidden_character_no_go_note_2026-04-24",
     "planck_source_unit_normalization_support_theorem_note_2026-04-25",
@@ -62711,25 +62716,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 178,
+      "bounded_theorem": 179,
       "meta": 22,
       "no_go": 14,
-      "none": 1683,
+      "none": 1682,
       "open_gate": 21,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 682,
+      "bounded_theorem": 683,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
-      "positive_theorem": 613
+      "positive_theorem": 612
     },
-    "edge_count": 7719,
+    "edge_count": 7720,
     "leaf_count": 536,
     "node_count": 2009,
-    "root_count": 814,
+    "root_count": 813,
     "runners_with_path": 1609
   }
 }

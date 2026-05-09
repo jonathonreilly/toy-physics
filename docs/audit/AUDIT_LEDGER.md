@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 993 |
+| unaudited | 994 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 342 |
+| ~~audited_conditional~~ | 341 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 342 |
+| `audited_conditional` | 341 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1054 |
+| `unaudited` | 1055 |
 
 | claim_type | count |
 |---|---:|
@@ -746,7 +746,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
-| `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -8441,21 +8440,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For positive real x and y, (x/y)^16=1 implies x/y=1; combined with x/y^2=1 this gives y=1, x=1, hence beta=6 and u_0=u_0_can using x=6/beta.  _(class `A`)_
 - **chain closes:** True — Within the stated positive canonical branch, the two invariant equations are sufficient and overdetermine the one-parameter deformation. The even-power ambiguity is removed by positivity, division by y is valid because y is positive, and Wilson alpha_bare(beta)=3/(2 pi beta) gives x=alpha_bare(beta)/alpha_bare(6)=6/beta, so x=1 exactly fixes beta=6 while y=1 fixes u_0=u_0_can.
 - **rationale:** The audited claim is clean under the narrowed boundary because the load-bearing content is finite real algebra over explicitly positive normalized variables. No substrate semantics, continuum claim, species identification, or general regulator no-go is needed. The exclusion list prevents the wider architectural commentary from carrying theorem weight. Residual risk is only boundary discipline: the result remains a rigidity theorem for the specified two normalized invariants on the retained Wilson/canonical surface, not a theorem of physical-lattice necessity in any broader semantic or regulator-universal sense.
-- **auditor confidence:** high
-
-### `planck_boundary_density_extension_theorem_note_2026-04-24`
-
-- **Note:** [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](../../docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Conditional finite-face-union extension only: given locality, additivity, cubic-frame orientation symmetry, primitive normalization c_cell=1/4, and the separate gravitational-carrier premise, the primitive coefficient extends uniquely to finite tiled boundary patches. It does not derive the carrier premise or an unconditional Planck-scale identification.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-agent-sagan-019dedaa-5b6e-74b0-9134-4b587a08c833`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Finite additivity plus unit primitive-face normalization c_cell=1/4 implies N_A(P)=n*c_cell for any finite disjoint union of primitive faces, with A(P)=n*a^2 giving N_A(P)=c_cell*A(P)/a^2.  _(class `A`)_
-- **chain closes:** False — The algebraic finite-boundary extension closes inside the stated assumptions, but the full Planck boundary/action claim does not close because the microscopic gravitational carrier premise is explicitly assumed rather than derived. Equating the extended count to A/(4 l_P^2) is conditional on that unsupported physical bridge.
-- **rationale:** Issue: The finite additivity theorem is algebraically valid under its assumptions, but the Planck-normalization consequence depends on accepting that the primitive boundary/worldtube count is the microscopic gravitational boundary/action carrier. Why this blocks: without that physical bridge, the derivation of a/l_P=1 is only an internal conditional normalization, not a first-principles Planck result. The runner verifies arithmetic, example invariance, orientation symmetry, and explicit non-identification of the carrier premise, but it cannot establish the carrier premise itself. Repair target: provide an independent derivation that the primitive one-step boundary/worldtube count is the gravitational boundary/action carrier, or demote all Planck-normalization language to a conditional corollary. Claim boundary until fixed: retain only the bounded theorem that a local additive primitive-face rule normalized by c_cell=1/4 uniquely extends to finite primitive-face unions with density c_cell/a^2.
-- **open / conditional deps cited:**
-  - `derive primitive one-step boundary/worldtube count as microscopic carrier of gravitational boundary/action density`
 - **auditor confidence:** high
 
 ### `planck_boundary_orientation_incidence_no_go_note_2026-04-30`

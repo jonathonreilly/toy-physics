@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_planck_boundary_density_extension.py
-runner_sha256: e5656cb75259dbad39e09a226a9a5ffe9836f7fa5f5ccddbb139994b548b9b8c
+runner_sha256: d2b37ab723fa635679eec366eb80314af320077f641a84fce25d1cf27e83418a
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.03
+elapsed_sec: 0.02
 status: ok
 ----- stdout -----
 [PASS] primitive coefficient is retained as 1/4: c_cell = 4/16 = 0.250000000000
@@ -13,10 +13,11 @@ status: ok
 [PASS] cubic-frame orientation symmetry preserves the density: xy=8.750000000000, yz=8.750000000000, zx=8.750000000000
 [PASS] unit-cell normalization uniquely fixes finite face-union patches: sampled rectangles and non-rectangular unions equal the sum of their unit-face tiles
 [PASS] extended density still gives conditional a/l_P = 1: sqrt(4*c_cell) = 1.000000000000
-[PASS] positive closure is the extension, not carrier identification: given the gravitational carrier premise, the finite-boundary density extension is unique and additive; the carrier premise remains explicit
+[PASS] bounded closure is the extension, not carrier identification: given the gravitational carrier premise, the finite-boundary density extension is unique and additive; the carrier premise remains explicit
+[PASS] conditional carrier-share consistency: c_cell matches 1/(4 G_N) and patch counts match A/(4 G_N) on every finite tiling: forced c_cell from Wald = 0.250000000000, framework c_cell = 0.250000000000; sampled patches all match
 
-Summary: 8/8 checks passed.
-Verdict: positive closure of the finite-boundary density extension; c_cell=1/4 extends uniquely to additive boundary patches and retains the conditional a/l_P=1 normalization.
+Summary: 9/9 checks passed.
+Verdict: bounded closure of the finite-boundary density extension; c_cell=1/4 extends uniquely to additive boundary patches, retains the conditional a/l_P=1 normalization, and matches 1/(4 G_N) per face under the explicit (BP) + Wald carrier-share chain.
 
 ----- stderr -----
 
