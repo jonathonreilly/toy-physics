@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 949 |
+| unaudited | 948 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
-| ~~audited_renaming~~ | 27 |
+| ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 372 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
@@ -45,8 +45,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
-| `audited_renaming` | 27 |
-| `unaudited` | 1005 |
+| `audited_renaming` | 28 |
+| `unaudited` | 1004 |
 
 | claim_type | count |
 |---|---:|
@@ -963,6 +963,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_ew_coupling_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `ai_methodology.ai_accountability_and_disclosure_note_2026-04-25` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
+| `charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `dark_energy_eos_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -2299,6 +2300,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A selector from scalar quotient data to one generation label would have to pick a C3-fixed label, but the C3 action 0 -> 1 -> 2 -> 0 on generation labels is free, so no fixed singleton label exists; only based maps exist and those require extra basepoint/source/generation data.  _(class `A`)_
 - **chain closes:** True — The negative result closes as an exact group-action obstruction from the supplied premises: scalar Q/delta/z data are invariant under cyclic relabeling, while the target generation labels form a free C3 orbit. Therefore invariant scalar data cannot canonically select one physical generation label without additional based data. The runner directly checks the scalar invariance, carrier relabeling behavior, free action, absence of invariant singleton, and existence of only based maps.
 - **rationale:** The claim is a narrow no-go, not a positive charged-lepton mass closure. Its load-bearing step is exact algebra over the supplied C3 action and scalar-readout premise, and the runner checks the obstruction directly. No PDG masses, observed hierarchy label, or hidden physical generation identification are used as derivation input.
+- **auditor confidence:** high
+
+### `charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28`
+
+- **Note:** [`CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md`](../../docs/CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the bounded open-gate/process claim that this note lists non-gauge-anchor y_tau mechanism candidates and recommends M3, with M5 as backup, without claiming y_tau retention.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0da5-b0b8-7863-988f-e050ec300f17`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note explicitly bounds itself as a stuck-fan-out artifact that does not retain any input, does not close y_tau, and only identifies M3 as the cleanest next attack frame with M5 as backup.  _(class `E`)_
+- **chain closes:** True — The bounded open-gate claim closes on the note's own explicit boundary: it is a fan-out and recommendation artifact, not a derivation of y_tau. No retained physics conclusion is established or needed for that limited scope.
+- **rationale:** Issue: the load-bearing content is a process classification/recommendation, not a first-principles computation or algebraic theorem. Why this blocks: it cannot be audited as a retained y_tau mechanism because the note explicitly says y_tau is not closed and M3 is not attempted. Repair target: Cycle 5 must supply the actual A4 representation assignments, Clebsch-Gordan computation, and retained bridge from those inputs to a y_tau coefficient. Claim boundary until fixed: this remains only an open-gate fan-out identifying candidate routes.
 - **auditor confidence:** high
 
 ### `charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28`
