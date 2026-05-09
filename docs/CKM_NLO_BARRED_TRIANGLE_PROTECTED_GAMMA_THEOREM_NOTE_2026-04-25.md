@@ -323,6 +323,54 @@ expected size of an `O(lambda^2) ~ 5%` correction.
 - It does not promote any BSM CP phase or modify the parent CKM
   atlas/axiom surface.
 
+## Exact-symbolic verification
+
+The load-bearing step of this note is the **protection identity**
+
+```text
+arg(rho_bar + i eta_bar)  ==  arg(rho + i eta)            (P0)
+```
+
+which holds for any apex coordinates `(rho, eta)` and any NLO
+multiplicative scale `lambda^2 in [0, 2)` because the NLO map
+`(rho_bar + i eta_bar) = (rho + i eta) (1 - lambda^2/2)` rescales the
+real and imaginary parts by **the same real positive factor**. The
+homogeneity-degree-zero ratio `eta_bar / rho_bar = eta / rho` is
+therefore invariant.
+
+The audit-acceleration companion at
+[`scripts/audit_companion_ckm_nlo_barred_triangle_protected_gamma_exact.py`](./../scripts/audit_companion_ckm_nlo_barred_triangle_protected_gamma_exact.py)
+provides exact-precision verification (PASS=34/0) via sympy
+`Rational + sqrt(5)` algebra:
+
+- `(P0)` abstract structural protection identity in symbolic
+  `(rho, eta, lambda^2)` -- `tan(gamma_bar) - tan(gamma_0)` simplifies
+  to the zero polynomial; the cancellation mechanism is the
+  homogeneity identity `Im(z') Re(z) - Re(z') Im(z) == 0` for any real
+  rescaling `z' = (1 - lambda^2/2) z`.
+- `(P1)` framework-counts protection identity at retained
+  `(rho, eta) = (1/6, sqrt(5)/6)` and `lambda^2 = alpha_s/2` --
+  `tan(gamma_bar) - sqrt(5) == 0` as an exact identity in `alpha_s`.
+- `(N1)`-`(N9)` closed-form NLO catalog: every parent-note
+  expression reduces to canonical `Rational + sqrt(5)` form
+  symbolically, with `(N7)` linear deviation
+  `alpha_bar - pi/2 = (sqrt(5)/20) alpha_s + O(alpha_s^2)` recovered
+  via sympy series expansion (linear coefficient `sqrt(5)/20`,
+  constant term identically zero by construction).
+- `(N6)` triangle-sum identity `alpha_bar = pi - gamma_0 - beta_bar`
+  via the algebraic right-angle identity `cot(gamma_0) = tan(beta_0)`
+  (i.e. `sqrt(5) * (1/sqrt(5)) = 1`), which proves
+  `gamma_0 + beta_0 = pi/2` algebraically; this avoids any reliance
+  on sympy's atan-sum normalization.
+- LO recovery at `alpha_s -> 0`: `rho_bar = 1/6`, `eta_bar =
+  sqrt(5)/6`, `tan(beta_bar) = 1/sqrt(5)`, `alpha_bar = pi/2` --
+  reproduces the retained atlas-leading right-angle triangle.
+
+The companion is a Pattern-A audit-acceleration runner: it does not
+introduce a new claim row, a new source note, or any modification of
+the parent row's status. It only verifies the local algebraic content
+at exact symbolic precision.
+
 ## Reproduction
 
 ```bash
@@ -337,6 +385,22 @@ TOTAL: PASS=42, FAIL=0
 
 The runner uses the Python standard library plus the canonical
 `scripts/canonical_plaquette_surface.py` import.
+
+For exact-precision verification of the protection identity and the
+closed-form catalog `(N1)-(N9)`:
+
+```bash
+python3 scripts/audit_companion_ckm_nlo_barred_triangle_protected_gamma_exact.py
+```
+
+Expected result:
+
+```text
+TOTAL: PASS=34, FAIL=0
+```
+
+This companion uses sympy `Rational + sqrt(5)` exact algebra; no
+floating-point input enters the protection identity verification.
 
 ## Cross-References
 
