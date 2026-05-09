@@ -14,6 +14,18 @@ across all dimensions, all h values, or all parameter variations. The bolded
 
 **Companion runner:** [`scripts/dimensional_gravity_card.py`](../scripts/dimensional_gravity_card.py) — slow lattice card, invoke with `--dim 3` or `--dim 4` to reproduce individual table rows; unsuitable as the audit-lane runner because of runtime.
 
+**Cached companion-runner stdout (2026-05-08, partial):**
+- [`logs/dimensional_gravity_card_d3_2026-05-08.txt`](../logs/dimensional_gravity_card_d3_2026-05-08.txt) — d=3 run reaching steps 1–5: Born=4.42e-15 [PASS], d_TV=0.8366, k=0=0 [PASS], **F∝M=1.00**, Gravity=+0.000232 (TOWARD).
+- [`logs/dimensional_gravity_card_d4_2026-05-08.txt`](../logs/dimensional_gravity_card_d4_2026-05-08.txt) — d=4 run reaching steps 1–5: Born=4.36e-15 [PASS], d_TV=0.7964, k=0=0 [PASS], **F∝M=1.00**, Gravity=+0.000071 (TOWARD).
+
+These cached partial runs back the bolded **F∝M=1.00** entries the auditor
+flagged, plus Born and gravity-sign on both d=3 and d=4. The remaining
+companion-runner steps (decoherence, distance-law tail fit) were not reached
+within this session's wall-time budget and are still backed only by the
+structural certificate runner. A future audit-lane compute pass should run
+`dimensional_gravity_card.py --dim {3,4}` to completion to attach those
+columns explicitly.
+
 ## Review-loop runner attachment (2026-05-03)
 
 The 2026-05-03 audit flagged that the table's bolded "1.00" entries were
