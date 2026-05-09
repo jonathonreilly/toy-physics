@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 913 |
+| unaudited | 912 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 407 |
+| ~~audited_conditional~~ | 408 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 407 |
+| `audited_conditional` | 408 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 968 |
+| `unaudited` | 967 |
 
 | claim_type | count |
 |---|---:|
@@ -598,6 +598,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_sensor_prediction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `diamond_sensor_protocol_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dimension_selection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dimensional_gravity_table` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dirac_decoherence_probe_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dirac_field_smoothing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -3378,6 +3379,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `dimensional_gravity_table`
+
+- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-entry inventory for d=3 and d=4 cache-backed rows of kernel 1/L^(d-1), valley-linear S=L(1-f), with listed h/lattice parameters; d=2 is diagnostic only.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d2a-8379-7e81-aa66-8c5d454d0e8d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The d=3 and d=4 table entries are asserted from registered cached artifacts/logs rather than from a first-principles recomputation in the audit runner.  _(class `B`)_
+- **chain closes:** False — The runner verifies structural identities and string-matches cached artifact outputs, but the cached artifacts themselves are imported load-bearing measurements rather than reproduced first-principles computations in the restricted packet. The missing step is an audit-visible derivation or completed sliced runner that computes the d=3 and d=4 row measurements directly.
+- **rationale:** Issue: the finite table’s numerical closure depends on registered cache/log artifacts parsed by C6 and C7, while the primary runner does not recompute the lattice measurements. Why this blocks: a cache string/SHA assertion verifies artifact consistency, not the underlying physical measurement from retained primitives. Repair target: include the cached artifacts as retained-grade authorities in the packet or provide a sliced audit-lane runner/certificate that computes the row values directly. Claim boundary until fixed: the note is a bounded registry of cache-backed reported rows, not an independently closed derivation of those rows.
+- **open / conditional deps cited:**
+  - `logs/runner-cache/same_family_3d_closure.txt`
+  - `logs/runner-cache/four_d_distance_width_probe.txt`
+  - `logs/2026-04-04-4d-wide-distance-law.txt`
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`
