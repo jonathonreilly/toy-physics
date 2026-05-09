@@ -1,5 +1,6 @@
 # Decoherence Failure Analysis
 
+**Type:** meta
 **Date:** 2026-04-01
 **Experiments tested:** 14 decoherence architectures on uniform random DAGs, plus topology-pivot and growth follow-ons
 

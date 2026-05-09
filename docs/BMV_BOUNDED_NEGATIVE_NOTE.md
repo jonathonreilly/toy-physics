@@ -3,6 +3,8 @@
 **Date:** 2026-04-05
 **Status:** s² coupling confirmed; no discrete spacetime correction found
 
+**Primary runner:** [`scripts/bmv_bounded_negative.py`](../scripts/bmv_bounded_negative.py)
+
 ## What was tested
 
 Simulated BMV comparison protocol: beam propagates through field of a mass

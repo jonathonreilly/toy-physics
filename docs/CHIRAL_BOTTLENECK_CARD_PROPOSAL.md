@@ -1,6 +1,8 @@
 # Chiral Expanded Core Card
 
 **Date:** 2026-04-10  
+**Type:** meta
+**Primary runner:** scripts/frontier_chiral_bottleneck_card.py
 **Scope:** replace the old 10-row closure card as the primary public card
 with an expanded core card that catches both operating-point health and the
 structural bottlenecks that keep surfacing later.

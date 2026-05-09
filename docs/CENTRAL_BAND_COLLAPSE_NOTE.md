@@ -1,5 +1,7 @@
 # Central Band Hard-Geometry + Collapse Note
 
+**Primary runner:** [`scripts/central_band_collapse_joint_card.py`](../scripts/central_band_collapse_joint_card.py)
+
 This note records the joint gravity/decoherence card for the central-band lane with stochastic collapse.
 
 Setup:

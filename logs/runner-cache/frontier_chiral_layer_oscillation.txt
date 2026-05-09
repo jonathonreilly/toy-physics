@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chiral_layer_oscillation.py
+runner_sha256: ebc3416449a9501467d16d327d47fe78fc59fdb1f9d14366c97b0f472b3bc921
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+Chiral 3+1D layer-oscillation diagnostic
+========================================================
+  n = 15, theta0 = 0.3, strength = 0.0005
+  mass offset = +3 along z, periodic BCs
+  N sweep = (12, 14, 16, 18, 20)
+
+  N = 12: signal = -2.885e-05  [AWAY]
+  N = 14: signal = +1.044e-05  [TOWARD]
+  N = 16: signal = -1.817e-06  [AWAY]
+  N = 18: signal = +3.829e-05  [TOWARD]
+  N = 20: signal = +2.552e-05  [TOWARD]
+
+  total wall time: 0.0s
+
+Verification:
+  sign_flip_detected      = True
+  positive_signal_present = True
+  negative_signal_present = True
+  oscillation_amplitude   = 6.713e-05
+  max|signal|             = 3.829e-05
+
+PASS: 3+1D chiral walk gravity proxy oscillates in sign across N in (12, 14, 16, 18, 20) at the note's operating point.
+
+----- stderr -----
+

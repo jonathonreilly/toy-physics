@@ -1,5 +1,7 @@
 # Chiral Split-Mass / Split-Gravity Note
 
+**Primary runner:** scripts/frontier_chiral_split_mass_gravity.py
+
 This note captures the bottleneck experiment for the chiral walk:
 
 - Baseline overload hypothesis: the same `theta_m` sets the free dispersion gap and the local gravity response.
