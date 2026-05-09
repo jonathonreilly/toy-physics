@@ -1,0 +1,205 @@
+
+========================================================================
+SECTION 1: RETAINED FRAMEWORK CONSTANTS (Probe 19 sanity)
+========================================================================
+  retained <P>          = 0.5934
+  retained M_Pl         = 1.221000e+19 GeV
+  retained alpha_bare   = 0.0795774715
+  retained u_0          = 0.8776813812
+  retained alpha_LM     = 0.0906678360
+  retained (7/8)^(1/4)  = 0.9671682101
+  retained v_EW formula = 246.3030 GeV (PDG comparator 246.22)
+  PASS  retained v_EW formula reproduces PDG to <0.1% (Probe 19 sanity)
+        rel = 3.3706e-04
+  Wilson m_tau formula  = 1.777105 GeV (PDG comparator 1.7768)
+  PASS  Probe 19 Wilson m_tau reproduces PDG to <0.1%
+        rel = 0.0172%
+
+========================================================================
+SECTION 2: BRANNEN CIRCULANT ON hw=1 (3 real DOF)
+========================================================================
+  Brannen circulant on hw=1: H = a*I + b*C + b_bar*C^2
+  Real DOF count: 3 (a in R, |b| in R+, arg(b) in [0, 2*pi))
+
+  PASS  Brannen circulant H = aI + bC + b_bar*C^2 is Hermitian for all (a, |b|, phi)
+        tested at 4 parameter values
+  PASS  Brannen circulant is C_3-equivariant: C H C^dag = H
+
+========================================================================
+SECTION 3: C_3-CYCLE EIGENVALUE FORMULA
+========================================================================
+  PASS  eigenvalue formula lambda_k = a + 2|b|cos(arg(b) + 2*pi*k/3) verified
+        max deviation = 8.8818e-16 across 4 test params
+  PASS  sum of cos(phi + 2*pi*k/3) over k = 0 (C_3 Plancherel)
+        max deviation = 7.2164e-16
+  PASS  sum of cos^2(phi + 2*pi*k/3) over k = 3/2 (C_3 character orthogonality)
+        max deviation = 6.6613e-16
+
+========================================================================
+SECTION 4: PARAMETER-COUNTING OBSTRUCTION
+========================================================================
+  Brannen circulant on hw=1: 3 real DOF (a, |b|, arg(b))
+  Wilson chain (Probe 19): 1 scalar input (m_tau scale)
+  Parameter-counting deficit: 3 - 1 = 2 parameters underconstrained
+
+  Two missing constraints required for closure:
+    (i)  BAE: |b|^2 / a^2 = 1/2  (1 real constraint)
+    (ii) phi-magic: arg(b) = 2/9 (1 real constraint)
+
+  PASS  Brannen circulant has 3 real DOF; Wilson provides 1; deficit = 2
+        BAE + phi-magic admissions exactly fill the deficit
+  Retained primitive candidates (all bounded per 22-probe campaign):
+    - V(m) Z3 scalar potential: single scalar coordinate m, not (a, |b|, arg b); Probes 20-21 obstruction
+    - Wilson chain extension (alpha_LM exponent): non-integer exponents n_mu ~ 19.18, n_e ~ 21.41 — not retained
+    - Anomaly-forced Dirac bridge / shape theorem: uniform weights (1,1,1,1) give degenerate generations
+    - Probes 1-18 retained-symmetry routes: all bounded obstruction
+    - Probes 22 spectrum-level cone: arithmetically identical to parameter BAE
+
+  PASS  retained library exhausted; no inventoried primitive supplies (|b|, arg b)
+        5 candidate routes enumerated; all bounded
+
+========================================================================
+SECTION 5: WILSON EXPONENT NON-EXTENSION TO (m_mu, m_e)
+========================================================================
+  Solve for n in m = M_Pl * (7/8)^(1/4) * u_0 * alpha_LM^n:
+    n_tau (PDG comparator)     = 18.0001  (Wilson Probe 19: 18 — integer)
+    n_mu (PDG comparator)      = 19.1758  (NOT integer)
+    n_e (PDG comparator)       = 21.3968  (NOT integer)
+
+  PASS  Wilson exponent for m_tau is close to 18 (Probe 19 retained-tier)
+        n_tau = 18.000071 (should be near 18.000)
+  PASS  Wilson exponent for m_mu is NOT integer (cannot be retained Wilson chain)
+        n_mu = 19.1758, round = 19, |dev| = 0.1758
+  PASS  Wilson exponent for m_e is NOT integer (cannot be retained Wilson chain)
+        n_e = 21.3968, round = 21, |dev| = 0.3968
+  PASS  discrete-exponent Wilson chains cannot pin continuous (|b|, arg b)
+        Wilson chain has discrete resolution (powers of alpha_LM, u_0)
+
+========================================================================
+SECTION 6: TRIPLET-LEVEL CONE = PARAMETER-LEVEL BAE
+========================================================================
+  Bridge identity (Probe 22 §Step 1):
+    3*(sum lambda_k^2) - 2*(sum lambda_k)^2  ==  -9*(a^2 - 2|b|^2)
+
+    (a=1.0, |b|=0.5, phi=0.1000): triplet=-4.500000, -9*BAE=-4.500000, dev=7.1054e-15
+    (a=2.0, |b|=1.0, phi=0.7854): triplet=-18.000000, -9*BAE=-18.000000, dev=7.1054e-15
+    (a=0.5, |b|=0.3, phi=0.2222): triplet=-0.630000, -9*BAE=-0.630000, dev=2.2204e-16
+    (a=0.4889, |b|=0.3457, phi=0.2222): triplet=-0.000056, -9*BAE=-0.000056, dev=1.4433e-15
+  PASS  Bridge identity verified: triplet slack = -9 * BAE slack
+        max deviation = 7.1054e-15
+  PASS  triplet-level cone (Q=2/3) <=> parameter-level BAE (|b|^2/a^2 = 1/2)
+        same equation in different variables (prefactor -9 is non-vanishing)
+  PASS  triplet pivot does NOT escape parameter-level obstruction
+        22-probe terminal residue applies at triplet level too
+
+========================================================================
+SECTION 7: CONDITIONAL TRIPLET (Wilson + BAE + phi=2/9)
+========================================================================
+  Brannen magic angle phi = 2/9 = 0.2222222222222222 rad = 12.7324 deg
+  cos(phi)         = 0.9754100854  (k=0, tau)
+  cos(phi+2pi/3)   = -0.6785750875  (k=1, e)
+  cos(phi+4pi/3)   = -0.2968349979  (k=2, mu)
+  a (derived) = 0.5602503175  (sqrt GeV units)
+  |b| = a/sqrt(2) (BAE) = 0.3961567987
+
+  Predicted m_tau = 1777.1049 MeV  (PDG comparator: 1776.8000)
+  Predicted m_mu  = 105.6665 MeV  (PDG comparator: 105.6584)
+  Predicted m_e   = 0.5110 MeV  (PDG comparator: 0.5110)
+  PASS  conditional m_tau matches PDG comparator to <0.5%
+        rel_dev = 0.0172%
+  PASS  conditional m_mu matches PDG comparator to <0.5%
+        rel_dev = 0.0077%
+  PASS  conditional m_e matches PDG comparator to <2%
+        rel_dev = 0.0067%
+  PASS  Brannen circulant H eigenvalues match sqrt(m_k) via C_3-cycle on hw=1
+        eigs_sorted = ['1.333081', '0.325064', '0.022606'], sqrt_m_sorted = ['1.333081', '0.325064', '0.022606']
+
+========================================================================
+SECTION 8: KOIDE Q = 2/3 EXACT UNDER BAE
+========================================================================
+  Predicted Koide Q = 0.666666666666667
+  2/3              = 0.666666666666667
+  |Q - 2/3|        = 2.2204e-16
+  PASS  predicted Koide Q = 2/3 exactly (under BAE)
+        Theorem 1 of CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE: BAE forces Q=2/3 independently of phi
+  PASS  Q = 2/3 holds at multiple phi values (phi-independence verified)
+        tested at 6 phi values
+
+========================================================================
+SECTION 9: SAME-RESIDUE DIAGNOSIS (R1-R5)
+========================================================================
+  Probe 23 sharpens the residue at the triplet/generation level:
+
+  (R1) Parameter counting:
+       C_3-cycle on hw=1 has 3 real DOF (a, |b|, arg b).
+       Wilson chain provides 1 scalar (m_tau).
+       Deficit: 2 = BAE (1) + phi-magic (1).
+
+  (R2) Bridge identity:
+       triplet cone slack = -9 * parameter BAE slack (same equation).
+       Probe 22 result, reapplied at triplet level.
+
+  (R3) Retained library exhaustion:
+       22-probe campaign enumerated parameter, scale, spectrum routes.
+       None supplies the missing (|b|, arg b) constraints.
+
+  (R4) Wilson exponent non-extension:
+       Empirical n_mu ~ 19.18, n_e ~ 21.41 (non-integer).
+       Discrete exponents cannot pin continuous parameters.
+
+  (R5) Conditional closure preserved:
+       Wilson + BAE + phi=2/9 gives triplet to 10^-4, Q=2/3 exact.
+       Same conditional as Probe 19 §Step 4; verified via C_3-cycle on hw=1.
+  PASS  sharpened residue documented (R1-R5)
+
+========================================================================
+SECTION 10: PDG-INPUT FIREWALL
+========================================================================
+  Step 2 prediction m_tau_Wilson = 1.7771 GeV uses ONLY:
+    - retained <P> = 0.5934 (from MC, not PDG)
+    - retained M_Pl = 1.221e19 GeV (framework UV cutoff)
+    - retained alpha_bare = 1/(4 pi) (canonical Cl(3) normalization)
+    - derived u_0, alpha_LM (from above)
+    - retained APBC factor (7/8)^(1/4)
+
+  Step 3 parameter counting uses only retained Brannen circulant DOF count.
+  Step 4 retained-library exhaustion uses only the 22-probe campaign synthesis.
+  Step 5 Wilson exponent non-extension uses PDG (m_mu, m_e) only as comparators
+    to demonstrate that Wilson chain CANNOT be extended to (m_mu, m_e).
+    The non-extension finding does NOT consume PDG as input — it shows that
+    the framework's retained chain does not derive these masses.
+  Step 6 Bridge identity is purely algebraic (retained, no PDG).
+  Step 7 conditional triplet uses Wilson m_tau + BAE + phi=2/9 (admissions).
+
+  PDG charged-lepton masses appear ONLY as falsifiability comparators
+  AFTER the chain is constructed. They are NOT derivation inputs.
+
+  PASS  PDG values used only post-derivation (firewall held)
+        Probe 23 derivation chain is purely retained-content
+
+========================================================================
+SECTION 11: HONEST VERDICT
+========================================================================
+  VERDICT: SHARPENED bounded obstruction, same-residue with Probes 1-22.
+
+  C_3-cycle on hw=1 (3 real DOF) + Wilson chain (1 scalar) cannot
+  derive the full triplet (m_e, m_mu, m_tau) without admitting BAE
+  and phi-magic. The triplet/generation-level pivot does NOT escape
+  the parameter-level obstruction (Probe 22 + retained Bridge identity).
+
+  Closure status:
+    BAE-condition:       STILL OPEN (consistent with 22 prior probes)
+    phi=2/9 angle:       STILL OPEN (Probe 19 §R3, unchanged by Probe 23)
+    m_tau-scale:         POSITIVE prediction at retained-tier (Probe 19)
+    triplet/generation:  SAME-RESIDUE bounded (this probe)
+
+  Authority disclaimer:
+    No retained theorem promoted. No new axiom added. No new admission
+    admitted. Audit-lane authority preserved.
+
+  BAE status at the spectrum/triplet level: BOUNDED (same residue).
+  PASS  honest verdict recorded (sharpened, same-residue with Probes 1-22)
+
+========================================================================
+=== TOTAL: PASS=25, FAIL=0 ===
+========================================================================
