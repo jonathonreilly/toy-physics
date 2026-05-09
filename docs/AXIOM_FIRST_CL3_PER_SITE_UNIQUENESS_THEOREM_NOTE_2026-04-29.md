@@ -97,8 +97,11 @@ kernel.
 The repair: cite the **open-gate** authority for the staggered-Dirac
 realization rather than treat A3 as a primitive input.
 
-**Cited authority:**
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+**Cited authority (forward-pointer only, not load-bearing on the
+narrowed U1–U3 scope; written as plain text in backticks per the
+PR #306 cleanup pattern so the citation-graph builder does not
+parse it as an upstream dep edge):**
+`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 is the open-gate authority for the staggered-Dirac/Grassmann
 realization on A1+A2. It explicitly enumerates the closure routes
 that, when one lands as a positive theorem and clears the independent

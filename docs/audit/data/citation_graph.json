@@ -438,10 +438,6 @@
     },
     {
       "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
       "to": "minimal_axioms_2026-04-11"
     },
     {
@@ -28959,10 +28955,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "minimal_axioms_2026-05-03",
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "9b90f409f9643f03d886c5926cf30783e4cc09957cac468ec0600f278a8a750c",
+      "note_hash": "29be42ce3f0f5fdddde887b358ed762047aaec664076dadbd906a1f8fa66397a",
       "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
       "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
@@ -57096,7 +57091,7 @@
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6773,
+    "edge_count": 6772,
     "leaf_count": 548,
     "node_count": 1934,
     "root_count": 842,

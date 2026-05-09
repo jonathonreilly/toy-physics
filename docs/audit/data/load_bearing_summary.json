@@ -59,12 +59,6 @@
       "transitive_descendants": 89
     },
     {
-      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 28.369,
-      "transitive_descendants": 660
-    },
-    {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "criticality": "critical",
       "load_bearing_score": 28.257,
@@ -75,6 +69,12 @@
       "criticality": "critical",
       "load_bearing_score": 27.992,
       "transitive_descendants": 89
+    },
+    {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 27.587,
+      "transitive_descendants": 543
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
