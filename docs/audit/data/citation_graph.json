@@ -953,6 +953,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+      "to": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09"
+    },
+    {
       "from": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
       "to": "axiom_reduction_note"
     },
@@ -33211,8 +33215,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "961bfd0db309b62aa1d176e83a989d0e0111c376fffbb94b5c8bbb1d3af11f14",
+      "deps": [
+        "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09"
+      ],
+      "note_hash": "33745c83757f4b206f8f57569012058e421ba4211d2f4d205e8077ec136c3c5d",
       "path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
       "title": "Axiom-First Cluster Decomposition / Lieb\u2013Robinson Bound on Cl(3) \u2297 Z^3"
@@ -35796,6 +35802,17 @@
       "path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
+    },
+    "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
+      "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "bounded support note",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "a829e3fad3c8372fd610ecaf062c40408b459438c91f651a8b6ac68cf9a8ebfe",
+      "path": "docs/CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md",
+      "runner_path": "scripts/cluster_decomposition_mass_gap_bridge_check.py",
+      "title": "Mass-Gap Bridge for Cluster Decomposition on Cl(3) \u2297 Z^3"
     },
     "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02": {
       "claim_id": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
@@ -62252,7 +62269,6 @@
     "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
     "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
     "axiom_change_proposal_2026-04-10",
-    "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
@@ -62310,6 +62326,7 @@
     "claude_complex_action_carryover_note",
     "claude_complex_action_grown_companion_note",
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
+    "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
     "complex_action_note",
     "confinement_string_tension_note",
     "continuum_bridge_note",
@@ -62956,22 +62973,22 @@
       "bounded_theorem": 180,
       "meta": 22,
       "no_go": 14,
-      "none": 1682,
+      "none": 1683,
       "open_gate": 21,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 684,
+      "bounded_theorem": 685,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
       "positive_theorem": 612
     },
-    "edge_count": 7765,
+    "edge_count": 7766,
     "leaf_count": 532,
-    "node_count": 2010,
+    "node_count": 2011,
     "root_count": 802,
-    "runners_with_path": 1610
+    "runners_with_path": 1611
   }
 }

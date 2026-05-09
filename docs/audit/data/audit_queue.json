@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 207,
+    "critical": 209,
     "high": 315,
     "leaf": 228,
     "medium": 275
@@ -3153,6 +3153,27 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.792,
+      "note_path": "docs/CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/cluster_decomposition_mass_gap_bridge_check.py",
+      "transitive_descendants": 626
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "boundary_law_robustness_note_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -3509,6 +3530,29 @@
       "ready": false,
       "runner_path": "scripts/hopping_bilinear_hermiticity_check.py",
       "transitive_descendants": 626
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09"
+      ],
+      "direct_in_degree": 14,
+      "effective_status": "unaudited",
+      "load_bearing_score": 16.29,
+      "note_path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
+      "transitive_descendants": 625
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -30508,6 +30552,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 55,
-  "total_pending": 1025
+  "ready_count": 56,
+  "total_pending": 1027
 }

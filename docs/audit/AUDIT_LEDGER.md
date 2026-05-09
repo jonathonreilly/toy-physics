@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 235 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 1019 |
+| unaudited | 1021 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 323 |
+| ~~audited_conditional~~ | 322 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,16 +41,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 387 |
-| `audited_conditional` | 323 |
+| `audited_conditional` | 322 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1080 |
+| `unaudited` | 1082 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 754 |
+| `bounded_theorem` | 755 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 191 |
@@ -59,7 +59,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 336 |
+| `critical` | 337 |
 | `high` | 460 |
 | `medium` | 481 |
 | `leaf` | 626 |
@@ -69,9 +69,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1504
-- runners with (C) first-principles compute hits: 774
-- runners with (D) external comparator hits: 397
+- runners classified: 1505
+- runners with (C) first-principles compute hits: 775
+- runners with (D) external comparator hits: 398
 - decoration candidates (no C, no D): 132
 
 ## Top 25 by load-bearing score (topology only)
@@ -519,7 +519,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1536,23 +1535,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   - `MINIMAL_AXIOMS_2026-04-11.md`
-- **auditor confidence:** high
-
-### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Finite-range Cl(3) site-algebra Hamiltonians on Z^3: L1 Lieb-Robinson envelope, L3 lattice light cone, L4 finite local norm bound, plus L2 exponential connected-correlator clustering for the canonical thermal state/gapped canonical surface.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-agent-ohm-019dedb4-fb2e-7ce0-9d1c-f4c83666905e`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Step 4: deriving L2 exponential clustering for the canonical thermal state from the LR bound via imaginary-time/Hastings-Koma and asserting m_gap>0 from the A_min gauge/SU(3) sector.  _(class `C`)_
-- **chain closes:** False — The LR portion can plausibly close from finite-dimensional local algebras, finite interaction range, bounded local norm, and cubic coordination. The full claim does not close because L2 is not an immediate consequence of those inputs: exponential clustering requires an independently established spectral gap, high-temperature/finite-temperature clustering hypotheses, uniqueness/mixing assumptions, or a cited theorem with all hypotheses verified. The note instead imports m_gap>0 through statements about the A_min gauge sector, SU(3) confinement, and generic gapped behavior, none of which are in the retained inputs or proved by the runner.
-- **rationale:** Issue: L2 exponential clustering is promoted from LR plus an asserted mass gap/confinement bridge. Why this blocks: LR bounds alone control commutators outside a light cone; they do not prove static connected-correlator clustering for arbitrary canonical thermal states, and the packet gives no retained derivation of m_gap>0 for the stated Cl(3) tensor Z^3 Hamiltonian class. The runner is a 1D free-fermion representative with weak clustering pass condition and cannot verify the 3D Cl(3) theorem or the imported gauge-sector gap. Repair target: either restrict the audited theorem to L1/L3/L4 LR consequences, or add a separate retained theorem proving the required spectral gap/thermal clustering hypotheses for the canonical Hamiltonian and then verify the exact Hastings-Koma assumptions and constants. Claim boundary until fixed: clean only as a conditional LR-plus-clustering statement: if the specified Hamiltonian/state satisfies an independently proved positive gap or valid finite-temperature clustering theorem hypotheses, then exponential clustering may be invoked; the unconditional cluster-decomposition corollary is not audited clean.
-- **open / conditional deps cited:**
-  - `independent proof of m_gap>0 or valid thermal clustering hypotheses for the canonical Cl(3) Z^3 Hamiltonian/state`
-  - `verification that Hastings-Koma assumptions apply to the stated finite-range interaction and state`
-  - `replacement of 1D free-fermion proxy runner with a theorem-level check or exact model-specific verification`
 - **auditor confidence:** high
 
 ### `axiom_first_cpt_theorem_stretch_note_2026-04-29`

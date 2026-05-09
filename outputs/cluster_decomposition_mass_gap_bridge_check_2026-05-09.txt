@@ -1,0 +1,47 @@
+========================================================================
+ cluster_decomposition_mass_gap_bridge_check.py
+ Closed-form bridge: gap input → temporal transfer-matrix decay
+ Loop: axiom-first-foundations rigorization repair
+========================================================================
+
+--- E1: spectral identity (B.6) ---
+  Verify: <0|A T̃^n B|0> = <0|A|0><0|B|0> + Σ_{k≥1} (λ_k/M_T)^n <0|A|k><k|B|0>
+  Setup: random T (d=8) with prescribed Δ_T=1.5, n in [1,5]
+  identity verified across 10/10 trials, max err < 1e-9
+
+--- E2: ground-state clustering (B.7) ---
+  Verify: |<A T̃^n B>_0 - <A>_0<B>_0| ≤ ‖A‖‖B‖ · exp(-n Δ_T)
+  Setup: random T (d=8) with various Δ_T, n in [1, 10]
+  bound holds in 200/200 (frac = 1.000)
+
+--- E3: thermal trace-distance bound (B.8 two-term form) ---
+  Verify: |<A T̃^n B>_β - <A>_β<B>_β| ≤ ‖A‖‖B‖ · ( exp(-n Δ_T) + 6 q_beta )
+  q_beta is the actual excited-state thermal weight, computed from
+  the tested finite spectrum; no dimension-independent Boltzmann
+  replacement is used.
+  Setup: random T (d=8), β·a_τ in {0.5, 1, 2, 4}, n in [1, 8]
+  trace-distance bound holds in 640/640 (frac = 1.000)
+
+--- E4: no-gap counter-example ---
+  Setup: T with DEGENERATE top eigenvalue (Δ_T = 0).
+  Expect: connected correlator does NOT decay — stays O(1).
+  This demonstrates the gap is GENUINELY required.
+    trial 0: |connc| at n=20 = 1.000  (no decay, as expected)
+    trial 1: |connc| at n=20 = 1.000  (no decay, as expected)
+    trial 2: |connc| at n=20 = 1.000  (no decay, as expected)
+    trial 3: |connc| at n=20 = 1.000  (no decay, as expected)
+    trial 4: |connc| at n=20 = 1.000  (no decay, as expected)
+  no-decay observed in 5/5 trials
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (spectral identity B.6): PASS
+   E2 (ground-state clustering B.7): PASS
+   E3 (thermal trace-distance B.8): PASS
+   E4 (no-gap counter-example): PASS
+
+   PASSED: 4/4
+
+ verdict: bridge (B.1)–(B.2) verified as closed-form finite-block identity;
+          no-gap counter-example confirms gap is required.
