@@ -1,0 +1,111 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.py
+runner_sha256: 9a83202a6d410a29a49936800d2a292525fbf7c823bd60e88d1c4c0fb40796e6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 7.27
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE POSITIVE CLOSURE
+KRAWCZYK-INTERVAL REGULAR-ROOT CERTIFICATE
+========================================================================================
+
+  base point a,b,c,d,e_base = (1.16845863, 0.46803892, 0.77107315, 0.05539671, 1.88733851171)
+  bracket I_e = [e_base - 1e-3, e_base + 1e-3]
+  precision: mp.prec = 200 bits, iv.prec = 200 bits
+  kernel: N = 20000 grid points, e-independent
+
+========================================================================================
+PART 1: HIGH-PRECISION F EVALUATIONS AT BRACKET ENDPOINTS AND MIDPOINT
+========================================================================================
+  F(e_lo)  = -3.448839492192e-05
+  F(e_mid) = -7.745780574380e-15
+  F(e_hi)  = +3.446009704378e-05
+  (3 evals took 2.40s)
+  [PASS] F has a strict sign change across the bracket  (sign(F_lo)=-1, sign(F_hi)=+1)
+  [PASS] Sign-change margin far above floating-point noise floor  (sign_margin/noise_floor = 3.446e+07)
+
+========================================================================================
+PART 2: ANALYTIC F'(e_base) FROM EXACT EIGENVECTOR DERIVATIVE FORMULA
+========================================================================================
+  F'(e_base) = +0.034474247848
+  P_k(e_base)         = [0.018813661294164907, 0.9432826622362294, 0.037903676469605685]
+  dP_k/de(e_base)     = [0.004433091071444831, -0.004405782317402316, -2.7308754042514806e-05]
+  psi'(P_k(e_base))   = [0.19803724658555752, -0.0008328587840814314, -0.012376309999802907]
+  (computed in 0.95s)
+  [PASS] Analytic F'(e_base) is bounded away from zero by at least 1e-3  (|F'(e_base)| = 0.034474)
+
+========================================================================================
+PART 3: INTERVAL H(I_e), dH(I_e), AND H-PERTURBATION FROBENIUS BOUND
+========================================================================================
+  ||H(I_e) - H(e_mid)||_F upper bound (eps_H): 1.549457e-04
+  eigenvalues at e_mid: [0.002554687545955301, 0.15356321455954144, 2.037471095924915]
+  individual gaps:      [0.15100852701358614, 0.15100852701358614, 1.8839078813653738]
+  min spectral gap:     0.151009
+  [PASS] Spectral gap is strictly larger than the H-perturbation Frobenius bound  (2*eps_H = 3.099e-04 < gap_min = 1.510e-01)
+
+========================================================================================
+PART 4: DAVIS-KAHAN INTERVAL EIGENVECTOR ENCLOSURE OVER THE BRACKET
+========================================================================================
+  Davis-Kahan eigenvector deviation bounds (per k):
+    k=0: ||u_k(I_e) - u_k(e_mid)||_2 <= 1.452576e-03
+    k=1: ||u_k(I_e) - u_k(e_mid)||_2 <= 1.452576e-03
+    k=2: ||u_k(I_e) - u_k(e_mid)||_2 <= 1.163244e-04
+  eigenvalue intervals over I_e:
+    lam_0(I_e) ⊂ [+2.39974182e-03, +2.70963327e-03]
+    lam_1(I_e) ⊂ [+1.53408269e-01, +1.53718160e-01]
+    lam_2(I_e) ⊂ [+2.03731615e+00, +2.03762604e+00]
+  packet entries P_k(I_e):
+    P_0(I_e) ⊂ [+1.83022520e-02, +1.93335105e-02], width = 1.031e-03
+    P_1(I_e) ⊂ [+9.39736126e-01, +9.46837638e-01], width = 7.102e-03
+    P_2(I_e) ⊂ [+3.78434245e-02, +3.79639826e-02], width = 1.206e-04
+
+========================================================================================
+PART 5: INTERVAL F'(I_e) VIA DIRECT ANALYTIC-FORMULA EVALUATION
+========================================================================================
+  dP_k/de(I_e):
+    dP_0(I_e) ⊂ [+2.612912e-03, +6.258312e-03], width = 3.645e-03
+    dP_1(I_e) ⊂ [-6.220206e-03, -2.600847e-03], width = 3.619e-03
+    dP_2(I_e) ⊂ [-1.965472e-04, +1.421572e-04], width = 3.387e-04
+  psi'(P_k(I_e)):
+    psi'(P_0(I_e)) ⊂ [+1.872509e-01, +2.088753e-01]
+    psi'(P_1(I_e)) ⊂ [-8.864756e-04, -7.799714e-04]
+    psi'(P_2(I_e)) ⊂ [-1.314094e-02, -1.161430e-02]
+  (3 interval psi' evals took 2.17s)
+
+  F'(I_e) ⊂ [+1.91317443e-02, +5.14149564e-02]
+  F'(I_e) interval width: 3.228321e-02
+  F'(I_e) min |.|: 1.913174e-02
+  [PASS] F'(I_e) is uniformly bounded away from zero (strict sign on bracket)  (F'(I_e) ⊂ [+1.913174e-02, +5.141496e-02])
+
+========================================================================================
+PART 6: KRAWCZYK CONTRACTION TEST
+========================================================================================
+  Newton correction |F(e_base)/F'(e_base)|: 2.246831e-13
+  (1 - F'(I_e)/F'(e_base)) ⊂ [-4.914018e-01, +4.450424e-01]
+  contraction factor c = |1 - F'(I_e)/F'(e_base)|_max: 4.914018e-01
+  bracket half-width r:                              1.000000e-03
+  K-image half-width upper bound (|N| + r*c):        4.914018e-04
+  contracted-image half-width r*(1 - c):             5.085982e-04
+  [PASS] Krawczyk contraction factor c < 1 (necessary for uniqueness)  (c = 4.914018e-01)
+  [PASS] K(I_e) is strictly contained in interior of I_e  (|N| + r*c = 4.914018e-04 < r = 1.000000e-03)
+  [PASS] Newton correction fits inside contracted bracket interior  (|N| = 2.246831e-13 < r*(1-c) = 5.085982e-04)
+
+========================================================================================
+PART 7: WRITE THE CERTIFICATE JSON
+========================================================================================
+  certificate written to outputs/dm_wilson_constructive_positive_closure_manifold_certificate_2026-04-18.json
+  [PASS] Certificate JSON written to disk  (size=4472 bytes)
+
+========================================================================================
+PART 8: BOTTOM LINE
+========================================================================================
+  [PASS] Krawczyk-interval regular-root certificate established for the base point  (sign-change + uniform F' bound + strict K-contraction all hold on the bracket)
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -206,14 +206,36 @@ and leave the A1 admission count unchanged:
 - [`KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md`](KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md)
   — expanding the operator class does not create a closure path.
 
+## Targeted follow-up probes and synthesis
+
+The 2026-05-09 review-loop batch adds targeted follow-up notes that
+sharpen the same missing primitive without changing the admission
+count:
+
+- [`KOIDE_A1_PROBE_Z2_C3_PAIRING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe7.md`](KOIDE_A1_PROBE_Z2_C3_PAIRING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe7.md)
+  — no retained `Z_2 x C_3` pairing forces `1/2`; the note localizes
+  the obstruction at the `3:6` multiplicity-weighted Frobenius pairing
+  on `M_3(C)_Herm`.
+- [`KOIDE_A1_11_PROBE_CAMPAIGN_BOUNDED_ADMISSION_META_NOTE_2026-05-08.md`](KOIDE_A1_11_PROBE_CAMPAIGN_BOUNDED_ADMISSION_META_NOTE_2026-05-08.md)
+  — meta/index note naming the missing primitive; it does not admit the
+  primitive, derive A1, or promote a theorem.
+- [`KOIDE_A1_PROBE_PLANCHEREL_PETER_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe12.md`](KOIDE_A1_PROBE_PLANCHEREL_PETER_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe12.md)
+  — Plancherel/Peter-Weyl route still leaves a scalar-normalization
+  convention at the same locus.
+- [`KOIDE_A1_PROBE_REAL_STRUCTURE_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe13.md`](KOIDE_A1_PROBE_REAL_STRUCTURE_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe13.md)
+  — real-structure / antilinear-involution route sharpens the same
+  obstruction and leaves the A1 admission count unchanged.
+
 ## Status: A1 remains a load-bearing non-axiom input
 
 Given the original no-go theorems and the companion bounded-obstruction
 source notes above, A1 is still not derived from physical `Cl(3)` on
-`Z^3` plus textbook math alone. Any future axiom-native closure must
-supply a new coefficient-fixing bridge, or the A1 amplitude-ratio input
-must be explicitly admitted by the user. This note does not set audit
-verdicts or pipeline-derived retained status.
+`Z^3` plus textbook math alone. The current target is precise: a future
+axiom-native closure must derive the canonical `(1,1)`-multiplicity-
+weighted Frobenius pairing on `M_3(C)_Herm` under `C_3`-isotype
+decomposition, or the A1 amplitude-ratio input must be explicitly
+admitted by the user. This note does not set audit verdicts or
+pipeline-derived retained status.
 
 ## References
 

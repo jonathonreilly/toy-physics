@@ -1,0 +1,31 @@
+=== Isotropic validation: 4^4 at beta_W=6 (Engels 1990: 0.594) ===
+
+  --- seed 1 ---
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=1 numba=True
+  thermalized in 3.7s (80 sweeps)
+  measured in 2.0s (400 sweeps, 200 measurements)
+
+  --- seed 2 ---
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=2 numba=True
+  thermalized in 0.3s (80 sweeps)
+  measured in 1.7s (400 sweeps, 200 measurements)
+
+  --- seed 3 ---
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=3 numba=True
+  thermalized in 0.3s (80 sweeps)
+  measured in 1.8s (400 sweeps, 200 measurements)
+
+  --- seed 4 ---
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=4 numba=True
+  thermalized in 0.4s (80 sweeps)
+  measured in 1.9s (400 sweeps, 200 measurements)
+
+  --- seed 5 ---
+[run_anisotropic] dims=(4, 4, 4, 4) vol=256 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=5 numba=True
+  thermalized in 0.4s (80 sweeps)
+  measured in 1.9s (400 sweeps, 200 measurements)
+
+  Multi-seed combined:
+    <P_sigma> = 0.59671 +/- 0.00036
+    <P_tau>   = 0.59659 +/- 0.00033
+    seed-std: sigma=0.00089, tau=0.00053

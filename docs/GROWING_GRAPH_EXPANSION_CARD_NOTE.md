@@ -3,6 +3,8 @@
 **Date:** 2026-04-05  
 **Status:** bounded analog expansion proxy on a frontier-growing graph
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/growing_graph_expansion_card.py` now carries explicit assertion checks (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This makes the runner's class-A invariants visible to `docs/audit/scripts/classify_runner_passes.py`. The runner output and pass/fail semantics are unchanged.
+
 ## Artifact chain
 
 - [`scripts/growing_graph_expansion_card.py`](/Users/jonreilly/Projects/Physics/scripts/growing_graph_expansion_card.py)
@@ -61,4 +63,3 @@ The narrow, review-safe statement is:
 ## Final Verdict
 
 **retained analog expansion proxy**
-

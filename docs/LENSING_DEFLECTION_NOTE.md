@@ -1,7 +1,7 @@
 # Gravitational Deflection / Lensing Sweep — Power-Law Positive (NOT 1/b)
 
 **Date:** 2026-04-07 (revised after Lane L+ H=0.25 fine refinement)
-**Status:** proposed_retained partial positive — at H=0.25 fine refinement, `kubo_true(b)` on the asymptotic subset b ∈ {3, 4, 5, 6} gives a **clean power law with R² = 0.998** but **slope = −1.43**, NOT the −1 expected from Newton/Einstein 1/b lensing. Refinement steepens the slope: −1.03 at H=0.35 on b ∈ {2..6} → −1.27 at H=0.35 on b ∈ {3..6} → **−1.43 at H=0.25 on b ∈ {3..6}** (R² 0.94 → 0.94 → 0.998). The original Lane L "matches 1/b lensing" headline (medium-only, slope −1.03) is **downgraded**: refinement is moving the slope away from −1, not toward it. What survives is **a clean power-law functional form** (R² > 0.998 at the finest refinement) with an exponent ≈ −1.4 to −1.5 — a meaningful gravity-side functional form but NOT standard Newton/Einstein 1/b lensing. The b=3 reference point matches Lane α's continuum value (+5.986043) to 0.2%, which is a strong consistency check on the harness.
+**Status:** bounded functional-form diagnostic — at H=0.25 fine refinement, `kubo_true(b)` on the asymptotic subset b in {3, 4, 5, 6} gives a **clean power law with R2 = 0.998** but **slope = -1.43**, NOT the -1 expected from Newton/Einstein 1/b lensing. Refinement steepens the slope: -1.03 at H=0.35 on b in {2..6} -> -1.27 at H=0.35 on b in {3..6} -> **-1.43 at H=0.25 on b in {3..6}** (R2 0.94 -> 0.94 -> 0.998). The original Lane L "matches 1/b lensing" headline (medium-only, slope -1.03) is **downgraded**: refinement is moving the slope away from -1, not toward it. What survives is **a clean power-law functional form** (R2 > 0.998 at the finest refinement) with an exponent around -1.4 to -1.5 — a meaningful gravity-side functional-form diagnostic but NOT standard Newton/Einstein 1/b lensing. The b=3 reference point matches Lane alpha's continuum value (+5.986043) to 0.2%, which is a strong consistency check on the harness.
 
 > **Lane L+ update (2026-04-07, H=0.25 added):** The original Lane L
 > reported slope ≈ −1.03 on b ∈ {2..6} at H=0.35 and framed it as
@@ -26,6 +26,9 @@ below for context but is no longer the load-bearing artifact.
 
 - [`scripts/lensing_deflection_fine_single.py`](../scripts/lensing_deflection_fine_single.py) — single-b H=0.25 runner (run per b in a bash loop because of the OOM workaround documented under "Lane L+ — H=0.25 fine refinement")
 - [`scripts/lensing_deflection_lane_lplus.py`](../scripts/lensing_deflection_lane_lplus.py) — combined-analysis runner that fits the slope on the H=0.25 asymptotic subset
+- [`scripts/lensing_deflection_h025_slope_fit_certificate.py`](../scripts/lensing_deflection_h025_slope_fit_certificate.py) — certificate runner that recomputes the H=0.25 b in {3,4,5,6} slope fit from the checked-in single-b outputs and asserts the bounded non-1/b conclusion
+- [`logs/runner-cache/lensing_deflection_h025_slope_fit_certificate.txt`](../logs/runner-cache/lensing_deflection_h025_slope_fit_certificate.txt) — runner cache for the certificate
+- [`outputs/lensing_deflection_h025_slope_fit_certificate.json`](../outputs/lensing_deflection_h025_slope_fit_certificate.json) — structured slope-fit certificate output
 - [`logs/2026-04-07-lensing-fine-asymptotic.txt`](../logs/2026-04-07-lensing-fine-asymptotic.txt) — cached single-b H=0.25 outputs for `b ∈ {3,4,5,6}`
 - [`logs/2026-04-07-lensing-deflection-lane-lplus.txt`](../logs/2026-04-07-lensing-deflection-lane-lplus.txt) — cached combined-analysis output (slope = −1.434, R² = 0.998)
 

@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_grav_wave_post_newtonian.py
-runner_sha256: 7dc6f44c09c33bfdf6e23bab492aa9170f71d225db981000c7dc8bad7ca342b6
+runner_sha256: cf43854527541082260d302ac94e3827db3f94d4eaa49cdbe04de8cecccc7784
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 33.49
+elapsed_sec: 25.40
 status: ok
 ----- stdout -----
 ========================================================================
@@ -19,7 +19,7 @@ scipy available: True
 TEST A: GRAVITATIONAL WAVE PROPAGATION
 ========================================================================
 
-  Poisson solve time: 0.16s
+  Poisson solve time: 0.11s
 
   Field profile along z-axis from source:
       r         f(r)    1/(4pi*r)    ratio
@@ -48,7 +48,7 @@ TEST A: GRAVITATIONAL WAVE PROPAGATION
   90% of full deflection reached at R=6
   -> Beam samples field only near its path
   -> Field at large R from beam path is irrelevant
-  [Test A time: 4.8s]
+  [Test A time: 3.1s]
 
 ========================================================================
 TEST B: POST-NEWTONIAN FORCE FROM MOVING SOURCE
@@ -79,7 +79,7 @@ TEST B: POST-NEWTONIAN FORCE FROM MOVING SOURCE
   RESULT: Retardation correction grows with velocity.
   The framework distinguishes instantaneous from retarded potentials
   when the source moves. This is a genuine post-Newtonian effect.
-  [Test B time: 9.7s]
+  [Test B time: 6.0s]
 
 ========================================================================
 TEST C: CAUSAL STRUCTURE OF FIELD-AMPLITUDE COUPLING
@@ -113,7 +113,7 @@ TEST C: CAUSAL STRUCTURE OF FIELD-AMPLITUDE COUPLING
   Beam density center of mass: (18.8, 9.9, 9.9)
   Beam density max: 2.452245e+09
   Beam spread: sigma_x=0.55, sigma_y=3.97, sigma_z=3.98
-  [Test C time: 6.8s]
+  [Test C time: 4.4s]
 
 ========================================================================
 TEST D: VALLEY-LINEAR vs POST-NEWTONIAN ACTION
@@ -131,7 +131,7 @@ TEST D: VALLEY-LINEAR vs POST-NEWTONIAN ACTION
   f^2 correction exceeds 1% at strength s = 0.0500 (max f = 0.01218)
   diff% vs max_f slope: -14.30%/unit-field
   (should be ~O(1) if f^2 correction is genuine)
-  [Test D time: 11.9s]
+  [Test D time: 11.3s]
 
 ========================================================================
 SYNTHESIS: BEYOND NEWTONIAN GRAVITY
@@ -183,7 +183,7 @@ The two-axiom framework produces:
     information propagation that is the prerequisite for gravitational
     waves in any future dynamical field extension.
 
-Total runtime: 33.3s
+Total runtime: 24.9s
 
 ----- stderr -----
 

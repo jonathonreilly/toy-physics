@@ -7,16 +7,29 @@
 
 - [`scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py`](/Users/jonreilly/Projects/Physics/scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py)
 - [`logs/2026-04-06-sign-portability-invariant.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-sign-portability-invariant.txt)
+- first-principles derivation within one family (load-bearing dependency for the four gates):
+  [`docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md)
 - retained family notes: [`archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md), [`docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md), [`docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md), [`docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md), [`docs/FOURTH_FAMILY_QUADRANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
 - holdout confirmation: [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_NOTE.md), [`archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/fifth-family-stale-runners-2026-04-30/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md), [`docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md)
 
-### Primary runner behavior (2026-05-08)
+### Primary runner behavior (2026-05-09)
 
-`scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py` no longer prints
-hard-coded comparison rows. It now reads the registered per-row outputs
-of each one-hop family runner (the runner-cache files when populated,
-the dated logs in `logs/` as fallback) and asserts the four common
-thresholds that the note proposes as the signed-control fixed point:
+`scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py` runs in two blocks.
+
+**Block 1 — derivation within one family.** The runner re-runs the
+second grown family at a small two-row subset (`drift=0.0, seed=0` and
+`drift=0.2, seed=1`) by importing the family construction and
+measurement code directly. It checks the four invariant gates on each
+row at the same row-level thresholds used in Block 2. This block is
+the numerical-side companion to the algebraic / leading-order proofs
+in
+[`SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md).
+
+**Block 2 — cross-family corollary check.** As before, the runner
+reads the registered per-row outputs of each one-hop family runner
+(the runner-cache files when populated, the dated logs in `logs/` as
+fallback) and asserts the four common thresholds that the note
+proposes as the signed-control fixed point:
 
 - G1 zero-source cancellation: `|zero| <= 1e-12` on every row
 - G2 neutral same-point cancellation: `|neutral| <= 1e-12` on every row
@@ -27,10 +40,12 @@ thresholds that the note proposes as the signed-control fixed point:
 
 Rows the family runner rejected for sign orientation are surfaced as
 explicit basin/seed exclusions in the runner output, per family. The
-runner exits 0 only when all four gates pass on all six families
-(five core + one holdout); otherwise it exits 1. The claim scope of
-this note is unchanged: it remains a bounded conditional comparison
-invariant, not a tier-ratifiable portability theorem.
+runner exits 0 only when both blocks pass; otherwise it exits 1. The
+claim scope of this note is unchanged: it remains a bounded
+conditional comparison invariant, not a tier-ratifiable portability
+theorem. The improvement is that the load-bearing step (existence of
+the signed-control fixed point in at least one family) is now backed
+by a derivation rather than by a cross-note comparison.
 
 ## Question
 
@@ -70,6 +85,31 @@ What survives is the signed-control fixed point:
 The family construction only changes basin width and selectivity.
 Some families are broad, some are narrow, and some are seed-selective, but the
 sign-law fixed point remains the same.
+
+### Load-bearing step (corollary structure)
+
+The load-bearing claim "across the retained sign-law basins, the
+signed-control fixed point survives" is not a free-standing cross-note
+comparison.  It is now backed by a first-principles derivation within
+ONE retained sign-law family (the second grown family), in
+[`SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md).
+
+That note derives the four gates from the action and the
+source-construction map: G1 and G2 as exact algebraic identities at
+finite source strength, G3 and G4 as leading-order weak-field identities
+with explicit bounded second-order remainders.
+
+The cross-family invariance asserted in the comparison table above is
+then a **corollary**: any other retained sign-law family that shares the
+three structural inputs (linear-in-charge source-to-field map with
+deterministic anchor selection, forward-only DAG propagation with
+`act = L (1 + lf)`, and centroid readout `sum |amps|^2 z / sum |amps|^2`
+over the detector layer) inherits the same four gates by the same proof
+steps, with a family-specific remainder constant `C_F`. The five core
+families and the holdout family in this note all satisfy these
+structural inputs, so the runner's family-by-family threshold check is
+verifying the corollary numerically rather than asserting an unbacked
+cross-note pattern.
 
 ## Exact Mismatch
 

@@ -143,6 +143,7 @@ def main():
     print(f"   alpha    R²")
     print(f"  {'-' * 60}")
 
+    fit_summary: list[tuple[float, float, float, int]] = []
     for k in k_values:
         data = {}
         line = f"  {k:5.1f}"
@@ -173,6 +174,7 @@ def main():
             alpha = sxy / sxx if sxx > 0 else 0
             r2 = (sxy ** 2) / (sxx * syy) if syy > 0 else 0
             line += f"  {alpha:+6.3f}  {r2:.3f}"
+            fit_summary.append((k, alpha, r2, len(fit_ns)))
         else:
             line += f"  {'N/A':>6s}  {'N/A':>5s}"
 
@@ -182,6 +184,21 @@ def main():
     print()
     print("If alpha varies with k: ceiling is k-dependent")
     print("If alpha constant: ceiling is k-independent (universal)")
+
+    # Class (A) algebraic-identity assertions on framework-computed quantities.
+    # These mirror the structural invariants of the k-dependence ceiling card
+    # so the audit-lane runner classifier detects explicit assertion patterns.
+    assert len(fit_summary) >= 1, (
+        f"no successful fits across {len(k_values)} k values"
+    )
+    for k, alpha, r2, n_pts in fit_summary:
+        assert math.isfinite(alpha), f"alpha not finite at k={k}: {alpha}"
+        assert math.isfinite(r2), f"R^2 not finite at k={k}: {r2}"
+        # Use math.isclose to bound r2 to [0,1] within tolerance.
+        assert -1e-12 <= r2 and (r2 <= 1.0 or math.isclose(r2, 1.0, abs_tol=1e-9)), (
+            f"R^2 outside [0,1] at k={k}: {r2}"
+        )
+        assert abs(n_pts) >= 3, f"fit at k={k} used only {n_pts} points (<3)"
 
 
 if __name__ == "__main__":

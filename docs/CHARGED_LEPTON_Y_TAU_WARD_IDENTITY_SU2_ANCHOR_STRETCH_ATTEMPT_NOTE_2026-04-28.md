@@ -1,7 +1,9 @@
 # `y_τ` Ward Identity from `SU(2)` Anchor — Stretch Attempt (SA-A)
 
+**Type:** open_gate
+
 **Date:** 2026-04-28
-**Status:** open branch-local **stretch-attempt** note on
+**Status:** open_gate — branch-local **stretch-attempt** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 2 of the charged-
 lepton loop: attempts SA-A `y_τ` Ward identity construction anchored
 on `SU(2)` weak coupling `g_2`, as direct analog of the retained YT-

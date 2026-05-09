@@ -3,6 +3,8 @@
 **Date:** 2026-04-04  
 **Status:** bounded Gate B prototype note
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/evolving_network_prototype_v2.py` now carries explicit assertion checks (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This makes the runner's class-A invariants visible to `docs/audit/scripts/classify_runner_passes.py`. The runner output and pass/fail semantics are unchanged.
+
 ## One-line read
 
 The new `evolving_network_prototype_v2.py` lane is a real generated-vs-imposed

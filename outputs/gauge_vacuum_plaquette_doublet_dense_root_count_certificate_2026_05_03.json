@@ -1,0 +1,72 @@
+{
+  "chart": {
+    "chart_volume_rad3": 31.006217462698547,
+    "per_seed_cell_volume_rad3": 0.008471644115491407,
+    "phi_lower": -1.5707953267948966,
+    "phi_upper": 1.5707953267948966,
+    "psi_lower": 1e-06,
+    "psi_upper": 1.5707953267948966,
+    "theta_lower": -3.141592653589793,
+    "theta_upper": 3.141592653589793
+  },
+  "honest_scope_note": "This certificate is empirical evidence that no additional root cluster appears in the bounded chart at the documented seed density. It is NOT a symbolic or interval-arithmetic exhaustiveness proof. The target equation routes through compressed_local_block_from_line, chaining hermitian linear responses and a Perron-Frobenius live readout, so polynomial reduction is not immediate. Strict symbolic or interval-arithmetic global root-count remains genuine open work.",
+  "n_distinct_roots": 2,
+  "roots": [
+    {
+      "angles": [
+        0.04907656490221557,
+        1.0303722430243114,
+        0.2587716598675984
+      ],
+      "jacobian_singular_values": [
+        1.5969243689212242,
+        0.5172994552349875,
+        0.25216052361266506
+      ],
+      "line": [
+        0.4967705956106183,
+        0.0243993862386191,
+        0.8289404459581099,
+        0.2558933026529225
+      ],
+      "n_seeds_clustered": 2159,
+      "residual_norm": 6.630806898393019e-13
+    },
+    {
+      "angles": [
+        1.0134050670462535,
+        0.060950108356444745,
+        0.050802315301297016
+      ],
+      "jacobian_singular_values": [
+        13.37615437825782,
+        1.0819359780450675,
+        0.5575471925827528
+      ],
+      "line": [
+        0.5273106873489987,
+        0.8459692861767256,
+        0.06083379122626166,
+        0.050780465714758055
+      ],
+      "n_seeds_clustered": 42,
+      "residual_norm": 6.707437923744493e-15
+    }
+  ],
+  "schema": "gauge_vacuum_plaquette_doublet_dense_root_count_certificate_v1",
+  "scope": "empirical dense Monte-Carlo + structured-grid root-count certificate for the bounded positive-angle chart of the retained 3d+1 complement-line live target equation on the selected least-positive-bulk Wilson branch; NOT a symbolic or interval-arithmetic global-exhaustiveness proof.",
+  "search": {
+    "distinct_tol": 1e-07,
+    "n_converged": 2201,
+    "n_random_seeds": 1500,
+    "n_structured_seeds": 2160,
+    "n_total_seeds": 3660,
+    "random_seed_rng_seed": 20260503,
+    "residual_tol": 1e-10,
+    "structured_grid_shape": [
+      15,
+      12,
+      12
+    ]
+  }
+}

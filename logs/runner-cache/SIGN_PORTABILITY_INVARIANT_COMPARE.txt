@@ -1,17 +1,33 @@
 ===== runner cache v1 =====
 runner: scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py
-runner_sha256: 5be9e0deded1ad1037eacf79f2fe655be1ae2900f9a28ff0e7bc1c30e1483966
+runner_sha256: 4a1d645c3c821e7fd4f18f5bc86711eb280defe206af014d28ce9e5b08f11635
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.05
+elapsed_sec: 8.75
 status: ok
 ----- stdout -----
 # Sign Portability Invariant Comparison
 
-Reading registered one-hop family outputs and asserting common
-thresholds for the signed-control fixed point.
+Block 1: derivation within one family (second grown family).
+Block 2: cross-family corollary check via registered family logs.
 
 thresholds: ZERO_TOL=1e-12 NEUTRAL_TOL=1e-12 ANTISYM_TOL=5e-03 EXP_TOL=5e-03
+
+## Derivation verification: second grown family (subset)
+
+Re-running the second grown family sweep at a two-row subset to
+check that the four gates derived in the theorem note hold under
+computation, not just under log-reading. G1 and G2 are the
+exact algebraic identities; G3 and G4 are the leading-order
+weak-field identities with bounded second-order remainders.
+
+   drift seed        zero     neutral        plus       minus     G3_res     G4_res
+   --------------------------------------------------------------------------------------
+    0.00    0  +0.000e+00  +0.000e+00  +4.525e-06  -4.526e-06  3.758e-05  2.711e-05   [PASS]
+    0.20    1  +0.000e+00  +0.000e+00  -1.734e-05  +1.734e-05  2.596e-05  1.872e-05   [PASS]
+
+   derivation_block: PASS
+   (G1, G2 exact at finite strength; G3, G4 leading-order with bounded remainders)
 
 ## Core families
 
@@ -71,6 +87,7 @@ thresholds: ZERO_TOL=1e-12 NEUTRAL_TOL=1e-12 ANTISYM_TOL=5e-03 EXP_TOL=5e-03
 
 ## Summary
 
+  derivation block (second grown family) = PASS
   Grown transfer basin                 G1G2G3G4 = PPPP
   Alternative connectivity family      G1G2G3G4 = PPPP
   Second grown-family sign             G1G2G3G4 = PPPP
@@ -78,7 +95,7 @@ thresholds: ZERO_TOL=1e-12 NEUTRAL_TOL=1e-12 ANTISYM_TOL=5e-03 EXP_TOL=5e-03
   Fourth family quadrant               G1G2G3G4 = PPPP
   Fifth family radial                  G1G2G3G4 = PPPP
 
-Order parameter candidate (unchanged): the portable quantity is the signed-control fixed point — exact zero-source null, exact neutral cancellation, plus/minus antisymmetry, and weak-field response near unit slope. Basin width and seed selectivity remain family-dependent and are reported above as basin/seed exclusions.
+Order parameter (now derivation-backed): the portable quantity is the signed-control fixed point — exact zero-source null, exact neutral cancellation, plus/minus antisymmetry, and weak-field response near unit slope. The derivation block above re-derives G1, G2 as exact algebraic identities at finite source strength and G3, G4 as leading-order weak-field identities with bounded second-order remainders within one family. The cross-family block then verifies that the same gates hold on the other retained sign-law families row-by-row, completing the corollary structure described in the parent note.
 
 OVERALL: PASS
 

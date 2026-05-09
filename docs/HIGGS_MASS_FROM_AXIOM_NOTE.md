@@ -301,7 +301,7 @@ pipeline-derived status.
 |---|---|---|---|---|
 | 2-loop CW + RGE running | [`HIGGS_MASS_DERIVED_NOTE.md`](HIGGS_MASS_DERIVED_NOTE.md) (`bounded_theorem`, td=309) + `scripts/frontier_higgs_mass_corrected_yt.py` (corrected-y_t RGE) | audit ledger only | tree-level → ~119.93 GeV via corrected-y_t at 3L+NNLO | conditional on `y_t` Ward + RGE-transport scaffolding |
 | Lattice spacing convergence (`m_H/m_W` flow as `a → 0`) | [`HIGGS_FROM_LATTICE_NOTE.md`](HIGGS_FROM_LATTICE_NOTE.md) (`bounded_theorem`, td=310) | audit ledger only | `m_H/m_W = 1.85` at `a=1` → 1.64 at `a=0.5` → 1.558 SM in continuum | continuum-limit theorem surface |
-| Wilson-term taste-breaking ((1,4,6,4,1) staircase) | [`WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md`](WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md) (`bounded_theorem`) + `scripts/frontier_wilson_bz_corner_hamming_staircase.py` | audit ledger only | proves the finite staircase identity on the canonical `Z^3 + t` APBC surface | **still open**: quantitative theorem translating the staircase into a reduced effective `N_taste` in [5] and its effect on `m_H_tree` |
+| Wilson-term taste-breaking ((1,4,6,4,1) staircase) | [`WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md`](WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md), [`HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md`](HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md), [`WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md`](WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md), [`WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md`](WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md), and [`WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md`](WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md) | audit ledger only | proves the finite staircase identity and bounded leading-order Wilson correction formulas | **still open**: no retained closure of the physical gap; uniform `N_taste = 16`, any nonzero Wilson coefficient `r`, and the leading-order comparison to 125.10 GeV remain bounded/noncanonical inputs |
 | Buttazzo full-3-loop calibration cross-check | `scripts/frontier_higgs_buttazzo_calibration.py` | (auxiliary calibration) | independent ~125.1 GeV via 3-loop Buttazzo parametric calibration | a different observable along a different chain; not load-bearing for this note |
 
 ### What this Step 7 changes
@@ -324,12 +324,14 @@ delegated.
   §2.3. That cluster requires an independent non-perturbative matching
   theorem before it can support a physical-mass closure.
   Closing the cluster closes this gap.
-- The **Wilson taste-breaking row is the most concrete follow-on
-  derivation target** of the four. The (1,4,6,4,1) staircase is a
-  direct algebraic structure; its reduction of effective `N_taste` and
-  the resulting `m_H_tree` correction is the cleanest follow-on source addition
-  that would bring this note's table to fully-cited closure on
-  `bounded_theorem` tier. Out of scope for the current note update, but flagged.
+- The **Wilson taste-breaking row now has bounded follow-on source
+  notes** for the staircase, the uniform-`N_taste = 16` boundary, the
+  corrected `V_taste` formula, the Wilson-shifted extremum, and the
+  leading-order `m_H_tree` comparison. These notes sharpen the
+  dependency chain but do **not** close the physical +12% gap: the
+  channel choice is non-derived, the parent canonical setup has
+  `r = 0`, and the `r ≈ 0.235` number is a leading-order comparison
+  value rather than a derivation of a Wilson coefficient.
 
 ---
 

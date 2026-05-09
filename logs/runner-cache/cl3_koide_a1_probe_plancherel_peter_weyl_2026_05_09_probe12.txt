@@ -1,0 +1,133 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_plancherel_peter_weyl_2026_05_09_probe12.py
+runner_sha256: 5e03e9de20e7c4e35597841c80e3102b8728113ebe3ef437e586cd8a6c9115cc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+/private/tmp/cl3-review-open-prs-20260509b.7sXhoj/scripts/cl3_koide_a1_probe_plancherel_peter_weyl_2026_05_09_probe12.py:493: SyntaxWarning: invalid escape sequence '\h'
+  measure on \hat{C_3}.
+=== Section 1: Retained inputs ===
+
+
+=== Section 2: Sub-derivation (a) ===
+
+C_3 acts on M_3(C) by conjugation: X -> U_g X U_g^*
+This action is unitarily implemented and preserves *.
+
+
+=== Section 3: Sub-derivation (b) ===
+
+Conditional expectation E: M_3(C) -> A^{C_3} = circulants
+E(X) = (1/3)(X + alpha_1(X) + alpha_2(X))
+
+
+=== Section 4: Frobenius pairing baseline ===
+
+Standard Frobenius <X, Y>_F = Tr(X^* Y) is C_3-invariant.
+
+
+=== Section 5: Plancherel measure on \hat{C_3} ===
+
+KEY QUESTION: Does Plancherel measure on \hat{C_3} give the
+(1,1) real-isotype weighting, or the (1,2) complex-character
+weighting?
+
+
+=== Section 6: C-character vs R-isotype decomposition ===
+
+
+=== Section 7: Plancherel-weighted scalar trace ===
+
+If we extract a scalar from the Hilbert C*-module valued pairing
+E(X^*Y) ∈ A^{C_3}, we need a state on A^{C_3}. The PLANCHEREL
+(uniform) state assigns weight 1/3 to each of the three
+complex characters {1, ω, ω̄}.
+
+
+=== Section 8: Convention-trap re-surface ===
+
+Sub-derivations (a), (b) close. The closure step from canonical
+bimodule structure to (1,1)-multiplicity weighting FAILS.
+
+
+=== Section 9: Plancherel does not canonically pick (1,1) ===
+
+
+=== Section 10: Convention robustness check ===
+
+
+=== Section 11: Probe 12 verdict ===
+
+STATUS: Sub-derivations (a), (b) close from retained content.
+        The closure step FAILS at the convention-trap.
+
+(a) C_3 acts on M_3(C) by *-automorphisms — VERIFIED (Section 2)
+(b) Hilbert C*-module structure over A^{C_3} — VERIFIED (Section 3)
+Plancherel measure on \hat{C_3} — UNIFORM (Section 5)
+Plancherel-uniform scalar trace -> (1,2) weighting (Section 7-8)
+(1,1) weighting requires NON-Plancherel state on A^{C_3} (Section 9)
+
+Net result: SHARPENED bounded obstruction.
+            Residual is precisely the R-isotype vs C-character
+            counting choice, not a generic normalization.
+
+============================================================
+PASS 1.1 C is unitary (C C^* = I)
+PASS 1.2 C^3 = I (C is order 3)
+PASS 1.3 Eigenvalues of C are {1, ω, ω̄}
+PASS 1.4 H = aI + bC + b̄C^2 is Hermitian
+PASS 1.5 H = aI + bC + b̄C^2 commutes with C (is C_3-equivariant)
+PASS 1.6 H is circulant (CHC^* = H)
+PASS 1.7 (a, b) -> H -> (a, b) round-trip
+PASS 2.1 alpha_g preserves * (alpha(X^*) = alpha(X)^*)
+PASS 2.2 alpha_g preserves multiplication
+PASS 2.3 alpha_g preserves identity
+PASS 2.4a Hermitian circulant is alpha-fixed
+PASS 2.4b Diagonal non-circulant is NOT alpha-fixed
+PASS 3.1 E is linear: E(X1+X2) = E(X1) + E(X2)
+PASS 3.2 E^2 = E (idempotent)
+PASS 3.3 E(X) is a circulant for any X
+PASS 3.4 E(circulant) = circulant
+PASS 3.5 E is C_3-equivariant: E(alpha_g(X)) = E(X)
+PASS 3.6 E(X^*X) is positive semi-definite
+PASS 3.7 E(X^*X) ≠ 0 for X ≠ 0 (faithfulness witness)
+PASS 3.8 <X,Y>_E = E(X^*Y) ∈ A^{C_3} (is circulant)
+PASS 4.1 <alpha(X), alpha(Y)>_F = <X, Y>_F (C_3-invariance of Tr)
+PASS 4.2 ||pi_+(H)||^2_F = 3a^2
+PASS 4.3 ||pi_perp(H)||^2_F = 6|b|^2
+PASS 4.4 At |b|=a/√2 (A1): E_+ = E_perp (equipartition)
+PASS 5.1 Plancherel measure on \hat{C_3} is uniform: μ(χ) = 1/3 for each character
+PASS 5.2 Total Plancherel measure = 1
+PASS 5.3 Plancherel measure on \hat{C_3} does NOT favor real-isotype counting
+PASS 6.1.1 ['I'] is C_3-fixed (trivial character)
+PASS 6.1.2 C is C_3-fixed (trivial character)
+PASS 6.1.3 C2 is C_3-fixed (trivial character)
+PASS 6.2 dim_C(trivial isotype in M_3(C)) = 3
+PASS 6.3 dim_C(ω isotype in M_3(C)) = dim_C(ω̄ isotype in M_3(C)) = 3
+PASS 6.4 Total dim: 3+3+3 = 9 = dim_C(M_3(C))
+PASS 6.5 dim_R(trivial real isotype in M_3(C)_Herm) = 3
+PASS 6.6 dim_R(real doublet isotype in M_3(C)_Herm) = 6
+PASS 7.1 Plancherel-uniform scalar trace = a^2 + 2|b|^2 = (1,2) weighting
+PASS 7.2 At A1 (|b|^2=a^2/2): Plancherel-uniform norm = a^2 + 2|b|^2 = 2a^2
+PASS 7.3 At kappa=1 (|b|^2=a^2): Plancherel-uniform norm = a^2 + 2(a^2) = 3a^2
+PASS 8.1 Block-total / Plancherel-uniform = 3 (constant rescaling)
+PASS 8.4 Block-total log (1,1) is MAXIMIZED at A1 over kappa=1
+PASS 8.5 Det-carrier log (1,2) is MAXIMIZED at kappa=1 over A1
+PASS 9.1 Uniform Plancherel state -> a^2 + 2|b|^2 = (1,2)
+PASS 9.2 Real-isotype state ≠ uniform state (different weighting)
+PASS 9.3 Convention-trap localized: (a) inner product is canonical, but (b) log-functional is not
+PASS 10.1 The RATIO E_+ / E_perp is scale-invariant (so A1 is convention-free)
+PASS 10.2 (1,1) vs (1,2) weighting choice is scale-invariant — does NOT resolve convention
+PASS 10.3 Basis change C -> C^{-1} preserves the C_3-action (isotype structure)
+PASS 11.1 Sub-derivation (a) closes from retained content
+PASS 11.2 Sub-derivation (b) closes from retained content
+PASS 11.3 Plancherel measure on \hat{C_3} does not canonically pick (1,1)
+PASS 11.4 The convention-trap localizes to the R-isotype vs C-character choice
+PASS 11.5 Probe 12 returns SHARPENED bounded obstruction, NOT closure
+============================================================
+=== TOTAL: PASS=52, FAIL=0 ===
+
+----- stderr -----
+

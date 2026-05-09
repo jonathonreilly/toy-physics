@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py
+runner_sha256: 11547676e45c0004657d2147d79296b952d948d486e05269c89f74db4cafcc6c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 33.24
+status: ok
+----- stdout -----
+==============================================================================
+STRUCTURED MIRROR BORN-SAFE — SLICED INDEPENDENT RUNNER (2026-05-09)
+Recomputes Born values from first principles on a 32-config slice
+Source note: docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md
+Born safety threshold: 1e-14
+Seeds per config: 6 (matches scan confirmation protocol)
+Slice size: 32 configurations
+==============================================================================
+
+  config                                       Born_mean    Born_min   ok
+  ------------------------------------------------------------------------
+  N=40 npl=12 r=3.0 g=1.25 j=0.00               8.79e-03    8.79e-03    6
+  N=25 npl= 8 r=2.5 g=1.25 j=0.00               8.07e-02    8.07e-02    6
+  N=25 npl= 8 r=4.5 g=1.25 j=0.00               7.29e-02    7.29e-02    6
+  N=25 npl=20 r=2.5 g=1.25 j=0.00               8.07e-02    8.07e-02    6
+  N=25 npl=20 r=4.5 g=1.25 j=0.00               7.32e-02    7.32e-02    6
+  N=40 npl= 8 r=2.5 g=1.25 j=0.00               7.47e-02    7.47e-02    6
+  N=40 npl= 8 r=4.5 g=1.25 j=0.00               6.75e-02    6.75e-02    6
+  N=40 npl=20 r=2.5 g=1.25 j=0.00               7.49e-02    7.49e-02    6
+  N=40 npl=20 r=4.5 g=1.25 j=0.00               7.14e-02    7.14e-02    6
+  N=30 npl=12 r=3.5 g=1.25 j=0.00               3.24e-02    3.24e-02    6
+  N=30 npl=16 r=3.5 g=1.25 j=0.00               3.24e-02    3.24e-02    6
+  N=40 npl=12 r=2.5 g=1.25 j=0.00               7.49e-02    7.49e-02    6
+  N=40 npl=12 r=3.5 g=1.25 j=0.00               2.12e-02    2.12e-02    6
+  N=40 npl=12 r=3.0 g=1.00 j=0.00               1.38e-01    1.38e-01    6
+  N=40 npl=12 r=3.0 g=1.50 j=0.00               9.65e-02    9.65e-02    6
+  N=40 npl=16 r=3.0 g=1.25 j=0.00               8.79e-03    8.79e-03    6
+  N=40 npl= 8 r=3.0 g=1.25 j=0.00               8.57e-03    8.57e-03    6
+  N=30 npl=12 r=3.0 g=1.25 j=0.00               1.63e-02    1.63e-02    6
+  N=25 npl= 8 r=2.5 g=1.00 j=0.00               1.13e-01    1.13e-01    6
+  N=25 npl= 8 r=2.5 g=1.50 j=0.00               1.56e-02    1.56e-02    6
+  N=40 npl=20 r=4.5 g=1.00 j=0.00               1.55e-01    1.55e-01    6
+  N=40 npl=20 r=4.5 g=1.50 j=0.00               6.69e-02    6.69e-02    6
+  N=25 npl= 8 r=2.5 g=1.25 j=0.15               9.27e-02    4.34e-02    6
+  N=25 npl= 8 r=2.5 g=1.25 j=0.30               1.01e-01    4.03e-02    5
+  N=40 npl=12 r=3.0 g=1.25 j=0.15               1.19e-01    4.33e-02    6
+  N=40 npl=12 r=3.0 g=1.25 j=0.30               4.05e-02    4.64e-03    5
+  N=40 npl=20 r=4.5 g=1.25 j=0.15               8.91e-02    4.23e-02    6
+  N=40 npl=20 r=4.5 g=1.25 j=0.30               6.86e-02    1.80e-02    5
+  N=30 npl=16 r=3.5 g=1.25 j=0.15               8.88e-02    5.26e-02    6
+  N=30 npl=16 r=3.5 g=1.25 j=0.30               3.43e-01    2.79e-02    5
+  N=25 npl=20 r=4.5 g=1.50 j=0.30               3.03e-01    6.56e-02    5
+  N=40 npl= 8 r=2.5 g=1.00 j=0.15               5.02e-02    2.93e-02    6
+
+Sliced grid Born minimum: 4.6428e-03
+Achieved at: N=40 npl=12 r=3.0 g=1.25 j=0.30
+Born safety threshold:    1e-14
+Note's documented best:   8.79e-03
+
+PASS: sliced grid minimum is well above 1e-14, consistent with
+      the note's bounded null-result claim. Sliced verification
+      reproduces the order of magnitude of the documented best
+      near-Born candidate (8.79e-03) on the same propagator.
+
+----- stderr -----
+

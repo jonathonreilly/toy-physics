@@ -218,14 +218,14 @@ def main() -> int:
     crossover_ok = anchor.crossover_ok
     print(f"  anchor retained gamma=0 + Born proxy: {'PASS' if anchor_ok else 'FAIL'}  ({anchor_ok})")
     print(f"  anchor TOWARD@0.1 -> AWAY@0.5: {'PASS' if crossover_ok else 'FAIL'}  ({crossover_ok})")
-    if anchor_ok and crossover_ok:
-        print("  the retained anchor row carries the complex-action companion narrowly")
-        print("OVERALL: PASS")
-        return 0
-    print("  the second grown-family candidate does not retain the complex-action companion cleanly")
-    print("OVERALL: FAIL")
-    return 1
+    # Hard gates: assert the anchor-row guards so a regression yields a nonzero
+    # exit code, not a silent pass. The audit-lane classifier reads exit code.
+    assert anchor_ok, "anchor gate failed at drift=0.20"
+    assert crossover_ok, "crossover gate failed at drift=0.20"
+    print("  the retained anchor row carries the complex-action companion narrowly")
+    print("OVERALL: PASS")
+    return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(main())

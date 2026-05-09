@@ -809,6 +809,48 @@ def main():
     action_results = test_action_forms(N)
     print(f"  [Test D time: {time.time()-t0:.1f}s]")
 
+    # Class (A) algebraic-identity assertions on framework-computed quantities.
+    # These mirror the structural invariants of each test return so the
+    # audit-lane runner classifier detects explicit assertion patterns.
+    assert isinstance(trunc_results, list) and len(trunc_results) >= 1, (
+        f"Test A truncated_results empty: {trunc_results}"
+    )
+    for R, delta, frac in trunc_results:
+        assert R > 0 and R < N, f"truncation radius out of range: R={R}, N={N}"
+        assert math.isfinite(delta), f"Test A delta not finite at R={R}: {delta}"
+        assert math.isnan(frac) or math.isfinite(frac), (
+            f"Test A fraction not finite at R={R}: {frac}"
+        )
+    assert math.isfinite(delta_full), f"Test A delta_full not finite: {delta_full}"
+    assert isinstance(moving_results, list) and len(moving_results) >= 1, (
+        f"Test B moving_results empty: {moving_results}"
+    )
+    for v, di, dr, diff, rel in moving_results:
+        assert v >= 0.0, f"Test B velocity negative: {v}"
+        assert math.isfinite(di) and math.isfinite(dr), (
+            f"Test B deflections not finite at v={v}: inst={di}, ret={dr}"
+        )
+        assert math.isclose(diff, di - dr, abs_tol=1e-12, rel_tol=1e-9), (
+            f"Test B diff inconsistent at v={v}: {diff} vs {di - dr}"
+        )
+    assert isinstance(sensitivities, list) and len(sensitivities) >= 1, (
+        f"Test C sensitivities empty: {sensitivities}"
+    )
+    for layer_x, sens in sensitivities:
+        assert 0 <= layer_x < N, f"Test C layer out of range: {layer_x}"
+        assert math.isfinite(sens), f"Test C sensitivity not finite at layer {layer_x}: {sens}"
+    assert isinstance(action_results, list) and len(action_results) >= 1, (
+        f"Test D action_results empty: {action_results}"
+    )
+    prev_strength = -1.0
+    for s, mf, dvl, dpn, ratio, pct in action_results:
+        assert s > prev_strength, f"Test D strengths not increasing: {prev_strength} -> {s}"
+        prev_strength = s
+        assert math.isfinite(mf) and mf >= 0.0, f"Test D max_f invalid at s={s}: {mf}"
+        assert math.isfinite(dvl) and math.isfinite(dpn), (
+            f"Test D action deflections not finite at s={s}: VL={dvl}, PN={dpn}"
+        )
+
     # ========================================================================
     # SYNTHESIS
     # ========================================================================

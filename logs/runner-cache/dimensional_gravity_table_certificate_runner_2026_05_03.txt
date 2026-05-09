@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py
-runner_sha256: 789aa40c753ff14810d10f9d6fce084421739aed203a04196f90955b4351d3ba
+runner_sha256: 218df4943f40517c268bed9823e8388718f1dc604890563876bb547b9f7b7c21
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.04
+elapsed_sec: 0.08
 status: ok
 ----- stdout -----
 ======================================================================
@@ -25,8 +25,30 @@ C4: spent-delay action S=L*f gives F~M=0.5 (sqrt(M))
   [PASS] spent-delay: deflection ∝ sqrt(source_strength) — M=2 ratio=1.4142 (sqrt 2=1.4142); M=4 ratio=2.0000 (sqrt 4=2.0000)
 C5: 4D distance tail flagged as width-limited in the note
   [PASS] 4D W∈{7,8} tail slopes far from Newtonian 1/b^2 (width-limited honest read) — max |slope - (-2)| = 1.71
+C6: 3D row companion-cache assertion (same_family_3d_closure.txt)
+  [PASS] logs/runner-cache/same_family_3d_closure.txt names scripts/same_family_3d_closure.py
+  [PASS] logs/runner-cache/same_family_3d_closure.txt SHA-fresh — sha=d20677929af9
+  [PASS] logs/runner-cache/same_family_3d_closure.txt exited cleanly
+  [PASS] 3D Born = 4.20e-15 in cache
+  [PASS] 3D F~M = 1.00 in cache
+  [PASS] 3D distance tail b^(-0.93) in cache
+  [PASS] 3D gravity TOWARD in cache
+  [PASS] 3D decoherence ≈ 50% in cache
+C7: 4D row companion-cache + W=8 frozen log assertion
+  [PASS] logs/runner-cache/four_d_distance_width_probe.txt names scripts/four_d_distance_width_probe.py
+  [PASS] logs/runner-cache/four_d_distance_width_probe.txt SHA-fresh — sha=3fe3047271cb
+  [PASS] logs/runner-cache/four_d_distance_width_probe.txt exited cleanly
+  [PASS] logs/2026-04-04-4d-wide-distance-law.txt present
+  [PASS] 4D W=7 TOWARD support 6/6 in cache
+  [PASS] 4D W=7 far tail b^(-0.96) in cache
+  [PASS] 4D W=7 peak at z=4 in cache
+  [PASS] 4D W=8 frozen header (W=8 L=15 h=0.5)
+  [PASS] 4D W=8 Born = 4.43e-15
+  [PASS] 4D W=8 F~M = 1.00
+  [PASS] 4D W=8 TOWARD: 6/6
+  [PASS] 4D W=8 early tail b^(-0.54)
 
-PASS=5/5
+PASS=7/7
 STATUS: STRUCTURAL CERTIFICATE PASS
 
 ----- stderr -----

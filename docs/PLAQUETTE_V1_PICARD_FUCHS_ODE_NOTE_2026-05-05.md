@@ -5,6 +5,16 @@
 **Status:** bounded support theorem, unaudited.
 **Primary runner:** `scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py`
 
+**All-order proof companion (added 2026-05-09):**
+[`PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md`](PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md)
+upgrades the truncated-series substitution and finite ODE-vs-Weyl
+agreement below to an all-order proof that `L · J(β) = 0` identically
+in `Q[[β]]` and that `J(β)` IS the analytic Frobenius branch at
+`β = 0`. That note's runner uses the Bostan-Salvy-Schost
+finite-window-suffices theorem combined with the runner-internal
+D-finite parameter bounds `(R, D) = (3, 2)`. The independent audit
+lane decides whether that companion closes the all-order gap.
+
 ## Claim
 
 For the single-plaquette SU(3) Wilson integral

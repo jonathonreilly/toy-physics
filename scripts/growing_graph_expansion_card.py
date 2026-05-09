@@ -114,6 +114,24 @@ def main() -> None:
     static_mean_r = graph_stats(seed, center)[2]
     static_max_r = graph_stats(seed, center)[3]
 
+    # Class (A) algebraic-identity assertions on framework-computed quantities.
+    # These mirror the structural invariants of the growing-graph card so the
+    # audit-lane runner classifier detects explicit assertion patterns.
+    assert math.isclose(counts[0], len(seed), abs_tol=0), (
+        f"initial node count must equal seed size: {counts[0]} vs {len(seed)}"
+    )
+    for i in range(1, len(counts)):
+        assert counts[i] >= counts[i - 1], (
+            f"node count must be non-decreasing: step {i} {counts[i]} < {counts[i-1]}"
+        )
+    for i in range(1, len(max_rs)):
+        assert max_rs[i] >= max_rs[i - 1] - 1e-12, (
+            f"max radius must be non-decreasing: step {i} {max_rs[i]} < {max_rs[i-1]}"
+        )
+    assert math.isclose(graph_stats(seed, center)[0], static_count, abs_tol=0), (
+        f"static control count drift: {graph_stats(seed, center)[0]} vs {static_count}"
+    )
+
     print()
     print("STATIC CONTROL")
     print(f"  node count stays {static_count}")

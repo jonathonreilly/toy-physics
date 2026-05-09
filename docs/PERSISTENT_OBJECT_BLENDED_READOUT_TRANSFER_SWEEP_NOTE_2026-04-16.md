@@ -1,7 +1,15 @@
 # Persistent Object Blended Readout Transfer Sweep
 
 **Date:** 2026-04-16  
-**Status:** bounded compact-object response transfer positive with one proposed_retained readout on the nearby exact-family neighborhood; still not a persistent inertial-mass closure
+**Status:** bounded sliced certificate covering only the four boundary-probe cases (baseline, source1.5, width4, length7) at fixed blend=0.25 with the top3 compact object; below the original full nearby-family transfer framing and not a persistent inertial-mass closure
+
+**Note:** the claim has been narrowed to honestly match the available cached
+runner output. The two extra cases (`source2.5`, `length5`) that appeared in
+the earlier framing of this row are not produced by the sliced runner, and
+the `top2` mode is not produced either. Earlier descriptions in this file
+of "full nearby-family neighborhood", "6/6 top3" and "1/6 top2" totals are
+retained below only as the *original* framing and are explicitly *not* the
+load-bearing claim of this sliced certificate.
 
 ## Artifact chain
 
@@ -9,29 +17,6 @@
 - Boundary log: [`logs/2026-04-16-persistent-object-blended-readout-boundary-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-blended-readout-boundary-probe.txt)
 - Transfer script: [`scripts/persistent_object_blended_readout_transfer_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_blended_readout_transfer_sweep.py)
 - Transfer log: [`logs/2026-04-16-persistent-object-blended-readout-transfer-sweep.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-blended-readout-transfer-sweep.txt)
-
-## Runner/log evidence (audit repair, 2026-05-08)
-
-The cited transfer-sweep runner was re-executed via the canonical
-`scripts/precompute_audit_runners.py` mechanism to close the auditor's
-runner-artifact gap on the bounded outer-transfer claim. The SHA-pinned
-runner-cache file is:
-
-- [`logs/runner-cache/persistent_object_blended_readout_transfer_sweep.txt`](../logs/runner-cache/persistent_object_blended_readout_transfer_sweep.txt)
-
-The runner is annotated with `AUDIT_TIMEOUT_SEC = 1800` (representative
-runtime ~500 s on this hardware; the default 120 s ceiling was too tight).
-The cached run reproduces the six fixed-blend top2/top3 cases at
-`blend = 0.25` with the frozen setup (`h = 0.25`, source strengths
-`0.001, 0.002, 0.004, 0.008`, three repeated updates, `field max = 0.02`).
-The bottom-line totals match the note's headline:
-
-- `top3` admissible on `6 / 6` cases
-- `top2` admissible on `1 / 6` cases (only `length7`)
-
-This evidence supports only the bounded outer-transfer portion of the headline.
-The note's stronger inward-source boundary phrasing remains conditional and is
-not promoted by this repair.
 
 ## Question
 
@@ -64,18 +49,15 @@ Fixed across the sweep:
 - fixed per-case field calibration to `field max = 0.02`
 - blended detector readout with fixed `blend = 0.25`
 
-Nearby cases:
+Sliced certificate cases (the four boundary-probe cases):
 
 1. baseline: `L = 6`, `W = 3`, `source_z = 2.0`
 2. source1.5: `L = 6`, `W = 3`, `source_z = 1.5`
-3. source2.5: `L = 6`, `W = 3`, `source_z = 2.5`
-4. width4: `L = 6`, `W = 4`, `source_z = 2.0`
-5. length5: `L = 5`, `W = 3`, `source_z = 2.0`
-6. length7: `L = 7`, `W = 3`, `source_z = 2.0`
+3. width4: `L = 6`, `W = 4`, `source_z = 2.0`
+4. length7: `L = 7`, `W = 3`, `source_z = 2.0`
 
-Object modes:
+Object mode in the sliced certificate:
 
-- `top2`
 - `top3`
 
 Frozen gates:
@@ -85,65 +67,44 @@ Frozen gates:
 - all step-wise `F~M` exponents stay in `[0.95, 1.05]`
 - response-coefficient drift `<= 10%`
 
+The `top2` mode and the additional cases (`source2.5`, `length5`) are not part
+of this sliced certificate.
+
 ## Frozen result
 
-### Headline
+### Headline (sliced certificate)
 
-`top3` with the fixed blended readout is admissible on the full nearby
-exact-family neighborhood.
+`top3` with the fixed blended readout is admissible on each of the four
+boundary-probe cases at `blend = 0.25`.
 
-Totals:
+Totals on the sliced certificate:
 
-- `top3`: `6 / 6`
-- `top2`: `1 / 6`
+- `top3`: `4 / 4` boundary cases at `blend = 0.25`
+- `top2`: not produced in this sliced certificate
 
-So the earlier complementary broad/adaptive split is now resolved on the tested
-nearby exact-family family without changing the object class.
+So the bounded statement is: the same `blend = 0.25` setting that was found by
+the boundary probe also passes the live `top3` admissibility check on those
+same four cases when run end-to-end through the transfer-sweep runner.
 
-### Summary table
+### Summary table (sliced certificate)
 
-| case | `top2` | `top3` | verdict |
-| --- | :---: | :---: | --- |
-| baseline | ❌ | ✅ | `top3` bridge |
-| source1.5 | ❌ | ✅ | `top3` bridge |
-| source2.5 | ❌ | ✅ | `top3` bridge |
-| width4 | ❌ | ✅ | `top3` bridge |
-| length5 | ❌ | ✅ | `top3` bridge |
-| length7 | ✅ | ✅ | `top2` bridge |
+| case | `top3` at blend=0.25 | verdict |
+| --- | :---: | --- |
+| baseline | True | `top3` bridge |
+| source1.5 | True | `top3` bridge |
+| width4 | True | `top3` bridge |
+| length7 | True | `top3` bridge |
 
-### Why this is a real upgrade
+### What is *not* in this sliced certificate
 
-The transfer is not just the original miss pair being rescued.
-
-The same fixed readout now clears:
-
-- both source-shifted rows: `source1.5`, `source2.5`
-- both geometry rows on the short side: `width4`, `length5`
-- the longer row where the adaptive readout had failed before: `length7`
-
-So the surviving object-plus-response lane is no longer:
-
-> exact-lattice `top3` object plus case-dependent readout choice
-
-It is now:
-
-> exact-lattice `top3` object plus one retained blended readout architecture on
-> the nearby exact-family neighborhood
-
-### Where the compact floor sits
-
-The floor is still near `top3`.
-
-`top2` does not transfer:
-
-- it fails on `5 / 6` cases
-- the only opening is the longer `length7` slice
-
-So the compact-object narrowing is bounded:
-
-- `top1` is already closed by update instability
-- `top2` is only a local boundary opening
-- `top3` is the first transferable object class under one retained readout
+The earlier framing of this note (preserved below) listed six cases and
+both `top2` and `top3` modes, with totals `top3`: `6 / 6` and `top2`:
+`1 / 6`. Those totals are *not* supported by the sliced certificate. The
+two extra cases (`source2.5`, `length5`) are not produced; `top2` is not
+produced. The compact-object floor framing below ("`top2` is only a local
+boundary opening, `top3` is the first transferable object class under one
+retained readout") was originally drawn from those six-case totals and so
+is also outside the sliced certificate's scope.
 
 ## Safe read
 

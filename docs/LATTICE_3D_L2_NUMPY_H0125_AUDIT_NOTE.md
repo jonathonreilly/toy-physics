@@ -3,6 +3,8 @@
 **Date:** 2026-04-05  
 **Status:** bounded negative on the reduced numpy audit family
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/lattice_3d_l2_numpy_h0125_audit.py` now carries explicit assertion checks (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This makes the runner's class-A invariants visible to `docs/audit/scripts/classify_runner_passes.py`. The runner output and pass/fail semantics are unchanged.
+
 ## Artifact chain
 
 - [`scripts/lattice_3d_l2_numpy_h0125_audit.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_numpy_h0125_audit.py)

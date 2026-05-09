@@ -1,14 +1,34 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
+---
+
+**This is a synthesis/overview note. It does not establish any retained claim.**
+For retained claims, see the per-claim notes it references in the per-claim index
+under `## Audit scope` below.
+
+---
+
 **Claim type:** meta
+**Claim scope:** support / historical synthesis only — does not propagate retained-grade
+**Audit status:** audited_conditional (per audit ledger)
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+This document is **labeled support / historical synthesis**. It is an overview /
+roadmap that indexes per-claim notes; it is not itself a retained-claim surface.
+Quantitative readouts, tables, and "established" / "publishable" enumerations
+appearing below are preserved as **historical program memory only**. Any
+retained / bounded / conditional status surface lives in the per-claim notes
+referenced from the per-claim index, plus the audit ledger
+(`docs/audit/AUDIT_LEDGER.md`); it does **not** propagate from this note.
 
 ## Audit scope
 
 This file is an **overview / index** of an earlier program-phase
 synthesis. It is **not** a single retained theorem and **must not** be
-audited as one. The auditor (`synthesis_note`,
-`audit_status=audited_conditional`, `claim_type=meta`) flagged this row
-as `scope_too_broad`. The auditor's repair target reads, verbatim:
+audited as one. The audit ledger row for `synthesis_note` classified
+this source as conditional/meta and flagged it as `scope_too_broad`.
+The auditor's repair target reads, verbatim:
 
 > scope_too_broad: split this synthesis note into atomic retained
 > claims and provide each claim's cited runner note, frozen runner
@@ -94,6 +114,16 @@ A future review-loop pass should physically split this document into
 the atomic per-claim files implied above, register a runner manifest
 and certificate per claim, and open one audit row per atomic claim.
 That is **out of scope** for this conditional-row repair.
+
+### Reading guide: this is a roadmap, not a derivation
+
+The per-claim index above is the roadmap. The `→ <CLAIM_ID_NOTE>`-style
+pointers inside each bullet are **navigation aids** to the dedicated
+per-claim notes (where the actual retained / bounded / conditional
+status surface lives). They are not assertions that this synthesis
+file derives, supports, or status-propagates the linked claims. To
+check the live status of any item below, follow the pointer to the
+linked per-claim note and consult its audit-ledger row (`docs/audit/AUDIT_LEDGER.md`).
 
 ---
 

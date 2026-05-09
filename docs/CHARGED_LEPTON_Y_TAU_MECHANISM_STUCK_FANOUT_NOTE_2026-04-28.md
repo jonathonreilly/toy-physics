@@ -1,7 +1,9 @@
 # `y_τ` Identity Mechanism — Stuck Fan-Out
 
+**Type:** open_gate
+
 **Date:** 2026-04-28
-**Status:** open branch-local **stuck fan-out** note on
+**Status:** open_gate — branch-local **stuck fan-out** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 4 of the charged-
 lepton loop: required stuck fan-out per Deep Work Rules before any
 honest stop. After Cycles 2 + 3 closed both gauge-anchor candidates

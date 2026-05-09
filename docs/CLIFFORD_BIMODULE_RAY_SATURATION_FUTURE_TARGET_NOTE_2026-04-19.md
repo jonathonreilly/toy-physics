@@ -1,8 +1,10 @@
 # Clifford Bimodule Ray-Saturation Theorem — Future Target
 
+**Type:** open_gate
+
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** open / future mathematical target (status line rephrased 2026-04-28 per audit-lane verdict). This is a named research target; it is not a theorem, has no runner, has no proof, and is not part of the current publishable claim surface. Named and scoped as the concrete math target that, if proven,
+**Status:** open_gate — future mathematical target (status line rephrased 2026-04-28 per audit-lane verdict). This is a named research target; it is not a theorem, has no runner, has no proof, and is not part of the current publishable claim surface. Named and scoped as the concrete math target that, if proven,
 would derive STRC
 (`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`) from
 retained structure alone and reduce the full scalar-selector axiom

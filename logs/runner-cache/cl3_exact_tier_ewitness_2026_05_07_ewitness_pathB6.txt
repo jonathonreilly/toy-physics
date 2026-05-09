@@ -1,0 +1,18 @@
+=== Path B: 6^3 x 24 at xi=4 ===
+
+  --- seed 1 ---
+[run_anisotropic] dims=(6, 6, 6, 24) vol=5184 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=1 numba=True
+  thermalized in 11.5s (80 sweeps)
+  measured in 40.0s (400 sweeps, 200 measurements)
+
+  --- seed 2 ---
+[run_anisotropic] dims=(6, 6, 6, 24) vol=5184 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=2 numba=True
+  thermalized in 8.6s (80 sweeps)
+  measured in 43.1s (400 sweeps, 200 measurements)
+
+  --- seed 3 ---
+[run_anisotropic] dims=(6, 6, 6, 24) vol=5184 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=3 numba=True
+  thermalized in 9.5s (80 sweeps)
+  measured in 47.0s (400 sweeps, 200 measurements)
+
+  6^3 x 24: <P_sigma>=0.44207 +/- 0.00022

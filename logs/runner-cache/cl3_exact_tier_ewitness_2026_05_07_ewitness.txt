@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/cl3_exact_tier_ewitness_2026_05_07_ewitness.py
+runner_sha256: fec4ab67aa7ae6769e7646597af09e32981995887b0df2655e5bf60dfb3d952e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 78.15
+status: ok
+----- stdout -----
+
+numba_available = True
+
+======================================================================
+SELF-TEST: isotropic SU(3) Wilson, beta=6 on 2^4 lattice
+======================================================================
+[run_anisotropic] dims=(2, 2, 2, 2) vol=16 g2=1.0 xi=1.0 beta_sigma=6.0000 beta_tau=6.0000 seed=12345 numba=True
+  thermalized in 5.0s (60 sweeps)
+  measured in 0.3s (200 sweeps, 100 measurements)
+  <P_sigma> = 0.6197 ± 0.0039
+  <P_tau>   = 0.6211 ± 0.0043
+  ENGELS-1990 BENCHMARK: <P>(beta=6) ~ 0.594 (large vol)
+
+======================================================================
+PATH A: high-statistics multi-seed anisotropic xi=4.0 on 4^3 x 16
+======================================================================
+
+  --- seed 1 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=1 numba=True
+  thermalized in 2.2s (80 sweeps)
+  measured in 11.0s (400 sweeps, 200 measurements)
+
+  --- seed 2 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=2 numba=True
+  thermalized in 2.1s (80 sweeps)
+  measured in 15.2s (400 sweeps, 200 measurements)
+
+  --- seed 3 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=3 numba=True
+  thermalized in 2.3s (80 sweeps)
+  measured in 11.6s (400 sweeps, 200 measurements)
+
+  --- seed 4 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=4 numba=True
+  thermalized in 2.4s (80 sweeps)
+  measured in 11.0s (400 sweeps, 200 measurements)
+
+  --- seed 5 ---
+[run_anisotropic] dims=(4, 4, 4, 16) vol=1024 g2=1.0 xi=4.0 beta_sigma=1.5000 beta_tau=24.0000 seed=5 numba=True
+  thermalized in 2.5s (80 sweeps)
+  measured in 11.2s (400 sweeps, 200 measurements)
+
+  Multi-seed combined:
+    <P_sigma> = 0.44340 ± 0.00043  (seed-std: 0.00081)
+    <P_tau>   = 0.85195 ± 0.00005  (seed-std: 0.00013)
+
+=== Path C (NLO): Convention C-iso analytic refinement ===
+    Direct comparison of SU(2) Wilson vs HK temporal plaquette
+    extracting linear, quadratic, cubic coefficients in s_t.
+
+    g^2     xi       s_t    beta_W     <P>_HK      <P>_W      (W-HK)   rel.shift
+  --------------------------------------------------------------------------------
+   1.00   1.00   0.50000     4.000    0.31271    0.34195    +0.02924    +9.3511%
+   1.00   2.00   0.25000     8.000    0.17097    0.18075    +0.00978    +5.7201%
+   1.00   4.00   0.12500    16.000    0.08949    0.09219    +0.00270    +3.0121%
+   1.00   8.00   0.06250    32.000    0.04579    0.04650    +0.00070    +1.5363%
+   1.00  16.00   0.03125    64.000    0.02316    0.02334    +0.00018    +0.7749%
+   1.00  32.00   0.01562   128.000    0.01165    0.01170    +0.00005    +0.3891%
+   1.00  64.00   0.00781   256.000    0.00584    0.00585    +0.00001    +0.1949%
+   1.00  128.00   0.00391   512.000    0.00293    0.00293    +0.00000    +0.0976%
+
+  Polynomial fit of rel_shift(s_t) for s_t < 0.6 (no constant term):
+    a_1 (coefficient of s_t^1) = +0.250104
+    a_2 (coefficient of s_t^2) = -0.066483
+    a_3 (coefficient of s_t^3) = -0.030370
+    a_4 (coefficient of s_t^4) = -0.177974
+
+  Compare to leading Taylor expansion of (P_W - P_HK):
+    SU(2) HK: P_HK(s) = 3s/4 - 9s^2/32 + 27s^3/128 - ...
+    SU(2) Wilson at beta = 2/s: P_W(beta) = 1 - I_2(beta)/I_1(beta).
+    For beta -> infinity (s -> 0):
+      I_2(b)/I_1(b) = 1 - 3/(2b) + 15/(8b^2) - 105/(16b^3) + ...
+                    = 1 - 3s/4 + 15 s^2/32 - 105 s^3/128 + ...
+    Hence P_W(2/s) = 3s/4 - 15 s^2/32 + 105 s^3/128 - ...
+
+    (P_W - P_HK)(s) = (15/32 - 9/32) s^2 + (-105/128 + 27/128) s^3 + ...
+                    = (3/16) s^2 - (39/64) s^3 + ...
+                    = 0.1875 s^2 - 0.609 s^3 + ...
+
+    rel_shift(s) = (P_W - P_HK)/P_HK(s)
+                ~ (0.1875 s^2 - 0.609 s^3) / (3s/4 - 9s^2/32)
+                ~ 0.25 s + O(s^2)
+    Leading coefficient: 0.250 (analytic).
+    Numerical fit a_1: +0.2501
+
+  Predicted Convention C-iso shift at canonical operating points:
+    xi=  1.0 (s_t=0.5000): NLO+=+9.3511%   LO-only=+12.5052%
+    xi=  2.0 (s_t=0.2500): NLO+=+5.7201%   LO-only=+6.2526%
+    xi=  4.0 (s_t=0.1250): NLO+=+3.0121%   LO-only=+3.1263%
+    xi=  8.0 (s_t=0.0625): NLO+=+1.5362%   LO-only=+1.5631%
+    xi= 16.0 (s_t=0.0312): NLO+=+0.7750%   LO-only=+0.7816%
+    xi= 32.0 (s_t=0.0156): NLO+=+0.3892%   LO-only=+0.3908%
+
+Saved results to outputs/action_first_principles_2026_05_07/exact_tier_e_witness_push/results_mode-fast.json
+
+----- stderr -----
+

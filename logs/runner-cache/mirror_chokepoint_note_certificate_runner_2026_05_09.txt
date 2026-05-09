@@ -1,0 +1,27 @@
+===== runner cache v1 =====
+runner: scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py
+runner_sha256: 9c931e1845083a0b57310bb6b61b4977859f166a6f41cf39b47c456a53f068bc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+======================================================================
+MIRROR CHOKEPOINT NOTE — RETAINED-ROW CERTIFICATE
+Source note: docs/MIRROR_CHOKEPOINT_NOTE.md
+Cache:       logs/runner-cache/mirror_chokepoint_joint.txt
+Scope:       strict default card N=15 and N=25 (mirror p2=0)
+======================================================================
+
+  [PASS] strict joint cache present and readable — logs/runner-cache/mirror_chokepoint_joint.txt
+  [PASS] cache header status=ok exit_code=0
+  [PASS] cache contains strict NPL_HALF=25 k=5.0 16-seed header — npl_half=25, k=5.0, seeds=16
+  [PASS] N=15 mirror p2=0 row matches retained-table claim — d_TV=ok; pur_cl_mean=ok; pur_cl_se=ok; S_norm=ok; gravity_mean=ok; gravity_se=ok; born_below_1e-10=ok; k0_below_1e-12=ok; seeds_ok_expected=ok; gravity_positive=ok
+  [PASS] N=25 mirror p2=0 row matches retained-table claim — d_TV=ok; pur_cl_mean=ok; pur_cl_se=ok; S_norm=ok; gravity_mean=ok; gravity_se=ok; born_below_1e-10=ok; k0_below_1e-12=ok; seeds_ok_expected=ok; gravity_positive=ok
+  [PASS] cache marks N=40, 60, 80, 100 mirror p2=0 as FAIL on this card — all four present
+
+PASS=5/5
+STATUS: RETAINED-ROW CERTIFICATE PASS — note's narrow N=15/25 table matches strict joint runner-cache; out-of-scope rows are explicitly excluded.
+
+----- stderr -----
+

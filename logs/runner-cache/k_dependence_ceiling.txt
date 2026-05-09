@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/k_dependence_ceiling.py
-runner_sha256: 3b638dacc95274fd1efd98c8918e42d2f3333ea2d13fea8e971a32fc033729fd
+runner_sha256: fa07b52d380da998a7dd183d23a01ee1ec7e04bc3a43bdca929c1512228684bc
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 39.22
+elapsed_sec: 29.23
 status: ok
 ----- stdout -----
 ======================================================================

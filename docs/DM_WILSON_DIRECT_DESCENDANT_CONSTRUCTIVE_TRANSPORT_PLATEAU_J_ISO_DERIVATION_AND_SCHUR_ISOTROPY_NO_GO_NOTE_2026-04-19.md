@@ -1,8 +1,10 @@
 # DM Wilson Direct-Descendant Constructive Transport Plateau J_iso Derivation And Schur-Isotropy No-Go
 
 **Date:** 2026-04-19  
-**Status:** exact positive-plus-negative closeout on the current DM
-constructive-plateau lane  
+**Status:** proposed_no_go — exact positive-plus-negative closeout on
+the current DM constructive-plateau lane (J_iso derivation succeeds at
+the orbit-level scalar; Schur-isotropy as a global selector law is a
+no-go)
 **Primary runner:**  
 `scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py`
 

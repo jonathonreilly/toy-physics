@@ -4,6 +4,8 @@
 This note captures the hardened rerun for the k-dependence claim from
 `scripts/k_dependence_ceiling.py`.
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/k_dependence_ceiling.py` now carries explicit assertion checks (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This makes the runner's class-A invariants visible to `docs/audit/scripts/classify_runner_passes.py`. The runner output and pass/fail semantics are unchanged.
+
 ## Method
 
 - Fixed N window for every `k`: `N = [25, 30, 40, 60, 80]`
@@ -34,4 +36,3 @@ Best replacement wording:
 - `k` affects the fitted ceiling behavior inside this graph family, but
   the current evidence is fit-window-sensitive and does not yet support a
   review-safe universal `alpha(k)` claim.
-

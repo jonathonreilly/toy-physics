@@ -2,9 +2,9 @@
 
 **Status:** bounded - bounded or caveated result note
 **Claim type:** bounded_theorem
-**Date:** 2026-04-20 (originally); 2026-05-03 (review-loop repair)
+**Date:** 2026-04-20 (originally); 2026-05-03 (review-loop repair); 2026-05-08 (certificate-source repair)
 
-## Review-loop repair (2026-05-03)
+## Review-loop repair (2026-05-03; certificate-source repair 2026-05-08)
 
 The 2026-05-03 review follow-up identified that the original
 runner used 175 seeds (7×5×5) of `least_squares` to count roots in the
@@ -22,12 +22,29 @@ seeds (3660 seeds total, ~20× the original 175). Every converged seed
 cluster emerges from the dense seed bath. Per-cell volume is
 ~8.5e-3 rad³, vs the chart volume ~31 rad³.
 
+The 2026-05-08 follow-up audit flagged that the certificate was not
+inspectable from the audit packet (no captured stdout, no structured
+output artifact). The certificate-source repair adds:
+
+- a JSON certificate at
+  [`outputs/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.json`](../outputs/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.json)
+  recording the bounded chart, the two root locations (line + angles),
+  per-root residual norms, finite-difference Jacobian singular values,
+  per-root cluster sizes, and seed counts; and
+- regenerated runner-cache stdout at
+  [`logs/runner-cache/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.txt`](../logs/runner-cache/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.txt)
+  and
+  [`logs/runner-cache/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.txt`](../logs/runner-cache/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.txt)
+  so that the audit packet sees both the dense-certificate and
+  original frontier-runner stdout.
+
 The dense certificate is **empirical** evidence (high seed density →
 no missed root cluster), not a symbolic proof of global
 exhaustiveness. Strict symbolic root-count via resultants or interval
 arithmetic remains genuine open work for a subsequent pass — the
-target equation involves transcendental functions of three angles
-(via `compressed_local_block_from_line`), so polynomial reduction
+target equation chains hermitian linear responses and a
+Perron-Frobenius live readout of the compressed `3×3` block via
+`compressed_local_block_from_line`, so polynomial reduction
 isn't immediate. Until then, this note records:
 
 - Local exact-solve: original runner finds 2 nondegenerate roots
@@ -62,5 +79,10 @@ here.
 
 - Local exact-solve runner (original):
   `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py`
-- Dense root-count certificate (2026-05-03 review-loop repair):
+- Dense root-count certificate runner (2026-05-03 review-loop repair):
   `scripts/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py`
+- Dense root-count JSON certificate artifact (2026-05-08 certificate-source repair):
+  `outputs/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.json`
+- Captured runner stdout (audit-packet sources):
+  `logs/runner-cache/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.txt`,
+  `logs/runner-cache/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.txt`

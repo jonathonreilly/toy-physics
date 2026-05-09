@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/SECOND_GROWN_FAMILY_COMPLEX.py
-runner_sha256: d29b172be85bb0702905101473f9b6383b46af5430db69bdb4bba63283f91829
+runner_sha256: 4ab7a30039285b0b7e45e9cbe2db48d946903547fb93e488f9a456149f52d90e
 timeout_sec: 1800
 exit_code: 0
-elapsed_sec: 146.72
+elapsed_sec: 199.21
 status: ok
 ----- stdout -----
 ==================================================================================================

@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py
+runner_sha256: 5f154b970f52a04a7af75cb7f9f6b45784d3ad73ed4f0638bcd324d70d74dd2d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 46.45
+status: ok
+----- stdout -----
+================================================================================
+ gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py
+ Review-loop repair runner: dense root-count certificate
+================================================================================
+
+ Bounded chart volume:
+   (theta in [-3.1416, 3.1416])
+   (phi   in [-1.5708, 1.5708])
+   (psi   in [0.0000, 1.5708])
+   chart volume V = 31.0062 rad^3
+
+ Running dense seed search...
+ (15 x 12 x 12 structured grid + 1500 uniform-random seeds, ~3700 total)
+
+   total seeds                         = 3660  (2160 structured + 1500 random)
+   converged seeds (|residual| < 1e-10) = 2201
+   distinct roots                      = 2
+   seed density per cell              = 1 per 8.4716e-03 rad^3 of chart
+
+   root[0] line                = [0.496770595611, 0.024399386239, 0.828940445958, 0.255893302653]
+   root[0] angles              = [0.049076564902, 1.030372243024, 0.258771659868]
+   root[0] residual_norm       = 6.631e-13
+   root[0] jacobian_sigmas     = [1.596924369, 0.517299455, 0.252160524]
+   root[0] n_seeds_clustered   = 2159
+   root[1] line                = [0.527310687349, 0.845969286177, 0.060833791226, 0.050780465715]
+   root[1] angles              = [1.013405067046, 0.060950108356, 0.050802315301]
+   root[1] residual_norm       = 6.707e-15
+   root[1] jacobian_sigmas     = [13.376154378, 1.081935978, 0.557547193]
+   root[1] n_seeds_clustered   = 42
+
+   wrote JSON certificate -> outputs/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.json
+
+  [PASS] Dense seed search returns exactly two distinct roots in the bounded chart  (count=2)
+  [PASS] Substantial fraction of seeds converge to a root in the bounded chart  (converged=2201/3660 = 0.6014)
+  [PASS] All converged seeds cluster onto the two distinct roots (no orphan cluster)  (sum_cluster=2201 == n_converged=2201)
+  [PASS] The two roots are well-separated as projective complement lines  (sep=1.143665)
+  [PASS] Each root is locally nondegenerate (min Jacobian singular value > 1e-3)  (min_sigma=0.252161)
+  [PASS] JSON certificate written to outputs/ for audit-packet inspection  (path=outputs/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.json)
+
+ Honest scope of this certificate:
+   - With 3660 seeds at one seed per ~8.47e-03 rad^3, no additional
+     root was found beyond the documented two. This is empirical,
+     not symbolic, evidence for the bounded chart's root count.
+   - Strict symbolic / interval-arithmetic exhaustiveness remains
+     genuine open work and is NOT closed by this runner.
+
+================================================================================
+ SUMMARY: PASS=6, FAIL=0
+================================================================================
+
+----- stderr -----
+

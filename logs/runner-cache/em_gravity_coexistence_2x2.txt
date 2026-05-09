@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/em_gravity_coexistence_2x2.py
-runner_sha256: 8254e5ccfbcce22931d83e1340c9c2462757f4db93be8e4f7b9b1dcb74886290
+runner_sha256: 0fe913012adbfa93c22e3f591f18c4d69a7b9eb8166c18b66d5f9438e33946b9
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.31
+elapsed_sec: 0.47
 status: ok
 ----- stdout -----
 ================================================================================
@@ -116,7 +116,7 @@ The 2x2 mixed residual is exactly zero by linearity of action
 accumulation. Charge-sign cancellation is exact in both the
 pure-EM and joint cells.
 
-elapsed = 0.06s
+elapsed = 0.04s
 
 ----- stderr -----
 

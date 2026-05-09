@@ -6,25 +6,52 @@ across all dimensions, all h values, or all parameter variations. The bolded
 "1.00" entries are point-tested results, not universality theorems. (NARROWED
 2026-05-02 in response to audit verdict requesting a finite-scope reframing.)
 
-**Date:** 2026-04-04 (NARROWED 2026-05-02; CERTIFICATE RUNNER ADDED 2026-05-03)
+**Date:** 2026-04-04 (NARROWED 2026-05-02; CERTIFICATE RUNNER ADDED 2026-05-03;
+CACHED-ARTIFACT ASSERTIONS ADDED 2026-05-09)
 **Action:** Valley-linear S = L(1-f)
 **Kernel:** 1/L^(d-1) with h^(d-1) measure
 
-**Primary runner:** [`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](../scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py) (structural certificate, PASS=5/5)
+**Primary runner:** [`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](../scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py) (structural certificate plus per-row cached-artifact assertions, PASS=7/7)
 
 **Companion runner:** [`scripts/dimensional_gravity_card.py`](../scripts/dimensional_gravity_card.py) — slow lattice card, invoke with `--dim 3` or `--dim 4` to reproduce individual table rows; unsuitable as the audit-lane runner because of runtime.
 
-## Review-loop runner attachment (2026-05-03)
+### Registered cached artifacts (load-bearing for the per-row entries)
+
+The d=3 and d=4 rows below are backed by SHA-pinned runner caches and a
+frozen companion log. The certificate runner above parses these and
+asserts the table's per-row values (Born, F∝M, distance tail, TOWARD
+counts) appear in the registered artifacts:
+
+- d=3 row → [`logs/runner-cache/same_family_3d_closure.txt`](../logs/runner-cache/same_family_3d_closure.txt)
+  (cache of [`scripts/same_family_3d_closure.py`](../scripts/same_family_3d_closure.py); freezes Born=4.20e-15, F∝M=1.00, distance tail b^(-0.93), TOWARD gravity, decoherence ≈ 50% on the h=0.25, W=10, L=12 family)
+- d=4 row (W=5..7 ladder) → [`logs/runner-cache/four_d_distance_width_probe.txt`](../logs/runner-cache/four_d_distance_width_probe.txt)
+  (cache of [`scripts/four_d_distance_width_probe.py`](../scripts/four_d_distance_width_probe.py); records the W=7, h=0.5, L=15 row's TOWARD support 6/6, peak at z=4, far-tail b^(-0.96))
+- d=4 W=8 companion → [`logs/2026-04-04-4d-wide-distance-law.txt`](../logs/2026-04-04-4d-wide-distance-law.txt)
+  (frozen single-run log: Born=4.43e-15, F∝M=1.00, TOWARD 6/6 over z=2..7, early tail b^(-0.54))
+
+## Review-loop runner attachment (2026-05-03; cache assertions added 2026-05-09)
 
 The 2026-05-03 audit flagged that the table's bolded "1.00" entries were
 asserted by prose with no executable runner attached at the audit-packet
-level. The repair adds the structural certificate runner above, which
-verifies the table's *invariants* (kernel/field/measure powers, Newtonian
-targets per d, the linear-mass identity for valley-linear S=L(1-f),
-the sqrt-mass identity for spent-delay, and the 4D width-limited honest
-read) without requiring a long lattice card to run inside the audit
-window. Per-row lattice measurements remain reproducible via the
-companion runner above.
+level. The 2026-05-03 repair added the structural certificate runner
+above, which verifies the table's *invariants* (kernel/field/measure
+powers, Newtonian targets per d, the linear-mass identity for
+valley-linear S=L(1-f), the sqrt-mass identity for spent-delay, and the
+4D width-limited honest read) without requiring a long lattice card to
+run inside the audit window.
+
+The 2026-05-05 audit verdict (audited_conditional) further requested
+that the per-row lattice measurements themselves be inspectable in the
+restricted packet, not just structurally argued. The 2026-05-09 repair
+adds per-row cached-artifact assertions (C6, C7) to the same runner:
+C6 parses the 3D row's SHA-pinned same-family cache and asserts
+Born=4.20e-15, F∝M=1.00, distance tail b^(-0.93), TOWARD gravity, and
+≈50% decoherence; C7 parses the 4D row's SHA-pinned width-ladder
+cache and the frozen W=8 companion log and asserts the W=7 TOWARD
+support 6/6, the W=8 Born=4.43e-15, F∝M=1.00, TOWARD 6/6, and the
+early-tail b^(-0.54). The slow companion runner remains the source for
+arbitrary new (d, kernel, h, lattice family) rows outside the
+registered cache set.
 
 ## Tested entries
 
@@ -33,15 +60,25 @@ h, lattice family) rows only. Each "1.00" is a finite measurement at the
 listed parameter point with the listed measurement quality, not a
 universality claim.
 
-| d | Kernel | F∝M | Distance tail | Born | Decoh | TOWARD |
-|---|--------|-----|---------------|------|-------|--------|
-| 2 | 1/L | **1.00** (point) | varies (2D = log) | <6e-16 | →50% | 7/7 at h≤0.5 |
-| 3 | 1/L² | **1.00** (point) | **b^(-0.93)** | <4e-15 | →50% | 8/8 at h≤0.5 |
-| 4 | 1/L³ | **0.99-1.00** (point) | bounded, width-limited (`W=7:-0.96`, `W=8:-0.54` companions) | 1.5e-15 .. 4.4e-15 | TBD | `3/3 .. 6/6` at h=0.5 |
+The d=3 and d=4 rows are backed by registered cached artifacts (see
+"Registered cached artifacts" above) and asserted by the certificate
+runner. The d=2 row is **diagnostic-only / supporting**: no registered
+audit-lane cache backs the d=2 numerical entries inside the restricted
+packet, so the d=2 row is recorded here for context only and does not
+carry an audit-clean per-entry numerical claim.
+
+| d | Kernel | F∝M | Distance tail | Born | Decoh | TOWARD | Status |
+|---|--------|-----|---------------|------|-------|--------|--------|
+| 2 | 1/L | 1.00 (point) | varies (2D = log) | <6e-16 | →50% | 7/7 at h≤0.5 | diagnostic-only / supporting (no registered cache) |
+| 3 | 1/L² | **1.00** (point) | **b^(-0.93)** | <4e-15 | →50% | 8/8 at h≤0.5 | cache-backed (`same_family_3d_closure.txt`) |
+| 4 | 1/L³ | **0.99-1.00** (point) | bounded, width-limited (`W=7:-0.96`, `W=8:-0.54` companions) | 1.5e-15 .. 4.4e-15 | TBD | `3/3 .. 6/6` at h=0.5 | cache-backed (`four_d_distance_width_probe.txt` + frozen W=8 log) |
 
 The table above covers `d in {2, 3, 4}`, kernel = `1/L^(d-1)`, valley-linear
 action `S = L(1-f)`, with `h <= 0.5` for d=2,3 and `h = 0.5` for d=4. No
-entries are reported outside that scope.
+entries are reported outside that scope. Only the d=3 and d=4 rows have
+their numerical entries asserted from registered artifacts in the audit
+packet; the d=2 row is supportive context, not a load-bearing audit
+claim.
 
 ## Newtonian predictions
 
@@ -53,21 +90,25 @@ entries are reported outside that scope.
 
 ## Key properties on the tested entries
 
-**Linear mass scaling F∝M ≈ 1.00 holds on every tested row above.** This is
-a finite-entry observation across the listed (d, kernel, h, family) points,
-not a universality theorem across all dimensions, all h values, or all
-parameter choices. No theorem in this note proves F∝M = 1 outside the
-tabulated scope. Future work could attempt that universality theorem; this
-note does not.
+**Linear mass scaling F∝M ≈ 1.00 holds on every cache-backed tested row
+above (d=3, d=4 W=7, d=4 W=8 companion).** This is a finite-entry
+observation across the listed (d, kernel, h, family) points, not a
+universality theorem across all dimensions, all h values, or all
+parameter choices. The d=2 entry is supportive context only and not a
+cache-backed audit claim. No theorem in this note proves F∝M = 1
+outside the tabulated scope. Future work could attempt that
+universality theorem; this note does not.
 
 **Decoherence is action-independent on the tested rows.** Valley-linear and
 spent-delay give identical d_TV, MI, CL purity at the tested h points.
 Decoherence depends on geometry, not the action formula. (Tested entries
-only.)
+only; the cache-backed support is the d=3 row's `same_family_3d_closure.txt`
+≈50% decoherence read.)
 
-**Born holds at machine precision on the tested rows.** This is a
-mathematical property of the linear propagator on the tested
-(d, kernel, h, family) points.
+**Born holds at machine precision on the cache-backed tested rows.** This
+is a mathematical property of the linear propagator on the tested
+(d, kernel, h, family) points (d=3 Born=4.20e-15 in the registered 3D
+cache; d=4 W=8 Born=4.43e-15 in the frozen W=8 companion log).
 
 ## Spent-delay comparison
 

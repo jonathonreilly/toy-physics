@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/gravity_observable_hierarchy.py
-runner_sha256: 21aba92d8cea48ed5f24469dcea3f1f0b329f1e653d7c589329f51b26488fbcb
+runner_sha256: bc2deea7a7b4cb2b015f95bda548bc6bae10f16180cfbe3d44438706b0a15721
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.33
+elapsed_sec: 0.39
 status: ok
 ----- stdout -----
 ====================================================================================================================================
@@ -14,8 +14,8 @@ GRAVITY OBSERVABLE HIERARCHY
 
   branch                              case                      centroid   P_near gain  channel bias  interpretation
   ------------------------------------------------------------------------------------------------------------------------------
-  2D dense spent-delay                ultra-weak retained     +0.162694  +0.006099  +0.812634  genuine attraction
-  2D dense spent-delay                strong-field depletion  -6.538915  -0.102645  -0.677897  away / depletion
+  2D dense spent-delay                ultra-weak retained     +0.162694  +0.006099  +0.888297  genuine attraction
+  2D dense spent-delay                strong-field depletion  -6.538915  -0.102645  -0.796165  away / depletion
   3D power-action close-slit barrier  retained barrier card   -0.000076  -0.000000  -0.918368  away / depletion
   3D dense spent-delay                retained dense z=3      +0.001941  +0.000374  +0.176381  genuine attraction
   3D dense spent-delay                retained dense z=5      +0.000693  +0.000715  +0.048601  genuine attraction
