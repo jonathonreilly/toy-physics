@@ -23,14 +23,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 233 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 1005 |
+| unaudited | 1003 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 324 |
+| ~~audited_conditional~~ | 325 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
+| `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 | `decoration_under_linear_response_true_kubo_note` | 1 |
@@ -40,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 324 |
-| `audited_decoration` | 10 |
+| `audited_conditional` | 325 |
+| `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1060 |
+| `unaudited` | 1058 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 735 |
-| `decoration` | 11 |
+| `decoration` | 12 |
 | `meta` | 62 |
 | `no_go` | 192 |
 | `open_gate` | 108 |
-| `positive_theorem` | 774 |
+| `positive_theorem` | 773 |
 
 | criticality | count |
 |---|---:|
@@ -789,6 +790,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -822,6 +824,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5 | A | `alpha_s_derived_note` |
 | `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | `decoration_under_moving_source_retarded_portability_note` | cross_family | codex-gpt-5.5 | A | `moving_source_retarded_portability_note` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
+| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | decoration | ~~audited_decoration~~ | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | fresh_context | codex-gpt-5.5 | A | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` |
 | `gellmann_completeness_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_hierarchy_matsubara_decomposition_note` | fresh_context | codex-gpt-5.5 | A | `hierarchy_matsubara_decomposition_note` |
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | cross_family | codex-gpt-5.5 | A | `koide_dweh_cyclic_compression_note_2026-04-18` |
@@ -5163,6 +5166,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The runner exhibits two explicit admissible positive residual source-sector environment operators with m_1^(A) != m_1^(B) and higher moments differing as well.  _(class `A`)_
 - **chain closes:** True — The scoped no-go is witnessed by two admissible positive conjugation-symmetric residual operators in the stated factorized class whose Perron states give different J-moments and Jacobi coefficients. No external comparator, tuned match, or symbol renaming is used.
 - **rationale:** The claim is negative and scoped to underdetermination inside the residual source-sector environment class, not to computing canonical beta=6 Jacobi data. The runner constructs two admissible residual environments, verifies positivity/symmetry/Perron properties, and obtains distinct moments and Jacobi coefficients for the same J. This is a direct counterexample to uniqueness within the scoped class.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_perron_reduction_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Finite Wilson L_s^3 x L_t source-surface reduction: for beta>0, bounded Borel functions of the explicit plaquette source J have a large-derived-time transfer-state limit given by the unique Perron vector state, equivalently by its Jacobi data.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-audit-loop-019e0d3b-7f49-71c3-9481-052d4fd60131`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By positivity improvement and the compact self-adjoint Perron-Jentzsch theorem, T has a simple spectral-radius eigenvalue with a unique strictly positive Perron vector, and spectral decomposition gives the large-L_t transfer state as <psi_0,f(J)psi_0>.  _(class `A`)_
+- **chain closes:** True — Given the retained_bounded upstream transfer-operator theorem's positive symmetric kernel and explicit self-adjoint plaquette operator J, standard Perron-Jentzsch and spectral-theorem arguments close the finite-surface reduction. This does not construct psi_0(L_s,6), beta=6 Jacobi coefficients, infinite-volume control, or canonical P(6).
+- **rationale:** Issue: the note's substantive work is a standard Perron-Jentzsch/spectral-theorem reduction once the single upstream transfer-operator theorem supplies a strictly positive symmetric kernel and explicit self-adjoint J. Why this blocks a clean verdict: with zero external comparator or independent framework computation, the claim is a mathematical corollary of one retained_bounded parent, and the runner only builds a truncated proxy rather than the actual Wilson transfer operator. Repair target: either box it explicitly as a corollary under the transfer-operator/character-recurrence theorem, or add an independent retained construction/computation of the actual Perron/Jacobi data. Claim boundary until fixed: finite-surface Perron/Jacobi reduction only, not explicit beta=6 coefficients, infinite-volume control, or canonical P(6).
+- **decoration parent:** `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_reduction_existence_theorem_note`
@@ -11407,6 +11424,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The weight-1 complement sectors appear with multiplicity two, the quotient-kernel spectrum is frame-invariant, therefore no representation-theoretic invariant in the current atlas selects a unique universal complement frame.  _(class `A`)_
 - **chain closes:** False — The representation-theoretic implication is plausible, but the note does not exhibit an exhaustive current invariant atlas or a theorem that the listed invariant data are all available selectors. The supplied runner does not execute its checks in this checkout because it fails on a missing POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md before PASS output.
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
+- **auditor confidence:** high
+
+### `universal_gr_invariant_nonlinear_completion_note`
+
+- **Note:** [`UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claimed exact nonlinear invariant-family quadratic completion on D=diag(a,b,b,b) from the restricted packet and listed runner evidence.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d3d-889b-7c61-87aa-f06a95cbfc15`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The conclusion rests on the asserted imports that the observable generator gives W_iso(a,b)=const+log a+3 log b, Lambda_R is exact SPD, and K_GR^iso(D)=M_D ⊗ Lambda_R, so the quadratic completion is exact over the positive invariant family.  _(class `B`)_
+- **chain closes:** False — The algebraic convexity/completion identity closes only after importing W_iso, exact SPD Lambda_R, and the isotropic glue law. No retained one-hop authorities are listed for those premises in the restricted packet, and the runner verifies them by text/import/hard-coded witnesses rather than deriving them here.
+- **rationale:** Issue: the note itself identifies three load-bearing imports that are not supplied as retained dependency edges: the all-orders observable generator, the exact SPD slice generator Lambda_R, and the invariant-family glue law. Why this blocks: the nonlinear completion is only an algebraic consequence once those premises are accepted, so the restricted packet does not establish the physical/operator bridge independently. Repair target: cite retained-grade authorities for all three premises or replace them with a self-contained derivation and runner that constructs Lambda_R and K_GR^iso(D) from retained primitives. Claim boundary until fixed: the packet supports only conditional algebraic convexity of the defined quadratic action on the invariant family.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+  - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
+  - `scripts/frontier_universal_gr_isotropic_glue_operator.py`
 - **auditor confidence:** high
 
 ### `universal_gr_isotropic_glue_operator_note`

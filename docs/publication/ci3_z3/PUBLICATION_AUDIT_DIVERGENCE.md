@@ -19,8 +19,8 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 183 |
 | medium | `unaudited` | 94 |
-| critical | `unaudited` | 80 |
-| critical | `audited_conditional` | 53 |
+| critical | `unaudited` | 78 |
+| critical | `audited_conditional` | 54 |
 | medium | `audited_conditional` | 45 |
 | high | `audited_conditional` | 43 |
 | high | `audited_renaming` | 8 |
@@ -34,7 +34,7 @@ publication tables phrase it.
 | critical | `open_gate` | 1 |
 | high | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 535
+**Total non-retained-grade rows in publication tables:** 534
 
 ## Per-row breakdown
 
@@ -92,7 +92,6 @@ publication tables phrase it.
 | critical | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
-| critical | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
@@ -158,7 +157,7 @@ publication tables phrase it.
 | critical | `three_generation_structure_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `universal_gr_a1_invariant_section_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_discrete_global_closure_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `universal_gr_invariant_nonlinear_completion_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `universal_gr_invariant_nonlinear_completion_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_isotropic_glue_operator_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_lorentzian_global_atlas_closure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `universal_gr_lorentzian_signature_extension_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
