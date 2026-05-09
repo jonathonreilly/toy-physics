@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 966 |
+| unaudited | 965 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 371 |
+| ~~audited_conditional~~ | 372 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 371 |
+| `audited_conditional` | 372 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1022 |
+| `unaudited` | 1021 |
 
 | claim_type | count |
 |---|---:|
@@ -718,6 +718,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -6975,6 +6976,26 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Applying the stated ABSS fixed-point formula with p = 3 and tangent weights (1,2) gives eta = (1/3)(1/3 + 1/3) = 2/9.  _(class `A`)_
 - **chain closes:** False — The symbolic eta evaluation closes after p = 3, weights (1,2), and the ABSS formula/normalization are accepted. The missing step is a retained or self-contained derivation of the admitted Cl(3)/Z^3-to-ambient APS setup and the exact ABSS fixed-point formula in this restricted packet.
 - **rationale:** The runner is not a trivial printout: it performs symbolic Rodrigues, eigenvalue, fixed-locus, weight, and eta-sum checks. But the load-bearing result is an algebraic closure after the admitted C3 route, the ABSS fixed-point formula, and its normalization are taken as inputs. The packet supplies no cited retained authority or self-contained proof for those imports, and the source explicitly leaves the physical-observable bridge delta_physical = eta_APS open.
+- **auditor confidence:** high
+
+### `koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26`
+
+- **Note:** [`KOIDE_BAE_PROBE_WILSON_DIMENSIONAL_CONSISTENCY_BOUNDED_NOTE_2026-05-09_probe26.md`](../../docs/KOIDE_BAE_PROBE_WILSON_DIMENSIONAL_CONSISTENCY_BOUNDED_NOTE_2026-05-09_probe26.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded obstruction that the specific m_tau Wilson chain cannot force BAE if its APBC, u0, alpha_LM^16, and alpha_LM^2 factors act as C3[111]-trivial scalars on the Brannen circulant.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0db8-ba7f-7650-85aa-60c98194f12d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Each Wilson-chain structural factor acts on H as a scalar rescaling H -> rH; scalar rescalings preserve |b|^2/a^2, so they cannot force BAE.  _(class `A`)_
+- **chain closes:** False — The scalar-rescaling algebra closes, but the restricted packet does not close the premise that all Wilson-chain structural factors act on H only as C3[111]-trivial scalars. The missing step is a retained operator-action bridge for APBC, u0, alpha_LM^16, alpha_LM^2, and the no-U(1)_b residue.
+- **rationale:** Issue: the algebraic ratio-preservation argument is valid, but the packet does not provide the retained Wilson/taste/tadpole/APBC/probe authorities that force those factors to act only as C3[111]-trivial scalars on H; the runner sets those actions as scalar multiplications and includes several hard-coded summary checks. Why this blocks: without that retained bridge, the obstruction is conditional on an imported operator-action premise rather than derived from the cited inputs. Repair target: provide a narrow retained theorem or full retained dependencies constructing the APBC, u0, alpha_LM^16, and alpha_LM^2 actions on A^{C3} and proving absence of C3-isotype grading or U(1)_b content. Claim boundary until fixed: the packet supports only the conditional algebraic statement that scalar rescalings preserve |b|^2/a^2 and therefore cannot force BAE.
+- **open / conditional deps cited:**
+  - `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+  - `STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+  - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
+  - `KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md`
+  - `KOIDE_A1_PROBE_RETAINED_U1_HUNT_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe14.md`
 - **auditor confidence:** high
 
 ### `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09`

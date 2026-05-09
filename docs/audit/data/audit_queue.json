@@ -3,7 +3,7 @@
     "critical": 161,
     "high": 332,
     "leaf": 219,
-    "medium": 264
+    "medium": 263
   },
   "cycle_break_target_count": 184,
   "cycle_break_targets": [
@@ -17164,29 +17164,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.5,
-      "note_path": "docs/KOIDE_BAE_PROBE_WILSON_DIMENSIONAL_CONSISTENCY_BOUNDED_NOTE_2026-05-09_probe26.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/cl3_koide_bae_probe_wilson_dimensional_consistency_2026_05_09_probe26.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "continuum_limit_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -29808,6 +29785,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 35,
-  "total_pending": 976
+  "ready_count": 34,
+  "total_pending": 975
 }
