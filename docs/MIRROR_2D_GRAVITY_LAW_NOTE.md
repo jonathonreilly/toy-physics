@@ -1,35 +1,43 @@
 # Exact 2D Mirror Gravity-Law Cleanup Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict; cleanup runner cached output added 2026-05-08)
-**Status:** bounded null-result note — gravity-law cleanup found no clean 2D mirror mass law and no clean 2D mirror distance law on the searched windows.
-**Primary runner:** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator)
-**Cleanup runner:** [`scripts/mirror_2d_gravity_law_cleanup.py`](../scripts/mirror_2d_gravity_law_cleanup.py) — slow gravity-law cleanup sweep that produced the N=60/80/100 mass-window and distance-tail fits below.
-**Cached cleanup log:** [`logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt`](../logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt) — completed stdout reproducing every fit row in the "Retained result" section.
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict; claim narrowed 2026-05-09 to primary-runner-backed evidence per audit `runner_artifact_issue` repair target)
+**Status:** bounded null-result note — the exact 2D mirror primary-runner evidence shows weak gravity-side mass-window and distance-tail fits, so no clean 2D mirror mass law and no clean 2D mirror distance law are supported on the searched windows.
+**Primary runner (load-bearing):** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator)
+**Primary runner cached log:** [`logs/2026-04-03-mirror-2d-validation.txt`](../logs/2026-04-03-mirror-2d-validation.txt) — completed stdout that backs every load-bearing weakness row in the "Retained result (primary runner)" section below.
+**Companion cleanup runner (diagnostic-only, not load-bearing):** [`scripts/mirror_2d_gravity_law_cleanup.py`](../scripts/mirror_2d_gravity_law_cleanup.py) — slow gravity-law cleanup sweep over wider anchor / distance windows. The companion table below is recorded as diagnostic context only; it is not load-bearing for the bounded null-result claim.
+**Companion cleanup runner cached log (diagnostic-only):** [`logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt`](../logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt).
 
-This note freezes the exact 2D mirror gravity-law cleanup lane.
+This note freezes the exact 2D mirror gravity-law lane.
 
 It uses the exact 2D mirror family retained in:
 
 [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py)
 
-and the cleanup sweep:
-
-[`scripts/mirror_2d_gravity_law_cleanup.py`](../scripts/mirror_2d_gravity_law_cleanup.py)
-
 The goal was narrow:
 
-- test fixed-anchor mass windows more widely
-- test fixed-geometry distance tails more widely
+- check fixed-anchor mass-window and fixed-geometry distance-tail behaviour on the primary 2D mirror runner
 - keep the exact 2D mirror family fixed
-- promote a law only if the fit quality is genuinely clean
+- promote a law only if the primary-runner fit quality is genuinely clean
 
-## Retained result
+## Retained result (primary runner, load-bearing)
 
 The exact 2D mirror family remains review-safe for Born, MI, decoherence, and
-positive gravity, but the gravity-side fits remain weak across the cleanup
-search.
+positive gravity, but the gravity-side fits on the primary runner are weak.
 
-The strongest retained clean row from the exact 2D validation lane remains:
+From [`logs/2026-04-03-mirror-2d-validation.txt`](../logs/2026-04-03-mirror-2d-validation.txt):
+
+- gravity scaling across `N ∈ {25, 40, 60, 80, 100}`:
+  `gravity = 6.48 * N^-0.210`, `R^2 = 0.168` (weak)
+- fixed-anchor mass window:
+  `delta ~= 0.8720 * M^0.132`, `R^2 = 0.167` (weak)
+- distance sweep tail:
+  `delta ~= 0.3418 * b^0.320`, `R^2 = 0.075` (weak)
+
+These primary-runner fit qualities are themselves the load-bearing evidence
+that no clean promoted 2D mirror mass law or distance law is supported on the
+searched windows.
+
+The strongest retained clean row from the exact 2D validation lane is:
 
 - `N = 60`
 - `MI = 0.756118`
@@ -39,24 +47,35 @@ The strongest retained clean row from the exact 2D validation lane remains:
 - Born `1.08e-15`
 - `k=0 = 0.00e+00`
 
-The wider gravity-law cleanup confirmed that the best fitted windows are still
-bounded rather than law-like:
+## Companion cleanup sweep (diagnostic-only, not load-bearing)
+
+The companion cleanup runner (`scripts/mirror_2d_gravity_law_cleanup.py`) was
+run as a wider diagnostic sweep over additional anchor and threshold windows.
+Its rows are reproduced here for diagnostic context only; they are NOT load-
+bearing for the bounded null-result claim above, which closes from the primary
+runner alone.
+
+Diagnostic rows (from [`logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt`](../logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt)):
 
 - `N = 60`
   - best mass window: `anchor_b = 5.0`, `delta ~= 0.8676 * M^0.462`, `R^2 = 0.923`
   - best distance tail: `mass_count = 5`, `peak_thr = 3.0`, `delta ~= 0.8858 * b^0.307`, `R^2 = 0.872`
 - `N = 80`
   - best mass window: `anchor_b = 5.0`, `delta ~= 1.0791 * M^0.458`, `R^2 = 0.820`
-  - best distance tail: no review-safe promoted fit
+  - best distance tail: FAIL on the wider sweep
 - `N = 100`
   - best mass window: `anchor_b = 6.0`, `delta ~= 1.0027 * M^0.204`, `R^2 = 0.568`
   - best distance tail: `mass_count = 4`, `peak_thr = 1.0`, `delta ~= 0.9961 * b^0.140`, `R^2 = 0.321`
 
+The companion cleanup table is consistent with the primary-runner conclusion
+(deteriorating fits at larger N, no `R^2 >= 0.95` promotable row), but the
+bounded null-result claim does not require those rows.
+
 ## Cleanup Conclusion
 
-The wider gravity-law cleanup did not produce a review-safe promoted law.
-
-The retained exact 2D mirror gravity story is still:
+The primary runner does not support a clean promoted 2D mirror mass law or
+distance law. The retained exact 2D mirror gravity story on primary-runner
+evidence is:
 
 - positive
 - bounded
@@ -65,11 +84,28 @@ The retained exact 2D mirror gravity story is still:
 So the conservative synthesis is:
 
 - **exact 2D mirror = review-safe bounded coexistence pocket**
-- **exact 2D mirror = no clean promoted mass law**
-- **exact 2D mirror = no clean promoted distance law**
+- **exact 2D mirror = no primary-runner-supported promoted mass law**
+- **exact 2D mirror = no primary-runner-supported promoted distance law**
 
 The family remains scientifically useful, but on the gravity side it is still a
 bounded pocket rather than a law-like result.
+
+## Audit boundary (2026-05-09 — claim narrowing per `runner_artifact_issue`)
+
+The 2026-05-08 audit verdict on this note was `audited_conditional` with the
+repair target:
+
+> runner_artifact_issue: provide the completed `mirror_2d_gravity_law_cleanup.py`
+> output/cache and source, or narrow the note to the diagnostic core actually
+> backed by current runner output.
+
+This revision takes the second branch of the repair target. The bounded null-
+result claim is now anchored entirely on the primary runner
+(`scripts/mirror_2d_validation.py`) and its cached log
+(`logs/2026-04-03-mirror-2d-validation.txt`). The wider companion cleanup
+sweep is recorded as diagnostic-only context. The bounded null-result holds
+from the primary-runner fit qualities alone (`R^2 = 0.168 / 0.167 / 0.075`),
+without depending on the companion cleanup rows.
 
 ## Audit boundary (2026-04-28)
 
@@ -97,17 +133,19 @@ Audit verdict (`audited_failed`, leaf criticality):
 - A promoted 2D mirror distance law.
 - That the bounded coexistence pocket is the same thing as a
   promoted-tier gravity result on the 2D mirror family.
+- Any load-bearing conclusion drawn from the diagnostic-only companion
+  cleanup table; the bounded null-result rests on the primary-runner
+  log alone.
 
 ## What would close this lane (Path A future work)
 
 Reinstating a promoted 2D mirror gravity law would require:
 
-1. A registered runner whose mass-exponent fit clears a hard `R^2`
-   threshold (e.g. `R^2 >= 0.95`) on at least three sizes — the current
-   best is `R^2 = 0.923` at `N = 60` and degrades to `R^2 = 0.568` at
-   `N = 100`.
-2. A registered runner whose distance-tail fit clears the same hard
-   threshold — currently the `N = 80` row has no review-safe fit and
-   `N = 100` has `R^2 = 0.321`.
+1. A registered primary-runner mass-exponent fit that clears a hard
+   `R^2` threshold (e.g. `R^2 >= 0.95`) on at least three sizes — the
+   current primary-runner mass-window fit is `R^2 = 0.167`, well below
+   the bar.
+2. A registered primary-runner distance-tail fit that clears the same
+   hard threshold — currently `R^2 = 0.075` on the primary runner.
 3. A first-principles argument that the fitted exponent is the
    mass-coupling exponent, not just an empirical curve fit.
