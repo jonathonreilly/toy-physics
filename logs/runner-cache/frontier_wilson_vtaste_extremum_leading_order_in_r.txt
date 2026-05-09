@@ -18,7 +18,7 @@
   [PASS] contains: Dependencies section header  (marker = '## Dependencies')
   [PASS] contains: Boundaries section header  (marker = '## Boundaries')
   [PASS] contains: Verification section header  (marker = '## Verification')
-  [PASS] contains: leading-shift formula present  (marker = 'm^*       =  - 4 r')
+  [PASS] contains: exact-shift formula present (m^* = -4r exact, all orders)  (marker = 'm^*       =  - 4 r       (exact, all orders in r)')
   [PASS] contains: leading-curvature formula present  (marker = '12 r^2 ) / u_0^4')
   [PASS] contains: centered-binomial-moment identity (4) stated  (marker = '= 16')
   [PASS] contains: variance-ratio explanation  (marker = '80 - 32^2 / 16 = 80 - 64 = 16')
@@ -66,14 +66,23 @@
   [PASS] moment ratio Σ k^2 · binom / Σ (k-2)^2 · binom = 80 / 16 = 5  (80 / 16 = 5)
 
 ----------------------------------------------------------------------------------------
- Part 5: m^* = -4r at leading order in r
+ Part 5: m^* = -4r is EXACT (not just leading-order)
 ----------------------------------------------------------------------------------------
   [PASS] leading-order shift coefficient: δm / r = -2 · Σ k · binom / Σ binom = -2 · 32 / 16 = -4  (got -4)
-  r = 1/1000, u_0 = 1097/1250
-  m^* (leading) = -4r = -1/250
-  dV^W/dm at m^* (leading) = 0.000e+00
-  residual / (1/u_0) = 0.000e+00
-  [PASS] dV^W/dm at m^*_leading is negligible at r = 1/1000 (consistent with O(r^3) residual)  (residual_to_scale = 0.000e+00, threshold = 1e-6)
+  [PASS] dV^W/dm at m=-4r is EXACTLY 0 at r=1/100 (k → 4-k reflection symmetry)  (derivative = 0 (must be exactly 0))
+  [PASS] dV^W/dm at m=-4r is EXACTLY 0 at r=1/10 (k → 4-k reflection symmetry)  (derivative = 0 (must be exactly 0))
+  [PASS] dV^W/dm at m=-4r is EXACTLY 0 at r=1/2 (k → 4-k reflection symmetry)  (derivative = 0 (must be exactly 0))
+  [PASS] dV^W/dm at m=-4r is EXACTLY 0 at r=1 (k → 4-k reflection symmetry)  (derivative = 0 (must be exactly 0))
+  [PASS] dV^W/dm at m=-4r is EXACTLY 0 at r=2 (k → 4-k reflection symmetry)  (derivative = 0 (must be exactly 0))
+  [PASS] dV^W/dm at m=-4r is EXACTLY 0 at r=10 (k → 4-k reflection symmetry)  (derivative = 0 (must be exactly 0))
+
+  Symmetry argument: at m = -4r, u_k = 2r(k-2). Pair (k, 4-k):
+    binom(4, k) = binom(4, 4-k), and u_{4-k} = 2r((4-k)-2) = -2r(k-2) = -u_k.
+    Each pair (k, 4-k): mult · u_k / (u_k^2 + 4u_0^2) + mult · u_{4-k} / (u_{4-k}^2 + 4u_0^2)
+                       = mult · u_k / (u_k^2 + 4u_0^2) + mult · (-u_k) / (u_k^2 + 4u_0^2)
+                       = 0.
+    The k=2 self-paired term has u_2 = 0 directly. So all pair sums and the singleton
+    contribute zero, giving dV^W/dm |_{m=-4r} = 0 identically.
 
 ----------------------------------------------------------------------------------------
  Part 6: d^2 V^W / dm^2 |_{m=-4r} = -4/u_0^2 + 12 r^2 / u_0^4 + O(r^4)
@@ -99,6 +108,17 @@
     Taylor with 12   = 15.0363697537, diff = 1.677e+01
     Taylor with 60   = 95.9561657298, diff = 9.769e+01
   [PASS] r = 1: leading-order Taylor with coefficient 12 closer than coefficient 60  (diff_12 = 1.677e+01, diff_60 = 9.769e+01)
+
+----------------------------------------------------------------------------------------
+ Part 6b: direct extraction of the +12 r^2/u_0^4 coefficient at small r
+----------------------------------------------------------------------------------------
+  r = 1/100 (1e-02):  c(r) = 11.9935120357
+  r = 1/1000 (1e-03):  c(r) = 11.9999350807
+  r = 1/10000 (1e-04):  c(r) = 11.9999993508
+  r = 1/100000 (1e-05):  c(r) = 11.9999999935
+  [PASS] at r = 1/100_000, c(r) → 12 cleanly (diff < 1e-6)  (c(1/100000) = 11.9999999935, |c - 12| = 6.492e-09)
+  [PASS] c(r) approaches 12 monotonically as r → 0 (consistent with O(r^2) residual)  (diffs from 12 at r ∈ {1/100, 1/1000, 1/10K, 1/100K}: [0.006487964336542081, 6.491933927909122e-05, 6.491973649157901e-07, 6.491974046372924e-09])
+  [PASS] structural derivation: 3 · Σ binom·(k-2)^2 / 4 = 3 · 16 / 4 = 12  (got 12)
 
 ----------------------------------------------------------------------------------------
  Part 7: r → 0 reduction (m^* = 0; curvature = -4/u_0^2)
@@ -127,10 +147,11 @@
   [PASS] source-note proposal language present
 
 ========================================================================================
- TOTAL: PASS=62, FAIL=0
+ TOTAL: PASS=70, FAIL=0
 ========================================================================================
 
- VERDICT: m^* = -4r + O(r^3); d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2
- + 12 r^2/u_0^4 + O(r^4). Leading correction is 5x smaller than
- at m=0 (variance ratio Σ binomial(4,k)·(k-2)^2 / Σ binomial(4,k)·k^2
- = 16/80 = 1/5).
+ VERDICT: m^* = -4r EXACTLY (k → 4-k reflection symmetry on
+ binomial(4,k) makes dV^W/dm |_{m=-4r} identically zero, all orders).
+ d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2 + 12 r^2/u_0^4 + O(r^4).
+ Leading-r^2 coefficient pinned to 12 by direct extraction at r → 0.
+ 5x smaller than at m=0 (variance vs raw second moment: 16 vs 80).

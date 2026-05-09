@@ -87,7 +87,8 @@ def part1_note_structure():
         ("Dependencies section header", "## Dependencies"),
         ("Boundaries section header", "## Boundaries"),
         ("Verification section header", "## Verification"),
-        ("leading-shift formula present", "m^*       =  - 4 r"),
+        ("exact-shift formula present (m^* = -4r exact, all orders)",
+         "m^*       =  - 4 r       (exact, all orders in r)"),
         ("leading-curvature formula present",
          "12 r^2 ) / u_0^4"),
         ("centered-binomial-moment identity (4) stated", "= 16"),
@@ -185,12 +186,14 @@ def part4_binomial_moments():
           moment_centered_2 == 16,
           f"got {moment_centered_2}")
 
-    # Variance-identity sanity check:
-    variance_check = moment_2 - (moment_1 ** 2) // moment_0
+    # Variance-identity sanity check (use Fraction division to avoid latent
+    # fragility under refactor: integer // would silently round if the
+    # numerator weren't exactly divisible).
+    variance_check_frac = Fraction(moment_2) - Fraction(moment_1) ** 2 / Fraction(moment_0)
     check(
         "variance identity: Σ k^2 · binom - (Σ k · binom)^2 / Σ binom = 80 - 64 = 16 = Σ (k-2)^2 · binom",
-        variance_check == 16 == moment_centered_2,
-        f"variance_check = {variance_check}, moment_centered_2 = {moment_centered_2}",
+        variance_check_frac == Fraction(16) == Fraction(moment_centered_2),
+        f"variance_check = {variance_check_frac}, moment_centered_2 = {moment_centered_2}",
     )
 
     # Ratio: 80 / 16 = 5 (drives the 60/12 = 5 ratio)
@@ -202,56 +205,63 @@ def part4_binomial_moments():
 
 
 # ---------------------------------------------------------------------------
-# Part 5: Leading-order extremum shift m^* = -4r
+# Part 5: Extremum shift m^* = -4r EXACTLY (all orders in r)
 # ---------------------------------------------------------------------------
-def part5_leading_extremum_shift():
-    section("Part 5: m^* = -4r at leading order in r")
+def part5_extremum_shift_is_exact():
+    section("Part 5: m^* = -4r is EXACT (not just leading-order)")
     # Reduced equation at leading order (denominators -> 4 u_0^2):
     #   Σ_k binomial(4, k) · (2rk + δm) = 0
     #   2r · Σ_k binomial(4, k) · k  +  δm · Σ_k binomial(4, k)  =  0
     #   2r · 32  +  δm · 16  =  0
     #   δm = -4r
+    # The full claim is stronger: by k → 4-k reflection symmetry on
+    # binomial(4, k) and the antisymmetric pair shifts (2r(k-2) and
+    # 2r(2-k)), every pair contribution to dV^W/dm at m=-4r cancels
+    # term-by-term, so dV^W/dm |_{m=-4r} = 0 identically (all orders).
     moment_1 = Fraction(32)
     moment_0 = Fraction(16)
-    # Symbolically:  delta_m = - 2r * moment_1 / moment_0  =  - 2r * 32 / 16  =  -4r
-    delta_m_per_r = -Fraction(2) * moment_1 / moment_0  # coefficient of r in δm
+    delta_m_per_r = -Fraction(2) * moment_1 / moment_0
     check(
         "leading-order shift coefficient: δm / r = -2 · Σ k · binom / Σ binom = -2 · 32 / 16 = -4",
         delta_m_per_r == Fraction(-4),
         f"got {delta_m_per_r}",
     )
 
-    # Verify by direct substitution at small r and small u_0:
+    # EXACT identity check: dV^W/dm at m=-4r should be identically zero
+    # for every (rational) r and every (rational) u_0, not just at small r.
     u_0 = Fraction(8776, 10000)
     u_0_sq = u_0 * u_0
-    r = Fraction(1, 1000)  # very small r so leading-order should be highly accurate
-    m_star_leading = Fraction(-4) * r
+    for r_test in [
+        Fraction(1, 100),
+        Fraction(1, 10),
+        Fraction(1, 2),
+        Fraction(1),
+        Fraction(2),
+        Fraction(10),
+    ]:
+        m_star = Fraction(-4) * r_test
+        derivative = Fraction(0)
+        for k in range(5):
+            mult = Fraction(binomial(4, k))
+            u_k = 2 * r_test * k + m_star  # = 2r(k-2)
+            denom = u_k * u_k + 4 * u_0_sq
+            derivative -= mult * u_k / denom
 
-    # dV^W/dm at the leading-order m^*:
-    derivative = Fraction(0)
-    for k in range(5):
-        mult = Fraction(binomial(4, k))
-        u_k = 2 * r * k + m_star_leading
-        denom = u_k * u_k + 4 * u_0_sq
-        derivative -= mult * u_k / denom
+        check(
+            f"dV^W/dm at m=-4r is EXACTLY 0 at r={r_test} (k → 4-k reflection symmetry)",
+            derivative == Fraction(0),
+            f"derivative = {derivative} (must be exactly 0)",
+        )
 
-    # At leading order in r, derivative should be ~ 0. The next-order term
-    # is O(r^3). Check that the residual is small relative to the typical
-    # scale 1/u_0:
-    typical_scale = Fraction(1) / u_0
-    residual_to_scale = abs(derivative) / typical_scale
-    print(f"  r = {r}, u_0 = {u_0}")
-    print(f"  m^* (leading) = -4r = {m_star_leading}")
-    print(f"  dV^W/dm at m^* (leading) = {float(derivative):.3e}")
-    print(f"  residual / (1/u_0) = {float(residual_to_scale):.3e}")
-    # At r = 1/1000, the leading-order approximation gives a residual of
-    # O(r^3) / O(1) = O(10^-9). Demand the residual is < 10^-6 to be safe.
-    threshold = Fraction(1, 1_000_000)
-    check(
-        "dV^W/dm at m^*_leading is negligible at r = 1/1000 (consistent with O(r^3) residual)",
-        residual_to_scale < threshold,
-        f"residual_to_scale = {float(residual_to_scale):.3e}, threshold = 1e-6",
-    )
+    # Sanity: print the symmetry argument
+    print()
+    print("  Symmetry argument: at m = -4r, u_k = 2r(k-2). Pair (k, 4-k):")
+    print("    binom(4, k) = binom(4, 4-k), and u_{4-k} = 2r((4-k)-2) = -2r(k-2) = -u_k.")
+    print("    Each pair (k, 4-k): mult · u_k / (u_k^2 + 4u_0^2) + mult · u_{4-k} / (u_{4-k}^2 + 4u_0^2)")
+    print("                       = mult · u_k / (u_k^2 + 4u_0^2) + mult · (-u_k) / (u_k^2 + 4u_0^2)")
+    print("                       = 0.")
+    print("    The k=2 self-paired term has u_2 = 0 directly. So all pair sums and the singleton")
+    print("    contribute zero, giving dV^W/dm |_{m=-4r} = 0 identically.")
 
 
 # ---------------------------------------------------------------------------
@@ -303,6 +313,67 @@ def part6_curvature_at_extremum():
                 diff_12 < diff_60,
                 f"diff_12 = {float(diff_12):.3e}, diff_60 = {float(diff_60):.3e}",
             )
+
+
+# ---------------------------------------------------------------------------
+# Part 6b: Direct extraction of the leading-r^2 coefficient — pin to 12 cleanly
+# ---------------------------------------------------------------------------
+def part6b_direct_nlo_coefficient_extraction():
+    section("Part 6b: direct extraction of the +12 r^2/u_0^4 coefficient at small r")
+    # At small r, define c(r) := (curvature - (-4/u_0^2)) · u_0^4 / r^2.
+    # The leading-order claim is c(r) → 12 as r → 0.
+    # We extract c(r) at successively smaller r and verify convergence to 12.
+    u_0 = Fraction(8776, 10000)
+    u_0_sq = u_0 * u_0
+    u_0_pow4 = u_0_sq * u_0_sq
+
+    leading_zero = -Fraction(4) / u_0_sq
+
+    extracted_values = []
+    for r_test in [Fraction(1, 100), Fraction(1, 1000), Fraction(1, 10_000), Fraction(1, 100_000)]:
+        rsq = r_test * r_test
+        curvature = Fraction(0)
+        for k in range(5):
+            mult = Fraction(binomial(4, k))
+            shift_sq = (k - 2) ** 2 * rsq
+            numer = shift_sq - u_0_sq
+            denom = (shift_sq + u_0_sq) ** 2
+            curvature += mult * numer / denom
+        curvature /= 4
+        # Extract leading r^2 coefficient
+        c = (curvature - leading_zero) * u_0_pow4 / rsq
+        extracted_values.append((r_test, c))
+        print(f"  r = {r_test} ({float(r_test):.0e}):  c(r) = {float(c):.10f}")
+
+    # As r → 0, c(r) should → 12 cleanly. At r = 1/100_000, the extracted
+    # value should agree with 12 to many decimal places (the residual is
+    # O(r^2 / u_0^2) suppressed).
+    smallest_r, smallest_c = extracted_values[-1]
+    diff_from_12 = abs(smallest_c - Fraction(12))
+    threshold = Fraction(1, 1_000_000)  # less than 1e-6
+    check(
+        f"at r = 1/100_000, c(r) → 12 cleanly (diff < 1e-6)",
+        diff_from_12 < threshold,
+        f"c({smallest_r}) = {float(smallest_c):.10f}, |c - 12| = {float(diff_from_12):.3e}",
+    )
+
+    # Also verify c(r) is MONOTONICALLY APPROACHING 12 (not just close at one r).
+    # The residual goes as r^2, so |c(r) - 12| should decrease as r decreases.
+    diffs = [abs(c - Fraction(12)) for r, c in extracted_values]
+    monotone = all(diffs[i + 1] <= diffs[i] for i in range(len(diffs) - 1))
+    check(
+        "c(r) approaches 12 monotonically as r → 0 (consistent with O(r^2) residual)",
+        monotone,
+        f"diffs from 12 at r ∈ {{1/100, 1/1000, 1/10K, 1/100K}}: {[float(d) for d in diffs]}",
+    )
+
+    # Cross-check: the derived structural value is 3 · 16 / 4 = 12.
+    derived_coeff = Fraction(3) * Fraction(16) / Fraction(4)
+    check(
+        "structural derivation: 3 · Σ binom·(k-2)^2 / 4 = 3 · 16 / 4 = 12",
+        derived_coeff == Fraction(12),
+        f"got {derived_coeff}",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -417,8 +488,9 @@ def main() -> int:
     part2_forbidden_vocabulary()
     part3_premise_class_consistency()
     part4_binomial_moments()
-    part5_leading_extremum_shift()
+    part5_extremum_shift_is_exact()
     part6_curvature_at_extremum()
+    part6b_direct_nlo_coefficient_extraction()
     part7_r_zero_reduction()
     part8_forbidden_imports()
     part9_boundary_check()
@@ -429,10 +501,11 @@ def main() -> int:
     print("=" * 88)
     if FAIL == 0:
         print()
-        print(" VERDICT: m^* = -4r + O(r^3); d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2")
-        print(" + 12 r^2/u_0^4 + O(r^4). Leading correction is 5x smaller than")
-        print(" at m=0 (variance ratio Σ binomial(4,k)·(k-2)^2 / Σ binomial(4,k)·k^2")
-        print(" = 16/80 = 1/5).")
+        print(" VERDICT: m^* = -4r EXACTLY (k → 4-k reflection symmetry on")
+        print(" binomial(4,k) makes dV^W/dm |_{m=-4r} identically zero, all orders).")
+        print(" d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2 + 12 r^2/u_0^4 + O(r^4).")
+        print(" Leading-r^2 coefficient pinned to 12 by direct extraction at r → 0.")
+        print(" 5x smaller than at m=0 (variance vs raw second moment: 16 vs 80).")
     return 0 if FAIL == 0 else 1
 
 

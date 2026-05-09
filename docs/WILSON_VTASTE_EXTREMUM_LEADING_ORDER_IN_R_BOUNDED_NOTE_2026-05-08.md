@@ -18,21 +18,31 @@ V_taste^W(m)
 derived in
 [`WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md`](WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md)
 (forward-reference; on a sister branch), the Wilson-shifted extremum
-`m^*` of `V_taste^W` and the curvature at `m^*`, both at leading
-order in `r`, are:
+`m^*` of `V_taste^W` and the curvature at `m^*` are:
 
 ```text
-m^*       =  - 4 r   +   O( r^3 ),                                              (2)
+m^*       =  - 4 r       (exact, all orders in r),                              (2)
 
 d^2 V^W / dm^2  |_{m = m^*}
           =  - 4 / u_0^2   +   ( 12 r^2 ) / u_0^4   +   O( r^4 ).                (3)
 ```
 
-The leading shift `m^* = -4r` follows from solving `dV^W/dm = 0`
-perturbatively, using the binomial-moment identity
-`Σ_{k=0}^{4} binomial(4, k) · k  =  32`. The leading curvature
-correction `+12 r^2 / u_0^4` follows from the centered binomial-
-moment identity
+The exact identity `m^* = -4r` holds by an exchange symmetry of (1):
+under the index relabeling `k → 4 - k`, the multiplicities
+`binomial(4, k)` are invariant (`binomial(4, k) = binomial(4, 4-k)`)
+while `(2 r k + m)` paired with `(2 r (4 - k) + m)` shift symmetrically
+around `(4 r + m)`. Setting `m = m^* = -4 r` makes the pair shifts
+`±2 r (k - 2)` antisymmetric while the multiplicity weights are
+symmetric, so every pair contribution to `dV^W/dm` cancels term-by-
+term, giving `dV^W/dm |_{m=-4r} = 0` identically (not perturbatively).
+The leading-order derivation via the binomial-moment identity
+`Σ_{k=0}^{4} binomial(4, k) · k = 32` (with `Σ binomial(4, k) = 16`)
+delivers the same value `δm = -4 r` and is documented in the proof-
+walk below as the constructive route to the same result.
+
+The curvature correction `+12 r^2 / u_0^4` in (3) is leading-order in
+`r` (with explicit `O(r^4)` remainder); it follows from the centered
+binomial-moment identity
 
 ```text
 Σ_{k=0}^{4}  binomial(4, k) · ( k - 2 )^2  =  16,                               (4)
@@ -44,10 +54,20 @@ correction at `m = 0` (which is `+ 60 r^2 / u_0^4`, derived in the
 sister `V_taste^W` note) reflects the fact that `Σ binomial(4, k) · k^2
 = 80` and `Σ binomial(4, k) · (k - 2)^2 = 80 - 32^2 / 16 = 80 - 64 = 16`.
 
-This note records the leading-order extremum location and curvature
-explicitly. It does **not** compute the physical Higgs mass, does
-**not** sum the perturbative series in `r` to all orders, and does
-**not** close the +12% Higgs gap chain.
+This note records the exact extremum location `m^* = -4r` and the
+leading-order curvature there. It does **not** compute the physical
+Higgs mass, does **not** sum the perturbative curvature expansion in
+`r` to all orders, and does **not** close the +12% Higgs gap chain.
+
+**Radius of convergence note.** The leading-order curvature expansion
+`+12 r^2 / u_0^4` comes from Taylor-expanding
+`f(x) = (x - u_0^2) / (x + u_0^2)^2` at `x = 0`, with `x = (k-2)^2 r^2`.
+The Taylor series has radius of convergence `u_0^2`, so the expansion
+is reliable when `(k-2)^2 r^2 << u_0^2`, i.e. `r << u_0 / 2` for the
+dominant `k = 0, 4` corners. At `r = O(u_0)` the all-orders sum is
+needed; the leading-order curvature is no longer a good approximation
+in that regime. The runner exhibits this breakdown at `r = 1/2` and
+`r = 1` for `u_0 ≈ 0.8776`.
 
 ## Proof-Walk
 
@@ -179,7 +199,9 @@ Expected:
 
 ```text
 TOTAL: PASS=N FAIL=0
-VERDICT: m^* = -4r + O(r^3); d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2 + 12 r^2/u_0^4
-+ O(r^4). Leading correction is 5× smaller than at m=0 (variance ratio
-Σ binomial(4,k)·(k-2)^2 / Σ binomial(4,k)·k^2 = 16/80 = 1/5).
+VERDICT: m^* = -4r EXACTLY (k → 4-k reflection symmetry on binomial(4,k)
+makes dV^W/dm |_{m=-4r} identically zero, all orders).
+d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2 + 12 r^2/u_0^4 + O(r^4).
+Leading-r^2 coefficient pinned to 12 by direct extraction at r → 0.
+5× smaller than at m=0 (variance vs raw second moment: 16 vs 80).
 ```
