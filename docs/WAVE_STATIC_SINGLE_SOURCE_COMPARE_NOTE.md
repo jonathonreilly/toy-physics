@@ -2,6 +2,20 @@
 
 **Date:** 2026-04-08
 **Status:** proposed_retained comparison probe
+**Primary runner:** `scripts/wave_static_single_source_compare.py`
+
+## Inputs
+
+This note depends on:
+
+- [WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md](./WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md)
+
+The cited continuum-limit note supplies the physical construction and
+readout primitives this comparator probe imports as `solve_wave`, `grow`,
+`prop_beam`, `cz`, and the shared physical constants `K_PER_H`, `PW_PHYS`,
+`S_PHYS`, `SRC_LAYER_FRAC`, `T_PHYS_LAYERS`. The single-source comparison
+table is then a top-level arithmetic readout on those primitives at the
+listed frozen-source positions and shared lattice spacing.
 
 This focused probe removes the moving-source sweep and asks a narrower
 question:
