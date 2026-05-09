@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 969 |
+| unaudited | 968 |
 | meta | 61 |
-| ~~audited_numerical_match~~ | 23 |
+| ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 363 |
 | ~~audited_failed~~ | 10 |
@@ -44,18 +44,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 363 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
-| `audited_numerical_match` | 23 |
+| `audited_numerical_match` | 24 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1030 |
+| `unaudited` | 1029 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 752 |
+| `bounded_theorem` | 753 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 770 |
+| `positive_theorem` | 769 |
 
 | criticality | count |
 |---|---:|
@@ -932,6 +932,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `born_scattering_comparison_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `continuum_limit_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `distance_law_definitive_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -2959,6 +2960,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The note concludes that selected effects survive size growth or lattice refinement while strict visibility gain, 4D mass scaling, and some emergence/distance-law claims are finite-size, structural, or retracted.  _(class `B`)_
 - **chain closes:** False — The chain does not close because the packet provides no cited retained authorities and no runner output/source for the numerical survival, convergence, retraction, and caveat classifications. The missing step is a retained computational certificate or cited retained notes supporting the listed scaling and refinement results.
 - **rationale:** Issue: the load-bearing survival/retraction table imports many empirical runner outcomes, script cards, and branch-specific lattice/DAG results without any one-hop retained authorities or primary runner in the packet. Why this blocks: the claimed bounded continuum bridge is a synthesis of computational evidence, but the audit packet contains only the synthesis text, so the numerical and architectural classifications cannot be verified from retained inputs. Repair target: cite the retained result notes or provide a primary runner/cached certificate that reproduces the scaling and refinement classifications. Claim boundary until fixed: this note is only an unverified bounded summary of reported tests, not an audited continuum/asymptotic theorem.
+- **auditor confidence:** high
+
+### `continuum_limit_note`
+
+- **Note:** [`CONTINUUM_LIMIT_NOTE.md`](../../docs/CONTINUUM_LIMIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited whether the provided h^2/T lattice runs establish a continuum limit from the finite h values shown down to h=0.125.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0dc6-b13f-7692-8fea-7df835e761f6`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note infers a well-defined weak-field continuum limit from the finite-spacing table, especially the 2.7% change between h=0.25 and h=0.125 and F~M values bracketing 1.000.  _(class `G`)_
+- **chain closes:** False — The packet shows a finite-resolution numerical trend, but it does not provide a completed convergence proof, error model, asymptotic bound, or completed runner output establishing the h -> 0 limit. The missing step is a retained convergence theorem or completed sliced computation with controlled extrapolation beyond h=0.125.
+- **rationale:** Issue: the conclusion that a continuum limit exists is carried by selected finite-h numerical agreement and a last-step 2.7% change, not by a proof or controlled asymptotic extrapolation. Why this blocks: behavior at h=0.125 alone cannot establish the h -> 0 limit, especially with acknowledged boundary leakage, logarithmic T growth, skipped Born checks at finer h, and nonmonotone strong-field gravity. Repair target: provide a completed runner certificate or sliced computation plus an error model/asymptotic theorem bounding the weak-field deflection and mass-scaling limit as h decreases. Claim boundary until fixed: the note supports only a bounded numerical observation that this h^2/T normalization looks stable over the tested grid range.
 - **auditor confidence:** high
 
 ### `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29`
