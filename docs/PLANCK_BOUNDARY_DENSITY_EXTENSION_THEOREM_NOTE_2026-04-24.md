@@ -1,8 +1,33 @@
 # Planck Boundary-Density Extension Theorem
 
 **Date:** 2026-04-24
-**Status:** proposed_retained positive support theorem for the conditional Planck lane
+**Status:** audited_conditional positive support theorem for the conditional Planck lane
 **Runner:** `scripts/frontier_planck_boundary_density_extension.py`
+
+## Cited authorities (one-hop deps)
+
+- [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  — `audited_conditional`. Selects the unique source-free, additive,
+  coframe-slot-symmetric, unit-normalized first-order coframe boundary carrier
+  `P_A = P_1` on the primitive event cell `H_cell ≅ C^16`, with primitive
+  coefficient `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4`. §5 of that theorem
+  carries the same explicit open bridge that this note inherits:
+  *gravitational boundary/action density identification with the first-order
+  coframe carrier*.
+- [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
+  — `bounded` composition. Records the conditional chain
+  `c_cell = 1/4 ⇒ S_BH = A · c_cell = A/(4 G_Newton,lat)` with
+  `G_Newton,lat = 1` in framework lattice units, conditional on the
+  Wald-Noether formula admitted as universal physics input and on the same
+  gravitational boundary/action density bridge premise.
+- [`PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`](PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
+  — `audited_conditional` source-unit normalization separating bare
+  `G_kernel = 1/(4π)` from conditional physical `G_Newton,lat = 1`.
+
+These are the live audited and bounded authorities that fix the carrier
+algebra and the conditional Planck-normalization match. Citing them here
+makes the carrier-identification step explicit rather than implicit, while
+preserving the conditional status of the gap they all share.
 
 ## Purpose
 
@@ -14,10 +39,11 @@ The packet already derives the primitive source-free coefficient
 c_cell = Tr((I_16 / 16) P_A) = 4 / 16 = 1/4.
 ```
 
-What was implicit is the finite-boundary extension: if the primitive boundary
-count is accepted as the microscopic gravitational boundary/action carrier,
-does the one-cell coefficient extend consistently from one primitive face to
-arbitrary finite boundary patches?
+via the cited primitive-coframe boundary carrier theorem. What was implicit
+in the present note's earlier formulation is the finite-boundary extension:
+if the primitive boundary count is accepted as the microscopic gravitational
+boundary/action carrier, does the one-cell coefficient extend consistently
+from one primitive face to arbitrary finite boundary patches?
 
 Yes. Locality, additivity, and cubic-frame orientation symmetry force the
 unique finite-boundary density
@@ -82,6 +108,101 @@ So the positive closure here is not merely single-cell arithmetic. The exact
 `1/4` coefficient now has a unique additive finite-boundary extension on the
 conditional carrier surface.
 
+## Conditional carrier-identification chain
+
+The audit verdict on this row identifies the load-bearing physical step
+beyond finite additivity:
+
+> the finite additivity theorem is algebraically valid under its
+> assumptions, but the Planck-normalization consequence depends on
+> accepting that the primitive boundary/worldtube count is the
+> microscopic gravitational boundary/action carrier.
+
+This section makes the structure of that bridge explicit on the live
+authority chain. It does **not** derive the bridge from `A_min`; that
+remains the named open target. What it does is record the exact form the
+carrier identification takes once the same admitted-physics-input chain
+already used by the cited
+[`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
+is in scope.
+
+### Bridge premise (admitted, not derived)
+
+```text
+(BP)  the framework's first-order coframe boundary carrier P_A is
+      the microscopic gravitational boundary/action density carrier.
+```
+
+This is the same bridge premise named in
+[`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+§5 ("Why this is positive but not lane closure") and inherited verbatim by
+the present note. The audit verdict on this row is precisely a request to
+cite that named open premise rather than letting it remain implicit.
+
+### Conditional carrier-share derivation
+
+Granted (BP) and the Wald-Noether formula as admitted universal physics
+input on the framework's retained discrete GR action surface
+(per the BH-Wald composition note), the Bekenstein-Hawking entropy of any
+stationary Killing horizon of cross-section area `A` is
+
+```text
+S_BH = A / (4 G_Newton,lat).                                        (W)
+```
+
+The boundary-density extension theorem above gives, on the same surface,
+
+```text
+N_A(P) = c_cell * A(P) / a^2,    c_cell = 1/4.                       (E)
+```
+
+Identifying `S_BH` with the extended boundary count on a horizon patch
+(this *is* the (BP) identification, applied at the macroscopic horizon
+scale), and matching (W) to (E) at `A(P) = A`,
+
+```text
+A * c_cell / a^2  =  A / (4 G_Newton,lat),
+c_cell / a^2      =  1 / (4 G_Newton,lat).                           (M)
+```
+
+In the framework's natural lattice units (`a = 1` and the source-unit
+normalization `G_kernel = 1/(4π) → G_Newton,lat = 1` from
+[`PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM`](PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)),
+(M) reduces to the algebraic identity
+
+```text
+c_cell = 1/4.                                                        (C)
+```
+
+The chain (W) ↔ (E) ↔ (M) ↔ (C) is consistent: each primitive face carries
+exactly `c_cell = 1/4` of the gravitational entropy/action share, summing
+locally and additively to `A/(4G_Newton,lat)` on any finite patch tiled by
+primitive faces.
+
+### What the bridge IS, on this surface
+
+Conditional on (BP) and the Wald admission, the carrier identification is
+not free. It is forced to:
+
+```text
+each primitive face contributes exactly c_cell = 1/4 (in lattice units)
+of the gravitational boundary/action density carrier, and a finite patch
+of n primitive faces carries exactly n * c_cell = n/4 of that carrier,
+matching A/(4G_Newton,lat) at G_Newton,lat = 1.
+```
+
+This is a sharper articulation of the carrier-identification step than the
+earlier "boundary count = gravitational carrier" assertion: the *share per
+face* is fixed at `1/4` by the cited authorities, not chosen.
+
+### What this section does NOT close
+
+The above is a conditional structural identity, not a derivation of (BP).
+The Wald-Noether formula remains an admitted universal physics input, and
+(BP) itself remains the named open bridge premise carried forward from the
+primitive-coframe carrier theorem §5. Status of this row remains
+`audited_conditional` until (BP) is independently derived from `A_min`.
+
 ## What this closes
 
 This closes the finite-boundary extension sub-gap:
@@ -91,18 +212,28 @@ This closes the finite-boundary extension sub-gap:
 > coefficient extends uniquely and additively to finite boundary patches.
 
 This is a positive support theorem for the Planck conditional packet.
+With the explicit citation chain above, the conditional carrier-share
+identification is sharpened to "each primitive face carries exactly
+`c_cell = 1/4` of the gravitational boundary/action density carrier on
+the same surface where the cited authorities live."
 
 ## What remains open
 
-This note still does **not** derive the carrier premise itself.
+This note still does **not** derive the carrier premise (BP) itself.
 
-The remaining positive Planck target is:
+The remaining positive Planck target, restated in the precise form of
+[`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+§5, is:
 
-> derive that the primitive one-step boundary/worldtube count is the
-> microscopic carrier of the gravitational boundary/action density.
+> `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
+>
+> i.e. derive that the framework's first-order coframe boundary carrier
+> `P_A` is the microscopic gravitational boundary/action density carrier
+> from `A_min` alone, without the Wald-Noether admission.
 
 The no-go notes remove two shortcuts to that target; this note adds the
-positive extension theorem that applies once the target is accepted or derived.
+positive extension theorem and the conditional carrier-share identity that
+apply once the target is accepted or derived.
 
 ## Verification
 
@@ -122,4 +253,8 @@ The runner checks:
 6. uniqueness from unit-cell normalization on rectangular and non-rectangular
    finite face unions;
 7. the extended density still yields conditional `a/l_P = 1`;
-8. the result is an extension theorem, not a carrier-identification theorem.
+8. the result is an extension theorem, not a carrier-identification theorem;
+9. conditional carrier-share consistency: under the bridge premise (BP) and
+   the admitted Wald formula, the per-face contribution `c_cell = 1/4`
+   matches `1/(4 G_Newton,lat)` at `G_Newton,lat = 1` on every finite patch
+   (chain (W) ↔ (E) ↔ (M) ↔ (C) above).
