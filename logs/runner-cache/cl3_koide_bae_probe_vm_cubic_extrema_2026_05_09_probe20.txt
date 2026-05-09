@@ -1,0 +1,227 @@
+======================================================================
+Section 0: Retained V(m) inputs (from KOIDE_Z3_SCALAR_POTENTIAL note)
+======================================================================
+
+  V(m) = V_0 + L*m + (3/2)*m^2 + (1/6)*m^3   [single real coord]
+  g_2 = 3/2  (from Tr T_m^2 = 3)
+  g_3 = 1/6  (from Tr T_m^3 = 1)
+  L = c_1 + c_2/2   with c_2 = 35/12 exact, c_1 ~ -0.2526
+  L ~ 1.2057  (numerically retained)
+
+  L (numerical, retained) = 1.205733
+
+======================================================================
+Section 1: Tr(H), Tr(H^2), Tr(H^3) for H = aI + bC + b-bar C^2
+======================================================================
+
+  Tr(H)   = 3*a
+  Tr(H^2) = 3*a**2 + 6*r**2
+  Tr(H^3) = 3*a**3 + 18*a*r**2 + 24*r**3*cos(phi)**3 - 18*r**3*cos(phi)
+
+  PASS  1.1 Tr(H) = 3a (sum eigenvalues)
+  PASS  1.2 Tr(H^2) = 3a^2 + 6r^2 (sum eigenvalues^2)
+  PASS  1.3 Tr(H^3) = 3a^3 + 18 a r^2 + 6 r^3 cos(3 phi)
+  PASS  1.4 numerical Tr H = 3a
+  PASS  1.5 numerical Tr H^2 = 3a^2 + 6r^2
+  PASS  1.6 numerical Tr H^3 = 3a^3 + 18 a r^2 + 6 r^3 cos(3phi)
+
+======================================================================
+Section 2: V_total(a, r, phi) := sum_k V(lambda_k)
+======================================================================
+
+  PASS  2.1 V_total (sum V(lambda_k)) equals trace expansion
+  V_total = 3 V_0 + 3 L a + (9/2) a^2 + 9 r^2 + (1/2) a^3
+            + 3 a r^2 + r^3 cos(3 phi)
+
+  symbolic V_total:
+                3      2                              
+               a    9⋅a         2    3               2
+3⋅L⋅a + 3⋅V₀ + ── + ──── + 3⋅a⋅r  + r ⋅cos(3⋅φ) + 9⋅r 
+               2     2                                
+
+  PASS  2.2 V_total matches expected closed form
+
+======================================================================
+Section 3: Extension consistency: V_total(a, 0, phi) reduces to 3 V(a)
+======================================================================
+
+  PASS  3.1 V_total(a, 0, phi) = 3 V(a)  [b=0 limit]
+  1D critical points (dV/dm = 0): m = [-sqrt(9 - 2*L) - 3, sqrt(9 - 2*L) - 3]
+  PASS  3.2 1D extremum equation: m^2 + 6m + 2L = 0
+  PASS  3.3 m_V (V_eff minimum) ~ -0.433 matches retained note
+
+======================================================================
+Section 4: Angular extremum dV_total/d(phi) = 0
+======================================================================
+
+  dV_total/dphi = -3*r**3*sin(3*phi)
+
+  PASS  4.1 dV/dphi = -3 r^3 sin(3 phi)
+  Angular extremum: sin(3 phi) = 0  =>  3 phi in pi*Z
+    cos(3 phi) = +1: phi in {0, 2pi/3, 4pi/3}     [C_3 directions]
+    cos(3 phi) = -1: phi in {pi/3, pi, 5pi/3}     [shifted directions]
+
+
+======================================================================
+Section 5: dV/da = 0 and dV/dr = 0 (with cos(3 phi) = eps in {+1, -1})
+======================================================================
+
+  dV/da = 3*L + 3*a**2/2 + 9*a + 3*r**2
+  dV/dr = 3*r*(2*a + eps*r + 6)
+
+  PASS  5.1 dV/da = 3L + 9a + (3/2)a^2 + 3 r^2
+  PASS  5.2 dV/dr = 3r(6 + 2a + eps r)
+  Substituting r = -eps(6+2a) into dV/da=0 (and clearing factor 2/3):
+  -> 2*L + 9*a**2 + 54*a + 72 = 0
+
+  PASS  5.3 (a, r) extremum reduces to 9 a^2 + 54 a + 72 + 2L = 0
+  PASS  5.4 quadratic-in-a from substitution matches
+
+======================================================================
+Section 6: BAE algebraic condition r^2/a^2 = 1/2
+======================================================================
+
+  PASS  6.1 BAE r^2/a^2=1/2 with r=-eps(6+2a) reduces to 7a^2 + 48a + 72 = 0
+  BAE roots (in a): [-24/7 - 6*sqrt(2)/7, -24/7 + 6*sqrt(2)/7]
+  Numerical: [-4.640754482034081, -2.216388375108776]
+
+
+======================================================================
+Section 7: V_total extremum vs BAE — same root for which L?
+======================================================================
+
+  Shared-root expression: a = (7L - 72) / 27
+  BAE evaluated at shared root: 343*L**2/729 + 224*L/81 - 56/9
+  L values for V_total/BAE compatibility: [-144/49 + 162*sqrt(2)/49, -162*sqrt(2)/49 - 144/49]
+
+  Retained L = c1 + c2/2 ~ 1.2057
+  Required L for compatibility: [1.736787696009008, -7.614338716417171]
+
+  PASS  7.1 V_total/BAE compatibility L values DIFFER from retained L
+
+======================================================================
+Section 8: Numerical V_total extrema at retained L vs BAE roots
+======================================================================
+
+  Discriminant 1 - 2L/9 = 0.732059
+  V_total extrema: a1 = -2.1444, a2 = -3.8556
+  r1 = 1.7112, r2 = 1.7112
+  r1^2/a1^2 = 0.6368  (BAE = 0.5)
+  r2^2/a2^2 = 0.1970  (BAE = 0.5)
+
+  PASS  8.1 V_total extremum a1: r^2/a^2 != 1/2
+  PASS  8.2 V_total extremum a2: r^2/a^2 != 1/2
+
+======================================================================
+Section 9: Numerical confirmation by explicit V_total minimization
+======================================================================
+
+  Numerical extremum found (phi fixed = pi/3): a = -2.144395, r = 1.711209
+  cos(3 phi) = -1.000000
+  r^2/a^2 = 0.636790  (BAE target: 0.5)
+
+  PASS  9.1 Numerical gradient at extremum near zero
+  PASS  9.2 Numerical extremum r^2/a^2 != 1/2 (BAE not satisfied)
+  PASS  9.3 Quadratic prediction matches numerical extremum a-coord
+
+======================================================================
+Section 10: Per-eigenvalue V'(lambda_k)=0 alternative
+======================================================================
+
+  V'(lambda) = 0 roots: lambda in [-sqrt(9 - 2*L) - 3, sqrt(9 - 2*L) - 3]
+  At L_num = 1.2057: lambda = [-5.566813848593881, -0.4331861514061184]
+
+  Per-eigenvalue test at L=0: lambda in {0, -6}
+  C_3-orbit triples (lambda_0, lambda_1, lambda_2) with each in {0, -6}:
+    triple (0.0, 0.0, 0.0): a=0.000, r^2=0.000, r^2/a^2=nan
+    triple (0.0, 0.0, -6.0): a=-2.000, r^2=4.000, r^2/a^2=1.0000
+    triple (0.0, -6.0, -6.0): a=-4.000, r^2=4.000, r^2/a^2=0.2500
+    triple (-6.0, -6.0, -6.0): a=-6.000, r^2=0.000, r^2/a^2=0.0000
+  PASS  10.1 Per-eigenvalue triples (L=0) — no triple satisfies BAE r^2/a^2=1/2
+
+======================================================================
+Section 11: Structural obstruction — V(m) extension does NOT close BAE
+======================================================================
+
+  Route A: V_total extrema vs BAE compatibility
+    Required L: [1.736787696009008, -7.614338716417171]
+    Retained L: 1.2057
+    -> retained L is NOT in the compatibility set
+
+  Route B: per-eigenvalue extremization
+    realizable C_3 triples at L=0: r^2/a^2 in {0, 0.25, 1.0, undef}
+    -> none equals 1/2
+
+  The obstruction is precise:
+    BAE quadratic-in-a:    7 a^2 + 48 a + 72 = 0
+    V_total quadratic-in-a: 9 a^2 + 54 a + 72 + 2L = 0
+    These coincide ONLY for a tuned L; not for retained L.
+
+  PASS  11.1 Route A: retained L not in V_total/BAE compatibility set
+  PASS  11.2 Route B: per-eigenvalue triples (L=0) miss BAE
+
+======================================================================
+Section 12: Out-of-scope check — broader 'mass tower' claim
+======================================================================
+
+  m_V (V_eff minimum on retained L)    ~ -0.4332
+  m_* (physical selected point, cited) ~ -1.1610
+  Gap: 0.7278
+
+  The retained note flags m_V != m_* as an honest gap.
+  Extending to hw=1 cannot close this gap because:
+    - hw=1 extremization REDUCES to 1D extremization at r=0.
+    - At the non-trivial r > 0 branch, the (a, r) configuration
+      does not satisfy BAE for retained L.
+
+  PASS  12.1 m_V (V_eff min) != m_* (physical point) — retained gap
+
+======================================================================
+Section 13: Verdict
+======================================================================
+
+VERDICT: STRUCTURAL OBSTRUCTION (sharpened).
+
+V(m) functional extension to hw=1 does NOT close BAE |b|^2/a^2=1/2.
+
+Two natural extensions tested:
+  (A) V_total = sum V(lambda_k)  -- functional-calculus aggregation
+      Extremum equations:
+        dV/da = 0  =>  3L + 9a + (3/2)a^2 + 3r^2 = 0
+        dV/dr = 0  =>  18r + 6ar + 3 eps r^2 = 0  (eps = cos(3 phi) = +/-1)
+        dV/dphi=0  =>  sin(3 phi) = 0
+      Non-trivial branch r = -eps(6+2a) substituted:
+        9 a^2 + 54 a + 72 + 2L = 0
+      BAE r^2/a^2 = 1/2 with same r-substitution gives:
+        7 a^2 + 48 a + 72 = 0
+      These linearly independent quadratics share a root only for
+      specific L values: [1.736787696009008, -7.614338716417171]
+      Retained L ~ 1.2057 is NOT compatible.
+
+  (B) Per-eigenvalue V'(lambda_k) = 0 for all k
+      At L=0: lambda in {0, -6}, four C_3-orbit triples possible
+      Realized r^2/a^2: {undef, 1.0, 0.25, undef} -- none = 1/2.
+
+Why this is structural, not tunable:
+  - The 1D V(m) extension to hw=1 is the canonical functional-calculus
+    extension. Any other 'extension' would require an additional choice
+    (e.g., ad-hoc weighting of eigenvalues), which would be a new
+    admission, not a derivation.
+  - The retained L = c1 + c2/2 inherits the K_frozen upstream condition
+    (out-of-scope per the retained note's scope statement). Even if a
+    different K_frozen could give the compatible L, that would shift the
+    closure target to deriving K_frozen, not deriving BAE from V(m).
+
+This rules out the 'V(m) extension to hw=1' route as a closure mechanism
+for BAE within retained content.
+
+Sharpened residue:
+  BAE |b|^2/a^2 = 1/2 is NOT recoverable from spectral-functional
+  extension of V(m) to the hw=1 C_3-orbit. Other routes (Q-readout
+  functional pivot per Probe 16, retained-U(1) hunt per Probe 14,
+  Plancherel/Peter-Weyl per Probe 12) remain open or already bounded.
+
+
+======================================================================
+=== TOTAL: PASS=27, FAIL=0 ===
+======================================================================
