@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py
-runner_sha256: 08f913c9f0c9e8cb6ac12ab111154dbd3e3db6920bd386e7dce7a72474b45412
+runner_sha256: 50eb5e74d6737b08aa1bcea0827796114c6f67f8b6dd4f7e678e14711c7d6e15
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.07
+elapsed_sec: 0.14
 status: ok
 ----- stdout -----
 ========================================================================================

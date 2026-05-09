@@ -35473,7 +35473,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "07f3e48e10995fea965347ccf5963cc65e36c3082a8be1a89881969cca9e603d",
+      "note_hash": "7d7d1a764fb525c117ebdbd77e73ee3d0fc2ac48228845e15a03a9976c9504bb",
       "path": "docs/DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py",
       "title": "DM Leptogenesis Expansion Axiom Boundary"
@@ -35852,7 +35852,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0e76024b20a92b3f2d3737cc25ba3bec56b429e0ec3a5ca2e201c618a9c0a12b",
+      "note_hash": "5d389855a906ae367d51a1612db0a7d30f7ee67ed98f798e0ef6ed2b59aafa76",
       "path": "docs/DM_LEPTOGENESIS_PROJECTION_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_projection_theorem.py",
       "title": "DM Leptogenesis Projection Theorem"
@@ -35920,7 +35920,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "bd62fdf7eadd12e36b914edbe3159c8a051dcb36fd21af44579928e34b9c07b5",
+      "note_hash": "c13210e545c458923fc988e2277f3cc4cb528e8c0969b19b2e989a6be897a2e1",
       "path": "docs/DM_LEPTOGENESIS_WASHOUT_AXIOM_BOUNDARY_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py",
       "title": "DM Leptogenesis Washout / Thermal Axiom Boundary"
@@ -35969,7 +35969,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "ce870ee61ae41f7f77f6f40001db0b2012da19cbe67a03c7db17f9429afc678a",
+      "note_hash": "c4f95d12b2c8b9c70ca6fc8631611d37f1b7dc4fff0c34f2cb9aa49afe59f9eb",
       "path": "docs/DM_NEUTRINO_BREAKING_TRIPLET_AXIOM_LAW_ATTEMPT_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py",
       "title": "DM Neutrino Breaking-Triplet Axiom-Law Attempt"
@@ -37012,7 +37012,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d1be1262bd03f26944268a1349fbceb3e2cea65d67f13ecf8a8d274bf3128771",
+      "note_hash": "2e98a732a4733128ba5aa79817c0239ac87890cd0adfc30296db41717c75c7b9",
       "path": "docs/DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_triplet_even_response_theorem.py",
       "title": "DM Neutrino Triplet Even-Response Theorem"
@@ -37023,7 +37023,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f5e7f7026a468f199b3332db8e614671891d1e5442a101f84dbc6f5c3f33981d",
+      "note_hash": "c0e11455ee1e21383aefa57c19aa6ebd88aa2337250fa066468620ec9b438e46",
       "path": "docs/DM_NEUTRINO_TRIPLET_NORMALIZATION_TARGET_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_triplet_normalization_target.py",
       "title": "DM Neutrino Triplet Normalization Target"
@@ -37131,7 +37131,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "71b79d6c942e32c27e09eca0607f6a12259026c96ec0e04624ee167f91469ceb",
+      "note_hash": "50c4baa2fa4817d40b04720708ecc4f95e0988ad1ea7da886c10b29f20072626",
       "path": "docs/DM_NEUTRINO_WEAK_TRIPLET_TRANSFER_CLASS_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py",
       "title": "DM Neutrino Weak-Triplet Transfer-Class Theorem"
@@ -37555,7 +37555,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "6b42ef56655c1f0de621c4ee32d42f3aed40980dbb6a7b19fffd7e529be7125b",
+      "note_hash": "07fa1d07044795c2b052d6cb0cb0e2286870385a2e27c21306af05d334778d08",
       "path": "docs/DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py",
       "title": "DM Strong-CP `\\gamma`-Transfer Boundary"
@@ -37744,7 +37744,7 @@
         "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
       ],
-      "note_hash": "b5f3a1cd23ffe184f1381eb7a770d2fcf752cbc0c84c52c6039e582b489f443a",
+      "note_hash": "c43a8fa8306d35732d55da22700e788948641a37c2bb8a7f1bfe61f940eeeec7",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Constructive Transport Plateau J_iso Derivation And Schur-Isotropy No-Go"

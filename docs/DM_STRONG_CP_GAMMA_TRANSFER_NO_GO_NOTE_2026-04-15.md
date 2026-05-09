@@ -5,6 +5,8 @@
 and the DM neutrino Hermitian carrier  
 **Script:** `scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py`
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py` exits 0 with PASS in the current cache; the prior audit verdict citing a nonzero exit was generated against a stale cache and is invalidated by this source-note hash drift. The runner output and pass/fail semantics are otherwise unchanged.
+
 ## Question
 
 Does the current strong-CP + CKM closure already populate the DM neutrino

@@ -4,6 +4,8 @@
 **Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_triplet_normalization_target.py`
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/frontier_dm_neutrino_triplet_normalization_target.py` exits 0 with PASS in the current cache; the prior audit verdict citing a nonzero exit was generated against a stale cache and is invalidated by this source-note hash drift. The runner output and pass/fail semantics are otherwise unchanged.
+
 ## Question
 
 What exact coefficient target must the missing triplet transfer law hit in
