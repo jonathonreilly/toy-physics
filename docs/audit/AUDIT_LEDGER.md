@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 234 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 896 |
+| unaudited | 895 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 420 |
+| ~~audited_conditional~~ | 421 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 420 |
+| `audited_conditional` | 421 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 950 |
+| `unaudited` | 949 |
 
 | claim_type | count |
 |---|---:|
@@ -577,6 +577,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_taste_generation_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2974,6 +2975,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** SU(3) is embedded as Gell-Mann generators on the 3D symmetric base subspace, giving the Fierz channel-count fraction R_conn = (N_c^2 - 1) / N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
 - **chain closes:** True — Within the narrowed algebraic scope, the construction closes: a chosen 3D carrier supports the standard SU(3) generators and the Fierz identity gives the adjoint fraction 8/9. The physical identification of this carrier with SM color remains outside the audited claim.
 - **rationale:** The source note has narrowed the claim to an algebraic embedding/channel-count theorem and explicitly removes the physical SM color bridge from the load-bearing scope. The runner source constructs the symmetric/antisymmetric base split, embeds standard Gell-Mann generators, checks commutators, trace normalization, and the Fierz identity rather than merely printing constants. The remaining assertions about physical color and EW correction are stated as conditional/deferred, so they do not block the bounded algebraic theorem.
+- **auditor confidence:** high
+
+### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
+
+- **Note:** [`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Whether the claimed quark-antiquark 3 x 3bar color-singlet decomposition follows on the framework's N_c = 3 SU(3)_c carrier.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c71-dc40-7183-8d18-8c03fee28fd5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Apply the standard SU(N) Clebsch-Gordan rule N x Nbar = 1 + adj with N_c = 3 to obtain 3 x 3bar = 1 + 8 and the normalized trace singlet.  _(class `A`)_
+- **chain closes:** False — The SU(3) representation-theory decomposition and rank-one projector close algebraically. The chain does not close for the quark/physical color carrier because the only cited authority explicitly leaves that identification outside its retained scope.
+- **rationale:** Issue: the Clebsch-Gordan calculation is valid for an assumed SU(3) fundamental and conjugate, but the cited parent is retained_bounded and explicitly defers the bridge from the CL3 symmetric-base SU(3) to physical SM color/quark carriers. Why this blocks: the note presents the result as a quark-antiquark color-singlet theorem, so retained status cannot propagate through that open carrier identification; the runner only checks hard-coded SU(3) linear algebra. Repair target: cite or prove a retained bridge deriving the quark and antiquark color representations from the CL3 carrier, then rerun the singlet/projector check under that bridge. Claim boundary until fixed: a standard algebraic SU(3) fact, 3 x 3bar = 1 + 8 with one invariant trace channel, conditional on the carrier bridge.
+- **open / conditional deps cited:**
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high
 
 ### `cl3_taste_generation_theorem`
