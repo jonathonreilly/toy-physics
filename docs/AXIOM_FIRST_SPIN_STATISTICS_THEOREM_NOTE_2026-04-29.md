@@ -343,15 +343,20 @@ by Steps 1–3 above. The runner exhibits the load-bearing facts:
 
 ## Load-bearing Dependencies
 
-- A_min: [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
-- per-site Hilbert-space bridge:
+After the 2026-05-08 reframe, only the U2+U3 content of the upstream
+Cl(3) per-site uniqueness theorem is load-bearing:
+
+- per-site Hilbert-space bridge (A1-only U2+U3):
   [AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
-- canonical normalization carriers:
-  [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md),
-  [G_BARE_RIGIDITY_THEOREM_NOTE.md](G_BARE_RIGIDITY_THEOREM_NOTE.md),
-  [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
-- assumption / derivation ledger:
-  [ASSUMPTION_DERIVATION_LEDGER.md](ASSUMPTION_DERIVATION_LEDGER.md)
+
+The following are **context references only**, not load-bearing on
+the spin-statistics chain (written as plain backticks per the
+PR #306 cleanup pattern so the citation-graph builder does not
+parse them as upstream dep edges):
+
+- A_min reference (axiom-set memo): `MINIMAL_AXIOMS_2026-04-11.md` (superseded; current memo is `MINIMAL_AXIOMS_2026-05-03.md`)
+- canonical normalization context (A4 enters Step 1 trivially via the canonical staggered Dirac-Wilson M, NOT load-bearing on the dimensional argument of Step 2): `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`, `G_BARE_RIGIDITY_THEOREM_NOTE.md`, `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
+- assumption / derivation ledger (overview reference, not load-bearing): `ASSUMPTION_DERIVATION_LEDGER.md`
 
 ## Citations into the loop pack
 

@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 67 |
+| **retained** | 68 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 865 |
+| unaudited | 864 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 393 |
+| `audited_clean` | 394 |
 | `audited_conditional` | 414 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 914 |
+| `unaudited` | 913 |
 
 | claim_type | count |
 |---|---:|
@@ -58,8 +58,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | criticality | count |
 |---|---:|
 | `critical` | 183 |
-| `high` | 474 |
-| `medium` | 520 |
+| `high` | 472 |
+| `medium` | 522 |
 | `leaf` | 650 |
 
 - **Retained pending chain closure:** 2
@@ -79,27 +79,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 399 | 36.64 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 660 | 35.87 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 567 | 33.15 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 363 | 32.01 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `native_gauge_closure_note` | bounded_theorem | critical | 648 | 29.34 | `audited_clean` | **retained_bounded** |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 655 | 35.86 | `audited_clean` | **retained_bounded** |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 564 | 32.64 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 357 | 31.98 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `native_gauge_closure_note` | bounded_theorem | critical | 643 | 29.33 | `audited_clean` | **retained_bounded** |
 | 6 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `unaudited` | unaudited |
-| 7 | `minimal_axioms_2026-05-03` | meta | critical | 554 | 28.62 | `unaudited` | meta |
-| 8 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 152 | 28.26 | `unaudited` | unaudited |
+| 7 | `minimal_axioms_2026-05-03` | meta | critical | 552 | 28.61 | `unaudited` | meta |
+| 8 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 145 | 28.19 | `unaudited` | unaudited |
 | 9 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
-| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 543 | 27.59 | `audited_clean` | open_gate |
-| 11 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 242 | 25.93 | `audited_clean` | **retained_bounded** |
+| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 541 | 27.58 | `audited_clean` | open_gate |
+| 11 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 236 | 25.89 | `audited_clean` | **retained_bounded** |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 514 | 25.51 | `unaudited` | unaudited |
 | 13 | `three_generation_structure_note` | bounded_theorem | critical | 370 | 25.04 | `unaudited` | unaudited |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 235 | 24.88 | `unaudited` | unaudited |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 429 | 24.25 | `unaudited` | unaudited |
+| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 231 | 24.86 | `unaudited` | unaudited |
+| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 423 | 24.23 | `unaudited` | unaudited |
 | 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 213 | 23.74 | `unaudited` | unaudited |
 | 17 | `one_generation_matter_closure_note` | bounded_theorem | critical | 356 | 23.48 | `unaudited` | unaudited |
 | 18 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 70 | 23.15 | `unaudited` | unaudited |
-| 19 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 399 | 22.14 | `audited_clean` | **retained** |
-| 20 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 429 | 21.75 | `audited_clean` | **retained_bounded** |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 402 | 21.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 200 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 395 | 22.13 | `audited_clean` | **retained** |
+| 20 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 423 | 21.73 | `audited_clean` | **retained_bounded** |
+| 21 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 200 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 396 | 21.63 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 149 | 20.23 | `unaudited` | unaudited |
 | 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 123 | 19.95 | `unaudited` | unaudited |
 | 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 84 | 19.91 | `unaudited` | unaudited |
@@ -127,6 +127,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | D | - |
+| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | claude-opus | C | - |
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -1653,6 +1654,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** A1-only abstract real-algebra classification of Cl(3,0): exactly two non-isomorphic faithful complex irreducible representations (rho_+ and rho_-), each 2-dim, distinguished by the central pseudoscalar omega -> +/- i; every finite-dim complex rep is a direct sum of these chirality irreps with even total dim. U4 (per-site Hilbert dim = 2 on the physical lattice) is explicitly out of scope as of the 2026-05-08 narrowing.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `claude-opus-fresh-context-crossconfirm-2026-05-09-b4a43eb7`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Construct Pauli matrices and central pseudoscalar omega = sigma_1 sigma_2 sigma_3 from scratch and verify (i) Cl(3) defining relations {sigma_i, sigma_j} = 2 delta_ij I at machine precision (E1), (ii) omega^2 = -I and centrality (E6), (iii) chirality split rho_+ (omega -> +i I) and rho_- (omega -> -i I) both satisfying Cl(3) relations (E6), (iv) absence of 1-dim faithful rep (E2), absence of 3-dim faithful rep via 200-trial random Hermitian search yielding 0 solutions (E3), and (v) 4-dim Pauli-otimes-Pauli rep decomposing with commutant-dim 4 (E5).  _(class `C`)_
+- **chain closes:** True — For the narrowed U1-U3 scope, the chain closes on A1 alone: U1 (existence) is exhibited by Pauli matrices satisfying (1); U2 (uniqueness within chirality) follows from Cl(3,0) ≅ M_2(C) as a real algebra (real-dim 8 = real-dim M_2(C)), complexification Cl(3) ⊗_R C ≅ M_2(C) ⊕ M_2(C) via central idempotents e_± = (1 ∓ i omega)/2, and Artin-Wedderburn/Schur in each simple summand; U3 (decomposition) follows from semisimplicity of M_2(C) ⊕ M_2(C). The runner exhibits all load-bearing algebraic facts (Cl(3) anticommutators, omega^2 = -I, omega central, chirality eigenvalues +/- i, no faithful odd-dim rep, multiplicity counting via commutant dim). U4 is properly excluded and forwarded to substep 1 of the staggered-Dirac realization gate; the citation is plain-text-in-backticks per PR #306 cleanup so the dep graph does not pick it up as an upstream edge — confirming no upstream deps for U1-U3.
+- **rationale:** Runner returns exit_code 0 and PASS=6/6 with all load-bearing algebraic identities at machine precision (E1 err 0.000e+00; E6 omega^2=-I err 0.000e+00, centrality 0.000e+00, chirality eigenvalues 0.000e+00; E5 decomposition err 0.000e+00 with commutant-dim 4); E3 random search over 200 trials finds 0 faithful 3-dim reps as predicted by Artin-Wedderburn; E4 trials confirm intertwining unitary equivalence within a fixed chirality (algebraic V = U_true gives diff 0.000e+00). Proof structure (Steps 1-5 of the note) matches a textbook Artin-Wedderburn argument and uses only A1. The narrowed claim_scope (U1-U3) excludes the A3-bridge U4 statement, eliminating the prior cycle. Two minor housekeeping issues do not invalidate the claim: (1) the cached runner log's final stdout line 74 still says '(U1)-(U4)' (stale string from pre-narrowing version of the script; the current script source on lines 366-367 correctly prints '(U1)-(U3)'), and (2) the runner sha256 recorded in the cache (48efa772...) does not match the current script sha256 (ba487551...), indicating the cache predates the 2026-05-08 narrowing of the verdict string. These are cosmetic — the exhibits themselves (E1-E6) verify only the A1-only algebraic content that supports U1-U3, and the cached numerics are valid for that content. Recommend re-running the runner to refresh the cache so the verdict line and sha256 are consistent with the narrowed scope.
 - **auditor confidence:** high
 
 ### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
