@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 64 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 233 |
+| **retained_bounded** | 234 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 962 |
+| unaudited | 961 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
@@ -40,22 +40,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 386 |
+| `audited_clean` | 387 |
 | `audited_conditional` | 365 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1017 |
+| `unaudited` | 1016 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 735 |
+| `bounded_theorem` | 736 |
 | `decoration` | 12 |
 | `meta` | 62 |
 | `no_go` | 192 |
 | `open_gate` | 108 |
-| `positive_theorem` | 773 |
+| `positive_theorem` | 772 |
 
 | criticality | count |
 |---|---:|
@@ -259,6 +259,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_circulant_wilson_target_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -6839,6 +6840,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Using the root-of-unity cancellations, the character sums give a_0 = sqrt(3) a and z = sqrt(3) b, so a_0^2 - 2|z|^2 = 3a^2 - 6|b|^2.  _(class `A`)_
 - **chain closes:** True — The claim uses only the stated definitions of C, omega, lambda_k, a_0, z, conjugation, and the standard identity 1 + omega + omega^2 = 0. No physical Koide, charged-lepton, Wilson, selector, comparator, or external normalization premise is imported.
 - **rationale:** The load-bearing work is a genuine class-A algebraic identity check over explicitly defined symbols, not a definition substitution or physical bridge. The runner source constructs the matrix, eigenvectors, character sums, and symbolic differences directly in SymPy and reports 16 class-A passes with no failures. Because there are no cited dependencies and no open physical identification is consumed, the narrow algebraic theorem closes exactly as scoped.
+- **auditor confidence:** high
+
+### `koide_circulant_wilson_target_note_2026-04-18`
+
+- **Note:** [`KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`](../../docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the structural algebraic target reduction: the C_3-covariant Hermitian commutant is 3-real, lies in the adjacent-chain path algebra, and the stipulated Koide spectral equation is one real constraint on it.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d62-9638-7141-b7b8-0af39e98a45a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using the retained circulant character bridge, the spectral Koide condition a_0^2 = 2|z|^2 becomes 3a^2 = 6|b|^2 = 6(x^2 + y^2) inside the 3-real C_3-covariant Hermitian family, so the target is 2-real.  _(class `A`)_
+- **chain closes:** True — For the bounded structural target-size claim, the chain closes by direct matrix algebra plus the retained narrow character/operator identity. It does not close a microscopic Wilson law, selector mechanism, or charged-lepton readout, but the note explicitly excludes those.
+- **rationale:** Issue: the note is not a first-principles Koide prediction; it is a structural reduction of the target, with an observed charged-lepton numerical witness in the runner. Why this does not block the audited scope: the note explicitly bounds out the microscopic Wilson law, selector, and readout, while the structural claims close by algebra over retained inputs. Repair target: a separate theorem must derive the cyclic responses, selector equation, and physical readout. Claim boundary until fixed: treat this as a clean bounded target-shape theorem, not as a derivation of lepton masses.
 - **auditor confidence:** high
 
 ### `koide_cl3_selector_gap_note_2026-04-19`
