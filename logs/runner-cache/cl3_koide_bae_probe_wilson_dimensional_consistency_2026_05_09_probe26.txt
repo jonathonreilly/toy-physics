@@ -1,0 +1,213 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_bae_probe_wilson_dimensional_consistency_2026_05_09_probe26.py
+runner_sha256: b7eff49bd01848706256e7d7afa5d9f127feb5d926dc77cf38b995929dd67772
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+
+======================================================================
+Probe 26 — BAE Wilson-Chain Dimensional Consistency
+======================================================================
+
+Goal: test whether the Wilson chain m_tau =
+      M_Pl * (7/8)^(1/4) * u_0 * alpha_LM^18
+      forces BAE (|b|^2/a^2 = 1/2) on the Brannen circulant
+      H = a I + b C + b̄ C^2 on hw=1 at the operator level.
+
+BAE = Brannen Amplitude Equipartition (formerly A1-condition).
+      Per the retained narrow theorem, BAE on operator coords
+      is the same equation as a_0^2 = 2|z|^2 on character coords.
+
+Five forms tested for consilience: all must give same m_tau.
+
+======================================================================
+
+=== Section 1: Algebraic setup verification ===
+
+  PASS  1.1 C is unitary
+  PASS  1.2 C has order 3 (C^3 = I)
+  PASS  1.3 C^* = C^{-1} = C^2
+  PASS  1.4 H = aI + bC + b̄C^2 is Hermitian
+  PASS  1.5 H is a circulant
+  PASS  1.6 H is C_3-invariant under conjugation
+  PASS  1.7 extract_a_b round-trip recovers (a, b)
+  PASS  1.8 ||H||_F^2 = 3 a^2 + 6 |b|^2 holds exactly
+  PASS  1.9 BAE example |b|^2/a^2 = 1/2 holds at constructed point
+  PASS  1.10 a_0 = sqrt(3) * a (T1 of CHAR_BRIDGE narrow theorem)
+  PASS  1.11 z = sqrt(3) * b (T2 of CHAR_BRIDGE narrow theorem)
+  PASS  1.12 a_0^2 - 2|z|^2 = 3 a^2 - 6 |b|^2 (T3 of CHAR_BRIDGE)
+
+=== Section 2: Five-form Wilson-chain consilience ===
+
+  Form 1 m_tau / M_Pl = 1.4647721223e-19
+  Form 2 m_tau / M_Pl = 1.4647721223e-19
+  PASS  2.2 Form 2 matches Form 1 numerically
+  Form 3 m_tau / M_Pl = 1.4647721223e-19
+  PASS  2.3 Form 3 matches Form 1 numerically
+  Form 4 m_tau / M_Pl = 1.4647721223e-19
+  PASS  2.4 Form 4 matches Form 1 numerically
+  Form 5 m_tau / M_Pl = 1.4647721223e-19
+  PASS  2.5 Form 5 matches Form 1 numerically
+  PASS  2.6 alpha_LM^18 = alpha_LM^16 * alpha_LM^2
+  PASS  2.7 N_taste = 16 = 2^4 (4D BZ corners)
+  PASS  2.8 N_Yukawa_legs = 2 (one alpha_LM per chiral leg)
+
+=== Section 3: D1 — Frobenius-norm decomposition test ===
+
+Hypothesis: alpha_LM^16 enforces equipartition between trivial
+            and nontrivial isotypes via taste-doubler trace.
+
+  PASS  3.1 alpha_LM * H is still Hermitian
+  PASS  3.2 alpha_LM * H is still a circulant
+  PASS  3.3 alpha_LM * H is still C_3-invariant
+  PASS  3.4 alpha_LM * H has scaled (a', b') = (alpha_LM a, alpha_LM b)
+  PASS  3.5 alpha_LM scaling PRESERVES |b|^2/a^2 ratio
+  PASS  3.6 alpha_LM^16 * H preserves |b|^2/a^2 ratio (taste-doubler factor is C_3-trivial)
+  PASS  3.7 tr(H^2) = 3 a^2 + 6 |b|^2 = ||H||_F^2
+  PASS  3.8 BAE-violating H (a=2, b=0.5) gives |b|^2/a^2 = 1/16
+  PASS  3.9 BAE-compliant H (a=1, b=1/sqrt(2)) gives |b|^2/a^2 = 1/2
+  PASS  3.10 alpha_LM^16 cannot lift BAE-violating to BAE-compliant
+  PASS  3.11 cited source-stack content forces lambda_0 = lambda_1 = alpha_LM^16
+  PASS  3.12 lambda_0 = lambda_1 cannot break (3 a^2) : (6 |b|^2) ratio
+
+=== Section 4: D2 — Yukawa-vertex bilinear decomposition test ===
+
+Hypothesis: alpha_LM^2 (Yukawa vertex factor) couples to the
+            bilinear ||H||_F^2 = tr(H^* H) in a way that pins
+            the trivial/nontrivial sector ratio.
+
+  PASS  4.1 alpha_LM^2 * H preserves Hermitian-circulant form
+  PASS  4.2 alpha_LM^2 * H preserves |b|^2/a^2 ratio
+  PASS  4.3 Y^* Y for Y = (1, 0.3, 0.1) gives |beta|^2/alpha^2 = 0.1528 != 1/2 (BAE-violating)
+  PASS  4.4 BAE-compliant Y (a=1, b=c=0.3841) gives |beta|^2/alpha^2 = 0.5000 ≈ 1/2
+  PASS  4.5 alpha_LM^2 cannot lift BAE-violating Y^* Y to BAE-compliant
+  PASS  4.6 N_Yukawa_legs = 2 counts chiral legs, not isotypes (no C_3-discriminating content)
+
+=== Section 5: D3 — APBC (7/8)^(1/4) operator-level test ===
+
+  PASS  5.1 (7/8)^(1/4) * H is Hermitian-circulant
+  PASS  5.2 (7/8)^(1/4) * H preserves |b|^2/a^2 ratio
+  PASS  5.3 APBC factor commutes with C_3 conjugation (scalar acts trivially)
+  PASS  5.4 Even (7/8)^1 * H preserves |b|^2/a^2 ratio (scalar at any power)
+  PASS  5.5.1/4 (7/8)^1/4 * H preserves |b|^2/a^2 ratio
+  PASS  5.5.1/2 (7/8)^1/2 * H preserves |b|^2/a^2 ratio
+  PASS  5.5.1 (7/8)^1 * H preserves |b|^2/a^2 ratio
+  PASS  5.5.2 (7/8)^2 * H preserves |b|^2/a^2 ratio
+  PASS  5.5.3/2 (7/8)^3/2 * H preserves |b|^2/a^2 ratio
+
+=== Section 6: D4 — u_0 plaquette tadpole operator-level test ===
+
+  PASS  6.1 u_0 * H is Hermitian-circulant
+  PASS  6.2 u_0 * H preserves |b|^2/a^2 ratio
+  PASS  6.3 u_0 factor commutes with C_3 conjugation (scalar acts trivially)
+  PASS  6.4 u_0 derives from color-trace, not spatial C_3[111] (structurally orthogonal sectors)
+
+=== Section 7: D5 — Five-form mutual consilience over-determination ===
+
+  PASS  7.1 All 5 forms agree on the scalar prefactor (no operator-level disagreement)
+  PASS  7.2.2 Form 2 produces same scaled H as Form 1
+  PASS  7.2.2r Form 2 preserves |b|^2/a^2 ratio (same as unscaled H)
+  PASS  7.2.3 Form 3 produces same scaled H as Form 1
+  PASS  7.2.3r Form 3 preserves |b|^2/a^2 ratio (same as unscaled H)
+  PASS  7.2.4 Form 4 produces same scaled H as Form 1
+  PASS  7.2.4r Form 4 preserves |b|^2/a^2 ratio (same as unscaled H)
+  PASS  7.2.5 Form 5 produces same scaled H as Form 1
+  PASS  7.2.5r Form 5 preserves |b|^2/a^2 ratio (same as unscaled H)
+  PASS  7.3 Form-grouping freedom = scalar associativity (no operator content)
+  PASS  7.4 m_tau / v = alpha_LM^2 form gives same numerical prefactor
+
+=== Section 8: Eigenvalue assignment vs (a, b) determination ===
+
+  PASS  8.1 Two distinct (a, b) give same lambda_max — m_tau alone underdetermines (a, b)
+  PASS  8.2 BAE-compliant (a=1, b=e^{i2/9}/sqrt(2)) gives ratio 0.5
+  PASS  8.3 BAE-violating (a=lam/1.4, b=0.4 a) gives ratio 0.16
+  PASS  8.4 Both produce the same lambda_max — m_tau Wilson chain cannot distinguish them
+
+  Summary 8.5: even if iterated to give m_e, m_mu, m_tau (3
+  equations), the chain pins (a, |b|, arg b) only if BAE is
+  IMPOSED. The chain's structural factors give scalars, not
+  selection principles for the cone Q = 2/3.
+
+=== Section 9: Structural obstruction summary ===
+
+  All structural factors in the m_tau Wilson chain
+  ((7/8)^(1/4), u_0, alpha_LM^16, alpha_LM^2) act on the
+  Brannen circulant H = a I + b C + b̄ C^2 as SCALAR rescalings
+  H -> r H. Scalar rescalings preserve every ratio, including
+  |b|^2/a^2. They cannot pin BAE.
+
+  The m_tau Wilson chain produces ONE scalar number. The
+  Brannen circulant on hw=1 has THREE real DOFs (a, |b|, arg b).
+  One scalar cannot determine three DOFs.
+
+  Even at the operator level, none of the chain's structural
+  factors carries C_3[111]-isotype-discriminating content. The
+  3-trivial isotype (multiples of I, contributing 3a^2 to
+  ||H||_F^2) and the 6-nontrivial isotype (multiples of C and
+  C^2, contributing 6|b|^2) cannot be distinguished by any
+  scalar factor.
+
+  Per the Probe 14 retained-U(1) hunt: distinguishing the two
+  isotypes requires the U(1)_b continuous extension of C_3,
+  which is NOT in the cited source-stack content. The Wilson chain does
+  not supply U(1)_b.
+
+  PASS  9.1 BAE residue does NOT close via m_tau Wilson chain (scalar factors cannot break |b|^2/a^2 ratio)
+  PASS  9.2 Result is consistent with Probe 14 (U(1)_b residue intact)
+  PASS  9.3 Result is consistent with Probe 6 (Y^* Y bilinears do not force BAE)
+  PASS  9.4 Result is consistent with CIRCULANT_CHARACTER_BRIDGE narrow theorem (BAE = 1-equation condition, not forced by scalars)
+
+=== Section 10: Honest verdict ===
+
+  VERDICT: STRUCTURAL OBSTRUCTION.
+
+  The m_tau Wilson chain
+    m_tau = M_Pl * (7/8)^(1/4) * u_0 * alpha_LM^18
+  derives ONE scalar (m_tau). It cannot derive BAE
+  (|b|^2/a^2 = 1/2, equivalently 3 a^2 = 6 |b|^2) at the
+  operator level on hw=1, because every structural factor in
+  the chain — (7/8)^(1/4), u_0, alpha_LM^16, alpha_LM^2 — is
+  C_3[111]-trivial and acts on H as a scalar rescaling that
+  preserves the |b|/a ratio.
+
+  Equivalent restatements:
+    - dimension counting: 1 scalar < 3 DOFs of (a, |b|, arg b)
+    - Frobenius norm: scalars cannot break (3 a^2) : (6 |b|^2)
+    - C_3 isotype: scalars are trivially graded; trivial vs
+      nontrivial isotype indistinguishable
+    - U(1)_b: chain does not supply the continuous extension
+      of C_3 needed to grade the b-doublet
+    - five-form consilience: forms are scalar regroupings,
+      no operator-level over-determination
+
+  The BAE admission count is UNCHANGED. This probe DOES NOT
+  introduce a new admission. It SHARPENS the existing residue:
+
+    The m_tau Wilson chain is an INSUFFICIENT closure path for
+    BAE, even when read at the operator level. The residue
+    remains (per Probes 12, 13, 14): the continuous extension
+    of retained discrete C_3 to U(1)_b on the b-doublet of
+    A^{C_3} on hw=1.
+
+  Consequence for the framework: the Q = 2/3 Koide identity
+  remains structurally compatible with hw=1 cited source-stack content
+  (R1+R2 of the CIRCULANT_CHARACTER_DERIVATION note), but
+  retention of BAE itself requires a different selector than
+  the m_tau Wilson chain. Currently retained_bounded; not
+  upgradable to retained on this attack.
+
+  This probe is a BOUNDED OBSTRUCTION result. It is:
+    - source-only (no PDG, no MC, no fits, no new axioms),
+    - bounded by the hierarchy theorem's named structural
+      factors and the retained C_3 + M_3(C) authorities,
+    - bounded by the no-U(1)_b finding from Probe 14.
+
+
+======================================================================
+=== TOTAL: PASS=69, FAIL=0 ===
+======================================================================
+
+----- stderr -----
+

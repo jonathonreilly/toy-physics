@@ -9449,6 +9449,106 @@
       "to": "koide_berry_phase_theorem_note_2026-04-19"
     },
     {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "continuum_limit_note"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "continuum_bridge_note"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_kms_condition_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "continuum_convergence_note"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_stefan_boltzmann_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_hawking_temperature_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_unruh_temperature_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_a1_probe_rg_fixed_point_bounded_obstruction_note_2026-05-08_probe5"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
       "from": "koide_a1_probe_flavor_anomaly_bounded_obstruction_note_2026-05-08_probe2",
       "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
@@ -9605,6 +9705,70 @@
       "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
     },
     {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "per_site_su2_spin_half_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "multisite_pauli_group_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_a1_probe_rp_frobenius_bounded_obstruction_note_2026-05-08_probe1"
+    },
+    {
+      "from": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
       "from": "koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6",
       "to": "minimal_axioms_2026-05-03"
     },
@@ -9715,6 +9879,78 @@
     {
       "from": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
       "to": "koide_a1_route_d_newton_girard_bounded_obstruction_note_2026-05-08_routed"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_q_so2_phase_erasure_support_note_2026-04-25"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_cone_completing_root_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_mru_demotion_note_2026-04-20"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_q_readout_factorization_theorem_2026-04-22"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_brannen_phase_reduction_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
     },
     {
       "from": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
@@ -10299,6 +10535,746 @@
     {
       "from": "koide_axiom_native_support_batch_note_2026-04-22",
       "to": "koide_q_second_order_support_batch_note_2026-04-22"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_q_readout_factorization_theorem_2026-04-22"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_a1_probe_rp_frobenius_bounded_obstruction_note_2026-05-08_probe1"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "to": "koide_a1_route_d_newton_girard_bounded_obstruction_note_2026-05-08_routed"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "hw1_second_order_return_shape_theorem_note"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "koide_a1_derivation_status_note"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "hw1_second_order_return_shape_theorem_note"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "koide_a1_probe_rg_fixed_point_bounded_obstruction_note_2026-05-08_probe5"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "yt_qfp_insensitivity_support_note"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "to": "koide_a1_derivation_status_note"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_brannen_phase_reduction_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_berry_phase_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_berry_bundle_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_a1_probe_rp_frobenius_bounded_obstruction_note_2026-05-08_probe1"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_a1_probe_spectral_action_bounded_obstruction_note_2026-05-08_probe4"
+    },
+    {
+      "from": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "to": "koide_a1_probe_rg_fixed_point_bounded_obstruction_note_2026-05-08_probe5"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "physical_lattice_necessity_note"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_cone_completing_root_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
+      "from": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_cone_completing_root_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
+      "from": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "koide_cyclic_wilson_descendant_law_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
     },
     {
       "from": "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
@@ -42611,6 +43587,43 @@
       "runner_path": null,
       "title": "A1 Physical Bridge \u2014 theoretical attempt"
     },
+    "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15": {
+      "claim_id": "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
+        "continuum_limit_note",
+        "continuum_bridge_note",
+        "axiom_first_kms_condition_theorem_note_2026-05-01",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "continuum_convergence_note",
+        "axiom_first_stefan_boltzmann_theorem_note_2026-05-01",
+        "axiom_first_hawking_temperature_theorem_note_2026-05-01",
+        "axiom_first_unruh_temperature_theorem_note_2026-05-01",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "complete_prediction_chain_2026_04_15",
+        "three_generation_observable_theorem_note",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_probe_rg_fixed_point_bounded_obstruction_note_2026-05-08_probe5",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+      ],
+      "note_hash": "cfe3a3b9467834b5e7eb94cf90cd6eb59514399c76d555abced750d3b6a34376",
+      "path": "docs/KOIDE_A1_PROBE_CONTINUUM_LIMIT_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe15.md",
+      "runner_path": "scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py",
+      "title": "Koide A1 Probe 15 \u2014 Continuum-Limit Hypothesis for U(1)_b Closure"
+    },
     "koide_a1_probe_flavor_anomaly_bounded_obstruction_note_2026-05-08_probe2": {
       "claim_id": "koide_a1_probe_flavor_anomaly_bounded_obstruction_note_2026-05-08_probe2",
       "claim_type_author_hint": "bounded_theorem",
@@ -42674,6 +43687,34 @@
       "runner_path": "scripts/cl3_koide_a1_probe_gravity_phase_2026_05_08_probe3.py",
       "title": "Koide A1 Probe \u2014 Gravity-as-Phase Matter-Sector Inner Product Bounded Obstruction"
     },
+    "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17": {
+      "claim_id": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure; no new admission)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "per_site_su2_spin_half_theorem_note_2026-05-02",
+        "multisite_pauli_group_theorem_note_2026-05-02",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_probe_rp_frobenius_bounded_obstruction_note_2026-05-08_probe1",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+      ],
+      "note_hash": "80792c1f4427918fb5f85f02af152e70e918c47ccdb085dfa15dfde2137b2ad9",
+      "path": "docs/KOIDE_A1_PROBE_LATTICE_NON_CONJUGATION_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe17.md",
+      "runner_path": "scripts/cl3_koide_a1_probe_lattice_non_conjugation_2026_05_09_probe17.py",
+      "title": "Koide A1 Probe 17 \u2014 Non-Conjugation Lift of Retained Per-Site Qubit U(1) Sharpened Bounded Obstruction"
+    },
     "koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6": {
       "claim_id": "koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6",
       "claim_type_author_hint": "bounded_theorem",
@@ -42725,6 +43766,36 @@
       "path": "docs/KOIDE_A1_PROBE_PLANCHEREL_PETER_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe12.md",
       "runner_path": "scripts/cl3_koide_a1_probe_plancherel_peter_weyl_2026_05_09_probe12.py",
       "title": "Koide A1 Probe 12 \u2014 Plancherel / Peter-Weyl Bimodule Weighting Bounded Obstruction"
+    },
+    "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16": {
+      "claim_id": "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction at the functional level; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
+        "koide_q_so2_phase_erasure_support_note_2026-04-25",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+        "koide_mru_demotion_note_2026-04-20",
+        "koide_q_readout_factorization_theorem_2026-04-22",
+        "koide_brannen_phase_reduction_theorem_note_2026-04-20",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+      ],
+      "note_hash": "f7b014b8f567390cef933cc2c98776380c22806d1d51e4aba3b9ef8e7331a645",
+      "path": "docs/KOIDE_A1_PROBE_Q_READOUT_FUNCTIONAL_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe16.md",
+      "runner_path": "scripts/cl3_koide_a1_probe_q_readout_functional_2026_05_09_probe16.py",
+      "title": "Koide A1 Probe 16 \u2014 Q-Readout / Functional-Level Pivot, Sharpened Bounded Obstruction"
     },
     "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13": {
       "claim_id": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
@@ -43025,6 +44096,347 @@
       "path": "docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md",
       "runner_path": null,
       "title": "Koide April 22 Axiom-Native Support Batch"
+    },
+    "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18": {
+      "claim_id": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; partial closure: F2 ruled out; no positive closure of F1 vs F3)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_q_readout_factorization_theorem_2026-04-22",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "koide_a1_probe_rp_frobenius_bounded_obstruction_note_2026-05-08_probe1",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08",
+        "koide_a1_route_d_newton_girard_bounded_obstruction_note_2026-05-08_routed"
+      ],
+      "note_hash": "0cae5e02597716d7cc3f40d59d4a6d27a8653f52a9775ef350c361f3604a2fed",
+      "path": "docs/KOIDE_BAE_PROBE_F1_CANONICAL_FUNCTIONAL_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe18.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_f1_canonical_functional_2026_05_09_probe18.py",
+      "title": "Koide BAE Probe 18 \u2014 F1 Canonical Q-Functional Sharpened Bounded Obstruction"
+    },
+    "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27": {
+      "claim_id": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "three_generation_observable_theorem_note",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "hw1_second_order_return_shape_theorem_note",
+        "wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_a1_derivation_status_note",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+      ],
+      "note_hash": "eb48fdd5ddf502e1396d117783b66bea01c7ae554b8c30a91a8525419e9b659b",
+      "path": "docs/KOIDE_BAE_PROBE_HW_SECTOR_IDENTIFICATION_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe27.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_hw_sector_identification_2026_05_09_probe27.py",
+      "title": "Koide BAE Probe 27 \u2014 hw=N Sector Identification Bounded Obstruction"
+    },
+    "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28": {
+      "claim_id": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction at the interacting-extension layer; no positive closure;",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "complete_prediction_chain_2026_04_15",
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+        "cl3_sm_embedding_theorem",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+        "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+      ],
+      "note_hash": "f46a5ff88d63cfc8961cac448a1c5a1af3cc0f20ffdecc5b660a86b4932fe729",
+      "path": "docs/KOIDE_BAE_PROBE_INTERACTING_DYNAMICS_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe28.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_interacting_dynamics_2026_05_09_probe28.py",
+      "title": "Koide BAE Probe 28 \u2014 Full Cited Interacting Matter-Sector Dynamics: Bounded Obstruction"
+    },
+    "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29": {
+      "claim_id": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (partial falsification of the charged-lepton",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+        "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+        "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+        "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+        "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+      ],
+      "note_hash": "2b69a65003c535aa454b2620a9c5c5dd576e749f20f0db4bb8a7f0a84f869bcd",
+      "path": "docs/KOIDE_BAE_PROBE_KAPPA_PREDICTION_TEST_PARTIAL_FALSIFICATION_NOTE_2026-05-09_probe29.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_kappa_prediction_test_2026_05_09_probe29.py",
+      "title": "Koide BAE Probe 29 \u2014 \u03ba Prediction Test: Partial Falsification of Charged-Lepton Sector (Bounded)"
+    },
+    "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23": {
+      "claim_id": "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction with same-residue",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "hw1_second_order_return_shape_theorem_note",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+        "complete_prediction_chain_2026_04_15",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+      ],
+      "note_hash": "38f297315203b00750834413a12801fcbb05e6d44ff184f225e8fcddc0e1df22",
+      "path": "docs/KOIDE_BAE_PROBE_LEPTON_TRIPLET_C3_CYCLE_BOUNDED_NOTE_2026-05-09_probe23.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_lepton_triplet_c3_cycle_2026_05_09_probe23.py",
+      "title": "Koide BAE Probe 23 \u2014 Lepton Triplet from C_3-Cycle on hw=1 (Bounded Obstruction, Same-Residue)"
+    },
+    "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21": {
+      "claim_id": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; distinct from Probe 5)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_a1_probe_rg_fixed_point_bounded_obstruction_note_2026-05-08_probe5",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "complete_prediction_chain_2026_04_15",
+        "minimal_axioms_2026-05-03",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "yt_qfp_insensitivity_support_note",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_derivation_status_note"
+      ],
+      "note_hash": "95ccc695c82e55fdba5ac3caed96be6c468fa577089410af4ceb855e3f222766",
+      "path": "docs/KOIDE_BAE_PROBE_NATIVE_LATTICE_FLOW_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe21.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_native_lattice_flow_2026_05_09_probe21.py",
+      "title": "Koide BAE Probe 21 \u2014 Framework's Native Lattice Hamiltonian Flow: Bounded Obstruction (Sharpened)"
+    },
+    "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24": {
+      "claim_id": "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction with partial positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+        "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
+        "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
+        "koide_brannen_phase_reduction_theorem_note_2026-04-20",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_berry_phase_theorem_note_2026-04-19",
+        "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+      ],
+      "note_hash": "efb142ec1da4b53f0df0120a6b2f40a1ae7d2dfad4dfccba8b959e2525af0863",
+      "path": "docs/KOIDE_BAE_PROBE_PHI_FROM_Z3_CHARACTER_SHARPENED_NOTE_2026-05-09_probe24.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_phi_from_z3_character_2026_05_09_probe24.py",
+      "title": "Koide BAE Probe 24 \u2014 Brannen Magic Angle `\u03c6 = 2/9` from Z_3-Character / Berry-Phase / Plancherel-Frobenius Content (Sharpened, Partial Closure)"
+    },
+    "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25": {
+      "claim_id": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure;",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_probe_rp_frobenius_bounded_obstruction_note_2026-05-08_probe1",
+        "koide_a1_probe_spectral_action_bounded_obstruction_note_2026-05-08_probe4",
+        "koide_a1_probe_rg_fixed_point_bounded_obstruction_note_2026-05-08_probe5"
+      ],
+      "note_hash": "8fff50e40fc8a64b34d9b46e183ace96deb03d3ee2163499e373e8fa2c37cf37",
+      "path": "docs/KOIDE_BAE_PROBE_PHYSICAL_EXTREMIZATION_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe25.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_physical_extremization_2026_05_09_probe25.py",
+      "title": "Koide BAE Probe 25 \u2014 Physical Extremization From Retained Hamiltonian Dynamics: Sharpened Bounded Obstruction"
+    },
+    "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30": {
+      "claim_id": "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (structural obstruction; sharpens but does not close `P`)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24",
+        "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
+        "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
+        "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "physical_lattice_necessity_note",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "complete_prediction_chain_2026_04_15",
+        "physical_lattice_foundational_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "2a79c94a18ecf9930ca501b867e0f7c0a6ee6fae6f4f2562ef6e0c1c8827e504",
+      "path": "docs/KOIDE_BAE_PROBE_RADIAN_FROM_DIMENSIONS_BOUNDED_NOTE_2026-05-09_probe30.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_radian_from_dimensions_2026_05_09_probe30.py",
+      "title": "Koide BAE Probe 30 \u2014 Radian-Bridge Primitive `P` From Retained Dimensional Content (Bounded Obstruction)"
+    },
+    "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22": {
+      "claim_id": "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure;",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+        "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "note_hash": "2e3d21e71940216b82ed439f93a7a16e14db5635ced52d843a812dc42eecc44f",
+      "path": "docs/KOIDE_BAE_PROBE_SPECTRUM_CONE_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe22.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_spectrum_cone_2026_05_09_probe22.py",
+      "title": "Koide BAE Probe 22 \u2014 Spectrum-Level Cone Localization Pivot Bounded Obstruction"
+    },
+    "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20": {
+      "claim_id": "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction; no positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+      ],
+      "note_hash": "c2697bf44403650d3523ddc471ff413dad913d42082340a88270f9dd391b69ee",
+      "path": "docs/KOIDE_BAE_PROBE_VM_CUBIC_EXTREMA_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe20.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_vm_cubic_extrema_2026_05_09_probe20.py",
+      "title": "Koide BAE Probe 20 \u2014 V(m) Cubic-Extrema Extension to hw=1"
+    },
+    "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19": {
+      "claim_id": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (sharpened obstruction with partial positive closure)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "complete_prediction_chain_2026_04_15",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+      ],
+      "note_hash": "109398ab4428a61d449e5eab645a453fd96543c2052a7e2196e2b05102218f93",
+      "path": "docs/KOIDE_BAE_PROBE_WILSON_CHAIN_MASS_SHARPENED_NOTE_2026-05-09_probe19.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_wilson_chain_mass_2026_05_09_probe19.py",
+      "title": "Koide BAE Probe 19 \u2014 Wilson Chain Extension to Charged-Lepton Mass Scale (Sharpened, Partial Closure)"
+    },
+    "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26": {
+      "claim_id": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+      ],
+      "note_hash": "43a638f77eba5f17beba553e2f5aafc472f95037ccf8a2d358172cd401977113",
+      "path": "docs/KOIDE_BAE_PROBE_WILSON_DIMENSIONAL_CONSISTENCY_BOUNDED_NOTE_2026-05-09_probe26.md",
+      "runner_path": "scripts/cl3_koide_bae_probe_wilson_dimensional_consistency_2026_05_09_probe26.py",
+      "title": "Koide BAE Probe 26 \u2014 Wilson-Chain Dimensional Consistency Bounded Obstruction"
     },
     "koide_berry_bundle_obstruction_theorem_note_2026-04-19": {
       "claim_id": "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
@@ -60963,7 +62375,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 156,
+      "bounded_theorem": 172,
       "meta": 17,
       "no_go": 14,
       "none": 1693,
@@ -60971,17 +62383,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 661,
+      "bounded_theorem": 677,
       "meta": 17,
       "no_go": 122,
       "none": 459,
       "open_gate": 113,
       "positive_theorem": 618
     },
-    "edge_count": 7415,
-    "leaf_count": 532,
-    "node_count": 1990,
+    "edge_count": 7659,
+    "leaf_count": 536,
+    "node_count": 2006,
     "root_count": 825,
-    "runners_with_path": 1581
+    "runners_with_path": 1597
   }
 }

@@ -1,0 +1,225 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_q_readout_functional_2026_05_09_probe16.py
+runner_sha256: 37686e27b8c3ba720e2a683a59990a8d8b9db37b8159b3f282c1880fa40b4098
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.74
+status: ok
+----- stdout -----
+
+========================================================================
+Probe 16 — Q-Readout / Functional-Level Pivot for A1-Condition
+========================================================================
+
+Pivot motivation:
+  Probes 13 (real-structure / antilinear involution) and Probe 14
+  (retained-U(1) hunt) sharpened the algebra-level A1-condition
+  residue to:
+     'U(1)_b angular quotient on the non-trivial doublet of
+      A^{C_3} = the U(1)_b symmetry of the Brannen delta-readout.'
+
+  This is a CONTINUOUS symmetry, qualitatively different from any
+  retained algebra symmetry. Probe 14 ruled out 9 retained U(1)
+  candidates; none projects to U(1)_b on the b-doublet.
+
+  This probe pivots to the Q-functional / readout level. Under the
+  retained P1 identification (per KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE
+  Section 1.2), lambda_k = sqrt(m_k). The Brannen Koide ratio
+  Q = sum(m_k) / (sum(sqrt(m_k)))^2 is then a function of (a, |b|)
+  only, not arg(b). The Q-functional automatically respects U(1)_b.
+
+Hypothesis under test:
+  Does the framework's retained matter-sector content force Q = 2/3
+  at the readout level, exploiting U(1)_b-invariance?
+
+========================================================================
+
+========================================================================
+Section 1: Retained-content sanity checks
+========================================================================
+
+  PASS  1.1 C is unitary
+  PASS  1.2 C^3 = I (order 3)
+  PASS  1.3 eigenvalues of C are {1, omega, omega-bar}
+  PASS  1.4 H = aI + bC + b̄C^2 is Hermitian
+  PASS  1.5 eigenvalues lambda_k = a + 2|b|cos(arg(b) + 2 pi k / 3)
+
+========================================================================
+Section 2: P1 identification (retained per spectrum-operator bridge)
+========================================================================
+
+Per KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM Section 1.2:
+  v_k = sqrt(m_k) = lambda_k
+
+This identifies the eigenvalues of H = aI + bC + b̄C^2 with the
+sqrt-mass amplitudes. Under this identification:
+  sum(sqrt(m_k)) = sum(lambda_k) = Tr(H) = 3a
+  sum(m_k) = sum(lambda_k^2) = ||H||_F^2 = 3a^2 + 6|b|^2
+
+  PASS  2.1 Tr(H) = 3a (symbolic)
+  PASS  2.2 ||H||_F^2 = 3a^2 + 6|b|^2 (symbolic)
+
+========================================================================
+Section 3: Q-functional under P1 is U(1)_b-invariant
+========================================================================
+
+Q under P1 = sum(m_k) / (sum(sqrt(m_k)))^2 = ||H||_F^2 / Tr(H)^2
+           = (3a^2 + 6|b|^2) / (3a)^2
+           = (a^2 + 2|b|^2) / (3a^2)
+
+This depends only on (a, |b|^2), NOT on arg(b). Hence Q is
+U(1)_b-invariant by construction.
+
+  PASS  3.1 Q(a, b) = (a^2 + 2|b|^2) / (3a^2) (symbolic)
+3.2-3.7 Q is U(1)_b-invariant (numerical):
+  PASS  3.2 Q(a, |b|*e^(i*0.00)) = Q(a, |b|)
+  PASS  3.3 Q(a, |b|*e^(i*0.30)) = Q(a, |b|)
+  PASS  3.4 Q(a, |b|*e^(i*0.70)) = Q(a, |b|)
+  PASS  3.5 Q(a, |b|*e^(i*1.50)) = Q(a, |b|)
+  PASS  3.6 Q(a, |b|*e^(i*2.50)) = Q(a, |b|)
+  PASS  3.7 Q(a, |b|*e^(i*3.14)) = Q(a, |b|)
+  PASS  3.8 At |b|^2/a^2 = 1/2 (A1), Q = 2/3 (numerical)
+  PASS  3.9 Q = 2/3 ⇔ |b|^2/a^2 = 1/2 (A1) (symbolic via substitution)
+
+========================================================================
+Section 4: Det-carrier law is NOT U(1)_b-invariant
+========================================================================
+
+Computing det(H) symbolically...
+  det(H) = a**3 - 3*a*bi**2 - 3*a*br**2 - 6*bi**2*br + 2*br**3
+
+  PASS  4.1 det(H) = a^3 - 3a|b|^2 + 2|b|^3 cos(3 arg(b)) (symbolic)
+  PASS  4.2 det(H) is NOT U(1)_b-invariant (det at phi=0 != det at phi=0.7)
+  PASS  4.3 <det(H)>_arg(b) = a(a^2 - 3|b|^2) (post-U(1)_b-quotient det)
+  PASS  4.4 <det^2(H)>_arg(b) = a^6 - 6a^4|b|^2 + 9a^2|b|^4 + 2|b|^6
+
+========================================================================
+Section 5: Functional extrema on (a, |b|)-plane (post-U(1)_b-quotient)
+========================================================================
+
+Three admissible extremization functionals on the post-U(1)_b-quotient
+(a, |b|) plane:
+  F1 = log E_+ + log E_perp     (block-total Frobenius, (1,1)-mult)
+  F2 = log <det^2>              (angular-averaged det)
+  F3 = log E_+ + 2 log E_perp   (rank-weighted, (1,2)-mult)
+
+Constraint: E_+ + E_perp = const, where E_+ = 3a^2, E_perp = 6|b|^2.
+
+  PASS  5.1 F1 (block-total Frobenius) extremum at A1 (kappa = 2)
+  PASS  5.2 F2 (angular-averaged det^2) extremum NOT at A1
+  PASS  5.3 F3 (rank-weighted) extremum at kappa = 1 (NOT A1)
+
+  Symbolic Lagrange of F1 = log(3a^2) + log(6|b|^2) at fixed E_total:
+     dF1/da = 2/a - lambda * 6a = 0  →  a^2 = 1/(3 lambda)
+     dF1/d|b| = 2/|b| - lambda * 12|b| = 0  →  |b|^2 = 1/(6 lambda)
+     →  a^2 / |b|^2 = 2  →  kappa = 2  →  A1.
+
+  Symbolic Lagrange of F2 (angular-averaged det^2):
+     <det^2> = a^6 - 6a^4|b|^2 + 9a^2|b|^4 + 2|b|^6
+     At |b|=0: <det^2> = a^6.  This is the boundary maximum (κ=∞).
+     At a → 0: <det^2> → 2|b|^6.  Lower than a^6 at fixed E_total.
+     →  F2 prefers |b| = 0 boundary (NOT A1).
+  PASS  5.4 F2 at |b|=0 boundary > F2 at A1 (confirms boundary preference)
+
+========================================================================
+Section 6: Functional-choice ambiguity persists at functional level
+========================================================================
+
+  PASS  6.1 F1, F2, F3 give distinct extrema (functional-choice ambiguity)
+  PASS  6.2 Only F1 (block-total Frobenius) lands at A1
+
+  Each functional uses only cited-source-stack primitives:
+    F1: E_+ = 3a^2 (retained), E_perp = 6|b|^2 (retained, BlockTotalFrob)
+    F2: <det^2>_phi = polynomial in (a^2, |b|^2) after U(1)_b averaging
+    F3: E_+, E_perp same as F1, but with rank-weighted (1,2) coefficients
+
+  All three are admissible candidates on the post-U(1)_b-quotient
+  (a, |b|)-plane. No cited source-stack content distinguishes F1 as canonical.
+
+  PASS  6.3 All three functionals use retained primitives (verifies F1 not distinguished by retained vocabulary)
+
+========================================================================
+Section 7: PDG circularity firewall
+========================================================================
+
+  PASS  7.1 F1 extremum scale-invariant (no PDG-scale loaded)
+  PASS  7.2 Q = 2/3 at A1 holds to machine precision (purely algebraic)
+
+========================================================================
+Section 8: Polynomial cone identity propagation under P1
+========================================================================
+
+Retained KOIDE_CONE_THREE_FORM_EQUIVALENCE (positive_theorem):
+  3(u^2 + v^2 + w^2) = 2(u + v + w)^2
+    ⇔ Q = 2/3
+    ⇔ 4(uv + uw + vw) - (u^2 + v^2 + w^2) = 0
+
+Under P1: (u, v, w) = (lambda_0, lambda_1, lambda_2) =
+                     (a + 2|b|cos(arg b + 2 pi k/3))_k
+
+  PASS  8.1 F_orbit under P1 = 9(a^2 - 2|b|^2) (cone equation in (a, |b|))
+  F_orbit = 0 ⇔ a^2 - 2|b|^2 = 0 ⇔ |b|^2/a^2 = 1/2 = A1 ✓
+
+  This propagates correctly. The polynomial cone identity is the
+  algebraic backbone, but it does NOT, by itself, force A1 — it
+  states: 'IF (lambda_0, lambda_1, lambda_2) lies on the cone
+  THEN |b|^2/a^2 = 1/2'. The 'IF' is the open admission.
+  PASS  8.2 Cone identity correctly propagates under P1 (algebraic backbone)
+
+========================================================================
+Section 9: Convention-robustness checks
+========================================================================
+
+  PASS  9.1 Q is scale-invariant (Q(cH) = Q(H))
+  PASS  9.2 Q is C-basis-independent (C → C^{-1} = C^2)
+
+========================================================================
+Section 10: Verdict
+========================================================================
+
+Phase 1 (closes from cited source-stack content):
+  Under P1 identification (lambda_k = sqrt(m_k)), the Brannen Koide
+  ratio Q = (a^2 + 2|b|^2)/(3a^2) is U(1)_b-invariant. The Q-
+  functional automatically erases the U(1)_b angular ambiguity.
+
+Phase 2 (closes from cited source-stack content):
+  The det-carrier law (campaign synthesis's competing functional for
+  kappa=1 at algebra level) is NOT U(1)_b-invariant. After U(1)_b-
+  quotient (angular average), <det> = a(a^2 - 3|b|^2). The angular-
+  averaged det extremum lands at boundary |b|=0, NOT A1.
+
+Phase 3 (positive — F1 is a viable candidate):
+  Block-total Frobenius F1 = log E_+ + log E_perp at fixed E_+ + E_perp
+  has its Lagrange extremum at E_+ = E_perp ⇔ a^2 = 2|b|^2 ⇔ A1.
+
+Phase 4 (sharpened obstruction — closure NOT achieved):
+  Multiple admissible post-U(1)_b-quotient functionals on (a, |b|)-
+  plane:
+    F1 = log E_+ + log E_perp         → extremum at A1 (kappa=2)
+    F2 = log <det^2>_arg(b)           → extremum at boundary, NOT A1
+    F3 = log E_+ + 2 log E_perp       → extremum at kappa=1, NOT A1
+  No retained extremization principle pins F1 over F2, F3.
+
+Conclusion:
+  The functional-level pivot ERASES the U(1)_b angular ambiguity
+  (Probes 13/14 algebra-level residue) by construction, but DOES
+  NOT close A1. The new sharpened residue is a discrete functional-
+  choice convention on the (a, |b|)-plane, strictly smaller than
+  (and qualitatively different from) the algebra-level continuous-
+  symmetry residue.
+
+  Sharpened residue (Probe 16):
+    'The canonical extremization functional on the (a, |b|) post-
+     U(1)_b-quotient carrier — block-total Frobenius F1 over
+     admissible competitors F2, F3 — that lands the extremum at A1.'
+
+  A1 admission count: UNCHANGED.
+  No new admissions proposed.
+
+
+========================================================================
+=== TOTAL: PASS=33, FAIL=0 ===
+========================================================================
+
+----- stderr -----
+

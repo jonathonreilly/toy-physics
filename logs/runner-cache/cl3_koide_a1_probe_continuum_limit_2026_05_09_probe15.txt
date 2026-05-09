@@ -1,0 +1,328 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py
+runner_sha256: ea83c4af1b97093ab5dd00b78ef8924abb2702187e4f37719ae97942375cb1ee
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
+----- stdout -----
+======================================================================
+Koide A1 Probe 15 — Continuum-Limit Hypothesis for U(1)_b Closure
+======================================================================
+
+Closure target: phi_theta(I) = I, phi_theta(C) = e^{i theta} C,
+                phi_theta(C^2) = e^{-i theta} C^2.
+On H = aI + bC + b̄C^2: phi_theta(H) = aI + e^{i theta} b C + e^{-i theta} b̄ C^2.
+
+This is NOT an algebra automorphism: phi_theta(C * C) != phi_theta(C) * phi_theta(C).
+
+=== Section 0: Closure-target structural facts ===
+
+  PASS  0.1 phi_theta(H) is a circulant for H circulant
+  PASS  0.2 phi_theta(C * C) != phi_theta(C) * phi_theta(C) (NOT algebra automorphism)
+  PASS  0.3 phi_theta is C-linear
+  PASS  0.4 phi_{2pi/3}(C) = omega * C (character action, not algebra auto)
+  PASS  0.5 phi_theta is NOT an algebra automorphism for generic theta = 0.41
+
+======================================================================
+=== Section 1: Limit L1 — lattice-spacing a -> 0 ===
+======================================================================
+
+Hypothesis: in the continuum limit a -> 0 of the staggered Z^3 substrate,
+does the BZ-corner triplet (1+1+3+3 doubler structure) carrying hw=1's M_3(C)
+smear out into a continuous representation, giving rise to a continuous U(1)_b?
+
+Setup: hw=1 corresponds to BZ-corners (pi,0,0), (0,pi,0), (0,0,pi).
+These are isolated points in the Brillouin zone. The C_3[111] cyclic shift
+acts on them as a 3-element permutation. Continuum limit shrinks the BZ.
+
+  PASS  C1.1 a -> 0 limit is cited source-stack content (CONTINUUM_LIMIT_NOTE.md)
+  PASS  C1.2 BZ-corner triplet exists at every finite a > 0
+  PASS  C1.2.b C_3 cyclic permutation acts identically across a-scales
+  PASS  C1.3 C_3 generator on hw=1 is unchanged by a-rescaling (intrinsic to corner indices)
+  PASS  C1.4 No a-rescaling reproduces phi_{0.41} on circulants (a -> 0 limit cannot add U(1))
+  PASS  C1.5 a -> 0 limit does NOT close A1: |b|^2/a^2 stays free
+  PASS  C1.6 BZ-corner structure preserved by taste-reinterpretation; C_3 stays discrete
+
+L1 verdict: FAILS Test C3, C4. The C_3 cyclic permutation of corner indices
+is intrinsic to the {0,1}^3 grading, NOT to a metric on the lattice. The
+continuum limit a -> 0 cannot extend a permutation group to U(1).
+
+======================================================================
+=== Section 2: Limit L2 — large-volume |Lambda| -> infinity ===
+======================================================================
+
+Hypothesis: at infinite-volume Z^3, are there C_3-related symmetries that
+aren't present at finite volume?
+
+  PASS  C2.1 |Lambda| -> infinity is cited source-stack content (thermodynamic limit)
+  PASS  C2.2 M_3(C) on hw=1 is volume-independent (no proper quotient + 3GenObs)
+  PASS  C2.3 C_3 on hw=1 is volume-independent (acts on 3 lattice directions)
+  PASS  C2.4 |Lambda| -> infinity does NOT supply continuous U(1)_b on the b-doublet
+  PASS  C2.5 |Lambda| -> infinity limit does NOT close A1
+  PASS  C2.6 Per-fiber M_3(C) algebra structure unchanged across V = 8, 64, 512
+
+L2 verdict: FAILS Test C3, C4. Volume controls fiber multiplicity, not
+per-fiber algebra structure. No new continuous symmetry appears.
+
+======================================================================
+=== Section 3: Limit L3 — high-temperature beta_th -> 0 (KMS / infinite-T) ===
+======================================================================
+
+Hypothesis: KMS state at high T or beta_th -> 0 might exhibit additional symmetries.
+The maximally-mixed state rho = I/3 is invariant under MORE unitary conjugations.
+
+  PASS  C3.1 beta_th -> 0 KMS limit is cited source-stack content (KMS theorem note)
+  PASS  C3.2 Maximally-mixed state rho_0 = I/3 is well-defined on hw=1 = C^3
+  PASS  C3.3 Maximally-mixed state IS phi_theta-invariant (trivial: it sees only Tr(X)/3)
+  PASS  C3.4 State-invariance does not produce algebra action — Gibbs limit cannot supply U(1)_b
+  PASS  C3.5 At finite beta_th > 0, Gibbs state is NOT phi_theta-invariant
+  PASS  C3.6 beta_th -> 0 limit gives degenerate state, NOT algebra extension to U(1)_b
+  PASS  C3.7 Full-eigenvalue Q is NOT phi_theta-invariant (depends on arg(b))
+  PASS  C3.7.b Reduced (a, |b|) projection IS U(1)_b-invariant by construction (readout-level)
+
+L3 verdict: FAILS Test C4. State-invariance of maximally-mixed Gibbs state does NOT
+produce a U(1)_b ACTION on the algebra. The state is invariant trivially under any
+trace-preserving linear map. The Q-readout is also U(1)_b-invariant, but this is a
+readout-level fact, not a derivation of U(1)_b as an algebra symmetry.
+
+======================================================================
+=== Section 4: Limit L4 — low-temperature beta_th -> infinity (ground-state limit) ===
+======================================================================
+
+Hypothesis: in ground state limit, does the matter-sector ground state exhibit U(1)_b?
+
+  PASS  C4.1 beta_th -> infinity limit is retained (ground-state Gibbs limit)
+  PASS  C4.2 Ground-state projector P_g = |g><g| is well-defined on hw=1
+  PASS  C4.3 phi_theta(H) has different ground-state eigenvalue from H (generically)
+  PASS  C4.4 beta_th -> infinity does NOT extend C_3 to U(1)_b on the algebra
+  PASS  C4.5 Q-extremization recovers A1 only IF (1, 1) weighting on reduced carrier is assumed
+
+L4 verdict: FAILS Test C4. Ground state depends on full (a, b), not on |b| alone.
+phi_theta is not a symmetry of generic H, so the ground-state limit does not produce U(1)_b.
+
+======================================================================
+=== Section 5: Limit L5 — Wilsonian effective action ===
+======================================================================
+
+Hypothesis: integrating out short-distance modes might produce an effective U(1)_b
+on long-mode operators.
+
+  PASS  C5.1 Wilsonian effective-action machinery is part of standard QFT (admissible)
+  PASS  C5.2 hw=1 triplet has no internal momentum hierarchy — no Wilsonian shell-decomposition
+  PASS  C5.3 Wilsonian RG renormalizes (a, b) but preserves algebra structure
+  PASS  C5.4 Schematic Wilson flow preserves |b|^2/a^2 (no phase rotation of b)
+  PASS  C5.5 Wilson flow does NOT generically attract |b|^2/a^2 to 1/2 (Probe 5 confirmed)
+
+L5 verdict: FAILS Test C2 (no internal mode hierarchy on hw=1) and C4.
+Wilsonian renormalization preserves algebra structure; does not introduce new continuous
+symmetries on the matter algebra.
+
+======================================================================
+=== Section 6: Limit L6 — Z_3 rationality density ===
+======================================================================
+
+Hypothesis: do retained discrete C_3 powers, modulo 2pi, form a dense subset of [0, 2pi)?
+If yes, U(1)_b could be the closure of the orbit. If no, the discrete C_3 cannot
+approximate arbitrary theta.
+
+  PASS  C6.1 Discrete C_3 powers generate exactly {0, 2pi/3, 4pi/3} (3 elements)
+  PASS  C6.2 3-element set is NOT dense in [0, 2pi) (finite)
+  PASS  C6.3 Rational-pi multiples form a countable dense subset (NOT the full continuous group)
+  PASS  C6.4 Dense countable subgroup is NOT a Lie subgroup of U(1) — no differentiable structure
+  PASS  C6.5 Generic theta = 0.41 is not in retained (Q * pi); thus not accessible
+  PASS  C6.6 Z_3 ⊂ U(1)_b inclusion does NOT supply continuous extension by any limit operation
+
+L6 verdict: FAILS Test C3 — discrete C_3 has only 3 elements (not dense in U(1));
+retained-radian set is countable (not the full continuous group). The closest miss
+but with a SHARP failure: countable subgroup is structurally different from a Lie subgroup.
+
+======================================================================
+=== Section 7: Limit L7 — per-site SU(2) qubit projection ===
+======================================================================
+
+Hypothesis: framework property says 'continuous in qubit operations' — does the
+per-site continuous SU(2) on Cl(3) ≅ M_2(C) project onto U(1)_b on hw=1?
+
+  PASS  C7.1 Per-site SU(2) diagonal U(1) on hw=1 is a GLOBAL phase (not U(1)_b)
+  PASS  C7.2 Per-site U(1) acts trivially on circulants (Probe 14 candidate 5 confirmation)
+  PASS  C7.3 Only C_3-equivariant per-site U(1) is the diagonal one; it's trivial on circulants
+  PASS  C7.4 Per-site qubit continuity does NOT extend to multi-site U(1)_b on hw=1
+
+L7 verdict: FAILS Test C4. Per-site continuous SU(2) projects to global phase on hw=1,
+which acts trivially on circulants by conjugation. Framework property 'continuous in qubit'
+is single-site; hw=1 is three-site collective.
+
+======================================================================
+=== Section 8: Limit L8 — matter-sector RG IR/UV fixed points ===
+======================================================================
+
+Hypothesis: does matter-sector RG flow to IR/UV fixed point with U(1)_b emergent symmetry?
+
+  PASS  C8.1 No retained matter-sector RG flow on |b|^2/a^2 (Probe 5 confirmed)
+  PASS  C8.2 SM-like 1-loop matter flow does NOT focus |b|^2/a^2 to 1/2
+  PASS  C8.3 SM-like flow preserves arg(b) — but this is because phi_theta NEVER acted
+  PASS  C8.4 RG flow preserves algebra structure; fixed points cannot generate new symmetries
+
+L8 verdict: FAILS Test C4 (Probe 5 confirmed). Matter-sector RG either does not exist as
+cited source-stack content, or preserves arg(b) trivially without generating phi_theta as algebra action.
+
+======================================================================
+=== Section 9: Limit L9 — large-N spectral / N -> infinity bulk-replica ===
+======================================================================
+
+Hypothesis: large-N limit produces additional symmetries (e.g., 't Hooft limit).
+
+  PASS  C9.1 hw=1 is fixed 3-dim; no large-N limit on hw=1
+  PASS  C9.2 Bulk-replica limit grows # of copies but per-copy hw=1 algebra is fixed
+  PASS  C9.3 SU(3) is fixed N=3; 't Hooft large-N is not cited source-stack content for matter sector
+  PASS  C9.4 Large-N limit does NOT close A1
+
+L9 verdict: FAILS Test C2 (matter-sector reach). hw=1 is structurally fixed at 3-dim.
+
+======================================================================
+=== Section 10: Universal-failure structural argument ===
+======================================================================
+
+All 9 candidate limits fail by ONE universal structural mechanism:
+
+  The C_3 cyclic-shift action on hw=1 is a FINITE-DIMENSIONAL discrete subgroup
+  of GL(3, C). It permutes the three lattice direction indices {x, y, z}. This
+  is a COMBINATORIAL group property of {0,1}^3, NOT a metric / geometric property
+  of the lattice spacing, volume, temperature, or coupling.
+
+  Continuum / scaling / thermal / RG limits act on parameters that scale a metric
+  or geometry: lattice spacing (L1), volume (L2), temperature (L3, L4),
+  coupling (L5, L8), Hilbert-space size (L7, L9). They do NOT act on the
+  combinatorial index structure of {0,1}^3 directly.
+
+  Therefore: no retained limit can extend a finite combinatorial group {1, C, C^2}
+  to a continuous Lie group U(1).
+
+This is a structural impossibility, not a contingent failure.
+
+  PASS  10.1 C_3 is a 3-element discrete subgroup of GL(3, C) (intrinsic to {0,1}^3 indexing)
+  PASS  10.2 A^{C_3} = span_C{I, C, C^2} is fixed 3-dim over C
+  PASS  10.3 In C-eigenbasis, C is diagonal: D = diag(1, omega, omega_bar)
+  PASS  10.4 Ad_U(theta) acts trivially on circulants (U is diagonal in C-eigenbasis)
+  PASS  10.5 phi_theta NOT realizable by conjugation for theta = 0.41 (generic, not in {0,2pi/3,4pi/3})
+  PASS  10.6 phi_theta IS realizable by conjugation for theta in {0, 2pi/3, 4pi/3} (the discrete C_3)
+  PASS  10.7 Universal failure: every retained limit preserves the conjugation-action structure
+
+======================================================================
+=== Section 11: Verdict — sharpened bounded obstruction ===
+======================================================================
+
+Probe 15 verdict:
+
+  Test C1 (limit existence): PASS for L1, L2, L3, L4, L6, L8, L9 (retained limits).
+    L5, L7 admissible by standard QFT machinery.
+  Test C2 (matter-sector reach): PASS for L1, L2, L3, L4, L8 (act on hw=1).
+    FAIL for L5 (no internal mode hierarchy), L9 (hw=1 fixed).
+  Test C3 (continuous extension of C_3): FAIL for ALL 9 limits.
+    No retained limit produces a continuous 1-parameter family containing C_3.
+  Test C4 (non-algebraic linear action phi_theta): FAIL for ALL 9 limits.
+    phi_theta is structurally not realizable by conjugation; no limit acts as
+    non-conjugation linear action on M_3(C).
+  Test C5 (closure of A1): FAIL for ALL 9 limits.
+
+Universal failure mechanism:
+
+  The C_3 cyclic-shift on hw=1 is a finite combinatorial subgroup of GL(3, C),
+  intrinsic to the {0,1}^3 BZ-corner indexing. Continuum / scaling / thermal /
+  RG limits act on metric/geometric/coupling parameters; they do not act on
+  combinatorial index structure. A finite combinatorial group cannot be extended
+  to a continuous Lie group by any limit on metric parameters.
+
+  Furthermore: phi_theta (the closure target) is NOT an algebra automorphism;
+  it is a LINEAR action on the C_3-character grading. No conjugation by any
+  matrix U can produce phi_theta for generic theta. This rules out limit-derived
+  symmetries that act by conjugation, which is ALL retained continuous symmetries.
+
+Sharpened residue (NOT smaller than Probe 14):
+
+  After Probes 12, 13, 14, 15, the residue is unchanged:
+
+    'the continuous extension of retained discrete C_3 to U(1)_b on the b-doublet
+     of A^{C_3} — equivalently, a 1-parameter linear action on the C_3-character-
+     graded vector space that is NOT an algebra automorphism.'
+
+  Probe 15 ADDS the structural conclusion: this primitive cannot be derived from
+  any retained continuum / scaling / thermal / RG limit by a UNIVERSAL structural
+  argument (combinatorial vs. metric structure incompatibility).
+
+  PASS  11.1 Probe 15 verdict: STRUCTURAL OBSTRUCTION (sharpened, no closure)
+  PASS  11.2 Universal failure: 9 retained limits all FAIL Test C3 / C4 by combinatorial-vs-metric argument
+  PASS  11.3 phi_theta is structurally NOT realizable by conjugation for generic theta
+  PASS  11.4 A1 admission count UNCHANGED (no new closure, no new admission, no new axiom)
+  PASS  11.5 Probe 14's residue is UPHELD; Probe 15 ADDS structural-impossibility argument
+
+======================================================================
+=== Section 12: Closest miss analysis ===
+======================================================================
+
+Three limits come closest to U(1)_b without producing it:
+
+  CLOSEST MISS 1: L6 (Z_3 rationality density)
+    The discrete Z_3 = C_3 is exactly the discrete subgroup we want to extend.
+    But the EXTENSION operation is what's missing — Z_3 ⊂ U(1) is just a
+    subgroup inclusion; it doesn't generate U(1) by 'taking a limit'.
+
+  CLOSEST MISS 2: L3 (KMS / infinite-T limit)
+    The maximally-mixed state IS phi_theta-invariant, and the Q-readout IS
+    phi_theta-invariant by construction. But invariance of state/readout is NOT
+    the same as algebra action. This is the FUNCTIONAL-PIVOT direction (Probe 14
+    Strategic Option 2), not a derivation of U(1)_b on the algebra.
+
+  CLOSEST MISS 3: L7 (per-site SU(2) qubit projection)
+    Framework property 'continuous in qubit operations' is true at single site,
+    but hw=1 is a three-site collective. Per-site U(1) commutes with C_3 cyclic,
+    so projects to global phase on hw=1 — trivial action on circulants.
+
+  PASS  12.1 L6 closest miss analysis: discrete-to-continuous extension is the missing operation
+  PASS  12.2 L3 closest miss analysis: state/readout invariance != algebra symmetry
+  PASS  12.3 L7 closest miss analysis: per-site continuity is single-site, not multi-site
+
+======================================================================
+=== Section 13: Convention robustness ===
+======================================================================
+
+  PASS  13.1 A1 is scale-invariant: H -> cH preserves |b|^2/a^2
+  PASS  13.2 C -> C^{-1} = C^2 preserves C_3-action structure
+  PASS  13.3 K commutes with C_3-action (Probe 13 confirmed)
+  PASS  13.4 Conditional expectation E projects onto circulants
+
+======================================================================
+=== Section 14: Summary ===
+======================================================================
+
+Continuum-limit hypothesis (Probe 15):
+  9 candidate limits examined: L1-L9 covering
+    lattice-spacing, volume, temperature (high+low),
+    Wilsonian, Z_3 density, per-site qubit, RG, large-N.
+  All 9 limits FAIL to produce U(1)_b on the b-doublet of A^{C_3}.
+
+Universal failure mechanism (Section 10):
+  C_3 is a finite combinatorial group on {0,1}^3 indices.
+  Retained limits act on metric/geometric/coupling parameters.
+  Combinatorial groups cannot be extended to Lie groups by metric limits.
+  Furthermore: phi_theta is structurally NOT realizable by any conjugation,
+  ruling out the entire class of conjugation-implemented symmetries.
+
+Closure status of A1-condition |b|^2/a^2 = 1/2:
+  After Probe 15: STRUCTURAL OBSTRUCTION (sharpened, no closure).
+  Probe 14's residue is UPHELD with an added structural-impossibility argument:
+    'No retained continuum / scaling / thermal / RG limit produces the
+     continuous extension of retained discrete C_3 to U(1)_b.'
+
+Strategic options remaining (unchanged from Probe 14):
+  1. Continue derivation hunt — probability is now lower after 15 negatives.
+  2. Functional pivot to Q-readout level — Q is U(1)_b-invariant by construction.
+  3. Pivot to other bridge work.
+
+======================================================================
+=== TOTAL: PASS=73, FAIL=0 ===
+======================================================================
+
+----- stderr -----
+

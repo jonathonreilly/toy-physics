@@ -1,0 +1,223 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_bae_probe_interacting_dynamics_2026_05_09_probe28.py
+runner_sha256: c8fc5404dc01aa3ffddd7e13c6a6af995d25834ffc62abc04694f90bdce15ea0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+
+========================================================================
+Section 0 — Retained input sanity
+========================================================================
+  PASS  0.1  C is unitary
+  PASS  0.2  C^3 = I
+  PASS  0.3  E_+(a, b) = 3 a^2
+        computed=8.67000000, expected=8.67000000
+  PASS  0.4  E_perp(a, b) = 6 |b|^2
+        computed=2.16000000, expected=2.16000000
+  PASS  0.5  Retained alpha_LM ~ 0.0907 (from <P>=0.5934 and alpha_bare=1/(4pi))
+        alpha_LM=0.090668
+  PASS  0.6  Retained u_0 = <P>^{1/4} ~ 0.8777
+        u_0=0.877681
+  PASS  0.7  Retained APBC factor (7/8)^{1/4} ~ 0.9672
+        (7/8)^{1/4}=0.967168
+
+========================================================================
+Section 1 — Probe 25 free-Gaussian baseline (real-dim weighting)
+========================================================================
+  PASS  1.1  Free-Gaussian F3 extremum at E_perp = 2N/3 = 4 (kappa=1, NOT BAE)
+        argmax E_perp = 4.0000, target 2N/3 = 4.0000
+  PASS  1.2  F1 extremum at E_perp = N/2 = 3 (kappa=2 = BAE) — REQUIRED for BAE
+        argmax E_perp = 3.0000, target N/2 = 3.0000
+  PASS  1.3  Doublet real-dim = 2 (structurally fixed by isotype decomposition)
+        Herm_circ(3) = R<I> + R<C+C^2> + R<i(C-C^2)>; doublet is 2-real-dim.
+  PASS  1.4  F1 requires multiplicity (1, 1), F3 gives real-dim (1, 2)
+        F1 - F3 = -log E_perp; cannot arise from path integral over 2-real-dim subspace.
+
+========================================================================
+Section 2 — INT-AV1: Higgs-quartic correction Tr(H^4)
+========================================================================
+  PASS  2.1 Tr(H^4) finite and positive at (a,b)=(0.876,1.431)
+        Tr(H^4)=195.3810
+  PASS  2.2 Tr(H^4) finite and positive at (a,b)=(1.797,1.312)
+        Tr(H^4)=382.1215
+  PASS  2.3 Tr(H^4) finite and positive at (a,b)=(1.746,0.669)
+        Tr(H^4)=93.2634
+  PASS  2.4 Tr(H^4) finite and positive at (a,b)=(1.539,1.261)
+        Tr(H^4)=271.7852
+  PASS  2.5 Tr(H^4) finite and positive at (a,b)=(1.350,0.760)
+        Tr(H^4)=68.1189
+  PASS  2.6  Quartic Hessian has 3 real eigenvalues (one per real-dim of Herm_circ(3))
+        eigenvalues = ['1.8524', '14.5201', '46.6274']
+  PASS  2.7  Quartic Hessian: trivial-block (0,0) is non-trivial
+        H_q[0,0]=21.0000
+  PASS  2.8  Quartic preserves doublet 2-real-dim structure (rank of doublet block = 2)
+        doublet block rank = 2
+  PASS  2.9  INT-AV1: V_eff = (1/2)[1*log eig_+ + 2*log eig_perp] -> F3 form preserved
+        Quartic shifts eigenvalues but NOT real-dim weighting (1, 2).
+
+========================================================================
+Section 3 — INT-AV2: Yukawa-fermion-loop log det(D + Y_e H)
+========================================================================
+  PASS  3.1  Yukawa fermion log-det: (1, 2) weighting (1 trivial + 2 doublet modes)
+        log_det_trivial(weight 1) + log_det_doublet(weight 2) = -1.3863
+  PASS  3.2  Z_2 bipartite from Cl(3)/Z^3 acts on spatial lattice, NOT C_3 doublet
+        Z_2 -> g_2^2 = 1/(d+1) = 1/4 (spatial); does NOT collapse 2-real-dim doublet to 1.
+  PASS  3.3  Probe 13 (real-structure): Z_2 of (1,1) but NOT SO(2) collapse
+        K-real involution does not collapse 2-real-dim doublet to 1d.
+  PASS  3.4  INT-AV2: Yukawa fermion log-det preserves (1, 2) real-dim weighting
+        Retained Yukawa Y_e psi-bar.H.psi -> log det -> (1, 2) sum, not (1, 1).
+  PASS  3.5  Fermion log-det at F3-extremum vs F1-extremum: both finite
+        LD(F3-extr)=0.1323, LD(F1-extr)=0.2740
+  PASS  3.6  Total action (free F3 + Yukawa): extremum still near F3-location 2N/3
+        x_min=3.700, F3-target=2N/3=4.000, F1-target=N/2=3.000
+  PASS  3.7  INT-AV2: Adding Yukawa fermion log-det does NOT shift extremum to F1-location
+        Yukawa correction is small relative to free F3; extremum stays near kappa=1.
+
+========================================================================
+Section 4 — INT-AV3: Gauge-link plaquette Wilson coupling
+========================================================================
+  PASS  4.1  Gauge plaquette is gauge-only; couples to matter only via Yukawa Y_e ~ sqrt(alpha_LM)
+        Plaquette beta=6, <P>=0.5934, alpha_LM=0.0907 (retained). No direct H coupling.
+  PASS  4.1  Y_e=0.01: fermion log-det finite (no doublet collapse)
+        log det = 0.0298
+  PASS  4.2  Y_e=0.1: fermion log-det finite (no doublet collapse)
+        log det = 0.2799
+  PASS  4.3  Y_e=1.0: fermion log-det finite (no doublet collapse)
+        log det = 1.9095
+  PASS  4.4  Y_e=10.0: fermion log-det finite (no doublet collapse)
+        log det = 6.6280
+  PASS  4.6  INT-AV3: Gauge plaquette preserves (1, 2) real-dim weighting structurally
+        Gauge couples to matter via Y_e ~ alpha_LM; rescaling does NOT change isotype dim.
+
+========================================================================
+Section 5 — INT-AV4: Composite-Higgs CW boundary lambda(H)=0
+========================================================================
+  PASS  5.1  Composite-Higgs lambda(M_Pl)=0: CW boundary is RADIATIVE quartic
+        V_CW(H) ~ y_t^4 Tr(H^4) log(...); this is INT-AV1 + INT-AV2 combined.
+  PASS  5.2  CW V_eff = (1/2) Tr log K[H_0] = (1/2)[1 log eig_+ + 2 log eig_perp]
+        Block-diagonal Tr log preserves (1, 2) real-dim weighting.
+  PASS  5.3  INT-AV4: Composite-Higgs CW preserves F3-class real-dim weighting
+        Radiative CW = log det of fluctuation kernel; (1, 2) structurally fixed.
+
+========================================================================
+Section 6 — INT-AV5: Probe 19 Yukawa-vertex factor alpha_bare * alpha_LM
+========================================================================
+  PASS  6.1  Probe 19's '+2' = alpha_bare * alpha_LM = alpha_LM^2 * u_0
+        alpha_bare * alpha_LM = 0.007215, alpha_LM^2*u_0 = 0.007215
+  PASS  6.2  Vertex factor ~ 0.0072 (small): correction is perturbative
+        vertex_factor = 0.007215
+  PASS  6.3  Vertex correction << F3 vs F1 separation (vertex < 1%, F3-F1 gap ~ 33%)
+        Vertex factor 0.7% perturbation cannot move extremum from kappa=1 to kappa=2.
+  PASS  6.4  Probe 19 vertex-corrected extremum still at F3-location, NOT F1-location
+        extremum x=4.000, |x - 2N/3|=0.000, |x - N/2|=1.000
+  PASS  6.5  INT-AV5: Probe 19 Yukawa-vertex factor preserves F3 selection
+        Retained '+2' factor is perturbative correction; does not shift kappa from 1 to 2.
+
+========================================================================
+Section 7 — INT-AV6: Retained Z_3 scalar potential
+========================================================================
+  PASS  7.1  Z_3 scalar potential m^2-piece is phi-independent (Z_3 cyclic invariance, quadratic)
+        m^2-sum(phi=0.5)=3.540000, m^2-sum(phi=0)=3.540000; cubic sum carries cos(3phi)
+  PASS  7.2  Z_3 V(m) sum reduces to function of (a, |b|) only
+        Z_3 cyclic symmetry: sum_k V(m_k) = polynomial in (a, |b|^2).
+  PASS  7.3  INT-AV6: Z_3 potential preserves real-dim (1, 2) weighting
+        Cubic in (a, |b|^2) is non-Gaussian but doublet remains 2-real-dim; (1, 2) preserved.
+
+========================================================================
+Section 8 — INT-AV7: Combined L_full = L_free + L_Yuk + L_Higgs + L_gauge
+========================================================================
+  PASS  8.1  Full L_full effective extremum: still in F3 basin (kappa~1), NOT F1 (kappa=2)
+        x_min=4.000, F3-target 2N/3=4.000, F1-target N/2=3.000
+  PASS  8.2  C_3 rotation (b -> omega b) preserves action; doublet 2-real-dim
+        (Re b, Im b) is a 2-real-dim irreducible rep of C_3; phi rotates by 2 pi/3.
+  PASS  8.3  INT-AV7: Full L_full preserves F3 real-dim weighting at every order
+        C_3 rep theory fixes (1, 2) real-dim count; interactions are O(C_3)-covariant.
+
+========================================================================
+Section 9 — INT-AV8: Does any cited interaction supply (1, 1) multiplicity?
+========================================================================
+  PASS  9.1  Doublet block of full Hessian: 2 nonzero singular values (rank 2)
+        singular values = [2.32021647 1.22817534]
+  PASS  9.2  No cited interaction induces zero mode in doublet block
+        Doublet 2d structure preserved by all cited interaction terms (Probe 13/14 confirmed).
+  PASS  9.3  C_3 irreps on Herm_circ(3): 1-real-dim trivial + 2-real-dim doublet
+        Pure rep theory; independent of action; cannot be modified by any cited interaction.
+  PASS  9.4  INT-AV8: No cited interaction route shifts F3 -> F1
+        Multiplicity (1, 1) requires non-retained primitive; F1 STRUCTURALLY ABSENT.
+
+========================================================================
+Section 10 — Cross-validation: all 8 INT-AVs preserve F3
+========================================================================
+  PASS  10.1  All 12 random N-values: extremum closer to F3 than F1
+        12/12 match F3-basin; 0 mismatches
+  PASS  10.2  Slope behavior at F3-extremum: log-functional gradient consistent with F3
+        slope proxy = 1.5382
+  PASS  10.3  Algebraic check: NO cited interaction contributes -log E_perp term
+        All 8 INT-AVs leave coefficient of log E_perp = 2 (F3-class).
+
+========================================================================
+Section 11 — Convention robustness
+========================================================================
+  PASS  11.1  Free F3 extremum E_perp/N = 2/3 invariant under H -> cH rescaling
+        free extrema (E_perp/N) = ['0.6736', '0.6736', '0.6736', '0.6736'], target 0.667
+  PASS  11.2  Basis change C -> C^2: preserves isotype decomposition (E_+, E_perp unchanged)
+        C^2 = C^{-1} = C^*; isotypes unchanged under cyclic relabeling.
+  PASS  11.3  Gauge convention: vertex factor alpha_bare * alpha_LM is gauge-fixed
+        Lattice tadpole convention: u_0 = <P>^{1/4}, alpha_LM = alpha_bare/u_0.
+
+========================================================================
+Section 12 — Verdict synthesis
+========================================================================
+  PASS  12.1  All 8 INT-AVs preserve F3 (real-dim (1, 2) weighting)
+        None of {quartic, Yukawa, gauge, CW, vertex, Z_3, combined, mult-search} shifts F3 -> F1.
+  PASS  12.2  Probe 25 conclusion (free Gaussian -> F3) extends to INTERACTING level
+        Adding cited interaction terms does NOT shift the canonical functional.
+  PASS  12.3  Structural reason: real-dim count (1, 2) is C_3 representation-theoretic
+        Independent of action; fixed by Block-Total Frobenius isotype-split-uniqueness.
+  PASS  12.4  F1 (multiplicity (1, 1)) requires multiplicity-counting principle
+        No retained continuous symmetry, gauge, RG, anomaly, or interaction supplies it.
+  PASS  12.5  BAE remains an open bounded admission (NO CLOSURE by Probe 28)
+        Retained interacting dynamics canonically gives kappa=1, NOT BAE (kappa=2).
+  PASS  12.6  Sharpened residue: BAE requires NEW PRIMITIVE (not retained)
+        Either (a) non-retained extremization principle, or (b) new admission.
+
+========================================================================
+Section 13 — What this probe does NOT do
+========================================================================
+  PASS  13.1  Does NOT close the BAE-condition
+        BAE remains the named bounded admission per the campaign.
+  PASS  13.2  Does NOT promote Probe 19 m_tau Wilson formula to retained
+        m_tau scale finding is Probe 19's authority; this probe consumes it as input only.
+  PASS  13.3  Does NOT add any new axiom
+        A1 + A2 stack unchanged. No new admission added.
+  PASS  13.4  Does NOT use PDG values as derivation input
+        Only retained Wilson-chain structural constants enter; PDG comparators absent.
+  PASS  13.5  Does NOT modify any retained theorem
+        Probe 25's F3-canonical theorem unchanged; this probe extends it to interacting level.
+  PASS  13.6  Does NOT promote sister bridge gaps (L3a, L3b, C-iso, W1.exact)
+        Interacting-extension probe only.
+
+========================================================================
+Section 14 — Comparison with prior probes (12, 13, 14, 18, 21, 25)
+========================================================================
+  PASS  14.1  Probe 12 (Plancherel/Peter-Weyl): (1, 2) on Cz_3-hat, consistent
+        Plancherel-uniform measure gives real-dim (1, 2); Probe 28 extends to interacting.
+  PASS  14.2  Probe 13 (real-structure): Z_2 of (1, 1) but not SO(2), consistent
+        K-real Z_2 cannot collapse 2-real-dim doublet to 1d; Probe 28 confirms in interacting.
+  PASS  14.3  Probe 14 (retained-U(1) hunt): no retained U(1) on b-doublet, consistent
+        No retained continuous symmetry; Probe 28 shows interactions don't supply one.
+  PASS  14.4  Probe 18 (F1-vs-F3 algebraic): F2 ruled out, F1/F3 ambiguous algebraically
+        Probe 25 + Probe 28: dynamics resolves AGAINST F1 at free + interacting levels.
+  PASS  14.5  Probe 21 (native bilinear flow): identity flow, neutral fixed-point family
+        Probe 28: even with full cited interaction stack, NO interaction-induced flow to BAE.
+  PASS  14.6  Probe 25 (free Gaussian): F3 canonical at FREE level
+        Probe 28: F3 canonical at INTERACTING level. Hierarchy preserved.
+
+========================================================================
+=== TOTAL: PASS=75, FAIL=0 ===
+========================================================================
+
+----- stderr -----
+

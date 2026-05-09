@@ -8844,6 +8844,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_koide_a1_cheeger_simons_rz_probe.py"
     },
+    "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py"
+    },
     "koide_a1_probe_flavor_anomaly_bounded_obstruction_note_2026-05-08_probe2": {
       "assert_count": 0,
       "counts": {
@@ -8868,6 +8880,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_a1_probe_gravity_phase_2026_05_08_probe3.py"
     },
+    "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_a1_probe_lattice_non_conjugation_2026_05_09_probe17.py"
+    },
     "koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6": {
       "assert_count": 1,
       "counts": {
@@ -8891,6 +8915,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/cl3_koide_a1_probe_plancherel_peter_weyl_2026_05_09_probe12.py"
+    },
+    "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_a1_probe_q_readout_functional_2026_05_09_probe16.py"
     },
     "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13": {
       "assert_count": 1,
@@ -9035,6 +9071,162 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_koide_aps_block_by_block_forcing.py"
+    },
+    "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_bae_probe_f1_canonical_functional_2026_05_09_probe18.py"
+    },
+    "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_bae_probe_hw_sector_identification_2026_05_09_probe27.py"
+    },
+    "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 19,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_bae_probe_interacting_dynamics_2026_05_09_probe28.py"
+    },
+    "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 26
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_kappa_prediction_test_2026_05_09_probe29.py"
+    },
+    "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 42
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_lepton_triplet_c3_cycle_2026_05_09_probe23.py"
+    },
+    "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_bae_probe_native_lattice_flow_2026_05_09_probe21.py"
+    },
+    "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 50
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_phi_from_z3_character_2026_05_09_probe24.py"
+    },
+    "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_physical_extremization_2026_05_09_probe25.py"
+    },
+    "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 34
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_radian_from_dimensions_2026_05_09_probe30.py"
+    },
+    "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22": {
+      "assert_count": 37,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_spectrum_cone_2026_05_09_probe22.py"
+    },
+    "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_vm_cubic_extrema_2026_05_09_probe20.py"
+    },
+    "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 27
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_wilson_chain_mass_2026_05_09_probe19.py"
+    },
+    "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_bae_probe_wilson_dimensional_consistency_2026_05_09_probe26.py"
     },
     "koide_berry_bundle_obstruction_theorem_note_2026-04-19": {
       "assert_count": 2,
@@ -20771,6 +20963,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_a1_probe_continuum_limit_bounded_obstruction_note_2026-05-09_probe15"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/cl3_koide_a1_probe_flavor_anomaly_2026_05_08_probe2.py": {
       "assert_count": 0,
       "claims": [
@@ -20801,6 +21008,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/cl3_koide_a1_probe_lattice_non_conjugation_2026_05_09_probe17.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/cl3_koide_a1_probe_operator_class_2026_05_08_probe6.py": {
       "assert_count": 1,
       "claims": [
@@ -20826,6 +21048,21 @@
         "B": 0,
         "C": 6,
         "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_a1_probe_q_readout_functional_2026_05_09_probe16.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_a1_probe_q_readout_functional_bounded_obstruction_note_2026-05-09_probe16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 7
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -20977,6 +21214,201 @@
         "B": 0,
         "C": 1,
         "D": 24
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_f1_canonical_functional_2026_05_09_probe18.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_hw_sector_identification_2026_05_09_probe27.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_interacting_dynamics_2026_05_09_probe28.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 19,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_kappa_prediction_test_2026_05_09_probe29.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 26
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_lepton_triplet_c3_cycle_2026_05_09_probe23.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_lepton_triplet_c3_cycle_bounded_note_2026-05-09_probe23"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 42
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_native_lattice_flow_2026_05_09_probe21.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_phi_from_z3_character_2026_05_09_probe24.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_phi_from_z3_character_sharpened_note_2026-05-09_probe24"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 50
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_physical_extremization_2026_05_09_probe25.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_radian_from_dimensions_2026_05_09_probe30.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_radian_from_dimensions_bounded_note_2026-05-09_probe30"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 34
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_spectrum_cone_2026_05_09_probe22.py": {
+      "assert_count": 37,
+      "claims": [
+        "koide_bae_probe_spectrum_cone_bounded_obstruction_note_2026-05-09_probe22"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_vm_cubic_extrema_2026_05_09_probe20.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_vm_cubic_extrema_bounded_obstruction_note_2026-05-09_probe20"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_wilson_chain_mass_2026_05_09_probe19.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 27
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_bae_probe_wilson_dimensional_consistency_2026_05_09_probe26.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 5
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -41465,12 +41897,12 @@
     "dominant_class_distribution": {
       "A": 21,
       "B": 174,
-      "C": 628,
-      "D": 232,
+      "C": 635,
+      "D": 241,
       "none": 426
     },
-    "runners_classified": 1481,
-    "runners_with_C": 758,
-    "runners_with_D": 378
+    "runners_classified": 1497,
+    "runners_with_C": 769,
+    "runners_with_D": 394
   }
 }

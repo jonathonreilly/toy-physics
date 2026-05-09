@@ -1,0 +1,182 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_bae_probe_physical_extremization_2026_05_09_probe25.py
+runner_sha256: d251deaae2de95e030cc75eece6334225547a630b39b4a663011ac6a802a3a6f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+
+========================================================================
+Section 0 — Retained input sanity
+========================================================================
+  PASS  0.1  C is unitary
+  PASS  0.2  C^3 = I
+  PASS  0.3  E_+(a, b) = 3 a^2
+        computed=8.67000000, expected=8.67000000
+  PASS  0.4  E_perp(a, b) = 6 |b|^2
+        computed=2.16000000, expected=2.16000000
+  PASS  0.5  At BAE (a^2 = 2|b|^2): E_+ = E_perp
+
+========================================================================
+Section 1 — Candidate functionals F1, F3 and physical Phi
+========================================================================
+  PASS  1.1  F1 at BAE point: F1 = 2 log 3
+        F1(BAE)=2.19722458
+  PASS  1.2  F1 maximum on constraint at E_+ = E_perp = N/2
+        argmax x=3.0000, target N/2=3.0000
+  PASS  1.3  F3 maximum on constraint at E_+ = N/3, E_perp = 2N/3 (kappa=1)
+        argmax x=4.0000, target 2N/3=4.0000
+  PASS  1.4  Phi_phys (Gaussian functional det) extremum at same point as F3 (NOT F1)
+        argmax x=4.0000, F3-target 4.0000, F1-target 3.0000
+  PASS  1.5  F1 extremum -> kappa = 2 = BAE
+        3 a^2 = 6 |b|^2 -> a^2 = 2 |b|^2 -> kappa = 2.
+  PASS  1.6  F3 extremum -> kappa = 1, NOT BAE
+        3 a^2 = (1/2) * 6 |b|^2 -> a^2 = |b|^2 -> kappa = 1.
+
+========================================================================
+Section 2 — PHYS-AV1: Gaussian path-integral on Herm_circ(3)
+========================================================================
+  PASS  2.1  Gaussian free energy Phi_G(a, b) = (1/2) F3(a, b) + const
+        deltaPhi_G=0.3364722366, (1/2)deltaF3=0.3364722366
+  PASS  2.2  Gaussian free energy Phi_G != (1/2) F1 + const
+        deltaPhi_G=0.3364722366, (1/2)deltaF1=0.0000000000
+  PASS  2.3  Phi_G extremum on constraint at E_perp = 2N/3 (matches F3, NOT F1)
+        argmax x=3.9450, F3-target 4.0000, F1-target 3.0000
+  PASS  2.4  E_perp marginal: chi-2(k=2) shape (mean ~= 2 sigma^2 / 6)
+        mean(E_perp)=0.33413, expected 0.33333
+  PASS  2.5  Doublet isotype chi-squared statistic: mean = k = 2 (NOT k = 1 of F1)
+        mean=2.0048 (expect 2 = real_dim_doublet, F1 expects 1), var=4.0293 (expect 4 = 2k_perp)
+
+========================================================================
+Section 3 — PHYS-AV2: Heat-kernel partition function
+========================================================================
+  PASS  3.1  Heat-kernel d log Z / d log(1/beta) = (real_dim_+/2 + real_dim_perp/2) = 3/2
+        slope=1.500000, expected 3/2 = 1.5
+  PASS  3.2  Heat-kernel free energy = (1/2) F3 (matches PHYS-AV1)
+        Phi_G - (1/2) F3 = 0.000000000000
+  PASS  3.3  (1/2) F1 != Phi_G (heat-kernel rejects multiplicity counting)
+        |delta| = 0.539205 > 0.05
+
+========================================================================
+Section 4 — PHYS-AV3: RP/transfer-matrix slice free energy
+========================================================================
+  PASS  4.1  RP-slice free energy = Phi_G (PHYS-AV1 / PHYS-AV2 consistency)
+        delta = 0.000000000000
+  PASS  4.2  RP-slice free energy maximum at E_perp = 2N/3 (kappa=1, F3-pattern)
+        argmax x=3.9450, F3-target 4.0000
+  PASS  4.3  log det(Gram_+) + log det(Gram_perp) = F3 (real-dim weighting)
+        log det = 3.255431, F3 = 3.255431
+
+========================================================================
+Section 5 — PHYS-AV4: Spectral action expansion
+========================================================================
+  PASS  5.1  Tr H^2 = E_+ + E_perp (Pythagoras of Frobenius isotype split)
+        Tr H^2 = 5.940000, E_+ + E_perp = 5.940000
+  PASS  5.2  Spectral-action log det = Phi_G = (1/2) F3 (cross-validation)
+        delta = 0.000000000000
+  PASS  5.3  (1/2) F1 != spectral-action log det
+        |delta| = 0.539205
+
+========================================================================
+Section 6 — PHYS-AV5: Independent-mode counting
+========================================================================
+  PASS  6.1  Independent-mode counting -> (1/2) F3 + const
+        delta = 0.000000000000
+  PASS  6.2  (1/2) F1 != mode-counting free energy
+        |delta| = 0.539205
+  PASS  6.3  Mode-count: doublet has 2 real modes (Re b, Im b), not 1
+        Doublet isotype is {b C + bbar C^2 : b in C} -- 2 real dims (Re b, Im b).
+
+========================================================================
+Section 7 — PHYS-AV6: Ginzburg-Landau extremization of S_native
+========================================================================
+  PASS  7.1  GL free energy max on constraint at E_perp = 2N/3 (kappa=1, F3-pattern)
+        argmax x=3.9450, F3-target 4.0000
+  PASS  7.2  GL extremum gives kappa = 1, NOT kappa = 2 = BAE
+        kappa_GL = 1, kappa_BAE = 2 -- cited dynamics fails to give BAE.
+
+========================================================================
+Section 8 — PHYS-AV7: Renormalized on-shell action
+========================================================================
+  PASS  8.1  On-shell action = Phi_G (cross-validation)
+        delta = 0.000000000000
+  PASS  8.2  No renormalization scheme changes (1, 2) real-dim weighting
+        Real dims of isotypes are (1, 2) by isotype-decomposition theorem; structural.
+
+========================================================================
+Section 9 — Cross-validation: convergent F3 selection
+========================================================================
+  PASS  9.1  PHYS-AV1 (Gaussian) equals (1/2) F3
+        PG=1.501736, (1/2) F3=1.501736
+  PASS  9.2  PHYS-AV2 (heat-kernel) equals (1/2) F3
+        Same as 9.1 by construction.
+  PASS  9.3  PHYS-AV3 (RP-slice) equals (1/2) F3
+        RP=1.501736
+  PASS  9.4  PHYS-AV4 (spectral-action) equals (1/2) F3
+        SA=1.501736
+  PASS  9.5  PHYS-AV5 (mode-count) equals (1/2) F3
+        MD=1.501736
+  PASS  9.6  PHYS-AV7 (on-shell) equals (1/2) F3
+        OS=1.501736
+  PASS  9.7  PHYS-AV1-7 != (1/2) F1 (universal F1 rejection)
+        PG=1.501736, F1half=1.116682, |PG - F1half| = 0.385054
+  PASS  9.8  All retained-dynamics routes converge on (1/2) F3 (max diff < 1e-9)
+        max |PHYS-AV - (1/2) F3| = 2.22e-16
+  PASS  9.9  All PHYS-AV extrema converge on E_perp = 2N/3 (kappa=1)
+        extrema [3.945, 3.945, 3.945, 3.945, 3.945], F3-target 4.000
+
+========================================================================
+Section 10 — Convention robustness
+========================================================================
+  PASS  10.1  F1(cH) - F1(H) = 4 log c (real_dim_total = 1 + 2 = 3 NO -- F1 has multiplicity = 2)
+        F1 shift = 3.665163, expected 3.665163
+  PASS  10.2  F3(cH) - F3(H) = 6 log c (real_dim weighting: 2 + 2*2 = 6)
+        F3 shift = 5.497744, expected 5.497744
+  PASS  10.3  Phi_G(cH) - Phi_G(H) = 3 log c (real_dim_total = 1 + 2 = 3)
+        Phi_G shift = 2.748872, expected 2.748872
+  PASS  10.4  Basis change C -> C^2 preserves E_+, E_perp
+        E_+: 3.000000 -> 3.000000, E_perp: 2.940000 -> 2.940000
+
+========================================================================
+Section 11 — Verdict synthesis
+========================================================================
+  PASS  11.1  Retained Hamiltonian dynamics canonically selects F3 (real-dim weighting)
+        Verified in Sections 2-9: Gaussian path-integral, heat-kernel, RP-slice, spectral-action, mode-counting, GL, on-shell -- all give F3.
+  PASS  11.2  F1 is NOT the canonical retained-dynamics functional
+        F1 = (1, 1) requires treating the 2-real-dim doublet as a single mode; cited Hamiltonian dynamics integrates Gaussian-weighted over actual real dimensions -> (1, 2) = F3.
+  PASS  11.3  Retained dynamics extremum -> kappa = 1, NOT BAE (kappa = 2)
+        F3 extremum at E_perp = 2N/3 -> 6|b|^2 = 2N/3, 3a^2 = N/3 -> kappa = 1.
+  PASS  11.4  Probe 18 F1-vs-F3 ambiguity resolved AGAINST F1 by cited dynamics
+        Sharpening: F3 is canonical retained-dynamics functional; F1 is NOT. BAE is therefore NOT the retained-dynamics canonical fixed point.
+
+========================================================================
+Section 12 — What this probe does NOT close
+========================================================================
+  PASS  12.1  Probe 25 does NOT close BAE
+        BAE remains a bounded admission. Retained dynamics gives F3 -> kappa=1, NOT BAE.
+  PASS  12.2  Probe 25 does NOT add a new admission
+        No new axiom. The extremization functional comes from the retained Lieb-Robinson Hamiltonian (Probe 21 surface), restricted to the C_3-equivariant matter sector.
+  PASS  12.3  No PDG mass values used as derivation input
+        All sections work on the algebraic (a, |b|)-plane structure; no observed masses.
+  PASS  12.4  Does NOT modify any retained theorem
+        Probe 18 (F1 ambiguity), Probe 21 (native bilinear flow), Probe 12-13 (Plancherel/real-structure) all remain unchanged. This probe SHARPENS the F1-vs-F3 residue from 'ambiguous' to 'F3 wins by cited dynamics'.
+
+========================================================================
+Section 13 — Comparison with prior probes
+========================================================================
+  PASS  13.1  Probe 25 extends Probe 12 (state -> dynamics)
+        Probe 12: canonical Plancherel state -> F3. Probe 25: canonical retained-Hamiltonian dynamics -> F3. Same conclusion, distinct route.
+  PASS  13.2  Probe 25 cross-validates Probe 21 (bilinear -> F3)
+        Probe 21: bilinear retained Hamiltonian gives identity block-spin flow. Probe 25: same bilinear retained Hamiltonian gives F3 free energy (real-dim Gaussian functional determinant).
+  PASS  13.3  Probe 25 resolves Probe 18 ambiguity AGAINST F1
+        Probe 18: cannot distinguish F1, F3 algebraically. Probe 25: retained Hamiltonian dynamics canonically gives F3 (real-dim weighting), NOT F1.
+  PASS  13.4  Combined Probes 12, 18, 21, 25: BAE is NOT canonical from cited dynamics
+        Retained Hamiltonian dynamics gives F3 -> kappa = 1, NOT BAE (kappa = 2). Multiplicity-counting F1 (which gives BAE) is structurally absent from retained-dynamics extremization principles.
+
+========================================================================
+=== TOTAL: PASS=57, FAIL=0 ===
+========================================================================
+
+----- stderr -----
+

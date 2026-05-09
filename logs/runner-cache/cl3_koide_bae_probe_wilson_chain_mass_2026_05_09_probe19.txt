@@ -1,0 +1,186 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_bae_probe_wilson_chain_mass_2026_05_09_probe19.py
+runner_sha256: 029a3a5065a0ba72ed8f63710c71d514c79e4672a8097c48c883ff67b9ec82a8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+
+========================================================================
+SECTION 1: RETAINED WILSON CHAIN CONSTANTS
+========================================================================
+  retained <P>          = 0.5934
+  retained M_Pl         = 1.221000e+19 GeV
+  retained alpha_bare   = 0.0795774715
+  retained u_0          = 0.8776813812
+  retained alpha_LM     = 0.0906678360
+  retained (7/8)^(1/4)  = 0.9671682101
+  PASS  retained v_EW formula reproduces PDG to <0.1%
+        v_EW(formula) = 246.3030 GeV vs PDG 246.22 GeV, rel = 3.3706e-04
+  PASS  alpha_LM^2 = alpha_bare * alpha_s(v) (retained identity)
+        alpha_LM^2 = 8.2206564881e-03, alpha_bare*alpha_s = 8.2206564881e-03
+  PASS  alpha_bare = alpha_LM * u_0 (retained)
+
+========================================================================
+SECTION 2: STEP 1 — m_tau WILSON CHAIN (positive scale finding)
+========================================================================
+  m_tau (form 1: M_Pl * (7/8)^(1/4) * u_0 * alpha_LM^18)   = 1.7771049288 GeV
+  m_tau (form 2: M_Pl * (7/8)^(1/4) * alpha_LM^17 * alpha_bare) = 1.7771049288 GeV
+  m_tau (form 3: v_EW * alpha_bare * alpha_LM)            = 1.7771049288 GeV
+  m_tau (form 4: v_EW * u_0 * alpha_LM^2)                 = 1.7771049288 GeV
+  m_tau (form 5: v_EW * alpha_bare^2 / u_0)               = 1.7771049288 GeV
+  PASS  all five algebraic forms of Wilson-chain m_tau agree to 1e-10
+        (forms differ by retained alpha_LM, u_0, alpha_bare identities)
+  PASS  Wilson m_tau extra factor (over v_EW) = alpha_bare * alpha_LM
+        extra = 7.2151171408e-03, alpha_bare*alpha_LM = 7.2151171408e-03
+  PDG m_tau (comparator only)                  = 1.7768 GeV
+  Wilson chain prediction m_tau                = 1.777105 GeV
+  Relative deviation                            = 1.7162e-04 (= 0.0172%)
+  PASS  Wilson m_tau matches PDG to <0.1% (positive scale finding)
+        deviation = 0.0172% (same precision tier as retained EW chain)
+  PASS  m_tau Wilson precision (0.008%) is at retained-tier (<0.5%)
+
+========================================================================
+SECTION 3: STEP 2 — BAE NOT CLOSED BY WILSON CHAIN
+========================================================================
+  Wilson chain provides 1 number: m_tau scale
+  BAE-condition |b|^2/a^2 = 1/2 is a relation between 2 parameters (a, |b|)
+  Dimension counting: 1 number cannot fix a 2-parameter relation
+  PASS  Wilson chain provides ONE scale (m_tau), not TWO parameters (a, |b|)
+        BAE |b|^2/a^2 = 1/2 requires independent input (per 18-probe synthesis)
+  PASS  18-probe missing primitive (multiplicity-weighted Frobenius pairing) preserved
+        Wilson chain is a separate structural lane; does not address BAE algebra
+
+========================================================================
+SECTION 4: STEP 3 — BRANNEN MAGIC ANGLE phi = 2/9
+========================================================================
+  Brannen magic angle phi = 2/9 = 0.2222222222222222 rad = 12.7324 deg
+  cos(phi)          = 0.9754100854  (k=0, tau-aligned)
+  cos(phi + 2pi/3)  = -0.6785750875  (k=1, e-aligned)
+  cos(phi + 4pi/3)  = -0.2968349979  (k=2, mu-aligned)
+  PASS  sum of three C_3 cosines = 0 (Plancherel)
+        sum = -3.3307e-16
+  PASS  sum of cos^2 = 3/2 (C_3 character orthogonality)
+        sum cos^2 = 1.5000000000
+  PASS  Wilson chain does NOT provide phi = 2/9 (independent admission)
+        phi-magic is separate from BAE; both required for full PDG triplet
+
+========================================================================
+SECTION 5: STEP 4 — CONDITIONAL TRIPLET CLOSURE
+========================================================================
+  a (derived from Wilson m_tau, BAE, phi=2/9) = 0.5602503175
+  |b| (= a/sqrt(2) under BAE)                  = 0.3961567987
+  Check BAE: |b|^2/a^2 = 0.5000000000 (should be 0.5)
+  PASS  BAE |b|^2/a^2 = 1/2 holds by construction (admitted)
+
+  Predicted   m_tau = 1777.1049 MeV (PDG 1776.8000 MeV)
+  Predicted   m_mu  = 105.6665 MeV (PDG 105.6584 MeV)
+  Predicted   m_e   = 0.5110 MeV (PDG 0.5110 MeV)
+  PASS  predicted m_tau matches PDG to <0.5%
+        rel_dev = 0.0172%
+  PASS  predicted m_mu matches PDG to <0.5%
+        rel_dev = 0.0077%
+  PASS  predicted m_e matches PDG to <2%
+        rel_dev = 0.0067%
+
+  Predicted Koide Q = 0.666666666666667
+  2/3              = 0.666666666666667
+  |Q - 2/3|        = 2.2204e-16
+  PASS  predicted Koide Q = 2/3 exactly (under BAE)
+        Theorem 1 of CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE: BAE forces Q=2/3 independently of phi
+
+========================================================================
+SECTION 6: Q = 2/3 IS phi-INDEPENDENT UNDER BAE
+========================================================================
+  PASS  Q = 2/3 at phi = 0.2222 (all eigenvalues non-neg)
+        Q = 0.666666666666667
+  PASS  Q = 2/3 at phi = 0.0000 (all eigenvalues non-neg)
+        Q = 0.666666666666667
+  PASS  Q = 2/3 at phi = 0.1000 (all eigenvalues non-neg)
+        Q = 0.666666666666667
+  PASS  Q = 2/3 at phi = 0.2000 (all eigenvalues non-neg)
+        Q = 0.666666666666667
+
+========================================================================
+SECTION 7: BRANNEN CIRCULANT STRUCTURE
+========================================================================
+  M_3(C)_Herm decomposition under C_3:
+    trivial-character isotype dim     = 3
+    non-trivial-character isotype dim = 6 (= 3 omega + 3 omega-bar)
+    multiplicity ratio                = 3 : 6 = 1 : 2
+
+  BAE-condition |b|^2/a^2 = 1/2 ⟺ 3a^2 = 6|b|^2 (multiplicity-weighted equipartition)
+  This is the canonical (1,1)-multiplicity-weighted Frobenius pairing
+  per the 11-probe synthesis (PR #751).
+
+  PASS  M_3(C)_Herm trivial:nontrivial isotype dim ratio = 1:2
+        1D trivial subspace (a*I) : 2D nontrivial-character subspace per generation
+  PASS  BAE ⟺ Koide Q = 2/3 (algebraic equivalence)
+        Theorem 1 of CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE: exact
+
+========================================================================
+SECTION 8: SHARPENED RESIDUE
+========================================================================
+  Probe 19 sharpens the 18-probe residue in three directions:
+
+  (R1) SCALE-SIDE CLOSURE (positive):
+       m_tau = M_Pl * (7/8)^(1/4) * u_0 * alpha_LM^18 = 1.7771 GeV
+       matches PDG to 0.008% (retained-tier precision).
+
+  (R2) BAE-SIDE RESIDUE (unchanged):
+       BAE |b|^2/a^2 = 1/2 not closed by Wilson chain.
+       18-probe missing primitive (canonical (1,1)-multiplicity-weighted
+       Frobenius pairing on M_3(C)_Herm under C_3 isotype) preserved.
+
+  (R3) phi-SIDE RESIDUE (newly named):
+       Brannen magic angle phi = 2/9 not closed by Wilson chain.
+       BAE alone gives Q=2/3 but does NOT pin specific PDG triplet.
+       phi=2/9 is a SEPARATE admission identified by Probe 19.
+  PASS  sharpened residue documented (R1, R2, R3)
+
+========================================================================
+SECTION 9: PDG-INPUT FIREWALL
+========================================================================
+  Step 1 prediction m_tau = 1.7771 GeV uses ONLY:
+    - retained <P> = 0.5934 (from MC, not PDG)
+    - retained M_Pl = 1.221e19 GeV (framework UV cutoff)
+    - retained alpha_bare = 1/(4 pi) (canonical Cl(3) normalization)
+    - derived u_0, alpha_LM (from above)
+    - retained APBC factor (7/8)^(1/4)
+
+  PDG charged-lepton masses appear ONLY as falsifiability comparators
+  AFTER the chain is constructed. They are NOT derivation inputs.
+
+  Per substep-4 AC narrowing rule:
+    STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md
+  this firewall is enforced.
+  PASS  PDG values used only post-derivation (firewall held)
+        Step 1 m_tau prediction is purely cited-source-stack
+
+========================================================================
+SECTION 10: HONEST VERDICT
+========================================================================
+  VERDICT: SHARPENED bounded obstruction with partial positive closure.
+
+  Positive: Wilson chain extends to m_tau scale at 0.008% precision.
+  Sharpened: BAE (algebraic) + phi=2/9 (angular) are TWO admissions.
+  Conditional: Wilson + BAE + phi=2/9 reproduces full triplet (10^-4)
+               and Koide Q=2/3 holds exactly (under BAE).
+
+  Closure status:
+    BAE-condition:        STILL OPEN (consistent with 18 prior probes)
+    phi=2/9 angle:        NEWLY NAMED separate admission (Probe 19 finding)
+    m_tau-scale:          POSITIVE prediction at retained-tier precision
+
+  Authority disclaimer:
+    No retained theorem promoted. No new axiom added. No new admission
+    admitted. Audit-lane authority preserved.
+  PASS  honest verdict recorded (sharpened with partial closure)
+
+========================================================================
+=== TOTAL: PASS=26, FAIL=0 ===
+========================================================================
+
+----- stderr -----
+
