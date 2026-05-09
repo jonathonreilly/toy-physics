@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 951 |
+| unaudited | 950 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 370 |
+| ~~audited_conditional~~ | 371 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 370 |
+| `audited_conditional` | 371 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1006 |
+| `unaudited` | 1005 |
 
 | claim_type | count |
 |---|---:|
@@ -710,6 +710,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `inverse_problem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -6758,6 +6759,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** C1 derived from current stack: false; C1 conditional route explicitly stated: true; remaining decision: human science judgment or new selector/metrology theorem.  _(class `B`)_
 - **chain closes:** False — The note's positive route depends on two explicit premises: a primitive active-block selector and a non-rescaling-invariant action-unit metrology map. The runner records those route states with hard-coded booleans rather than deriving them from registered one-hop dependencies.
 - **rationale:** Issue: the C1 route is conditional on new selector and metrology premises, and the row has no ledger dependencies for the A1/A2/A4/A5/A6 route-state claims it summarizes. Why this blocks: an explicit axiom boundary is not a derivation of C1 from the current stack. Repair target: derive the selector and metrology maps from retained primitives, or register the prior route notes as dependencies and keep C1 explicitly axiom-conditional. Claim boundary until fixed: safe as a carrier/metrology boundary inventory, not as an audited C1 closure.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28`
+
+- **Note:** [`HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the branch-local attack inventory and phase ordering for future attempts on the C1 residual premise, not closure of G1, G2, or the C1 gate.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0da2-b435-74d0-8acd-536e4ea5ce80`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note asserts that A1+A2=A3 is the highest-leverage single-cycle pathway for attacking the coupled (G1+G2) residual premise, while no attack frame or gate closure is closed here.  _(class `E`)_
+- **chain closes:** False — The packet contains no one-hop retained authorities and no runner, while the note's classification of A1-A6 depends on unprovided prior gate audits, A_min, parity-gate, CAR, and phase-bridge notes. The missing step is a retained authority chain justifying that these are the surviving attack candidates and that A1/A2 are highest-leverage.
+- **rationale:** Issue: the note is an open-gate planning inventory whose key rankings and dependencies import prior C1, A_min, CAR, parity-gate, and conditional phase-bridge context not present as retained one-hop authorities in the restricted packet. Why this blocks: the audit cannot verify from the packet alone that A1-A6 are exhaustive, correctly ranked, or that A1 plus A2 would close the residual premise. Repair target: add the required retained dependency edges or reduce the note to an explicitly local planning memo with no implied retained dependency claims. Claim boundary until fixed: it remains only a proposed research agenda and does not retain G1, G2, C1, or any attack frame.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30`
