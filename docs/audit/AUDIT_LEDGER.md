@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 958 |
+| unaudited | 957 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 365 |
+| ~~audited_conditional~~ | 366 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 389 |
-| `audited_conditional` | 365 |
+| `audited_conditional` | 366 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1013 |
+| `unaudited` | 1012 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 736 |
+| `bounded_theorem` | 737 |
 | `decoration` | 12 |
 | `meta` | 62 |
 | `no_go` | 192 |
 | `open_gate` | 108 |
-| `positive_theorem` | 772 |
+| `positive_theorem` | 771 |
 
 | criticality | count |
 |---|---:|
@@ -735,6 +735,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `local_zsym_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `lorentz_boost_covariance_3plus1d_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `matched_2d_4d_decoherence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `memory_decay_diagnosis_2026-04-11` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -7815,6 +7816,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The newly promoted open-cubic staggered subset is scientifically consistent on main, supporting only the bounded external-source d^-2 reproduction, blocking-sensitivity, and 3D sign-split surfaces stated in the note.  _(class `C`)_
 - **chain closes:** True — The current outputs of the three listed scripts reproduce the note's exact-force, blocked-trajectory, blocking-sensitivity, and 3D contraction/sign-split summaries within print precision. The note explicitly excludes broader staggered both-masses or self-consistent two-body closure.
 - **rationale:** The validation claim closes for its bounded scope: all three referenced reruns match the frozen note summaries, including the global exponents, per-side blocked fits, blocking-scheme sensitivity, width ratios, core excess values, and 20/20 vs 0/20 field-side sign split. The note does not overstate these checks into broader Newton closure or two-body closure. Residual risk is limited to the promoted upstream notes' own scopes, not to stale validation output here.
+- **auditor confidence:** high
+
+### `matched_2d_4d_decoherence_note`
+
+- **Note:** [`MATCHED_2D_4D_DECOHERENCE_NOTE.md`](../../docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the stated modular-family pocket, fixed 2D radius 3.0, matched 4D radius grid, N = [25, 40, 60, 80, 100], eight seeds, npl = 25, gap = 3.0, and the runner's pur_min metric, the comparison fails to support dimensional 4D ceiling-flattening.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d6e-b660-70b2-a840-ee68fe1aada0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** After matching the 4D radius to the 2D mean degree, the runner finds alpha_2D = -0.158 ± 1.024 and alpha_4D = -2.704 ± 0.620, so the matched comparison does not support a clean 4D exponent-flattening claim.  _(class `C`)_
+- **chain closes:** False — The runner computes the reported matched comparison and its output matches the note, but the restricted packet does not include retained authorities or source for the imported 2D and 4D modular DAG generators. The missing step is a retained, packet-local justification that these imported generators and measurement conventions are the closed retained modular families claimed by the note.
+- **rationale:** Issue: the result is a bounded computational finding, but the runner relies on imported generator implementations whose authorities are not included in the restricted packet. Why this blocks: without those retained generator definitions and metric conventions, the audit can verify only internal runner arithmetic and matching logic, not that the tested objects are the claimed retained modular families. Repair target: cite or include the retained notes/source certificates for generate_modular_dag, generate_4d_modular_dag, the slit/mass rule, and pur_min normalization. Claim boundary until fixed: the note supports only this runner's reported matched-pocket outcome, not a closed retained theorem about dimensionality.
 - **auditor confidence:** high
 
 ### `matter_inertial_closure_note`
