@@ -11364,6 +11364,18 @@
       "dominant_class": null,
       "runner": "scripts/mesoscopic_surrogate_two_stage_2d.py"
     },
+    "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 25,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/microcausality_finite_range_h_bridge_2026_05_09.py"
+    },
     "minimal_absorbing_horizon_probe_note": {
       "assert_count": 0,
       "counts": {
@@ -39333,6 +39345,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/microcausality_finite_range_h_bridge_2026_05_09.py": {
+      "assert_count": 1,
+      "claims": [
+        "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 25,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/minimal_absorbing_horizon_probe.py": {
       "assert_count": 0,
       "claims": [
@@ -42083,12 +42110,12 @@
     "dominant_class_distribution": {
       "A": 22,
       "B": 174,
-      "C": 637,
+      "C": 638,
       "D": 242,
       "none": 426
     },
-    "runners_classified": 1501,
-    "runners_with_C": 771,
-    "runners_with_D": 395
+    "runners_classified": 1502,
+    "runners_with_C": 772,
+    "runners_with_D": 396
   }
 }

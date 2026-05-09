@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 988 |
+| unaudited | 990 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 345 |
+| ~~audited_conditional~~ | 344 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,16 +41,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 345 |
+| `audited_conditional` | 344 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1049 |
+| `unaudited` | 1051 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 754 |
+| `bounded_theorem` | 755 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
@@ -59,9 +59,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 312 |
+| `critical` | 314 |
 | `high` | 474 |
-| `medium` | 485 |
+| `medium` | 484 |
 | `leaf` | 629 |
 
 - **Retained pending chain closure:** 1
@@ -69,9 +69,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1501
-- runners with (C) first-principles compute hits: 771
-- runners with (D) external comparator hits: 395
+- runners classified: 1502
+- runners with (C) first-principles compute hits: 772
+- runners with (D) external comparator hits: 396
 - decoration candidates (no C, no D): 132
 
 ## Top 25 by load-bearing score (topology only)
@@ -80,12 +80,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 767 | 61.09 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 768 | 61.59 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 534 | 40.56 | `unaudited` | unaudited |
 | 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 756 | 38.06 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 622 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 745 | 36.54 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 674 | 33.90 | `unaudited` | meta |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 675 | 33.90 | `unaudited` | meta |
 | 7 | `alpha_s_derived_note` | bounded_theorem | critical | 504 | 32.48 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 30.12 | `unaudited` | unaudited |
 | 9 | `native_gauge_closure_note` | bounded_theorem | critical | 735 | 30.02 | `audited_clean` | **retained_bounded** |
@@ -526,7 +526,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -1610,26 +1609,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `MINIMAL_AXIOMS_2026-04-11.md`
   - `MINIMAL_AXIOMS_2026-05-03.md`
-- **auditor confidence:** high
-
-### `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01`
-
-- **Note:** [`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](../../docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Equal-time graded tensor locality on distinct lattice sites, an explicit Lieb-Robinson bound for a finite-range reconstructed lattice Hamiltonian, and claimed continuum spacelike microcausality in the Lorentz limit.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-axiom_first_microcausali-025`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The note assumes the RP-reconstructed Hamiltonian can be written as a uniformly bounded finite-range sum H = sum_z h_z with h_z supported in a radius-r ball, then applies the Lieb-Robinson estimate to obtain bound (5) with v_LR = 2 e r J.  _(class `A`)_
-- **chain closes:** False — M1 closes as a finite tensor/graded locality statement, but M2 and M3 do not close from the restricted authorities. The missing step is a retained bridge from RP/spectrum reconstruction to a finite-range local Hamiltonian with the stated J and geometry-correct LR constants, plus a retained continuum local-operator/Lorentz bridge for strict microcausality.
-- **rationale:** Issue: the load-bearing finite-range-H and explicit v_LR = 2erJ step is not derived by the cited RP or spectrum authorities, and several cited authorities are unaudited, audited-conditional, or superseded. Why this blocks: RP/spectrum provide positivity/self-adjointness/boundedness of H, not the local interaction decomposition needed for the stated Lieb-Robinson theorem, while M3 imports an unretained Lorentz/continuum bridge. Repair target: retain the dependencies and add a theorem deriving the finite-range reconstructed Hamiltonian with correct lattice-geometry constants and a continuum local-operator bridge. Claim boundary until fixed: M1 is algebraic, and the runner gives toy 1D finite-matrix support, but M2/M3 remain conditional.
-- **open / conditional deps cited:**
-  - `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
-  - `AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
-  - `LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`
-  - `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
-  - `AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
-  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03`

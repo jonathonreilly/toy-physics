@@ -1,6 +1,6 @@
 # Axiom-First Microcausality / Lieb-Robinson Bound on A_min
 
-**Date:** 2026-05-01
+**Date:** 2026-05-01 (2026-05-09: bounded action-support/J-bound support added — see new section below)
 **Type:** positive_theorem
 **Claim scope:** equal-time strict locality [O_x, O_y] = 0 for x ≠ y on Cl(3) tensor structure (M1); Lieb-Robinson lightcone bound ‖[α_t(O_x), O_y]‖ ≤ 2‖O_x‖‖O_y‖exp(-d + v_LR|t|) with v_LR = 2erJ on framework's finite-range Hamiltonian (M2); continuum spacelike microcausality in the smooth-limit Lorentz regime (M3).
 **Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline from `audit_status` + `claim_type` + dependency chain.
@@ -216,6 +216,58 @@ and using `log(z) ≤ z - 1` for the dominant exponential).
 This is the Lieb-Robinson bound (5) with `v_LR := 2 e r J` and
 decay rate `ξ = 1`. ∎
 
+### Bounded action-support/J-bound support (added 2026-05-09)
+
+The Step 2 argument above takes the finite-range structure of `H = Σ_z h_z`
+and the local-density operator-norm `J = sup_z ‖h_z‖_op` as inputs. A
+2026-05-05 audit review flagged that these inputs were **asserted** rather
+than **derived**: the cited RP/spectrum authorities supply positivity /
+self-adjointness / boundedness of the reconstructed `H`, but not the
+locality structure needed for Lieb-Robinson, nor an explicit `v_LR`
+derivation.
+
+The companion bridge note
+`MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md`
+narrows that gap. It proves three bounded statements directly from the
+canonical action coefficients (the same coefficients that the parent RP
+note's eqs. (1) and (2) record, not from any new spectral input):
+
+**(F1) Leading action-density support.** The action `S = S_F + S_G`
+(parent RP note eqs. (1)–(2)) couples either single sites (mass term),
+NN sites (staggered hop, Wilson term), or four sites in a single
+elementary plaquette (Wilson plaquette). This gives bounded support
+`r_action <= 2` in the site `l1` metric for the leading local
+action-density pieces. It does not prove that the exact logarithmic
+Hamiltonian `H = -log(T)/a_tau` is finite range.
+
+**(F2) Explicit action-density J bound.** `J_action ≤ J_max :=
+|m| + d/2 + r_W · d + (2β/N_c) · d(d-1)/2`, depending only on action
+coefficients. For the canonical surface (`d = 4, r_W = 1, β = 6,
+N_c = 3`): `J_max = |m| + 30`. Proof: triangle inequality on the
+local action-density pieces, using `‖U_μ‖_op = 1` because
+`U_μ ∈ SU(3)` is unitary, `|η_μ(x)| = 1`, fermion ladder ops bounded
+by 1, and `|1 - Re tr(U_P)/N_c| <= 2` for unitary `U_P`. The bound is
+gauge-background-independent.
+
+**(F3) Conditional Lieb-Robinson velocity.** If the exact
+reconstructed Hamiltonian has a finite-range/quasilocal decomposition
+with compatible support and local bound, Hastings-Koma /
+Nachtergaele-Sims gives `v_LR = 2 e r J`; preserving the leading
+`r_action <= 2` support would give `v_LR ≤ 4 e · (|m| + 30)`.
+
+The bridge note's runner `scripts/microcausality_finite_range_h_bridge_2026_05_09.py`
+verifies (F1) on a finite-range toy action-density carrier, (F2) by
+computing `‖h_z‖_op` on 20 random SU(3) backgrounds and comparing
+against the conservative `J_max`, (F3) by verifying the standard
+Lieb-Robinson bound (5) on a 1D finite-range Hamiltonian, and (F4)
+outside-lightcone exponential decay.
+
+**Consequence for the load-bearing claim.** The action-support and
+coefficient/norm pieces are no longer asserted, but Step 2 still
+requires an exact finite-range or quasilocal estimate for the
+reconstructed logarithmic Hamiltonian. Until that bridge is supplied,
+the parent lightcone claim remains conditional.
+
 ### Step 3 — Continuum microcausality (proves M3)
 
 In the lattice → continuum limit `a → 0` with
@@ -321,6 +373,8 @@ bare_retained_allowed: false
   [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
 - retained cluster-decomposition note:
   [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
+- 2026-05-09 bounded action-support/J-bound support for finite-range H + explicit v_LR:
+  `MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md`
 - retained emergent Lorentz invariance:
   [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
   [`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
@@ -329,3 +383,13 @@ bare_retained_allowed: false
   Hastings (2004) *Phys. Rev. B* 69, 104431;
   Nachtergaele-Sims (2010) in *New Trends in Mathematical Physics*,
   Springer, p. 591.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by the
+audit verdict so the audit citation graph can track them. It does not promote
+this note or change the audited claim scope.
+
+- [microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09](MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md)
+  (2026-05-09 — supplies bounded action-density support and explicit
+  J budget for the load-bearing finite-range-H/v_LR bridge).

@@ -1081,6 +1081,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "to": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
+    },
+    {
       "from": "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
@@ -12823,6 +12827,22 @@
     {
       "from": "mesoscopic_surrogate_two_stage_2d_note",
       "to": "mesoscopic_surrogate_backreaction_note"
+    },
+    {
+      "from": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+      "to": "hopping_bilinear_hermiticity_theorem_note_2026-05-02"
+    },
+    {
+      "from": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     },
     {
       "from": "minimal_absorbing_horizon_probe_note",
@@ -33069,9 +33089,10 @@
         "lorentz_kernel_positive_closure_note",
         "emergent_lorentz_invariance_note",
         "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
-        "minimal_axioms_2026-04-11"
+        "minimal_axioms_2026-04-11",
+        "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
       ],
-      "note_hash": "9804a6700eb9e1d768b5964e8b84bf25ea7aaee62d3bdd1c689f9f40720dfb56",
+      "note_hash": "a8bc038a6bea4a10f6d6668ff7b2e51ea6fe1e70720480ad711275f25f5421f8",
       "path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
       "runner_path": "scripts/axiom_first_microcausality_check.py",
       "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min"
@@ -47453,6 +47474,22 @@
       "path": "docs/MESOSCOPIC_SURROGATE_TWO_STAGE_2D_NOTE.md",
       "runner_path": "scripts/mesoscopic_surrogate_two_stage_2d.py",
       "title": "Mesoscopic Surrogate Two-Stage 2D Note"
+    },
+    "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09": {
+      "claim_id": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "minimal_axioms_2026-05-03",
+        "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "note_hash": "ba3b85dc17a55a5d91225f86d7ee3ada2fa332c4919f723eed8a9a6aedfd308a",
+      "path": "docs/MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md",
+      "runner_path": "scripts/microcausality_finite_range_h_bridge_2026_05_09.py",
+      "title": "Bounded Action-Support J Bound for the Microcausality / Lieb-Robinson Bridge"
     },
     "minimal_absorbing_horizon_probe_note": {
       "claim_id": "minimal_absorbing_horizon_probe_note",
@@ -62582,7 +62619,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 176,
+      "bounded_theorem": 177,
       "meta": 22,
       "no_go": 14,
       "none": 1683,
@@ -62590,17 +62627,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 680,
+      "bounded_theorem": 681,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
       "positive_theorem": 613
     },
-    "edge_count": 7698,
+    "edge_count": 7703,
     "leaf_count": 536,
-    "node_count": 2007,
+    "node_count": 2008,
     "root_count": 815,
-    "runners_with_path": 1607
+    "runners_with_path": 1608
   }
 }
