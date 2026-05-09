@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 133,
-    "high": 357,
+    "high": 356,
     "leaf": 225,
     "medium": 258
   },
@@ -7080,22 +7080,26 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
       "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
+      "claim_type_provenance": "migration_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
+      "deps": [
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 7.619,
-      "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md",
+      "load_bearing_score": 8.609,
+      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_koide_circulant_character_bridge_narrow.py",
-      "transitive_descendants": 138
+      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
+      "transitive_descendants": 137
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -11076,31 +11080,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_koide_positive_parent_axis_obstruction.py",
-      "transitive_descendants": 137
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
-        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.609,
-      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "transitive_descendants": 137
     },
     {
@@ -29490,5 +29469,5 @@
     }
   ],
   "ready_count": 44,
-  "total_pending": 973
+  "total_pending": 972
 }
