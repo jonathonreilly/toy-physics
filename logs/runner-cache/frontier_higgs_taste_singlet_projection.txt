@@ -1,0 +1,226 @@
+
+========================================================================================
+ frontier_higgs_taste_singlet_projection.py
+========================================================================================
+ Bounded source note: under σ = taste-singlet (parent identification),
+   (m_H_W/v)^2 = Σ_k w_k · c_k with w_k = binomial(4,k)/16 and
+   c_k = (u_0^2 - (k-2)^2 r^2)/(4·((k-2)^2 r^2 + u_0^2)^2). Three
+   structural consequences: (i) k=2 Wilson-decoupled; (ii) k → 4-k
+   reflection; (iii) reduction at r=0 to parent's 1/(4u_0^2). Cross-
+   validates PR #773 total at multiple r values. Factors the parent's
+   uniform-N_taste=16 admission into σ=taste-singlet (structural) +
+   binom(4,k) counting fact, both more constrained than free N_taste.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Taste-Singlet Projection  (marker = 'Taste-Singlet Projection')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only; audit verdict and')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: formula (1) decomposed sum  (marker = 'Σ_{k=0}^{4}  w_k · c_k ( r, u_0 )')
+  [PASS] contains: formula (2) weight definition w_k = binomial(4,k)/16  (marker = 'binomial(4, k) / 16')
+  [PASS] contains: formula (3) per-corner curvature c_k  (marker = '( u_0^2  -  ( k - 2 )^2 r^2 )')
+  [PASS] contains: Σ w_k = 1 stated  (marker = '( 1 + 4 + 6 + 4 + 1 ) / 16  =  16 / 16  =  1')
+  [PASS] contains: k=2 Wilson-decoupling stated  (marker = 'Central level `k = 2` is Wilson-decoupled')
+  [PASS] contains: c_2 = 1/(4 u_0^2) r-independent stated  (marker = 'r-independent for all r')
+  [PASS] contains: k → 4-k reflection symmetry stated  (marker = 'Reflection symmetry under `k → 4 - k`')
+  [PASS] contains: c_0 = c_4, c_1 = c_3 stated  (marker = 'c_0 ( r, u_0 )  =  c_4 ( r, u_0 ),')
+  [PASS] contains: reduction at r=0 to parent eq [5]  (marker = 'matching\nthe parent eq. `[5]`')
+  [PASS] contains: σ = taste-singlet structural identification flagged  (marker = 'structural identification')
+  [PASS] contains: uniform-N_taste=16 factored into (A) + (B) statement  (marker = 'two structural inputs to the uniform-`N_taste = 16` weighting')
+  [PASS] contains: Hamming staircase upstream cited  (marker = 'WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: PR-#773 all-orders upstream cited (forward-ref)  (marker = 'WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: V_taste extremum upstream cited (forward-ref)  (marker = 'WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Higgs-channel boundary upstream cited (forward-ref)  (marker = 'HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: parent Higgs note upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: PDG comparison flagged not load-bearing  (marker = 'comparison input only, NOT load-bearing')
+  [PASS] contains: note explicitly does NOT change closure value statement  (marker = 'is unchanged by this re-organization')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent (note + runner)
+----------------------------------------------------------------------------------------
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams (with graceful forward-references)
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+  [PASS] sister forward-reference present: docs/WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08.md
+  [PASS] sister forward-reference present: docs/WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md
+  [PASS] sister forward-reference present: docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md
+  [INFO] sister forward-reference not yet on this branch: docs/WILSON_M_H_PER_CHANNEL_CLOSURE_BOUNDED_NOTE_2026-05-09.md
+         (intentional; audit lane resolves order)
+
+----------------------------------------------------------------------------------------
+ Part 4: weight normalization Σ w_k = 1
+----------------------------------------------------------------------------------------
+  w_k = [w_0, w_1, w_2, w_3, w_4] = [1/16, 1/4, 3/8, 1/4, 1/16]
+      = [1/16, 4/16, 6/16, 4/16, 1/16] = [1/16, 1/4, 3/8, 1/4, 1/16]
+  [PASS] Σ_k w_k = 1 EXACTLY in Fraction arithmetic  (sum = 1)
+  [PASS] w_0 = w_4 = 1/16 (corner-of-corner multiplicity)  (w_0=1/16, w_4=1/16)
+  [PASS] w_2 = 3/8 = 6/16 (central-level multiplicity)  (w_2=3/8)
+
+----------------------------------------------------------------------------------------
+ Part 5: reduction at r=0 — every c_k = 1/(4 u_0^2)
+----------------------------------------------------------------------------------------
+  Expected per-corner value: 1/(4 u_0^2) = 0.3245987025
+    c_0(0, u_0) = 0.3245987025, diff from 1/(4 u_0^2) = +0.00e+00
+  [PASS] c_0(0, u_0) = 1/(4 u_0^2) EXACTLY  (diff = 0)
+    c_1(0, u_0) = 0.3245987025, diff from 1/(4 u_0^2) = +0.00e+00
+  [PASS] c_1(0, u_0) = 1/(4 u_0^2) EXACTLY  (diff = 0)
+    c_2(0, u_0) = 0.3245987025, diff from 1/(4 u_0^2) = +0.00e+00
+  [PASS] c_2(0, u_0) = 1/(4 u_0^2) EXACTLY  (diff = 0)
+    c_3(0, u_0) = 0.3245987025, diff from 1/(4 u_0^2) = +0.00e+00
+  [PASS] c_3(0, u_0) = 1/(4 u_0^2) EXACTLY  (diff = 0)
+    c_4(0, u_0) = 0.3245987025, diff from 1/(4 u_0^2) = +0.00e+00
+  [PASS] c_4(0, u_0) = 1/(4 u_0^2) EXACTLY  (diff = 0)
+  [PASS] Σ_k w_k c_k(0, u_0) = 1/(4 u_0^2) EXACTLY (matches parent eq. [5])  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 6: k=2 Wilson-decoupling — c_2(r, u_0) = 1/(4 u_0^2) for all r
+----------------------------------------------------------------------------------------
+  c_2(0.00000, u_0) = 0.3245987025, diff = +0.00e+00
+  [PASS] c_2(r=0.00000) = 1/(4 u_0^2) EXACTLY (Wilson-decoupled)  (diff = 0)
+  c_2(0.10000, u_0) = 0.3245987025, diff = +0.00e+00
+  [PASS] c_2(r=0.10000) = 1/(4 u_0^2) EXACTLY (Wilson-decoupled)  (diff = 0)
+  c_2(0.23500, u_0) = 0.3245987025, diff = +0.00e+00
+  [PASS] c_2(r=0.23500) = 1/(4 u_0^2) EXACTLY (Wilson-decoupled)  (diff = 0)
+  c_2(0.26855, u_0) = 0.3245987025, diff = +0.00e+00
+  [PASS] c_2(r=0.26855) = 1/(4 u_0^2) EXACTLY (Wilson-decoupled)  (diff = 0)
+  c_2(0.40000, u_0) = 0.3245987025, diff = +0.00e+00
+  [PASS] c_2(r=0.40000) = 1/(4 u_0^2) EXACTLY (Wilson-decoupled)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 7: reflection symmetry — c_0 = c_4, c_1 = c_3
+----------------------------------------------------------------------------------------
+  r = 0.10000: c_0 = 0.278103, c_4 = 0.278103, c_1 = 0.312224, c_3 = 0.312224
+  [PASS] c_0(r=0.1000) = c_4(r=0.1000) EXACTLY  (diff = 0)
+  [PASS] c_1(r=0.1000) = c_3(r=0.1000) EXACTLY  (diff = 0)
+  r = 0.23500: c_0 = 0.139803, c_4 = 0.139803, c_1 = 0.262352, c_3 = 0.262352
+  [PASS] c_0(r=0.2350) = c_4(r=0.2350) EXACTLY  (diff = 0)
+  [PASS] c_1(r=0.2350) = c_3(r=0.2350) EXACTLY  (diff = 0)
+  r = 0.26855: c_0 = 0.107451, c_4 = 0.107451, c_1 = 0.245980, c_3 = 0.245980
+  [PASS] c_0(r=0.2686) = c_4(r=0.2686) EXACTLY  (diff = 0)
+  [PASS] c_1(r=0.2686) = c_3(r=0.2686) EXACTLY  (diff = 0)
+  r = 0.40000: c_0 = 0.016366, c_4 = 0.016366, c_1 = 0.176305, c_3 = 0.176305
+  [PASS] c_0(r=0.4000) = c_4(r=0.4000) EXACTLY  (diff = 0)
+  [PASS] c_1(r=0.4000) = c_3(r=0.4000) EXACTLY  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 8: cross-validation Σ_k w_k c_k(r) == PR-#773 total
+----------------------------------------------------------------------------------------
+  r = 0.00000: decomposed = 0.3245987025, PR-#773 = 0.3245987025, diff = +0.00e+00
+  [PASS] Σ_k w_k c_k(r=0.0000) == PR-#773 total EXACTLY  (diff = 0)
+  r = 0.10000: decomposed = 0.3125992706, PR-#773 = 0.3125992706, diff = +0.00e+00
+  [PASS] Σ_k w_k c_k(r=0.1000) == PR-#773 total EXACTLY  (diff = 0)
+  r = 0.23500: decomposed = 0.2703756852, PR-#773 = 0.2703756852, diff = +0.00e+00
+  [PASS] Σ_k w_k c_k(r=0.2350) == PR-#773 total EXACTLY  (diff = 0)
+  r = 0.26855: decomposed = 0.2581459092, PR-#773 = 0.2581459092, diff = +0.00e+00
+  [PASS] Σ_k w_k c_k(r=0.2686) == PR-#773 total EXACTLY  (diff = 0)
+  r = 0.40000: decomposed = 0.2119225407, PR-#773 = 0.2119225407, diff = +0.00e+00
+  [PASS] Σ_k w_k c_k(r=0.4000) == PR-#773 total EXACTLY  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 9: closure cross-check at r_all_orders ≈ 0.26855
+----------------------------------------------------------------------------------------
+  Target (m_H_PDG / v)^2 = 0.2581475249
+  (m_H_PDG = 125.1 GeV used as comparison
+   input only; NOT load-bearing for derivation of (1)–(3))
+  At r = 0.26855:
+    Σ_k w_k c_k = 0.2581459092
+    target      = 0.2581475249
+    abs diff    = -1.62e-06
+    rel diff    = 6.26e-06
+  [PASS] Σ_k w_k c_k(0.26855) ≈ (m_H_PDG/v)^2 within 10^{-4} (PR-#773 closure)  (abs diff = -1.62e-06, rel diff = 6.26e-06)
+
+----------------------------------------------------------------------------------------
+ Part 10: per-level breakdown at r_all_orders ≈ 0.26855
+----------------------------------------------------------------------------------------
+  At r = 0.26855, u_0 = 0.8776:
+
+      k  binom(4,k)         w_k    c_k(r,u_0)       w_k · c_k
+    ---  ----------  ----------  ------------  --------------
+      0           1      0.0625      0.107451      0.00671568
+      1           4      0.2500      0.245980      0.06149502
+      2           6      0.3750      0.324599      0.12172451
+      3           4      0.2500      0.245980      0.06149502
+      4           1      0.0625      0.107451      0.00671568
+    ---  ----------  ----------  ------------  --------------
+      Σ          16      1.0000                    0.25814591
+
+    target (m_H_PDG/v)^2  = 0.25814752
+    Σ_k w_k · c_k         = 0.25814591
+    abs diff              = -1.62e-06
+  [PASS] k=2 contribution = (3/8) · 1/(4 u_0^2) = 3/(32 u_0^2) EXACTLY  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 11: stdlib-only / no PDG pins (other than declared comparison)
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] PDG comparison declared with explicit not-load-bearing label
+  [PASS] no extra PDG pins beyond declared m_H_PDG comparison  (none (clean))
+
+----------------------------------------------------------------------------------------
+ Part 12: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: the +12% Higgs gap chain
+  [PASS] note explicitly does not close: the σ = taste-singlet identification itself
+  [PASS] note explicitly does not close: the value of the Wilson coefficient `r` itself
+  [PASS] note explicitly does not close: any parent theorem/status promotion
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+  [PASS] factors uniform-N_taste=16 admission into (A) + (B)
+  [PASS] (B) counting fact about (Z/2)^4 explicitly stated
+  [PASS] explicitly states closure value is unchanged by this re-organization
+
+========================================================================================
+ TOTAL: PASS=102, FAIL=0
+========================================================================================
+
+ VERDICT: under σ = taste-singlet (parent identification), the all-orders
+ Wilson-corrected (m_H_W/v)^2 decomposes on the Hamming staircase as
+ Σ_k w_k · c_k(r, u_0) with derived weights w_k = binomial(4,k)/16 and
+ per-corner curvatures c_k(r, u_0) = (u_0^2 - (k-2)^2 r^2)/(4·((k-2)^2 r^2
+ + u_0^2)^2). Three structural consequences verified at exact rational
+ precision: (i) k=2 channel r-decoupled (c_2 = 1/(4u_0^2) for all r);
+ (ii) k → 4-k reflection symmetry (c_0 = c_4, c_1 = c_3); (iii) reduction
+ at r=0 to parent's 1/(4u_0^2). Cross-validates PR #773 total at r ∈
+ {0, 0.1, 0.235, 0.26855, 0.4}. The decomposition factors the parent's
+ uniform-N_taste=16 admission into σ = taste-singlet (structural) +
+ binom(4,k) staircase counting, both more constrained than a free N_taste
+ numerical choice.
