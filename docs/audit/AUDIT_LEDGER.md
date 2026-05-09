@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 64 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 235 |
+| **retained_bounded** | 236 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 959 |
+| unaudited | 958 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 388 |
+| `audited_clean` | 389 |
 | `audited_conditional` | 365 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1014 |
+| `unaudited` | 1013 |
 
 | claim_type | count |
 |---|---:|
@@ -288,6 +288,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_nn_rg_alpha_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `lattice_nn_rg_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_purity_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -7568,6 +7569,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The supplied runner computes the finite alpha-by-h grid for the deterministic nearest-neighbor lattice path, derives g(0.25)/g(0.5) and pair exponent for each alpha, and the live completed stdout matches the source-note gravity values, ratios, exponents, k=0 zeros, and machine-clean Born conclusion; alpha=1.5 is the least h-sensitive measured point on the scanned grid with ratio 0.858.  _(class `C`)_
 - **chain closes:** True — The one-hop dependency is audited clean for the finite deterministic Born-safe path, and the supplied runner source summary plus live completed stdout compute the asserted bounded scan rows without external comparator data or target fitting. The cache Born-residual triplet discrepancy does not break closure because the live runner matches the note for the listed rows and the discrepant cache values preserve the only load-bearing Born assertion, namely machine-clean residuals; exact alternate cache residuals are not needed for the alpha-stability conclusion. The note explicitly caveats the result as a scan-edge fixed-point-style probe rather than a renormalization theorem.
 - **rationale:** Under the bounded scope, the claim follows from the supplied completed runner and audited finite dependency: alpha=1.5 is the strongest checked alpha, gives the highest measured h=0.25/h=0.5 gravity ratio of 0.858, and the note avoids claiming a solved RG fixed point or continuum theory. The cache mismatch is non-load-bearing because it changes only sub-femtoscale Born residual numerics while preserving the machine-clean conclusion and not altering gravity values, ratios, exponents, or k=0 behavior.
+- **auditor confidence:** high
+
+### `lattice_nn_rg_gravity_note`
+
+- **Note:** [`LATTICE_NN_RG_GRAVITY_NOTE.md`](../../docs/LATTICE_NN_RG_GRAVITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded computational claim that the raw nearest-neighbor lattice has a Born-clean finite refinement window through h = 0.25 and that fixed, 1/h, and 1/sqrt(h) strength schedules do not establish a clean RG/continuum continuation past the shared h = 0.125 failure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d6d-0972-71d3-aba6-95dcadb12d4a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The runner-computed finite rows show Born errors below 1e-10 through h = 0.25 for all three schedules, while all schedules fail at h = 0.125 and the fitted exponents are only descriptive across sign-changing gravity rows.  _(class `C`)_
+- **chain closes:** True — The runner source constructs the nearest-neighbor lattice, propagates amplitudes, computes gravity, MI, purity, d_TV, Born residuals, and descriptive power fits directly from the stated harness rather than printing hard-coded target values. The note's conclusion is bounded to the finite retained window and explicitly does not promote the continuum/RG claim.
+- **rationale:** The load-bearing evidence is a direct computation in the included runner, and the stdout matches the source note tables and caveats. No cited upstream dependency is required for the narrowed claim, and the runner does not hard-code the contested finite-row outcomes. The claim boundary is appropriately limited to a finite-resolution Born-clean refinement window plus a negative/inconclusive statement about simple RG-style scaling, not a finished continuum theorem.
 - **auditor confidence:** high
 
 ### `lattice_symmetry_unification_decision_note`
