@@ -1,23 +1,35 @@
 #!/usr/bin/env python3
-"""Bounded boundary-law robustness addendum: multi-seed, multi-size,
-multi-partition checks.
+"""Bounded boundary-law robustness diagnostic on a pre-registered envelope.
 
-Strengthens the bounded boundary-law result from frontier_holographic_probe.py
-with systematic robustness checks:
+Reports a bounded finite-run numerical robustness diagnostic on the
+pre-registered parameter envelope below. This is NOT:
 
-  1. Multi-seed stability (5 seeds per lattice size)
-  2. Size convergence (side=6,8,10,12,14)
-  3. Multiple partition geometries (planar, BFS-ball, random)
-  4. G-dependence of the coefficient (G=0,5,10,20)
-  5. Coefficient error bars from multi-seed spread
+  - a clean bounded theorem-level boundary-law result,
+  - a parameter-independent area-law statement,
+  - a holography proof,
+  - evidence the linear S-vs-|boundary| fit holds outside the envelope.
+
+The diagnostic measures linear `R^2` of Dirac-sea entanglement entropy `S`
+against counted BFS-ball boundary-edge size `|boundary|` on the periodic
+2D staggered-fermion lattice. It separates:
+
+  - the full counted grid (5 sides x 4 couplings x 5 seeds = 100 configs),
+  - the >=3-radii subgrid that excludes automatic 2-point fits at side=6
+    (4 sides x 4 couplings x 5 seeds = 80 configs).
+
+Companion bounded note:
+  scripts/frontier_holographic_probe.py / HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md.
 
 Physics: Dirac-sea correlation-matrix method (Peschel 2003) on a
 staggered-fermion Hamiltonian with parity coupling, evolved under
 screened-Poisson self-gravity.
 
-Current-main boundary:
-  this is a bounded many-body-style boundary-law robustness addendum on the
-  periodic lattice, not a holography proof.
+Current-main claim boundary (per audit verdict 2026-05-03):
+  this is a bounded finite-run numerical robustness diagnostic on the
+  pre-registered envelope. It is not a boundary-law theorem and not a
+  holography proof. The retained statement is limited to the exact
+  fixed-run numerical observation on the audited BFS-ball sweep and the
+  stated small partition cross-check.
 """
 
 from __future__ import annotations
@@ -313,15 +325,34 @@ def run_experiment():
     t_global = time.time()
 
     print("=" * 80)
-    print("BOUNDED BOUNDARY-LAW ROBUSTNESS ADDENDUM")
-    print("Multi-seed, multi-size, multi-partition, multi-G checks")
+    print("BOUNDED BOUNDARY-LAW ROBUSTNESS DIAGNOSTIC")
+    print("Pre-registered parameter envelope; bounded finite-run R^2 readout")
     print("=" * 80)
     print()
-    print(f"Parameters: MASS={MASS}, MU2={MU2}, DT={DT}, N_STEPS={N_STEPS}")
-    print(f"Sides: {SIDES}")
-    print(f"Seeds: {SEEDS} (jitter={JITTER})")
-    print(f"G values: {G_VALUES}")
-    print(f"Partition types: BFS-ball, rectangular, random")
+    print("CLAIM SCOPE (per audit verdict 2026-05-03):")
+    print("  This is a bounded finite-run numerical robustness diagnostic on")
+    print("  the pre-registered parameter envelope below. It is NOT a clean")
+    print("  bounded theorem-level boundary-law result, NOT parameter-")
+    print("  independent, NOT a holography proof. The retained statement is")
+    print("  limited to the exact fixed-run numerical observation that this")
+    print("  script reports high R^2 boundary-size linearity on the audited")
+    print("  BFS-ball sweep and the stated small partition cross-check.")
+    print()
+    print("PRE-REGISTERED PARAMETER ENVELOPE (fixed grid, not swept axes):")
+    print(f"  MASS={MASS}, MU2={MU2}, DT={DT}, N_STEPS={N_STEPS}, "
+          f"SIGMA={SIGMA}, JITTER={JITTER}")
+    print(f"  Sides:     {SIDES}")
+    print(f"  Couplings: {G_VALUES}")
+    print(f"  Seeds:     {SEEDS}")
+    print(f"  Counted BFS-ball fits: "
+          f"{len(SIDES)} sides x {len(G_VALUES)} couplings x "
+          f"{len(SEEDS)} seeds = {len(SIDES)*len(G_VALUES)*len(SEEDS)} configs")
+    print(f"  Partition cross-check (separate, smaller): side=10, G=10,")
+    print(f"    partitions: BFS-ball, rectangular, random")
+    print()
+    print("CAVEAT: side=6 BFS rows have only 2 available radii, so R^2=1.0")
+    print("  is automatic by two-point linear regression. The verdict")
+    print("  reports the >=3-radii subgrid (sides 8,10,12,14) separately.")
     print()
 
     # ===================================================================
@@ -331,8 +362,8 @@ def run_experiment():
     print("SECTION 1: BFS-ball S vs |boundary| -- multi-seed stability")
     print("=" * 80)
 
-    # results[(side, G)] = list of (alpha, r2) over seeds
-    bfs_results: dict[tuple[int, int], list[tuple[float, float]]] = defaultdict(list)
+    # results[(side, G)] = list of (alpha, r2, n_radii) over seeds
+    bfs_results: dict[tuple[int, int], list[tuple[float, float, int]]] = defaultdict(list)
     # raw data for plotting
     bfs_raw: list[dict] = []
 
@@ -362,13 +393,15 @@ def run_experiment():
                         'R': R, 'nA': nA, 'bnd': bnd_edges, 'S': S,
                     })
 
-                if len(bnds) >= 2:
+                n_used = len(bnds)
+                if n_used >= 2:
                     alpha, _, r2, stderr = safe_linregress(bnds, entropies)
-                    bfs_results[(side, G)].append((alpha, r2))
+                    bfs_results[(side, G)].append((alpha, r2, n_used))
 
+                two_point_flag = " [2-point fit, R^2=1 automatic]" if n_used == 2 else ""
                 print(f"  side={side:>2} G={G:>2} seed={seed}: "
                       f"alpha={alpha:.6f} R2={r2:.6f} "
-                      f"(n_filled={n_filled}, {len(radii)} radii)")
+                      f"(n_filled={n_filled}, {n_used} radii){two_point_flag}")
 
     # Summarize with error bars
     print("\n" + "-" * 70)
@@ -495,7 +528,7 @@ def run_experiment():
         for side in SIDES:
             key = (side, G)
             if key in bfs_results:
-                for a, r in bfs_results[key]:
+                for a, r, _ in bfs_results[key]:
                     all_alphas.append(a)
                     all_r2s.append(r)
         if len(all_alphas) > 0:
@@ -512,36 +545,97 @@ def run_experiment():
     print("VERDICT")
     print("=" * 80)
 
-    # Collect all R^2 values
+    # Collect R^2 values, separating the >=3-radii subgrid from the
+    # automatic two-point fits at side=6.
     all_r2 = []
+    subgrid_r2 = []          # n_radii >= 3 (audit-relevant subset)
+    two_point_r2 = []        # n_radii == 2 (R^2=1 automatic)
     for key, vals in bfs_results.items():
-        for _, r2 in vals:
+        for _, r2, n_used in vals:
             all_r2.append(r2)
+            if n_used >= 3:
+                subgrid_r2.append(r2)
+            else:
+                two_point_r2.append(r2)
     all_r2 = np.array(all_r2)
+    subgrid_r2 = np.array(subgrid_r2)
+    two_point_r2 = np.array(two_point_r2)
 
     total_configs = len(all_r2)
     high_r2 = np.sum(all_r2 > 0.95)
     very_high = np.sum(all_r2 > 0.99)
 
-    print(f"\n  Total (side, G, seed) configs tested: {total_configs}")
-    print(f"  Configs with R^2 > 0.95: {high_r2} ({100*high_r2/max(total_configs,1):.1f}%)")
-    print(f"  Configs with R^2 > 0.99: {very_high} ({100*very_high/max(total_configs,1):.1f}%)")
+    print(f"\n  Pre-registered envelope: "
+          f"{len(SIDES)} sides x {len(G_VALUES)} couplings x "
+          f"{len(SEEDS)} seeds = {len(SIDES)*len(G_VALUES)*len(SEEDS)} configs")
+    print(f"  Counted (side, G, seed) configs with linear fit: {total_configs}")
+    print(f"  Configs with R^2 > 0.95: {high_r2} "
+          f"({100*high_r2/max(total_configs,1):.1f}%)")
+    print(f"  Configs with R^2 > 0.99: {very_high} "
+          f"({100*very_high/max(total_configs,1):.1f}%)")
     print(f"  R^2 range: [{all_r2.min():.6f}, {all_r2.max():.6f}]")
     print(f"  R^2 mean +/- std: {all_r2.mean():.6f} +/- {all_r2.std():.6f}")
 
-    # Check partition universality
+    # Audit-required separation: 2-point side=6 R^2=1.0 is automatic.
+    print()
+    print("  --- Two-point automatic fits (side=6, audit-flagged) ---")
+    if len(two_point_r2) > 0:
+        n_2pt = len(two_point_r2)
+        print(f"  Configs with exactly 2 radii (R^2=1 automatic): {n_2pt}")
+        print(f"  These configurations carry no diagnostic information about")
+        print(f"  linear-versus-nonlinear boundary scaling.")
+    else:
+        print("  No two-point configurations counted.")
+
+    print()
+    print("  --- >=3-radii subgrid (audit-relevant) ---")
+    if len(subgrid_r2) > 0:
+        n_sub = len(subgrid_r2)
+        sub_high = np.sum(subgrid_r2 > 0.95)
+        sub_very = np.sum(subgrid_r2 > 0.99)
+        print(f"  Configs with >=3 radii: {n_sub}")
+        print(f"  Configs with R^2 > 0.95: {sub_high} "
+              f"({100*sub_high/max(n_sub,1):.1f}%)")
+        print(f"  Configs with R^2 > 0.99: {sub_very} "
+              f"({100*sub_very/max(n_sub,1):.1f}%)")
+        print(f"  R^2 range: [{subgrid_r2.min():.6f}, {subgrid_r2.max():.6f}]")
+        print(f"  R^2 mean +/- std: {subgrid_r2.mean():.6f} +/- "
+              f"{subgrid_r2.std():.6f}")
+    else:
+        print("  No >=3-radii configurations on this envelope.")
+
+    # Partition cross-check
+    print()
+    print("  --- Partition cross-check (side=10, G=10) ---")
     for ptype in ['BFS-ball', 'rectangular', 'random']:
         if ptype in partition_results and len(partition_results[ptype]) > 0:
             r2s = np.array([x[1] for x in partition_results[ptype]])
-            print(f"  {ptype} partition: R^2 = {r2s.mean():.6f} +/- {r2s.std():.6f}")
+            print(f"  {ptype:>12} partition: "
+                  f"R^2 = {r2s.mean():.6f} +/- {r2s.std():.6f}")
 
-    if all_r2.mean() > 0.95:
-        print("\n  ==> BOUNDED boundary-law scaling is robust across the audited")
-        print("      seeds, sizes, couplings, and partition families.")
-    elif all_r2.mean() > 0.85:
-        print("\n  ==> Bounded boundary-law scaling holds with moderate robustness")
+    # Bounded-diagnostic verdict on the pre-registered envelope.
+    print()
+    print("  --- Bounded diagnostic verdict ---")
+    sub_high = int(np.sum(subgrid_r2 > 0.95)) if len(subgrid_r2) > 0 else 0
+    n_sub = len(subgrid_r2)
+    full_high = int(np.sum(all_r2 > 0.95))
+
+    diagnostic_holds = (
+        full_high == total_configs
+        and (n_sub == 0 or sub_high == n_sub)
+    )
+    if diagnostic_holds:
+        print("  ==> Bounded diagnostic holds on the pre-registered envelope:")
+        print(f"      {full_high}/{total_configs} BFS-ball fits with R^2 > 0.95,")
+        if n_sub > 0:
+            print(f"      {sub_high}/{n_sub} >=3-radii fits with R^2 > 0.95.")
+        print("      This is a finite-run numerical observation on a fixed")
+        print("      grid; it is NOT a parameter-independent boundary-law")
+        print("      theorem and NOT a holography proof.")
     else:
-        print("\n  ==> Boundary-law robustness is insufficient on this audited surface")
+        print("  ==> Bounded diagnostic fails on the pre-registered envelope.")
+        print(f"      {full_high}/{total_configs} BFS-ball fits with R^2 > 0.95,")
+        print(f"      {sub_high}/{n_sub} >=3-radii fits with R^2 > 0.95.")
 
     elapsed = time.time() - t_global
     print(f"\n  Total elapsed: {elapsed:.1f}s")
