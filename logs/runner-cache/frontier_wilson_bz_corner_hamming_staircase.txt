@@ -1,0 +1,132 @@
+
+========================================================================================
+ frontier_wilson_bz_corner_hamming_staircase.py
+========================================================================================
+ Bounded proof-walk for the Wilson term Hamming-weight staircase
+ on Z^3+t APBC: 16 BZ corners decompose into 5 hw classes with
+ multiplicities (1, 4, 6, 4, 1) and Wilson shifts (0, 2r, 4r, 6r, 8r).
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Wilson Term BZ-Corner Hamming-Weight Staircase  (marker = 'Wilson Term BZ-Corner Hamming-Weight Staircase')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only; audit verdict and')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: 16 corner identity stated  (marker = '1 + 4 + 6 + 4 + 1 = 16')
+  [PASS] contains: multiplicity tuple  (marker = '( 1, 4, 6, 4, 1 )')
+  [PASS] contains: Wilson formula in Z^3+t form  (marker = 'Z^3 + t')
+  [PASS] contains: APBC and L=2 stated  (marker = 'L = 2')
+  [PASS] contains: HIGGS_MASS_FROM_AXIOM_NOTE upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: STAGGERED_DIRAC_REALIZATION_GATE upstream cited  (marker = 'STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03')
+  [PASS] contains: MINIMAL_AXIOMS_2026-05-03 upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent
+----------------------------------------------------------------------------------------
+  [PASS] absent (rejected vocabulary): 'algebraic universality'
+  [PASS] absent (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent (rejected vocabulary): 'two-class framing'
+  [PASS] absent (rejected vocabulary): '(CKN)'
+  [PASS] absent (rejected vocabulary): '(LCL)'
+  [PASS] absent (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent (rejected vocabulary): 'imports problem'
+  [PASS] absent (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent (rejected vocabulary): 'retires admission'
+  [PASS] absent (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent (rejected vocabulary): 'sub-class (ii)'
+
+----------------------------------------------------------------------------------------
+ Part 3: multiplicities binomial(4, hw) and 16-state count
+----------------------------------------------------------------------------------------
+  [PASS] binomial(4, 0) = 1  (computed 1)
+  [PASS] binomial(4, 1) = 4  (computed 4)
+  [PASS] binomial(4, 2) = 6  (computed 6)
+  [PASS] binomial(4, 3) = 4  (computed 4)
+  [PASS] binomial(4, 4) = 1  (computed 1)
+  [PASS] sum over hw classes = 2^4 = 16 BZ corners on Z^3+t  (sum = 16)
+  [PASS] enumerated 16 distinct corners
+  [PASS] hw = 0: enumerated multiplicity = binomial(4,0) = 1  (got 1)
+  [PASS] hw = 1: enumerated multiplicity = binomial(4,1) = 4  (got 4)
+  [PASS] hw = 2: enumerated multiplicity = binomial(4,2) = 6  (got 6)
+  [PASS] hw = 3: enumerated multiplicity = binomial(4,3) = 4  (got 4)
+  [PASS] hw = 4: enumerated multiplicity = binomial(4,4) = 1  (got 1)
+
+----------------------------------------------------------------------------------------
+ Part 4: per-corner Wilson value W(n)/r = 2 * hw(n)
+----------------------------------------------------------------------------------------
+  [PASS] cos(0) = 1 used as integer 1  (exact)
+  [PASS] cos(pi) = -1 used as integer -1  (exact)
+  [PASS] 1 - cos(0) = 0 (n_mu = 0 → no contribution)
+  [PASS] 1 - cos(pi) = 2 (n_mu = 1 → contributes +2 per direction)
+  [PASS] corner (0, 0, 0, 0): W/r = 0 = 2 * hw = 2 * 0  (computed 0)
+  [PASS] corner (0, 0, 0, 1): W/r = 2 = 2 * hw = 2 * 1  (computed 2)
+  [PASS] corner (0, 0, 1, 0): W/r = 2 = 2 * hw = 2 * 1  (computed 2)
+  [PASS] corner (0, 0, 1, 1): W/r = 4 = 2 * hw = 2 * 2  (computed 4)
+  [PASS] corner (0, 1, 0, 0): W/r = 2 = 2 * hw = 2 * 1  (computed 2)
+  [PASS] corner (0, 1, 0, 1): W/r = 4 = 2 * hw = 2 * 2  (computed 4)
+  [PASS] corner (0, 1, 1, 0): W/r = 4 = 2 * hw = 2 * 2  (computed 4)
+  [PASS] corner (0, 1, 1, 1): W/r = 6 = 2 * hw = 2 * 3  (computed 6)
+  [PASS] corner (1, 0, 0, 0): W/r = 2 = 2 * hw = 2 * 1  (computed 2)
+  [PASS] corner (1, 0, 0, 1): W/r = 4 = 2 * hw = 2 * 2  (computed 4)
+  [PASS] corner (1, 0, 1, 0): W/r = 4 = 2 * hw = 2 * 2  (computed 4)
+  [PASS] corner (1, 0, 1, 1): W/r = 6 = 2 * hw = 2 * 3  (computed 6)
+  [PASS] corner (1, 1, 0, 0): W/r = 4 = 2 * hw = 2 * 2  (computed 4)
+  [PASS] corner (1, 1, 0, 1): W/r = 6 = 2 * hw = 2 * 3  (computed 6)
+  [PASS] corner (1, 1, 1, 0): W/r = 6 = 2 * hw = 2 * 3  (computed 6)
+  [PASS] corner (1, 1, 1, 1): W/r = 8 = 2 * hw = 2 * 4  (computed 8)
+
+----------------------------------------------------------------------------------------
+ Part 5: corners with the same hw share one Wilson mass shift
+----------------------------------------------------------------------------------------
+  [PASS] hw = 0: every corner has W/r = 0  (values = [Fraction(0, 1)])
+  [PASS] hw = 1: every corner has W/r = 2  (values = [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)])
+  [PASS] hw = 2: every corner has W/r = 4  (values = [Fraction(4, 1), Fraction(4, 1), Fraction(4, 1), Fraction(4, 1), Fraction(4, 1), Fraction(4, 1)])
+  [PASS] hw = 3: every corner has W/r = 6  (values = [Fraction(6, 1), Fraction(6, 1), Fraction(6, 1), Fraction(6, 1)])
+  [PASS] hw = 4: every corner has W/r = 8  (values = [Fraction(8, 1)])
+  [PASS] hw = 0: staircase shift W/r = 0  (got 0)
+  [PASS] hw = 1: staircase shift W/r = 2  (got 2)
+  [PASS] hw = 2: staircase shift W/r = 4  (got 4)
+  [PASS] hw = 3: staircase shift W/r = 6  (got 6)
+  [PASS] hw = 4: staircase shift W/r = 8  (got 8)
+
+----------------------------------------------------------------------------------------
+ Part 6: cited upstream files exist on this branch
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+  [PASS] upstream exists: docs/THREE_GENERATION_STRUCTURE_NOTE.md
+
+----------------------------------------------------------------------------------------
+ Part 7: stdlib-only / no PDG-value pins
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] no PDG-value pin pattern  (none)
+
+----------------------------------------------------------------------------------------
+ Part 8: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: continuum-limit numerical Higgs mass
+  [PASS] note explicitly does not close: actual closure of the `+12%` Higgs gap chain
+  [PASS] note explicitly does not close: Wilson coefficient `r` itself
+  [PASS] note explicitly does not close: staggered-Dirac realization gate
+  [PASS] note explicitly does not close: `g_bare = 1` derivation
+  [PASS] note explicitly does not close: any parent theorem/status promotion
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+
+========================================================================================
+ TOTAL: PASS=84, FAIL=0
+========================================================================================
+
+ VERDICT: the 16 BZ corners on Z^3+t APBC decompose into five
+ Hamming-weight classes with multiplicities (1, 4, 6, 4, 1) and
+ Wilson mass shifts (0, 2r, 4r, 6r, 8r) by direct combinatorial
+ identity on {0,1}^4.
