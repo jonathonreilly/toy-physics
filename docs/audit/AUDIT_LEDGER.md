@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 969 |
+| unaudited | 970 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 363 |
+| ~~audited_conditional~~ | 362 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,31 +41,31 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 363 |
+| `audited_conditional` | 362 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1030 |
+| `unaudited` | 1031 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 755 |
+| `bounded_theorem` | 754 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 768 |
+| `positive_theorem` | 769 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 293 |
-| `high` | 491 |
-| `medium` | 487 |
+| `critical` | 311 |
+| `high` | 475 |
+| `medium` | 485 |
 | `leaf` | 629 |
 
 - **Retained pending chain closure:** 1
-- **Citation cycles detected:** 183
+- **Citation cycles detected:** 181
 
 ### Runner classification (static heuristic)
 
@@ -80,18 +80,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 762 | 60.58 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 763 | 61.08 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 532 | 40.56 | `unaudited` | unaudited |
-| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 751 | 38.05 | `audited_clean` | open_gate |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 457 | 36.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 740 | 36.53 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 670 | 33.89 | `unaudited` | meta |
+| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 752 | 38.06 | `audited_clean` | open_gate |
+| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 619 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 741 | 36.53 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 671 | 33.89 | `unaudited` | meta |
 | 7 | `alpha_s_derived_note` | bounded_theorem | critical | 502 | 32.47 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 30.12 | `unaudited` | unaudited |
-| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 730 | 30.01 | `audited_clean` | **retained_bounded** |
+| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 731 | 30.02 | `audited_clean` | **retained_bounded** |
 | 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 502 | 29.97 | `unaudited` | unaudited |
 | 11 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 29.12 | `unaudited` | unaudited |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 583 | 28.69 | `unaudited` | unaudited |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 584 | 28.69 | `unaudited` | unaudited |
 | 13 | `three_generation_structure_note` | bounded_theorem | critical | 458 | 27.34 | `unaudited` | unaudited |
 | 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 601 | 27.23 | `unaudited` | unaudited |
 | 15 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 505 | 26.98 | `audited_clean` | **retained_bounded** |
@@ -764,7 +764,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | E | - |
 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -8784,21 +8783,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The runner genuinely verifies an explicit matrix representation of Cl_4(C), its CAR pairing, and coefficient cross-checks, but it hard-wires the contested carrier by constructing gamma matrices directly on C^4 and setting rank(P_A)=4. That verifies consistency of the assigned carrier, not derivation of that carrier from the event-cell substrate. The cited no-go notes further show P_A is not uniquely forced because P_3 and other rank-four local equivariant projectors satisfy the same stated substrate tests.
 - **open / conditional deps cited:**
   - `ANOMALY_FORCES_TIME_THEOREM.md`
-- **auditor confidence:** high
-
-### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`
-
-- **Note:** [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded algebraic theorem on the time-locked Boolean coframe event cell: under the stated locality, additivity, slot-symmetry, and unit-response normalization assumptions, the normalized first-order carrier is P_A and Tr(I_16/16 P_A)=1/4. It does not derive the gravitational boundary/action identification, Planck scale, SI constants, or minimal-stack closure.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-agent-pauli-019dedb2-2e8d-76f3-90f0-c082bb8c70f9`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The selection of P_A rests on the stipulated first-order locality B=P_1BP_1 plus axis additivity, coframe-slot symmetry, and especially unit primitive response normalization b_a=1; without the unit normalization the theorem only gives B=lambda P_A, and without the physical bridge it does not identify this carrier with gravitational boundary/action density.  _(class `E`)_
-- **chain closes:** False — The internal algebraic chain to P_A and the 1/4 trace closes only after accepting the carrier axioms and unit normalization. The Planck physical chain remains open because the note explicitly leaves the bridge premise derive_gravitational_boundary_action_density_as_first_order_coframe_carrier unresolved.
-- **rationale:** Issue: The note proves a normalized first-order carrier theorem, not an unconditional derivation of the primitive gravitational boundary/action carrier. Why this blocks: P_A is forced only after assuming first-order locality and unit primitive response normalization; the coefficient 1/4 is then a trace of the selected normalized packet, not a first-principles physical derivation. This avoids a numerical mismatch, but it is still definition/axiom-conditioned rather than Nature-grade closure. Repair target: derive or independently justify first-order locality and unit coframe-slot response from retained primitive axioms, then separately prove the physical bridge identifying gravitational boundary/action density with this carrier. Claim boundary until fixed: may be retained only as a bounded algebraic support theorem: stipulated normalized first-order coframe carrier equals P_A and has source-free trace 1/4; it must not be cited as Planck minimal-stack closure or as deriving gravitational boundary/action density.
-- **open / conditional deps cited:**
-  - `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
 - **auditor confidence:** high
 
 ### `planck_scale_conditional_completion_note_2026-04-24`

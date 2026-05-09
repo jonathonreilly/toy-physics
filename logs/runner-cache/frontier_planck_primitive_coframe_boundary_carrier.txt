@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_planck_primitive_coframe_boundary_carrier.py
-runner_sha256: fa21a34c7e73dd3cd98f93212df247eccbe94b5d3f5a08aa89bf6be576e0ac0c
+runner_sha256: 7b71fd9bec044cdb0df01fa0b33e97d7ce73bf27abb70fc02479774a0e58bb79
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.05
+elapsed_sec: 0.04
 status: ok
 ----- stdout -----
 [PASS] theorem note exists: docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md
@@ -20,8 +20,12 @@ status: ok
 [PASS] note carries non-closure flags: minimal-stack closure remains explicitly false with residual theorem target named
 [PASS] note avoids forbidden retained-closure flags: no forbidden TRUE closure marker present
 [PASS] note states coframe-slot symmetry rather than physical cubic spacetime symmetry: symmetry is scoped to the time-locked Boolean coframe register
+[PASS] link-local first-variation authority exists and is cited: first-order locality premise is sourced to the link-local first-variation theorem
+[PASS] current minimal-axioms framework memo exists and is cited: current framework memo keeps Cl(3)/Z^3 physical and leaves the action route conditional
+[PASS] Hodge-degeneracy negative boundary authority exists and is cited: negative-boundary citation makes the symmetry-only Hodge ambiguity explicit
+[PASS] unit primitive response normalization recorded as scheme choice with linear rescaling: rescaling b_a by c rescales c_cell by c; provenance fields recorded
 
-TOTAL: PASS=14, FAIL=0
+TOTAL: PASS=18, FAIL=0
 Verdict: support theorem verified. P_A is the unique first-order coframe-slot carrier under the stated hypotheses, c_cell=1/4 follows, and Planck minimal-stack closure remains open.
 
 ----- stderr -----

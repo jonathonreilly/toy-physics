@@ -1,11 +1,11 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 755,
+    "bounded_theorem": 754,
     "decoration": 12,
     "meta": 68,
     "no_go": 192,
     "open_gate": 105,
-    "positive_theorem": 768
+    "positive_theorem": 769
   },
   "cycle_examples": [
     [
@@ -21,7 +21,8 @@
       "lorentz_kernel_positive_closure_note",
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
-      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
@@ -29,18 +30,19 @@
       "lorentz_kernel_positive_closure_note",
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
-      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
-      "bh_entropy_rt_ratio_widom_no_go_note",
-      "bh_entropy_derived_note"
+      "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+      "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     ]
   ],
-  "cycles_detected": 183,
+  "cycles_detected": 181,
   "effective_status_counts": {
-    "audited_conditional": 363,
+    "audited_conditional": 362,
     "audited_failed": 11,
     "audited_numerical_match": 24,
     "audited_renaming": 26,
@@ -58,7 +60,7 @@
     "retained_bounded": 238,
     "retained_no_go": 122,
     "retained_pending_chain": 1,
-    "unaudited": 969
+    "unaudited": 970
   },
   "retained_pending_chain_count": 1,
   "retained_pending_chain_examples": [

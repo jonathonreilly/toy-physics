@@ -1,5 +1,5 @@
 {
-  "cycle_count": 184,
+  "cycle_count": 182,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 591,
+      "max_transitive_descendants": 592,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 591
+          "transitive_descendants": 592
         },
         {
           "audit_status": "unaudited",
@@ -33,7 +33,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 591
+          "transitive_descendants": 592
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 589,
+      "max_transitive_descendants": 590,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/3D_CORRECTION_MASTER_NOTE.md",
           "title": "3D Correction Master Note",
-          "transitive_descendants": 589
+          "transitive_descendants": 590
         },
         {
           "audit_status": "unaudited",
@@ -70,7 +70,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DISPERSION_RELATION_NOTE.md",
           "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic",
-          "transitive_descendants": 589
+          "transitive_descendants": 590
         }
       ],
       "requires_lemma_extraction": false
@@ -89,7 +89,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 586,
+      "max_transitive_descendants": 587,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -98,7 +98,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
           "title": "BH Entropy RT-Ratio Widom No-Go Theorem",
-          "transitive_descendants": 586
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -107,7 +107,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
           "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement",
-          "transitive_descendants": 586
+          "transitive_descendants": 587
         }
       ],
       "requires_lemma_extraction": false
@@ -126,7 +126,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 583,
+      "max_transitive_descendants": 584,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -135,7 +135,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "audited_conditional",
@@ -144,13 +144,126 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         }
       ],
       "requires_lemma_extraction": false
     },
     {
       "cycle_id": "cycle-0005",
+      "decision": null,
+      "edges": [
+        {
+          "from": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+          "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+        },
+        {
+          "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+          "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 584,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
+          "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
+          "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)",
+          "transitive_descendants": 584
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0006",
+      "decision": null,
+      "edges": [
+        {
+          "from": "universal_gr_discrete_global_closure_note",
+          "to": "universal_gr_lorentzian_signature_extension_note"
+        },
+        {
+          "from": "universal_gr_lorentzian_signature_extension_note",
+          "to": "universal_gr_constraint_action_stationarity_note"
+        },
+        {
+          "from": "universal_gr_constraint_action_stationarity_note",
+          "to": "universal_gr_tensor_variational_candidate_note"
+        },
+        {
+          "from": "universal_gr_tensor_variational_candidate_note",
+          "to": "universal_gr_curvature_localization_blocker_note"
+        },
+        {
+          "from": "universal_gr_curvature_localization_blocker_note",
+          "to": "universal_gr_discrete_global_closure_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 584,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_discrete_global_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
+          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_lorentzian_signature_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
+          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_constraint_action_stationarity_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
+          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_tensor_variational_candidate_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
+          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "universal_gr_curvature_localization_blocker_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
+          "title": "Universal GR Curvature Localization Blocker Note",
+          "transitive_descendants": 584
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -163,10 +276,14 @@
         },
         {
           "from": "planck_scale_lane_status_note_2026-04-23",
-          "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+          "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
         },
         {
-          "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "from": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+          "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
           "to": "anomaly_forces_time_theorem"
         },
         {
@@ -178,8 +295,8 @@
           "to": "lorentz_kernel_positive_closure_note"
         }
       ],
-      "length": 6,
-      "max_transitive_descendants": 583,
+      "length": 7,
+      "max_transitive_descendants": 584,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -188,7 +305,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "audited_conditional",
@@ -197,7 +314,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "unaudited",
@@ -206,16 +323,25 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
-          "audit_status": "audited_renaming",
-          "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_renaming",
-          "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
-          "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 583
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
+          "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
+          "transitive_descendants": 584
         },
         {
           "audit_status": "unaudited",
@@ -224,7 +350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "audited_conditional",
@@ -233,13 +359,13 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -256,10 +382,14 @@
         },
         {
           "from": "planck_scale_lane_status_note_2026-04-23",
-          "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+          "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
         },
         {
-          "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "from": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+          "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
           "to": "anomaly_forces_time_theorem"
         },
         {
@@ -271,8 +401,8 @@
           "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
         }
       ],
-      "length": 7,
-      "max_transitive_descendants": 583,
+      "length": 8,
+      "max_transitive_descendants": 584,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -281,7 +411,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "unaudited",
@@ -290,7 +420,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "audited_conditional",
@@ -299,7 +429,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "unaudited",
@@ -308,16 +438,25 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
-          "audit_status": "audited_renaming",
-          "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_renaming",
-          "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
-          "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 583
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
+          "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
+          "transitive_descendants": 584
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
+          "transitive_descendants": 584
         },
         {
           "audit_status": "unaudited",
@@ -326,7 +465,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         },
         {
           "audit_status": "audited_conditional",
@@ -335,13 +474,13 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 583
+          "transitive_descendants": 584
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -378,7 +517,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -415,7 +554,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -465,7 +604,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -554,7 +693,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -656,7 +795,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -771,7 +910,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -886,7 +1025,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -1001,7 +1140,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -1116,324 +1255,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 310,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 310
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0017",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        },
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 310,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 310
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
       "cycle_id": "cycle-0018",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_a1_invariant_section_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        },
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        },
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_a1_invariant_section_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 310,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_a1_invariant_section_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md",
-          "title": "Universal GR A1 Invariant Section on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 310
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0019",
-      "decision": null,
-      "edges": [
-        {
-          "from": "universal_gr_tensor_variational_candidate_note",
-          "to": "universal_gr_curvature_localization_blocker_note"
-        },
-        {
-          "from": "universal_gr_curvature_localization_blocker_note",
-          "to": "universal_gr_discrete_global_closure_note"
-        },
-        {
-          "from": "universal_gr_discrete_global_closure_note",
-          "to": "universal_gr_lorentzian_signature_extension_note"
-        },
-        {
-          "from": "universal_gr_lorentzian_signature_extension_note",
-          "to": "universal_gr_constraint_action_stationarity_note"
-        },
-        {
-          "from": "universal_gr_constraint_action_stationarity_note",
-          "to": "universal_gr_tensor_quotient_uniqueness_note"
-        },
-        {
-          "from": "universal_gr_tensor_quotient_uniqueness_note",
-          "to": "universal_gr_tensor_variational_candidate_note"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 310,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-          "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_curvature_localization_blocker_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-          "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_discrete_global_closure_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-          "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_lorentzian_signature_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-          "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_constraint_action_stationarity_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
-          "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 310
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
-          "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
-          "transitive_descendants": 310
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1470,7 +1292,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1546,7 +1368,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1622,7 +1444,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1698,7 +1520,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1774,7 +1596,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1850,7 +1672,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1926,7 +1748,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -2002,7 +1824,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -2072,6 +1894,184 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Upper-Face Local Neighborhoods Candidate",
+          "transitive_descendants": 263
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0027",
+      "decision": null,
+      "edges": [
+        {
+          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
+        },
+        {
+          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
+        },
+        {
+          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "to": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 263,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
+          "title": "DM Neutrino Hermitian Bridge Carrier",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
+          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
+          "transitive_descendants": 263
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0028",
+      "decision": null,
+      "edges": [
+        {
+          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
+        },
+        {
+          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
+        },
+        {
+          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "to": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+        }
+      ],
+      "length": 6,
+      "max_transitive_descendants": 263,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
+          "title": "DM Neutrino Hermitian Bridge Carrier",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
+          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
           "transitive_descendants": 263
         }
       ],
@@ -2099,184 +2099,6 @@
         },
         {
           "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "to": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 263,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
-          "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
-          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
-          "transitive_descendants": 263
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0030",
-      "decision": null,
-      "edges": [
-        {
-          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
-        },
-        {
-          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "to": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
-        }
-      ],
-      "length": 6,
-      "max_transitive_descendants": 263,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
-          "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
-          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
-          "transitive_descendants": 263
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0031",
-      "decision": null,
-      "edges": [
-        {
-          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
-        },
-        {
-          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
           "to": "dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18"
         },
         {
@@ -2345,7 +2167,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -2434,7 +2256,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -2523,7 +2345,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -2612,7 +2434,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -2701,7 +2523,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -2784,6 +2606,210 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Upper-Face Local Neighborhoods Candidate",
+          "transitive_descendants": 263
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0035",
+      "decision": null,
+      "edges": [
+        {
+          "from": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+        },
+        {
+          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
+        },
+        {
+          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
+        },
+        {
+          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "to": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+        }
+      ],
+      "length": 7,
+      "max_transitive_descendants": 263,
+      "nodes": [
+        {
+          "audit_status": "audited_conditional",
+          "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
+          "title": "DM Neutrino Hermitian Bridge Carrier",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
+          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
+          "transitive_descendants": 263
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0036",
+      "decision": null,
+      "edges": [
+        {
+          "from": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+        },
+        {
+          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
+        },
+        {
+          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
+        },
+        {
+          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "to": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18"
+        },
+        {
+          "from": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
+          "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+        }
+      ],
+      "length": 7,
+      "max_transitive_descendants": 263,
+      "nodes": [
+        {
+          "audit_status": "audited_conditional",
+          "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
+          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
+          "title": "DM Neutrino Hermitian Bridge Carrier",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
+          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
+          "transitive_descendants": 263
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
+          "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
           "transitive_descendants": 263
         }
       ],
@@ -2815,210 +2841,6 @@
         },
         {
           "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "to": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
-        }
-      ],
-      "length": 7,
-      "max_transitive_descendants": 263,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
-          "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
-          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
-          "transitive_descendants": 263
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0038",
-      "decision": null,
-      "edges": [
-        {
-          "from": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
-        },
-        {
-          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
-        },
-        {
-          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "to": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
-        }
-      ],
-      "length": 7,
-      "max_transitive_descendants": 263,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
-          "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
-          "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
-          "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
-          "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
-          "transitive_descendants": 263
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0039",
-      "decision": null,
-      "edges": [
-        {
-          "from": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-          "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
-        },
-        {
-          "from": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
-          "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
-          "to": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15"
-        },
-        {
-          "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-          "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
-        },
-        {
-          "from": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
-          "to": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17"
-        },
-        {
-          "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
           "to": "dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18"
         },
         {
@@ -3096,7 +2918,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -3198,7 +3020,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -3300,7 +3122,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -3402,7 +3224,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -3504,7 +3326,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -3606,7 +3428,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -3643,7 +3465,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -3680,7 +3502,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -3717,7 +3539,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -3754,7 +3576,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -3791,7 +3613,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -3828,7 +3650,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -3891,7 +3713,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -3928,7 +3750,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -3978,7 +3800,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -4041,7 +3863,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -4064,6 +3886,145 @@
       "length": 4,
       "max_transitive_descendants": 165,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE Note",
+          "transitive_descendants": 165
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE: All-Order Proof Note",
+          "transitive_descendants": 165
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_BOUNDED_SYNTHESIS_NOTE_2026-05-06.md",
+          "title": "V=1 SU(3) Wilson Picard-Fuchs ODE Bounded Synthesis",
+          "transitive_descendants": 165
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_KOUTSCHAN_MINIMALITY_NOTE_2026-05-06.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE: Extended (Koutschan-style) Minimality Note",
+          "transitive_descendants": 165
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0054",
+      "decision": null,
+      "edges": [
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+          "to": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
+          "to": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+          "to": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
+          "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 165,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE Note",
+          "transitive_descendants": 165
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE: All-Order Proof Note",
+          "transitive_descendants": 165
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_BOUNDED_SYNTHESIS_NOTE_2026-05-06.md",
+          "title": "V=1 SU(3) Wilson Picard-Fuchs ODE Bounded Synthesis",
+          "transitive_descendants": 165
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_RANK_BOUND_CITATION_NOTE_2026-05-06.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE: Rank-Bound Citation Note",
+          "transitive_descendants": 165
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0055",
+      "decision": null,
+      "edges": [
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+          "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+          "to": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
+          "to": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
+          "to": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06"
+        },
+        {
+          "from": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
+          "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 165,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_MINIMALITY_PROOF_NOTE_2026-05-06.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE: Minimality Certificate Note",
+          "transitive_descendants": 165
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
@@ -4108,6 +4069,10 @@
       "decision": null,
       "edges": [
         {
+          "from": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+          "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+        },
+        {
           "from": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
           "to": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
         },
@@ -4121,12 +4086,21 @@
         },
         {
           "from": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+          "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
         }
       ],
-      "length": 4,
+      "length": 5,
       "max_transitive_descendants": 165,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_MINIMALITY_PROOF_NOTE_2026-05-06.md",
+          "title": "Plaquette V=1 Picard-Fuchs ODE: Minimality Certificate Note",
+          "transitive_descendants": 165
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
@@ -4171,158 +4145,6 @@
       "decision": null,
       "edges": [
         {
-          "from": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
-          "to": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
-          "to": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 165,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_MINIMALITY_PROOF_NOTE_2026-05-06.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE: Minimality Certificate Note",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE Note",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE: All-Order Proof Note",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_BOUNDED_SYNTHESIS_NOTE_2026-05-06.md",
-          "title": "V=1 SU(3) Wilson Picard-Fuchs ODE Bounded Synthesis",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_koutschan_minimality_note_2026-05-06",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_KOUTSCHAN_MINIMALITY_NOTE_2026-05-06.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE: Extended (Koutschan-style) Minimality Note",
-          "transitive_descendants": 165
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0058",
-      "decision": null,
-      "edges": [
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
-          "to": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
-          "to": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06"
-        },
-        {
-          "from": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
-          "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 165,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_MINIMALITY_PROOF_NOTE_2026-05-06.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE: Minimality Certificate Note",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE Note",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE: All-Order Proof Note",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_BOUNDED_SYNTHESIS_NOTE_2026-05-06.md",
-          "title": "V=1 SU(3) Wilson Picard-Fuchs ODE Bounded Synthesis",
-          "transitive_descendants": 165
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_RANK_BOUND_CITATION_NOTE_2026-05-06.md",
-          "title": "Plaquette V=1 Picard-Fuchs ODE: Rank-Bound Citation Note",
-          "transitive_descendants": 165
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0059",
-      "decision": null,
-      "edges": [
-        {
           "from": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
           "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
         },
@@ -4356,7 +4178,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -4393,7 +4215,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -4430,7 +4252,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -4467,7 +4289,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -4504,7 +4326,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -4541,7 +4363,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -4591,7 +4413,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -4641,7 +4463,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -4691,7 +4513,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -4741,7 +4563,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -4804,7 +4626,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -4867,7 +4689,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -4930,7 +4752,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -4993,7 +4815,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -5056,7 +4878,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -5119,7 +4941,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -5182,7 +5004,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -5205,6 +5027,145 @@
       "length": 4,
       "max_transitive_descendants": 152,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "structural_no_go_survey_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
+          "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
+          "transitive_descendants": 152
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
+          "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
+          "transitive_descendants": 152
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
+          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
+          "transitive_descendants": 152
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "koide_a1_derivation_status_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/KOIDE_A1_DERIVATION_STATUS_NOTE.md",
+          "title": "A1 derivation status \u2014 full landscape audit",
+          "transitive_descendants": 152
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0075",
+      "decision": null,
+      "edges": [
+        {
+          "from": "structural_no_go_survey_note",
+          "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+        },
+        {
+          "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+          "to": "charged_lepton_koide_review_packet_2026-04-18"
+        },
+        {
+          "from": "charged_lepton_koide_review_packet_2026-04-18",
+          "to": "koide_a1_loop_investigation_summary"
+        },
+        {
+          "from": "koide_a1_loop_investigation_summary",
+          "to": "structural_no_go_survey_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 152,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "structural_no_go_survey_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
+          "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
+          "transitive_descendants": 152
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
+          "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
+          "transitive_descendants": 152
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
+          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
+          "transitive_descendants": 152
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "koide_a1_loop_investigation_summary",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
+          "title": "A1 Derivation \u2014 /loop investigation summary",
+          "transitive_descendants": 152
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0076",
+      "decision": null,
+      "edges": [
+        {
+          "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
+          "to": "structural_no_go_survey_note"
+        },
+        {
+          "from": "structural_no_go_survey_note",
+          "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+        },
+        {
+          "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+          "to": "charged_lepton_koide_review_packet_2026-04-18"
+        },
+        {
+          "from": "charged_lepton_koide_review_packet_2026-04-18",
+          "to": "koide_a1_derivation_status_note"
+        },
+        {
+          "from": "koide_a1_derivation_status_note",
+          "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 152,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
+          "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
+          "transitive_descendants": 152
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "structural_no_go_survey_note",
@@ -5249,6 +5210,10 @@
       "decision": null,
       "edges": [
         {
+          "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
+          "to": "structural_no_go_survey_note"
+        },
+        {
           "from": "structural_no_go_survey_note",
           "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
         },
@@ -5262,12 +5227,21 @@
         },
         {
           "from": "koide_a1_loop_investigation_summary",
-          "to": "structural_no_go_survey_note"
+          "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
         }
       ],
-      "length": 4,
+      "length": 5,
       "max_transitive_descendants": 152,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
+          "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
+          "transitive_descendants": 152
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "structural_no_go_survey_note",
@@ -5309,158 +5283,6 @@
     },
     {
       "cycle_id": "cycle-0078",
-      "decision": null,
-      "edges": [
-        {
-          "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
-          "to": "structural_no_go_survey_note"
-        },
-        {
-          "from": "structural_no_go_survey_note",
-          "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-        },
-        {
-          "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "to": "charged_lepton_koide_review_packet_2026-04-18"
-        },
-        {
-          "from": "charged_lepton_koide_review_packet_2026-04-18",
-          "to": "koide_a1_derivation_status_note"
-        },
-        {
-          "from": "koide_a1_derivation_status_note",
-          "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 152,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
-          "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "structural_no_go_survey_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
-          "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
-          "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
-          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_a1_derivation_status_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_A1_DERIVATION_STATUS_NOTE.md",
-          "title": "A1 derivation status \u2014 full landscape audit",
-          "transitive_descendants": 152
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0079",
-      "decision": null,
-      "edges": [
-        {
-          "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
-          "to": "structural_no_go_survey_note"
-        },
-        {
-          "from": "structural_no_go_survey_note",
-          "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-        },
-        {
-          "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "to": "charged_lepton_koide_review_packet_2026-04-18"
-        },
-        {
-          "from": "charged_lepton_koide_review_packet_2026-04-18",
-          "to": "koide_a1_loop_investigation_summary"
-        },
-        {
-          "from": "koide_a1_loop_investigation_summary",
-          "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
-        }
-      ],
-      "length": 5,
-      "max_transitive_descendants": 152,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
-          "title": "Charged-Lepton Koide-Cone Algebraic Equivalence",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "structural_no_go_survey_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
-          "title": "Structural No-Go Survey on the Charged-Lepton Mass Hierarchy",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
-          "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
-          "title": "Charged-Lepton Koide Support Packet (2026-04-18)",
-          "transitive_descendants": 152
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "koide_a1_loop_investigation_summary",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md",
-          "title": "A1 Derivation \u2014 /loop investigation summary",
-          "transitive_descendants": 152
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -5536,7 +5358,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -5612,7 +5434,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -5688,7 +5510,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -5777,7 +5599,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -5866,7 +5688,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -5955,7 +5777,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -6044,7 +5866,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -6133,7 +5955,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -6222,7 +6044,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -6311,7 +6133,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -6400,7 +6222,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -6489,7 +6311,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -6578,7 +6400,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -6667,7 +6489,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -6769,7 +6591,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0093",
       "decision": null,
       "edges": [
         {
@@ -6871,7 +6693,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0094",
       "decision": null,
       "edges": [
         {
@@ -6973,7 +6795,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0095",
       "decision": null,
       "edges": [
         {
@@ -7075,7 +6897,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0096",
       "decision": null,
       "edges": [
         {
@@ -7177,7 +6999,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0097",
       "decision": null,
       "edges": [
         {
@@ -7279,7 +7101,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0098",
       "decision": null,
       "edges": [
         {
@@ -7394,7 +7216,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0099",
       "decision": null,
       "edges": [
         {
@@ -7509,7 +7331,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0100",
       "decision": null,
       "edges": [
         {
@@ -7624,7 +7446,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -7739,7 +7561,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0104",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -7867,7 +7689,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -7995,7 +7817,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -8123,7 +7945,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0107",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -8251,7 +8073,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0108",
+      "cycle_id": "cycle-0106",
       "decision": null,
       "edges": [
         {
@@ -8379,7 +8201,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0109",
+      "cycle_id": "cycle-0107",
       "decision": null,
       "edges": [
         {
@@ -8507,7 +8329,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0110",
+      "cycle_id": "cycle-0108",
       "decision": null,
       "edges": [
         {
@@ -8635,7 +8457,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0109",
       "decision": null,
       "edges": [
         {
@@ -8776,7 +8598,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0110",
       "decision": null,
       "edges": [
         {
@@ -8917,7 +8739,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0111",
       "decision": null,
       "edges": [
         {
@@ -9071,7 +8893,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0112",
       "decision": null,
       "edges": [
         {
@@ -9225,7 +9047,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0113",
       "decision": null,
       "edges": [
         {
@@ -9392,7 +9214,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0114",
       "decision": null,
       "edges": [
         {
@@ -9572,7 +9394,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0115",
       "decision": null,
       "edges": [
         {
@@ -9765,7 +9587,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0116",
       "decision": null,
       "edges": [
         {
@@ -9958,7 +9780,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0117",
       "decision": null,
       "edges": [
         {
@@ -10164,7 +9986,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0118",
       "decision": null,
       "edges": [
         {
@@ -10370,7 +10192,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0119",
       "decision": null,
       "edges": [
         {
@@ -10576,7 +10398,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0120",
       "decision": null,
       "edges": [
         {
@@ -10782,7 +10604,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0121",
       "decision": null,
       "edges": [
         {
@@ -10988,7 +10810,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0122",
       "decision": null,
       "edges": [
         {
@@ -11194,7 +11016,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0123",
       "decision": null,
       "edges": [
         {
@@ -11400,7 +11222,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0124",
       "decision": null,
       "edges": [
         {
@@ -11606,7 +11428,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0125",
       "decision": null,
       "edges": [
         {
@@ -11812,7 +11634,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0126",
       "decision": null,
       "edges": [
         {
@@ -12018,7 +11840,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0127",
       "decision": null,
       "edges": [
         {
@@ -12237,7 +12059,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0128",
       "decision": null,
       "edges": [
         {
@@ -12456,7 +12278,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0129",
       "decision": null,
       "edges": [
         {
@@ -12675,7 +12497,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0130",
       "decision": null,
       "edges": [
         {
@@ -12894,7 +12716,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0133",
+      "cycle_id": "cycle-0131",
       "decision": null,
       "edges": [
         {
@@ -13113,7 +12935,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0134",
+      "cycle_id": "cycle-0132",
       "decision": null,
       "edges": [
         {
@@ -13332,7 +13154,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0135",
+      "cycle_id": "cycle-0133",
       "decision": null,
       "edges": [
         {
@@ -13551,7 +13373,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0136",
+      "cycle_id": "cycle-0134",
       "decision": null,
       "edges": [
         {
@@ -13770,7 +13592,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0137",
+      "cycle_id": "cycle-0135",
       "decision": null,
       "edges": [
         {
@@ -14002,7 +13824,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0138",
+      "cycle_id": "cycle-0136",
       "decision": null,
       "edges": [
         {
@@ -14234,7 +14056,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0139",
+      "cycle_id": "cycle-0137",
       "decision": null,
       "edges": [
         {
@@ -14466,7 +14288,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0140",
+      "cycle_id": "cycle-0138",
       "decision": null,
       "edges": [
         {
@@ -14698,7 +14520,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0141",
+      "cycle_id": "cycle-0139",
       "decision": null,
       "edges": [
         {
@@ -14930,7 +14752,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0142",
+      "cycle_id": "cycle-0140",
       "decision": null,
       "edges": [
         {
@@ -15162,7 +14984,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0143",
+      "cycle_id": "cycle-0141",
       "decision": null,
       "edges": [
         {
@@ -15394,7 +15216,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0144",
+      "cycle_id": "cycle-0142",
       "decision": null,
       "edges": [
         {
@@ -15626,7 +15448,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0145",
+      "cycle_id": "cycle-0143",
       "decision": null,
       "edges": [
         {
@@ -15858,7 +15680,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0146",
+      "cycle_id": "cycle-0144",
       "decision": null,
       "edges": [
         {
@@ -16090,7 +15912,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0147",
+      "cycle_id": "cycle-0145",
       "decision": null,
       "edges": [
         {
@@ -16322,7 +16144,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0148",
+      "cycle_id": "cycle-0146",
       "decision": null,
       "edges": [
         {
@@ -16554,7 +16376,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0149",
+      "cycle_id": "cycle-0147",
       "decision": null,
       "edges": [
         {
@@ -16799,7 +16621,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0150",
+      "cycle_id": "cycle-0148",
       "decision": null,
       "edges": [
         {
@@ -17044,7 +16866,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0151",
+      "cycle_id": "cycle-0149",
       "decision": null,
       "edges": [
         {
@@ -17289,7 +17111,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0152",
+      "cycle_id": "cycle-0150",
       "decision": null,
       "edges": [
         {
@@ -17534,7 +17356,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0153",
+      "cycle_id": "cycle-0151",
       "decision": null,
       "edges": [
         {
@@ -17779,7 +17601,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0154",
+      "cycle_id": "cycle-0152",
       "decision": null,
       "edges": [
         {
@@ -18024,7 +17846,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0155",
+      "cycle_id": "cycle-0153",
       "decision": null,
       "edges": [
         {
@@ -18269,7 +18091,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0156",
+      "cycle_id": "cycle-0154",
       "decision": null,
       "edges": [
         {
@@ -18527,7 +18349,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0157",
+      "cycle_id": "cycle-0155",
       "decision": null,
       "edges": [
         {
@@ -18590,7 +18412,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0158",
+      "cycle_id": "cycle-0156",
       "decision": null,
       "edges": [
         {
@@ -18627,7 +18449,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0159",
+      "cycle_id": "cycle-0157",
       "decision": null,
       "edges": [
         {
@@ -18690,7 +18512,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0160",
+      "cycle_id": "cycle-0158",
       "decision": null,
       "edges": [
         {
@@ -18766,7 +18588,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0161",
+      "cycle_id": "cycle-0159",
       "decision": null,
       "edges": [
         {
@@ -18829,7 +18651,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0162",
+      "cycle_id": "cycle-0160",
       "decision": null,
       "edges": [
         {
@@ -18905,7 +18727,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0163",
+      "cycle_id": "cycle-0161",
       "decision": null,
       "edges": [
         {
@@ -18942,7 +18764,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0164",
+      "cycle_id": "cycle-0162",
       "decision": null,
       "edges": [
         {
@@ -19005,7 +18827,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0165",
+      "cycle_id": "cycle-0163",
       "decision": null,
       "edges": [
         {
@@ -19042,7 +18864,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0166",
+      "cycle_id": "cycle-0164",
       "decision": null,
       "edges": [
         {
@@ -19079,7 +18901,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0167",
+      "cycle_id": "cycle-0165",
       "decision": null,
       "edges": [
         {
@@ -19094,6 +18916,106 @@
       "length": 2,
       "max_transitive_descendants": 17,
       "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0166",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0167",
+      "decision": null,
+      "edges": [
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 17
+        },
         {
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
@@ -19129,106 +19051,6 @@
         },
         {
           "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0169",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0170",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
           "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
         },
         {
@@ -19279,7 +19101,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0171",
+      "cycle_id": "cycle-0169",
       "decision": null,
       "edges": [
         {
@@ -19342,7 +19164,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0172",
+      "cycle_id": "cycle-0170",
       "decision": null,
       "edges": [
         {
@@ -19405,7 +19227,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0173",
+      "cycle_id": "cycle-0171",
       "decision": null,
       "edges": [
         {
@@ -19468,7 +19290,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0174",
+      "cycle_id": "cycle-0172",
       "decision": null,
       "edges": [
         {
@@ -19531,7 +19353,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0175",
+      "cycle_id": "cycle-0173",
       "decision": null,
       "edges": [
         {
@@ -19607,7 +19429,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0176",
+      "cycle_id": "cycle-0174",
       "decision": null,
       "edges": [
         {
@@ -19683,7 +19505,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0177",
+      "cycle_id": "cycle-0175",
       "decision": null,
       "edges": [
         {
@@ -19759,7 +19581,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0178",
+      "cycle_id": "cycle-0176",
       "decision": null,
       "edges": [
         {
@@ -19861,7 +19683,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0179",
+      "cycle_id": "cycle-0177",
       "decision": null,
       "edges": [
         {
@@ -19989,7 +19811,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0180",
+      "cycle_id": "cycle-0178",
       "decision": null,
       "edges": [
         {
@@ -20130,7 +19952,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0181",
+      "cycle_id": "cycle-0179",
       "decision": null,
       "edges": [
         {
@@ -20193,7 +20015,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0182",
+      "cycle_id": "cycle-0180",
       "decision": null,
       "edges": [
         {
@@ -20321,7 +20143,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0183",
+      "cycle_id": "cycle-0181",
       "decision": null,
       "edges": [
         {
@@ -20358,7 +20180,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0184",
+      "cycle_id": "cycle-0182",
       "decision": null,
       "edges": [
         {
@@ -20406,13 +20228,13 @@
     "17": 12,
     "18": 7,
     "19": 1,
-    "2": 27,
+    "2": 28,
     "3": 8,
-    "4": 24,
+    "4": 23,
     "5": 21,
-    "6": 23,
+    "6": 20,
     "7": 17,
-    "8": 8,
+    "8": 9,
     "9": 9
   },
   "sort": [
