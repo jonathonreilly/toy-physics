@@ -1,0 +1,246 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_rg_fixed_point_2026_05_08_probe5.py
+runner_sha256: 711248c1a7961afeaf83b789cdea6d3cb446fedceec18d0b53ef372a417a5099
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.41
+status: ok
+----- stdout -----
+
+======================================================================
+Koide A1 Probe 5 — RG Fixed-Point Hypothesis
+Bounded obstruction verification (5 barriers + synthesis + anchor)
+======================================================================
+
+======================================================================
+Section 1: A1 condition algebraic baseline
+======================================================================
+  1.1: At |b|²/a² = 1/2, Frobenius equipartition holds
+       trivial share = 3.000000, nontrivial = 3.000000
+       Equipartition: True
+       PASS
+  1.2: Eigenvalues at A1: λ_α = ['2.414+0.000j', '0.293+0.000j', '0.293+0.000j']
+       Doublet at α=±1 (real b), singlet at α=0 — expected for real b
+       Singlet+doublet structure: True
+
+======================================================================
+Section 2: Barrier RG1 — No retained matter-sector RG for ratio
+======================================================================
+  2.1: Plaquette → α_LM is GAUGE running:
+       <P> = 0.5934, u_0 = 0.87768, α_LM = 0.09067
+       Acts on gauge couplings, not on (a, b) circulant
+  2.2: EW hierarchy v = M_Pl·(7/8)^(1/4)·α_LM^16 = 246.303 GeV
+       This IS dynamical running (16 powers of α_LM) but on gauge sector
+       Does NOT act on circulant (a, b) coefficient ratio
+  2.3: y_t IR QFP is COLORED Yukawa running
+       β_{y_t} ∝ +9/2 y_t² - 8 g_3² - 9/4 g_2² - 17/20 g_1²
+       The -8 g_3² term creates the QFP structure
+       Charged-lepton Yukawa: NO g_3² term (no color)
+       β_{y_τ} ∝ +9/2 y_τ² + 3 Tr(Y_e†Y_e) - 9/4 g_2² - 9/4 g_1²
+       No dominant -g² gauge term → no QFP
+  2.4: No retained β_(a,b) for circulant on hw=1
+       Y_e is free 3×3 (DIRECT_WARD_FREE_YUKAWA_NO_GO)
+       Narrowed to circulant by C_3 (Route 1 obstruction)
+       But (a, b) flow is NOT supplied by retained primitives
+
+======================================================================
+Section 3: Barrier RG2 — Charged-lepton Yukawa has no IR QFP
+======================================================================
+  3.1: y_t SM RGE focusing (with -8 g_3² term):
+       y_t({M_Pl}) = 0.300  →  y_t(v) = 1.6467
+       y_t({M_Pl}) = 0.450  →  y_t(v) = 1.6709
+       y_t({M_Pl}) = 0.600  →  y_t(v) = 1.6795
+       y_t({M_Pl}) = 0.800  →  y_t(v) = 1.6845
+       y_t({M_Pl}) = 1.000  →  y_t(v) = 1.6868
+       y_t({M_Pl}) = 1.200  →  y_t(v) = 1.6880
+       UV range: 0.900 → IR range: 0.0413
+       Focusing ratio: 21.80 (R > 1 confirms QFP)
+  3.2: y_τ SM RGE flow (NO -g_3² term):
+       y_τ({M_Pl}) = 0.001  →  y_τ(v) = 0.0014
+       y_τ({M_Pl}) = 0.005  →  y_τ(v) = 0.0071
+       y_τ({M_Pl}) = 0.010  →  y_τ(v) = 0.0142
+       y_τ({M_Pl}) = 0.020  →  y_τ(v) = 0.0285
+       y_τ({M_Pl}) = 0.050  →  y_τ(v) = 0.0709
+       y_τ({M_Pl}) = 0.100  →  y_τ(v) = 0.1402
+       UV range: 0.099 → IR range: 0.1387
+       Focusing ratio: 0.71 (R ≤ 1 or > 1 small confirms NO QFP)
+  3.3: Beta-function structure comparison:
+       β_{y_t} = y_t·[9/2 y_t² + (-8) g_3² + (-9/4) g_2² + (-17/20) g_1²]
+       β_{y_τ} = y_τ·[9/2 y_τ² + 0·g_3²    + (-9/4) g_2² + (-9/4)  g_1²]
+       Dominant gauge term in β_{y_t}: -8 g_3² ≈ -11.713
+       Dominant gauge term in β_{y_τ}: -9/4 g_2² ≈ -0.951
+       Ratio: g_3-term/g_2-term ≈ 12.3×
+       y_t QCD dominance (~12×) vs y_τ flat gauge (factor ~1) → no PR QFP
+  3.4: Hypothetical PR QFP for charged lepton would require
+       adding a primitive (charged-lepton-QCD coupling) NOT in
+       retained content. Forbidden by retained matter content.
+
+======================================================================
+Section 4: Barrier RG3 — |b|²/a² ≠ fixed point at 1/2 under SM flow
+======================================================================
+  4.1: A1 starting point (|b|²/a² = 1/2):
+       Initial: a = 1.0000, b = 0.7071, ratio = 0.5000
+       After 17-decade SM-like flow:
+               a = 0.5653, b = 0.1822+0.0000i
+               ratio = 0.1039, drift = 79.221%
+       Drift > 5% confirms 1/2 is NOT a fixed point: True
+  4.2: Non-A1 starting point (|b|²/a² = 0.2):
+       Initial: ratio = 0.2000, distance from 1/2: 0.3000
+       After flow: ratio = 0.0197, distance from 1/2: 0.4803
+       If 1/2 were attractor, distance should DECREASE substantially
+       Distance reduction < 30%: True (= NOT attracted)
+  4.3: Above-A1 starting point (|b|²/a² = 1.0):
+       Initial: ratio = 1.0000, distance from 1/2: 0.5000
+       After flow: ratio = 1.0000, distance from 1/2: 0.5000
+       Distance reduction < 30%: True (= NOT attracted)
+  4.4: Multi-point UV→IR scan:
+       UV |b|²/a² = 0.10  →  IR |b|²/a² = 0.0083
+       UV |b|²/a² = 0.30  →  IR |b|²/a² = 0.0369
+       UV |b|²/a² = 0.50  →  IR |b|²/a² = 0.1039
+       UV |b|²/a² = 0.70  →  IR |b|²/a² = 0.2614
+       UV |b|²/a² = 1.00  →  IR |b|²/a² = 1.0000
+       UV |b|²/a² = 1.50  →  IR |b|²/a² = 13.6135
+       UV range: 1.400  IR range: 13.6052
+       Focusing ratio: 0.10
+       NOT focused on 1/2 (focusing < 5×):
+       True
+
+======================================================================
+Section 5: Barrier RG4 — No fixed-point structure at |b|²/a² = 1/2
+======================================================================
+  5.1: d(|b|²/a²)/dt at |b|²/a² = 1/2:
+       Before: a = 1.0, |b|² = 0.4999999999999999, ratio = 0.4999999999999999
+       After dt: ratio = 0.499964
+       d(ratio)/dt ≈ -3.636796e-02
+       (Note: small derivative reflects multiplicative cancellation,
+        not an attractive fixed point. Test attractiveness in 5.2.)
+  5.2: Perturbation test (start at ratio = 0.55):
+       Initial distance from 1/2: 0.0500
+       Final distance from 1/2: 0.3679
+       Ratio of distances: 7.3588
+       If 1/2 is ATTRACTOR, ratio should be < 1 (substantially)
+       NOT attractive (distance ratio > 0.8): True
+  5.3: Stability test (start at ratio = 0.501):
+       Initial distance: 0.00100
+       Final distance: 0.39524
+       Neutral (neither attractor nor repeller)
+  5.4: Jacobian linearization at A1 fixed point:
+       δa direction: da/dt ≈ -8.039996e-02, db/dt ≈ -8.256928e-02
+       Both directions show uniform multiplicative dressing
+       (gauge-term dominant) — NOT attractive fixed-point structure
+
+======================================================================
+Section 6: Barrier RG5 — HS rigidity does not propagate to matter
+======================================================================
+  6.1: g_bare HS rigidity (retained, gauge sector):
+       T_a → c·T_a forbidden by joint Tr-Gram + Casimir preservation
+       This is a 2-form rigidity statement on Lie-algebra sector
+       Forces g_bare = 1 given canonical N_F = 1/2 admission
+  6.2: Hypothetical matter-sector HS analog:
+       Y = aI + bU + b̄U^{-1}, a = 1.0, b = 0.5
+       Tr(Y†Y) = 4.5000, Tr((Y†Y)²) = 16.1250
+       Rescaling Y → 2Y:
+       Tr → 18.0000 = 4× original
+       Tr(quartic) → 258.0000 = 16× original
+       Both rescale uniformly; ratio Tr²/quartic preserved
+       Invariant ratio (Tr²/quartic): 1.2558 vs 1.2558
+       Form-rescaling is degenerate — no 2-form rigidity: True
+  6.3: Explicit non-A1 counter-examples (consistent with retained):
+       a=1.0, b=0.3000: ratio = 0.09
+         Hermitian: True, C_3-commuting: True
+       a=1.0, b=0.7000: ratio = 0.49
+         Hermitian: True, C_3-commuting: True
+       a=1.0, b=1.0000: ratio = 1.00
+         Hermitian: True, C_3-commuting: True
+       a=1.0, b=0.7071: ratio = 0.50 (A1)
+         Hermitian: True, C_3-commuting: True
+       a=1.0, b=1.5000: ratio = 2.25
+         Hermitian: True, C_3-commuting: True
+       All five satisfy retained constraints; only A1 at 1/2
+       Retained primitives do NOT select 1/2 as unique value
+  6.4: Matter-sector 2-form rigidity analog NOT retained content
+       Would require new primitive — not supplied by axiom-native chain
+
+======================================================================
+Section 7: Combined verdict — Five-barrier RG fixed-point obstruction
+======================================================================
+  Barrier RG1 (No retained matter-sector RG flow on |b|²/a²): VERIFIED
+    Retained RG content: gauge running, EW staircase α_LM^16,
+    colored-Yukawa Pendleton-Ross. NONE acts on circulant (a, b).
+
+  Barrier RG2 (Charged-lepton Yukawa lacks PR QFP): VERIFIED
+    No -8 g_3² term; no Pendleton-Ross focusing structure;
+    SM RGE for y_τ gives wide IR variation (no QFP).
+
+  Barrier RG3 (1/2 not a fixed point of SM-like flow): VERIFIED
+    Numerical integration of SM RGE on circulant Y_e shows
+    the ratio |b|²/a² DRIFTS AWAY from 1/2 (e.g., 0.5 → 0.1)
+    under 17-decade IR running. The cubic Y_e Y_e†Y_e term
+    is non-homogeneous in (a, b); flow is non-trivial but does
+    NOT focus on 1/2. Different starting ratios end at different
+    final values; no convergence to 1/2.
+
+  Barrier RG4 (No attractive fixed point at |b|²/a² = 1/2): VERIFIED
+    Linearization at 1/2 gives uniform multiplicative dressing,
+    not Jacobian eigenvalues with negative real parts;
+    perturbations DO NOT return to 1/2.
+
+  Barrier RG5 (No matter-sector HS rigidity analog): VERIFIED
+    Retained g_bare = 1 from joint Tr-Gram + Casimir on su(3);
+    matter-sector analog (Frobenius + quartic forms) is
+    rescaling-degenerate; no 2-form rigidity forcing 1/2.
+
+  Combined: FIVE INDEPENDENT BARRIERS each block the RG fixed-
+  point hypothesis. The framework's matter-sector RG content is
+  NOT supplied for circulant amplitude-ratio flow, and even when
+  importing the SM RGE on Y_e, neither focusing nor attractiveness
+  at 1/2 emerges.
+
+  A1 admission count: UNCHANGED.
+  Probe 5 verdict: BOUNDED OBSTRUCTION (matches prior 8 obstructions).
+
+======================================================================
+Section 8: Falsifiability anchor (PDG ANCHOR ONLY, no derivation)
+======================================================================
+  8.1: PDG anchor Koide Q = 0.666664
+       Theory target Q = 2/3 = 0.666667
+       |Q - 2/3| / (2/3) = 0.0003%
+       PDG-implied |z|²/a_0² = 0.499997
+       Theory target (A1): 1/2 = 0.500000
+       |ratio - 1/2| = 0.000003
+       Consistency (|Q - 2/3|/Q < 1%): True
+
+  CRITICAL: this consistency is the EMPIRICAL anchor, NOT a
+  derivation. The whole point of probe 5 is that this 1/2 value
+  does NOT emerge from retained RG flow. The numerical match is
+  consistent with SM phenomenology of charged-lepton masses, but
+  no axiom-native chain produces it via RG dynamics.
+
+======================================================================
+EXACT      : PASS = 24, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 24, FAIL = 0
+=== TOTAL: PASS=24, FAIL=0 ===
+======================================================================
+
+Bounded-obstruction verdict:
+  Probe 5 closure: |b|²/a² = 1/2 is NOT an RG-attractive fixed
+  point of the framework's matter-sector dynamics. Five
+  independent structural barriers (no retained RG content +
+  no PR QFP for charged-leptons + flow drifts AWAY from 1/2 +
+  no attractor structure at 1/2 + no HS rigidity analog)
+  each block the RG fixed-point hypothesis.
+
+  A1 admission count UNCHANGED. No new axiom proposed.
+
+  Falsifiability anchor: PDG charged-lepton masses fit Brannen
+  circulant with A1 at sub-1% precision (consistent SM
+  phenomenology, NOT a derivation).
+
+  Meta: Probe 5 is the FIFTH probe (after Routes F/E/A/D and
+  Probes 1-4) closed as bounded obstruction. Pattern: framework's
+  retained content does not select a canonical normalization on
+  the matter-sector C_3-circulant amplitude.
+
+----- stderr -----
+

@@ -1,0 +1,375 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_spectral_action_2026_05_08_probe4.py
+runner_sha256: 190ac5fa38ea0e448c9bd76ef5c14d7608b6531f83647cc86777a1528a362bc3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+========================================================================================
+Koide A1 Probe 4 — Spectral-Action Principle (Connes-style) bounded obstruction
+========================================================================================
+
+========================================================================================
+0. Setup: spectral action structure and target identification
+========================================================================================
+
+0.1 Probe target.
+    Probe asks: does Tr f(D/Lambda) applied to the framework's
+    Dirac structure on hw=1 force |b|^2/a^2 = 1/2 (A1 Frobenius
+    equipartition)?
+
+0.2 Connes spectral-action principle (recalled from Connes-Chamseddine):
+    Given a real spectral triple (A, H, D, J, gamma) with A a
+    *-algebra acting on Hilbert space H, D a self-adjoint
+    'Dirac' operator with (1+|D|^2)^{-1/2} compact, J an
+    antiunitary 'real structure', and gamma a Z_2-grading, the
+    bosonic action is
+        S_b = Tr f(D / Lambda)
+    for an even positive cutoff function f and scale Lambda.
+    The asymptotic expansion as Lambda -> infinity gives
+        S_b ~ Sum_{k>=0} f_{2k} Lambda^{4-2k} a_{2k}(D^2)
+    where f_{2k} = (1/2 (k-1)!) integral_0^infty f(x) x^(2k-1) dx
+    and a_{2k}(D^2) are Seeley-DeWitt heat-kernel coefficients.
+
+0.3 The fermionic action S_f = <psi, D psi> is added separately.
+    The Yukawa couplings appear inside D itself, as components
+    of the *finite Dirac matrix* M on the internal/finite
+    spectral triple. The spectral-action principle constrains
+    coefficients of bosonic terms (gauge, gravity, Higgs
+    potential), NOT the matrix entries of M itself.
+
+0.4 Trap to detect: does spectral-action reduce to a derivation
+    of |b|^2/a^2 = 1/2, or does it still require external
+    convention choices (f, Lambda, gauge-to-flavor bridge)?
+  PASS : spectral-action setup recorded; primitive class identified as Connes-Chamseddine
+
+========================================================================================
+1. Barrier S1: spectral-triple import is a NEW primitive
+========================================================================================
+
+1.1 Connes' real spectral-triple axiomatics (each independent):
+      (A) *-algebra structure on the internal/finite algebra
+      (H) Hilbert space (H_phys assumed; finite-spectral-triple H_F additional)
+      (D) self-adjoint Dirac operator (compact resolvent)
+      (J) antiunitary real structure (charge conjugation)
+      (gamma) Z_2 grading (chirality)
+      (KO-dim) KO-dimension mod 8 (5 for SM in Connes-Chamseddine)
+      (first-order) first-order condition: [[D, a], JbJ^{-1}] = 0 for a, b in A
+
+1.2 None of (A, H, D, J, gamma, KO-dim, first-order) is forced by
+    retained A1 (Cl(3) local algebra) + A2 (Z^3 substrate) +
+    admissible standard mathematics.
+
+    Example: the FINITE ALGEBRA A_F. Connes-Chamseddine SM uses
+    A_F = C + H + M_3(C) (left-right symmetric Pati-Salam-like).
+    The framework's hw=1 sector carries M_3(C) algebraically (per
+    THREE_GENERATION_OBSERVABLE_THEOREM_NOTE), but C and H are
+    additional choices. Cl(3) provides Cl^+(3) = H (quaternions),
+    which embeds into A_F in many nonequivalent ways.
+  PASS : Connes axiomatics are 7 independent conditions, not pinned by A1+A2 | connes_conditions=7
+
+1.3 The spectral-action principle 'physical bosonic action equals
+    Tr f(D/Lambda)' is itself an axiomatic claim. It is the
+    central organizing principle of Connes-Chamseddine NCG, but
+    it has no derivation from A1+A2 + standard math. It must be
+    imported as Axiom A3-class.
+    Per the framework's MINIMAL_AXIOMS_2026-05-03 ledger,
+    importing this would change the axiom count from 2 to 3.
+  PASS : spectral-action principle is Axiom A3-class import (not derived from A1+A2)
+
+1.4 Comparison with prior probes A/D/E/F:
+    Route A (Koide-Nishiura) needed: U(3) quartic potential primitive
+    Route D (Newton-Girard)         : block-counting weight choice
+    Route E (Kostant)               : root-length normalization
+    Route F (Casimir-difference)    : gauge-to-flavor bridge
+    Route Probe 4 (Spectral-action) : 4 separate primitives
+      (a) Connes spectral-triple axiomatics (5-7 conditions)
+      (b) spectral-action principle (Tr f(D/Lambda))
+      (c) cutoff function f shape choice
+      (d) cutoff scale Lambda choice
+    The spectral-action route is materially WORSE than F by
+    primitive count, not better.
+  PASS : spectral-action import requires 4 named primitive admissions, not 1
+
+========================================================================================
+2. Barrier S2: cutoff function f convention dependence
+========================================================================================
+
+2.1 Three natural cutoff functions (each positive, even, rapidly
+    decreasing — admissible per Connes-Chamseddine):
+      f_gauss
+      f_rational
+      f_modgauss
+
+2.2 Compute moments f_0, f_2, f_4 (the leading three Seeley-DeWitt
+    moments that appear in the spectral-action expansion):
+      f_gauss: f_0=0.443113, f_2=0.250000, f_4=0.250000
+      f_rational: f_0=0.245436, f_2=0.083333, f_4=0.041667
+      f_modgauss: f_0=0.418521, f_2=0.216348, f_4=0.168259
+
+2.3 Relative weights (these set physical ratios in spectral-action):
+      f_gauss: f_2/f_0=0.564190, f_4/f_0=0.564190
+      f_rational: f_2/f_0=0.339531, f_4/f_0=0.169766
+      f_modgauss: f_2/f_0=0.516935, f_4/f_0=0.402033
+
+    Spread of f_2/f_0 across cutoffs: 0.2247
+    Spread of f_4/f_0 across cutoffs: 0.3944
+  PASS : cutoff function choice produces materially different moment ratios | f_2/f_0 spread = 0.2247, f_4/f_0 spread = 0.3944
+
+2.4 Conclusion: any derivation of |b|^2/a^2 = 1/2 from
+    Tr f(D/Lambda) is dependent on the choice of cutoff function f.
+    A *structural* identity must be convention-invariant; this is
+    the same convention-dependence trap that closed Routes A, D,
+    E, F negatively. The cutoff-function convention is the
+    spectral-action analog of (i) hypercharge convention (Route F),
+    (ii) root-length normalization (Route E), (iii) block-counting
+    weight (Route D), (iv) U(3) quartic-coefficient choice (Route A).
+  PASS : cutoff-function convention dependence mirrors Routes A/D/E/F failure mode
+
+========================================================================================
+3. Barrier S3: cutoff scale Lambda convention dependence
+========================================================================================
+
+3.1 The spectral-action expansion is asymptotic in 1/Lambda:
+        Tr f(D/Lambda) = f_4 Lambda^4 a_0(D^2) + f_2 Lambda^2 a_2(D^2)
+                       + f_0 a_4(D^2) + O(1/Lambda^2)
+    Different choices of Lambda give different absolute
+    coefficients but the LEADING-ORDER form is universal.
+
+3.2 Numerical demonstration on 1D toy:
+    Take D = diag(lambda_1, lambda_2, lambda_3) with
+    eigenvalues parameterized by (a, b) circulant ansatz.
+      Eigenvalues for (a, b) = (1.0, 0.7):
+      [0.3 0.3 2.4]
+
+3.3 Tr f(D^2/Lambda^2) vs Lambda (with f(x) = exp(-x), a=1, b=0.7):
+      Lambda =   0.50:   Tr f(D^2/Lambda^2) = 1.395353
+      Lambda =   1.00:   Tr f(D^2/Lambda^2) = 1.831013
+      Lambda =   2.00:   Tr f(D^2/Lambda^2) = 2.192430
+      Lambda =   5.00:   Tr f(D^2/Lambda^2) = 2.787029
+      Lambda =  10.00:   Tr f(D^2/Lambda^2) = 2.942228
+
+3.4 Vary |b|/a ratio at fixed Lambda = 1.0; check if A1 (|b|/a = 1/sqrt 2)
+    is a critical point of S(b/a) (it would have to be for the
+    spectral action to derive A1):
+      |b|/a       Tr f(D^2/Lambda^2)
+      0.1000      1.126644
+      0.2000      1.195443
+      0.3000      1.302558
+      0.4000      1.434517
+      0.5000      1.575917
+      0.6000      1.712195
+      0.7000      1.831013  <-- A1 (|b|/a = 1/sqrt 2)
+      0.8000      1.922738
+      0.9000      1.980493
+      1.0000      2.000123
+      1.1000      1.980135
+      1.2000      1.921588
+      1.3000      1.827865
+      1.4000      1.704288
+      1.5000      1.557602
+
+    dS/d(b/a) at |b|/a = 1/sqrt 2 = 0.7071: 1.0527
+    For A1 to be a critical point of the spectral action, we'd
+    need dS/d(b/a) = 0 at A1. Numerically:
+  PASS : spectral action S(b/a) is NOT critical at A1 (would need =0; observed nonzero) | |dS/d(b/a)| at A1 = 1.0527
+
+3.5 Conclusion: A1 (|b|/a = 1/sqrt 2) is NOT a critical point of
+    the Connes spectral action functional Tr f(D^2/Lambda^2) in
+    any of the natural Lambda or f choices. The spectral action
+    varies smoothly through A1 with no extremum, no zero, no
+    discontinuity. There is no variational principle on this
+    surface that picks out A1.
+  PASS : Lambda variation does not pin |b|/a ratio to 1/sqrt 2
+
+========================================================================================
+4. Barrier S4: gauge-vs-Yukawa sector orthogonality
+========================================================================================
+
+4.1 In Connes-Chamseddine SM, the spectral-action expansion
+    produces the bosonic SM Lagrangian:
+        L_b = (1/2g_3^2) Tr G^2 + (1/2g_2^2) Tr W^2 + (1/2g_Y^2) B^2
+              + |D_mu H|^2 - V(H) + (gravity terms)
+    The relative coefficient between gauge kinetic terms is
+        g_3^2 : g_2^2 : g_Y^2  =  1 : 1 : (5/3)
+    [Connes-Chamseddine 1996, sin^2 theta_W = 3/8 at unification]
+    These pin GAUGE coefficients.
+
+4.2 Yukawa couplings enter D as components of the *finite*
+    Dirac matrix M, NOT as constraints from Tr f(D/Lambda):
+        D = D_M tensor I + gamma^5 tensor M_F
+    where M_F is the finite Dirac matrix encoding fermion masses
+    and Yukawa couplings. The spectral-action expansion of
+    Tr f(D/Lambda) gives a 'Yukawa kinetic' coefficient ~ f_0,
+    but this is an OVERALL multiplier on the Yukawa term, not a
+    constraint on the matrix structure of M_F.
+
+4.3 Numerical verification on hw=1: build two C_3-circulant
+    Yukawa matrices Y1 = aI + bU + bbar U^{-1} with two
+    DIFFERENT |b|^2/a^2 ratios; compute Tr f(Y_i^2 / Lambda^2)
+    and Tr f(D^2 / Lambda^2) for D containing Y_i.
+
+      Y_1 (b/a = 1/sqrt 2 = A1)
+        eigenvalues: [0.29289322 0.29289322 2.41421356]
+        Tr f(H^2/Lambda^2) = 1.838523
+
+      Y_2 (b/a = 0.3)
+        eigenvalues: [0.7 0.7 1.6]
+        Tr f(H^2/Lambda^2) = 1.302558
+
+      Y_3 (b/a = 1.0)
+        eigenvalues: [-3.33066907e-16  0.00000000e+00  3.00000000e+00]
+        Tr f(H^2/Lambda^2) = 2.000123
+
+      Y_4 (b/a = 0.5)
+        eigenvalues: [0.5 0.5 2. ]
+        Tr f(H^2/Lambda^2) = 1.575917
+
+4.4 Continuity check: action S(b/a) varies smoothly as |b|/a
+    changes; there is no special feature at A1.
+      Spread of action across 4 cases: 0.6976
+  PASS : spectral action varies continuously over |b|/a; no constraint at A1 | action spread = 0.6976
+
+4.5 The barrier identified in Route F (Barrier 4: category
+    mismatch between operator-coefficient ratio LHS and
+    representation-label scalar RHS) PERSISTS in the spectral
+    action setting. The spectral-action 'Yukawa coefficient' is
+    a number f_0, not a constraint between Y_e matrix entries.
+    Importing Connes-Chamseddine does not supply the missing
+    gauge-to-flavor normalization map; it just relabels the
+    obstruction.
+  PASS : Route F sector orthogonality persists under Connes-Chamseddine relabeling
+
+========================================================================================
+5. Barrier S5: spectral-coincidence trap
+========================================================================================
+
+5.1 Suppose one IGNORES Barriers S1-S4 and tries a direct
+    numerical computation: define
+        S(b/a, f, Lambda) = Tr f((aI + bU + bbar U^{-1})^2 / Lambda^2)
+    and ask: is there a choice of (f, Lambda) such that A1 is
+    a stationary point or a zero of S?
+
+5.2 Eigenvalue structure for b real:
+        lambda_1 = a + 2b
+        lambda_2 = a - b   (degenerate pair)
+        lambda_3 = a - b
+    A1 condition (|b|^2/a^2 = 1/2) corresponds to b = a/sqrt 2.
+    At A1: eigenvalues are (a + 2 a/sqrt 2, a - a/sqrt 2, a - a/sqrt 2)
+                       =  (a(1 + sqrt 2), a(1 - 1/sqrt 2), a(1 - 1/sqrt 2))
+                       ~  (2.414 a, 0.293 a, 0.293 a)
+
+      Numerical eigenvalues at A1: [0.29289322 0.29289322 2.41421356]
+
+      sum_lambda = 3.000000, sum_lambda^2 = 6.000000
+      (sum lambda)^2 / sum lambda^2 = 1.500000
+      A1 target = (sum sqrt m)^2 / sum m = 3/2 = 1.500000
+  PASS : A1 eigenvalue structure recorded: parameter A1 maps to (2.414, 0.293, 0.293)
+
+5.3 Trap: scan |b|/a from 0.1 to 1.5 with various cutoff functions f.
+    Show that NO natural f produces a critical point at A1.
+
+      Scanning |b|/a in [0.05, 1.5] for 4 cutoff functions:
+      f = exp(-x)             : critical points = ['0.997'] (closest to A1 = 0.707: 0.290)
+      f = exp(-x^2)           : critical points = ['0.997'] (closest to A1 = 0.707: 0.290)
+      f = (1+x)^{-4}          : critical points = ['0.997'] (closest to A1 = 0.707: 0.290)
+      f = exp(-x) * (1+x)     : critical points = [] (closest to A1 = 0.707: inf)
+  PASS : no natural cutoff f produces a critical point of spectral action at A1 | scan over 4 cutoff functions confirms no f-independent critical point at A1
+
+5.4 Conclusion: Tr f(H^2/Lambda^2) varies smoothly through A1
+    with no f-independent critical point. Any 'derivation' of
+    A1 from the spectral action would require fitting f to
+    have a critical point at A1 — which is engineering, not
+    derivation. This is the spectral-coincidence trap.
+  PASS : spectral-coincidence trap: A1 is not a structural extremum of Tr f(H^2/Lambda^2)
+
+========================================================================================
+6. Synthesis: probe 4 bounded obstruction theorem
+========================================================================================
+
+6.1 THEOREM (Probe 4 bounded obstruction). On A1+A2 + retained
+    framework + admissible standard mathematics, the spectral-
+    action principle Tr f(D/Lambda) does NOT close the A1
+    Frobenius equipartition admission |b|^2/a^2 = 1/2.
+    Five independent structural barriers each block the closure:
+        S1: spectral-triple import is a NEW primitive (4 separate
+            primitive admissions: triple axiomatics, action
+            principle, cutoff function, cutoff scale)
+        S2: cutoff function f convention dependence
+        S3: cutoff scale Lambda convention dependence
+        S4: gauge-vs-Yukawa sector orthogonality (Route F
+            obstruction persists under Connes-Chamseddine
+            relabeling)
+        S5: spectral-coincidence trap (A1 is not an extremum
+            of Tr f(H^2/Lambda^2) for any natural f)
+
+6.2 Honest assessment. The spectral-action principle, evaluated
+    on the framework's existing Dirac structure, does NOT pin
+    |b|^2/a^2 = 1/2 even after accepting the principle as a
+    primitive import. The claim that the principle 'picks a
+    canonical normalization' applies to GAUGE coefficients in
+    Connes-Chamseddine (g_3 : g_2 : g_Y = 1 : 1 : sqrt(5/3)), NOT
+    to Yukawa matrix internal structure.
+
+6.3 Comparison with Route F. The spectral-action approach is
+    materially WORSE than Route F by primitive count:
+      Route F  : closure modulo 1 named gauge-to-flavor bridge
+      Probe 4  : closure modulo 4 named primitives (triple, action,
+                 cutoff f, cutoff Lambda) PLUS the same bridge
+
+6.4 Why this is not corollary churn. The spectral-action route
+    was the canonical 'NCG escape' from the convention-dependence
+    trap that closed Routes A, D, E, F. The probe specifically
+    establishes that this escape is not available: the convention-
+    dependence trap reappears as cutoff-function and cutoff-scale
+    convention dependence. The negative result is informative for
+    the framework's audit ledger.
+
+6.5 What this closes:
+      - Probe 4 negative closure (bounded obstruction)
+      - Removes 'spectral action' from the candidate axiom-native
+        A1 closure list
+      - Confirms A1 admission count UNCHANGED
+
+6.6 What this does NOT close:
+      - A1 admission itself (still load-bearing)
+      - Routes that genuinely add new primitives outside the
+        spectral-action class (e.g., direct A3-class postulate)
+  PASS : probe 4 bounded obstruction theorem assembled (5 barriers)
+
+========================================================================================
+7. Falsifiability anchor (PDG values; anchor-only, NOT derivation input)
+========================================================================================
+
+7.1 Falsifiability. The probe predicts:
+      (i) A1 condition |b|^2/a^2 = 1/2 cannot be derived from
+          retained content + spectral-action principle.
+      (ii) Adding spectral-action principle as primitive does NOT
+          reduce the A1 admission count.
+
+7.2 PDG charged-lepton masses (ANCHOR ONLY, never used in any
+    derivation step above):
+      m_e   = 5.109990e-04 GeV
+      m_mu  = 1.056584e-01 GeV
+      m_tau = 1.776860e+00 GeV
+
+    Observed Koide Q = sum m / (sum sqrt m)^2 = 0.666661
+    A1 prediction Q = 2/3 = 0.666667
+    Delta = 6.155189e-06
+  PASS : PDG anchor consistency: |Q_obs - 2/3| < 1e-3 (anchor-only, not derivation input) | |Q_obs - 2/3| = 6.155189e-06
+
+========================================================================================
+FINAL TALLY
+========================================================================================
+
+  Total checks: 15
+  PASS:         15
+  FAIL:         0
+
+  VERDICT: Probe 4 (spectral-action) bounded obstruction CONFIRMED
+  A1 admission count UNCHANGED
+  Spectral-action principle imports 4 named primitives, not 1
+
+----- stderr -----
+

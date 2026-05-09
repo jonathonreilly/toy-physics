@@ -1,0 +1,123 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_operator_class_2026_05_08_probe6.py
+runner_sha256: 03816f334e85b97b6159d559a5ead4fa3cc83e4db5b1d9023a1f96983d2a7157
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.67
+status: ok
+----- stdout -----
+======================================================================
+Koide A1 Probe 6 — Operator-Class Expansion: Bounded Obstruction
+Source note:
+  docs/KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md
+======================================================================
+
+Section 1 — Sanity: Hermitian sub-class is the Brannen ansatz target
+  PASS : Hermitian circulant is C_3-equivariant | U H U^dagger = H verified
+  PASS : Hermitian circulant lies in span{I, U, U^2} | decomposition consistent
+  PASS : Hermitian circulant satisfies H^dagger = H | Hermiticity verified
+  PASS : Hermitian circulant has free |b|^2/a^2 ratio (counterexample) | |b|^2/a^2 = 0.3125 != 1/2 (a, b are free, A1 is not forced)
+  PASS : At A1, eigenvalues match Brannen 1 + sqrt(2)*cos form | max residual = 3.89e-16
+
+Section 2 — Hypothesis A: Complex circulant (drop Hermiticity, 6 DOF)
+  PASS : Complex circulant is C_3-equivariant | U Y U^dagger = Y verified
+  PASS : Complex circulant is generically non-Hermitian | Y^dagger != Y for generic (a, b, c) — strictly larger class
+  PASS : Complex circulant has complex eigenvalues (not physical masses) | max |Im(eig)| = 0.2232 != 0; eigenvalues of Y itself cannot be charged-lepton masses (must be real positive)
+  PASS : Complex circulant Frobenius norm = 3*(|a|^2+|b|^2+|c|^2) | ||Y||_F^2 = 4.1700 = 4.1700
+  PASS : Multiple complex-circulant counterexamples violate naive A1 | (a,b,c) free in 6-DOF; |b|^2/|a|^2 ranges freely; A1 not forced
+  PASS : A1-compatible 6-DOF surface is genuinely higher-dimensional | 1000/1000 samples have |b|^2/|a|^2 = 1/2 with c FREE; A1 surface in 6D has dim >= 5, not codim-FORCED
+       NOTE: Expanding 3-DOF -> 6-DOF makes A1 MORE compatible,
+       not LESS. This is the 'more DOF doesn't help' trap:
+       A1 must be FORCED by structure, not COMPATIBLE with it.
+  PASS : Hypothesis A is structurally barred (more DOF != more force) | 6-DOF makes A1 1-codim instead of 1-codim with 3D base; no forcing principle emerges from drop-Hermiticity alone
+
+Section 3 — Hypothesis B: Squared mass matrix M = Y^dagger Y
+  PASS : M = Y^dagger Y is Hermitian | (Y^dagger Y)^dagger = Y^dagger Y
+  PASS : M = Y^dagger Y is positive semi-definite | eigenvalues = [0.16555136 0.75444864 3.25      ]
+  PASS : M = Y^dagger Y lies in circulant subspace span{I, U, U^2} | alpha = 1.3900+0.0000j, beta = 0.9300+0.1700j, gamma = 0.9300-0.1700j
+  PASS : M's circulant decomposition has gamma = bar(beta) (Hermitian form) | gamma - bar(beta) = 0.00e+00+0.00e+00j
+  PASS : alpha = |a|^2 + |b|^2 + |c|^2 (sum of squares formula) | alpha = 1.3900, expected = 1.3900
+  PASS : beta = bar(a)*b + bar(c)*a + bar(b)*c (cyclic-product formula) | beta = 0.9300+0.1700j, expected = 0.9300+0.1700j
+       OBSTRUCTION: M = Y^dagger Y collapses 6 DOF (Y) -> 3 DOF (M).
+       The squared-mass matrix is automatically in the prior
+       Hermitian-circulant sub-class. No new closure freedom.
+  PASS : Hypothesis B does not escape the prior 3-DOF Hermitian sub-class | M = Y^dagger Y is Hermitian circulant; same constraint surface as the 8 prior attacks; no new closure path
+  PASS : M's A1 ratio |beta|^2/alpha^2 is free (counterexamples) | (a,b,c) -> M(a,b,c) does not force the |beta|^2/alpha^2 = 1/2 constraint
+  PASS : Eigenvalues of M = squared singular values of Y | eig(M) = sigma(Y)^2 verified to 1.33e-15
+
+Section 4 — Hypothesis C: Operator-on-operator action on M_3(C)
+  PASS : Circulants are C_3-conjugation invariant | U A U^dagger = A for circulant A
+  PASS : Non-circulant M_3(C) elements are NOT C_3-invariant (sanity) | verifies that C_3-invariance is a real restriction
+  PASS : C_3-invariant Hermitian subspace = Hermitian circulants (R1) | Same 3-DOF class as the Brannen ansatz; no new structure
+       SUMMARY: M_3(C) decomposes under C_3 as
+       3*trivial + 3*omega + 3*omegabar.
+       The trivial sub-algebra is the 3-dim complex circulants.
+       Hermitian restriction: 3 DOF. Non-Hermitian: 6 DOF.
+       No new structure beyond what R1 already retains.
+  PASS : Operator-on-operator action gives prior circulant class | Hypothesis C reduces to the same class as R1; no new closure path
+  PASS : C_3-invariant subspace of M_3(C) has complex dimension 3 | rank(P) = 3; equals dim(span{I, U, U^2}) = 3
+  PASS : No retained structural principle forces A1 in any C_3-invariant class | The 8 prior attacks (Routes A,D,E,F + Probes 1-4) all rule out forcing within the Hermitian sub-class; expanding to 6-DOF weakens, not strengthens, the forcing capacity
+
+Section 5 — Positivity check: does positivity of M force A1?
+  PASS : At A1 with delta=0, all eigenvalues > 0 (M positive definite) | eigenvalues = [0.29289322 0.29289322 2.41421356]
+  PASS : At A1 with delta=pi/3, one eigenvalue < 0 (NOT positive definite) | eigenvalues = [-0.41421356  1.70710678  1.70710678]; A1 is NOT inside the positive cone here
+  PASS : At off-A1 ratio (|b|/a=0.3), positivity holds: NOT a forcing principle | eigenvalues = [0.7 0.7 1.6]; positivity is COMPATIBLE with A1 and non-A1
+       At delta=pi/12, A1 eigenvalues = [4.27605055e-16 6.33974596e-01 2.36602540e+00]
+       (min |eig| = 0.0000; near-critical for delta near pi/12)
+  PASS : A1 is at the positivity-boundary for some delta (near-critical surface) | A1 sits at the criticality boundary for delta=pi/3 (negative eig); this confirms A1 is not FORCED, just CRITICAL for some delta
+
+Section 6 — Parametric scan: A1 ratio is not concentrated at 1/2
+       Sample size: 5000, mean ratio = 0.2521, median ratio = 0.2080, target A1 = 0.5
+       Fraction within 1% of A1: 0.7400% (measure-zero surface ⇒ small fraction)
+  PASS : A1 surface in 6-DOF moduli has measure zero | only 0.7400% of random samples land near A1; A1 is not a measure-supported attractor
+  PASS : A1 ratio spans wide range under random (a, b, c) sampling | std(ratio) = 0.1958; ratio is not bunched at any value
+  PASS : Non-A1 (a,b,c) is C_3-equivariant — A1 is not forced by retained constraints | ratio = 0.3451; Y, M both C_3-equivariant; A1 not forced
+
+Section 7 — Falsifiability anchor (PDG values, anchor-only)
+       Charged-lepton Koide Q = 0.666661 (target 2/3 = 0.666667)
+  PASS : PDG charged-lepton Koide Q = 2/3 to sub-percent (anchor-only) | Q = 0.666661, target = 0.666667; ANCHOR ONLY — does not enter derivation
+       Reminder: Brannen ansatz at A1 forces Q = 2/3 algebraically.
+       PDG match confirms A1 is consistent with observed masses;
+       this is NOT a derivation of A1 from retained content.
+
+Section 8 — Bounded-obstruction theorem verification
+  PASS : Hypothesis A (complex circulant, 6 DOF) does not force A1 | More DOF -> more compatibility, not more force; codim-1 in 6-DOF
+  PASS : Hypothesis B (M = Y^dagger Y) collapses to prior 3-DOF class | Squared mass matrix is automatically Hermitian circulant; same forcing problem as 8 prior attacks
+  PASS : Hypothesis C (operator-on-operator) gives same C_3-invariant class | M_3(C) C_3-conjugation-invariant subspace = circulants; no new structure
+  PASS : Positivity of M is NOT a forcing principle for A1 | A1 sits at the positivity-boundary for some delta; not forced
+  PASS : All three operator-class hypotheses are structurally barred | Probe 6 confirms: the 8 prior attack failures are NOT artifacts of the Hermitian sub-class; expanding the operator class does not help
+
+       VERDICT: The tested operator-class expansions do not rescue A1.
+       A1 itself remains unforced from retained content. The checked
+       'wrong operator class' hypotheses FAIL as closure paths.
+       A1 admission count UNCHANGED.
+
+
+======================================================================
+EXACT      : PASS = 40, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 40, FAIL = 0
+=== TOTAL: PASS=40, FAIL=0 ===
+======================================================================
+
+Bounded-obstruction verdict:
+  Probe 6 confirms STRUCTURAL OBSTRUCTION: expanding the operator
+  class beyond Hermitian C_3-equivariant does NOT open a closure
+  path for A1.
+
+  Hypothesis A (complex circulant, 6 DOF): more freedom, not more
+    force. A1 becomes more compatible, not more forced.
+  Hypothesis B (M = Y^dagger Y): collapses to prior 3-DOF Hermitian
+    sub-class. No new closure freedom.
+  Hypothesis C (operator-on-operator): same C_3-invariant circulant
+    algebra as before. No new structure.
+
+  The 8 prior attack failures (Routes A,D,E,F + Probes 1-4) are
+  NOT explained by the tested Hermitian-subclass criticism; they
+  reflect a structural absence of a forcing principle for A1 across
+  the checked C_3-equivariant operator classes.
+
+  A1 admission count UNCHANGED. No new axiom proposed.
+
+----- stderr -----
+

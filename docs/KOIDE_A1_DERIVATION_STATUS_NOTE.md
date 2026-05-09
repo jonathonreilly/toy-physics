@@ -3,8 +3,16 @@
 **Context:** this note documents the exhaustive audit of routes to
 derive A1 (Frobenius equipartition, |b|/a = 1/√2 ⟺ Brannen c = √2 ⟺
 Koide Q = 2/3) from the retained Cl(3)/Z³ framework + textbook math.
-It establishes what's been ruled out (by retained theorems) and what
-candidate routes remain open.
+It establishes what's been ruled out (by retained theorems and
+source-note bounded-obstruction proposals) and what remains open.
+
+**2026-05-09 review-loop update:** Routes A, D, E, F and Probes 1-6
+are now represented by companion bounded-obstruction source notes. These
+notes do not promote any audit verdict and do not reduce the A1
+admission count. They update the route map: the named A1 closure
+attempts are negative boundaries unless a future branch supplies a new
+coefficient-fixing bridge or the user explicitly approves an A1-class
+admission.
 
 ## Retained no-go theorems (all close negatively)
 
@@ -48,7 +56,7 @@ All 9 routes close negatively. The retained atlas has definitively
 established that standard mechanisms within the current framework do
 NOT force A1.
 
-## Candidate routes outside the no-go's (still open)
+## Candidate routes outside the original no-go's (now bounded-obstruction proposals)
 
 ### Route A: Koide-Nishiura U(3) quartic potential
 
@@ -62,15 +70,14 @@ TRACE invariants (tr, tr²), not from Clifford generator products
 (Γ_a Γ_b Γ_c Γ_d). Theorem 6 rules out Clifford-based 4th-order,
 but not trace-based.
 
-**Open task:** derive V(Φ) as a term in the retained effective action,
-perhaps via:
-  - Koide-Nishiura's S_3 flavor Higgs potential (hep-ph/0509214)
-    imported to Cl(3)/Z³'s EW-scalar lane
-  - Specific trace-invariant construction in the admitted Higgs/CW lane
-  - A discriminant of a specific characteristic polynomial
+**Review-loop result:** the companion
+[`KOIDE_A1_ROUTE_A_KOIDE_NISHIURA_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routea.md`](KOIDE_A1_ROUTE_A_KOIDE_NISHIURA_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routea.md)
+records a bounded obstruction. The internal arithmetic remains true,
+but retained content does not fix the Wilson-coefficient ratio
+`(2 : -3)` without importing the Koide target.
 
-Runner: `scripts/frontier_koide_a1_quartic_potential_derivation.py`
-(demonstrates V(Φ) has UNIQUE minimum at A1).
+Runner:
+[`scripts/cl3_koide_a1_route_a_koide_nishiura_2026_05_08_routea.py`](../scripts/cl3_koide_a1_route_a_koide_nishiura_2026_05_08_routea.py).
 
 ### Route B: Clifford torus bipartition on S³ = Spin(3)
 
@@ -97,8 +104,13 @@ structural replacement for A1 (verified earlier).
 
 V(Φ) = [e_1² − 6e_2]² where e_1 = trΦ, e_2 = Σ_{i<j}λ_iλ_j. The
 coefficient 6 = n(n+1)/2 for n=3. This clean elementary-symmetric
-form suggests a natural polynomial structure, but doesn't by itself
+form suggests a natural polynomial structure, but does not by itself
 force the specific 6 coefficient.
+
+**Review-loop result:** the companion
+[`KOIDE_A1_ROUTE_D_NEWTON_GIRARD_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routed.md`](KOIDE_A1_ROUTE_D_NEWTON_GIRARD_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routed.md)
+records a bounded obstruction: Newton-Girard gives an identity between
+coordinate systems, not a constraint selecting A1.
 
 ### Route E: A_1 Weyl-vector / Kostant-strange-formula coincidence
 
@@ -119,19 +131,16 @@ axiom-native A1 derivation. The retained Cl^+(3) ≅ H ⟹ Spin(3) =
 SU(2) = A_1 Lie algebra carries Weyl vector with |ρ|² = 1/2
 (Kostant), matching the charged-lepton amplitude ratio.
 
-**Candidate structural lemma** (open, would close A1 if proved):
-the charged-lepton Yukawa amplitude ratio |b|²/a² is FIXED by the
-SU(2)_L × U(1)_Y Casimir imbalance:
+**Review-loop result:** the companion
+[`KOIDE_A1_ROUTE_E_KOSTANT_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routee.md`](KOIDE_A1_ROUTE_E_KOSTANT_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routee.md)
+records a bounded obstruction. The Weyl-vector numerical match remains
+a useful coincidence, but the Cartan-Killing normalization and
+gauge-to-flavor bridge are not derived by retained content.
 
-  |b|²/a² = C_2(SU(2)_L fund) − Y²(U(1)_Y, Higgs) = 1/2
-
-Combined with the retained C_τ = 1 theorem, this would derive A1
-axiom-natively. The required lemma is NOT currently established —
-it needs a specific Yukawa-structure argument showing how the A_1
-Weyl geometry imprints on the generation-space amplitude ratio.
-
-Runner: `scripts/frontier_koide_a1_weyl_vector_kostant_coincidence.py`
-(documents the three-way coincidence, flags the open lemma).
+The older scout runner
+[`scripts/frontier_koide_a1_weyl_vector_kostant_coincidence.py`](../scripts/frontier_koide_a1_weyl_vector_kostant_coincidence.py)
+documents the coincidence; the companion obstruction runner tests the
+negative boundary.
 
 **DOUBLE MATCH (A_1 AND A_2)**: Brannen c = 2|b|/a converts A1 to the
 equivalent condition c² = 2. This matches |ρ_{A_2}|² = 2 via Kostant
@@ -149,7 +158,7 @@ Candidate lemmas that would close A1 axiom-natively via Weyl geometry:
   - Hidden SU(3)_family broken to Z_3 (Z_3 = SU(3) center)
   - Cl(3) ⊃ sl(3) via pseudoscalar extension
 
-### Route F: Yukawa Casimir-difference identity (STRONGEST AXIOM-NATIVE CANDIDATE)
+### Route F: Yukawa Casimir-difference identity
 
 **KEY OBSERVATION**: T(T+1) − Y² = 1/2 holds UNIQUELY for the lepton
 SU(2)_L doublet L (T=1/2, Y=-1/2) AND the Higgs H (T=1/2, Y=+1/2).
@@ -169,36 +178,42 @@ The retained C_τ = T(T+1) + Y² = 1 theorem (already used to derive
 y_τ = α_LM/(4π)) gives the SUM. The proposed candidate gives the
 DIFFERENCE. Both are derivable from retained gauge structure alone.
 
-**OPEN STRUCTURAL LEMMA** (would close A1 axiom-natively):
+**Review-loop result:** the companion
+[`KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routef.md`](KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routef.md)
+records a bounded obstruction. The numerical identity is not a
+structural derivation because the value is convention-dependent and
+there is no retained gauge-to-flavor normalization map.
 
-  |b|²/a²  =  T(T+1) − Y²  for Yukawa doublet participants
+Runner:
+[`scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py`](../scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py).
 
-If proven, this gives axiom-native A1 from:
-  - Cl⁺(3) ≅ ℍ ⟹ T(T+1) = 3/4 (retained)
-  - ω pseudoscalar ⟹ Y² = 1/4 (retained, L hypercharge)
-  - Casimir-difference lemma ⟹ |b|²/a² = 1/2 (proposed)
-  - ⟹ A1 (Frobenius equipartition) forced
+## Round-2 probes
 
-NO new retained primitives required. Only the structural lemma needs
-proof. This is the cleanest A1 closure candidate identified to date.
+The following companion source notes test additional A1 closure routes
+and leave the A1 admission count unchanged:
 
-Runner: `scripts/frontier_koide_a1_yukawa_casimir_identity.py` (9/9 PASS).
+- [`KOIDE_A1_PROBE_RP_FROBENIUS_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe1.md`](KOIDE_A1_PROBE_RP_FROBENIUS_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe1.md)
+  — RP+GNS does not force the canonical Frobenius pairing.
+- [`KOIDE_A1_PROBE_FLAVOR_ANOMALY_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe2.md`](KOIDE_A1_PROBE_FLAVOR_ANOMALY_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe2.md)
+  — flavor-anomaly channels do not fix operator-coefficient ratios.
+- [`KOIDE_A1_PROBE_GRAVITY_PHASE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe3.md`](KOIDE_A1_PROBE_GRAVITY_PHASE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe3.md)
+  — gravity-as-phase content does not induce the required matter-sector
+  inner product.
+- [`KOIDE_A1_PROBE_SPECTRAL_ACTION_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe4.md`](KOIDE_A1_PROBE_SPECTRAL_ACTION_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe4.md)
+  — spectral-action import does not produce an A1 critical point.
+- [`KOIDE_A1_PROBE_RG_FIXED_POINT_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe5.md`](KOIDE_A1_PROBE_RG_FIXED_POINT_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe5.md)
+  — A1 is not a retained charged-lepton RG fixed point.
+- [`KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md`](KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md)
+  — expanding the operator class does not create a closure path.
 
-## Status: A1 remains a retained-but-not-axiom-native assumption
+## Status: A1 remains a load-bearing non-axiom input
 
-Given the 9 no-go theorems covering standard mechanisms, and the
-candidate Route A being outside but not yet derived from Cl(3)/Z³,
-A1 is:
-
-  - **Retained** via the Brannen form with √2 prefactor (on origin/main)
-  - **Characterized** as unique minimum of V(Φ) = [2(trΦ)²−3tr(Φ²)]²
-    (this package)
-  - **NOT derivable** from Cl(3)/Z³ + textbook alone without new
-    retained primitives
-
-For full axiom-native nature-grade closure, new retained content
-would be needed — most promisingly an import of Koide-Nishiura's
-quartic flavor Higgs potential into the Cl(3)/Z³ EW-scalar lane.
+Given the original no-go theorems and the companion bounded-obstruction
+source notes above, A1 is still not derived from physical `Cl(3)` on
+`Z^3` plus textbook math alone. Any future axiom-native closure must
+supply a new coefficient-fixing bridge, or the A1 amplitude-ratio input
+must be explicitly admitted by the user. This note does not set audit
+verdicts or pipeline-derived retained status.
 
 ## References
 

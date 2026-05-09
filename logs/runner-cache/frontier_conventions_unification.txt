@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_conventions_unification.py
+runner_sha256: cac2fad800c32cb40656b28c0fa50e9d2309e20fcdfcb110a4ddd91bd245bd53
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+Conventions-unification companion check
+note: docs/CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08.md
+
+PASS: source note is meta
+PASS: does not declare pipeline status
+PASS: does not declare audit-clean verdict token
+PASS: does not add a new mathematical axiom
+PASS: unification of labeling+unit conventions stated explicitly
+PASS: labeling layer present (mass ordering)
+PASS: unit-conversion layer present
+PASS: labeling-convention analogue cited (quark names)
+PASS: labeling-convention analogue cited: ν_1
+PASS: labeling-convention analogue cited: K_S
+PASS: Planck-from-structure escape mentioned
+PASS: Planck escape stated conditionally
+PASS: Planck-derivation explicitly NOT claimed retained
+PASS: EW-Planck hierarchy retained-derivation cited (no opining)
+PASS: no PDG numerical mass values inserted as derivation input
+PASS: explicitly references substep-4 AC narrowing
+PASS: explicitly disclaims PDG-input use
+PASS: forbidden promotion absent: AC closure by declaration
+PASS: forbidden promotion absent: specific param promoted to retained
+PASS: forbidden promotion absent: specific bridge-gap count claimed
+PASS: Planck-derivation result is open, not closed
+PASS: Option C parameter targets remain bounded
+PASS: cross-references retained note: PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE
+PASS: cross-references retained note: C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE
+PASS: cross-references retained note: MINIMAL_AXIOMS_2026-05-03
+PASS: cross-references retained note: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE
+PASS: cross-references retained note: A3_OPTION_C_BRANNEN_RIVERO
+PASS: cross-references retained note: KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE
+PASS: minimal axioms note has physical Cl(3) A1
+PASS: minimal axioms note has physical Z^3 A2
+PASS: review-loop rule present
+
+TOTAL: PASS=31 FAIL=0
+Conventions-unification check passed: labeling and unit conventions tracked together, Planck escape stated conditionally, no Option C target promoted, no new axiom.
+
+----- stderr -----
+

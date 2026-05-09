@@ -26,7 +26,7 @@ has full authority to retag, narrow, or reject the proposal.
 
 ## Question
 
-[`KOIDE_A1_DERIVATION_STATUS_NOTE.md`](KOIDE_A1_DERIVATION_STATUS_NOTE.md)
+`KOIDE_A1_DERIVATION_STATUS_NOTE.md`
 identifies "Route F" (Yukawa Casimir-difference identity) as the
 **strongest axiom-native candidate** for closing the A1 √2
 equipartition admission. The proposed structural lemma is:
@@ -364,11 +364,11 @@ SM particle content, not a structural prediction.
 
 | Prior closure attempt | Status | Comment |
 |---|---|---|
-| Route A (Koide-Nishiura U(3) quartic) | open; outside Theorem 6 | trace-based 4th-order; needs derivation |
+| Route A (Koide-Nishiura U(3) quartic) | companion bounded obstruction | trace-based 4th-order; Wilson-coefficient ratio unforced |
 | Route B (Clifford torus on S³) | does not match Koide cone | 45° latitude vs equator |
 | Route C (AS Lefschetz cot²) | parallel numeric identity | 2/3 = 2/3 coincidence |
-| Route D (Newton-Girard) | open; trace-poly form | 6 = n(n+1)/2 coefficient unforced |
-| Route E (A_1 Weyl-vector / Kostant) | three-way exact match | `|ρ_{A_1}|² = 1/2` matches but no derivation |
+| Route D (Newton-Girard) | companion bounded obstruction | trace-poly form; 6 = n(n+1)/2 coefficient unforced |
+| Route E (A_1 Weyl-vector / Kostant) | companion bounded obstruction | `|ρ_{A_1}|² = 1/2` matches but no structural map |
 | Route F (Yukawa Casimir-difference) | **THIS NOTE: bounded obstruction** | **four-barrier negative closure** |
 | Numerical match runner (Apr 2026, 9/9 PASS) | establishes RHS arithmetic | does NOT establish structural lemma |
 
@@ -386,9 +386,9 @@ though the numerical match holds.
   must supply at least one of: (a) gauge-to-flavor normalization
   principle, (b) cross-sector bridge theorem, (c) convention-
   invariant reformulation.
-- **Sister-route implications**: confirms Routes A, D, E remain the
-  open candidates; Route F should not be cited as an axiom-native
-  closure path going forward.
+- **Sister-route implications**: Route F should not be cited as an
+  axiom-native closure path going forward; companion Route A, D, and E
+  notes close their own candidate mechanisms negatively.
 - **Audit-defensibility**: explicit numerical counterexamples to the
   proposed lemma, removing it from the "axiom-native A1" candidate
   list at retained-grade.
@@ -397,8 +397,9 @@ though the numerical match holds.
 
 - A1 admission count is unchanged. A1 remains a load-bearing
   non-axiom step on the Brannen circulant lane.
-- Routes A (Koide-Nishiura quartic), D (Newton-Girard), E
-  (Kostant Weyl-vector) remain open candidates.
+- Routes A (Koide-Nishiura quartic), D (Newton-Girard), and E
+  (Kostant Weyl-vector) are handled by their own companion
+  bounded-obstruction notes.
 - Charged-lepton Koide closure remains a bounded observational-pin
   package (status from
   [`CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
@@ -467,7 +468,7 @@ is to avoid one-step relabelings of already-landed cycles. This note:
 
 ## Cross-references
 
-- A1 derivation status (parent): [`KOIDE_A1_DERIVATION_STATUS_NOTE.md`](KOIDE_A1_DERIVATION_STATUS_NOTE.md)
+- A1 derivation status (parent): `KOIDE_A1_DERIVATION_STATUS_NOTE.md`
 - Existing Route F numerical runner: [`scripts/frontier_koide_a1_yukawa_casimir_identity.py`](../scripts/frontier_koide_a1_yukawa_casimir_identity.py)
 - Circulant character derivation: [`KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
 - Charged-lepton Koide-cone algebraic equivalence: [`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)

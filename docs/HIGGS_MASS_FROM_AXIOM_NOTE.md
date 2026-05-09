@@ -293,21 +293,22 @@ The narrative paragraph above ("The remaining +12% gap") attributes the
 sister authorities that actually carry each derivation. This step
 upgrades the cross-reference to an audit-compatible authority inventory
 without attempting any new derivation. Each row is a pointer; this note
-does not change any sibling claim boundary or effective status. The audit
-ledger remains the only authority for current audit/effective status.
+does not change any sibling claim boundary or pipeline-derived status. The
+audit ledger remains the only authority for current audit and
+pipeline-derived status.
 
 | Gap correction | Sister authority | Status authority | Closes the gap from / to | Open content |
 |---|---|---|---|---|
 | 2-loop CW + RGE running | [`HIGGS_MASS_DERIVED_NOTE.md`](HIGGS_MASS_DERIVED_NOTE.md) (`bounded_theorem`, td=309) + `scripts/frontier_higgs_mass_corrected_yt.py` (corrected-y_t RGE) | audit ledger only | tree-level → ~119.93 GeV via corrected-y_t at 3L+NNLO | conditional on `y_t` Ward + RGE-transport scaffolding |
 | Lattice spacing convergence (`m_H/m_W` flow as `a → 0`) | [`HIGGS_FROM_LATTICE_NOTE.md`](HIGGS_FROM_LATTICE_NOTE.md) (`bounded_theorem`, td=310) | audit ledger only | `m_H/m_W = 1.85` at `a=1` → 1.64 at `a=0.5` → 1.558 SM in continuum | continuum-limit theorem surface |
-| Wilson-term taste-breaking ((1,4,6,4,1) staircase) | (no dedicated authority note) | absent | breaks 16-fold degeneracy → reduces effective `N_taste` in [5] | **open follow-on**: theorem note + runner deriving the (1,4,6,4,1) staircase reduction of `N_taste` and its quantitative effect on `m_H_tree` |
+| Wilson-term taste-breaking ((1,4,6,4,1) staircase) | [`WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md`](WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md) (`bounded_theorem`) + `scripts/frontier_wilson_bz_corner_hamming_staircase.py` | audit ledger only | proves the finite staircase identity on the canonical `Z^3 + t` APBC surface | **still open**: quantitative theorem translating the staircase into a reduced effective `N_taste` in [5] and its effect on `m_H_tree` |
 | Buttazzo full-3-loop calibration cross-check | `scripts/frontier_higgs_buttazzo_calibration.py` | (auxiliary calibration) | independent ~125.1 GeV via 3-loop Buttazzo parametric calibration | a different observable along a different chain; not load-bearing for this note |
 
 ### What this Step 7 changes
 
 No claim status or theorem boundary. The +12% gap remains an open chain
-across sister authorities and one missing dedicated authority. This note
-continues to claim only the tree-level formula
+across sister authorities and a remaining quantitative-effect bridge. This
+note continues to claim only the tree-level formula
 `m_H_tree = v/(2 u_0) = 140.3 GeV`, with the gap-closure load explicitly
 delegated.
 

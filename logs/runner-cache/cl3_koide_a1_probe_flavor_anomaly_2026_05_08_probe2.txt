@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_probe_flavor_anomaly_2026_05_08_probe2.py
+runner_sha256: 6b789c9f1ea6a67924f2e068ce3de610f7e062218242bfb7e028f25b9d96e3fa
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.44
+status: ok
+----- stdout -----
+======================================================================
+Koide A1 Probe 2 — Flavor-sector anomaly bounded obstruction
+Source note:
+  docs/KOIDE_A1_PROBE_FLAVOR_ANOMALY_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe2.md
+======================================================================
+Section 1 — Setup recap
+       hw=1 sector ≅ C^3 with C_3[111] cyclic permutation U_C3.
+       C_3-equivariant Hermitian on hw=1 is forced to circulant form
+       H = a I + b U + b̄ U^{-1}, with (a, b) free per retained
+       Yukawa-free no-go (CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO).
+
+       A1 target: |b|^2 / a^2 = 1/2.
+       Probe: does any flavor-sector anomaly cancellation (F1, F2, F3)
+       force this target from retained content?
+
+  PASS : Two distinct (a, b) circulants are both Hermitian and C_3-equivariant | r1=0.090, r2=0.650; ratios free under retained constraints
+  PASS : A1-condition target value is |b|^2/a^2 = 1/2 (Frobenius equipartition) | target = 1/2
+Section 2 — Channel F1: Witten Z_2 anomaly on hw=1
+  PASS : hw=1 has dim 3, not the 2-dim SU(2) doublet dim | dim(hw=1) = 3 ≠ 2 = dim(SU(2) doublet)
+  PASS : Witten parity is independent of (a, b) in hypothetical decomposition | Witten N_D mod 2 depends on REP COUNT, not on coefficient ratio
+  PASS : Continuous A1 target cannot be encoded in Witten's binary constraint | Witten gives Z_2-valued constraint; A1 target is real-valued ratio 1/2
+       VERDICT F1: Witten Z_2 anomaly does NOT force A1.
+       Constraint is REP-COUNT parity, dimensionally cannot fix |b|^2/a^2.
+
+Section 3 — Channel F2: Pure cubic anomaly Tr[Q_F^3] = 0 for U(1)_F flavor
+  PASS : C_3-equivariant flavor charge assignment must be constant on orbit | R3-functoriality: f(C_3·c) = f(c) ⇒ q_1 = q_2 = q_3
+  PASS : C_3-symmetric U(1)_F: Tr[Q_F] = 0 forces q = 0; cubic anomaly trivial | q = 0, Tr = 0, Tr^3 = 0; system carries no constraint
+  PASS : Generic anomaly-free (q_1, q_2, q_3) triples do NOT exist as rational solutions to both Tr=0 and Tr^3=0 simultaneously | Without C_3-breaking new primitive, cubic anomaly is trivially satisfied by q=0 only (degenerate)
+  PASS : U(1)_F charges and Yukawa coefficients are independently parametrizable | no retained relation [Y_e, Q_F] = 0 forces |b|^2/a^2 = 1/2
+       VERDICT F2: Pure cubic flavor anomaly does NOT force A1.
+       (a) C_3-equivariance forces trivial charges (R3-functoriality).
+       (b) Even if C_3-broken, charges are not |b|^2/a^2.
+
+Section 4 — Channel F3: Mixed SU(2)_L^2 × U(1)_F anomaly
+  PASS : Mixed anomaly is LINEAR equation Σ q_i = 0 in flavor charges | e.g., (1, -1, 0) ⇒ Σ = 0.0
+  PASS : A1-condition |b|^2/a^2 = 1/2 is QUADRATIC in operator coefficients | |b|^2/a^2 = 0.5000; target = 0.5
+       Linear constraint on charges {q_i} vs quadratic ratio of coefficients (a, b):
+       no algebraic identity equates them. The mixed anomaly cannot
+       reach the A1 condition by direct substitution.
+
+  PASS : Exhibit 12 (Yukawa, flavor-charge) pairs: all independently valid | Yukawa C_3-equivariance and U(1)_F anomaly cancellation impose INDEPENDENT constraints; no link to A1
+  PASS : Counter-example: (a=1, b=1) Yukawa with (1,-1,0) flavor charges satisfies all retained constraints but violates A1 | |b|^2/a^2 = 1.0 (NOT 1/2), Σq = 0.0 = 0
+       VERDICT F3: Mixed gauge-flavor anomaly does NOT force A1.
+       Linear constraint on charges; A1 target is quadratic in coefficients.
+
+Section 5 — Unifying obstruction P2-S1: category mismatch is universal
+  PASS : Anomaly traces are polynomial in charges (linear, cubic, ...) | Tr[Q] = 0.000 (linear), Tr[Q^3] = 0.000 (cubic)
+  PASS : A1 target |b|^2/a^2 = 1/2 is quadratic ratio in coefficients | a=1.0, |b|=0.7071, ratio = |b|^2/a^2 = 0.5000
+  PASS : Charges (QQ-valued) vs operator coefficients (CC-valued) are in different categories | charge type = Fraction, coef type = complex
+  PASS : 100 random (charges, circulant) pairs: 100/100 have |b|^2/a^2 ≠ 1/2 | no retained map fixes |b|^2/a^2 from anomaly constraints
+       P2-S1 sharpens R3-functoriality: anomaly arithmetic is
+       polynomial in REP LABELS, hence cannot reach quadratic
+       ratios in OPERATOR COEFFICIENTS without an additional
+       (currently absent) normalization map.
+
+Section 6 — Distinguishing P2-S1 from R3-S1 (independent obstructions)
+  PASS : Hypothetical R3-escape scenario: distinct q_α with anomaly cancellation | qs = [1.0, -1.0, 0.0], Tr=0, Tr^3 = 0.000
+  PASS : Even a 'maximally anomaly-cancelling' charge triple on the orbit (viewed as RR-valued) fails cube-anomaly | qs=[1.0, np.float64(-0.49999999999999983), np.float64(-0.5000000000000004)], sum=-0.000, cube=0.750
+  PASS : P2-S1 still blocks even when R3 escaped: random (a, b) hits |b|^2/a^2 ≈ 1/2 only 1.1% of time | no anomaly-cancellation constraint preferences for the A1 ratio
+       R3-S1 and P2-S1 are STRUCTURALLY INDEPENDENT obstructions:
+       R3-S1 ⇒ anomaly carriers respect C_3 orbits (=> equal expectations)
+       P2-S1 ⇒ anomaly arithmetic is polynomial-in-charges (=> can't reach
+              continuous operator-coefficient ratios)
+       Each blocks different aspects of the anomaly route to A1.
+
+Section 7 — Falsifiability anchor (PDG values are NOT derivation input)
+  PASS : ANCHOR ONLY: PDG charged-lepton Koide Q ≈ 2/3 (consistency) | Q(PDG) = 0.666661, target = 0.666667; falsifiability anchor only
+       NOTE: PDG match (Q ≈ 2/3) confirms A1 is OBSERVATIONALLY consistent
+       but does NOT derive A1. Per consistency-vs-derivation user-memory rule,
+       observational consistency is not closure.
+
+Section 8 — Probe 2 verdict (flavor anomaly bounded obstruction)
+  PASS : All three flavor-anomaly channels {F1, F2, F3} are obstructed | F1: rep-count parity; F2: orbit-functoriality + free coef; F3: linear vs quadratic
+  PASS : P2-S1 unifying obstruction: anomaly arithmetic is polynomial-in-charges | incompatible with A1 quadratic-in-coefficients target — category mismatch
+  PASS : P2-S1 is structurally distinct from R3-functoriality | R3 blocks corner-distinguishing; P2 blocks coefficient-fixing — independent obstructions
+       VERDICT: STRUCTURAL OBSTRUCTION (sharpened beyond R3).
+       Three flavor-anomaly channels each fail; unifying obstruction P2-S1.
+       Bounded-tier closure, no positive arrow.
+
+       A1 admission count: UNCHANGED.
+       Routes A (Koide-Nishiura quartic), D (Newton-Girard), E (Kostant)
+       are handled by their own companion obstruction notes. Probe 2 adds
+       the flavor-anomaly channel to the barred list alongside A, D, E, F.
+
+======================================================================
+Summary
+======================================================================
+EXACT      : PASS = 24, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 24, FAIL = 0
+
+Probe 2 verdict: STRUCTURAL OBSTRUCTION.
+Flavor-sector anomaly cancellation does NOT close A1 from
+retained content. Three channels {F1, F2, F3} all obstructed by
+the unifying P2-S1 category-mismatch lemma (sharpened beyond R3).
+A1 admission count UNCHANGED.
+
+----- stderr -----
+

@@ -1,0 +1,361 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_route_a_koide_nishiura_2026_05_08_routea.py
+runner_sha256: 763c3235d485f3d369754edf06573a3a92476e8eb82b990d60b2657bbd032397
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.93
+status: ok
+----- stdout -----
+
+========================================================================================
+Koide A1 Route A — Koide-Nishiura U(3) Quartic Bounded Obstruction
+========================================================================================
+
+Verifies four-barrier structural obstruction. The algebraic identity
+V(Φ) = [2(tr Φ)² − 3 tr(Φ²)]² = 81(a² − 2|b|²)² on circulant Φ holds
+(tautological), but the structural identification of V with retained
+effective action requires non-derived assumptions.
+
+Authority: source-note proposal. Not a retained-tier promotion.
+
+========================================================================================
+Part A — Algebraic identity V₀² = 81(a² − 2|b|²)² on circulant Φ
+========================================================================================
+  V₀ = 2(tr Φ)² − 3 tr(Φ²) = 9*a**2 - 18*b**2
+  V  = V₀² (factored)      = 81*(a**2 - 2*b**2)**2
+  Expected: 81 (a² − 2|b|²)² = 81*a**4 - 324*a**2*b**2 + 324*b**4
+[PASS] A.1 V₀² = 81(a² − 2|b|²)² on circulant (algebraic identity)
+       Algebraic identity, holds in any framework (tautology of construction).
+  V₀ = 0 ⟺ |b|/a = sqrt(2)/2
+[PASS] A.2 V₀ = 0 ⟺ |b|/a = 1/√2 (= A1 condition)
+       Algebraic equivalence, NOT a derivation of A1 from retained content.
+[PASS] A.3 At V₀ = 0, Koide Q = tr(Φ²)/(tr Φ)² equals 2/3
+       Q(min) = 0.666666666667, target 2/3 = 0.666666666667.
+
+========================================================================================
+Part B — Barrier 1: Wilson-coefficient circularity
+========================================================================================
+  General U(3)-invariant quadratic-in-traces residual:
+    V₀^(α,β) = α (tr Φ)² + β tr(Φ²)
+  On circulant Φ = aI + bC + b̄C²:
+    V₀^(α,β) = (9α + 3β) a² + 6β |b|²
+
+  Setting V₀ = 0 (zero locus / minimum of V = V₀²):
+    9α + 3β and β have opposite signs ⟹ |b|²/a² = -(9α + 3β)/(6β)
+
+  Tabulation of (α : β) → equilibrium |b|²/a² → equilibrium Q:
+
+    (α : β)       |b|²/a²    Q value at min   Notes
+    -----------------------------------------------------------------
+    (+2 : -3)    0.5000     0.6667            Koide [target]
+    (+1 : -3)    -          -               alt 1 (degenerate)
+    (+1 : -1)    1.0000     1.0000            alt 2
+    (+3 : -4)    0.6250     0.7500            alt 3
+    (+1 : -2)    0.2500     0.5000            alt 4
+    (+4 : -5)    0.7000     0.8000            alt 5
+    (+5 : -7)    0.5714     0.7143            alt 6
+
+  Each (α : β) Wilson coefficient ratio gives a DIFFERENT Q value.
+  No retained Cl(3)/Z³ theorem fixes (α : β) at (2 : −3).
+  Choosing (2 : −3) empirically is circular: the answer is the input.
+[PASS] B.1 Multiple Wilson coefficient ratios (α : β) give different Q values
+       5 alternative ratios produce non-Koide Q values.
+       Specific (2 : −3) choice is empirical input encoding Q = 2/3.
+[PASS] B.2 Only (2 : −3) among tested ratios reproduces Q = 2/3
+       Exactly 1 ratio gives Koide Q = 2/3.
+       This uniqueness is by construction: (2 : −3) is the polynomial encoding of Q = 2/3.
+
+========================================================================================
+Part C — Barrier 2: U(3)-invariance import
+========================================================================================
+  Retained framework symmetry on hw=1: C_3-equivariance.
+  Reference: KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md (R1)
+
+  C_3 (cyclic 3-element group) ⊂ S_3 ⊂ U(3) (continuous)
+
+  C_3-equivariance forces circulant: Φ = aI + bC + b̄C² (2-real-parameter family).
+  U(3)-flavor symmetry would require continuous SU(3) action on M_3(C).
+
+  Retained content provides at most C_3 (and possibly residual S_2)
+  but NOT continuous U(3) flavor symmetry.
+
+  Reference: HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md
+    Theorem 6 companion: 'No retained sole-axiom S_2-breaking primitive
+    is present on the current framework surface.'
+
+  ⟹ Importing U(3) is a structural assumption beyond retained content.
+[PASS] C.1 Circulant Φ satisfies [Φ, C] = 0 (C_3-equivariant)
+       ||[Φ, C]|| = 0.00e+00 (numerical machine precision).
+
+  At a = 1.0, b = 0.7 (real):
+    tr(Φ)  = 3.000000+0.000000j (real, depends on a only)
+    tr(Φ²) = 5.940000+0.000000j (real, function of a, |b|)
+    tr(Φ³) = 13.878000+0.000000j (real, function of a, |b|)
+[PASS] C.2 U(3) is a stronger symmetry than retained C_3-equivariance
+       Importing U(3) as constraint on Wilson expansion is non-derivable
+       from retained content. The framework has C_3 only.
+
+========================================================================================
+Part D — Barrier 3: Trace-only restriction (5 invariants)
+========================================================================================
+  U(3)-invariant quartic polynomials on M_3(C)_Herm:
+    I₁ = (tr Φ)⁴
+    I₂ = (tr Φ)² · tr(Φ²)
+    I₃ = tr(Φ²)²
+    I₄ = tr(Φ) · tr(Φ³)
+    I₅ = tr(Φ⁴)
+
+  On circulant Φ = aI + bC + b̄C² (real b for explicit calculation):
+
+    I₁ = 81*a**4
+    I₂ = 27*a**4 + 54*a**2*b**2
+    I₃ = 9*a**4 + 36*a**2*b**2 + 36*b**4
+    I₄ = 9*a**4 + 54*a**2*b**2 + 18*a*b**3
+    I₅ = 3*a**4 + 36*a**2*b**2 + 24*a*b**3 + 18*b**4
+
+[PASS] D.1 V_koide = 4 I₁ − 12 I₂ + 9 I₃ + (0) I₄ + (0) I₅
+       Koide quartic uses ONLY the {(tr Φ), (tr Φ²)}-pure quartic invariants.
+
+  Numerical perturbation test:
+  Minimize V_pert = V_0² + λ · I_pert subject to tr(Φ²) = 1, a, b ≥ 0
+
+  Perturbation       λ       a_min     b_min     b/a       Δ(b/a − 1/√2)
+  --------------------------------------------------------------------------------
+  (tr Φ)⁴              0.000  0.4082    0.2887    0.7071    -0.0000
+  (tr Φ)⁴              0.010  0.4077    0.2890    0.7089    +0.0018
+  (tr Φ)⁴              0.100  0.4032    0.2922    0.7246    +0.0175
+  (tr Φ)⁴              1.000  0.3651    0.3162    0.8660    +0.1589
+  (tr Φ)⁴             10.000  0.2183    0.3780    1.7317    +1.0246
+
+  tr(Φ⁴)               0.000  0.4082    0.2887    0.7071    -0.0000
+  tr(Φ⁴)               0.010  0.4083    0.2886    0.7069    -0.0002
+  tr(Φ⁴)               0.100  0.4086    0.2884    0.7058    -0.0013
+  tr(Φ⁴)               1.000  0.4120    0.2860    0.6941    -0.0130
+  tr(Φ⁴)              10.000  0.4647    0.2422    0.5212    -0.1859
+
+  tr(Φ²)²              0.000  0.4082    0.2887    0.7071    -0.0000
+  tr(Φ²)²              0.010  0.4082    0.2887    0.7071    -0.0000
+  tr(Φ²)²              0.100  0.4082    0.2887    0.7071    -0.0000
+  tr(Φ²)²              1.000  0.4082    0.2887    0.7071    -0.0000
+
+  tr(Φ) tr(Φ³)         0.000  0.4082    0.2887    0.7071    -0.0000
+  tr(Φ) tr(Φ³)         0.010  0.4082    0.2887    0.7073    +0.0002
+  tr(Φ) tr(Φ³)         0.100  0.4079    0.2889    0.7084    +0.0013
+  tr(Φ) tr(Φ³)         1.000  0.4043    0.2914    0.7208    +0.0137
+
+[PASS] D.2 (tr Φ)⁴ perturbation shifts minimum away from A1
+       Max shift: 1.0246.
+       Generic (tr Φ)⁴ Wilson coefficient shifts the minimum.
+[PASS] D.3 tr(Φ⁴) perturbation shifts minimum away from A1
+       Max shift: 0.1859.
+       Generic tr(Φ⁴) Wilson coefficient shifts the minimum.
+[PASS] D.4 tr(Φ²)² perturbation does NOT shift (held constant by tr(Φ²)=1)
+       Max shift: 0.000000.
+       tr(Φ²)² is degenerate under the variational constraint, not a structural support.
+
+  ⟹ Restricting to {(tr Φ), (tr Φ²)}-only quartics is a CONVENTION,
+    not derivable from retained content.
+  ⟹ Generic U(3)-quartic expansion includes I₄ = tr(Φ) tr(Φ³) and
+    I₅ = tr(Φ⁴) which shift the minimum off the Koide cone.
+
+========================================================================================
+Part E — Barrier 4: Empirical-target circularity (squaring trap)
+========================================================================================
+  The 'variational principle' V := V₀² is constructed by:
+    Step 1: V₀ = 2(tr Φ)² − 3 tr(Φ²) [Koide condition residual]
+    Step 2: V := V₀² [non-negative functional]
+    Step 3: Argue 'V minimum at V₀ = 0 = Koide cone'
+
+  Equivalent to:
+    V := (Q − 2/3)² · 9 (tr Φ)⁴
+  where Q = tr(Φ²)/(tr Φ)² is the empirically observed value.
+
+  This is structurally circular — the empirical answer is squared
+  and treated as a 'derivation output'.
+
+  Generalization: ANY value q* can be encoded this way:
+    V_q* := (Q − q*)² · 9 (tr Φ)⁴   has minimum at Q = q*
+
+  Verification (numerical minimization with tr(Φ²) = 1):
+    q*     min |b|²/a²     Q(min)        Δ(Q − q*)
+    ------------------------------------------------------------
+    0.3333  0.0000        0.3333        +0.000000
+    0.5000  0.2500        0.5000        +0.000013
+    0.6667  0.5000        0.6667        +0.000000
+    0.7500  0.6251        0.7500        +0.000036
+    1.0000  0.9999        0.9999        -0.000050
+[PASS] E.1 V_q* = (Q − q*)² has zero locus Q = q*, |b|²/a² = (3q* − 1)/2
+       ANY value q* admits the squared-residual construction.
+       Choice q* = 2/3 (giving |b|²/a² = 1/2) is empirical input.
+[PASS] E.2 q* = 1/3 (uniform spectrum) gives V_uniform = 36 b⁴
+       Different q* values give different quartics with different minima.
+       No structural reason within retained content prefers q* = 2/3.
+[PASS] E.3 V₀² is the squared empirical residual, NOT a derived variational principle
+       Construction step 'square the Koide condition' is post-hoc.
+       Equivalent to V := (Q − Q_observed)² · 9(tr Φ)⁴.
+
+========================================================================================
+Part F — Three-route meta-pattern
+========================================================================================
+  Three 'axiom-native A1 candidate routes' all close negatively
+  via convention/coefficient dependence traps:
+
+  Route | Trap class                      | Specific trap
+  ------|----------------------------------|----------------------------------
+  E     | Norm-convention dependence       | |ρ_{A_1}|² ∈ {1/4, 1/2, 1}
+        |                                  | depending on ||α||² ∈ {1, 2, 4}
+  F     | Charge-convention dependence     | T(T+1) − Y² ∈ {-1/4, 1/2}
+        |                                  | depending on PDG vs SU(5) Y conv.
+  A     | Wilson-coefficient circularity   | (α : β) = (2 : -3) directly
+        |                                  | encodes Q = 2/3 as input
+
+  All three routes arrive at the value '1/2' (= |b|²/a² = (Q−1/3)/(2/3))
+  via convention/coefficient choices that themselves encode the empirical answer.
+
+  Meta-conclusion: A1 closure within retained Cl(3)/Z³ + textbook math alone
+  appears blocked across multiple structural categories.
+[PASS] F.1 Routes E, F, A all suffer from convention/coefficient dependence
+       Three independent structural routes, three distinct trap classes,
+       all reduce to: '1/2' is empirically loaded into a chosen normalization,
+       charge convention, or Wilson coefficient ratio.
+[PASS] F.2 A1 closure requires a new retained primitive or A3-class admission
+       Future re-attempts on A1 must supply a non-circular structural argument
+       fixing |b|²/a² = 1/2 from independently-derived retained primitives.
+
+========================================================================================
+Part G — Counterfactual: alternative quartic potentials
+========================================================================================
+  If V_0² were structurally forced from Cl(3)/Z³, the framework would
+  have to explain why V_0² is preferred over alternatives. Tabulating
+  alternative quartic potentials with the same general form:
+
+  V_(α,β)(Φ) := [α (tr Φ)² + β tr(Φ²)]²
+
+  At minimum (V_(α,β) = 0): |b|²/a² = -(9α + 3β)/(6β)
+
+  Quartic    (α : β)    Min |b|²/a²    Min Q    Notes
+  ----------------------------------------------------------------------
+  V_koide    (+2 : -3)    0.5000        0.6667    Koide target
+  V_alt1     (+1 : -1)    1.0000        1.0000    alt 1: equal coeffs
+  V_alt2     (+3 : -4)    0.6250        0.7500    alt 2
+  V_alt3     (+1 : -2)    0.2500        0.5000    alt 3
+  V_alt4     (+4 : -5)    0.7000        0.8000    alt 4
+[PASS] G.1 At least 4 alternative quartic potentials with positive |b|²/a² minima
+       Tabulated 5 valid alternatives; framework picks none structurally.
+
+========================================================================================
+Part H — Route A vs retained Theorems 5 and 6
+========================================================================================
+  Theorem 5 (HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md):
+    'No retained C_3-invariant variational principle selects the Koide cone'
+    (Six candidate principles closed negatively.)
+
+  Theorem 6:
+    '4th-order signed Clifford ordering cancellation: the fourth-order
+    retained spatial-Clifford + EWSB-Higgs family is ruled out.'
+
+  Route A's V_0² is:
+    (i) U(3)-invariant (stronger than C_3) → outside Theorem 5's scope
+       (Theorem 5 considered C_3-only; U(3) is an additional import)
+    (ii) trace-based, NOT Clifford-generator-based → outside Theorem 6's scope
+       (Theorem 6 cancels Γ_a Π Γ_b Π Γ_c Π Γ_d products)
+
+  ⟹ Route A is logically ALLOWED by Theorems 5 and 6 (different mechanism)
+  ⟹ But the four-barrier obstruction (B1-B4) still blocks closure.
+[PASS] H.1 Route A is outside Theorem 5's scope (U(3) > C_3 invariance)
+       Theorem 5 surveyed C_3-invariant principles only.
+       U(3) is a stronger symmetry, not derived from retained C_3.
+[PASS] H.2 Route A is outside Theorem 6's scope (trace-based vs Clifford-based)
+       Theorem 6 cancels signed Clifford ordering products.
+       V_0² is built from tr(Φ), tr(Φ²) — different mechanism.
+
+========================================================================================
+Part I — Falsifiability anchor (PDG values, anchor-only)
+========================================================================================
+  PDG (2024) charged-lepton pole masses (anchor-only, NOT derivation input):
+    m_e = 0.5109989 MeV
+    m_μ = 105.6583745 MeV
+    m_τ = 1776.86 MeV
+
+  Q_PDG = (Σ m_k) / (Σ √m_k)² = 0.666661
+  2/3                          = 0.666667
+  Δ(Q_PDG − 2/3)               = -6.153463e-06
+[PASS] I.1 PDG Q matches 2/3 to ~10⁻⁵ precision (anchor-only, not derivation)
+       Q_PDG = 0.666661, deviation -6.15e-06.
+       This precision is what makes Route A interesting; it cannot be loaded as derivation input.
+
+========================================================================================
+Part J — Bounded-obstruction theorem statement
+========================================================================================
+  THEOREM (Route A bounded obstruction):
+
+  On A1+A2 + retained CL3_SM_EMBEDDING + retained C_3-equivariance
+  + retained KoideCone-algebraic-equivalence + retained Theorem 5
+  + retained Theorem 6 + admissible standard math machinery:
+
+    The structural identification 'V(Φ) = [2(tr Φ)² − 3 tr(Φ²)]² appears
+    in the retained Cl(3)/Z³ effective charged-lepton action with the
+    specific coefficient ratio (α : β) = (2 : −3)' cannot be derived
+    from retained Cl(3)/Z³ content alone. Four independent structural
+    barriers block the lemma:
+
+      (B1) Wilson-coefficient circularity
+      (B2) U(3)-invariance import
+      (B3) Trace-only restriction
+      (B4) Empirical-target circularity (squaring trap)
+
+    Therefore Route A closure of A1 is structurally barred under the
+    stated retained-content surface. The A1 admission count is unchanged.
+[PASS] J.1 Route A bounded-obstruction theorem statement holds
+       Four-barrier conjunction blocks structural derivation of V_0².
+       A1 remains a load-bearing non-axiom step on the Brannen circulant lane.
+
+========================================================================================
+SUMMARY
+========================================================================================
+PASSED: 21/21
+  [PASS] A.1 V₀² = 81(a² − 2|b|²)² on circulant (algebraic identity)
+  [PASS] A.2 V₀ = 0 ⟺ |b|/a = 1/√2 (= A1 condition)
+  [PASS] A.3 At V₀ = 0, Koide Q = tr(Φ²)/(tr Φ)² equals 2/3
+  [PASS] B.1 Multiple Wilson coefficient ratios (α : β) give different Q values
+  [PASS] B.2 Only (2 : −3) among tested ratios reproduces Q = 2/3
+  [PASS] C.1 Circulant Φ satisfies [Φ, C] = 0 (C_3-equivariant)
+  [PASS] C.2 U(3) is a stronger symmetry than retained C_3-equivariance
+  [PASS] D.1 V_koide = 4 I₁ − 12 I₂ + 9 I₃ + (0) I₄ + (0) I₅
+  [PASS] D.2 (tr Φ)⁴ perturbation shifts minimum away from A1
+  [PASS] D.3 tr(Φ⁴) perturbation shifts minimum away from A1
+  [PASS] D.4 tr(Φ²)² perturbation does NOT shift (held constant by tr(Φ²)=1)
+  [PASS] E.1 V_q* = (Q − q*)² has zero locus Q = q*, |b|²/a² = (3q* − 1)/2
+  [PASS] E.2 q* = 1/3 (uniform spectrum) gives V_uniform = 36 b⁴
+  [PASS] E.3 V₀² is the squared empirical residual, NOT a derived variational principle
+  [PASS] F.1 Routes E, F, A all suffer from convention/coefficient dependence
+  [PASS] F.2 A1 closure requires a new retained primitive or A3-class admission
+  [PASS] G.1 At least 4 alternative quartic potentials with positive |b|²/a² minima
+  [PASS] H.1 Route A is outside Theorem 5's scope (U(3) > C_3 invariance)
+  [PASS] H.2 Route A is outside Theorem 6's scope (trace-based vs Clifford-based)
+  [PASS] I.1 PDG Q matches 2/3 to ~10⁻⁵ precision (anchor-only, not derivation)
+  [PASS] J.1 Route A bounded-obstruction theorem statement holds
+
+=== TOTAL: PASS=21, FAIL=0 ===
+
+VERDICT: Route A bounded obstruction confirmed.
+
+The Koide-Nishiura U(3) quartic V(Φ) = [2(tr Φ)² − 3 tr(Φ²)]² has
+its global minimum on the Koide cone (algebraic identity, tautology),
+but the structural identification of V with retained Cl(3)/Z³ effective
+action requires non-derived assumptions:
+  - Wilson-coefficient ratio (α : β) = (2 : −3) [empirical circularity]
+  - U(3)-flavor invariance [import beyond retained C_3]
+  - Trace-only restriction [excludes generic I₄, I₅ invariants]
+  - Squared-residual construction [empirical-target circularity]
+
+Route A joins Routes E (Kostant Weyl-vector) and F (Yukawa Casimir-
+difference) as bounded obstructions. The three-route meta-pattern is
+documented in the source note.
+
+A1 admission count is UNCHANGED. Closing A1 axiom-natively requires
+either a new retained primitive or explicit user-approved A3-class
+admission.
+
+----- stderr -----
+

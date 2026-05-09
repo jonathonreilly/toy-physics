@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_a1_route_d_newton_girard_2026_05_08_routed.py
+runner_sha256: d2f81a3a52158d874f39569b7e59d0c2da5ff3656d760b744bf5b7cc254c724d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.78
+status: ok
+----- stdout -----
+======================================================================
+Koide A1 Route D — Newton-Girard Polynomial Structure Bounded Obstruction
+Source note:
+  docs/KOIDE_A1_ROUTE_D_NEWTON_GIRARD_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routed.md
+======================================================================
+Section 1 — Newton-Girard identity and the A1 polynomial form
+  PASS : Newton-Girard p_2 = e_1^2 - 2 e_2 holds symbolically (any 3 eigenvalues) | verified for arbitrary (a, r, delta) parameters
+  PASS : A1 polynomial form: e_1^2 - 6 e_2 = 0 substituting r = a/sqrt(2) | Polynomial form is exactly the Frobenius equipartition condition
+  PASS : p_2/e_1^2 = 2/3 at A1 (linear-eigenvalue Koide) | p_2/e_1^2 |_A1 = 2/3
+  PASS : p_2/e_1^2 = 1/3 at b = 0 (degenerate / all eigenvalues equal) | p_2/e_1^2 at degenerate = 1/3
+  PASS : p_2/e_1^2 takes ALL values in [1/3, infinity) as r/a varies | Newton-Girard alone does not single out 2/3; ratio is continuous in r/a
+Section 2 — Barrier D1: Newton-Girard is identity, not constraint
+  PASS : Newton-Girard p_2 = e_1^2 - 2 e_2 holds for 50/50 random eigenvalue triples | Identity holds without ANY structural constraint on the eigenvalues
+  PASS : Random circulants give p_2/e_1^2 over a wide range (NOT pinned at 2/3) | min = 0.3356, max = 10.4807 — ratio is FREE under retained R1+R2
+  PASS : Newton-Girard satisfied for all counterexamples (incl. |b|^2/a^2 ne 1/2) | p_2/e_1^2 ratio is unconstrained by Newton-Girard
+Section 3 — Barrier D2: (1,1) vs (1,2) weight ambiguity in polynomial form
+  PASS : Polynomial form V_(1,1) = e_1^2 - 6 e_2 vanishes at A1 (multiplicity weights) | V_(1,1) |_A1 = 0
+  PASS : Polynomial form V_(1,2) = e_1^2 - 3 e_2 does NOT vanish at A1 (dimensional weights) | V_(1,2) |_A1 = 9*a**2/2
+  PASS : Polynomial form V_(1,2) at kappa=1 does NOT vanish — polynomial zeros and Lagrangian extrema are different objects | V_(1,2) |_kappa=1 = 9*a**2; the (1,2) Lagrangian extremum (κ=1) is a different polynomial structure than V_(1,1) zero (κ=2 = A1)
+  PASS : Polynomial-coefficient framing reproduces the (1,1)-vs-(1,2) weight ambiguity | Choice between e_1^2 = 6 e_2 (A1) and e_1^2 = 3 e_2 (kappa=1) is the SAME convention choice as multiplicity vs dimensional weighting in the block-total Frobenius theorem
+Section 4 — Barrier D3: Newton-Girard alone needs Brannen ansatz + extra input
+  PASS : Generic Hermitian 3x3 (non-circulant): p_2/e_1^2 ranges widely | min = 0.795, max = 1652.704 — Newton-Girard gives NO constraint
+  PASS : Circulant Hermitian on hw=1 has p_2/e_1^2 = 1/3 + (2/3)(r/a)^2 | min (b=0) = 1/3, A1 (r=a/sqrt(2)) = 2/3, r=2a = 3
+  PASS : R1+R2 alone is insufficient — the specific value 2/3 needs another principle | Newton-Girard provides the ALGEBRAIC FORM of the relation, but the SPECIFIC value of p_2/e_1^2 is not pinned without external input
+Section 5 — Barrier D4: polynomial-coefficient form is circular w.r.t. A1
+  PASS : Polynomial form e_1^2 - 6 e_2 = 9 (2 r^2 - a^2) on Brannen ansatz | Polynomial coefficient '6' is exactly the Frobenius factor in disguise (vanishes at a^2 = 2r^2 = A1)
+  PASS : V(Phi) = [e_1^2 - 6 e_2]^2 = 81 (a^2 - 2|b|^2)^2 (Frobenius equipartition squared) | Vanishing of V is exactly the Frobenius condition ‖aI‖_F^2 = ‖bC + bbarC^2‖_F^2
+  PASS : Polynomial-coefficient route is CIRCULAR w.r.t. A1 admission | The 'forced 6 coefficient' = the Frobenius admission. Same admission, different coordinates — not a derivation.
+Section 6 — Barrier D5: no symmetric-polynomial-only extremization picks A1
+  PASS : Discriminant does NOT vanish at A1 (eigenvalues remain non-degenerate) | Disc |_(A1, delta=2/9) = 27*a**6*(-2*sqrt(2)*cos(2/3) - 4*(1 + sqrt(2)*cos(2/9))**2*(-sqrt(2)*sin(2/9 + pi/6) + 1)**2*(-sqrt(2)*cos(2/9 + pi/3) + 1)**2 + 3)/4
+  PASS : d(Disc)/dr does NOT vanish at A1 — Disc is NOT extremized at A1 | d(Disc)/dr |_(A1) ≈ 43.8023; A1 is not a critical point
+  PASS : Tschirnhaus 'p' = e_2 - e_1^2/3 takes value -3 r^2 at A1 (no special vanishing) | p_depressed |_A1 = -3*a**2/2 (free parameter)
+  PASS : e_1^2 / e_2 = 6 at A1 — but this is by construction (definition of A1) | e_1^2/e_2 |_A1 = 6; the value 6 is the Frobenius factor
+  PASS : d/dr [e_1^2 / e_2] is NOT zero at A1 — e_1^2/e_2 is not extremized at A1 | d/dr [e_1^2/e_2] |_A1 ≈ 16.9706
+  PASS : No natural symmetric-polynomial extremization picks A1 uniquely | Discriminant, Tschirnhaus form, e_1^2/e_2, etc., do NOT have critical points at A1; the value 2/3 is a SELECTION not a DERIVATION
+Section 7 — Comparison with Routes E (Kostant) and F (Casimir-difference)
+  PASS : Route E (Kostant) values vary under root-length normalization: {1/4, 1/2, 1} | three Cartan-Killing convention give three different |rho|^2 values
+  PASS : Route F (Casimir-diff) values vary under hypercharge normalization: {1/2, -1/4} | PDG (Y_L = -1/2) gives 1/2; SU(5) (Y_L = -1) gives -1/4
+  PASS : Route D weight ambiguity: (mu=1, nu=1) gives V = e_1^2 - 6 e_2; (mu=1, nu=2) gives different | Both natural polynomial forms exist; selection requires extra input (same as block-total Frobenius weight residue)
+  PASS : Route D's trap profile is MATERIALLY different from Routes E/F | E/F: continuous root-length / hypercharge normalization; D: discrete weight-class (1,1) vs (1,2)
+  PASS : But Route D's trap is STRUCTURALLY analogous: convention-dependent value | All three routes: 'the value depends on a choice the framework does not make'
+Section 8 — Falsifiability anchor (PDG values are NOT derivation input)
+  PASS : ANCHOR ONLY: PDG charged-lepton sqrt-mass Koide Q = 2/3 | Q(PDG) = 0.666661, target = 2/3 = 0.666667
+  PASS : ANCHOR ONLY: PDG charged-lepton linear-eigenvalue Q_lin = 1/2 (Koide in lambda^2 = m form) | Q_lin(PDG) = 0.500005, target = 1/2 = 0.500000
+       NOTE: PDG match (Q ~ 2/3) confirms A1 is OBSERVATIONALLY consistent
+       but does NOT derive A1 from retained content. A1 admission unchanged.
+
+Section 9 — Bounded-obstruction theorem verification
+  PASS : All five structural barriers independently block Route D closure | D1 (NG identity) + D2 (weight ambiguity) + D3 (Brannen needed) + D4 (circularity) + D5 (no extremization) = no retained-content path to derive |b|^2/a^2 = 1/2 from Newton-Girard alone
+       VERDICT: Route D Newton-Girard polynomial structure cannot close
+       A1 on the retained Cl(3)/Z^3 framework. The polynomial coefficient
+       '6' (in V = e_1^2 - 6 e_2) is the Frobenius equipartition condition
+       in different coordinates, NOT a derivation-from-axioms.
+
+       The Newton-Girard formulation has a MATERIALLY DIFFERENT trap
+       profile from Routes E/F (discrete weight-class vs continuous norm-
+       convention), but it is STRUCTURALLY ANALOGOUS: both fail because
+       the framework does not select a single convention/weight-class.
+
+       AC_φλ residual (from substep 4) is unaffected. The A1 admission
+       count remains UNCHANGED.
+
+  PASS : Route D bounded-obstruction theorem holds | Five-barrier structural argument: no closure path from retained content
+
+======================================================================
+EXACT      : PASS = 33, FAIL = 0
+BOUNDED    : PASS = 0, FAIL = 0
+TOTAL      : PASS = 33, FAIL = 0
+=== TOTAL: PASS=33, FAIL=0 ===
+======================================================================
+
+Bounded-obstruction verdict:
+  Route D structurally barred: Newton-Girard polynomial structure
+  cannot close |b|^2/a^2 = 1/2 from retained content alone. Five
+  independent structural barriers (NG identity-not-constraint +
+  weight-class ambiguity + Brannen ansatz + circularity +
+  no extremization) each block the proposed derivation.
+
+  Trap profile: MATERIALLY DIFFERENT from Routes E/F (discrete
+  weight-class vs continuous norm convention), but STRUCTURALLY
+  ANALOGOUS (the framework doesn't select a unique convention).
+
+  A1 admission count UNCHANGED. No new axiom proposed.
+
+  Falsifiability anchor: PDG charged-lepton masses fit A1 at
+  0.1% precision (consistent but NOT derivation).
+
+----- stderr -----
+
