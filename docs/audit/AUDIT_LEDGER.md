@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 64 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 234 |
+| **retained_bounded** | 235 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 960 |
+| unaudited | 959 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 387 |
+| `audited_clean` | 388 |
 | `audited_conditional` | 365 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1015 |
+| `unaudited` | 1014 |
 
 | claim_type | count |
 |---|---:|
@@ -423,6 +423,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
+| `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -11096,6 +11097,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The packet's registered runner recomputes only a 32-configuration representative slice, while the note's broader null result depends on a 540-configuration slow scan whose full runner output/source is not included in the restricted packet. The missing step is an audit-packet computation or certificate covering the full scanned grid.
 - **rationale:** Issue: the registered runner verifies a representative 32-config slice, not the full 540-config scanned family named in the conclusion. Why this blocks: the no-pocket claim is a bounded exhaustion claim, so a slice cannot by itself close absence across unexecuted grid points in the audit packet. Repair target: provide a registered full-grid runner, cached full-grid certificate, or independently checkable certificate proving every scanned configuration stays above 1e-14. Claim boundary until fixed: the packet supports only that the sampled slice, including the documented near-best region, stayed above the Born-safety threshold.
 - **auditor confidence:** high
+
+### `structured_mirror_reconciliation_note`
+
+- **Note:** [`STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that structured-growth mirror geometry is not Born-clean under the retained canonical linear threshold-slit/mass-field harness for the N=25,30,40 comparison shown by the runner.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d6a-7153-7a83-9582-477f8ac79cec`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The dedicated runner compares canonical threshold-slit/mass-field and alternate top-K/flat-field harnesses and finds the canonical structured-growth Born ratio remains O(1e-1), so the earlier 8e-17 clean result is a harness discrepancy rather than a canonical structured-growth result.  _(class `C`)_
+- **chain closes:** True — The runner source constructs the structured-growth geometry, propagates amplitudes, computes Sorkin |I3|/P ratios under four harness choices, and the completed stdout reports canonical values about 7.8e-2 to 1.0e-1. That closes the bounded negative conclusion that the canonical structured-growth lane is not machine Born-clean within the audited scope.
+- **rationale:** The load-bearing issue is whether the claimed clean structured-growth Born number survives the canonical harness. The provided runner does not merely print constants; it builds graphs, selects slits, applies field choices, propagates amplitudes, and computes the Born ratios, with canonical outputs remaining O(1e-1). This supports the bounded claim that structured-growth is not Born-clean on the canonical linear validator. Claim boundary: this audit does not independently ratify contextual statements about the exact 2D mirror lane or unprovided structured-growth implementation internals.
+- **auditor confidence:** medium
 
 ### `structureless_dag_gravity_harness_note`
 
