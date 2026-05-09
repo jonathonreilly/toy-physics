@@ -7440,6 +7440,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py"
     },
+    "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py"
+    },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
       "assert_count": 1,
       "counts": {
@@ -28403,6 +28415,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py": {
+      "assert_count": 2,
+      "claims": [
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py": {
       "assert_count": 1,
       "claims": [
@@ -41989,12 +42016,12 @@
     "dominant_class_distribution": {
       "A": 21,
       "B": 174,
-      "C": 636,
+      "C": 637,
       "D": 242,
       "none": 425
     },
-    "runners_classified": 1498,
-    "runners_with_C": 770,
+    "runners_classified": 1499,
+    "runners_with_C": 771,
     "runners_with_D": 395
   }
 }

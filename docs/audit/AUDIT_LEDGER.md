@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 966 |
+| unaudited | 969 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 28 |
+| ~~audited_renaming~~ | 26 |
 | ~~audited_conditional~~ | 363 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
@@ -45,12 +45,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 28 |
-| `unaudited` | 1027 |
+| `audited_renaming` | 26 |
+| `unaudited` | 1030 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 754 |
+| `bounded_theorem` | 755 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
@@ -59,7 +59,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 292 |
+| `critical` | 293 |
 | `high` | 491 |
 | `medium` | 487 |
 | `leaf` | 629 |
@@ -69,8 +69,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1498
-- runners with (C) first-principles compute hits: 770
+- runners classified: 1499
+- runners with (C) first-principles compute hits: 771
 - runners with (D) external comparator hits: 395
 - decoration candidates (no C, no D): 131
 
@@ -964,8 +964,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
-| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_full_self_consistency_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_observable_hierarchy_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -5830,19 +5828,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `G_BARE_DERIVATION_NOTE.md`
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** The unresolved residual plaquette factor is identified as a compressed unmarked spatial environment operator R_beta^env; explicit rho_(p,q)(6) coefficients remain open.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-residual-environment-identification-lorentz`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** After stripping the marked half-slice and local mixed-kernel factor, the remaining object is called and identified exactly with the compressed unmarked spatial Wilson environment operator R_beta^env.  _(class `F`)_
-- **chain closes:** False — The note closes a bookkeeping separation, but it does not derive the actual Wilson residual environment coefficients or Perron data. The runner injects a generic positive conjugation-symmetric diagonal witness rather than computing R_6^env from the Wilson environment.
-- **rationale:** Issue: the load-bearing move is an asserted identification of the residual open datum as R_beta^env, not a derivation of its coefficients from the unmarked Wilson environment. Why this blocks: the runner verifies algebraic properties and factorized behavior for a generic positive symmetric witness, but it does not compute the actual residual environment. Repair target: compute rho_(p,q)(6) or Perron data directly from the unmarked spatial Wilson environment, or prove the stripped residual equals that compression without witness injection. Claim boundary until fixed: safe to cite this as an open-gate target naming the residual environment slot, not as a retained theorem.
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md)
@@ -5854,19 +5839,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** After stripping the two marked half-slice multipliers, the residual source-sector compression C_beta is central on class functions and therefore diagonal in the SU(3) character basis, giving T_src(beta)=exp[(beta/2)J] D_beta exp[(beta/2)J].  _(class `A`)_
 - **chain closes:** True — Within this boundary, the construction closes: once the residual compression is the positive central diagonal operator D_beta, the factorized matrix law follows algebraically. The chain does not compute or identify the Wilson beta=6 kappa sequence, and the note explicitly leaves that datum open.
 - **rationale:** The audited content is a bounded structural factorization, not a numerical evaluation of Wilson residual data. The runner supports this as a finite algebraic witness: it builds exp(3J), injects a generic positive conjugation-symmetric diagonal kappa, and verifies the factorized matrix formula. Because the claim explicitly excludes evaluation of D_6/kappa and Perron data, there is no hidden numerical closure being asserted.
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** The residual source-sector environment operator is identified with convolution by a normalized unmarked spatial Wilson boundary class function; explicit rho_(p,q)(6) data remain open.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-spatial-environment-character-measure-bernoulli`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The residual environment operator is asserted to have the same normalized coefficients rho_(p,q)(beta) as the boundary class function, so R_beta^env=C_(Z_beta^env).  _(class `F`)_
-- **chain closes:** False — Centrality and formal character expansion of the constructed boundary function are plausible, but equality between the pre-existing residual operator and that convolution is asserted by coefficient identification. The runner injects a generic positive conjugation-symmetric rho_env witness and verifies packaging, not actual Wilson environment data.
-- **rationale:** Issue: the load-bearing closure is an asserted identity between the residual operator and the newly constructed convolution operator. Why this blocks: the runner confirms algebraic consistency once a rho_env sequence is supplied, but it does not compute rho_(p,q)(6) from the unmarked spatial Wilson integral or independently verify that the residual operator spectrum equals those coefficients. Repair target: compute or independently verify the beta=6 boundary character coefficients from the unmarked spatial Wilson environment. Claim boundary until fixed: safe to cite this as an open-gate reformulation of the residual environment datum, not as a retained positive theorem.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`

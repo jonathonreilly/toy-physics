@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py
+runner_sha256: ce277f8e5bb136966debeb6ceb0fa38eb4205c971e9deb31cc8245ab7acb4c6a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.77
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE rho_(p,q)(6) WILSON-ENVIRONMENT COMPUTATION
+==============================================================================
+
+Computed boundary character coefficients rho_(p,q)(6) (closed form, Bessel-det)
+  rho_(0,0)(6) = 1.000000000000e+00   (Weyl quadrature: 1.000000000000e+00)
+  rho_(1,0)(6) = 4.225317396500e-01   (Weyl quadrature: 4.225317396500e-01)
+  rho_(0,1)(6) = 4.225317396500e-01   (Weyl quadrature: 4.225317396500e-01)
+  rho_(1,1)(6) = 1.622597994799e-01   (Weyl quadrature: 1.622597994799e-01)
+  rho_(2,0)(6) = 1.359617273634e-01   (Weyl quadrature: 1.359617273634e-01)
+  rho_(0,2)(6) = 1.359617273634e-01   (Weyl quadrature: 1.359617273634e-01)
+  rho_(2,1)(6) = 4.828805556745e-02   (Weyl quadrature: 4.828805556744e-02)
+  rho_(1,2)(6) = 4.828805556745e-02   (Weyl quadrature: 4.828805556744e-02)
+  rho_(3,0)(6) = 3.505738045167e-02   (Weyl quadrature: 3.505738045167e-02)
+  rho_(0,3)(6) = 3.505738045167e-02   (Weyl quadrature: 3.505738045167e-02)
+  rho_(2,2)(6) = 1.350507888830e-02   (Weyl quadrature: 1.350507888829e-02)
+
+Cross-check Bessel-det (Method A) vs Weyl integration (Method B)
+  max |rho_A - rho_B| (absolute)        = 4.136e-15
+  max |rho_A - rho_B| / |rho_A|         = 7.952e-14
+
+Symmetry / positivity / structural gates
+  rho_(p,q)(6) min/max                  = 2.275225312476e-05, 1.000000000000
+  rho_swap_err (rho_(p,q) = rho_(q,p))  = 2.776e-17
+  rho_(0,0)(6)                          = 1.0000000000000000
+  R_env chi_(p,q) = rho chi_(p,q) error = 0.000e+00
+
+Distance from prior witness injections (was the prior runner using witnesses?)
+  max |rho_env - prior_char_measure|    = 4.565e-01
+  max |rho_env - prior_residual_id|     = 4.205e-01
+
+Resulting factorized transfer witness (with computed rho_env)
+  transfer symmetry error               = 2.220e-16
+  transfer swap error                   = 6.453e-16
+  transfer min entry                    = 6.176469e-10
+  local/environment commutator          = 0.000e+00
+  Perron <J>                            = 0.435516533272
+
+  Z(beta=6) = c_(0,0)(6)                = 3.441440354988
+
+  [PASS] [THEOREM] Method A (Bessel-determinant) and Method B (Weyl integration on the Cartan torus) compute c_(p,q)(6) to machine precision on the finite 0 <= p,q <= 4 box
+         max abs=4.136e-15, max rel=7.952e-14; two independent integrators agree
+  [PASS] [THEOREM] the boundary character coefficients rho_(p,q)(6) satisfy rho_(0,0)(6) = 1 exactly (normalized Wilson character measure)
+         |rho_(0,0)(6) - 1| = 0.000e+00
+  [PASS] [THEOREM] rho_(p,q)(6) is conjugation-symmetric: rho_(p,q)(6) = rho_(q,p)(6) on the finite marked-plaquette class-function box
+         max |swap rho - rho swap| = 2.776e-17
+  [PASS] [THEOREM] rho_(p,q)(6) is strictly positive on every finite-box weight, matching the positive-type expectation for the single-link boundary class function Z_6^env
+         min rho_(p,q)(6) = 2.275225e-05
+  [PASS] [THEOREM] the finite diagonal coefficient operator R_6^env acts on chi_(p,q) by R_6^env chi_(p,q) = rho_(p,q)(6) chi_(p,q) with the computed Wilson coefficients
+         eigen-action error = 0.000e+00; the bounded coefficient object is numerically explicit
+  [PASS] [THEOREM] the finite factorized framework-point source-sector witness exp(3 J) D_6^loc R_6^env exp(3 J) is self-adjoint and conjugation-symmetric with the computed rho_env (no witness injection)
+         sym=2.220e-16, swap=6.453e-16, min entry=6.176e-10
+  [PASS] [THEOREM] the previous witness injections rho_env_witness(p,q) (both spatial_environment_character_measure and residual_environment_identification runners) differ from the computed Wilson coefficients by a definite tabulated amount, confirming this runner is not just relabelling the prior witness
+         max |rho - witness_char|=4.565e-01, max |rho - witness_resid|=4.205e-01
+  [PASS] [SUPPORT] Z(6) = c_(0,0)(6) > 0 confirms the SU(3) Wilson partition function is well-defined and the normalization is consistent
+         Z(6) = 3.441440
+  [PASS] [SUPPORT] the local mixed-kernel factor D_6^loc and the residual environment factor R_6^env commute as positive diagonal operators on the character basis
+         commutator error = 0.000e+00
+  [PASS] [SUPPORT] with explicit bounded rho_(p,q)(6) the factorized transfer Perron expectation <J> is positive, matching the structural Perron-positivity expectation of the source sector
+         Perron <J> = 0.435517
+
+==============================================================================
+SUMMARY: THEOREM PASS=7 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

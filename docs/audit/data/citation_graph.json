@@ -7873,6 +7873,10 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+    },
+    {
       "from": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
       "to": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17"
     },
@@ -7883,6 +7887,10 @@
     {
       "from": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
       "to": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
     },
     {
       "from": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
@@ -41534,11 +41542,13 @@
     },
     "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "fad5727d8365ac1f2de0a49496982c24fffed48305eee244867b12ed76497a40",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "note_hash": "5893e7f1e916e8fec635956a214618315049965590540a32a6d41f3fe79d48ee",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
       "title": "Gauge-Vacuum Plaquette Residual Environment Identification Theorem"
@@ -41558,6 +41568,17 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
       "title": "Gauge-Vacuum Plaquette Retained Class-Sampling Inversion"
     },
+    "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09": {
+      "claim_id": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "74309581184a1def15af6717c8a4b7f8a10242e7c2ec2416367766b46e8331b6",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py",
+      "title": "Gauge-Vacuum Plaquette Rho(p,q)(6) Wilson Environment Bounded Note"
+    },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
       "claim_id": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
       "claim_type_author_hint": null,
@@ -41571,11 +41592,13 @@
     },
     "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "ff0016776547627249ad0ebb49ef7264834eca17f201cf27771c71e4b44bd696",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "note_hash": "651edabfa203e89d55e98d654723627cf42731c7cc00c4da31088f8767785c1b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem"
@@ -61891,9 +61914,8 @@
     "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
     "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
     "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
-    "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+    "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09",
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
-    "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
     "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
@@ -62375,25 +62397,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 173,
+      "bounded_theorem": 174,
       "meta": 22,
       "no_go": 14,
-      "none": 1687,
-      "open_gate": 19,
+      "none": 1685,
+      "open_gate": 21,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 677,
+      "bounded_theorem": 678,
       "meta": 22,
       "no_go": 122,
       "none": 458,
-      "open_gate": 110,
-      "positive_theorem": 617
+      "open_gate": 112,
+      "positive_theorem": 615
     },
-    "edge_count": 7659,
+    "edge_count": 7661,
     "leaf_count": 536,
-    "node_count": 2006,
-    "root_count": 825,
-    "runners_with_path": 1603
+    "node_count": 2007,
+    "root_count": 824,
+    "runners_with_path": 1604
   }
 }

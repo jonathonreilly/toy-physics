@@ -6,7 +6,10 @@
 and the exact normalized mixed-kernel local factor are stripped, the remaining
 open operator is exactly the normalized central boundary character measure of
 the unmarked spatial Wilson environment
+**Claim type:** open_gate
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`
+**Bounded coefficient companion:**
+[`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md)
 
 ## Question
 
@@ -158,11 +161,30 @@ Hence the remaining open constructive datum is explicitly:
 
 ## What this does not close
 
-- explicit coefficients `rho_(p,q)(6)` of the spatial environment boundary
-  class function
+- the all-weight or full tensor-transfer coefficients of the actual unmarked
+  spatial Wilson environment; the companion note computes only a bounded
+  finite single-link Wilson boundary table
 - explicit `beta = 6` Perron moments or Jacobi coefficients
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette
+
+## Bounded companion: finite `rho_(p,q)(6)` Wilson coefficients
+
+The companion note
+[`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md)
+and runner
+`scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py`
+compute bounded normalized single-link Wilson boundary coefficients
+
+`rho_(p,q)(6) = c_(p,q)(6) / (d_(p,q) c_(0,0)(6))`,
+`c_(p,q)(6) = int_{SU(3)} chi_(p,q)(U) exp((6/3) Re tr U) dU`,
+
+two independent ways (Bessel-determinant identity vs Weyl integration formula
+on the Cartan torus), cross-checked to ~`1e-14` absolute on the finite
+`0 <= p,q <= 4` box. These values are runner-backed bounded single-link Wilson
+boundary data that can replace the previous generic witness sequence on that
+finite box. They do not by themselves close the all-weight or full
+tensor-transfer residual environment problem.
 
 ## Commands run
 
@@ -173,3 +195,57 @@ python3 scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_me
 Expected summary:
 
 - `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+
+### Companion computation: bounded `rho_(p,q)(6)` from single-link Wilson data
+
+The previous runner above only checks the packaging of the boundary character
+expansion against a generic positive conjugation-symmetric witness sequence
+`rho_env(p,q)`. Prior review recorded that the load-bearing step under that
+runner was an identification, not a derivation, because the explicit Wilson
+environment coefficients `rho_(p,q)(6)` were not computed.
+
+The bounded companion note and runner
+
+```bash
+python3 scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py
+```
+
+evaluate the canonical normalized single-link boundary character coefficients
+
+`rho_(p,q)(6) = c_(p,q)(6) / (d_(p,q) c_(0,0)(6))`,
+
+`c_(p,q)(6) = int_{SU(3)} chi_(p,q)(U) exp((6/3) Re tr U) dU`,
+
+two independent ways on the finite `0 <= p,q <= 4` box and cross-check the two
+evaluations to machine precision:
+
+- **Method A (Schur-Weyl Bessel-determinant identity, closed form):** the
+  integer-mode Schur-Weyl reduction expresses the SU(3) character integral as a
+  sum of `3 x 3` determinants of modified Bessel functions
+  `I_{m + lambda_j + i - j}(beta/3)` summed over the integer shift `m in Z`,
+  truncated at `|m| <= 80` for absolute convergence at `beta = 6`.
+
+- **Method B (Weyl integration formula on the Cartan torus, direct quadrature):**
+  the same integral computed by the Weyl integration formula
+  `int_{SU(3)} f dU = (1/|W|)(1/(2 pi)^2) int_{T^2} f(theta) |Delta(theta)|^2 d^2 theta`
+  with `|W| = 6`, `chi_(p,q)(theta)` evaluated by the Weyl character formula on
+  the maximal torus, and `|Delta(theta)|^2` the SU(3) Vandermonde squared.
+
+Reported computed coefficients at `beta = 6` (closed form, twelve digits):
+
+- `rho_(0,0)(6) = 1.000000000000`
+- `rho_(1,0)(6) = rho_(0,1)(6) = 4.225317396500e-01`
+- `rho_(1,1)(6) = 1.622597994799e-01`
+- `rho_(2,0)(6) = rho_(0,2)(6) = 1.359617273634e-01`
+- `rho_(2,1)(6) = rho_(1,2)(6) = 4.828805556745e-02`
+- `rho_(3,0)(6) = rho_(0,3)(6) = 3.505738045167e-02`
+- `rho_(2,2)(6) = 1.350507888830e-02`
+
+Method A and Method B agree to `~4e-15` absolute and `~8e-14` relative on the
+finite box. The all-weight coefficient law and full unmarked spatial
+environment tensor-transfer/Perron closure remain outside this bounded
+companion.
+
+Expected summary for the companion runner:
+
+- `THEOREM PASS=7 SUPPORT=3 FAIL=0`
