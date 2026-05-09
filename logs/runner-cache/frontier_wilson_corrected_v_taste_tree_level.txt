@@ -1,0 +1,121 @@
+
+========================================================================================
+ frontier_wilson_corrected_v_taste_tree_level.py
+========================================================================================
+ Bounded source note: V_taste^W(m) = -(1/2) Σ_k binomial(4,k) ·
+                       log((2rk+m)^2 + 4u_0^2)
+ Verifies r=0 reduction, derivative structure, leading-r expansion.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token  (marker = 'Wilson-Corrected V_taste Tree-Level')
+  [PASS] contains: claim_type bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only; audit verdict and')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: formula (1) present  (marker = 'binomial(4, k) · log( (2 r k + m)^2 + 4 u_0^2 )')
+  [PASS] contains: first derivative at m=0 named  (marker = 'dV^W/dm |_{m=0}')
+  [PASS] contains: second derivative at m=0 named  (marker = 'd^2 V^W / dm^2 |_{m=0}')
+  [PASS] contains: r→0 reduction stated  (marker = 'uniform `N_taste = 16` degeneracy')
+  [PASS] contains: binomial moment 80 stated  (marker = '= 80')
+  [PASS] contains: leading-order correction expression  (marker = '60 r^2 / u_0^4')
+  [PASS] contains: staircase upstream cited  (marker = 'WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Higgs note upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent
+----------------------------------------------------------------------------------------
+  [PASS] absent (rejected vocabulary): 'algebraic universality'
+  [PASS] absent (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent (rejected vocabulary): 'two-class framing'
+  [PASS] absent (rejected vocabulary): '(CKN)'
+  [PASS] absent (rejected vocabulary): '(LCL)'
+  [PASS] absent (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent (rejected vocabulary): 'imports problem'
+  [PASS] absent (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent (rejected vocabulary): 'retires admission'
+  [PASS] absent (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstream files exist on this branch
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+ Part 4: binomial moments on Σ_k binomial(4, k) f(k)
+----------------------------------------------------------------------------------------
+  [PASS] Σ_k binomial(4, k) = 2^4 = 16 (state count)  (got 16)
+  [PASS] Σ_k binomial(4, k) · k^2 = 80 (used in leading-r expansion of (3))  (got 80)
+  [PASS] Σ_k binomial(4, k) · k = 32 (standard binomial first moment)  (got 32)
+
+----------------------------------------------------------------------------------------
+ Part 5: r=0 limit of V_taste^W reduces to V_taste = -8 log(m^2 + 4u_0^2)
+----------------------------------------------------------------------------------------
+  [PASS] V_taste^W |_{r=0} leading coefficient = -8 (matches parent eq. [2])  (derived = -8, parent = -8)
+
+----------------------------------------------------------------------------------------
+ Part 6: dV^W/dm |_{m=0} closed-form check
+----------------------------------------------------------------------------------------
+  [PASS] dV^W/dm |_{m=0} at r=0 = 0 (Wilson-symmetric point at zero shift)  (got 0)
+  [PASS] dV^W/dm |_{m=0} at r=1/10, u_0=8776/10000 is non-zero (Wilson breaks symmetric point)  (derivative = -1.909464, k=1 contribution = -0.256351)
+  [PASS] dV^W/dm |_{m=0} at r=1/2, u_0=8776/10000 is non-zero (Wilson breaks symmetric point)  (derivative = -3.877912, k=1 contribution = -0.980217)
+  [PASS] dV^W/dm |_{m=0} at r=1, u_0=8776/10000 is non-zero (Wilson breaks symmetric point)  (derivative = -3.121014, k=1 contribution = -1.129827)
+
+----------------------------------------------------------------------------------------
+ Part 7: d^2 V^W / dm^2 |_{m=0} closed-form check
+----------------------------------------------------------------------------------------
+  [PASS] d^2V^W/dm^2 |_{m=0, r=0} = -4/u_0^2 (matches parent eq. [3])  (got -6250000/1203409, expected -6250000/1203409)
+  [PASS] d^2V^W/dm^2 |_{m=0, r=1/10, u_0=8776/10000} computed at exact rational  (curvature = -4.337691)
+  [PASS] d^2V^W/dm^2 |_{m=0, r=1/2, u_0=8776/10000} computed at exact rational  (curvature = -0.516672)
+  [PASS] d^2V^W/dm^2 |_{m=0, r=1, u_0=8776/10000} computed at exact rational  (curvature = 0.061408)
+
+----------------------------------------------------------------------------------------
+ Part 8: leading-r expansion of d^2V^W/dm^2 |_{m=0}
+----------------------------------------------------------------------------------------
+  r_test = 1/100 = 0.010000
+  curvature_exact   = -5.1834828345
+  Taylor with 60 r^2/u_0^4: -5.1834642658, diff = 1.86e-05
+  Taylor with 40 r^2/u_0^4: -5.1868359240, diff = 3.35e-03
+  [PASS] leading-order expansion coefficient is 60 (not 40)  (60-coeff residual = 1.86e-05 vs 40-coeff residual = 3.35e-03)
+  [PASS] note's stated leading-order coefficient matches runner (= 60)  (note_states_60 = True, note_states_40 = False)
+
+----------------------------------------------------------------------------------------
+ Part 9: stdlib-only / no PDG pins
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] no PDG-value pin pattern  (none)
+
+----------------------------------------------------------------------------------------
+ Part 10: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: physical Higgs mass `m_H` numerical value
+  [PASS] note explicitly does not close: Wilson-shifted extremum `m^*`
+  [PASS] note explicitly does not close: +12% Higgs gap chain
+  [PASS] note explicitly does not close: Wilson coefficient `r`
+  [PASS] note explicitly does not close: plaquette mean-field link `u_0`
+  [PASS] note explicitly does not close: staggered-Dirac realization gate
+  [PASS] note explicitly does not close: `g_bare = 1` derivation
+  [PASS] note explicitly does not close: any parent theorem/status promotion
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+
+========================================================================================
+ TOTAL: PASS=61, FAIL=0
+========================================================================================
+
+ VERDICT: V_taste^W(m) = -(1/2) Σ_k binomial(4,k) log((2rk+m)^2 + 4u_0^2)
+ derived; reduces to V_taste(m) = -8 log(m^2 + 4u_0^2) at r=0;
+ second-derivative-at-m=0 leading correction = 60 r^2 / u_0^4 with
+ binomial moment Σ_k binomial(4,k) k^2 = 80.
