@@ -166,3 +166,11 @@ python3 scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py
 Expected summary:
 
 - `THEOREM PASS=5 SUPPORT=3 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+The conditional verdict flagged a missing cited retained dependency for the exact transfer-operator / character-recurrence theorem proving strict positivity of `T_(L_s,beta)`. That authority is supplied by:
+
+- [gauge_vacuum_plaquette_transfer_operator_character_recurrence_note](GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
