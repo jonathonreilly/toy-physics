@@ -1,0 +1,123 @@
+================================================================================
+Koide A1 — Gravity-Phase Probe Bounded Obstruction Verification
+================================================================================
+
+Verdict: STRUCTURAL OBSTRUCTION CONFIRMED
+
+Five barriers each independently block the gravity-phase A1 closure.
+
+Section 0 — A1 target lives on the FLAVOR sector T_1 (hw=1)
+  PASS : circulant H is Hermitian
+  PASS : circulant H commutes with C_3[111]
+  PASS : eigenvalues match Brannen form λ_k = a + 2|b|cos(2πk/3) | eigs = [0.29289322 0.29289322 2.41421356], expected = [np.float64(0.29289321881345187), np.float64(0.29289321881345276), np.float64(2.414213562373095)]
+  PASS : Frobenius equipartition: 2|b|^2/a^2 = 1.0 (i.e., |b|^2/a^2 = 1/2) | computed 2|b|^2/a^2 = 1.000000000000
+  PASS : Brannen c^2 = 2 at A1 | c^2 = 2.000000000000
+  PASS : v real (a_0 ∈ R, z̄ partner forces v ∈ R^3) | max |Im(v)| = 1.11e-16
+  PASS : Koide Q = 2/3 at a_0^2 = 2|z|^2 (algebraic equivalence) | Q = 0.666666666667 (target 2/3 = 0.666666666667)
+
+Section 1 — Barrier G1: substrate-vs-flavor sector orthogonality
+  PASS : spatial operator (A_grav ⊗ I_T1) commutes with flavor (I_Z3 ⊗ H_circ) | ||[A_lifted, H_lifted]|| = 0.00e+00
+  PASS : spatial spectral projection compatible with arbitrary (a, b) ratios | tested ratios |b|²/a² ∈ [0.1, 0.3, 0.5, 0.8, 1.5], all compatible
+  PASS : dim(H_Z3) ≠ dim(T_1) — no canonical map | dim(H_Z3) = 64, dim(T_1) = 3; no canonical operator exists
+       NOTE: Gravity content (Laplacian, Green function, wave field, Born ρ = |ψ|^2)
+             all lives on H_Z3. The flavor amplitude ratio |b|^2/a^2 lives on T_1.
+             Tensor-product orthogonality blocks induction without an explicit retained
+             bridge primitive H_Z3 → T_1, which is not present in the audit ledger.
+
+Section 2 — Barrier G2: retained gravity content is overwhelmingly bounded
+       Audit-ledger gravity inventory (snapshot, 2026-05-08):
+         retained (positive_theorem): 4 rows
+         retained_bounded (bounded_theorem): 22 rows
+         retained_no_go: 9 rows
+         audited_conditional: 7 rows
+         audited_renaming (failed): 3 rows
+         unaudited: 12 rows
+       Retained (full) gravity rows:
+         SELF_GRAVITY_ENTROPY_NOTE_2026-04-11: spatial-substrate probe / boundary sensitivity
+         SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE: spatial-substrate probe / boundary sensitivity
+         WAVE_STATIC_BOUNDARY_SENSITIVITY_NOTE: spatial-substrate probe / boundary sensitivity
+         WAVE_STATIC_DIRECT_PROBE_FINE_NOTE: spatial-substrate probe / boundary sensitivity
+         WAVE_STATIC_FIXED_BEAM_BOUNDARY_SENSITIVITY_NOTE: spatial-substrate probe / boundary sensitivity
+         WAVE_STATIC_MATRIXFREE_FIXED_BEAM_BOUNDARY_NOTE: spatial-substrate probe / boundary sensitivity
+         WAVE_STATIC_SINGLE_SOURCE_COMPARE_NOTE: spatial-substrate probe / boundary sensitivity
+  PASS : no retained (full) gravity row asserts a flavor-sector identity | all retained gravity rows act on H_Z3 / spatial wavefunctions
+  PASS : GRAVITY_CLEAN_DERIVATION_NOTE is unaudited (not retained-grade) | explicit IF-conditions: L^{-1} = G_0, ρ = |ψ|^2, S = L(1−φ)
+       Planck-from-structure no-go's barring 2-for-1 bridge:
+         PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24: retained_no_go
+         PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30: retained_no_go
+         PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24: retained_no_go
+         PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25: retained_no_go
+  PASS : retained no-go's bar hypothesized 2-for-1 Planck bridge | 4 retained no-go rows on Planck route
+       NOTE: Even granting structural reach to the spatial sector, gravity
+             content's overwhelming bounded-tier status with explicit fragility
+             caveats means no retained-grade gravity row can load-bear a
+             flavor-sector closure on its own.
+
+Section 3 — Barrier G3: Z_2^3 vs C_3 character mismatch
+  PASS : |Z_2^3| = 8 ≠ 3 = |C_3| | |Z_2^3| = 8, |C_3| = 3
+  PASS : gcd(|Z_2^3|, |C_3|) = 1 — no nontrivial homomorphism in either direction | gcd(8, 3) = 1
+  PASS : only trivial homomorphism Z_2^3 → C_3 exists | valid kernel sizes: [8]
+  PASS : only trivial homomorphism C_3 → Z_2^3 exists | intersection of {1, 2, 4, 8} ∩ {1, 3} = {1}
+  PASS : Hadamard 3x3 sub-block ≠ C_3 Fourier matrix (no character lift) | Z_2^3 sub-character is sign-valued; C_3 character has cube-roots ω, ω̄
+  PASS : P_μ eigenvalues {±1} ⊅ C_3 eigenvalues {1, ω, ω̄} | P spectrum: [1, -1], C_3 spectrum: [(1+0j), (-0.49999999999999983+0.8660254037844387j), (-0.5000000000000002-0.8660254037844384j)]
+       NOTE: The only retained gravity-and-phase character content is
+             the Z_2^3 cube-shift intertwiner. Z_2^3 and C_3 have no
+             nontrivial group homomorphism (gcd(8,3)=1), so the gravity-
+             phase character cannot lift to the flavor sector C_3 character.
+
+Section 4 — Barrier G4: Born map ρ = |ψ|^2 is target-side (collapses ratios)
+  PASS : two flavor vectors v_A, v_B have same norm | ||v_A||² = 2.000000, ||v_B||² = 2.000000
+  PASS : v_A and v_B have DIFFERENT |z|^2/a₀^2 ratios | |z|²/a₀² for A = 0.5000, for B = 3.5000
+  PASS : Born densities ρ_A = ρ_B despite different flavor ratios | ||ρ_A − ρ_B||_∞ = 4.44e-16
+  PASS : gravity potential φ(x) identical for A and B | no flavor-sector information reaches the gravity loop
+       NOTE: No retained pre-Born map exists. The Born map ρ = |ψ|^2 is
+             load-bearing for self-gravity loops and structurally collapses
+             flavor amplitude ratios. A gravity-induced inner product on
+             matter would require modifying the Born step itself, which is
+             not possible without violating retained probability conservation.
+
+Section 5 — Barrier G5: Newton G is dimensional, not amplitude-fixing
+       Target: |b|²/a² = 1/2 (dimensionless)
+       G_0 dimensions on Z^3: [length]^{-1} (3D Z^3 large separation)
+       Retained dimensionless gravity outputs:
+         α (Newton exponent) = -1.0000, equals 1/2? False
+         β (wavefield mass) = 1.2100, equals 1/2? False
+         γ (radiation tail) = -0.5800, equals 1/2? False
+         ln 2 (entropy bound) = 0.6931, equals 1/2? False
+  PASS : no retained dimensionless gravity output equals 1/2 | closest is ln(2) ≈ 0.6931, which is NOT 1/2
+  PASS : no pairwise ratio of retained gravity outputs equals 1/2 | exhaustive pairwise check on (α, β, γ, ln 2)
+       NOTE: A numerical match (if any existed) would still fail Type-I
+             admissibility per feedback_consistency_vs_derivation_below_w2.md.
+             The dimensional analysis shows that the natural gravity outputs
+             are spatial exponents on Z^3, not flavor amplitude ratios on T_1.
+
+Section 6 — Bounded-obstruction theorem statement
+       Five compounding structural barriers:
+         G1 (sector orthogonality): verified in Section 1
+         G2 (retained-grade absence): verified in Section 2
+         G3 (Z_2^3 vs C_3 character mismatch): verified in Section 3
+         G4 (Born map collapse): verified in Section 4
+         G5 (dimensional incompatibility): verified in Section 5
+  PASS : joint barrier conjunction: no retained-content gravity-phase closure | G1 ∧ G2 ∧ G3 ∧ G4 ∧ G5 ⟹ the candidate identity is structurally barred
+  PASS : A1 admission count UNCHANGED | gravity-phase route ruled out; A1 remains load-bearing non-axiom
+  PASS : 2-for-1 Planck-from-gravity-bridge hypothesis falsified | even if GRAVITY_CLEAN_DERIVATION cleared audit, G1/G3/G4/G5 still apply
+
+Section 7 — Falsifiability anchor (PDG anchor-only)
+       PDG anchor values: m_e = 0.510999 MeV, m_μ = 105.6584 MeV, m_τ = 1776.86 MeV
+       Computed Q = 0.666661
+       Target Q = 2/3 = 0.666667
+       |Q − 2/3| = 6.15e-06 (sub-0.001%)
+  PASS : PDG-anchor: Q ≈ 2/3 to sub-0.001% (anchor-only, NOT derivation input) | Q = 0.666661
+
+================================================================================
+Total: 29 PASS / 0 FAIL  (out of 29 checks)
+================================================================================
+
+All five structural barriers verified. The gravity-as-phase route
+for closing the A1 √2 equipartition admission is structurally
+barred under retained Cl(3)/Z^3 content. The A1 admission count
+is UNCHANGED. The 2-for-1 Planck-from-gravity bridge hypothesis
+is falsified independently of the gravity content's retained-grade
+status: even a fully-retained GRAVITY_CLEAN_DERIVATION would not
+close A1 because barriers G1, G3, G4, G5 are independent of audit
+status.
