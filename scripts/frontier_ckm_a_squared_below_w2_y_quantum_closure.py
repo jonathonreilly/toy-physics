@@ -30,6 +30,7 @@ S5 NEW retained EW-CKM bridge: sin^2(theta_W)|_lattice = A^4 = 4/9 from
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from fractions import Fraction
@@ -59,6 +60,7 @@ def banner(title: str) -> None:
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+LEDGER_PATH = REPO_ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 
 
 def read_authority(rel_path: str) -> str:
@@ -70,7 +72,14 @@ def read_authority(rel_path: str) -> str:
 
 
 def extract_status_line(content: str) -> str:
-    """Extract the first 'Status:' line from a markdown document."""
+    """Extract the first 'Status:' line from a markdown document.
+
+    Retained for transparency / display only. After the 2026-05-07 audit-pipeline
+    retag, author-side prose deliberately does NOT carry the audit verdict
+    (e.g. it now reads `**Status authority:** independent audit lane only`).
+    The load-bearing status check is `ledger_effective_status` against the
+    canonical `audit_ledger.json` row; this helper is no longer load-bearing.
+    """
     if not content:
         return ""
     for line in content.splitlines()[:30]:
@@ -83,6 +92,54 @@ def extract_status_line(content: str) -> str:
                     break
             return text
     return ""
+
+
+_LEDGER_CACHE: dict | None = None
+
+
+def _load_ledger() -> dict:
+    """Load the audit ledger once and cache it for the runner."""
+    global _LEDGER_CACHE
+    if _LEDGER_CACHE is None:
+        try:
+            _LEDGER_CACHE = json.loads(LEDGER_PATH.read_text())
+        except OSError:
+            _LEDGER_CACHE = {"rows": {}}
+    return _LEDGER_CACHE
+
+
+def _claim_id_from_rel_path(rel_path: str) -> str:
+    """Mirror docs/audit/scripts/build_citation_graph.py::claim_id_from_path.
+
+    For `docs/X/Y.md` -> `x.y` (lowercase, dotted); for `docs/Y.md` -> `y`.
+    """
+    s = rel_path
+    if s.startswith("docs/"):
+        s = s[len("docs/"):]
+    if s.endswith(".md"):
+        s = s[:-3]
+    parts = s.split("/")
+    return ".".join(parts).lower()
+
+
+def ledger_effective_status(rel_path: str, ledger: dict | None = None) -> str:
+    """Look up `effective_status` for an authority note, falling back to
+    `audit_status` then to the empty string when the ledger has no row.
+    """
+    rows = (ledger or _load_ledger()).get("rows", {})
+    cid = _claim_id_from_rel_path(rel_path)
+    row = rows.get(cid)
+    if row is None:
+        return ""
+    return row.get("effective_status") or row.get("audit_status") or ""
+
+
+def _retained_grade(eff_status: str) -> bool:
+    """Whether a ledger effective_status counts as retained-grade for runners.
+
+    Accepts `retained`, `retained_bounded`, `retained_no_go`, `retained_pending_chain`.
+    """
+    return bool(eff_status) and eff_status.startswith("retained")
 
 
 def extract_rep_literal(content: str, field_name: str) -> tuple[int, int] | None:
@@ -105,14 +162,18 @@ def extract_rep_literal(content: str, field_name: str) -> tuple[int, int] | None
 
 
 def audit_authority_status_lines() -> None:
-    """S1 inputs: verify each cited authority by extracting its Status line."""
-    banner("Ground-up verification of cited authorities (Status lines from disk)")
+    """S1 inputs: verify each cited authority via ledger effective_status."""
+    banner("Ground-up verification of cited authorities (ledger effective_status)")
 
-    print("  Reading each cited authority file from disk and extracting Status: line.")
-    print("  Verification is by direct text extraction, NOT assumption.")
+    print("  Status check is now structural: the runner looks up the canonical")
+    print("  `effective_status` for each authority in")
+    print("  docs/audit/data/audit_ledger.json (the per-row audit verdict).")
+    print("  Author-side note prose is shown for transparency only.")
     print()
     print("  S1 LOAD-BEARING retained-tier authorities:")
     print()
+
+    ledger = _load_ledger()
 
     retained_authorities = (
         ("docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
@@ -126,14 +187,16 @@ def audit_authority_status_lines() -> None:
          ("framework",)),
     )
 
-    for rel_path, role, kws in retained_authorities:
+    for rel_path, role, _kws in retained_authorities:
         content = read_authority(rel_path)
         status_text = extract_status_line(content)
-        ok = bool(content) and any(kw.lower() in status_text.lower() for kw in kws)
+        eff_status = ledger_effective_status(rel_path, ledger)
+        ok = bool(content) and _retained_grade(eff_status)
         print(f"    [{rel_path.split('/')[-1]}]")
-        print(f"      Role:               {role}")
-        print(f"      Status (extracted): {status_text!r}")
-        print(f"      Verified retained?  {ok}")
+        print(f"      Role:                {role}")
+        print(f"      Status (note prose): {status_text!r}")
+        print(f"      Effective status:    {eff_status!r}")
+        print(f"      Verified retained?   {ok}")
         check(f"Retained-tier verified for {rel_path.split('/')[-1]}", ok)
         print()
 
@@ -152,14 +215,16 @@ def audit_authority_status_lines() -> None:
          ("retained",)),
     )
 
-    for rel_path, role, kws in consistency_authorities:
+    for rel_path, role, _kws in consistency_authorities:
         content = read_authority(rel_path)
         status_text = extract_status_line(content)
-        ok = bool(content) and all(kw.lower() in status_text.lower() for kw in kws)
+        eff_status = ledger_effective_status(rel_path, ledger)
+        ok = bool(content) and _retained_grade(eff_status)
         print(f"    [{rel_path.split('/')[-1]}]")
-        print(f"      Role:               {role}")
-        print(f"      Status (extracted): {status_text!r}")
-        print(f"      Verified retained?  {ok}")
+        print(f"      Role:                {role}")
+        print(f"      Status (note prose): {status_text!r}")
+        print(f"      Effective status:    {eff_status!r}")
+        print(f"      Verified retained?   {ok}")
         check(f"Retained-tier verified for {rel_path.split('/')[-1]}", ok)
         print()
 

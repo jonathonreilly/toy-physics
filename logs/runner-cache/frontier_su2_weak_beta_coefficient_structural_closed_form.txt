@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py
-runner_sha256: 7b76faeff6bba84ac6e5eb286fbe3ce8dd57eb5f3db1ea97b9fb4ab5d6731499
+runner_sha256: f75820408d21324e2380ce4b9a12ab958978327a29fdfed4c7c538fefeb433f7
 timeout_sec: 120
 exit_code: 1
-elapsed_sec: 0.04
+elapsed_sec: 0.08
 status: nonzero_exit
 ----- stdout -----
 ========================================================================================
@@ -12,67 +12,78 @@ See docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-2
 ========================================================================================
 
 ----------------------------------------------------------------------------------------
-Ground-up verification of cited authorities (Status lines from disk)
+Ground-up verification of cited authorities (ledger effective_status)
 ----------------------------------------------------------------------------------------
-  Reading each cited authority file from disk and extracting Status: line.
-  Verification is by direct text extraction, NOT assumption.
+  Status check is now structural: the runner looks up the canonical
+  `effective_status` for each authority in
+  docs/audit/data/audit_ledger.json (the per-row audit verdict).
+  Author-side note prose is shown for transparency only.
 
   T1-T6 LOAD-BEARING retained-tier authorities:
 
     [LEFT_HANDED_CHARGE_MATCHING_NOTE.md]
-      Role:               S1 P1: Q_L : (2,3) source for N_pair, N_color, plus LH Weyl doublet content (P4)
-      Status (extracted): ''
-      Verified retained?  False
+      Role:                S1 P1: Q_L : (2,3) source for N_pair, N_color, plus LH Weyl doublet content (P4)
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
   [FAIL] Retained-tier verified for LEFT_HANDED_CHARGE_MATCHING_NOTE.md
 
     [CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md]
-      Role:               S1 Identification Source Theorem
-      Status (extracted): 'proposed_retained CKM × Cl(3) closure theorem on proposed_retained-tier authorities.'
-      Verified retained?  True
-  [PASS] Retained-tier verified for CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md
+      Role:                S1 Identification Source Theorem
+      Status (note prose): 'proposed_retained CKM × Cl(3) closure theorem on proposed_retained-tier authorities.'
+      Effective status:    'audited_conditional'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md
 
     [THREE_GENERATION_STRUCTURE_NOTE.md]
-      Role:               P2: retained physical three-generation matter structure, N_gen = 3
-      Status (extracted): ''
-      Verified retained?  False
+      Role:                P2: retained physical three-generation matter structure, N_gen = 3
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
   [FAIL] Retained-tier verified for THREE_GENERATION_STRUCTURE_NOTE.md
 
     [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
-      Role:               P2 cross-check: retained CKM structural N_color = 3
-      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
-      Verified retained?  True
-  [PASS] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+      Role:                P2 cross-check: retained CKM structural N_color = 3
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
 
     [EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md]
-      Role:               P5: 1 Higgs doublet Y_H = 1/2 retained tree theorem
-      Status (extracted): 'proposed_retained - explicit strong derivation claim pending audit'
-      Verified retained?  False
-  [FAIL] Retained-tier verified for EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md
+      Role:                P5: 1 Higgs doublet Y_H = 1/2 retained tree theorem
+      Status (note prose): 'proposed_retained - explicit strong derivation claim pending audit'
+      Effective status:    'retained'
+      Verified retained?   True
+  [PASS] Retained-tier verified for EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md
 
     [YT_EW_COLOR_PROJECTION_THEOREM.md]
-      Role:               P7: g_2^2 = 1/(d+1) lattice coupling (1/alpha_2|_lattice = 16 pi)
-      Status (extracted): 'audited_conditional / bounded EW normalization lane. The exact'
-      Verified retained?  False
-  [FAIL] Retained-tier verified for YT_EW_COLOR_PROJECTION_THEOREM.md
+      Role:                P7: g_2^2 = 1/(d+1) lattice coupling (1/alpha_2|_lattice = 16 pi)
+      Status (note prose): ''
+      Effective status:    'retained_bounded'
+      Verified retained?   True
+  [PASS] Retained-tier verified for YT_EW_COLOR_PROJECTION_THEOREM.md
 
     [ONE_GENERATION_MATTER_CLOSURE_NOTE.md]
-      Role:               S1 cross-check: u_R, d_R : (1,3) on N_color
-      Status (extracted): 'proposed_retained'
-      Verified retained?  True
-  [PASS] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+      Role:                S1 cross-check: u_R, d_R : (1,3) on N_color
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
 
     [FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md]
-      Role:               Inline companion b_QED: Q_u, Q_d structural forms
-      Status (extracted): 'proposed_retained structural corollary on the matter/gauge surface. This'
-      Verified retained?  True
-  [PASS] Retained-tier verified for FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md
+      Role:                Inline companion b_QED: Q_u, Q_d structural forms
+      Status (note prose): 'proposed_retained structural corollary on the matter/gauge surface. This'
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md
 
   Comparators (NOT load-bearing; numerical cross-checks only):
 
     [COMPLETE_PREDICTION_CHAIN_2026_04_15.md]
-      Role:               Comparator: lists 'b_2 = -19/6' as DERIVED (sign-convention coincidence)
-      Status (extracted): 'support - inventory of the prediction chain composed of upstream proposed and audited rows; this row is not itself a strong derivation claim independent of those upstream rows'
-      File exists?        True
+      Role:                Comparator: lists 'b_2 = -19/6' as DERIVED (sign-convention coincidence)
+      Status (note prose): 'support - inventory of the prediction chain composed of upstream proposed and audited rows; this row is not itself a strong derivation claim independent of those upstream rows'
+      Effective status:    'unaudited'
+      File exists?         True
   [PASS] Comparator file present for COMPLETE_PREDICTION_CHAIN_2026_04_15.md
 
 

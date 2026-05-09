@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ckm_wolfenstein_eta_inverse_square_gap.py
-runner_sha256: 3fcce172539605fac4a12ada0ee5bc391054f3b0b84d5de4a9cacfa380077410
+runner_sha256: 0a46545d4a254fa638e86d08860dd391173f215d7e02afed169673fc022d29e3
 timeout_sec: 120
 exit_code: 1
-elapsed_sec: 0.04
+elapsed_sec: 0.09
 status: nonzero_exit
 ----- stdout -----
 ========================================================================================
@@ -12,42 +12,61 @@ See docs/CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md
 ========================================================================================
 
 ----------------------------------------------------------------------------------------
-Ground-up verification of cited authorities from disk
+Ground-up verification of cited authorities (ledger effective_status)
 ----------------------------------------------------------------------------------------
+  Status check is now structural: the runner looks up the canonical
+  `effective_status` for each authority in
+  docs/audit/data/audit_ledger.json (the per-row audit verdict).
+  Author-side note prose is shown for transparency only.
+
   [LEFT_HANDED_CHARGE_MATCHING_NOTE.md]
-    role:   Q_L:(2,3) source literal
-    status: ''
+    Role:                Q_L:(2,3) source literal
+    Status (note prose): ''
+    Effective status:    'unaudited'
+    Verified retained?   False
   [FAIL (D)] Retained-tier verified for LEFT_HANDED_CHARGE_MATCHING_NOTE.md
 
   [ONE_GENERATION_MATTER_CLOSURE_NOTE.md]
-    role:   u_R,d_R:(1,3) cross-check
-    status: 'proposed_retained'
-  [PASS (D)] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+    Role:                u_R,d_R:(1,3) cross-check
+    Status (note prose): ''
+    Effective status:    'unaudited'
+    Verified retained?   False
+  [FAIL (D)] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
 
   [CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md]
-    role:   below-W2 source theorem
-    status: 'proposed_retained CKM × Cl(3) closure theorem on proposed_retained-tier authorities.'
-  [PASS (D)] Retained-tier verified for CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md
+    Role:                below-W2 source theorem
+    Status (note prose): 'proposed_retained CKM × Cl(3) closure theorem on proposed_retained-tier authorities.'
+    Effective status:    'audited_conditional'
+    Verified retained?   False
+  [FAIL (D)] Retained-tier verified for CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md
 
   [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md]
-    role:   A^2 structural identity
-    status: 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
-  [PASS (D)] Retained-tier verified for WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+    Role:                A^2 structural identity
+    Status (note prose): ''
+    Effective status:    'unaudited'
+    Verified retained?   False
+  [FAIL (D)] Retained-tier verified for WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
 
   [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
-    role:   rho and eta^2 retained package
-    status: 'proposed_retained standalone structural-identity theorem on `main`.'
-  [PASS (D)] Retained-tier verified for CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+    Role:                rho and eta^2 retained package
+    Status (note prose): ''
+    Effective status:    'unaudited'
+    Verified retained?   False
+  [FAIL (D)] Retained-tier verified for CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
 
   [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
-    role:   N_pair, N_color, N_quark counts
-    status: 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
-  [PASS (D)] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+    Role:                N_pair, N_color, N_quark counts
+    Status (note prose): ''
+    Effective status:    'unaudited'
+    Verified retained?   False
+  [FAIL (D)] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
 
   [CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md]
-    role:   Bernoulli comparator
-    status: 'proposed_retained CKM-structure theorem on current `main`. This note'
-  [PASS (D)] Retained-tier verified for CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md
+    Role:                Bernoulli comparator
+    Status (note prose): 'proposed_retained CKM-structure theorem on current `main`. This note'
+    Effective status:    'audited_conditional'
+    Verified retained?   False
+  [FAIL (D)] Retained-tier verified for CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md
 
 
 ----------------------------------------------------------------------------------------

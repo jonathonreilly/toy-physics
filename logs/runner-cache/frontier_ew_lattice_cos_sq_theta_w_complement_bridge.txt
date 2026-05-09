@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ew_lattice_cos_sq_theta_w_complement_bridge.py
-runner_sha256: 2f105dcec0e46e798fb70379e4ede775a56abefab29e58c0f071e15f30f58b6c
+runner_sha256: 85b2b8cd8b3b9b15b7b348c6ffb953c0d438a3a1e996f92de4d56517e9bc1c7c
 timeout_sec: 120
 exit_code: 1
-elapsed_sec: 0.05
+elapsed_sec: 0.08
 status: nonzero_exit
 ----- stdout -----
 ========================================================================================
@@ -12,67 +12,78 @@ See docs/EW_LATTICE_COS_SQ_THETA_W_COMPLEMENT_BRIDGE_THEOREM_NOTE_2026-04-26.md
 ========================================================================================
 
 ----------------------------------------------------------------------------------------
-Ground-up verification of cited authorities (Status lines from disk)
+Ground-up verification of cited authorities (ledger effective_status)
 ----------------------------------------------------------------------------------------
-  Reading each cited authority file from disk and extracting Status: line.
-  Verification is by direct text extraction, NOT assumption.
+  Status check is now structural: the runner looks up the canonical
+  `effective_status` for each authority in
+  docs/audit/data/audit_ledger.json (the per-row audit verdict).
+  Author-side note prose is shown for transparency only.
 
   T1-T6 LOAD-BEARING retained-tier authorities:
 
     [YT_EW_COLOR_PROJECTION_THEOREM.md]
-      Role:               T1: bare g_2^2, g_Y^2 lattice couplings
-      Status (extracted): 'audited_conditional / bounded EW normalization lane. The exact'
-      Verified retained?  False
-  [FAIL] Retained-tier verified for YT_EW_COLOR_PROJECTION_THEOREM.md
+      Role:                T1: bare g_2^2, g_Y^2 lattice couplings
+      Status (note prose): ''
+      Effective status:    'retained_bounded'
+      Verified retained?   True
+  [PASS] Retained-tier verified for YT_EW_COLOR_PROJECTION_THEOREM.md
 
     [EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md]
-      Role:               T1: cos^2(theta_W) = g^2/(g^2+g_Y^2), M_W^2/M_Z^2 = cos^2(theta_W)
-      Status (extracted): 'proposed_retained - explicit strong derivation claim pending audit'
-      Verified retained?  False
-  [FAIL] Retained-tier verified for EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md
+      Role:                T1: cos^2(theta_W) = g^2/(g^2+g_Y^2), M_W^2/M_Z^2 = cos^2(theta_W)
+      Status (note prose): 'proposed_retained - explicit strong derivation claim pending audit'
+      Effective status:    'retained'
+      Verified retained?   True
+  [PASS] Retained-tier verified for EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md
 
     [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md]
-      Role:               T2: A^2 = N_pair/N_color = 2/3 (W2 retained)
-      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
-      Verified retained?  True
-  [PASS] Retained-tier verified for WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+      Role:                T2: A^2 = N_pair/N_color = 2/3 (W2 retained)
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
 
     [LEFT_HANDED_CHARGE_MATCHING_NOTE.md]
-      Role:               S1 / P4: Q_L : (2,3) source
-      Status (extracted): ''
-      Verified retained?  False
+      Role:                S1 / P4: Q_L : (2,3) source
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
   [FAIL] Retained-tier verified for LEFT_HANDED_CHARGE_MATCHING_NOTE.md
 
     [ONE_GENERATION_MATTER_CLOSURE_NOTE.md]
-      Role:               S1 / P4: u_R, d_R : (1,3) cross-check on N_color
-      Status (extracted): 'proposed_retained'
-      Verified retained?  True
-  [PASS] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+      Role:                S1 / P4: u_R, d_R : (1,3) cross-check on N_color
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
 
     [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
-      Role:               T8: N_pair = N_color - 1 W2 primitive
-      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
-      Verified retained?  True
-  [PASS] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+      Role:                T8: N_pair = N_color - 1 W2 primitive
+      Status (note prose): ''
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
 
     [MINIMAL_AXIOMS_2026-04-11.md]
-      Role:               P6: Z^3 axiom 2; gauge structures
-      Status (extracted): '**SUPERSEDED** by `MINIMAL_AXIOMS_2026-05-03.md` — see that note for the current axiom set.'
-      Verified retained?  False
+      Role:                P6: Z^3 axiom 2; gauge structures
+      Status (note prose): '**SUPERSEDED** by `MINIMAL_AXIOMS_2026-05-03.md` — see that note for the current axiom set.'
+      Effective status:    'meta'
+      Verified retained?   False
   [FAIL] Retained-tier verified for MINIMAL_AXIOMS_2026-04-11.md
 
     [CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md]
-      Role:               T2 sister: A^4 = sin^2(theta_W)|_lattice = 4/9
-      Status (extracted): 'proposed_retained EW-CKM lattice-scale identity theorem; companion'
-      Verified retained?  True
-  [PASS] Retained-tier verified for CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md
+      Role:                T2 sister: A^4 = sin^2(theta_W)|_lattice = 4/9
+      Status (note prose): 'proposed_retained EW-CKM lattice-scale identity theorem; companion'
+      Effective status:    'unaudited'
+      Verified retained?   False
+  [FAIL] Retained-tier verified for CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md
 
   Support-tier auxiliary (NOT load-bearing for T1-T6 chain):
 
     [CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md]
-      Role:               T4-aux: F5 = 5/9 companion (auxiliary)
-      Status (extracted): 'exact CKM-side support corollary on proposed_retained `main` inputs, plus'
-      Verified support?   True
+      Role:                T4-aux: F5 = 5/9 companion (auxiliary)
+      Status (note prose): 'exact CKM-side support corollary on proposed_retained `main` inputs, plus'
+      Effective status:    'unaudited'
+      Support-tier present? True
   [PASS] Support-tier verified for CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md
 
 
