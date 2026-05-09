@@ -4,6 +4,8 @@
 after Hermitian-Hamiltonian bridge
 **Bridge:** [PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md](./PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
 ## Status
+**Primary runner:** `scripts/frontier_cpt_exact.py`
+
 
 EXACT theorem on even periodic lattices. All checks pass on `L = 4, 6, 8`
 (`PASS=53 FAIL=0`), and the runner now rejects odd `L`.

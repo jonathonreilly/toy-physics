@@ -2,6 +2,8 @@
 
 **Status:** bounded - bounded or caveated result note
 This note freezes the bounded multi-seed replay of the retained 3D valley-linear family.
+**Primary runner:** `scripts/edge_deletion_boundary_sweep.py`
+
 
 The question was whether the edge-deletion boundary seen in earlier graph-requirements work shows up as a stable 80%-90% connectivity transition on the same family when we sweep keep fractions across many seeds.
 

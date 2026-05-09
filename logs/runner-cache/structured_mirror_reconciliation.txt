@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/structured_mirror_reconciliation.py
+runner_sha256: 37cedf98eebdc64c349ec745ac6ed26b209e9184f5c04bd8303b3f1d9d2bf044
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 105.89
+status: ok
+----- stdout -----
+============================================================================================================
+STRUCTURED MIRROR BORN RECONCILIATION
+  structured-growth geometry under canonical joint validator vs alternate Born harnesses
+  npl_half=20, d_growth=2, r=4.5, seeds=8, k=5
+============================================================================================================
+
+   N     canonical(Born)   flat-threshold(Born)          audit-topk-flat          audit-topk-mass
+------------------------------------------------------------------------------------------------------------
+  25  1.002e-01±2.2e-02  2.382e-01±1.3e-01  3.337e-01±2.0e-01  1.342e-01±2.1e-02
+  30  8.662e-02±2.3e-02  2.295e-01±1.0e-01  1.607e-01±3.4e-02  1.054e-01±1.6e-02
+  40  7.788e-02±2.5e-02  1.583e-01±5.3e-02  1.696e-01±3.4e-02  1.196e-01±1.8e-02
+
+Interpretation:
+  - canonical = structured-growth geometry with the joint-validator slit/mass harness
+  - flat-threshold = same slits, but no mass field
+  - audit-topk-flat = slit-selection harness used by the Born audit style
+  - audit-topk-mass = same top-k slit selection, but with the physical mass field
+  - If canonical stays O(1e-1) while audit-topk can approach O(1), the discrepancy is harness-level, not a geometry bug.
+
+----- stderr -----
+

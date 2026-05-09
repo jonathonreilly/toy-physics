@@ -76,7 +76,7 @@
     "codex-gpt-5": {
       "audits_with_runner_class": {
         "A": 82,
-        "B": 155,
+        "B": 150,
         "C": 216,
         "D": 12,
         "E": 1,
@@ -91,7 +91,7 @@
       "criticality_counts": {
         "critical": 39,
         "high": 16,
-        "leaf": 357,
+        "leaf": 352,
         "medium": 62
       },
       "cross_confirmation_agreement_rate": 0.742,
@@ -109,11 +109,11 @@
       "third_pass_decisions_n": 23,
       "third_pass_overturn_rate": 0.435,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 474,
-      "verdict_changed_after_re_audit": 331,
+      "total_audits": 469,
+      "verdict_changed_after_re_audit": 327,
       "verdict_counts": {
         "audited_clean": 245,
-        "audited_conditional": 183,
+        "audited_conditional": 178,
         "audited_decoration": 1,
         "audited_failed": 43,
         "audited_renaming": 2
@@ -121,13 +121,13 @@
     },
     "codex-gpt-5.5": {
       "audits_with_runner_class": {
-        "A": 180,
-        "B": 64,
+        "A": 178,
+        "B": 62,
         "C": 109,
         "D": 7,
         "E": 32,
         "F": 15,
-        "G": 35,
+        "G": 34,
         "configured_numerical_proxy_to_surrogate_theorem_bridge": 1
       },
       "bias_direction_breakdown": {
@@ -136,10 +136,10 @@
         "same_severity": 5
       },
       "criticality_counts": {
-        "critical": 87,
+        "critical": 85,
         "high": 154,
         "leaf": 47,
-        "medium": 155
+        "medium": 152
       },
       "cross_confirmation_agreement_rate": 0.802,
       "cross_confirmation_outcomes": {
@@ -156,11 +156,11 @@
       "third_pass_decisions_n": 33,
       "third_pass_overturn_rate": 0.545,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 443,
+      "total_audits": 438,
       "verdict_changed_after_re_audit": 27,
       "verdict_counts": {
         "audited_clean": 132,
-        "audited_conditional": 243,
+        "audited_conditional": 238,
         "audited_decoration": 9,
         "audited_failed": 11,
         "audited_numerical_match": 22,
@@ -195,7 +195,7 @@
   "totals": {
     "auditor_families_observed": 5,
     "overall_agreement_rate": 0.797,
-    "total_audits_recorded": 929,
+    "total_audits_recorded": 919,
     "total_cross_confirmation_family_participations": 178,
     "total_cross_confirmation_pairs": 138,
     "total_third_pass_decisions": 56

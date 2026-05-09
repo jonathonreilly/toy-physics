@@ -33292,9 +33292,9 @@
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25"
       ],
-      "note_hash": "dca72fefc0dc9e7d23d63d70195d2f448e5e7b890585ee88d157ae0659a6451c",
+      "note_hash": "4652cd4834a47c8972470157e9b509587fa27b731f4994086e756376cf2f29f8",
       "path": "docs/CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_ckm_n9_structural_family_koide_bridge.py",
       "title": "Complete n/N_color^2 Structural Family from CKM Retained Inputs: Koide-Bridge Support"
     },
     "ckm_neutron_edm_bound_note": {
@@ -33964,9 +33964,9 @@
       "deps": [
         "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
       ],
-      "note_hash": "3afa404d43a363c2dde5dd7c210c3aaa95d92fa696759bab6ceac344f83b7826",
+      "note_hash": "8892bef0bec8c2b9b37bb545549a408426981064d9e6ae35ad6fa2ac413beb2c",
       "path": "docs/CPT_EXACT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cpt_exact.py",
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
@@ -37764,9 +37764,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "42b75c31ef2c12b298bab19ccd75cea6d628563328390021616b37fbaf2fdcff",
+      "note_hash": "659f98ed8a6e371cefd84b7183e300763a4a5d0b11badff2993120f31738a6f5",
       "path": "docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/edge_deletion_boundary_sweep.py",
       "title": "Edge Deletion Boundary Sweep Note"
     },
     "eigenvalue_anderson_phase_note_2026-04-11": {
@@ -39868,9 +39868,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "759158e15b9fb057db05c14f840a15899fcba30ec456410549052d4030ec25d4",
+      "note_hash": "db466c0490753f48b595137162515c0442c0cc1adefc8118a8e8a1465d5d797d",
       "path": "docs/GEOMETRY_LANE_HEAD_TO_HEAD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/geometry_lane_head_to_head.py",
       "title": "Geometry Lane Head-to-Head Note"
     },
     "geometry_superposition_dag_ensemble_note_2026-04-11": {
@@ -40662,9 +40662,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "1d508251e7956bedc792fa18fc300bd4fb60b508828248272cd0386c7de2ae77",
+      "note_hash": "053957205e19dcc11df089493269548af836b4834f1ab361b4a58ba6b797e472",
       "path": "docs/HARD_GEOMETRY_HEAD_TO_HEAD_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/hard_geometry_head_to_head.py",
       "title": "Hard Geometry Head-To-Head Note"
     },
     "hard_geometry_local_note": {
@@ -43091,9 +43091,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "acf79e936e83fc6a9c7f958d53ecf413865b1cb6551a3a1873318a96a8bad703",
+      "note_hash": "32834b0cd12bfbecb0410f362dd5d226ca776c9d047ffe3da522e4939bc87785",
       "path": "docs/KOIDE_THETA_HIERARCHY_OPEN_SCALAR_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_berry_phase_theorem.py",
       "title": "Koide Theta Hierarchy Open Scalar -- Closed on the Actual Berry Route"
     },
     "koide_transport_gap_constant_no_go_note_2026-04-20": {
@@ -43907,9 +43907,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a9006b589dceb8c2c9739e994929428fb9b1102bc12288865c54b1f32f4c97d3",
+      "note_hash": "468115036529e2e7b4119f5654ed410178d09378d0979110c9edc1f467efc2a5",
       "path": "docs/LATTICE_NN_RG_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_rg_gravity.py",
       "title": "NN Lattice RG-Style Gravity Note"
     },
     "lattice_nn_rg_reconciliation_note": {
@@ -44517,9 +44517,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4d45c4cf153b37bf03b61a26f842f53448f8082caf500b7d30b3bc88d78a33bb",
+      "note_hash": "32bd997090ed7e15575b1cba6af027c6e0d37b348f8e15cc1101691301e45093",
       "path": "docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/matched_2d_4d_decoherence.py",
       "title": "Matched 2D vs 4D Decoherence Note"
     },
     "matter_inertial_closure_note": {
@@ -44606,9 +44606,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "21cc485a7f0c3a7c4b5c726639f5bb4c8ab774b74707abc0e31d14ee86bad65b",
+      "note_hash": "df231f093b7c39c2877b81ece5f3de8734a66b1db8c8c4d28a4e93a3f013bc5f",
       "path": "docs/MESOSCOPIC_SURROGATE_ALTERNATE_FAMILY_SCOUT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_alternate_family_scout.py",
       "title": "Mesoscopic Surrogate Alternate-Family Scout Note"
     },
     "mesoscopic_surrogate_annular_tapered_sweep_note": {
@@ -54101,9 +54101,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "97494a1b6321b7fb8cfca9e7e92f1637691b7ff2768e3fbbbd36482e917b7552",
+      "note_hash": "6201f8e580c76c24885ffb0b079699ed0e724e970304223fd9f1b37ac875369e",
       "path": "docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_reconciliation.py",
       "title": "Structured Mirror Reconciliation Note"
     },
     "structureless_dag_gravity_harness_note": {
@@ -59788,6 +59788,6 @@
     "leaf_count": 535,
     "node_count": 1973,
     "root_count": 837,
-    "runners_with_path": 1552
+    "runners_with_path": 1562
   }
 }

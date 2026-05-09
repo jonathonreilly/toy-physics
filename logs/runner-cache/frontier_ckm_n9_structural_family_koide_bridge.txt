@@ -1,0 +1,151 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_n9_structural_family_koide_bridge.py
+runner_sha256: f4f45501f37c01b59309a15e429a999b0adbfb1d8869c2ed549d8fd8b02531ef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+Complete n/N_color^2 structural family in CKM: Koide-bridge support audit
+See docs/CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  N_pair = 2, N_color = 3, N_quark = 6
+  A^2 = N_pair/N_color  = 2/3
+  rho = 1/N_quark       = 1/6
+  eta^2 = rho(1-rho)    = 5/36
+  [PASS] N_pair = 2 (retained)
+  [PASS] N_color = 3 (retained)
+  [PASS] N_quark = N_pair * N_color = 6
+  [PASS] A^2 = 2/3 (W2)
+  [PASS] rho = 1/6 (CP-phase)
+  [PASS] eta^2 = 5/36 (Thales = rho(1-rho))
+  [PASS] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+Complete n/9 support family from retained CKM inputs (F1-F9)
+----------------------------------------------------------------------------------------
+  F1 = A^2 * rho                    = 1/9  (1/9? True)
+  F2 = A^2 (1 - A^2)                 = 2/9  (2/9? True)
+  F3 = 1 - A^2                        = 1/3  (3/9? True)
+  F4 = A^4                            = 4/9  (4/9? True)
+  F5a = (1-A^2)(1+A^2) = 1 - A^4     = 5/9  (5/9? True)
+  F5b = eta^2 * N_pair^2              = 5/9  (5/9? True)
+  F6 = A^2                             = 2/3  (6/9? True)
+  F7 = 1 - F2                          = 7/9  (7/9? True)
+  F8 = 1 - F1                          = 8/9  (8/9? True)
+  F9 = 1                               = 1  (9/9? True)
+  [PASS] F1 = 1/9 (Wolfenstein x CP-phase product)
+  [PASS] F2 = 2/9 (Bernoulli support readout)
+  [PASS] F3 = 3/9 = 1/3 (W2 complement)
+  [PASS] F4 = 4/9 (A^4)
+  [PASS] F5a = 5/9 NEW path a: (1-A^2)(1+A^2)
+  [PASS] F5b = 5/9 NEW path b: eta^2 * N_pair^2
+  [PASS] F5a = F5b (two paths agree at 5/9)
+  [PASS] F6 = 6/9 = 2/3 = A^2 (W2)
+  [PASS] F7 = 7/9 = 1 - F2
+  [PASS] F8 = 8/9 = 1 - F1
+  [PASS] F9 = 9/9 = 1 (trivial)
+
+----------------------------------------------------------------------------------------
+(G1) NEW sum identity: F1 + F2 + ... + F9 = N_quark - 1 = 5
+----------------------------------------------------------------------------------------
+  F1 + F2 + ... + F9   = 5
+  Expected (N_quark-1)  = 5
+  = (1+2+3+4+5+6+7+8+9)/9 = 45/9 = 5
+  [PASS] (G1) Sum F1+...+F9 = 45/9 = 5
+  [PASS] (G1) Sum equals N_quark - 1
+
+----------------------------------------------------------------------------------------
+(G2) Universal denominator N_color^2 = 9 across all F_n
+----------------------------------------------------------------------------------------
+  N_color^2 = 9
+  All F_n share denominator 9 (when expressed as n/9 over n=1...9).
+  [PASS] (G2) N_color^2 = 9
+
+----------------------------------------------------------------------------------------
+(G3) NEW Numerator pattern: structural-integer ladder for n in {1,...,9}
+----------------------------------------------------------------------------------------
+  n = 1: 1 (unit)
+  n = 2: N_pair = 2
+  n = 3: N_color = 3
+  n = 4: N_pair^2 = 4
+  n = 5: N_quark - 1 = 5
+  n = 6: N_quark = 6
+  n = 7: N_quark + 1 = N_color^2 - N_pair = 7
+  n = 8: N_color^2 - 1 = 8
+  n = 9: N_color^2 = 9
+  [PASS] (G3) n=1: numerator = 1 (unit)
+  [PASS] (G3) n=2: numerator = N_pair
+  [PASS] (G3) n=3: numerator = N_color
+  [PASS] (G3) n=4: numerator = N_pair^2
+  [PASS] (G3) n=5: numerator = N_quark - 1
+  [PASS] (G3) n=6: numerator = N_quark
+  [PASS] (G3) n=7: numerator = N_quark + 1 = N_color^2 - N_pair
+  [PASS] (G3) n=8: numerator = N_color^2 - 1
+  [PASS] (G3) n=9: numerator = N_color^2
+
+----------------------------------------------------------------------------------------
+(G4) Generating set {A^2, rho, eta^2, N_pair, N_color, 1} spans support family
+----------------------------------------------------------------------------------------
+  Each F_n derivable via finite combination of:
+    - A^2 (retained W2)
+    - rho (retained CP-phase)
+    - eta^2 (retained Thales)
+    - N_pair, N_color (retained magnitudes counts)
+    - constant 1
+    - basic arithmetic (*, /, +, -)
+
+  Demonstrated by F1-F9 derivations above.
+  [PASS] (G4) Generating set spans support family (demonstrated)
+
+----------------------------------------------------------------------------------------
+Cross-sector reading (SUPPORT, NOT closure)
+----------------------------------------------------------------------------------------
+  If a separate Koide-side theorem produces ratios n/N_gen^2,
+  then the separately retained numeric equality N_gen = N_color = 3
+  lets the CKM-side support family here supply matching n/9 expressions.
+
+  CKM-side support family: F1-F9 cover all n/9 for n in {1,...,9}.
+
+  This does not close Koide 2/9, does not derive a Koide n/9 family,
+  and does not use N_gen = N_color as a CKM input.
+
+  It only packages the CKM-side target class exactly.
+  [PASS] Cross-sector reading: CKM support family covers n/9 target class
+  [PASS] Retained numeric equality N_gen = N_color is NOT used as input
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (F5): 5/9 = (1-A^2)(1+A^2) = 1 - A^4 = eta^2 * N_pair^2
+            Two independent paths to 5/9 from retained inputs.
+
+  NEW (F1-F9 support family): every n/9 for n in {1,...,9} derivable
+            from retained CKM inputs.
+
+  NEW (G1): Sum F1 + F2 + ... + F9 = 5 = N_quark - 1.
+            Conservation-like statement tying family to quark deficit.
+
+  NEW (G2): Universal denominator N_color^2 = 9 across all F_n.
+
+  NEW (G3): Numerator ladder 1, N_pair, N_color, N_pair^2, N_quark-1,
+            N_quark, N_quark+1, N_color^2-1, N_color^2 fills n=1..9.
+
+  Cross-sector reading: CKM support family covers the n/9 target class.
+  Koide-side derivations remain separate open problems.
+
+  All inputs retained on main; no SUPPORT-tier or open inputs used as input.
+
+========================================================================================
+TOTAL: PASS=35, FAIL=0
+========================================================================================
+
+----- stderr -----
+

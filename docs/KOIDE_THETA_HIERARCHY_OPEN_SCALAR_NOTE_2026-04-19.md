@@ -6,6 +6,8 @@ actual-route stack, the previously separate selected-line
 `m_* / kappa_sel,*` input is also gone as a corollary. The old ambient-`S^2` /
 `n = 2` monopole story is superseded. The correct closure lives on the exact
 selected charged-lepton line.
+**Primary runner:** `scripts/frontier_koide_berry_phase_theorem.py`
+
 
 **Primary reference:** `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`.
 

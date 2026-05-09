@@ -3,6 +3,8 @@
 **Date:** 2026-04-04  
 **Status:** bounded - bounded or caveated result note
 the retained 3D `h=0.25` family
+**Primary runner:** `scripts/mesoscopic_surrogate_alternate_family_scout.py`
+
 
 ## Question
 

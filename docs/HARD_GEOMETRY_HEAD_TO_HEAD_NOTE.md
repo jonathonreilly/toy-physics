@@ -2,6 +2,8 @@
 
 **Date:** 2026-04-03  
 **Status:** support - structural or confirmatory support note
+**Primary runner:** `scripts/hard_geometry_head_to_head.py`
+
 
 This note compares the retained hard-geometry and symmetry lanes that are
 still worth carrying forward after the hardening pass, plus the emergence-

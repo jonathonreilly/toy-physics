@@ -1,306 +1,45 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_generation_axiom_boundary.py
-runner_sha256: 05c443fc050ec4ac9781d43ad581de06abb693957d4bc18d45c472496afe1af8
+runner_sha256: 1a3666496c5078b8663515182957f4f81950c4a49b58d4a139cdc4944a4e561a
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.08
+elapsed_sec: 0.20
 status: ok
 ----- stdout -----
 ========================================================================
-GENERATION AXIOM BOUNDARY THEOREM
-Triplet physicality is closed; substrate ontology remains explicit
+GENERATION AXIOM BOUNDARY -- LOCAL M_3(C) RECONSTRUCTION
+Local observable-algebra reconstruction on H_hw=1 (in-scope claim)
 ========================================================================
 
 ========================================================================
-PART 1: ON THE ACCEPTED HILBERT SURFACE, TRIPLET PHYSICALITY IS CLOSED
+LOCAL M_3(C) OBSERVABLE-ALGEBRA RECONSTRUCTION ON H_hw=1
 ========================================================================
 
-  Accepted Hilbert / retained-generation surface:
-    The three hw=1 sectors are exact observable sectors of the
-    Hamiltonian, and no proper exact quotient preserving that
-    retained observable algebra survives.
+  Generators: three translation-character projectors + C3 cycle.
+  Target: full M_3(C) algebra (dim 9) with scalar commutant (dim 1).
 
-  Step (a): BZ corners are physical momentum states
-  [PASS] bz_8_corners  (8 BZ corners from {0,pi}^3)
-  [PASS] [LOGICAL] exact_translation_spectrum_is_physical_observable_data  (distinct translation characters on the accepted Hilbert surface are physical observable distinctions)
   [PASS] hw1_translation_characters_pairwise_distinct  (characters=[(-1, 1, 1), (1, -1, 1), (1, 1, -1)])
   [PASS] hw1_translation_projectors_are_rank_one  (three exact rank-one observable projectors on H_hw=1)
   [PASS] hw1_retained_observable_algebra_is_full_M3  (generated algebra dimension=9)
   [PASS] hw1_retained_observable_commutant_is_scalar  (commutant dimension=1; no proper exact quotient kernel can be invariant)
 
-  Step (b): 3 hw=1 corners give 3 retained species sectors
-  [PASS] hw1_count_3  (hw=1 corners: [(0, 0, 1), (0, 1, 0), (1, 0, 0)])
-  [PASS] fermi_point_X1  (|E_min| = 1.0000000000)
-  [PASS] fermi_point_X2  (|E_min| = 1.0000000000)
-  [PASS] fermi_point_X3  (|E_min| = 1.0000000000)
-
-  Step (c): Gauge universality -- same gauge rep at each corner
-  [PASS] commutant_dim_8  (dim(Comm(Cl(3))) = 8)
-  [PASS] proj_comm_dim_4_all  (projected commutant dims = [4, 4, 4] (M(2,C) at each corner))
-  [PASS] casimir_X1  (Casimir eigenvalues = [0.375 0.375 0.375 0.375])
-  [PASS] casimir_X2  (Casimir eigenvalues = [0.375 0.375 0.375 0.375])
-  [PASS] casimir_X3  (Casimir eigenvalues = [0.375 0.375 0.375 0.375])
-
-  Step (d): Species distinguished by non-Cl(3) generators (3-FAILs)
-  [PASS] C3_maps_X1_to_X2  (singular values of P2^dag U_C3 P1 = [1. 1. 1. 1.])
-  [PASS] non_cl3_generators_exist  (8 commutant generators outside Cl(3))
-  [PASS] non_cl3_spectra_differ  (Non-Cl(3) generators distinguish the three corners)
-
-  Step (e): EWSB gives different masses (1+2 split, EXACT)
-  [PASS] X2_X3_degenerate  (spectrum(X2) = spectrum(X3) -- residual degeneracy after EWSB)
-  [PASS] ewsb_1plus2_exact  (Weak-axis selection gives exact 1+2 mass split)
-
-  Step (f): Conclusion
-    On the accepted Hilbert / retained-generation surface:
-    (a) 8 BZ corners are exact momentum sectors
-    (b) 3 hw=1 sectors are exact retained species sectors
-    (c) Each carries the same gauge representation (universality)
-    (d) They are distinguished by non-gauge quantum numbers
-    (e) EWSB gives them different masses (1+2 exact)
-    (f) Therefore: the retained triplet already has physical-species
-        semantics inside the accepted theory. QED.
-
-  [PASS] [LOGICAL] part1_triplet_physicality_closed_on_hilbert_surface  (exact observable separation + no-rooting/no-quotient closure give triplet physical-species semantics)
-
-========================================================================
-PART 2: WITHOUT THE SUBSTRATE PREMISE, GLOBAL REINTERPRETATION REMAINS OPEN
-========================================================================
-
-  Without the substrate premise, the lattice may be treated as a regularization.
-  Then:
-    (a) A continuum limit a->0 could in principle exist
-    (b) Taste doublers could be removed by fourth-root trick
-    (c) The retained triplet would be re-read as non-fundamental bookkeeping
-
-  The rooting obstruction (E3) proves: no projector on C^8
-  preserves Cl(3). But this applies only in the Hamiltonian
-  formulation. In a path integral formulation:
-    det(D_stag)^{1/4} is a well-defined operation on the measure
-    (whether or not it defines a local theory is debated,
-    but it IS a mathematically defined operation)
-
-  [PASS] rooting_blocked_hamiltonian  (0/254 proper subspaces preserve Cl(3))
-  [PASS] [LOGICAL] rooting_defined_path_integral  (det(D)^{1/4} is mathematically defined on the path integral measure)
-  [PASS] [LOGICAL] path_integral_requires_no_axiom  (Path integral formulation exists only if lattice is a regularization)
-
-  CONCLUSION: Without the substrate premise, an external
-  regulator reinterpretation escape route remains. The
-  residual open question is substrate ontology, not the
-  exact retained triplet algebra itself.
-
-  [PASS] [LOGICAL] part2_substrate_escape_route_without_axiom  (Without substrate premise: explicit external escape route via fourth-root / regulator-family reinterpretation)
-
-========================================================================
-PART 3: THE OLDER REDUCED STACK LEFT THE SUBSTRATE PREMISE EXPLICIT
-========================================================================
-
-  Older reduced-stack witness:
-    I1: Cl(3) algebra: {G_mu, G_nu} = 2 delta_{mu,nu} on C^8
-    I2: Z^3 lattice with staggered Hamiltonian
-    I3: Hilbert space is tensor product over lattice sites
-    I4: Unitary evolution: U(t) = exp(-iHt)
-    I5: SUBSTRATE PREMISE: Z^3 is fundamental, not a regulator-family surrogate *** TARGET ***
-
-  Argument 1: the reduced stack without the substrate premise is
-  mathematically consistent.
-    Proof: Standard LQCD uses exactly {A1, A2, A3, A4} (staggered
-    fermions on Z^3 with Hamiltonian evolution) WITHOUT assuming
-    the lattice is physical. LQCD treats the lattice as a regulator
-    and takes a -> 0. This is a consistent mathematical framework.
-    Therefore the reduced stack by itself does not imply substrate
-    physicality.
-
-  [PASS] [LOGICAL] reduced_stack_consistent_without_substrate_premise  (LQCD uses the reduced stack without the substrate premise: consistent framework)
-  Argument 2: the no-continuum-limit theorem is not an independent
-  reduced-stack derivation.
-    The theorem says: 'no tunable bare coupling => no line of
-    constant physics => no continuum limit.'
-    But 'no tunable bare coupling' is equivalent to the substrate
-    premise on the reduced stack:
-      - If the lattice is a regularization, the bare coupling IS
-        tunable (it's a parameter of the regularization scheme).
-      - If the lattice is physical, the bare coupling is FIXED
-        (it's determined by the lattice structure).
-    So the no-continuum-limit theorem does not independently
-    establish substrate physicality; it is a consequence of it.
-
-  [PASS] [LOGICAL] no_continuum_limit_uses_substrate_premise  (No-continuum-limit theorem is a consequence of the substrate premise, not independent)
-  Argument 3: the universality-class argument is also reduced-stack
-  circularity.
-    The argument says: 'the framework is its own universality class.'
-    This is true only if the framework IS the fundamental theory
-    (not a regularization of some other theory). But that is just
-    the substrate premise restated.
-
-  [PASS] [LOGICAL] universality_class_uses_substrate_premise  (Universality class argument presupposes the substrate premise)
-  Argument 4: the substrate premise is structurally parallel to
-  foundational commitments in established physics:
-    - GR: 'Spacetime is a pseudo-Riemannian manifold'
-      (not derivable from the field equations)
-    - QM: 'States are vectors in a Hilbert space'
-      (not derivable from the Schrodinger equation)
-    - SM: 'The gauge group is SU(3)xSU(2)xU(1)'
-      (not derivable from the renormalization group)
-    - This framework: 'The lattice Z^3 is the physical substrate'
-      (not derivable from the Hamiltonian)
-
-    Each of these is an ontological commitment that defines what
-    the mathematical formalism MEANS physically. Such commitments
-    are axioms, not theorems.
-
-  [PASS] [LOGICAL] substrate_premise_is_ontological  (substrate physicality is an ontological commitment on the reduced stack)
-  Argument 5: the substrate premise is what distinguished the
-  original reduced-stack witness from standard LQCD.
-    The event-network ontology of the original framework STARTS
-    from the premise that reality is a discrete structure. The
-    lattice Z^3 emerges as the regularized version of this ontology
-    in the fermion sector. Removing the substrate premise would
-    not 'weaken' the
-    framework -- it would REPLACE it with standard LQCD.
-
-  [PASS] [LOGICAL] substrate_premise_defines_reduced_stack_framework  (the substrate premise is what distinguished this reduced-stack witness from standard LQCD)
-
-========================================================================
-PART 4: ASSUMPTION ENUMERATION
-========================================================================
-
-  Every step in the generation derivation chain uses exactly one of:
-    [T] = theorem (derived from axioms)
-    [C] = computation (verified numerically from axioms)
-    [A] = consequence of the reduced-stack substrate premise
-    [B] = bounded (model-dependent, does NOT affect the obstruction)
-
-    [THEOREM         ] 8 BZ corners exist
-                    Fourier analysis of the staggered Hamiltonian on Z^3. Uses A1+A2 only.
-    [THEOREM         ] BZ corners are exact observable momentum sectors
-                    Exact translation characters on the accepted Hilbert surface give physical observable distinctions.
-    [THEOREM         ] Hamming weight groups corners as 1+3+3+1
-                    Combinatorial identity C(3,k). Uses A1+A2 only.
-    [COMPUTATION     ] 3 hw=1 species are lightest nonzero-mass states
-                    Computed: Wilson mass m(p) = 2r*hw(p). Verified at all 8 corners.
-    [THEOREM         ] Each species carries distinct lattice momentum
-                    Translation invariance on Z^3. Uses A2 only.
-    [COMPUTATION     ] No subspace projection preserves Cl(3)
-                    Exhaustive search over all 246 proper subspaces of C^8. Uses A1+A3.
-    [THEOREM         ] Rooting is undefined in Hamiltonian formulation
-                    Consequence of Cl(3) irreducibility + no path integral. Uses A1+A3+A4.
-    [THEOREM         ] No proper exact quotient survives on the retained hw=1 surface
-                    Exact retained observable theorem: the triplet algebra is irreducible.
-    [COMPUTATION     ] Commutant of Cl(3) has dim 8
-                    Null space computation of [M, G_mu] = 0. Uses A1 only.
-    [THEOREM         ] Commutant is corner-independent
-                    KS gammas are K-independent; commutant depends only on the algebra. Uses A1.
-    [COMPUTATION     ] Projected commutant is M(2,C) at each corner
-                    SVD of projected commutant at each hw=1 corner. Uses A1+A2.
-    [COMPUTATION     ] Projected su(2) has identical Casimir at all corners
-                    Casimir = 3/4 at all 3 corners. Verified numerically. Uses A1+A2.
-    [COMPUTATION     ] C3[111] maps corners cyclically preserving commutant
-                    Explicit unitary construction. Verified numerically. Uses A1+A2.
-    [COMPUTATION     ] Non-Cl(3) generators distinguish corners
-                    3-FAILs investigation: projected spectra differ. Uses A1+A2.
-    [THEOREM         ] EWSB gives 1+2 mass split
-                    Weak-axis selection breaks C3 -> C2. Uses A1+A2.
-    [BOUNDED         ] EWSB gives 1+1+1 hierarchy
-                    Jordan-Wigner structure argument. BOUNDED -- not needed for the obstruction.
-    [THEOREM         ] Triplet sectors have physical-species semantics
-                    Exact observables separate them, Hilbert semantics gives those distinctions physical meaning, and no exact quotient identifies them.
-    [AXIOM-DEPENDENT ] Substrate is fundamental rather than regulator-family surrogate
-                    Reduced-stack residual witness: the old memo left substrate physicality explicit even though the stronger live closure now derives it on the accepted one-axiom surface.
-
-  Summary: 9 theorems, 7 computations, 1 axiom-dependent, 1 bounded
-
-  [PASS] all_steps_classified  (18 steps fully classified)
-  [PASS] axiom_dependent_steps  (1 reduced-stack residual step depends on the substrate premise)
-  The remaining reduced-stack residual step is the same substrate premise:
-    'The lattice Z^3 is the physical substrate.'
-  Specifically:
-    - exact triplet physical-species semantics are already closed
-    - on the stronger accepted one-axiom surface, substrate
-      physicality is also derived
-    - this script now survives only as the reduced-stack witness
-      explaining why the old operational memo listed the point
-      explicitly
-
-  [PASS] [LOGICAL] single_residual_premise_on_reduced_stack  (All reduced-stack residual steps collapse to the same substrate premise)
-  [PASS] [LOGICAL] no_hidden_assumptions  (No assumption in the chain is unclassified or hidden)
-  [PASS] [LOGICAL] bounded_step_irrelevant_to_obstruction  (The 1+1+1 hierarchy is bounded but does not affect the axiom boundary theorem)
-
-========================================================================
-PART 5: SYNTHESIS -- THE GENERATION AXIOM BOUNDARY THEOREM
-========================================================================
-
-  THEOREM (Generation Axiom Boundary):
-
-  The physical-lattice premise is no longer the boundary between the
-  retained `hw=1` triplet and physical-species semantics. Specifically:
-
-  (I)  On the accepted Hilbert surface, the retained triplet is already
-       physically distinct species structure: exact observables separate
-       the sectors, no proper exact quotient preserves the retained
-       observable algebra, and the sectors acquire different EWSB-induced
-       masses.  [CLOSED]
-
-  (II) On the older reduced stack without the substrate premise, an explicit
-       external escape route
-       still exists: one may change theory package and reinterpret the
-       lattice as a regulator family with rooting/path-integral machinery.
-       That is a global substrate reinterpretation, not a hidden loophole
-       in the retained triplet algebra itself.  [OPEN on reduced stack]
-
-  (III) On the older reduced witness the substrate premise remained explicit:
-        the reduced stack was consistent without it (standard LQCD is the
-        witness), so that witness by itself did not derive substrate
-        physicality away from the reduced input set.
-
-  (IV) On the accepted one-axiom Hilbert/locality/information surface,
-       the stronger physical-lattice necessity theorem now derives substrate
-       physicality too. This reduced-stack script remains only as a witness
-       explaining why the older implementation memo had looked weaker.
-
-  CONSEQUENCE FOR THE PAPER:
-
-  The generation lane is stronger than the older audit stated. This
-  reduced-stack witness is now historical support, not the live theorem
-  boundary, so the generation gate is tighter than "closed only modulo
-  axiom" language suggested.
-
-  PAPER-SAFE WORDING:
-
-  "The three `hw=1` BZ corner sectors carry identical gauge
-  representations (exact), acquire different masses via EWSB (exact 1+2
-  split), and cannot be removed by any operation consistent with the
-  retained exact observable algebra. Exact observable separation therefore
-  gives them physical-species semantics on the accepted Hilbert surface.
-  On the accepted one-axiom Hilbert/locality/information surface the
-  substrate-level physical-lattice reading is also derived, so the old
-  reduced-stack substrate caveat now survives only as route history."
-
 ========================================================================
 FINAL SUMMARY
 ========================================================================
 
-  PASS=35  FAIL=0
+  PASS=4  FAIL=0
 
-  EXACT computational checks:
-    - Clifford algebra, Fermi points, commutant dimension
-    - Projected commutant structure (M(2,C) at each corner)
-    - C3[111] symmetry mapping corners cyclically
-    - Non-Cl(3) generators distinguish corners
-    - Rooting blocked in Hamiltonian formulation (0/246)
-    - EWSB 1+2 split from C3 -> C2 breaking
+  EXACT computational checks (in-scope):
+    - three pairwise-distinct hw=1 translation characters
+    - three rank-one observable projectors on H_hw=1
+    - generated algebra is full M_3(C) (dim 9)
+    - commutant on H_hw=1 is scalar (dim 1)
 
-  LOGICAL checks:
-    - Triplet physical-species semantics are already closed
-    - The reduced-stack residual escape is substrate reinterpretation
-    - The reduced-stack witness isolates one substrate premise
-    - The older five-item memo listed that point explicitly
-    - All 18 steps in the chain are fully classified
-
-  THEOREM STATUS: EXACT REDUCED-STACK WITNESS
-    Triplet physicality is closed on the accepted Hilbert surface.
-    This script isolates why substrate-level physicality had looked
-    explicit on the older five-item memo; the stronger live closure
-    now sits in frontier_physical_lattice_necessity.
+  THEOREM STATUS: bounded_theorem
+    Local M_3(C) observable-algebra reconstruction on H_hw=1.
+    Physical-species bridge, substrate-fundamentality, and the
+    historical reduced-stack/five-item-memo witness are out of
+    scope here and live in separate authority notes.
 
   ALL CHECKS PASSED.
 

@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/edge_deletion_boundary_sweep.py
+runner_sha256: 161d395b662e2cf8501c96ebb90bf7c89c75571a924558918117d8a90a4805a8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 54.34
+status: ok
+----- stdout -----
+====================================================================================================
+EDGE DELETION BOUNDARY SWEEP
+  Retained 3D valley-linear family
+  h=0.5, W=8, L=12, max_d=3
+  keep fractions: 1.00, 0.95, 0.90, 0.85, 0.80, 0.75
+  seeds: 12 (20260404..20260415)
+  Goal: harden the 80%-90% retention transition on the same family
+====================================================================================================
+
+  keep       TOWARD     mean_delta    std_delta
+------------------------------------------------------
+  1.00 12/12         +3.473338e-05 6.776264e-21
+  0.95 12/12         +4.884894e-05 1.693359e-05
+  0.90 12/12         +5.446079e-05 2.384982e-05
+  0.85 12/12         +5.815760e-05 2.112014e-05
+  0.80 12/12         +7.655170e-05 2.621961e-05
+  0.75 12/12         +6.004755e-05 2.016072e-05
+
+REPRESENTATIVE CONTROLS (seed=first seed)
+  100%  Born=2.35e-15  k=0=+0.000e+00  no-field=+0.000e+00
+  80%   Born=2.42e-15  k=0=+0.000e+00  no-field=+0.000e+00
+
+SAFE READ
+  - Use the keep-fraction rows to locate the transition region, not as a universal theorem.
+  - If 90% stays mostly TOWARD and 80% becomes coin-flip or AWAY-dominated, the boundary is real.
+  - If the transition wanders seed-to-seed, the graph boundary is forgiving but not precise.
+  - The representative controls are only sanity checks; the sweep rows are the main result.
+  - endpoints: best=1.00, worst=0.75
+
+----- stderr -----
+

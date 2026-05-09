@@ -2124,6 +2124,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_ckm_multi_projection_bernoulli_family.py"
     },
+    "ckm_n9_structural_family_koide_bridge_support_note_2026-04-25": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_ckm_n9_structural_family_koide_bridge.py"
+    },
     "ckm_neutron_edm_bound_note": {
       "assert_count": 1,
       "counts": {
@@ -2615,6 +2627,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/coupled_field_generated_family_probe.py"
+    },
+    "cpt_exact_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_cpt_exact.py"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -5640,6 +5664,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dt1_time_dimension_proof_walk_lattice_independence.py"
     },
+    "edge_deletion_boundary_sweep_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/edge_deletion_boundary_sweep.py"
+    },
     "eigenvalue_anderson_phase_note_2026-04-11": {
       "assert_count": 0,
       "counts": {
@@ -7440,6 +7476,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_generation_axiom_boundary.py"
     },
+    "geometry_lane_head_to_head_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/geometry_lane_head_to_head.py"
+    },
     "geometry_superposition_dag_ensemble_note_2026-04-11": {
       "assert_count": 0,
       "counts": {
@@ -8003,6 +8051,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/hard_geometry_gravity_window.py"
+    },
+    "hard_geometry_head_to_head_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/hard_geometry_head_to_head.py"
     },
     "hard_geometry_local_note": {
       "assert_count": 0,
@@ -9756,6 +9816,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_koide_taste_cube_cyclic_source_descent.py"
     },
+    "koide_theta_hierarchy_open_scalar_note_2026-04-19": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_koide_berry_phase_theorem.py"
+    },
     "koide_transport_gap_constant_no_go_note_2026-04-20": {
       "assert_count": 1,
       "counts": {
@@ -10199,6 +10271,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/lattice_nn_rg_alpha_sweep.py"
+    },
+    "lattice_nn_rg_gravity_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/lattice_nn_rg_gravity.py"
     },
     "lattice_nn_rg_reconciliation_note": {
       "assert_count": 0,
@@ -10644,6 +10728,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_mass_mixing_disjointness_theorem.py"
     },
+    "matched_2d_4d_decoherence_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/matched_2d_4d_decoherence.py"
+    },
     "matter_inertial_closure_note": {
       "assert_count": 0,
       "counts": {
@@ -10703,6 +10799,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_meson_charges_from_quark_y.py"
+    },
+    "mesoscopic_surrogate_alternate_family_scout_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 8,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/mesoscopic_surrogate_alternate_family_scout.py"
     },
     "mesoscopic_surrogate_annular_tapered_sweep_note": {
       "assert_count": 0,
@@ -15815,6 +15923,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py"
+    },
+    "structured_mirror_reconciliation_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/structured_mirror_reconciliation.py"
     },
     "structureless_dag_gravity_note": {
       "assert_count": 0,
@@ -21055,6 +21175,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/edge_deletion_boundary_sweep.py": {
+      "assert_count": 0,
+      "claims": [
+        "edge_deletion_boundary_sweep_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/electric_sign_law_harness.py": {
       "assert_count": 0,
       "claims": [
@@ -22726,6 +22861,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_ckm_n9_structural_family_koide_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_n9_structural_family_koide_bridge_support_note_2026-04-25"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_ckm_neutron_edm_bound.py": {
       "assert_count": 1,
       "claims": [
@@ -23087,6 +23237,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_cpt_exact.py": {
+      "assert_count": 1,
+      "claims": [
+        "cpt_exact_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_critical_exponents.py": {
@@ -28623,6 +28788,7 @@
       "assert_count": 1,
       "claims": [
         "koide_berry_phase_theorem_note_2026-04-19",
+        "koide_theta_hierarchy_open_scalar_note_2026-04-19",
         "scalar_selector_full_stack_recovery_note_2026-04-19"
       ],
       "counts": {
@@ -36725,6 +36891,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/geometry_lane_head_to_head.py": {
+      "assert_count": 0,
+      "claims": [
+        "geometry_lane_head_to_head_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/global_coherence_held_out2.py": {
       "assert_count": 0,
       "claims": [
@@ -36911,6 +37092,21 @@
       "assert_count": 0,
       "claims": [
         "hard_geometry_gravity_window_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/hard_geometry_head_to_head.py": {
+      "assert_count": 0,
+      "claims": [
+        "hard_geometry_head_to_head_note"
       ],
       "counts": {
         "A": 0,
@@ -37496,6 +37692,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/lattice_nn_rg_gravity.py": {
+      "assert_count": 0,
+      "claims": [
+        "lattice_nn_rg_gravity_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/lattice_nn_topological_causal_bound_check.py": {
       "assert_count": 3,
       "claims": [
@@ -37796,6 +38007,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/matched_2d_4d_decoherence.py": {
+      "assert_count": 0,
+      "claims": [
+        "matched_2d_4d_decoherence_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/matter_inertial_closure.py": {
       "assert_count": 0,
       "claims": [
@@ -37824,6 +38050,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/mesoscopic_surrogate_alternate_family_scout.py": {
+      "assert_count": 0,
+      "claims": [
+        "mesoscopic_surrogate_alternate_family_scout_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 8,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/mesoscopic_surrogate_annular_tapered_sweep.py": {
@@ -39937,6 +40178,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/structured_mirror_reconciliation.py": {
+      "assert_count": 0,
+      "claims": [
+        "structured_mirror_reconciliation_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/structureless_dag_gravity_harness.py": {
       "assert_count": 0,
       "claims": [
@@ -40706,16 +40962,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 122,
+    "decoration_candidates": 123,
     "dominant_class_distribution": {
       "A": 14,
-      "B": 170,
-      "C": 618,
+      "B": 171,
+      "C": 619,
       "D": 226,
-      "none": 426
+      "none": 433
     },
-    "runners_classified": 1454,
-    "runners_with_C": 740,
+    "runners_classified": 1463,
+    "runners_with_C": 741,
     "runners_with_D": 368
   }
 }
