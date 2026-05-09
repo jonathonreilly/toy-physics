@@ -1,8 +1,11 @@
 # Light Cone Framing — Lieb-Robinson is Standard Lattice QFT
 
 **Status:** support - structural or confirmatory support note
-**Date:** 2026-04-11 (math corrected 2026-05-01)
-**Runner:** scripts/light_cone_staggered_dispersion.py
+**Date:** 2026-04-11 (math corrected 2026-05-01; CN LR bridge added 2026-05-09)
+**Runners:**
+  - `scripts/light_cone_staggered_dispersion.py` (dispersion validation)
+  - `scripts/light_cone_crank_nicolson_lr_2026_05_09.py` (Crank-Nicolson LR
+    bridge runner — see CN bridge note below)
 
 ## The Concern
 
@@ -64,6 +67,50 @@ lattice units, matching v_max(m=0) = 1 above. In the continuum limit
 light cone from above. The 97% containment seen at finite lattice spacing
 in the Crank-Nicolson evolution is the standard discretization artifact.
 
+### Hamiltonian-side Lieb-Robinson constant (PR #806)
+
+The explicit Lieb-Robinson constant for the canonical lattice
+Hamiltonian H is derived in
+[`MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md`](MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md)
+(PR #806):
+
+    v_LR(H) = 2 e r J,    r = 1,    J ≤ |m| + 18  (canonical surface)
+
+This reads `r` and `J` directly off the action coefficients
+(staggered hop, Wilson term, plaquette gauge action), removing the
+asserted-bridge step that previously sourced the constant from
+RP/spectrum positivity alone.
+
+### Crank-Nicolson refinement
+
+The framework's discrete-time evolution uses the **Crank-Nicolson
+scheme** (Cayley transform of H):
+
+    U_CN(a_τ)  =  (I − i a_τ H/2) · (I + i a_τ H/2)^{−1}
+
+This is a different operator from the continuous evolution exp(−itH);
+they agree only in the continuum limit. The Lieb-Robinson constant
+for `U_CN^n` over total time `t = n a_τ` is derived in
+[`LIGHT_CONE_CRANK_NICOLSON_LIEB_ROBINSON_BRIDGE_NOTE_2026-05-09.md`](LIGHT_CONE_CRANK_NICOLSON_LIEB_ROBINSON_BRIDGE_NOTE_2026-05-09.md):
+
+    v_LR^CN(a_τ)  =  v_LR(H) / (1 − a_τ J / 2)
+                  =  v_LR(H) · (1 + a_τ J / 2 + O((a_τ J)²))
+
+with the bound
+
+    ‖[α_t^CN(O_x), O_y]‖_op  ≤  2 ‖O_x‖ ‖O_y‖ · exp(−d(x,y) + v_LR^CN |t|).
+
+The correction factor `1/(1 − a_τ J / 2)` traces directly to the
+Neumann-series resolvent expansion of `(I + i a_τ H/2)^{−1}`. As
+`a_τ → 0`, `v_LR^CN(a_τ) → v_LR(H)`, recovering the standard
+lattice-QFT Lieb-Robinson form.
+
+The companion runner
+`scripts/light_cone_crank_nicolson_lr_2026_05_09.py` certifies (CN-A)
+unitarity, (CN-B) per-step Neumann-series decay, (CN-C) the n-step
+velocity bound, and (CN-D) the `O(a_τ²)` continuum convergence
+(`PASS=5 FAIL=0`).
+
 ## What This Architecture Does Provide
 
 1. **Correct continuum dispersion** in the small-k regime: E ≈ √(m² + k²).
@@ -84,12 +131,26 @@ in the Crank-Nicolson evolution is the standard discretization artifact.
 
 This note is a *framing* note: it confirms that the observed Lieb-Robinson
 cone is standard lattice QFT behavior, not an artifact of the framework.
-It does **not** derive a Lieb-Robinson constant from first principles for
-the specific Crank-Nicolson operator used elsewhere in the repo; that
-would require a separate operator-norm calculation against the actual
-hopping kernel. The corrected dispersion result above is exact for the
-1+1d staggered Dirac operator, and the runner validates the numeric
-v_max(m) = √(m²+1) − m to ~1e-8 across m ∈ [0, 2].
+The dispersion-side claim is exact for the 1+1d staggered Dirac operator,
+and the runner validates the numeric v_max(m) = √(m²+1) − m to ~1e-8 across
+m ∈ [0, 2].
+
+The previously-flagged audit gap — that the note did not derive a
+Lieb-Robinson constant from first principles for the specific Crank-
+Nicolson operator used elsewhere in the repo — is now closed:
+
+  - **Hamiltonian-side LR constant** is derived in
+    [`MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md`](MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md)
+    (PR #806): `v_LR(H) = 2 e r J` with `r = 1`, `J ≤ |m| + 18`.
+
+  - **Crank-Nicolson-side LR constant** is derived in
+    [`LIGHT_CONE_CRANK_NICOLSON_LIEB_ROBINSON_BRIDGE_NOTE_2026-05-09.md`](LIGHT_CONE_CRANK_NICOLSON_LIEB_ROBINSON_BRIDGE_NOTE_2026-05-09.md):
+    `v_LR^CN(a_τ) = v_LR(H) / (1 − a_τ J/2)`, converging to `v_LR(H)`
+    as `a_τ → 0`.
+
+The 97% containment observed in the framework's Crank-Nicolson runs
+is exactly the exponential-tail leak outside `v_LR^CN |t|` cone,
+fully captured by the LR bound on the discrete time-step kernel.
 
 ## References
 

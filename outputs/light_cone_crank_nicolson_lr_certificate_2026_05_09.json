@@ -1,0 +1,46 @@
+{
+  "claim_id": "light_cone_framing_note",
+  "runner": "light_cone_crank_nicolson_lr_2026_05_09.py",
+  "date": "2026-05-09",
+  "pass_count": 5,
+  "fail_count": 0,
+  "results": [
+    {
+      "name": "CN1 unitarity",
+      "status": "PASS",
+      "detail": "max ||U^dag U - I||_op = 4.219e-15 across a_tau in [1e-3, 1e-1]"
+    },
+    {
+      "name": "CN2 per-step Neumann-series decay",
+      "status": "PASS",
+      "detail": "comm at d=2 scales as O(epsilon) relative to d=1, consistent with single-step v_LR_CN = v_LR(H)/(1 - a_tau J/2)"
+    },
+    {
+      "name": "CN3 n-step velocity bound",
+      "status": "PASS",
+      "detail": "v_LR_CN = v_LR(H) / (1 - a_tau J / 2); reduces to v_LR(H) as a_tau -> 0"
+    },
+    {
+      "name": "CN4 continuum convergence O(a_tau^2)",
+      "status": "PASS",
+      "detail": "O(a_tau^2) scaling verified in 4/4 successive halvings"
+    },
+    {
+      "name": "CN5 LR-bound agreement with continuous evolution",
+      "status": "PASS",
+      "detail": "max |comm_CN - comm_exact| = 6.337e-07 at a_tau = 2.000e-03, O(a_tau^2) floor ~ 2.838e-04"
+    }
+  ],
+  "constants": {
+    "L": 8,
+    "J": 1.0,
+    "r": 1,
+    "v_LR_H_lower_bound": 5.43656365691809,
+    "v_LR_CN_formula": "v_LR(H) / (1 - a_tau * J / 2)"
+  },
+  "upstream": [
+    "PR #806",
+    "docs/MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md",
+    "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md"
+  ]
+}
