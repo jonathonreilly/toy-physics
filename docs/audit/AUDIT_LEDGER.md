@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 950 |
+| unaudited | 949 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 371 |
+| ~~audited_conditional~~ | 372 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 371 |
+| `audited_conditional` | 372 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1005 |
+| `unaudited` | 1004 |
 
 | claim_type | count |
 |---|---:|
@@ -553,6 +553,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_dense_largen_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `central_band_layernorm_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `central_band_mass_window_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `charged_lepton_lane6_theorem_plan_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `chiral_3plus1d_boundary_phase_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2220,6 +2221,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the Brannen carrier Q=(c^2+2)/6 is independent of delta, and cyclic relabelings preserve Q and unordered ratios while moving the largest slot label.  _(class `A`)_
 - **chain closes:** True — The negative firewall closes: even granting the Q and Brannen support values, the data do not select a physical generation or tau-scale label. The note explicitly leaves Q source selection, selected-line endpoint/readout, and generation selection as residuals.
 - **rationale:** The runner verifies phase-erasure of Q, conditional status of the source and endpoint support, cyclic relabeling of the largest slot, and comparator-only use of PDG masses. That is sufficient for the no-go that Q plus Brannen phase support is not a standalone generation/tau-scale selector. It does not audit or retain native Q closure or delta/radian closure.
+- **auditor confidence:** high
+
+### `charged_lepton_lane6_theorem_plan_note_2026-04-28`
+
+- **Note:** [`CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md`](../../docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the note's roadmap claim that Lane 6 charged-lepton mass closure is organized into 6A, 6B, and 6C targets with 6B as the next priority; no charged-lepton mass theorem is claimed.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0da4-2a37-76b1-96e9-48ee924100a8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Lane 6 closure is decomposed into 6A Koide ratios, 6B a y_tau Ward identity, and 6C their automatic combination into retained absolute charged-lepton masses, while this note itself only produces the structural roadmap.  _(class `E`)_
+- **chain closes:** False — The roadmap claim is internally explicit, but the scientific closure of Lane 6 does not close because 6A Koide ratios and 6B y_tau Ward identity are both stated as in-flight or future work. The missing step is a retained theorem deriving y_tau, plus the retained Koide-ratio inputs.
+- **rationale:** Issue: the note is an open-gate roadmap and explicitly says it does not derive any charged-lepton mass or close 6A/6B. Why this blocks: the advertised Lane 6 retirement depends on future retained Koide-ratio closure and a future y_tau Ward identity, neither supplied in the restricted packet. Repair target: provide retained-grade 6A and 6B theorem notes, with a runner or derivation constructing y_tau rather than naming an anchor candidate. Claim boundary until fixed: this remains only a phase-ordering and target-inventory note.
 - **auditor confidence:** high
 
 ### `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27`
