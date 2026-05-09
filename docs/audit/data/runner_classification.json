@@ -14377,15 +14377,15 @@
       "runner": "scripts/frontier_rh_sector_anomaly_cancellation_identities.py"
     },
     "s3_boundary_link_theorem_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 4
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "runner": "scripts/frontier_s3_boundary_link_theorem.py"
     },
     "s3_cap_uniqueness_note": {
@@ -33676,7 +33676,7 @@
       "exists": true
     },
     "scripts/frontier_s3_boundary_link_theorem.py": {
-      "assert_count": 0,
+      "assert_count": 1,
       "claims": [
         "s3_boundary_link_theorem_note"
       ],
@@ -33684,10 +33684,10 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 4
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_s3_cap_uniqueness.py": {
@@ -41898,11 +41898,11 @@
       "A": 21,
       "B": 174,
       "C": 635,
-      "D": 241,
-      "none": 426
+      "D": 242,
+      "none": 425
     },
     "runners_classified": 1497,
     "runners_with_C": 769,
-    "runners_with_D": 394
+    "runners_with_D": 395
   }
 }

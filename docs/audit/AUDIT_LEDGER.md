@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 964 |
+| unaudited | 966 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 373 |
+| ~~audited_conditional~~ | 371 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 373 |
+| `audited_conditional` | 371 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1020 |
+| `unaudited` | 1022 |
 
 | claim_type | count |
 |---|---:|
@@ -71,7 +71,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 - runners classified: 1497
 - runners with (C) first-principles compute hits: 769
-- runners with (D) external comparator hits: 394
+- runners with (D) external comparator hits: 395
 - decoration candidates (no C, no D): 131
 
 ## Top 25 by load-bearing score (topology only)
@@ -796,8 +796,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `retarded_field_delay_proxy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9655,32 +9653,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note explicitly frames the route as open and dynamically blocked, not as a closed GR derivation. Its kinematic premise imports upstream atlas results that are not included in the restricted packet, and the asserted missing dynamics bridge is not supplied. With no runner source or stdout available, there is no independent computation or closure evidence in the packet.
 - **open / conditional deps cited:**
   - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
-- **auditor confidence:** high
-
-### `s3_boundary_link_theorem_note`
-
-- **Note:** [`S3_BOUNDARY_LINK_THEOREM_NOTE.md`](../../docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** For every R >= 2 and every boundary vertex v of the cubical ball B_R in Z^3, the cubical vertex link link(v,B_R) is a PL 2-disk.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-adjudicator-s3-boundary-link-current-main-20260505`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Connectedness of both the present and absent triangle sets in the octahedral S^2 is used to conclude H_1(link(v,B_R); Z)=0, one boundary component, local 2-manifoldness, and hence PL 2-disk.  _(class `A`)_
-- **chain closes:** False — The Phi separability and downset/upset connectivity mechanism closes, and the cached runner verifies the finite R=2..10 cases. The all-R proof does not close the topological bridge from connected present/absent triangle sets to H_1=0, single boundary component, vertex-link/local 2-manifoldness, and PL disk classification.
-- **rationale:** Issue: Properties 3-4 treat an arbitrary simplicial 1-cycle as a Jordan curve and infer compact 2-manifold-with-boundary status from edge incidence, without proving the required vertex-link/local-surface condition. Why this blocks: under hostile review, connected present and absent triangle sets in the octahedral dual graph plus finite R=2..10 checks do not by themselves constitute the written all-R PL-disk proof. Repair target: prove a finite octahedral downset/upset-to-PL-disk lemma, including integral H_1, single boundary component, and vertex-link checks, then cite it in the note and/or runner. Claim boundary until fixed: the separable Phi downset/upset mechanism and finite R=2..10 PL-disk verification remain supported, but the stated all-R PL-disk theorem is conditional.
-- **auditor confidence:** high
-
-### `s3_cap_uniqueness_note`
-
-- **Note:** [`S3_CAP_UNIQUENESS_NOTE.md`](../../docs/S3_CAP_UNIQUENESS_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the note's claim that cone-capping a cubical ball with PL S^2 boundary is the unique closure yielding a closed simply connected PL 3-manifold, hence PL S^3.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-s3_cap_uniqueness_note-012`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Every alternative closure is excluded by either the PL manifold condition or nontrivial pi_1, so the cone cap is the unique closure up to PL homeomorphism.  _(class `A`)_
-- **chain closes:** False — The restricted packet does not derive or provide a retained exhaustive PL closure classification for arbitrary caps X. The runner verifies finite cubical facts but hard-codes the load-bearing exclusion/classification steps as theorem assertions.
-- **rationale:** Issue: the proof relies on an exhaustive exclusion of all non-cone PL closures, but the restricted packet supplies no retained theorem proving that handles, boundary identifications, and multi-cones exhaust arbitrary PL 3-complex caps X. Why this blocks: the finite runner checks support boundary/link facts for tested cubical balls, but they do not prove the global uniqueness bridge. Repair target: add and audit a direct PL closure/Schoenflies-style classification dependency, and wire the prior cone-cap manifold verification as a retained dependency if it remains load-bearing. Claim boundary until fixed: conditional on that external PL-topology infrastructure, the cone-capped construction may be carried as a bounded S^3 closure argument.
 - **auditor confidence:** high
 
 ### `s3_mass_matrix_no_go_note`

@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_s3_cap_uniqueness.py
-runner_sha256: 29f1b0c1d783732eb55c5115bf3b0b743967357cd1223c812421ca981ab71bf4
+runner_sha256: e689719a7e6e209ce993d16dc271dcfc712344dcde43659cbe60e4b67dfd5bd6
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.12
+elapsed_sec: 0.59
 status: ok
 ----- stdout -----
 ======================================================================
@@ -79,8 +79,26 @@ S^3 Cap-Map Uniqueness: The Framework FORCES Cone-Capping
 
   [PASS] [THEOREM] Cap-map uniqueness: cone cap is the unique PL closure of the cubical ball  (alternatives exhaustively excluded; gluing unique by Alexander trick; result is PL S^3 by Perelman + Moise)
 
+=== T8: Schoenflies global exhaustiveness ===
+  Structural argument (replaces case-by-case T2-T4 enumeration):
+    Any PL 3-complex X with M = B cup_{dB} X a closed simply-
+    connected PL 3-manifold satisfies:
+      (a) M = PL S^3  (Perelman + Moise)
+      (b) Image of B in M is a PL 3-ball  (B is convex cubical)
+      (c) Image of X in M is the closure of the complement of a
+          PL 3-ball, hence ALSO a PL 3-ball  (Alexander 1924 PL
+          Schoenflies / Brown 1960 generalized Schoenflies)
+      (d) Every PL 3-ball with prescribed PL S^2 boundary is PL
+          homeomorphic to cone(S^2)  (Alexander 1930)
+    Therefore X = cone(dB) up to PL homeo, GLOBALLY.
+
+  [PASS] [THEOREM] Alexander 1924 (PL Schoenflies in dim 3): every PL S^2 in PL S^3 bounds two PL 3-balls  (global exhaustiveness step: any PL 3-complex closure X of B yielding PL 3-manifold M is itself a PL 3-ball)
+  [PASS] [THEOREM] Brown 1960 / Mazur 1959 generalized Schoenflies: locally flat (n-1)-sphere in S^n bounds two n-balls  (specializes to Alexander 1924 in PL dim 3)
+  [PASS] [THEOREM] Alexander 1930 cone theorem: every PL 3-ball is PL homeomorphic to cone(S^2)  (every closure X (a PL 3-ball by Schoenflies) equals cone(dB) up to PL homeomorphism)
+  [PASS] [THEOREM] STRUCTURAL EXHAUSTIVENESS: every PL 3-complex closure X of B is a cone cap up to PL homeo  (Schoenflies (X is a PL 3-ball) + Alexander 1930 cone theorem (every PL 3-ball with PL S^2 boundary = cone(S^2)))
+
 ======================================================================
-PASS=35 FAIL=0 (0.1s)
+PASS=39 FAIL=0 (0.1s)
 
 All checks passed.
 

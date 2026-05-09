@@ -54274,18 +54274,18 @@
       "claim_type_author_hint_raw": "Constructive combinatorial proof + computational verification (R=2..10)",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "aa151ffb2631cc4bed74cc7f9479c19e7afdd21b93a1b8edb57aeb9c72694e50",
+      "note_hash": "e6df00aecce43be85ce9c02c8ea8b28f00003638bea5e70ac7f1b61a411134e8",
       "path": "docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_s3_boundary_link_theorem.py",
       "title": "S^3 Boundary-Link Disk Theorem"
     },
     "s3_cap_uniqueness_note": {
       "claim_id": "s3_cap_uniqueness_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "02fba1769e34e6b75e932db1932a533f0dad510133ebf220e284e20ba6e93570",
+      "note_hash": "aa29a176225a5db138330e277218a8cdb7395c2342797d7cb361e40b5b7a36c5",
       "path": "docs/S3_CAP_UNIQUENESS_NOTE.md",
       "runner_path": "scripts/frontier_s3_cap_uniqueness.py",
       "title": "S^3 Cap-Map Uniqueness: The Framework Forces Cone-Capping"
@@ -62375,18 +62375,18 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 172,
+      "bounded_theorem": 173,
       "meta": 17,
       "no_go": 14,
-      "none": 1693,
+      "none": 1692,
       "open_gate": 19,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 677,
+      "bounded_theorem": 678,
       "meta": 17,
       "no_go": 122,
-      "none": 459,
+      "none": 458,
       "open_gate": 113,
       "positive_theorem": 618
     },

@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_s3_boundary_link_theorem.py
-runner_sha256: 9b6af8afaef7662f64a3cc6c48b354512c6df0905f76f7f6452b61283939dc0f
+runner_sha256: bb621c8cf62accb4ce15e555ccba0205c06cf888e19970ead08334a05ce52e6b
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 2.75
+elapsed_sec: 7.29
 status: ok
 ----- stdout -----
 ======================================================================
@@ -37,6 +37,10 @@ status: ok
   Link type: disk  (count=26)
   [PASS] [EXACT] R=2 P1: all boundary links nonempty proper subcomplexes  (26 boundary vertices)
   [PASS] [EXACT] R=2 P2-P4: all boundary links are PL 2-disks  (26/26)
+  [PASS] [EXACT] R=2 P3a: H_1(link; Z) = 0 (integer SNF)  (26/26)
+  [PASS] [EXACT] R=2 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (26/26)
+  [PASS] [EXACT] R=2 P5a: link has single boundary component  (26/26)
+  [PASS] [EXACT] R=2 P5b: every vertex of link has PL S^1 or arc neighborhood  (26/26 -- finite vertex-link check)
   [PASS] [EXACT] R=2 MECHANISM: Phi decomposes as sum of per-coord terms  (26/26)
   [PASS] [EXACT] R=2 MECHANISM: present set is downset  (26/26)
   [PASS] [EXACT] R=2 MECHANISM: absent set is upset  (26/26)
@@ -51,6 +55,10 @@ status: ok
   Link type: disk  (count=98)
   [PASS] [EXACT] R=3 P1: all boundary links nonempty proper subcomplexes  (98 boundary vertices)
   [PASS] [EXACT] R=3 P2-P4: all boundary links are PL 2-disks  (98/98)
+  [PASS] [EXACT] R=3 P3a: H_1(link; Z) = 0 (integer SNF)  (98/98)
+  [PASS] [EXACT] R=3 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (98/98)
+  [PASS] [EXACT] R=3 P5a: link has single boundary component  (98/98)
+  [PASS] [EXACT] R=3 P5b: every vertex of link has PL S^1 or arc neighborhood  (98/98 -- finite vertex-link check)
   [PASS] [EXACT] R=3 MECHANISM: Phi decomposes as sum of per-coord terms  (98/98)
   [PASS] [EXACT] R=3 MECHANISM: present set is downset  (98/98)
   [PASS] [EXACT] R=3 MECHANISM: absent set is upset  (98/98)
@@ -65,6 +73,10 @@ status: ok
   Link type: disk  (count=194)
   [PASS] [EXACT] R=4 P1: all boundary links nonempty proper subcomplexes  (194 boundary vertices)
   [PASS] [EXACT] R=4 P2-P4: all boundary links are PL 2-disks  (194/194)
+  [PASS] [EXACT] R=4 P3a: H_1(link; Z) = 0 (integer SNF)  (194/194)
+  [PASS] [EXACT] R=4 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (194/194)
+  [PASS] [EXACT] R=4 P5a: link has single boundary component  (194/194)
+  [PASS] [EXACT] R=4 P5b: every vertex of link has PL S^1 or arc neighborhood  (194/194 -- finite vertex-link check)
   [PASS] [EXACT] R=4 MECHANISM: Phi decomposes as sum of per-coord terms  (194/194)
   [PASS] [EXACT] R=4 MECHANISM: present set is downset  (194/194)
   [PASS] [EXACT] R=4 MECHANISM: absent set is upset  (194/194)
@@ -79,6 +91,10 @@ status: ok
   Link type: disk  (count=314)
   [PASS] [EXACT] R=5 P1: all boundary links nonempty proper subcomplexes  (314 boundary vertices)
   [PASS] [EXACT] R=5 P2-P4: all boundary links are PL 2-disks  (314/314)
+  [PASS] [EXACT] R=5 P3a: H_1(link; Z) = 0 (integer SNF)  (314/314)
+  [PASS] [EXACT] R=5 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (314/314)
+  [PASS] [EXACT] R=5 P5a: link has single boundary component  (314/314)
+  [PASS] [EXACT] R=5 P5b: every vertex of link has PL S^1 or arc neighborhood  (314/314 -- finite vertex-link check)
   [PASS] [EXACT] R=5 MECHANISM: Phi decomposes as sum of per-coord terms  (314/314)
   [PASS] [EXACT] R=5 MECHANISM: present set is downset  (314/314)
   [PASS] [EXACT] R=5 MECHANISM: absent set is upset  (314/314)
@@ -93,6 +109,10 @@ status: ok
   Link type: disk  (count=530)
   [PASS] [EXACT] R=6 P1: all boundary links nonempty proper subcomplexes  (530 boundary vertices)
   [PASS] [EXACT] R=6 P2-P4: all boundary links are PL 2-disks  (530/530)
+  [PASS] [EXACT] R=6 P3a: H_1(link; Z) = 0 (integer SNF)  (530/530)
+  [PASS] [EXACT] R=6 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (530/530)
+  [PASS] [EXACT] R=6 P5a: link has single boundary component  (530/530)
+  [PASS] [EXACT] R=6 P5b: every vertex of link has PL S^1 or arc neighborhood  (530/530 -- finite vertex-link check)
   [PASS] [EXACT] R=6 MECHANISM: Phi decomposes as sum of per-coord terms  (530/530)
   [PASS] [EXACT] R=6 MECHANISM: present set is downset  (530/530)
   [PASS] [EXACT] R=6 MECHANISM: absent set is upset  (530/530)
@@ -107,6 +127,10 @@ status: ok
   Link type: disk  (count=722)
   [PASS] [EXACT] R=7 P1: all boundary links nonempty proper subcomplexes  (722 boundary vertices)
   [PASS] [EXACT] R=7 P2-P4: all boundary links are PL 2-disks  (722/722)
+  [PASS] [EXACT] R=7 P3a: H_1(link; Z) = 0 (integer SNF)  (722/722)
+  [PASS] [EXACT] R=7 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (722/722)
+  [PASS] [EXACT] R=7 P5a: link has single boundary component  (722/722)
+  [PASS] [EXACT] R=7 P5b: every vertex of link has PL S^1 or arc neighborhood  (722/722 -- finite vertex-link check)
   [PASS] [EXACT] R=7 MECHANISM: Phi decomposes as sum of per-coord terms  (722/722)
   [PASS] [EXACT] R=7 MECHANISM: present set is downset  (722/722)
   [PASS] [EXACT] R=7 MECHANISM: absent set is upset  (722/722)
@@ -121,6 +145,10 @@ status: ok
   Link type: disk  (count=986)
   [PASS] [EXACT] R=8 P1: all boundary links nonempty proper subcomplexes  (986 boundary vertices)
   [PASS] [EXACT] R=8 P2-P4: all boundary links are PL 2-disks  (986/986)
+  [PASS] [EXACT] R=8 P3a: H_1(link; Z) = 0 (integer SNF)  (986/986)
+  [PASS] [EXACT] R=8 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (986/986)
+  [PASS] [EXACT] R=8 P5a: link has single boundary component  (986/986)
+  [PASS] [EXACT] R=8 P5b: every vertex of link has PL S^1 or arc neighborhood  (986/986 -- finite vertex-link check)
   [PASS] [EXACT] R=8 MECHANISM: Phi decomposes as sum of per-coord terms  (986/986)
   [PASS] [EXACT] R=8 MECHANISM: present set is downset  (986/986)
   [PASS] [EXACT] R=8 MECHANISM: absent set is upset  (986/986)
@@ -135,6 +163,10 @@ status: ok
   Link type: disk  (count=1298)
   [PASS] [EXACT] R=9 P1: all boundary links nonempty proper subcomplexes  (1298 boundary vertices)
   [PASS] [EXACT] R=9 P2-P4: all boundary links are PL 2-disks  (1298/1298)
+  [PASS] [EXACT] R=9 P3a: H_1(link; Z) = 0 (integer SNF)  (1298/1298)
+  [PASS] [EXACT] R=9 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (1298/1298)
+  [PASS] [EXACT] R=9 P5a: link has single boundary component  (1298/1298)
+  [PASS] [EXACT] R=9 P5b: every vertex of link has PL S^1 or arc neighborhood  (1298/1298 -- finite vertex-link check)
   [PASS] [EXACT] R=9 MECHANISM: Phi decomposes as sum of per-coord terms  (1298/1298)
   [PASS] [EXACT] R=9 MECHANISM: present set is downset  (1298/1298)
   [PASS] [EXACT] R=9 MECHANISM: absent set is upset  (1298/1298)
@@ -149,6 +181,10 @@ status: ok
   Link type: disk  (count=1610)
   [PASS] [EXACT] R=10 P1: all boundary links nonempty proper subcomplexes  (1610 boundary vertices)
   [PASS] [EXACT] R=10 P2-P4: all boundary links are PL 2-disks  (1610/1610)
+  [PASS] [EXACT] R=10 P3a: H_1(link; Z) = 0 (integer SNF)  (1610/1610)
+  [PASS] [EXACT] R=10 P3b: H_1(link; Z_2) = 0 (mod-2 cross-check)  (1610/1610)
+  [PASS] [EXACT] R=10 P5a: link has single boundary component  (1610/1610)
+  [PASS] [EXACT] R=10 P5b: every vertex of link has PL S^1 or arc neighborhood  (1610/1610 -- finite vertex-link check)
   [PASS] [EXACT] R=10 MECHANISM: Phi decomposes as sum of per-coord terms  (1610/1610)
   [PASS] [EXACT] R=10 MECHANISM: present set is downset  (1610/1610)
   [PASS] [EXACT] R=10 MECHANISM: absent set is upset  (1610/1610)
@@ -158,6 +194,21 @@ status: ok
   [PASS] [EXACT] R=10 MECHANISM: absent set connected in Q_3  (1610/1610)
 
 ======================================================================
+  FINITE TYPE ENUMERATION (bounded support)
+======================================================================
+  Distinct (present, absent) configurations on {0,-1}^3 across R=2..10: 102
+  All such configurations are nonempty proper downsets in Q_3.
+  All produce H_1 = 0 over Z (verified above).
+  All produce single-boundary-component PL 2-disk.
+  TYPE BOUND: at most 2^8 = 256 labelled subsets of {0,-1}^3.
+  This run reports the subset types that actually occur for
+  R=2..10; larger-R exhaustion remains part of the analytic proof,
+  not something certified by this bounded enumeration alone.
+  Empirical: 102 distinct configurations observed at R=2..10,
+  all PASS the H_1=0 + manifoldness + single-boundary checks.
+  [PASS] [BOUNDED] FINITE TYPE ENUMERATION: observed R=2..10 configurations verified  (102 observed labelled types; all checked in the finite-radius run)
+
+======================================================================
   SUMMARY
 ======================================================================
   R range:           2..10
@@ -165,9 +216,9 @@ status: ok
   All disk:          5778/5778
   Failures:          0
 
-  PASS: 81   FAIL: 0
-  EXACT: 81   BOUNDED: 0
-  Time: 2.7s
+  PASS: 118   FAIL: 0
+  EXACT: 117   BOUNDED: 1
+  Time: 6.8s
 
   RESULT: ALL CHECKS PASS
 
