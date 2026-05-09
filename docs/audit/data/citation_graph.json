@@ -8717,6 +8717,58 @@
       "to": "higgs_from_lattice_note"
     },
     {
+      "from": "higgs_mass_derived_note",
+      "to": "yt_zero_import_authority_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "yt_flagship_boundary_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "yt_color_projection_correction_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "yt_explicit_systematic_budget_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "ew_coupling_derivation_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "qcd_low_energy_running_bridge_note_2026-05-01"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "hierarchy_spatial_bc_and_u0_scaling_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "hierarchy_matsubara_decomposition_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note"
+    },
+    {
+      "from": "higgs_mass_derived_note",
+      "to": "assumption_derivation_ledger"
+    },
+    {
       "from": "higgs_mass_from_axiom_note",
       "to": "higgs_mass_derived_note"
     },
@@ -42890,9 +42942,22 @@
       "deps": [
         "taste_scalar_isotropy_theorem_note",
         "higgs_mechanism_note",
-        "higgs_from_lattice_note"
+        "higgs_from_lattice_note",
+        "yt_zero_import_authority_note",
+        "yt_flagship_boundary_note",
+        "yt_color_projection_correction_note",
+        "yt_explicit_systematic_budget_note",
+        "ew_coupling_derivation_note",
+        "yt_ew_color_projection_theorem",
+        "alpha_s_derived_note",
+        "plaquette_self_consistency_note",
+        "qcd_low_energy_running_bridge_note_2026-05-01",
+        "hierarchy_spatial_bc_and_u0_scaling_note",
+        "hierarchy_matsubara_decomposition_note",
+        "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
+        "assumption_derivation_ledger"
       ],
-      "note_hash": "ce3eefa82df02d439a2dc1cbc77a994dba3d07e856d83095bc179d903667c656",
+      "note_hash": "4bcfce2311ea5ce534b1a1601cc2b2625f3416db30f42cfb2c87bb781cdb6c80",
       "path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
       "title": "Higgs Mass: Canonical Authority Boundary"
@@ -62661,7 +62726,7 @@
       "open_gate": 112,
       "positive_theorem": 613
     },
-    "edge_count": 7706,
+    "edge_count": 7719,
     "leaf_count": 536,
     "node_count": 2009,
     "root_count": 814,

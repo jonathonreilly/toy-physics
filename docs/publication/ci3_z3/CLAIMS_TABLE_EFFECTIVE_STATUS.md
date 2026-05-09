@@ -134,7 +134,7 @@ These rows are in the public package, but they are not manuscript-core claims.
 
 | Lane | Status | Authority |
 |---|---|---|
-| Higgs / vacuum package | bounded companion | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)&nbsp;[audit:unaudited], [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)&nbsp;[audit:audited_conditional] |
+| Higgs / vacuum package | bounded companion | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)&nbsp;[audit:unaudited], [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)&nbsp;[audit:unaudited] |
 | Quark mass-ratio support stack | bounded companion | [QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md](../../QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md)&nbsp;[audit:unaudited] |
 | Curated neutrino retained boundary/support packet | bounded companion | [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](../../NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md)&nbsp;[audit:unaudited], [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md)&nbsp;[audit:unaudited] |
 | Native taste-qubit teleportation planning boundary | parked planning lane / not manuscript-core | [TELEPORTATION_PROTOCOL_NOTE.md](../../TELEPORTATION_PROTOCOL_NOTE.md)&nbsp;[audit:unaudited], [TELEPORTATION_NATIVE_AXIOMS_THEORY_NOTE.md](../../TELEPORTATION_NATIVE_AXIOMS_THEORY_NOTE.md)&nbsp;[audit:audited_conditional], [TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md](../../TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md)&nbsp;[audit:audited_renaming] |

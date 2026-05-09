@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 992 |
+| unaudited | 993 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 343 |
+| ~~audited_conditional~~ | 342 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,27 +41,27 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 343 |
+| `audited_conditional` | 342 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1053 |
+| `unaudited` | 1054 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 756 |
+| `bounded_theorem` | 755 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 769 |
+| `positive_theorem` | 770 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 315 |
-| `high` | 474 |
-| `medium` | 484 |
+| `critical` | 316 |
+| `high` | 475 |
+| `medium` | 482 |
 | `leaf` | 629 |
 
 - **Retained pending chain closure:** 1
@@ -80,21 +80,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 770 | 61.59 | `unaudited` | meta |
-| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 534 | 40.56 | `unaudited` | unaudited |
-| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 756 | 38.06 | `audited_clean` | open_gate |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 771 | 61.59 | `unaudited` | meta |
+| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 535 | 40.57 | `unaudited` | unaudited |
+| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 757 | 38.07 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 622 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 745 | 36.54 | `audited_clean` | **retained_bounded** |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 746 | 36.55 | `audited_clean` | **retained_bounded** |
 | 6 | `minimal_axioms_2026-04-11` | meta | critical | 677 | 33.91 | `unaudited` | meta |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 504 | 32.48 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 505 | 32.98 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 30.12 | `unaudited` | unaudited |
-| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 735 | 30.02 | `audited_clean` | **retained_bounded** |
-| 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 504 | 29.98 | `unaudited` | unaudited |
+| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 736 | 30.03 | `audited_clean` | **retained_bounded** |
+| 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 505 | 29.98 | `unaudited` | unaudited |
 | 11 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 29.12 | `unaudited` | unaudited |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 587 | 28.70 | `unaudited` | unaudited |
-| 13 | `three_generation_structure_note` | bounded_theorem | critical | 459 | 27.34 | `unaudited` | unaudited |
-| 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 603 | 27.24 | `unaudited` | unaudited |
-| 15 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 507 | 26.99 | `audited_clean` | **retained_bounded** |
+| 13 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 508 | 27.49 | `audited_clean` | **retained_bounded** |
+| 14 | `three_generation_structure_note` | bounded_theorem | critical | 459 | 27.34 | `unaudited` | unaudited |
+| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 604 | 27.24 | `unaudited` | unaudited |
 | 16 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 152 | 26.76 | `unaudited` | unaudited |
 | 17 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 152 | 25.76 | `unaudited` | unaudited |
 | 18 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 152 | 24.76 | `unaudited` | unaudited |
@@ -103,8 +103,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `one_generation_matter_closure_note` | bounded_theorem | critical | 420 | 24.22 | `unaudited` | unaudited |
 | 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 264 | 24.05 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 259 | 24.02 | `unaudited` | unaudited |
-| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 514 | 24.01 | `audited_clean` | **retained_bounded** |
-| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 594 | 23.22 | `audited_clean` | **retained** |
+| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 515 | 24.01 | `audited_clean` | **retained_bounded** |
+| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 595 | 23.22 | `audited_clean` | **retained** |
 
 
 ## Applied audits
@@ -693,7 +693,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `higgs_mass_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | G | - |
 | `higher_dimension_status_2026-04-01` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -6375,22 +6374,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current Higgs runner shows that the framework has nontrivial quantitative Higgs behavior once the lattice Coleman-Weinberg mechanism is active.  _(class `C`)_
 - **chain closes:** True — For this bounded scope, the note does not claim an exact Higgs-mass derivation; it claims only that the runner exhibits nontrivial CW Higgs behavior and supports bounded studies. The completed runner computes CW potential/SSB scans and ballpark mass-ratio behavior, while its failed exact-coupling/crossing checks are consistent with the note's explicit boundary.
 - **rationale:** The source note is narrowly scoped: it is a support note for bounded Higgs quantitative behavior and explicitly excludes standalone exact m_H authority. The runner is not clean for exact Higgs closure, but that is not the claim under audit; the two completed failures show missing exact coupling/crossing closure and reinforce the boundary. Within the bounded scope, the source note and completed runner evidence close without promoting an exact Higgs-mass derivation.
-- **auditor confidence:** high
-
-### `higgs_mass_derived_note`
-
-- **Note:** [`HIGGS_MASS_DERIVED_NOTE.md`](../../docs/HIGGS_MASS_DERIVED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded Higgs-mass authority: the direct 3-loop SM RGE runner with lambda(M_Pl)=0 maps the current hard-coded framework input set to m_H ~= 125.1 GeV; exact closure remains conditional on the y_t and framework-input authority paths.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-higgs-derived-judge`  (codex-gpt-5.5; independence=judicial_review)
-- **load-bearing step:** For the current accepted central input y_t(v) = 0.9176, the direct full 3-loop runner gives m_H ~= 125.1 GeV, with exact Higgs closure still inheriting the YT-lane precision caveat.  _(class `G`)_
-- **chain closes:** False — The restricted packet shows a real 3-loop RGE computation, but it does not close the authority for y_t(v)=0.9176, g1, g2, alpha_s, v, or the lambda(M_Pl)=0 boundary. The supplied Higgs dependencies explicitly support mechanism-level or bounded quantitative claims, not exact independent m_H closure.
-- **rationale:** Issue: the m_H ~= 125.1 result is obtained at a specific hard-coded input set, especially y_t(v)=0.9176, while the restricted dependencies do not establish those inputs or the lambda(M_Pl)=0 boundary as retained authorities. Why this blocks: the runner removes the Buttazzo-style fit import and performs a real 3-loop RGE computation, but the Higgs number remains input-sensitive and the packet does not prove the input authority or precision budget. Repair target: add retained-grade direct dependencies or runners for the YT authority path, g1/g2/alpha_s/v inputs, and high-scale boundary, with this runner consuming those outputs. Claim boundary until fixed: bounded support that the current hard-coded input set maps to m_H ~= 125.1 GeV with inherited YT/input caveats.
-- **open / conditional deps cited:**
-  - `HIGGS_MECHANISM_NOTE.md`
-  - `HIGGS_FROM_LATTICE_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mechanism_note`
