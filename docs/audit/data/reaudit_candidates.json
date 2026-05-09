@@ -9,7 +9,7 @@
     "critical": 0,
     "high": 0,
     "leaf": 0,
-    "medium": 1
+    "medium": 0
   },
   "candidates": [],
   "eligible_audit_statuses": [
@@ -32,36 +32,7 @@
     "retained_bounded",
     "retained_no_go"
   ],
-  "runner_drift_candidates": [
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "audited_conditional",
-      "candidate_reason": "runner_artifact_repaired_since_audit",
-      "claim_id": "second_grown_family_complex_note",
-      "claim_scope": "Narrow drift=0.20 no-restore geometry-sector grown-family complex-action companion, conditional on printed runner guards being accepted or asserted.",
-      "claim_type": "positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "current_dep_effective_status": {
-        "second_grown_family_sign_note": "retained_bounded"
-      },
-      "current_runner_hash": "4ab7a30039285b0b7e45e9cbe2db48d946903547fb93e488f9a456149f52d90e",
-      "deps": [
-        "second_grown_family_sign_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
-      "generated_order": 1,
-      "improved_dependencies": [],
-      "load_bearing_score": 6.524,
-      "note_hash": "086accbcaa09c2aa4653fff65eff1b1c933f218aed2f2f8cee10d0d469f02826",
-      "note_path": "docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md",
-      "reraudit_after_claim_ids": [],
-      "runner_path": "scripts/SECOND_GROWN_FAMILY_COMPLEX.py",
-      "snap_runner_hash": "d44a347da407dbc0678cda8be68960e27732f7a0b058c569f7ff6577b58c0e57",
-      "transitive_descendants": 22
-    }
-  ],
+  "runner_drift_candidates": [],
   "total_candidates": 0,
-  "total_runner_drift_candidates": 1
+  "total_runner_drift_candidates": 0
 }

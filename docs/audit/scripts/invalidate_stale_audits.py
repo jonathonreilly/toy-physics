@@ -14,6 +14,9 @@ Triggers (any of):
   4. This claim's criticality tier increased since audit time. A claim
      audited at criticality=medium that is now criticality=critical needs
      re-audit under the stricter cross-confirmation rule.
+  5. The audited runner hash changed since audit time, or an
+     audited_conditional `runner_artifact_issue` row that asked for a current
+     runner/log now has a fresh OK cache matching the current runner source.
 
 When triggered, the prior audit fields are archived into previous_audits
 with an `invalidation_reason`, and audit_status is reset to unaudited.
@@ -24,12 +27,15 @@ compute_effective_status.py have populated criticality and effective_status.
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+import runner_cache as rc  # noqa: E402
 
 # Strength rank used to compare 'before' and 'after' for a dep.
 # Must stay in sync with compute_effective_status.py RANK.
@@ -108,6 +114,7 @@ EMPTY_AFTER_INVALIDATION = {
     "claim_type_provenance": "needs_reaudit_after_invalidation",
     "claim_type_last_reviewed": None,
     "notes_for_re_audit_if_any": None,
+    "effective_status": "unaudited",
 }
 
 
@@ -119,6 +126,20 @@ def status_rank(status: str | None) -> int:
 
 def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     snap = row.get("audit_state_snapshot")
+    if snap is not None:
+        snap_runner_hash = snap.get("runner_hash")
+        cur_runner_hash = rc.runner_sha256(row.get("runner_path") or "")
+        if (
+            snap_runner_hash is not None
+            and cur_runner_hash is not None
+            and snap_runner_hash != cur_runner_hash
+        ):
+            return f"runner_hash_changed:{snap_runner_hash[:8]}->{cur_runner_hash[:8]}"
+
+    artifact_reason = runner_artifact_issue_resolved(row)
+    if artifact_reason is not None:
+        return artifact_reason
+
     if snap is None:
         return None  # nothing to compare against; treat as fresh
 
@@ -174,6 +195,34 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     return None
 
 
+def runner_artifact_issue_resolved(row: dict) -> str | None:
+    """Detect a resolved "register current runner/log" audit blocker.
+
+    This does not decide whether the claim is scientifically clean. It only
+    reopens a stale conditional audit when the exact artifact it requested is
+    now present as a fresh OK cache.
+    """
+    if row.get("audit_status") != "audited_conditional":
+        return None
+    notes = (row.get("notes_for_re_audit_if_any") or "").lower()
+    if not notes.startswith("runner_artifact_issue:"):
+        return None
+    if "register a current runner/log" not in notes and "register a current runner" not in notes:
+        return None
+    runner_path = row.get("runner_path")
+    if not runner_path:
+        return None
+    cache_path, header, _body = rc.load_cache(runner_path)
+    if not cache_path.exists() or not header:
+        return None
+    if header.get("status") != "ok" or header.get("exit_code") != "0":
+        return None
+    current_hash = rc.runner_sha256(runner_path)
+    if current_hash is None or header.get("runner_sha256") != current_hash:
+        return None
+    return f"runner_artifact_issue_resolved:{runner_path}"
+
+
 def is_archived_terminal_failed_dep(dep: str, rows: dict[str, dict]) -> bool:
     dep_row = rows.get(dep)
     if not dep_row:
@@ -203,6 +252,9 @@ def archive_and_reset(row: dict, reason: str) -> dict:
     if source_hint in CLAIM_TYPES:
         new_row["claim_type"] = source_hint
         new_row["claim_type_provenance"] = "author_hint_after_invalidation"
+    elif row.get("claim_type") in CLAIM_TYPES:
+        new_row["claim_type"] = row.get("claim_type")
+        new_row["claim_type_provenance"] = "needs_reaudit_after_invalidation"
     return new_row
 
 

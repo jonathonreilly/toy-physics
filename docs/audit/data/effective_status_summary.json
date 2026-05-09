@@ -50,10 +50,10 @@
   ],
   "cycles_detected": 172,
   "effective_status_counts": {
-    "audited_conditional": 306,
-    "audited_failed": 10,
+    "audited_conditional": 274,
+    "audited_failed": 9,
     "audited_numerical_match": 22,
-    "audited_renaming": 26,
+    "audited_renaming": 25,
     "decoration_under_cl3_color_automorphism_theorem": 3,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": 1,
@@ -64,10 +64,10 @@
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 65,
     "open_gate": 11,
-    "retained": 64,
+    "retained": 63,
     "retained_bounded": 235,
     "retained_no_go": 121,
-    "unaudited": 1034
+    "unaudited": 1069
   },
   "retained_pending_chain_count": 0,
   "retained_pending_chain_examples": []

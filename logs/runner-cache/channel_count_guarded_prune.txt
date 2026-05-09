@@ -1,11 +1,38 @@
 ===== runner cache v1 =====
 runner: scripts/channel_count_guarded_prune.py
-runner_sha256: 254816a4e30601e35a90a711f5e13cbefd041928efcd751ddda6d7b4d1a6dafa
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 59b80b6e38ef31e02fee919a1c0298a8f294c6d122067ac70e5d1cb63864d0bf
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 436.95
+status: ok
 ----- stdout -----
+==========================================================================
+CHANNEL-COUNT-PRESERVING PRUNING GUARD
+  Guard: undo prune if eff_ch drops below 80% of baseline
+  Compare: unguarded vs channel-guarded
+==========================================================================
+
+  default npl: 60
+  dense N=120 npl: 80
+
+     N     variant   grav_b   grav_p   pur_b   pur_p  eff_b  eff_p  flips    n
+  ----------------------------------------------------------------------------------------
+    80  npl=60 Unguarded   +0.983   +1.757  0.9968  0.9689    6.3    5.2      3   14
+    80  npl=60 Channel-guarded   +0.983   +1.739  0.9968  0.9703    6.3    7.0      0   14
+
+   100  npl=60 Unguarded   +1.778   -0.001  0.9930  0.9965    2.4    1.6      2   13
+   100  npl=60 Channel-guarded   +1.778   +1.628  0.9930  0.9734    2.4    2.4      2   13
+
+   120  npl=60 Unguarded   +0.000   +0.000  0.9289  0.9892    1.6    0.7      0    3
+   120  npl=60 Channel-guarded   +0.000   +0.000  0.9289  0.9289    1.6    1.6      0    3
+
+   120  npl=80 Unguarded   +2.466   +1.945  0.9969  0.9722   10.0    8.0      2   16
+   120  npl=80 Channel-guarded   +2.466   +2.175  0.9969  0.9909   10.0   10.3      1   16
+
+==========================================================================
+KEY: channel-guarded should have fewer flips AND eff_p closer to eff_b
+while still achieving pur_p < pur_b (decoherence improvement)
+==========================================================================
 
 ----- stderr -----
 
