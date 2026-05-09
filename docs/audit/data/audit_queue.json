@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 133,
     "high": 354,
-    "leaf": 220,
+    "leaf": 219,
     "medium": 255
   },
   "cycle_break_target_count": 184,
@@ -23642,27 +23642,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "growing_graph_expansion_card_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/growing_graph_expansion_card.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -24077,6 +24056,30 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_grav_wave_post_newtonian.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "growing_graph_expansion_skeptic_audit_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "growing_graph_expansion_card_note",
+        "growing_graph_dynamic_limit_diagnostic_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GROWING_GRAPH_EXPANSION_SKEPTIC_AUDIT_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
       "transitive_descendants": 0
     },
     {
@@ -26938,30 +26941,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "growing_graph_expansion_skeptic_audit_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "growing_graph_expansion_card_note",
-        "growing_graph_dynamic_limit_diagnostic_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GROWING_GRAPH_EXPANSION_SKEPTIC_AUDIT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "grown_wavefield_failure_diagnosis_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -29255,5 +29234,5 @@
     }
   ],
   "ready_count": 35,
-  "total_pending": 962
+  "total_pending": 961
 }

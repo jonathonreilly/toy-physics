@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 64 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 237 |
+| **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 952 |
+| unaudited | 951 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 390 |
+| `audited_clean` | 391 |
 | `audited_conditional` | 370 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1007 |
+| `unaudited` | 1006 |
 
 | claim_type | count |
 |---|---:|
@@ -238,6 +238,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitomagnetic_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `growing_graph_dynamic_propagation_replacement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
+| `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `growing_graph_frontier_expansion_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
@@ -6329,6 +6330,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The retained replacement observable is the frontier-delay proxy frozen in the runner and proxy note, with step 0 frontier delay 3.000, step 20 frontier delay 22.000, slope +0.9325 hops/step, and static control frontier delay 3.000.  _(class `B`)_
 - **chain closes:** True — The source note only imports the one-hop retained proxy result and narrows the claim boundary around it. The current runner output matches the frozen replay values and the note explicitly excludes cosmology, de Sitter, wavepacket, and amplitude-carry-forward claims.
 - **rationale:** The claim is clean within its bounded replacement scope: it does not assert a new dynamic propagation theorem, but defers to the retained frontier-delay proxy and preserves the proxy-only limitations. The runner completes and reproduces the frozen values in the note. Residual risk is confined to the upstream proxy family and to any future attempt to re-promote dynamic amplitude propagation, which this note does not claim.
+- **auditor confidence:** high
+
+### `growing_graph_expansion_card_note`
+
+- **Note:** [`GROWING_GRAPH_EXPANSION_CARD_NOTE.md`](../../docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded toy-graph statement that the specified seed strip and frontier-growth rule produce strong spreading proxies relative to the static seed control over 16 steps.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d7c-c172-74a2-ab82-65b4f95e2e33`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The runner applies the stated frontier-growing graph rule for 16 steps and computes that node count, frontier size, mean radius, and max radius grow strongly while the static control remains fixed.  _(class `C`)_
+- **chain closes:** True — The note makes only a bounded analog-proxy claim, and the runner directly constructs the seed, applies the growth rule, computes the reported graph statistics, and compares them to the static control. No external physical bridge or cosmology derivation is required for this narrowed scope.
+- **rationale:** The load-bearing result is an internal computation from the specified toy growth rule, not an imported comparator or a symbolic relabeling. The source explicitly limits the claim to a de Sitter-like spreading proxy and disclaims proof of de Sitter spacetime, inflation, or real cosmological data. Within that boundary, the runner source actually grows the graph and recomputes the reported counts, radii, slopes, and static-control quantities.
 - **auditor confidence:** high
 
 ### `growing_graph_frontier_expansion_proxy_note`
