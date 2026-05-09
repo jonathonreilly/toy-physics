@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 233 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 965 |
+| unaudited | 964 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 363 |
+| ~~audited_conditional~~ | 364 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 363 |
+| `audited_conditional` | 364 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1020 |
+| `unaudited` | 1019 |
 
 | claim_type | count |
 |---|---:|
@@ -636,6 +636,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4270,6 +4271,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the broad tested exact bundle box, endpoint and split-1 minima lie above Lambda_+(x_*) = 1.586874714730 while split-2 has minimum 1.500442491658 below that floor, so broad exact-bundle dominance fails.  _(class `B`)_
 - **chain closes:** False — The runner numerically reproduces the stated minima and sign comparisons, but it imports the exact bundle map, repair functional, and preferred recovered floor from modules not supplied or cited as retained authorities. The missing step is a retained dependency closing quotient_gauge_h, repair_from_slack_point, and PREFERRED_RECOVERED_LIFT, plus theorem-grade certification if the note is to exceed candidate status.
 - **rationale:** Issue: the load-bearing comparison relies on imported carrier/readout/floor objects, but the restricted packet lists no one-hop dependencies closing those objects. Why this blocks: the completed runner supports a numerical candidate, yet stdout and source do not establish that the exact bundle, repair normalization, preferred floor, or global minima are retained-grade consequences of the allowed inputs. Repair target: add retained dependency edges for the bundle construction and floor normalization, and add an interval/global-minimum certificate if theorem status is intended. Claim boundary until fixed: this is a broad-box numerical candidate showing split-2 below the imported floor in the tested code, not a closed retained theorem.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded numerical dominance candidate that the endpoint m-window [-1.899713,-1.87] stays above the preferred recovered repair floor on the stated compact exact-bundle box and two stated tail challenges.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d5e-ecf6-7a51-a47a-f029df3e4146`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The endpoint window search on the exact shift-quotient bundle finds a compact-box minimum 3.027555919409 and tail minima above the preferred recovered floor Lambda_+(x_*) = 1.586874714730.  _(class `B`)_
+- **chain closes:** False — The runner computes the scan using imported bundle and preferred-floor machinery, but the restricted packet provides no cited authority closing quotient_gauge_h, PREFERRED_RECOVERED_LIFT, repair_from_slack_point, or the upgrade from tested bundle dominance to local rival-window dominance.
+- **rationale:** Issue: the note's numerical scan is real within the runner, but it depends on uncited imported bundle construction and preferred-floor inputs, and the note itself states the remaining theorem gap from tested bundle dominance to certified local rival-window dominance. Why this blocks: without retained authorities for the exact shift-quotient bundle, floor normalization, and rival-window completeness bridge, the restricted packet cannot close the dominance claim as a theorem. Repair target: cite retained bundle/floor/completeness theorems or provide a runner deriving those inputs inside the packet. Claim boundary until fixed: a bounded numerical candidate on the stated sampled/refined domain and tails, not certified local dominance.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`
