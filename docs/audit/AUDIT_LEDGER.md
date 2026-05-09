@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 885 |
+| unaudited | 884 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 426 |
+| ~~audited_conditional~~ | 427 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 387 |
-| `audited_conditional` | 426 |
+| `audited_conditional` | 427 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 939 |
+| `unaudited` | 938 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 720 |
+| `bounded_theorem` | 721 |
 | `decoration` | 11 |
 | `meta` | 63 |
 | `no_go` | 188 |
 | `open_gate` | 109 |
-| `positive_theorem` | 775 |
+| `positive_theorem` | 774 |
 
 | criticality | count |
 |---|---:|
@@ -906,6 +906,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_retarded_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `wave_static_single_source_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -13443,6 +13444,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The live runner reproduces the two numerical comparison tables, but it does not define or pass a drop-in-replacement acceptance criterion; its own printed verdict says the matrix-free result is close but not yet proven identical.
 - **rationale:** Issue: the note promotes the matrix-free solver as a strong drop-in replacement, but the runner only demonstrates small finite mismatches at two geometries and explicitly reports that identity is not proven. Why this blocks: without a stated tolerance or convergence/equivalence theorem, the audit can certify numerical closeness but cannot certify replacement status as a retained engine equivalence. Repair target: add an audited acceptance criterion for drop-in replacement, such as field and propagated-response tolerances tied to solver residuals, or prove both algorithms converge to the same finite-grid Poisson solution with a runner pass/fail threshold. Claim boundary until fixed: safe to claim that at H = 0.35 and H = 0.25 the direct and matrix-free fields agree to roughly 1e-5 relative field mismatch and propagated dS agrees to roughly 1e-6; not safe to claim unconditional retained drop-in replacement beyond those numerical tests.
 - **auditor confidence:** high
+
+### `wave_static_single_source_compare_note`
+
+- **Note:** [`WAVE_STATIC_SINGLE_SOURCE_COMPARE_NOTE.md`](../../docs/WAVE_STATIC_SINGLE_SOURCE_COMPARE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A finite H = 0.5 smoke-test comparison of dM, dI, dIeq, dN, and dS for frozen sources at z_phys = 3.0 and z_phys = 0.0.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c8f-53c8-7590-95e1-cba554dc8976`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At H = 0.5 and frozen z_phys = 3.0, the runner reports dM = +0.009857 versus dI = +0.018250, dIeq = +0.003038, dN = +0.013402, and dS = +0.009507, so comparator mismatches are already present without source motion.  _(class `C`)_
+- **chain closes:** False — The top-level runner reproduces the note's tables and locally computes the direct static solve, but it imports the retarded solver, cached comparators, Newton comparator, lattice growth, beam propagation, readout, and constants from an unprovided module. The missing closure step is a retained or in-packet construction of those imported quantities.
+- **rationale:** Issue: the note's conclusion rests on runner-generated dM/dI/dIeq/dN/dS values, while the runner delegates most physical construction and readout to wave_retardation_continuum_limit, which is not included as a cited or retained authority in the restricted packet. Why this blocks: stdout plus top-level arithmetic cannot by itself verify that the compared quantities are the advertised retarded, cached static, Newton-style, and beam-readout objects. Repair target: provide a retained dependency edge or a self-contained sliced runner that constructs solve_wave, make_instantaneous, make_instantaneous_equilibrated, make_imposed_newton, grow, prop_beam, cz, and constants from retained primitives. Claim boundary until fixed: the packet supports a reported finite-run smoke-test table, not a closed theorem that source motion is excluded as the cause of the comparator mismatch.
+- **auditor confidence:** medium
 
 ### `weak_coupling_retention_note_2026-04-11`
 
