@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 955 |
+| unaudited | 954 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 368 |
+| ~~audited_conditional~~ | 369 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 389 |
-| `audited_conditional` | 368 |
+| `audited_conditional` | 369 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1010 |
+| `unaudited` | 1009 |
 
 | claim_type | count |
 |---|---:|
@@ -552,6 +552,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_layernorm_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `central_band_mass_window_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `chiral_3plus1d_boundary_phase_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_3plus1d_mixing_period_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `chiral_bottleneck_card_proposal` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2293,6 +2294,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** There is no SU(2) Fierz identity that would give sqrt(2 N_w) in the same role on the colorless (2,1) lepton block, so the direct g_2 anchor analog fails.  _(class `B`)_
 - **chain closes:** False — The note depends on the YT-lane D12/D17 structure and on a non-extension claim for the (2,1) lepton block, but no cited authority or runner is provided in the restricted packet to establish either step. The missing step is a retained theorem or computation showing that the SU(2)-only lepton block lacks the required Fierz/composite-scalar uniqueness analog.
 - **rationale:** Issue: the no-go/open-gate conclusion rests on imported YT-lane structure and an asserted absence of an SU(2)-only analog, neither of which is supplied as a retained dependency in this packet. Why this blocks: a route-exclusion claim requires more than noting the lepton is color-singlet; it needs a closed theorem or computation ruling out the relevant (2,1) scalar-channel/Fierz replacement. Repair target: cite a retained D12/D17 authority plus add a bounded no-go theorem or runner for the (2,1) block. Claim boundary until fixed: this remains a branch-local stretch attempt identifying a plausible obstruction, not an audited exclusion of the g_2 anchor route.
+- **auditor confidence:** high
+
+### `charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28`
+
+- **Note:** [`CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md`](../../docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the note's stated SA-B exclusion: a direct U(1)_Y hypercharge anchor does not determine a specific tau Yukawa value because the proposed chain leaves an unfixed dimensionless constant.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d75-1604-7ec1-bb36-a9ba64b0c93a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Because U(1)_Y is abelian, its charge multiplication has no SU(N) Fierz/D12 analog and therefore leaves an undetermined prefactor C rather than fixing y_tau.  _(class `A`)_
+- **chain closes:** False — The U(1)-specific obstruction is plausibly an algebraic no-go as stated, but the stronger combined no-go imports the SU(2) Cycle 2 exclusion and the retained YT-lane D12/D17 chain without those authorities being present in the restricted packet. The missing step is a retained upstream theorem establishing the SU(2) exclusion and the exact YT structural primitive being analogized.
+- **rationale:** Issue: the note's SA-B argument rests on the algebraic claim that abelian U(1) charge multiplication supplies no Fierz normalization and leaves C free, while the stronger no-go also relies on Cycle 2 and YT-lane retained results that are not supplied. Why this blocks: without those upstream inputs, the restricted packet cannot close the advertised combined direct-gauge-anchor no-go, only the local U(1) stretch-attempt obstruction. Repair target: provide the Cycle 2 SU(2) exclusion and YT D12/D17 retained authority as one-hop cited inputs, or narrow the claim to SA-B alone. Claim boundary until fixed: U(1)_Y alone is not shown here to determine y_tau, but the full 'no direct gauge-anchor YT analog works' conclusion remains conditional.
+- **open / conditional deps cited:**
+  - `CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `chiral_3plus1d_boundary_phase_note`
