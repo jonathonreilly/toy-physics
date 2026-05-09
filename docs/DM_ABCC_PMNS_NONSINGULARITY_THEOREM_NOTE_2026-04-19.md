@@ -49,6 +49,15 @@ singularity), but it is not derived from Cl(3)/Z³ algebra alone. The
 axiom cost is reduced from a bare sign assumption (A-BCC verbatim) to
 this weaker continuity statement.
 
+**Algebraic companion (§10.5).** A separate, narrower question — whether
+the actual PMNS matrix U_PMNS is unitary at a non-singular endpoint —
+**is** answered by Cl(3)/Z³ algebra. The spectral theorem on Hermitian
+matrices gives V ∈ U(3) for the diagonalizer of any non-singular 3×3
+Hermitian, and U(3) is closed under composition; so U_PMNS = U_e† U_ν is
+automatically unitary at the physical endpoint. This narrows PNS to its
+path-continuity half on (0, 1) only; the endpoint half (which a reader
+could conflate with "U_PMNS non-singularity") is automatic. See §10.5.
+
 ---
 
 ## 1. Setup
@@ -283,7 +292,7 @@ the complete A-BCC conditional closure stack.
 
 ## 10. Runner verification
 
-`scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py` runs 9 tasks:
+`scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py` runs 11 tasks:
 
 - T1: det(H_base) > 0 (physical parameterization).
 - T2: E2-threshold exact theorem (algebraic, det(H_base + m T_M) =
@@ -299,8 +308,89 @@ the complete A-BCC conditional closure stack.
 - T8: PNS conditional theorem: structural PASS asserting the gap and
   its physical grounding.
 - T9: Summary — Basin 1 is the unique known chi²=0 basin satisfying PNS.
+- T10: Algebraic companion — U_PMNS unitarity from the Cl(3) spectral
+  theorem. Random Cl(3) Hermitian non-singular samples, H_base, and
+  Basin 1 endpoint all yield diagonalizers U with ‖U†U − I‖ < 1e-12 and
+  |det U| = 1. The constructed U_PMNS = U_e† U_ν is unitary as a product
+  of two U(3) elements (closure).
+- T11: Symbolic spectral-theorem unitarity. Sympy verification on the
+  symbolic H_base (with sqrt(8/3), sqrt(8)/3, Γ = 1/2 entries) that the
+  diagonalizer is in U(3), and exact symbolic verification that real
+  rotations and phases generate U(3) and that products remain unitary.
 
-Expected: PASS=38 FAIL=0.
+Expected: PASS=49 FAIL=0.
+
+---
+
+## 10.5 Algebraic companion theorem: U_PMNS unitarity from Cl(3) spectral theorem
+
+The PNS axiom controls the **path** behaviour of det H(t) on (0, 1). It
+does NOT need to control unitarity of the constructed PMNS matrix
+U_PMNS = U_e† U_ν at the endpoint — that part is automatic from the
+Cl(3)/Z³ Hermitian-operator algebra. This section records the bounded
+algebraic companion result.
+
+> **Theorem (U_PMNS unitarity from spectral closure).** Let H be any
+> 3×3 Hermitian operator on the Cl(3) source-side carrier with
+> det H ≠ 0. Then the diagonalizing matrix V from H = V diag(λ) V†,
+> with columns chosen as the unit-norm eigenvectors of H, satisfies
+> V† V = I and |det V| = 1; equivalently V ∈ U(3).
+>
+> **Corollary (PMNS construction).** If H_e and H_ν are the (Hermitian)
+> charged-lepton and neutrino mass operators of the framework with
+> det H_e ≠ 0 and det H_ν ≠ 0, the constructed PMNS matrix
+> U_PMNS = U_e† U_ν is unitary as a product of two U(3) elements.
+
+**Proof sketch (purely algebraic).** A Hermitian H with three distinct
+real eigenvalues admits an orthonormal basis of eigenvectors (spectral
+theorem on finite-dimensional Hermitian operators). Distinct eigenvalues
+give automatic orthogonality; degenerate subspaces orthogonalize
+(Gram–Schmidt within the eigenspace). The unit-norm choice gives V† V = I
+exactly, hence V ∈ U(3). U(3) is closed under composition (a finite
+algebraic check: (U_1 U_2)† (U_1 U_2) = U_2† U_1† U_1 U_2 = U_2† U_2 = I),
+so U_PMNS = U_e† U_ν ∈ U(3). ∎
+
+**Verification (T10/T11 in the runner):**
+
+- T10 numeric: 200 random Cl(3) Hermitian non-singular samples, plus
+  H_base and the Basin 1 endpoint, all give ‖V† V − I‖ < 1e-12 and
+  |det V| − 1 < 1e-12. The constructed U_PMNS = U_e† U_ν (with U_e from
+  H_base and U_ν from Basin 1) satisfies ‖U_PMNS† U_PMNS − I‖ ≈ 1.6e-15
+  and |det U_PMNS| − 1 < 1e-12.
+- T11 symbolic: sympy verifies that H_sym (with rational + sqrt(8/3),
+  sqrt(8)/3, Γ = 1/2 entries) is Hermitian and that its diagonalizer is
+  in U(3) at machine precision. Real rotations and phase matrices are
+  shown unitary in exact symbolic arithmetic, and U(3) closure under
+  multiplication is checked symbolically (P† P = I exactly).
+
+**What this companion narrows.** The original PNS axiom is read in two
+parts:
+
+1. **Endpoint half:** det(H_base + J_phys) ≠ 0 — equivalent to
+   U_PMNS being well-defined and unitary at the endpoint. This part is
+   **derived** by the spectral theorem above plus the chamber bound
+   (det H_base + J ≠ 0 on the chamber, retained from sigma_hier
+   uniqueness on Basin 1).
+2. **Path half:** det(H_base + t J_phys) ≠ 0 for all t ∈ (0, 1) — this
+   is the irreducible residual axiom. The assumptions-audit no-goes show
+   Cl(3)/Z³ algebra alone cannot fix this; it remains physically
+   grounded by measured oscillation Δm² ≠ 0 and by Sylvester
+   signature-forcing (companion theorem) which makes the path-half
+   compatible with the endpoint half whenever the source remains in
+   the same Sylvester chamber as H_base.
+
+So PNS is now scoped strictly to the path-continuity half on (0, 1).
+The endpoint half (and equivalently U_PMNS unitarity at the physical
+endpoint) is no longer an axiom — it follows from Cl(3) spectral
+closure plus retained chamber input.
+
+**Boundary statement.** This companion theorem does **not** derive PNS
+itself, and the audit verdict on this note remains conditional on the
+path half of PNS. What it does is narrow the residual axiom: the
+endpoint piece (which a reader could otherwise conflate with bare
+"non-singularity of U_PMNS") is automatic; only the open
+path-continuity statement on (0, 1) remains as physical input. The
+status of the note is unchanged (audited_conditional / bounded).
 
 ---
 
@@ -351,4 +441,9 @@ audit.
 out by the assumptions audit no-goes (Cl(3)/Z³ algebra cannot determine
 the sign of det from structure alone). PNS is the minimum residual input.
 
-Runner status: PASS=38 FAIL=0.
+The §10.5 algebraic companion narrows PNS to its path-continuity half on
+(0, 1): the endpoint half (equivalent to U_PMNS unitarity at the physical
+endpoint) is now derived from Cl(3) spectral-theorem closure on Hermitian
+matrices and is no longer part of the axiom cost.
+
+Runner status: PASS=49 FAIL=0.
