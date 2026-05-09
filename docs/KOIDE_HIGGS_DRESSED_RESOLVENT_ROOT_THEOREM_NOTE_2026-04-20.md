@@ -2,8 +2,41 @@
 
 **Date:** 2026-04-20
 **Lane:** charged-lepton Koide, constructive transport avenue
-**Status:** exact scalar reduction of the proposed_retained Higgs-dressed intermediate-propagator route. This does **not** finish a proposed_retained Koide derivation, but it turns the old broad transport ambiguity into one scalar root law on the most natural missing-axis lift.
+**Status:** exact scalar reduction of the proposed_retained Higgs-dressed intermediate-propagator route, **conditional on the observational PMNS chamber pins** `(M_STAR, DELTA_STAR, Q_PLUS_STAR)` that fix the missing-axis affine Hermitian `H_*`. This does **not** finish a proposed_retained Koide derivation, but it turns the old broad transport ambiguity into one scalar root law on the most natural missing-axis lift, contingent on those three pins.
 **Runner:** `scripts/frontier_koide_higgs_dressed_resolvent_root_theorem.py`
+
+## Observational pins (audit-explicit)
+
+The theorem below is conditional on three observational inputs imported via
+`scripts/frontier_higgs_dressed_propagator_v1.py`:
+
+| Constant | Value | Source | Status |
+|---|---|---|---|
+| `M_STAR` | `0.657061342210` | G1 observational chamber pin (PMNS-pinned to NuFit 5.3 normal-ordering 1-sigma band; not framework-derived) | Observational |
+| `DELTA_STAR` | `0.933806343759` | Same G1 chamber pin | Observational |
+| `Q_PLUS_STAR` | `0.715042329587` | Same G1 chamber pin | Observational |
+
+These are the same pins flagged in
+[`KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md`](KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
+(Issue 4) and labeled as `# G1 observational chamber pin (PMNS-pinned; not
+framework-derived)` directly in the runner module. They appear here only via
+`H_* = H3(M_STAR, DELTA_STAR, Q_PLUS_STAR)` on the missing-axis lift; no other
+import from the chamber pin enters the theorem statement.
+
+The remaining numerical inputs (`E1 = sqrt(8/3)`, `E2 = sqrt(8)/3`, `gamma = 1/2`,
+the cyclic generators `T_M, T_Delta, T_Q`, and the affine Hermitian `H_base`)
+are framework chart constants on the retained `Cl(3)/Z^3` carrier, unrelated to
+the PMNS pins.
+
+A candidate retained-derivation surface for the three pins exists as an
+`audited_conditional` support route in
+[`PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md`](PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md),
+which numerically recovers `(m, delta, q_+) ~= (0.667, 0.933, 0.715)` from the
+proposed three-equation system `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`,
+`det(H) = E2`. That note's last two equations are explicitly **proposed**, not
+retained, so it does not yet discharge the observational dependency in this
+theorem. Promotion of that support route would lift this theorem from
+"conditional on observational pins" to "conditional on retained selector laws".
 
 ## Question
 
@@ -156,33 +189,69 @@ That is a real reduction.
 
 This theorem does **not** claim any of the following:
 
+- that the chamber pins `(M_STAR, DELTA_STAR, Q_PLUS_STAR)` are derived from
+  framework axioms; they are observational PMNS pins on the canonical surface
+  (see "Observational pins" above);
 - that the missing-axis lift is already the unique retained lift;
 - that `lambda_*` is already derivable from Cl(3)/Z^3 alone;
 - that `lambda_slack` itself is the answer;
 - that the Koide lane is now retained-closed.
 
-What it does claim is sharper and correct:
+What it does claim is sharper and correct, **conditional on those pins**:
 
-- the strongest surviving transport route has been reduced to isolated scalar
-  roots;
+- the strongest surviving transport route, once the three observational pins
+  fix `H_*`, has been reduced to isolated scalar roots;
 - the best-supported one is a unique small positive root near chamber slack;
 - the old avenue-G ambiguity is now one-scalar, not broad.
 
 ## 5. Consequence for the frontier
 
 This creates a new explicit candidate closure object for the Koide `Q = 2/3`
-import:
+import, **stacked behind the observational chamber pins**:
 
 ```text
-derive lambda_* on the missing-axis Higgs-dressed resolvent lane.
+(a) derive (M_STAR, DELTA_STAR, Q_PLUS_STAR) from retained framework
+    (or accept the conditional scope), then
+(b) derive lambda_* on the missing-axis Higgs-dressed resolvent lane.
 ```
 
-If a retained theorem fixes that scalar from the microscopic transport law, this
-avenue closes without going back through the older broad H-lift search.
+If both retained theorems land, this avenue closes without going back through
+the older broad H-lift search.
 
 So even though the full derivation is still open, the constructive frontier is
 cleaner than it was:
 
 - not a generic H-lift ambiguity,
 - not a generic intermediate-weight ambiguity,
-- one scalar resolvent root law.
+- one scalar resolvent root law, conditional on three observational pins.
+
+## 6. Cited authorities (one hop)
+
+The theorem statement at section 2 imports the following from these on-repo
+surfaces. Each is listed with its ledger-side authority status to keep the
+audit dependency transparent.
+
+- [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
+  -- Issue 4 explicitly flags `(M_STAR, DELTA_STAR, Q_PLUS_STAR)` as
+  observational PMNS pins, not framework-derived constants.
+- [PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md](PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md)
+  -- candidate retained-derivation surface for `(m_*, delta_*, q_+*)` via
+  the proposed three-equation system; **`audited_conditional` support, not
+  retained**. Promotion would discharge the observational dependency.
+- `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md` (plain-text
+  reference to avoid citation back-edge; transitive cycle exists through
+  `koide_berry_phase_theorem_note_2026-04-19`) -- companion note that
+  explicitly lists these chamber pins as separately-pinned observational
+  inputs (section 5.3).
+- [SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md](SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md)
+  -- the open-imports register listing this theorem as one of four candidate
+  routes to the Koide cone, all currently conditional on the chamber pins
+  (Priority 1 entry 3).
+- [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
+  -- prior gap statement classifying the same three pins as G1 observational
+  chamber pins not derived from `Cl(3)`.
+
+The chart constants `E1 = sqrt(8/3)`, `E2 = sqrt(8)/3`, and the cyclic
+generators `T_M, T_Delta, T_Q, H_base` enter via `H3(m, delta, q_+)` from
+`scripts/frontier_higgs_dressed_propagator_v1.py` and are framework retained
+chart constants, unrelated to the PMNS pins.
