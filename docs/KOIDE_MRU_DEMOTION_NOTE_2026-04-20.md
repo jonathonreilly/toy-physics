@@ -18,6 +18,35 @@ support, and promotes the spectrum-operator bridge theorem as the
 
 ---
 
+## Cited authorities (one hop)
+
+This note's load-bearing one-hop citations registered to the audit-graph
+builder:
+
+- [`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`](KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md)
+  — retained spectrum-operator bridge identity that carries operator-side
+  `kappa = 2` as a corollary of spectrum-side `Q = 2/3` with symbolic zero
+  residue. This is the **primary retained closure route** promoted by the
+  present demotion note.
+- [`KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`](KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md)
+  — independent second route via real-isotype multiplicity counting on the
+  block-total Frobenius-squared functional. Cited for completeness as the
+  alternative non-MRU route. (Note: this authority is itself unaudited; the
+  primary retained route above carries the demotion.)
+- [`KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`](KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md)
+  — the demoted MRU theorem note whose closure status this note formally
+  reclassifies to supplementary / alternative-framing support.
+- [`KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
+  — the companion MRU obstruction note co-demoted by this reclassification.
+
+These citations register the one-hop load-bearing dependency edges so the
+citation-graph builder picks them up on the next pipeline run. The repair
+addresses the `notes_for_re_audit_if_any` request to "add one-hop
+dependencies for the spectrum-operator bridge theorem, block-total
+Frobenius theorem" in the prior audit verdict on this note.
+
+---
+
 ## 0. Why this note exists
 
 A strict-reviewer audit of the scalar-selector cycle 1 stack found one
