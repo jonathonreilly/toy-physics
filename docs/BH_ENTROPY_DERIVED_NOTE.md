@@ -4,8 +4,25 @@
 observed at `L <= 32` is a finite-L artifact; the asymptotic value on this
 carrier is the Widom-Gioev-Klich coefficient `c_Widom = 1/6`, not `1/4`.
 **Claim type:** bounded_theorem
-See the retained no-go theorem
-`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`.
+See the no-go theorem
+[`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md)
+(currently `audited_conditional`).
+
+## Audit-status note (2026-05-09)
+
+The 2026-04-29 audit verdict (`audited_conditional`) flagged that the
+asymptotic / no-BH conclusion of this note depends on the Widom no-go
+authority, but the dependency edge was not picked up because every
+reference inside the prose was inline-code rather than a markdown link.
+The header above is now a real markdown link so the citation graph
+resolves the one-hop edge to
+[`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md).
+
+Blocked-on: that authority itself is currently
+`audited_conditional`. This note therefore stays a bounded companion
+until the upstream Widom no-go advances to retained-grade. The bounded
+"finite-L lattice approximates `~ 1/4` while asymptote is `1/6`" content
+is unchanged by this clarification.
 
 ## Review-loop repair (2026-05-03)
 
@@ -55,9 +72,9 @@ Reported as OBSERVATIONS (not pass/fail):
 
 The bounded-companion claim is unchanged: the RT ratio at finite L
 approximates 1/4 but the asymptote on this free-fermion carrier is
-the Widom 1/6, not 1/4. The retained Widom no-go
-(`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`) is the load-bearing
-authority for the asymptotic statement.
+the Widom 1/6, not 1/4. The Widom no-go
+([`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md))
+is the load-bearing authority for the asymptotic statement.
 
 **Scripts**:
 - `scripts/frontier_bh_entropy_derived.py` (this bounded lane)

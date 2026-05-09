@@ -8,6 +8,23 @@
 (downstream extension; the 3+1D note cites this 2D theorem as a stepping
 stone — not a one-hop dep of this note)
 
+## Audit-status note (2026-05-09)
+
+The 2026-04-29 audit verdict (`audited_conditional`) flagged that a
+direct cited authority,
+[EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
+is itself `audited_conditional` rather than retained-grade, so the
+rubric blocks retained closure from propagating through that one-hop
+authority even though the bounded 1+1D free-scalar core is internally
+clean.
+
+Blocked-on: this 1+1D boost-covariance result therefore stays
+audited-conditional until
+[EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+itself advances to retained-grade. The 1+1D core (Steps 1–8 below) is
+unaffected by this status note; the change is purely upstream
+propagation accounting.
+
 ## Theorem
 
 **Theorem (1+1D SO(1,1) boost covariance).**
