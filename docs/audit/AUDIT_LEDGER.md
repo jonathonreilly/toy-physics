@@ -23,7 +23,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 994 |
+| unaudited | 995 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 26 |
@@ -46,11 +46,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1055 |
+| `unaudited` | 1056 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 755 |
+| `bounded_theorem` | 756 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
@@ -62,16 +62,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 316 |
 | `high` | 475 |
 | `medium` | 482 |
-| `leaf` | 629 |
+| `leaf` | 630 |
 
 - **Retained pending chain closure:** 1
 - **Citation cycles detected:** 181
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1503
-- runners with (C) first-principles compute hits: 773
-- runners with (D) external comparator hits: 396
+- runners classified: 1504
+- runners with (C) first-principles compute hits: 774
+- runners with (D) external comparator hits: 397
 - decoration candidates (no C, no D): 132
 
 ## Top 25 by load-bearing score (topology only)
@@ -80,21 +80,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 771 | 61.59 | `unaudited` | meta |
-| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 535 | 40.57 | `unaudited` | unaudited |
-| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 757 | 38.07 | `audited_clean` | open_gate |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 772 | 62.09 | `unaudited` | meta |
+| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 536 | 40.57 | `unaudited` | unaudited |
+| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 758 | 38.57 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 622 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 746 | 36.55 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 677 | 33.91 | `unaudited` | meta |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 505 | 32.98 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 747 | 36.55 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 678 | 33.91 | `unaudited` | meta |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 506 | 32.99 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 30.12 | `unaudited` | unaudited |
-| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 736 | 30.03 | `audited_clean` | **retained_bounded** |
-| 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 505 | 29.98 | `unaudited` | unaudited |
+| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 737 | 30.03 | `audited_clean` | **retained_bounded** |
+| 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 506 | 29.99 | `unaudited` | unaudited |
 | 11 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 29.12 | `unaudited` | unaudited |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 587 | 28.70 | `unaudited` | unaudited |
-| 13 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 508 | 27.49 | `audited_clean` | **retained_bounded** |
-| 14 | `three_generation_structure_note` | bounded_theorem | critical | 459 | 27.34 | `unaudited` | unaudited |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 604 | 27.24 | `unaudited` | unaudited |
+| 13 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 509 | 27.49 | `audited_clean` | **retained_bounded** |
+| 14 | `three_generation_structure_note` | bounded_theorem | critical | 460 | 27.35 | `unaudited` | unaudited |
+| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 605 | 27.24 | `unaudited` | unaudited |
 | 16 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 152 | 26.76 | `unaudited` | unaudited |
 | 17 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 152 | 25.76 | `unaudited` | unaudited |
 | 18 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 152 | 24.76 | `unaudited` | unaudited |
@@ -103,8 +103,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `one_generation_matter_closure_note` | bounded_theorem | critical | 420 | 24.22 | `unaudited` | unaudited |
 | 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 264 | 24.05 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 259 | 24.02 | `unaudited` | unaudited |
-| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 515 | 24.01 | `audited_clean` | **retained_bounded** |
-| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 595 | 23.22 | `audited_clean` | **retained** |
+| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 516 | 24.01 | `audited_clean` | **retained_bounded** |
+| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 596 | 23.22 | `audited_clean` | **retained** |
 
 
 ## Applied audits

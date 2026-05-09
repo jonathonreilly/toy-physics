@@ -1,0 +1,271 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wilson_m_h_per_channel_closure.py
+runner_sha256: bb1fece6c70ac0f66f9d87d8f2b76e7c777d3cd74284e873a5c7dc9d4d6b1e64
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+========================================================================================
+ frontier_wilson_m_h_per_channel_closure.py
+========================================================================================
+ Bounded source note: per-channel closure values for the +12% Higgs gap
+   under different channel identifications S of the Hamming-weight classes.
+   S = {2}-only is r-independent (no closure).
+   S = {0, 4} closes at r ≈ 0.12192.
+   S = {1, 3} closes at r ≈ 0.24383 = 2 · r_{0,4} (rescaling identity).
+   S = {0..4} uniform-16 closes at r ≈ 0.26855 (all-orders ref).
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Per-Channel Closure  (marker = 'Per-Channel Closure')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'independent audit lane only; effective status is')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: formula (S) per-channel readout  (marker = '( 1 / ( 4 · N_taste^(eff)(S) ) ) · Σ_{k ∈ S}')
+  [PASS] contains: S = {2} k=2-only stated r-independent  (marker = 'CONSTANT in r')
+  [PASS] contains: S = {0, 4} formula stated  (marker = '( u_0^2 - 4 r^2 )')
+  [PASS] contains: S = {1, 3} formula stated  (marker = '( u_0^2 - r^2 )')
+  [PASS] contains: k=2-only no closure stated  (marker = 'no closure to TARGET')
+  [PASS] contains: k04 closure value 0.12192 stated  (marker = '0.12192')
+  [PASS] contains: k13 closure value 0.24383 stated  (marker = '0.24383')
+  [PASS] contains: uniform-16 closure value 0.26855 stated (all-orders ref)  (marker = '0.26855')
+  [PASS] contains: rescaling identity r_{1,3} = 2 r_{0,4} stated  (marker = 'r_{1,3} ≈ 2 · r_{0,4}')
+  [PASS] contains: rescaling derivation: (k-2)^2 = 4 vs 1 stated  (marker = '(where `(k - 2)^2 = 4`)')
+  [PASS] contains: uniform-N_taste=16 admission cited as one identification  (marker = 'uniform-`N_taste = 16`')
+  [PASS] contains: non-derived flag on identification  (marker = 'non-derived')
+  [PASS] contains: validity boundary u_0 / 2 for k=0,4 stated  (marker = 'r < u_0 / 2')
+  [PASS] contains: validity boundary u_0 for k=1,3 stated  (marker = 'r < u_0`')
+  [PASS] contains: ratio 0.278 to boundary stated  (marker = '≈ 0.278')
+  [PASS] contains: all-orders upstream cited  (marker = 'WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: V_taste^W extremum upstream cited  (marker = 'WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: V_taste^W formula upstream cited  (marker = 'WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Wilson staircase upstream cited  (marker = 'WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Higgs note upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: Higgs-channel boundary upstream cited  (marker = 'HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: PDG comparison input flagged not-load-bearing  (marker = 'comparison input only')
+  [PASS] contains: not-load-bearing label explicit  (marker = '**not load-\nbearing**')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent (note + runner)
+----------------------------------------------------------------------------------------
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+ Part 4: per-channel formulas at r = 0 reduce to parent eq. [5]
+----------------------------------------------------------------------------------------
+  parent eq. [5]: 1/(4 u_0^2) = 0.3245987025
+  ((m_H_zero/v)^2 = (1/(2 u_0))^2 = 0.3245987025)
+
+  [PASS] S = {2} (k=2-only) at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=6)  (diff = 0)
+  [PASS] S = {0, 4} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=2)  (diff = 0)
+  [PASS] S = {1, 3} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=8)  (diff = 0)
+  [PASS] S = {0..4} (uniform-16) at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=16)  (diff = 0)
+  [PASS] S = {0} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=1)  (diff = 0)
+  [PASS] S = {1} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=4)  (diff = 0)
+  [PASS] S = {3} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=4)  (diff = 0)
+  [PASS] S = {4} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=1)  (diff = 0)
+  [PASS] S = {0, 1, 4} at r=0 equals 1/(4 u_0^2) EXACTLY (N_eff=6)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 5: S = {2} (k=2-only) is r-independent; no closure
+----------------------------------------------------------------------------------------
+  Constant value 1/(4 u_0^2) = 0.3245987025
+  Target (m_H_PDG/v)^2       = 0.2581475249
+  Gap (constant - target)    = +0.0664511776
+
+  [PASS]   S={2} at r=0.0000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.0100 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.1000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.2000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.3000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.4000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.5000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=0.8776 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS]   S={2} at r=1.0000 equals 1/(4 u_0^2) EXACTLY (r-independent)
+  [PASS] S={2} algebraic verification: summand = 6/u_0^2
+  [PASS] S={2} algebraic verification: 6/u_0^2 / (4 · 6) = 1/(4 u_0^2)
+  [PASS] S={2} does not close to target: 1/(4 u_0^2) > (m_H_PDG/v)^2 (the +12% gap)  (gap = +0.066451)
+  m_H_zero / m_H_PDG = 1.1213 (the canonical +12% gap)
+  [PASS] +12% gap canonically present: m_H_zero / m_H_PDG > 1.12  (ratio = 1.1213)
+
+----------------------------------------------------------------------------------------
+ Part 6: S = {0, 4} bisection on bracket [0.12, 0.14]
+----------------------------------------------------------------------------------------
+  f(lo = 0.1200) = +0.001834
+  f(hi = 0.1400) = -0.017976
+  [PASS] bracket endpoint sign change: f(0.12) > 0 and f(0.14) < 0  (f(0.12) = +0.001834, f(0.14) = -0.017976)
+
+  After 21 bisection iterations:
+    bracket width = 9.54e-09
+    midpoint r_{0,4} = 0.1219162035
+    (m_H_W/v)^2_({0,4}) at result = 0.2581475207
+    target                    = 0.2581475249
+  [PASS] bisection converges (bracket width ≤ 10^{-5})  (width = 9.54e-09)
+  [PASS] bisection result within 10^{-4} of note's claimed 0.12192  (|result - 0.12192| = 3.80e-06)
+  [PASS] (m_H_W/v)^2_({0,4}) at result matches target to < 10^{-7}  (|(m_H_W/v)^2(result) - target| = 4.20e-09)
+  [PASS] explicit closed form for S={0,4} matches general per-channel readout
+
+----------------------------------------------------------------------------------------
+ Part 7: S = {1, 3} bisection on bracket [0.22, 0.25]
+----------------------------------------------------------------------------------------
+  f(lo = 0.2200) = +0.011143
+  f(hi = 0.2500) = -0.002983
+  [PASS] bracket endpoint sign change: f(0.22) > 0 and f(0.25) < 0  (f(0.22) = +0.011143, f(0.25) = -0.002983)
+
+  After 22 bisection iterations:
+    bracket width = 7.15e-09
+    midpoint r_{1,3} = 0.2438323963
+    (m_H_W/v)^2_({1,3}) at result = 0.2581475259
+    target                    = 0.2581475249
+  [PASS] bisection converges (bracket width ≤ 10^{-5})  (width = 7.15e-09)
+  [PASS] bisection result within 10^{-4} of note's claimed 0.24383  (|result - 0.24383| = 2.40e-06)
+  [PASS] (m_H_W/v)^2_({1,3}) at result matches target to < 10^{-7}  (|(m_H_W/v)^2(result) - target| = 9.61e-10)
+  [PASS] explicit closed form for S={1,3} matches general per-channel readout
+
+----------------------------------------------------------------------------------------
+ Part 8: rescaling identity r_{1,3} = 2 · r_{0,4}
+----------------------------------------------------------------------------------------
+  r_{0,4} = 0.1219162035
+  r_{1,3} = 0.2438323963
+  2 · r_{0,4} = 0.2438324070
+  ratio r_{1,3} / r_{0,4} = 1.9999999120
+  [PASS] rescaling identity: |r_{1,3} - 2 · r_{0,4}| < 10^{-5}  (diff = 1.07e-08)
+  [PASS] ratio r_{1,3} / r_{0,4} ≈ 2 within 10^{-4}  (ratio = 2.000000)
+  [PASS]   algebraic identity at r=0.1000: (m_H/v)^2_{1,3}(r) == (m_H/v)^2_{0,4}(r/2)  (diff = 0)
+  [PASS]   algebraic identity at r=0.2000: (m_H/v)^2_{1,3}(r) == (m_H/v)^2_{0,4}(r/2)  (diff = 0)
+  [PASS]   algebraic identity at r=0.3000: (m_H/v)^2_{1,3}(r) == (m_H/v)^2_{0,4}(r/2)  (diff = 0)
+  [PASS]   algebraic identity at r=0.2438: (m_H/v)^2_{1,3}(r) == (m_H/v)^2_{0,4}(r/2)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+ Part 9: S = {0..4} uniform-16 cross-check (all-orders r_{16} ≈ 0.26855)
+----------------------------------------------------------------------------------------
+  f(lo = 0.2600) = +0.003126
+  f(hi = 0.2800) = -0.004190
+  [PASS] bracket endpoint sign change: f(0.26) > 0 and f(0.28) < 0
+
+  After 21 bisection iterations:
+    midpoint r_{16} = 0.2685455847
+    all-orders note value: 0.26855
+  [PASS] bisection converges (bracket width ≤ 10^{-5})
+  [PASS] uniform-16 closure matches all-orders note value 0.26855  (|r_{16} - 0.26855| = 4.42e-06)
+  [PASS] general per-channel readout at S=full equals all-orders (1/64) Σ form
+
+----------------------------------------------------------------------------------------
+ Part 10: per-channel ordering r_{0,4} < r_{1,3} < r_{16}
+----------------------------------------------------------------------------------------
+  r_{0,4} = 0.1219162035
+  r_{1,3} = 0.2438323963
+  r_{16}  = 0.2685455847
+  [PASS] ordering: r_{0,4} < r_{1,3}  (r_{0,4} = 0.12192, r_{1,3} = 0.24383)
+  [PASS] ordering: r_{1,3} < r_{16}  (r_{1,3} = 0.24383, r_{16} = 0.26855)
+  [PASS] no closure for S = {2} (r-independent constant readout)
+
+----------------------------------------------------------------------------------------
+ Part 11: validity-boundary check
+----------------------------------------------------------------------------------------
+  S={0,4} boundary: u_0/2 = 0.438800
+     r_{0,4} = 0.121916; ratio = 0.2778
+  S={1,3} boundary: u_0   = 0.877600
+     r_{1,3} = 0.243832; ratio = 0.2778
+  S={16}  boundary: u_0/2 = 0.438800
+     r_{16}  = 0.268546; ratio = 0.6120
+  [PASS] S={0,4}: r_{0,4} < u_0/2 (within perturbative-Taylor radius)
+  [PASS] S={1,3}: r_{1,3} < u_0 (within perturbative-Taylor radius)
+  [PASS] S={16}: r_{16} < u_0/2 (within perturbative-Taylor radius)
+  [PASS] dimensionless ratio r/boundary equal for {0,4} and {1,3} (rescaling identity)  (ratio_{0,4} = 0.27784, ratio_{1,3} = 0.27784)
+  [PASS] dimensionless ratio ≈ 0.278 for {0,4} and {1,3}  (computed ratio = 0.2778)
+
+----------------------------------------------------------------------------------------
+ Part 12: stdlib-only / no PDG pins (other than declared comparison)
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] PDG comparison declared with explicit not-load-bearing label
+  [PASS] no extra PDG pins beyond declared m_H_PDG comparison  (none (clean))
+
+----------------------------------------------------------------------------------------
+ Part 13: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: the +12 % Higgs gap chain
+  [PASS] note explicitly does not close: the Higgs-channel assignment itself
+  [PASS] note explicitly does not close: the physical Higgs mass `m_H` numerical value
+  [PASS] note explicitly does not close: the value of the Wilson coefficient `r` itself
+  [PASS] note explicitly does not close: the plaquette mean-field link `u_0` numerical value
+  [PASS] note explicitly does not close: the staggered-Dirac realization gate
+  [PASS] note explicitly does not close: the `g_bare = 1` derivation
+  [PASS] note explicitly does not close: any parent theorem/status promotion
+  [PASS] note explicitly does not close: any claim that `S = {2}` (the central single-class Higgs
+  [PASS] note explicitly does not close: the exact algebraic matching roots for `r`
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] independent audit-lane status authority present
+  [PASS] matching values flagged as conditional on channel identification
+  [PASS] matching values flagged as conditional on per-channel-rule convention
+  [PASS] matching values flagged as conditional on tree-level mean-field
+  [PASS] matching values flagged as conditional on non-zero r (not canonical KS)
+  [PASS] channel-boundary alternative convention referenced (561.1, 280.6, ...)
+
+========================================================================================
+ TOTAL: PASS=137, FAIL=0
+========================================================================================
+
+ VERDICT: per-channel closure values verified at exact rational
+ precision. The k=2-only identification is r-independent (the closure
+ mechanism breaks because the Wilson factor (k-2)^2 vanishes at k=2);
+ no value of r closes the +12% gap in this channel. The k={0,4} and
+ k={1,3} paired-class identifications close at r_{0,4} ≈ 0.12192 and
+ r_{1,3} ≈ 0.24383 respectively (bisection precision ± 10^{-5}); the
+ two are related by the algebraic-substitution identity r_{1,3} = 2 ·
+ r_{0,4} at the matching-equation level. The uniform-16 identification
+ reproduces the all-orders note value r_{16} ≈ 0.26855. All
+ matching readouts are conditional on (i) channel identification, (ii)
+ the curvature-on-subset per-channel rule, (iii) tree-level mean-field,
+ (iv) non-zero r — none of which is a derived value of the Wilson
+ coefficient.
+
+----- stderr -----
+

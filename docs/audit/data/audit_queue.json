@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 187,
     "high": 321,
-    "leaf": 227,
+    "leaf": 228,
     "medium": 269
   },
   "cycle_break_target_count": 182,
@@ -141,7 +141,7 @@
       "cycle_id": "cycle-0009",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -155,7 +155,7 @@
       "cycle_id": "cycle-0010",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -170,7 +170,7 @@
       "cycle_id": "cycle-0011",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -188,7 +188,7 @@
       "cycle_id": "cycle-0012",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_constraint_vs_convention_theorem_note_2026-05-03', 'g_bare_derivation_note', 'g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09', 'g_bare_structural_normalization_theorem_note_2026-04-18', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -207,7 +207,7 @@
       "cycle_id": "cycle-0013",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_constraint_vs_convention_theorem_note_2026-05-03', 'g_bare_derivation_note', 'g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09', 'g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07', 'g_bare_structural_normalization_theorem_note_2026-04-18', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -227,7 +227,7 @@
       "cycle_id": "cycle-0014",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_constraint_vs_convention_theorem_note_2026-05-03', 'g_bare_derivation_note', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19', 'gauge_vacuum_plaquette_distinct_shell_theorem_note', 'plaquette_self_consistency_note', 'yt_vertex_power_derivation', 'yt_ward_identity_derivation_theorem'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "alpha_s_derived_note",
       "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
@@ -247,7 +247,7 @@
       "cycle_id": "cycle-0015",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_constraint_vs_convention_theorem_note_2026-05-03', 'g_bare_derivation_note', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19', 'gauge_vacuum_plaquette_reduction_existence_theorem_note', 'plaquette_self_consistency_note', 'yt_vertex_power_derivation', 'yt_ward_identity_derivation_theorem'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "alpha_s_derived_note",
       "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
@@ -267,7 +267,7 @@
       "cycle_id": "cycle-0016",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_constraint_vs_convention_theorem_note_2026-05-03', 'g_bare_derivation_note', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19', 'gauge_vacuum_plaquette_spectral_measure_theorem_note', 'plaquette_self_consistency_note', 'yt_vertex_power_derivation', 'yt_ward_identity_derivation_theorem'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "alpha_s_derived_note",
       "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
@@ -287,7 +287,7 @@
       "cycle_id": "cycle-0017",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['g_bare_constraint_vs_convention_theorem_note_2026-05-03', 'g_bare_derivation_note', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19', 'gauge_vacuum_plaquette_susceptibility_flow_theorem_note', 'plaquette_self_consistency_note', 'yt_vertex_power_derivation', 'yt_ward_identity_derivation_theorem'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 505,
+      "max_transitive_descendants": 506,
       "primary_break_target": "alpha_s_derived_note",
       "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
@@ -747,7 +747,7 @@
       "cycle_id": "cycle-0043",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 248,
+      "max_transitive_descendants": 249,
       "primary_break_target": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "high",
@@ -761,7 +761,7 @@
       "cycle_id": "cycle-0044",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['higgs_mass_from_axiom_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 246,
+      "max_transitive_descendants": 247,
       "primary_break_target": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "high",
@@ -775,7 +775,7 @@
       "cycle_id": "cycle-0045",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 246,
+      "max_transitive_descendants": 247,
       "primary_break_target": "higgs_mass_from_axiom_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -789,7 +789,7 @@
       "cycle_id": "cycle-0046",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 246,
+      "max_transitive_descendants": 247,
       "primary_break_target": "higgs_mass_from_axiom_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -803,7 +803,7 @@
       "cycle_id": "cycle-0047",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 246,
+      "max_transitive_descendants": 247,
       "primary_break_target": "higgs_mass_from_axiom_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "critical",
@@ -3631,12 +3631,12 @@
       "deps": [],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.014,
+      "load_bearing_score": 10.017,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md",
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py",
-      "transitive_descendants": 516
+      "transitive_descendants": 517
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3719,12 +3719,12 @@
       ],
       "direct_in_degree": 36,
       "effective_status": "unaudited",
-      "load_bearing_score": 27.241,
+      "load_bearing_score": 27.243,
       "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 604
+      "transitive_descendants": 605
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5085,12 +5085,12 @@
       ],
       "direct_in_degree": 63,
       "effective_status": "unaudited",
-      "load_bearing_score": 40.566,
+      "load_bearing_score": 40.569,
       "note_path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
-      "transitive_descendants": 535
+      "transitive_descendants": 536
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5108,12 +5108,12 @@
       ],
       "direct_in_degree": 11,
       "effective_status": "unaudited",
-      "load_bearing_score": 14.508,
+      "load_bearing_score": 14.511,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
-      "transitive_descendants": 514
+      "transitive_descendants": 515
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5131,12 +5131,12 @@
       ],
       "direct_in_degree": 8,
       "effective_status": "unaudited",
-      "load_bearing_score": 13.003,
+      "load_bearing_score": 13.006,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
-      "transitive_descendants": 512
+      "transitive_descendants": 513
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5154,12 +5154,12 @@
       ],
       "direct_in_degree": 6,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.003,
+      "load_bearing_score": 12.006,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
-      "transitive_descendants": 512
+      "transitive_descendants": 513
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5184,12 +5184,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.5,
+      "load_bearing_score": 12.503,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
-      "transitive_descendants": 511
+      "transitive_descendants": 512
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5209,12 +5209,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.486,
+      "load_bearing_score": 12.489,
       "note_path": "docs/G_BARE_RIGIDITY_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
-      "transitive_descendants": 506
+      "transitive_descendants": 507
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5237,12 +5237,12 @@
       ],
       "direct_in_degree": 42,
       "effective_status": "unaudited",
-      "load_bearing_score": 29.983,
+      "load_bearing_score": 29.986,
       "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5262,12 +5262,12 @@
       ],
       "direct_in_degree": 18,
       "effective_status": "unaudited",
-      "load_bearing_score": 17.983,
+      "load_bearing_score": 17.986,
       "note_path": "docs/G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_audit_residual_closure.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5290,12 +5290,12 @@
       ],
       "direct_in_degree": 16,
       "effective_status": "unaudited",
-      "load_bearing_score": 16.983,
+      "load_bearing_score": 16.986,
       "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_structural_normalization.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5314,12 +5314,12 @@
       ],
       "direct_in_degree": 11,
       "effective_status": "unaudited",
-      "load_bearing_score": 14.483,
+      "load_bearing_score": 14.486,
       "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_audit_residual_closure.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5339,12 +5339,12 @@
       ],
       "direct_in_degree": 8,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.983,
+      "load_bearing_score": 12.986,
       "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5362,12 +5362,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.483,
+      "load_bearing_score": 11.486,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5388,12 +5388,12 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.983,
+      "load_bearing_score": 10.986,
       "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5411,12 +5411,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.483,
+      "load_bearing_score": 10.486,
       "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_vertex_power.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5436,12 +5436,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.983,
+      "load_bearing_score": 9.986,
       "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5462,12 +5462,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.983,
+      "load_bearing_score": 9.986,
       "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
-      "transitive_descendants": 505
+      "transitive_descendants": 506
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5490,12 +5490,12 @@
       ],
       "direct_in_degree": 10,
       "effective_status": "unaudited",
-      "load_bearing_score": 13.849,
+      "load_bearing_score": 13.852,
       "note_path": "docs/THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py",
-      "transitive_descendants": 460
+      "transitive_descendants": 461
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5515,12 +5515,12 @@
       ],
       "direct_in_degree": 37,
       "effective_status": "unaudited",
-      "load_bearing_score": 27.345,
+      "load_bearing_score": 27.349,
       "note_path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_generation_fermi_point.py",
-      "transitive_descendants": 459
+      "transitive_descendants": 460
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5564,12 +5564,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.039,
+      "load_bearing_score": 11.043,
       "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
-      "transitive_descendants": 371
+      "transitive_descendants": 372
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5589,12 +5589,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.918,
+      "load_bearing_score": 11.922,
       "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
-      "transitive_descendants": 341
+      "transitive_descendants": 342
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6777,6 +6777,29 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.555,
+      "note_path": "docs/CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/cl3_per_site_hilbert_dim_two_check.py",
+      "transitive_descendants": 265
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_conditional",
       "blocker": null,
       "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
@@ -6954,29 +6977,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py",
-      "transitive_descendants": 264
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.55,
-      "note_path": "docs/CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/cl3_per_site_hilbert_dim_two_check.py",
       "transitive_descendants": 264
     },
     {
@@ -7326,12 +7326,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "audited_conditional",
-      "load_bearing_score": 11.511,
+      "load_bearing_score": 11.517,
       "note_path": "docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md",
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_two_ward_closure.py",
-      "transitive_descendants": 257
+      "transitive_descendants": 258
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7349,12 +7349,12 @@
       ],
       "direct_in_degree": 6,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.011,
+      "load_bearing_score": 11.017,
       "note_path": "docs/ASSUMPTION_DERIVATION_LEDGER.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 257
+      "transitive_descendants": 258
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7377,12 +7377,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.494,
+      "load_bearing_score": 9.5,
       "note_path": "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_spin_statistics_check.py",
-      "transitive_descendants": 254
+      "transitive_descendants": 255
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7404,12 +7404,12 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.983,
+      "load_bearing_score": 9.989,
       "note_path": "docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/probe_grassmann_forcing_dependency_chain.py",
-      "transitive_descendants": 252
+      "transitive_descendants": 253
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7427,12 +7427,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.483,
+      "load_bearing_score": 9.489,
       "note_path": "docs/FERMION_PARITY_Z2_GRADING_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/fermion_parity_z2_grading_check.py",
-      "transitive_descendants": 252
+      "transitive_descendants": 253
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7453,12 +7453,12 @@
       ],
       "direct_in_degree": 6,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.977,
+      "load_bearing_score": 10.983,
       "note_path": "docs/STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/probe_kawamoto_smit_phase_forcing.py",
-      "transitive_descendants": 251
+      "transitive_descendants": 252
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7483,12 +7483,12 @@
       ],
       "direct_in_degree": 26,
       "effective_status": "unaudited",
-      "load_bearing_score": 20.972,
+      "load_bearing_score": 20.977,
       "note_path": "docs/STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/probe_bz_corner_decomposition.py",
-      "transitive_descendants": 250
+      "transitive_descendants": 251
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7521,11 +7521,41 @@
       ],
       "direct_in_degree": 17,
       "effective_status": "unaudited",
-      "load_bearing_score": 16.454,
+      "load_bearing_score": 16.46,
       "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
+      "transitive_descendants": 248
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "higgs_mass_from_axiom_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "higgs_mass_derived_note",
+        "higgs_from_lattice_note",
+        "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
+        "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08",
+        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "yt_ew_color_projection_theorem"
+      ],
+      "direct_in_degree": 16,
+      "effective_status": "unaudited",
+      "load_bearing_score": 15.954,
+      "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
       "transitive_descendants": 247
     },
     {
@@ -7552,36 +7582,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py",
-      "transitive_descendants": 246
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "higgs_mass_from_axiom_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "higgs_mass_derived_note",
-        "higgs_from_lattice_note",
-        "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
-        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
-        "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08",
-        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
-        "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
-        "yt_ew_color_projection_theorem"
-      ],
-      "direct_in_degree": 15,
-      "effective_status": "unaudited",
-      "load_bearing_score": 15.448,
-      "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
       "transitive_descendants": 246
     },
     {
@@ -8505,14 +8505,14 @@
         "minimal_axioms_2026-05-03",
         "three_generation_structure_note"
       ],
-      "direct_in_degree": 7,
+      "direct_in_degree": 8,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.46,
+      "load_bearing_score": 11.966,
       "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_wilson_bz_corner_hamming_staircase.py",
-      "transitive_descendants": 248
+      "transitive_descendants": 249
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8534,12 +8534,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.96,
+      "load_bearing_score": 8.966,
       "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_wilson_bz_corner_hamming_staircase_closed_form_certificate_2026_05_09.py",
-      "transitive_descendants": 248
+      "transitive_descendants": 249
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8560,12 +8560,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.96,
+      "load_bearing_score": 8.966,
       "note_path": "docs/YT_FLAGSHIP_BOUNDARY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 248
+      "transitive_descendants": 249
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8610,14 +8610,14 @@
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "direct_in_degree": 4,
+      "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.948,
+      "load_bearing_score": 10.454,
       "note_path": "docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_higgs_channel_effective_ntaste_boundary.py",
-      "transitive_descendants": 246
+      "transitive_descendants": 247
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8636,14 +8636,14 @@
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "direct_in_degree": 4,
+      "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.948,
+      "load_bearing_score": 10.454,
       "note_path": "docs/WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_wilson_corrected_v_taste_tree_level.py",
-      "transitive_descendants": 246
+      "transitive_descendants": 247
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8664,14 +8664,14 @@
         "minimal_axioms_2026-05-03",
         "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
       ],
-      "direct_in_degree": 3,
+      "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.448,
+      "load_bearing_score": 9.954,
       "note_path": "docs/WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py",
-      "transitive_descendants": 246
+      "transitive_descendants": 247
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -8695,12 +8695,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.948,
+      "load_bearing_score": 8.954,
       "note_path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_wilson_m_h_tree_at_extremum_leading_order_in_r.py",
-      "transitive_descendants": 246
+      "transitive_descendants": 247
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26531,6 +26531,36 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "higgs_mass_from_axiom_note",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
+        "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08",
+        "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_wilson_m_h_tree_at_extremum_all_orders.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "work_history.gw_echo_timing_route_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -30303,7 +30333,7 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
+      "claim_id": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
       "claim_type_provenance": "author_hint",
@@ -30311,22 +30341,22 @@
       "criticality_rank": 0,
       "cross_confirmation_status": null,
       "deps": [
-        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
         "higgs_mass_from_axiom_note",
-        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
-        "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
         "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08",
         "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
       "direct_in_degree": 0,
       "effective_status": "unaudited",
       "load_bearing_score": 0.0,
-      "note_path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08.md",
+      "note_path": "docs/WILSON_M_H_PER_CHANNEL_CLOSURE_BOUNDED_NOTE_2026-05-09.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/frontier_wilson_m_h_tree_at_extremum_all_orders.py",
+      "runner_path": "scripts/frontier_wilson_m_h_per_channel_closure.py",
       "transitive_descendants": 0
     },
     {
@@ -30450,5 +30480,5 @@
     }
   ],
   "ready_count": 48,
-  "total_pending": 1004
+  "total_pending": 1005
 }

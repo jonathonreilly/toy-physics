@@ -18456,6 +18456,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_wilson_corrected_v_taste_tree_level.py"
     },
+    "wilson_m_h_per_channel_closure_bounded_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_wilson_m_h_per_channel_closure.py"
+    },
     "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08": {
       "assert_count": 1,
       "counts": {
@@ -36416,6 +36428,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_wilson_m_h_per_channel_closure.py": {
+      "assert_count": 1,
+      "claims": [
+        "wilson_m_h_per_channel_closure_bounded_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_wilson_m_h_tree_at_extremum_all_orders.py": {
       "assert_count": 1,
       "claims": [
@@ -42138,11 +42165,11 @@
       "A": 22,
       "B": 174,
       "C": 639,
-      "D": 242,
+      "D": 243,
       "none": 426
     },
-    "runners_classified": 1503,
-    "runners_with_C": 773,
-    "runners_with_D": 396
+    "runners_classified": 1504,
+    "runners_with_C": 774,
+    "runners_with_D": 397
   }
 }

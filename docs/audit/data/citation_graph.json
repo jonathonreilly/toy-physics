@@ -19161,6 +19161,38 @@
       "to": "wilson_two_body_open_note_2026-04-11"
     },
     {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
       "to": "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08"
     },
@@ -60019,6 +60051,26 @@
       "runner_path": "scripts/frontier_wilson_corrected_v_taste_tree_level.py",
       "title": "Wilson-Corrected V_taste Tree-Level Mean-Field Formula Bounded Note"
     },
+    "wilson_m_h_per_channel_closure_bounded_note_2026-05-09": {
+      "claim_id": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
+        "higgs_mass_from_axiom_note",
+        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08",
+        "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "579e804f8cc902e99d94728beb3c870c5a6eccde161524fe88b8c99a7c36dd0b",
+      "path": "docs/WILSON_M_H_PER_CHANNEL_CLOSURE_BOUNDED_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_wilson_m_h_per_channel_closure.py",
+      "title": "Wilson m_H Per-Channel Closure Values \u2014 Bounded Note"
+    },
     "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08": {
       "claim_id": "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
       "claim_type_author_hint": "bounded_theorem",
@@ -62716,7 +62768,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 179,
+      "bounded_theorem": 180,
       "meta": 22,
       "no_go": 14,
       "none": 1682,
@@ -62724,17 +62776,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 683,
+      "bounded_theorem": 684,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
       "positive_theorem": 612
     },
-    "edge_count": 7720,
+    "edge_count": 7728,
     "leaf_count": 536,
-    "node_count": 2009,
+    "node_count": 2010,
     "root_count": 813,
-    "runners_with_path": 1609
+    "runners_with_path": 1610
   }
 }
