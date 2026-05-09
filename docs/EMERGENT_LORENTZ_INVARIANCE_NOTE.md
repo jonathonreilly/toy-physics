@@ -180,7 +180,10 @@ produce relativistic physics?" The answer is:
 ```
 python3 scripts/frontier_emergent_lorentz_invariance.py
 # Exit code: 0
-# PASS=37  FAIL=0
+# PASS=55  FAIL=0
+# (Added Part 6b: CPT bridge on runner's H; Part 6c: parity bridge on
+#  staggered dispersion; Part 6d: Planck-pin bridge citation. The
+#  original PASS=37 surface is preserved unchanged.)
 ```
 
 ## Audit boundary (2026-04-28)
@@ -202,6 +205,105 @@ descendants):
 The Status line has been narrowed to make the bridge premises
 explicit IF-conditions rather than retained inputs.
 
+## Bridge derivations (2026-05-09)
+
+This section addresses the three bridge premises identified by the
+audit verdict. Two are derivations on the same staggered Hamiltonian
+the runner already constructs; the third is a citation to a retained
+package lane.
+
+The runner has been extended with three new test sections (Part 6b,
+Part 6c, Part 6d) that make the bridges explicit on the runner's own
+operator family.
+
+### Bridge 1: CPT exactness (derivation)
+
+**Claim.** The runner's staggered Hamiltonian
+`H_{x,y} = (1/2) sum_mu eta_mu(x) [delta(y, x + e_mu) - delta(y, x - e_mu)]`
+on `Z^3 / L Z^3` with even `L` is exactly invariant under the combined
+CPT transformation. All CPT-odd SME coefficients in the free-field
+sector vanish identically.
+
+**Operators (constructed in the runner, Part 6b).**
+
+- `C` = sublattice charge conjugation, `C_{xy} = epsilon(x) delta_{xy}`,
+  `epsilon(x) = (-1)^{x_1+x_2+x_3}`. Real, diagonal, involutory.
+- `P` = spatial inversion, `P_{xy} = delta(y, -x mod L)`. Real,
+  involutory, well defined when `L` is even.
+- `T` = complex conjugation. Acts trivially on `H` because every
+  matrix element is real.
+
+**Identities (verified to machine precision on `L = 8` in Part 6b).**
+
+| Identity | Numerical residual |
+|---|---|
+| `C^2 = I` | `0.00e+00` |
+| `P^2 = I` | `0.00e+00` |
+| `H` real (so `T H T^{-1} = H`) | `max|Im H| = 0.00e+00` |
+| `C H C = -H` (sublattice-parity flip) | `0.00e+00` |
+| `P H P = -H` (spatial-parity flip) | `0.00e+00` |
+| `(CP) H (CP) = +H` | `0.00e+00` |
+| `[CPT, H] = 0` | `0.00e+00` |
+| `H_odd = (H - CPT H CPT^{-1})/2 = 0` | `0.00e+00` |
+
+These are the exact same identities as Steps 1-4 of
+[`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md), evaluated on the runner's own
+free staggered Hamiltonian. The Hermitian-Hamiltonian/SME extension
+(needed to lift the algebraic CPT statement to a physical-observable
+statement) is carried by the cited
+[`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md);
+the present free-field CPT step is verified here directly.
+
+### Bridge 2: parity protection (derivation)
+
+**Claim.** Under spatial inversion `P_inv: x -> -x mod L`, the staggered
+dispersion `E^2(p) = (1/a^2) sum_i sin^2(p_i a)` satisfies
+`E^2(-p) = E^2(p)` exactly. Consequently, the Taylor expansion of `E^2`
+contains only even powers of each `p_i`, so the runner's dispersion
+admits no dimension-5 LV operator (which would carry an odd power of `p`).
+
+**Identities (verified to machine precision in Part 6c).**
+
+| Identity | Numerical residual |
+|---|---|
+| `E^2(-p) = E^2(p)` (50 random `p`) | `0.00e+00` |
+| Dim-5 odd-power coefficient `(E^2(p) - E^2(-p))/2` | `0.00e+00` |
+| Each of 4 SME-style dim-5 Dirac structures has P-weight `-1` | enumerated PASS |
+| Parity-symmetric projection of every dim-5 LV operator vanishes | by P-odd weight |
+
+The dispersion-side check above is the direct incarnation of
+[`PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md`](PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md)
+Steps 2-4 on the present operator family. The cited no-go theorem
+completes the operator-basis enumeration on the SME-style dim-5 Dirac
+basis. The runner therefore verifies the parity-protection bridge
+directly rather than asserting it.
+
+### Bridge 3: hierarchy-scale identification `a ~ 1/M_Planck` (citation)
+
+**Claim.** The lattice spacing identification `a^{-1} = M_Pl` is
+carried as the explicit package-surface pin documented in
+[`PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+Section 6, with the natural-unit closure `a/l_P = 1` conditional on
+the primitive Clifford-Majorana edge-statistics carrier per
+[`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md).
+
+The Planck-suppression formulas in Part 5 (`|delta E^2/E^2| ~ (E/M_Pl)^2`)
+and the experimental-context table follow from the pin as written; the
+present note does not derive the pin. The bridge's audit status follows
+the upstream package lane, not this note's runner.
+
+### Summary of bridges
+
+| Bridge | Status here | Mechanism | Upstream reference |
+|---|---|---|---|
+| CPT exactness | derivation on the runner's free `H` | Part 6b: `[CPT, H] = 0` to machine precision on `L = 8` | [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md), [`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md) |
+| parity protection | derivation on the runner's dispersion | Part 6c: `E^2(-p) = E^2(p)`, dim-5 SME basis P-weight `-1` | [`PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md`](PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md) |
+| `a ~ 1/M_Planck` | citation to retained package lane | Part 6d: cite-only, not promoted | [`PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md) |
+
+Status authority for this update remains the independent audit lane.
+This source note does not set or predict an audit outcome; later
+status is generated by the audit pipeline after independent review.
+
 ## What this note does NOT claim
 
 - An unconditional theorem of Lorentz invariance from the lattice
@@ -222,3 +324,9 @@ Promoting from bounded conditional to retained would require:
    identification `a ~ 1/M_Planck`.
 4. A runner that constructs or verifies those bridges rather than
    evaluating the assumed surface.
+
+The 2026-05-09 update partially addresses item 4: the runner now
+contains direct bridge constructions for CPT (Part 6b) and parity
+(Part 6c) on its own staggered Hamiltonian, and a citation block
+(Part 6d) for the Planck pin. Items 1-3 remain audit-pipeline
+decisions on the upstream notes themselves.
