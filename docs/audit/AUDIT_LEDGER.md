@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 62 |
+| **retained** | 63 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 921 |
+| unaudited | 920 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 387 |
+| `audited_clean` | 388 |
 | `audited_conditional` | 401 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 976 |
+| `unaudited` | 975 |
 
 | claim_type | count |
 |---|---:|
@@ -142,6 +142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `chiral_3plus1d_coupled_coin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
+| `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2443,6 +2444,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `CHIRAL_3PLUS1D_RECURRENCE_NOTE.md`
   - `CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`
+- **auditor confidence:** high
+
+### `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`CIRCULANT_PARITY_CP_TENSOR_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CIRCULANT_PARITY_CP_TENSOR_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone 3x3 linear-algebra identities for the Hermitian-circulant family K(d,c_even,c_odd) under P_{23}, including the exact Im[(K_{01})^2]=2 c_even c_odd formula.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d13-11ba-7f52-806f-b6a6e8328b79`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** From K_{01}=c_even+i c_odd, (K_{01})^2=c_even^2-c_odd^2+2i c_even c_odd, so Im[(K_{01})^2]=2 c_even c_odd.  _(class `A`)_
+- **chain closes:** True — The note defines S, P_{23}, and K internally, then proves the parity identities and CP-tensor formula by direct matrix and scalar algebra. No cited authority or external physical readout is required for the stated narrow scope.
+- **rationale:** Issue: none within the narrow mathematical scope; the runner's PASS labels say C, but the source code actually performs exact symbolic matrix and scalar algebra, so the audited class is A. Why this blocks: it does not block, because the claim is only a standalone algebraic theorem over explicitly defined 3x3 matrices. Repair target: no repair needed unless the claim is later broadened to a DM-neutrino or standard CP observable readout. Claim boundary until fixed: clean only for the abstract Hermitian-circulant parity decomposition and displayed scalar formula, not for any physical identification.
 - **auditor confidence:** high
 
 ### `circulant_response_master_identity_narrow_theorem_note_2026-05-02`
