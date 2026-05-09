@@ -1,0 +1,295 @@
+
+======================================================================
+Probe 27 — hw=N Sector Identification for Charged Leptons
+======================================================================
+
+Question: Can the charged-lepton sector be identified with hw=N
+for N != 1, restoring F1 (BAE) under retained dynamics?
+
+Background:
+  - Probe 25 structurally rejected F1 at hw=1: retained free
+    Gaussian dynamics on Herm_circ(3) gives F3 (multiplicity (1,2)).
+  - Conventional identification (Brannen/Rivero) places leptons
+    on hw=1 BZ-corner triplet.
+  - This probe tests whether hw=2 or hw=3 sectors could host the
+    charged-lepton sector and yield F1 instead.
+
+Forbidden: NO new axioms, NO PDG values as derivation input.
+
+======================================================================
+
+=== Section 1: BZ-Corner Sector Inventory ===
+
+Sectors on {0,1}^3 by Hamming weight:
+  hw=0: [(0, 0, 0)]  ->  dim = 1
+  hw=1: [(0, 0, 1), (0, 1, 0), (1, 0, 0)]  ->  dim = 3
+  hw=2: [(0, 1, 1), (1, 0, 1), (1, 1, 0)]  ->  dim = 3
+  hw=3: [(1, 1, 1)]  ->  dim = 1
+
+  PASS  1.1 Total BZ corners on {0,1}^3 = 8
+  PASS  1.2 Multiplicities by hw: (1, 3, 3, 1)
+  PASS  1.3 hw=0 is 1-dim (singlet)
+  PASS  1.4 hw=1 is 3-dim (triplet)
+  PASS  1.5 hw=2 is 3-dim (triplet)
+  PASS  1.6 hw=3 is 1-dim (singlet)
+
+=== Section 2: Test A — 3-fold structure under C_3[111] ===
+
+Test A passes if the C_3[111] action on the sector has a 3-cycle
+orbit on 3 distinct states (matching 3 SM generations).
+
+  PASS  2.1 hw=0 C_3[111] orbit: (0,0,0) -> (0,0,0) is fixed
+  PASS  2.2 hw=0 has NO 3-fold structure (fails Test A)
+
+  PASS  2.3 hw=1 orbit is a 3-cycle covering all 3 corners
+  PASS  2.4 hw=1 has 3-cycle orbit on 3 distinct states (PASSES Test A)
+
+  PASS  2.5 hw=2 orbit is a 3-cycle covering all 3 corners
+  PASS  2.6 hw=2 has 3-cycle orbit on 3 distinct states (PASSES Test A)
+
+  PASS  2.7 hw=3 C_3[111] orbit: (1,1,1) -> (1,1,1) is fixed
+  PASS  2.8 hw=3 has NO 3-fold structure (fails Test A)
+
+Test A summary:
+  hw=0: FAILS Test A (1-dim, fixed point)
+  hw=1: PASSES Test A (3-cycle on 3 distinct corners)
+  hw=2: PASSES Test A (3-cycle on 3 distinct corners)
+  hw=3: FAILS Test A (1-dim, fixed point)
+
+=== Section 3: Test B — Translations + C_3[111] generate M_3(C) ===
+
+hw=1:
+  T_x diagonal eigenvalues: [1, 1, -1]
+  T_y diagonal eigenvalues: [1, -1, 1]
+  T_z diagonal eigenvalues: [-1, 1, 1]
+  PASS  3.1 hw=1 T_x diagonal matches (-1)^{c_x} (one -1, two +1)
+  PASS  3.2 hw=1 T_y diagonal matches (-1)^{c_y} (one -1, two +1)
+  PASS  3.3 hw=1 T_z diagonal matches (-1)^{c_z} (one -1, two +1)
+  PASS  3.4 hw=1: T_x, T_y, T_z, C_3[111] generate M_3(C) (9-dim)
+
+hw=2:
+  hw=2 corners ordered: [(0, 1, 1), (1, 0, 1), (1, 1, 0)]
+  T_x diagonal eigenvalues: [1, -1, -1]
+  T_y diagonal eigenvalues: [-1, 1, -1]
+  T_z diagonal eigenvalues: [-1, -1, 1]
+  PASS  3.5 hw=2 T_x diagonal matches (-1)^{c_x} (two -1, one +1)
+  PASS  3.6 hw=2 T_y diagonal matches (-1)^{c_y} (two -1, one +1)
+  PASS  3.7 hw=2 T_z diagonal matches (-1)^{c_z} (two -1, one +1)
+  PASS  3.8 hw=2: T_x, T_y, T_z, C_3[111] generate M_3(C) (9-dim)
+
+hw=0 (singlet): trivially closed, dim = 1, not M_3(C).
+hw=3 (singlet): trivially closed, dim = 1, not M_3(C).
+  PASS  3.9 hw=0 algebra is 1-dim (not M_3(C))
+  PASS  3.10 hw=3 algebra is 1-dim (not M_3(C))
+
+=== Section 4: Test C — No proper exact quotient on hw=N ===
+
+Per THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM:
+  if a quotient claims to preserve any exact retained operator,
+  the observable-descent lemma forces its kernel to be invariant
+  under that operator. Since {T_x, T_y, T_z, C_3[111]} generate
+  M_3(C), an exact-preserving quotient must have a kernel invariant
+  under all four — which forces the kernel to be trivial.
+
+hw=1: M_3(C) is simple, no proper two-sided ideal → no proper quotient.
+hw=2: M_3(C) is simple, no proper two-sided ideal → no proper quotient.
+
+  PASS  4.1 hw=1: commutant of {T_x,T_y,T_z,C_3} has dim 1 (Schur ⟹ irreducible)
+  PASS  4.2 hw=1: M_3(C) on C^3 has no proper invariant subspace ⟹ no proper quotient
+  PASS  4.3 hw=2: commutant of {T_x,T_y,T_z,C_3} has dim 1 (Schur ⟹ irreducible)
+  PASS  4.4 hw=2: M_3(C) on C^3 has no proper invariant subspace ⟹ no proper quotient
+
+=== Section 5: Test D — Brannen circulant ansatz on hw=N ===
+
+Test D: every Hermitian H on hw=N commuting with C_3[111] has
+the Brannen form H = aI + bC + b̄C^2 (a in R, b in C).
+
+By C_3 character theory: M_3(C)_Herm = 3 trivial + 3 omega + 3 omega-bar.
+The C_3-invariant Hermitian subspace = trivial isotypic component = circulants.
+
+  PASS  5.1 hw=1: Hermitian commutant of C_3[111] has dim 3 over R (= circulants)
+  PASS  5.2 hw=2: Hermitian commutant of C_3[111] has dim 3 over R (= circulants)
+  PASS  5.3 hermitian_circulant(a,b) eigenvalues match Brannen form a + 2|b|cos(δ + 2πk/3)
+  PASS  5.4 Frobenius norm decomposition: ||H||^2 = 3a^2 + 6|b|^2
+
+Per C_3 conjugation action on M_3(C)_Herm:
+  trivial isotype dim = 3 (the circulants {I, C, C^2})
+  non-trivial isotype dim = 6 (the 'non-circulant' part)
+These multiplicities are character-theoretic and identical at hw=1, hw=2.
+  PASS  5.5 (1,1) sector-block multiplicities are independent of sector basis
+
+=== Section 6: Test E — Retained dynamics F1 vs F3 on hw=N ===
+
+Per Probe 25 framing: free Gaussian dynamics on Herm_circ(3)
+with retained measure d^3 H = da · d^2 b gives multiplicity-
+weighted (1, 2) (rank-weighted F3, kappa=1), NOT (1,1) (F1/BAE,
+kappa=2).
+
+This selection arises from the multiplicity weighting in the
+Frobenius / Plancherel measure on the C_3-invariant Hermitian
+circulants, which is sector-independent (character-theoretic).
+
+Direct measure-counting:
+  trivial channel: 3a^2 ↔ 1 real DOF (a)
+  non-trivial channel: 6|b|^2 ↔ 2 real DOFs (Re b, Im b)
+  Multiplicity-weighted ratio: trivial:non-trivial = (3/1) : (6/2) = 3 : 3 = 1 : 1
+  But the natural measure dim ratio over real Lie measure: 1 : 2 (DOF count).
+
+Empirical Koide kappa under Gaussian measure d a · d^2 b:
+  Mean kappa = 0.2464
+  (F1/BAE target: kappa = 2; F3 target: kappa = 1)
+  PASS  6.1 Mean kappa under Gaussian on Herm_circ(3) is closer to F3 (kappa=1) than F1 (kappa=2)
+
+hw=2 algebra is M_3(C) on C^3 with circulant Hermitians:
+  Same Brannen ansatz H = aI + bC + b̄C^2 (a ∈ R, b ∈ C).
+  Same Frobenius norm decomposition 3a^2 + 6|b|^2.
+  Same character-theoretic isotype multiplicities (1,1) vs (1,2).
+  Hence retained Gaussian dynamics gives the SAME F3 selection at hw=2.
+  PASS  6.2 hw=2 retained Gaussian dynamics gives F3 (same as hw=1)
+  PASS  6.3 hw=0 has no F1/F3 question (1-dim sector)
+  PASS  6.4 hw=3 has no F1/F3 question (1-dim sector)
+
+=== Section 7: Test F — Sublattice-parity duality hw=1 ↔ hw=2 ===
+
+Sublattice parity epsilon(x) = (-1)^{n_x + n_y + n_z} sends
+hw=k corner to hw=(3-k) corner with sign (-1)^k. Equivalently,
+complementation (n_x, n_y, n_z) -> (1-n_x, 1-n_y, 1-n_z) maps
+hw=1 corners to hw=2 corners bijectively.
+
+  PASS  7.1 hw=1 complement is in hw=2 sector
+  PASS  7.2 T_mu eigenvalues flip under complementation (T_mu(hw=2) = -T_mu(hw=1))
+  PASS  7.3 C_3[111] commutes with complementation
+  PASS  7.4 M_3(C) on hw=1 ≅ M_3(C) on hw=2 (algebra isomorphism via complementation)
+
+Wilson staircase W(n)/r = 2·hw(n) (retained per WILSON_BZ_CORNER...):
+  hw=0: W/r = 0
+  hw=1: W/r = 2
+  hw=2: W/r = 4
+  hw=3: W/r = 6
+
+Wilson term distinguishes sectors by mass scale, but does NOT alter
+the M_3(C) action / Brannen circulant ansatz within each sector.
+
+  PASS  7.5 Wilson scalar separates sectors but preserves intra-sector algebra
+
+=== Section 8: Cross-Sector Verdict on Charged-Lepton Identification ===
+
+Summary table:
+
+  Sector  dim   Test A    Test B    Test C    Test D    F1/F3     
+  ------------------------------------------------------------
+  hw=0    1     FAIL      N/A       N/A       N/A       N/A       
+  hw=1    3     PASS      PASS      PASS      PASS      F3        
+  hw=2    3     PASS      PASS      PASS      PASS      F3        
+  hw=3    1     FAIL      N/A       N/A       N/A       N/A       
+
+Charged leptons can ONLY live on hw=1 or hw=2 (hw=0, hw=3 fail Test A).
+hw=1 and hw=2 are algebraically isomorphic via sublattice-parity
+complementation (Test F). Therefore retained dynamics on either gives
+the same F3 selection — F1 (BAE) is NOT recovered.
+
+  PASS  8.1 hw=0 ruled out: 1-dim, no 3-fold structure
+  PASS  8.2 hw=3 ruled out: 1-dim singleton fixed by C_3[111]
+  PASS  8.3 hw=1 and hw=2 are algebraically isomorphic via complementation
+  PASS  8.4 No hw=N exists with 3-fold structure AND F1 selection
+  PASS  8.5 Probe 25 finding F3 at hw=1 ≡ F3 at hw=2 (sector-relocation does NOT recover BAE)
+
+=== Section 9: Could leptons live at hw=N with N>3 via projection? ===
+
+Question: in the sister Z^4 (full spacetime) Wilson decomposition
+with hw ∈ {0, 1, 2, 3, 4} and multiplicities (1, 4, 6, 4, 1),
+could charged leptons live on a 3-dimensional subspace of hw=2 (6
+corners) selected by some retained projection?
+
+  Z^4 hw=0: dim = 1
+  Z^4 hw=1: dim = 4
+  Z^4 hw=2: dim = 6
+  Z^4 hw=3: dim = 4
+  Z^4 hw=4: dim = 1
+
+  PASS  9.1 Z^4 hw=2 has dim 6 (not 3)
+  PASS  9.2 Z^4 hw=4 has dim 1 (singleton)
+Z^4 hw=2 split by n_t:
+  n_t=0 corners (spatial hw=2): [(0, 0, 1, 1), (0, 1, 0, 1), (0, 1, 1, 0)], dim=3
+  n_t=1 corners (spatial hw=1 + temporal): [(1, 0, 0, 1), (1, 0, 1, 0), (1, 1, 0, 0)], dim=3
+  PASS  9.3 Z^4 hw=2 splits into n_t=0 (spatial hw=2) + n_t=1 (spatial hw=1+temporal)
+
+The two 3-dim n_t-blocks of Z^4 hw=2 reduce to the spatial hw=1
+and spatial hw=2 sectors examined above. The temporal n_t = 1 lift
+does not add a fundamentally new algebraic structure — it just
+adds a temporal phase factor (-1)^{n_t} that commutes with the
+spatial C_3[111]. So:
+
+  PASS  9.4 Z^4 hw=2 sub-blocks reduce to spatial hw=1 and hw=2 algebraically
+  PASS  9.5 Z^4-extension does not provide a fresh charged-lepton sector
+
+=== Section 10: New retained derivation attempt — projection map ===
+
+To place charged leptons at hw=N (N≠1) we'd need a NEW retained
+derivation specifying:
+
+  (a) a projection map P: hw=N -> 3-dim observable charged-lepton space
+  (b) the projection commutes with C_3[111] and translations
+  (c) the projection is unique up to retained content
+  (d) the resulting effective dynamics gives F1 (BAE)
+
+Examined candidate projections:
+
+hw=0 -> hw=1: trivial 1-dim sector; no 3-fold structure to project.
+hw=3 -> hw=1: same — 1-dim singleton can only project to 1-dim subspace.
+hw=2 -> hw=1: identity on the 3-dim space (after complementation), so
+  projection is the algebra isomorphism examined in Section 7. Gives
+  F3, not F1.
+
+  PASS  10.1 hw=2 has only 3 corners ⟹ no proper 3-dim projection sub-block
+  PASS  10.2 hw=0, hw=3 have only 1 corner each ⟹ no 3-dim sub-block
+  PASS  10.3 hw=1 + hw=2 combined is 6-dim (sublattice B union sublattice A interior)
+  PASS  10.4 No C_3-invariant 3-dim subspace of hw=1 ⊕ hw=2 gives a NEW sector beyond hw=1, hw=2 themselves
+
+======================================================================
+=== Section 11: VERDICT — Structural Obstruction ===
+======================================================================
+
+Theorem (Probe 27 bounded structural obstruction):
+
+  On A1+A2 + retained STAGGERED_DIRAC_BZ_CORNER_FORCING + retained
+  THREE_GENERATION_OBSERVABLE + retained KOIDE_CIRCULANT_CHARACTER:
+
+  The charged-lepton sector identification CANNOT relocate to
+  hw=N (N ≠ 1) within the BZ-corner inventory of {0,1}^3 to
+  recover F1 (BAE) selection from retained dynamics:
+
+    (i)   hw=0 is a 1-dim singlet (fails 3-generation);
+    (ii)  hw=3 is a 1-dim fixed point of C_3[111] (fails 3-generation);
+    (iii) hw=2 carries an M_3(C) algebra algebraically isomorphic
+          to hw=1 via sublattice-parity complementation; retained
+          Brannen ansatz on hw=2 has the same isotype multiplicity
+          structure as hw=1, hence retained dynamics gives F3 there
+          as well.
+    (iv)  Z^4-extension to hw ∈ {0,...,4} reduces algebraically to
+          spatial hw blocks; no new 3-dim sector emerges.
+    (v)   No C_3-invariant 3-dim sub-block of hw=1 ⊕ hw=2 exists
+          beyond the two pure sectors themselves.
+
+  Hence Probe 25's finding F3 at hw=1 is NOT an artifact of wrong-
+  sector identification. The F1/F3 ambiguity is intrinsic to the
+  Brannen circulant ansatz on M_3(C), independent of which sector
+  hosts it. BAE closure via sector relocation is structurally barred.
+
+  No new admissions are introduced. No new axioms are required.
+
+  PASS  11.1 Probe 27 verdict: STRUCTURAL OBSTRUCTION (sector relocation cannot recover BAE)
+  PASS  11.2 hw=0, hw=3 ruled out by 3-fold structure failure
+  PASS  11.3 hw=2 algebraically isomorphic to hw=1 via complementation
+  PASS  11.4 F1/F3 ambiguity is intrinsic to Brannen ansatz, sector-independent
+  PASS  11.5 BAE admission count UNCHANGED (no closure, no new admission)
+
+=== Section 12: Convention robustness ===
+
+  PASS  12.1 hw multiplicities (1,3,3,1) are S_3-invariant under axis permutations
+  PASS  12.2 C_3[111] vs C_3^{-1}[111] both give 3-cycle on same 3 corners
+  PASS  12.3 hw=N classification depends only on F_2-bit count (lattice-independent)
+
+======================================================================
+=== TOTAL: PASS=64, FAIL=0 ===
+======================================================================
