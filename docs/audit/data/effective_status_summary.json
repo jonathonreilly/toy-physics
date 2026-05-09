@@ -49,18 +49,18 @@
     "decoration_under_hierarchy_matsubara_decomposition_note": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_linear_response_true_kubo_note": 1,
+    "decoration_under_moving_source_retarded_portability_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 54,
     "open_gate": 11,
     "retained": 62,
     "retained_bounded": 237,
     "retained_no_go": 121,
-    "retained_pending_chain": 2,
+    "retained_pending_chain": 1,
     "unaudited": 885
   },
-  "retained_pending_chain_count": 2,
+  "retained_pending_chain_count": 1,
   "retained_pending_chain_examples": [
-    "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
-    "diamond_signal_budget_hardening_note"
+    "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
   ]
 }
