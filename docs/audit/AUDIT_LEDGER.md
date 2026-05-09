@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 919 |
+| unaudited | 918 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 402 |
+| ~~audited_conditional~~ | 403 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 402 |
+| `audited_conditional` | 403 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 974 |
+| `unaudited` | 973 |
 
 | claim_type | count |
 |---|---:|
@@ -839,6 +839,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_complex_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | C | - |
 | `self_gravity_entropy_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `source_resolved_wavefield_escalation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -10650,6 +10651,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Across all 5 enumerated F3 routes, the table of independent-cross-bound? answers is (No, No, Yes-but-tension, No, No); the only positive route (F3-gamma) gives Sigma m_nu approx 0.056 eV, ~0.003 eV below the NO oscillation floor 0.0586 eV; and the framework current-bank Omega_DM excess by ~0.003 over Planck-derived ~0.265 is the structural-tension source.  _(class `C`)_
 - **chain closes:** True — The no-go is structural and arithmetic: each of the 5 routes is shown not to supply an independent cross-bound producing positive Sigma m_nu within the NO oscillation floor under the framework's no-fitted-parameter posture. The runner check breakdown (A=3, B=10, C=4, D=3) verifies the route-by-route enumeration and the ~0.003 eV magnitude of the residual tension.
 - **rationale:** Within the stuck-fan-out scope, the chain closes as a clean no-go for single-cycle Sigma m_nu retention. The structural-tension residue (framework Omega_DM vs. observation) is sharp and identified, and the three pivots forward (Omega_DM tightening, alt-admission bypass, Lane 5 C1 closure) are flagged as research-level moves beyond the cycle. This is a ratified negative result, not an active failure.
+- **auditor confidence:** high
+
+### `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09`
+
+- **Note:** [`SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`](../../docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the note's bounded derivation of gates G1-G4 for the second grown family and its stated cross-family corollary, using only the provided note, stdout, and runner source.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d19-f0ab-74d3-8db2-22748df61a24`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** From the Jacobi expansion, field sign reversal sends J to -J, so R(plus)=eps*dz_+ + O(eps^2), R(minus)=-eps*dz_+ + O(eps^2), and R(double)/R(plus)=2+O(eps).  _(class `A`)_
+- **chain closes:** False — The formal algebra for G1-G4 closes only conditional on the structural source map, propagation kernel, centroid readout, family slice, retained-family status, and log provenance. Those dependencies are named in the note but no one-hop cited authorities are provided in the restricted packet, and the runner imports external family code and reads logs whose contents/provenance are not included.
+- **rationale:** Issue: the note's algebraic/Taylor proof depends on structural inputs and retained sign-law family facts that are not supplied as cited authorities in the packet. Why this blocks: the auditor cannot verify that the second grown family, other retained families, imported source code, or registered logs actually instantiate the stated source-to-field map, propagation/readout, anchor rule, and retained-family status. Repair target: add retained one-hop authorities or embedded source certificates for the family construction, propagation/readout implementation, and log provenance, plus a runner that exposes the checked structural equivalence. Claim boundary until fixed: the packet supports only a conditional algebraic statement that if those maps and retained-family facts hold, then the four gates follow to the stated exact or weak-field order.
+- **open / conditional deps cited:**
+  - `SECOND_GROWN_FAMILY_SIGN_NOTE.md`
+  - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
 - **auditor confidence:** high
 
 ### `signed_gravity_response_lane_status_note_2026-04-26`
