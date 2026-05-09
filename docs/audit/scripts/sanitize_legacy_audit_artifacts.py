@@ -3,7 +3,8 @@
 
 This is a deterministic cleanup pass for the scope-aware audit schema. It
 removes deprecated ledger keys and rewrites historical audit prose away from
-old author-tier vocabulary. It does not change audit verdicts.
+old author-tier vocabulary. It also normalizes legacy decoration-parent ids
+that were accidentally stored as note paths. It does not change audit verdicts.
 """
 from __future__ import annotations
 
@@ -61,11 +62,62 @@ def sanitize_obj(value):
     return value
 
 
+def _add_alias(aliases: dict[str, str | None], alias: str, claim_id: str) -> None:
+    if not alias:
+        return
+    previous = aliases.get(alias)
+    if previous is None and alias not in aliases:
+        aliases[alias] = claim_id
+    elif previous != claim_id:
+        aliases[alias] = None
+
+
+def note_path_aliases(note_path: str) -> set[str]:
+    normalized = note_path.lstrip("./")
+    aliases = {note_path, normalized, f"./{normalized}"}
+    basename = Path(normalized).name
+    if basename:
+        aliases.add(basename)
+    return aliases
+
+
+def canonicalize_decoration_parent_ids(ledger: dict) -> None:
+    """Convert legacy decoration parent note paths to canonical claim ids."""
+    rows = ledger.get("rows")
+    if not isinstance(rows, dict):
+        return
+
+    note_to_claim: dict[str, str | None] = {}
+    for claim_id, row in rows.items():
+        if not isinstance(row, dict):
+            continue
+        note_path = row.get("note_path")
+        if not isinstance(note_path, str):
+            continue
+        for alias in note_path_aliases(note_path):
+            _add_alias(note_to_claim, alias, claim_id)
+
+    for row in rows.values():
+        if not isinstance(row, dict):
+            continue
+        parent = row.get("decoration_parent_claim_id")
+        if not isinstance(parent, str) or not parent or parent in rows:
+            continue
+        normalized = parent.lstrip("./")
+        candidates = [parent, normalized, f"./{normalized}", Path(normalized).name]
+        for candidate in candidates:
+            replacement = note_to_claim.get(candidate)
+            if replacement:
+                row["decoration_parent_claim_id"] = replacement
+                break
+
+
 def main() -> int:
     if not LEDGER_PATH.exists():
         raise SystemExit("audit_ledger.json missing; run seed_audit_ledger.py first")
     ledger = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
     sanitized = sanitize_obj(ledger)
+    canonicalize_decoration_parent_ids(sanitized)
     LEDGER_PATH.write_text(json.dumps(sanitized, indent=2, sort_keys=True) + "\n")
     print(f"Sanitized {LEDGER_PATH.relative_to(REPO_ROOT)}")
     return 0
