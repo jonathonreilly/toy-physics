@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 862 |
+| unaudited | 863 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 415 |
+| ~~audited_conditional~~ | 414 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 415 |
+| `audited_conditional` | 414 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 911 |
+| `unaudited` | 912 |
 
 | claim_type | count |
 |---|---:|
@@ -53,7 +53,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 56 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 789 |
+| `positive_theorem` | 788 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
@@ -865,7 +866,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `staggered_dirac_grassmann_forcing_theorem_note_2026-05-07` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -11530,21 +11530,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The staggered force-first lane is not confined to periodic cubic lattices; it survives a narrow layered acyclic template with forward-depth bias, machine-clean norm/Born, and stable inward proxy response under the prescribed attractive sign, even though the live transport operator is still symmetrized rather than truly directed.  _(class `C`)_
 - **chain closes:** True — The runner directly evaluates the three layered DAG-derived configurations and reproduces the load-bearing 6/6 score surface, TOWARD forces, N-stability, Born linearity, forward-depth fraction, and state-family robustness. The small norm-row roundoff difference remains at machine precision and does not affect the bounded compatibility claim.
 - **rationale:** The source note is narrowly framed as a compatibility control, not a proof of truly directed DAG Hamiltonian transport. The current runner gives 6/6 on all three configurations, with TOWARD force, 14/14 N-stability, machine-clean norm/Born behavior, forward-depth fraction 0.1266, and 3/3 state families. Residual risk is limited to the symmetrized-adjacency scope boundary, which the note states explicitly.
-- **auditor confidence:** high
-
-### `staggered_dirac_grassmann_forcing_theorem_note_2026-05-07`
-
-- **Note:** [`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`](../../docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** On A1 (Cl(3) local algebra) + A2 (Z^3 substrate) plus U2 (Cl(3) per-site uniqueness, chirality-aware), U4 (per-site Hilbert dim 2), and S2 (spin-statistics: bosonic incompatibility): the matter measure on the Cl(3) ⊗ Z^3 substrate must be the finite Grassmann partition with one Grassmann pair per site; bosonic 2nd-quantization is ruled out. Self-declared bounded source support; no retained-grade closure asserted.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-fresh-context-first-2026-05-09-f2809c24`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** Step 2-5 of the proof: bosonic 2nd-quantization gives infinite-dim per-site Fock (F_B = ⊕_n |n⟩, dim_C = ∞), but A1 + U4 require per-site Hilbert dim = 2; contradiction rules out bosonic; the only remaining standard-QFT algebraic alternative is Grassmann (CAR), giving dim 2 per site. Hence the matter measure is forced to be the finite Grassmann partition with one (χ_x, χ̄_x) pair per site.  _(class `C`)_
-- **chain closes:** True — As a bounded_theorem the chain closes within its declared support boundary: A1, A2 are framework axioms; U2 is taken from the per-site uniqueness note; U4 is the per-site Hilbert dim=2 input; S2 is the spin-statistics support input cited as load-bearing. Step 1 invokes U2+U4 to fix per-site dim=2; Step 2-3 build the bosonic Fock tower (dim ∞); Step 4 derives the contradiction with U4; Step 5 invokes the standard CCR/CAR exhaustion (S2's algebraic alternative argument) to force Grassmann; Step 6 verifies the Grassmann implementation matches U4 (dim 2). The note explicitly does NOT claim retained-grade closure and explicitly defers to the independent audit lane on S2, matching the bounded_theorem typing. The runner exhibits all dependency-chain compatibility checks (K1-K9) at PASS=9/9.
-- **rationale:** The proof is sound as a bounded support theorem and the runner passes 9/9 as a logical-consistency dependency-chain check. However, the load-bearing premise U4 (CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02) is explicitly audited_conditional per the task statement, and the note itself (line 11) acknowledges that the load-bearing S2 input remains support-tier/re-audit-dependent on current main. Per the standard tie-break rule (prefer audited_conditional over audited_clean if any load-bearing cited authority is unaudited/conditional/support/open), the audited_conditional dependency on U4 forces audited_conditional. The note correctly self-types as bounded_theorem and explicitly disclaims retained-grade closure. U2 and S2 are stated by the user to be retained as of today, but U4's audited_conditional status is the binding constraint.
-- **open / conditional deps cited:**
-  - `U4 (CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md) — audited_conditional; load-bearing on per-site dim=2 step (proof Step 1 and Step 4)`
 - **auditor confidence:** high
 
 ### `staggered_dirac_realization_gate_note_2026-05-03`

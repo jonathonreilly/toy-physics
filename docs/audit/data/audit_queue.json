@@ -3,7 +3,7 @@
     "critical": 77,
     "high": 312,
     "leaf": 196,
-    "medium": 289
+    "medium": 290
   },
   "cycle_break_target_count": 37,
   "cycle_break_targets": [
@@ -11298,7 +11298,7 @@
       "blocker": null,
       "claim_id": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
       "claim_scope": null,
-      "claim_type": "positive_theorem",
+      "claim_type": "bounded_theorem",
       "claim_type_provenance": "author_hint",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -18258,6 +18258,33 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+      "claim_scope": null,
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "axiom_first_spin_statistics_theorem_note_2026-04-29",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03",
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 3.0,
+      "note_path": "docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/probe_grassmann_forcing_dependency_chain.py",
+      "transitive_descendants": 3
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -23759,5 +23786,5 @@
     }
   ],
   "ready_count": 32,
-  "total_pending": 874
+  "total_pending": 875
 }
