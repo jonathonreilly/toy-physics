@@ -228,6 +228,41 @@ This note does not claim:
 - quark mass-ratio closure;
 - BSM flavor or CP phases.
 
+## Exact-symbolic verification
+
+Each load-bearing structural identity is certified at exact-symbolic
+precision via `sympy` in
+`scripts/frontier_wolfenstein_lambda_a_structural_identities.py`. The
+runner treats `alpha_s(v)` as a positive real symbol, the structural
+counts `(n_pair, n_color) = (2, 3)` as exact rationals imported from the
+authorities cited above, and the CP-radius `rho^2 + eta^2 = 1/6` as an
+exact rational imported from the CP-phase structural-identity companion.
+Each identity is verified by computing `sympy.simplify(lhs - rhs)` and
+asserting the residual equals `0` exactly.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `(W1)` general | `lambda^2 = alpha_s(v)/n_pair` | `sympy.simplify` residual `= 0` |
+| `(W1)` specialized | `lambda^2 = alpha_s(v)/2` | `sympy.simplify` residual `= 0` |
+| `(W2)` general | `A^2 = n_pair/n_color` | `sympy.simplify` residual `= 0` |
+| `(W2)` specialized | `A^2 = 2/3` | exact rational `2/3` |
+| `(W3)` general | `A^2 lambda^2 = alpha_s(v)/n_color` | `sympy.simplify` residual `= 0` (`n_pair` cancels) |
+| `(W3)` specialized | `A^2 lambda^2 = alpha_s(v)/3` | `sympy.simplify` residual `= 0` |
+| `(W3)` rational cancel | `(n_pair/n_color)(1/n_pair) = 1/n_color` | exact `Fraction` `0` |
+| `|V_us|_0` | `lambda = sqrt(alpha_s(v)/2)` | `sympy.simplify` residual `= 0` |
+| `|V_cb|` general | `A lambda^2 = alpha_s(v)/sqrt(n_quark)` | `sympy.simplify` residual `= 0` |
+| `|V_cb|` explicit | `A lambda^2 = alpha_s(v)/sqrt(6)` | `sympy.simplify` residual `= 0` |
+| `|V_cb|^2` | `alpha_s(v)^2/6` | `sympy.simplify` residual `= 0` (no radicals) |
+| `|V_ub|_0` | `A lambda^3 sqrt(rho^2+eta^2) = alpha_s(v)^(3/2)/(6 sqrt(2))` | `sympy.simplify` residual `= 0` |
+| `|V_ub|_0^2` | `alpha_s(v)^3/72` | `sympy.simplify` residual `= 0` (no radicals) |
+| atlas `J_0` | `lambda^6 A^2 eta = alpha_s(v)^3 sqrt(5)/72` | `sympy.simplify` residual `= 0` |
+
+The structural relations are therefore exact-symbolic over the imported
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section, which is not load-bearing for the algebra.
+
 ## Reproduction
 
 ```bash
@@ -237,11 +272,12 @@ python3 scripts/frontier_wolfenstein_lambda_a_structural_identities.py
 Expected result:
 
 ```text
-TOTAL: PASS=19, FAIL=0
+TOTAL: PASS=24, FAIL=0
 ```
 
-The runner uses the Python standard library plus the canonical
-`scripts/canonical_plaquette_surface.py` constants.
+The runner imports `sympy` for exact-symbolic verification and the
+canonical `scripts/canonical_plaquette_surface.py` constants for the
+trailing numerical sanity pin.
 
 ## Cross-References
 
