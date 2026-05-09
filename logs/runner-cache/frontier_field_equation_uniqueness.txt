@@ -1,0 +1,34 @@
+===== runner cache v1 =====
+runner: scripts/frontier_field_equation_uniqueness.py
+runner_sha256: c60e67865df72a5f7bfd178655d5c3dcd44f3463617d3456794bb729ea77cf25
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+==============================================================================
+FIELD EQUATION UNIQUENESS TEST
+==============================================================================
+G_SELF=50.0, MU2=0.22, N_ITER=20
+
+Graph: random geometric, n=64
+
+method               norm_drift  w_ratio  contract  TW/iter  phi_stab      F_final
+----------------------------------------------------------------------------------
+screened_poisson       2.22e-16   1.0277        NO 20/ 20        OK  +1.6784e+00
+bare_laplacian         4.44e-16   1.0000       YES 20/ 20        OK  +2.0877e+00
+biharmonic             0.00e+00   1.0231        NO 20/ 20        OK  +1.5858e+00
+heat_kernel            3.33e-16   1.2621        NO 20/ 20        OK  +9.9481e-01
+
+==============================================================================
+VERDICT
+==============================================================================
+MULTIPLE PASS: screened_poisson, bare_laplacian, biharmonic, heat_kernel
+The field equation is NOT uniquely selected by these consistency tests.
+It remains a free parameter.
+However, only bare_laplacian produces contraction.
+
+Total time: 0.1s
+
+----- stderr -----
+

@@ -1,5 +1,7 @@
 # Claude Session — 04c820e1-77cd-416f-8917-21767de255fd
 
+**Type:** meta
+
 **Source:** `/Users/jonBridger/.claude/projects/-Users-jonBridger-Toy-Physics/04c820e1-77cd-416f-8917-21767de255fd.jsonl`
 
 **Total user prompts captured:** 589

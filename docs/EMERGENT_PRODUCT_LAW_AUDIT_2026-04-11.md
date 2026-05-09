@@ -1,7 +1,8 @@
 # Emergent M1*M2 Product Law Audit
 
 **Date:** 2026-04-11  
-**Status:** approved for bounded promotion to `main`
+**Status:** bounded support / audit-lane candidate
+**Primary runner:** scripts/frontier_emergent_product_law.py
 
 ## Decision
 

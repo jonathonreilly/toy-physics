@@ -1,5 +1,7 @@
 # Audit DM Runner Stale-Path Cleanup
 
+**Type:** meta
+
 **Date:** 2026-05-01
 **Status:** support / audit-hygiene cleanup. This note does **not** propose
 retention for any claim. It documents a surgical removal of stale `read()`

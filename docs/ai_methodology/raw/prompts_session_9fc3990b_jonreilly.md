@@ -1,5 +1,7 @@
 # Claude Session — 9fc3990b-c690-4f72-a5a6-996f5baaa803
 
+**Type:** meta
+
 **Source:** `/Users/jonreilly/.claude/projects/-Users-jonreilly-Projects-Physics--claude-worktrees-upbeat-williamson-a2ff73/9fc3990b-c690-4f72-a5a6-996f5baaa803.jsonl`
 
 **Machine:** /Users/jonreilly/  (Claude Code, model claude-opus-4-X / sonnet-4-X)

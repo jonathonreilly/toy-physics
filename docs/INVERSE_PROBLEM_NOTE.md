@@ -2,6 +2,7 @@
 
 **Status:** support - structural graph-requirements diagnostic
 **Date:** 2026-04-04
+**Primary runner:** scripts/inverse_problem_graph_requirements.py
 
 ## Answer: almost nothing.
 

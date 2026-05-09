@@ -1,5 +1,7 @@
 # Claude Session — Current (2026-04-25, in progress)
 
+**Type:** meta
+
 **Session id:** TBD (capturing in progress)
 
 **Capture date:** 2026-04-25

@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-19
 **Status:** support - structural or confirmatory support note
+**Primary runner:** scripts/frontier_dm_dple_theorem.py
 signature-structure analysis of the DM A-BCC chart, introducing F4
 (interior-minimum linear-path Sylvester discriminant) as the basin-
 selector axiom candidate. this cycle reduces F4 to a **theorem**: the

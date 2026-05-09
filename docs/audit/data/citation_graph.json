@@ -31438,11 +31438,11 @@
     },
     "ai_methodology.raw.prompts_session_04c820e1": {
       "claim_id": "ai_methodology.raw.prompts_session_04c820e1",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "75bb704d1b169cc9c76963344562f78625b469e4c71cf1bc868e63233007507e",
+      "note_hash": "54a9869cf606d6a2b345ad8d42f68528fddb7bb9e93b04e961caa559459e05ad",
       "path": "docs/ai_methodology/raw/prompts_session_04c820e1.md",
       "runner_path": null,
       "title": "Claude Session \u2014 04c820e1-77cd-416f-8917-21767de255fd"
@@ -31658,11 +31658,11 @@
     },
     "ai_methodology.raw.prompts_session_9fc3990b_jonreilly": {
       "claim_id": "ai_methodology.raw.prompts_session_9fc3990b_jonreilly",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "8a3583d4a5a859a19ce6d8fbc7a96aacb570d57d7cd62da89af9a3dee8972b54",
+      "note_hash": "e0e8a6dcaf618c7e433fa0c684badd9d265fb5c88765be1e321c18dd27334f60",
       "path": "docs/ai_methodology/raw/prompts_session_9fc3990b_jonreilly.md",
       "runner_path": null,
       "title": "Claude Session \u2014 9fc3990b-c690-4f72-a5a6-996f5baaa803"
@@ -31702,11 +31702,11 @@
     },
     "ai_methodology.raw.prompts_session_current": {
       "claim_id": "ai_methodology.raw.prompts_session_current",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "22bc007b58508448a1ac78b2f6d9752672d13310423bbee90766441b217f8791",
+      "note_hash": "d3a8b668c5a099043d2b31feb43f6ad1956c0fa6b3a6b4af99fae8e54b05e655",
       "path": "docs/ai_methodology/raw/prompts_session_current.md",
       "runner_path": null,
       "title": "Claude Session \u2014 Current (2026-04-25, in progress)"
@@ -32684,11 +32684,11 @@
     },
     "audit_dm_runner_stale_path_cleanup_note_2026-05-01": {
       "claim_id": "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "f90a0e80282addd84d760ba2218aa4af9be5442b7c3fd62833b830323c705c29",
+      "note_hash": "a6df14e138dc6eb25ee0440e8efc66481b09d2a138639de1c1969586b54d2f3d",
       "path": "docs/AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md",
       "runner_path": null,
       "title": "Audit DM Runner Stale-Path Cleanup"
@@ -36518,9 +36518,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "98bcba48baf02d11f3380456c2492e400610201d7ddbfe84ea044d514bd457bf",
+      "note_hash": "65fc2c88c89e4bc7b49b9215a860e1aee2068154dd99efd4507b36c5a43d23b9",
       "path": "docs/DM_CHAMBER_SIGNATURE_STRUCTURE_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_dple_theorem.py",
       "title": "DM Chamber Signature Structure -- F4 Closed by DPLE Theorem"
     },
     "dm_continuum_limit_velocity_note": {
@@ -39589,9 +39589,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "3cbcd386fb3bf68bd3b43357aae3f87e8d79a74132e27d0390e5bfe22817772d",
+      "note_hash": "5eb3ca8e3d6fba15d71ee37ad367e16a358b27daf0622c198f09a973073bbcc2",
       "path": "docs/EDGE_DELETION_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/edge_deletion_boundary_sweep.py",
       "title": "Edge Deletion Boundary: Gravity Sign Flip"
     },
     "edge_deletion_boundary_sweep_note": {
@@ -39714,9 +39714,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "cd016c4a4943c45c8aa13c3634e29c61f0467dc5c13b98b2546ed6389f11f4e2",
+      "note_hash": "8b12f1187ed3fa97071136ee510d4fe50dabbc302d6824b6d46c204cbaaa109b",
       "path": "docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_emergent_product_law.py",
       "title": "Emergent M1*M2 Product Law Audit"
     },
     "emergent_product_law_note": {
@@ -40073,9 +40073,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "00ee4a6d6225212eb7bc2a5cca58a62650247886921f11e770b28e3328d808e5",
+      "note_hash": "5e4309eb1da168a9122eaf1931faf89d9e31154e37ed7f61677f47cbfa1a28af",
       "path": "docs/FIELD_EQUATION_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_field_equation_uniqueness.py",
       "title": "Field Equation Derivation \u2014 Variational Argument"
     },
     "fifth_family_complex_boundary_note": {
@@ -40175,11 +40175,11 @@
     },
     "flagship_paper_contribution_statement_note": {
       "claim_id": "flagship_paper_contribution_statement_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "4ea661c2ade5b573bb6a22e6b307c7894c3ff7357f22f2face54054937df7ced",
+      "note_hash": "be1c7aae8b7922640125bccea0bbc7be44140bcc9ca9cf5311d8a6d60e0a5082",
       "path": "docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md",
       "runner_path": null,
       "title": "Flagship Paper Contribution Statement Note"
@@ -43379,9 +43379,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "8af5157d3863ea17ea9b48aa6d94fa9101b6543e0bdb67cd9d107ee20d0183d2",
+      "note_hash": "b2a579427d14557abe92724f62c97a9a5f02014f71862b7f665f7452380dc361",
       "path": "docs/INVERSE_PROBLEM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/inverse_problem_graph_requirements.py",
       "title": "Inverse Problem: What Does Newton+Born Require of the Network?"
     },
     "irregular_directional_observable_note_2026-04-11": {
@@ -48860,9 +48860,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1328541d852f206ca2297e255bc4b82c061f7730280fd12c9e1f5053bfdebc5b",
+      "note_hash": "b903af91f033b62222974015471c8ece213c570ac07b293514728a68ec9a4c4e",
       "path": "docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_inertial_object_probe.py",
       "title": "Newton Persistent-Pattern Control Note"
     },
     "newtonian_distance_law_confirmed": {
@@ -62376,24 +62376,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 173,
-      "meta": 17,
+      "meta": 22,
       "no_go": 14,
-      "none": 1692,
+      "none": 1687,
       "open_gate": 19,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 678,
-      "meta": 17,
+      "bounded_theorem": 677,
+      "meta": 22,
       "no_go": 122,
       "none": 458,
-      "open_gate": 113,
-      "positive_theorem": 618
+      "open_gate": 110,
+      "positive_theorem": 617
     },
     "edge_count": 7659,
     "leaf_count": 536,
     "node_count": 2006,
     "root_count": 825,
-    "runners_with_path": 1597
+    "runners_with_path": 1603
   }
 }

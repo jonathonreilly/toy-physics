@@ -1,5 +1,7 @@
 # Flagship Paper Contribution Statement Note
 
+**Type:** meta
+
 **Date:** 2026-04-12  
 **Status:** publication-facing framing for the `CI(3)` / `Z^3` lane; bounded by `CI3_Z3_PUBLICATION_RETAIN_AUDIT_2026-04-12.md`
 
