@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_invariant_nonlinear_completion.py
+runner_sha256: c06ee4721f5c2b1ec0d60054ef149c5573ca4c9cca934e03f43b598de67f86d5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.18
+status: ok
+----- stdout -----
+[EXACT] PASS: the direct-universal route already has the exact invariant nonlinear family and isotropic glue theorem
+    exact additive observable generator, exact invariant family, and exact isotropic glue operator are already on the branch
+[EXACT] PASS: the invariant-family observable generator is exact at all orders on D = diag(a,b,b,b)
+    max finite-difference Hessian error=2.069e-08
+[EXACT] PASS: the nonlinear invariant-family glued operator is symmetric positive definite for all sampled positive backgrounds
+    Lambda_R witness symmetry=0.000e+00, witness min eig=1.363463e+00, glued min eig=2.782578e-02
+[EXACT] PASS: the invariant-family boundary action has a unique exact stationary point for every sampled positive background
+    max stationary gradient error=4.441e-16
+[EXACT] PASS: the quadratic completion identity holds exactly across the sampled invariant nonlinear family
+    min sampled gap=1.954e-08, max completion error=7.604e-14
+UNIVERSAL GR INVARIANT NONLINEAR COMPLETION
+==============================================================================
+max invariant-family Hessian error = 2.069e-08
+Lambda_R witness symmetry error   = 0.000e+00
+Lambda_R witness min eigenvalue   = 1.363463e+00
+min glued operator eigenvalue     = 2.782578e-02
+max stationary gradient error     = 4.441e-16
+min sampled action gap            = 1.954e-08
+max completion identity error     = 7.604e-14
+
+Verdict:
+On the full positive invariant background family D = diag(a,b,b,b), the direct-universal observable generator is already exact at all orders, and the isotropic glued operator therefore extends to an exact nonlinear family of covariant quadratic boundary actions.
+So the direct-universal route is no longer open at nonlinear completion on the invariant family. The remaining gap, if one insists on more, is widening beyond the invariant background family.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+
