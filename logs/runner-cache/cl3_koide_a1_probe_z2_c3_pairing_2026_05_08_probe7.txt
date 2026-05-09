@@ -1,0 +1,97 @@
+Section 0 — Baseline: retained C_3 + circulant primitives on hw=1
+  PASS : U_C3^3 = I_3 (C_3 order 3)
+  PASS : U_C3 unitary
+  PASS : H(a=1.7, b=(0.3+0.5j)) is Hermitian
+  PASS : Circulant H commutes with C_3 cyclic shift U_C3
+  PASS : Circulant eigenvalues match Brannen-Rivero cosine form
+  PASS : Brannen canonical point (a=1, b=1/√2) yields |b|²/a² = 1/2 | |b|²/a² = 0.5000000000
+  PASS : A1 ratio |b|²/a² is scale-invariant under (a, b) → (λa, λb)
+
+Section 1 — Z_2 Candidate (1): Inversion Z_2 (S ↔ S²) — P_{23} on hw=1
+  PASS : Test 1 (existence): P_{23} U_{C3} P_{23} = U_{C3}^{-1} (retained T1)
+  PASS : P_{23}^2 = I (Z_2 involution)
+  PASS : Test 2 (commutation): P_{23} does NOT commute with U_C3 (S_3 ≠ Z_6) | Z_3 ⋊ Z_2 = S_3, not Z_6 = Z_3 × Z_2
+  PASS : P_{23} H(a, b) P_{23} = H(a, b̄)
+  PASS : Test 3 (constraint): Z_2-equivariance ⟹ b ∈ ℝ (Im(b) = 0)
+  PASS : Test 3 (continued): Z_2-equivariant circulants span MULTIPLE distinct |b|²/a² ratios | ratios sampled: [0.01, 0.25, 1.0, 4.0, np.float64(0.5)]
+  PASS : Test 3 (negative): Z_2-equivariance does NOT force |b|²/a² = 1/2 | Counterexamples (1.0, 0.1), (1.0, 1.0) are Z_2-equivariant with ratio ≠ 1/2
+  PASS : Test 4 (norm): Frobenius |H|_F² = 3a² + 6|b|² unaffected by Z_2
+  PASS : Test 5 (convention): N/A — Z_2 inversion does not produce 1/2
+
+Section 2 — Z_2 Candidate (2): (12)-transposition Z_2 fixing axis 3
+  PASS : Test 1 (existence): P_12^2 = I (Z_2 involution)
+  PASS : Test 2 (commutation): P_12 does NOT commute with U_C3 (semidirect S_3)
+  PASS : P_12 U P_12 = U^{-1}
+  PASS : P_12 acts on circulant: H(a, b) → H(a, b̄)
+  PASS : Test 3 (negative): real-b circulants are P_12-invariant with arbitrary |b|²/a² | ratios: [0.01, 0.49, np.float64(0.5), 2.25]
+  PASS : A1 point (a=1, b=1/√2) is Z_2-invariant — but so is every (a, b∈ℝ) point | Z_2 doesn't single out A1 from 2D continuous family
+  PASS : Test 4: Frobenius split 3a² : 6|b|² is C_3-derived, not Z_2-derived | 3:6 weight from C_3 multiplicity (1 trivial + 2 non-trivial chars)
+  PASS : Test 5 (convention): N/A — (12)-transposition does not isolate 1/2
+
+Section 3 — Z_2 Candidate (3): Pseudoscalar ω-flip orientation Z_2
+  PASS : Test 1 (existence): ω² = -I_8 (retained per CL3_SM_EMBEDDING)
+  PASS : ω is central in Cl(3,0): [ω, Γ_i] = 0 for all i
+  PASS : Test 2 (commutation): ω-flip acts trivially on hw=1, commutes with C_3 | ω lives in Cl(3) taste sector, hw=1 lives in spatial corner sector — orthogonal
+  PASS : Test 3 (constraint): ω-flip is trivial on circulant, no (a,b) constraint | every circulant is automatically ω-flip equivariant
+  PASS : Test 3 (continued): all circulants ω-flip-equivariant, |b|²/a² unconstrained
+  PASS : Test 4 (normalization): no Frobenius weight from ω-flip (trivial action)
+  PASS : Test 5 (convention): N/A — ω-flip does not produce 1/2
+
+Section 4 — Z_2 Candidate (4): Fermion parity F = (-1)^Q̂_total
+  PASS : Test 1 (existence): F = ⊗ σ_3 satisfies F^2 = I (per FERMION_PARITY F2)
+  PASS : F has spectrum {+1, -1} (per F3)
+  PASS : Test 2 (commutation): [F, a_x^† a_y] = 0 (Z_2-EVEN on bilinears, F7)
+  PASS : F acts trivially on bilinear sector hw=1 — commutes with C_3 trivially | Generates Z_6, but Z_2 acts as identity (degenerate Z_2 × C_3 = C_3)
+  PASS : Test 3 (constraint): F acts trivially, no (a, b) constraint
+  PASS : Test 3 (continued): all ratios F-equivariant — F gives NO constraint | ratios sampled: [0.0, 0.25, 1.0, 4.0, np.float64(0.5)]
+  PASS : Test 4 (normalization): no Frobenius weight from F (trivial action)
+  PASS : Test 5 (convention): N/A — F does not produce 1/2
+
+Section 5 — Z_2 Candidate (5): APBC vs PBC boundary-condition Z_2
+  PASS : Test 1 (existence): APBC retained as substrate convention | Per STAGGERED_DIRAC_BZ_CORNER_FORCING premise APBC
+  PASS : Test 2 (commutation): APBC has no operator action on hw=1 (substrate-level only)
+  PASS : Test 2 (continued): uniform Z_3 phase twists cancel on closed lattices | per SU3_Z3_APBC_VARIANT_PROBE: P(β=6) identical PBC vs Z_3-symm APBC
+  PASS : Test 3 (constraint): APBC twist does not constrain (a, b) on hw=1 | boundary convention selects hw=1 sector but doesn't restrict operator coefficients
+  PASS : Test 4 (normalization): APBC does not supply Frobenius weight
+  PASS : Test 5 (convention): N/A — APBC twist does not produce 1/2
+
+Section 6 — Universal barrier: scale-invariance defeats any linear Z_2
+  PASS : A1 ratio |b|²/a² is scale-invariant under (a, b) → (λa, λb)
+  PASS : Linear Z_2 with (a, b) → (a, -b) gives ker = {b=0}, ratio = 0 ≠ 1/2
+  PASS : Linear Z_2 with (a, b) → (-a, b) gives ker = {a=0}, ratio = ∞ ≠ 1/2
+  PASS : Linear Z_2 swap (a,b) ↔ (b,a) gives ker = {a=b}, ratio = 1 ≠ 1/2
+  PASS : Test: reflection-Z_2 with slope m = 1/√2 gives ratio = 1/2 — but m unmotivated | Admitting m = 1/√2 IS the A1 admission; circular
+  PASS : Universal barrier: scale-invariance + linearity ⟹ Z_2 cannot pick 1/2 | Z_2-fixed-points are cones in (a, b) plane, never single ratios
+
+Section 7 — Joint Z_6 = Z_2 × C_3 representation theory
+  PASS : Trivial Z_2 (F, ω-flip): Z_2 × C_3 = C_3, commutes
+  PASS : Inversion Z_2 (P_{23}): semidirect S_3 = Z_3 ⋊ Z_2, NOT Z_6
+  PASS : Real-b circulants form 2-real-parameter Z_2-equivariant family
+  PASS : A1-violating real-b circulants are still Z_2-equivariant: 4 counterexamples | ratios: 0, 0.16, 1.0, 6.25 — all P_23-invariant, none = 1/2
+  PASS : Z_6 = Z_2 × C_3 cannot force |b|²/a² = 1/2 (codim 1 in 2D family) | Even under semidirect S_3, real-b circulants are 2D; A1 is codim 1 surface
+
+Section 8 — Cross-check: where 1/2 actually comes from in A1
+  PASS : C_3-multiplicity ratio (trivial : non-trivial) = 3:6 = 1/2 | 1/2 = (dim trivial-char Hermitian) / (dim nontrivial-char Hermitian)
+  PASS : A1 = equipartition: at (a=1, b=1/√2), 3a² = 6|b|² = 3.0 | diag = 3.0000, off = 3.0000
+  PASS : A1 equipartition is a normalization principle, not a Z_2 derivation | Open per HIGHER_ORDER_STRUCTURAL_THEOREMS Theorem 5
+  PASS : 1/2 traceability: 1/2 = 3/6 = (dim trivial χ)/(dim nontrivial χ) of C_3 on M_3(ℂ)_Herm | C_3-multiplicity arithmetic, not Z_2 halving
+
+Section 9 — Convention robustness across Z_2 candidates
+  PASS : Z_2 (1) inversion: NOT invariant under global phase b → e^{iα}b | Constraint Im(b)=0 fails after general phase rotation
+  PASS : Z_2 (2) (12)-transposition: same constraint b ∈ ℝ, NOT phase-invariant
+  PASS : Z_2 (3) ω-flip: phase-invariant (trivial action) but NO constraint
+  PASS : Z_2 (4) F: phase-invariant (trivial action) but NO constraint
+  PASS : Z_2 (5) APBC: substrate-level only, no convention impact on (a, b)
+  PASS : Universal: NO Z_2 candidate produces |b|²/a² = 1/2 in convention-invariant form | Either trivial constraint or breaks under phase rotation
+
+Section 10 — Falsifiability anchor (PDG charged-lepton masses)
+  PASS : Anchor: PDG-anchored Koide Q ≈ 2/3 (sub-percent) | Q = 0.666661, target 2/3 = 0.666667
+  PASS : Anchor: PDG-anchored σ = a₀²/|v|² ≈ 1/2 (Koide cone latitude) | σ = 0.500005, target 0.5
+  PASS : Anchor: shows A1 condition holds empirically — but NOT derived from Z_2/C_3 | Anchor only; this probe is structurally bounded
+
+Section 11 — Probe 7 bounded obstruction theorem
+  THEOREM (Probe 7): no retained-grade Z_2 paired with C_3 forces |b|²/a² = 1/2
+  Structural barriers per candidate: trivial action / scale-invariance / S_3 not Z_6
+  PASS : Theorem statement printed
+
+=== TOTAL: PASS=70, FAIL=0 ===
