@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 62 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 235 |
+| **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 894 |
+| unaudited | 893 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 384 |
+| `audited_clean` | 385 |
 | `audited_conditional` | 421 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 948 |
+| `unaudited` | 947 |
 
 | claim_type | count |
 |---|---:|
@@ -339,6 +339,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_3d_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -9907,6 +9908,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The full nonlinear loop is run separately for a, b, c, ab, ac, bc, and abc, giving end-to-end Born I3/P = 6.830e-05 while the frozen snapshot check stays at 8.834e-16.  _(class `C`)_
 - **chain closes:** True — The runner implements the frozen-field and end-to-end tests separately and the stdout matches the note's stated values. No cited upstream authority is required for the bounded claim as stated.
 - **rationale:** The issue tested is narrow: whether this explicit loop preserves Born locally and end-to-end. The runner computes the field iteration, frozen Sorkin I3/P, separate slit-subset loop outputs, and zero-coupling reduction rather than hard-coding the target numbers. The claim boundary is limited to the specified lattice, coupling, source strength, and nonconverged max-iteration snapshot; within that boundary the conclusion follows from the provided computation.
+- **auditor confidence:** medium
+
+### `poisson_self_gravity_loop_v3_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the specified h=0.25, W=3, L=6 reduced exact-lattice Poisson-like loop and listed coupling/source sweep, the audit checks exact zero-coupling reduction, matched-null shifts, convergence, and Born behavior.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0c7a-7c8d-7f80-9f9d-dd0215046668`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The exact epsilon=0 reduction and matched-null controls hold, while nonzero-coupling rows show only small centroid/phase shifts with nonconvergence and end-to-end Born drift, so the family remains a bounded control rather than a self-gravity lane.  _(class `C`)_
+- **chain closes:** True — Within the explicitly scoped numerical harness, the runner computes the sweep rather than hard-coding the reported values, and the bounded conclusion matches the stdout. The result is limited to the chosen lattice family, kernel, couplings, and observables.
+- **rationale:** The primary runner performs a nontrivial lattice/backreaction computation and reports exact zero-epsilon identity, small nonzero-coupling shifts, nonconvergence, and non-machine-clean end-to-end Born behavior. Those outputs support the note's bounded claim that this is a weak control surface and not a promoted self-gravity mechanism. No cited upstream dependency is listed, and no external comparator or tuned empirical target is used in the audited conclusion.
 - **auditor confidence:** medium
 
 ### `portable_card_extension_note`

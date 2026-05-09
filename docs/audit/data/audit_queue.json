@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 99,
-    "high": 363,
+    "high": 362,
     "leaf": 193,
     "medium": 251
   },
@@ -4642,27 +4642,6 @@
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "transitive_descendants": 130
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "poisson_self_gravity_loop_v3_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.511,
-      "note_path": "docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
-      "transitive_descendants": 128
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21220,6 +21199,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "self_gravity_failure_diagnosis",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "poisson_self_gravity_loop_v3_note",
+        "self_gravity_backreaction_closure_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "reproduction_audit_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -25316,30 +25319,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "self_gravity_failure_diagnosis",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "poisson_self_gravity_loop_v3_note",
-        "self_gravity_backreaction_closure_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "shapiro_experimental_card",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -26252,5 +26231,5 @@
     }
   ],
   "ready_count": 14,
-  "total_pending": 906
+  "total_pending": 905
 }
