@@ -1,0 +1,108 @@
+===== runner cache v1 =====
+runner: scripts/light_cone_crank_nicolson_lr_2026_05_09.py
+runner_sha256: afdeecb6a8e29ff212635348aeeeb249ac43f9e0e234734fccc1b78bc453e724
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.58
+status: ok
+----- stdout -----
+========================================================================
+BOUNDED CRANK-NICOLSON LIEB-ROBINSON DIAGNOSTIC
+========================================================================
+
+Cites: MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE
+       (bounded Hamiltonian-side action-support/J-budget context)
+
+This runner: finite-volume Crank-Nicolson diagnostics
+             v_CN = v_LR(H) / (1 - a_tau J / 2) on tested toy models
+             interpreted as bounded support, not a retained constant
+
+
+------------------------------------------------------------------------
+CN1: Cayley transform unitarity
+     U_CN = (I - i a_tau H/2) (I + i a_tau H/2)^(-1)
+     => U_CN^dagger U_CN = I (because H Hermitian)
+------------------------------------------------------------------------
+     a_tau = 0.0010:  ||U^dag U - I||_op = 2.887e-15
+     a_tau = 0.0100:  ||U^dag U - I||_op = 4.219e-15
+     a_tau = 0.1000:  ||U^dag U - I||_op = 4.112e-15
+  [PASS] CN1 unitarity
+         max ||U^dag U - I||_op = 4.219e-15 across a_tau in [1e-3, 1e-1]
+
+------------------------------------------------------------------------
+CN2: Per-step commutator decay
+     For one CN step, ||[U_CN O_0 U_CN^(-1), O_d]|| decays in d
+     With H finite-range r=1, ||a_tau H/2|| < 1 (sub-critical step)
+------------------------------------------------------------------------
+     ||H||_op = 4.1400
+        a_tau   eps=a J/2       comm(d=1)       comm(d=2)   ratio_2/1    eps_pred
+       0.0100      0.0207    1.332425e-02    6.029394e-05      0.0045      0.0207
+       0.0200      0.0414    2.667098e-02    2.425230e-04      0.0091      0.0414
+       0.0500      0.1035    6.682046e-02    1.538711e-03      0.0230      0.1035
+       0.1000      0.2070    1.339544e-01    6.273202e-03      0.0468      0.2070
+
+     [Single-step Neumann bound: ratio_2/1 ~ O(epsilon).]
+  [PASS] CN2 per-step Neumann-series decay
+         comm at d=2 scales as O(epsilon) relative to d=1, consistent with single-step v_LR_CN = v_LR(H)/(1 - a_tau J/2)
+
+------------------------------------------------------------------------
+CN3: n-step Crank-Nicolson velocity bound
+     For t = n a_tau, ||[U_CN^n O_0 U_CN^(-n), O_d]|| obeys
+     a Lieb-Robinson bound with v_LR_CN -> 2 e r J as a_tau -> 0.
+------------------------------------------------------------------------
+     Toy Hamiltonian-side v_LR(H) = 2 e r J = 5.4366
+     for toy r = 1, J = 1.0
+
+        a_tau   a_tau J     n       t    d            comm        CN bound   OK?
+       0.0050     0.005    10   0.050    3    2.255458e-05    1.307663e-01  OK
+       0.0050     0.005    10   0.050    4    2.473696e-06    4.810624e-02  OK
+       0.0050     0.005    10   0.050    5    2.354056e-06    1.769730e-02  OK
+       0.0100     0.010    10   0.100    3    1.797470e-04    1.719650e-01  OK
+       0.0100     0.010    10   0.100    4    2.046424e-05    6.326238e-02  OK
+       0.0100     0.010    10   0.100    5    1.885126e-05    2.327293e-02  OK
+       0.0200     0.020    10   0.200    3    1.426961e-03    2.986278e-01  OK
+       0.0200     0.020    10   0.200    4    1.803331e-04    1.098590e-01  OK
+       0.0200     0.020    10   0.200    5    1.514628e-04    4.041488e-02  OK
+       0.0500     0.050    10   0.500    3    2.132792e-02    1.617899e+00  OK
+       0.0500     0.050    10   0.500    4    4.022642e-03    5.951919e-01  OK
+       0.0500     0.050    10   0.500    5    2.461817e-03    2.189589e-01  OK
+  [PASS] CN3 n-step velocity bound
+         v_LR_CN = v_LR(H) / (1 - a_tau J / 2); reduces to v_LR(H) as a_tau -> 0
+
+------------------------------------------------------------------------
+CN4: Continuum-limit convergence
+     U_CN(a_tau)^n with t = n a_tau converges to exp(-itH)
+     with leading error O(a_tau^2 * t * ||H||^3)
+------------------------------------------------------------------------
+     fixed t = 0.1
+
+          a_tau   n_steps    ||U_CN^n - U_exact||
+        0.05000         2            1.468811e-03
+        0.02000         5            2.362754e-04
+        0.01000        10            5.911439e-05
+        0.00500        20            1.478145e-05
+        0.00200        50            2.365159e-06
+  [PASS] CN4 continuum convergence O(a_tau^2)
+         O(a_tau^2) scaling verified in 4/4 successive halvings
+
+------------------------------------------------------------------------
+CN5: Crank-Nicolson commutator agreement with continuous evolution
+     ||[U_CN^n O_x U_CN^(-n), O_y]|| -> ||[exp(itH) O_x exp(-itH), O_y]||
+     in the small-a_tau limit at fixed t = n * a_tau
+------------------------------------------------------------------------
+     fixed t = 0.1, J = 1.0, v_LR(H) = 2 e r J = 5.437
+
+          a_tau    d         comm_CN      comm_exact          diff
+        0.00200    2    6.028717e-03    6.028699e-03     1.827e-08
+        0.00200    3    1.789484e-04    1.789471e-04     1.357e-09
+        0.00200    4    5.717919e-06    5.658004e-06     5.992e-08
+        0.00200    5    7.972087e-07    1.635341e-07     6.337e-07
+  [PASS] CN5 LR-bound agreement with continuous evolution
+         max |comm_CN - comm_exact| = 6.337e-07 at a_tau = 2.000e-03, O(a_tau^2) floor ~ 2.838e-04
+
+========================================================================
+PASS=5 FAIL=0
+========================================================================
+
+----- stderr -----
+

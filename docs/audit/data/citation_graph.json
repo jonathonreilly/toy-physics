@@ -12565,6 +12565,18 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09",
+      "to": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
+    },
+    {
+      "from": "light_cone_framing_note",
+      "to": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
+    },
+    {
+      "from": "light_cone_framing_note",
+      "to": "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09"
+    },
+    {
       "from": "literature_backmatch_live_scan_note",
       "to": "experiment_backmatch_query_pack_note"
     },
@@ -47028,13 +47040,29 @@
       "runner_path": "scripts/frontier_lhcm_y_normalization.py",
       "title": "LHCM Y Normalization from Anomaly Cancellation and Electric-Charge Convention"
     },
+    "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09": {
+      "claim_id": "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
+      ],
+      "note_hash": "dbc39c09b46e6eab5d481ae1781fdc4f4a3cb202071a2d46db2ba22fa651816c",
+      "path": "docs/LIGHT_CONE_CRANK_NICOLSON_LIEB_ROBINSON_BRIDGE_NOTE_2026-05-09.md",
+      "runner_path": "scripts/light_cone_crank_nicolson_lr_2026_05_09.py",
+      "title": "Bounded Crank-Nicolson Lieb-Robinson Diagnostic for Light-Cone Framing"
+    },
     "light_cone_framing_note": {
       "claim_id": "light_cone_framing_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "7c14a58ecb8ba68107cba70f5f00445dacee4b9346ae04e7c65dca81a7f5c82e",
+      "deps": [
+        "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+        "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09"
+      ],
+      "note_hash": "68da0a360c45bcf1dd5306447bd2320f3822e48a2e62a255e24dd0304769e349",
       "path": "docs/LIGHT_CONE_FRAMING_NOTE.md",
       "runner_path": "scripts/light_cone_staggered_dispersion.py",
       "title": "Light Cone Framing \u2014 Lieb-Robinson is Standard Lattice QFT"
@@ -62264,7 +62292,6 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_deflection_note",
     "lensing_k_sweep_note",
-    "light_cone_framing_note",
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
@@ -62619,7 +62646,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 177,
+      "bounded_theorem": 178,
       "meta": 22,
       "no_go": 14,
       "none": 1683,
@@ -62627,17 +62654,17 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 681,
+      "bounded_theorem": 682,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
       "positive_theorem": 613
     },
-    "edge_count": 7703,
+    "edge_count": 7706,
     "leaf_count": 536,
-    "node_count": 2008,
-    "root_count": 815,
-    "runners_with_path": 1608
+    "node_count": 2009,
+    "root_count": 814,
+    "runners_with_path": 1609
   }
 }

@@ -11016,6 +11016,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_lhcm_y_normalization.py"
     },
+    "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/light_cone_crank_nicolson_lr_2026_05_09.py"
+    },
     "light_cone_framing_note": {
       "assert_count": 2,
       "counts": {
@@ -39045,6 +39057,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/light_cone_crank_nicolson_lr_2026_05_09.py": {
+      "assert_count": 1,
+      "claims": [
+        "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/light_cone_staggered_dispersion.py": {
       "assert_count": 2,
       "claims": [
@@ -42110,12 +42137,12 @@
     "dominant_class_distribution": {
       "A": 22,
       "B": 174,
-      "C": 638,
+      "C": 639,
       "D": 242,
       "none": 426
     },
-    "runners_classified": 1502,
-    "runners_with_C": 772,
+    "runners_classified": 1503,
+    "runners_with_C": 773,
     "runners_with_D": 396
   }
 }

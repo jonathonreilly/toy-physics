@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 990 |
+| unaudited | 992 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 344 |
+| ~~audited_conditional~~ | 343 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,16 +41,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 344 |
+| `audited_conditional` | 343 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1051 |
+| `unaudited` | 1053 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 755 |
+| `bounded_theorem` | 756 |
 | `decoration` | 12 |
 | `meta` | 68 |
 | `no_go` | 192 |
@@ -59,7 +59,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 314 |
+| `critical` | 315 |
 | `high` | 474 |
 | `medium` | 484 |
 | `leaf` | 629 |
@@ -69,8 +69,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1502
-- runners with (C) first-principles compute hits: 772
+- runners classified: 1503
+- runners with (C) first-principles compute hits: 773
 - runners with (D) external comparator hits: 396
 - decoration candidates (no C, no D): 132
 
@@ -80,12 +80,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 768 | 61.59 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 770 | 61.59 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 534 | 40.56 | `unaudited` | unaudited |
 | 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 756 | 38.06 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 622 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 745 | 36.54 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 675 | 33.90 | `unaudited` | meta |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 677 | 33.91 | `unaudited` | meta |
 | 7 | `alpha_s_derived_note` | bounded_theorem | critical | 504 | 32.48 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 30.12 | `unaudited` | unaudited |
 | 9 | `native_gauge_closure_note` | bounded_theorem | critical | 735 | 30.02 | `audited_clean` | **retained_bounded** |
@@ -720,7 +720,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `local_zsym_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -7523,19 +7522,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The load-bearing step is a genuine class (A) algebraic closure once the 6 and 2 multiplicities are accepted. However, the restricted packet includes the staggered-Dirac realization gate as an admitted context input and cited authority with effective_status open_gate, so retained status cannot propagate through it. The runner also exits nonzero because it still expects positive_theorem tags, which is a runner artifact rather than a scientific failure of the narrowed ratio algebra.
 - **open / conditional deps cited:**
   - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-- **auditor confidence:** high
-
-### `light_cone_framing_note`
-
-- **Note:** [`LIGHT_CONE_FRAMING_NOTE.md`](../../docs/LIGHT_CONE_FRAMING_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audit of the claim that the observed finite-spacing Crank-Nicolson Lieb-Robinson cone is standard lattice-QFT behavior and not a blocker, supported by the 1+1d staggered Dirac dispersion bound.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-agent-light-cone-20260503T000000Z`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The 97% containment seen at finite lattice spacing in the Crank-Nicolson evolution is the standard discretization artifact.  _(class `F`)_
-- **chain closes:** False — The runner closes the corrected staggered-dispersion formula, but the note explicitly states that it does not derive the Lieb-Robinson constant for the specific Crank-Nicolson operator. Therefore the architecture-level framing conclusion does not follow from the provided inputs alone.
-- **rationale:** Issue: the note validates the staggered Dirac dispersion formula v_max(m)=sqrt(m^2+1)-m, but the load-bearing bridge identifies the observed Crank-Nicolson containment behavior with standard lattice-QFT Lieb-Robinson behavior without deriving the LR constant for the actual Crank-Nicolson hopping kernel. Why this blocks: the positive theorem needs the architecture-specific operator-norm/source-kernel calculation, not just an analogy to staggered lattice QFT. Repair target: add a retained theorem and runner that compute the Lieb-Robinson/operator-norm bound for the specific Crank-Nicolson operator used elsewhere. Claim boundary until fixed: the exact 1+1d staggered dispersion maximum is numerically validated and subluminal, but the architecture-level no-blocker conclusion remains conditional.
 - **auditor confidence:** high
 
 ### `linear_response_derivation_note`
