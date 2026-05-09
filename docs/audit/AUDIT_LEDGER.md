@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 918 |
+| unaudited | 917 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 403 |
+| ~~audited_conditional~~ | 404 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 403 |
+| `audited_conditional` | 404 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 973 |
+| `unaudited` | 972 |
 
 | claim_type | count |
 |---|---:|
@@ -669,6 +669,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `down_type_mass_ratio_ckm_dual_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `edge_deletion_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4923,6 +4924,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_SCHUR_ENTROPY_CANDIDATE_NO_GO_NOTE_2026-04-19.md`
   - `DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_BRANCH_DISCRIMINANT_THEOREM_NOTE_2026-04-19.md`
   - `DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded fixed-kernel claim that the named constructive-positive closure point is regular in e and therefore locally lies on a positive-dimensional closure family.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d1c-feb5-7602-bb24-9cf41af8500a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The Krawczyk-interval certificate for F(a,b,c,d,e)=eta_1-1 at the named base point establishes a unique regular zero in the e-bracket, so the implicit-function theorem gives a local 4-real closure family inside the constructive positive branch.  _(class `B`)_
+- **chain closes:** False — The note's load-bearing Krawczyk interval certificate and fixed e-independent transport kernel are not actually supplied by the primary runner source; the provided runner uses double-precision finite differences, Brent solves, imported framework functions, and a hard-coded final PASS rather than constructing the interval certificate.
+- **rationale:** Issue: the scientific load-bearing step is the Krawczyk regular-root certificate on a precomputed fixed transport kernel, but the packet supplies only a numerical witness runner, not the companion interval-certificate runner or cached certificate object. Why this blocks: stdout PASS lines do not verify the asserted rigorous interval enclosure, derivative bounds, or provenance of the fixed kernel, so the IFT manifold claim is conditional on an unsupplied artifact/input. Repair target: include the certificate runner source/stdout or cached JSON certificate and a retained provenance edge for the fixed-kernel object. Claim boundary until fixed: at most a double-precision numerical witness for local non-isolation on the imported fixed-kernel implementation.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25`
