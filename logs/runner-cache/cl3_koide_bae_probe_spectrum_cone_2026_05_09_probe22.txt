@@ -1,0 +1,83 @@
+Koide BAE Probe 22 — Spectrum-Level Cone Localization Pivot
+Date: 2026-05-09
+Type: bounded_theorem (sharpened obstruction)
+
+========================================================================
+Section 1 — Retained inputs (R1, R2)
+========================================================================
+  T1.1 C^3 = I exact: PASS=True
+  T1.2 C unitary: PASS=True
+  T1.3 char poly of C is -(lam^3 - 1) (eigenvalues {1, omega, omega^2}): PASS=True
+  T1.4 H = aI + bC + b̄C^2 is Hermitian: PASS=True
+  T1.5 lambda_k = a + b omega^k + b̄ omega^{-k} matches diagonalization: PASS=True (residual=0)
+  Section 1: PASS=5, FAIL=0
+
+========================================================================
+Section 2 — Retained bridge identity (positive_theorem)
+========================================================================
+  T2.1 a_0 = sqrt(3) a: PASS=True (residual=0)
+  T2.2 |z|^2 = 3 |b|^2: PASS=True (residual=0)
+  T2.3 a_0^2 - 2|z|^2 = 3a^2 - 6|b|^2: PASS=True (residual=0)
+  Section 2: PASS=3, FAIL=0
+
+========================================================================
+Section 3 — Spectrum-level cone reduces to BAE
+========================================================================
+  T3.1 F_orbit = const * (a^2 - 2|b|^2): PASS=True
+        F_orbit (simplified) = -9*a**2 + 18*b_im**2 + 18*b_re**2
+        ratio F_orbit / (a^2 - 2|b|^2) = -9
+  T3.2 sum(lambda) = 3a, sum(lambda^2) = 3a^2 + 6|b|^2: PASS=True
+  T3.3 cone condition 3(sum sq) - 2(sum)^2 = -9(a^2 - 2|b|^2): PASS=True
+  T3.4 F_orbit = 0 iff BAE: in=True, out=True, PASS=True
+        F at BAE (a=sqrt(2), b=1): 0
+        F off BAE (a=1, b=1): 9
+  Section 3: PASS=4, FAIL=0
+
+========================================================================
+Section 4 — Spectrum-level pivot is bridge-identical to parameter-level
+========================================================================
+  T4.1 Brannen/Rivero spectral form lambda_k = a + 2|b|cos(delta + 2pi k/3): PASS=True
+  T4.2 sum(lambda) = 3a (delta-indep), sum(lambda^2) = 3a^2 + 6|b|^2 (delta-indep): PASS=True
+  T4.3 Q = 2/3 <=> a^2 = 2|b|^2 (the BAE condition): PASS=True
+  T4.4 F_orbit = 0 iff BAE on 6 sample (a, |b|) points: BAE=[True, True, True], offBAE=[True, True, True], PASS=True
+  T4.5 cone localization is delta-independent at BAE: F(d=1/7)=0, F(d=pi-2/5)=0, PASS=True
+  T4.6 prefactor -9 in 3(sum sq) - 2(sum)^2 = -9 BAE_slack is non-vanishing: PASS=True
+  Section 4: PASS=6, FAIL=0
+
+========================================================================
+Section 5 — Spectrum invariants are functions of (a, |b|) only
+========================================================================
+  T5.1.1 d/d(delta) p_1 = 0 (delta-indep): PASS=True, d_p_1=0
+  T5.1.2 d/d(delta) p_2 = 0 (delta-indep): PASS=True, d_p_2=0
+  T5.1.3 d/d(delta) p_3 != 0 (delta-DEPENDENT, carries the residual angular DOF): PASS=True, d_p_3=-18*b_mod**3*sin(3*delta)
+  T5.2.e_1 d/d(delta) e_1 = 0 (delta-indep): PASS=True, d_e_1=0
+  T5.2.e_2 d/d(delta) e_2 = 0 (delta-indep): PASS=True, d_e_2=0
+  T5.2.e_3 d/d(delta) e_3 != 0 (delta-DEPENDENT): PASS=True, d_e_3=-6*b_mod**3*sin(3*delta)
+  T5.3 explicit forms: e_1=3a [True], e_2=3a^2-3|b|^2 [True], e_3=a^3 - 3a|b|^2 + 2|b|^3 cos(3 delta) [True], PASS=True
+        e_3 (simplified) = (a - 2*b_mod*sin(delta + pi/6))*(a + 2*b_mod*cos(delta))*(a - 2*b_mod*cos(delta + pi/3))
+  T5.4 e_3 takes different values for different delta (delta=0: 0, delta=pi/3: -4): PASS=True
+  T5.5 Spectrum pivot adds no BAE-relevant DOF beyond (a, |b|): PASS=True
+        (BAE is delta-independent; spectrum reduces to (a, |b|, delta) with delta unconstrained by BAE.)
+  Section 5: PASS=9, FAIL=0
+
+========================================================================
+Section 6 — Retained polynomial closure: cone => Q = 2/3
+========================================================================
+  T6.1 F_ratio' = -F_orbit_retained (retained T2): PASS=True, residual=0
+  T6.2 (1, 1, 4+3sqrt(2)): F_orbit_retained=0, Q=2/3: F=0, Q=2/3, PASS=True
+  T6.3 (1, 1, 1) off cone, F_orbit_retained=9, Q=1/3: F=9, Q=1/3, PASS=True
+  T6.4 closure step (cone => Q=2/3 => BAE) is correct conditional on antecedent: PASS=True
+  Section 6: PASS=4, FAIL=0
+
+========================================================================
+Section 7 — Verdict: spectrum-level pivot is bridge-illusory
+========================================================================
+  T7.1 Verdict outcome: SHARPENED bounded obstruction. PASS=True
+  T7.2 BAE admission count UNCHANGED: PASS=True
+  T7.3 No PDG values consumed: PASS=True
+  T7.4 No new axioms or imports: PASS=True
+  Section 7: PASS=4, FAIL=0
+
+========================================================================
+=== TOTAL: PASS=35, FAIL=0 ===
+========================================================================
