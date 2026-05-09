@@ -32,6 +32,11 @@ Run the repo-native physics review loop from:
    preserve any durable, runner-backed lemma in the same requested landing path
    with a canonical claim type, and explicitly reject only the pieces that
    cannot be salvaged without new science.
+   Non-science audit/status or hygiene PRs still need a utility review:
+   salvage durable audit-graph, cache, queue, normalization, dependency-chain,
+   or audit-readiness repairs into source/tooling/pipeline changes and
+   regenerate generated surfaces instead of rejecting them just because they
+   are not theorem science.
 9. End with a concise report covering imports/support status, retained/bounded
    disposition, salvage disposition, audit-readiness, commits, checks, and
    remaining manual science.
@@ -79,5 +84,9 @@ Run the repo-native physics review loop from:
   theorem/no-go/open-gate lemmas into canonical source-only landing commits
   when the runner directly supports the narrowed claim and no audit
   verdict/status language is carried over.
+- Closing a PR must not discard durable audit-process value either. A generated
+  audit/status diff can be evidence of a real repo defect; land the underlying
+  source/tooling/pipeline repair when it strengthens auditability, but never
+  treat hand-authored generated status as the authority.
 - Live unresolved review findings belong in `docs/repo/ACTIVE_REVIEW_QUEUE.md`.
 - Long historical packets belong in `docs/work_history/repo/review_feedback/`.

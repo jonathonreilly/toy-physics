@@ -42,6 +42,12 @@ status-vocabulary, or runner-validity defects. Do not lose durable science
 when a PR fails that bar: before closing or rejecting a branch, run the
 salvage pass below and preserve any narrow, runner-backed lemma that can be
 made canonical without changing the science.
+Non-science PRs require the same discipline: do not reject generated
+audit/status or hygiene-only work just because it is not theorem science.
+First decide whether it exposes a real audit-graph, cache, queue,
+normalization, dependency-chain, or audit-readiness defect. If it does,
+salvage the value into durable source, tooling, pipeline, or controlled-data
+repairs and regenerate the generated surfaces from that repair.
 
 ## Arguments
 
@@ -280,6 +286,9 @@ lowering the review bar.
      have a runner or exact calculation;
    - support-only calculations: exact algebra or bookkeeping that may be useful
      as bounded support but not as retained/Nature-grade science;
+   - audit/process hygiene: dependency-graph repairs, audit queue unlocks,
+     stale runner-cache detection, generated-data normalization, cycle-break
+     hygiene, and pipeline/tooling fixes that make audit results more reliable;
    - non-source material: claim-status certificates, handoffs, campaign state,
      generated audit files, expected audit verdicts, and branch-local logs.
 2. For each source candidate, decide whether it can be salvaged with only
@@ -310,7 +319,13 @@ lowering the review bar.
 6. Run the normal audit-system compatibility gate on every salvage slice.
    The resulting rows must remain `unaudited`; the independent audit lane owns
    all verdicts.
-7. If no salvage is possible, leave a concise PR comment or review summary
+7. For audit/process hygiene, preserve the durable repair rather than the
+   generated symptom. Land source/tooling/pipeline/controlled-data changes when
+   they strengthen the repo or unblock auditing without changing science.
+   Regenerate audit JSON/Markdown from the pipeline afterward. Do not land
+   hand-authored `effective_status`, `intrinsic_status`, `audit_status`, or
+   expected-verdict edits as the authority for the change.
+8. If no salvage is possible, leave a concise PR comment or review summary
    saying why, for example: "runner only rechecks assumed premise",
    "claim depends on closed sibling", "noncanonical stretch packet with no
    theorem-grade boundary", or "overbroad theorem not supported by runner".
@@ -321,11 +336,13 @@ Salvageable examples:
 - a conditional textbook lemma that is useful only when explicitly marked as
   bounded support;
 - a negative route that conclusively rules out one proposed mechanism and
-  narrows the remaining open gate.
+  narrows the remaining open gate;
+- an audit-hygiene PR whose generated status change reveals a real durable
+  graph/tooling/pipeline defect, salvaged as the underlying repair plus
+  regenerated audit outputs.
 
 Not salvageable without a new research task:
 
-- audit-hygiene or graph-registration packages;
 - branch-local certificates and handoffs with no source theorem;
 - broad "closing derivations" whose runner assumes the missing bridge;
 - expected audit verdicts or status-elevation packages;

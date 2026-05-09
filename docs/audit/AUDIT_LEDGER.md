@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 63 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 233 |
-| _retained_pending_chain_ | 2 |
+| _retained_pending_chain_ | 1 |
 | open_gate | 11 |
 | unaudited | 969 |
 | meta | 55 |
@@ -34,6 +34,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 | `decoration_under_linear_response_true_kubo_note` | 1 |
+| `decoration_under_moving_source_retarded_portability_note` | 1 |
 | `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
 | audit_status | count |
@@ -62,7 +63,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 480 |
 | `leaf` | 624 |
 
-- **Retained pending chain closure:** 2
+- **Retained pending chain closure:** 1
 - **Citation cycles detected:** 183
 
 ### Runner classification (static heuristic)
@@ -855,7 +856,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5 | A | `alpha_s_derived_note` |
-| `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | `docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md` |
+| `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | `decoration_under_moving_source_retarded_portability_note` | cross_family | codex-gpt-5.5 | A | `moving_source_retarded_portability_note` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `gellmann_completeness_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_hierarchy_matsubara_decomposition_note` | fresh_context | codex-gpt-5.5 | A | `hierarchy_matsubara_decomposition_note` |
@@ -3244,12 +3245,12 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **claim_type:** `decoration`
 - **claim_scope:** A narrow proxy-budget card for one retained moving-source geometry, deriving weakest-observable 3-sigma centroid and phase noise targets from the cited portability note.
 - **audit_status:** ~~audited_decoration~~
-- **effective_status:** _retained_pending_chain_  (reason: `decoration_waiting_on:docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`)
+- **effective_status:** `decoration_under_moving_source_retarded_portability_note`  (reason: `decoration_parent_retained`)
 - **auditor:** `codex-cli-gpt-5.5-20260504-234846-c679ece8-diamond_signal_budget_ha-012`  (codex-gpt-5.5; independence=cross_family)
 - **load-bearing step:** Using the weakest retained nonzero centroid and phase observables, divide each by 3 to state conservative 3-sigma readout targets.  _(class `A`)_
 - **chain closes:** True — The arithmetic budget follows from the cited retained_bounded moving-source rows by taking nonzero absolute minima and dividing by three. The note also correctly leaves the absolute lab NV budget open because the proxy-to-readout transfer coefficient is missing.
 - **rationale:** The runner hard-codes the retained upstream geometry and scaling rows, then performs only standard arithmetic reductions: nonzero minima, maxima, and division by three. There is no first-principles compute and no external comparator check. Because the chain reduces to a single retained_bounded parent claim plus algebraic processing, the appropriate conservative verdict is audited_decoration rather than audited_clean.
-- **decoration parent:** `docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`
+- **decoration parent:** `moving_source_retarded_portability_note`
 - **auditor confidence:** high
 
 ### `dimension_selection_note`
