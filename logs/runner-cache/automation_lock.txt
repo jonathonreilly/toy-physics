@@ -1,0 +1,15 @@
+===== runner cache v1 =====
+runner: scripts/automation_lock.py
+runner_sha256: 70884909dcd00e350c9c998115b4506d1fae96c939341ad5d612e9ab3a5e77f2
+timeout_sec: 120
+exit_code: 2
+elapsed_sec: 0.08
+status: nonzero_exit
+----- stdout -----
+usage: automation_lock.py [-h] [--lock-path LOCK_PATH]
+                          [--meta-lock-path META_LOCK_PATH]
+                          {status,acquire,refresh,release} ...
+automation_lock.py: error: the following arguments are required: command
+
+----- stderr -----
+
