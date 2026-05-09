@@ -4,6 +4,8 @@
 **Status:** strong carrier-side support on the residual split-2 neighborhoods; not interval-certified closure.
 **Runner:** `scripts/frontier_dm_split2_dense_grid_lipschitz_dominance_support_2026_04_21.py`
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/frontier_dm_split2_dense_grid_lipschitz_dominance_support_2026_04_21.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 added; runs in 355s under the new budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ---
 
 ## Review-surface target

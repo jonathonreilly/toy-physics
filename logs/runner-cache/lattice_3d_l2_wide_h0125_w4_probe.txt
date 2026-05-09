@@ -1,11 +1,35 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_3d_l2_wide_h0125_w4_probe.py
-runner_sha256: 6d4604d85089d3fe0fa1fcd1b03f3f207bf49857be056a05cff9fdf7dca25a17
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 34b072a5ac4fa812cbf4643dbbe8a8ba6c64bd82cc425beb2464cffde92e8187
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 193.15
+status: ok
 ----- stdout -----
+========================================================================================
+WIDER H=0.125 W=4 PROBE
+  goal: minimal width-4 check on the fixed-family weak-field exponent
+========================================================================================
+  family: phys_l=2, phys_w=4, h=0.125
+  strengths: 1e-07, 1e-06, 5e-06
+
+nodes=71825 layers=17 nodes/layer=4225 dense_edges=285610000
+Born=6.81e-15
+k=0 check=-0.000000
+gravity(z=3, s=5e-06)=+0.002512  P_det=2.572e+72
+
+WINDOW full  p_free=2.526e+72
+  s=1e-07: delta=+3.547111e-04
+  s=1e-06: delta=+1.122369e-03
+  s=5e-06: delta=+2.512335e-03
+  alpha=0.500  count=3  delta_max=0.002512
+
+WINDOW r<=1.5  p_free=6.172e+71
+  s=1e-07: delta=+9.218577e-05
+  s=1e-06: delta=+2.911837e-04
+  s=5e-06: delta=+6.497228e-04
+  alpha=0.499  count=3  delta_max=0.000650
+
 
 ----- stderr -----
 

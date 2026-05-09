@@ -3,6 +3,8 @@
 **Date:** 2026-04-16  
 **Status:** bounded compact-object response transfer positive with one proposed_retained readout on the nearby exact-family neighborhood; still not a persistent inertial-mass closure
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/persistent_object_blended_readout_boundary_probe.py` previously timed out under the audit-lane 120s default budget; already had AUDIT_TIMEOUT_SEC=1800; cache refreshed against the declared budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ## Artifact chain
 
 - Supporting boundary script: [`scripts/persistent_object_blended_readout_boundary_probe.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_blended_readout_boundary_probe.py)

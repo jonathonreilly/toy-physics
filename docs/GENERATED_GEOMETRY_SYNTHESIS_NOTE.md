@@ -3,6 +3,8 @@
 **Date:** 2026-04-05
 **Status:** bounded - bounded or caveated result note
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/gate_b_farfield_harness.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 added; runs in 841s under the new budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ## Growth rule
 
 Template previous layer + Gaussian drift (σ = drift × h) + restoring

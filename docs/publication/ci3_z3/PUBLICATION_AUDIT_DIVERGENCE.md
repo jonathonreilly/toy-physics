@@ -17,12 +17,12 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| high | `unaudited` | 188 |
-| medium | `unaudited` | 93 |
+| high | `unaudited` | 189 |
+| medium | `unaudited` | 94 |
 | critical | `unaudited` | 63 |
 | critical | `audited_conditional` | 61 |
-| medium | `audited_conditional` | 47 |
-| high | `audited_conditional` | 46 |
+| medium | `audited_conditional` | 46 |
+| high | `audited_conditional` | 45 |
 | high | `audited_renaming` | 9 |
 | critical | `audited_renaming` | 6 |
 | medium | `audited_failed` | 6 |
@@ -175,7 +175,7 @@ publication tables phrase it.
 | critical | `yt_zero_import_authority_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | high | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | `retained_pending_chain` | `audited_decoration` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | high | `axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| high | `bell_inequality_derived_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| high | `bell_inequality_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | high | `bminusl_anomaly_freedom_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | high | `broad_gravity_derivation_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | high | `charged_lepton_koide_review_packet_2026-04-18` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
@@ -512,7 +512,7 @@ publication tables phrase it.
 | medium | `nonlinear_born_gravity_note` | `audited_failed` | `audited_failed` | DERIVATION_ATLAS.md |
 | medium | `one_parameter_reduced_shell_law_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `pauli_group_order_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| medium | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | `audited_conditional` | `audited_conditional` | PUBLICATION_MATRIX.md |
+| medium | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | `unaudited` | `unaudited` | PUBLICATION_MATRIX.md |
 | medium | `persistent_object_exact_lattice_park_note_2026-04-16` | `unaudited` | `unaudited` | FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | medium | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | `unaudited` | `unaudited` | PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | medium | `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_VALIDATION_MAP.md |

@@ -31369,7 +31369,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0766665852205e3ec08c57e48f9eae69a3aa020b944f24676a3c459be4a27591",
+      "note_hash": "43709a40e4174ffa4d241b48ce412a0cb660a1a521d74e72c041a821ca7dee11",
       "path": "docs/BELL_INEQUALITY_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_bell_inequality.py",
       "title": "Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements (Conditional Model Surface)"
@@ -34548,7 +34548,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c7865001b09ffd21c73f5da2cc38583fac5a70a6d3d2e8993522f4a1450d89fb",
+      "note_hash": "1bc84d750b33402153fa42b6aa0e7e887cd4d373689da82622fa4ec7a5afced2",
       "path": "docs/DISTANCE_LAW_DEFINITIVE_NOTE.md",
       "runner_path": "scripts/frontier_distance_law_definitive.py",
       "title": "Definitive Distance Law Closure"
@@ -36942,7 +36942,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "5139b68328c8195d94391f3076205bda3f8e36540cab4aaa516aba9a514a73c8",
+      "note_hash": "74e8db0cf0266b32f21c22dce4701e9551019834912fb8d9f585c1e35fde372a",
       "path": "docs/DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_pns_attack_cascade.py",
       "title": "DM PNS Attack Cascade: Seven Attack Vectors on PMNS Non-Singularity"
@@ -37101,7 +37101,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "53cc0df7d5d3f385bbe4c10b3f17406958b39804ca3931a2dc06a3cf113c33a9",
+      "note_hash": "b4333c7570a70d7db940ffba412a404682ecc5ce1575250cea710a6b1cd4928e",
       "path": "docs/DM_SPLIT2_DENSE_GRID_LIPSCHITZ_DOMINANCE_SUPPORT_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_split2_dense_grid_lipschitz_dominance_support_2026_04_21.py",
       "title": "DM Split-2 Upper-Face Dense-Grid Dominance Support"
@@ -38794,7 +38794,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "61aa3f38515f19e08689048f57e1707eddc5e5b48334e9ca4ef1b12cfc3ef80d",
+      "note_hash": "83f4c0ed18254a8f2fe1d0d8e2ef95fa2d1ffd3993100d7ae960fa36b64dc1ec",
       "path": "docs/GATE_B_GROWN_PROPAGATING_FIELD_RADICAL_NOTE.md",
       "runner_path": "scripts/gate_b_grown_propagating_field_radical.py",
       "title": "Gate B Grown Propagating Field Radical Note"
@@ -39846,7 +39846,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "be403e02db457a096868cf3b4977ce58e2874d9647685b389146658cb031fb8b",
+      "note_hash": "3bece01a6609a69b34b950946075096168a4a943b9c5d2daf9628bbdb2a70420",
       "path": "docs/GENERATED_GEOMETRY_SYNTHESIS_NOTE.md",
       "runner_path": "scripts/gate_b_farfield_harness.py",
       "title": "Generated Geometry Synthesis"
@@ -40380,7 +40380,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "a198cb658a54be21debccd5ca078211afe560ed327211a9fe744cb9e96ef9f4f",
+      "note_hash": "80c266e849a1d423be75a2c68e62b52af4d2e80c8d9c1bfaee4679a376ac462d",
       "path": "docs/GROWN_WAVEFIELD_COMPANION_NOTE.md",
       "runner_path": "scripts/gate_b_grown_wavefield_companion.py",
       "title": "Grown Wavefield Companion Note"
@@ -40467,7 +40467,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "567c74958f6fb2ef450a7abaaf3c18d9412da76d11a2d7c83299a1ac4c725636",
+      "note_hash": "ae006f7942965cf284e904ba4a2f476841ee10f77c3544d979d62a11d76a83be",
       "path": "docs/H0125_WIDER_W4_PROBE_NOTE.md",
       "runner_path": "scripts/lattice_3d_l2_wide_h0125_w4_probe.py",
       "title": "Wider `h = 0.125` `phys_w = 4` Probe Note"
@@ -46801,7 +46801,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6a62d9bf19f36a4cb148e3c8b6f664564bf1dc2ec4f5643de1387966e46bd212",
+      "note_hash": "c6a289b383ad47803491d69161bb9be95751dda7b0e8a1d680dc1f97dd0c8e6d",
       "path": "docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md",
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "title": "Persistent Object Blended Readout Transfer Sweep"

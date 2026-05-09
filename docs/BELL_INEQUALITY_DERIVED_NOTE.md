@@ -5,6 +5,8 @@
 **Script:** `scripts/frontier_bell_inequality.py`
 **Runtime:** ~2-5 minutes (dominated by 3D 4x4x4 eigenvalue decomposition)
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/frontier_bell_inequality.py` previously timed out under the audit-lane 120s default budget; already had AUDIT_TIMEOUT_SEC=1800; cache refreshed against the declared budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ## Claim
 
 CHSH Bell violation on a tensor product Hilbert space C^N ⊗ C^N with:

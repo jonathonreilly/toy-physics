@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_pns_attack_cascade.py
-runner_sha256: 482498bc2b0866e7baa2b398f8ab5fb4c152ac280400975230342deee973df1a
-timeout_sec: 120
+runner_sha256: 0c43014ba990349a314df52217703bd756e2348ebc52ef52cb9d84472e000eb8
+timeout_sec: 1800
 exit_code: 0
-elapsed_sec: 104.34
+elapsed_sec: 108.39
 status: ok
 ----- stdout -----
 

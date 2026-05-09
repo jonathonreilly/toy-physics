@@ -3,6 +3,8 @@
 **Date:** 2026-04-05  
 **Status:** bounded no-go for a review-safe grown-row wavefield transfer
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/gate_b_grown_wavefield_companion.py` previously timed out under the audit-lane 120s default budget; already had AUDIT_TIMEOUT_SEC=1800; cache refreshed against the declared budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ## Artifact chain
 
 - [`scripts/gate_b_grown_wavefield_companion.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_wavefield_companion.py)
