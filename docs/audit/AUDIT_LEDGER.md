@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 945 |
+| unaudited | 944 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 374 |
+| ~~audited_conditional~~ | 375 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 374 |
+| `audited_conditional` | 375 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1001 |
+| `unaudited` | 1000 |
 
 | claim_type | count |
 |---|---:|
@@ -641,6 +641,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4189,6 +4190,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Because the aligned seed point gives eta/eta_obs < 1, the extremal candidate gives eta/eta_obs > 1, and the exact transport value is continuous on the interpolating fixed-seed family, there exists an exact closure point with eta/eta_obs = 1.  _(class `A`)_
 - **chain closes:** False — The continuity argument closes only after accepting the transport functional, projector interface, exact package constants, and observed normalization imported by the runner. Those upstream definitions and derivations are not provided in the restricted packet, so the claimed full-stack closure does not derive here from the sole axiom alone.
 - **rationale:** The runner performs a real numerical optimization and root find, but the computation rests on imported modules and constants not included as cited retained authorities. The decisive closure step is a valid continuity/intermediate-value argument over the computed endpoint values, not an independent first-principles derivation from Cl(3) on Z^3 inside the restricted packet. The note itself also frames transport extremality as an open candidate selector law rather than a closed sole-axiom theorem.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_projection_theorem_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_PROJECTION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_PROJECTION_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the claimed identification of the coherent leptogenesis physical denominator with the heavy-basis K00 channel.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0daf-d83b-7451-a602-da32f67fecbc`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** physical denominator = (Y_mass^dag Y_mass)00 = (K_mass)00 = K00  _(class `B`)_
+- **chain closes:** False — The algebraic identity Y_mass^dag Y_mass = U_M^dag H U_M follows if the polar representative and heavy-basis definitions are granted, but the packet provides no cited retained authorities for Y_+(H)=H^(1/2), K00=(K_mass)00, or the physical epsilon_1 denominator readout. The missing step is a retained bridge proving that this physical denominator is exactly the 00 channel named K00.
+- **rationale:** Issue: the note relies on upstream polar-section and K00 authorities plus a physical readout bridge, but no one-hop dependencies are provided in the restricted packet. Why this blocks: the runner’s decisive checks partly read external notes/scripts and perform string-presence verification, so the audit packet does not close the theorem-grade chain from retained inputs. Repair target: cite the retained polar-section theorem, retained K00 theorem, and a retained theorem mapping the standard epsilon_1 denominator to the heavy-basis 00 channel, with a runner that constructs rather than string-checks the bridge. Claim boundary until fixed: the packet supports only a conditional algebraic projection identity assuming those imported authorities and readout conventions.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16`
