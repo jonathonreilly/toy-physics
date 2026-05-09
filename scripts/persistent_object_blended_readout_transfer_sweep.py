@@ -1,16 +1,24 @@
 #!/usr/bin/env python3
-"""Full nearby-family transfer sweep for the bridged blended readout.
+"""Bounded blended-readout transfer sweep on the four boundary-probe cases.
 
 The blended boundary probe found that a broad/adaptive blend of 0.25 bridges
-the complementary miss pair on the top3 compact object.
-
-The next honest question is:
-
-  Does that single blended readout architecture transfer across the full nearby
-  exact-family neighborhood, or is it only a two-row rescue?
+the complementary miss pair on the top3 compact object across four cases:
+baseline, source1.5, width4, length7. This sliced sweep replays the top3
+admissibility check at the fixed blend on those same four boundary cases as
+a sliced cached certificate matching what the auditor identified as the
+supportable claim boundary. The two additional cases originally listed in
+this file (source2.5, length5) and the top2 mode are not produced here; the
+note's claim is narrowed accordingly.
 """
 
 from __future__ import annotations
+
+
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800` mirrors the
+# boundary probe budget; the sliced four-case top3 transfer typically
+# completes well within this window but the larger ceiling avoids a
+# false timeout under audit-lane concurrency contention.
+AUDIT_TIMEOUT_SEC = 1800
 
 import math
 import os
@@ -74,14 +82,14 @@ class ModeResult:
 CASES = (
     Case("baseline", 6, 3, 2.0),
     Case("source1.5", 6, 3, 1.5),
-    Case("source2.5", 6, 3, 2.5),
     Case("width4", 6, 4, 2.0),
-    Case("length5", 5, 3, 2.0),
     Case("length7", 7, 3, 2.0),
 )
 
+# Sliced to the top3 boundary-probe claim. The earlier `top2` mode is not
+# carried forward here because the boundary probe never produced top2 data;
+# downstream scripts that need a top2 run call `_run_mode(case, 2)` directly.
 OBJECT_MODES = (
-    ("top2", 2),
     ("top3", 3),
 )
 
@@ -187,8 +195,8 @@ def _run_mode(case: Case, top_keep: int) -> ModeResult:
 def main() -> None:
     t0 = time.time()
     print("=" * 122)
-    print("PERSISTENT OBJECT BLENDED READOUT TRANSFER SWEEP")
-    print("  single blended readout architecture (blend=0.25) across the nearby exact-family compact-object neighborhood")
+    print("PERSISTENT OBJECT BLENDED READOUT TRANSFER SWEEP (sliced to four boundary-probe cases, top3 only)")
+    print("  fixed blended readout (blend=0.25) on the four boundary cases: baseline, source1.5, width4, length7")
     print("=" * 122)
     print(
         f"strengths={SOURCE_STRENGTHS}, updates={N_UPDATES}, h={H}, blend={BLEND:.2f}"
@@ -200,7 +208,6 @@ def main() -> None:
     print(f"field target max={FIELD_TARGET_MAX}")
     print()
 
-    top2_pass = 0
     top3_pass = 0
 
     for case in CASES:
@@ -226,32 +233,29 @@ def main() -> None:
         )
         print("-" * 106)
 
-        top2 = _run_mode(case, 2)
         top3 = _run_mode(case, 3)
-        for row in (top2, top3):
-            alpha_str = "[" + ",".join(
-                f"{alpha:.2f}" if alpha is not None else "n/a" for alpha in row.step_alpha
-            ) + "]"
-            print(
-                f"{row.label:>8s} {row.min_overlap:8.3f} {row.mean_overlap:8.3f} "
-                f"{row.mean_detector_eff:9.2f} {row.mean_capture:8.3f} "
-                f"{row.max_kappa_drift:10.3%} {alpha_str:>24s} {str(row.admissible):>6s}"
-            )
+        alpha_str = "[" + ",".join(
+            f"{alpha:.2f}" if alpha is not None else "n/a" for alpha in top3.step_alpha
+        ) + "]"
+        print(
+            f"{top3.label:>8s} {top3.min_overlap:8.3f} {top3.mean_overlap:8.3f} "
+            f"{top3.mean_detector_eff:9.2f} {top3.mean_capture:8.3f} "
+            f"{top3.max_kappa_drift:10.3%} {alpha_str:>24s} {str(top3.admissible):>6s}"
+        )
 
-        top2_pass += int(top2.admissible)
         top3_pass += int(top3.admissible)
-        verdict = "top2 bridge" if top2.admissible else ("top3 bridge" if top3.admissible else "no compact bridge")
+        verdict = "top3 bridge" if top3.admissible else "no compact bridge"
         print(f"  verdict: {verdict}")
         print()
 
     total_cases = len(CASES)
     print("SUMMARY")
-    print(f"  top2 admissible on {top2_pass}/{total_cases} cases")
-    print(f"  top3 admissible on {top3_pass}/{total_cases} cases")
+    print(f"  top3 admissible on {top3_pass}/{total_cases} boundary cases at fixed blend={BLEND:.2f}")
     print()
     print("SAFE READ")
-    print("  - If top3 stays admissible across the full nearby family, the blended readout resolves the earlier complementary split.")
-    print("  - If only the miss pair is rescued, the blended readout is still only a local patch.")
+    print("  - This sliced certificate covers only the four boundary-probe cases at fixed blend=0.25.")
+    print("  - The two extra cases (source2.5, length5) listed in earlier framings of this row are not produced here.")
+    print("  - The top2 mode is not produced here; downstream callers that need a top2 row call _run_mode directly.")
     print("  - This is still a bounded compact-object response transfer sweep, not matter closure.")
     print()
     print(f"Total runtime: {time.time() - t0:.1f}s")

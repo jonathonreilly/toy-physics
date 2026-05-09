@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_blended_readout_transfer_sweep.py
+runner_sha256: 1b326e3d03c70d6c2e5ecb9067c4141fe252132507d55c363850a7d5a4f15650
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 122.11
+status: ok
+----- stdout -----
+==========================================================================================================================
+PERSISTENT OBJECT BLENDED READOUT TRANSFER SWEEP (sliced to four boundary-probe cases, top3 only)
+  fixed blended readout (blend=0.25) on the four boundary cases: baseline, source1.5, width4, length7
+==========================================================================================================================
+strengths=[0.001, 0.002, 0.004, 0.008], updates=3, h=0.25, blend=0.25
+gates: overlap>=0.90, drift<=0.10, alpha in [0.95, 1.05], all steps 4/4 TOWARD
+field target max=0.02
+
+CASE: baseline  (h=0.25, W=3, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top3    0.876    0.929    305.77    0.513     3.125%         [1.03,1.03,1.03]   True
+  verdict: top3 bridge
+
+CASE: source1.5  (h=0.25, W=3, L=6, source_z=1.5, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top3    0.884    0.929    305.25    0.514     9.640%         [1.02,1.01,1.01]   True
+  verdict: top3 bridge
+
+CASE: width4  (h=0.25, W=4, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top3    0.884    0.927    376.04    0.509     1.843%         [1.00,1.00,1.00]   True
+  verdict: top3 bridge
+
+CASE: length7  (h=0.25, W=3, L=7, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top3    0.869    0.931    328.13    0.503     2.049%         [1.03,1.03,1.03]   True
+  verdict: top3 bridge
+
+SUMMARY
+  top3 admissible on 4/4 boundary cases at fixed blend=0.25
+
+SAFE READ
+  - This sliced certificate covers only the four boundary-probe cases at fixed blend=0.25.
+  - The two extra cases (source2.5, length5) listed in earlier framings of this row are not produced here.
+  - The top2 mode is not produced here; downstream callers that need a top2 row call _run_mode directly.
+  - This is still a bounded compact-object response transfer sweep, not matter closure.
+
+Total runtime: 122.0s
+
+----- stderr -----
+
