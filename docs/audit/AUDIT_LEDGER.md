@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 957 |
+| unaudited | 956 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 366 |
+| ~~audited_conditional~~ | 367 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 389 |
-| `audited_conditional` | 366 |
+| `audited_conditional` | 367 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1012 |
+| `unaudited` | 1011 |
 
 | claim_type | count |
 |---|---:|
@@ -659,6 +659,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `emergent_product_law_audit_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `evolving_network_prototype_v2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ew_coupling_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `field_equation_derivation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -4817,6 +4818,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** eta/eta_obs = (516 / 53009) * Y0^2 * F_CP * kappa_axiom / eta_obs  _(class `A`)_
 - **chain closes:** True — The source note states a bounded decomposition rather than a full structural derivation of every factor. The runner completed with PASS=38 FAIL=0 and verifies the ABC rational cancellation, exact product reconstruction, candidate near-fit mismatch, and explicit isolation of Y0^2 as phenomenological.
 - **rationale:** The audited bounded claim closes as an algebraic decomposition of the existing transport chain: ABC reduces exactly to 516/53009, the reconstructed product matches the runner's eta/eta_obs value, and the four named near-fit candidates are not exact framework forms. The clean verdict is limited to this bounded scope and does not promote Y0^2, PMNS-chart constants, or the ODE transport functional to first-principles retained derivations beyond the note's admitted residual boundary.
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v2_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded prototype claim that this runner shows a generated geometry gap signal but does not close Gate B dynamics under the tested thresholds.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d70-5c68-7000-a7de-c1c9da524adf`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The prototype asserts that the local self-regulating prune rule creates a measurable post-barrier gap distinct from baseline, while convergence remains 0.00 and the imposed-control purity is undefined.  _(class `B`)_
+- **chain closes:** False — The runner output supports the note's bounded negative summary, but the computation depends on imported helpers for DAG generation, pruning, decoherence, and gap metrics whose definitions are not included as cited authorities in the restricted packet. The missing step is a packet-visible verification of those helper definitions and metric semantics.
+- **rationale:** Issue: the result is a runner-dependent bounded prototype, but the runner imports the load-bearing graph generator, pruning rule, decoherence readout, and gap metric from an uncited helper module not present in the packet. Why this blocks: a hostile audit cannot verify that the printed gap, purity, and convergence quantities implement the claimed generated-vs-imposed comparison rather than inheriting an unchecked bridge. Repair target: include the helper module as a cited authority or inline a self-contained runner slice with assertions over the graph construction, pruning rule, and readouts. Claim boundary until fixed: the packet supports only that this runner printed a bounded negative/gap-signal summary, not an independently closed bounded theorem about the prototype dynamics.
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_v3_note`
