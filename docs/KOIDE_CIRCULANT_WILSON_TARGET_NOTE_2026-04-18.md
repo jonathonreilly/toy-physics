@@ -4,6 +4,30 @@
 **Status:** support - structural or confirmatory support note
 **Runner:** `scripts/frontier_koide_circulant_wilson_target.py`
 
+## Inputs (cited authorities)
+
+The load-bearing spectral bridge `a_0^2 = 2 |z|^2` used in §"Theorem 3"
+is imported verbatim from:
+
+- `docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md` — the
+  exact circulant character bridge `a_0^2 = 2 |z|^2 ⟺ 3 a^2 = 6 |b|^2`
+  on the retained `C_3[111]` charged-lepton triplet.
+
+Companion structural inputs already in the one-hop deps:
+
+- `docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md` —
+  cyclic 3-response descendant law on `B0 = I`, `B1 = C + C^2`,
+  `B2 = i(C - C^2)`.
+- `docs/KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md` — exact
+  charged Hermitian source law compresses canonically to those three
+  cyclic channels.
+
+This note does not derive the spectral bridge; it imports it from the
+character-bridge note above and pulls back the target-size reduction to
+the `C_3`-covariant Hermitian subfamily. The selector mechanism and
+charged-lepton readout primitive are explicitly out of scope (see
+"What this does not yet close").
+
 ## Question
 
 If we stop spending cycles on generic blocker language and ask for the smallest

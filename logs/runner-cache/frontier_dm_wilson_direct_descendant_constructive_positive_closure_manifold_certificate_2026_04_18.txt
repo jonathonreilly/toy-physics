@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.py
+runner_sha256: dc48b064195c5af1c538f6d746e93d42faf800fed38d3f6be69f6f655497b5b0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE POSITIVE CLOSURE
+VALIDATED-NUMERICS REGULAR-ROOT CERTIFICATE
+========================================================================================
+
+  base point (a,b,c,d,e_base) = (1.16845863, 0.46803892, 0.77107315, 0.05539671, 1.88733851171)
+  bracket half-width delta_e  = 1.000e-03
+  bracket [e_lo, e_hi]        = [1.886338511710, 1.888338511710]
+
+========================================================================================
+PART 1: SIGN-CHANGE ENDPOINT EVALUATIONS OF F ACROSS THE BRACKET
+========================================================================================
+  F(e_lo)  = -3.448839492215e-05
+  F(e_mid) = -7.993605777301e-15
+  F(e_hi)  = +3.446009704344e-05
+  [PASS] F has a strict sign change across the bracket  (sign(F_lo)=-1, sign(F_hi)=+1)
+  [PASS] Both endpoint magnitudes are far above the floating-point noise floor  (min|F_endpoint|=3.446e-05 >> noise_floor=1e-12)
+  [PASS] The sign-change margin is at least 5 orders of magnitude above the noise floor  (margin/noise ratio=3.446e+07)
+
+========================================================================================
+PART 2: DISCRETE-SLOPE LOWER BOUND OF dF/de UNIFORMLY ACROSS THE BRACKET
+========================================================================================
+  number of grid points        = 21
+  number of discrete slopes    = 20
+  min discrete slope on grid   = +0.034447359825
+  max discrete slope on grid   = +0.034501125763
+  mid-grid discrete slope      = +0.034472832933
+  slope variation span         = 5.377e-05
+  [PASS] All discrete slopes share the same sign across the bracket  (min=+0.034447, max=+0.034501)
+  [PASS] The minimum discrete slope is bounded away from zero by at least 1e-3  (min|slope|=0.034447 > 1e-03)
+  [PASS] The discrete-slope variation across the bracket is small relative to the slope itself  (span/|mid|=1.560e-03)
+
+========================================================================================
+PART 3: CENTRAL-DIFFERENCE dF/de IS STEP-INDEPENDENT
+========================================================================================
+  h=1e-03: dF/de = +0.034474245983
+  h=1e-04: dF/de = +0.034474247829
+  h=1e-05: dF/de = +0.034474247879
+  h=1e-06: dF/de = +0.034474247845
+  h=1e-07: dF/de = +0.034474250676
+  [PASS] Central-FD dF/de agrees across step sizes 1e-3..1e-7 within 1e-6  (span=4.694e-09)
+  [PASS] The step-stable central-FD value is bounded away from zero by at least 1e-3  (|fd_mid|=0.034474)
+  [PASS] Central-FD value is sign-consistent with the discrete-slope grid  (sign(fd_mid)=+1, sign(slope_mid)=+1)
+
+========================================================================================
+PART 4: CONSTRUCTIVE POSITIVE BRANCH HOLDS AT THE BASE POINT AND ON THE BRACKET
+========================================================================================
+  base triplet (gamma,E1,E2,Delta_src)
+    gamma     = +0.103856487612
+    E1        = +0.302714955579
+    E2        = +2.003452402509
+    Delta_src = +0.000799312200
+  [PASS] Base point lies in the constructive positive branch  (all four > 0)
+  [PASS] Constructive positive branch holds at every grid point on the bracket  (min(gamma,E1,E2,Delta_src) on bracket=(1.038224e-01,3.026630e-01,2.003400e+00,7.990901e-04))
+
+========================================================================================
+PART 5: CACHE THE CERTIFICATE TO outputs/
+========================================================================================
+  certificate written to outputs/dm_wilson_constructive_positive_closure_manifold_certificate_2026-04-18.json
+  [PASS] Certificate JSON cache file is written  (size=2007 bytes)
+
+========================================================================================
+PART 6: BOTTOM LINE
+========================================================================================
+  [PASS] Validated-numerics regular-root certificate established for the base point  (sign-change + uniform-slope-lower-bound + branch-stability all hold on the bracket)
+
+========================================================================================
+SUMMARY: PASS=13 FAIL=0
+========================================================================================
+
+----- stderr -----
+

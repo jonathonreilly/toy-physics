@@ -6,6 +6,29 @@ not a standalone minimal-stack closure of `a^(-1) = M_Pl`
 **Runner:**
 `scripts/frontier_planck_source_unit_normalization_support_theorem.py`
 
+## Inputs (cited authorities)
+
+This note imports the primitive boundary/Wald carrier `c_cell = 1/4` and
+its identification `c_cell = 1/(4 G_lambda)` as a load-bearing premise.
+The carrier itself is **not derived in this note**; it is imported from
+the conditional Planck packet's primitive-cell theorem chain:
+
+- `docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`
+  (runner: `scripts/frontier_area_law_primitive_car_edge_identification.py`)
+  — minimal local-CAR assumptions under which the primitive parity-gate
+  carrier is forced by the primitive boundary block itself.
+- `docs/AREA_LAW_COEFFICIENT_GAP_NOTE.md` — the audit-side context note
+  that records `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4` as the exact
+  primitive-cell coefficient on the conditional Planck packet.
+
+The carrier-side identification `c_cell = 1/(4 G_lambda)` is the
+Wald-Noether area-law reading on the same conditional Planck packet; it
+is part of the same packet's external authority surface and is **not**
+derived from `Cl(3) × Z^3` retained data alone. This note explicitly
+flags itself as **not a standalone minimal-stack closure** of
+`a^(-1) = M_Pl`; the source-unit normalization clarifies the bare/Newton
+mass-unit accounting once the carrier and its Wald reading are accepted.
+
 ## Verdict
 
 The prior obstruction was real:

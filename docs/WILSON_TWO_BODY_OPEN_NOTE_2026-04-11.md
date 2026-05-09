@@ -2,10 +2,39 @@
 
 **Date:** 2026-04-11  
 **Status:** bounded companion on the current `main` surface; outside flagship core
-**Scripts:**  
-- `frontier_wilson_two_body.py`  
-- `frontier_wilson_two_body_open.py`  
-- `frontier_wilson_two_body_laws.py`
+**Primary runner:** `scripts/frontier_wilson_two_body_open.py`
+**Companion runners:**
+- `scripts/frontier_wilson_two_body_laws.py` (post-selected law characterizations)
+
+## Inputs (registered runners with caches)
+
+The note's load-bearing claims are backed by two registered audit runners:
+
+- `scripts/frontier_wilson_two_body_open.py` (cache: `logs/runner-cache/frontier_wilson_two_body_open.txt`) — the open-boundary mutual-attraction probe (8/8 attractive, 8/8 clean).
+- `scripts/frontier_wilson_two_body_laws.py` (cache: `logs/runner-cache/frontier_wilson_two_body_laws.txt`) — the post-selected distance-falloff and partner-source-scaling fits, plus the screening-mass `mu^2` sweep.
+
+Two runner stems mentioned in earlier sections of this note are no longer
+present in `scripts/`:
+
+- `frontier_wilson_two_body.py` — the periodic-box probe; superseded
+  structurally by the open-boundary runner above. The narrative paragraph
+  describes a small-window observation that matches the open runner's
+  same-side window structure but is not a load-bearing entry point for
+  the open-surface law characterization.
+- `frontier_newton_both_masses.py` — the both-masses observable
+  referenced in the "Both-Masses Audit" section. The honest read of this
+  section is the failure-mode statement (action-reaction balance fails on
+  every row); the supporting numerics are reported as historical context
+  for why the lane stops short of a retained Newton derivation, not as a
+  retained calibration.
+- `frontier_wilson_newton_law.py` — explicitly flagged in §"Important
+  Guardrail" as **not** the clean next test. No load-bearing claim depends
+  on it.
+
+The retained content of this note is the open-boundary attractive-signal
+calibration plus the screened-falloff sweep, both backed by the
+registered runner caches above. Anything mentioned only in narrative for
+historical motivation is not a retained claim of this note.
 
 ## Question
 

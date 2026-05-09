@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_emergent_geometry_multisize.py
+runner_sha256: 2025d55fd93a069c41ecc1026bdbc120f964eae3fd087d6abf491c0d19b5e2b7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 18.29
+status: ok
+----- stdout -----
+==============================================================================
+EMERGENT GEOMETRY — MULTI-SIZE CONFIRMATION + DISPLACEMENT TEST
+==============================================================================
+G=100, seeds=42-46, sizes=60,80,100,120,150
+
+==============================================================================
+Q1: FORCE BATTERY ACROSS GRAPH SIZES (G=100)
+==============================================================================
+
+  n=  60: 3/5 ROBUST_TOWARD  sm=+5.375e-03  sp=+5.237e-02  er=+6.660e-02
+  n=  80: 4/5 ROBUST_TOWARD  sm=+2.275e-03  sp=+4.025e-02  er=+1.319e-01
+  n= 100: 3/5 ROBUST_TOWARD  sm=+2.172e-03  sp=+3.093e-02  er=+2.469e-01
+  n= 120: 3/5 ROBUST_TOWARD  sm=+2.219e-03  sp=+3.874e-02  er=+2.547e-02
+  n= 150: 2/5 ROBUST_TOWARD  sm=+3.703e-04  sp=+8.222e-03  er=+4.229e-02
+
+Size-stability summary:
+  All sizes >=4/5 robust: NO
+  All sizes  5/5 robust: NO
+
+==============================================================================
+Q2: WAVEPACKET DISPLACEMENT TEST (G=100)
+==============================================================================
+
+Does the wavepacket centroid move TOWARD the self-generated
+density peak compared to free evolution? Positive delta = attraction.
+
+  n=  60: 1/5 ATTRACTED  delta=-0.0378  contraction=1.0323  free_spread=1.0198  norm=1.000000
+  n=  80: 4/5 ATTRACTED  delta=+0.0017  contraction=1.0314  free_spread=1.0691  norm=1.000000
+  n= 100: 1/5 ATTRACTED  delta=-0.0029  contraction=1.0238  free_spread=1.0484  norm=1.000000
+  n= 120: 2/5 ATTRACTED  delta=+0.0011  contraction=1.0159  free_spread=1.0276  norm=1.000000
+  n= 150: 3/5 ATTRACTED  delta=+0.0200  contraction=1.0123  free_spread=1.0348  norm=1.000000
+
+Displacement summary:
+  All sizes >=4/5 attracted: NO
+  All sizes  5/5 attracted: NO
+
+==============================================================================
+Q3: EFFECTIVE DIMENSION ACROSS SIZES
+==============================================================================
+
+  n=  60: d_eff = 1.565 +/- 0.328
+  n=  80: d_eff = 1.703 +/- 0.300
+  n= 100: d_eff = 1.845 +/- 0.038
+  n= 120: d_eff = 1.954 +/- 0.123
+  n= 150: d_eff = 1.920 +/- 0.095
+
+==============================================================================
+VERDICT
+==============================================================================
+Neither test is size-stable. Emergent geometry remains exploratory.
+
+Total time: 17.4s
+
+----- stderr -----
+

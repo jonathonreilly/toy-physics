@@ -4,6 +4,37 @@
 **Status:** proposed_retained **full staggered-PT 4D BZ quadrature** of the
 four canonical-surface lattice-PT integrals that feed the Rep-A/Rep-B
 three-channel ratio decomposition
+
+## Inputs (cited authorities — upstream conditional)
+
+This note is a **layered numerical refinement** on top of upstream
+P1-cluster authorities. The eight one-hop deps below are listed in the
+audit ledger and are referenced verbatim in §"Authority notice" and
+§"Cross-references". They remain `unaudited` upstream at this audit
+date; this note's `audited_conditional` status is **upstream-conditional
+on those eight deps**, not a derivation-gap claim against this note's
+own content. Audit promotion of this note will follow upstream
+audit-ratification of the cited deps:
+
+- `docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md` — schematic
+  BZ quadrature this note refines (5× tightening over the prior
+  ±25% per-integral systematic).
+- `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  master Δ_R assembly theorem; literature-cited central is unchanged.
+- `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
+  three-channel decomposition is inherited verbatim.
+- `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`,
+  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`,
+  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` — per-channel
+  cited literature ranges, cross-referenced but not revised here.
+- `docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  — H_unit symbolic reduction (Feynman rules FR1, FR2, envelope).
+- `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — Ward-identity
+  tree-level theorem; the full-PT `I_v_gauge = 0` is consistent with it.
+
+This note does **not** modify any of those upstream notes; it only adds
+the framework-native ±0.45% `Δ_R` quadrature on top of the same
+literature-cited band.
 `Δ_R^ratio = (α_LM/(4π)) · [C_F · Δ_1 + C_A · Δ_2 + T_F n_f · Δ_3]` on
 the retained `Cl(3) × Z^3` Wilson-plaquette + 1-link staggered-Dirac
 tadpole-improved canonical surface. Upgrades the prior schematic

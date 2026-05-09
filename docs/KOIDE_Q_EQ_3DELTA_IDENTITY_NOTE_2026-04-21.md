@@ -4,6 +4,34 @@
 **Status:** proposed_retained arithmetic identity.
 **Runner:** `scripts/frontier_koide_Q_eq_3delta_identity.py` — 16/16 PASS.
 
+## Inputs (cited authorities)
+
+This note is an arithmetic-bridge identity over **two retained
+support-route values that are derived in upstream notes**, not a
+re-derivation of either route. The runner verifies the identity
+`Q = p · δ` over hard-coded values, but those values come from the
+following one-hop authorities (each with its own runner):
+
+- `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`
+  (runner: `scripts/frontier_koide_aps_block_by_block_forcing.py`,
+  29/29 PASS) — block-by-block forcing of `δ = 2/p² = 2/9` via the
+  Atiyah-Bott-Segal-Singer equivariant fixed-point formula for the APS
+  η-invariant at an isolated `Z_p` fixed locus with tangent weights
+  `(1, p−1)` and `p = 3`.
+- `docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`
+  (runner: `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py`,
+  28/28 PASS) — block-by-block forcing of the AM-GM `Q = 2/d = 2/3`
+  derivation on the admitted `Cl(3)/Herm_circ(3)` carrier (Frobenius
+  inner product, `C_3`-singlet/triplet split, `κ = 2`).
+- `docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md` — the
+  package-level handoff that fixes both support routes and the
+  `p = d = 3` axiomatic base on the retained `C_3 ⊂ S_3` action on `Z³`.
+
+The identity here is **arithmetic over those two cited values**, not a
+new derivation of either. The retained physical bridges (zero-source
+selection for `Q`, selected-line Brannen-endpoint identification for
+`δ`) remain explicitly out of scope, as flagged in the package README.
+
 ---
 
 ## Statement

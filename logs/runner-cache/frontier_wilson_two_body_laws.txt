@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wilson_two_body_laws.py
+runner_sha256: 875a02c21ed72d2681867344cb26b8bb844646e5c81138c9932b201bcc670eed
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 24.47
+status: ok
+----- stdout -----
+========================================================================================
+WILSON TWO-BODY LAW SWEEPS
+========================================================================================
+Surface: open 3D Wilson lattice, G=5, mu2=0.22
+Fit surface: post-selected ATTRACT + CLEAN rows only
+
+Distance sweep
+  side=11 d=3: a_mut=-0.566674 SNR=9.69 [ATTRACT] [CLEAN] dsep SH=-0.7543 SELF=+0.0237 FREE=-0.0283
+  side=11 d=4: a_mut=-0.247554 SNR=8.47 [ATTRACT] [CLEAN] dsep SH=-0.3114 SELF=+0.0316 FREE=-0.0298
+  side=11 d=5: a_mut=-0.113243 SNR=8.72 [ATTRACT] [CLEAN] dsep SH=-0.1412 SELF=+0.0072 FREE=-0.2111
+  side=13 d=3: a_mut=-0.567354 SNR=9.74 [ATTRACT] [CLEAN] dsep SH=-0.7705 SELF=+0.0105 FREE=-0.0025
+  side=13 d=4: a_mut=-0.246222 SNR=8.46 [ATTRACT] [CLEAN] dsep SH=-0.3298 SELF=+0.0129 FREE=-0.0026
+  side=13 d=5: a_mut=-0.114091 SNR=8.16 [ATTRACT] [CLEAN] dsep SH=-0.1340 SELF=+0.0235 FREE=-0.0283
+  side=13 d=6: a_mut=-0.056692 SNR=8.15 [ATTRACT] [CLEAN] dsep SH=-0.0480 SELF=+0.0303 FREE=-0.0298
+  side=15 d=3: a_mut=-0.567478 SNR=9.78 [ATTRACT] [CLEAN] dsep SH=-0.7778 SELF=+0.0035 FREE=-0.0002
+  side=15 d=4: a_mut=-0.245780 SNR=8.48 [ATTRACT] [CLEAN] dsep SH=-0.3381 SELF=+0.0043 FREE=-0.0002
+  side=15 d=5: a_mut=-0.113977 SNR=8.16 [ATTRACT] [CLEAN] dsep SH=-0.1478 SELF=+0.0106 FREE=-0.0025
+  side=15 d=6: a_mut=-0.056342 SNR=8.12 [ATTRACT] [CLEAN] dsep SH=-0.0655 SELF=+0.0127 FREE=-0.0026
+  side=15 d=7: a_mut=-0.028987 SNR=8.11 [ATTRACT] [CLEAN] dsep SH=-0.0168 SELF=+0.0232 FREE=-0.0283
+
+Global post-selected clean-attract characterization: |a_mut| ~ d^-3.406  (R^2=0.9935)
+  side=11: post-selected |a_mut| ~ d^-3.139  (R^2=0.9968)
+  side=13: post-selected |a_mut| ~ d^-3.313  (R^2=0.9960)
+  side=15: post-selected |a_mut| ~ d^-3.500  (R^2=0.9939)
+
+Partner-source sweep  (side=13, d=4)
+  mB=0.5: a_mut=-0.206150 SNR=14.07 [ATTRACT] [CLEAN] dsep SH=+0.1398 SELF=+0.4050 FREE=-0.0026
+  mB=1.0: a_mut=-0.246222 SNR=8.46 [ATTRACT] [CLEAN] dsep SH=-0.3298 SELF=+0.0129 FREE=-0.0026
+  mB=1.5: a_mut=-0.314107 SNR=3.69 [ATTRACT] [CLEAN] dsep SH=-0.8986 SELF=-0.4986 FREE=-0.0026
+  mB=2.0: a_mut=-0.346657 SNR=4.95 [ATTRACT] [CLEAN] dsep SH=-0.9961 SELF=-0.5198 FREE=-0.0026
+  mB=3.0: a_mut=-0.503814 SNR=3.03 [ATTRACT] [CLEAN] dsep SH=-1.3846 SELF=-0.8108 FREE=-0.0026
+
+Mass characterization at side=13,d=4: |a_mut| ~ mB^0.483  (R^2=0.9363)
+
+----- stderr -----
+

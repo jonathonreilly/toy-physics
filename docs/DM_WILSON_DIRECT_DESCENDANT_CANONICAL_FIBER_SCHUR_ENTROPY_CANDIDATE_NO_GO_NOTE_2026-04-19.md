@@ -1,8 +1,14 @@
 # DM Wilson Direct-Descendant Canonical-Fiber Schur-Entropy Candidate / No-Go
 
 **Date:** 2026-04-19  
-**Status:** exact follow-on note on the DM source-fiber lane. The new
-canonical transport-column theorem reduces the live object to the
+**Status:** exact no-go on the canonical-fiber Schur-entropy slogan; the
+slogan does not extend canonically as a coefficient-free local Schur law on
+the orbit-level source fiber. This note **does not** promote or close any
+upstream lane; it documents the negative result for the entropy candidate
+and confirms one extra axiom (Shannon entropy) produces an endpoint that
+leaves the constructive chamber. The physical selector remains open.
+
+The new canonical transport-column theorem reduces the live object to the
 orbit-level source fiber over the canonical favored column. On that fiber,
 the plateau slogan
 

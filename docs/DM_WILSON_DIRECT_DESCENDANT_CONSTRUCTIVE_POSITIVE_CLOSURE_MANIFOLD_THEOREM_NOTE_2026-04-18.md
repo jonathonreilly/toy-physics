@@ -3,12 +3,35 @@
 **Date:** 2026-04-18 (narrowed 2026-05-08 in response to runner-artifact audit)
 **Claim type:** bounded_theorem
 **Status:** support - validated-numerics evidence for a local non-isolated branch; not an exact regular-root theorem
-**Scripts:**
+**Scripts (both registered with caches):**
 
 - `scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py`
+  (cache: `logs/runner-cache/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.txt`)
 - `scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.py`
+  (cache: `logs/runner-cache/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.txt`)
 
 **Certificate:** `outputs/dm_wilson_constructive_positive_closure_manifold_certificate_2026-04-18.json`
+
+## Inputs (cited authorities)
+
+The transport functional `eta_1` and the projected-source kernel used in
+the closure constraint `F = eta_1 - 1` are **imported** from upstream
+constructive-transport notes; this note's contribution is the
+validated-numerics regular-root certificate, not the underlying transport
+construction. The cited authorities are:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md`
+  — the constructive transport plateau and its `eta_1` functional.
+- `docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md`
+  — fiber-spectral completion that fixes the transport kernel surface.
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MULTIPLICITY_THEOREM_NOTE_2026-04-18.md`
+  — the same-day multiplicity companion, which records the prior
+  numerical evidence of multiple distinct near-closure points.
+
+The 2026-05-08 narrowing already removed the previous "exact
+regular-root theorem" claim; the remaining content is bounded as
+"validated-numerics evidence for a local non-isolated branch" with the
+explicit `support` status tier.
 
 ## Question
 

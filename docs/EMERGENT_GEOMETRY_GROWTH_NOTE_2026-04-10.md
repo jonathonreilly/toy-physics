@@ -2,7 +2,29 @@
 
 **Date:** 2026-04-10  
 **Status:** bounded - bounded or caveated result note
-**Scripts:** `frontier_emergent_geometry.py`, `frontier_emergent_geometry_v2.py`
+**Primary runner:** `scripts/frontier_emergent_geometry.py` — single-seed
+qualitative geometry comparison.
+**Companion runners (registered with caches):**
+- `scripts/frontier_emergent_geometry_v2.py` — `v2` probe full analysis
+  (`R²` density-vs-`Φ`, `d_eff` vs coupling).
+- `scripts/frontier_emergent_geometry_g_sweep.py` — hardened `k=4`
+  multi-seed `G`-sweep (provides the `8/10 ROBUST_TOWARD` and density-`Φ`
+  `mean R²` numbers).
+- `scripts/frontier_emergent_geometry_multisize.py` — multi-size
+  confirmation + displacement test.
+
+## Inputs (registered runners)
+
+The single-seed qualitative comparison is backed by the primary runner
+above. The hardened `k=4` multi-seed and `G`-sweep claims (e.g.
+`8/10 ROBUST_TOWARD` at `G=100`, `mean R²=0.454`) are backed by
+`scripts/frontier_emergent_geometry_g_sweep.py`. The `v2` probe
+diagnostics (`R²≈0.1353` on the seed-42 `G=100` single run,
+`d_eff` fluctuation, sign-by-seed table) are backed by
+`scripts/frontier_emergent_geometry_v2.py`. The 3D-seed and
+multi-size diagnostics are backed by
+`scripts/frontier_emergent_geometry_multisize.py`. All four runners
+have committed SHA-pinned caches under `logs/runner-cache/`.
 
 ## Question
 

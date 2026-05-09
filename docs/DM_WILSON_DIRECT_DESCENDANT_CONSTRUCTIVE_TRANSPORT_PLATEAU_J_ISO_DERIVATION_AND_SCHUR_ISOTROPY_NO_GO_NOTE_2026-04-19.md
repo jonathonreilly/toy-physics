@@ -1,8 +1,13 @@
 # DM Wilson Direct-Descendant Constructive Transport Plateau J_iso Derivation And Schur-Isotropy No-Go
 
 **Date:** 2026-04-19  
-**Status:** exact positive-plus-negative closeout on the current DM
-constructive-plateau lane  
+**Status:** **(positive)** bounded support theorem — `J_iso` is the exact
+law to test on the normalized cubic Schur-side carrier;
+**(negative)** no-go — Schur-side spectral isotropy maximization does
+**not** keep the certified `W1` winner on the full constructive transport
+plateau (it does so only on the witness packet `W0, W1, W2, W3`). The
+note is an exact positive-plus-negative closeout on the current DM
+constructive-plateau lane; it does **not** promote any upstream lane.
 **Primary runner:**  
 `scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py`
 
