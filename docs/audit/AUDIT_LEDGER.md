@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 893 |
+| unaudited | 892 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 421 |
+| ~~audited_conditional~~ | 422 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,21 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 421 |
+| `audited_conditional` | 422 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 947 |
+| `unaudited` | 946 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 716 |
 | `decoration` | 11 |
-| `meta` | 62 |
+| `meta` | 63 |
 | `no_go` | 188 |
 | `open_gate` | 109 |
-| `positive_theorem` | 780 |
+| `positive_theorem` | 779 |
 
 | criticality | count |
 |---|---:|
@@ -760,6 +760,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `koide_mru_demotion_note_2026-04-20` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7789,6 +7790,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The scalar charged-lepton lane factors through the SO(2) quotient of the non-trivial real doublet, so the relevant carrier is the two-slot pair (rho_+, rho_perp) rather than the unreduced ordered triple (r_0,r_1,r_2).  _(class `E`)_
 - **chain closes:** False — The algebra after choosing the two-slot quotient carrier closes, but the restricted packet does not derive that this quotient is the physical charged-lepton scalar carrier. The missing step is a retained bridge theorem from the stated axiom/structure to quotienting the doublet frame before applying the log-volume law.
 - **rationale:** The runner performs genuine symbolic algebra and invariance checks, but all reported passes are class A checks after the carrier choice is already made. The load-bearing carrier reduction is introduced as the exact scalar lane rather than derived from an independent retained input in the restricted packet. Therefore the conclusion is conditional on an unclosed bridge/carrier premise, not a first-principles closure.
+- **auditor confidence:** high
+
+### `koide_mru_demotion_note_2026-04-20`
+
+- **Note:** [`KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`](../../docs/KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audited the demotion note's status change: MRU is no longer primary, and operator-side kappa = 2 is instead assigned to the spectrum-operator bridge and block-total Frobenius routes.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c7c-ed2d-7123-a5be-2508e5a57a3c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The kappa = 2 gate is carried by two retained independent routes, bridge plus block-total Frobenius, neither of which requires the SO(2)-quotient postulate, so MRU is demoted from the closure stack.  _(class `B`)_
+- **chain closes:** False — The restricted packet provides no cited authority bodies or retained statuses for the bridge theorem, block-total Frobenius theorem, observable principle, or spectrum-side Berry + Brannen route. The included runner verifies only the spectrum-operator bridge identity and PDG numerical realization, not the full demotion/provenance claim or the independent second route.
+- **rationale:** Issue: the note's status change depends on unprovided upstream theorem notes and retained-status assertions, especially the block-total Frobenius route and the spectrum-side closure inherited by the bridge. Why this blocks: the audit packet cannot verify that the promoted routes are retained, independent, or sufficient to replace MRU; the runner only establishes an algebraic bridge plus external PDG checks. Repair target: include the one-hop authority packets and runner output/source for both promoted routes and the spectrum-side closure dependency. Claim boundary until fixed: the note can stand only as a conditional reclassification proposal given those retained routes, not as an audited closed theorem.
 - **auditor confidence:** high
 
 ### `koide_mru_weight_class_obstruction_theorem_note_2026-04-19`
