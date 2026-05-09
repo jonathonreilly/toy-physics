@@ -1,0 +1,175 @@
+{
+  "certificate_id": "lensing_deflection_h025_slope_fit",
+  "checks": [
+    {
+      "detail": "NL=60, n_nodes=141660",
+      "name": "H=0.25 b=3.0 present in fine-asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "got +5.986043, expected +5.986043",
+      "name": "H=0.25 b=3.0 kubo_true matches expected",
+      "passed": true
+    },
+    {
+      "detail": "got +0.025555, expected +0.025555",
+      "name": "H=0.25 b=3.0 dM matches expected",
+      "passed": true
+    },
+    {
+      "detail": "NL=60, n_nodes=141660",
+      "name": "H=0.25 b=4.0 present in fine-asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "got +3.819639, expected +3.819639",
+      "name": "H=0.25 b=4.0 kubo_true matches expected",
+      "passed": true
+    },
+    {
+      "detail": "got +0.015455, expected +0.015455",
+      "name": "H=0.25 b=4.0 dM matches expected",
+      "passed": true
+    },
+    {
+      "detail": "NL=60, n_nodes=141660",
+      "name": "H=0.25 b=5.0 present in fine-asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "got +2.826383, expected +2.826383",
+      "name": "H=0.25 b=5.0 kubo_true matches expected",
+      "passed": true
+    },
+    {
+      "detail": "got +0.011405, expected +0.011405",
+      "name": "H=0.25 b=5.0 dM matches expected",
+      "passed": true
+    },
+    {
+      "detail": "NL=60, n_nodes=141660",
+      "name": "H=0.25 b=6.0 present in fine-asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "got +2.211718, expected +2.211718",
+      "name": "H=0.25 b=6.0 kubo_true matches expected",
+      "passed": true
+    },
+    {
+      "detail": "got +0.008900, expected +0.008900",
+      "name": "H=0.25 b=6.0 dM matches expected",
+      "passed": true
+    },
+    {
+      "detail": "runner DATA=+5.986043, log=+5.986043",
+      "name": "combined runner b=3.0 kubo matches asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "runner DATA=+3.819639, log=+3.819639",
+      "name": "combined runner b=4.0 kubo matches asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "runner DATA=+2.826383, log=+2.826383",
+      "name": "combined runner b=5.0 kubo matches asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "runner DATA=+2.211718, log=+2.211718",
+      "name": "combined runner b=6.0 kubo matches asymptotic log",
+      "passed": true
+    },
+    {
+      "detail": "|-1.433549 - (-1.4335)| = 4.87e-05 < 1e-03",
+      "name": "kubo slope matches expected (-1.4335)",
+      "passed": true
+    },
+    {
+      "detail": "|0.998404 - 0.9984| = 4.46e-06 < 1e-03",
+      "name": "kubo R\u00b2 matches expected (0.998)",
+      "passed": true
+    },
+    {
+      "detail": "|-1.516166 - (-1.5162)| = 3.44e-05",
+      "name": "dM slope matches expected (-1.5162)",
+      "passed": true
+    },
+    {
+      "detail": "|0.995371 - 0.9954| = 2.94e-05",
+      "name": "dM R\u00b2 matches expected (0.995)",
+      "passed": true
+    },
+    {
+      "detail": "|-1.4335 - (-1)| = 0.4335 > 0.1",
+      "name": "kubo slope is non-standard (|slope \u2212 (\u22121)| > 0.1)",
+      "passed": true
+    },
+    {
+      "detail": "R\u00b2=0.9984 > 0.99",
+      "name": "kubo R\u00b2 > 0.99 (clean power law)",
+      "passed": true
+    },
+    {
+      "detail": "replay=+7.061910, ref=+7.0619",
+      "name": "replay kubo_true matches H=0.5 b=3 reference",
+      "passed": true
+    },
+    {
+      "detail": "replay=+0.034642, ref=+0.034642",
+      "name": "replay dM matches H=0.5 b=3 reference",
+      "passed": true
+    }
+  ],
+  "combined_analysis_log": "logs/2026-04-07-lensing-deflection-lane-lplus.txt",
+  "combined_analysis_runner": "scripts/lensing_deflection_lane_lplus.py",
+  "expected_values": {
+    "dM_r_squared": 0.9954,
+    "dM_slope": -1.5162,
+    "kubo_r_squared": 0.9984,
+    "kubo_slope": -1.4335
+  },
+  "fine_asymptotic_log": "logs/2026-04-07-lensing-fine-asymptotic.txt",
+  "fine_single_runner": "scripts/lensing_deflection_fine_single.py",
+  "fit_inputs": {
+    "b": [
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "dM": [
+      0.025555,
+      0.015455,
+      0.011405,
+      0.0089
+    ],
+    "kubo_true": [
+      5.986043,
+      3.819639,
+      2.826383,
+      2.211718
+    ]
+  },
+  "fit_results": {
+    "dM_intercept": -2.026961000861056,
+    "dM_r_squared": 0.9953705754509956,
+    "dM_slope": -1.5161655934930662,
+    "kubo_intercept": 3.3500926291047235,
+    "kubo_r_squared": 0.9984044562747288,
+    "kubo_slope": -1.433548671845435
+  },
+  "framework_replay": {
+    "command": "python3 scripts/lensing_deflection_fine_single.py 0.5 3.0",
+    "expected_dM": 0.034642,
+    "expected_kubo_true": 7.0619
+  },
+  "load_bearing_step": "At H=0.25 on b \u2208 {3,4,5,6}, kubo_true follows a clean log-log power law with slope \u2248 -1.43 and R\u00b2 = 0.998, so the retained result is a non-standard power law rather than 1/b lensing.",
+  "non_lensing_margin": {
+    "abs_slope_minus_minus_one": 0.4335486718454351,
+    "passes": true,
+    "threshold": 0.1
+  },
+  "source_note": "docs/LENSING_DEFLECTION_NOTE.md"
+}

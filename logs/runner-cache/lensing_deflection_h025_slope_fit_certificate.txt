@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/lensing_deflection_h025_slope_fit_certificate.py
+runner_sha256: 7612bc6c3abad51241429f23650c2397b42e1e26992c4ad7ba707dac3bc04261
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.33
+status: ok
+----- stdout -----
+==============================================================================
+LENSING DEFLECTION H=0.25 SLOPE FIT CERTIFICATE
+Source note: docs/LENSING_DEFLECTION_NOTE.md
+Scope: bounded log-log slope fit on b ∈ {3,4,5,6} at H=0.25 only
+==============================================================================
+
+STAGE_1_FINE_SINGLE_ARTIFACT:
+  [PASS] H=0.25 b=3.0 present in fine-asymptotic log: NL=60, n_nodes=141660
+  [PASS] H=0.25 b=3.0 kubo_true matches expected: got +5.986043, expected +5.986043
+  [PASS] H=0.25 b=3.0 dM matches expected: got +0.025555, expected +0.025555
+  [PASS] H=0.25 b=4.0 present in fine-asymptotic log: NL=60, n_nodes=141660
+  [PASS] H=0.25 b=4.0 kubo_true matches expected: got +3.819639, expected +3.819639
+  [PASS] H=0.25 b=4.0 dM matches expected: got +0.015455, expected +0.015455
+  [PASS] H=0.25 b=5.0 present in fine-asymptotic log: NL=60, n_nodes=141660
+  [PASS] H=0.25 b=5.0 kubo_true matches expected: got +2.826383, expected +2.826383
+  [PASS] H=0.25 b=5.0 dM matches expected: got +0.011405, expected +0.011405
+  [PASS] H=0.25 b=6.0 present in fine-asymptotic log: NL=60, n_nodes=141660
+  [PASS] H=0.25 b=6.0 kubo_true matches expected: got +2.211718, expected +2.211718
+  [PASS] H=0.25 b=6.0 dM matches expected: got +0.008900, expected +0.008900
+
+STAGE_2_COMBINED_RUNNER_CROSSCHECK:
+  [PASS] combined runner b=3.0 kubo matches asymptotic log: runner DATA=+5.986043, log=+5.986043
+  [PASS] combined runner b=4.0 kubo matches asymptotic log: runner DATA=+3.819639, log=+3.819639
+  [PASS] combined runner b=5.0 kubo matches asymptotic log: runner DATA=+2.826383, log=+2.826383
+  [PASS] combined runner b=6.0 kubo matches asymptotic log: runner DATA=+2.211718, log=+2.211718
+
+STAGE_3_LOG_LOG_FIT:
+  fit_input_b        : [3.0, 4.0, 5.0, 6.0]
+  fit_input_kubo_true: [5.986043, 3.819639, 2.826383, 2.211718]
+  fit_input_dM       : [0.025555, 0.015455, 0.011405, 0.0089]
+  kubo_slope    = -1.433549
+  kubo_intercept= +3.350093
+  kubo_R2       = 0.998404
+  dM_slope      = -1.516166
+  dM_intercept  = -2.026961
+  dM_R2         = 0.995371
+  [PASS] kubo slope matches expected (-1.4335): |-1.433549 - (-1.4335)| = 4.87e-05 < 1e-03
+  [PASS] kubo R² matches expected (0.998): |0.998404 - 0.9984| = 4.46e-06 < 1e-03
+  [PASS] dM slope matches expected (-1.5162): |-1.516166 - (-1.5162)| = 3.44e-05
+  [PASS] dM R² matches expected (0.995): |0.995371 - 0.9954| = 2.94e-05
+  [PASS] kubo slope is non-standard (|slope − (−1)| > 0.1): |-1.4335 - (-1)| = 0.4335 > 0.1
+  [PASS] kubo R² > 0.99 (clean power law): R²=0.9984 > 0.99
+
+STAGE_4_RUNNER_REATTESTATION_H05_B3:
+LIVE_REPLAY_COMMAND:
+  python3 /Users/jonBridger/Toy Physics/.claude/worktrees/agent-a4063b23b53843a94/scripts/lensing_deflection_fine_single.py 0.5 3.0
+LIVE_REPLAY_STDOUT_BEGIN
+H=0.5 b=3.0 NL=30 n_nodes=18126 dM=+0.034642 kubo_true=+7.061910
+LIVE_REPLAY_STDOUT_END
+  [PASS] replay kubo_true matches H=0.5 b=3 reference: replay=+7.061910, ref=+7.0619
+  [PASS] replay dM matches H=0.5 b=3 reference: replay=+0.034642, ref=+0.034642
+
+SELECTOR_FIREWALL:
+  safe_scope:
+    - log-log slope fit on b ∈ {3,4,5,6} at H=0.25 only
+    - asserts slope ≈ -1.4335, R² ≈ 0.998 with NON-1/b margin > 0.1
+  excluded_scope:
+    - no continuum-stable exponent (slope still H-dependent)
+    - no Newton/Einstein 1/b lensing match (explicitly excluded)
+    - no other families, observables, or impact-parameter ranges
+
+CERTIFICATE_WRITTEN: outputs/lensing_deflection_h025_slope_fit_certificate.json
+
+PASS=24/24
+STATUS: BOUNDED H=0.25 SLOPE-FIT CERTIFICATE PASS
+
+----- stderr -----
+
