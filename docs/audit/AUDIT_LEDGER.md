@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 234 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 961 |
+| unaudited | 960 |
 | meta | 55 |
-| ~~audited_numerical_match~~ | 22 |
+| ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
 | ~~audited_conditional~~ | 365 |
 | ~~audited_failed~~ | 10 |
@@ -44,9 +44,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 365 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
-| `audited_numerical_match` | 22 |
+| `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1016 |
+| `unaudited` | 1015 |
 
 | claim_type | count |
 |---|---:|
@@ -928,6 +928,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_freeze_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `wave_static_boundary_sensitivity_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `born_scattering_comparison_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -1782,6 +1783,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Gcrit_0.011_not_sampled_or_reproduced_by_live_runner`
   - `field_strength_dependence_rows_s_0.001_and_s_0.016_not_present_in_current_runner`
   - `high_G_live_runner_shows_unstable_away_behavior_not_smooth_threshold_table`
+- **auditor confidence:** high
+
+### `bell_inequality_derived_note`
+
+- **Note:** [`BELL_INEQUALITY_DERIVED_NOTE.md`](../../docs/BELL_INEQUALITY_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-lattice two-species staggered-fermion model surface showing CHSH violation for the listed small lattices and selected G couplings, with Cl(3) taste-operator checks and G=0 null controls.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d66-8c90-7a00-8c94-c3ea50b2bbc8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For the Hamiltonian H = H1⊗I + I⊗H1 + G∑ij V(i,j)|i><i|⊗|j><j|, selected finite lattices and chosen G values give Horodecki CHSH |S| > 2 while G=0 gives |S|=2.  _(class `G`)_
+- **chain closes:** False — The packet specifies the model and runner source, but the table is not supported by completed runner stdout here and the one-hop authorities deriving the two-species bipartition, diagonal periodic-Poisson density coupling, and physical normalization of G are absent. The result closes only as a selected-parameter model surface, not as a retained framework-native gravitational Bell theorem.
+- **rationale:** Issue: the CHSH violation is obtained on selected small lattices with large chosen couplings, while the packet provides no retained one-hop authority deriving the two-species matter bipartition, the diagonal periodic-Poisson density coupling, or a physical normalization/continuum scaling for G. Why this blocks: the runner source appears to compute the model surface rather than hard-code S, but the load-bearing result depends on chosen model parameters and imported interaction/readout bridges, so it is not a framework-native derivation from cited inputs. Repair target: register the two-species Hilbert/matter theorem and D5 Poisson-coupling authority, derive a fixed coupling or continuum-refinement rule, and rerun without sweeping to violation. Claim boundary until fixed: reproducible finite-lattice model-surface CHSH violation at the listed selected couplings with Cl(3) taste checks and G=0 null controls only.
 - **auditor confidence:** high
 
 ### `beyond_lattice_qcd_note`

@@ -42,7 +42,7 @@
   "effective_status_counts": {
     "audited_conditional": 365,
     "audited_failed": 10,
-    "audited_numerical_match": 22,
+    "audited_numerical_match": 23,
     "audited_renaming": 27,
     "decoration_under_cl3_color_automorphism_theorem": 3,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
@@ -58,7 +58,7 @@
     "retained_bounded": 234,
     "retained_no_go": 122,
     "retained_pending_chain": 1,
-    "unaudited": 961
+    "unaudited": 960
   },
   "retained_pending_chain_count": 1,
   "retained_pending_chain_examples": [
