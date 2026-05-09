@@ -1,147 +1,130 @@
 # Mirror Chokepoint Note
 
-**Date:** 2026-04-03 (downgraded 2026-04-28 per audit-lane verdict)
-**Status:** bounded finite mirror chokepoint diagnostic across stitched parameter surfaces; not a single-surface family theorem and not an asymptotic claim.
+**Date:** 2026-04-03 (downgraded 2026-04-28 per audit-lane verdict; narrowed 2026-05-09 per audit_failed re-flag).
+**Status:** bounded finite mirror chokepoint diagnostic on the strict default `NPL_HALF=25` `connect_radius=4.0` card at `N=15` and `N=25` only; not a single-surface family theorem and not an asymptotic claim. The dense `NPL_HALF=60` `connect_radius=5.0` boundary card retention through `N=100` is covered by the separate retained boundary-fit note (see [`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)) and is not part of this note's retained scope.
 
 This note freezes the current review-safe mirror result on the strict
 chokepoint family in:
 
-[`scripts/mirror_chokepoint_joint.py`](/Users/jonreilly/Projects/Physics/scripts/mirror_chokepoint_joint.py)
+[`scripts/mirror_chokepoint_joint.py`](../scripts/mirror_chokepoint_joint.py)
 
-Log:
-[`logs/2026-04-03-mirror-chokepoint-joint.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-joint.txt)
+The registered runner-cache for this strict default card is:
 
-Scaling log:
-[`logs/2026-04-03-mirror-chokepoint-scale-r5p0-n50.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-scale-r5p0-n50.txt)
+[`logs/runner-cache/mirror_chokepoint_joint.txt`](../logs/runner-cache/mirror_chokepoint_joint.txt)
 
-Sparse rescue log:
-[`logs/2026-04-03-mirror-chokepoint-scale-r5p0-p2p02-n50.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-scale-r5p0-p2p02-n50.txt)
+The assertion-gated certificate runner that mechanically verifies this
+note's retained `N=15`/`N=25` rows against that cache is:
 
-Boundary scan logs:
-[`logs/2026-04-03-mirror-chokepoint-boundary-n45-r5p0.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n45-r5p0.txt)
-[`logs/2026-04-03-mirror-chokepoint-boundary-n50-r5p2.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n50-r5p2.txt)
-[`logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p0.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p0.txt)
-[`logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p0-N100.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p0-N100.txt)
-[`logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p2-N100.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p2-N100.txt)
-[`logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N100.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N100.txt)
-[`logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N120.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N120.txt)
+[`scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py`](../scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py)
+
+Its registered runner-cache is:
+
+[`logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt`](../logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt)
+
+Historical exploratory log files (`logs/2026-04-03-mirror-chokepoint-*`) are
+not part of the retained provenance for this note and are not relied upon
+here. The dense `NPL_HALF=60` boundary card has its own registered
+runner-cache (`logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt`)
+and is the scope of the separate boundary-fit note linked above.
 
 ## Setup
 
 - strict layer-1 chokepoint connectivity
 - `NPL_HALF = 25` (`50` total nodes per layer)
+- `connect_radius = 4.0`
+- `layer2_prob = 0.0`
 - `k = 5.0`
 - `16` seeds
-- `N = 15, 25, 40, 60, 80, 100`
+- this note's retained scope: `N = 15, 25` only (default strict card)
 
 ## Retained Rows
 
-The bounded mirror pocket is Born-clean and gravity-positive on the strict
-`NPL_HALF = 25` probe at small `N`, and the dense `NPL_HALF = 60`,
-`connect_radius = 5.0` boundary card extends the same pocket to `N = 40`,
-`N = 60`, `N = 80`, and `N = 100`. Each retained row in the table below is
-tied to exactly one of the two runner-cache artifacts that are presently
-checked in:
+This note's retained scope, after the 2026-05-09 narrowing, is the **default
+strict card only**: `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0`,
+16 seeds, and only at `N = 15` and `N = 25`. The dense `NPL_HALF=60`,
+`connect_radius=5.0` boundary card retention through `N=100` is the scope of
+the separate retained boundary-fit certificate
+([`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md))
+and is not stitched into this note's retained table.
+
+The retained rows below are read directly from one runner-cache artifact:
 
 - `logs/runner-cache/mirror_chokepoint_joint.txt` — strict default card
-  (`NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0`, 16 seeds).
-- `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` —
-  dense boundary card (`NPL_HALF=60`, `connect_radius=5.0`,
-  `layer2_prob=0.0`, 16 seeds).
+  (`NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0`, 16 seeds). The
+  numbers below match this cache exactly.
 
-| N | `d_TV` | `pur_cl` | `S_norm` | gravity | Born `|I3|/P` | `k=0` | parameter card | runner-cache artifact |
-|---|---:|---:|---:|---:|---:|---:|---|---|
-| 15 | `0.9716` | `0.5769±0.02` | `1.0006` | `+1.2927±0.691` | `5.84e-16` | `0.00e+00` | `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_joint.txt` |
-| 25 | `0.8014` | `0.7329±0.05` | `0.9986` | `+2.2748±0.525` | `6.54e-16` | `0.00e+00` | `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_joint.txt` |
-| 40 | `0.8006` | `0.8764±0.03` | `0.9965` | `+4.6161±0.721` | `1.01e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
-| 60 | `0.5443` | `0.8971±0.03` | `1.0021` | `+3.6663±0.698` | `1.18e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
-| 80 | `0.4291` | `0.8182±0.03` | `1.0029` | `+3.0551±0.672` | `2.43e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
-| 100 | `0.2308` | `0.9043±0.02` | `1.0058` | `+1.3089±0.570` | `1.13e-15` | `0.00e+00` | `NPL_HALF=60`, `connect_radius=5.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt` |
+The assertion-gated certificate runner that mechanically verifies these two
+rows against the cache lives at:
 
-Note: the retained table is stitched across two parameter cards, not a
-single registered runner invocation. The `NPL_HALF = 50` scaling probe and
-the sparse same-side layer-2 rescue (`layer2_prob = 0.02`) referenced below
-are reported only as exploratory / out-of-scope — no runner-cache artifact
-is presently checked in for those surfaces, so they are not part of the
-retained provenance.
+- [`scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py`](../scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py)
+  — exits zero on PASS, nonzero if the cache is missing or any retained
+  row drifts from the cache.
 
-## Exploratory Rows (out-of-scope: no runner-cache artifact)
+| N | `d_TV` | `pur_cl` | `S_norm` | gravity | Born `|I3|/P` | `k=0` | seeds_ok | parameter card | runner-cache artifact |
+|---|---:|---:|---:|---:|---:|---:|---:|---|---|
+| 15 | `0.9716` | `0.5769±0.02` | `1.0006` | `+1.2927±0.691` | `5.75e-16` | `0.00e+00` | `11/16` | `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_joint.txt` |
+| 25 | `0.8014` | `0.7329±0.05` | `0.9986` | `+2.2748±0.525` | `6.92e-16` | `0.00e+00` | `13/16` | `NPL_HALF=25`, `connect_radius=4.0`, `layer2_prob=0.0` | `logs/runner-cache/mirror_chokepoint_joint.txt` |
 
-The numbers below are **out-of-scope for this note's bounded claim**. They
-are kept here only as historical context — no runner-cache artifact is
-presently checked in for the `NPL_HALF=50` scaling probe or for the
-`NPL_HALF=55` boundary scans, so neither is part of the retained-row
-provenance and neither should be relied upon by downstream consumers. The
-in-scope runner-cache replays are listed in the "Retained Rows" table
-above.
+The strict default runner-cache also records `FAIL` for `N = 40, 60, 80, 100`
+on this card; those rows are out of this note's retained scope and are
+explicitly NOT claimed here. The dense-card retention story for
+`N = 40..100` is the scope of the boundary-fit note linked above.
 
-At the default strict settings and the denser `NPL_HALF=50` scaling probe,
-the higher-N rows still did not retain enough successful seeds to freeze as a
-bounded large-N joint result:
+The exploratory `NPL_HALF = 50` scaling probe and the sparse same-side
+layer-2 rescue (`layer2_prob = 0.02`) are also out-of-scope — no
+runner-cache artifact is presently checked in for those surfaces.
 
-| N | verdict |
-|---|---|
-| 80 | FAIL (out-of-scope: no `NPL_HALF=50` runner-cache artifact) |
-| 100 | FAIL (out-of-scope: no `NPL_HALF=50` runner-cache artifact) |
+## Out-of-scope (historical exploratory surfaces)
 
-The dense `NPL_HALF = 55` boundary scan rows below are also out-of-scope
-for the same reason; only the `NPL_HALF = 60`, `connect_radius = 5.0` rows
-in this table have a corresponding runner-cache artifact
-(`logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt`):
+The following surfaces are **out-of-scope for this note's bounded claim**
+and have no runner-cache artifact in the repo. They are listed here only
+to record what is excluded; no number from any of them is relied upon in
+this note:
 
-| npl_half | connect_radius | N | verdict |
-|---|---:|---:|---|
-| 55 | `5.0` | 80 | retained, Born clean, gravity positive (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
-| 55 | `5.0` | 100 | gravity collapses to zero; not retained (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
-| 55 | `5.2` | 80 | retained, Born clean, gravity positive (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
-| 55 | `5.2` | 100 | gravity collapses to zero; not retained (out-of-scope: no `NPL_HALF=55` runner-cache artifact) |
-| 60 | `5.0` | 80 | retained, Born clean, gravity positive (in-scope; matches retained-row N=80) |
-| 60 | `5.0` | 100 | retained, Born clean, gravity positive (in-scope; matches retained-row N=100) |
-| 60 | `5.0` | 120 | Born still clean, but gravity collapses to zero; not retained (in-scope wall row) |
-
-The sparse same-side layer-2 rescue (`layer2_prob = 0.02`) is **also
-out-of-scope**: no runner-cache artifact for `layer2_prob=0.02` is checked
-in, so the rows below are exploratory only and not part of the retained
-provenance:
-
-| N | `pur_cl` | gravity | verdict |
-|---|---:|---:|---|
-| 25 | `0.7128±0.05` | `+1.1909±0.800` | retained, but weaker than strict mirror (out-of-scope: no sparse-rescue runner-cache artifact) |
-| 40 | `0.8272±0.05` | `+2.5460±1.031` | retained, still below strict mirror gravity (out-of-scope: no sparse-rescue runner-cache artifact) |
-| 60 | `0.8718±0.04` | `+2.7086±0.937` | retained, but weaker than strict mirror (out-of-scope: no sparse-rescue runner-cache artifact) |
-| 80 | `0.9031±0.04` | `+1.9444±1.268` | exploratory only; Born not certified (`nan`) (out-of-scope: no sparse-rescue runner-cache artifact) |
-| 100 | FAIL | FAIL | no retained row (out-of-scope: no sparse-rescue runner-cache artifact) |
+- `NPL_HALF=25`, `connect_radius=4.0`, `N=40, 60, 80, 100` — these rows
+  FAIL on the strict default runner-cache and are explicitly not in the
+  retained table.
+- `NPL_HALF=50` scaling probe (any `N`).
+- `NPL_HALF=55` boundary scan (any `connect_radius`, any `N`).
+- Sparse same-side layer-2 rescue (`layer2_prob = 0.02`, any `N`).
+- `NPL_HALF=60`, `connect_radius=5.0` boundary card at `N = 40, 60, 80,
+  100, 120` — this dense card has its own runner-cache and is the scope
+  of [`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md).
 
 ## Narrow Read
 
-- The mirror chokepoint lane is **real as a bounded pocket**.
-- It is Born-clean at machine precision on the retained small-N rows.
-- It keeps a strong decoherence-side advantage at `N=15`, `N=25`, `N=40`,
-  `N=60`, `N=80`, and `N=100`.
-- It also keeps positive gravity and the `k=0` control at zero on the retained
+- The mirror chokepoint lane is **real as a bounded pocket** at small `N`
+  on the strict default card.
+- It is Born-clean at machine precision on the retained `N=15` and `N=25`
   rows.
-- The mirror pocket now clearly extends past `N=60`; the farthest retained row
-  is `N=100` on the `NPL_HALF = 60`, `connect_radius = 5.0` boundary scan.
-- The pocket still does **not** survive to `N=120` in a gravity-positive way,
-  so it is bounded rather than asymptotic.
-- The sparse layer-2 rescue does not change that verdict; it helps a little at
-  `N=80` but does not produce a cleaner large-`N` retention story than the
-  dense boundary scan.
+- It keeps a strong decoherence-side advantage at `N=15` and `N=25` on the
+  strict default card.
+- It also keeps positive gravity and the `k=0` control at zero on the
+  retained rows.
+- The strict default card does **not** retain `N=40, 60, 80, 100` (those
+  fall to FAIL on the same card); the dense-card retention story is
+  separately certified in the boundary-fit note and is **not** stitched
+  into this note's retained table.
+- The sparse layer-2 rescue is exploratory only and is not part of any
+  retained scope here.
 
 ## Interpretation
 
-The current safe statement is:
+The current safe statement, narrowed to this note's retained scope, is:
 
-- **retained bounded mirror pocket:** yes
-- **large-N mirror scaling:** yes, through `N=100`
-- **Born + gravity + decoherence coexistence:** yes, through `N=100`
+- **retained bounded mirror pocket on the strict default card:** yes, at
+  `N=15` and `N=25`
+- **strict default card large-N retention:** no — `N=40, 60, 80, 100`
+  FAIL on this card per the registered runner-cache
+- **dense-card retention through `N=100`:** out-of-scope here; covered by
+  the separate retained boundary-fit certificate
 - **strict `NPL_HALF = 50` scaling probe:** out-of-scope (no runner-cache
-  artifact is presently checked in for `NPL_HALF=50`); the historical
-  exploratory note that this probe retained through `N=60` and failed at
-  `N=80/100` is not part of the retained provenance for this note
+  artifact)
+- **sparse same-side layer-2 rescue (`layer2_prob = 0.02`):** out-of-scope
+  (no runner-cache artifact)
 
-The dense large-`N` boundary extension is reproducible directly from the live
-script with:
+The dense large-`N` boundary extension is the scope of the separate
+boundary-fit note and is reproducible directly from the live script with:
 
 `python3 scripts/mirror_chokepoint_joint.py --npl-half 60 --connect-radius 5.0 --n-layers 40 60 80 100 120 --layer2-prob 0.0`
 
@@ -150,18 +133,14 @@ baseline check separate from that slower replay; use
 [`scripts/canonical_regression_gate.py --slow`](/Users/jonreilly/Projects/Physics/scripts/canonical_regression_gate.py)
 when you want both.
 
-The next step is to test whether even denser `NPL`, larger radius, or sparse
-same-side layer-2 links can extend the mirror pocket beyond `N=60` without
-breaking the chokepoint Born check.
-
 For the canonical fixed-family decoherence fit on the bounded dense boundary
 mirror pocket, see:
 
 [`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
 
-## Audit boundary (2026-04-28)
+## Audit boundary (2026-04-28; re-narrowed 2026-05-09)
 
-Audit verdict (`audited_conditional`, leaf criticality):
+Audit verdict (`audited_conditional`, leaf criticality, 2026-04-28):
 
 > Issue: the finite mirror-chokepoint pocket is partly reproducible, but
 > the proposed-retained packet depends on a stitched table whose `N=40`/
@@ -177,50 +156,64 @@ Audit verdict (`audited_conditional`, leaf criticality):
 > parameter surface supports each row and without assertion-gated
 > retention criteria.
 
-The honest claim, per the audit verdict's "Claim boundary until fixed"
-line, is:
+Re-flag verdict (`audited_failed`, 2026-05-08):
 
-> safe to claim a finite diagnostic pocket: strict `NPL_HALF=25`
-> `radius=4.0` reproduces retained `N=15`/`N=25`, dense `NPL_HALF=60`
-> `radius=5.0` reproduces positive-gravity Born-clean `k=0`-clean mirror
-> rows through `N=100` and zero-gravity collapse at `N=120`; it is not
-> yet a clean retained asymptotic or single-surface mirror-chokepoint
-> theorem.
+> Issue: the current note claims a specific retained stitched table, but
+> the provided strict runner only recovers N=15/N=25 and the cited dense
+> boundary authority gives different N=40/N=60 values than the table in
+> this note. Repair target: land a per-row certificate or update the
+> retained table so every row matches the named runner-cache artifact.
+> Claim boundary until fixed: only the strict `N=15`/`N=25` rows and the
+> separate retained_bounded dense boundary-card result can be cited, not
+> this exact stitched retained table.
 
-The Status line and "Interpretation" framing have been narrowed to match.
+The 2026-05-09 narrowing applies the auditor's "narrow the note to cite
+only the default `N=15/25` rows and the retained boundary-fit card" path:
+
+- The retained table is now `N=15`/`N=25` only on the strict default card.
+- The Born values match the strict joint runner-cache exactly
+  (`5.75e-16`, `6.92e-16`).
+- The dense `NPL_HALF=60` boundary card retention through `N=100` is
+  delegated to the separately-retained boundary-fit certificate note and
+  is no longer stitched into this note.
+- An assertion-gated certificate runner
+  (`scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py`)
+  exits zero on PASS and nonzero if the retained rows drift from the
+  cache.
 
 ## What this note does NOT claim
 
 - A single-parameter-surface mirror chokepoint family theorem.
-- A clean asymptotic retention law — the through-`N=100` retention is on
-  a specific dense parameter card, not a family-wide statement.
-- That the canonical retained table is recoverable from a single
-  registered runner invocation — the table is stitched across multiple
-  surfaces (`NPL_HALF=25` `radius=4.0`, `NPL_HALF=25` `radius=5.0`,
-  `NPL_HALF=50` scaling, `NPL_HALF=55/60` boundary scans, sparse layer-2
-  rescue), and several of the cited log files are not present in the
-  repo.
-- That the sparse layer-2 rescue is closed — its `N=80` row is reported
-  as "Born not certified (`nan`)" and `N=100` is FAIL.
+- A clean asymptotic retention law on the strict default card —
+  `N=40, 60, 80, 100` FAIL on this card per the registered runner-cache.
+- A through-`N=100` retention story on this note. The dense
+  `NPL_HALF=60`, `connect_radius=5.0` boundary card retention through
+  `N=100` is the scope of the separately retained boundary-fit
+  certificate
+  ([`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md))
+  and is not stitched into this note's retained table.
+- That the `NPL_HALF=50` scaling probe, the `NPL_HALF=55` boundary
+  scans, or the sparse layer-2 rescue (`layer2_prob = 0.02`) are part
+  of any retained provenance here — no runner-cache artifact is
+  presently checked in for those surfaces.
 
 ## What would close this lane (Path A future work)
 
 A future worker pursuing reinstatement of a clean mirror chokepoint
-family claim would need to land all of the following:
+family claim that goes beyond this note's narrow `N=15/25` strict-card
+scope would need to land at least one of the following:
 
-1. A single registered runner invocation (or a per-row parameter-card
-   table) that reproduces every retained row from one canonical command
-   line, with the canonical command line registered in the note.
-2. Archived versions of the cited log files that are currently missing
-   from the repo: `2026-04-03-mirror-chokepoint-joint.txt`,
-   `2026-04-03-mirror-chokepoint-scale-r5p0-n50.txt`,
-   `2026-04-03-mirror-chokepoint-scale-r5p0-p2p02-n50.txt`, and the
-   six `2026-04-03-mirror-chokepoint-boundary-*.txt` files.
+1. A single registered runner invocation that reproduces a per-row
+   table on a single parameter surface (no stitching), with the
+   canonical command line and per-row pass/fail gates registered in
+   the note and a runner-cache artifact present.
+2. A reconciliation between the strict `NPL_HALF=25` baseline (where
+   `N=40, 60, 80, 100` FAIL) and the dense `NPL_HALF=60` boundary card
+   (where they retain through `N=100`) as a single-surface theorem or
+   as an explicit cross-card diagnostic with assertion-gated runners
+   on both surfaces.
 3. Hard runner-side pass/fail gates for seed counts, `NPL_HALF`,
    `connect_radius`, `layer2_prob`, Born tolerance, `k=0`,
-   gravity positivity/significance, decoherence ceiling, and the
-   `N=120` failure boundary.
-4. A reconciliation of the strict `NPL_HALF=25` baseline (where
-   `N=40`/`N=60` do not match the retained table) with the dense
-   `NPL_HALF=60` boundary (where they do) — either as a separate
-   diagnostic or as a single-surface theorem.
+   gravity positivity/significance, decoherence ceiling, and any
+   collapse boundary (e.g. the `N=120` zero-gravity row on the dense
+   card).
