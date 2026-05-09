@@ -24,11 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
 | unaudited | 964 |
-| audit_in_progress | 1 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 372 |
+| ~~audited_conditional~~ | 373 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,9 +40,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
 | `audited_clean` | 390 |
-| `audited_conditional` | 372 |
+| `audited_conditional` | 373 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
@@ -113,7 +111,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `s3_cap_uniqueness_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -800,6 +797,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `retarded_field_delay_proxy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9677,6 +9675,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note explicitly frames the route as open and dynamically blocked, not as a closed GR derivation. Its kinematic premise imports upstream atlas results that are not included in the restricted packet, and the asserted missing dynamics bridge is not supplied. With no runner source or stdout available, there is no independent computation or closure evidence in the packet.
 - **open / conditional deps cited:**
   - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+- **auditor confidence:** high
+
+### `s3_cap_uniqueness_note`
+
+- **Note:** [`S3_CAP_UNIQUENESS_NOTE.md`](../../docs/S3_CAP_UNIQUENESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Cone-capping is unique up to PL homeomorphism among closures of the cubical ball that yield a closed simply connected PL 3-manifold, assuming the listed PL-topology infrastructure and prior cap-link result.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0dc0-9269-7593-b819-9d96230cb5ae`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** Schoenflies/Alexander makes the complement X of B in PL S^3 a PL 3-ball, and Alexander 1930 identifies such a ball with cone(∂B) up to PL homeomorphism.  _(class `A`)_
+- **chain closes:** False — The second audit is better supported because the restricted packet has no one-hop retained authorities and the runner source marks the required topology theorems and prior manifold checks as True theorem/citation lines rather than deriving them. Under the rubric, audited_clean requires closure from cited retained inputs without appeal to anything else; this packet instead imports Schoenflies/Alexander, Perelman/Moise, Kawamoto-Smit closure, and prior cap-link verification as external or prior premises. The first audit correctly identifies the load-bearing topology chain but treats explicitly named external infrastructure as sufficient for clean closure despite the restricted packet not supplying retained dependency evidence.
+- **rationale:** The second audit is better supported because the restricted packet has no one-hop retained authorities and the runner source marks the required topology theorems and prior manifold checks as True theorem/citation lines rather than deriving them. Under the rubric, audited_clean requires closure from cited retained inputs without appeal to anything else; this packet instead imports Schoenflies/Alexander, Perelman/Moise, Kawamoto-Smit closure, and prior cap-link verification as external or prior premises. The first audit correctly identifies the load-bearing topology chain but treats explicitly named external infrastructure as sufficient for clean closure despite the restricted packet not supplying retained dependency evidence.
 - **auditor confidence:** high
 
 ### `s3_mass_matrix_no_go_note`
