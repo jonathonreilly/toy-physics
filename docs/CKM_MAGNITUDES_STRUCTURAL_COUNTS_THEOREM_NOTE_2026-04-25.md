@@ -214,16 +214,61 @@ This note does **not** claim:
 - any Koide, three-sector, or cross-lane closure;
 - all-orders exact CKM matrix entries beyond the parent atlas scope.
 
+## Exact-symbolic verification
+
+The primary runner verifies `(M1)`–`(M5)` and the `n_pair` cancellation at
+floating-point tolerance using the canonical numerical `alpha_s(v)`. The
+audit-companion runner
+`scripts/audit_companion_ckm_magnitudes_structural_counts_exact.py` adds an
+exact-symbolic verification using `sympy`:
+
+1. The structural counts are treated as positive-integer symbols
+   `(p, c, q)` rather than fixed numerals, with the framework constraint
+   `q = p c`.
+2. The canonical coupling `alpha_s(v)` is treated as a free positive real
+   symbol, so each identity must reduce to `0` as a sympy expression rather
+   than at one numerical value.
+3. The cited inputs are imported verbatim:
+   `lambda^2 = alpha_s/p`, `A^2 = p/c`, `rho = 1/q`,
+   `eta^2 = (q-1)/q^2`, and the Thales reading `(1-rho)^2 + eta^2 = 1-rho`.
+4. The companion verifies:
+   - the cited Thales relation `(1-rho)^2 + eta^2 = 1 - rho` and the dual
+     `rho^2 + eta^2 = 1/q` reduce to `0` parametrically in `q`;
+   - `(M1)–(M3)` reduce to `0` parametrically in `(p, c)` over abstract counts;
+   - `(M4)` reduces parametrically to
+     `A^2 lambda^6 (rho^2 + eta^2) = alpha_s^3 / (c p^2 q)`
+     and, after `q = p c`, to `alpha_s^3 / (p^3 c^2)`. At `p = 2` the
+     `n_pair` factor cancels exactly into the constant `8`, and the resulting
+     compact form `alpha_s^3 / (8 c^2)` has no `p_sym` in its free-symbol
+     set;
+   - `(M5)` reduces parametrically to
+     `A^2 lambda^6 (1 - rho) = alpha_s^3 (q-1) / (c p^2 q)`
+     and, after `q = p c` with `p = 2`, to `alpha_s^3 (2 c - 1) / (8 c^2)`;
+   - all five identities specialize correctly at the framework counts
+     `(p, c, q) = (2, 3, 6)` to the table values
+     `alpha_s/2`, `alpha_s^2/6`, `alpha_s^2/6`, `alpha_s^3/72`,
+     `5 alpha_s^3/72`;
+   - the `n_pair` cancellation in `(M4)` is specific to `p = 2`: at `p = 3`
+     the closed form is `alpha_s^3/(27 c^2)` (not `alpha_s^3/(8 c^2)`),
+     and at `p = 1` it is `alpha_s^3/(c^2)`.
+
+This is an exact-symbolic check of the local algebra on the cited
+structural-counts surface. It does not re-derive the upstream Wolfenstein,
+CP-phase, atlas right-angle, or `alpha_s` authorities and does not assert any
+status promotion; status remains owned by the audit pipeline.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_magnitudes_structural_counts.py
+python3 scripts/audit_companion_ckm_magnitudes_structural_counts_exact.py
 ```
 
-Expected result:
+Expected results:
 
 ```text
 TOTAL: PASS=32, FAIL=0
+TOTAL: PASS=21, FAIL=0
 ```
 
 ## Cross-References
