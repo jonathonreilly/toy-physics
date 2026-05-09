@@ -1,0 +1,136 @@
+
+========================================================================================
+ frontier_wilson_vtaste_extremum_leading_order_in_r.py
+========================================================================================
+ Bounded source note: m^* = -4r + O(r^3); curvature there =
+   -4/u_0^2 + 12 r^2 / u_0^4 + O(r^4). 5x smaller correction than
+   at m=0, from variance identity Σ binom·(k-2)^2 = 16 vs Σ binom·k^2 = 80.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Wilson-Shifted V_taste Extremum  (marker = 'Wilson-Shifted V_taste Extremum at Leading Order in r')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only; audit verdict and')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: leading-shift formula present  (marker = 'm^*       =  - 4 r')
+  [PASS] contains: leading-curvature formula present  (marker = '12 r^2 ) / u_0^4')
+  [PASS] contains: centered-binomial-moment identity (4) stated  (marker = '= 16')
+  [PASS] contains: variance-ratio explanation  (marker = '80 - 32^2 / 16 = 80 - 64 = 16')
+  [PASS] contains: ratio 5x reduction noted  (marker = '5×')
+  [PASS] contains: V_taste^W upstream cited (sister)  (marker = 'WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Wilson staircase upstream cited  (marker = 'WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08')
+  [PASS] contains: Higgs note upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent
+----------------------------------------------------------------------------------------
+  [PASS] absent (rejected vocabulary): 'algebraic universality'
+  [PASS] absent (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent (rejected vocabulary): 'two-class framing'
+  [PASS] absent (rejected vocabulary): '(CKN)'
+  [PASS] absent (rejected vocabulary): '(LCL)'
+  [PASS] absent (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent (rejected vocabulary): 'imports problem'
+  [PASS] absent (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent (rejected vocabulary): 'retires admission'
+  [PASS] absent (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstream files (with graceful forward-reference)
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+  [INFO] sister forward-reference not yet on this branch: docs/WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md
+         (intentional; audit lane resolves order)
+
+----------------------------------------------------------------------------------------
+ Part 4: binomial moments on Σ_k binomial(4, k) f(k)
+----------------------------------------------------------------------------------------
+  [PASS] Σ binomial(4, k) = 16 (state count)  (got 16)
+  [PASS] Σ binomial(4, k) · k = 32  (got 32)
+  [PASS] Σ binomial(4, k) · k^2 = 80  (got 80)
+  [PASS] Σ binomial(4, k) · (k-2)^2 = 16 (centered second moment, drives +12 coefficient)  (got 16)
+  [PASS] variance identity: Σ k^2 · binom - (Σ k · binom)^2 / Σ binom = 80 - 64 = 16 = Σ (k-2)^2 · binom  (variance_check = 16, moment_centered_2 = 16)
+  [PASS] moment ratio Σ k^2 · binom / Σ (k-2)^2 · binom = 80 / 16 = 5  (80 / 16 = 5)
+
+----------------------------------------------------------------------------------------
+ Part 5: m^* = -4r at leading order in r
+----------------------------------------------------------------------------------------
+  [PASS] leading-order shift coefficient: δm / r = -2 · Σ k · binom / Σ binom = -2 · 32 / 16 = -4  (got -4)
+  r = 1/1000, u_0 = 1097/1250
+  m^* (leading) = -4r = -1/250
+  dV^W/dm at m^* (leading) = 0.000e+00
+  residual / (1/u_0) = 0.000e+00
+  [PASS] dV^W/dm at m^*_leading is negligible at r = 1/1000 (consistent with O(r^3) residual)  (residual_to_scale = 0.000e+00, threshold = 1e-6)
+
+----------------------------------------------------------------------------------------
+ Part 6: d^2 V^W / dm^2 |_{m=-4r} = -4/u_0^2 + 12 r^2 / u_0^4 + O(r^4)
+----------------------------------------------------------------------------------------
+  [PASS] r=0: curvature at m^*=0 = -4/u_0^2 (matches parent eq. [3])  (got -6250000/1203409, expected -6250000/1203409)
+  r = 1/100 = 0.010000
+    curvature exact  = -5.1915573392
+    Taylor with 12   = -5.1915562454, diff = 1.094e-06
+    Taylor with 60   = -5.1834642658, diff = 8.093e-03
+  [PASS] r = 1/100: leading-order Taylor with coefficient 12 closer than coefficient 60  (diff_12 = 1.094e-06, diff_60 = 8.093e-03)
+  r = 1/10 = 0.100000
+    curvature exact  = -5.0015883296
+    Taylor with 12   = -4.9912797504, diff = 1.031e-02
+    Taylor with 60   = -4.1820817906, diff = 8.195e-01
+  [PASS] r = 1/10: leading-order Taylor with coefficient 12 closer than coefficient 60  (diff_12 = 1.031e-02, diff_60 = 8.195e-01)
+  r = 1/2 = 0.500000
+    curvature exact  = -2.9105302031
+    Taylor with 12   = -0.1360919918, diff = 2.774e+00
+    Taylor with 60   = 20.0938570022, diff = 2.300e+01
+  [PASS] r = 1/2: leading-order Taylor with coefficient 12 closer than coefficient 60  (diff_12 = 2.774e+00, diff_60 = 2.300e+01)
+  r = 1 = 1.000000
+    curvature exact  = -1.7299389984
+    Taylor with 12   = 15.0363697537, diff = 1.677e+01
+    Taylor with 60   = 95.9561657298, diff = 9.769e+01
+  [PASS] r = 1: leading-order Taylor with coefficient 12 closer than coefficient 60  (diff_12 = 1.677e+01, diff_60 = 9.769e+01)
+
+----------------------------------------------------------------------------------------
+ Part 7: r → 0 reduction (m^* = 0; curvature = -4/u_0^2)
+----------------------------------------------------------------------------------------
+  [PASS] r=0: m^* = -4 · 0 = 0 (extremum at the symmetric point)
+  [PASS] r=0: d^2V^W/dm^2 |_{m^*=0} = -4/u_0^2 (matches parent eq. [3])  (got -6250000/1203409, expected -6250000/1203409)
+
+----------------------------------------------------------------------------------------
+ Part 8: stdlib-only / no PDG pins
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] no PDG-value pin pattern  (none)
+
+----------------------------------------------------------------------------------------
+ Part 9: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: the physical Higgs mass `m_H` numerical value
+  [PASS] note explicitly does not close: the `V_taste^W` extremum `m^*` to all orders in `r`
+  [PASS] note explicitly does not close: the curvature at `m^*` to all orders in `r`
+  [PASS] note explicitly does not close: the +12% Higgs gap chain
+  [PASS] note explicitly does not close: the Wilson coefficient `r`
+  [PASS] note explicitly does not close: the plaquette mean-field link `u_0`
+  [PASS] note explicitly does not close: the staggered-Dirac realization gate
+  [PASS] note explicitly does not close: the `g_bare = 1` derivation
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+
+========================================================================================
+ TOTAL: PASS=62, FAIL=0
+========================================================================================
+
+ VERDICT: m^* = -4r + O(r^3); d^2V^W/dm^2 |_{m=-4r} = -4/u_0^2
+ + 12 r^2/u_0^4 + O(r^4). Leading correction is 5x smaller than
+ at m=0 (variance ratio Σ binomial(4,k)·(k-2)^2 / Σ binomial(4,k)·k^2
+ = 16/80 = 1/5).
