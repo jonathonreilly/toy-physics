@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 64 |
-| **retained_no_go** | 121 |
+| **retained_no_go** | 122 |
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 968 |
+| unaudited | 967 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 28 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 390 |
+| `audited_clean` | 391 |
 | `audited_conditional` | 363 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1029 |
+| `unaudited` | 1028 |
 
 | claim_type | count |
 |---|---:|
@@ -276,6 +276,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -7300,6 +7301,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
 - **auditor confidence:** high
+
+### `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20`
+
+- **Note:** [`KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`](../../docs/KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the internal no-go that the actual 1-real-dimensional selected-line CP^1 local packet (F=0, constant FS density, branch-constant rho_delta) cannot locally select the interior point delta=2/d^2.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0dc8-81c5-7bc0-9356-5f2fb9764e23`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Every local gauge-invariant scalar built from the selected-line tautological Berry geometry and branch-constant rho_delta is constant along the branch, while delta(m) is strict-monotone, so the interior equation delta(m)=2/d^2 cannot be a local selected-line identity.  _(class `A`)_
+- **chain closes:** True — Within the stated local-packet scope, the obstruction closes: constant local invariants cannot distinguish two branch points with different holonomy values. The result is a scoped no-go for local selected-line laws, not a no-go for nonlocal continuation or extra Wilson/lattice transport.
+- **rationale:** Issue checked: whether the selected-line local packet itself can select delta=2/d^2. Why this closes: the note and runner establish that the local Berry/FS/rho_delta data are constant while delta varies strictly, which is enough for the stated local no-go. Repair target: none for this scoped no-go; any positive bridge must instead supply a nonlocal branch rule or extra Wilson/lattice transport datum. Claim boundary until fixed elsewhere: this does not derive the physical point and does not rule out nonlocal or extra-structure bridges.
+- **auditor confidence:** medium
 
 ### `koide_transport_gap_constant_no_go_note_2026-04-20`
 
