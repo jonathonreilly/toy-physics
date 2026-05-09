@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dirac_walk_3plus1d_decoherence_probe.py
+runner_sha256: 140845fc032813614a8832b5de45b30c733a2f8902f85b2281232fb8f7ef2631
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.78
+status: ok
+----- stdout -----
+========================================================================
+DIRAC 3+1D DECOHERENCE / RECORD PROBE
+========================================================================
+Geometry: localized +x packet -> double slit barrier -> detector plane
+Channels: coherent, random phase kicks, which-path record
+
+CASE n=17, steps=16
+  clean detector visibility      = 0.5800
+  clean detector proxy            = 0.0705
+  phase-kick visibility          = 0.5668 +/- 0.0522
+  phase-kick proxy               = 0.0678
+  record-model visibility        = 0.5663
+  record-model proxy             = 0.0707
+  clean vs record L1 residual    = 0.9084
+  slit weights (A,B)             = (0.017664, 0.017063)
+  slit distinguishability D      = 0.0173
+  record-mixture purity          = 0.5001
+  proxy gap vs mixture purity    = 0.4295
+  norms (clean/noise/record)     = 0.658659 / 0.626148 / 1.207968
+  complementarity (clean V^2 + D^2) = 0.3367
+  complementarity (record V^2 + D^2) = 0.3210
+
+CASE n=21, steps=20
+  clean detector visibility      = 0.5158
+  clean detector proxy            = 0.0638
+  phase-kick visibility          = 0.5128 +/- 0.0470
+  phase-kick proxy               = 0.0575
+  record-model visibility        = 0.5411
+  record-model proxy             = 0.0638
+  clean vs record L1 residual    = 0.9413
+  slit weights (A,B)             = (0.012349, 0.011898)
+  slit distinguishability D      = 0.0186
+  record-mixture purity          = 0.5002
+  proxy gap vs mixture purity    = 0.4364
+  norms (clean/noise/record)     = 0.657205 / 0.607673 / 1.207786
+  complementarity (clean V^2 + D^2) = 0.2664
+  complementarity (record V^2 + D^2) = 0.2932
+
+========================================================================
+SUMMARY
+========================================================================
+  The Dirac double-slit harness is live: clean interference and explicit record branches are both present.
+  The main mismatch is metric-level: the current detector proxy barely moves even when the record mixture purity is ~0.5 and the clean-vs-record residual is large.
+  Random phase kicks reduce visibility modestly, but they are not the clean discriminator in this geometry.
+  Total runtime: 0.63s
+
+----- stderr -----
+

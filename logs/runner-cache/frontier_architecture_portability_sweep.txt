@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/frontier_architecture_portability_sweep.py
+runner_sha256: 0157676f7911f7335d5567f4a73eea429a259c2e76678a5c6d7fed0196341be4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 12.92
+status: ok
+----- stdout -----
+==========================================================================================
+ARCHITECTURE PORTABILITY SWEEP
+==========================================================================================
+MASS=0.3, DT=0.08, N_STEPS=15, REG=0.001
+Source amplitudes: (0.4, 0.6, 0.8, 1.0, 1.5)
+Goal: beta ~ 1.0, attractive force, I_3 ~ 0 where measured
+
+------------------------------------------------------------------------------------------
+ARCHITECTURE 1: Ordered 3D Cubic (side=14)
+------------------------------------------------------------------------------------------
+  Mass exponent beta = 0.9999 (R^2 = 1.0000)
+  Attraction: 5/5 toward source -> YES
+    A=0.4  M=1.9574  dx=-0.000022  TOWARD
+    A=0.6  M=4.4041  dx=-0.000050  TOWARD
+    A=0.8  M=7.8295  dx=-0.000088  TOWARD
+    A=1.0  M=12.2336  dx=-0.000138  TOWARD
+    A=1.5  M=27.5256  dx=-0.000309  TOWARD
+  Born rule I_3 (side=12)... I_3 = 2.29e-09
+
+------------------------------------------------------------------------------------------
+ARCHITECTURE 2: Staggered 3D Cubic (side=14)
+------------------------------------------------------------------------------------------
+  Mass exponent beta = 1.0125 (R^2 = 1.0000)
+  Attraction: 5/5 toward source -> YES
+    A=0.4  M=1.9574  dx=-0.000605  TOWARD
+    A=0.6  M=4.4041  dx=-0.001367  TOWARD
+    A=0.8  M=7.8295  dx=-0.002441  TOWARD
+    A=1.0  M=12.2336  dx=-0.003837  TOWARD
+    A=1.5  M=27.5256  dx=-0.008809  TOWARD
+  Born rule I_3 (side=12)... I_3 = 2.20e-11
+
+------------------------------------------------------------------------------------------
+ARCHITECTURE 3: Wilson 3D Cubic (side=14)
+------------------------------------------------------------------------------------------
+  Mass exponent beta = 1.0005 (R^2 = 1.0000)
+  Attraction: 5/5 toward source -> YES
+    A=0.4  M=3.0069  dx=-0.000150  TOWARD
+    A=0.6  M=6.7655  dx=-0.000337  TOWARD
+    A=0.8  M=12.0276  dx=-0.000600  TOWARD
+    A=1.0  M=18.7931  dx=-0.000937  TOWARD
+    A=1.5  M=42.2845  dx=-0.002110  TOWARD
+
+------------------------------------------------------------------------------------------
+ARCHITECTURE 4: Random Geometric Graph (2D mass-only, side=10, n=100)
+------------------------------------------------------------------------------------------
+  Mass exponent beta = 0.9989 (R^2 = 1.0000)
+  Attraction: 5/5 toward source -> YES
+    A=0.4  M=1.1279  dx=+0.000149  TOWARD
+    A=0.6  M=2.5377  dx=+0.000335  TOWARD
+    A=0.8  M=4.5115  dx=+0.000596  TOWARD
+    A=1.0  M=7.0492  dx=+0.000931  TOWARD
+    A=1.5  M=15.8606  dx=+0.002090  TOWARD
+  Note: random geometric is 2D and mass-scaling only; no distance-law comparison.
+
+==========================================================================================
+ARCHITECTURE COMPARISON TABLE
+==========================================================================================
+Architecture               beta      R^2   Attract          I_3   Verdict
+------------------------------------------------------------------------------------------
+ordered_3d               0.9999   1.0000       YES     2.29e-09      PASS
+staggered_3d             1.0125   1.0000       YES     2.20e-11      PASS
+wilson_3d                1.0005   1.0000       YES          n/a      PASS
+random_geometric         0.9989   1.0000       YES          n/a      PASS
+------------------------------------------------------------------------------------------
+
+==========================================================================================
+ACCEPTANCE GATE
+==========================================================================================
+  beta within 10% of 1.0: 4/4 architectures (need >= 3) -> PASS
+  Attractive force:       4/4 architectures (need all) -> PASS
+  Born rule I_3 < 1e-6:   all measured pass -> PASS
+
+  OVERALL: PASS — bounded source-mass portability companion established
+
+Elapsed: 12.4s
+
+----- stderr -----
+

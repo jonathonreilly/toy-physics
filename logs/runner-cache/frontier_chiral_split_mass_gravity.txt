@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chiral_split_mass_gravity.py
+runner_sha256: 8578932015a1c0ec955d987ccb1b083f48f8dc73bef37b7581875a9ea27d2616
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.25
+status: ok
+----- stdout -----
+========================================================================
+SPLIT-PARAMETER CHIRAL GRAVITY
+========================================================================
+Overloaded baseline: theta_eff = theta_m * (1 - theta_m * f)
+Split model:         theta_eff = theta_m * (1 - g * f)
+Reference split g = 0.30 at theta_ref = 0.30
+
+========================================================================
+1) FREE DISPERSION / KG FIT
+========================================================================
+ theta_m       m_fit       slope       R^2     max_resid
+    0.15    0.150002    0.992435  1.000000     1.655e-06
+    0.25    0.250004    0.978931  1.000000     4.560e-06
+    0.35    0.350005    0.958542  1.000000     8.825e-06
+    0.45    0.450007    0.931104  1.000000     1.433e-05
+    0.55    0.550008    0.896391  1.000000     2.091e-05
+  Baseline and split are identical here by construction.
+
+========================================================================
+2) F ∝ M SCALING AT FIXED theta_m
+========================================================================
+Reference theta_m = 0.30, k0 = 0.60
+         M    baseline |d|       split |d|
+   2.0e-04    1.199447e-05    1.199447e-05
+   5.0e-04    2.999438e-05    2.999438e-05
+   1.0e-03    6.001611e-05    6.001611e-05
+   2.0e-03    1.201417e-04    1.201417e-04
+   5.0e-03    3.011757e-04    3.011757e-04
+Baseline alpha_M = 1.001 (R^2=1.0000)
+Split alpha_M    = 1.001 (R^2=1.0000)
+
+========================================================================
+3) k-ACHROMATICITY AT FIXED theta_m
+========================================================================
+theta_m = 0.30, strength = 5e-4
+    k0      baseline d         split d  layers
+  0.20    3.504107e-04    3.504107e-04      33
+  0.40   -3.522252e-07   -3.522252e-07      23
+  0.60   -2.999438e-05   -2.999438e-05      21
+  0.80   -2.494751e-05   -2.494751e-05      20
+  1.00   -1.717512e-05   -1.717512e-05      19
+Baseline CV_k = 2.6580
+Split CV_k    = 2.6580
+
+========================================================================
+4) g CONTROL AT FIXED theta_m
+========================================================================
+theta_m = 0.30, k0 = 0.60, strength = 5e-4
+     g         split d
+  0.00    0.000000e+00
+  0.10   -9.995090e-06
+  0.20   -1.999322e-05
+  0.30   -2.999438e-05
+  0.40   -3.999859e-05
+  0.50   -5.000583e-05
+Split d(g) fit: slope=-1.000117e-04, R^2=1.0000
+
+========================================================================
+5) theta_m DEPENDENCE / EQUIVALENCE-STYLE BEHAVIOR
+========================================================================
+Using the mean |deflection| across the k band to suppress resonance noise.
+  theta_m=0.15  baseline env=7.196741e-06  split env=1.439281e-05
+  theta_m=0.25  baseline env=4.212245e-05  split env=5.054462e-05
+  theta_m=0.35  baseline env=1.731411e-04  split env=1.484298e-04
+  theta_m=0.45  baseline env=4.495970e-04  split env=2.999565e-04
+  theta_m=0.55  baseline env=9.627576e-04  split env=5.262615e-04
+Baseline theta envelope exponent = 3.802 (R^2=0.9988)
+Split theta envelope exponent    = 2.803 (R^2=0.9978)
+Baseline theta envelope CV       = 1.0825
+Split theta envelope CV          = 0.9013
+
+========================================================================
+VERDICT
+========================================================================
+Free KG fit OK:       True
+F∝M scaling OK:       True
+Theta sensitivity reduced in split: True
+g control is linear-ish: True
+*** OVERLOADING IS A REAL BLOCKER FOR THE theta DEPENDENCE ***
+
+Total runtime: 0.1s
+
+----- stderr -----
+
