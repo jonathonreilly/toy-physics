@@ -27,6 +27,10 @@ sys.path.insert(0, ROOT)
 
 from scripts.structured_mirror_growth import compute_field, grow_structured_mirror
 
+# This runner is intentionally heavier than the 120 s default when the machine
+# is loaded; audit precompute needs enough time to finish the full N-grid.
+AUDIT_TIMEOUT_SEC = 300
+
 BETA = 0.8
 
 

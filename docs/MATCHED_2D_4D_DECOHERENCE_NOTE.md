@@ -3,6 +3,8 @@
 **Status:** support - structural or confirmatory support note
 **Date:** 2026-04-03
 **Purpose:** Test whether the current 4D decoherence claim survives a degree-matched comparison against the 2D modular family.
+**Primary runner:** `scripts/matched_2d_4d_decoherence.py`
+
 
 ## Setup
 

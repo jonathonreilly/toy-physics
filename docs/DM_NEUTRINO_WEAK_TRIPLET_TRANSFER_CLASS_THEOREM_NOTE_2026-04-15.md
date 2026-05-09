@@ -4,6 +4,8 @@
 **Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py`
 
+**Audit-lane runner update (2026-05-09):** hardcoded `/Users/jonBridger/...` paths in `scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py` have been replaced with portable `read('docs/...')` calls; the runner now executes cleanly in any clone of the repo and exits 0 with PASS=11 FAIL=0. The runner output and pass/fail semantics are otherwise unchanged.
+
 ## Framework sentence
 
 In this note, “axiom” means only the single framework axiom `Cl(3)` on `Z^3`.

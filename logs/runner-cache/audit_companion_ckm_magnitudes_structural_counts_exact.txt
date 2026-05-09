@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_ckm_magnitudes_structural_counts_exact.py
+runner_sha256: 5c14aee6648589d2c770e14dc32a489100d0a02b688c57f717e2c13be88cfbe5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.93
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_magnitudes_structural_counts_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (M1)-(M5) and n_pair cancellation
+over abstract integer counts (p, c, q = p c) and framework counts (2, 3, 6)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  symbolic counts: p (n_pair), c (n_color), q (n_quark)
+  lambda^2 = alpha_s/p
+  A^2      = p/c
+  rho      = 1/q
+  eta^2    = (q - 1)/q**2
+
+----------------------------------------------------------------------------------------
+Part 1: cited Thales relation R_t^2 = (1-rho)^2 + eta^2 = 1-rho
+----------------------------------------------------------------------------------------
+  [PASS (A)] Thales: (1 - rho)^2 + eta^2 == 1 - rho (parametric in q)  (diff simplifies to 0)
+  [PASS (A)] rho^2 + eta^2 == 1/q (parametric in q, dual Thales form)  (needed for |V_ub|^2 = A^2 lambda^6 (rho^2 + eta^2))
+
+----------------------------------------------------------------------------------------
+Part 2: parametric (M1)-(M3) identities over abstract (p, c, q)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (M1) parametric: |V_us|^2 == alpha_s / p  (|V_us|^2 - alpha_s/p simplifies to 0)
+  [PASS (A)] (M2) parametric: A^2 lambda^4 == alpha_s^2 / (p c)  (diff = 0)
+  [PASS (A)] (M3) parametric: |V_ts|^2 == |V_cb|^2 at atlas-leading order  (atlas-leading Wolfenstein equality)
+
+----------------------------------------------------------------------------------------
+Part 3: parametric (M4) identity and exact n_pair cancellation
+----------------------------------------------------------------------------------------
+  [PASS (A)] (M4) parametric: A^2 lambda^6 (rho^2+eta^2) == alpha_s^3 / (c p^2 q)  (diff = 0)
+  [PASS (A)] (M4) parametric under q = p c: equals alpha_s^3 / (p^3 c^2)  (reduced form = alpha_s**3/(c**2*p**3))
+  [PASS (A)] (M4) n_pair cancellation at p = 2: alpha_s^3 / (8 c^2)  (|V_ub|^2 at p=2 = alpha_s**3/(8*c**2))
+  [PASS (A)] (M4) compact closed form has no n_pair dependence  (free_symbols of compact M4 = {c, alpha_s})
+
+----------------------------------------------------------------------------------------
+Part 4: parametric (M5) identity using Thales
+----------------------------------------------------------------------------------------
+  [PASS (A)] (M5) parametric: ((1-rho)^2+eta^2) form == (1-rho) form (Thales)  (Thales reduction inside |V_td|^2)
+  [PASS (A)] (M5) parametric: A^2 lambda^6 (1-rho) == alpha_s^3 (q-1) / (c p^2 q)  (closed form before q = p c substitution)
+  [PASS (A)] (M5) parametric under q = p c: alpha_s^3 (p c - 1) / (p^3 c^2)  (reduced form = alpha_s**3*(c*p - 1)/(c**2*p**3))
+  [PASS (A)] (M5) at p = 2: alpha_s^3 (2 c - 1) / (8 c^2)  (|V_td|^2 at p=2 = alpha_s**3*(2*c - 1)/(8*c**2))
+
+----------------------------------------------------------------------------------------
+Part 5: framework counts (p, c, q) = (2, 3, 6) numerical structural form
+----------------------------------------------------------------------------------------
+  [PASS (A)] (M1) at (2,3,6): alpha_s / 2  (got alpha_s/2)
+  [PASS (A)] (M2) at (2,3,6): alpha_s^2 / 6  (got alpha_s**2/6)
+  [PASS (A)] (M3) at (2,3,6): alpha_s^2 / 6  (got alpha_s**2/6)
+  [PASS (A)] (M4) at (2,3,6): alpha_s^3 / 72  (got alpha_s**3/72)
+  [PASS (A)] (M5) at (2,3,6): 5 alpha_s^3 / 72  (got 5*alpha_s**3/72)
+  [PASS (A)] n_pair cancels at (2,3,6): |V_ub|^2 = alpha_s^3 / (8 * 9) = alpha_s^3/72  (explicit |V_ub|^2 at framework counts uses only n_color)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual probe (n_pair != 2 breaks compact form)
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: at p=3, |V_ub|^2 = alpha_s^3/(27 c^2) != alpha_s^3/(8 c^2)  (diff at p=3 simplifies to -19*alpha_s**3/(216*c**2) (nonzero confirms n_pair-=2 specificity))
+  [PASS (A)] counterfactual: at p=1, compact constant fails (1 != 8)  (diff at p=1 simplifies to 7*alpha_s**3/(8*c**2))
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Thales: (1-rho)^2 + eta^2 = 1 - rho parametric in q
+    rho^2 + eta^2 = 1/q parametric in q
+    (M1)-(M5) parametric over abstract counts (p, c, q)
+    (M4) n_pair cancellation: at p = 2, |V_ub|^2 = alpha_s^3/(8 c^2)
+    (M4) compact form is independent of n_pair (free_symbols check)
+    All identities specialize correctly at (p, c, q) = (2, 3, 6)
+    Counterfactual: n_pair != 2 breaks the compact (8 c^2) constant
+
+========================================================================================
+TOTAL: PASS=21, FAIL=0
+========================================================================================
+
+----- stderr -----
+

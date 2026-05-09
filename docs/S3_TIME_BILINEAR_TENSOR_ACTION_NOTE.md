@@ -48,6 +48,21 @@ Items 1, 3, and 4 name existing current-main source surfaces but are not
 treated here as retained-grade closure. Items 2 and 5 remain load-bearing
 gaps for any future retained physical-dynamics claim.
 
+**Current upstream dep effective_status (per audit ledger as of the
+2026-05-04 `audited_renaming` salvage):**
+
+- `oh_schur_boundary_action_note` → `retained_bounded`
+- `s3_time_bilinear_tensor_primitive_note` → `audited_renaming`
+- `s3_time_transfer_matrix_bridge_note` → `audited_conditional`
+- `s3_time_spacetime_tensor_primitive_note` → `audited_conditional`
+
+That is, the four wired upstream deps are at definition-only, bounded, or
+conditional grade — none is retained-clean — which is why this note's own
+verdict remains `audited_renaming` (definition-only under named inputs)
+rather than promoting toward a derived physical-dynamics claim. The
+verdict will not move until at least items 2 and 5 are supplied as
+retained certificates.
+
 ## Physical-dynamics identification (deferred to a separate bridge)
 
 This note **does not derive**:

@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py
 runner_sha256: 7dc436b880c6624600904efe86d1c5bcdcfb5c9aea02000767cad2ed2a0b669b
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.45
+elapsed_sec: 1.21
 status: ok
 ----- stdout -----
 ========================================================================================

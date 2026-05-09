@@ -5,6 +5,8 @@
 **Status:** exact CKM-side support corollary on proposed_retained `main` inputs, plus
 explicit cross-sector SUPPORT commentary. This is not a retained Koide theorem
 and not a retained cross-sector identification.
+**Primary runner:** `scripts/frontier_ckm_n9_structural_family_koide_bridge.py`
+
 
 This note packages an explicit nine-member CKM support family
 

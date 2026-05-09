@@ -65,12 +65,8 @@ def part1_current_stack_already_has_a_1_plus_2_source_bundle_and_a_1_plus_2_targ
     print("PART 1: THE CURRENT STACK ALREADY HAS A 1+2 SOURCE BUNDLE AND A 1+2 TARGET BUNDLE")
     print("=" * 88)
 
-    selector = Path("/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md").read_text(
-        encoding="utf-8"
-    )
-    ckm = Path("/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature/docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md").read_text(
-        encoding="utf-8"
-    )
+    selector = read("docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md")
+    ckm = read("docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md")
     source_boundary = read("docs/DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md")
     source_note = read("docs/DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md")
     response_note = read("docs/DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md")

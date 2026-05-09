@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/hard_geometry_head_to_head.py
+runner_sha256: e51bfc7ed9500862827b12dc36b2bb80e86fdc88ba8f6a3365138a4283e33b96
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+HARD-GEOMETRY HEAD-TO-HEAD
+========================================================================================
+1. Dense central-band + layer norm [retained]
+   Best joint coexistence: strongest same-graph balance of Born, decoherence, and positive gravity
+   Born: Corrected Born stays at machine precision on the retained dense pocket
+   Retained row: Best retained same-graph joint row: N=80, npl=80, Born-clean, pur_min=0.500, gravity +2.799±1.612
+
+2. Mirror chokepoint / Z2-protected transfer [retained]
+   Strongest symmetry-protected challenger: stronger gravity than the dense central-band row, weaker decoherence and shorter range, but now artifact-backed through N=60
+   Born: Corrected Born stays machine-clean on the retained chokepoint pocket
+   Retained row: Retained bounded pocket: Born-clean through N=60 on strict NPL_HALF=50; strongest row N=40, pur_cl 0.8764±0.03, gravity +4.6161±0.721
+
+3. Generated asymmetry-persistence + layer norm [retained]
+   Best gravity side alone: stronger direct gravity pocket and cleaner mass-window fit, but less balanced jointly
+   Born: Corrected Born stays machine-clean on the dense probe
+   Retained row: Best gravity-side retained row: N=100, thr=0.20, Born 2.31e-16, pur_cl 0.921±0.043, gravity +2.102±0.825
+
+Ranking
+1. Best joint coexistence: Dense central-band + layer norm
+2. Best symmetry-protected bounded challenger: Mirror chokepoint / Z2-protected transfer
+3. Best gravity side alone: Generated asymmetry-persistence + layer norm
+
+Review-safe bottom line:
+Hard geometry remains the shared enabler. Dense central-band is the strongest retained joint lane, mirror chokepoint is the strongest symmetry-protected bounded challenger through N=60, and generated asymmetry is the strongest retained gravity-side-alone lane.
+
+----- stderr -----
+

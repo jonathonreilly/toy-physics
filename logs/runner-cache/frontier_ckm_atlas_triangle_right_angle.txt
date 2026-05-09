@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ckm_atlas_triangle_right_angle.py
-runner_sha256: d2c45240dd34dba7f7c7130019792ec970b78866bbc9dfcd0e32b2af22179809
+runner_sha256: 626f0714f9513da78052039123d841ed83415533dab47f3482fdb07d5b986696
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 0.19
+elapsed_sec: 0.86
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -56,11 +56,45 @@ Part 3: finite-lambda barred unitarity-triangle guardrail
   barred angles: alpha=90.692690, beta=23.439159, gamma=65.868151
   barred apex:   rho_bar=0.16263737, eta_bar=0.36303884
 
+----------------------------------------------------------------------------------------
+Part 4: exact-symbolic sympy proof of cos(alpha_0) = 0
+----------------------------------------------------------------------------------------
+  Symbolic inputs: rho = 1/6, eta = sqrt(5)/6
+  [PASS] sympy: rho = 1/6 (exact) (rho = 1/6)
+  [PASS] sympy: eta^2 = 5/36 (exact) (eta^2 = 5/36)
+  [PASS] sympy: rho^2 + eta^2 = 1/6 (atlas-leading CP radius squared)
+  u = V_A - V_C = (-rho, -eta) = (-1/6, -sqrt(5)/6)
+  w = V_B - V_C = (1 - rho, -eta) = (5/6, -sqrt(5)/6)
+  u . w = -rho(1 - rho) + eta^2
+        = 0
+  sympy.simplify(u . w) = 0
+  [PASS] sympy: u . w = 0 exactly (apex dot product vanishes) (u . w = 0)
+  [PASS] sympy: |u| > 0 (|u| = sqrt(rho^2 + eta^2) = sqrt(6)/6)
+  [PASS] sympy: |w| > 0 (|w| = sqrt((1-rho)^2 + eta^2) = sqrt(30)/6)
+  [PASS] sympy: cos(alpha_0) = 0 exactly (cos(alpha_0) = 0)
+  [PASS] sympy: atan2(|u x w|, u . w) = +/- pi/2 exactly (atan2(...) = pi/2)
+  Apex form: z = rho + i*eta = 1/6 + sqrt(5)*I/6
+  (1 - z) * conj(-z) = sqrt(5)*I/6
+  Re((1 - z) conj(-z)) = -rho(1 - rho) + eta^2 = 0
+  Im((1 - z) conj(-z)) = +eta = sqrt(5)/6
+  [PASS] sympy: Re((1 - z) conj(-z)) = 0 exactly (apex right angle) (Re = 0)
+  [PASS] sympy: Im((1 - z) conj(-z)) = +eta != 0 (angle is +pi/2, not 0/pi) (Im = sqrt(5)/6)
+  [PASS] sympy: arg((1 - z) conj(-z)) = pi/2 (Re=0, Im>0)
+  [PASS] sympy: Thales identity eta^2 - rho(1 - rho) = 0 exactly (eta^2 - rho(1 - rho) = 0)
+  [PASS] sympy: tan(gamma_0) = sqrt(5) (exact surd)
+  [PASS] sympy: tan(beta_0) = 1/sqrt(5) (exact surd)
+  [PASS] sympy: tan(gamma_0) * tan(beta_0) = 1 exactly
+  [PASS] sympy: cos(beta_0 + gamma_0) = 0 exactly (addition formula) (cos(b+g) = 0)
+  [PASS] sympy: sin(beta_0 + gamma_0) = 1 exactly (addition formula) (sin(b+g) = 1)
+  [PASS] sympy: alpha_0 = pi/2 exactly (from cos=0 + sin=1, sum in (0,pi))
+  [PASS] sympy: Area_0 = sqrt(5)/12 exactly (Area_0 = sqrt(5)/12)
+
 ========================================================================================
-TOTAL: PASS=26, FAIL=0
+TOTAL: PASS=45, FAIL=0
 ========================================================================================
-PASSED: 26/26
+PASSED: 45/45
 CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_ATLAS_IDENTITY_PASS=TRUE
+CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_EXACT_SYMBOLIC_PASS=TRUE
 BARRED_UNITARITY_TRIANGLE_EXACT_RIGHT_ANGLE_CLAIMED=FALSE
 
 ----- stderr -----

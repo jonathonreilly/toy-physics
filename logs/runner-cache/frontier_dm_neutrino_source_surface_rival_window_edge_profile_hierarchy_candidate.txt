@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_rival_window_edge_profile_hi
 runner_sha256: 99737fe8506e1bfc3d2d2722592d1bf13b21b27cb9e5b52d4c910d48c2b52afd
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 0.54
+elapsed_sec: 0.30
 status: ok
 ----- stdout -----
 ========================================================================================

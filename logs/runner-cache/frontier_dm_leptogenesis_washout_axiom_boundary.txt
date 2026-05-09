@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py
 runner_sha256: 1a102ddca168b4402492da6710df4cb234dc94654f10f10a9f49e92851dd3d07
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.04
+elapsed_sec: 0.33
 status: ok
 ----- stdout -----
 ========================================================================================

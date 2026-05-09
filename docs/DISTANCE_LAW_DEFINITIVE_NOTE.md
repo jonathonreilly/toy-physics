@@ -4,6 +4,8 @@
 **Script:** `scripts/frontier_distance_law_definitive.py`
 **Status:** bounded review candidate -- high-precision ordered-cubic distance-law closure
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/frontier_distance_law_definitive.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 added; runs in 234s under the new budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ## Method
 
 Sparse Poisson solver (direct for N<=48, conjugate gradient for N>=56) on 3D

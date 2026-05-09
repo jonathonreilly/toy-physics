@@ -11,6 +11,8 @@ of "full nearby-family neighborhood", "6/6 top3" and "1/6 top2" totals are
 retained below only as the *original* framing and are explicitly *not* the
 load-bearing claim of this sliced certificate.
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/persistent_object_blended_readout_boundary_probe.py` previously timed out under the audit-lane 120s default budget; already had AUDIT_TIMEOUT_SEC=1800; cache refreshed against the declared budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ## Artifact chain
 
 - Supporting boundary script: [`scripts/persistent_object_blended_readout_boundary_probe.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_blended_readout_boundary_probe.py)

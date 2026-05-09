@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/gate_b_grown_propagating_field_radical.py
-runner_sha256: b2a722a091eaf9cf7db236c10fb633551563721201838660f349ca08603fe874
-timeout_sec: 120
+runner_sha256: 95e6b5a47d525f4eb3e78d9134a8632ab00919910b4383011776da18167ab50d
+timeout_sec: 1800
 exit_code: 0
-elapsed_sec: 79.58
+elapsed_sec: 75.22
 status: ok
 ----- stdout -----
 ============================================================================================================
@@ -38,7 +38,7 @@ SAFE READ
   if the phase ramp and escape stay flat once the feedback field is
   self-consistent, this is a bounded no-go for the radical attempt
 
-Total time: 79.5s
+Total time: 75.0s
 
 ----- stderr -----
 

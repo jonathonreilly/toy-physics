@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate.py
+runner_sha256: cc5cdad56dece3d7e1055fb6656b5c71668ba88859e13e6862c109cf18b3a139
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.90
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 EDGE TRANSPORT-LANE OBSTRUCTION CANDIDATE
+========================================================================================
+
+Question:
+  Does the tested broad-bundle split-2 dangerous edge already lie on the
+  same transport-selected packet lane as the preferred recovered point?
+
+========================================================================================
+PART 1: THE PREFERRED RECOVERED POINT CARRIES ONE SHARP TRANSPORT LANE
+========================================================================================
+  [PASS] The preferred recovered active coordinate q_+ is unchanged on this branch  (q_+*=0.467879209399)
+  [PASS] The preferred recovered repair is unchanged on this branch  (Lambda_+*=1.586874714730)
+  [PASS] The preferred recovered point still carries the same winning eta/eta_obs and winning column  ((winner,eta,col)=(2,1.052220313052,[0.03564425 0.03564436 0.92871139]))
+
+========================================================================================
+PART 2: THE SPLIT-2 EDGE TRANSPORT DATA ARE REPRODUCED STABLY
+========================================================================================
+  [PASS] The split-2 edge sample at s=0.000000000000 reproduces its minimizing point stably  ((delta,q_+,Lambda_+)=(0.997049893395,0.635943268461,1.500442491658))
+  [PASS] The split-2 edge sample at s=0.000000000000 reproduces its winning transport lane stably  ((winner,eta,col)=(2,0.847299300834,[0.02638337 0.42966792 0.54394871]))
+  [PASS] The split-2 edge sample at s=0.100000000000 reproduces its minimizing point stably  ((delta,q_+,Lambda_+)=(1.032895484591,0.700097677265,1.541184222341))
+  [PASS] The split-2 edge sample at s=0.100000000000 reproduces its winning transport lane stably  ((winner,eta,col)=(2,0.794943196720,[0.01733571 0.43987297 0.54279132]))
+  [PASS] The split-2 edge sample at s=0.195041737783 reproduces its minimizing point stably  ((delta,q_+,Lambda_+)=(1.064222961126,0.763811938512,1.586874714730))
+  [PASS] The split-2 edge sample at s=0.195041737783 reproduces its winning transport lane stably  ((winner,eta,col)=(1,0.771460755068,[0.12281349 0.18577258 0.69141392]))
+
+========================================================================================
+PART 3: THE TESTED DANGEROUS EDGE STAYS OFF THE PREFERRED TRANSPORT LANE
+========================================================================================
+  [PASS] Across the tested dangerous split-2 edge, the best eta/eta_obs stays far below the preferred recovered value  ((max_edge_eta,gap)=(0.847299300834,0.204921012218))
+  [PASS] Across the tested dangerous split-2 edge, the winning transport column stays separated from the preferred quotient lane  ((s_min,dist) = (0.179194596588,0.293939334980))
+  [PASS] Across the tested dangerous split-2 edge, the winning column never develops the preferred near-symmetric small-leakage pair  ((s_min,|p2-p1|)=(0.135310205587,0.057100889715))
+  [PASS] Across the tested dangerous split-2 edge, the winning column never develops the preferred dominant entry near 0.93  ((s_max,p3)=(0.195041737783,0.691413921653))
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE TRANSPORT-LANE OBSTRUCTION HONESTLY
+========================================================================================
+  [PASS] The note records the preferred transport lane and its eta value
+  [PASS] The note records the tested dangerous-edge transport separation numbers
+  [PASS] The note keeps the boundary honest: this is still not exact-carrier closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Sharp carrier-side transport read on the broad split-2 edge:
+    - the dangerous edge is real on the broad bundle, but it does not
+      realize the preferred recovered transport lane
+    - its best eta/eta_obs stays below 0.847299300834, more than 0.20
+      below the preferred recovered 1.052220313052
+    - its winning packet columns stay packet-level separated from the
+      preferred small-leakage quotient
+  RESULT: the broad split-2 low-slack undercut is transport-incompatible
+  with the preferred recovered lane on the tested edge interval
+
+SUMMARY: PASS=16 FAIL=0
+
+----- stderr -----
+

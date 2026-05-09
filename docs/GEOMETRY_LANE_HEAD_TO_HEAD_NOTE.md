@@ -2,6 +2,8 @@
 
 **Date:** 2026-04-02  
 **Status:** support - structural or confirmatory support note
+**Primary runner:** `scripts/geometry_lane_head_to_head.py`
+
 
 ## Setup
 

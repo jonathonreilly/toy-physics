@@ -3,6 +3,8 @@
 **Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-06
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/lattice_3d_l2_wide_h0125_w4_probe.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 added; runs in 193s under the new budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 This note records the cheapest width-4 continuation probe for the dense
 `1/L^2 + h^2` bridge lane. The fixed-family `phys_w = 3` replay is already a
 bounded negative; this narrower probe asks whether a genuinely wider box

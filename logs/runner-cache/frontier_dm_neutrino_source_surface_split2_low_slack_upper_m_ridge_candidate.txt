@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate.py
+runner_sha256: 101b37a7a637648a7ae757aa57e0a9eaa09863b23ad0b7a14a6c2b48cf66e0f8
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 4.47
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 LOW-SLACK UPPER-m RIDGE CANDIDATE
+========================================================================================
+
+Question:
+  On the tested broad split-2 low-slack box, do the transport-facing
+  objectives already collapse toward the upper-m boundary?
+
+========================================================================================
+PART 1: THE PREFERRED LANE IS STILL THE REFERENCE TARGET
+========================================================================================
+  [PASS] The preferred recovered repair is unchanged on this branch  (Lambda_+*=1.586874714730)
+  [PASS] The preferred recovered lane still carries eta/eta_obs > 1  ((winner,eta)=(2,1.052220313052))
+
+========================================================================================
+PART 2: SLICE PROFILES FORCE THE TRANSPORT SEARCH TOWARD UPPER-m
+========================================================================================
+  [PASS] Slice m=-0.19 still contains feasible lower-repair points on the tested grid  (feasible=431)
+  [PASS] Slice m=-0.18 still contains feasible lower-repair points on the tested grid  (feasible=482)
+  [PASS] Slice m=-0.17 still contains feasible lower-repair points on the tested grid  (feasible=529)
+  [PASS] Slice m=-0.16 still contains feasible lower-repair points on the tested grid  (feasible=576)
+  [PASS] Slice m=-0.15 still contains feasible lower-repair points on the tested grid  (feasible=615)
+  [PASS] Slice m=-0.14 still contains feasible lower-repair points on the tested grid  (feasible=651)
+  [PASS] The slice-wise best lower-repair transport value is reproduced stably  (best_etas=[0.87246793 0.87492099 0.87675088 0.87953525 0.88161929 0.88382105])
+  [PASS] The slice-wise closest packet-lane distance is reproduced stably  (min_dists=[0.30183348 0.29004104 0.27048603 0.25970272 0.24926159 0.2391594 ])
+  [PASS] The slice-wise best transport values increase monotonically toward the upper-m boundary  (best_etas=[0.87246793 0.87492099 0.87675088 0.87953525 0.88161929 0.88382105])
+  [PASS] The slice-wise closest packet-lane distances decrease monotonically toward the upper-m boundary  (min_dists=[0.30183348 0.29004104 0.27048603 0.25970272 0.24926159 0.2391594 ])
+  [PASS] The strongest tested lower-repair transport pressure therefore sits at m = -0.14 on the coarse slices  ((argmax_eta,argmin_dist)=(5,5))
+  [PASS] The best-eta points stay in a small-slack ridge on every tested m-slice  (best_points=[(1.1366666666666667, 0.032), (1.15, 0.032), (1.1633333333333333, 0.012), (1.17, 0.028), (1.1766666666666667, 0.024), (1.1833333333333333, 0.02)])
+  [PASS] The closest-lane points sit exactly on the slack floor s = 0 on every tested m-slice  (closest_points=[(1.1433333333333333, 0.0), (1.15, 0.0), (1.1633333333333333, 0.0), (1.17, 0.0), (1.1766666666666667, 0.0), (1.1833333333333333, 0.0)])
+
+========================================================================================
+PART 3: THE NOTE RECORDS THE UPPER-m RIDGE REDUCTION
+========================================================================================
+  [PASS] The note records the monotone upper-m drift of the best eta profile
+  [PASS] The note records the monotone upper-m drift of the closest packet-lane distance
+  [PASS] The note keeps the boundary honest: this is still a coarse tested-grid ridge candidate
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive-path carrier reduction:
+    - on the tested coarse split-2 low-slack slices, both transport
+      objectives move monotonically toward the upper-m boundary
+    - the best-eta ridge stays at small slack, and the closest-lane
+      ridge sits exactly on s = 0
+  RESULT: the residual tested transport threat is already pushed toward
+  the upper-m low-slack ridge, with strongest pressure at m = -0.14
+
+SUMMARY: PASS=18 FAIL=0
+
+----- stderr -----
+

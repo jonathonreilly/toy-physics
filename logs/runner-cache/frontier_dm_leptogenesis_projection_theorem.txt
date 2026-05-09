@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_leptogenesis_projection_theorem.py
 runner_sha256: 537218c3db71a07a32bebd9bab67f1f58263ce45e2fa7d98f7851a4b54df8b10
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.09
+elapsed_sec: 0.25
 status: ok
 ----- stdout -----
 ========================================================================================

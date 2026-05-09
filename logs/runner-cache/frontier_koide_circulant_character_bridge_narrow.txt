@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_circulant_character_bridge_narrow.py
+runner_sha256: fb37aa8bd07ef58886c82f9656ca83ed3d0236c560eed17ffbc3c1beabe9d743
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.51
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: Koide circulant / character bridge identities
+----------------------------------------------------------------------------------------
+  [PASS (A)] w^3 = 1 (cube root of unity)  (w^3 = 1)
+  [PASS (A)] 1 + w + w^2 = 0 (sum of cube roots of unity)  (1 + w + w^2 = 0)
+  [PASS (A)] C^3 = I (cyclic permutation cubes to identity)  (explicit matrix product)
+
+----------------------------------------------------------------------------------------
+Part 1: lam_k = a + b w^k + bbar w^{-k} agrees with eigenvalue computation of H
+----------------------------------------------------------------------------------------
+  [PASS (A)] H v_0 = lam_0 v_0 with lam_0 = a + b w^0 + bbar w^{-0}  (residual = [0, 0, 0])
+  [PASS (A)] H v_1 = lam_1 v_1 with lam_1 = a + b w^1 + bbar w^{-1}  (residual = [0, 0, 0])
+  [PASS (A)] H v_2 = lam_2 v_2 with lam_2 = a + b w^2 + bbar w^{-2}  (residual = [0, 0, 0])
+
+----------------------------------------------------------------------------------------
+Part 2 (T1): a_0 := (lam_0 + lam_1 + lam_2) / sqrt(3) = sqrt(3) * a
+----------------------------------------------------------------------------------------
+  [PASS (A)] a_0 = sqrt(3) * a symbolically  (a_0 = sqrt(3)*a, expected = sqrt(3)*a, diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 3 (T2): z := (lam_0 + wbar lam_1 + w lam_2) / sqrt(3) = sqrt(3) * b
+----------------------------------------------------------------------------------------
+  [PASS (A)] z = sqrt(3) * b symbolically  (z = sqrt(3)*(x + I*y), expected = sqrt(3)*(x + I*y), diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4 (T3): a_0^2 - 2 |z|^2  =  3 a^2 - 6 |b|^2
+----------------------------------------------------------------------------------------
+  [PASS (A)] a_0^2 - 2 |z|^2 = 3 a^2 - 6 |b|^2 symbolically  (diff = 0)
+  [PASS (A)] (a_0^2 - 2 |z|^2) - (3 a^2 - 6 |b|^2) = 0 symbolically  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: numerical sanity at concrete (a, b)
+----------------------------------------------------------------------------------------
+  [PASS (A)] at (a, b) = (2, 1 + 2 i): a_0 = 2 sqrt(3)  (a_0 = 2*sqrt(3))
+  [PASS (A)] at (a, b) = (2, 1 + 2 i): z = sqrt(3) * (1 + 2 i)  (z = sqrt(3)*(1 + 2*I))
+  [PASS (A)] at (a, b) = (2, 1 + 2 i): |z|^2 = 15  (|z|^2 = 15, 3 |b|^2 = 15)
+  [PASS (A)] at (a, b) = (2, 1 + 2 i): a_0^2 - 2 |z|^2 = 3 a^2 - 6 |b|^2 = -18  (a_0^2 - 2 |z|^2 = -18, 3 a^2 - 6 |b|^2 = -18)
+  [PASS (A)] on-cone instance (a=1, b=1/sqrt(2)): a_0^2 - 2 |z|^2 = 0  (a_0^2 - 2 |z|^2 = 0)
+  [PASS (A)] on-cone instance (a=1, b=1/sqrt(2)): 3 a^2 - 6 |b|^2 = 0  (3 a^2 - 6 |b|^2 = 0)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (a, b) in R x C be abstract symbols. Let C be the 3 x 3 cyclic
+    permutation matrix and w = exp(2 pi i / 3). Define
+        H     = a I + b C + bbar C^2,
+        lam_k = a + b w^k + bbar w^{-k}   (k = 0, 1, 2),
+        a_0   = (lam_0 + lam_1 + lam_2)         / sqrt(3),
+        z     = (lam_0 + wbar lam_1 + w lam_2)  / sqrt(3).
+
+  CONCLUSION:
+    (T1)  a_0 = sqrt(3) * a    symbolic identity.
+    (T2)  z   = sqrt(3) * b    symbolic identity.
+    (T3)  a_0^2 - 2 |z|^2  =  3 a^2 - 6 |b|^2,
+          and equivalently
+              a_0^2 = 2 |z|^2  iff  3 a^2 = 6 |b|^2.
+
+  Audit-lane class:
+    (A) - pure polynomial algebra over R x C with the standard
+    root-of-unity identity 1 + w + w^2 = 0. No Koide / charged-lepton
+    mass / sqrt(m) / Wilson-source / selection-principle physical
+    identification.
+
+  This narrow theorem isolates the algebraic character/operator
+  identities from any physical Wilson / charged-lepton / spectral-readout
+  framing.
+
+
+========================================================================================
+  TOTAL: PASS=16, FAIL=0
+========================================================================================
+PASS=16 FAIL=0
+
+----- stderr -----
+

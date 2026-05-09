@@ -31,6 +31,12 @@ from pathlib import Path
 
 import numpy as np
 
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800` means the
+# audit-lane precompute and live audit runner allow up to 30 min of wall
+# time before recording a timeout. The 120 s default ceiling is too tight
+# under concurrency contention. See `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
 # Set up path for imports
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))

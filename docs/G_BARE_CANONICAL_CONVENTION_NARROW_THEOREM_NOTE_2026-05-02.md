@@ -4,6 +4,21 @@
 **Type:** bounded_theorem (proposed; audit-lane to ratify)
 **Primary runner:** `scripts/frontier_g_bare_canonical_convention_narrow.py`
 
+> **Supersession (2026-05-09):** the convention narrowing in this note is
+> superseded — once retained — by the forced-determination upgrade in
+> [`G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md`](G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md).
+> The upgrade leverages the retained Ward Rep-B-independence theorem
+> ([`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md))
+> and the same-1PI pinning theorem
+> ([`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md))
+> to demote `g_bare = 1` from "admitted Wilson convention" to "forced
+> determination". The scoped algebraic consequences below (`β = 6`,
+> `F^lattice = Ω^Cl(3)` at `g_bare = 1`) remain valid; the convention
+> status of `g_bare = 1` itself is replaced by the forced-determination
+> reading once the upgrade row reaches retained-grade audit status. Do
+> not change this note's intrinsic status from this header — let the
+> independent audit lane decide.
+
 ## Claim scope (proposed)
 
 > **Given** the Wilson gauge-action canonical-normalization convention

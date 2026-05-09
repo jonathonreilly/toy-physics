@@ -1,11 +1,12 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 731,
+    "bounded_theorem": 732,
     "decoration": 11,
-    "meta": 64,
+    "meta": 62,
     "no_go": 192,
     "open_gate": 108,
-    "positive_theorem": 771
+    "positive_theorem": 774,
+    "unset": 3
   },
   "cycle_examples": [
     [
@@ -34,16 +35,16 @@
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
-      "angular_kernel_underdetermination_no_go_note",
-      "architecture_note_directional_measure"
+      "bh_entropy_rt_ratio_widom_no_go_note",
+      "bh_entropy_derived_note"
     ]
   ],
-  "cycles_detected": 127,
+  "cycles_detected": 183,
   "effective_status_counts": {
-    "audited_conditional": 408,
+    "audited_conditional": 360,
     "audited_failed": 9,
-    "audited_numerical_match": 23,
-    "audited_renaming": 28,
+    "audited_numerical_match": 22,
+    "audited_renaming": 27,
     "decoration_under_cl3_color_automorphism_theorem": 3,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_hierarchy_matsubara_decomposition_note": 1,
@@ -53,10 +54,10 @@
     "meta": 55,
     "open_gate": 11,
     "retained": 63,
-    "retained_bounded": 236,
+    "retained_bounded": 233,
     "retained_no_go": 122,
     "retained_pending_chain": 2,
-    "unaudited": 912
+    "unaudited": 970
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

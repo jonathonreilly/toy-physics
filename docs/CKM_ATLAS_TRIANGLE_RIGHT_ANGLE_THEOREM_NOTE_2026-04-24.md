@@ -213,7 +213,85 @@ atlas surface.
 - It does not introduce BSM flavor, PMNS, or Majorana phases.
 - It does not use current global-fit angle values as derivation inputs.
 
-## 7. Reproduction
+## 7. Exact-Symbolic Verification
+
+The runner carries an exact-symbolic sympy verification (Part 4) of the
+right-angle identity, in addition to the original floating-point checks
+(Parts 0-3) and the finite-`lambda` barred-triangle guardrail (Part 3).
+
+The exact-symbolic proof works in `sympy` with the imported atlas-leading
+apex coordinates as exact rationals/surds:
+
+```text
+rho = 1/6,
+eta = sqrt(5/36) = sqrt(5)/6,
+eta^2 = 5/36 in QQ,
+rho^2 + eta^2 = 1/6 in QQ.
+```
+
+**Apex dot-product form (primary).** The interior angle `alpha_0` at the
+apex `V_C = (rho, eta)` is the angle between the two edge vectors
+`u = V_A - V_C = (-rho, -eta)` and `w = V_B - V_C = (1 - rho, -eta)`. Their
+dot product is
+
+```text
+u . w = (-rho)(1 - rho) + (-eta)(-eta)
+      = -rho (1 - rho) + eta^2
+      = -(1/6)(5/6) + 5/36
+      = -5/36 + 5/36
+      = 0
+```
+
+exactly in `QQ`. `sympy.simplify(u . w)` returns `0`. The norms `|u|`, `|w|`
+are positive surds (`sqrt(6)/6`, `sqrt(30)/6`), so
+
+```text
+cos(alpha_0) = (u . w) / (|u| |w|) = 0
+```
+
+and `alpha_0 = pi/2` exactly. `sympy.atan2(u_x w_y - u_y w_x, u . w)`
+returns `pi/2` symbolically.
+
+**Unitarity-triangle apex form.** With `z = rho + i*eta`, the apex angle
+equals `arg((1 - z) * conj(-z))`. sympy reduces this exactly to
+`Re = 0`, `Im = +sqrt(5)/6 > 0`, hence `arg(...) = +pi/2` exactly.
+
+**Arctan-complementarity form.** sympy does not auto-fold
+`atan(x) + atan(1/x) -> pi/2`, so the runner certifies
+`gamma_0 + beta_0 = pi/2` via the trig addition formulas:
+
+```text
+cos(beta_0 + gamma_0) = cos(beta_0) cos(gamma_0) - sin(beta_0) sin(gamma_0) = 0,
+sin(beta_0 + gamma_0) = sin(beta_0) cos(gamma_0) + cos(beta_0) sin(gamma_0) = 1.
+```
+
+Both reduce exactly under `sympy.simplify`.  Since both summands lie in
+`(0, pi/2)`, their sum is in `(0, pi)`, where `cos = 0` and `sin = 1` admit
+the unique value `pi/2`.  Therefore `alpha_0 = pi - (beta_0 + gamma_0) =
+pi/2` exactly.
+
+**Thales identity.** The identity `eta^2 - rho (1 - rho) = 0` reduces to
+`0` exactly, placing `V_C` on the Thales circle with diameter `V_A V_B`,
+which gives the same right angle by Thales' theorem.
+
+**Area certificate.** The signed-area determinant
+`(1/2) |det[V_B - V_A; V_C - V_A]|` reduces to `sqrt(5)/12` exactly.
+
+The exact-symbolic checks are independent of the floating-point checks
+in Parts 0-3 and depend only on the imported atlas-leading apex
+coordinates `(rho, eta) = (1/6, sqrt(5)/6)`. They do not promote the
+note's status; they certify the local algebra of the right-angle
+identity at the level of exact symbolic computation.
+
+**Cited structural identities relied upon (imported from upstream
+authorities, not re-derived here):**
+
+- `rho = 1/6`, `eta = sqrt(5)/6` from
+  [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md);
+- `eta^2 = 5/36`, hence `eta^2 = rho (1 - rho)` (Thales identity);
+- `rho^2 + eta^2 = 1/6` (atlas CP-radius squared).
+
+## 8. Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_atlas_triangle_right_angle.py
@@ -222,12 +300,13 @@ python3 scripts/frontier_ckm_atlas_triangle_right_angle.py
 Expected:
 
 ```text
-PASSED: 26/26
+PASSED: 45/45
 CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_ATLAS_IDENTITY_PASS=TRUE
+CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_EXACT_SYMBOLIC_PASS=TRUE
 BARRED_UNITARITY_TRIANGLE_EXACT_RIGHT_ANGLE_CLAIMED=FALSE
 ```
 
-## 8. Cross-References
+## 9. Cross-References
 
 - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)

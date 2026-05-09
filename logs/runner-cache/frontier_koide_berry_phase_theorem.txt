@@ -3,7 +3,7 @@ runner: scripts/frontier_koide_berry_phase_theorem.py
 runner_sha256: c899a40aa93ba8dd01cbad43d9bc8142aa298b9fcebcac63471296bda8193281
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 1.24
+elapsed_sec: 2.07
 status: ok
 ----- stdout -----
 ========================================================================

@@ -202,3 +202,32 @@ The support runner verifies:
 - the explicit zero-import taste-staircase presentation of the same bounded
   route
 - cubic-exact NNI self-consistency with admissible `c_12, c_23 = O(1)`
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-04-30 by
+`codex-audit-loop-critical-sweep-20260430-rerun` and returned
+`audited_conditional`. The chain-closure rationale recorded in the ledger is:
+
+> *The local step cannot be promoted because direct upstream authorities
+> remain unaudited, support/open/unknown, or terminal non-clean:
+> `QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md`,
+> `ALPHA_S_DERIVED_NOTE.md`,
+> `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`,
+> `CKM_FROM_MASS_HIERARCHY_NOTE.md`.*
+
+These are exactly the four upstream authorities the bounded lane already
+declares in §1 ("Inputs and bridge structure"). Their current effective
+statuses on the audit lane are:
+
+| Upstream authority | Effective status |
+|---|---|
+| [`ALPHA_S_DERIVED_NOTE.md`](./ALPHA_S_DERIVED_NOTE.md) | `audited_conditional` |
+| [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](./CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `audited_conditional` |
+| [`CKM_FROM_MASS_HIERARCHY_NOTE.md`](./CKM_FROM_MASS_HIERARCHY_NOTE.md) | `audited_conditional` |
+| [`QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md`](./QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md) | `audited_conditional` |
+
+The local algebra and runner verification are unchanged. The block remains
+in the bounded lane until at least one of the listed upstream authorities
+reaches retained-grade audit status; this row inherits the conditional
+verdict and does not promote.

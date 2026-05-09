@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_triplet_even_response_theorem.py
 runner_sha256: 51250a2c39bc1d86ccfe9e41f6ff6a39bbeb5a534a654e8e323af79dc5907ea5
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.08
+elapsed_sec: 0.19
 status: ok
 ----- stdout -----
 ========================================================================================

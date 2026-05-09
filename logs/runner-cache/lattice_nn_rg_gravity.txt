@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rg_gravity.py
+runner_sha256: 0fcd576e6dca5103a44e6363488919e657a470dbcd93c922d6d3566558588dae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.88
+status: ok
+----- stdout -----
+==============================================================================================================
+NN LATTICE RG-STYLE GRAVITY PROBE
+  Geometry: 3 edges/node at all spacings, W=20.0, L=40.0, mass at y=8.0
+  Base strength = 0.0005, k=5.0
+  Schedules: fixed, inv_h, inv_sqrt_h
+==============================================================================================================
+
+SCHEME: fixed
+       h    nodes    strength     gravity         k=0       MI     1-pur     d_TV        Born   time
+  ---------------------------------------------------------------------------------------------
+   2.000      441      0.0005   -0.775486   +0.00e+00   0.5558    0.4215   0.7498  2.88e-16     0s
+   1.000     1681      0.0005   -0.116678   +0.00e+00   0.5022    0.4229   0.7455  6.02e-16     0s
+   0.500     6561      0.0005   +0.138226   +0.00e+00   0.7420    0.4844   0.9072  2.26e-16     0s
+   0.250    25921      0.0005   +0.077415   +0.00e+00   0.9470    0.4989   0.9878  3.83e-16     1s
+   0.125  FAIL     1s
+  descriptive fit(|gravity|) ~ h^0.973 with R^2=0.733 on finite rows
+
+SCHEME: inv_h
+       h    nodes    strength     gravity         k=0       MI     1-pur     d_TV        Born   time
+  ---------------------------------------------------------------------------------------------
+   2.000      441     0.00025   -0.438446   +0.00e+00   0.5558    0.4215   0.7498  2.88e-16     0s
+   1.000     1681      0.0005   -0.116678   +0.00e+00   0.5022    0.4229   0.7455  6.02e-16     0s
+   0.500     6561       0.001   +0.183567   +0.00e+00   0.7420    0.4844   0.9072  2.26e-16     0s
+   0.250    25921       0.002   +0.139274   +0.00e+00   0.9470    0.4989   0.9878  3.83e-16     1s
+   0.125  FAIL     0s
+  descriptive fit(|gravity|) ~ h^0.431 with R^2=0.431 on finite rows
+
+SCHEME: inv_sqrt_h
+       h    nodes    strength     gravity         k=0       MI     1-pur     d_TV        Born   time
+  ---------------------------------------------------------------------------------------------
+   2.000      441    0.000354   -0.583594   +0.00e+00   0.5558    0.4215   0.7498  2.88e-16     0s
+   1.000     1681      0.0005   -0.116678   +0.00e+00   0.5022    0.4229   0.7455  6.02e-16     0s
+   0.500     6561    0.000707   +0.159796   +0.00e+00   0.7420    0.4844   0.9072  2.26e-16     0s
+   0.250    25921       0.001   +0.104860   +0.00e+00   0.9470    0.4989   0.9878  3.83e-16     1s
+   0.125  FAIL     1s
+  descriptive fit(|gravity|) ~ h^0.698 with R^2=0.623 on finite rows
+
+READ
+- fixed strength: baseline raw NN trend
+- inv_h: asks whether gravity can be held up under refinement
+- inv_sqrt_h: nearby alternative, less aggressive than 1/h
+- Born-safe meaning: Born stays below 1e-10 on the retained window only
+- the h=0.125 FAIL rows are shared raw-kernel continuation limits, not clean schedule-discriminating wins or losses
+- the printed power fits are descriptive only because the retained rows cross a sign-flip regime
+
+----- stderr -----
+

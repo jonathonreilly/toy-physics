@@ -61,6 +61,12 @@ Run the repo-native physics review loop from:
   salvageable, land the source-only salvage and dependency-chain/audit-queue
   repairs as part of the current landing path; otherwise close or reject the
   existing PR with a clear reason.
+- When integrating PRs, `/review-loop` must not checkout whole files from a
+  stale PR head over current `main`. Compute the PR merge base, detect overlap
+  between files changed on current `main` and files changed by the PR, and use
+  three-way patch/rebase/merge/cherry-pick integration for overlapping paths.
+  Whole-file checkout is allowed only for new paths or paths proven unchanged
+  on current `main` since the PR base.
 - The repo baseline is physical `Cl(3)` on `Z^3` (physical local algebra
   plus physical spatial substrate). Do not classify that baseline as a
   new axiom, new admitted premise, regulator interpretation, or optional

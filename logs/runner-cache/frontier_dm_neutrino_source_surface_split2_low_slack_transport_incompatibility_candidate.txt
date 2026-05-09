@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate.py
+runner_sha256: b0fe23daef5d2e3b082ecf062bdb5946b6e2733f7c657e368dae3bef932a68f5
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 17.56
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 LOW-SLACK TRANSPORT INCOMPATIBILITY CANDIDATE
+========================================================================================
+
+Question:
+  On the tested broad split-2 low-slack box, can any lower-repair point
+  realize a transport-compatible rival lane?
+
+========================================================================================
+PART 1: THE PREFERRED RECOVERED LANE IS UNCHANGED
+========================================================================================
+  [PASS] The preferred recovered repair is unchanged on this branch  (Lambda_+*=1.586874714730)
+  [PASS] The preferred recovered winning transport value is unchanged on this branch  ((winner,eta)=(2,1.052220313052))
+  [PASS] The preferred recovered winning packet quotient is unchanged on this branch  (Q_pref=[0.03564425 0.03564436 0.92871139])
+
+========================================================================================
+PART 2: A COARSE BOX SCAN ALREADY SHOWS NO SUBCRITICAL TRANSPORT CLOSURE
+========================================================================================
+  [PASS] On the coarse tested split-2 low-slack box, no lower-repair sample already reaches eta/eta_obs >= 1  (best coarse eta=0.879221532368)
+  [PASS] The best coarse lower-repair transport sample is reproduced stably  ((m,delta,s,eta)=(-0.140000000000,1.150000000000,0.004876043445,0.879221532368))
+  [PASS] The closest coarse lower-repair packet lane is still visibly separated from the preferred quotient  ((dist,point)=(0.250560685550,-0.140000000000,1.140000000000,0.156033390226))
+
+========================================================================================
+PART 3: SEEDED GLOBAL SEARCH KEEPS THE SAME BROAD-BOX VERDICT
+========================================================================================
+  [PASS] Across seeded global searches, the best lower-repair transport value stays strictly below 0.885 and never reaches 1  (etas=[0.884522236904, 0.884519994114, 0.884529423259, 0.884520032107, 0.884523453538, 0.884512015064])
+  [PASS] The strongest seeded lower-repair transport rival is reproduced stably  ((x,eta,col)=([-0.1400014   1.18844883  0.02077045],0.884529423259,[0.04085184 0.20701298 0.75213518]))
+  [PASS] Across seeded global searches, the closest lower-repair packet lane stays separated from the preferred quotient  (dists=[0.23365027115, 0.233558712352, 0.233756759001, 0.233832588984, 0.233468501596, 0.233756456819])
+  [PASS] The closest seeded lower-repair packet lane is reproduced stably  ((x,dist,eta,col)=([-1.40104496e-01  1.18883523e+00  6.95640000e-05],0.233468501596,0.883603974097,[0.04460033 0.19607118 0.75932849]))
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE BROAD-BOX INCOMPATIBILITY HONESTLY
+========================================================================================
+  [PASS] The note records the tested broad split-2 low-slack box and the lower-repair constraint
+  [PASS] The note records the strongest tested lower-repair transport value and closest lane distance
+  [PASS] The note keeps the boundary honest: this is still not interval-certified exact-carrier closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Strongest tested broad split-2 low-slack statement so far:
+    - on the tested box, no lower-repair sample reaches eta/eta_obs >= 1
+    - seeded global searches keep the best lower-repair transport rival
+      below 0.884523453538
+    - seeded global searches keep the closest lower-repair packet lane at
+      distance at least 0.233468501596 from the preferred quotient
+  RESULT: the tested broad split-2 low-slack box is transport-incompatible
+  with the preferred recovered lane under the lower-repair constraint
+
+SUMMARY: PASS=13 FAIL=0
+
+----- stderr -----
+

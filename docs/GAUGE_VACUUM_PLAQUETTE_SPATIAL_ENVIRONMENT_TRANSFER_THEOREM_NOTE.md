@@ -228,3 +228,13 @@ the spatial transfer operator `S_beta^env` and the **boundary-amplitude
 realization formula** for `Z_beta^env`, conditional on the upstream
 tensor-transfer theorem authority. Theorems 1, 2, 3 plus Corollary 1
 are the in-scope content.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+The conditional verdict flagged that the cited upstream tensor-transfer authority is itself `audited_conditional`. The retained-status of this row is therefore **blocked on** the upstream conditional:
+
+- [gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note](GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md) — currently `audited_conditional`; the explicit `beta = 6` matrix-element / Perron / boundary data of the tensor-transfer construction are not yet audited-clean.
+
+This dependency is already registered in the audit ledger (`deps:`); the note here records it in human-readable form so reviewers see the conditional uplink without re-deriving the audit graph.

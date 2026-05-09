@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py
 runner_sha256: 90164d519eb75faa9dbecf58a38c7ed4ff97c41fda875549d2365653bda1a0bf
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.07
+elapsed_sec: 0.19
 status: ok
 ----- stdout -----
 ========================================================================================

@@ -34,6 +34,12 @@ import statistics
 import time
 from dataclasses import dataclass
 
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800` means the
+# audit-lane precompute and live audit runner allow up to 30 min of wall
+# time before recording a timeout. The 120 s default ceiling is too tight
+# under concurrency contention. See `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
 BETA = 0.8
 K = 5.0
 MAX_D_PHYS = 3

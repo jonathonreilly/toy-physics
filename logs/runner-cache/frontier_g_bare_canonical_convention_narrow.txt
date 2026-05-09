@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_g_bare_canonical_convention_narrow.py
-runner_sha256: 7154df77d942c29449cddd752d244b725d919a66e0137facc9504ded49f6602c
+runner_sha256: 47f647c99d22f9005326e961ef32eea7a2e460f1abc068ce20a6f7d3a3fb49b5
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.07
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
 ----- stdout -----
 
 ----------------------------------------------------------------------------------------
@@ -51,11 +51,46 @@ Part 5: declared authority is graph-visible
 ----------------------------------------------------------------------------------------
   [PASS (A)] graph_first_su3_integration_note exists in audit ledger  (effective_status='retained_bounded')
   [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 seeded by audit pipeline  (run docs/audit/scripts/run_pipeline.sh after editing the note)
-  [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 records graph_first_su3 as declared dependency  (deps=['graph_first_su3_integration_note'])
-  [FAIL (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 remains effective-unaudited before independent audit  (effective_status='audited_conditional')
+  [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 records graph_first_su3 as declared dependency  (deps=['g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09', 'g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19', 'graph_first_su3_integration_note'])
+  [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 is not promoted to retained-grade by this runner  (effective_status='unaudited')
+
+----------------------------------------------------------------------------------------
+Part 6: Ward Rep-B-independence + same-1PI forced-determination upgrade
+----------------------------------------------------------------------------------------
+  [PASS (A)] upgrade note G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md exists  (path=docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md)
+  [PASS (A)] Rep-B form factor squared F_Htt^(0)^2 = 1/6 (retained Ward identity W1)  (F^2 = 1/6)
+  [PASS (A)] Rep-B form factor squared is g_bare-independent at g_bare = 1/2  (F^2(g_bare=1/2) = 1/6)
+  [PASS (A)] Rep-B form factor squared is g_bare-independent at g_bare = 1  (F^2(g_bare=1) = 1/6)
+  [PASS (A)] Rep-B form factor squared is g_bare-independent at g_bare = 2  (F^2(g_bare=2) = 1/6)
+  [PASS (A)] Rep-B form factor squared is g_bare-independent at g_bare = 3  (F^2(g_bare=3) = 1/6)
+  [PASS (A)] Rep-B form factor squared is g_bare-independent at g_bare = 7/11  (F^2(g_bare=7/11) = 1/6)
+  [PASS (A)] forced determination: g_bare^2 = 2 N_c · F^2 = 6 · 1/6 = 1 (class A)  (g_bare^2 = 2·3·1/6 = 1)
+  [PASS (A)] same-1PI identity at g_bare = 1/2 requires F^2 = 1/24 != 1/6  (g^2/(2 N_c) = 1/4/6 = 1/24)
+  [PASS (A)] same-1PI identity at g_bare = 2 requires F^2 = 2/3 != 1/6  (g^2/(2 N_c) = 4/6 = 2/3)
+  [PASS (A)] same-1PI identity at g_bare = 3 requires F^2 = 3/2 != 1/6  (g^2/(2 N_c) = 9/6 = 3/2)
+  [PASS (A)] same-1PI identity at g_bare = 7/11 requires F^2 = 49/726 != 1/6  (g^2/(2 N_c) = 49/121/6 = 49/726)
+  [PASS (A)] unique positive g_bare consistent with both retained identities is g_bare = 1  (g_bare = sqrt(1) = 1)
+  [PASS (A)] forced determination consistent with original β = 6 conclusion  (β(g_bare=1, N_c=3) = 6)
+  [PASS (A)] upgrade note contains: 'g_bare Forced (Not Chosen) via Ward Rep-B-Independence'  ()
+  [PASS (A)] upgrade note contains: 'G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md'  ()
+  [PASS (A)] upgrade note contains: 'G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md'  ()
+  [PASS (A)] upgrade note contains: 'F_Htt^(0)(g_bare) = 1/sqrt(6)'  ()
+  [PASS (A)] upgrade note contains: 'F_Htt^(0)(g_bare)^2 = g_bare^2/(2 N_c)'  ()
+  [PASS (A)] upgrade note contains: 'g_bare = 1'  ()
+  [PASS (A)] upgrade note contains: 'forced determination'  ()
+  [PASS (A)] upgrade note contains: 'class (A)'  ()
+  [PASS (A)] upgrade note avoids over-claim: 'Rep-B-independence theorem alone forces g_bare'  ()
+  [PASS (A)] upgrade note avoids over-claim: 'Ward Rep-B-independence alone proves g_bare = 1'  ()
+
+----------------------------------------------------------------------------------------
+Part 7: convention note carries supersession header
+----------------------------------------------------------------------------------------
+  [PASS (A)] convention note carries supersession marker: 'Supersession (2026-05-09)'  ()
+  [PASS (A)] convention note carries supersession marker: 'G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md'  ()
+  [PASS (A)] convention note carries supersession marker: 'forced-determination'  ()
 
 ========================================================================================
-  TOTAL: PASS=26, FAIL=1
+  TOTAL: PASS=54, FAIL=0
 ========================================================================================
 
 ----- stderr -----

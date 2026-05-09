@@ -29,6 +29,19 @@ counts) appear in the registered artifacts:
 - d=4 W=8 companion → [`logs/2026-04-04-4d-wide-distance-law.txt`](../logs/2026-04-04-4d-wide-distance-law.txt)
   (frozen single-run log: Born=4.43e-15, F∝M=1.00, TOWARD 6/6 over z=2..7, early tail b^(-0.54))
 
+### Cached companion-runner stdout (partial, load-bearing for F∝M point checks)
+
+- [`logs/dimensional_gravity_card_d3_2026-05-08.txt`](../logs/dimensional_gravity_card_d3_2026-05-08.txt) — d=3 run reaching steps 1–5: Born=4.42e-15 [PASS], d_TV=0.8366, k=0=0 [PASS], **F∝M=1.00**, Gravity=+0.000232 (TOWARD).
+- [`logs/dimensional_gravity_card_d4_2026-05-08.txt`](../logs/dimensional_gravity_card_d4_2026-05-08.txt) — d=4 run reaching steps 1–5: Born=4.36e-15 [PASS], d_TV=0.7964, k=0=0 [PASS], **F∝M=1.00**, Gravity=+0.000071 (TOWARD).
+
+These cached partial runs back the bolded **F∝M=1.00** entries the auditor
+flagged, plus Born and gravity-sign on both d=3 and d=4. The remaining
+companion-runner steps (decoherence, distance-law tail fit) were not reached
+within this session's wall-time budget and are still backed only by the
+structural certificate runner. A future audit-lane compute pass should run
+`dimensional_gravity_card.py --dim {3,4}` to completion to attach those
+columns explicitly.
+
 ## Review-loop runner attachment (2026-05-03; cache assertions added 2026-05-09)
 
 The 2026-05-03 audit flagged that the table's bolded "1.00" entries were

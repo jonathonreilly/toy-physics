@@ -94,6 +94,48 @@ git diff -- <files>
 For untracked files, include their full content or a concise new-file summary
 in reviewer prompts.
 
+## Stale PR Integration Guard
+
+When landing one or more PRs, protect already-landed science before applying
+any branch content. A PR branch may be based before another PR just landed, so
+checking out whole files from that stale PR head can erase current-main source
+science in shared files.
+
+For every PR before integration:
+
+```bash
+git fetch origin main pull/<N>/head:refs/tmp/pr-<N>
+pr_base=$(git merge-base origin/main refs/tmp/pr-<N>)
+comm -12 \
+  <(git diff --name-only "$pr_base"..origin/main | sort) \
+  <(git diff --name-only "$pr_base"..refs/tmp/pr-<N> | sort)
+```
+
+If the overlap list is non-empty, or if earlier PRs have landed during the
+same review-loop run, do **not** run `git checkout refs/tmp/pr-<N> -- <file>`
+for those paths. Integrate the PR's delta against its merge base with a
+three-way patch, rebase/merge, or cherry-pick source commits, then resolve any
+conflicts by preserving both current-main science and the salvageable PR
+science:
+
+```bash
+git diff --binary "$pr_base"..refs/tmp/pr-<N> -- <source paths> > /tmp/pr<N>.patch
+git apply --3way /tmp/pr<N>.patch
+```
+
+Whole-file checkout from a PR head is allowed only when the file is new on the
+PR or when `git diff --quiet "$pr_base"..origin/main -- <file>` proves current
+`main` has not changed that path since the PR base. For every overlapped
+source path, do a science-loss guard after integration: the current-main diff
+from `pr_base` to `origin/main` must still be represented in the final file.
+If that cannot be verified quickly, stop and treat it as a blocking integration
+hazard rather than risking science loss.
+
+Generated audit JSON/Markdown is a special case: do not hand-merge generated
+files from stale PR heads. Resolve source files first, prefer the current
+`origin/main` generated audit surface, then rerun the audit pipeline and strict
+lint to regenerate it.
+
 ## Reviewer Fanout
 
 On each iteration, set `files_to_review` to the files that changed since their

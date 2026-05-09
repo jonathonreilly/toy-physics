@@ -1,0 +1,30 @@
+===== runner cache v1 =====
+runner: scripts/matched_2d_4d_decoherence.py
+runner_sha256: 8d3d9788424f956292741ae649c7dabbd57578205517969894caf5fe7061cb85
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 49.03
+status: ok
+----- stdout -----
+============================================================================================
+MATCHED 2D vs 4D DECOHERENCE EXPONENT COMPARISON
+  Same modular family, same slit/mass rule, degree-matched 4D radius
+  n_layers=[25, 40, 60, 80, 100], seeds=8, npl=25, gap=3.0
+  2D radius fixed at 3.0
+============================================================================================
+
+     N  2D pur_min   2D <k>  4D pur_min   4D <k>     r4d
+  ------------------------------------------------------------
+    25      0.9341     9.76      0.9647     9.52    4.75
+    40      0.9577     9.98      0.9559     9.69    4.75
+    60      0.9555    10.11      0.9378     9.78    4.75
+    80      0.9667    10.24      0.9812     9.89    4.75
+   100      0.9428    10.25      0.9991     9.89    4.75
+
+  2D matched alpha: -0.158 ± 1.024
+  4D matched alpha: -2.704 ± 0.620
+  alpha delta (4D - 2D): -2.546
+  Verdict: 4D does not flatten the ceiling after degree matching
+
+----- stderr -----
+

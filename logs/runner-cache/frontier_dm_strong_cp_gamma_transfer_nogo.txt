@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py
 runner_sha256: 08258aec9bc8131483c927ad63e861ae8bbca194fe67e07a9c13429bb02e9427
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.13
+elapsed_sec: 0.28
 status: ok
 ----- stdout -----
 ========================================================================================

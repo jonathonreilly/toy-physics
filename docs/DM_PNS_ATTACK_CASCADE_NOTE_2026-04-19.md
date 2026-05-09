@@ -9,6 +9,8 @@ sign-blindness no-go as DPLE (this cycle).
 **Primary runner:**
 `scripts/frontier_dm_pns_attack_cascade.py`
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/frontier_dm_pns_attack_cascade.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 added; runs in 108s under the new budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
 ---
 
 ## 0. Executive summary

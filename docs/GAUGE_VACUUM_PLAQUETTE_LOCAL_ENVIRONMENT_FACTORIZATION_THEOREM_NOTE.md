@@ -210,3 +210,11 @@ python3 scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.
 Expected summary:
 
 - `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+The conditional verdict flagged the asserted operator/surface premises (temporal-gauge mixed-kernel factorization over spatial links, accepted Wilson `3+1` source surface). Those premises are already established in:
+
+- [gauge_vacuum_plaquette_transfer_operator_character_recurrence_note](GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)

@@ -1,0 +1,145 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wilson_bz_corner_hamming_staircase_closed_form_certificate_2026_05_09.py
+runner_sha256: 0be78bbcdb50116a42c8f7dd8acf5ac18f1d167078de278c05a95f68ffc32e82
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.82
+status: ok
+----- stdout -----
+
+========================================================================================
+ frontier_wilson_bz_corner_hamming_staircase_closed_form_certificate_2026_05_09.py
+========================================================================================
+ Closed-form enumeration + lattice-independence certificate
+ Lifts wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08
+ to a full closed-form theorem.
+
+----------------------------------------------------------------------------------------
+ T1. Closed-form enumeration on {0,1}^4 (16 BZ corners)
+----------------------------------------------------------------------------------------
+  [PASS] enumerated 2^4 = 16 corners  (got 16)
+  [PASS] all corners distinct
+  [PASS] sympy exact: cos(0) = 1  (cos(0) = 1)
+  [PASS] sympy exact: cos(pi) = -1  (cos(pi) = -1)
+  [PASS] 1 - cos(0)  =  0  (n_mu=0 contributes 0)
+  [PASS] 1 - cos(pi) =  2  (n_mu=1 contributes 2)
+  [PASS] corner (0, 0, 0, 0): symbolic W/r = 0, closed-form 2*hw = 0
+  [PASS] corner (0, 0, 0, 1): symbolic W/r = 2, closed-form 2*hw = 2
+  [PASS] corner (0, 0, 1, 0): symbolic W/r = 2, closed-form 2*hw = 2
+  [PASS] corner (0, 0, 1, 1): symbolic W/r = 4, closed-form 2*hw = 4
+  [PASS] corner (0, 1, 0, 0): symbolic W/r = 2, closed-form 2*hw = 2
+  [PASS] corner (0, 1, 0, 1): symbolic W/r = 4, closed-form 2*hw = 4
+  [PASS] corner (0, 1, 1, 0): symbolic W/r = 4, closed-form 2*hw = 4
+  [PASS] corner (0, 1, 1, 1): symbolic W/r = 6, closed-form 2*hw = 6
+  [PASS] corner (1, 0, 0, 0): symbolic W/r = 2, closed-form 2*hw = 2
+  [PASS] corner (1, 0, 0, 1): symbolic W/r = 4, closed-form 2*hw = 4
+  [PASS] corner (1, 0, 1, 0): symbolic W/r = 4, closed-form 2*hw = 4
+  [PASS] corner (1, 0, 1, 1): symbolic W/r = 6, closed-form 2*hw = 6
+  [PASS] corner (1, 1, 0, 0): symbolic W/r = 4, closed-form 2*hw = 4
+  [PASS] corner (1, 1, 0, 1): symbolic W/r = 6, closed-form 2*hw = 6
+  [PASS] corner (1, 1, 1, 0): symbolic W/r = 6, closed-form 2*hw = 6
+  [PASS] corner (1, 1, 1, 1): symbolic W/r = 8, closed-form 2*hw = 8
+  [PASS] |{n in {0,1}^4 : hw(n) = 0}| = binomial(4, 0) = 1  (enumerated 1)
+  [PASS] |{n in {0,1}^4 : hw(n) = 1}| = binomial(4, 1) = 4  (enumerated 4)
+  [PASS] |{n in {0,1}^4 : hw(n) = 2}| = binomial(4, 2) = 6  (enumerated 6)
+  [PASS] |{n in {0,1}^4 : hw(n) = 3}| = binomial(4, 3) = 4  (enumerated 4)
+  [PASS] |{n in {0,1}^4 : hw(n) = 4}| = binomial(4, 4) = 1  (enumerated 1)
+  [PASS] sum of multiplicities = 2^4 = 16
+
+----------------------------------------------------------------------------------------
+ T2. S_4 axis-permutation equivariance
+----------------------------------------------------------------------------------------
+  [PASS] |S_4| = 4! = 24 axis permutations
+  [PASS] every S_4 element preserves hw (level sets fixed setwise)  (24/24 preserve hw)
+  [PASS] every S_4 element preserves W(n)/r  (24/24 preserve W)
+  [PASS] C_3[111] is a subgroup of S_4
+  [PASS] C_3[111] preserves every Hamming-weight level setwise
+  [PASS] C_3[111] preserves W(n)/r
+  [PASS] C_3[111] orbit on hw=1 spatial: x -> y -> z -> x  (orbit = (0, 1, 0, 0) -> (0, 0, 1, 0) -> (0, 0, 0, 1))
+  [PASS] C_4[1111] cyclic axis-rotation preserves every level
+  [PASS] S_4 acts transitively on hw=0 (single orbit, size = binomial(4,0))  (1 orbit(s); first orbit size = 1)
+  [PASS] S_4 acts transitively on hw=1 (single orbit, size = binomial(4,1))  (1 orbit(s); first orbit size = 4)
+  [PASS] S_4 acts transitively on hw=2 (single orbit, size = binomial(4,2))  (1 orbit(s); first orbit size = 6)
+  [PASS] S_4 acts transitively on hw=3 (single orbit, size = binomial(4,3))  (1 orbit(s); first orbit size = 4)
+  [PASS] S_4 acts transitively on hw=4 (single orbit, size = binomial(4,4))  (1 orbit(s); first orbit size = 1)
+
+----------------------------------------------------------------------------------------
+ T3. Lattice-independence (rectangular Bravais rescaling)
+----------------------------------------------------------------------------------------
+  [PASS] lattice-independent corner (0, 0, 0, 0): 1 - cos(k*a) summed = 0 (a-free)  (got 0)
+  [PASS] lattice-independent corner (0, 0, 0, 1): 1 - cos(k*a) summed = 2 (a-free)  (got 2)
+  [PASS] lattice-independent corner (0, 0, 1, 0): 1 - cos(k*a) summed = 2 (a-free)  (got 2)
+  [PASS] lattice-independent corner (0, 0, 1, 1): 1 - cos(k*a) summed = 4 (a-free)  (got 4)
+  [PASS] lattice-independent corner (0, 1, 0, 0): 1 - cos(k*a) summed = 2 (a-free)  (got 2)
+  [PASS] lattice-independent corner (0, 1, 0, 1): 1 - cos(k*a) summed = 4 (a-free)  (got 4)
+  [PASS] lattice-independent corner (0, 1, 1, 0): 1 - cos(k*a) summed = 4 (a-free)  (got 4)
+  [PASS] lattice-independent corner (0, 1, 1, 1): 1 - cos(k*a) summed = 6 (a-free)  (got 6)
+  [PASS] lattice-independent corner (1, 0, 0, 0): 1 - cos(k*a) summed = 2 (a-free)  (got 2)
+  [PASS] lattice-independent corner (1, 0, 0, 1): 1 - cos(k*a) summed = 4 (a-free)  (got 4)
+  [PASS] lattice-independent corner (1, 0, 1, 0): 1 - cos(k*a) summed = 4 (a-free)  (got 4)
+  [PASS] lattice-independent corner (1, 0, 1, 1): 1 - cos(k*a) summed = 6 (a-free)  (got 6)
+  [PASS] lattice-independent corner (1, 1, 0, 0): 1 - cos(k*a) summed = 4 (a-free)  (got 4)
+  [PASS] lattice-independent corner (1, 1, 0, 1): 1 - cos(k*a) summed = 6 (a-free)  (got 6)
+  [PASS] lattice-independent corner (1, 1, 1, 0): 1 - cos(k*a) summed = 6 (a-free)  (got 6)
+  [PASS] lattice-independent corner (1, 1, 1, 1): 1 - cos(k*a) summed = 8 (a-free)  (got 8)
+  [PASS] all 16 corners on lattice diag((1, 1, 1, 1)) yield closed-form 2*hw
+  [PASS] all 16 corners on lattice diag((2/3, 7/5, 11/4, 13/9)) yield closed-form 2*hw
+  [PASS] all 16 corners on lattice diag((sqrt(2), sqrt(3), sqrt(5), sqrt(7))) yield closed-form 2*hw
+  [PASS] BZ-corner labels n in {0,1}^4 form F_2^4 (bit-vector quotient)
+  [PASS] Hamming weight = sum mod 0 (linear functional on F_2^4 over Z)
+
+----------------------------------------------------------------------------------------
+ T4. Sister Z^3 corollary: spatial {0,1}^3 with C_3[111]
+----------------------------------------------------------------------------------------
+  [PASS] enumerated 2^3 = 8 spatial BZ corners
+  [PASS] |{n in {0,1}^3 : hw(n) = 0}| = binomial(3, 0) = 1
+  [PASS] |{n in {0,1}^3 : hw(n) = 1}| = binomial(3, 1) = 3
+  [PASS] |{n in {0,1}^3 : hw(n) = 2}| = binomial(3, 2) = 3
+  [PASS] |{n in {0,1}^3 : hw(n) = 3}| = binomial(3, 3) = 1
+  [PASS] spatial multiplicity tuple (1, 3, 3, 1) sums to 2^3 = 8
+  [PASS] spatial C_3[111] perm (0, 1, 2) preserves Hamming weight
+  [PASS] spatial C_3[111] perm (1, 2, 0) preserves Hamming weight
+  [PASS] spatial C_3[111] perm (2, 0, 1) preserves Hamming weight
+  [PASS] C_3[111] acts transitively on the hw=1 spatial triplet  (orbit size = 3)
+
+----------------------------------------------------------------------------------------
+ Note structure (closed-form note)
+----------------------------------------------------------------------------------------
+  [PASS] note exists  (path = docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md)
+  [PASS] note contains: title  (marker = 'Wilson Term BZ-Corner Hamming-Weight Staircase Closed-Form')
+  [PASS] note contains: claim_type bounded_theorem token  (marker = 'Claim type:** bounded_theorem')
+  [PASS] note contains: source-note authority phrase  (marker = 'source-note proposal only')
+  [PASS] note contains: Theorem T1  (marker = '## T1')
+  [PASS] note contains: Theorem T2  (marker = '## T2')
+  [PASS] note contains: Theorem T3  (marker = '## T3')
+  [PASS] note contains: Theorem T4  (marker = '## T4')
+  [PASS] note contains: closed-form formula 2*hw(n)  (marker = '2 · hw(n)')
+  [PASS] note contains: multiplicity tuple (1, 4, 6, 4, 1)  (marker = '(1, 4, 6, 4, 1)')
+  [PASS] note contains: S_4 equivariance phrase  (marker = 'S_4 axis-permutation')
+  [PASS] note contains: C_3[111] phrase  (marker = 'C_3[111]')
+  [PASS] note contains: F_2^4 quotient structure phrase  (marker = 'F_2^4')
+  [PASS] note contains: lattice-independence phrase  (marker = 'lattice-independent')
+  [PASS] note contains: companion bounded note cited  (marker = 'WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08')
+
+----------------------------------------------------------------------------------------
+ Bounded note cross-link to closed-form note
+----------------------------------------------------------------------------------------
+  [PASS] bounded note exists and references the new closed-form companion  (path = docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md)
+
+----------------------------------------------------------------------------------------
+ Emit JSON certificate
+----------------------------------------------------------------------------------------
+  [PASS] wrote JSON certificate to outputs/wilson_bz_corner_hamming_staircase_certificate_2026_05_09.json  (size = 10480 bytes)
+
+========================================================================================
+ TOTAL: PASS=89, FAIL=0
+========================================================================================
+
+ VERDICT: closed-form theorem certified.
+ T1 closed-form enumeration: W(n)/r = 2*hw(n), multiplicities binomial(4,k).
+ T2 S_4 equivariance verified (24/24 perms; C_3[111] and C_4[1111] sub-actions).
+ T3 lattice-independence verified symbolically for any rectangular Bravais L.
+ T4 sister Z^3 corollary verified (1+3+3+1 with C_3[111] transitivity).
+
+----- stderr -----
+

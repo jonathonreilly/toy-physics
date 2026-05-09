@@ -133,3 +133,11 @@ python3 scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.p
 Expected summary:
 
 - `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+The conditional verdict flagged the asserted endpoint/asymptotic Wilson-surface premises (`P_L(0) = 0`, `lim_(t -> infinity) P_L(t) = 1` by compact Laplace concentration on the maximum-action gauge orbit). The compact-Laplace concentration argument (and the `P_1plaq(beta) -> 1` endpoint) is established in:
+
+- [gauge_vacuum_plaquette_reduction_existence_theorem_note](GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md) — currently `audited_conditional`; the retained-status of this row is therefore **blocked on** that upstream conditional. The local algebra of this note (finite Taylor support implies polynomial `K(t)`) is unchanged by that uplink.

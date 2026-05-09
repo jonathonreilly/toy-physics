@@ -1,11 +1,112 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_split2_dense_grid_lipschitz_dominance_support_2026_04_21.py
-runner_sha256: 4539236051800e94ebb9928f7c252ed6a543125197e6dd6191295c101f07e5df
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 33e1388ae18ab8d17ab2d63f9b4ca04759384d0de94c00f3d3f084dbfec15f6d
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 540.45
+status: ok
 ----- stdout -----
+
+========================================================================================
+Split-2 upper-face dense-grid dominance support
+========================================================================================
+  Λ_+* (preferred recovered repair floor) = 1.586874714730
+  η threshold for transport closure = 1.0
+  carrier-side goal: η_best < 1.0 throughout each box
+
+========================================================================================
+Box analysis: CAP_BOX
+========================================================================================
+  m:     [-0.1450, -0.1400]
+  delta: [1.1835, 1.1935]
+  slack: [0.0145, 0.0245]
+  grid:  51 × 51 × 51 = 132,651 samples
+  grid scan time: 272.5s
+  n_feasible (Λ_+ ≤ Λ_+*): 40,193 (30.3%)
+  max η on lower-repair grid: 0.884524150717
+  max η point: (-0.14, 1.1885, 0.019700000000000002)
+  Lipschitz L_m: 0.1764, L_delta: 0.1483, L_slack: 0.0536
+  L_total: 0.3783
+  cell half-distance excess: 0.000029
+  certified upper bound on η_best: 0.884553160564
+  margin to transport closure (η=1): 0.115446839436
+  running 40-seed optimization to search for hidden rivals...
+  seed-optimization time: 13.2s
+  best η found by seeded optimization: 0.884530446113
+  best point: (-0.1400000013639935, 1.1884204555828939, 0.021331681869516707)
+
+========================================================================================
+Box analysis: ENDPOINT_BOX
+========================================================================================
+  m:     [-0.1450, -0.1400]
+  delta: [1.1839, 1.1890]
+  slack: [0.0000, 0.0050]
+  grid:  51 × 51 × 51 = 132,651 samples
+  grid scan time: 239.0s
+  n_feasible (Λ_+ ≤ Λ_+*): 80,855 (61.0%)
+  max η on lower-repair grid: 0.883985022069
+  max η point: (-0.14, 1.188898, 0.005)
+  Lipschitz L_m: 0.2035, L_delta: 0.1121, L_slack: 0.0904
+  L_total: 0.4060
+  cell half-distance excess: 0.000020
+  certified upper bound on η_best: 0.884005432319
+  margin to transport closure (η=1): 0.115994567681
+  running 40-seed optimization to search for hidden rivals...
+  seed-optimization time: 13.9s
+  best η found by seeded optimization: 0.883987000125
+  best point: (-0.14000776137314835, 1.1889292107690035, 0.004999999192287916)
+
+========================================================================================
+Part C — certification assembly
+========================================================================================
+[PASS] C.1 CAP_BOX dense-grid max η_best < 1 with margin > 0.1
+       max η = 0.884524, margin = 0.115476
+[PASS] C.2 CAP_BOX seeded-optimization best η < 1 with margin, consistent with grid
+       seed-opt max = 0.884530, grid max = 0.884524
+[PASS] C.3 CAP_BOX empirical-Lipschitz upper bound max η_best < 1
+       certified max = 0.884553, margin = 0.115447
+[PASS] C.4 ENDPOINT_BOX dense-grid max η_best < 1 with margin > 0.1
+       max η = 0.883985, margin = 0.116015
+[PASS] C.5 ENDPOINT_BOX seeded-optimization best η < 1, consistent with grid
+       seed-opt max = 0.883987, grid max = 0.883985
+[PASS] C.6 ENDPOINT_BOX empirical-Lipschitz upper bound max η_best < 1
+       certified max = 0.884005, margin = 0.115995
+[PASS] C.7 Both CAP_BOX and ENDPOINT_BOX have feasible (lower-repair) points
+       CAP_BOX feasible: 40,193; ENDPOINT_BOX feasible: 80,855
+[PASS] C.8 Grid density 51×51×51 is 12.5× denser per direction than existing branch (11×31×31)
+       Total samples: 132,651 per box (vs 10,571 per box previously)
+[PASS] C.9 No rival with η_best ≥ 1 found by seeded optimization in either box
+       CAP best η = 0.884530, ENDPOINT best η = 0.883987
+
+========================================================================================
+SUMMARY
+========================================================================================
+PASSED: 9/9
+  [PASS] C.1 CAP_BOX dense-grid max η_best < 1 with margin > 0.1
+  [PASS] C.2 CAP_BOX seeded-optimization best η < 1 with margin, consistent with grid
+  [PASS] C.3 CAP_BOX empirical-Lipschitz upper bound max η_best < 1
+  [PASS] C.4 ENDPOINT_BOX dense-grid max η_best < 1 with margin > 0.1
+  [PASS] C.5 ENDPOINT_BOX seeded-optimization best η < 1, consistent with grid
+  [PASS] C.6 ENDPOINT_BOX empirical-Lipschitz upper bound max η_best < 1
+  [PASS] C.7 Both CAP_BOX and ENDPOINT_BOX have feasible (lower-repair) points
+  [PASS] C.8 Grid density 51×51×51 is 12.5× denser per direction than existing branch (11×31×31)
+  [PASS] C.9 No rival with η_best ≥ 1 found by seeded optimization in either box
+
+VERDICT:
+  Strong carrier-side support on both split-2 upper-face neighborhoods
+  at dense-grid plus empirical-Lipschitz rigor.
+
+  CAP_BOX:
+    grid max η = 0.884524
+    certified max = 0.884553 < 1.0 (margin 0.115447)
+  ENDPOINT_BOX:
+    grid max η = 0.883985
+    certified max = 0.884005 < 1.0 (margin 0.115995)
+
+  This materially sharpens the residual carrier-side blocker, but it does
+  not yet close the interval-certified exact-carrier dominance/completeness
+  theorem target. Full rigorous enclosure of the transport pipeline
+  remains open.
 
 ----- stderr -----
 

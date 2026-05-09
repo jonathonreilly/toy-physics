@@ -4,6 +4,11 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / nonlinear invariant-family theorem step
+**Runner:** `scripts/frontier_universal_gr_invariant_nonlinear_completion.py`
+**Cache:** `logs/runner-cache/frontier_universal_gr_invariant_nonlinear_completion.txt`
+  (registration only; runner numerically demonstrates the invariant-family
+  glue identity but does not by itself close the audit dependency edges
+  flagged below).
 
 ## Verdict
 
@@ -123,3 +128,16 @@ But it is stronger than the previous state in exactly the way that matters:
 - the invariant direct universal branch is no longer merely quadratic at one
   background;
 - it is an exact nonlinear family over all positive invariant backgrounds.
+
+**Current audit-ledger conditional (per 2026-05-05 verdict):** the algebraic
+convexity identity is accepted as written, but the three load-bearing imports
+- exact all-orders observable generator giving `W_iso(a,b)=const+log a+3 log b`,
+- exact SPD slice generator `Lambda_R`,
+- invariant-family glue law `K_GR^iso(D)=M_D ⊗ Lambda_R`,
+are referenced descriptively rather than wired to retained-grade direct
+dependency edges in the audit ledger (`deps: []`, `direct_in_degree: 2`).
+The verdict is therefore `audited_conditional` until those three premises
+are either supplied as cited authorities (each retained-grade) or replaced
+by a single self-contained restricted-packet derivation. Registering the
+runner here does not move that verdict; it only documents that the
+numerical invariant-family check is reproducible.

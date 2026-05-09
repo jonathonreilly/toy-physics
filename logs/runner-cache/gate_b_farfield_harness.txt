@@ -1,11 +1,29 @@
 ===== runner cache v1 =====
 runner: scripts/gate_b_farfield_harness.py
-runner_sha256: b21c5294ab930db49ed5fe7ebc1bd68791c901ed9af93cc78cbfb485fa7339cc
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 366ba73255b74b1775847ea5eaba9ac004fc4c3bf2a60a710102330f4900947a
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 1043.14
+status: ok
 ----- stdout -----
+=================================================================
+GATE B FAR-FIELD HARNESS
+  Growth: template + drift + restore + NN connectivity
+  h=0.5, W=8, NL=25, 12 seeds, z_masses=[3, 4, 5]
+=================================================================
+  drift=0.3,rest=0.5       : 36/36 TOWARD (100%), F~M=1.00
+  drift=0.2,rest=0.7       : 36/36 TOWARD (100%), F~M=1.00
+  drift=0.1,rest=0.9       : 36/36 TOWARD (100%), F~M=1.00
+  exact grid               : 36/36 TOWARD (100%), F~M=1.00
+
+Total time: 1043s
+
+SAFE INTERPRETATION
+  This harness tests far-field (z>=3) gravity on grown geometry.
+  If TOWARD > 90%: the growth rule works in the far field.
+  If mixed: the growth rule is noisy even in the far field.
+  F~M should match the fixed-lattice value (1.00) if the
+  universality class transfers to grown geometry.
 
 ----- stderr -----
 
