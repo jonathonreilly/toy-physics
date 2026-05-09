@@ -4921,6 +4921,18 @@
       "to": "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
     },
     {
+      "from": "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_projector_interface_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
+      "to": "pmns_active_four_real_source_from_transport_note"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
+      "to": "pmns_sector_orientation_orbit_note"
+    },
+    {
       "from": "dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17",
       "to": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16"
     },
@@ -4939,6 +4951,22 @@
     {
       "from": "dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17",
       "to": "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16",
+      "to": "dm_leptogenesis_full_microscopic_reduction_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16",
+      "to": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16",
+      "to": "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
     },
     {
       "from": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
@@ -5147,6 +5175,18 @@
     {
       "from": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
       "to": "dm_neutrino_weak_vector_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
+      "to": "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
+      "to": "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
+      "to": "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
     },
     {
       "from": "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
@@ -6169,6 +6209,22 @@
       "to": "dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15"
     },
     {
+      "from": "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
+      "to": "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
+      "to": "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
+      "to": "dm_neutrino_z3_circulant_cp_tool_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
+      "to": "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15"
+    },
+    {
       "from": "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15",
       "to": "dm_neutrino_z3_circulant_cp_tool_note_2026-04-15"
     },
@@ -6191,6 +6247,14 @@
     {
       "from": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
       "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+      "to": "dm_neutrino_triplet_character_source_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+      "to": "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15"
     },
     {
       "from": "dm_neutrino_z3_circulant_cp_tool_note_2026-04-15",
@@ -6235,6 +6299,18 @@
     {
       "from": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
       "to": "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21"
+    },
+    {
+      "from": "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
+      "to": "dm_pmns_asymptotic_source_no_go_note_2026-04-20"
+    },
+    {
+      "from": "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
+      "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
+      "to": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
     },
     {
       "from": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
@@ -15130,7 +15206,15 @@
     },
     {
       "from": "pmns_oriented_cycle_reduced_channel_nonselection_note",
+      "to": "pmns_oriented_cycle_selection_structure_note"
+    },
+    {
+      "from": "pmns_oriented_cycle_reduced_channel_nonselection_note",
       "to": "pmns_oriented_cycle_channel_value_law_note"
+    },
+    {
+      "from": "pmns_oriented_cycle_reduced_channel_nonselection_note",
+      "to": "pmns_active_four_real_source_from_transport_note"
     },
     {
       "from": "pmns_oriented_cycle_selection_structure_note",
@@ -37272,8 +37356,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "20986702928075134d0a5ff7d718976fe36e5bc395cb169ed0ec85de9e15b38d",
+      "deps": [
+        "dm_leptogenesis_pmns_projector_interface_note_2026-04-16",
+        "pmns_active_four_real_source_from_transport_note",
+        "pmns_sector_orientation_orbit_note"
+      ],
+      "note_hash": "c24ebb5cadbb62cb9cf5b981fa497ee2474cdce87af4bfc1483ceaa1bb70dcc3",
       "path": "docs/DM_LEPTOGENESIS_PMNS_ACTIVE_PROJECTOR_REDUCTION_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py",
       "title": "DM Leptogenesis PMNS Active-Projector Reduction"
@@ -37322,8 +37410,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "1a1c8fb1218ea4bb645af72e4652a81a9406b503c400666661a0054ef8479853",
+      "deps": [
+        "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16",
+        "dm_leptogenesis_full_microscopic_reduction_note_2026-04-16",
+        "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+        "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
+      ],
+      "note_hash": "c1b6972457c2165e818ad58a2f76d471ac398b4692336dbce54e3c2a8103b82d",
       "path": "docs/DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_PROJECTED_SOURCE_SELECTOR_THEOREM_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_pmns_constructive_projected_source_selector_theorem.py",
       "title": "DM Leptogenesis PMNS Constructive Projected-Source Selector Theorem"
@@ -37783,8 +37876,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "60b25fb499899b58c5a9d81d23d9fe1f12b06141eb6f2189204faa17b41cb1d2",
+      "deps": [
+        "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
+        "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
+        "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
+      ],
+      "note_hash": "96c1da960ac83620341c1e54ca569182fd47118e07c883e60a8d466ce05b0ace",
       "path": "docs/DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_PREIMAGE_BUNDLE_THEOREM_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_exact_h_source_surface_preimage_bundle_theorem.py",
       "title": "DM Neutrino Exact H-Side Source-Surface Preimage-Bundle Theorem"
@@ -38063,7 +38160,7 @@
         "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16"
       ],
-      "note_hash": "40f781782408b3913240f5f4fd8cbc5c09a5e2acf64b8354d7870b0a777dcedd",
+      "note_hash": "02c579ae839b119e89421c2fc0fdf22eb975c11b983a478704e1984f381c44ea",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py",
       "title": "DM Neutrino Source-Surface Active Affine Point-Selection Boundary"
@@ -38096,7 +38193,7 @@
         "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16"
       ],
-      "note_hash": "31c382f6b77725d95627a24eab7af27a9cbfa0da3f665e0ab5cda4c3e1286874",
+      "note_hash": "4bcb6f090d26a41587d1e05ba156200ab095c1a8cb825ef0daaca120ac2801f0",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py",
       "title": "DM Neutrino Source-Surface Active Half-Plane Theorem"
@@ -38656,9 +38753,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "22e7ddfe30af2f5e2ad546a93ff20af0880a27896590dcc73332aebaaaf977c2",
+      "note_hash": "74527ac68fc8d364adbf8588a8a6e751b782e505c16f0c2d88965b03fdad5906",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py",
       "title": "DM Neutrino Source-Surface Split-2 Upper-m Slack-Floor Endpoint Candidate"
     },
     "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16": {
@@ -38708,7 +38805,7 @@
         "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
       ],
-      "note_hash": "8633fc22b6a6b4f7a1e91ce57aeca04edd8cb208ab45ec086316f0543c455369",
+      "note_hash": "85a4ec98a6c54c1c3f3d17eb58104d88470f49cf76e18e94d31303b423d70769",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py",
       "title": "DM Neutrino Source-Surface `Z_3` Doublet-Block Point-Selection Theorem"
@@ -38828,8 +38925,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "4a952d2441da9b7af716295ef6b917ba3fabbeb293f65a2d6ffe5796322d37a6",
+      "deps": [
+        "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15",
+        "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15",
+        "dm_neutrino_z3_circulant_cp_tool_note_2026-04-15",
+        "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15"
+      ],
+      "note_hash": "60136795e3ea51da199dea14fd6a1f9483a96135c42c8f84550672ea285fb088",
       "path": "docs/DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_two_higgs_minimality_theorem.py",
       "title": "DM Neutrino Two-Higgs Minimality Theorem"
@@ -38925,8 +39027,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "0b3d710458ccdea8dd7c6687ab5827d4fc1bbfc98b3f051a2086a1465e432f26",
+      "deps": [
+        "dm_neutrino_triplet_character_source_theorem_note_2026-04-15",
+        "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15"
+      ],
+      "note_hash": "f7474ee93c0175cd5a335daea6acc7d2baa5d27d2e6055955dc3f6af97285424",
       "path": "docs/DM_NEUTRINO_Z3_CHARACTER_TRANSFER_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py",
       "title": "DM Neutrino `Z_3` Character-Transfer Theorem"
@@ -39005,8 +39110,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "abf445f44a706c7ae2c9576db37922b14abd2a3c21a5bb9118e65475bb0096fb",
+      "deps": [
+        "dm_pmns_asymptotic_source_no_go_note_2026-04-20",
+        "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
+      ],
+      "note_hash": "ad781dd16714c9baef832b6d744e357895d23bb1db873003849a1ae606709fef",
       "path": "docs/DM_PMNS_CHAMBER_SPECTRAL_COMPLETENESS_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py",
       "title": "DM PMNS Chamber Spectral Completeness Theorem"
@@ -50655,9 +50764,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "pmns_oriented_cycle_channel_value_law_note"
+        "pmns_oriented_cycle_selection_structure_note",
+        "pmns_oriented_cycle_channel_value_law_note",
+        "pmns_active_four_real_source_from_transport_note"
       ],
-      "note_hash": "5737edd414853f896efca29d3f02ce267510ad975f21b2104b9d600274412bf3",
+      "note_hash": "9ab5a05cfce00689c21c63cb994b65aa8812bb89c56cda5e44f3f4b033dbedc9",
       "path": "docs/PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py",
       "title": "PMNS Oriented Cycle Reduced-Channel Nonselection"
@@ -62252,10 +62363,8 @@
     "dm_leptogenesis_hrad_theorem_note_2026-04-16",
     "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
     "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16",
-    "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
     "dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16",
     "dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16",
-    "dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16",
     "dm_leptogenesis_pmns_even_response_sole_axiom_boundary_note_2026-04-16",
     "dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16",
     "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16",
@@ -62278,7 +62387,6 @@
     "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15",
     "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
     "dm_neutrino_cascade_geometry_note_2026-04-14",
-    "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
     "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
     "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
     "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
@@ -62292,15 +62400,12 @@
     "dm_neutrino_triplet_normalization_target_note_2026-04-15",
     "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
     "dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15",
-    "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
     "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
     "dm_neutrino_weak_matching_obstruction_note_2026-04-15",
     "dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15",
     "dm_neutrino_weak_vector_theorem_note_2026-04-15",
-    "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
     "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15",
     "dm_pmns_asymptotic_source_no_go_note_2026-04-20",
-    "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
     "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
     "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
     "dm_pns_attack_cascade_note_2026-04-19",
@@ -62863,10 +62968,10 @@
       "open_gate": 112,
       "positive_theorem": 612
     },
-    "edge_count": 7744,
-    "leaf_count": 534,
+    "edge_count": 7765,
+    "leaf_count": 532,
     "node_count": 2010,
-    "root_count": 808,
-    "runners_with_path": 1609
+    "root_count": 802,
+    "runners_with_path": 1610
   }
 }

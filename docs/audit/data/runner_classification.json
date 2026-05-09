@@ -4752,6 +4752,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py"
     },
+    "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py"
+    },
     "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16": {
       "assert_count": 1,
       "counts": {
@@ -26328,6 +26340,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py": {
+      "assert_count": 1,
+      "claims": [
+        "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -42137,12 +42164,12 @@
     "dominant_class_distribution": {
       "A": 22,
       "B": 174,
-      "C": 638,
+      "C": 639,
       "D": 243,
       "none": 426
     },
-    "runners_classified": 1503,
-    "runners_with_C": 773,
+    "runners_classified": 1504,
+    "runners_with_C": 774,
     "runners_with_D": 397
   }
 }

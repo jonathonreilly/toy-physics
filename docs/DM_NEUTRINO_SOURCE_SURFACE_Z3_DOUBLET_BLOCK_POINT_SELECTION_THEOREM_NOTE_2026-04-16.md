@@ -5,6 +5,7 @@
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py`
+**Primary runner:** `scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py`
 
 ## Question
 

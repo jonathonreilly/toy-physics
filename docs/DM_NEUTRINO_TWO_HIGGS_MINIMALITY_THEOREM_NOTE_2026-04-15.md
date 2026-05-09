@@ -3,6 +3,7 @@
 **Date:** 2026-04-15  
 **Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_two_higgs_minimality_theorem.py`
+**Primary runner:** `scripts/frontier_dm_neutrino_two_higgs_minimality_theorem.py`
 
 ## Question
 
@@ -32,14 +33,16 @@ stack.
 
 This theorem combines:
 
-- the single-Higgs monomial obstruction
-- the two-Higgs neutrino escape theorem from the local neutrino lane
-- the universal-Yukawa leptogenesis no-go
-- the DM odd-circulant CP tool
-- the DM two-Higgs right-Gram bridge theorem
+- [DM_LEPTOGENESIS_UNIVERSAL_YUKAWA_NO_GO_NOTE_2026-04-15.md](./DM_LEPTOGENESIS_UNIVERSAL_YUKAWA_NO_GO_NOTE_2026-04-15.md) — universal-Yukawa leptogenesis no-go
+- [DM_NEUTRINO_TWO_HIGGS_RIGHT_GRAM_BRIDGE_NOTE_2026-04-15.md](./DM_NEUTRINO_TWO_HIGGS_RIGHT_GRAM_BRIDGE_NOTE_2026-04-15.md) — DM two-Higgs right-Gram bridge theorem
+- [DM_NEUTRINO_Z3_CIRCULANT_CP_TOOL_NOTE_2026-04-15.md](./DM_NEUTRINO_Z3_CIRCULANT_CP_TOOL_NOTE_2026-04-15.md) — exact `Z_3` circulant CP tool (the algebraic target underlying the odd-circulant CP family)
+- [DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md) — DM odd-circulant `Z_2` slot theorem (the odd-circulant CP-supporting carrier)
 
-The point is to turn those separate facts into one DM-side route-selection
-statement.
+The single-Higgs monomial obstruction (every fixed-charge single-Higgs lane
+gives `Y = D P_q` with `P_q` a support permutation, hence `Y^dag Y` diagonal)
+and the repeated-charge collapse (`D_a P_q + D_b P_q = (D_a + D_b) P_q`) are
+elementary and proved in-line in the body. The point is to turn those
+separate facts into one DM-side route-selection statement.
 
 ## Single-Higgs and repeated-charge lanes are too small
 

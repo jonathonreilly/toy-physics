@@ -4,6 +4,24 @@
 **Status:** exact theorem on the activation law of the invented phase-lift
 family  
 **Script:** `scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py`
+**Primary runner:** `scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py`
+
+## Inputs
+
+This note depends on the non-cyclic authorities below. The phase-lift
+mixed-bridge note is context, not a one-hop graph dependency here, because
+that note already cites this character-transfer theorem.
+
+- [DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md)
+- [DM_NEUTRINO_WEAK_TRIPLET_TRANSFER_CLASS_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_WEAK_TRIPLET_TRANSFER_CLASS_THEOREM_NOTE_2026-04-15.md)
+- `DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md` (context)
+
+The phase-lift mixed-bridge family supplies the `K_lambda = d I + r (e^{i lambda
+delta_src} S + e^{-i lambda delta_src} S^2)` parametrisation; the triplet
+character-source theorem supplies the exact weak-only source phase
+`delta_src = 2pi/3` and the local continuity strip `|lambda| <= 1`; the
+weak-triplet transfer-class theorem supplies the established source orientation
+`delta_src = +2pi/3` that selects `lambda = +1` as the physical branch.
 
 ## Question
 
@@ -44,7 +62,7 @@ source-faithful branches are
 
 `lambda in {-1, 0, +1}`.
 
-With the retained source orientation `delta_src = +2pi/3`, the nontrivial
+With the established source orientation `delta_src = +2pi/3`, the nontrivial
 physical branch is
 
 `lambda = +1`,

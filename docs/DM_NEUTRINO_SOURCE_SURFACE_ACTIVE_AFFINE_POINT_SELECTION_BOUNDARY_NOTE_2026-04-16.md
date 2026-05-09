@@ -5,6 +5,7 @@
 **Atlas placement:** canonical toolkit on `main` at
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py`
+**Primary runner:** `scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py`
 
 ## Question
 
