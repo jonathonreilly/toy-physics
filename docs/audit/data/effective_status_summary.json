@@ -38,7 +38,7 @@
   ],
   "cycles_detected": 36,
   "effective_status_counts": {
-    "audited_conditional": 414,
+    "audited_conditional": 415,
     "audited_failed": 8,
     "audited_numerical_match": 20,
     "audited_renaming": 25,
@@ -50,11 +50,11 @@
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 49,
     "open_gate": 11,
-    "retained": 68,
+    "retained": 69,
     "retained_bounded": 237,
     "retained_no_go": 122,
     "retained_pending_chain": 2,
-    "unaudited": 864
+    "unaudited": 862
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
