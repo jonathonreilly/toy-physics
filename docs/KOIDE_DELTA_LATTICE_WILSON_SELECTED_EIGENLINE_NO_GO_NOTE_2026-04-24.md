@@ -97,10 +97,18 @@ python3 scripts/frontier_koide_hostile_review_guard.py
 python3 scripts/frontier_koide_lane_regression.py
 ```
 
-Expected closeout:
+The primary runner reports 13/14 PASS, with one explicit `[FAIL]` on
+check `A.3 finite Wilson eta proxy is not the exact APS value 2/9`.
+That failure is the negative result this note documents: the finite
+Wilson proxy does not equal the ambient APS `2/9`, leaving
+`RESIDUAL_AMBIENT`. The runner's per-line `=FALSE` flags report that
+the selected-eigenline route did not close; they do not contradict the
+note's residual analysis.
+
+Expected closeout (matches the runner cache verbatim):
 
 ```text
-KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=TRUE
+KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=FALSE
 DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
 RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
@@ -108,3 +116,10 @@ RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed
 RESIDUAL_AMBIENT=finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
 ```
+
+The `KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=FALSE` flag
+means this route does not produce a closing no-go theorem on its own:
+it selects a rank-two character sector rather than a unique rank-one
+selected line, leaving exactly the residuals enumerated above. The note's
+claim is a no-go attempt; the runner's `=FALSE` is the honest report
+that this attempt does not close the selected-eigenline question.

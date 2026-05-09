@@ -10,13 +10,36 @@ deleted by commit `d2e754fdc` (2026-04-16, "Trim DM package to science-only
 surface").
 **Lane:** audit-hygiene. No physics claim is added or removed.
 
+## Inputs (registered runners with caches)
+
+The hygiene claim "69 PASS / 0 FAIL across 8 affected runners" is
+verified by the eight runners' own SHA-pinned caches under
+`logs/runner-cache/`. Each runner is registered with its own audit row
+and cache; this hygiene note does not add a new aggregating runner. The
+cited per-runner caches are:
+
+- `logs/runner-cache/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.txt`
+- `logs/runner-cache/frontier_dm_neutrino_triplet_normalization_target.txt`
+- `logs/runner-cache/frontier_dm_neutrino_triplet_character_source_theorem.txt`
+- `logs/runner-cache/frontier_dm_neutrino_triplet_even_response_theorem.txt`
+- `logs/runner-cache/frontier_dm_neutrino_breaking_triplet_cp_theorem.txt`
+- `logs/runner-cache/frontier_dm_neutrino_veven_bosonic_normalization_theorem.txt`
+- `logs/runner-cache/frontier_dm_leptogenesis_projection_theorem.txt`
+- `logs/runner-cache/frontier_dm_leptogenesis_washout_axiom_boundary.txt`
+
+Each cache reports its own per-runner PASS/FAIL summary; the aggregate
+"69 PASS / 0 FAIL" line in §2 is the sum of those eight per-runner
+summaries (13+6+6+6+8+10+10+10 = 69). The hygiene note does not gate
+on a single aggregating runner; the per-runner caches are the audit
+trail.
+
 ---
 
 ## 0. Why this note exists
 
 Eight runners under `scripts/` carried `read("docs/X.md")` calls referencing
 notes deleted by the 2026-04-16 trim commit. Each runner's audit row was
-landing as `audited_conditional` or `audited_failed` because:
+landing with a non-clean verdict because:
 
 - The audit pipeline's restricted environment (and any local rerun) raised
   `FileNotFoundError` for the deleted-note path.
@@ -85,12 +108,11 @@ Total: **69 PASS / 0 FAIL** across the cluster.
 
 ## 3. What this changes for the audit ledger
 
-Each affected claim row's `audit_status` was `audited_conditional` or
-`audited_failed` with verdict text "primary runner returned nonzero in the
-restricted audit environment". After this PR lands and the audit pipeline
-re-runs, these rows should re-audit as either `audited_clean` (if the
-content checks now close cleanly) or remain conditional for substantive
-reasons unrelated to the stale-path bug.
+Each affected claim row previously carried an audit verdict tied to the
+runner failing in the restricted audit environment. After this hygiene
+repair, the independent audit lane owns any future verdict; this note only
+removes the stale-path runner noise so future reviews can decide on the
+substantive content.
 
 Importantly: **all eight affected claim rows are leaf-criticality with
 author-declared `current_status` of `support` or `bounded`.** Clearing the

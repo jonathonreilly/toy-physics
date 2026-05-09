@@ -8,6 +8,34 @@ power-law step
 **Runner:** `scripts/frontier_dm_candidate_mass_window_theorem.py` ([scripts/frontier_dm_candidate_mass_window_theorem.py](../scripts/frontier_dm_candidate_mass_window_theorem.py))
 **Runner result:** `PASS = 15, FAIL = 0`
 
+## Inputs (cited authorities)
+
+The framework mass values `(M1, M2, M3)` and the one-flavor transport
+ratio `η/η_obs = 0.189` are imported from the upstream DM neutrino lane;
+this note does **not** re-derive the `ALPHA_LM` power-law generator or
+the exact-kernel closure. The cited authorities are:
+
+- [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+  — the exact source-and-CP-channel package and the consistent
+  benchmark `η/η_obs ≈ 0.558` heavy-basis number; this note's
+  one-flavor `0.189` is the radiation-branch projection.
+- [`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+  and [`DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md)
+  — the upstream `ALPHA_LM` power-law `(k_A, k_B)` generators that
+  fix the `(M1, M2, M3)` spectrum entries.
+- [`COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md`](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
+  — the upstream cosmology-side mass-spectrum reading on the same
+  `ALPHA_LM` ladder.
+
+The Davidson-Ibarra bound `M_DI ≈ 2.4 × 10^8 GeV` is a literature input
+(Davidson-Ibarra 2002), not a framework derivation; this note imports it
+to characterise viability and does not claim its derivation. The
+transport-gap factor and the `M_N_target = 4.002 × M1` ratio are
+characterisations of the imported numbers, not new first-principles
+derivations from physical `Cl(3)` on `Z^3`. The bounded scope is the
+power-law-position characterisation `k_target ≈ 7.44`, which is
+arithmetic over the imported values.
+
 ## What this theorem establishes
 
 The framework derives the heavy right-handed neutrino (DM candidate) mass

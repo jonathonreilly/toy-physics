@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_emergent_geometry_v2.py
+runner_sha256: 0766c1fafda012b7e7a76380dcc1e75d2ba93352c655d5d1e115a20643064eb4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 37.09
+status: ok
+----- stdout -----
+======================================================================
+EMERGENT GEOMETRY v2 — FOUR QUESTIONS
+======================================================================
+Retained growth rule: matter-coupled attachment with k=4 neighbors.
+
+--- Q1: Node Density vs Gravitational Potential ---
+  Seed 42, G=100: density vs Phi R^2=0.5788, slope=224.15
+  (Positive slope is the retained sign criterion; strength is seed-dependent.)
+
+--- Q1b: Multi-seed Density-Phi Stability ---
+
+--- Multi-seed audit (matter_k4) ---
+  G=  50: ROBUST_TOWARD=8/10, mean_R2=0.411, min_R2=0.002, mean_d_eff=1.779
+  G= 100: ROBUST_TOWARD=8/10, mean_R2=0.454, min_R2=0.048, mean_d_eff=1.912
+  G= 150: ROBUST_TOWARD=6/10, mean_R2=0.283, min_R2=0.003, mean_d_eff=1.812
+
+--- Q2: Effective Dimension vs Gravity Coupling ---
+  G=   0: d_eff=1.774 (R^2=0.9753)
+  G=  50: d_eff=1.588 (R^2=0.9775)
+  G= 100: d_eff=1.882 (R^2=0.9774)
+  G= 150: d_eff=1.945 (R^2=0.9849)
+  G= 200: d_eff=2.230 (R^2=0.9865)
+
+--- Q3: Force Battery on Grown Graph ---
+  Seed 42, G=  50: shell_mean=+6.6181e-04, shell_prob=+1.3326e-02, edge_radial=+5.9292e-02 ROBUST_TOWARD, |psi|=1.000000
+  Seed 42, G= 100: shell_mean=+1.0375e-04, shell_prob=+6.1290e-03, edge_radial=-3.9020e-02 MIXED/AWAY, |psi|=1.000000
+  Seed 42, G= 150: shell_mean=+5.5103e-03, shell_prob=+1.1451e-01, edge_radial=-1.6715e-01 MIXED/AWAY, |psi|=1.000000
+
+--- Q3b: Growth Rule Comparison at G=100 ---
+
+--- Growth Rule Comparison ---
+  matter_k3        : ROBUST_TOWARD=3/10, mean_R2=0.321
+  matter_k4        : ROBUST_TOWARD=8/10, mean_R2=0.454
+  degree_penalty_k4: ROBUST_TOWARD=8/10, mean_R2=0.098
+  uniform_k4       : ROBUST_TOWARD=6/10, mean_R2=0.265
+
+--- Q4: 3D Seed → d_eff=3? ---
+  3D seed, G=   0: d_eff=1.651 (R^2=0.9927)
+  3D seed, G=  50: d_eff=1.937 (R^2=0.9432)
+  3D seed, G= 100: d_eff=1.957 (R^2=0.9655)
+
+Total time: 35.9s
+
+----- stderr -----
+

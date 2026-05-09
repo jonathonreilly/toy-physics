@@ -4,6 +4,29 @@
 **Script:** `scripts/frontier_self_gravity_entropy.py`  
 **Status:** proposed_retained exploratory negative / inconclusive for area-law claims
 
+## Inputs (cited authorities)
+
+The state evolution and graph construction reused by this probe are
+imported from the parity-coupled staggered self-gravity lane documented
+in:
+
+- [`STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md`](STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+  — the parity-coupled 3D staggered self-gravity sign lane and its
+  operating point.
+- [`SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md`](SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md)
+  — the bounded backreaction-closure no-go that pins the strict
+  reduction/Born controls used here as a baseline.
+- [`POISSON_SELF_GRAVITY_MECHANISM_NOTE.md`](POISSON_SELF_GRAVITY_MECHANISM_NOTE.md)
+  — the upstream Poisson-like mechanism that fixes the `MASS = 0.30`,
+  `MU2 = 0.22`, `DT = 0.12`, `G_SELF = 50.0`, `N_ITER = 20`
+  operating point.
+
+This note is a negative/inconclusive entropy diagnostic layered on top
+of the lane above; it does not modify any of those authorities. The
+bipartition-entropy observable is bounded above by `ln(2) = 0.6931` and
+is therefore a single-particle subsystem-occupancy diagnostic, not an
+area-law-quality entanglement measure (see "Honest Conclusion").
+
 ## Question
 
 Does a simple bipartition entropy observable on the retained parity-coupled

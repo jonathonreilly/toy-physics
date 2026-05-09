@@ -4637,6 +4637,22 @@
       "to": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
     },
     {
+      "from": "dm_candidate_mass_window_theorem_note_2026-04-19",
+      "to": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15"
+    },
+    {
+      "from": "dm_candidate_mass_window_theorem_note_2026-04-19",
+      "to": "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_candidate_mass_window_theorem_note_2026-04-19",
+      "to": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_candidate_mass_window_theorem_note_2026-04-19",
+      "to": "cosmology_from_mass_spectrum_note"
+    },
+    {
       "from": "dm_continuum_limit_velocity_note",
       "to": "wave_retardation_continuum_limit_note"
     },
@@ -6627,6 +6643,18 @@
     {
       "from": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
       "to": "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+      "to": "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+      "to": "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18"
     },
     {
       "from": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
@@ -11506,7 +11534,7 @@
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
-      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+      "to": "koide_circulant_character_bridge_note_2026-04-18"
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
@@ -11515,6 +11543,10 @@
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
       "to": "koide_dweh_cyclic_compression_note_2026-04-18"
+    },
+    {
+      "from": "koide_circulant_wilson_target_note_2026-04-18",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
     },
     {
       "from": "koide_cl3_selector_gap_note_2026-04-19",
@@ -11939,6 +11971,18 @@
     {
       "from": "koide_q_delta_readout_retention_split_no_go_note_2026-04-24",
       "to": "hierarchy_bosonic_bilinear_selector_note"
+    },
+    {
+      "from": "koide_q_eq_3delta_identity_note_2026-04-21",
+      "to": "koide_aps_block_by_block_forcing_note_2026-04-21"
+    },
+    {
+      "from": "koide_q_eq_3delta_identity_note_2026-04-21",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_q_eq_3delta_identity_note_2026-04-21",
+      "to": "koide_q_delta_closure_package_readme_2026-04-21"
     },
     {
       "from": "koide_q_minimal_scale_free_selector_note_2026-04-22",
@@ -14661,6 +14705,14 @@
       "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
     },
     {
+      "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+      "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
+    },
+    {
+      "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+      "to": "area_law_coefficient_gap_note"
+    },
+    {
       "from": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
       "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
     },
@@ -16183,6 +16235,18 @@
     {
       "from": "second_grown_family_complex_note",
       "to": "second_grown_family_sign_note"
+    },
+    {
+      "from": "self_gravity_entropy_note_2026-04-11",
+      "to": "staggered_3d_self_gravity_sign_note_2026-04-11"
+    },
+    {
+      "from": "self_gravity_entropy_note_2026-04-11",
+      "to": "self_gravity_backreaction_closure_note"
+    },
+    {
+      "from": "self_gravity_entropy_note_2026-04-11",
+      "to": "poisson_self_gravity_mechanism_note"
     },
     {
       "from": "self_gravity_failure_diagnosis",
@@ -32964,7 +33028,7 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "a6df14e138dc6eb25ee0440e8efc66481b09d2a138639de1c1969586b54d2f3d",
+      "note_hash": "4746ce7ca6f948fb83e2927dd5dce9f4c4003cb789b398794861b45a865cb401",
       "path": "docs/AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md",
       "runner_path": null,
       "title": "Audit DM Runner Stale-Path Cleanup"
@@ -36783,8 +36847,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "5212ed5eff593b06569f04ed71d79fd2c00318e608a8d9c5591a989377502686",
+      "deps": [
+        "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+        "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+        "cosmology_from_mass_spectrum_note"
+      ],
+      "note_hash": "f7776ed5b3122a82687c1784c65916d3e0c307eca7a20756ce05171cdab1a956",
       "path": "docs/DM_CANDIDATE_MASS_WINDOW_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_candidate_mass_window_theorem.py",
       "title": "DM Candidate Mass Window Theorem"
@@ -39337,7 +39406,7 @@
         "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
       ],
-      "note_hash": "a7ae7d1affb8b78323123fca13d9052c684b8898d30da3b4fb9d6bf27e6e3738",
+      "note_hash": "3b6209daa80b9706c3e7426663a43897286f972b5ec34a2da392f2d18ceb2e0d",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_SCHUR_ENTROPY_CANDIDATE_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Canonical-Fiber Schur-Entropy Candidate / No-Go"
@@ -39402,10 +39471,14 @@
       "claim_type_author_hint": "bounded_theorem",
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "a116e14e8a92ee21dedb992a7d8d836e90a04f79f1e6e0fe566e8bef139c85e8",
+      "deps": [
+        "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18"
+      ],
+      "note_hash": "fd74e163ba00892fec8bb707434723f101cf4eee278068e3ebd736a7960c1ca8",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md",
-      "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py",
+      "runner_path": null,
       "title": "DM Wilson Direct-Descendant Constructive Positive Closure Manifold Support"
     },
     "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18": {
@@ -39974,7 +40047,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "eadc2732670dff1e964aed5c14d623645164495c953f078e45c9d5b7e51c715f",
+      "note_hash": "8fbe9cc068397323405c8f5055f3dd05bba24d7ad6e08df8b3d90d940d3ee994",
       "path": "docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md",
       "runner_path": "scripts/frontier_emergent_geometry.py",
       "title": "Emergent Geometry from Matter-Coupled Growth"
@@ -44913,11 +44986,12 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "koide_circulant_character_bridge_note_2026-04-18",
         "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_dweh_cyclic_compression_note_2026-04-18"
+        "koide_dweh_cyclic_compression_note_2026-04-18",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
       ],
-      "note_hash": "95a75671aa232697df3b0ad464363639cb588012f99e4cbfffb3decfaa3468cf",
+      "note_hash": "8acf7098a21cea0b0c85caba5a8487aebf61e50e98df362eee20bfc0240ba549",
       "path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "title": "Koide Circulant Wilson-Target Note"
@@ -45029,7 +45103,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "0ff6deef3e5f406b286b7b4c4af0f09fb643649636cf89acc24899ac9dbb2a1d",
+      "note_hash": "657c6598075c959021520bfceb8124605cd3796d127c84fc07e747c67cfcce16",
       "path": "docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py",
       "title": "Koide delta lattice Wilson selected-eigenline no-go"
@@ -45580,8 +45654,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "d4971f5128192b994eabdb73ea0987956f2de7e6771bee2de160a64a20e1572d",
+      "deps": [
+        "koide_aps_block_by_block_forcing_note_2026-04-21",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_q_delta_closure_package_readme_2026-04-21"
+      ],
+      "note_hash": "a493a992e1be76e2c8ec38d0e8c4771fd4b5aa7dd0a6b51013e7617ffb01d98f",
       "path": "docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_koide_Q_eq_3delta_identity.py",
       "title": "Q = p\u00b7\u03b4 Arithmetic Identity on the Current Koide Support-Route Values"
@@ -50098,8 +50176,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "a8af307cfcf3d5a5d42672fadee2f48edbb46ac4dda672881ba2384af2f5da6f",
+      "deps": [
+        "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+        "area_law_coefficient_gap_note"
+      ],
+      "note_hash": "cc136d107f49a3318bc5dc318b5d42360b14778e77e76ff895af06ea1de6e720",
       "path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_source_unit_normalization_support_theorem.py",
       "title": "Planck Source-Unit Normalization Support Theorem"
@@ -55167,8 +55248,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "fe7aadae3d8bc9848ca6b8df611f9229ead858b02d543edcfaa377afc2db2076",
+      "deps": [
+        "staggered_3d_self_gravity_sign_note_2026-04-11",
+        "self_gravity_backreaction_closure_note",
+        "poisson_self_gravity_mechanism_note"
+      ],
+      "note_hash": "ee0a747a1545789ec736637ed51c5b02b2e3b1de393bbce1b95aff9ddf273c27",
       "path": "docs/SELF_GRAVITY_ENTROPY_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_self_gravity_entropy.py",
       "title": "Self-Gravity Bipartition Entropy Probe"
@@ -60155,7 +60240,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "5373d33a1048817ec9d1c34adc3f9ed2bb3afa97e22edae770c7d9db38877006",
+      "note_hash": "00c0fb5ddcf255758ea0d7b21aab510ca12b7eac2e4e368686ae7cfa5253f121",
       "path": "docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_wilson_two_body_open.py",
       "title": "Wilson Two-Body Open-Lattice Note"
@@ -61351,7 +61436,7 @@
         "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
         "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "c4f684eda76bfc5dfb376545c76308d78254a31e78e0add45ed4a8ad87955e87",
+      "note_hash": "aceddb4770d4e9e2ff2e200f142a9760d6db3edb3cc3aba8265bd7171ca64d28",
       "path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py",
       "title": "P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)"
@@ -62149,7 +62234,6 @@
     "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
     "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
     "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
-    "dm_candidate_mass_window_theorem_note_2026-04-19",
     "dm_chamber_signature_structure_note_2026-04-19",
     "dm_current_bank_quantitative_mapping_note_2026-04-21",
     "dm_dple_abcc_no_go_note_2026-04-19",
@@ -62224,7 +62308,6 @@
     "dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21",
     "dm_strong_cp_gamma_transfer_no_go_note_2026-04-15",
     "dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19",
-    "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
     "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
     "edge_deletion_boundary_note",
     "edge_deletion_boundary_sweep_note",
@@ -62383,7 +62466,6 @@
     "koide_q23_oh_covariance_nogo_note_2026-04-22",
     "koide_q_bridge_single_primitive_note_2026-04-22",
     "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24",
-    "koide_q_eq_3delta_identity_note_2026-04-21",
     "koide_q_no_hidden_source_audit_2026-04-22",
     "koide_q_normalized_second_order_effective_action_theorem_2026-04-22",
     "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
@@ -62496,7 +62578,6 @@
     "physics_qa_tracker",
     "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
     "planck_parent_source_hidden_character_no_go_note_2026-04-24",
-    "planck_source_unit_normalization_support_theorem_note_2026-04-25",
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
     "pmns_active_four_real_source_from_transport_note",
     "pmns_c3_nontrivial_current_boundary_note",
@@ -62565,7 +62646,6 @@
     "self_consistency_structured_null_note_2026-04-11",
     "self_gravity_backreaction_closure_note",
     "self_gravity_born_hardening_note",
-    "self_gravity_entropy_note_2026-04-11",
     "self_gravity_scaling_note_2026-04-10",
     "session_summary_2026-04-01_dimensional",
     "session_summary_2026-04-04",
@@ -62783,10 +62863,10 @@
       "open_gate": 112,
       "positive_theorem": 612
     },
-    "edge_count": 7728,
-    "leaf_count": 536,
+    "edge_count": 7744,
+    "leaf_count": 534,
     "node_count": 2010,
-    "root_count": 813,
-    "runners_with_path": 1610
+    "root_count": 808,
+    "runners_with_path": 1609
   }
 }

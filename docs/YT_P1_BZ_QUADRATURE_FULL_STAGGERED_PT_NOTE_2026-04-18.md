@@ -5,7 +5,7 @@
 four canonical-surface lattice-PT integrals that feed the Rep-A/Rep-B
 three-channel ratio decomposition
 `Δ_R^ratio = (α_LM/(4π)) · [C_F · Δ_1 + C_A · Δ_2 + T_F n_f · Δ_3]` on
-the retained `Cl(3) × Z^3` Wilson-plaquette + 1-link staggered-Dirac
+the physical `Cl(3)` on `Z^3` Wilson-plaquette + 1-link staggered-Dirac
 tadpole-improved canonical surface. Upgrades the prior schematic
 integrand (`YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md`;
 ±25% per-integral systematic) to the full Kawamoto–Smit staggered
@@ -20,6 +20,36 @@ master assembly literature-cited central −3.27%, moving `Δ_R` from
 
 **Primary runner:** `scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py`
 **Log:** `logs/retained/yt_p1_bz_quadrature_full_staggered_pt_2026-04-18.log`
+
+## Inputs (cited authorities)
+
+This note is a layered numerical refinement on top of upstream
+P1-cluster authorities. The one-hop authorities below are the
+load-bearing inputs for the quadrature surface; this note does not
+modify them:
+
+- [`YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md)
+  — schematic BZ quadrature this note refines (5x tightening over the
+  prior ±25% per-integral systematic).
+- [`YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md)
+  — master `Δ_R` assembly theorem; literature-cited central is
+  unchanged.
+- [`YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
+  — three-channel decomposition inherited verbatim.
+- [`YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md),
+  [`YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md),
+  and [`YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md)
+  — per-channel cited literature ranges, cross-referenced but not
+  revised here.
+- [`YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
+  — `H_unit` symbolic reduction (Feynman rules FR1, FR2, envelope).
+- [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+  — Ward-identity tree-level theorem; the full-PT `I_v_gauge = 0` is
+  consistent with it.
+
+The note adds the framework-native ±0.45% `Δ_R` quadrature on top of the
+same literature-cited band. It does not set an audit verdict or promote
+any upstream dependency.
 
 ---
 
@@ -728,7 +758,7 @@ budget accounting.
 
 This note claims:
 
-> On the retained `Cl(3) × Z^3` Wilson-plaquette + 1-link staggered-Dirac
+> On the physical `Cl(3)` on `Z^3` Wilson-plaquette + 1-link staggered-Dirac
 > tadpole-improved canonical surface, a 4D BZ uniform offset-grid
 > quadrature at `N = 64` with IR regulator `m² = 0.01` in lattice units,
 > tadpole-improved with `u_0 = 0.87768`, using the full Kawamoto–Smit

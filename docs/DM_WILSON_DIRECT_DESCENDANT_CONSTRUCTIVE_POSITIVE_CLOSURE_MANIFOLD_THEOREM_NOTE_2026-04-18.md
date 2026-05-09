@@ -3,12 +3,30 @@
 **Date:** 2026-04-18 (rigorized 2026-05-09 with a Krawczyk-interval certificate)
 **Claim type:** bounded_theorem
 **Status:** support - regular-root theorem with a Krawczyk-interval certificate at the named base point on the fixed e-independent transport kernel
-**Scripts:**
+**Scripts (both registered with caches):**
 
 - `scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py`
+  (cache: `logs/runner-cache/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.txt`)
 - `scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.py`
+  (cache: `logs/runner-cache/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.txt`)
 
 **Certificate:** `outputs/dm_wilson_constructive_positive_closure_manifold_certificate_2026-04-18.json`
+
+## Inputs (cited authorities)
+
+The transport functional `eta_1` and the projected-source kernel used in
+the closure constraint `F = eta_1 - 1` are imported from upstream
+constructive-transport notes; this note's contribution is the
+Krawczyk-interval regular-root certificate, not the underlying transport
+construction. The cited authorities are:
+
+- [`DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md`](DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md)
+  — the constructive transport plateau and its `eta_1` functional.
+- [`DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md`](DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md)
+  — fiber-spectral completion that fixes the transport kernel surface.
+- [`DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MULTIPLICITY_THEOREM_NOTE_2026-04-18.md`](DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MULTIPLICITY_THEOREM_NOTE_2026-04-18.md)
+  — the same-day multiplicity companion, which records the prior
+  numerical evidence of multiple distinct near-closure points.
 
 ## Question
 

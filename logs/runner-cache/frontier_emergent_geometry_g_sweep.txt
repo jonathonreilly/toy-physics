@@ -1,0 +1,117 @@
+===== runner cache v1 =====
+runner: scripts/frontier_emergent_geometry_g_sweep.py
+runner_sha256: a902d0aa0e37dc056b4486f9e21a42bc848a43cd42497716a7753cf75197d8a6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 16.09
+status: ok
+----- stdout -----
+========================================================================
+EMERGENT GEOMETRY — G-THRESHOLD SWEEP
+N_TARGET=100, MASS=0.3, MU2=0.22, DT=0.12
+G values: [10, 20, 30, 50, 75, 100, 125, 150, 200, 250, 300]
+Seeds: [42, 43, 44, 45, 46]
+========================================================================
+
+--- G = 10 ---
+  seed=42: shell_mean=+2.1754e-04 [+]  shell_prob=+2.1552e-03 [+]  edge_radial=-8.3758e-03 [-]  => MIXED/AWAY  (0.2s)
+  seed=43: shell_mean=+2.1414e-04 [+]  shell_prob=+3.2466e-03 [+]  edge_radial=+1.3291e-02 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=44: shell_mean=+7.7920e-04 [+]  shell_prob=+6.0320e-03 [+]  edge_radial=+4.1810e-02 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=-8.4350e-05 [-]  shell_prob=-3.0920e-03 [-]  edge_radial=+1.5102e-02 [+]  => MIXED/AWAY  (0.2s)
+  seed=46: shell_mean=+6.1267e-06 [+]  shell_prob=+3.6210e-04 [+]  edge_radial=+5.7088e-03 [+]  => ROBUST_TOWARD  (0.3s)
+
+--- G = 20 ---
+  seed=42: shell_mean=+2.9913e-04 [+]  shell_prob=+7.4931e-03 [+]  edge_radial=+3.3742e-02 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=43: shell_mean=-1.3855e-05 [-]  shell_prob=+1.4381e-03 [+]  edge_radial=-1.3524e-02 [-]  => MIXED/AWAY  (0.3s)
+  seed=44: shell_mean=-1.1208e-03 [-]  shell_prob=-1.1491e-02 [-]  edge_radial=+6.8200e-03 [+]  => MIXED/AWAY  (0.2s)
+  seed=45: shell_mean=+6.0453e-04 [+]  shell_prob=+1.4328e-02 [+]  edge_radial=+2.1806e-03 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=46: shell_mean=+6.6032e-04 [+]  shell_prob=+1.2969e-02 [+]  edge_radial=+4.9055e-02 [+]  => ROBUST_TOWARD  (0.3s)
+
+--- G = 30 ---
+  seed=42: shell_mean=+2.3304e-03 [+]  shell_prob=+5.6896e-03 [+]  edge_radial=+2.5263e-02 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=43: shell_mean=+2.5935e-05 [+]  shell_prob=+1.0643e-02 [+]  edge_radial=+2.5613e-02 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=44: shell_mean=+2.2473e-04 [+]  shell_prob=+5.5795e-03 [+]  edge_radial=+1.2154e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=+9.2480e-04 [+]  shell_prob=+1.7751e-02 [+]  edge_radial=+9.2742e-02 [+]  => ROBUST_TOWARD  (0.2s)
+  seed=46: shell_mean=+2.6127e-04 [+]  shell_prob=-2.5749e-03 [-]  edge_radial=+3.6152e-02 [+]  => MIXED/AWAY  (0.3s)
+
+--- G = 50 ---
+  seed=42: shell_mean=+2.0217e-03 [+]  shell_prob=+5.7745e-02 [+]  edge_radial=-2.0963e-01 [-]  => MIXED/AWAY  (0.2s)
+  seed=43: shell_mean=+3.2702e-03 [+]  shell_prob=+5.3014e-02 [+]  edge_radial=+2.9235e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=44: shell_mean=+9.0256e-04 [+]  shell_prob=+2.1626e-02 [+]  edge_radial=+1.6352e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=+2.3804e-04 [+]  shell_prob=+1.7719e-03 [+]  edge_radial=+3.9469e-02 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=46: shell_mean=+1.5792e-03 [+]  shell_prob=+7.0418e-03 [+]  edge_radial=+7.9477e-02 [+]  => ROBUST_TOWARD  (0.3s)
+
+--- G = 75 ---
+  seed=42: shell_mean=+2.5030e-03 [+]  shell_prob=+3.6872e-02 [+]  edge_radial=+3.8621e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=43: shell_mean=+3.8590e-03 [+]  shell_prob=+7.9271e-02 [+]  edge_radial=+7.3912e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=44: shell_mean=+1.6785e-02 [+]  shell_prob=+8.4750e-02 [+]  edge_radial=+4.6212e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=+7.9933e-04 [+]  shell_prob=-3.3682e-02 [-]  edge_radial=+5.0665e-02 [+]  => MIXED/AWAY  (0.3s)
+  seed=46: shell_mean=+2.7521e-03 [+]  shell_prob=-1.7958e-04 [-]  edge_radial=+3.2848e-02 [+]  => MIXED/AWAY  (0.3s)
+
+--- G = 100 ---
+  seed=42: shell_mean=+6.1854e-04 [+]  shell_prob=+2.5950e-02 [+]  edge_radial=+1.4748e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=43: shell_mean=+3.2052e-03 [+]  shell_prob=+8.3086e-02 [+]  edge_radial=+7.7149e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=44: shell_mean=+5.4685e-03 [+]  shell_prob=+5.9152e-02 [+]  edge_radial=+2.1313e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=+4.7516e-03 [+]  shell_prob=+4.5286e-02 [+]  edge_radial=+5.1713e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=46: shell_mean=+1.3150e-03 [+]  shell_prob=+4.5116e-02 [+]  edge_radial=+3.8195e-01 [+]  => ROBUST_TOWARD  (0.3s)
+
+--- G = 125 ---
+  seed=42: shell_mean=+6.5451e-05 [+]  shell_prob=-3.9880e-02 [-]  edge_radial=-6.9155e-02 [-]  => MIXED/AWAY  (0.3s)
+  seed=43: shell_mean=-2.4442e-03 [-]  shell_prob=-6.1395e-02 [-]  edge_radial=-6.6769e-02 [-]  => MIXED/AWAY  (0.3s)
+  seed=44: shell_mean=+3.8474e-03 [+]  shell_prob=+3.3119e-02 [+]  edge_radial=-5.2116e-02 [-]  => MIXED/AWAY  (0.3s)
+  seed=45: shell_mean=-1.0371e-03 [-]  shell_prob=-2.0540e-02 [-]  edge_radial=+1.9401e-01 [+]  => MIXED/AWAY  (0.3s)
+  seed=46: shell_mean=-1.2401e-02 [-]  shell_prob=-1.3306e-01 [-]  edge_radial=-1.4822e-01 [-]  => MIXED/AWAY  (0.3s)
+
+--- G = 150 ---
+  seed=42: shell_mean=+4.4062e-04 [+]  shell_prob=+1.6715e-02 [+]  edge_radial=+2.1144e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=43: shell_mean=+8.1474e-03 [+]  shell_prob=+1.4928e-01 [+]  edge_radial=+3.3611e-02 [+]  => ROBUST_TOWARD  (0.2s)
+  seed=44: shell_mean=+8.5600e-04 [+]  shell_prob=+3.4029e-02 [+]  edge_radial=+9.4777e-01 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=-9.6692e-03 [-]  shell_prob=-1.8762e-01 [-]  edge_radial=-1.1575e+00 [-]  => MIXED/AWAY  (0.3s)
+  seed=46: shell_mean=-1.4779e-03 [-]  shell_prob=-6.1189e-02 [-]  edge_radial=+8.5188e-01 [+]  => MIXED/AWAY  (0.3s)
+
+--- G = 200 ---
+  seed=42: shell_mean=-4.2798e-03 [-]  shell_prob=-7.8681e-02 [-]  edge_radial=+4.4380e-01 [+]  => MIXED/AWAY  (0.3s)
+  seed=43: shell_mean=-6.2058e-04 [-]  shell_prob=-4.0983e-02 [-]  edge_radial=+1.2746e+00 [+]  => MIXED/AWAY  (0.3s)
+  seed=44: shell_mean=+5.0107e-03 [+]  shell_prob=+1.1418e-01 [+]  edge_radial=+1.1619e+00 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=-1.0894e-02 [-]  shell_prob=-2.6238e-01 [-]  edge_radial=-2.2366e+00 [-]  => MIXED/AWAY  (0.3s)
+  seed=46: shell_mean=-2.9047e-03 [-]  shell_prob=-1.3844e-01 [-]  edge_radial=+7.2295e-01 [+]  => MIXED/AWAY  (0.3s)
+
+--- G = 250 ---
+  seed=42: shell_mean=-2.2700e-01 [-]  shell_prob=-4.1644e-01 [-]  edge_radial=+9.7581e-01 [+]  => MIXED/AWAY  (0.3s)
+  seed=43: shell_mean=+1.7368e-03 [+]  shell_prob=-8.2230e-03 [-]  edge_radial=-3.7376e+00 [-]  => MIXED/AWAY  (0.3s)
+  seed=44: shell_mean=+5.4967e-03 [+]  shell_prob=+1.0644e-01 [+]  edge_radial=+2.5159e+00 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=45: shell_mean=-5.5949e-03 [-]  shell_prob=-1.2866e-01 [-]  edge_radial=-2.0175e+00 [-]  => MIXED/AWAY  (0.3s)
+  seed=46: shell_mean=-2.2720e-03 [-]  shell_prob=+1.3473e-02 [+]  edge_radial=+1.7016e+00 [+]  => MIXED/AWAY  (0.3s)
+
+--- G = 300 ---
+  seed=42: shell_mean=+2.1035e-03 [+]  shell_prob=+2.0218e-02 [+]  edge_radial=-1.1449e+00 [-]  => MIXED/AWAY  (0.3s)
+  seed=43: shell_mean=-1.0740e-02 [-]  shell_prob=-1.2836e-01 [-]  edge_radial=+9.8675e+00 [+]  => MIXED/AWAY  (0.3s)
+  seed=44: shell_mean=-2.1024e-02 [-]  shell_prob=-4.1840e-01 [-]  edge_radial=+1.1778e+00 [+]  => MIXED/AWAY  (0.3s)
+  seed=45: shell_mean=+2.5243e-03 [+]  shell_prob=+1.2071e-01 [+]  edge_radial=+8.5429e+00 [+]  => ROBUST_TOWARD  (0.3s)
+  seed=46: shell_mean=+4.8493e-02 [+]  shell_prob=+1.0149e-01 [+]  edge_radial=+5.6793e+00 [+]  => ROBUST_TOWARD  (0.3s)
+
+========================================================================
+SUMMARY: ROBUST_TOWARD count per G value (out of 5 seeds)
+========================================================================
+     G  Robust    Frac    shell_mean    shell_prob   edge_radial
+------------------------------------------------------------------------
+    10       3/5   60.0%  +2.2653e-04  +1.7408e-03  +1.3507e-02
+    20       3/5   60.0%  +8.5858e-05  +4.9476e-03  +1.5655e-02
+    30       4/5   80.0%  +7.5344e-04  +7.4176e-03  +6.0261e-02
+    50       4/5   80.0%  +1.6024e-03  +2.8240e-02  +7.3037e-02
+    75       3/5   60.0%  +5.3397e-03  +3.3406e-02  +3.3419e-01
+   100       5/5  100.0%  +3.0718e-03  +5.1718e-02  +4.0624e-01
+   125       0/5    0.0%  -2.3938e-03  -4.4351e-02  -2.8451e-02
+   150       3/5   60.0%  -3.4063e-04  -9.7567e-03  +1.7744e-01
+   200       1/5   20.0%  -2.7377e-03  -8.1262e-02  +2.7333e-01
+   250       1/5   20.0%  -4.5528e-02  -8.6680e-02  -1.1235e-01
+   300       2/5   40.0%  +4.2713e-03  -6.0867e-02  +4.8245e+00
+
+------------------------------------------------------------------------
+THRESHOLD: G >= 10 gives majority ROBUST_TOWARD (>=3/5 seeds)
+UNANIMOUS:  G >= 100 gives 5/5 ROBUST_TOWARD
+
+Total time: 14.9s
+
+----- stderr -----
+

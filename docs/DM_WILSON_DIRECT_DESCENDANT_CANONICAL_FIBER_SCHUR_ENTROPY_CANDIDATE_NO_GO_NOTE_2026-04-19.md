@@ -15,11 +15,12 @@ choose the most isotropic normalized Schur spectrum
 ```
 
 does **not** extend canonically. Standard coefficient-free normalized
-Schur-spectral laws disagree on exact positive-fiber points. If one adds one
-extra axiom selecting Shannon entropy, that does produce an explicit endpoint
+Schur-spectral laws disagree on exact positive-fiber points. If one adds a
+Shannon-entropy selector assumption, that does produce an explicit endpoint
 candidate on the canonical fiber, but the resulting aligned-seed -> endpoint
 exact crossing leaves the constructive chamber. So the physical selector is
-still open.
+still open. This note does not add a repo-wide axiom or promote any upstream
+lane.
 
 **Primary runner:**  
 `scripts/frontier_dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_2026_04_19.py`

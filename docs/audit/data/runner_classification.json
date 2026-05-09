@@ -5376,18 +5376,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_2026_04_19.py"
     },
-    "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 1,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py"
-    },
     "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -27106,21 +27094,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py": {
-      "assert_count": 1,
-      "claims": [
-        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 1,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
     "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_2026_04_18.py": {
       "assert_count": 1,
       "claims": [
@@ -42164,12 +42137,12 @@
     "dominant_class_distribution": {
       "A": 22,
       "B": 174,
-      "C": 639,
+      "C": 638,
       "D": 243,
       "none": 426
     },
-    "runners_classified": 1504,
-    "runners_with_C": 774,
+    "runners_classified": 1503,
+    "runners_with_C": 773,
     "runners_with_D": 397
   }
 }
