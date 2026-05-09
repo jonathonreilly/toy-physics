@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 964 |
+| unaudited | 963 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 373 |
+| ~~audited_conditional~~ | 374 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 373 |
+| `audited_conditional` | 374 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1020 |
+| `unaudited` | 1019 |
 
 | claim_type | count |
 |---|---:|
@@ -797,6 +797,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `retarded_field_delay_proxy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9675,6 +9676,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note explicitly frames the route as open and dynamically blocked, not as a closed GR derivation. Its kinematic premise imports upstream atlas results that are not included in the restricted packet, and the asserted missing dynamics bridge is not supplied. With no runner source or stdout available, there is no independent computation or closure evidence in the packet.
 - **open / conditional deps cited:**
   - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+- **auditor confidence:** high
+
+### `s3_boundary_link_theorem_note`
+
+- **Note:** [`S3_BOUNDARY_LINK_THEOREM_NOTE.md`](../../docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claimed all-R theorem that every boundary vertex link link(v,B_R) is a PL 2-disk for R >= 2, using the note proof and the finite R=2..10 runner.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0dc2-75f0-74e3-a5ff-7b1242960f2f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note asserts that the downset/upset structure of present and absent triangles in Q_3 implies the all-R finite combinatorial disk conditions, including H_1(link(v,B_R); Z)=0, single boundary component, and vertex-link manifoldness, for every boundary vertex.  _(class `A`)_
+- **chain closes:** False — The coordinate-separability/downset connectivity step closes, but the restricted packet does not actually provide an all-R proof or exhaustive finite certificate that every nonempty proper downset/upset local type has H_1=0 and PL disk structure. The runner verifies only R=2..10 and explicitly marks the finite-type enumeration as bounded support rather than an all-R certificate.
+- **rationale:** Issue: the note promotes bounded finite-radius checks plus asserted finite downset/upset facts into an all-R PL disk theorem. Why this blocks: the runner covers 5,778 vertices for R=2..10 and 102 observed types, while the claimed theorem requires every larger-R boundary type or an explicit analytic enumeration proof. Repair target: add a retained all-256-type certificate or a written finite combinatorial proof deriving H_1=0, one boundary cycle, and vertex-link manifoldness for every allowable downset/upset type. Claim boundary until fixed: retained support for R=2..10 and for the coordinate-separability/connectivity mechanism, not a closed all-R theorem.
 - **auditor confidence:** high
 
 ### `s3_cap_uniqueness_note`
