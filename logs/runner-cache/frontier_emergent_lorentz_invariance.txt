@@ -1,17 +1,17 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_emergent_lorentz_invariance.py
-runner_sha256: a4ea10d27310a85b60a55b70ba4a6506b9e48f0d8e00d0cf3a44ef35c48ab76f
+runner_sha256: bfd6027f165ce8f8d6dea657d7e6d12a15745908e8aeba1c00a053ab6f2678dd
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 0.23
+elapsed_sec: 0.42
 status: ok
 ----- stdout -----
 ========================================================================
 Emergent Lorentz Invariance from the Cubic Z³ Lattice
 ========================================================================
 
-THEOREM: Lorentz invariance emerges at E ≪ M_Planck with
-         corrections at (E/M_Planck)² ~ 10⁻³⁹ at 1 GeV.
+BOUNDED SUPPORT: if the bridge premises are supplied, Lorentz
+                 violation is suppressed as (E/M_Planck)^2.
 
 
 === Part 1: Dispersion relation isotropy ===
@@ -52,23 +52,23 @@ THEOREM: Lorentz invariance emerges at E ≪ M_Planck with
 
 === Part 4: CPT protection ===
 
-  [PASS] CPT is exact on even periodic Z³ (CPT_EXACT_NOTE, PASS=53 FAIL=0)  ([CP,H] = 0, T trivial on real H, CPT exact to machine precision)
-  [PASS] All CPT-odd SME coefficients vanish identically  (a_μ = b_μ = e_μ = f_μ = g_λμν = 0 (from CPT exact))
-  [PASS] CPT-odd LV requires odd-dimension operators (Greenberg theorem)  (CPT exact ⇒ no dimension-3 or dimension-5 LV ⇒ leading LV is dimension-6)
-  [PASS] Dimension-5 LV also forbidden by P symmetry  (P: x → −x exact on even Z³ ⇒ no odd-power momentum corrections)
-  [PASS] Leading LV is dimension-6: (E/M_Planck)² suppression  (doubly protected by CPT + P ⇒ weakest possible Planck-scale LV)
+  [PASS] CPT support premise is explicit for the even periodic Z³ runner  ([CP,H] is checked directly below; physical SME lift remains upstream)
+  [PASS] CPT-odd part vanishes on the checked free-H support surface  (free-H CPT-odd component is checked directly in Part 6b)
+  [PASS] CPT-odd LV requires odd-dimension operators on the bridge premise  (under the CPT bridge, dimension-3 and dimension-5 LV are absent)
+  [PASS] Dimension-5 LV also forbidden by P symmetry  (P: x → −x support check ⇒ no odd-power momentum corrections)
+  [PASS] Leading LV is dimension-6: (E/M_Planck)² suppression  (under supplied CPT + P bridges, weakest Planck-scale LV is dimension-6)
 
-=== Part 5: Planck suppression (retained) ===
+=== Part 5: Planck suppression under package pin premise ===
 
   [PASS] LV at 1 GeV: |δE²/E²| = (1/5)(E/M_Pl)² ≈ 1.3e-39  (|δE²/E²| = 1.34e-39)
   [PASS] LV at 1 TeV: |δE²/E²| ≈ 1.3e-33  (|δE²/E²| = 1.34e-33)
   [PASS] LV at 10²⁰ eV (UHECR): |δE²/E²| ≈ 1.3e-17  (|δE²/E²| = 1.34e-17)
 
-  --- Experimental context (not part of retained theorem) ---
+  --- Experimental context (conditional on the Planck pin) ---
   Framework LV coefficient ~ 1/M_Pl² ~ 6.7e-39 GeV⁻²
   Tightest CPT-even bound: ~10⁻³² GeV⁻² (GRB birefringence)
   Ratio: ~10⁻⁷ (7 orders below current sensitivity)
-  All CPT-odd bounds: framework predicts exactly 0 (CPT exact)
+  CPT-odd bounds: this support surface predicts zero under the CPT bridge
 
 === Part 6: Finite-lattice dispersion verification ===
 
@@ -77,22 +77,68 @@ THEOREM: Lorentz invariance emerges at E ≪ M_Planck with
   [PASS] L=8: lowest eigenvalue matches analytical dispersion  (E_min_num = 0.707107, E_min_ana = 0.707107)
   [PASS] L=8: E([1,0,0]) = E([0,1,0]) = E([0,0,1]) (cubic symmetry)  (all = 0.7071067812 (exact by O_h))
 
+=== Part 6b: CPT support — direct verification on runner's free H ===
+
+  [PASS] L=8: C^2 = I (sublattice-parity involution)  (||C^2 - I||_max = 0.00e+00)
+  [PASS] L=8: P^2 = I (spatial-parity involution)  (||P^2 - I||_max = 0.00e+00)
+  [PASS] L=8: T-symmetry — H is real, so T H T^{-1} = H  (max|Im H| = 0.00e+00)
+  [PASS] L=8: C H C = -H (sublattice-parity flip, CPT_EXACT_NOTE Step 1)  (||C H C + H||_max = 0.00e+00)
+  [PASS] L=8: P H P = -H (spatial-parity flip, CPT_EXACT_NOTE Step 2)  (||P H P + H||_max = 0.00e+00)
+  [PASS] L=8: (CP) H (CP) = +H (CP-symmetry on the free staggered H)  (||CP H CP - H||_max = 0.00e+00)
+  [PASS] L=8: [CPT, H] = 0 (free-H CPT support checked on runner H)  (||(CPT) H (CPT)^{-1} - H||_max = 0.00e+00)
+  [PASS] L=8: CPT-odd part of the free runner H vanishes  (||H_odd||_max = 0.00e+00)
+
+  --- Bridge citation ---
+  Direct CPT verification above corresponds 1:1 to
+  CPT_EXACT_NOTE.md Steps 1-4 on the same operator family.
+  Hermitian-Hamiltonian/SME extension is carried by the
+  PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md
+  bridge note. The free-field CPT step used by this runner is
+  verified here directly; the physical-observable SME lift is upstream.
+
+=== Part 6c: Parity bridge — direct verification on dispersion ===
+
+  [PASS] E^2(-p) = E^2(p) (P-symmetric staggered dispersion)  (max |E^2(p) - E^2(-p)| = 0.00e+00 over 50 random (|p|,direction) pairs)
+  [PASS] Dim-5 LV coefficient (a p^3 part of E^2) vanishes identically  (max |odd_coef| = 0.00e+00)
+  [PASS] Dim-5 SME basis 'gamma^mu partial_nu partial_rho' has P-weight = -1  (Dirac-weight or deriv-weight is -1)
+  [PASS] Dim-5 SME basis 'partial_mu partial_nu (unit Clifford)' has P-weight = -1  (one unpaired spatial derivative)
+  [PASS] Dim-5 SME basis 'gamma_5 gamma^mu partial_nu' has P-weight = -1  (gamma_5 * spatial-derivative weight)
+  [PASS] Dim-5 SME basis 'sigma^{mu nu} partial_rho' has P-weight = -1  (partial_rho is parity-odd)
+  [PASS] Enumerated dim-5 candidate list is P-odd on this support surface  (all listed dim-5 LV candidates carry P-weight -1)
+
+  --- Bridge citation ---
+  Direct verification above is the dispersion-side incarnation of
+  PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md
+  Steps 2-4. The runner here verifies P-symmetry of the staggered
+  dispersion E^2(-p) = E^2(p) directly; the no-go note completes
+  the operator-basis enumeration on the SME dim-5 Dirac basis.
+
+=== Part 6d: Planck-pin bridge — citation to upstream package lane ===
+
+  [PASS] Planck pin a^{-1} = M_Pl is present on the package surface  (PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+  [PASS] Conditional natural-unit closure a/l_P = 1 is carried by separate lane  (PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+  [PASS] Hierarchy bookkeeping (v ↔ M_Pl) uses the pin, not derives it  (Planck suppression follows from the pin; this runner does not promote the pin to retained natural-unit closure)
+
+  --- Bridge citation ---
+  The Planck-pin bridge is a citation, not a derivation in this note.
+  Its authority follows the upstream package lane.
+
 === Part 7: Emergent Lorentz invariance ===
 
   [PASS] Z³ lattice has octahedral symmetry O_h (48 elements), not SO(3,1)  (O_h ⊂ SO(3) ⊂ SO(3,1); broken at the lattice scale)
   [PASS] Staggered dispersion: E² = p² − (a²/3)Σp_i⁴ + O(a⁴)  (leading correction is O(a²p⁴), dimension-6)
-  [PASS] CPT exact + P exact → no dimension-3, -4, or -5 LV operators  (leading LV is dimension-6: (E/M_Pl)² suppression)
+  [PASS] Checked CPT/P bridge premises remove dim-3, -4, and -5 LV on this support surface  (leading LV is dimension-6: (E/M_Pl)² suppression)
   [PASS] Angular structure: unique cubic harmonic K₄ at ℓ=4  (Σn_i⁴ = 3/5 + (4/5)K₄; factor-of-3 anisotropy axis vs diagonal)
-  [PASS] |δE/E| < 10⁻¹⁹ at highest observable energies (UHECR)  (hierarchy theorem pins a ~ 1/M_Pl → suppression is retained)
-  [PASS] THEOREM: Lorentz invariance is emergent at E ≪ M_Planck  (O_h + (E/M_Pl)² suppression → full SO(3,1) to all observable precision)
+  [PASS] |δE/E| < 10⁻¹⁹ at highest observable energies under Planck-pin premise  (if a ~ 1/M_Pl is supplied, suppression follows)
+  [PASS] BOUND: Lorentz-violation estimate is Planck-suppressed at E ≪ M_Planck  (O_h + supplied Planck pin gives (E/M_Pl)² support estimate)
   [PASS] PREDICTION: cubic harmonic ℓ=4 signature if LV ever detected  (smoking gun for lattice substructure; testable angular pattern)
 
 ========================================================================
-SUMMARY: PASS=37  FAIL=0
+SUMMARY: PASS=55  FAIL=0
 ========================================================================
 
-All checks passed. Lorentz invariance is emergent at E ≪ M_Planck.
-Leading LV: dimension-6, (E/M_Pl)², cubic harmonic ℓ=4, CPT-exact.
+All bounded checks passed for the conditional support surface.
+Leading checked LV support: dimension-6, (E/M_Pl)^2 under the Planck pin, cubic harmonic l=4.
 
 ----- stderr -----
 

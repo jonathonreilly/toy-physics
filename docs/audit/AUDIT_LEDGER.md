@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 121 |
 | **retained_bounded** | 235 |
 | open_gate | 11 |
-| unaudited | 1025 |
+| unaudited | 1026 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 319 |
+| ~~audited_conditional~~ | 318 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 387 |
-| `audited_conditional` | 319 |
+| `audited_conditional` | 318 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1086 |
+| `unaudited` | 1087 |
 
 | claim_type | count |
 |---|---:|
@@ -58,10 +58,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 337 |
+| `critical` | 338 |
 | `high` | 462 |
 | `medium` | 479 |
-| `leaf` | 626 |
+| `leaf` | 625 |
 
 - **Retained pending chain closure:** 0
 - **Citation cycles detected:** 172
@@ -634,7 +634,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `ew_coupling_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4364,23 +4363,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The provided runner constructs the lattice, sums source fields linearly, propagates a test charge, and computes centroid shifts rather than printing fixed expected constants. The audited conclusion is limited to this proxy harness and does not establish Maxwell theory or full electromagnetism.
 - **rationale:** The note's load-bearing claims are qualitative consequences of the completed runner output and the runner source shows actual computation of the tested cases. There are no cited upstream authorities to propagate, and no external comparator or calibrated input is used for the contested conclusion. The result is clean only at the explicitly narrow proxy scope: linear field summation inside the imported retained weak-field propagator harness.
 - **auditor confidence:** medium
-
-### `emergent_lorentz_invariance_note`
-
-- **Note:** [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](../../docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Conditional structural-dispersion result for the cubic Z3 lattice: leading infrared dispersion is isotropic and the first anisotropic correction has the dimension-6 cubic-harmonic form; reported physical Lorentz-invariance precision follows only if exact CPT, exact/tree-level parity protection, and a ~ 1/M_Planck are supplied as bridge premises.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-pr291-emergent-lorentz-harvey-2026-05-02`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The step from lattice dispersion/cubic harmonic structure to reported physical Lorentz-invariance precision depends on unregistered bridge inputs: exact CPT, parity protection forbidding dimension-5 LV, and the hierarchy-scale identification a ~ 1/M_Planck.  _(class `B`)_
-- **chain closes:** False — The internal dispersion and cubic-harmonic checks close on the runner output, but the physical interpretation does not close from this row alone because the symmetry and scale premises are assumed rather than registered as audit-clean dependencies.
-- **rationale:** Issue: the runner supports the bounded lattice-dispersion surface, including low-p isotropy, p^4 coefficients, dimension-6 leading correction, and l=4 cubic anisotropy, but the reported physical precision imports CPT exactness, parity protection, and a ~ 1/M_Planck. Why this blocks retained status: those bridge premises are not registered retained-grade dependencies for this row, and the runner asserts rather than constructs them. Repair target: add audit-clean dependency rows or a runner that constructs the CPT, parity-protection, and hierarchy-scale bridges. Claim boundary until fixed: cite this as a bounded conditional structural-dispersion theorem on the stated symmetry/scale surface, not as a standalone Lorentz-invariance theorem.
-- **open / conditional deps cited:**
-  - `exact CPT on the cubic Z3 lattice`
-  - `exact/tree-level parity protection forbidding odd-dimension Lorentz-violating operators`
-  - `hierarchy-scale identification a ~ 1/M_Planck`
-- **auditor confidence:** high
 
 ### `emergent_product_law_note`
 

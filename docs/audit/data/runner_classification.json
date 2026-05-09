@@ -5869,15 +5869,15 @@
       "runner": "scripts/frontier_emergent_geometry.py"
     },
     "emergent_lorentz_invariance_note": {
-      "assert_count": 2,
+      "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 1,
-        "D": 6
+        "B": 4,
+        "C": 7,
+        "D": 3
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
+      "dominant_class": "C",
       "runner": "scripts/frontier_emergent_lorentz_invariance.py"
     },
     "emergent_product_law_audit_2026-04-11": {
@@ -27626,18 +27626,18 @@
       "exists": true
     },
     "scripts/frontier_emergent_lorentz_invariance.py": {
-      "assert_count": 2,
+      "assert_count": 1,
       "claims": [
         "emergent_lorentz_invariance_note"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 1,
-        "D": 6
+        "B": 4,
+        "C": 7,
+        "D": 3
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_emergent_product_law.py": {
@@ -42218,8 +42218,8 @@
     "dominant_class_distribution": {
       "A": 22,
       "B": 174,
-      "C": 641,
-      "D": 243,
+      "C": 642,
+      "D": 242,
       "none": 426
     },
     "runners_classified": 1506,

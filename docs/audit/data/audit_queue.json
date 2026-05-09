@@ -1,8 +1,8 @@
 {
   "by_criticality": {
-    "critical": 212,
+    "critical": 214,
     "high": 316,
-    "leaf": 228,
+    "leaf": 227,
     "medium": 275
   },
   "cycle_break_target_count": 173,
@@ -3426,14 +3426,14 @@
       "deps": [
         "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
       ],
-      "direct_in_degree": 22,
+      "direct_in_degree": 23,
       "effective_status": "unaudited",
-      "load_bearing_score": 20.297,
+      "load_bearing_score": 20.804,
       "note_path": "docs/CPT_EXACT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_cpt_exact.py",
-      "transitive_descendants": 628
+      "transitive_descendants": 631
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3551,6 +3551,54 @@
       "ready": false,
       "runner_path": "scripts/hopping_bilinear_hermiticity_check.py",
       "transitive_descendants": 626
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.792,
+      "note_path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
+      "transitive_descendants": 626
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "emergent_lorentz_invariance_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cpt_exact_note",
+        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30",
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+      ],
+      "direct_in_degree": 18,
+      "effective_status": "unaudited",
+      "load_bearing_score": 18.29,
+      "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
+      "transitive_descendants": 625
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -29177,29 +29225,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cpt_exact_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -30646,5 +30671,5 @@
     }
   ],
   "ready_count": 58,
-  "total_pending": 1031
+  "total_pending": 1032
 }

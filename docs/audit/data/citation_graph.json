@@ -7185,6 +7185,18 @@
       "to": "generated_geometry_synthesis_note"
     },
     {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+    },
+    {
       "from": "em_coupling_from_ewsb_note_2026-05-02",
       "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
     },
@@ -40198,8 +40210,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "296429f41517fec385da2461b9423dec161f859714822611a94680e67a8d4973",
+      "deps": [
+        "cpt_exact_note",
+        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30",
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+      ],
+      "note_hash": "490d19fc7acba33aa032d7297573ddb981be8f381b12c97a6e95b9df0535d817",
       "path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
       "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)"
@@ -62456,7 +62472,6 @@
     "electrostatics_superposition_proxy_note",
     "em_gravity_coexistence_2x2_note",
     "emergent_geometry_growth_note_2026-04-10",
-    "emergent_lorentz_invariance_note",
     "emergent_product_law_audit_2026-04-11",
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
@@ -63002,10 +63017,10 @@
       "open_gate": 112,
       "positive_theorem": 610
     },
-    "edge_count": 7769,
-    "leaf_count": 532,
+    "edge_count": 7772,
+    "leaf_count": 531,
     "node_count": 2011,
-    "root_count": 800,
+    "root_count": 799,
     "runners_with_path": 1612
   }
 }
