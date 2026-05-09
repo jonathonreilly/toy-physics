@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 920 |
+| unaudited | 919 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 401 |
+| ~~audited_conditional~~ | 402 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 401 |
+| `audited_conditional` | 402 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 975 |
+| `unaudited` | 974 |
 
 | claim_type | count |
 |---|---:|
@@ -777,6 +777,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_absorbing_horizon_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `minimal_bidirectional_trapping_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mirror_gravity_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `mirror_program_synthesis` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -8518,6 +8519,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The certificate replays the fixed dense-boundary command, verifies the pre-fit gates for mirror rows N=40,60,80,100, excludes N=120 as a zero-gravity wall, and only then fits log(1 - pur_cl) versus log(N) on the four retained rows.  _(class `C`)_
 - **chain closes:** True — The chain closes within the stated bounded scope: the certificate runs the companion generator, parses the replayed finite rows, checks the gates, and recomputes the fit from the selected rows. It imports no one-hop dependencies and makes no external comparator, mirror-family, or asymptotic-law claim.
 - **rationale:** The clean result covers only the deterministic finite-window certificate under the named command and runner definitions. I count the finite replay gate checks as C because the companion runner generates the mirror DAGs and computes Born, k=0, gravity, purity, and wall metrics rather than reading them from another note; the header, post-retention fit arithmetic, extrapolation arithmetic, and selector-firewall sequencing checks are A. Residual risk is limited to implementation fidelity and the deliberate named-card choice; the note explicitly excludes physical-comparator, family, and asymptotic claims.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite mirror chokepoint diagnostic on the strict default NPL_HALF=25, connect_radius=4.0, layer2_prob=0.0 card at N=15 and N=25 only.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d17-cdf3-7fe0-95eb-dca7608341d7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The retained N=15 and N=25 rows are read directly from logs/runner-cache/mirror_chokepoint_joint.txt and mechanically verified by an assertion-gated certificate runner.  _(class `B`)_
+- **chain closes:** False — The note's narrowed scope is clear, but the restricted packet does not include the named runner-cache contents, the certificate runner source, or certificate stdout. The missing step is an included artifact or runner transcript showing the N=15 and N=25 rows actually match the asserted cache and gates.
+- **rationale:** Issue: the claim depends on a named runner-cache and assertion-gated certificate that are described but not present in the restricted packet. Why this blocks: without the cache, source, or stdout, the auditor cannot verify the retained N=15/N=25 numerical rows or the pass/fail gates from the provided inputs alone. Repair target: include the certificate runner source plus completed registered stdout or the exact cache excerpt it checks. Claim boundary until fixed: cite only that the note asserts a narrowed finite strict-card pocket, not that this packet independently certifies it.
 - **auditor confidence:** high
 
 ### `mirror_gravity_probe_note`
