@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-10  
 **Status:** Canonical axiom note for the current branch. This note folds the useful substance of the prior risk-ledger framing into one combined presentation.
+**Type:** meta
 
 ## Why this note exists
 

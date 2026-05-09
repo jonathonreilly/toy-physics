@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-09
 **Status:** Diagnosed, not resolved
+**Primary runner:** scripts/frontier_chiral_layer_oscillation.py
 
 ## Finding
 

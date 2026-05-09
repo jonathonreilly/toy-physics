@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-10  
 **Scope:** test whether the 4-component Dirac walk's decoherence / purity failures are a bad harness match or a real architecture problem.
+**Primary runner:** [`scripts/frontier_dirac_walk_3plus1d_decoherence_probe.py`](../scripts/frontier_dirac_walk_3plus1d_decoherence_probe.py)
 
 ## Geometry
 

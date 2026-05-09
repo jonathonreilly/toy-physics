@@ -2,6 +2,7 @@
 
 **Status:** bounded transfer diagnostic on the fixed directional-measure lane  
 **Date:** 2026-04-04
+**Primary runner:** [`scripts/directional_b_density_stencil_transfer.py`](../scripts/directional_b_density_stencil_transfer.py)
 
 ## Scope
 

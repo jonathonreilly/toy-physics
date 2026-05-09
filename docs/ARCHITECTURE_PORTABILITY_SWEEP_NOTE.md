@@ -1,5 +1,7 @@
 # Architecture Portability Sweep
 
+**Primary runner:** [`scripts/frontier_architecture_portability_sweep.py`](../scripts/frontier_architecture_portability_sweep.py)
+
 ## Purpose
 
 Assess source-mass portability for the key retained observables:

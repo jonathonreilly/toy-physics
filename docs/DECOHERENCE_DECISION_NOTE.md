@@ -1,5 +1,6 @@
 # Decoherence Decision Note
 
+**Type:** meta
 **Status:** architecture decision point
 **Date:** 2026-04-01
 
