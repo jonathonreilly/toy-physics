@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 121 |
 | **retained_bounded** | 235 |
 | open_gate | 11 |
-| unaudited | 1026 |
+| unaudited | 1027 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 318 |
+| ~~audited_conditional~~ | 317 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 387 |
-| `audited_conditional` | 318 |
+| `audited_conditional` | 317 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1087 |
+| `unaudited` | 1088 |
 
 | claim_type | count |
 |---|---:|
@@ -517,7 +517,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1499,22 +1498,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** A1-only algebraic classification of finite-dimensional complex Cl(3) representations, with U4 bounded by the open staggered-Dirac/Grassmann realization gate.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-axiom_first_cl3_per_site-004`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The abstract Cl(3) representation classification gives two 2-dimensional chirality irreps, and the physical per-site Hilbert-space conclusion follows only if the one-Grassmann-pair staggered-fermion realization is admitted.  _(class `A`)_
-- **chain closes:** False — U1-U3 close as standard finite-dimensional Clifford-algebra representation theory over A1. U4 does not close from the retained restricted packet because the physical one-Grassmann-pair Hilbert-space bridge is explicitly an open staggered-Dirac realization gate.
-- **rationale:** The algebraic chirality-aware repair is coherent: Cl(3,0) as a real algebra, the central pseudoscalar split, and the two 2-dimensional complex irreps support U1-U3. The runner checks are algebraic exhibits and sanity checks, not first-principles physical closure, and they do not establish the staggered/Grassmann realization. Because U4 imports the open staggered-Dirac realization gate and cites an open_gate authority, the full per-site physical Hilbert-dimension conclusion is conditional rather than clean.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `axiom_first_cpt_theorem_stretch_note_2026-04-29`

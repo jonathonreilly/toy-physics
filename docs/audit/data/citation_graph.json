@@ -33221,15 +33221,15 @@
     },
     "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "minimal_axioms_2026-05-03",
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "df7a9de639452522894e0c5257cf96c82b44b744776034ef033b479dbd336a5e",
+      "note_hash": "2dfb674c9f8755cede1bd7c4411c5fd1c2ddbb35cbbde683da5306e1b719fbd0",
       "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
       "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
@@ -63000,22 +63000,22 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 181,
+      "bounded_theorem": 182,
       "decoration": 1,
       "meta": 22,
       "no_go": 14,
       "none": 1681,
       "open_gate": 21,
-      "positive_theorem": 91
+      "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 686,
+      "bounded_theorem": 687,
       "decoration": 1,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
-      "positive_theorem": 610
+      "positive_theorem": 609
     },
     "edge_count": 7772,
     "leaf_count": 531,

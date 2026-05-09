@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/axiom_first_cl3_per_site_uniqueness_check.py
-runner_sha256: 48efa77239a7213c6b8da214784bf28b3facf1cca7f7578c5bd1e28eaa70c4c1
+runner_sha256: ba487551ea437eeac420d0aaf3373dc501c4edfca1a4499cf30cf3b44e57ad55
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.29
+elapsed_sec: 0.24
 status: ok
 ----- stdout -----
 ========================================================================
@@ -71,7 +71,7 @@ status: ok
 
    PASSED: 6/6
 
- verdict: per-site uniqueness (U1)-(U4) exhibited on Cl(3) with
+ verdict: A1-only classification (U1)-(U3) exhibited on Cl(3) with
           chirality split rho_+ (canonical) / rho_- (parity-conjugate).
 
 ----- stderr -----
