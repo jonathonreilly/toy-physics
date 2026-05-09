@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 917 |
+| unaudited | 916 |
 | meta | 55 |
-| ~~audited_numerical_match~~ | 22 |
+| ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 404 |
 | ~~audited_failed~~ | 9 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 404 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
-| `audited_numerical_match` | 22 |
+| `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 972 |
+| `unaudited` | 971 |
 
 | claim_type | count |
 |---|---:|
@@ -976,6 +976,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `lattice_distance_law_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `lensing_deflection_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `monopole_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -8162,6 +8163,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The one-term-per-layer reduction fails badly while the exact edge replay matches the first-order observable at the stated H=0.35 setup.  _(class `C`)_
 - **chain closes:** True — The source makes only a bounded negative claim about the first reduced surrogate. The live H=0.35 runner reproduces the archived exact-edge/full-harness spot-check and the layer_signed/layer_abs failures against the exact edge series, with no cited dependencies needed.
 - **rationale:** The retained content is a bounded negative inside the stated harness, not a derivation of the reference lensing slope or a continuum physics claim. The live runner with --h 0.35 reproduces true_kubo=+5.972756 and exact_edge=+5.972756 at b=3 with |Delta|=4.228e-13, then shows the signed and absolute one-term-per-layer reductions miss the b=3..6 exact-edge series by about 98-100%. Because the note explicitly keeps the exact edge factorization as the reference object and rejects only the first reduced surrogate, the claim closes on its own terms.
+- **auditor confidence:** high
+
+### `lensing_deflection_note`
+
+- **Note:** [`LENSING_DEFLECTION_NOTE.md`](../../docs/LENSING_DEFLECTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded numerical functional-form claim that the H=0.25 Fam1 kubo_true deflection data on b in {3,4,5,6} fits a non-standard power law with slope about -1.43 and high R2, not textbook 1/b lensing.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d1f-b7bc-7892-beb5-11cfcc7f6e08`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The retained claim is that kubo_true(b) on b in {3,4,5,6} at H=0.25 follows a clean power law with exponent about -1.43 and R2 = 0.998.  _(class `G`)_
+- **chain closes:** False — The note's conclusion depends on cached per-b outputs and a slope-fit certificate that are not present in the restricted packet, while the provided runner exited with usage error and does not perform the slope fit. The missing step is a completed in-packet computation or certificate showing the four H=0.25 values and recomputing the log-log fit.
+- **rationale:** Issue: the load-bearing result is a numerical fit at a selected refinement, family, and b-window, with the actual slope certificate absent from the packet and the supplied runner only capable of generating one b-value when invoked correctly. Why this blocks: the claimed exponent and R2 are not derived algebraically or from a completed first-principles run in the restricted evidence. Repair target: include the completed H=0.25 b={3,4,5,6} outputs plus a runner that recomputes the log-log slope and R2 from them, or a completed full runner output. Claim boundary until fixed: at most a reported bounded numerical diagnostic for the specified Fam1/H/b window, not a closed lensing theorem or continuum-stable exponent.
 - **auditor confidence:** high
 
 ### `lensing_k_sweep_note`

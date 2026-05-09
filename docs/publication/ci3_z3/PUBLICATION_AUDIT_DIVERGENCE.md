@@ -18,7 +18,7 @@ publication tables phrase it.
 | criticality | effective_status | count |
 |---|---|---:|
 | high | `unaudited` | 188 |
-| medium | `unaudited` | 96 |
+| medium | `unaudited` | 95 |
 | critical | `unaudited` | 63 |
 | critical | `audited_conditional` | 61 |
 | high | `audited_conditional` | 46 |
@@ -26,7 +26,7 @@ publication tables phrase it.
 | high | `audited_renaming` | 9 |
 | critical | `audited_renaming` | 6 |
 | medium | `audited_failed` | 6 |
-| medium | `audited_numerical_match` | 5 |
+| medium | `audited_numerical_match` | 6 |
 | high | `audited_numerical_match` | 4 |
 | critical | `audited_numerical_match` | 2 |
 | medium | `audited_renaming` | 2 |
@@ -497,7 +497,7 @@ publication tables phrase it.
 | medium | `koide_q_second_order_reviewer_stress_test_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
 | medium | `kubo_continuum_limit_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `lensing_adjoint_kernel_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| medium | `lensing_deflection_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| medium | `lensing_deflection_note` | `audited_numerical_match` | `audited_numerical_match` | DERIVATION_ATLAS.md |
 | medium | `lepton_charge_universality_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `mass_mixing_subspace_disjointness_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | medium | `meson_charges_from_quark_y_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
