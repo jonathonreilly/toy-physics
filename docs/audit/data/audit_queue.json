@@ -665,10 +665,7 @@
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-05-03",
-        "minimal_axioms_2026-04-11"
-      ],
+      "deps": [],
       "direct_in_degree": 12,
       "effective_status": "unaudited",
       "load_bearing_score": 15.055,

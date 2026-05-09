@@ -433,14 +433,6 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
-      "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-      "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-      "to": "minimal_axioms_2026-04-11"
-    },
-    {
       "from": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
       "to": "axiom_reduction_note"
     },
@@ -28953,11 +28945,8 @@
       "claim_type_author_hint": "positive_theorem",
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "minimal_axioms_2026-05-03",
-        "minimal_axioms_2026-04-11"
-      ],
-      "note_hash": "29be42ce3f0f5fdddde887b358ed762047aaec664076dadbd906a1f8fa66397a",
+      "deps": [],
+      "note_hash": "f1c88393a935093a308f9508f7409f1a7ab323c421124317c9b4b30f53935410",
       "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
       "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
@@ -56335,6 +56324,7 @@
     "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
     "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
     "axiom_change_proposal_2026-04-10",
+    "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_reduction_note",
@@ -57091,10 +57081,10 @@
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6772,
+    "edge_count": 6770,
     "leaf_count": 548,
     "node_count": 1934,
-    "root_count": 842,
+    "root_count": 843,
     "runners_with_path": 1513
   }
 }

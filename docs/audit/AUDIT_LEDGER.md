@@ -80,11 +80,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 399 | 36.64 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 660 | 35.87 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 577 | 33.67 | `unaudited` | meta |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 567 | 33.15 | `unaudited` | meta |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 363 | 32.01 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `minimal_axioms_2026-05-03` | meta | critical | 670 | 29.39 | `unaudited` | meta |
-| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 648 | 29.34 | `audited_clean` | **retained_bounded** |
-| 7 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `unaudited` | unaudited |
+| 5 | `native_gauge_closure_note` | bounded_theorem | critical | 648 | 29.34 | `audited_clean` | **retained_bounded** |
+| 6 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `unaudited` | unaudited |
+| 7 | `minimal_axioms_2026-05-03` | meta | critical | 554 | 28.62 | `unaudited` | meta |
 | 8 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 152 | 28.26 | `unaudited` | unaudited |
 | 9 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
 | 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 543 | 27.59 | `audited_clean` | open_gate |

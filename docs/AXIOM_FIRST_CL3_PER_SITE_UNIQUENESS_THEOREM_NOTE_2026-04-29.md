@@ -90,7 +90,7 @@ U4's "one-Grassmann-pair staggered-fermion normalization" used to
 identify the abstract 2-dim Cl(3) chirality module with the physical
 per-site Hilbert space chains through A3, but the current canonical
 minimal-input surface
-[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+`MINIMAL_AXIOMS_2026-05-03.md`
 places the staggered/Grassmann realization outside the A1+A2 primitive
 kernel.
 
@@ -401,7 +401,7 @@ carried by substep 1 of the staggered-Dirac realization gate.
 
 ## Load-bearing Dependencies
 
-- A_min: [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+- A_min: `MINIMAL_AXIOMS_2026-04-11.md` (superseded; current axiom-set memo is `MINIMAL_AXIOMS_2026-05-03.md`)
 
 ## Citations
 
