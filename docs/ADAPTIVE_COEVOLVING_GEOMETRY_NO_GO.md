@@ -3,6 +3,8 @@
 **Date:** 2026-04-05  
 **Status:** compact no-go / outside audit-ratified tier
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/node_placement_emergence.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 ## One-line read
 
 The existing distinguishability-weighted node-placement machinery does

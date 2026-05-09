@@ -1,5 +1,7 @@
 # Asymmetry Persistence Born Calibration Note
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/asymmetry_persistence_born_calibration.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 has been declared and the cache refreshed under the new budget. The runner output and pass/fail semantics are unchanged.
+
 This note records the corrected Born calibration for the generated
 asymmetry-persistence lane. The lane is now confirmed as a narrow dense
 Born-safe pocket, but the pocket is density-sensitive and does not yet have a

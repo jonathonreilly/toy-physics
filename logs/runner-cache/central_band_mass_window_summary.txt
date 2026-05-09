@@ -1,11 +1,68 @@
 ===== runner cache v1 =====
 runner: scripts/central_band_mass_window_summary.py
-runner_sha256: c4d36914d73db577f81594a90e3529f9a567ce48fdf16aa8ba95ecaa570e1850
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 102a2b0a694a79b8ca9f043fe6ed9ba59f779743dd7a1b07c249e6a63e9572a3
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 190.23
+status: ok
 ----- stdout -----
+======================================================================================================================
+CENTRAL-BAND MASS WINDOW SUMMARY
+  Compare the plain baseline against the best retained hard-geometry row on the same graphs
+  seeds=16, npl=25, y_range=12.0, r=3.0, y_cut=2.0, anchor_b=5.0
+======================================================================================================================
+
+N = 60
+     M        linear            LN    pruned_lin     pruned_LN   ok
+  ------------------------------------------------------------------------
+     1  -0.331±0.295  -0.029±0.178  +0.563±0.380  +0.360±0.285   16
+     2  -0.299±0.405  -0.067±0.214  +0.697±0.449  +0.236±0.323   16
+     3  -0.497±0.415  -0.314±0.182  +0.659±0.490  +0.149±0.263   16
+     5  -0.447±0.414  -0.289±0.240  +0.276±0.509  -0.123±0.410   16
+     8  -0.238±0.352  -0.188±0.170  +0.566±0.509  +0.380±0.343   16
+    12  -0.151±0.356  +0.122±0.331  +0.471±0.551  +0.473±0.394   16
+  removed fraction: 17.2%
+
+  Power-law fits for gravity delta on the declared fit window
+          linear: not enough positive points for a stable fit
+              LN: not enough positive points for a stable fit
+    pruned_linear: delta ~= 0.8073 * M^-0.324  (R^2=0.209)
+       pruned_LN: delta ~= 0.1320 * M^0.456  (R^2=0.485)
+
+N = 80
+     M        linear            LN    pruned_lin     pruned_LN   ok
+  ------------------------------------------------------------------------
+     1  -0.013±0.287  +0.208±0.372  +0.343±0.361  +0.817±0.364   16
+     2  +0.509±0.372  +0.402±0.255  +0.403±0.372  +0.722±0.394   16
+     3  +0.147±0.485  +0.266±0.207  +0.165±0.548  +0.599±0.386   16
+     5  +0.095±0.547  +0.274±0.230  -0.235±0.492  +0.480±0.361   16
+     8  +0.399±0.405  +0.520±0.280  -0.118±0.504  +0.550±0.305   16
+    12  +0.521±0.472  +0.742±0.287  +0.078±0.524  +0.913±0.385   16
+  removed fraction: 17.2%
+
+  Power-law fits for gravity delta on the declared fit window
+          linear: delta ~= 0.3114 * M^-0.219  (R^2=0.027)
+              LN: delta ~= 0.2723 * M^0.186  (R^2=0.121)
+    pruned_linear: not enough positive points for a stable fit
+       pruned_LN: delta ~= 0.7859 * M^-0.220  (R^2=0.602)
+
+N = 100
+     M        linear            LN    pruned_lin     pruned_LN   ok
+  ------------------------------------------------------------------------
+     1  +0.024±0.320  +0.826±0.441  +0.614±0.550  +0.314±0.473   16
+     2  +0.457±0.533  +0.453±0.449  +0.616±0.704  +0.339±0.614   16
+     3  +0.080±0.417  +0.446±0.533  +0.569±0.615  -0.012±0.595   16
+     5  +0.090±0.428  +0.334±0.501  +1.061±0.630  +0.641±0.609   16
+     8  +0.067±0.475  +0.789±0.588  +1.167±0.808  +0.810±0.743   16
+    12  +0.351±0.581  +1.001±0.586  +0.955±0.851  +1.067±0.768   16
+  removed fraction: 17.1%
+
+  Power-law fits for gravity delta on the declared fit window
+          linear: delta ~= 0.6096 * M^-1.175  (R^2=0.634)
+              LN: delta ~= 0.3198 * M^0.297  (R^2=0.248)
+    pruned_linear: delta ~= 0.3802 * M^0.553  (R^2=0.825)
+       pruned_LN: delta ~= 0.2207 * M^0.638  (R^2=0.994)
+
 
 ----- stderr -----
 

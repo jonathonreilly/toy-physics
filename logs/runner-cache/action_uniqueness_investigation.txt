@@ -1,11 +1,214 @@
 ===== runner cache v1 =====
 runner: scripts/action_uniqueness_investigation.py
-runner_sha256: 4032ae6f9efe4ec6cc7c6465e0dcc1f513a3ba27100a1e4f521a950c087795b9
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.08
-status: timeout
+runner_sha256: 6502650b3a3affcf20e7475f67aac2648c918cab33d594a9f717299b14466194
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 123.40
+status: ok
 ----- stdout -----
+
+ACTION UNIQUENESS INVESTIGATION
+Is the valley-linear action forced by the axioms?
+
+================================================================================================
+PART A: NUMERICAL LANDSCAPE OF ACTION CHOICES
+  3D ordered lattice, h=0.5, W=8, L=12
+  Question: which actions give Newtonian gravity?
+================================================================================================
+
+                   Action     sign   toward      F~M     dist                class
+------------------------------------------------------------------------------------------------
+               S=L (none)     NONE      0/7      n/a      n/a    non-gravitational
+               S=L(1+f^1)     AWAY      0/7      n/a      n/a    non-gravitational
+                    S=-Lf     AWAY      0/7      n/a      n/a    non-gravitational
+            S=L(1-f^0.25)   TOWARD      7/7     0.26    -0.60 sub-Newtonian (F~M=0.26)
+             S=L(1-f^0.5)   TOWARD      7/7     0.50    -0.86 sqrt-class (F~M=0.5)
+            S=L(1-f^0.75)   TOWARD      7/7     0.75    -1.14 sub-Newtonian (F~M=0.75)
+               S=L(1-f^1)   TOWARD      7/7     1.00    -1.47    Newtonian (F~M=1)
+             S=L(1-f^1.5)   TOWARD      7/7     1.50    -2.35 super-Newtonian (F~M=1.5)
+               S=L(1-f^2)   TOWARD      7/7     2.00    -3.67 super-Newtonian (F~M=2.0)
+               S=L(1-f^3)   TOWARD      6/7     3.59    -4.64 super-Newtonian (F~M=3.6)
+              S=L*exp(-f)   TOWARD      7/7     1.00    -1.47    Newtonian (F~M=1)
+                S=L/(1+f)   TOWARD      7/7     1.00    -1.47    Newtonian (F~M=1)
+           S=L(1-ln(1+f))   TOWARD      7/7     1.00    -1.47    Newtonian (F~M=1)
+           S=L(1-tanh(f))   TOWARD      7/7     1.00    -1.47    Newtonian (F~M=1)
+            S=spent-delay   TOWARD      7/7     0.50    -0.86 sqrt-class (F~M=0.5)
+
+================================================================================================
+PART B: ANALYTIC DERIVATION CHAIN
+  Each physical requirement eliminates alternatives
+================================================================================================
+
+  STEP 1: Locality
+    The propagator is nearest-neighbor: K(i->j) only for adjacent i,j.
+    This means the action is a per-edge quantity S(L, f_local).
+    Eliminates: non-local actions, path-dependent couplings.
+
+  STEP 2: Unitarity (linear propagator)
+    Amplitudes add linearly: psi_j = sum K(i->j) psi_i.
+    The Born rule I3=0 holds for ANY per-edge action.
+    Born does NOT constrain the action. All tested actions give I3 < 5e-15.
+
+  STEP 3: Attractive gravity (phase valley)
+    Paths near a mass must accumulate LESS phase than paths far away.
+    This requires dS/df < 0 (action decreases with field strength).
+    Eliminates: S=L (no coupling), S=L(1+f) (hill/repulsion), S=-Lf (AWAY).
+
+  STEP 4: Newtonian mass law (F ~ M)
+    The deflection must scale linearly with source mass.
+    For action S = L*g(f), deflection ~ integral g'(f) * df/db dx.
+    If g(f) ~ 1 - c*f + O(f^2) at weak field, then deflection ~ s (mass).
+      If g(f) ~ 1 - c*f^alpha, then deflection ~ s^alpha.
+      F ~ M requires alpha = 1 (linear in f at weak field).
+      Eliminates: S=L(1-sqrt(f)) [alpha=0.5], S=L(1-f^2) [alpha=2], etc.
+
+  STEP 5: Momentum conservation (Newton's third law)
+    For two bodies A, B with masses s_A, s_B:
+      Force on A ~ s_A * s_B^alpha,  Force on B ~ s_B * s_A^alpha
+      Momentum conservation: s_A * s_B^alpha = s_B * s_A^alpha
+      => (s_A/s_B)^(alpha-1) = 1 for ALL mass ratios
+      => alpha = 1.
+    This is an independent derivation of alpha=1 from momentum conservation alone.
+    Eliminates: all alpha != 1, regardless of other criteria.
+
+  STEP 6: Source additivity (superposition)
+    Two masses s1, s2 at same location should produce field s1+s2.
+    For S = L(1-f^alpha), the combined phase is L(1-(s1+s2)^alpha/r^alpha).
+    For individual masses: L(1-s1^alpha/r^alpha) + L(1-s2^alpha/r^alpha) - L.
+      Additivity: (s1+s2)^alpha = s1^alpha + s2^alpha?
+      This holds only for alpha=1.
+      Eliminates: all alpha != 1 (same conclusion as Step 5).
+
+  STEP 7: Newtonian distance law in 3D (1/b)
+    For S = L(1-c*f) with f = s/r (Coulomb in 3D):
+      deflection(b) = k*s*b * integral dx / (x^2+b^2)^{3/2} = 2ks/b
+      This is exact 1/b (Newtonian).
+      For S = L(1-c*f^alpha): deflection ~ 1/b^alpha.
+      Only alpha=1 gives 1/b.
+    This is the third independent route to alpha=1.
+    The three independent routes (mass law, momentum, distance law) all
+      select alpha=1, providing a robust uniqueness argument.
+
+  CONCLUSION: Within the family S = L*g(f), the requirements
+    (attractive, F~M, momentum conservation, 1/b distance law)
+    each independently select g(f) = 1 - c*f + O(f^2).
+
+  The remaining freedom is:
+    - The coupling constant c (sets G_Newton)
+    - Higher-order corrections O(f^2) that are invisible at weak field
+
+  Valley-linear S=L(1-cf) is the UNIQUE weak-field action.
+  Exp(-cf), 1/(1+cf), 1-tanh(cf) all agree at weak field
+  and are physically equivalent in the Newtonian regime.
+
+================================================================================================
+PART C: CONTINUUM UNIQUENESS THEOREM
+  Proving valley-linear is the unique Newtonian action
+================================================================================================
+
+  THEOREM: On a d-dimensional lattice with Coulomb field f=s/r^(d-2),
+  the gravitational deflection for action S = L*g(f) is:
+
+    delta(b) = k * b * integral_{-inf}^{inf} g'(f(x,b)) * (df/db) dx
+
+  For g(f) = 1 - c*f^alpha, the deflection scales as:
+    delta(b) ~ s^alpha / b^{alpha*(d-2) - (d-3)}
+
+  In 3D (d=3, f=s/r): delta ~ s^alpha / b^alpha
+  Newtonian (delta ~ 1/b) requires alpha = 1.
+
+  Numerical verification of the continuum deflection integral:
+  (evaluating integral for different alpha values)
+
+   alpha         b=1.0         b=2.0         b=4.0         b=8.0     fit slope    theory   match
+  ----------------------------------------------------------------------------------------
+    0.25      0.673712      0.565056      0.472225      0.391252       -0.2611     -0.25     YES
+    0.50      1.197474      0.845880      0.596406      0.418291       -0.5056     -0.50     YES
+    0.75      1.629267      0.968387      0.575046      0.340409       -0.7529     -0.75     YES
+    1.00      1.999900      0.999800      0.499600      0.249204       -1.0014     -1.00     YES
+    1.25      2.327150      0.978391      0.411252      0.172690       -1.2507     -1.25     YES
+    1.50      2.622046      0.927013      0.327709      0.115784       -1.5004     -1.50     YES
+    2.00      3.141591      0.785395      0.196344      0.049077       -2.0001     -2.00     YES
+    3.00      4.000000      0.500000      0.062500      0.007812       -3.0000     -3.00     YES
+
+  Analytic formula: delta(b) = k * s^alpha * C_alpha / b^alpha
+  where C_alpha = alpha * sqrt(pi) * Gamma((alpha+1)/2) / Gamma((alpha+2)/2)
+
+   alpha       C_alpha     C_numeric     ratio
+  ------------------------------------------------
+    0.25      0.674977      0.674445    0.9992
+    0.50      1.198140      1.197905    0.9998
+    0.75      1.629539      1.629458    1.0000
+    1.00      2.000000      1.999975    1.0000
+    1.25      2.327185      2.327178    1.0000
+    1.50      2.622058      2.622055    1.0000
+    2.00      3.141593      3.141592    1.0000
+    3.00      4.000000      4.000000    1.0000
+
+================================================================================================
+PART D: UNIQUENESS SUMMARY
+================================================================================================
+
+  REQUIREMENT CHAIN (each eliminates alternatives):
+
+  1. Locality  =>  action is per-edge: S = S(L, f_local)
+  2. Unitarity =>  Born rule holds for any action (no constraint)
+  3. Attractive gravity =>  phase valley: dS/df < 0
+  4. F ~ M  =>  g(f) = 1 - c*f + O(f^2)
+  5. Momentum conservation  =>  alpha = 1  (independent route)
+  6. Source additivity  =>  alpha = 1  (independent route)
+  7. 1/b distance law in 3D  =>  alpha = 1  (independent route)
+
+  Three independent arguments (4+5, 4+6, 4+7) all select alpha=1.
+
+  LANDSCAPE CLASSIFICATION:
+
+  Non-gravitational (3 actions):
+    S=L (none)
+    S=L(1+f^1)
+    S=-Lf
+
+  Newtonian class (5 actions):
+    S=L(1-f^1)  (F~M=1.00, dist=-1.47)
+    S=L*exp(-f)  (F~M=1.00, dist=-1.47)
+    S=L/(1+f)  (F~M=1.00, dist=-1.47)
+    S=L(1-ln(1+f))  (F~M=1.00, dist=-1.47)
+    S=L(1-tanh(f))  (F~M=1.00, dist=-1.47)
+
+  Non-Newtonian gravitational (7 actions):
+    S=L(1-f^0.25)  (sub-Newtonian (F~M=0.26), F~M=0.26)
+    S=L(1-f^0.5)  (sqrt-class (F~M=0.5), F~M=0.50)
+    S=L(1-f^0.75)  (sub-Newtonian (F~M=0.75), F~M=0.75)
+    S=L(1-f^1.5)  (super-Newtonian (F~M=1.5), F~M=1.50)
+    S=L(1-f^2)  (super-Newtonian (F~M=2.0), F~M=2.00)
+    S=L(1-f^3)  (super-Newtonian (F~M=3.6), F~M=3.59)
+    S=spent-delay  (sqrt-class (F~M=0.5), F~M=0.50)
+
+  UNIQUENESS THEOREM (bounded):
+
+  On the 3D ordered-lattice family with Coulomb field f=s/r,
+  the action S = L * g(f) satisfying ALL of:
+    (a) phase valley (attractive gravity)
+    (b) F ~ M (linear mass dependence)
+    (c) delta ~ 1/b (Newtonian distance law)
+    (d) momentum conservation for unequal masses
+  is UNIQUELY determined at weak field to be:
+
+    S = L * (1 - c*f)  +  O(f^2)
+
+  where c > 0 is the gravitational coupling constant.
+
+  The O(f^2) terms are invisible in the Newtonian regime
+  but could produce post-Newtonian corrections at strong field.
+
+  Valley-linear S=L(1-cf) is the simplest member of this class.
+  Exp(-cf), 1/(1+cf), 1-ln(1+cf), 1-tanh(cf) are all equivalent
+  at weak field and differ only in their strong-field predictions.
+
+  THE ACTION IS NOT AD HOC. It is the unique weak-field choice
+  forced by the conjunction of locality + attractive gravity +
+  Newtonian scaling (any one of: mass law, momentum, or distance law).
+
 
 ----- stderr -----
 

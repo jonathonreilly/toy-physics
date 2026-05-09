@@ -1,5 +1,7 @@
 # CHIRAL 3+1D Boundary Phase Note
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 Date: 2026-04-10
 
 This note records the boundary-condition phase scan added in

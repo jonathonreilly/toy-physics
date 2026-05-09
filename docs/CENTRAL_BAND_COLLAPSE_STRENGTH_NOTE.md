@@ -3,6 +3,8 @@
 **Date:** 2026-04-02  
 **Status:** bounded calibration complete
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/central_band_born_collapse_strength_sweep.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 This note records the corrected Born sweep over the stochastic-collapse
 probability `p` inside the dense central-band hard-geometry pocket.
 

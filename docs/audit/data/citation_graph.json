@@ -29627,7 +29627,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "675a5faa8d34f15df654a5f62cff340b6649512a49858b641801aa55d122228b",
+      "note_hash": "34a6148bbf8031073a15948bd3eceb479d02d517b11e17b6f905e5cc9efdf9f6",
       "path": "docs/ACTION_GEOMETRY_BRIDGE_NOTE.md",
       "runner_path": "scripts/action_geometry_bridge_probe.py",
       "title": "Action Geometry Bridge Note"
@@ -29682,7 +29682,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "b971204908d83c596cc3311ecbc4c6c1264e5a13732efd27eed812e27633cf35",
+      "note_hash": "4a790f8c0fa8e1a8f2d32ec7b75ba330c5a4c85c78fc5f6c670ec172e93ae30b",
       "path": "docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md",
       "runner_path": "scripts/action_uniqueness_investigation.py",
       "title": "Action Uniqueness Audit"
@@ -29706,7 +29706,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "86d7a637924ee8d9026a4bab9af4bea7acdeefadc4d0ef137c0bafe87e2e1c93",
+      "note_hash": "9cdd1f86213863c6b7b8be8cb18f286f03806a75021e70cf218b31715b6f102b",
       "path": "docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md",
       "runner_path": "scripts/node_placement_emergence.py",
       "title": "Adaptive / Coevolving Geometry Scout No-Go"
@@ -30936,7 +30936,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1ddb215c156cd1732a1525e62d25843088854804494e754e29b130fe2f492f67",
+      "note_hash": "c4438713200701080fa1c4e36a8f6c153b731ed1ce9dcee0189548901a0a15f1",
       "path": "docs/ALTERNATIVE_COUPLED_FIELD_PROBE_NOTE.md",
       "runner_path": "scripts/alternative_coupled_field_probe.py",
       "title": "Alternative Coupled-Field Probe"
@@ -31192,7 +31192,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "c7ac30f4e8dda9c6ed390f0b5dd735f56fddb969f655851f62811b027bff6904",
+      "note_hash": "8ab0fa281ddc456d1ab460a218d459db35edac7182d97a89a94edab569f77f1b",
       "path": "docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md",
       "runner_path": "scripts/asymmetry_persistence_born_calibration.py",
       "title": "Asymmetry Persistence Born Calibration Note"
@@ -31214,7 +31214,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "42ed727dae63d87219874bb2f4bb04a22dbd4c79f98b4f025d96be63a723f147",
+      "note_hash": "4ff890fd03871b9c7fe9a7b6a105f5afea0e1b0c6193df9218a0e8c17af60ada",
       "path": "docs/ASYMMETRY_PERSISTENCE_JOINT_CARD_NOTE.md",
       "runner_path": "scripts/asymmetry_persistence_joint_card.py",
       "title": "Asymmetry Persistence Joint Card Note"
@@ -31225,7 +31225,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "70b50b74202ac894d7eda221692465e186d3bb4a949f2efa8194ab2adffdaf4c",
+      "note_hash": "3ea07f6d820f794b058eac7abf2832802d1734213f62b5e2729772e3bd10f354",
       "path": "docs/ASYMMETRY_PERSISTENCE_MASS_SCALING_NOTE.md",
       "runner_path": "scripts/asymmetry_persistence_mass_scaling.py",
       "title": "Asymmetry Persistence Mass Scaling Note"
@@ -31934,7 +31934,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "063d57fda038eb7346731936475de4ac1fe6c0f9bba513f6f0cf2b3ae986d38f",
+      "note_hash": "b536f24cc7368051ed12dd5c79797ff87bf34f6f90d98f56f5da1af2375133b0",
       "path": "docs/BORN_LANE_COMPARISON_NOTE.md",
       "runner_path": "scripts/born_compare_modular_central_ln.py",
       "title": "Born Lane Comparison Note"
@@ -32671,7 +32671,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "26296f8e5f361e0e1ed23675f64fa94676da37c4c109cd2946897eebca68192e",
+      "note_hash": "5c4caf5f4c75189157616f754dd76ea70d952e24063eaff7419a4a5b634ab6d4",
       "path": "docs/CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md",
       "runner_path": "scripts/central_band_born_dense_sweep.py",
       "title": "Central-Band Dense Corrected Born Sweep Note"
@@ -32682,7 +32682,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "7e10de1f8ccc6646e8dce3d407ae165a0ff2d17e7e558dd58b554a39ca79289b",
+      "note_hash": "d8002b5db63ebde4e8b40a93a80a0cdee411f03c271e7fbd230e31c181128942",
       "path": "docs/CENTRAL_BAND_BORN_LARGEN_NOTE.md",
       "runner_path": "scripts/central_band_born_largeN.py",
       "title": "Central-Band Large-N Corrected Born Note"
@@ -32704,7 +32704,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "10819ae9a60731cfe190c7ec1efa7e5c3076406aab090a9f5baca6ccb4622394",
+      "note_hash": "3864db3265b30b1d7919893dd75fceec399199d4d73e727023b7659fa57f3bd0",
       "path": "docs/CENTRAL_BAND_COLLAPSE_STRENGTH_NOTE.md",
       "runner_path": "scripts/central_band_born_collapse_strength_sweep.py",
       "title": "Central-Band Collapse-Strength Note"
@@ -32715,7 +32715,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "c041b01a5e024310cbd4615ac7e78b4abc23a6d67fedce9f789aa37cc3228181",
+      "note_hash": "8bec11f995a0a09b416111b210cf32ccf9174a4e6d8b1cb49578691d23a243bd",
       "path": "docs/CENTRAL_BAND_DENSE_BOUNDARY_NOTE.md",
       "runner_path": "scripts/central_band_dense_boundary_sweep.py",
       "title": "Central-Band Dense Boundary Note"
@@ -32726,7 +32726,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a343d4b8ccc7b7cbd00788a04c816f03ab4bb8c1c4991ed1d88a8dd4736d4c07",
+      "note_hash": "98aecc5a199ad537a12b223569a9003e8da7c5ef4bae3d451673330822ffc310",
       "path": "docs/CENTRAL_BAND_DENSE_JOINT_HIGHN_NOTE.md",
       "runner_path": "scripts/central_band_dense_joint_highN.py",
       "title": "Central-Band Dense High-N Joint Card Note"
@@ -32737,7 +32737,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "69992100110ea115a29d64e68dfece0a94964396d4702be9ca75df1fb4cd4dae",
+      "note_hash": "99a8ca0e07fead4c5e82c4d30cca0a0c2ae53f22d2b4ed823a6c9503c4205fc9",
       "path": "docs/CENTRAL_BAND_DENSE_JOINT_NOTE.md",
       "runner_path": "scripts/central_band_dense_joint_card.py",
       "title": "Central-Band Dense Joint Card Note"
@@ -32748,7 +32748,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "0e4ab2d44ade16ea06ad8c5b91a6d41d10b11ea978ec3553a3b2413bced31262",
+      "note_hash": "80b1effcb1a779f99ef8b6559924c3b79ceee8d2a29c3734aa87be201495d375",
       "path": "docs/CENTRAL_BAND_DENSE_LARGEN_NOTE.md",
       "runner_path": "scripts/central_band_dense_joint_largeN.py",
       "title": "Central-Band Dense Large-N Joint Card Note"
@@ -32759,7 +32759,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "cf42f800464067f24312d0f7e4e8fe121ea7427e63835348778472bdae78bad4",
+      "note_hash": "91ab09fcf88204516ca9d8315514388c360f9b003e4bb1e0f601566394ddda53",
       "path": "docs/CENTRAL_BAND_LAYERNORM_NOTE.md",
       "runner_path": "scripts/central_band_layernorm_combo.py",
       "title": "Central-Band Removal + Layernorm Note"
@@ -32770,7 +32770,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "7e7cd13b4a9ba5e33456846c80d29f9e0180df2ba4048257f2f91153b48c599f",
+      "note_hash": "7f17b2c264a5a15eed326b26be55d12f6710a262669cc9a6b92ff022bf5b139c",
       "path": "docs/CENTRAL_BAND_MASS_WINDOW_NOTE.md",
       "runner_path": "scripts/central_band_mass_window_summary.py",
       "title": "Central-Band Mass Window Note"
@@ -33018,7 +33018,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "4603e862c21d23f2cabc1f2d15ae81b18fc607a131dd7cf88aabadfa23f29e22",
+      "note_hash": "a6692d1cdab8137f4040fb87258e83004581087d3c77418c716dd4be7563858e",
       "path": "docs/CHIRAL_3PLUS1D_BOUNDARY_PHASE_NOTE.md",
       "runner_path": "scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py",
       "title": "CHIRAL 3+1D Boundary Phase Note"
@@ -34442,7 +34442,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "141cca89f25840dae3b3932b9bf077d3a1eb3cfa5cea8d0de737318c3a025c72",
+      "note_hash": "bf1b9fe91b0e7ad5ebb63fd7a633de4298b3f3601a58bd2d03cc6ef354155603",
       "path": "docs/CROSS_FAMILY_UNIVERSALITY_NOTE.md",
       "runner_path": "scripts/dispersion_all_families.py",
       "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5 (Conditional)"
@@ -34640,7 +34640,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "cf8423b5d175b2749bb2d532516cba5d4e7fb4af5430537c3c780ffce32bee99",
+      "note_hash": "9e53bd916bb2c52a3ff1f2dcf3c16392fa79bb036c5b21ed9761435361da6fce",
       "path": "docs/DENSE_PRUNE_GUARD_SEED_NOTE.md",
       "runner_path": "scripts/channel_count_guarded_prune.py",
       "title": "Dense Prune Guard Seed Note"
@@ -34744,7 +34744,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "516e83e7d8f54c0ca1a14427bc9934ac1b382264d967ed74101c1d6c7d850401",
+      "note_hash": "e9b80e857a25251eb1540df3d8c333dd9cffb935494098ada0c36e82f9d66b8a",
       "path": "docs/DIMENSION_SELECTION_NOTE.md",
       "runner_path": "scripts/frontier_dimension_selection.py",
       "title": "Dimension Selection: Does Self-Consistency Require d = 3?"
@@ -34788,7 +34788,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "a2cff3950651edbeffaf8c8c9d4f1488e374b83965de85ec64aad56331c0ceea",
+      "note_hash": "aec1aa6078f886f02001cb9dfa446a4ead6896db4373353b812d8bf46da8cf6a",
       "path": "docs/DIRAC_FIELD_SMOOTHING_NOTE.md",
       "runner_path": "scripts/frontier_dirac_walk_3plus1d_field_smoothing_scan.py",
       "title": "Dirac Field Smoothing Note"
@@ -34812,7 +34812,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "7e9935a31cbb0526b7c5815a8e7d7077a9ba49df9e8c6af0f856cfdd86bae3c7",
+      "note_hash": "b53cc7f36396baa111a22d29b4efc3b0fff8cb884d49ce65e917f1249f8617e8",
       "path": "docs/DIRAC_SOURCE_SMOOTHING_NOTE.md",
       "runner_path": "scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py",
       "title": "Dirac Source Smoothing Note"
@@ -34823,7 +34823,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "161d6d759136b133315dd92d43c2b20b858a61876790a58a53ade92557708496",
+      "note_hash": "4277cc191e0ff4e897b94ff3c4d153112504367afaeb8c50836836c8d3dc2ebc",
       "path": "docs/DIRAC_V4_CONVERGENCE_NOTE.md",
       "runner_path": "scripts/frontier_dirac_walk_3plus1d_v4_convergence.py",
       "title": "Dirac v4 Convergence Note"
@@ -34834,7 +34834,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "855b0e3a9f33283a58e84b7a8a0fdd3f79b55deebebea6139c55b5d3ec0f0654",
+      "note_hash": "2f070dc026724362d44fa0a84f9dd0619f4be112e347d10f398c6e3a2f621b8c",
       "path": "docs/DIRAC_WEAK_COUPLING_NOTE.md",
       "runner_path": "scripts/frontier_dirac_walk_3plus1d_weak_coupling_scan.py",
       "title": "Dirac Weak Coupling Note"
@@ -34927,7 +34927,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "3bd71f298b9c934c3654081d5e528a39f61921aabab8f0078b7e9ba97c9a6611",
+      "note_hash": "3ac7c8ea07113013e362ebf6192a920b5e32c9ace99e2ac95b0803396b21159e",
       "path": "docs/DISPERSION_HIGH_P_TIEBREAKER_NOTE.md",
       "runner_path": "scripts/dispersion_high_p_tiebreaker.py",
       "title": "High-p Dispersion Tiebreaker"
@@ -37744,7 +37744,7 @@
         "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
       ],
-      "note_hash": "b5f3a1cd23ffe184f1381eb7a770d2fcf752cbc0c84c52c6039e582b489f443a",
+      "note_hash": "c43a8fa8306d35732d55da22700e788948641a37c2bb8a7f1bfe61f940eeeec7",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Constructive Transport Plateau J_iso Derivation And Schur-Isotropy No-Go"

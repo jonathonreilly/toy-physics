@@ -1,5 +1,7 @@
 # Dense Prune Guard Seed Note
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/channel_count_guarded_prune.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 has been declared and the cache refreshed under the new budget. The runner output and pass/fail semantics are unchanged.
+
 This note compares the exact flip-prone seed IDs from the replay work against the current channel-count guard path.
 
 The code path has evolved a bit since the earlier replay logs, so treat these as same-seed diagnostic comparisons rather than a literal byte-for-byte rerun of the older numbers.

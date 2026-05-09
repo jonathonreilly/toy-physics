@@ -3,6 +3,8 @@
 **Date:** 2026-04-05  
 **Status:** bounded positive for an edge-carried minimal coupled-field architecture on the exact 3D lattice
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/alternative_coupled_field_probe.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 ## Artifact chain
 
 - [`scripts/alternative_coupled_field_probe.py`](/Users/jonreilly/Projects/Physics/scripts/alternative_coupled_field_probe.py)

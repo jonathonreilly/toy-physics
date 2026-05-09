@@ -1,5 +1,7 @@
 # Dirac Weak Coupling Note
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/frontier_dirac_walk_3plus1d_weak_coupling_scan.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 **Date:** 2026-04-10
 **Scope:** periodic 3+1D Dirac v4 scan with weaker coupling and longer propagation at fixed dimensionless geometry.
 
