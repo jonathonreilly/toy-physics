@@ -1,0 +1,134 @@
+==============================================================================
+SECTION 0: Setup sanity
+==============================================================================
+
+==============================================================================
+SECTION 1: Barrier 1 — Vacuum-state freedom
+==============================================================================
+Test: GNS inner product depends on vacuum state rho_Omega.
+C_3 invariance forces rho diagonal in C_3-character basis but does NOT
+force tracial (p_+ = p_omega = p_{omega^2} = 1/3).
+
+   E_+/E_perp at A1 point under tracial rho: 1.000000
+   E_+/E_perp at A1 point under skewed (0.6,0.2,0.2): 0.714286
+   E_+/E_perp at A1 point under skewed (0.2,0.6,0.2): 1.250000
+   E_+/E_perp at A1 point under skewed (0.1,0.45,0.45): 1.538462
+   |b|/a at GNS-equipartition under tracial rho: 0.7070 (target: 1/sqrt(2) = 0.7071)
+   |b|/a at GNS-equipartition under skewed (0.6,0.2,0.2): 0.5982
+   |b|/a at GNS-equipartition under skewed (0.2,0.6,0.2): 0.7912
+
+==============================================================================
+SECTION 2: Barrier 2 — Yukawa-vacuum circularity
+==============================================================================
+Test: vacuum |Omega> selected by full action S = S_gauge + S_Yukawa(Y_e).
+If GNS metric depends on Y_e, deriving (a,b) from GNS metric is circular.
+
+
+==============================================================================
+SECTION 3: Barrier 3 — Inner-product vs log-functional choice
+==============================================================================
+Test: even with tracial rho, GNS inner product is scalar·Frobenius.
+The (1,1) vs (1,2) weight-class choice is a separate LOG-FUNCTIONAL
+choice not selected by the inner product itself.
+
+   kappa at extremum of block-total log-law: 2.0098 (target A1: 2.0)
+   kappa at extremum of det log-law:        1.0040 (target: 1.0)
+   → Even with tracial GNS = (1/3)·Frobenius, the choice of LOG-FUNCTIONAL
+     (block-total vs det) is independent and NOT pinned by the inner product.
+
+==============================================================================
+SECTION 4: Barrier 4 — Spatial-vs-flavor sector orthogonality
+==============================================================================
+Test: RP is on Z^3-spatial path integral; hw=1 is a momentum-space
+flavor sector. RP form on field polynomials does not directly induce
+a unique inner product on the abstract M_3(C) acting on hw=1.
+
+
+==============================================================================
+SECTION 5: Barrier 5 — Reeh-Schlieder cyclicity does not pin metric
+==============================================================================
+Test: cyclicity (density of A(O)|Omega>) is topological; it does NOT
+select a unique inner product on A(O).
+
+   <H, H>_v1 (symmetric vacuum) = 4.0000
+   <H, H>_v2 (corner vacuum)    = 1.5000
+   <H, H>_v3 (skewed vacuum)    = 3.5833
+
+==============================================================================
+SECTION 6: Meta-pattern verification — same as Routes F/E/A/D
+==============================================================================
+All five routes hit the SAME structural barrier: framework's retained
+content does not fix a canonical normalization on the operator algebra.
+
+Comparison table:
+  Route F (Casimir-difference T(T+1)-Y²): convention dep + sector orthogonality
+  Route E (Kostant Weyl-vector |ρ|²): Cartan-Killing convention
+  Route A (Koide-Nishiura quartic): Wilson-coefficient circularity
+  Route D (Newton-Girard polynomial): weight-class (1,1) vs (1,2) ambiguity
+  Probe 1 (RP+GNS): vacuum-state freedom + log-functional choice
+
+All routes need a NORMALIZATION not supplied by retained content.
+
+==============================================================================
+SECTION 7: Falsifiability anchor (PDG, anchor-only)
+==============================================================================
+PDG charged-lepton masses appear ONLY as observational anchor here.
+They are NOT derivation inputs.
+
+   Q anchor (PDG): 0.666661  (target: 2/3 = 0.666667)
+   PDG: a_0² = 0.941523,  2|z|² = 0.941506
+
+==============================================================================
+RESULTS
+==============================================================================
+PASS  0.1 C^3 = I (C_3 cyclic order check)  expected C^3 = I
+PASS  0.2 C is unitary  expected C C^† = I
+PASS  0.3 circulant H is Hermitian  H = aI + bC + b̄C²
+PASS  0.4 C_3 commutes with circulant  C-equivariance: C H C^† = H
+PASS  0.5 E_+ formula: 3 a^2  E_+ = 3.000000 vs 3·a² = 3.0
+PASS  0.6 E_perp formula: 6 |b|^2  E_perp = 2.040000 vs 6·|b|² = 2.040000
+PASS  0.7 A1 condition: kappa = 2 forced by |b|²/a² = 1/2  kappa = 2.000000 vs 2.0
+PASS  1.1 C eigenvector e_+: C e_+ = e_+ (eigenvalue 1)  trivial character
+PASS  1.2 C eigenvector e_omega: C e_omega = omega · e_omega  omega = -0.5000+0.8660j
+PASS  1.3 C eigenvector e_omega2: C e_omega2 = omega^2 · e_omega2  omega^2 = -0.5000-0.8660j
+PASS  1.4 tracial rho is C_3-invariant  C rho_tr C^† = rho_tr
+PASS  1.5 skewed rho_1 is C_3-invariant (eigenvectors of C)  p=(0.6, 0.2, 0.2)
+PASS  1.6 skewed rho_2 is C_3-invariant  p=(0.2, 0.6, 0.2)
+PASS  1.7 skewed rho_3 is C_3-invariant  p=(0.1, 0.45, 0.45)
+PASS  1.8 tracial rho gives E_+/E_perp = 1 at A1 point  tracial reproduces (1,1) Frobenius weighting
+PASS  1.9 skewed rho_1 gives E_+/E_perp ≠ 1 at A1 point (vacuum-dep)  deviation 0.2857 > 0.1
+PASS  1.10 skewed rho_2 gives E_+/E_perp ≠ 1 at A1 point  deviation 0.2500 > 0.05
+PASS  1.11 skewed rho_3 gives E_+/E_perp ≠ 1 at A1 point  deviation 0.5385 > 0.05
+PASS  1.12 tracial gives equipartition at |b|/a = 1/sqrt(2)  (1,1) Frobenius weighting recovers A1
+PASS  1.13 skewed rho gives different GNS-equipartition |b|/a (or none)  skew_1: 0.5982, skew_2: 0.7912, target: 0.7071
+PASS  2.1 mock_yukawa_vacuum (a=1, b=0.300) is valid rho  hermitian=True, trace=1=True, eigs≥0=True
+PASS  2.2 mock_yukawa_vacuum (a=1, b=0.707) is valid rho  hermitian=True, trace=1=True, eigs≥0=True
+PASS  2.3 mock_yukawa_vacuum (a=1, b=1.000) is valid rho  hermitian=True, trace=1=True, eigs≥0=True
+PASS  2.4 different (a,b) give different vacuum rho  ||rho_1 - rho_2||_F = 0.0707, ||rho_1 - rho_3||_F = 0.0726
+PASS  2.5 GNS metric depends on Y_e coefficients (circularity)  different choices of (a,b) in Y_e give different GNS metrics
+PASS  3.1 GNS-tracial = (1/3) · Frobenius  GNS=1.1400+0.0000j, Frob/3=1.1400+0.0000j
+PASS  3.2 block-total log-law extremum gives kappa ≈ 2 (A1)  kappa_block = 2.0098 vs 2.0
+PASS  3.3 det log-law extremum gives kappa ≈ 1 (NOT A1)  kappa_det = 1.0040 vs 1.0
+PASS  3.4 two log-functionals give DIFFERENT kappa  |kappa_block - kappa_det| = 1.0059
+PASS  4.1 different reduction maps give different effective inner products  ||H||_A = 4.5000 vs ||H||_B = 5.0000
+PASS  4.2 reduction map B breaks C_3-equivariance  Map B's image is not circulant under standard C
+PASS  4.3 reduction-map choice is unconstrained by RP  RP gives form on field polynomials, not on abstract M_3(C)
+PASS  5.1 v1 = (1,1,1)/sqrt(3) is cyclic for M_3(C)  ||v1||=1.0000
+PASS  5.2 v2 = (1,0,0) is cyclic for M_3(C)  ||v2||=1.0000
+PASS  5.3 v3 = (1,0.5,0.5)/norm is cyclic for M_3(C)  ||v3||=1.0000
+PASS  5.4 different cyclic vacua give different GNS norms  cyclicity does not pin metric
+PASS  6.1 prior 4 routes all face normalization gap  Routes F, E, A, D documented
+PASS  6.2 probe 1 finds analogous normalization gap (vacuum-freedom)  vacuum on hw=1 not pinned to tracial
+PASS  6.3 probe 1 also finds NEW barrier (log-functional choice)  block-total vs det log-law residue persists even at tracial
+PASS  7.1 PDG Koide Q anchor close to 2/3 (anchor-only)  Q_anchor = 0.666661 vs 2/3 = 0.666667
+PASS  7.2 PDG anchor: a_0² ≈ 2|z|² (Brannen-equivalent A1)  |a_0² - 2|z|²|/a_0² = 0.000018
+
+=== TOTAL: PASS=41, FAIL=0 ===
+
+VERDICT: STRUCTURAL OBSTRUCTION — RP+GNS does NOT force the (1,1)
+Frobenius pairing on M_3(C)-on-hw=1. Five independent barriers each
+block the chain [RP+GNS → canonical Frobenius pairing → A1].
+
+Same meta-pattern as Routes F/E/A/D: framework's retained content
+does not fix a canonical normalization.
+
