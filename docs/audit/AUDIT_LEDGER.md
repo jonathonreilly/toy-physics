@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 947 |
+| unaudited | 946 |
 | meta | 56 |
-| ~~audited_numerical_match~~ | 23 |
+| ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 373 |
 | ~~audited_failed~~ | 10 |
@@ -44,9 +44,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 373 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
-| `audited_numerical_match` | 23 |
+| `audited_numerical_match` | 24 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1003 |
+| `unaudited` | 1002 |
 
 | claim_type | count |
 |---|---:|
@@ -943,6 +943,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `born_scattering_comparison_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `distance_law_definitive_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -3527,6 +3528,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The retained signal is the 31^3 through 64^3 grid sweep with largest-grid far-field exponent alpha = -1.023 +/- 0.012, finite-size extrapolation alpha_inf = -0.976 +/- 0.019, and largest-grid mass-linearity spread below 0.1%.  _(class `C`)_
 - **chain closes:** True — The named runner directly recomputes the Poisson field, path-sum deflections, far-field fits, finite-size extrapolation, and largest-grid mass scaling, and its live output reproduces the note's bounded numerical values.
 - **rationale:** The clean verdict is narrow. The live runner reproduces alpha(64^3) = -1.0233 +/- 0.0115, alpha_inf = -0.9762 +/- 0.0193, and delta/M spread 0.0010 on the specified Dirichlet 3D path-sum setup. The note explicitly limits the claim to a bounded numerical continuation and states that it is not full Newton closure, not architecture portability, and not a two-body M1 M2 theorem. Residual risk is therefore scope-bound: the result should only be cited for this finite path-sum surface and its stated convergence trend.
+- **auditor confidence:** high
+
+### `distance_law_definitive_note`
+
+- **Note:** [`DISTANCE_LAW_DEFINITIVE_NOTE.md`](../../docs/DISTANCE_LAW_DEFINITIVE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded ordered-cubic Dirichlet Poisson/path-sum numerical claim that the selected scaled-fit large-N estimator gives a 1/b deflection law and hence an inverse-square force exponent.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0dac-dec6-7361-b8b3-c7ab65fbccc7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note selects the scaled fit b=4..N/6 and reports the weighted mean for N>=56 as alpha = -1.00104 +/- 0.00416, then converts this to force exponent -2.0010 +/- 0.0042.  _(class `G`)_
+- **chain closes:** False — The runner genuinely computes Poisson fields and path-sum fits, but the 0.1% conclusion depends on choosing the scaled-fit N>=56 weighted mean while multiple finite-size extrapolations in the same output miss -1 by about 3% to 14%. The missing step is an independent theorem or pre-registered rule selecting that estimator as the continuum/bounded-law estimator.
+- **rationale:** Issue: the load-bearing result is a selected numerical estimator, not a closed derivation of the distance law. Why this blocks: the same runner reports finite-size extrapolations inconsistent with the claimed sub-percent alpha, so the headline precision follows only after choosing the favorable scaled-fit large-N weighted mean. Repair target: provide an independent estimator-selection/convergence theorem, or a runner that pre-registers and validates the estimator without target-based selection. Claim boundary until fixed: finite ordered-cubic Dirichlet grids with the stated scaled-fit window show a sub-percent numerical match to alpha=-1 over the sampled N values.
 - **auditor confidence:** high
 
 ### `distance_law_note`
