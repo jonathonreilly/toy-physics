@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 62 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 234 |
+| **retained_bounded** | 235 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 895 |
+| unaudited | 894 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 383 |
+| `audited_clean` | 384 |
 | `audited_conditional` | 421 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 949 |
+| `unaudited` | 948 |
 
 | claim_type | count |
 |---|---:|
@@ -338,6 +338,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `poisson_3d_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -9894,6 +9895,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Within the stated boundary, the runner genuinely solves the 2D finite-grid Poisson update and then uses that field in the propagation, Born, null, direction, and F~M checks. The full 3D field-law derivation does not close, but the note explicitly excludes that from the claimed scope.
 - **rationale:** The source note is careful that only the transverse profile is claimed as derived, and the runner source implements an actual Gauss-Seidel solve of the discrete 2D Poisson equation rather than printing constants or importing the result from another note. The longitudinal 1/(dx+0.1) factor is an explicit imposed boundary of the claim, not hidden support for the scoped transverse result. The cited Gate B authority is retained_no_go and is used as dependency bookkeeping, not as an open positive bridge needed for this scoped conclusion.
 - **auditor confidence:** high
+
+### `poisson_self_gravity_born_audit_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Narrow computational audit of one h=0.25 3D lattice, one three-slit source set, one screened Poisson-like backreaction loop, epsilon=0.05, source strength 0.004, distinguishing frozen-step Born from end-to-end Born.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0c76-aabf-70d2-8647-223a5ea416ae`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The full nonlinear loop is run separately for a, b, c, ab, ac, bc, and abc, giving end-to-end Born I3/P = 6.830e-05 while the frozen snapshot check stays at 8.834e-16.  _(class `C`)_
+- **chain closes:** True — The runner implements the frozen-field and end-to-end tests separately and the stdout matches the note's stated values. No cited upstream authority is required for the bounded claim as stated.
+- **rationale:** The issue tested is narrow: whether this explicit loop preserves Born locally and end-to-end. The runner computes the field iteration, frozen Sorkin I3/P, separate slit-subset loop outputs, and zero-coupling reduction rather than hard-coding the target numbers. The claim boundary is limited to the specified lattice, coupling, source strength, and nonconverged max-iteration snapshot; within that boundary the conclusion follows from the provided computation.
+- **auditor confidence:** medium
 
 ### `portable_card_extension_note`
 
