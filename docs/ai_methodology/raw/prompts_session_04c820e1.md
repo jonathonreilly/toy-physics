@@ -1,5 +1,13 @@
 # Claude Session — 04c820e1-77cd-416f-8917-21767de255fd
 
+**Type:** meta
+
+**Status:** meta — raw prompt archive / methodology-paper evidence item.
+This file is a verbatim user-prompt extraction from a session jsonl, not
+a closed physics derivation. It carries no theorem, no-go, support,
+bounded, or open_gate physics claim; cite only as session-evidence input
+to the methodology paper.
+
 **Source:** `/Users/jonBridger/.claude/projects/-Users-jonBridger-Toy-Physics/04c820e1-77cd-416f-8917-21767de255fd.jsonl`
 
 **Total user prompts captured:** 589

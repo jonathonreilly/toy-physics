@@ -29670,11 +29670,11 @@
     },
     "ai_methodology.raw.prompts_session_04c820e1": {
       "claim_id": "ai_methodology.raw.prompts_session_04c820e1",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "75bb704d1b169cc9c76963344562f78625b469e4c71cf1bc868e63233007507e",
+      "note_hash": "90a3c407454699e2b06d9f19dc11ac04dd24ba0475113e6b9c5257a3d703640f",
       "path": "docs/ai_methodology/raw/prompts_session_04c820e1.md",
       "runner_path": null,
       "title": "Claude Session \u2014 04c820e1-77cd-416f-8917-21767de255fd"
@@ -29890,11 +29890,11 @@
     },
     "ai_methodology.raw.prompts_session_9fc3990b_jonreilly": {
       "claim_id": "ai_methodology.raw.prompts_session_9fc3990b_jonreilly",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "8a3583d4a5a859a19ce6d8fbc7a96aacb570d57d7cd62da89af9a3dee8972b54",
+      "note_hash": "076c8c1231074b2718e042d54712bc9c3cd999c0ecfe4cf59b5e85dde7df9c05",
       "path": "docs/ai_methodology/raw/prompts_session_9fc3990b_jonreilly.md",
       "runner_path": null,
       "title": "Claude Session \u2014 9fc3990b-c690-4f72-a5a6-996f5baaa803"
@@ -29934,11 +29934,11 @@
     },
     "ai_methodology.raw.prompts_session_current": {
       "claim_id": "ai_methodology.raw.prompts_session_current",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "22bc007b58508448a1ac78b2f6d9752672d13310423bbee90766441b217f8791",
+      "note_hash": "5c103ead6f23b888bd8e565f6572b88b121d9b1cd96981afef7f41cdbf51e24b",
       "path": "docs/ai_methodology/raw/prompts_session_current.md",
       "runner_path": null,
       "title": "Claude Session \u2014 Current (2026-04-25, in progress)"
@@ -32621,9 +32621,9 @@
       "claim_id": "chiral_3plus1d_recurrence_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "00773d77c8f128581d7efff5c0a873d403c8c187a31d2aa662d29232d6c8f0cb",
+      "note_hash": "49148e41ca22cd00b5c8b9e6c4f3b38b02b158ed2522acaf198d491550c11fad",
       "path": "docs/CHIRAL_3PLUS1D_RECURRENCE_NOTE.md",
       "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "3+1D Periodic Chiral Sign Windows: Wrap and Recurrence Scale"
@@ -37211,7 +37211,7 @@
       "claim_id": "dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_seed_hint": "no_go",
       "deps": [
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_constructive_transport_plateau_schur_spectral_isotropy_selector_note_2026-04-19",
@@ -37219,7 +37219,7 @@
         "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
       ],
-      "note_hash": "c1a94c6d5f547f9e2ea917dc1658918b17ace9a42a0900f4193794f15c0a3fbb",
+      "note_hash": "a7ae7d1affb8b78323123fca13d9052c684b8898d30da3b4fb9d6bf27e6e3738",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_SCHUR_ENTROPY_CANDIDATE_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Canonical-Fiber Schur-Entropy Candidate / No-Go"
@@ -37309,14 +37309,14 @@
       "claim_id": "dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_seed_hint": "no_go",
       "deps": [
         "dm_wilson_direct_descendant_constructive_transport_plateau_schur_spectral_isotropy_selector_note_2026-04-19",
         "dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19",
         "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
       ],
-      "note_hash": "788bccdea9fbc14e560bb0a8f598e6add0e78c7fa4eb3419fbf5acce0f91181d",
+      "note_hash": "b5f3a1cd23ffe184f1381eb7a770d2fcf752cbc0c84c52c6039e582b489f443a",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Constructive Transport Plateau J_iso Derivation And Schur-Isotropy No-Go"
@@ -37610,13 +37610,13 @@
       "claim_id": "dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_seed_hint": "no_go",
       "deps": [
         "dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18",
         "dm_wilson_to_dweh_local_chain_path_algebra_target_note_2026-04-18",
         "dm_wilson_to_dweh_local_path_algebra_minimal_certificate_note_2026-04-18"
       ],
-      "note_hash": "208395127141cb7cb8c7e72acefc0a216ce29dbf2d27ddcc96783e663c0602fb",
+      "note_hash": "2baa7c183aeb2e5136a57a9768997a2db49bfc2c223d3431734b7a45b92d20cb",
       "path": "docs/DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_CURRENT_BANK_BOUNDARY_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_2026_04_18.py",
       "title": "DM Wilson-to-`dW_e^H` Local Chain Path-Algebra Current-Bank Boundary"
@@ -41133,11 +41133,11 @@
     },
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "cf8afdfd2da66283d6d3ee44515e4790304853d3c42e9f93793824d4f5499165",
+      "note_hash": "557a2094faa7ff4638bafc0722c4a9f02e70f41757f34db924dc34588761519b",
       "path": "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 5 `(C1)` Absolute-Scale Gate \u2014 Residual-Premise Attack Audit"
@@ -59770,18 +59770,18 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 142,
-      "meta": 15,
+      "meta": 18,
       "no_go": 14,
-      "none": 1699,
-      "open_gate": 13,
+      "none": 1695,
+      "open_gate": 14,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 645,
-      "meta": 15,
-      "no_go": 119,
-      "none": 462,
-      "open_gate": 114,
+      "bounded_theorem": 646,
+      "meta": 18,
+      "no_go": 122,
+      "none": 459,
+      "open_gate": 110,
       "positive_theorem": 618
     },
     "edge_count": 7217,

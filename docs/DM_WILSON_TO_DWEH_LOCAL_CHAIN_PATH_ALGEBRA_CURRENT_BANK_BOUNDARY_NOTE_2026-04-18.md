@@ -1,8 +1,10 @@
 # DM Wilson-to-`dW_e^H` Local Chain Path-Algebra Current-Bank Boundary
 
 **Date:** 2026-04-18
-**Status:** exact current-stack nonrealization theorem for the sharpest local
-Wilson object on the DM route
+**Status:** proposed_no_go — exact current-stack nonrealization theorem
+for the sharpest local Wilson object on the DM route (the current stack
+does not already realize the local generator layer / minimal path-algebra
+certificate / current-bank reading under another name)
 **Script:** `scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_2026_04_18.py`
 
 ## Question

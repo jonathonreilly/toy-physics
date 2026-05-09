@@ -1,5 +1,13 @@
 # Claude Session — 9fc3990b-c690-4f72-a5a6-996f5baaa803
 
+**Type:** meta
+
+**Status:** meta — raw prompt archive / methodology-paper evidence item.
+This file is a verbatim user-prompt extraction from a session jsonl, not
+a closed physics derivation. It carries no theorem, no-go, support,
+bounded, or open_gate physics claim; cite only as session-evidence input
+to the methodology paper.
+
 **Source:** `/Users/jonreilly/.claude/projects/-Users-jonreilly-Projects-Physics--claude-worktrees-upbeat-williamson-a2ff73/9fc3990b-c690-4f72-a5a6-996f5baaa803.jsonl`
 
 **Machine:** /Users/jonreilly/  (Claude Code, model claude-opus-4-X / sonnet-4-X)

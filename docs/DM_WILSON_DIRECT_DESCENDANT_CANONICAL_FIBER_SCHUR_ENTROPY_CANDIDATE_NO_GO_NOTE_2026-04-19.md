@@ -1,8 +1,12 @@
 # DM Wilson Direct-Descendant Canonical-Fiber Schur-Entropy Candidate / No-Go
 
 **Date:** 2026-04-19  
-**Status:** exact follow-on note on the DM source-fiber lane. The new
-canonical transport-column theorem reduces the live object to the
+**Status:** proposed_no_go — exact follow-on no-go on the DM source-fiber
+lane (canonical-fiber Schur-entropy candidate)
+
+### Detailed status
+
+The new canonical transport-column theorem reduces the live object to the
 orbit-level source fiber over the canonical favored column. On that fiber,
 the plateau slogan
 

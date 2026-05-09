@@ -1,10 +1,18 @@
 # Claude Session — Current (2026-04-25, in progress)
 
+**Type:** meta
+
 **Session id:** TBD (capturing in progress)
 
 **Capture date:** 2026-04-25
 
-**Status:** capturing live during the session that produced this methodology MD itself. The session began with an open-ended request to review main and identify ToE-claim gaps; evolved through gap-defense, strategy, AI-method-framing, and concluded with the request to start the methodology paper itself.
+**Status:** meta — raw prompt archive / methodology-paper evidence item.
+This file is a verbatim session-prompts capture, not a closed physics
+derivation. Captured live during the session that produced this
+methodology MD itself; the session began with an open-ended request to
+review main and identify ToE-claim gaps; evolved through gap-defense,
+strategy, AI-method-framing, and concluded with the request to start
+the methodology paper itself.
 
 This session is therefore both a primary data point AND the originator of the methodology-paper work. It exemplifies the workflow: open-ended evaluation request → focused strategic discussion → execution of a substantial repo-write task in the same session.
 
