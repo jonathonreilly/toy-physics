@@ -27,8 +27,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 360 |
-| ~~audited_failed~~ | 9 |
+| ~~audited_conditional~~ | 359 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -39,22 +39,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 360 |
+| `audited_conditional` | 359 |
 | `audited_decoration` | 10 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
 | `unaudited` | 1025 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 732 |
+| `bounded_theorem` | 735 |
 | `decoration` | 11 |
 | `meta` | 62 |
 | `no_go` | 192 |
 | `open_gate` | 108 |
 | `positive_theorem` | 774 |
-| `unset` | 3 |
 
 | criticality | count |
 |---|---:|
@@ -552,7 +551,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_layer_oscillation_2026-04-09` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_split_mass_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_walk_synthesis_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `chiral_walk_synthesis_2026-04-10_addendum` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -868,6 +866,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `ckm_schur_complement_theorem` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -2300,6 +2299,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `universal_chiral_recurrence_law_not_derived`
 - **auditor confidence:** medium
 
+### `chiral_3plus1d_recurrence_note`
+
+- **Note:** [`CHIRAL_3PLUS1D_RECURRENCE_NOTE.md`](../../docs/CHIRAL_3PLUS1D_RECURRENCE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-volume AWAY/TOWARD sign-window table and recurrence interpretation for n in {15,21,23,25,31}, L in {12,14,16,18,20,28}, theta0=0.3, strength=5e-4, offset=3.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d31-c9d0-7260-98f9-75e48a58121b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The observed-window table and the L/n interpretation assert specific classical/phase-kill AWAY windows and use the L=28 row as diagnostic evidence for wrap/recurrence behavior.  _(class `C`)_
+- **chain closes:** False — The current runner output contradicts several note entries: n=15 lambda=1.333, n=21 lambda=1.333, and n=25 lambda=0.560 are listed as classical/phase-kill AWAY when stdout says TOWARD. The L=28 diagnostic also reverses key signs, with n=21 classical/phase-kill TOWARD and n=31 classical/phase-kill AWAY in stdout.
+- **rationale:** Issue: the note's claimed exact sweep table and diagnostic interpretation are stale relative to the supplied completed runner output. Why this blocks: the bounded theorem is specifically about the finite parameter sweep, so incorrect AWAY/TOWARD windows break the chain on its own terms even though the runner source performs a genuine computation. Repair target: regenerate the table and L=28 interpretation from the current runner, then add assertions tying each listed lambda window to stdout. Claim boundary until fixed: only the raw runner stdout establishes the computed signs, not the note's published window summary.
+- **auditor confidence:** high
+
 ### `chiral_bottleneck_card_proposal`
 
 - **Note:** [`CHIRAL_BOTTLENECK_CARD_PROPOSAL.md`](../../docs/CHIRAL_BOTTLENECK_CARD_PROPOSAL.md)
@@ -2358,22 +2370,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing chiral-walk synthesis and its numerical table are not tied to a primary runner, parsed dependency edges, or explicit cited artifact logs in this row. Why this blocks: the audit can read the caveats, but cannot verify the overnight closure-card numbers, gauge checks, distance-law fits, or narrowed 3+1D basin claims from the restricted inputs. Repair target: register the chiral-walk synthesis runner or split the synthesis into explicit dependencies on the relevant audited closure-card, gauge, distance-law, convergence, and carrier-k rows, with current replay logs for the exact numbers quoted. Claim boundary until fixed: the note can serve as a bounded orientation summary and warning against universal 3+1D/chromaticity overclaiming, not as a clean audited synthesis of the chiral transport evidence.
 - **open / conditional deps cited:**
   - `chiral_walk_synthesis_2026-04-09 -> missing registered runner or explicit audited artifact dependencies for the quoted chiral-walk numerical table`
-- **auditor confidence:** high
-
-### `chiral_walk_synthesis_2026-04-10_addendum`
-
-- **Note:** [`CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md`](../../docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** - **1+1D chiral:** the wide-lattice result remains strong. Exact lattice  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (chiral_3plus1d_recurrence_note=audited_conditional, chiral_3plus1d_mixing_period_note=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (chiral_3plus1d_recurrence_note=audited_conditional, chiral_3plus1d_mixing_period_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared candidate retained-grade tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `CHIRAL_3PLUS1D_RECURRENCE_NOTE.md`
-  - `CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`
 - **auditor confidence:** high
 
 ### `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02`
