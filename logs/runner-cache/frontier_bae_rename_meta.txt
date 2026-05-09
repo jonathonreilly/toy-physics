@@ -1,0 +1,46 @@
+BAE-rename meta clarification check
+note: docs/BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09.md
+
+PASS: rename note is meta
+PASS: does not declare pipeline status
+PASS: BAE name introduced as primary
+PASS: structural content stated (3a² = 6|b|²)
+PASS: legacy alias acknowledged: 'A1-condition'
+PASS: legacy alias acknowledged: 'Brannen-Rivero'
+PASS: legacy alias acknowledged: 'Frobenius equipartition'
+PASS: framework-A1 vs BAE collision documented
+PASS: Brannen-Rivero literature attribution present
+PASS: PR cross-reference: #727
+PASS: PR cross-reference: #730
+PASS: PR cross-reference: #731
+PASS: PR cross-reference: #732
+PASS: PR cross-reference: #735
+PASS: PR cross-reference: #733
+PASS: PR cross-reference: #736
+PASS: PR cross-reference: #734
+PASS: PR cross-reference: #738
+PASS: PR cross-reference: #737
+PASS: PR cross-reference: #740
+PASS: PR cross-reference: #751
+PASS: PR cross-reference: #755
+PASS: PR cross-reference: #763
+PASS: PR cross-reference: #784
+PASS: PR cross-reference: #788
+PASS: PR cross-reference: #789
+PASS: PR cross-reference: #787
+PASS: review-loop rule for future branches present
+PASS: filename convention KOIDE_BAE_* established
+PASS: file-immutability for landed PRs preserved
+PASS: framework axioms A1+A2 declared unchanged
+PASS: minimal-axioms note still has Cl(3) A1
+PASS: minimal-axioms note still has Z³ A2
+PASS: rename does not promote any audit row
+PASS: rename does not modify retained theorems
+PASS: rename applies prospectively (forward-only)
+PASS: structural-content layer acknowledged: 'Brannen-Rivero original'
+PASS: structural-content layer acknowledged: 'Frobenius level'
+PASS: structural-content layer acknowledged: 'ℝ-isotype level'
+PASS: structural-content layer acknowledged: 'Continuous-symmetry level'
+
+TOTAL: PASS=40 FAIL=0
+BAE rename meta check passed: name 'A1-condition' renamed to 'Brannen Amplitude Equipartition (BAE)' going forward, framework axioms unchanged, file-immutability preserved for landed PRs, no theorem promotion.
