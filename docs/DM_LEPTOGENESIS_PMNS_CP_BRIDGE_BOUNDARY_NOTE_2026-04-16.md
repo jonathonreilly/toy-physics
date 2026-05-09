@@ -5,6 +5,31 @@
 to the mainline post-canonical leptogenesis CP package
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`
 
+## Inputs (cited authorities)
+
+The runner imports `canonical_h`, `cp_formula`, `cp_pair_from_h`,
+`h_from_breaking_triplet`, and `exact_package` from helper modules.
+Each of those imported constructions is supplied by a one-hop
+authority on the current main retained surface:
+
+- `canonical_h`, `h_from_breaking_triplet`, breaking-triplet grammar:
+  [`DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md)
+  and
+  [`DM_LEPTOGENESIS_PMNS_BREAKING_TRIPLET_SOURCE_LAW_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_BREAKING_TRIPLET_SOURCE_LAW_NOTE_2026-04-16.md);
+- `cp_formula`, `cp_pair_from_h` (CP pair from breaking-triplet
+  parameters): same projector-interface note above;
+- `exact_package` (exact source-oriented mainline leptogenesis CP
+  package with `gamma = 1/2`, `E1 = sqrt(8/3)`, `E2 = sqrt(8)/3`):
+  [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+  and
+  [`DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md).
+
+The note's contribution is the comparator: the runner shows that the
+canonical PMNS near-closing sample produces the opposite CP sign
+pattern from the source-oriented mainline package. The cited primitives
+are not re-derived; the note's load-bearing claim is the sign-split
+verdict conditional on those imported inputs.
+
 ## Question
 
 Does the canonical near-closing PMNS-assisted `N_e` sample already realize the

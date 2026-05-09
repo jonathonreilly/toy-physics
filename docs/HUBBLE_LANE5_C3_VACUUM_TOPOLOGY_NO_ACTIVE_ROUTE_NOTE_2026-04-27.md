@@ -9,6 +9,39 @@ opening would require beyond current framework content.
 **Lane:** 5 — Hubble constant `H_0` derivation
 **Workstream:** `hubble-h0-20260426`
 
+## Inputs (cited authorities)
+
+The audit no-go enumerates and disposes of five candidate `(C3)`
+routes. Each disposition rests on a one-hop authority on the current
+main retained / bounded surface:
+
+- Cycle 3 closure-pathway taxonomy (definition of `(C2)` and `(C3)`
+  classes):
+  [`HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md`](HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md);
+- Candidate 1 (`S^3` spatial topology):
+  [`S3_GENERAL_R_DERIVATION_NOTE.md`](S3_GENERAL_R_DERIVATION_NOTE.md)
+  and the spectral-gap identity
+  [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md);
+- Candidate 2 (direct vacuum-energy computation; closed negatively):
+  [`COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md`](COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md);
+- Candidate 3 (holographic / boundary-law probe):
+  [`HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md);
+- Candidate 4 (`Lambda` spectral tower bridge):
+  [`GRAVITY_COSMOLOGY_TOWER_LAMBDA_SPECTRAL_BRIDGE_THEOREM_NOTE_2026-04-25.md`](GRAVITY_COSMOLOGY_TOWER_LAMBDA_SPECTRAL_BRIDGE_THEOREM_NOTE_2026-04-25.md);
+- Candidate 5 (inflation, out of scope):
+  [`PRIMORDIAL_SPECTRUM_NOTE.md`](PRIMORDIAL_SPECTRUM_NOTE.md);
+- Cross-references to the Lane 5 cycle structure:
+  [`HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`](HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md),
+  [`HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`](HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md),
+  [`HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md`](HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md).
+
+The note is a structural-review audit, not a runner-driven theorem;
+the disposition of each candidate is a citation-based reading of the
+listed retained surfaces. The `(C3)` empty-class verdict is conditional
+on the current retained / bounded statuses of those candidate notes.
+A disposition flips if any candidate's retained surface is later
+strengthened to deliver `Omega_Lambda` outside the matter cascade.
+
 ---
 
 ## 0. Statement

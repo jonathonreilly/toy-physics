@@ -205,3 +205,26 @@ result for a static observable.
 > does not depend on any c=∞ comparator. The retardation magnitude
 > continuum question remains open; this lane is a separate
 > continuum result for a static observable."
+
+## Upstream dep effective_status (audit-lane snapshot)
+
+Per the audit ledger as of 2026-05-09:
+
+| Upstream authority | audit_status |
+| --- | --- |
+| `linear_response_true_kubo_note` | `audited_clean` |
+| `wave_retardation_continuum_limit_note` | `audited_clean` |
+
+The 2026-05-05 audit verdict
+([codex-fresh-first-kubo_continuum_limit_note in `docs/audit/data/audit_ledger.json`])
+was set when both upstreams were `retained_bounded`/conditional. Both
+have since been promoted to `audited_clean` upstream. The verdict's
+explicit "first obtain retained-grade closure for
+docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md, then re-audit this note" gating
+condition is therefore satisfied on the current upstream state.
+
+The conditional verdict on the broader physical-continuum framing of
+this row should re-evaluate against the newly-clean upstream pair when
+the row is next visited by the audit lane. The narrow runner-cached
+report (Fam1 H = 0.50, 0.35, 0.25 gives kubo_true = 7.062, 5.973, 5.986
+with 0.2% last-step drift) is unchanged.

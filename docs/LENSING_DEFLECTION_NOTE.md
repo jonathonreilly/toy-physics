@@ -374,6 +374,35 @@ did not survive fine refinement as textbook weak-field lensing.
 3. **Family sweep on the retained fine-`H` slope.** Tests whether the
    fine-`H` power-law shape is Fam1-specific or shared.
 
+## Audit-lane certificate (2026-05-09 status)
+
+The 2026-04 audit verdict flagged that the registered runner
+(`scripts/lensing_deflection_fine_single.py`) only generates a single
+b-value when invoked correctly, so the load-bearing slope/R² fit at
+H=0.25 on `b ∈ {3,4,5,6}` could not be verified end-to-end inside the
+audit packet.
+
+That certificate is now present:
+
+- runner: [`scripts/lensing_deflection_h025_slope_fit_certificate.py`](../scripts/lensing_deflection_h025_slope_fit_certificate.py)
+- cache: [`logs/runner-cache/lensing_deflection_h025_slope_fit_certificate.txt`](../logs/runner-cache/lensing_deflection_h025_slope_fit_certificate.txt)
+- structured output:
+  [`outputs/lensing_deflection_h025_slope_fit_certificate.json`](../outputs/lensing_deflection_h025_slope_fit_certificate.json)
+
+The certificate runner reproduces the per-b H=0.25 cached values
+(`kubo_true(b=3)=+5.986043`, `kubo_true(b=4)=+3.819639`, etc.) from
+the checked-in single-b outputs and recomputes the log-log slope and
+R² fit. It exits 0 with cached PASS rows for the H=0.25
+b ∈ {3,4,5,6} slope/R² certificate.
+
+This satisfies the audit-verdict repair target ("include the completed
+H=0.25 b={3,4,5,6} outputs plus a runner that recomputes the log-log
+slope and R² from them"). The certificate runner is already cited in
+the artifact-chain section above; this audit-lane subsection records
+the explicit alignment with the verdict's repair target. No claim
+status is promoted: the bounded numerical-diagnostic scope of the
+note is unchanged.
+
 ## Bottom line
 
 > "At H=0.35 the first-order Kubo deflection coefficient

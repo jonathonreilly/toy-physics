@@ -4,6 +4,34 @@
 **Script:** `scripts/frontier_oh_static_constraint_lift.py`
 **Status:** support - structural or confirmatory support note
 
+## Inputs (cited authorities)
+
+The runner's algebraic identity check (vanishing residuals on the two
+local static conformal constraints) takes the following primitives as
+input. Each is a one-hop authority on the current main retained
+surface:
+
+- exterior projector field `phi_ext`, exact shell source
+  `sigma_R = H_0 phi_ext`, and same-charge bridge
+  `psi = 1 + phi_ext`, `chi = 1 - phi_ext = alpha psi`:
+  cited from
+  [`RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`](RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md);
+- exact local `O_h` source class with shell support `3 < r <= 5`:
+  cited from
+  [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+  and
+  [`ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md`](ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md);
+- finite-rank source-to-metric bridge for the broader-family bound:
+  [`FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`](FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md).
+
+The note's contribution is the local algebraic identity that, given
+those primitives, the discrete static conformal constraint pair
+`H_0 psi = 2 pi psi^5 rho` and
+`H_0 chi = -2 pi alpha psi^5 (rho + 2S)` is satisfied to machine
+precision when `rho` and `S` are defined as below. The runner
+verifies this identity numerically; the cited primitives are not
+re-derived here.
+
 ## Purpose
 
 The strong-field gravity line had already fixed:

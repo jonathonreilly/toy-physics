@@ -1,6 +1,12 @@
 # Mesoscopic Surrogate Localization Sweep
 
 **Status:** bounded - bounded or caveated result note
+
+**Primary runner:** [`scripts/mesoscopic_surrogate_localization_family_sweep.py`](../scripts/mesoscopic_surrogate_localization_family_sweep.py)
+
+**Runner cache:** [`logs/runner-cache/mesoscopic_surrogate_localization_family_sweep.txt`](../logs/runner-cache/mesoscopic_surrogate_localization_family_sweep.txt)
+(SHA-pinned; runner exits 0; ~6s on the audit-lane host.)
+
 This note records an alternative localization-family sweep on the retained 3D ordered-lattice mesoscopic source control. The question was whether an explicitly local source shape can preserve the same two-stage sourced-response stability as the broad top-N control, and possibly improve on it.
 
 ## Setup

@@ -183,3 +183,29 @@ The runner uses the Python standard library only.
   - retained `w=-1` late-time companion.
 - [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)
   - retained three-generation matter structure.
+
+## Upstream dep effective_status (audit-lane snapshot)
+
+Per the audit ledger as of 2026-05-09:
+
+| Upstream authority | audit_status |
+| --- | --- |
+| `cosmology_frw_kinematic_reduction_theorem_note_2026-04-24` | `unaudited` |
+| `cosmology_from_mass_spectrum_note` | `unaudited` |
+| `r_base_group_theory_derivation_theorem_note_2026-04-24` | `unaudited` |
+| `n_eff_from_three_generations_theorem_note_2026-04-24` | `unaudited` |
+| `dark_energy_eos_retained_corollary_theorem_note` | `unaudited` |
+| `three_generation_structure_note` | `unaudited` |
+
+The audit verdict ([2026-05-05 codex-fresh-first audit row]) flags those
+six deps as not retained-clean upstream. The exact identity
+`1 + z_mr = Omega_m,0/Omega_r,0` is an algebraic consequence of flat-FRW
+plus standard matter/radiation equations of state once those upstream
+authorities are admitted. The conditional verdict therefore reflects
+the open upstream audit state, not a defect in the algebraic identity.
+
+**Promotion path.** The verdict moves to clean once the listed six
+upstream rows are themselves promoted to retained-clean / audited_clean,
+and this row is re-audited against the updated upstream state. No
+new derivation step is required from this note to lift the
+conditional.

@@ -201,3 +201,34 @@ lane invoked.
 ```bash
 python3 scripts/frontier_cosmological_constant_spectral_gap_identity.py
 ```
+
+## Upstream dep effective_status (audit-lane snapshot)
+
+Per the audit ledger as of 2026-05-09:
+
+| Upstream authority | audit_status |
+| --- | --- |
+| `universal_gr_discrete_global_closure_note` | `unaudited` |
+| `universal_qg_smooth_gravitational_global_solution_class_note` | `unaudited` |
+| `universal_qg_canonical_textbook_continuum_gr_closure_note` | `unaudited` |
+| `s3_general_r_derivation_note` | `unaudited` |
+| `s3_cap_uniqueness_note` | `audited_conditional` |
+| `cosmological_constant_result_2026-04-12` | `unaudited` |
+| `cosmology_scale_identification_and_reduction_note` | `audited_conditional` |
+| `dark_energy_eos_retained_corollary_theorem_note` | `unaudited` |
+| `confinement_string_tension_note` | `audited_conditional` |
+
+The audit verdict
+([2026-05-05 codex-fresh-first-cosmological-constant-spectral-gap-identity-theorem-note]
+in `docs/audit/data/audit_ledger.json`) flags those nine deps as not
+retained-clean upstream. Under the restricted one-hop audit context the
+identity therefore inherits a conditional verdict from upstream rather
+than from any defect in the algebraic Einstein-side or spectral-side
+legs of this theorem. The identity itself is an exact function identity
+in `R`; the audit boundary is purely upstream.
+
+**Promotion path.** The verdict moves to clean once the listed nine
+upstream rows are themselves promoted to retained-clean / audited_clean,
+and the conditional verdict is re-run against the updated upstream
+state. No new vocabulary or algebraic content is required from this
+note to lift the conditional.

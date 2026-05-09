@@ -65,7 +65,7 @@ is geometry-portable.
 | F~M (Fam1) | 0.9965 |
 | F~M (Fam2) | 0.9955 |
 | F~M (Fam3) | 0.9963 |
-| Born |I3|/P | 2.22e-15 |
+| Born |I3|/P | 6.21e-16 |
 | Null (s=0) | exact |
 | v-symmetry (+v vs −v) | +0.0072 vs +0.0085 |
 
@@ -101,3 +101,29 @@ proper c=∞ comparator instead of frozen-position references.
 - Stationary slices used for the instantaneous comparator are
   cached per visited iz; with the chosen v that's 7 unique positions
 - The retarded effect is +25% scale, not order-of-magnitude — small v/c
+
+## Inputs (cited authorities)
+
+The runner's load-bearing observable is `delta_M − delta_I`, the
+difference between retarded moving-source field and a layer-by-layer
+stitched late-time stationary slice (the c=∞ comparator). The
+primitives the runner imports are each one-hop authorities on the
+current main retained surface:
+
+- standard parallel perturbation propagator and beam-deflection readout
+  for the linear gravitational response:
+  [`LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](LINEAR_RESPONSE_TRUE_KUBO_NOTE.md);
+- continuum-stable static-slice construction for the stitched
+  instantaneous comparator and the wave-equation field's finite-c
+  lightcone certification:
+  [`WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`](WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md)
+  and
+  [`WAVE_RETARDATION_LAB_PREDICTION_NOTE.md`](WAVE_RETARDATION_LAB_PREDICTION_NOTE.md);
+- grown-DAG geometry families Fam1/Fam2/Fam3 used for the portability
+  check:
+  [`KUBO_CONTINUUM_LIMIT_NOTE.md`](KUBO_CONTINUUM_LIMIT_NOTE.md).
+
+The note's contribution is the bounded numerical M − I gap on three
+families. The c=∞ asymptotic identification of the stitched stationary
+slices is taken as the audit-flagged conditional input, not derived
+inside this note.
