@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 965 |
+| unaudited | 964 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 372 |
+| ~~audited_conditional~~ | 373 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 372 |
+| `audited_conditional` | 373 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1021 |
+| `unaudited` | 1020 |
 
 | claim_type | count |
 |---|---:|
@@ -586,6 +586,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `confinement_string_tension_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `continuum_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -3011,6 +3012,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** From the framework's alpha_s(M_Z) = 0.1181 and the asserted framework-gauge-sector = SU(3) Yang-Mills identification, standard QCD running and lattice string-tension inputs give sqrt(sigma) in a range overlapping experiment.  _(class `B`)_
 - **chain closes:** False — The source and runner check arithmetic, running, imported lattice comparisons, and a small qualitative MC test, but they do not close the framework-to-SU(3)-YM identification or the alpha_s(M_Z) input from provided one-hop authorities. No cited authorities were registered for this row, so the load-bearing bridge remains unratified in this audit context.
 - **rationale:** Issue: the result depends on unprovided retained inputs: the graph-first gauge sector = standard SU(3) Yang-Mills identification, the alpha_s(M_Z) = 0.1181 theorem, and the standard low-energy EFT/lattice bridge for sqrt(sigma). Why this blocks: the runner hard-codes several contested physical premises as true and verifies downstream consistency after importing QCD/lattice constants, so the scoped claim cannot be retained from the provided source alone. Repair target: register and cite retained authorities for the SU(3) YM equivalence and alpha_s theorem, and state the bounded EFT/lattice bridge as an audited dependency or explicit bounded premise. Claim boundary until fixed: a conditional consistency check showing that standard SU(3) YM at beta = 6 with the imported alpha_s input gives qualitative confinement signals and a plausible string-tension range.
+- **auditor confidence:** high
+
+### `continuum_bridge_note`
+
+- **Note:** [`CONTINUUM_BRIDGE_NOTE.md`](../../docs/CONTINUUM_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded continuum/asymptotic-bridge summary that classifies which DAG and lattice results survive scaling/refinement based on the numerical tables and caveats in the note.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0db7-822f-78a2-8187-061c5631fba7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note concludes that selected effects survive size growth or lattice refinement while strict visibility gain, 4D mass scaling, and some emergence/distance-law claims are finite-size, structural, or retracted.  _(class `B`)_
+- **chain closes:** False — The chain does not close because the packet provides no cited retained authorities and no runner output/source for the numerical survival, convergence, retraction, and caveat classifications. The missing step is a retained computational certificate or cited retained notes supporting the listed scaling and refinement results.
+- **rationale:** Issue: the load-bearing survival/retraction table imports many empirical runner outcomes, script cards, and branch-specific lattice/DAG results without any one-hop retained authorities or primary runner in the packet. Why this blocks: the claimed bounded continuum bridge is a synthesis of computational evidence, but the audit packet contains only the synthesis text, so the numerical and architectural classifications cannot be verified from retained inputs. Repair target: cite the retained result notes or provide a primary runner/cached certificate that reproduces the scaling and refinement classifications. Claim boundary until fixed: this note is only an unverified bounded summary of reported tests, not an audited continuum/asymptotic theorem.
 - **auditor confidence:** high
 
 ### `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29`
