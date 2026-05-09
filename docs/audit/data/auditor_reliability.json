@@ -76,7 +76,7 @@
     "codex-gpt-5": {
       "audits_with_runner_class": {
         "A": 80,
-        "B": 110,
+        "B": 109,
         "C": 210,
         "D": 12,
         "E": 1,
@@ -91,7 +91,7 @@
       "criticality_counts": {
         "critical": 40,
         "high": 14,
-        "leaf": 305,
+        "leaf": 304,
         "medium": 62
       },
       "cross_confirmation_agreement_rate": 0.754,
@@ -109,11 +109,11 @@
       "third_pass_decisions_n": 21,
       "third_pass_overturn_rate": 0.429,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 421,
-      "verdict_changed_after_re_audit": 311,
+      "total_audits": 420,
+      "verdict_changed_after_re_audit": 312,
       "verdict_counts": {
         "audited_clean": 241,
-        "audited_conditional": 134,
+        "audited_conditional": 133,
         "audited_decoration": 1,
         "audited_failed": 43,
         "audited_renaming": 2
@@ -123,7 +123,7 @@
       "audits_with_runner_class": {
         "A": 173,
         "B": 50,
-        "C": 106,
+        "C": 107,
         "D": 6,
         "E": 31,
         "F": 14,
@@ -138,7 +138,7 @@
       "criticality_counts": {
         "critical": 84,
         "high": 131,
-        "leaf": 47,
+        "leaf": 48,
         "medium": 151
       },
       "cross_confirmation_agreement_rate": 0.802,
@@ -156,13 +156,13 @@
       "third_pass_decisions_n": 33,
       "third_pass_overturn_rate": 0.545,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 413,
+      "total_audits": 414,
       "verdict_changed_after_re_audit": 28,
       "verdict_counts": {
         "audited_clean": 133,
         "audited_conditional": 214,
         "audited_decoration": 9,
-        "audited_failed": 10,
+        "audited_failed": 11,
         "audited_numerical_match": 22,
         "audited_renaming": 25
       }

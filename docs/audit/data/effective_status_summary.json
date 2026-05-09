@@ -40,8 +40,8 @@
   ],
   "cycles_detected": 183,
   "effective_status_counts": {
-    "audited_conditional": 349,
-    "audited_failed": 9,
+    "audited_conditional": 348,
+    "audited_failed": 10,
     "audited_numerical_match": 22,
     "audited_renaming": 27,
     "decoration_under_cl3_color_automorphism_theorem": 3,
