@@ -1,46 +1,62 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_boundary_law_robustness.py
-runner_sha256: 2b557c7e4379822ecbb1ee9945bd3bc529e5da256493367902b021ccc65501cd
+runner_sha256: fb13e8703e5f40abc132d75c0ec43cfbb2881abb475a3702817f37bcd2d76555
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 21.98
+elapsed_sec: 6.36
 status: ok
 ----- stdout -----
 ================================================================================
-BOUNDED BOUNDARY-LAW ROBUSTNESS ADDENDUM
-Multi-seed, multi-size, multi-partition, multi-G checks
+BOUNDED BOUNDARY-LAW ROBUSTNESS DIAGNOSTIC
+Fixed audit parameter envelope; bounded finite-run R^2 readout
 ================================================================================
 
-Parameters: MASS=0.3, MU2=0.22, DT=0.12, N_STEPS=30
-Sides: [6, 8, 10, 12, 14]
-Seeds: [42, 43, 44, 45, 46] (jitter=0.05)
-G values: [0, 5, 10, 20]
-Partition types: BFS-ball, rectangular, random
+CLAIM SCOPE (per prior audit review 2026-05-03):
+  This is a bounded finite-run numerical robustness diagnostic on
+  the fixed audit parameter envelope below. It is NOT a clean
+  bounded theorem-level boundary-law result, NOT parameter-
+  independent, NOT a holography proof. The support statement is
+  limited to the exact fixed-run numerical observation that this
+  script reports high R^2 boundary-size linearity on the audited
+  BFS-ball sweep and the stated small partition cross-check.
+
+FIXED AUDIT PARAMETER ENVELOPE (fixed grid, not swept axes):
+  MASS=0.3, MU2=0.22, DT=0.12, N_STEPS=30, SIGMA=1.5, JITTER=0.05
+  Sides:     [6, 8, 10, 12, 14]
+  Couplings: [0, 5, 10, 20]
+  Seeds:     [42, 43, 44, 45, 46]
+  Counted BFS-ball fits: 5 sides x 4 couplings x 5 seeds = 100 configs
+  Partition cross-check (separate, smaller): side=10, G=10,
+    partitions: BFS-ball, rectangular, random
+
+CAVEAT: side=6 BFS rows have only 2 available radii, so R^2=1.0
+  is automatic by two-point linear regression. The verdict
+  reports the >=3-radii subgrid (sides 8,10,12,14) separately.
 
 
 ================================================================================
 SECTION 1: BFS-ball S vs |boundary| -- multi-seed stability
 ================================================================================
-  side= 6 G= 0 seed=42: alpha=0.203168 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 0 seed=43: alpha=0.218291 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 0 seed=44: alpha=0.181932 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 0 seed=45: alpha=0.198848 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 0 seed=46: alpha=0.194956 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 5 seed=42: alpha=0.111611 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 5 seed=43: alpha=0.123013 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 5 seed=44: alpha=0.096787 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 5 seed=45: alpha=0.108679 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G= 5 seed=46: alpha=0.106049 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=10 seed=42: alpha=0.076458 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=10 seed=43: alpha=0.084256 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=10 seed=44: alpha=0.066682 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=10 seed=45: alpha=0.075201 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=10 seed=46: alpha=0.073112 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=20 seed=42: alpha=0.038862 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=20 seed=43: alpha=0.042316 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=20 seed=44: alpha=0.034020 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=20 seed=45: alpha=0.038011 R2=1.000000 (n_filled=18, 2 radii)
-  side= 6 G=20 seed=46: alpha=0.037330 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 0 seed=42: alpha=0.203168 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 0 seed=43: alpha=0.218291 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 0 seed=44: alpha=0.181932 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 0 seed=45: alpha=0.198848 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 0 seed=46: alpha=0.194956 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 5 seed=42: alpha=0.111611 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 5 seed=43: alpha=0.123013 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 5 seed=44: alpha=0.096787 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 5 seed=45: alpha=0.108679 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G= 5 seed=46: alpha=0.106049 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=10 seed=42: alpha=0.076458 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=10 seed=43: alpha=0.084256 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=10 seed=44: alpha=0.066682 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=10 seed=45: alpha=0.075201 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=10 seed=46: alpha=0.073112 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=20 seed=42: alpha=0.038862 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=20 seed=43: alpha=0.042316 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=20 seed=44: alpha=0.034020 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=20 seed=45: alpha=0.038011 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
+  side= 6 G=20 seed=46: alpha=0.037330 R2=1.000000 (n_filled=18, 2 radii) [2-point fit, R^2=1 automatic]
   side= 8 G= 0 seed=42: alpha=0.202839 R2=0.999920 (n_filled=32, 3 radii)
   side= 8 G= 0 seed=43: alpha=0.199603 R2=0.991522 (n_filled=32, 3 radii)
   side= 8 G= 0 seed=44: alpha=0.203100 R2=0.999660 (n_filled=32, 3 radii)
@@ -188,21 +204,41 @@ SECTION 4: G-dependence of boundary-law coefficient
 VERDICT
 ================================================================================
 
-  Total (side, G, seed) configs tested: 100
+  Fixed audit envelope: 5 sides x 4 couplings x 5 seeds = 100 configs
+  Counted (side, G, seed) configs with linear fit: 100
   Configs with R^2 > 0.95: 100 (100.0%)
   Configs with R^2 > 0.99: 78 (78.0%)
   R^2 range: [0.974518, 1.000000]
   R^2 mean +/- std: 0.994607 +/- 0.007004
-  BFS-ball partition: R^2 = 0.995138 +/- 0.001668
-  rectangular partition: R^2 = 0.994513 +/- 0.002123
-  random partition: R^2 = 0.995500 +/- 0.002903
 
-  ==> BOUNDED boundary-law scaling is robust across the audited
-      seeds, sizes, couplings, and partition families.
+  --- Two-point automatic fits (side=6, audit-flagged) ---
+  Configs with exactly 2 radii (R^2=1 automatic): 20
+  These configurations carry no diagnostic information about
+  linear-versus-nonlinear boundary scaling.
 
-  Total elapsed: 19.1s
+  --- >=3-radii subgrid (audit-relevant) ---
+  Configs with >=3 radii: 80
+  Configs with R^2 > 0.95: 80 (100.0%)
+  Configs with R^2 > 0.99: 58 (72.5%)
+  R^2 range: [0.974518, 0.999971]
+  R^2 mean +/- std: 0.993258 +/- 0.007227
 
-Plot saved to /private/tmp/gate-fix-worktree/scripts/frontier_boundary_law_robustness.png
+  --- Partition cross-check (side=10, G=10) ---
+      BFS-ball partition: R^2 = 0.995138 +/- 0.001668
+   rectangular partition: R^2 = 0.994513 +/- 0.002123
+        random partition: R^2 = 0.995500 +/- 0.002903
+
+  --- Bounded diagnostic verdict ---
+  ==> Bounded diagnostic holds on the fixed audit envelope:
+      100/100 BFS-ball fits with R^2 > 0.95,
+      80/80 >=3-radii fits with R^2 > 0.95.
+      This is a finite-run numerical observation on a fixed
+      grid; it is NOT a parameter-independent boundary-law
+      theorem and NOT a holography proof.
+
+  Total elapsed: 5.6s
+
+Optional plot generation skipped: No module named 'matplotlib'
 
 Done.
 

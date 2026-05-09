@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 970 |
+| unaudited | 971 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 362 |
+| ~~audited_conditional~~ | 361 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 362 |
+| `audited_conditional` | 361 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1031 |
+| `unaudited` | 1032 |
 
 | claim_type | count |
 |---|---:|
@@ -536,7 +536,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `central_band_born_dense_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1883,19 +1882,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The runner genuinely computes spectra for the stated finite lattices, but the conclusion that stable matter anthropically implies exactly d=3 imports an unproved bridge from these bounded diagnostics to chemistry and excludes d=2 by an external complexity premise. The claimed d>=4 fall-to-center behavior is also not actually demonstrated by the runner's own fall-to-center diagnostic, which remains false in the displayed scans.
 - **rationale:** The numerical part is not merely a printed constant: the source builds sparse lattice Laplacians and Coulomb potentials, diagonalizes them, and reports eigenvalue/localization diagnostics. However, the audited packet supplies no retained authority or bridge theorem connecting the finite, regularized, small-lattice results to continuum atomic stability or to the anthropic exclusion of d=2. The runner also labels d=4 and d=5 as fall-to-center in interpretive prose despite the implemented IPR threshold never flagging fall-to-center in the provided output.
 - **auditor confidence:** high
-
-### `boundary_law_robustness_note_2026-04-11`
-
-- **Note:** [`BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`](../../docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the bounded numerical claim that the fixed runner configuration reports highly linear entropy-versus-boundary-size fits across the stated BFS-ball sweep, with all 100 counted fits above R^2=0.95, plus small side=10,G=10 partition checks above R^2=0.95.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-cl3-auditor-2026-05-03`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The boundary-law robustness conclusion is inferred from selected finite-run R^2 linear fits of entropy against boundary size under fixed model parameters, sides, seeds, couplings, and partition choices.  _(class `C`)_
-- **chain closes:** False — The runner summary is internally consistent with the source-note numbers and supports the exact fixed-grid numerical claim, but the proof chain does not close as an audited_clean bounded theorem because the physical/readout generalization rests on finite numerical sampling and selected observables rather than algebraic closure or independently forced first-principles derivation.
-- **rationale:** Issue: The packet supports a bounded finite-run numerical robustness statement, but not a clean bounded theorem-level boundary-law result. Why this blocks: The conclusion depends on finite selected observables, fixed parameters, selected sizes/seeds/couplings/partitions, and R^2 readout; 20/100 counted fits are automatic two-point R^2=1 side=6 cases, and partition-family evidence is only a separate small side=10,G=10 check. This is enough for conditional numerical support, but not Nature-grade clean closure of a theorem-style claim without stronger justification that the readout, finite sampling surface, and parameter choices are forced by retained inputs. Repair target: Recast as a bounded numerical robustness result, exclude or separately report two-point R^2 fits, pre-register/justify the audited parameter and partition surface, and add broader independent partition and size checks or analytic closure if theorem status is intended. Claim boundary until fixed: The retained statement should be limited to the exact fixed-run numerical observation that this script/parameter grid reports high R^2 boundary-size linearity for the audited BFS-ball sweep and the stated small partition check; it should not be cited as a general boundary-law theorem or holography proof.
-- **auditor confidence:** medium
 
 ### `branch_entanglement_robustness_note_2026-04-11`
 

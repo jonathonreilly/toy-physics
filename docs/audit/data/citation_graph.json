@@ -33346,13 +33346,13 @@
     },
     "boundary_law_robustness_note_2026-04-11": {
       "claim_id": "boundary_law_robustness_note_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (only for the fixed-run numerical diagnostic",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "holographic_probe_note_2026-04-11"
       ],
-      "note_hash": "ac8ae531ebd6b3d64bbbfcff658b5263ea0b10869d3ee3b41b18c1f84d7a8758",
+      "note_hash": "15e2d83fd993faffd37e8a886f34e7acb18a30408cfde35d2fa4a836772a0a20",
       "path": "docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_boundary_law_robustness.py",
       "title": "Boundary-Law Robustness Addendum"
@@ -62422,10 +62422,10 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 174,
+      "bounded_theorem": 175,
       "meta": 22,
       "no_go": 14,
-      "none": 1685,
+      "none": 1684,
       "open_gate": 21,
       "positive_theorem": 91
     },
