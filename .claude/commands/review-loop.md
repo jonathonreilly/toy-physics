@@ -50,6 +50,13 @@ Run the repo-native physics review loop from:
 - Load-bearing dependencies in changed claim notes must be markdown links that
   seed the citation graph. After the audit pipeline, changed claim rows must
   show the intended deps in `docs/audit/data/audit_ledger.json`.
+- New landed science must use explicit repo naming from
+  `docs/repo/CONTROLLED_VOCABULARY.md`. Do not approve bare overloaded labels
+  such as `A1`, `A2`, `G1`, `R3`, `Route F`, or `Block 2` as theorem/lane
+  names, table labels, claim scopes, runner headlines, or review findings.
+  Use names such as `physical Cl(3) local algebra`, `Z^3 spatial substrate`,
+  `Koide Frobenius-equipartition condition`, or `Lie type A_1`; keep shorthand
+  only as a parenthetical legacy alias.
 - `retained`, `retained_bounded`, and `retained_no_go` are the retained-grade
   dependency statuses. Reviewers must reject stale exact-status checks that
   require only `effective_status = retained` when bounded/no-go retained
@@ -68,11 +75,12 @@ Run the repo-native physics review loop from:
   Whole-file checkout is allowed only for new paths or paths proven unchanged
   on current `main` since the PR base.
 - The repo baseline is physical `Cl(3)` on `Z^3` (physical local algebra
-  plus physical spatial substrate). Do not classify that baseline as a
-  new axiom, new admitted premise, regulator interpretation, or optional
-  theory language. Do not let that baseline silently promote separate
-  species identifications, selectors, readout bridges, empirical matches,
-  or parent theorem/status surfaces.
+  plus physical spatial substrate). Name it explicitly; do not compress it to
+  bare `A1` / `A2` labels. Do not classify that baseline as a new axiom, new
+  admitted premise, regulator interpretation, or optional theory language. Do
+  not let that baseline silently promote separate species identifications,
+  selectors, readout bridges, empirical matches, or parent theorem/status
+  surfaces.
 - Nature-grade retention requires derived or explicitly admitted inputs,
   decisive artifact support, clear falsifiers, and no hidden semantic bridge.
 - Closing a PR must not discard durable science. Salvage narrow

@@ -23,13 +23,17 @@ it is artifact-chain or semantic drift.
    one surface. Correct algebra can still compare the wrong physical objects.
 5. **Check status language.** Decide whether the evidence supports retained,
    bounded, support, open, no-go, reject, or historical language.
-6. **Classify findings.** Use the local disposition buckets:
+6. **Check science naming.** Reject new bare shorthand labels that can be
+   confused with axioms, assumptions, Lie types, lane stages, route codes, or
+   branch blocks. Require explicit scientific names from the controlled
+   vocabulary, with shorthand only as a parenthetical alias when needed.
+7. **Classify findings.** Use the local disposition buckets:
    `fix on main`, `support-only demotion`, `science-needed`, `reject`,
    `historical only`.
-7. **Recommend the narrowest honest fix.** Prefer wording fixes for wording
+8. **Recommend the narrowest honest fix.** Prefer wording fixes for wording
    problems; demotion for overclaimed support; new science only when a real
    theorem step is missing.
-8. **Write review output.** Lead with findings and file/line references when
+9. **Write review output.** Lead with findings and file/line references when
    possible, then summarize the safe status.
 
 ## Review Questions
@@ -42,6 +46,8 @@ it is artifact-chain or semantic drift.
 - Is the symbol-to-physics identification actually justified?
 - Is the claim still true under the stated validation path?
 - Does the public package surface match the latest retained evidence?
+- Does the name identify the scientific object, or is it a bare overloaded
+  code like `A1`, `A2`, `G1`, `R3`, `Route F`, or `Block 2`?
 - Should this be live, demoted, archived, or rejected?
 
 ## Guardrails
@@ -51,3 +57,6 @@ it is artifact-chain or semantic drift.
 - Do not invent fixes that would require missing science.
 - Do not approve arithmetic-only closure when the semantic bridge is open.
 - Do not bury useful no-go results; preserve them as route-pruning evidence.
+- Do not approve new science names that are only ambiguous shorthand. Use
+  explicit names such as `physical Cl(3) local algebra`, `Z^3 spatial
+  substrate`, `Koide Frobenius-equipartition condition`, or `Lie type A_1`.

@@ -31051,7 +31051,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "fd3c94b142e3ad1a6931725e7014ad544e97e13260b3fd616815f243bed389c9",
+      "note_hash": "b8bf2250d1358efe2e2a9c7133a863e19587b711fbb201d6c37ee782414a22c5",
       "path": "docs/ai_methodology/skills/physics-claim-reviewer/SKILL.md",
       "runner_path": null,
       "title": "Physics Claim Reviewer"
@@ -31122,7 +31122,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "71ddf6d66974325b9df75798e72c8d2b1e65294f20071b56efba74782d8689a1",
+      "note_hash": "d839f35bb5f0339576eaaf52d18e966745d5bc9351bc6fb5bdcdd960b5465351",
       "path": "docs/ai_methodology/skills/review-loop/SKILL.md",
       "runner_path": null,
       "title": "Review Loop"
@@ -52591,7 +52591,7 @@
       "deps": [
         "writing_voice_guide_2026-04-25"
       ],
-      "note_hash": "cef79e8b9a5bea5bbde58a3e91e45d4445cc681cde44ff8c973d8a62e47080e9",
+      "note_hash": "59c995e632d8e80df0ad038640adb41f6a5b5cb23470b7eb29b478c18213f57c",
       "path": "docs/repo/CONTROLLED_VOCABULARY.md",
       "runner_path": null,
       "title": "Controlled Vocabulary"
