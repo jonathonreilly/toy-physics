@@ -8893,6 +8893,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
+      "to": "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25"
+    },
+    {
       "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
       "to": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
     },
@@ -43018,8 +43022,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
-      "deps": [],
-      "note_hash": "b4b29e402ea765bf1edbafad89ebd2595b8f3f18e9e5e4d92851973a2fd667fc",
+      "deps": [
+        "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25"
+      ],
+      "note_hash": "88879a378fe6ef8494b6e91211c4ac6a2cc13316bc4b0e8a4031fe7629e9b923",
       "path": "docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_hubble_c1_a4_parity_gate_no_go.py",
       "title": "Lane 5 `(C1)` Gate \u2014 A4 Parity-Gate-from-A_min No-Go"
@@ -46396,9 +46402,9 @@
       "claim_type_author_hint_raw": "bounded support theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0ce6a3492aada9f59f1a8f48d49197df54a0afbb8db8f033a91ff92e41337de3",
+      "note_hash": "f88be214d19d7829f9b886a610e7638a8c3a28acf31c102c577c17c54bb0a6fc",
       "path": "docs/LATTICE_NN_HIGH_PRECISION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_high_precision_closure.py",
       "title": "Lattice NN High-Precision Note"
     },
     "lattice_nn_light_cone_note": {
@@ -61990,7 +61996,6 @@
     "holographic_probe_note_2026-04-11",
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
     "hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29",
-    "hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28",
     "hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29",
     "hubble_lane5_c1_a6_bilinear_active_block_support_boundary_note_2026-04-29",
     "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
@@ -62437,10 +62442,10 @@
       "open_gate": 112,
       "positive_theorem": 615
     },
-    "edge_count": 7666,
+    "edge_count": 7667,
     "leaf_count": 536,
     "node_count": 2007,
-    "root_count": 823,
-    "runners_with_path": 1604
+    "root_count": 822,
+    "runners_with_path": 1605
   }
 }

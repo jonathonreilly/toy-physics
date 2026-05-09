@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 971 |
+| unaudited | 973 |
 | meta | 61 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 26 |
-| ~~audited_conditional~~ | 361 |
+| ~~audited_conditional~~ | 359 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 361 |
+| `audited_conditional` | 359 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 26 |
-| `unaudited` | 1032 |
+| `unaudited` | 1034 |
 
 | claim_type | count |
 |---|---:|
@@ -69,7 +69,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1499
+- runners classified: 1500
 - runners with (C) first-principles compute hits: 771
 - runners with (D) external comparator hits: 395
 - decoration candidates (no C, no D): 131
@@ -80,18 +80,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 763 | 61.08 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 764 | 61.08 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 532 | 40.56 | `unaudited` | unaudited |
-| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 752 | 38.06 | `audited_clean` | open_gate |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 619 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 741 | 36.53 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 671 | 33.89 | `unaudited` | meta |
+| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 753 | 38.06 | `audited_clean` | open_gate |
+| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 620 | 37.28 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 742 | 36.54 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 672 | 33.89 | `unaudited` | meta |
 | 7 | `alpha_s_derived_note` | bounded_theorem | critical | 502 | 32.47 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 30.12 | `unaudited` | unaudited |
-| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 731 | 30.02 | `audited_clean` | **retained_bounded** |
+| 9 | `native_gauge_closure_note` | bounded_theorem | critical | 732 | 30.02 | `audited_clean` | **retained_bounded** |
 | 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 502 | 29.97 | `unaudited` | unaudited |
 | 11 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 196 | 29.12 | `unaudited` | unaudited |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 584 | 28.69 | `unaudited` | unaudited |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 585 | 28.70 | `unaudited` | unaudited |
 | 13 | `three_generation_structure_note` | bounded_theorem | critical | 458 | 27.34 | `unaudited` | unaudited |
 | 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 601 | 27.23 | `unaudited` | unaudited |
 | 15 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 505 | 26.98 | `audited_clean` | **retained_bounded** |
@@ -700,7 +700,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | G | - |
 | `higher_dimension_status_2026-04-01` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -726,7 +725,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_refinement_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
@@ -6570,19 +6568,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The note cleanly separates the conditional positive chain from the standalone A4 shortcut. The finite-matrix witness shows a primitive Z2 gate supplies a half-zone selector only after CAR/coframe semantics are assumed; it does not force the odd Clifford/CAR generators or dimensional action unit. This is a structural no-go boundary, not algebraic decoration.
 - **auditor confidence:** high
 
-### `hubble_lane5_c1_a4_parity_gate_no_go_note_2026-04-28`
-
-- **Note:** [`HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md`](../../docs/HUBBLE_LANE5_C1_A4_PARITY_GATE_NO_GO_NOTE_2026-04-28.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-fresh-agent-hubble-c1-a4-parity-gate-no-go-20260501`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Assumption 1 of the parity-gate carrier theorem is P_A H_cell ≅ F(C^2), exactly the (G1) edge-statistics principle, and the bare Z_2 parity grading is shared by CAR, two-qubit spin, and ququart semantics, so parity alone cannot derive CAR.  _(class `B`)_
-- **chain closes:** False — The algebraic countermodel part closes: the runner explicitly verifies that 2+2 parity Z_2 structure is preserved by CAR and non-CAR rank-four semantics. The carrier-theorem leg does not close from the restricted inputs because the runner hard-codes the cross-note assertion that the theorem's Assumption 1 is CAR, while no one-hop authority was provided to verify it.
-- **rationale:** Issue: the note's negative conclusion partly relies on the cross-note premise that the primitive parity-gate carrier theorem assumes P_A H_cell ≅ F(C^2), but that authority was not available as a one-hop dependency and the runner records the premise as a true assertion rather than checking it. Why this blocks: the bare-parity no-go is structurally verified, but the stronger claim that the carrier theorem itself cannot derive G1 is conditional on the unverified assumption quote. Repair target: add the parity-gate carrier theorem as a cited authority or make the runner parse/check the stated assumption from that source. Claim boundary until fixed: the note cleanly shows that a bare 2+2 Z_2 parity gate does not distinguish CAR from non-CAR semantics on a rank-four block.
-- **auditor confidence:** high
-
 ### `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29`
 
 - **Note:** [`HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md)
@@ -7527,19 +7512,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The current runner completed and reproduces the source note's distance rows, signs, slopes, and R^2 values. The cited one-hop dependency is now retained_bounded/audited_clean for the same raw NN finite window including h=1.0,0.5,0.25, so the prior upstream Born/k=0 bridge is closed within the restricted packet.
 - **rationale:** The claim is bounded to the barrier harness and finite h,b grid actually executed by the runner. The live output supports the far-field sign statements, fixed-strength near-1/b decay through h=0.25, and alpha=1.5 flattening comparison, while the audited-clean continuum note supplies the raw NN finite-window Born/k=0 controls. No continuum, universal attraction, or no-barrier branch claim is needed for closure.
 - **auditor confidence:** high
-
-### `lattice_nn_high_precision_note`
-
-- **Note:** [`LATTICE_NN_HIGH_PRECISION_NOTE.md`](../../docs/LATTICE_NN_HIGH_PRECISION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the bounded core stated in the note: the arithmetic float64 overflow bound for the raw NN kernel at h = 0.125 and the limited step-scale cancellation claim for normalized probabilities and centroid as described in the note.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e094d-804f-70a3-8038-3393bc6fc381`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** For h = 0.125, nl = 321 and per-edge amplitude bound 3/h = 24 give cumulative scale 24^321 with log10 about 443, exceeding float64 max log10 about 308 by roughly 10^135.  _(class `A`)_
-- **chain closes:** False — The overflow arithmetic itself closes from quantities stated in the note. The broader retained core also relies on a closure runner and NN observable implementation details that are named but not provided in the restricted packet, so the detector-layer invariance verification cannot be independently checked here.
-- **rationale:** Issue: the overflow margin is a closed arithmetic bound, but the retained core also asserts runner-verified step-scale invariance for normalized probabilities and centroid without providing the runner stdout or source as the primary runner. Why this blocks: the packet does not let the auditor confirm that the quoted max-diff values were computed rather than hard-coded or that the implemented observables match the stated theorem. Repair target: provide the closure runner source/stdout or a self-contained algebraic theorem for those two observables. Claim boundary until fixed: retain only the arithmetic float64 overflow estimate as support, not the runner-verified invariance claim.
-- **auditor confidence:** medium
 
 ### `lattice_nn_light_cone_note`
 

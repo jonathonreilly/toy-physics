@@ -3,6 +3,7 @@
 **Date:** 2026-04-03 (closure addendum 2026-05-07; audit-scope split 2026-05-08)
 **Type:** bounded support theorem
 **Claim type:** bounded_theorem
+**Primary runner:** [`scripts/lattice_nn_high_precision_closure.py`](../scripts/lattice_nn_high_precision_closure.py) (closure runner that verifies the step-scale invariance theorem on a small NN lattice)
 **Status:** bounded source support. The gate's narrow open question is
 bounded by a float64 overflow of ~10^135 above the representable range,
 not by a physics inconsistency. The framework's canonical Born-clean

@@ -10656,6 +10656,18 @@
       "dominant_class": null,
       "runner": "scripts/lattice_nn_distance_law.py"
     },
+    "lattice_nn_high_precision_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/lattice_nn_high_precision_closure.py"
+    },
     "lattice_nn_light_cone_note": {
       "assert_count": 3,
       "counts": {
@@ -38727,6 +38739,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/lattice_nn_high_precision_closure.py": {
+      "assert_count": 0,
+      "claims": [
+        "lattice_nn_high_precision_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/lattice_nn_mass_response.py": {
       "assert_count": 0,
       "claims": [
@@ -42018,9 +42045,9 @@
       "B": 174,
       "C": 637,
       "D": 242,
-      "none": 425
+      "none": 426
     },
-    "runners_classified": 1499,
+    "runners_classified": 1500,
     "runners_with_C": 771,
     "runners_with_D": 395
   }

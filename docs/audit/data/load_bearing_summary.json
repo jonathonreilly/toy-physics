@@ -19,8 +19,8 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 61.077,
-      "transitive_descendants": 763
+      "load_bearing_score": 61.079,
+      "transitive_descendants": 764
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -31,26 +31,26 @@
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 38.057,
-      "transitive_descendants": 752
+      "load_bearing_score": 38.058,
+      "transitive_descendants": 753
     },
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 37.276,
-      "transitive_descendants": 619
+      "load_bearing_score": 37.278,
+      "transitive_descendants": 620
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 36.535,
-      "transitive_descendants": 741
+      "load_bearing_score": 36.537,
+      "transitive_descendants": 742
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 33.892,
-      "transitive_descendants": 671
+      "load_bearing_score": 33.894,
+      "transitive_descendants": 672
     },
     {
       "claim_id": "alpha_s_derived_note",
@@ -67,8 +67,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 30.016,
-      "transitive_descendants": 731
+      "load_bearing_score": 30.018,
+      "transitive_descendants": 732
     },
     {
       "claim_id": "yt_ward_identity_derivation_theorem",
@@ -85,8 +85,8 @@
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 28.692,
-      "transitive_descendants": 584
+      "load_bearing_score": 28.695,
+      "transitive_descendants": 585
     },
     {
       "claim_id": "three_generation_structure_note",
