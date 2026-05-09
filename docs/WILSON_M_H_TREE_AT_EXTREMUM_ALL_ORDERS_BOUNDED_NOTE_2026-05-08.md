@@ -8,10 +8,13 @@ effective status are set by the independent audit lane.
 
 ## Claim
 
-Building on the exact curvature at the Wilson-shifted extremum
+Building on the exact-in-`r` curvature at the Wilson-shifted extremum
 `m^* = -4 r` derived in
 [`WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md`](WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md)
-(forward-reference; sister branch),
+(forward-reference; sister branch — note that the sister filename's
+`LEADING_ORDER_IN_R` qualifier refers to that note's own leading-order
+expansion of the curvature about `r = 0`; the sister note's eq. (1)
+itself, which we cite below, is the *exact* curvature at `m^*`),
 
 ```text
 d^2 V^W / dm^2  |_{m = m^*}
@@ -60,21 +63,39 @@ r_all_orders  ≈  0.26855   ± 10^{-5}                                         
 
 vs the leading-order closure value `r_leading ≈ 0.23572` from
 [`WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md`](WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md)
-(forward-reference; sister branch). The relative shift between
-leading-order and all-orders is
+(forward-reference; sister branch). The sister note's `r_leading ≈
+0.23572` is the *mass-level linear-Taylor* closure value, obtained by
+truncating `sqrt(1 - 3 r^2/u_0^2)` linearly to give `m_H_W ≈ m_H_zero·(1
+- (3/2) r^2/u_0^2)` and solving for `r`. The relative shift between
+this leading-order value and all-orders is
 
 ```text
-( r_all_orders  -  r_leading )  /  r_leading   ≈   13.9 %.                       (5)
+( r_all_orders  -  r_leading )  /  r_leading   ≈   13.9 %                        (5)
 ```
 
-The all-orders value sits well within the perturbative-Taylor
+(mass-level linear-Taylor comparison). For an apples-to-apples
+square-form comparison, the square-form leading-order closure equation
+`(m_H_W/v)^2 = (1/(4u_0^2))·(1 - 3 r^2/u_0^2) = (m_H_PDG/v)^2` (no
+sqrt-truncation) solves exactly to `r_LO_square ≈ 0.22925`, giving
+
+```text
+( r_all_orders  -  r_LO_square )  /  r_LO_square   ≈   17.1 %                    (5')
+```
+
+Both comparisons (5) and (5') describe the same all-orders shift; they
+differ in *which* leading-order observable is being squared. Either
+way the all-orders correction is non-trivial (`~14–17 %`) and is not
+captured by the leading-order Taylor truncation.
+
+The all-orders value sits within the perturbative-Taylor
 radius-of-convergence boundary `r < u_0 / 2 ≈ 0.439` (set by the
 dominant `k = 0, 4` summands, which control the ratio test). At
 `r ≈ 0.269` the dimensionless expansion parameter is
 `(2r/u_0)^2 ≈ 0.37`, so the perturbative Taylor expansion converges
-but with non-negligible higher-order corrections — leading-order
-underestimates `r` by `~14 %`. The all-orders closed form (2) is the
-unique resummation that captures these corrections exactly.
+but with non-negligible higher-order corrections — successive Taylor
+contributions fall by a factor `~2-3` at `r ≈ 0.269` (asymptotic
+ratio `~4` only at much smaller `r`). The all-orders closed form (2)
+is the unique resummation that captures these corrections exactly.
 
 This note records the all-orders closed form and the all-orders
 closure value. It does **not** close the +12% Higgs gap chain. The

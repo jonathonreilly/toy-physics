@@ -144,10 +144,18 @@ def part1_note_structure():
          "0.26855"),
         ("leading-order closure value 0.23572 cited",
          "0.23572"),
-        ("relative shift 13.9% stated",
+        ("relative shift 13.9% stated (linear-form comparison)",
          "13.9 %"),
+        ("relative shift 17.1% stated (square-form apples-to-apples)",
+         "17.1 %"),
+        ("square-form leading-order r_LO_square 0.22925 stated",
+         "0.22925"),
+        ("equation (5') for square-form comparison",
+         "(5')"),
         ("validity boundary u_0 / 2 stated",
          "u_0 / 2 ≈ 0.439"),
+        ("sister-note 'leading-order' filename clarification present",
+         "the sister note's eq. (1) itself"),
         ("uniform-N_taste=16 admission cited",
          "uniform-`N_taste = 16`"),
         ("non-derived admission flagged",
@@ -178,7 +186,7 @@ def part1_note_structure():
 # Part 2: Forbidden vocabulary
 # ---------------------------------------------------------------------------
 def part2_forbidden_vocabulary():
-    section("Part 2: forbidden meta-framing vocabulary absent")
+    section("Part 2: forbidden meta-framing vocabulary absent (note + runner)")
     forbidden = [
         "algebraic universality",
         "lattice-realization-invariant",
@@ -194,10 +202,24 @@ def part2_forbidden_vocabulary():
         "sub-class (ii)",
         "Wilson asymptotic universality",
     ]
+    # Extract the runner's module docstring (the prose at the top) — this
+    # is where stray meta-framing language would actually appear, NOT in
+    # the `forbidden = [...]` list literal below.
+    runner_text = Path(__file__).read_text()
+    docstring_match = re.match(r'^(?:#![^\n]*\n)?[^"]*"""(.*?)"""',
+                               runner_text, re.DOTALL)
+    runner_docstring = docstring_match.group(1) if docstring_match else ""
+
     for token in forbidden:
+        in_note = token in NOTE_TEXT
+        in_runner_docstring = token in runner_docstring
         check(
-            f"absent (rejected vocabulary): {token!r}",
-            token not in NOTE_TEXT,
+            f"absent in note (rejected vocabulary): {token!r}",
+            not in_note,
+        )
+        check(
+            f"absent in runner docstring (rejected vocabulary): {token!r}",
+            not in_runner_docstring,
         )
 
 
@@ -439,13 +461,10 @@ def part7_comparison_to_leading_order(r_all_orders: Fraction):
     ratio = M_H_PDG_COMPARISON / m_H_zero
     rsq_over_u0sq_LO = (Fraction(2) / Fraction(3)) * (Fraction(1) - ratio)
     rsq_LO = rsq_over_u0sq_LO * U_0_SQ
-    # Compute r_LO via Fraction sqrt approximation:
-    # We know rsq_LO exactly. We just want r_LO_approx ≈ sqrt(rsq_LO).
-    # Use a few Newton iterations:
-    r_LO = Fraction(rsq_LO.numerator) / Fraction(rsq_LO.denominator)  # placeholder
+    # Compute r_LO via Newton iteration on rational sqrt of rsq_LO.
     # Initial guess from float sqrt:
     r_LO = Fraction(int(round(float(rsq_LO) ** 0.5 * 10**10)), 10**10)
-    # Newton iterations (returns rational approximation):
+    # Newton iterations: x_{n+1} = (x_n + rsq_LO/x_n) / 2:
     for _ in range(10):
         if r_LO == 0:
             break
@@ -489,6 +508,53 @@ def part7_comparison_to_leading_order(r_all_orders: Fraction):
         "(leading-order under-estimates)",
         r_all_orders > r_LO,
         f"r_all = {float(r_all_orders):.5f} vs r_LO = {float(r_LO):.5f}",
+    )
+
+    # Apples-to-apples: square-form leading-order closure (no sqrt
+    # truncation, just leading-order Taylor of the rational closed form):
+    #   (1/(4 u_0^2))·(1 - 3 r^2/u_0^2) = (m_H_PDG/v)^2
+    # ⇒  3 r^2/u_0^2 = 1 - 4 u_0^2·(m_H_PDG/v)^2
+    # ⇒  r^2 = (u_0^2/3) · (1 - 4 u_0^2·TARGET_SQ)
+    rsq_LO_square = (U_0_SQ / 3) * (Fraction(1) - 4 * U_0_SQ * TARGET_SQ)
+    r_LO_square = Fraction(int(round(float(rsq_LO_square) ** 0.5 * 10**10)),
+                           10**10)
+    for _ in range(10):
+        if r_LO_square == 0:
+            break
+        r_LO_square = (r_LO_square + rsq_LO_square / r_LO_square) / 2
+
+    rel_shift_square = (r_all_orders - r_LO_square) / r_LO_square
+    print()
+    print(f"  Square-form leading-order (no sqrt truncation):")
+    print(f"    r_LO_square = {float(r_LO_square):.5f}")
+    print(f"    Relative shift (r_all_orders - r_LO_square) / r_LO_square = "
+          f"{float(rel_shift_square) * 100:.2f} %")
+
+    expected_LO_square = Fraction(22925, 100000)
+    diff_LO_square = abs(r_LO_square - expected_LO_square)
+    check(
+        "square-form leading-order r_LO_square ≈ 0.22925",
+        diff_LO_square < Fraction(1, 10**4),
+        f"r_LO_square = {float(r_LO_square):.5f}, expected ≈ 0.22925, "
+        f"diff = {float(diff_LO_square):.2e}",
+    )
+
+    # Note's claim: square-form shift ≈ 17.1%
+    expected_shift_square = Fraction(171, 1000)  # 0.171
+    diff_shift_square = abs(rel_shift_square - expected_shift_square)
+    check(
+        "square-form relative shift (r_all_orders - r_LO_square)/r_LO_square ≈ 17.1%",
+        diff_shift_square < Fraction(5, 1000),
+        f"shift = {float(rel_shift_square) * 100:.2f} %, expected ≈ 17.1 %, "
+        f"diff = {float(diff_shift_square) * 100:.2f} %-pts",
+    )
+
+    # And r_LO_square < r_LO_linear (different leading-order truncation flavors):
+    check(
+        "square-form leading-order r < linear-form leading-order r "
+        "(square form drops a higher-order term)",
+        r_LO_square < r_LO,
+        f"r_LO_square = {float(r_LO_square):.5f}, r_LO_linear = {float(r_LO):.5f}",
     )
 
 

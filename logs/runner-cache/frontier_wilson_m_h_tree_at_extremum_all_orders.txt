@@ -28,8 +28,12 @@
   [PASS] contains: bisection bracket [0.26, 0.28] stated  (marker = 'bracket `[0.26, 0.28]`')
   [PASS] contains: all-orders closure value 0.26855 stated  (marker = '0.26855')
   [PASS] contains: leading-order closure value 0.23572 cited  (marker = '0.23572')
-  [PASS] contains: relative shift 13.9% stated  (marker = '13.9 %')
+  [PASS] contains: relative shift 13.9% stated (linear-form comparison)  (marker = '13.9 %')
+  [PASS] contains: relative shift 17.1% stated (square-form apples-to-apples)  (marker = '17.1 %')
+  [PASS] contains: square-form leading-order r_LO_square 0.22925 stated  (marker = '0.22925')
+  [PASS] contains: equation (5') for square-form comparison  (marker = "(5')")
   [PASS] contains: validity boundary u_0 / 2 stated  (marker = 'u_0 / 2 ≈ 0.439')
+  [PASS] contains: sister-note 'leading-order' filename clarification present  (marker = "the sister note's eq. (1) itself")
   [PASS] contains: uniform-N_taste=16 admission cited  (marker = 'uniform-`N_taste = 16`')
   [PASS] contains: non-derived admission flagged  (marker = 'non-derived')
   [PASS] contains: V_taste^W extremum upstream cited (sister)  (marker = 'WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08')
@@ -42,21 +46,34 @@
   [PASS] contains: PDG comparison input flagged not-load-bearing  (marker = 'comparison input only, not load-bearing')
 
 ----------------------------------------------------------------------------------------
- Part 2: forbidden meta-framing vocabulary absent
+ Part 2: forbidden meta-framing vocabulary absent (note + runner)
 ----------------------------------------------------------------------------------------
-  [PASS] absent (rejected vocabulary): 'algebraic universality'
-  [PASS] absent (rejected vocabulary): 'lattice-realization-invariant'
-  [PASS] absent (rejected vocabulary): 'two-class framing'
-  [PASS] absent (rejected vocabulary): '(CKN)'
-  [PASS] absent (rejected vocabulary): '(LCL)'
-  [PASS] absent (rejected vocabulary): '(SU5-CKN)'
-  [PASS] absent (rejected vocabulary): 'imports problem'
-  [PASS] absent (rejected vocabulary): 'Every prediction listed'
-  [PASS] absent (rejected vocabulary): 'two-axiom claim'
-  [PASS] absent (rejected vocabulary): 'retires admission'
-  [PASS] absent (rejected vocabulary): 'sub-class (i)'
-  [PASS] absent (rejected vocabulary): 'sub-class (ii)'
-  [PASS] absent (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
 
 ----------------------------------------------------------------------------------------
  Part 3: cited upstreams (with graceful forward-references)
@@ -144,6 +161,13 @@
   [PASS] relative shift (r_all_orders - r_leading)/r_leading ≈ 13.9%  (shift = 13.93 %, expected ≈ 13.9 %, diff = 0.03 %-pts)
   [PASS] all-orders r is LARGER than linear-form leading-order r (leading-order under-estimates)  (r_all = 0.26855 vs r_LO = 0.23572)
 
+  Square-form leading-order (no sqrt truncation):
+    r_LO_square = 0.22925
+    Relative shift (r_all_orders - r_LO_square) / r_LO_square = 17.14 %
+  [PASS] square-form leading-order r_LO_square ≈ 0.22925  (r_LO_square = 0.22925, expected ≈ 0.22925, diff = 2.42e-06)
+  [PASS] square-form relative shift (r_all_orders - r_LO_square)/r_LO_square ≈ 17.1%  (shift = 17.14 %, expected ≈ 17.1 %, diff = 0.04 %-pts)
+  [PASS] square-form leading-order r < linear-form leading-order r (square form drops a higher-order term)  (r_LO_square = 0.22925, r_LO_linear = 0.23572)
+
 ----------------------------------------------------------------------------------------
  Part 8: perturbative validity (r < u_0 / 2 ≈ 0.439)
 ----------------------------------------------------------------------------------------
@@ -180,7 +204,7 @@
   [PASS] closure value flagged as conditional on non-zero r (not canonical KS)
 
 ========================================================================================
- TOTAL: PASS=82, FAIL=0
+ TOTAL: PASS=102, FAIL=0
 ========================================================================================
 
  VERDICT: all-orders closed form (m_H_W/v)^2 = (1/64) Σ_k binomial(4,k) ·
