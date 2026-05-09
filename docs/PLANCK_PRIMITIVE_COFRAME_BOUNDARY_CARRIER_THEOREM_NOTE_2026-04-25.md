@@ -1,11 +1,56 @@
 # Planck Primitive Coframe Boundary-Carrier Theorem
 
 **Date:** 2026-04-25
-**Status:** positive support theorem for the Planck boundary/action carrier;
-not a standalone minimal-stack derivation of `a^(-1) = M_Pl`
+**Status:** audited_conditional positive support theorem for the Planck
+boundary/action carrier; not a standalone minimal-stack derivation of
+`a^(-1) = M_Pl`
 **Scope:** first-order coframe/worldtube boundary carrier on the time-locked
 primitive event cell
 **Runner:** `scripts/frontier_planck_primitive_coframe_boundary_carrier.py`
+
+## Cited authorities (one-hop deps)
+
+This rigorization PR adds explicit one-hop authority citations for the two
+premises the audit verdict identified as load-bearing in Theorem 2
+(first-order locality and unit primitive response normalization). The
+citations make the provenance of those premises explicit, while the
+audited_conditional status of this note is preserved because the
+gravitational boundary/action-density bridge from §5 remains the named
+open premise.
+
+- [`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+  — intrinsic proposed_retained candidate (effective conditional pending
+  upstream audit) that derives the first-order locality premise from the
+  retained microscopic action surface. The theorem there shows that the
+  algebraic differential of the link-local staggered-Dirac / Grassmann
+  action with respect to its fundamental local link variables has support
+  on exactly the Hamming-weight-one packet `P_1`, and that the Hodge-dual
+  `P_3` is excluded as a fundamental first variation because it
+  corresponds to a third-link composite source rather than a one-link
+  source. That theorem supplies the action-native provenance for the
+  "first-order coframe locality" assumption used in Theorem 2 below.
+- [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+  — `A_min` source surface (with the 2026-05-03 restoration carrying
+  forward the same retained-action surface): the framework's microscopic
+  dynamics are the finite Grassmann / staggered-Dirac partition with
+  lattice operators built from one-link nearest-neighbor hop terms. This
+  is the substrate that makes the link-local first-variation theorem
+  sensible: the fundamental local source variables `u_a` are one-link /
+  one-axis variables on the time-completed primitive local star, by
+  construction of the retained action.
+- [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+  — branch-local theorem on the same retained Grassmann staggered-Dirac
+  action, recording explicitly that on `A_min` the conserved-current
+  carriers are one-link bilinears (eqs (3)–(5) in that note). This is
+  consilience evidence for the same first-order locality fact: the
+  retained action's natural carriers are link-local one-form structures,
+  not three-form composites.
+- [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+  — exact negative boundary clarifying that pure substrate symmetries
+  alone do *not* force first-order over Hodge-dual third-order. This is
+  why the link-local first-variation route is needed: symmetry-only
+  reasoning cannot select `P_1` from `P_3`. The retained-action provenance
+  above is the additional structure that breaks the Hodge degeneracy.
 
 ## Purpose
 
@@ -222,6 +267,155 @@ B = P_{ {t} } + P_{ {x} } + P_{ {y} } + P_{ {z} } = P_A.
 
 QED.
 
+## Premise provenance
+
+The audit verdict on this row identifies two premises in Theorem 2 as
+load-bearing rather than trivial: **first-order locality**
+(`B = P_1 B P_1`) and **unit primitive response normalization** (`b_a = 1`).
+This section records the provenance of each premise explicitly so the
+theorem statement is honest about what it derives versus what it accepts as
+input.
+
+### Premise 1: first-order coframe locality (derived; not assumed abstractly)
+
+First-order locality is *not* an abstract structural assumption on this
+note's surface. It is the support of the algebraic first variation of the
+retained microscopic action on `A_min`, and it is derived in the cited
+[`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM`](PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md).
+The chain is:
+
+```text
+A_min retained dynamics
+  = finite Grassmann / staggered-Dirac partition
+  + lattice operators built from one-link nearest-neighbor hops
+  on Z^3 + anomaly-forced time axis.
+
+local action on the primitive (t,x,y,z) star
+  = sum_{a in E} u_a J_a    with support(J_a) = {a}.
+
+algebraic first variation
+  dS_link / du_a = J_a.
+
+support of the first variation
+  = span({t},{x},{y},{z}) = P_1 H_cell.
+```
+
+Equivalently: on the retained `A_min` action surface, the fundamental
+local source variables `u_a` are one-link / one-axis variables, by
+construction. The first variation `dS_link / du_a` carries Hamming weight
+exactly one. The Hodge-dual `P_3` packet remains a valid flux/face
+representation, but it corresponds to a third-link composite source — it
+is not an automorphism of the link-local source domain that the retained
+action exposes. Hence first-order locality is derived from the retained
+action structure, not adopted as an independent assumption on this note's
+surface.
+
+This derivation respects the negative boundary recorded in the cited
+[`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM`](FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md):
+substrate symmetries alone do *not* force first-order over Hodge-dual
+third-order. The link-local first-variation theorem changes the premise
+surface (it adds the retained action source domain as additional retained
+structure beyond pure symmetries), and on that enlarged surface the Hodge
+ambiguity is broken because Hodge duality maps a one-link source to a
+three-link composite and is therefore not an automorphism of the
+fundamental source domain.
+
+Audit caveat: the link-local first-variation theorem is itself
+proposed_retained on the audit graph and effective-conditional pending
+upstream audit; this rigorization records the provenance citation
+explicitly. If that upstream theorem is later promoted, the present
+premise would correspondingly inherit a stronger derivational footing. If
+it is rejected on audit, this note's first-order locality premise reverts
+to the abstract assumption form used before this PR — which is exactly
+the form the audit verdict on this row already cited as load-bearing.
+Either way, no claim of unconditional retention is made here.
+
+### Premise 2: unit primitive response normalization (honest scheme/normalization choice)
+
+Unit primitive response normalization (`b_a = 1`) is *not* a derived
+fact. It is recorded here as an honest scheme/normalization choice with
+explicit physical content:
+
+```text
+(N)  one activated coframe axis carries unit first-order boundary count.
+```
+
+(N) is the canonical normalization of the primitive boundary-count
+operator on the source-free cell state. Concretely:
+
+- The boundary-count operator `B` is defined to count the first-order
+  active coframe slots in a primitive event. (N) sets the unit of that
+  count to be one count per active slot.
+- Any other choice `b_a = c` for some real `c > 0` rescales the primitive
+  trace linearly: `Tr((I_16/16) (c P_A)) = c/4`. The choice `c = 1` is
+  the choice that makes "one active coframe slot" carry "one boundary
+  count," which is the natural canonical normalization for any
+  count-valued boundary operator.
+- This scheme convention is fully analogous to the standard physics
+  convention that fixes the unit of fermion number to one per particle:
+  it does not derive a constant; it fixes a unit so that downstream
+  coefficients are dimensionless ratios rather than scheme-dependent
+  rescalings.
+- Coframe-slot symmetry (premise 3 of Theorem 2) then forces the same
+  unit choice on each of the four primitive slots.
+
+What this is and is not:
+
+- (N) is **not** a hidden assumption about gravitational normalization.
+  The bridge to gravitational boundary/action density is the *separate*
+  named open premise (BP) carried over from §5: that the first-order
+  coframe carrier `P_A` is the microscopic gravitational boundary/action
+  density carrier. (N) is upstream of that bridge and concerns only the
+  count-operator normalization on the Boolean event cell.
+- (N) is **not** a tunable parameter. It is the canonical unit choice
+  for a count operator. Rescaling `b_a` linearly rescales `c_cell`
+  linearly, so it is *exactly* the normalization gauge of the
+  bookkeeping; it does not move the lane forward or backward, only
+  rescales numbers in lock-step.
+- The downstream Wald-Noether composition cited in
+  [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
+  uses this canonical normalization to match `c_cell = 1/4` to
+  `1/(4G_Newton,lat)`, forcing `G_Newton,lat = 1` in framework lattice
+  units. Any rescaling of (N) by a factor `c` would absorb into a
+  matching rescaling of `G_Newton,lat`; the physical content of the
+  match is preserved, only the unit convention changes.
+
+Honest premise label: `unit_primitive_response_normalization` is recorded
+as an explicit scheme/normalization choice. It is not derived from
+`A_min` and this note does not claim to derive it. Future work that
+derives a canonical count-operator normalization from independent
+substrate dynamics (rather than scheme convention) would close this
+remaining bookkeeping freedom.
+
+### Closure status after this provenance pass
+
+```text
+first-order coframe locality
+  : derived from retained A_min link-local first variation
+    (cited authority: PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM)
+  ; effective audit grade conditional pending upstream audit of that theorem.
+
+unit primitive response normalization
+  : honest scheme/normalization choice; canonical count-operator unit
+  ; not derived from A_min on this note's surface.
+
+coframe-slot symmetry, axis additivity
+  : retained substrate facts (time-locked Boolean event cell symmetry).
+
+gravitational boundary/action density identification
+  : open named bridge premise (§5);
+    NOT derived; NOT closed by this PR.
+```
+
+The audit-blocker form of the verdict — "P_A is forced only after
+assuming first-order locality and unit primitive response normalization"
+— is now answered: first-order locality is derived from the cited
+link-local first-variation theorem, and unit primitive response
+normalization is recorded as the explicit scheme/normalization choice
+that any count operator must fix. The remaining open premise is the
+gravitational boundary/action-density bridge in §5, which this PR does
+not claim to derive.
+
 ## Theorem 3: primitive coefficient
 
 For the unique first-order coframe boundary carrier,
@@ -385,8 +579,20 @@ python3 scripts/frontier_planck_primitive_coframe_boundary_carrier.py
 Expected result:
 
 ```text
-TOTAL: PASS=14, FAIL=0
+TOTAL: PASS=18, FAIL=0
 ```
+
+The four added checks (this PR) verify the new premise-provenance
+content:
+
+1. The cited link-local first-variation authority exists and is
+   load-bearing for the first-order locality premise.
+2. The cited minimal-axiom surface authority exists.
+3. The cited Hodge-degeneracy negative boundary authority exists.
+4. Unit primitive response normalization is recorded as a canonical
+   scheme/normalization choice and rescaling it linearly rescales
+   `c_cell` linearly (so unit choice is not a hidden tunable parameter,
+   only a bookkeeping gauge).
 
 ## Closeout flags
 
@@ -395,6 +601,8 @@ PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER=TRUE
 FIRST_ORDER_COFRAME_CARRIER_EQUALS_P_A=TRUE
 PRIMITIVE_COEFFICIENT_FROM_COFRAME_CARRIER=1/4
 FINITE_BOUNDARY_EXTENSION_COMPATIBLE=TRUE
+FIRST_ORDER_LOCALITY_PROVENANCE=link_local_first_variation_of_retained_action
+UNIT_PRIMITIVE_RESPONSE_NORMALIZATION_PROVENANCE=canonical_scheme_choice
 PLANCK_MINIMAL_STACK_CLOSURE=FALSE
 RESIDUAL_PLANCK=derive_gravitational_boundary_action_density_as_first_order_coframe_carrier
 ```

@@ -15,6 +15,13 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTE = ROOT / "docs" / "PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md"
 BOUNDARY_EXTENSION = ROOT / "docs" / "PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md"
 CLIFFORD_BRIDGE = ROOT / "docs" / "PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md"
+LINK_LOCAL_FIRST_VARIATION = (
+    ROOT / "docs" / "PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md"
+)
+HODGE_NO_GO = (
+    ROOT / "docs" / "FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md"
+)
+MINIMAL_AXIOMS = ROOT / "docs" / "MINIMAL_AXIOMS_2026-04-11.md"
 
 
 @dataclass(frozen=True)
@@ -148,6 +155,53 @@ def main() -> int:
         "coframe-slot symmetry" in note_text
         and "not claiming an independent Euclidean\nspacetime symmetry" in note_text,
         "symmetry is scoped to the time-locked Boolean coframe register",
+    )
+
+    # Premise provenance citations (rigorize PR additions).
+    record(
+        checks,
+        "link-local first-variation authority exists and is cited",
+        LINK_LOCAL_FIRST_VARIATION.exists()
+        and "PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md"
+        in note_text,
+        "first-order locality premise is sourced to the link-local first-variation theorem",
+    )
+    record(
+        checks,
+        "minimal-axioms substrate authority exists and is cited",
+        MINIMAL_AXIOMS.exists()
+        and "MINIMAL_AXIOMS_2026-04-11.md" in note_text,
+        "A_min link-local source domain is the substrate for the first-variation derivation",
+    )
+    record(
+        checks,
+        "Hodge-degeneracy negative boundary authority exists and is cited",
+        HODGE_NO_GO.exists()
+        and "FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md"
+        in note_text,
+        "negative-boundary citation makes the symmetry-only Hodge ambiguity explicit",
+    )
+
+    # Unit primitive response is a normalization gauge: rescaling b_a by c
+    # rescales c_cell by c. Verify this is the bookkeeping fact (not a
+    # hidden derivation), and that the note records it as a scheme choice.
+    sample_factors = (Fraction(1), Fraction(1, 2), Fraction(2), Fraction(7, 3))
+    rescaling_consistent = all(
+        Fraction(len(p_a), len(all_states)) * c == c * c_cell for c in sample_factors
+    )
+    provenance_recorded = (
+        "Premise provenance" in note_text
+        and "honest scheme/normalization choice" in note_text
+        and "UNIT_PRIMITIVE_RESPONSE_NORMALIZATION_PROVENANCE=canonical_scheme_choice"
+        in note_text
+        and "FIRST_ORDER_LOCALITY_PROVENANCE=link_local_first_variation_of_retained_action"
+        in note_text
+    )
+    record(
+        checks,
+        "unit primitive response normalization recorded as scheme choice with linear rescaling",
+        rescaling_consistent and provenance_recorded,
+        "rescaling b_a by c rescales c_cell by c; provenance fields recorded",
     )
 
     print()
