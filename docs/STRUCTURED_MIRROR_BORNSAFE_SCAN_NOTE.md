@@ -184,3 +184,23 @@ Reinstating a Born-safe structured-mirror successor would require:
    Born tolerance.
 3. A coexistence demonstration of decoherence and gravity together with
    the Born-safe pocket on the same parameter set.
+
+## Registered runner artifacts
+
+The registered sliced runner verifies a representative 32-config slice rather
+than the full 540-config scanned family. The companion full-grid scan source
+is present in the worktree:
+
+- Sliced runner (registered, fast slice): `scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py`
+  with cache `logs/runner-cache/structured_mirror_bornsafe_sliced_runner_2026_05_09.txt`.
+- Constants certificate runner (registered): `scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py`.
+- Full-grid scan runner source (slow, 540 configs): `scripts/structured_mirror_bornsafe_scan.py`.
+- Full-grid scan completed log: `logs/2026-04-03-structured-mirror-bornsafe-scan.txt`
+  (recorded stdout from a prior run covering all 540 configurations; not yet
+  registered in `logs/runner-cache/`).
+
+The bounded scope is therefore: the sliced runner closes the representative
+slice plus the documented near-best region; the full 540-config exhaustion
+claim relies on the prior recorded log, not a current registered cache.
+Registering a full-grid `logs/runner-cache/` artifact remains the residual
+gap.

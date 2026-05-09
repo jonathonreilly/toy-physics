@@ -11412,6 +11412,18 @@
       "dominant_class": null,
       "runner": "scripts/minimal_source_driven_field_probe.py"
     },
+    "mirror_2d_gravity_law_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/mirror_2d_validation.py"
+    },
     "mirror_2d_validation_note": {
       "assert_count": 0,
       "counts": {
@@ -39371,6 +39383,7 @@
       "claims": [
         "audited_symmetry_synthesis_note",
         "lanes.mirror.readme",
+        "mirror_2d_gravity_law_note",
         "mirror_2d_validation_note"
       ],
       "counts": {

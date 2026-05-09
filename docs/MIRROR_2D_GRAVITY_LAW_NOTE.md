@@ -149,3 +149,19 @@ Reinstating a promoted 2D mirror gravity law would require:
    hard threshold — currently `R^2 = 0.075` on the primary runner.
 3. A first-principles argument that the fitted exponent is the
    mass-coupling exponent, not just an empirical curve fit.
+
+## Registered runner artifacts
+
+The primary-runner source and completed cached stdout backing the three
+weak-fit rows are present in the worktree:
+
+- Primary runner: `scripts/mirror_2d_validation.py` (load-bearing source for
+  every weak-fit row in the "Retained result (primary runner, load-bearing)"
+  section above).
+- Primary runner cache: `logs/runner-cache/mirror_2d_validation.txt`
+  (registered cached stdout; exit_code=0).
+- Companion cleanup runner (diagnostic-only):
+  `scripts/mirror_2d_gravity_law_cleanup.py`.
+
+The bounded null-result claim closes from the primary runner's cached stdout
+alone; the companion cleanup table is recorded as diagnostic context.

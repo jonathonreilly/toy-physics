@@ -127,3 +127,19 @@ Reinstating a closed Gate B dynamics result would require:
 3. A resolved band-vs-random wording mismatch for the imposed control.
 4. A promoted criterion asserted across seeds and layer sizes (not just
    one seed).
+
+## Registered runner artifacts
+
+`scripts/evolving_network_prototype_v2.py` contains explicit `assert`
+statements that mirror the existing PASS-condition booleans, so
+`docs/audit/scripts/classify_runner_passes.py` can pick them up:
+
+- Primary runner: `scripts/evolving_network_prototype_v2.py` (registered;
+  contains seven `assert` statements covering the documented PASS conditions
+  for Born clean, `k=0` clean, gap-signal magnitude, removal budget,
+  decoherence ceiling, and the imposed-control comparator semantics).
+- Primary runner cache: `logs/runner-cache/evolving_network_prototype_v2.txt`
+  (registered cached stdout; exit_code=0, status=ok).
+
+This block records the runner assertions that back the bounded prototype read
+above.

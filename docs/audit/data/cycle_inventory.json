@@ -493,7 +493,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -502,7 +502,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -511,7 +511,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
           "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -530,7 +530,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -539,7 +539,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -548,7 +548,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -571,7 +571,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -580,7 +580,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -589,7 +589,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -598,7 +598,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
           "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -633,7 +633,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -642,7 +642,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
           "title": "G_bare Structural Normalization: Cl(3) -> End(V) -> su(3) -> Wilson Action Chain",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -651,7 +651,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -660,7 +660,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -669,7 +669,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -678,7 +678,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -687,7 +687,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
           "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -726,7 +726,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -735,7 +735,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
           "title": "G_bare Structural Normalization: Cl(3) -> End(V) -> su(3) -> Wilson Action Chain",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -744,7 +744,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -753,7 +753,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -762,7 +762,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -771,7 +771,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -780,7 +780,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
           "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -789,7 +789,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md",
           "title": "g_bare Hilbert\u2013Schmidt Rigidity Theorem (Independent Rescaling-Freedom Closure)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -832,7 +832,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -841,7 +841,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -850,7 +850,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -859,7 +859,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -868,7 +868,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -877,7 +877,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -886,7 +886,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -895,7 +895,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -904,7 +904,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Distinct-Shell Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -947,7 +947,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -956,7 +956,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -965,7 +965,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -974,7 +974,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -983,7 +983,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -992,7 +992,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1001,7 +1001,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1010,7 +1010,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1019,7 +1019,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -1062,7 +1062,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1071,7 +1071,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1080,7 +1080,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1089,7 +1089,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1098,7 +1098,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1107,7 +1107,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1116,7 +1116,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1125,7 +1125,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1134,7 +1134,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false
@@ -1177,7 +1177,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 503,
+      "max_transitive_descendants": 504,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1186,7 +1186,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1195,7 +1195,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1204,7 +1204,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1213,7 +1213,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "unaudited",
@@ -1222,7 +1222,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1231,7 +1231,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1240,7 +1240,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         },
         {
           "audit_status": "audited_conditional",
@@ -1249,7 +1249,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem",
-          "transitive_descendants": 503
+          "transitive_descendants": 504
         }
       ],
       "requires_lemma_extraction": false

@@ -217,3 +217,23 @@ scope would need to land at least one of the following:
    gravity positivity/significance, decoherence ceiling, and any
    collapse boundary (e.g. the `N=120` zero-gravity row on the dense
    card).
+
+## Registered runner artifacts
+
+The runner sources and cached stdout backing the `N=15`/`N=25` rows are
+present in the worktree:
+
+- Strict default scan runner: `scripts/mirror_chokepoint_joint.py` (registered
+  source for the `NPL_HALF=25, connect_radius=4.0, layer2_prob=0.0` card).
+- Strict default scan cache: `logs/runner-cache/mirror_chokepoint_joint.txt`
+  (registered cached stdout from which the retained `N=15`/`N=25` rows above
+  are read directly).
+- Assertion-gated certificate runner:
+  `scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py`
+  (mechanically verifies the retained rows against the strict scan cache).
+- Certificate runner cache:
+  `logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt`
+  (registered cached stdout from the certificate runner; PASS exit zero).
+
+Both runners are in-tree; their caches are present in `logs/runner-cache/`.
+This block records the exact registered runner sources and cached stdout.

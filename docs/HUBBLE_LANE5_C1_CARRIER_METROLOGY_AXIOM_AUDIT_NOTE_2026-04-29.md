@@ -136,3 +136,19 @@ This note justifies treating Lane 5 `(C1)` as blocked for the current cascade
 unless a fresh selector/metrology theorem appears. It does **not** by itself
 create an all-lane stop condition; the cascade must still check the remaining
 queued lanes for fresh viable premises before stopping.
+
+## Cited authority notes
+
+The A1/A2/A4/A5/A6 route-state row in this note summarizes existing
+ledger-registered obstruction/boundary notes; they are listed here as
+one-hop authorities for the route-state claims:
+
+- A1: [`HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md`](HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md)
+- A2: [`HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md`](HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md)
+- A4: [`HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md`](HUBBLE_LANE5_C1_A4_PARITY_GATE_CAR_BOUNDARY_NOTE_2026-04-29.md)
+- A5: [`HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md`](HUBBLE_LANE5_C1_A5_BOOLEAN_COFRAME_RESTRICTION_OBSTRUCTION_NOTE_2026-04-29.md)
+- A6: [`HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md`](HUBBLE_LANE5_C1_A6_BILINEAR_ACTIVE_BLOCK_SUPPORT_BOUNDARY_NOTE_2026-04-29.md)
+
+This note's own content is the conditional carrier/metrology premise plus the
+seven runner facts; the route-state row is a cross-reference summary of the
+listed authorities.

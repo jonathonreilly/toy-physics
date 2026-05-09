@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 990
-**Ready (all deps already at retained-grade or metadata tiers):** 41
+**Total pending:** 998
+**Ready (all deps already at retained-grade or metadata tiers):** 48
 
 By criticality:
 - `critical`: 180
-- `high`: 319
-- `medium`: 266
-- `leaf`: 225
+- `high`: 320
+- `medium`: 271
+- `leaf`: 227
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -16,11 +16,11 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | unaudited | critical | 589 | 10.21 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_boundary_law_robustness.py` |
-| 2 | `gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09` | bounded_theorem | unaudited | critical | 514 | 10.01 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py` |
+| 2 | `gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09` | bounded_theorem | unaudited | critical | 515 | 10.01 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py` |
 | 3 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | unaudited | critical | 265 | 9.05 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_bundle_window_trichotomy_candidate.py` |
 | 4 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | unaudited | critical | 265 | 8.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate.py` |
 | 5 | `dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | unaudited | critical | 265 | 8.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_split1_window_bundle_dominance_candidate.py` |
-| 6 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 602 | 27.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 6 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 603 | 27.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
 | 7 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 595 | 20.72 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
 | 8 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 595 | 10.22 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
 | 9 | `cpt_exact_note` | positive_theorem | unaudited | critical | 593 | 20.21 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
@@ -80,15 +80,15 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 6 | `cycle-0006` | 5 | 587 | `universal_gr_constraint_action_stationarity_note` | critical | unaudited |
 | 7 | `cycle-0007` | 7 | 587 | `anomaly_forces_time_theorem` | critical | unaudited |
 | 8 | `cycle-0008` | 8 | 587 | `anomaly_forces_time_theorem` | critical | unaudited |
-| 9 | `cycle-0009` | 2 | 503 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
-| 10 | `cycle-0010` | 2 | 503 | `g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09` | critical | unaudited |
-| 11 | `cycle-0011` | 3 | 503 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
-| 12 | `cycle-0012` | 6 | 503 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
-| 13 | `cycle-0013` | 7 | 503 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
-| 14 | `cycle-0014` | 8 | 503 | `alpha_s_derived_note` | critical | audited_conditional |
-| 15 | `cycle-0015` | 8 | 503 | `alpha_s_derived_note` | critical | audited_conditional |
-| 16 | `cycle-0016` | 8 | 503 | `alpha_s_derived_note` | critical | audited_conditional |
-| 17 | `cycle-0017` | 8 | 503 | `alpha_s_derived_note` | critical | audited_conditional |
+| 9 | `cycle-0009` | 2 | 504 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
+| 10 | `cycle-0010` | 2 | 504 | `g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09` | critical | unaudited |
+| 11 | `cycle-0011` | 3 | 504 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
+| 12 | `cycle-0012` | 6 | 504 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
+| 13 | `cycle-0013` | 7 | 504 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
+| 14 | `cycle-0014` | 8 | 504 | `alpha_s_derived_note` | critical | audited_conditional |
+| 15 | `cycle-0015` | 8 | 504 | `alpha_s_derived_note` | critical | audited_conditional |
+| 16 | `cycle-0016` | 8 | 504 | `alpha_s_derived_note` | critical | audited_conditional |
+| 17 | `cycle-0017` | 8 | 504 | `alpha_s_derived_note` | critical | audited_conditional |
 | 18 | `cycle-0018` | 2 | 304 | `hypercharge_identification_note` | critical | unaudited |
 | 19 | `cycle-0019` | 5 | 264 | `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15` | critical | unaudited |
 | 20 | `cycle-0020` | 5 | 264 | `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15` | critical | unaudited |
