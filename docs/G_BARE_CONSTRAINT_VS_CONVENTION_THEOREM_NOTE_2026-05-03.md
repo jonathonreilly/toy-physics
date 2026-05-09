@@ -303,3 +303,33 @@ linked once in section 2. The remaining cross-references are reader pointers
 - `MINIMAL_AXIOMS_2026-04-11.md` — `A4` records the canonical normalization
   as the framework's normalization-and-evaluation surface input. The
   present theorem clarifies the relationship between `A4` and `g_bare = 1`.
+
+## 11. Current audit-lane disposition (informational)
+
+This row was audited on 2026-05-05 by `codex-audit-loop-gpt5-20260505` and
+returned `audited_conditional`. The chain-closure rationale recorded in the
+ledger is:
+
+> *The algebra closes locally, but the one-hop rescaling-freedom-removal
+> authority is not retained-grade; it is currently an audited decoration
+> boxed under `cl3_color_automorphism_theorem`.*
+
+The named one-hop dep
+[`G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md`](G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md)
+carries effective status `decoration_under_cl3_color_automorphism_theorem`.
+That is a terminal classification under the audit lane, so this row's
+conditional status cannot be lifted along the rescaling-freedom path without
+re-architecting the dep chain. The local algebra (class A substitution into
+the canonical Wilson matching identity) is unchanged; only the upstream
+authority status is the gating issue.
+
+Independent of this row, the audit lane has a separate Ward-route program
+that reaches `g_bare = 1` via different upstream authorities — see
+[`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+(now `retained_bounded`) and
+[`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
+(`audited_conditional`). That route is **not** the rescaling-freedom path
+this note depends on; it is a parallel disambiguation that does not change
+this row's intrinsic dep chain. Cross-reference only — the present theorem
+remains scoped to the rescaling-freedom reading and is not promoted by the
+parallel Ward-route work.
