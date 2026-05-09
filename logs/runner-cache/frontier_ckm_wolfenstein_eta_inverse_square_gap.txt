@@ -72,8 +72,109 @@ Ground-up verification of cited authorities (ledger effective_status)
 ----------------------------------------------------------------------------------------
 S1 source extraction from retained matter-content literal
 ----------------------------------------------------------------------------------------
-  [FAIL (D)] Extract Q_L:(a,b) from retained doc
-FATAL: could not extract Q_L literal.
+  [PASS (D)] Extract Q_L:(a,b) from retained doc
+  [PASS (D)] Extract u_R:(1,3) from retained doc
+  [PASS (D)] Extract d_R:(1,3) from retained doc
+  Q_L literal gives N_pair=2, N_color=3
+  Derived N_quark = N_pair * N_color = 6
+  Cross-check u_R=(1, 3), d_R=(1, 3)
+  [PASS (D)] u_R color dimension matches Q_L color dimension
+  [PASS (D)] d_R color dimension matches Q_L color dimension
+
+----------------------------------------------------------------------------------------
+Retained CKM package values
+----------------------------------------------------------------------------------------
+  rho   = 1/6 = 1/6
+  eta^2 = (6-1)/6^2 = 5/36
+  A^2   = 2/3 = 2/3
+  [PASS (D)] Retained rho = 1/6
+  [PASS (D)] Retained eta^2 = 5/36
+  [PASS (D)] Retained A^2 = 2/3
+
+----------------------------------------------------------------------------------------
+W1: eta^2 as inverse-square dimension gap
+----------------------------------------------------------------------------------------
+  1/N_pair^2  = 1/4
+  1/N_color^2 = 1/9
+  W1 value     = 5/36
+  Retained eta^2 = 5/36
+  [PASS (D)] W1 gives 5/36
+  [PASS (D)] W1 matches retained eta^2
+
+----------------------------------------------------------------------------------------
+W2: rho A^2 factorization
+----------------------------------------------------------------------------------------
+  rho A^2      = 1/6 * 2/3 = 1/9
+  1/N_color^2  = 1/9
+  [PASS (D)] W2 gives 1/9
+  [PASS (D)] W2 matches 1/N_color^2
+
+----------------------------------------------------------------------------------------
+W3/W4 companion sum identities
+----------------------------------------------------------------------------------------
+  W3 = eta^2 + rho A^2 = 1/4
+  1/N_pair^2          = 1/4
+  W4 = eta^2 + 2 rho A^2 = 13/36
+  1/N_pair^2 + 1/N_color^2 = 13/36
+  [PASS (D)] W3 gives 1/4
+  [PASS (D)] W3 matches 1/N_pair^2
+  [PASS (D)] W4 gives 13/36
+  [PASS (D)] W4 matches sum of inverse squares
+
+----------------------------------------------------------------------------------------
+W5/W6 factored readouts
+----------------------------------------------------------------------------------------
+  rho from counts       = 1/6
+  eta^2 factored value  = (9 - 4)/36 = 5/36
+  [PASS (D)] W5: rho = 1/(N_pair N_color)
+  [PASS (D)] W6: eta^2 = (N_color^2 - N_pair^2)/N_quark^2
+
+----------------------------------------------------------------------------------------
+Bernoulli-family comparator cross-check
+----------------------------------------------------------------------------------------
+  V(N_pair) M(N_color) M(N_quark) = 1/4 * 2/3 * 5/6
+                                  = 5/36
+  [PASS (D)] Bernoulli comparator reproduces eta^2
+
+----------------------------------------------------------------------------------------
+Audit: W2 is a generic factorization, not an SM-uniqueness claim
+----------------------------------------------------------------------------------------
+  (N_pair, N_color)=(1,2) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(1,3) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(1,4) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(1,5) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,2) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,3) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,4) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,5) -> rho A^2 = 1/N_color^2 ? True
+  [PASS (D)] W2 holds identically on sampled count surface
+
+----------------------------------------------------------------------------------------
+Framing audit
+----------------------------------------------------------------------------------------
+  This theorem is a retained structural reading of eta^2 on the sourced
+  Q_L:(2,3) surface. It does not claim a new below-Wn closure.
+  It also does not claim W2 is SM-unique.
+  [PASS (D)] Framing remains within retained-reading scope
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  N_pair=2, N_color=3, N_quark=6
+  A^2=2/3, rho=1/6, eta^2=5/36
+  W1: eta^2 = 1/4 - 1/9 = 5/36
+  W2: rho A^2 = 1/9 = 1/9
+  W3: eta^2 + rho A^2 = 1/4 = 1/4
+  W4: eta^2 + 2 rho A^2 = 13/36
+  W5: rho = 1/(2*3) = 1/6
+  W6: eta^2 = (9-4)/36 = 5/36
+
+  ETA_SQ_INVERSE_SQUARE_GAP_VERIFIED = True
+  W2_GENERIC_FACTORIZATION_VERIFIED  = True
+
+========================================================================================
+TOTAL: PASS=21, FAIL=7
+========================================================================================
 
 ----- stderr -----
 
