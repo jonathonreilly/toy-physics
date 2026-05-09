@@ -44,10 +44,12 @@ and `u_0 = 0.8776`).
 
 For small `r`, the Wilson correction *reduces* `m_H_tree^W` below the
 `r = 0` value. Setting (3) equal to the PDG value
-`m_H = 125.10 GeV` and solving for `r / u_0` at leading order:
+`m_H = 125.10 GeV` and solving for `r / u_0` at leading order (each
+`≈` below absorbs an `O(r^4)` remainder from the leading-order Taylor
+expansion in (3)):
 
 ```text
-1  -  ( 3 / 2 ) ( r / u_0 )^2  =  m_H_PDG / m_H_tree^{r=0}  ≈  0.892,
+1  -  ( 3 / 2 ) ( r / u_0 )^2  ≈  m_H_PDG / m_H_tree^{r=0}  ≈  0.892,
 ( 3 / 2 ) ( r / u_0 )^2        ≈  0.108,
 ( r / u_0 )^2                  ≈  0.072,
 r / u_0                        ≈  0.268,                                         (4)
@@ -117,14 +119,17 @@ c(r) := (m_H_tree^{r=0} - m_H_tree^W) / (r^2 / u_0^2 · m_H_tree^{r=0})
 The runner extracts `c(r)` at successively smaller `r` and verifies
 convergence to `3/2` cleanly.
 
-(C) **Closure value `r ≈ 0.235`:** solving `1 - (3/2)(r/u_0)^2 = m_H_PDG /
-m_H_tree^{r=0}` for `r`:
-- `m_H_PDG / m_H_tree^{r=0} = 125.10 / 140.3 ≈ 0.8917` (note: PDG value is
-  treated as a *comparison input*, not as a derivation input);
-- `(3/2)(r/u_0)^2 ≈ 1 - 0.8917 = 0.1083`;
+(C) **Closure value `r ≈ 0.235`:** solving `1 - (3/2)(r/u_0)^2 ≈ m_H_PDG /
+m_H_tree^{r=0}` for `r` at leading order (the `≈` absorbs the
+`O(r^4)` remainder from (3)):
+- `m_H_tree^{r=0} = v / (2 u_0) = 246.22 / (2 · 0.8776) ≈ 140.281` GeV
+  (the parent's headline `140.3 GeV` is the same value rounded);
+- `m_H_PDG / m_H_tree^{r=0} = 125.10 / 140.281 ≈ 0.8918` (note: PDG
+  value is treated as a *comparison input*, not as a derivation input);
+- `(3/2)(r/u_0)^2 ≈ 1 - 0.8918 = 0.1082`;
 - `(r/u_0)^2 ≈ 0.0722`;
-- `r/u_0 ≈ 0.2687`;
-- `r ≈ 0.2687 · 0.8776 ≈ 0.2358`.
+- `r/u_0 ≈ 0.2686`;
+- `r ≈ 0.2686 · 0.8776 ≈ 0.2357`.
 
 The runner reports this leading-order closure value with `m_H_PDG`
 clearly labelled as a comparison input (no PDG-pin promotion to
