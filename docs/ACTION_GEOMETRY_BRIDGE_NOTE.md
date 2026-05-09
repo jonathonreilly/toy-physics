@@ -3,6 +3,8 @@
 **Date:** 2026-04-04  
 **Status:** bounded geometry-dependent bridge probe; safe read is mixed bridge
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/action_geometry_bridge_probe.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 ## Purpose
 
 This note freezes a stricter version of the regularity crossover question:

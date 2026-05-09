@@ -3,6 +3,8 @@
 **Date:** 2026-04-09
 **Status:** PARTIAL RESOLUTION — extending the momentum range to p=0–6 (from p=0–2) **eliminates Klein-Gordon** as the worst fit (R²=0.78, 0/8 per-seed wins) but does NOT give a clean winner between Schrödinger and Linear. Schrödinger R²=0.97 vs Linear R²=0.96 on the seed-mean, with per-seed winner split **4:4** (Schrödinger:Linear). The dispersion curve has structure beyond any simple two-parameter form: a smooth region at low p, a gap/dropout near p≈2.5, and steep negative ω at high p.
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/dispersion_high_p_tiebreaker.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 has been declared and the cache refreshed under the new budget. The runner output and pass/fail semantics are unchanged.
+
 ## Setup
 
 - Fam1 grown DAG, H=0.5, 8 seeds

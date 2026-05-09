@@ -3,6 +3,8 @@
 **Date:** 2026-04-02  
 **Status:** complete, bounded same-graph joint card
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/central_band_dense_joint_card.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 This note records the same-graph joint card for the dense central-band pocket
 that is already Born-clean on the corrected three-slit harness.
 

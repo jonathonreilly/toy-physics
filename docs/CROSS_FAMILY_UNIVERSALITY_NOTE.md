@@ -3,6 +3,8 @@
 **Date:** 2026-04-08 (status line narrowed 2026-04-28 per audit-lane verdict; revised 2026-04-09 after earlier review)
 **Status:** bounded conditional finite-runner consistency at `H = 0.5` — family-mean dispersion and lensing observables agree across the three tested DAG families on the registered seed-mean output, with the Schrödinger/KG near-tie holding in each family. Per-seed variance and statistical power are not reported by the runner, so the "no detectable family effect" wording is unsupported; fine-H (`H = 0.25`) universality is untested on Fam2 / Fam3. Not a tier-ratifiable universality theorem.
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/dispersion_all_families.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 has been declared and the cache refreshed under the new budget. The runner output and pass/fail semantics are unchanged.
+
 ## What was tested
 
 All measurements at H=0.5, 5 seeds per family, on the same grown-DAG generator with three parameter sets.

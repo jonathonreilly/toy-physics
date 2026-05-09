@@ -1,11 +1,77 @@
 ===== runner cache v1 =====
 runner: scripts/dispersion_high_p_tiebreaker.py
-runner_sha256: 1e34a4f32500e7396d01142ae64cf3dc8f20c9076e3946d6f7ce54f53b4b5b53
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 4292131ba239e9d83deabb2185778fea8eb305b6914361d832f13a8f992d6844
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 249.91
+status: ok
 ----- stdout -----
+==========================================================================================
+HIGH-p DISPERSION TIEBREAKER (Fam1 grown DAG)
+  H=0.5, NL=31, k=5.0, β=0.8
+  p range: 0–6 (Nyquist = 6.28)
+  Seeds: [0, 1, 2, 3, 4, 5, 6, 7]
+  Key test: at p >> m_eff ≈ 6:
+    Schrödinger → ω ∝ p²  (accelerating)
+    Klein-Gordon → ω ∝ |p| (linear)
+==========================================================================================
+  nodes=18751, time per seed ≈ 46.0s
+
+      p         <ω>       σ_ω      <R²>    n
+  ---------------------------------------------
+    0.0     +0.5349    0.0085   0.99902    8
+    0.1     +0.5346    0.0095   0.99917    8
+    0.3     +0.5334    0.0122   0.99961    8
+    0.5     +0.5295    0.0133   0.99943    8
+    1.0     +0.4766    0.0086   0.99819    8
+    1.5     +0.3453    0.0237   0.99596    8
+    2.0     +0.2065    0.0234   0.99218    8
+    2.5     <3 good
+    3.0     -0.3082    0.0429   0.96676    7 ←noisy
+    3.5     -0.6744    0.0892   0.98885    8 ←noisy
+    4.0     -0.9825    0.2414   0.98422    5 ←noisy
+    4.5     -1.0348    0.1910   0.95807    7 ←noisy
+    5.0     -1.2954    0.4128   0.95481    3 ←noisy
+    5.5     <3 good
+    6.0     <3 good
+
+  SEED-MEAN FITS (12 points, p up to 5.0):
+    Schrödinger      R² = 0.9742503  a=-0.0799, b=0.5052, m_eff=6.2598
+    Klein-Gordon     R² = 0.7796878  c²=0.0493, m²=0.1121
+    Linear           R² = 0.9575741  c=-0.3870, d=0.7246
+    sqrt-KG          R² = -0.5886235  c=0.0160, m=0.4279
+
+    WINNER: Schrödinger (R² = 0.9742503)
+    Runner: Linear (R² = 0.9575741)
+    Gap: Δ = 0.016676
+    → TIE BROKEN (Δ > 0.01)
+
+  PER-SEED FITS (winner per seed):
+    seed 0: Linear           (Δ = 0.0309)  [Lin=0.9231, Sch=0.8922]
+    seed 1: Schrödinger      (Δ = 0.0865)  [Sch=0.9970, Lin=0.9104]
+    seed 2: Linear           (Δ = 0.0314)  [Lin=0.9498, Sch=0.9184]
+    seed 3: Schrödinger      (Δ = 0.0496)  [Sch=0.9726, Lin=0.9230]
+    seed 4: Schrödinger      (Δ = 0.0478)  [Sch=0.9684, Lin=0.9206]
+    seed 5: Linear           (Δ = 0.0404)  [Lin=0.9577, Sch=0.9173]
+    seed 6: Linear           (Δ = 0.0027)  [Lin=0.9218, Sch=0.9191]
+    seed 7: Schrödinger      (Δ = 0.0635)  [Sch=0.9864, Lin=0.9229]
+
+    Winner tally: {'Linear': 4, 'Schrödinger': 4}
+
+  CURVATURE DIAGNOSTIC:
+  If omega curves UP at high p → Schrödinger (∝ p²)
+  If omega flattens/becomes linear at high p → Klein-Gordon (∝ √(p²+m²))
+  If omega turns over → band structure / lattice artifact
+    p=0.1: d²ω/dp² = -0.0408  (concave down → KG-like)
+    p=0.3: d²ω/dp² = -0.0680  (concave down → KG-like)
+    p=0.5: d²ω/dp² = -0.3995  (concave down → KG-like)
+    p=1.0: d²ω/dp² = -0.3139  (concave down → KG-like)
+    p=1.5: d²ω/dp² = -0.0297  (concave down → KG-like)
+    p=2.0: d²ω/dp² = -0.6684  (concave down → KG-like)
+    p=3.0: d²ω/dp² = +0.2641  (concave up → Schrö-like)
+    p=3.5: d²ω/dp² = +0.2322  (concave up → Schrö-like)
+    p=4.0: d²ω/dp² = +1.0232  (concave up → Schrö-like)
+    p=4.5: d²ω/dp² = -0.8333  (concave down → KG-like)
 
 ----- stderr -----
 

@@ -1,5 +1,7 @@
 # Central-Band Mass Window Note
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/central_band_mass_window_summary.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 has been declared and the cache refreshed under the new budget. The runner output and pass/fail semantics are unchanged.
+
 This note records the gravity-side follow-up to the central-band hard-geometry
 lane. The question is narrower than the full joint card:
 

@@ -22,6 +22,12 @@ import cmath
 import random
 import time
 
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800` means the
+# audit-lane precompute and live audit runner allow up to 30 min of wall
+# time before recording a timeout. The 120 s default ceiling is too tight
+# under concurrency contention. See `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
 BETA = 0.8
 K_PER_H = 2.5
 T_PHYS = 15.0

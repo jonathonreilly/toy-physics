@@ -24,6 +24,12 @@ import sys
 from collections import defaultdict, deque
 from dataclasses import dataclass
 
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800` means the
+# audit-lane precompute and live audit runner allow up to 30 min of wall
+# time before recording a timeout. The 120 s default ceiling is too tight
+# under concurrency contention. See `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 

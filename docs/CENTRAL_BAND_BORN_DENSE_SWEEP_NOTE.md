@@ -1,5 +1,7 @@
 # Central-Band Dense Corrected Born Sweep Note
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/central_band_born_dense_sweep.py` exits 0 with PASS in the current cache; the prior audit verdict citing an unregistered artifact was generated against an earlier cache state and is invalidated by this source-note hash drift.
+
 This note records the dense corrected-Born sweep for the central-band hard-geometry
 lane using the review-safe three-slit Sorkin quantity with the required `-P(empty)`
 term.

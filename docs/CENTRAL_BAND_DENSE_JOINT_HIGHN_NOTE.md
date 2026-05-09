@@ -3,6 +3,8 @@
 **Date:** 2026-04-03  
 **Status:** complete, bounded high-N extension of the dense central-band lane
 
+**Audit-lane runner update (2026-05-09):** the primary runner `scripts/central_band_dense_joint_highN.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 has been declared and the cache refreshed under the new budget. The runner output and pass/fail semantics are unchanged.
+
 This note records the higher-N extension of the dense central-band same-graph
 hard-geometry lane. It keeps the corrected Born harness fixed and sweeps only
 the dense central-band family.
