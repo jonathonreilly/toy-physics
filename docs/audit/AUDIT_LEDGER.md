@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| **retained_no_go** | 120 |
+| **retained_no_go** | 121 |
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 891 |
+| unaudited | 890 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 385 |
+| `audited_clean` | 386 |
 | `audited_conditional` | 423 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 945 |
+| `unaudited` | 944 |
 
 | claim_type | count |
 |---|---:|
@@ -134,6 +134,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
@@ -2249,6 +2250,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26`
+
+- **Note:** [`CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md`](../../docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audit of the stated no-go that one-Higgs gauge selection plus direct top-Ward analogy allows the charged-lepton Yukawa skeleton but leaves Y_e arbitrary, so no y_tau or charged-lepton eigenvalue follows without an additional generation/source/normalization primitive.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0c80-092b-74d0-bf0b-ad085b1e6bcc`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The gauge group acts identically on each generation copy of L_L and e_R, so every (Y_e)_{ij} bar L_{L,i} H e_{R,j} has the same gauge quantum numbers and gauge selection cannot select eigenvalues, hierarchy, texture, or a tau entry.  _(class `A`)_
+- **chain closes:** True — The note gives the doubled-hypercharge bookkeeping for H versus tilde H, the generation-blind gauge action that leaves all Y_e entries allowed, and the colorless charged-lepton normalization options 1 or 2 rather than the top Q_L value 6. Within that stated direct-lift scope, the obstruction follows algebraically.
+- **rationale:** The audited claim is a negative boundary, not a charged-lepton mass prediction. The runner source actually computes the relevant hypercharge sums, checks arbitrary generation-matrix entries and basis relabeling, and verifies that direct charged-lepton gauge dimensions do not reproduce the top Ward 3 x 2 normalization without adding a new generation primitive. Comparator lepton masses are printed only behind a firewall and are not used as proof inputs, so the stated no-go closes on algebra within its scope.
 - **auditor confidence:** high
 
 ### `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27`

@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 99,
-    "high": 360,
+    "high": 359,
     "leaf": 193,
     "medium": 251
   },
@@ -4642,27 +4642,6 @@
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "transitive_descendants": 130
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.977,
-      "note_path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
-      "transitive_descendants": 125
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26188,6 +26167,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 12,
-  "total_pending": 903
+  "ready_count": 11,
+  "total_pending": 902
 }
