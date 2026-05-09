@@ -1,0 +1,80 @@
+Koide A1 eleven-probe campaign synthesis check
+note: docs/KOIDE_A1_11_PROBE_CAMPAIGN_BOUNDED_ADMISSION_META_NOTE_2026-05-08.md
+
+PASS: source note is meta
+PASS: does not declare pipeline status
+PASS: does not declare audit-clean verdict token
+PASS: cross-references retained foundational note: MINIMAL_AXIOMS_2026-05-03
+PASS: cross-references retained foundational note: PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08
+PASS: cross-references retained foundational note: C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08
+PASS: cross-references retained foundational note: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac
+PASS: cross-references retained provenance: STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07
+PASS: cross-references retained provenance: KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18
+PASS: cross-references retained provenance: CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE
+PASS: cross-references probe note: KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routef.md
+PASS: probe note file exists on this branch: KOIDE_A1_ROUTE_F_CASIMIR_DIFFERENCE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routef.md
+PASS: cross-references probe note: KOIDE_A1_ROUTE_E_KOSTANT_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routee.md
+PASS: probe note file exists on this branch: KOIDE_A1_ROUTE_E_KOSTANT_WEYL_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routee.md
+PASS: cross-references probe note: KOIDE_A1_ROUTE_A_KOIDE_NISHIURA_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routea.md
+PASS: probe note file exists on this branch: KOIDE_A1_ROUTE_A_KOIDE_NISHIURA_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routea.md
+PASS: cross-references probe note: KOIDE_A1_ROUTE_D_NEWTON_GIRARD_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routed.md
+PASS: probe note file exists on this branch: KOIDE_A1_ROUTE_D_NEWTON_GIRARD_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_routed.md
+PASS: cross-references probe note: KOIDE_A1_PROBE_RP_FROBENIUS_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe1.md
+PASS: probe note file exists on this branch: KOIDE_A1_PROBE_RP_FROBENIUS_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe1.md
+PASS: cross-references probe note: KOIDE_A1_PROBE_FLAVOR_ANOMALY_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe2.md
+PASS: probe note file exists on this branch: KOIDE_A1_PROBE_FLAVOR_ANOMALY_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe2.md
+PASS: cross-references probe note: KOIDE_A1_PROBE_GRAVITY_PHASE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe3.md
+PASS: probe note file exists on this branch: KOIDE_A1_PROBE_GRAVITY_PHASE_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe3.md
+PASS: cross-references probe note: KOIDE_A1_PROBE_SPECTRAL_ACTION_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe4.md
+PASS: probe note file exists on this branch: KOIDE_A1_PROBE_SPECTRAL_ACTION_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe4.md
+PASS: cross-references probe note: KOIDE_A1_PROBE_RG_FIXED_POINT_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe5.md
+PASS: probe note file exists on this branch: KOIDE_A1_PROBE_RG_FIXED_POINT_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe5.md
+PASS: cross-references probe note: KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md
+PASS: probe note file exists on this branch: KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md
+PASS: cross-references probe-7 note (open PR): KOIDE_A1_PROBE_Z2_C3_PAIRING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_probe7.md
+PASS: cites PR #727
+PASS: cites PR #730
+PASS: cites PR #731
+PASS: cites PR #732
+PASS: cites PR #733
+PASS: cites PR #734
+PASS: cites PR #735
+PASS: cites PR #736
+PASS: cites PR #737
+PASS: cites PR #738
+PASS: cites PR #740
+PASS: cites exactly the eleven distinct PR numbers
+PASS: missing primitive named precisely (canonical phrase)
+PASS: missing primitive language uses 'multiplicity-weighted Frobenius pairing'
+PASS: missing primitive references C_3-isotype decomposition
+PASS: missing primitive references M_3(C)_Herm
+PASS: states 3:6 multiplicity ratio structural locus
+PASS: states algebraic equivalence 3a^2 = 6|b|^2
+PASS: isotype decomposition stated explicitly
+PASS: Probe 7 §8 corroboration cited
+PASS: Route D weight-class corroboration cited
+PASS: Probe 1 Frobenius reduction-map corroboration cited
+PASS: Option (a) admit-as-axiom enumerated
+PASS: Option (b) further-probe enumerated
+PASS: Option (c) pivot-to-other-bridge enumerated
+PASS: no option selected by this note
+PASS: forbidden promotion absent: AC closure by declaration
+PASS: forbidden promotion absent: A1 condition closed
+PASS: forbidden promotion absent: missing primitive admitted
+PASS: forbidden promotion absent: new axiom added
+PASS: forbidden promotion absent: bridge-gap admission count zero
+PASS: explicit: does not admit primitive as axiom
+PASS: explicit: does not derive A1-condition
+PASS: explicit: does not modify any retained theorem
+PASS: explicit: A1+A2 still suffice
+PASS: explicit: no PDG values as derivation input
+PASS: no PDG numerical mass values inserted as derivation input
+PASS: naming-collision warning present (framework axiom A1 vs A1-condition)
+PASS: minimal axioms note has physical Cl(3) A1
+PASS: minimal axioms note has physical Z^3 A2
+PASS: review-loop rule present
+PASS: campaign declared terminal / converged
+PASS: structural obstruction language
+
+=== TOTAL: PASS=74, FAIL=0 ===
+Eleven-probe campaign synthesis check passed: terminal state recorded, missing primitive named precisely (canonical (1,1)-multiplicity-weighted Frobenius pairing on M_3(C)_Herm under C_3-isotype decomposition), no closure claimed, no axiom added, no theorem promoted.
