@@ -1,11 +1,56 @@
 # Axiom-First Cluster Decomposition / Lieb–Robinson Bound on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29
+**Date:** 2026-04-29 (originally); 2026-05-09 (mass-gap bridge repair)
 **Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
 **Loop:** `axiom-first-foundations`
 **Cycle:** 3 (Route R3)
 **Runner:** `scripts/axiom_first_cluster_decomposition_check.py`
 **Log:** `outputs/axiom_first_cluster_decomposition_check_2026-04-29.txt`
+
+## Mass-gap bridge repair (2026-05-09)
+
+The 2026-05-09 audit-driven repair addresses the audit verdict:
+
+> "L2 exponential clustering is promoted from LR plus an asserted
+> mass gap/confinement bridge. LR bounds alone control commutators
+> outside a light cone; they do not prove static connected-correlator
+> clustering for arbitrary canonical thermal states, and the packet
+> gives no retained mass-gap or confinement authority that closes
+> the bridge from microcausality to thermal connected-correlator
+> decay."
+
+The repair note
+[`CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md`](CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md)
+supplies the **closed-form bridge** from L1 (Lieb-Robinson) plus a
+named gap input `Δ_T > 0` (transfer-matrix spectral gap) to L2
+(exponential clustering). The bridge is a finite-dim spectral
+decomposition + Cauchy-Schwarz argument; no Hastings-Koma constants
+are imported without verification.
+
+After the repair:
+
+- The bridge L1 + Δ_T → L2 is a **closed-form theorem on `A_min` +
+  retained RP + retained spectrum condition**.
+- The mass-gap input `Δ_T > 0` is **explicitly tagged as the open
+  derivation target** for the canonical Cl(3) ⊗ Z^3 staggered +
+  Wilson Hamiltonian (it is asserted, not derived, in the spectrum-
+  condition support note's (SC3) and is recorded as the remaining
+  open work).
+- L2 in this note is **honestly conditional** on the gap input;
+  the unconditional L2-as-stated for arbitrary canonical thermal
+  states is not what is proved.
+
+The bridge runner
+`scripts/cluster_decomposition_mass_gap_bridge_check.py` exhibits
+the bridge as a closed-form identity (E1: spectral decomposition
+identity B.6) plus the inequality forms (E2: ground-state
+clustering, E3: thermal clustering with two-term rigorous bound),
+and a **no-gap counter-example** (E4) that confirms the gap is
+genuinely required (without it, connected correlators do not decay
+at all). All four exhibits PASS.
+
+The parent claim's L2 statement below is restated as a conditional
+in §"Honest status (post-bridge-repair)".
 
 ## Scope
 
@@ -223,13 +268,60 @@ decomposition pair. Cycle 2 + Cycle 3 jointly supply the structural
 content underlying any "physical Hilbert space + spectrum
 condition + clustering" sentence in the package.
 
-## Honest status
+## Honest status (post-bridge-repair)
 
-**Branch-local theorem.** (L1)–(L4) are proved on `A_min` by the
-classical Lieb–Robinson argument with explicit cubic-lattice
-constants. The runner exhibits the exponential envelope (7) on a
-small free-fermion lattice and confirms exponential decay of
-connected correlators.
+**Branch-local theorem with sector-dependent support level.**
+
+- **(L1) Lieb–Robinson commutator bound.** Proved on `A_min` by
+  the classical Lieb–Robinson argument with explicit cubic-lattice
+  constants. The runner exhibits the exponential envelope on a
+  small free-fermion lattice. **Closed-form derivation; full
+  retained-grade support.**
+- **(L3) Lattice light cone.** Direct contrapositive of (L1).
+  **Closed-form derivation; full retained-grade support.**
+- **(L4) Cl(3)-specific constant.** Bound on `J` by spectral radius
+  of finite-dim Cl(3) Hermitian elements. **Closed-form
+  derivation; full retained-grade support.**
+- **(L2) Exponential clustering.** Conditional on a transfer-matrix
+  spectral gap `Δ_T > 0`, supplied by the bridge note
+  [`CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md`](CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md).
+  The bridge is a closed-form spectral decomposition; the gap input
+  is explicitly tagged as `admitted_context_input`. **The
+  unconditional L2 form ("for any canonical thermal state") is
+  *not* proved; only the conditional form ("if `Δ_T > 0`, then
+  exponential clustering at rate set by `Δ_T`") is closed.**
+
+**What this rules out.**
+
+- The note no longer claims unconditional exponential clustering
+  for arbitrary canonical thermal states. The gap is genuinely
+  required (the bridge runner E4 demonstrates a no-gap
+  counter-example with `Δ_T = 0` where connected correlators do
+  not decay).
+- Downstream lanes that quote "exponential clustering of
+  correlators at spacelike separation" must either:
+  (a) cite the bridge as conditional on `Δ_T > 0` and acknowledge
+      the gap is asserted at the SC3 level, or
+  (b) wait for an independent first-principles derivation of
+      `Δ_T > 0` on the canonical Cl(3) ⊗ Z^3 staggered + Wilson
+      Hamiltonian.
+
+**Open dependency for full L2 closure.**
+
+The remaining open work is a first-principles derivation of
+`Δ_T > 0` for the canonical Cl(3) ⊗ Z^3 Hamiltonian on `A_min`.
+Standard candidates:
+
+1. Strong-coupling expansion at `g_bare = 1` showing convergence
+   with positive rate.
+2. Perron-Frobenius for the positive transfer matrix proving
+   non-degeneracy of the top eigenvalue under canonical-surface
+   boundary conditions.
+3. Structural confinement theorem on `A_min` giving `m_gap ≥ √σ`
+   with `σ > 0` the string tension.
+
+None of these is currently retained on `A_min`. The bridge note
+makes this dependency explicit in the audit citation graph.
 
 **Not in scope.**
 
@@ -241,6 +333,9 @@ connected correlators.
 - Continuum-limit clustering / Lorentz-invariant light cone. (L3)
   is the lattice light cone; the continuum / Lorentz limit is a
   separate program question.
+- First-principles derivation of `Δ_T > 0` (the open dependency
+  identified above). The bridge note records this as the explicit
+  next-step repair target.
 
 ## Citations
 
@@ -248,7 +343,22 @@ connected correlators.
 - prior cycles in this loop:
   - `docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`
   - `docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
+- mass-gap bridge repair (2026-05-09):
+  `docs/CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md`
+- retained spectrum-condition support note (defines `Δ_T`):
+  `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
 - standard external references for the Lieb–Robinson technique
   (cited as theorem-grade lattice references; we do not import
   any numerical input):
   Lieb–Robinson 1972; Hastings–Koma 2006; Nachtergaele–Sims 2010.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links
+named by the 2026-05-09 mass-gap bridge repair, so the audit
+citation graph can track them. It does not promote this note or
+change the audited claim scope.
+
+- [cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09](CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md)
+- [axiom_first_spectrum_condition_theorem_note_2026-04-29](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
+- [axiom_first_reflection_positivity_theorem_note_2026-04-29](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
