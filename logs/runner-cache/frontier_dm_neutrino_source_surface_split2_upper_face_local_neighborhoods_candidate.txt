@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neig
 runner_sha256: 4b413c5b99dbd172937b2b5e27192496e07a08e22ad1a66f224ddaf01f0d1b72
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 53.45
+elapsed_sec: 14.52
 status: ok
 ----- stdout -----
 ========================================================================================

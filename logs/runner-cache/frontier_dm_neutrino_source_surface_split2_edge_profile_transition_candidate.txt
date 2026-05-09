@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transiti
 runner_sha256: 93bc2903518f24d467659f4fbd469656c370ff18feac25656a20ce43136d09fc
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 0.61
+elapsed_sec: 0.31
 status: ok
 ----- stdout -----
 ========================================================================================
