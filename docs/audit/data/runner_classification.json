@@ -8916,6 +8916,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_koide_c3_singlet_extension_reduction_theorem.py"
     },
+    "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_koide_circulant_character_bridge_narrow.py"
+    },
     "koide_circulant_character_bridge_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -28725,6 +28737,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_koide_circulant_character_bridge_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_koide_circulant_wilson_target.py": {
       "assert_count": 1,
       "claims": [
@@ -40712,9 +40739,9 @@
       "B": 170,
       "C": 618,
       "D": 226,
-      "none": 426
+      "none": 427
     },
-    "runners_classified": 1454,
+    "runners_classified": 1455,
     "runners_with_C": 740,
     "runners_with_D": 368
   }

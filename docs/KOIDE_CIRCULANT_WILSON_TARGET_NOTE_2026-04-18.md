@@ -155,11 +155,13 @@ Then:
 |b|^2 = x^2 + y^2.
 ```
 
-By the exact Koide bridge note, the spectral Koide condition is
+By the [KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09](./KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md)
+exact algebraic identity `a_0^2 - 2 |z|^2 = 3 a^2 - 6 |b|^2`, the
+spectral Koide condition
 ```
 a_0^2 = 2 |z|^2
 ```
-which on the circulant coordinates becomes
+becomes, on the circulant coordinates,
 ```
 3 a^2 = 6 |b|^2
       = 6 (x^2 + y^2).

@@ -9778,6 +9778,10 @@
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "koide_circulant_wilson_target_note_2026-04-18",
       "to": "koide_cyclic_wilson_descendant_law_note_2026-04-18"
     },
     {
@@ -42062,6 +42066,17 @@
       "runner_path": "scripts/frontier_koide_c3_singlet_extension_reduction_theorem.py",
       "title": "Koide `C_3` Singlet-Extension Reduction Theorem"
     },
+    "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09": {
+      "claim_id": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "1d99d2de9d4cfd64f914b6c6dca57d42ec351d7ace7ee8c896ea683c309a0d81",
+      "path": "docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_koide_circulant_character_bridge_narrow.py",
+      "title": "Koide Circulant / Character Bridge Narrow Theorem"
+    },
     "koide_circulant_character_bridge_note_2026-04-18": {
       "claim_id": "koide_circulant_character_bridge_note_2026-04-18",
       "claim_type_author_hint": null,
@@ -42097,10 +42112,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
         "koide_cyclic_wilson_descendant_law_note_2026-04-18",
         "koide_dweh_cyclic_compression_note_2026-04-18"
       ],
-      "note_hash": "895e6b5e916452369a41edeff68a7ed8c53884e8bd2652eb8e3263a1d7402dde",
+      "note_hash": "95a75671aa232697df3b0ad464363639cb588012f99e4cbfffb3decfaa3468cf",
       "path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "title": "Koide Circulant Wilson-Target Note"
@@ -59354,6 +59370,7 @@
     "koide_a1_physical_bridge_attempt_2026-04-22",
     "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
     "koide_aps_block_by_block_forcing_note_2026-04-21",
+    "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
     "koide_closure_atlas_issues_flagged",
     "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
     "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
@@ -59774,7 +59791,7 @@
       "no_go": 14,
       "none": 1699,
       "open_gate": 13,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 645,
@@ -59782,12 +59799,12 @@
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
-      "positive_theorem": 618
+      "positive_theorem": 619
     },
-    "edge_count": 7217,
+    "edge_count": 7218,
     "leaf_count": 535,
-    "node_count": 1973,
-    "root_count": 837,
-    "runners_with_path": 1552
+    "node_count": 1974,
+    "root_count": 838,
+    "runners_with_path": 1553
   }
 }

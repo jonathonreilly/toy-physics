@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 883 |
+| unaudited | 885 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 427 |
+| ~~audited_conditional~~ | 426 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 427 |
+| `audited_conditional` | 426 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 937 |
+| `unaudited` | 939 |
 
 | claim_type | count |
 |---|---:|
@@ -53,12 +53,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 63 |
 | `no_go` | 189 |
 | `open_gate` | 109 |
-| `positive_theorem` | 773 |
+| `positive_theorem` | 774 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 218 |
-| `high` | 539 |
+| `high` | 540 |
 | `medium` | 477 |
 | `leaf` | 632 |
 
@@ -67,7 +67,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1454
+- runners classified: 1455
 - runners with (C) first-principles compute hits: 740
 - runners with (D) external comparator hits: 368
 - decoration candidates (no C, no D): 122
@@ -758,7 +758,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7613,22 +7612,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Applying the stated ABSS fixed-point formula with p = 3 and tangent weights (1,2) gives eta = (1/3)(1/3 + 1/3) = 2/9.  _(class `A`)_
 - **chain closes:** False — The symbolic eta evaluation closes after p = 3, weights (1,2), and the ABSS formula/normalization are accepted. The missing step is a retained or self-contained derivation of the admitted Cl(3)/Z^3-to-ambient APS setup and the exact ABSS fixed-point formula in this restricted packet.
 - **rationale:** The runner is not a trivial printout: it performs symbolic Rodrigues, eigenvalue, fixed-locus, weight, and eta-sum checks. But the load-bearing result is an algebraic closure after the admitted C3 route, the ABSS fixed-point formula, and its normalization are taken as inputs. The packet supplies no cited retained authority or self-contained proof for those imports, and the source explicitly leaves the physical-observable bridge delta_physical = eta_APS open.
-- **auditor confidence:** high
-
-### `koide_circulant_wilson_target_note_2026-04-18`
-
-- **Note:** [`KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`](../../docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the asserted reduction of the charged-lepton Koide constructive target to the 3-real C3-covariant circulant Hermitian family inside the adjacent-chain algebra, with Koide imposing one real equation and leaving a 2-real cone.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-koide_circulant_wilson_target_note-20260505`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** By the exact Koide bridge note, the spectral Koide condition is a_0^2 = 2 |z|^2, which on the circulant coordinates becomes 3 a^2 = 6 |b|^2 = 6 (x^2 + y^2).  _(class `B`)_
-- **chain closes:** False — The finite linear-algebra checks for the C3 commutant, adjacent-chain containment, and codimension-one equation close locally. The identification of that equation as the spectral Koide target imports an exact Koide bridge note that is not present in the direct dependency packet, while the microscopic selector and final readout are explicitly left open.
-- **rationale:** Issue: the load-bearing Koide spectral bridge a_0^2 = 2|z|^2 is imported from a named bridge note outside the listed one-hop dependencies, and the note explicitly does not derive the selector mechanism or final charged-lepton readout. Why this blocks: the algebraic target-size reduction can be true without establishing that this is a retained physical Koide observable target from the restricted inputs. Repair target: add and retain the exact Koide bridge dependency, and keep the microscopic selector/readout claims scoped as future work unless separate retained bridge theorems exist. Claim boundary until fixed: the note supports a finite algebraic reduction of a stipulated cyclic Koide target, not a closed retained theorem deriving the physical Wilson-side Koide target.
-- **open / conditional deps cited:**
-  - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
-  - `KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_cl3_selector_gap_note_2026-04-19`
