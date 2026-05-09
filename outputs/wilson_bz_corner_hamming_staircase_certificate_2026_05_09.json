@@ -1,0 +1,759 @@
+{
+  "certificate_id": "wilson_bz_corner_hamming_staircase_closed_form_2026_05_09",
+  "rigorize_target": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
+  "closed_form_formula": "W(n) / r = 2 * hw(n) for n in {0,1}^4",
+  "multiplicity_formula": "|{n : hw(n) = k}| = binomial(4, k)",
+  "shifts_over_r": [
+    0,
+    2,
+    4,
+    6,
+    8
+  ],
+  "multiplicities_per_hw": {
+    "0": 1,
+    "1": 4,
+    "2": 6,
+    "3": 4,
+    "4": 1
+  },
+  "total_state_count": 16,
+  "F2_4_quotient": true,
+  "spacetime_corners_2_to_4": [
+    {
+      "corner": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hw": 0,
+      "wilson_shift_over_r": 0
+    },
+    {
+      "corner": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "hw": 1,
+      "wilson_shift_over_r": 2
+    },
+    {
+      "corner": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "hw": 1,
+      "wilson_shift_over_r": 2
+    },
+    {
+      "corner": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "hw": 2,
+      "wilson_shift_over_r": 4
+    },
+    {
+      "corner": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "hw": 1,
+      "wilson_shift_over_r": 2
+    },
+    {
+      "corner": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "hw": 2,
+      "wilson_shift_over_r": 4
+    },
+    {
+      "corner": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hw": 2,
+      "wilson_shift_over_r": 4
+    },
+    {
+      "corner": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "hw": 3,
+      "wilson_shift_over_r": 6
+    },
+    {
+      "corner": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "hw": 1,
+      "wilson_shift_over_r": 2
+    },
+    {
+      "corner": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hw": 2,
+      "wilson_shift_over_r": 4
+    },
+    {
+      "corner": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "hw": 2,
+      "wilson_shift_over_r": 4
+    },
+    {
+      "corner": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "hw": 3,
+      "wilson_shift_over_r": 6
+    },
+    {
+      "corner": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "hw": 2,
+      "wilson_shift_over_r": 4
+    },
+    {
+      "corner": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "hw": 3,
+      "wilson_shift_over_r": 6
+    },
+    {
+      "corner": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "hw": 3,
+      "wilson_shift_over_r": 6
+    },
+    {
+      "corner": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hw": 4,
+      "wilson_shift_over_r": 8
+    }
+  ],
+  "spacetime_corner_symbolic_records": [
+    {
+      "corner": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hw": 0,
+      "wilson_shift_over_r_symbolic": "0",
+      "wilson_shift_over_r": 0,
+      "closed_form_2_times_hw": 0
+    },
+    {
+      "corner": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "hw": 1,
+      "wilson_shift_over_r_symbolic": "2",
+      "wilson_shift_over_r": 2,
+      "closed_form_2_times_hw": 2
+    },
+    {
+      "corner": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "hw": 1,
+      "wilson_shift_over_r_symbolic": "2",
+      "wilson_shift_over_r": 2,
+      "closed_form_2_times_hw": 2
+    },
+    {
+      "corner": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "hw": 2,
+      "wilson_shift_over_r_symbolic": "4",
+      "wilson_shift_over_r": 4,
+      "closed_form_2_times_hw": 4
+    },
+    {
+      "corner": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "hw": 1,
+      "wilson_shift_over_r_symbolic": "2",
+      "wilson_shift_over_r": 2,
+      "closed_form_2_times_hw": 2
+    },
+    {
+      "corner": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "hw": 2,
+      "wilson_shift_over_r_symbolic": "4",
+      "wilson_shift_over_r": 4,
+      "closed_form_2_times_hw": 4
+    },
+    {
+      "corner": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hw": 2,
+      "wilson_shift_over_r_symbolic": "4",
+      "wilson_shift_over_r": 4,
+      "closed_form_2_times_hw": 4
+    },
+    {
+      "corner": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "hw": 3,
+      "wilson_shift_over_r_symbolic": "6",
+      "wilson_shift_over_r": 6,
+      "closed_form_2_times_hw": 6
+    },
+    {
+      "corner": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "hw": 1,
+      "wilson_shift_over_r_symbolic": "2",
+      "wilson_shift_over_r": 2,
+      "closed_form_2_times_hw": 2
+    },
+    {
+      "corner": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hw": 2,
+      "wilson_shift_over_r_symbolic": "4",
+      "wilson_shift_over_r": 4,
+      "closed_form_2_times_hw": 4
+    },
+    {
+      "corner": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "hw": 2,
+      "wilson_shift_over_r_symbolic": "4",
+      "wilson_shift_over_r": 4,
+      "closed_form_2_times_hw": 4
+    },
+    {
+      "corner": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "hw": 3,
+      "wilson_shift_over_r_symbolic": "6",
+      "wilson_shift_over_r": 6,
+      "closed_form_2_times_hw": 6
+    },
+    {
+      "corner": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "hw": 2,
+      "wilson_shift_over_r_symbolic": "4",
+      "wilson_shift_over_r": 4,
+      "closed_form_2_times_hw": 4
+    },
+    {
+      "corner": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "hw": 3,
+      "wilson_shift_over_r_symbolic": "6",
+      "wilson_shift_over_r": 6,
+      "closed_form_2_times_hw": 6
+    },
+    {
+      "corner": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "hw": 3,
+      "wilson_shift_over_r_symbolic": "6",
+      "wilson_shift_over_r": 6,
+      "closed_form_2_times_hw": 6
+    },
+    {
+      "corner": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hw": 4,
+      "wilson_shift_over_r_symbolic": "8",
+      "wilson_shift_over_r": 8,
+      "closed_form_2_times_hw": 8
+    }
+  ],
+  "spacetime_buckets_by_hw": {
+    "0": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "1": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "2": [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "3": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "4": [
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "S4_size": 24,
+  "S4_orbits_by_hw": {
+    "0": [
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "1": [
+      [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "2": [
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ]
+    ],
+    "3": [
+      [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    ],
+    "4": [
+      [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "C3_111_perms_full4d": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      1,
+      2
+    ]
+  ],
+  "C4_1111_perms": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      2,
+      3,
+      0
+    ],
+    [
+      2,
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      0,
+      1,
+      2
+    ]
+  ],
+  "spatial_corners_2_to_3": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "spatial_buckets_by_hw": {
+    "0": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "1": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "2": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "3": [
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "spatial_multiplicity_formula": "|{n : hw(n) = k}| = binomial(3, k)",
+  "spatial_shifts_over_r": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "lattice_independence_proof_sketch": "For rectangular Bravais L = diag(a_t, a_x, a_y, a_z), BZ corners at L=2 minimal block are k_mu = n_mu pi / a_mu with n_mu in {0,1}. Then k_mu a_mu = n_mu pi, so 1 - cos(k_mu a_mu) = 1 - cos(n_mu pi) = 2 n_mu, independent of a_mu. The staircase depends only on the F_2^4 quotient (n_mu mod 2).",
+  "exact_arithmetic_method": "sympy.cos(0)=1 and sympy.cos(pi)=-1 are exact symbolic; the Wilson sum reduces to the integer 2*hw(n) for every n in {0,1}^4.",
+  "summary": {
+    "closure_status": "closed_form_theorem",
+    "T1_closed_form_enumeration": true,
+    "T2_S4_equivariance_verified": true,
+    "T3_lattice_independence_verified": true,
+    "T4_sister_Z3_corollary": true
+  }
+}

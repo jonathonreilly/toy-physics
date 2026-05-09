@@ -6,6 +6,18 @@
 pipeline-derived status are set by the independent audit lane.
 **Primary runner:** [`scripts/frontier_wilson_bz_corner_hamming_staircase.py`](../scripts/frontier_wilson_bz_corner_hamming_staircase.py)
 
+**Closed-form companion (added 2026-05-09):**
+[`WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md`](WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md)
+lifts this bounded proof-walk to a full closed-form theorem.
+It establishes T1 (closed-form formula `W(n)/r = 2·hw(n)` with
+multiplicities `binomial(4, k)`), T2 (`S_4` axis-permutation
+equivariance, including the spatial `C_3[111]` and full
+`C_4[1111]` sub-actions), T3 (lattice-independence under any
+rectangular Bravais rescaling — the staircase depends only on the
+`F_2^4` quotient structure), and T4 (sister `Z^3` corollary
+recovering the `1+3+3+1` decomposition). The independent audit
+lane decides whether that companion closes the closed-form gap.
+
 ## Claim
 
 On the canonical staggered Kogut-Susskind Dirac fermion action with
