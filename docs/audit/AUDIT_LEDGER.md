@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 914 |
+| unaudited | 913 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 406 |
+| ~~audited_conditional~~ | 407 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 406 |
+| `audited_conditional` | 407 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 969 |
+| `unaudited` | 968 |
 
 | claim_type | count |
 |---|---:|
@@ -851,6 +851,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -11686,6 +11687,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For N=25,40,60, the structured chokepoint slice remains Born-clean, k=0 pinned, positive-gravity, and below the decoherence ceiling on the registered canonical readout.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
+- **auditor confidence:** high
+
+### `structured_mirror_bornsafe_scan_note`
+
+- **Note:** [`STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](../../docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded null-result claim that the scanned structured-mirror linear-propagator parameter family contains no Born-safe pocket at threshold 1e-14.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d28-ada5-7483-b381-83c739f39487`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** No scanned structured-mirror configuration reached the corrected Born threshold of machine precision.  _(class `B`)_
+- **chain closes:** False — The packet's registered runner recomputes only a 32-configuration representative slice, while the note's broader null result depends on a 540-configuration slow scan whose full runner output/source is not included in the restricted packet. The missing step is an audit-packet computation or certificate covering the full scanned grid.
+- **rationale:** Issue: the registered runner verifies a representative 32-config slice, not the full 540-config scanned family named in the conclusion. Why this blocks: the no-pocket claim is a bounded exhaustion claim, so a slice cannot by itself close absence across unexecuted grid points in the audit packet. Repair target: provide a registered full-grid runner, cached full-grid certificate, or independently checkable certificate proving every scanned configuration stays above 1e-14. Claim boundary until fixed: the packet supports only that the sampled slice, including the documented near-best region, stayed above the Born-safety threshold.
 - **auditor confidence:** high
 
 ### `structured_mirror_reconciliation_note`
