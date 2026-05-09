@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 233 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 967 |
+| unaudited | 966 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 27 |
-| ~~audited_conditional~~ | 361 |
+| ~~audited_conditional~~ | 362 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 361 |
+| `audited_conditional` | 362 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1022 |
+| `unaudited` | 1021 |
 
 | claim_type | count |
 |---|---:|
@@ -827,6 +827,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -12015,6 +12016,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The weight-1 complement sectors appear with multiplicity two, the quotient-kernel spectrum is frame-invariant, therefore no representation-theoretic invariant in the current atlas selects a unique universal complement frame.  _(class `A`)_
 - **chain closes:** False — The representation-theoretic implication is plausible, but the note does not exhibit an exhaustive current invariant atlas or a theorem that the listed invariant data are all available selectors. The supplied runner does not execute its checks in this checkout because it fails on a missing POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md before PASS output.
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
+- **auditor confidence:** high
+
+### `universal_gr_invariant_nonlinear_completion_note`
+
+- **Note:** [`UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claimed exact nonlinear invariant-family quadratic completion on D=diag(a,b,b,b) from the restricted packet and listed runner evidence.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d3d-889b-7c61-87aa-f06a95cbfc15`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The conclusion rests on the asserted imports that the observable generator gives W_iso(a,b)=const+log a+3 log b, Lambda_R is exact SPD, and K_GR^iso(D)=M_D ⊗ Lambda_R, so the quadratic completion is exact over the positive invariant family.  _(class `B`)_
+- **chain closes:** False — The algebraic convexity/completion identity closes only after importing W_iso, exact SPD Lambda_R, and the isotropic glue law. No retained one-hop authorities are listed for those premises in the restricted packet, and the runner verifies them by text/import/hard-coded witnesses rather than deriving them here.
+- **rationale:** Issue: the note itself identifies three load-bearing imports that are not supplied as retained dependency edges: the all-orders observable generator, the exact SPD slice generator Lambda_R, and the invariant-family glue law. Why this blocks: the nonlinear completion is only an algebraic consequence once those premises are accepted, so the restricted packet does not establish the physical/operator bridge independently. Repair target: cite retained-grade authorities for all three premises or replace them with a self-contained derivation and runner that constructs Lambda_R and K_GR^iso(D) from retained primitives. Claim boundary until fixed: the packet supports only conditional algebraic convexity of the defined quadratic action on the invariant family.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+  - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
+  - `scripts/frontier_universal_gr_isotropic_glue_operator.py`
 - **auditor confidence:** high
 
 ### `universal_gr_isotropic_glue_operator_note`
