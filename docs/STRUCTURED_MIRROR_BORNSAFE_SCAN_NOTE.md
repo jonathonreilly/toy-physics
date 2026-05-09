@@ -1,20 +1,33 @@
 # Structured Mirror Born-Safe Scan Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28; certificate runner added 2026-05-03)
+**Date:** 2026-04-03 (status line rephrased 2026-04-28; certificate runner added 2026-05-03; sliced runner added 2026-05-09)
 **Status:** bounded null-result note — the scanned structured-mirror linear-propagator family contains no Born-safe pocket; this is a useful negative control, not a successor lane.
 
 This note freezes the bounded search for a review-safe structured-mirror
 variant using the strictly linear propagator.
 
-**Primary runner:** [`scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py`](../scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py)
-— registered certificate; PASS=3/3 confirms the documented best near-Born readout (`8.79e-03`)
-is well above the machine-precision Born-safety threshold (`1e-14`),
-so the bounded null-result claim is consistent with the scan evidence.
+**Primary runner:** [`scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py`](../scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py)
+— registered sliced independent runner; recomputes corrected Born `|I3|/P`
+from first principles via the same `propagate_LINEAR` import the slow scan
+uses, on a 32-config representative slice (best near-Born candidate, grid
+corners, center, near-best neighbourhood, jittered slice) at the canonical
+6-seed protocol. Asserts grid minimum stays above the documented machine-
+precision Born-safety threshold (`1e-14`); exits nonzero if any sliced
+config beats the threshold (which would invalidate the null result and
+re-open the lane). On the live import, the slice's grid minimum is
+`4.6428e-03`, in the same order of magnitude as the documented best
+(`8.79e-03`), eleven orders of magnitude above the threshold. Cached
+stdout: [`logs/runner-cache/structured_mirror_bornsafe_sliced_runner_2026_05_09.txt`](../logs/runner-cache/structured_mirror_bornsafe_sliced_runner_2026_05_09.txt).
+
+**Supporting certificate:** [`scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py`](../scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py)
+— constants-certificate runner; PASS=3/3 confirms the documented best
+near-Born readout is consistent with the scan evidence at the audit-packet
+level.
 
 **Companion runner:** [`scripts/structured_mirror_bornsafe_scan.py`](../scripts/structured_mirror_bornsafe_scan.py)
 — the original (slow) parameter-grid scan (540 configurations, 2 seeds per
 config + 6-seed confirmation on the best candidate). Reproducible but
-too slow to be the audit-lane runner.
+slower than the sliced lane.
 
 **Cached scan log:** [`logs/2026-04-03-structured-mirror-bornsafe-scan.txt`](../logs/2026-04-03-structured-mirror-bornsafe-scan.txt)
 — completed stdout from the slow scan covering all 540 configurations.
@@ -24,13 +37,29 @@ appears at line ~225 with the documented `Born=8.79e-03, d_TV=0.1208, pur_cl=0.9
 S_norm=0.0009, gravity=+0.3811`, including the 6-seed confirmation.
 RETAINED POCKET: none found.
 
-## Review-loop runner attachment (2026-05-03)
+## Review-loop runner attachment (2026-05-09 update)
 
-The 2026-05-03 audit flagged the note's null-result claim as lacking
-a registered runner / completed certificate at audit-packet level.
-The repair adds the structural certificate runner above; per-row
-re-evaluation of every grid configuration remains reproducible via
-the slow companion runner.
+The 2026-05-03 audit flagged the note's null-result claim as lacking a
+registered runner that recomputes the grid minimum from first principles.
+The 2026-05-03 repair attached a constants-certificate runner that
+verified consistency with the scan evidence but did not re-execute the
+underlying first-principles computation.
+
+The 2026-05-09 repair attaches a sliced independent runner
+(`scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py`) that:
+
+1. recomputes corrected Born `|I3|/P` from first principles per-config
+   using the same `propagate_LINEAR` propagator as the slow companion
+   scan;
+2. covers a 32-config representative slice spanning grid corners,
+   center, near-best neighbourhood, and jittered configurations;
+3. runs the canonical 6-seed protocol per config;
+4. asserts the sliced grid minimum stays above `1e-14` (Born-safety
+   threshold); exits nonzero if any sliced config beats that threshold.
+
+The sliced lane is the new audit-packet runner. The 540-config slow
+scan and its cached log remain supporting context for the broader
+exhaustion claim.
 
 ## Search Question
 
@@ -86,6 +115,19 @@ The best near-Born candidate in the broad sweep was:
 
 That candidate was then re-run with `6` seeds and kept the same Born
 readout, so it is not a seed fluke.
+
+### Sliced verification (2026-05-09)
+
+The sliced independent runner re-executed the same first-principles
+propagator on a 32-config representative slice (best near-Born candidate
++ grid corners + center + near-best neighbourhood + jittered slice),
+each at the canonical 6-seed protocol. The sliced grid Born minimum is
+`4.6428e-03` (achieved at `N=40, npl_half=12, connect_radius=3.0,
+grid_spacing=1.25, layer_jitter=0.30`), in the same order of magnitude
+as the documented best near-Born candidate (`8.79e-03`) and eleven
+orders of magnitude above the Born-safety threshold (`1e-14`). The
+sliced runner exits zero and is registered as the audit-packet
+runner; the 540-config slow scan remains supporting context.
 
 ## Interpretation
 
