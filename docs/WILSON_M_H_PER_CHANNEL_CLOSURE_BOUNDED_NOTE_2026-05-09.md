@@ -89,12 +89,15 @@ coefficient `r`; each is a comparison-input matching value
 **conditional** on:
 1. its respective channel identification (single-class, paired-class,
    or uniform-16; **non-derived**);
-2. the tree-level mean-field formalism (no CW corrections, no RGE
+2. the curvature-on-subset per-channel rule (eq. `(S)`; **non-
+   derived**, distinct from the boundary sister note's alternative
+   substitute-into-parent-eq. `[5]` convention; see Dependencies);
+3. the tree-level mean-field formalism (no CW corrections, no RGE
    running);
-3. a non-zero Wilson coefficient `r`, **not** part of the canonical
+4. a non-zero Wilson coefficient `r`, **not** part of the canonical
    pure-Kogut-Susskind staggered setup.
 
-Any of (1)–(3) failing voids the per-channel matching readouts.
+Any of (1)–(4) failing voids the per-channel matching readouts.
 
 ## Proof-Walk
 
@@ -195,10 +198,21 @@ perturbative-Taylor convergence radius of their respective forms.
   `N_taste = 16` admission.
 - [`HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md`](HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md)
   for the boundary statement that the uniform-`N_taste = 16` choice
-  is itself a non-derived admission, and for the parallel
-  single-class enumeration at `r = 0` (which gives the same `1 / (4
-  u_0^2)` per-channel value at `r = 0` for any single class).
-  **Forward-reference;** on a sister branch.
+  is itself a non-derived admission. **Forward-reference;** on a
+  sister branch. The boundary sister note uses a different
+  per-channel rule at `r = 0` (it substitutes `N_taste^(eff)` directly
+  into parent eq. `[5]` keeping the full-lattice total `4 / u_0^2`,
+  giving `r = 0` values 561.1, 280.6, 229.1, 280.6, 561.1 GeV for
+  single-class `k = 0, 1, 2, 3, 4`). This note instead uses the
+  curvature-on-subset rule (eq. `(S)` above), which collapses to the
+  parent's `1 / (4 u_0^2)` at `r = 0` for every non-empty `S`. Both
+  rules inherit the same parent-admission status; the choice between
+  them is not derived by either note. This note follows the
+  curvature-on-subset convention because that is the convention under
+  which the all-orders sister note `WILSON_M_H_TREE_AT_EXTREMUM_ALL_
+  ORDERS_BOUNDED_NOTE_2026-05-08` derives the uniform-16 closure
+  `r_{16} ≈ 0.26855`, and this note's S-dependent values are the
+  natural per-`S` extension of that closure equation.
 - [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
   for the staggered-Dirac realization-gate context.
 - [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) for
@@ -221,11 +235,15 @@ This note does not close:
   1. the chosen channel identification (which subset `S` of the
      Hamming-weight classes is identified with the Higgs; **non-
      derived**);
-  2. the tree-level mean-field formalism (no CW corrections, no RGE
+  2. the curvature-on-subset per-channel rule used for the readout
+     (eq. `(S)` above; **non-derived**, see the boundary sister note's
+     alternative substitute-into-parent-eq.[5] convention in
+     Dependencies);
+  3. the tree-level mean-field formalism (no CW corrections, no RGE
      running);
-  3. a non-zero Wilson coefficient `r`, **not** part of the canonical
+  4. a non-zero Wilson coefficient `r`, **not** part of the canonical
      pure-Kogut-Susskind staggered setup.
-  Any of (1)–(3) failing voids the matching readouts;
+  Any of (1)–(4) failing voids the matching readouts;
 - the Higgs-channel assignment itself: this note enumerates four
   candidate identifications (`{2}`, `{0, 4}`, `{1, 3}`, `{0..4}`) but
   does not select one. Whether a single-class, paired-class, or
@@ -278,6 +296,7 @@ two are related by the algebraic-substitution identity r_{1,3} = 2 ·
 r_{0,4} at the matching-equation level. The uniform-16 identification
 reproduces the all-orders sister-note value r_{16} ≈ 0.26855. All
 matching readouts are conditional on (i) channel identification, (ii)
-tree-level mean-field, (iii) non-zero r — none of which is a derived
-value of the Wilson coefficient.
+the curvature-on-subset per-channel rule, (iii) tree-level mean-field,
+(iv) non-zero r — none of which is a derived value of the Wilson
+coefficient.
 ```

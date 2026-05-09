@@ -779,12 +779,21 @@ def part13_boundary_check():
         "the chosen channel identification" in NOTE_TEXT,
     )
     check(
+        "matching values flagged as conditional on per-channel-rule convention",
+        "curvature-on-subset per-channel rule" in NOTE_TEXT,
+    )
+    check(
         "matching values flagged as conditional on tree-level mean-field",
         "tree-level mean-field formalism" in NOTE_TEXT,
     )
     check(
         "matching values flagged as conditional on non-zero r (not canonical KS)",
         "pure-Kogut-Susskind staggered setup" in NOTE_TEXT,
+    )
+    # The note explicitly distinguishes its convention from the boundary note's:
+    check(
+        "boundary-sister-note alternative convention referenced (561.1, 280.6, ...)",
+        "561.1, 280.6, 229.1" in NOTE_TEXT,
     )
 
 
@@ -827,8 +836,9 @@ def main() -> int:
         print(" r_{0,4} at the matching-equation level. The uniform-16 identification")
         print(" reproduces the all-orders sister-note value r_{16} ≈ 0.26855. All")
         print(" matching readouts are conditional on (i) channel identification, (ii)")
-        print(" tree-level mean-field, (iii) non-zero r — none of which is a derived")
-        print(" value of the Wilson coefficient.")
+        print(" the curvature-on-subset per-channel rule, (iii) tree-level mean-field,")
+        print(" (iv) non-zero r — none of which is a derived value of the Wilson")
+        print(" coefficient.")
     return 0 if FAIL == 0 else 1
 
 

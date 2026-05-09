@@ -236,11 +236,13 @@
   [PASS] claim_type: bounded_theorem stated
   [PASS] source-note proposal language present
   [PASS] matching values flagged as conditional on channel identification
+  [PASS] matching values flagged as conditional on per-channel-rule convention
   [PASS] matching values flagged as conditional on tree-level mean-field
   [PASS] matching values flagged as conditional on non-zero r (not canonical KS)
+  [PASS] boundary-sister-note alternative convention referenced (561.1, 280.6, ...)
 
 ========================================================================================
- TOTAL: PASS=135, FAIL=0
+ TOTAL: PASS=137, FAIL=0
 ========================================================================================
 
  VERDICT: per-channel closure values verified at exact rational
@@ -253,5 +255,6 @@
  r_{0,4} at the matching-equation level. The uniform-16 identification
  reproduces the all-orders sister-note value r_{16} ≈ 0.26855. All
  matching readouts are conditional on (i) channel identification, (ii)
- tree-level mean-field, (iii) non-zero r — none of which is a derived
- value of the Wilson coefficient.
+ the curvature-on-subset per-channel rule, (iii) tree-level mean-field,
+ (iv) non-zero r — none of which is a derived value of the Wilson
+ coefficient.
