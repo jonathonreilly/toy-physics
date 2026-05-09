@@ -82,6 +82,21 @@ LH-doublet sector, where:
 - `(2,3)` denotes the SU(2)-doublet × Sym²(C²) (3-dim) block;
 - `(2,1)` denotes the SU(2)-doublet × Anti²(C²) (1-dim) block.
 
+In repo-canonical representation-literal form (matching the convention
+used in [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+for the right-handed sector), the convention-normalized restatement of
+this pattern is:
+
+- `Q_L : (2,3)_{+1/3}` — the LH quark-doublet block with the
+  convention-fixed eigenvalue `+1/3` on the `(2,3)` sub-decomposition;
+- `L_L : (2,1)_{-1}` — the LH lepton-doublet block with the
+  convention-fixed eigenvalue `-1` on the `(2,1)` sub-decomposition.
+
+These literals carry the same `audited_conditional` boundary as the
+narrative statement above (their absolute scale is set by the `β = -1`
+labelling convention, not by a derivation in this row's load-bearing
+chain).
+
 The eigenvalue ratio `1 : (−3)` is forced structurally by tracelessness
 on the (6 + 2) state count of the LH-doublet sector
 (`6 · α + 2 · β = 0` ⇒ `β = −3α`); the overall scale `α = +1/3` is fixed
