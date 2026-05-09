@@ -363,7 +363,7 @@ def main():
     print(f"\n   PASSED: {n_pass}/{n_total}")
     print()
     if n_pass == n_total:
-        print(" verdict: per-site uniqueness (U1)-(U4) exhibited on Cl(3) with")
+        print(" verdict: A1-only classification (U1)-(U3) exhibited on Cl(3) with")
         print("          chirality split rho_+ (canonical) / rho_- (parity-conjugate).")
         return 0
     else:

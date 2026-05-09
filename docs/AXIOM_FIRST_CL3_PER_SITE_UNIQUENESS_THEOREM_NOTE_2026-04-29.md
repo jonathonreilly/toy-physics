@@ -1,12 +1,42 @@
 # Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module
 
-**Date:** 2026-04-29 (originally); 2026-05-03 (review-loop repair)
-**Status:** support — branch-local theorem note on A_min; runner passing; queued for independent audit after review repair.
+**Date:** 2026-04-29 (originally); 2026-05-03 (review-loop repair); 2026-05-08 (narrowed to A1-only U1–U3 to break cycle)
+**Status:** support — branch-local theorem note on A1 alone (Cl(3) site algebra). Runner passing on all six exhibits. Queued for independent audit at the narrowed A1-only scope.
 **Claim type:** positive_theorem
 **Loop:** `axiom-first-foundations`
 **Cycle:** 6 (Route R6)
 **Runner:** `scripts/axiom_first_cl3_per_site_uniqueness_check.py`
 **Log:** `outputs/axiom_first_cl3_per_site_uniqueness_check_2026-04-29.txt`
+
+## Audit scope (2026-05-08 narrowing)
+
+This note is now restricted to the **A1-only** content (U1, U2, U3) —
+the abstract real-algebra classification of `Cl(3,0)` and its complex
+chirality irreps. The earlier U4 statement ("per-site Hilbert space
+has dimension exactly 2 on `A_min`") has been **moved out of scope of
+this note** because its bridge from the abstract 2-dim Cl(3) chirality
+module to the physical per-site Hilbert space depends on A3
+(staggered-fermion canonical normalisation). That A3 bridge is
+in-flight under the staggered-Dirac realization gate
+(`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`, currently
+`open_gate`), specifically substep 1
+(`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`).
+
+The 2026-05-08 fresh-context audit confirmed U1–U3 close cleanly on A1
+alone and that bundling U4 into this note's scope made the whole row
+conditional on the open gate. Narrowing to U1–U3 makes the row
+audit-clean on its own terms and lets the substep 1 note carry the
+A3-dependent U4 conclusion separately.
+
+The narrowed claim_scope is therefore:
+
+> **Per-site uniqueness of the Cl(3) spinor module (A1 only):** the
+> abstract real Clifford algebra `Cl(3,0)` admits exactly two
+> non-isomorphic faithful complex irreducible representations
+> (positive- and negative-chirality), each 2-dim, distinguished by
+> the central pseudoscalar eigenvalue `ω → ±i`; every finite-dim
+> complex representation decomposes as a direct sum of these two
+> irreps.
 
 ## Review-loop repair (2026-05-03)
 
@@ -164,14 +194,15 @@ canonical positive-chirality convention only the `ρ_+` summand is
 populated and the decomposition reduces to `n_+` copies of the
 Pauli irrep.
 
-**(U4) Per-site Hilbert dimension on `A_min`.** Combining (U2) with
-A3's staggered-fermion canonical normalisation (one Grassmann pair
-per site), the per-site Hilbert space has dimension exactly 2 (one
-Grassmann mode → 2-dim Fock space, matching the dim-2 chirality
-summand selected by the package convention). The dimensional
-conclusion is independent of the chirality choice — both `ρ_+` and
-`ρ_-` are 2-dim — so the chain into spin-statistics depends only on
-the dimension, not on the chirality.
+**(U4 — out of scope of this note as of 2026-05-08.)** The
+per-site Hilbert dimension conclusion on `A_min` (combining (U2)
+with A3's one-Grassmann-pair-per-site canonical normalisation) is
+NOT a theorem of this note. It is downstream content carried by
+the staggered-Dirac realization gate's substep 1
+(`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`).
+Downstream cycles (spin-statistics, RP, cluster, CPT) that need
+the per-site dim = 2 conclusion should cite that substep, not
+this note.
 
 ## Proof
 
@@ -278,42 +309,41 @@ copies of its single irrep. Hence (2) holds with multiplicities
 `(n_+, n_-)` and `dim_C V = 2(n_+ + n_-)`. No odd-dim faithful
 complex rep exists.
 
-### Step 6 — per-site Hilbert dimension (U4)
+### Step 6 — moved to substep 1 (2026-05-08)
 
-`A_min`'s A3 places one Grassmann pair `(χ_x, χ̄_x)` per site
-`x ∈ Λ`. The single-mode Grassmann Fock space is 2-dim (`{|0⟩, χ̄|0⟩}`).
-By Step 4, this 2-dim complex space is unitarily equivalent to the
-canonical positive-chirality irrep `ρ_+` (the package convention).
-Hence per-site Hilbert dimension on `A_min` is exactly 2. The
-dimensional conclusion is the same in the negative-chirality summand;
-only the chirality choice differs.
-
-**Hypothesis subtlety.** Step 6 uses A1 (for the Cl(3) algebra and
-its representation theory) AND A3 (for the staggered-fermion
-canonical normalisation that gives the one-Grassmann-mode Fock
-space). U4 cannot be derived from A1 alone — the bridge from
-"abstract Cl(3) irrep" to "physical per-site Hilbert space" is the
-A3 convention. This was implicit in the original note and is now
-made explicit. ∎
+The per-site Hilbert dimension argument that was Step 6 of the
+original proof is no longer in scope of this note. It depended on
+A3 (staggered-fermion canonical normalisation, one Grassmann pair
+per site) in addition to A1, so it cannot be derived from the A1
+content here. The argument now lives in the staggered-Dirac
+realization gate's substep 1
+(`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`),
+which forces the Grassmann partition from A1 + admissible
+mathematical infrastructure plus the spin-statistics S2 dimension
+match. ∎
 
 ## Hypothesis set used
 
-A1 (Cl(3) site algebra structure) for U1–U3. A1 + A3 (the
-one-Grassmann-pair-per-site canonical normalisation) for U4. The
-proof uses the standard real-algebra classification of `Cl(3,0)`,
-explicit complexification via the central pseudoscalar `ω`, and
-Schur's lemma in each chirality summand. All elementary finite-dim
-representation theory; no imports from the forbidden list.
+**A1 alone** (Cl(3) site algebra structure) for U1–U3, the in-scope
+content of this note. The proof uses the standard real-algebra
+classification of `Cl(3,0)`, explicit complexification via the
+central pseudoscalar `ω`, and Schur's lemma in each chirality
+summand. All elementary finite-dim representation theory; no
+imports from the forbidden list. **No A3 dependency** — the former
+U4 step that brought in A3 has been moved to substep 1 of the
+staggered-Dirac realization gate.
 
 ## Corollaries (downstream tools)
 
-C1. *Discharge of Cycle 1 Step 2.* The "per-site Hilbert dim = 2"
-step in
-`docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md` is
-now a theorem (U4) on **A1 + A3** (not A1 alone, after the
-2026-05-03 repair). The dimensional conclusion is independent of
-the chirality choice — both summands give 2-dim irreps — so the
-spin-statistics chain is unaffected by the chirality structure.
+C1. *Spin-statistics chain — see substep 1 instead.* The "per-site
+Hilbert dim = 2" step in
+`docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md` is now
+discharged by substep 1 of the staggered-Dirac realization gate
+(`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`)
+rather than by U4 of this note. The dimensional conclusion is
+independent of the chirality choice — both `ρ_+` and `ρ_-` are 2-dim
+— so the spin-statistics chain is unaffected by the chirality
+structure.
 
 C2. *Universality of the spin-1/2 representation under the
 canonical chirality choice.* Any half-integer spin lattice fermion
@@ -331,23 +361,28 @@ on `A_min` must produce one that is unitarily equivalent to
 `ρ_- = (-σ_1, -σ_2, -σ_3)`. There are exactly two non-isomorphic
 finite-dim faithful Cl(3) irreps and no others.
 
-C4. *Compatibility with all prior cycles.* (U4) + Cycle 1
-spin-statistics + Cycle 2 reflection positivity + Cycle 3 cluster
-decomposition + Cycle 4 CPT all share the same per-site Hilbert
-space dimension; (U4) underlies the per-site dimension count in
-each. The chirality choice is fixed by the package convention and
-does not change the dimensional content of any downstream cycle.
+C4. *Compatibility with downstream cycles.* All downstream
+cycles (spin-statistics, reflection positivity, cluster
+decomposition, CPT) that need a per-site Hilbert dim = 2 input
+should cite the staggered-Dirac substep 1
+(`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`)
+plus this note's chirality content (U2). The chirality choice is
+fixed by the package convention and does not change the dimensional
+content of any downstream cycle.
 
 ## Honest status
 
-**Branch-local theorem.** (U1)–(U4) are proved on A1 (plus A3 for
-U4 only) by standard real-algebra classification, explicit
-complexification via the central pseudoscalar, and Schur's lemma in
-each chirality summand. The runner exhibits the load-bearing facts:
+**Branch-local theorem.** (U1)–(U3) are proved on A1 alone by
+standard real-algebra classification, explicit complexification
+via the central pseudoscalar, and Schur's lemma in each chirality
+summand. The runner exhibits the load-bearing facts:
 anticommutation relations of Pauli; central-pseudoscalar identity
 `ω² = -1` and centrality; chirality eigenvalue assignments
 `ω → ±i` on `ρ_±`; non-existence of an odd-dim faithful complex
 rep; and unitarity of intertwiners within each chirality summand.
+The 2026-05-08 narrowing dropped U4 (per-site Hilbert dim = 2 on
+`A_min`) from this note's scope; that A3-bridge content is now
+carried by substep 1 of the staggered-Dirac realization gate.
 
 **Not in scope.**
 
