@@ -183,6 +183,41 @@ exhibits Hermitian generators, trace orthonormality, su(3) Lie algebra
 closure, Schur scalar property of C_2, exact value 4/3, and agreement
 with the SU(N) formula at N = 3.
 
+## Upstream dep effective_status and inherited bound
+
+Per the audit ledger as of the 2026-05-07 audit:
+
+- `cl3_color_automorphism_theorem` → `audited_clean` / effective_status
+  `retained_bounded` / claim_type `bounded_theorem`.
+  Its `claim_scope` is explicitly: "Exact algebraic SU(3) embedding and
+  Fierz adjoint channel-count fraction on the 3D symmetric base carrier,
+  **excluding physical SM color identification and EW readout closure.**"
+
+Because the only one-hop dependency is a bounded theorem that explicitly
+defers identifying the 3D symmetric base subspace V_3 with physical SM
+quark color, the algebraic statement (K1)-(K3) closes within the cited
+authority, but corollary (K4) and the physical corollaries (C1)-(C5) -
+which read 4/3 as the universal coefficient for color-triplet *quarks*
+in one-gluon exchange, one-loop quark self-energy, and color-singlet
+bilinears - inherit that upstream bound.
+
+That is, on current-main retained surfaces:
+
+- (K1)-(K3) (centrality, Schur scalar, value 4/3) follow directly from
+  the cited algebraic SU(3) embedding and admitted Lie-algebra facts.
+- (K4) and the as-written physical-quark corollaries are conditional on
+  a separate retained bridge identifying V_3 with physical SM quark
+  color and deriving the perturbative QCD color-factor readout. Such a
+  bridge is not present in the current dep set.
+
+The audit-ledger conditional therefore reflects the scope-mismatch
+between the algebraic core and the physical readout, not a defect in
+the algebraic computation itself. Promoting the verdict requires either
+- adding a retained color-identification bridge dependency, or
+- narrowing this note to the algebraic V_3 statement and migrating the
+  physical-quark corollaries to a separate downstream note keyed on
+  that bridge.
+
 ```yaml
 claim_type_author_hint: positive_theorem
 claim_scope: "SU(3)_c quadratic Casimir on fundamental V_3 = 4/3 in standard Gell-Mann normalization."
