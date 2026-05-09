@@ -40,3 +40,19 @@ The field-coupled `theta_eff` matters, but only as a small perturbation on top o
 ## Bottom Line
 
 The 3+1D periodic chiral walk has genuine sign windows on the local mixing period, but the bad windows are not fixed by `pi/theta0` and are not removed by classicalization. They track a size-dependent resonance phase that the periodic geometry introduces, with only a minor correction from the field-shifted mixing angle.
+
+## Registered runner artifacts (audit lane)
+
+The 2026-04-28 audit verdict requested a live runner reproducing the n/L
+decoherence sweep plus a predictive recurrence/phase-offset law. The runner
+half of that repair target is now in-tree:
+
+- Live runner: `scripts/frontier_chiral_3plus1d_decoherence_sweep.py`
+  (registered as the runner path for this CID).
+- Runner cache: `logs/runner-cache/frontier_chiral_3plus1d_decoherence_sweep.txt`
+  (registered cached stdout; exit_code=0, status=ok).
+
+The remaining repair item is structural rather than registration: a
+predictive recurrence/phase-offset law across lattice sizes is not derived
+here. The bounded read above stays as a geometry-dependent resonance
+boundary, not a closed period theorem.

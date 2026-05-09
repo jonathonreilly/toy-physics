@@ -274,3 +274,23 @@ so subsequent cycles target the right object.
 
 A runner is not authored: the plan is editorial / structural; no new
 symbolic or numerical content is introduced.
+
+## 10. Cited authority notes (audit lane)
+
+The retained-framework table in §1 references ledger-registered authority
+notes; they are listed here so an auditor can verify the plan's structural
+inputs against canonical sources without inflating this plan's own deps:
+
+- `docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md` (PMNS local zero)
+- `docs/NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md` (Majorana local zero)
+- `docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md` (Dirac carrier identity)
+- `docs/NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md`
+- `docs/NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md`
+- `docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`
+- `docs/OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`
+- `docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md`
+- `docs/MASS_SPECTRUM_DERIVED_NOTE.md`
+- `docs/MINIMAL_AXIOMS_2026-04-11.md`
+
+The plan itself produces no derivation; the listed authorities carry their
+own ledger rows and audit verdicts and are cross-referenced for transparency.

@@ -83,3 +83,20 @@ statement remains occupancy-first, and the next bounded continuous-law step, if
 one is still needed, should start from the 3-NN stencil's residual anatomy or
 another equally local occupancy-aware correction, not from a broader
 denominator search.
+
+## Registered runner artifacts (audit lane)
+
+The directional-B density-stencil transfer runner source backing the rows
+above is present in the worktree:
+
+- `scripts/directional_b_density_stencil_transfer.py` — primary runner for
+  the 4-NN vs 3-NN frozen-stencil comparison on the reference + tree control
+  + center-biased midlayer sentinel sample.
+- `scripts/directional_b_density_residual_probe.py` — companion residual
+  probe whose 3-NN miss anatomy is summarized above.
+- `scripts/directional_b_overlap_continuous_density_midlayer_holdout.py` —
+  source of the center-biased midlayer sentinel referenced above.
+
+The `logs/runner-cache/` artifacts for these runners are not yet present;
+this note's bounded read remains a transfer diagnostic, not a promoted
+continuous-law theorem.

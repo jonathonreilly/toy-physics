@@ -62,3 +62,19 @@ What survives here is only a **partial portability story**:
 - no tested newer family preserves both at the same time
 
 So this sweep is a diagnosed boundary, not a new portability win.
+
+## Registered runner artifacts (audit lane)
+
+The portability comparison runner source backing the rows above is present in
+the worktree:
+
+- `scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py` — primary runner for the
+  alpha/direction rows tabulated above across the four retained structured
+  families.
+
+The historical scan logs from the alt-connectivity, third-family,
+fourth-family, and fifth-family radial sweeps are referenced inline. The
+`logs/runner-cache/` artifact for the portability comparator runner is not
+yet present; this note's bounded read remains a partial-portability diagnosis
+rather than a promoted geometry-independence theorem pending registered
+cache.

@@ -382,3 +382,23 @@ inputs.
 A runner is not authored: the attempt is structural case-analysis
 on `A_min` and the existing Majorana cluster. No new symbolic or
 numerical content is introduced.
+
+## 11. Cited authority notes (audit lane)
+
+The structural inputs above are ledger-registered authority notes. They are
+restated here so an auditor can verify the case-analysis premises against
+canonical sources without inflating this stretch-attempt's own deps. The
+substrate-admissibility policy decision is the open object; the cited
+authorities are inputs only:
+
+- Local U(1) result: `docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md`
+- Cycle 2 P1: `docs/NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md`
+- Cycle 2 P6: `docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`
+- Axiom source: `docs/MINIMAL_AXIOMS_2026-04-11.md`
+- Audit policy: `docs/audit/AXIOM_MINIMALITY_POLICY.md`
+- Cycle 2 (this stretch sharpens its `(C2-X)`): `docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`
+- Cycle 1 (SA2 origin): `docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md`
+
+This stretch-attempt produces no new derivation that retires or reclassifies
+those authorities; the substrate-admissibility decision is explicitly the
+open repair target identified in §10.

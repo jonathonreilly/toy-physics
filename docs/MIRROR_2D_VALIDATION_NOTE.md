@@ -76,3 +76,22 @@ law.
 - the best retained statement is a **bounded exact 2D mirror coexistence
   pocket**, strongest at `N = 60`
 
+## Registered runner artifacts (audit lane)
+
+The 2D mirror validation lane uses the exact 2D mirror generator and linear
+propagator from a companion script. Both runner sources are present in the
+worktree:
+
+- Primary runner: `scripts/mirror_2d_validation.py` (registered runner whose
+  cached stdout backs every retained row in this note's table).
+- Imported generator/propagator authority: `scripts/mirror_born_audit.py`
+  (provides `propagate_LINEAR` and the exact 2D mirror generator imported by
+  the primary runner; cached stdout at
+  `logs/runner-cache/mirror_born_audit.txt`).
+- Primary runner cache: `logs/runner-cache/mirror_2d_validation.txt`.
+
+This block exists so a hostile auditor can verify the imported generator and
+linear propagator authority directly from the registered companion script
+plus its cached stdout without grepping; the primary runner remains
+load-bearing for the retained-row table.
+

@@ -101,3 +101,17 @@ The current mainline distance-law story is now best summarized as:
   path-sum architecture.
 
 That is a mechanism diagnostic, not a new rescue lane.
+
+## Registered runner artifacts (audit lane)
+
+The mechanism diagnostics in this note rest on companion runner scripts that
+are present in the worktree:
+
+- `scripts/path_sampling_analysis.py` — path-preservation diagnostic.
+- `scripts/field_localization_test.py` — field-localization diagnostic.
+
+The historical log file
+`logs/2026-04-01-b-independence-mechanism.txt` is the recorded stdout from a
+prior combined run. The `logs/runner-cache/` artifacts for these companion
+runners are not yet present; this note's bounded read remains a mechanism
+diagnostic, not a promoted theorem.

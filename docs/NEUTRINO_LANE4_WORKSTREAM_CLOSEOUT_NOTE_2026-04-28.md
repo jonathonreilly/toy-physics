@@ -187,3 +187,20 @@ Rules satisfaction stop, lists the four cycle artifacts for the post-loop
 integration pipeline, and lands the `(C2-X)` work as bounded no-go inventory.
 
 A runner is not authored.
+
+## 7. Cited authority notes (audit lane)
+
+The cycle inventory above references four cycle artifacts; each is a
+ledger-registered note with its own audit row. They are listed here so an
+auditor can verify the workstream-progress summary against canonical sources
+without inflating this close-out's own deps:
+
+- Cycle 1: `docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md`
+- Cycle 2: `docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`
+- Cycle 3: `docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
+- Cycle 4: `docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md`
+- Axiom source: `docs/MINIMAL_AXIOMS_2026-04-11.md`
+- Audit policy: `docs/audit/AXIOM_MINIMALITY_POLICY.md`
+
+This close-out itself produces no new derivation; its content is structural
+inventory of those listed artifacts.

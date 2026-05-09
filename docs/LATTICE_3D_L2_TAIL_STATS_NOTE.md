@@ -59,3 +59,17 @@ The right review-safe wording is still narrow:
 - it does **not** by itself prove an asymptotic `-2` law
 - it remains a propagator-fork probe, not a promoted branch theorem
 
+## Registered runner artifacts (audit lane)
+
+The runner source backing the rows above is present in the worktree:
+
+- `scripts/lattice_3d_l2_tail_stats.py` — primary runner for the tail-fit
+  rows reported above.
+- `scripts/lattice_3d_inverse_square_kernel.py` — companion kernel module
+  imported by the primary runner.
+
+The historical log file `logs/2026-04-04-lattice-3d-l2-tail-stats.txt` is the
+recorded stdout from a prior run. The `logs/runner-cache/` artifact for this
+runner is not yet present; the note's bounded read above does not promote a
+result tier and remains a propagator-fork probe pending registered cache.
+

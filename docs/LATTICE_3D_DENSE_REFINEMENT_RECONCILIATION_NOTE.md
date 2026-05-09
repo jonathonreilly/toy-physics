@@ -104,3 +104,16 @@ The project ranking does not change:
 - **mirror remains the flagship**
 - **ordered lattice remains the secondary branch**
 - **NN refinement remains the continuum-side bridge**
+
+## Cited authority notes (audit lane)
+
+The runner imports `BETA`, `K`, `LAM`, and `N_YBINS` action-normalization
+constants from `scripts/action_power_canonical_harness.py`. The
+authoritative source note for those harness choices is:
+
+- `docs/ACTION_POWER_NOTE.md` (ledger row `action_power_note`,
+  `audited_clean` / `retained_bounded`).
+
+This note's gravity-observable hierarchy reads through that retained
+canonical harness; the bounded read above does not introduce new
+normalization choices.
