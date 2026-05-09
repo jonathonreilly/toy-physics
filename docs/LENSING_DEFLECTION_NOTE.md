@@ -374,6 +374,29 @@ did not survive fine refinement as textbook weak-field lensing.
 3. **Family sweep on the retained fine-`H` slope.** Tests whether the
    fine-`H` power-law shape is Fam1-specific or shared.
 
+## H=0.25 slope-fit certificate
+
+The registered runner (`scripts/lensing_deflection_fine_single.py`)
+generates a single b-value when invoked directly. The multi-b
+H=0.25 slope/R² fit over `b ∈ {3,4,5,6}` is therefore carried by a
+separate certificate runner:
+
+- runner: [`scripts/lensing_deflection_h025_slope_fit_certificate.py`](../scripts/lensing_deflection_h025_slope_fit_certificate.py)
+- cache: [`logs/runner-cache/lensing_deflection_h025_slope_fit_certificate.txt`](../logs/runner-cache/lensing_deflection_h025_slope_fit_certificate.txt)
+- structured output:
+  [`outputs/lensing_deflection_h025_slope_fit_certificate.json`](../outputs/lensing_deflection_h025_slope_fit_certificate.json)
+
+The certificate runner reproduces the per-b H=0.25 cached values
+(`kubo_true(b=3)=+5.986043`, `kubo_true(b=4)=+3.819639`, etc.) from
+the checked-in single-b outputs and recomputes the log-log slope and
+R² fit. It exits 0 with cached PASS rows for the H=0.25
+b ∈ {3,4,5,6} slope/R² certificate.
+
+The certificate runner is already cited in the artifact-chain section
+above. This subsection records that the bounded numerical-diagnostic
+scope is supported by the multi-b certificate rather than by the
+single-b runner alone.
+
 ## Bottom line
 
 > "At H=0.35 the first-order Kubo deflection coefficient

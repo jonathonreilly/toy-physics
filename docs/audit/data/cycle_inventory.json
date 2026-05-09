@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 593,
+      "max_transitive_descendants": 595,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 593
+          "transitive_descendants": 595
         },
         {
           "audit_status": "unaudited",
@@ -33,7 +33,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 593
+          "transitive_descendants": 595
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 591,
+      "max_transitive_descendants": 593,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/3D_CORRECTION_MASTER_NOTE.md",
           "title": "3D Correction Master Note",
-          "transitive_descendants": 591
+          "transitive_descendants": 593
         },
         {
           "audit_status": "unaudited",
@@ -70,7 +70,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DISPERSION_RELATION_NOTE.md",
           "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic",
-          "transitive_descendants": 591
+          "transitive_descendants": 593
         }
       ],
       "requires_lemma_extraction": false
@@ -89,7 +89,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 588,
+      "max_transitive_descendants": 590,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -98,7 +98,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
           "title": "BH Entropy RT-Ratio Widom No-Go Theorem",
-          "transitive_descendants": 588
+          "transitive_descendants": 590
         },
         {
           "audit_status": "unaudited",
@@ -107,7 +107,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
           "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement",
-          "transitive_descendants": 588
+          "transitive_descendants": 590
         }
       ],
       "requires_lemma_extraction": false
@@ -126,7 +126,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 585,
+      "max_transitive_descendants": 587,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -135,7 +135,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "audited_conditional",
@@ -144,7 +144,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         }
       ],
       "requires_lemma_extraction": false
@@ -163,7 +163,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 585,
+      "max_transitive_descendants": 587,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -172,7 +172,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -181,7 +181,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
           "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         }
       ],
       "requires_lemma_extraction": false
@@ -212,7 +212,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 585,
+      "max_transitive_descendants": 587,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -221,7 +221,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -230,7 +230,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -239,7 +239,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -248,7 +248,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -257,7 +257,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         }
       ],
       "requires_lemma_extraction": false
@@ -296,7 +296,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 585,
+      "max_transitive_descendants": 587,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -305,7 +305,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "audited_conditional",
@@ -314,7 +314,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -323,7 +323,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -332,7 +332,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -341,7 +341,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -350,7 +350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "audited_conditional",
@@ -359,7 +359,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         }
       ],
       "requires_lemma_extraction": false
@@ -402,7 +402,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 585,
+      "max_transitive_descendants": 587,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -411,7 +411,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -420,7 +420,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "audited_conditional",
@@ -429,7 +429,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -438,7 +438,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -447,7 +447,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -456,7 +456,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "unaudited",
@@ -465,7 +465,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         },
         {
           "audit_status": "audited_conditional",
@@ -474,7 +474,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 585
+          "transitive_descendants": 587
         }
       ],
       "requires_lemma_extraction": false
@@ -493,7 +493,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -502,7 +502,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -511,7 +511,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
           "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -530,7 +530,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -539,7 +539,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -548,7 +548,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -571,7 +571,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -580,7 +580,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -589,7 +589,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -598,7 +598,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
           "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -633,7 +633,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -642,7 +642,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
           "title": "G_bare Structural Normalization: Cl(3) -> End(V) -> su(3) -> Wilson Action Chain",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -651,7 +651,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -660,7 +660,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -669,7 +669,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -678,7 +678,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -687,7 +687,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
           "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -726,7 +726,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -735,7 +735,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
           "title": "G_bare Structural Normalization: Cl(3) -> End(V) -> su(3) -> Wilson Action Chain",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -744,7 +744,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -753,7 +753,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -762,7 +762,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -771,7 +771,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -780,7 +780,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
           "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -789,7 +789,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md",
           "title": "g_bare Hilbert\u2013Schmidt Rigidity Theorem (Independent Rescaling-Freedom Closure)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -832,7 +832,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -841,7 +841,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -850,7 +850,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -859,7 +859,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -868,7 +868,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -877,7 +877,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -886,7 +886,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -895,7 +895,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -904,7 +904,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Distinct-Shell Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -947,7 +947,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -956,7 +956,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -965,7 +965,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -974,7 +974,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -983,7 +983,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -992,7 +992,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1001,7 +1001,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1010,7 +1010,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1019,7 +1019,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -1062,7 +1062,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1071,7 +1071,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1080,7 +1080,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1089,7 +1089,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1098,7 +1098,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1107,7 +1107,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1116,7 +1116,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1125,7 +1125,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1134,7 +1134,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -1177,7 +1177,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 502,
+      "max_transitive_descendants": 503,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1186,7 +1186,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1195,7 +1195,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1204,7 +1204,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1213,7 +1213,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "unaudited",
@@ -1222,7 +1222,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1231,7 +1231,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1240,7 +1240,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         },
         {
           "audit_status": "audited_conditional",
@@ -1249,7 +1249,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem",
-          "transitive_descendants": 502
+          "transitive_descendants": 503
         }
       ],
       "requires_lemma_extraction": false
@@ -1268,7 +1268,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 303,
+      "max_transitive_descendants": 304,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1277,7 +1277,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 303
+          "transitive_descendants": 304
         },
         {
           "audit_status": "unaudited",
@@ -1286,7 +1286,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 303
+          "transitive_descendants": 304
         }
       ],
       "requires_lemma_extraction": false
@@ -1317,7 +1317,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1326,7 +1326,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1335,7 +1335,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1344,7 +1344,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1353,7 +1353,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1362,7 +1362,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1393,7 +1393,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1402,7 +1402,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1411,7 +1411,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1420,7 +1420,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1429,7 +1429,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1438,7 +1438,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1469,7 +1469,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1478,7 +1478,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1487,7 +1487,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1496,7 +1496,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1505,7 +1505,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1514,7 +1514,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Edge-Profile Transition Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1545,7 +1545,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1554,7 +1554,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1563,7 +1563,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1572,7 +1572,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1581,7 +1581,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1590,7 +1590,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Edge Transport-Lane Obstruction Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1621,7 +1621,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1630,7 +1630,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1639,7 +1639,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1648,7 +1648,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1657,7 +1657,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1666,7 +1666,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Low-Slack Transport Incompatibility Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1697,7 +1697,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1706,7 +1706,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1715,7 +1715,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1724,7 +1724,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1733,7 +1733,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1742,7 +1742,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Low-Slack Upper-m Ridge Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1773,7 +1773,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1782,7 +1782,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1791,7 +1791,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1800,7 +1800,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1809,7 +1809,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1818,7 +1818,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Lower-Repair Upper-Face Extremals Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1849,7 +1849,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1858,7 +1858,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1867,7 +1867,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1876,7 +1876,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1885,7 +1885,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1894,7 +1894,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Upper-Face Local Neighborhoods Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -1929,7 +1929,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1938,7 +1938,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1947,7 +1947,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1956,7 +1956,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1965,7 +1965,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1974,7 +1974,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -1983,7 +1983,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2018,7 +2018,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2027,7 +2027,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2036,7 +2036,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2045,7 +2045,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2054,7 +2054,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2063,7 +2063,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2072,7 +2072,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2107,7 +2107,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2116,7 +2116,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2125,7 +2125,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2134,7 +2134,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2143,7 +2143,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2152,7 +2152,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2161,7 +2161,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Edge-Profile Transition Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2196,7 +2196,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2205,7 +2205,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2214,7 +2214,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2223,7 +2223,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2232,7 +2232,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2241,7 +2241,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2250,7 +2250,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Edge Transport-Lane Obstruction Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2285,7 +2285,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2294,7 +2294,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2303,7 +2303,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2312,7 +2312,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2321,7 +2321,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2330,7 +2330,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2339,7 +2339,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Low-Slack Transport Incompatibility Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2374,7 +2374,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2383,7 +2383,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2392,7 +2392,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2401,7 +2401,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2410,7 +2410,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2419,7 +2419,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2428,7 +2428,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Low-Slack Upper-m Ridge Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2463,7 +2463,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2472,7 +2472,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2481,7 +2481,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2490,7 +2490,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2499,7 +2499,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2508,7 +2508,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2517,7 +2517,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Lower-Repair Upper-Face Extremals Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2552,7 +2552,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2561,7 +2561,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2570,7 +2570,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2579,7 +2579,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2588,7 +2588,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2597,7 +2597,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2606,7 +2606,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Upper-Face Local Neighborhoods Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2645,7 +2645,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -2654,7 +2654,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2663,7 +2663,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2672,7 +2672,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2681,7 +2681,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2690,7 +2690,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2699,7 +2699,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2708,7 +2708,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Rival-Window Edge-Profile Hierarchy Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2747,7 +2747,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -2756,7 +2756,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2765,7 +2765,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2774,7 +2774,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2783,7 +2783,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2792,7 +2792,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2801,7 +2801,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2810,7 +2810,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Boundary-Band Transition Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2849,7 +2849,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -2858,7 +2858,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2867,7 +2867,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2876,7 +2876,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2885,7 +2885,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2894,7 +2894,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2903,7 +2903,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2912,7 +2912,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Edge-Profile Transition Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -2951,7 +2951,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -2960,7 +2960,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2969,7 +2969,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2978,7 +2978,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2987,7 +2987,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -2996,7 +2996,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3005,7 +3005,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3014,7 +3014,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Edge Transport-Lane Obstruction Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -3053,7 +3053,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -3062,7 +3062,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3071,7 +3071,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3080,7 +3080,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3089,7 +3089,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3098,7 +3098,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3107,7 +3107,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3116,7 +3116,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Low-Slack Transport Incompatibility Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -3155,7 +3155,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -3164,7 +3164,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3173,7 +3173,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3182,7 +3182,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3191,7 +3191,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3200,7 +3200,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3209,7 +3209,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3218,7 +3218,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Low-Slack Upper-m Ridge Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -3257,7 +3257,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -3266,7 +3266,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3275,7 +3275,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3284,7 +3284,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3293,7 +3293,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3302,7 +3302,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3311,7 +3311,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3320,7 +3320,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Lower-Repair Upper-Face Extremals Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -3359,7 +3359,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 263,
+      "max_transitive_descendants": 264,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -3368,7 +3368,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3377,7 +3377,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Shift-Quotient Bundle Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3386,7 +3386,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Carrier Normal-Form Theorem",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3395,7 +3395,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
           "title": "DM Neutrino Hermitian Bridge Carrier",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3404,7 +3404,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Carrier-Side Conclusion",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3413,7 +3413,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md",
           "title": "DM Neutrino Source-Surface Global Dominance Completeness Obstruction",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         },
         {
           "audit_status": "unaudited",
@@ -3422,7 +3422,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md",
           "title": "DM Neutrino Source-Surface Split-2 Upper-Face Local Neighborhoods Candidate",
-          "transitive_descendants": 263
+          "transitive_descendants": 264
         }
       ],
       "requires_lemma_extraction": false
@@ -3441,7 +3441,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 247,
+      "max_transitive_descendants": 248,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3450,7 +3450,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Bounded Note",
-          "transitive_descendants": 247
+          "transitive_descendants": 248
         },
         {
           "audit_status": "unaudited",
@@ -3459,7 +3459,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md",
           "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Closed-Form Note",
-          "transitive_descendants": 247
+          "transitive_descendants": 248
         }
       ],
       "requires_lemma_extraction": false
@@ -3478,7 +3478,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 245,
+      "max_transitive_descendants": 246,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3487,7 +3487,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         },
         {
           "audit_status": "unaudited",
@@ -3496,7 +3496,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md",
           "title": "Higgs-Channel Effective N_taste Boundary Bounded Note",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         }
       ],
       "requires_lemma_extraction": false
@@ -3515,7 +3515,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 245,
+      "max_transitive_descendants": 246,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3524,7 +3524,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         },
         {
           "audit_status": "unaudited",
@@ -3533,7 +3533,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson-Corrected V_taste Tree-Level Mean-Field Formula Bounded Note",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         }
       ],
       "requires_lemma_extraction": false
@@ -3552,7 +3552,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 245,
+      "max_transitive_descendants": 246,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3561,7 +3561,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         },
         {
           "audit_status": "unaudited",
@@ -3570,7 +3570,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson-Corrected m_H_tree at Extremum, Leading Order in r \u2014 Bounded Note",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         }
       ],
       "requires_lemma_extraction": false
@@ -3589,7 +3589,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 245,
+      "max_transitive_descendants": 246,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3598,7 +3598,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         },
         {
           "audit_status": "unaudited",
@@ -3607,7 +3607,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson-Shifted V_taste Extremum at Leading Order in r \u2014 Bounded Note",
-          "transitive_descendants": 245
+          "transitive_descendants": 246
         }
       ],
       "requires_lemma_extraction": false

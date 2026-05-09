@@ -4921,6 +4921,22 @@
       "to": "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
     },
     {
+      "from": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_projector_interface_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
+      "to": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15"
+    },
+    {
+      "from": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16"
+    },
+    {
       "from": "dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17",
       "to": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16"
     },
@@ -8927,6 +8943,34 @@
     {
       "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
       "to": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "s3_general_r_derivation_note"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "cosmological_constant_vacuum_energy_audit_note"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "holographic_probe_note_2026-04-11"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25"
+    },
+    {
+      "from": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "to": "primordial_spectrum_note"
     },
     {
       "from": "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
@@ -14105,6 +14149,22 @@
       "to": "observable_principle_from_axiom_note"
     },
     {
+      "from": "oh_static_constraint_lift_note",
+      "to": "restricted_strong_field_closure_note"
+    },
+    {
+      "from": "oh_static_constraint_lift_note",
+      "to": "oh_schur_boundary_action_note"
+    },
+    {
+      "from": "oh_static_constraint_lift_note",
+      "to": "one_parameter_reduced_shell_law_note"
+    },
+    {
+      "from": "oh_static_constraint_lift_note",
+      "to": "finite_rank_source_to_metric_theorem_note"
+    },
+    {
       "from": "omega_lambda_derivation_note",
       "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
     },
@@ -17529,6 +17589,30 @@
       "to": "teleportation_bell_measurement_circuit_note"
     },
     {
+      "from": "tensor_block_closure_test_note",
+      "to": "oh_schur_boundary_action_note"
+    },
+    {
+      "from": "tensor_block_closure_test_note",
+      "to": "one_parameter_reduced_shell_law_note"
+    },
+    {
+      "from": "tensor_block_closure_test_note",
+      "to": "finite_rank_source_to_metric_theorem_note"
+    },
+    {
+      "from": "tensor_block_closure_test_note",
+      "to": "gr_class_expansion_finite_rank_target_note"
+    },
+    {
+      "from": "tensor_block_closure_test_note",
+      "to": "restricted_strong_field_closure_note"
+    },
+    {
+      "from": "tensor_block_closure_test_note",
+      "to": "scalar_trace_tensor_no_go_note"
+    },
+    {
       "from": "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
       "to": "primordial_spectrum_note"
     },
@@ -18871,6 +18955,22 @@
     {
       "from": "wave_retardation_continuum_limit_note",
       "to": "wave_retardation_lab_prediction_note"
+    },
+    {
+      "from": "wave_retarded_gravity_note",
+      "to": "linear_response_true_kubo_note"
+    },
+    {
+      "from": "wave_retarded_gravity_note",
+      "to": "wave_retardation_continuum_limit_note"
+    },
+    {
+      "from": "wave_retarded_gravity_note",
+      "to": "wave_retardation_lab_prediction_note"
+    },
+    {
+      "from": "wave_retarded_gravity_note",
+      "to": "kubo_continuum_limit_note"
     },
     {
       "from": "wide_family_h0125_bridge_reopen_audit",
@@ -37016,11 +37116,16 @@
     },
     "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16": {
       "claim_id": "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "54be417a69e4d64302df1f0a2055c60b3ca788099b44b97f806d4c1858cc8e6f",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "dm_leptogenesis_pmns_projector_interface_note_2026-04-16",
+        "dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16",
+        "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+        "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16"
+      ],
+      "note_hash": "c39ee0d738e0e4845a8b39451ac4957e70f9afafeb3c021a861d53e404ab32b7",
       "path": "docs/DM_LEPTOGENESIS_PMNS_CP_BRIDGE_BOUNDARY_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py",
       "title": "DM Leptogenesis PMNS/Mainline CP Bridge Boundary"
@@ -43121,8 +43226,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
-      "deps": [],
-      "note_hash": "7f42c97e282c9e8fb9ae89cc1ac70596ebeda11f16a27b21aa8ce9ae417ca226",
+      "deps": [
+        "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
+        "s3_general_r_derivation_note",
+        "cosmological_constant_spectral_gap_identity_theorem_note",
+        "cosmological_constant_vacuum_energy_audit_note",
+        "holographic_probe_note_2026-04-11",
+        "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
+        "primordial_spectrum_note"
+      ],
+      "note_hash": "f682537794172299f5a2d5baaf15a2e0eedd51c4086b3015c00552fe859e995f",
       "path": "docs/HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md",
       "runner_path": null,
       "title": "Lane 5 `(C3)` Class: No Active Vacuum/Topology Route \u2014 Audit-No-Go"
@@ -46652,9 +46765,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "957d43ef15d023f02d27df4785b7d14fdbc7145a8f7c75b63cac49722eff05d9",
+      "note_hash": "ba9120bf1551cd392625af7d459e693686f7098359f0fb65a38b21ebf97ac04f",
       "path": "docs/LENSING_DEFLECTION_NOTE.md",
-      "runner_path": "scripts/lensing_deflection_fine_single.py",
+      "runner_path": "scripts/lensing_deflection_h025_slope_fit_certificate.py",
       "title": "Gravitational Deflection / Lensing Sweep \u2014 Power-Law Positive (NOT 1/b)"
     },
     "lensing_finite_path_explanation_note": {
@@ -47244,9 +47357,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d75cb6fb26726df987f8ffe43130361845f9a67224d20bfe754c7d2b85ccdbbd",
+      "note_hash": "f5c1aad540c4a484180044361730c682ad42b3ca9dd7919bcdcd3d0d6d478153",
       "path": "docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_localization_family_sweep.py",
       "title": "Mesoscopic Surrogate Localization Sweep"
     },
     "mesoscopic_surrogate_multistage_note": {
@@ -49039,8 +49152,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "e97f69661f3286c5dfc201fc0d8284acf57bd34eccebfedbe3ae9ec73e72d88d",
+      "deps": [
+        "restricted_strong_field_closure_note",
+        "oh_schur_boundary_action_note",
+        "one_parameter_reduced_shell_law_note",
+        "finite_rank_source_to_metric_theorem_note"
+      ],
+      "note_hash": "d575016654255f76a915bdfc7d46f4db1abec5b7ea81880872f79fec0e7f99e3",
       "path": "docs/OH_STATIC_CONSTRAINT_LIFT_NOTE.md",
       "runner_path": "scripts/frontier_oh_static_constraint_lift.py",
       "title": "Exact Local Static-Constraint Lift on the Current Bridge Surface"
@@ -57679,8 +57797,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "60197bf19ec265757a74087428cbdad306957a125195dc500b68fb522252a8f0",
+      "deps": [
+        "oh_schur_boundary_action_note",
+        "one_parameter_reduced_shell_law_note",
+        "finite_rank_source_to_metric_theorem_note",
+        "gr_class_expansion_finite_rank_target_note",
+        "restricted_strong_field_closure_note",
+        "scalar_trace_tensor_no_go_note"
+      ],
+      "note_hash": "6c0305bb31cea1e904237c22681f2d8d4c2891b4e4a0e5459223b4e28a61bc3f",
       "path": "docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md",
       "runner_path": "scripts/frontier_tensor_block_closure_test.py",
       "title": "Tensor Block Closure Test"
@@ -59514,9 +59639,14 @@
       "claim_id": "wave_retarded_gravity_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "40fe663f778dbd9f4604eb94f70408215fccb017cbbddbb771662a490cf260e7",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "linear_response_true_kubo_note",
+        "wave_retardation_continuum_limit_note",
+        "wave_retardation_lab_prediction_note",
+        "kubo_continuum_limit_note"
+      ],
+      "note_hash": "98d7105ed31f18964af56a5af61006cae554628f812eccc71d0d7eafd21ea059",
       "path": "docs/WAVE_RETARDED_GRAVITY_NOTE.md",
       "runner_path": "scripts/wave_retarded_gravity.py",
       "title": "Wave Retarded Gravity: Retarded \u2260 Instantaneous on the Wave Field"
@@ -61822,7 +61952,6 @@
     "dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16",
     "dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16",
     "dm_leptogenesis_pmns_constructive_projected_source_selector_theorem_note_2026-04-16",
-    "dm_leptogenesis_pmns_cp_bridge_boundary_note_2026-04-16",
     "dm_leptogenesis_pmns_even_response_sole_axiom_boundary_note_2026-04-16",
     "dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16",
     "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16",
@@ -62002,7 +62131,6 @@
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
     "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
     "hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29",
-    "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
     "i3_zero_exact_theorem_note",
     "independent_generators_heldout_note",
     "interest_map",
@@ -62124,7 +62252,6 @@
     "nonlinear_born_gravity_note",
     "observable_principle_from_axiom_note",
     "oh_schur_boundary_action_note",
-    "oh_static_constraint_lift_note",
     "ollivier_einstein_proxy_note_2026-04-11",
     "one_parameter_reduced_shell_law_note",
     "ordered_lattice_quasi_persistent_relaunch_2d_note",
@@ -62327,7 +62454,6 @@
     "teleportation_resource_from_poisson_note",
     "teleportation_retained_axis_operator_algebra_closure_note",
     "teleportation_three_register_cross_encoding_note",
-    "tensor_block_closure_test_note",
     "tensor_matching_completion_theorem_note",
     "tensor_network_connection_note",
     "tensor_support_center_excess_law_note",
@@ -62369,7 +62495,6 @@
     "wave_equation_self_field_note",
     "wave_radiation_note",
     "wave_retardation_lab_prediction_note",
-    "wave_retarded_gravity_note",
     "wave_static_boundary_sensitivity_note",
     "wave_static_direct_probe_fine_note",
     "wave_static_fixed_beam_boundary_sensitivity_note",
@@ -62427,25 +62552,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 175,
+      "bounded_theorem": 176,
       "meta": 22,
       "no_go": 14,
-      "none": 1684,
+      "none": 1683,
       "open_gate": 21,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 678,
+      "bounded_theorem": 680,
       "meta": 22,
       "no_go": 122,
       "none": 458,
       "open_gate": 112,
-      "positive_theorem": 615
+      "positive_theorem": 613
     },
-    "edge_count": 7667,
+    "edge_count": 7692,
     "leaf_count": 536,
     "node_count": 2007,
-    "root_count": 822,
-    "runners_with_path": 1605
+    "root_count": 817,
+    "runners_with_path": 1606
   }
 }

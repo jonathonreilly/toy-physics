@@ -10849,16 +10849,16 @@
       "runner": "scripts/lensing_beta_sweep.py"
     },
     "lensing_deflection_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
-        "A": 0,
-        "B": 0,
+        "A": 3,
+        "B": 2,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/lensing_deflection_fine_single.py"
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/lensing_deflection_h025_slope_fit_certificate.py"
     },
     "lensing_finite_path_explanation_note": {
       "assert_count": 0,
@@ -11303,6 +11303,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/mesoscopic_surrogate_localization_frontier.py"
+    },
+    "mesoscopic_surrogate_localization_sweep_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/mesoscopic_surrogate_localization_family_sweep.py"
     },
     "mesoscopic_surrogate_multistage_note": {
       "assert_count": 0,
@@ -38949,19 +38961,19 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/lensing_deflection_fine_single.py": {
-      "assert_count": 0,
+    "scripts/lensing_deflection_h025_slope_fit_certificate.py": {
+      "assert_count": 1,
       "claims": [
         "lensing_deflection_note"
       ],
       "counts": {
-        "A": 0,
-        "B": 0,
+        "A": 3,
+        "B": 2,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/lensing_fine_h_batch.py": {
@@ -39208,6 +39220,21 @@
       "assert_count": 0,
       "claims": [
         "mesoscopic_surrogate_h025_constrained_localization_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/mesoscopic_surrogate_localization_family_sweep.py": {
+      "assert_count": 0,
+      "claims": [
+        "mesoscopic_surrogate_localization_sweep_note"
       ],
       "counts": {
         "A": 0,
@@ -42039,15 +42066,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 131,
+    "decoration_candidates": 132,
     "dominant_class_distribution": {
-      "A": 21,
+      "A": 22,
       "B": 174,
       "C": 637,
       "D": 242,
       "none": 426
     },
-    "runners_classified": 1500,
+    "runners_classified": 1501,
     "runners_with_C": 771,
     "runners_with_D": 395
   }

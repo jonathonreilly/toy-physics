@@ -4,6 +4,33 @@
 **Script:** `scripts/frontier_tensor_block_closure_test.py` (PASS=6 FAIL=0 on current main; classified PASS lines for the bounded no-go now emitted: local sufficiency on each family, cross-family kernel/eta/a_star mismatches, non-universality)
 **Status:** bounded - bounded or caveated result note
 
+## Inputs (cited authorities)
+
+The runner extracts vector and traceless-shear tensor response channels
+from the restricted source families and fits a symmetric
+`K_tensor` from those probe directions. The primitives the runner imports
+are each one-hop authorities on the current dependency surface:
+
+- exact local `O_h` source class:
+  [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+  and
+  [`ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md`](ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md);
+- finite-rank source family and source-to-metric bridge:
+  [`FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`](FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md)
+  and
+  [`GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md`](GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md);
+- scalar bridge package and traceless Einstein floor:
+  [`RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`](RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md)
+  and
+  [`SCALAR_TRACE_TENSOR_NO_GO_NOTE.md`](SCALAR_TRACE_TENSOR_NO_GO_NOTE.md).
+
+The note's bounded contribution is the cross-family non-universality
+no-go: local sufficiency on each family, but the fitted `K_tensor`,
+`eta`, and `a_star` differ across the exact local `O_h` class and the
+broader finite-rank class. The cited primitives are not re-derived;
+this note's load-bearing claim is the cross-family mismatch conditional
+on those imported inputs.
+
 ## Question
 
 The current gravity branch already proves that the scalar shell trace is not
