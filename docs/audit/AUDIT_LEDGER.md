@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 915 |
+| unaudited | 914 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 405 |
+| ~~audited_conditional~~ | 406 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 388 |
-| `audited_conditional` | 405 |
+| `audited_conditional` | 406 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 28 |
-| `unaudited` | 970 |
+| `unaudited` | 969 |
 
 | claim_type | count |
 |---|---:|
@@ -778,6 +778,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `minimal_absorbing_horizon_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `minimal_bidirectional_trapping_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_2d_gravity_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mirror_gravity_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -8536,6 +8537,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the retained exact 3D lattice at stronger calibration, the source-driven rows remain TOWARD and zero-source reduction is exact, but the dynamic F~M exponent drops to 0.64 rather than recovering linear weak-field mass scaling.  _(class `C`)_
 - **chain closes:** True — The runner source constructs the lattice, evolves the local field, propagates amplitudes, computes centroid shifts, and fits the mass exponent rather than merely printing constants. The companion cited authority is marked retained_bounded and supports the calibration-hierarchy framing.
 - **rationale:** The load-bearing result is a bounded first-principles numerical computation from the stated lattice, field rule, source strengths, and calibration, producing the reported deflections and exponent. The code does not read the contested result from another note, hard-code the output table, or match an external empirical target. The conclusion is limited to the stated calibration and explicitly records failure of full weak-field recovery, with the retained companion authority used only for the broader calibration-sensitivity interpretation.
+- **auditor confidence:** high
+
+### `mirror_2d_gravity_law_note`
+
+- **Note:** [`MIRROR_2D_GRAVITY_LAW_NOTE.md`](../../docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the narrowed bounded null-result that the exact 2D mirror primary-runner evidence does not support a clean promoted mass law or distance law on the searched windows.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0d27-29c1-75f1-9ed3-5caa35eec176`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The primary-runner fit qualities R^2 = 0.168, 0.167, and 0.075 are the evidence that no clean promoted 2D mirror mass law or distance law is supported on the searched windows.  _(class `B`)_
+- **chain closes:** False — The note's conclusion depends on quoted primary-runner/log values, but the restricted packet lists no primary runner, no stdout, no runner source, and no cited authority containing that log. The missing step is packet-level verification that the primary runner actually computed the quoted weak fits.
+- **rationale:** Issue: the load-bearing weak-fit values are imported from a claimed primary runner/cache that is not included in the restricted packet. Why this blocks: without stdout or source, the audit cannot verify that the R^2 values were computed rather than copied or stale. Repair target: register/include scripts/mirror_2d_validation.py plus the completed cached stdout backing the three weak-fit rows. Claim boundary until fixed: the note is a bounded null-result conditional on the quoted primary-runner log being authentic and correctly computed.
 - **auditor confidence:** high
 
 ### `mirror_2d_validation_note`
