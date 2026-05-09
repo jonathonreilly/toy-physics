@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/evolving_network_prototype_v2.py
-runner_sha256: f0a2b6efbca457dcd95783030d3087ca11bdf75eed414778d915f95c4af4be75
+runner_sha256: 343b9eae95d5b3b6651812ea1a99dcdeb5974e394041bdadd2bf629d55871cdd
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 16.86
+elapsed_sec: 8.73
 status: ok
 ----- stdout -----
 ====================================================================================
@@ -54,7 +54,7 @@ READ:
   - If the deltas are small or mixed, that is a bounded negative result,
     not a failure of the review-hardening lane.
 
-Total time: 16.8s
+Total time: 8.6s
 ====================================================================================
 
 ----- stderr -----

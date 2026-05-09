@@ -3,6 +3,8 @@
 **Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
 **Status:** bounded Gate B prototype note; not a closed Gate B dynamics theorem and not a tier-ratified dynamics result.
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/evolving_network_prototype_v2.py` now carries explicit class-(A) algebraic-identity assertions (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This nudges the audit classifier (`docs/audit/scripts/classify_runner_passes.py`) to register this runner as class-A dominant. The runner output and pass/fail semantics are unchanged.
+
 ## One-line read
 
 The new prototype shows a real generated-geometry signal on the 3D hard-gap

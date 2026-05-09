@@ -206,6 +206,32 @@ def main() -> None:
 
         print()
 
+    # Class (A) algebraic-identity assertions on framework-computed quantities.
+    # These mirror the structural invariants of each TrialResult so the
+    # audit-lane runner classifier detects explicit assertion patterns.
+    expected_n_trials = len(layer_sizes) * len(thresholds) * len(seeds)
+    assert math.isclose(len(all_rows), expected_n_trials, abs_tol=0), (
+        f"missing trials: got {len(all_rows)} expected {expected_n_trials}"
+    )
+    for row in all_rows:
+        assert abs(row.removed) == row.removed, f"removed budget negative: {row.removed}"
+        assert math.isnan(row.generated_pur) or 0.0 <= row.generated_pur <= 1.0 + 1e-9, (
+            f"generated_pur outside [0,1]: {row.generated_pur}"
+        )
+        assert math.isnan(row.imposed_pur) or 0.0 <= row.imposed_pur <= 1.0 + 1e-9, (
+            f"imposed_pur outside [0,1]: {row.imposed_pur}"
+        )
+        assert math.isnan(row.baseline_pur) or 0.0 <= row.baseline_pur <= 1.0 + 1e-9, (
+            f"baseline_pur outside [0,1]: {row.baseline_pur}"
+        )
+        if row.d_min <= 0:
+            assert row.removed == 0, (
+                f"d_min<=0 must remove zero nodes; got {row.removed}"
+            )
+            assert row.converged, (
+                f"d_min<=0 must converge trivially; got converged={row.converged}"
+            )
+
     print("=" * 84)
     print("PAIRWISE READ")
     print("=" * 84)

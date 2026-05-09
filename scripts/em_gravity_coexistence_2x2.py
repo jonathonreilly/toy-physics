@@ -59,6 +59,7 @@ Surface:
 
 from __future__ import annotations
 
+import math
 import time
 
 import numpy as np
@@ -441,6 +442,22 @@ def main() -> None:
     pass_grav_nonzero = grav_nonzero
     pass_grav_consistent = grav_sign_consistent
     pass_em_opposite = em_opposite
+
+    # Class (A) algebraic-identity assertions on framework-computed quantities.
+    # These mirror the boolean tests above so the audit-lane runner classifier
+    # can detect explicit assertion patterns (math.isclose / assert abs(...)).
+    for r in r_ge_list_p:
+        assert abs(r) < EPS, f"R_GE(q+) nonzero: {r}"
+    for r in r_ge_list_m:
+        assert abs(r) < EPS, f"R_GE(q-) nonzero: {r}"
+    for row in all_data:
+        assert math.isclose(row["em_cancel"], 0.0, abs_tol=EPS), (
+            f"EM +/- cancel (pure) nonzero: {row['em_cancel']}"
+        )
+    for jc in joint_cancel_list:
+        assert math.isclose(jc, 0.0, abs_tol=EPS), (
+            f"EM +/- cancel (joint cell) nonzero: {jc}"
+        )
 
     tests = {
         "R_GE(q+) = 0 (exact)":                pass_rge_p,

@@ -37845,7 +37845,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "26360466cd85ccdfb932bef07a761822c65e86bbe06b2815fb74866ff90d956f",
+      "note_hash": "f48a912d4772c7e2dbbc7ac6c7f1b46a4548316255d1bda6a12af2d6e5be21a5",
       "path": "docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md",
       "runner_path": "scripts/em_gravity_coexistence_2x2.py",
       "title": "Gravity + EM Coexistence 2x2 Factorial Control"
@@ -37966,7 +37966,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "9ffa98b6e5de96f953dee14241338bd350b09f24e8d087847ba11a8580b17513",
+      "note_hash": "13dbee3348ab4cea1aef01856d3ca1feab09acc67928f7280cd25e7dd72a07de",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md",
       "runner_path": "scripts/evolving_network_prototype_v2.py",
       "title": "Evolving Network Prototype Note"
@@ -37977,7 +37977,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f7b54e55480dc491f4bd555b20e8ecb4007b8ecd1a03f717b3b5d3bd2319787c",
+      "note_hash": "06e1ab79f27e892783a9c5ac48328ae464724ebc4b1589fa1a7f83ec87323da8",
       "path": "docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md",
       "runner_path": "scripts/evolving_network_prototype_v2.py",
       "title": "Evolving Network Prototype V2 Note"
@@ -40078,7 +40078,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4db3953232f312229f25c024ff31a70d3684f4589dfc613fcc1c85e7be3a1767",
+      "note_hash": "e237c82848a5e1789f56a48d925c3431c3e5c89707e8c8ab71011bb3d2f6067d",
       "path": "docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md",
       "runner_path": "scripts/frontier_grav_wave_post_newtonian.py",
       "title": "Gravitational Wave / Post-Newtonian Probe"
@@ -40313,7 +40313,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "8182a49ec3396cd97b97a702cc567b01dd90bf733d389a132258c5797403bbc8",
+      "note_hash": "f2d0d3f8601dbd2d86acc54fd93380619e7e4e633fdb0b517404367554492586",
       "path": "docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md",
       "runner_path": "scripts/growing_graph_expansion_card.py",
       "title": "Growing Graph Expansion Card"
@@ -41515,9 +41515,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "fdb486dd7787252771e558d39f0ee280494a05385ebb01f0d7f76a562f0578d6",
+      "note_hash": "7565dcb322c4c0ea0314d10674c5f85369475e6c7ab39d3f1f61bedf5c494a47",
       "path": "docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md",
-      "runner_path": "scripts/k_dependence_ceiling.py",
+      "runner_path": null,
       "title": "K Dependence Review-Safe Note"
     },
     "koide_a1_brannen_plancherel_identity_support_note_2026-04-25": {
@@ -43665,7 +43665,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "54f2391b71957d152ed7b802689a69394cf7b40f20c3ac2f3c083ad32cebc885",
+      "note_hash": "0f64c2e7d09521119d6a39545ca06703f8a84a2655068e7dd51db4c2a605f643",
       "path": "docs/LATTICE_3D_L2_NUMPY_H0125_AUDIT_NOTE.md",
       "runner_path": "scripts/lattice_3d_l2_numpy_h0125_audit.py",
       "title": "3D 1/L^2 + h^2 Numpy h=0.125 Audit"
@@ -59788,6 +59788,6 @@
     "leaf_count": 535,
     "node_count": 1973,
     "root_count": 837,
-    "runners_with_path": 1552
+    "runners_with_path": 1551
   }
 }

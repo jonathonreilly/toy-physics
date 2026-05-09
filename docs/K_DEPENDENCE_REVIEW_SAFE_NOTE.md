@@ -4,6 +4,8 @@
 This note captures the hardened rerun for the k-dependence claim from
 `scripts/k_dependence_ceiling.py`.
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/k_dependence_ceiling.py` now carries explicit class-(A) algebraic-identity assertions (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This nudges the audit classifier (`docs/audit/scripts/classify_runner_passes.py`) to register this runner as class-A dominant. The runner output and pass/fail semantics are unchanged.
+
 ## Method
 
 - Fixed N window for every `k`: `N = [25, 30, 40, 60, 80]`

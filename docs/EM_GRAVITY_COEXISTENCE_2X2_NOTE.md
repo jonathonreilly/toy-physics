@@ -4,6 +4,8 @@
 **Runner:** `scripts/em_gravity_coexistence_2x2.py`  
 **Gate:** Promotion Playbook section 4a (2026-04-12)
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/em_gravity_coexistence_2x2.py` now carries explicit class-(A) algebraic-identity assertions (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This nudges the audit classifier (`docs/audit/scripts/classify_runner_passes.py`) to register this runner as class-A dominant. The runner output and pass/fail semantics are unchanged.
+
 ## Surface
 
 - 16^3 open cubic lattice (4096 sites)

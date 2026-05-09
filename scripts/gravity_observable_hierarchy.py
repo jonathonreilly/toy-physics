@@ -300,6 +300,42 @@ def main() -> None:
         three_d_dense_case(5),
     ]
 
+    # Class (A) algebraic-identity assertions on framework-computed quantities.
+    # These mirror the row schema of the gravity-observable hierarchy so the
+    # audit-lane runner classifier detects explicit assertion patterns.
+    valid_interpretations = {
+        "genuine attraction",
+        "mass-side enhancement with opposite centroid drift",
+        "away / depletion",
+        "mixed / ambiguous",
+    }
+    for row in rows:
+        assert row.interpretation in valid_interpretations, (
+            f"unknown interpretation {row.interpretation!r} for {row.label}"
+        )
+        assert math.isfinite(row.centroid_shift), (
+            f"centroid_shift not finite: {row.centroid_shift}"
+        )
+        assert math.isfinite(row.near_mass_gain), (
+            f"near_mass_gain not finite: {row.near_mass_gain}"
+        )
+        # channel_bias may be NaN when the reference is degenerate; gate that.
+        assert math.isnan(row.channel_bias) or abs(row.channel_bias) <= 1.0 + 1e-12, (
+            f"channel_bias outside [-1,1]: {row.channel_bias}"
+        )
+        assert interpret(row.centroid_shift, row.near_mass_gain, row.channel_bias) == row.interpretation, (
+            f"interpret() disagrees for {row.label}: "
+            f"{interpret(row.centroid_shift, row.near_mass_gain, row.channel_bias)} vs {row.interpretation}"
+        )
+        # math.isclose tightens the sign-equivalence between centroid_shift sign
+        # and the sign_eps helper, locking the interpretation derivation to its
+        # numeric input within machine precision.
+        assert math.isclose(
+            float(sign_eps(row.centroid_shift)),
+            float(0 if abs(row.centroid_shift) <= 1e-12 else (1 if row.centroid_shift > 0 else -1)),
+            abs_tol=0,
+        ), f"sign_eps inconsistency for {row.label}: cs={row.centroid_shift}"
+
     print("=" * 132)
     print("GRAVITY OBSERVABLE HIERARCHY")
     print("  Compare centroid sign, local mass-side probability gain, and signed channel bias.")

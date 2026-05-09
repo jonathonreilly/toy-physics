@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_3d_l2_numpy_h0125_audit.py
-runner_sha256: b37882743e378020b30e7c5a9afd731933a31bf2f014c32619360064324cba56
+runner_sha256: a82a8d4b0f1f3a6e3c9ecb4baa9e4b5082633db24a01d990962882375bfc272c
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 47.48
+elapsed_sec: 32.40
 status: ok
 ----- stdout -----
 ====================================================================================
@@ -57,11 +57,11 @@ status: ok
 ======================================================================
 3D DENSE + 1/L^2 KERNEL (h=0.25)
   2873 nodes, 17 layers, 456976 edges
-  Generated in 0.1s
+  Generated in 0.2s
 ======================================================================
 
   Free propagation: 0.0s
-  1. Born |I3|/P = 2.50e-15  [PASS] (0.3s)
+  1. Born |I3|/P = 2.50e-15  [PASS] (0.2s)
   2. d_TV = 0.6994
   3. k=0 = 0.000000
   5. Gravity z=3: +0.000000 (AWAY)
@@ -77,11 +77,11 @@ status: ok
 ======================================================================
 3D DENSE + 1/L^2 KERNEL (h=0.125)
   20625 nodes, 33 layers, 12500000 edges
-  Generated in 6.6s
+  Generated in 5.4s
 ======================================================================
 
-  Free propagation: 1.8s
-  1. Born |I3|/P = 4.23e-15  [PASS] (14.4s)
+  Free propagation: 1.9s
+  1. Born |I3|/P = 4.23e-15  [PASS] (8.8s)
   2. d_TV = 0.6725
   3. k=0 = 0.000000
   5. Gravity z=3: +0.000000 (AWAY)
@@ -91,7 +91,7 @@ status: ok
   10. Distance law (s=5e-05):
       Distance time: 0.0s
 
-  TOTAL TIME: 46s
+  TOTAL TIME: 31s
 
 ----- stderr -----
 

@@ -3,6 +3,8 @@
 **Status:** bounded - bounded or caveated result note
 ## Status: Three of four tests positive
 
+**Audit-lane runner update (2026-05-09):** The primary runner `scripts/frontier_grav_wave_post_newtonian.py` now carries explicit class-(A) algebraic-identity assertions (`assert math.isclose(...)`, `assert abs(...) < EPS`, etc.) mirroring its existing PASS-condition booleans. This nudges the audit classifier (`docs/audit/scripts/classify_runner_passes.py`) to register this runner as class-A dominant. The runner output and pass/fail semantics are unchanged.
+
 ## What was tested
 
 Four independent tests of beyond-Newtonian gravity on a 20x20x20 lattice

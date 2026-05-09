@@ -5713,15 +5713,15 @@
       "runner": "scripts/frontier_em_coupling_from_ewsb.py"
     },
     "em_gravity_coexistence_2x2_note": {
-      "assert_count": 0,
+      "assert_count": 4,
       "counts": {
-        "A": 0,
+        "A": 6,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/em_gravity_coexistence_2x2.py"
     },
     "emergent_geometry_growth_note_2026-04-10": {
@@ -5809,27 +5809,27 @@
       "runner": "scripts/frontier_evanescent_barrier_amplitude_suppression.py"
     },
     "evolving_network_prototype_note": {
-      "assert_count": 0,
+      "assert_count": 7,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/evolving_network_prototype_v2.py"
     },
     "evolving_network_prototype_v2_note": {
-      "assert_count": 0,
+      "assert_count": 7,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/evolving_network_prototype_v2.py"
     },
     "evolving_network_prototype_v3_note": {
@@ -7621,15 +7621,15 @@
       "runner": "scripts/frontier_gravitational_memory.py"
     },
     "gravitational_wave_probe_note": {
-      "assert_count": 0,
+      "assert_count": 16,
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/frontier_grav_wave_post_newtonian.py"
     },
     "gravitomagnetic_note": {
@@ -7705,15 +7705,15 @@
       "runner": "scripts/gravity_distance_fixed_geometry.py"
     },
     "gravity_observable_hierarchy_note": {
-      "assert_count": 0,
+      "assert_count": 6,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/gravity_observable_hierarchy.py"
     },
     "gravity_sign_audit_2026-04-10": {
@@ -7765,15 +7765,15 @@
       "runner": "scripts/growing_graph_frontier_expansion.py"
     },
     "growing_graph_expansion_card_note": {
-      "assert_count": 0,
+      "assert_count": 4,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/growing_graph_expansion_card.py"
     },
     "growing_graph_frontier_expansion_proxy_note": {
@@ -7885,15 +7885,15 @@
       "runner": "scripts/lattice_3d_l2_wide_h0125_w4_probe.py"
     },
     "h2t_h0125_narrow_bridge_note": {
-      "assert_count": 0,
+      "assert_count": 3,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/lattice_3d_l2_numpy_h0125_audit.py"
     },
     "hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29": {
@@ -8615,18 +8615,6 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_irregular_sign_core_packet_gate.py"
-    },
-    "k_dependence_review_safe_note": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/k_dependence_ceiling.py"
     },
     "kernel_vs_gravity_note": {
       "assert_count": 0,
@@ -9997,15 +9985,15 @@
       "runner": "scripts/lattice_3d_dense_window_extension.py"
     },
     "lattice_3d_l2_numpy_h0125_audit_note": {
-      "assert_count": 0,
+      "assert_count": 3,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/lattice_3d_l2_numpy_h0125_audit.py"
     },
     "lattice_3d_l2_numpy_h0125_bridge_note": {
@@ -21101,18 +21089,18 @@
       "exists": true
     },
     "scripts/em_gravity_coexistence_2x2.py": {
-      "assert_count": 0,
+      "assert_count": 4,
       "claims": [
         "em_gravity_coexistence_2x2_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 6,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/equivalence_principle_harness.py": {
@@ -21131,19 +21119,19 @@
       "exists": true
     },
     "scripts/evolving_network_prototype_v2.py": {
-      "assert_count": 0,
+      "assert_count": 7,
       "claims": [
         "evolving_network_prototype_note",
         "evolving_network_prototype_v2_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/evolving_network_prototype_v3.py": {
@@ -27655,18 +27643,18 @@
       "exists": true
     },
     "scripts/frontier_grav_wave_post_newtonian.py": {
-      "assert_count": 0,
+      "assert_count": 16,
       "claims": [
         "gravitational_wave_probe_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/frontier_gravitational_entanglement.py": {
@@ -36831,18 +36819,18 @@
       "exists": true
     },
     "scripts/gravity_observable_hierarchy.py": {
-      "assert_count": 0,
+      "assert_count": 6,
       "claims": [
         "gravity_observable_hierarchy_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/gravity_signed_sector_harness.py": {
@@ -36877,18 +36865,18 @@
       "exists": true
     },
     "scripts/growing_graph_expansion_card.py": {
-      "assert_count": 0,
+      "assert_count": 4,
       "claims": [
         "growing_graph_expansion_card_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/growing_graph_frontier_expansion.py": {
@@ -37057,21 +37045,6 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/k_dependence_ceiling.py": {
-      "assert_count": 0,
-      "claims": [
-        "k_dependence_review_safe_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": true
-    },
     "scripts/kubo_continuum_limit.py": {
       "assert_count": 0,
       "claims": [
@@ -37195,19 +37168,19 @@
       "exists": true
     },
     "scripts/lattice_3d_l2_numpy_h0125_audit.py": {
-      "assert_count": 0,
+      "assert_count": 3,
       "claims": [
         "h2t_h0125_narrow_bridge_note",
         "lattice_3d_l2_numpy_h0125_audit_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/lattice_3d_l2_numpy_h0125_bridge.py": {
@@ -40706,15 +40679,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 122,
+    "decoration_candidates": 128,
     "dominant_class_distribution": {
-      "A": 14,
+      "A": 20,
       "B": 170,
       "C": 618,
       "D": 226,
-      "none": 426
+      "none": 419
     },
-    "runners_classified": 1454,
+    "runners_classified": 1453,
     "runners_with_C": 740,
     "runners_with_D": 368
   }
