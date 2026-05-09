@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| **retained_no_go** | 121 |
+| **retained_no_go** | 122 |
 | **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 884 |
+| unaudited | 883 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
@@ -38,22 +38,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 387 |
+| `audited_clean` | 388 |
 | `audited_conditional` | 427 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 938 |
+| `unaudited` | 937 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 721 |
 | `decoration` | 11 |
 | `meta` | 63 |
-| `no_go` | 188 |
+| `no_go` | 189 |
 | `open_gate` | 109 |
-| `positive_theorem` | 774 |
+| `positive_theorem` | 773 |
 
 | criticality | count |
 |---|---:|
@@ -366,6 +366,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_backreaction_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `self_gravity_born_hardening_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
+| `self_gravity_failure_diagnosis` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_gravity_scaling_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `seventh_family_diagonal_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | claude-opus | C | - |
@@ -10812,6 +10813,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The finite entropy arithmetic in the primary runner is internally consistent with the note, but the self-gravity lane, graph constructors, evolution operators, and retained operating point are imported from an uncited upstream module not included in the restricted packet. The packet therefore does not close the physical-computational premise behind the reported states.
 - **rationale:** Issue: the note's conclusion relies on a numerical probe whose state evolution and graph construction are imported from the retained self-gravity lane, but no cited authority or source for that lane is supplied in the packet. Why this blocks: the audit can verify that the displayed entropy readout follows from the runner's imported outputs, but cannot verify that those outputs are generated from retained primitives rather than an unclosed premise. Repair target: cite and include the retained self-gravity theorem/module, or provide a self-contained runner that constructs the graph, Hamiltonian, Poisson solve, and evolution from accepted inputs. Claim boundary until fixed: this is an internally consistent exploratory diagnostic of a stated imported operating point, not an independently closed area-law negative theorem.
 - **auditor confidence:** high
+
+### `self_gravity_failure_diagnosis`
+
+- **Note:** [`SELF_GRAVITY_FAILURE_DIAGNOSIS.md`](../../docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the bounded no-go diagnosis for the specified exact-lattice Poisson-like self-gravity/backreaction loop and its retained runner outputs.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0c9a-fadd-7e03-a34f-4f9b6b868d24`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The lane is a bounded no-go because the exact epsilon=0 identity holds but nonzero-coupling rows show only tiny perturbations, fail strict convergence, and lose machine-clean end-to-end Born behavior.  _(class `C`)_
+- **chain closes:** True — The cited retained_bounded and retained_no_go authorities plus the runner output all support the stated boundary: epsilon=0 reduction is exact, while nonzero coupling has 0/3 convergence in each nonzero epsilon block and representative end-to-end Born drift of 4.911e-06. No additional physical bridge is needed for the bounded no-go scope.
+- **rationale:** The runner source constructs the specified lattice loop, computes the zero-coupling reduction, nonzero-coupling sweep, convergence flags, and Born diagnostics, and the stdout matches the note's no-go diagnosis. The claim is bounded to this architecture and does not promote the tiny perturbation into a mechanism, so the negative conclusion follows from retained inputs and completed computation.
+- **auditor confidence:** medium
 
 ### `self_gravity_scaling_note_2026-04-10`
 
