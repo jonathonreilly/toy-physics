@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 62 |
 | **retained_no_go** | 121 |
-| **retained_bounded** | 236 |
+| **retained_bounded** | 237 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 886 |
+| unaudited | 885 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
@@ -38,22 +38,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 386 |
+| `audited_clean` | 387 |
 | `audited_conditional` | 426 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 940 |
+| `unaudited` | 939 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 719 |
+| `bounded_theorem` | 720 |
 | `decoration` | 11 |
 | `meta` | 63 |
 | `no_go` | 188 |
 | `open_gate` | 109 |
-| `positive_theorem` | 776 |
+| `positive_theorem` | 775 |
 
 | criticality | count |
 |---|---:|
@@ -485,6 +485,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_radiation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
 | `wave_retardation_continuum_limit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_retardation_lab_prediction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
+| `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_moving_source_fixed_beam_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
@@ -13403,6 +13404,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The supplied runner stdout does not contain the H = 0.25 fine-point run that carries the note's conclusion; it only reports H = 0.5 and H = 0.35. The missing step is a completed retained H = 0.25 runner artifact or independent derivation producing the quoted dM, dIeq, dS, and residual values.
 - **rationale:** Issue: the note's load-bearing fine-point comparison is not reproduced by the supplied runner stdout, while the runner source default explicitly runs only coarse and medium points and describes H = 0.25 as optional and expensive. Why this blocks: the audited packet does not close the actual H = 0.25 numeric claim, even though the code appears capable of computing it when invoked with the right argument. Repair target: provide a completed retained run, cached certificate, or included log for scripts/wave_static_direct_probe.py --hs 0.25 matching the quoted values. Claim boundary until fixed: the packet supports only that the direct-static probe was implemented and run at H = 0.5 and H = 0.35, not the stated fine-point negative.
 - **auditor confidence:** high
+
+### `wave_static_fixed_beam_boundary_sensitivity_note`
+
+- **Note:** [`WAVE_STATIC_FIXED_BEAM_BOUNDARY_SENSITIVITY_NOTE.md`](../../docs/WAVE_STATIC_FIXED_BEAM_BOUNDARY_SENSITIVITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the fixed-beam boundary-sensitivity probe for the provided completed H = 0.5 run comparing field PW_phys 6.0 versus 9.0 with beam PW_phys fixed at 6.0.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0c8b-04fd-7f20-9fe7-8ac39f264bcd`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Keeping beam PW_phys fixed at 6.0 while enlarging only the field/static solve box from 6.0 to 9.0 moves dS by 30.29% and rel_MS by 83.88% at shared H = 0.5.  _(class `C`)_
+- **chain closes:** True — For the H = 0.5 scope, the runner actually constructs two field/static solve boxes, crops to the fixed beam box, propagates the same beam geometry, and computes the reported dS, dM, rel_MS, and move percentages.
+- **rationale:** The audited H = 0.5 boundary probe closes from the provided runner: the code varies field_pw_phys, keeps beam_pw_phys fixed, crops the enlarged field to the beam box, and computes the reported material dS and rel_MS changes rather than printing constants. There are no cited upstream dependencies and no external comparator is needed for this bounded computational sensitivity claim. The source note also lists an H = 0.35 table, but that completed stdout is not included, so the clean audit boundary is the provided H = 0.5 run.
+- **auditor confidence:** medium
 
 ### `wave_static_matrixfree_moving_source_fixed_beam_boundary_note`
 
