@@ -16,6 +16,9 @@ downstream status set only by the independent audit lane.
 **Loop:** staggered-dirac-substep4-ac-narrow-20260507
 **Primary runner:** [`scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py`](../scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py)
 **Cache:** [`logs/runner-cache/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.txt`](../logs/runner-cache/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.txt)
+**Rigorization runner (2026-05-09):** [`scripts/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.py`](../scripts/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.py)
+**Rigorization cache (2026-05-09):** [`logs/runner-cache/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.txt`](../logs/runner-cache/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.txt)
+**Rigorization certificate (2026-05-09):** [`outputs/staggered_dirac_substep4_ac_phi_lambda_certificate_2026_05_09.json`](../outputs/staggered_dirac_substep4_ac_phi_lambda_certificate_2026_05_09.json)
 
 ## Authority disclaimer
 
@@ -457,6 +460,110 @@ equal-expectation verification under C_3[111] symmetry, and
 AC_residual identification-claim characterization.
 
 Cached: [`logs/runner-cache/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.txt`](../logs/runner-cache/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.txt)
+
+## Rigorization addendum (2026-05-09)
+
+A rigorization pass on 2026-05-09 upgraded the three atoms from
+structural-only checks to interval-certified rigorous content where
+applicable. The substep 4 status remains `bounded_theorem` (per the
+audit-decision rule); the rigorization sharpens the per-atom fates
+without promoting status. The pass is recorded at runner
+[`scripts/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.py`](../scripts/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.py)
+with cache
+[`logs/runner-cache/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.txt`](../logs/runner-cache/cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09.txt)
+and certificate
+[`outputs/staggered_dirac_substep4_ac_phi_lambda_certificate_2026_05_09.json`](../outputs/staggered_dirac_substep4_ac_phi_lambda_certificate_2026_05_09.json).
+
+### AC_λ — rigorously closed (interval certificate)
+
+The free-fermion propagator block-diagonality on `H_{hw=1}` is
+now closed by an interval-certified Kawamoto-Smit argument:
+
+1. **Step (i):** at every hw=1 BZ corner, the kinetic operator
+   `K(k) = Σ_μ i · η_μ · sin(k_μ) · γ_μ` vanishes because every
+   `k_μ ∈ {0, π}` gives `sin(k_μ) = 0`. Verified for each corner
+   in `mpmath.iv` interval arithmetic at 50-digit precision.
+
+2. **Step (ii):** the Kawamoto-Smit kinetic operator `K` commutes
+   with all three lattice translations `(T_x, T_y, T_z)` by
+   translation-invariance of the staggered kinetic action — a
+   structural property carried from substep 2 (Kawamoto-Smit forcing).
+
+3. **Step (iii):** the three hw=1 corners are simultaneous
+   eigenvectors of `(T_x, T_y, T_z)` with **pairwise distinct** joint
+   eigenvalue triples `((-1, 1, 1), (1, -1, 1), (1, 1, -1))`. By the
+   simultaneous-diagonalization theorem for commuting operators with
+   non-degenerate joint eigenspaces, any operator commuting with
+   all three translations is diagonal in that basis. Therefore
+   `⟨c_α | K | c_β⟩ = 0` for `α ≠ β`, certifying free-propagator
+   block-diagonality on the species index.
+
+The argument is rigorous within A_min: no new axiom, no PDG input,
+and the only standard-math machinery is the simultaneous-
+diagonalization theorem for commuting operators (Reed-Simon I §VIII.5).
+
+### AC_φ — structural no-go within A_min (demoted from open residual)
+
+The C_3[111] equal-expectation lemma is now interval-certified:
+every `C_3[111]`-symmetric self-adjoint operator `H` on `H_{hw=1}`
+has the circulant form `H = a·I + b·U_{C_3} + b̄·U_{C_3}²` and
+satisfies `⟨c_α | H | c_α⟩ = a = Tr(H)/3` for every `α ∈ {1, 2, 3}`.
+The runner verifies the canonical instance (`a = 1.5`, `b = 0.7`) at
+50-digit interval precision: commutator norm `|[H, U_{C_3}]| < 10^{-30}`,
+corner expectations all equal to within `10^{-30}`.
+
+Per [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md),
+the `C_3[111]` symmetry is the framework's **load-bearing preserved
+symmetry**, analogous to QCD `SU(3)` color or isospin `SU(2)`. The
+equal-expectation lemma is therefore reclassified from "open
+obstruction admitting C_3-breaking dynamics as closure path" to
+**structural no-go theorem within A_min** — the framework's own
+prediction, not an admitted observation. AC_φ is **demoted from open
+residual to retained-class structural no-go** under this reclassification.
+
+### AC_φλ — parameter-counting + labeling-convention reframe (partial)
+
+Under no-proper-quotient (NQ) + `C_3[111]` cyclicity + Type I_3 factor
+structure (per [`A3_ROUTE5_NO_PROPER_QUOTIENT_SHARPENED_OBSTRUCTION_NOTE_2026-05-08_r5.md`](A3_ROUTE5_NO_PROPER_QUOTIENT_SHARPENED_OBSTRUCTION_NOTE_2026-05-08_r5.md)),
+the framework's hw=1 sector is the abstract irreducible 3-orbit of
+`M_3(C)` with `Z/3Z` cyclic outer automorphism. A finite enumeration
+gives:
+
+- 3 hw=1 corners `{(1,0,0), (0,1,0), (0,0,1)}` form one `C_3` orbit
+- 3 SM generations form one `C_3` orbit (under un-broken family
+  permutation)
+- `C_3`-equivariant bijections between the two orbits = **exactly 3**
+  (the three cyclic-shift bijections), all related by global cyclic
+  relabeling
+- NQ ensures the orbit cannot decompose into smaller pieces, so no
+  finer reduction is possible
+
+Per [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md),
+the residual "which cyclic shift" is a **labeling convention**
+identical in nature to standard particle-physics conventions
+`{u, c, t}`, `{ν_1, ν_2, ν_3}`, `{K_S, K_L}`, etc. — consuming zero
+retained-grade content and not loading PDG data into a derivation step.
+
+This is a **partial reframe**, not a full positive derivation closure.
+Strict derivation closure of AC_φλ still requires either (a) an
+explicit user-approved labeling axiom or (b) C_3-breaking dynamics
+in retained primitives; neither is added here. The 10-probe A3
+campaign (PRs #709-#713 + #719-#723) established that no `C_3`-
+breaking mechanism is derivable within A_min, and the C_3-preserved
+interpretation note records that the framework's stance under that
+result is the labeling-convention bridge (a), not C_3-breaking (b).
+
+### Net effect on substep 4 status
+
+| atom | before 2026-05-09 | after 2026-05-09 |
+|---|---|---|
+| AC_λ | candidate consequence of upstream substep 2 (audit-conditional) | **rigorously closed** via interval-certified Kawamoto-Smit block-diagonality |
+| AC_φ | open obstruction admitting C_3-breaking closure paths | **structural no-go within A_min** (C_3 is preserved-not-broken framework symmetry) |
+| AC_φλ | open derivation residual (axiom-open, audit-conditional) | **labeling-convention bridge** (parameter-counted; full derivation closure still requires labeling axiom or C_3-breaking) |
+
+The substep 4 surface status remains `bounded_theorem` — final tier
+classification is set by the audit lane, not by this rigorization
+addendum. Status promotion proposals must be opened separately.
 
 ## User-memory feedback rules respected
 

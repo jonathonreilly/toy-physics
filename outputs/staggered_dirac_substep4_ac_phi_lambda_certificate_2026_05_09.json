@@ -1,0 +1,150 @@
+{
+  "AC_lambda": {
+    "AC_lambda_closure_status": "rigorously closed via interval-certified Kawamoto-Smit block-diagonality",
+    "K_diagonal_in_corner_basis_certified": true,
+    "atom": "AC_lambda",
+    "claim": "Free fermion propagator block-diagonal on hw=1 corner basis (species-label decomposition)",
+    "kawamoto_smit_reference": "Kawamoto, N. & Smit, J. (1981). Effective Lagrangian and dynamical symmetry breaking in strongly coupled lattice QCD. Nucl. Phys. B192, 100-124.",
+    "method": "interval-certified Kawamoto-Smit block-diagonality",
+    "simultaneous_diagonalization_applies": true,
+    "step_i_K_at_each_corner_vanishes": true,
+    "step_i_per_corner_certificates": [
+      {
+        "K_at_corner_vanishes_interval_certified": true,
+        "corner": [
+          1,
+          0,
+          0
+        ],
+        "k1_pi_multiple": 1,
+        "k2_pi_multiple": 0,
+        "k3_pi_multiple": 0,
+        "sin_eps_threshold": 1e-30,
+        "sin_k1_max_abs": 4.3348336826487077e-51,
+        "sin_k2_max_abs": 0.0,
+        "sin_k3_max_abs": 0.0
+      },
+      {
+        "K_at_corner_vanishes_interval_certified": true,
+        "corner": [
+          0,
+          1,
+          0
+        ],
+        "k1_pi_multiple": 0,
+        "k2_pi_multiple": 1,
+        "k3_pi_multiple": 0,
+        "sin_eps_threshold": 1e-30,
+        "sin_k1_max_abs": 0.0,
+        "sin_k2_max_abs": 4.3348336826487077e-51,
+        "sin_k3_max_abs": 0.0
+      },
+      {
+        "K_at_corner_vanishes_interval_certified": true,
+        "corner": [
+          0,
+          0,
+          1
+        ],
+        "k1_pi_multiple": 0,
+        "k2_pi_multiple": 0,
+        "k3_pi_multiple": 1,
+        "sin_eps_threshold": 1e-30,
+        "sin_k1_max_abs": 0.0,
+        "sin_k2_max_abs": 0.0,
+        "sin_k3_max_abs": 4.3348336826487077e-51
+      }
+    ],
+    "step_ii_K_commutes_with_translations_structural": true,
+    "step_iii_joint_eigenvalues_pairwise_distinct": true,
+    "step_iii_per_corner_eigenvalues": [
+      {
+        "corner": [
+          1,
+          0,
+          0
+        ],
+        "joint_eigenvalues": [
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "corner": [
+          0,
+          1,
+          0
+        ],
+        "joint_eigenvalues": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "corner": [
+          0,
+          0,
+          1
+        ],
+        "joint_eigenvalues": [
+          1,
+          1,
+          -1
+        ]
+      }
+    ],
+    "upstream_authority": "STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md"
+  },
+  "AC_phi": {
+    "AC_phi_no_go_status": "RECLASSIFIED FROM 'OPEN OBSTRUCTION' TO 'STRUCTURAL NO-GO WITHIN A_MIN'. The C_3-preserved interpretation note (2026-05-08) retires the 'C_3 must be broken' framing; C_3[111] is a load-bearing preserved symmetry. The equal-expectation lemma is the framework's structural prediction, not an admitted obstruction.",
+    "U3_equals_I": true,
+    "U_T_equals_U2_cyclic_property": true,
+    "U_unitary": true,
+    "atom": "AC_phi",
+    "claim": "Every C_3[111]-symmetric self-adjoint operator on H_{hw=1} has equal expectation Tr(H)/3 on every corner-basis state",
+    "commutator_HU_minus_UH_norm": 1.3363823550460978e-51,
+    "commutator_zero_interval_certified": true,
+    "corner_expectations_all_equal_interval_certified": true,
+    "corner_expectations_max_deviation": 0.0,
+    "diagonal_max_deviation_from_a": 0.0,
+    "diagonals_all_equal_a_interval_certified": true,
+    "instance_a_value": "1.5",
+    "instance_b_value": "0.7",
+    "interpretive_authority": "C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md",
+    "method": "interval-certified circulant structure + equal-diagonal lemma",
+    "supports_AC_phi_demoted_from_open_residual": true,
+    "trace_over_3_equals_a_interval_certified": true
+  },
+  "AC_phi_lambda": {
+    "AC_phi_lambda_closure_status": "REFRAMED FROM 'OPEN DERIVATION RESIDUAL' TO 'LABELING-CONVENTION BRIDGE'. Parameter-counting on C_3-equivariant 3-orbit bijections forces the 3-fold count and reduces the residual to a global cyclic relabeling, identical in nature to standard particle-physics conventions {u, c, t}, {nu_1, nu_2, nu_3}, etc. Full positive derivation closure still requires either an explicit user-approved labeling axiom or C_3-breaking dynamics; per the C_3-preserved interpretation note the framework's stance is the labeling-convention bridge, not C_3-breaking.",
+    "C3_equivariant_bijection_count": 3,
+    "C3_equivariant_bijections_related_by_global_relabeling": true,
+    "atom": "AC_phi_lambda",
+    "claim": "Identification of framework hw=1 3-fold structure with SM flavor-generation structure",
+    "hw1_corner_orbit_C3_cyclic": true,
+    "hw1_corner_orbit_size": 3,
+    "labeling_convention_examples": [
+      "{u, c, t}: SM up-type mass-ordering convention",
+      "{nu_1, nu_2, nu_3}: neutrino mass-eigenstate labels",
+      "{K_S, K_L}: kaon lifetime-ordering convention",
+      "{electron, muon, tau}: charged-lepton mass-ordering convention"
+    ],
+    "labeling_convention_reframe_authority": "C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md",
+    "method": "parameter-counting on C_3-equivariant 3-orbit bijections + labeling-convention reframe",
+    "no_proper_quotient_upstream": true,
+    "remaining_open_residual": "Strict 'derivation' closure of which cyclic shift maps hw=1 corner -> SM generation requires either (a) explicit user-approved labeling axiom or (b) C_3-breaking dynamics; neither is added here.",
+    "supports_AC_phi_lambda_partial_closure": true,
+    "type_I3_factor_upstream": true
+  },
+  "companion_note": "docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md",
+  "date": "2026-05-09",
+  "loop": "staggered-dirac-substep4-ac-rigorize-20260509",
+  "name": "staggered_dirac_substep4_ac_phi_lambda_certificate",
+  "summary": {
+    "AC_lambda_rigorously_closed_interval_cert": true,
+    "AC_phi_lambda_partial_reframe_param_count": true,
+    "AC_phi_structural_no_go_interval_cert": true
+  }
+}
