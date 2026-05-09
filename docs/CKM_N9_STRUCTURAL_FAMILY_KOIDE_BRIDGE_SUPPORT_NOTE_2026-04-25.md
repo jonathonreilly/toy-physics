@@ -6,6 +6,8 @@
 explicit cross-sector SUPPORT commentary. This is not a retained Koide theorem
 and not a retained cross-sector identification.
 
+**Primary runner:** `scripts/frontier_ckm_n9_structural_family_koide_bridge.py`
+
 This note packages an explicit nine-member CKM support family
 
 ```text
@@ -254,3 +256,41 @@ The runner uses Python's `fractions.Fraction` for exact-rational arithmetic.
   -- retained `N_pair = 2`, `N_color = 3`, `N_quark = N_pair*N_color = 6`.
 - [`CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
   -- accepted CKM-side `2/9` support readouts.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-05-05 by
+`codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_n9_structural_family-069`
+and returned `audited_conditional`. The verdict noted that the
+runner source/stdout were unavailable and the cited W2 and CP-phase
+authorities were marked unaudited:
+
+> *The arithmetic is class (A), and runner source/stdout were unavailable,
+> but the cited W2 and CP-phase authorities are marked unaudited while
+> the counts and two-ninths authorities are audited_conditional in the
+> restricted packet.*
+
+The four declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #764 added exact-symbolic verification, awaiting re-audit) |
+| [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `unaudited` |
+| [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #766 added exact-symbolic magnitude-count verification, awaiting re-audit) |
+| [`CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md) | `audited_conditional` |
+
+### Runner registration (this PR)
+
+The previous ledger snapshot recorded `runner_path: None` and the
+runner source/stdout were unavailable to the auditor. This audit-sweep
+PR adds an explicit `**Primary runner:**` header to the note (above)
+and lands a SHA-pinned cache for
+`scripts/frontier_ckm_n9_structural_family_koide_bridge.py`
+(`PASS=35, FAIL=0`) under `logs/runner-cache/`. The runner uses
+Python's `fractions.Fraction` for exact-rational arithmetic; the
+class-(A) algebra is unchanged. The next audit pass will see the
+runner source and stdout as part of the restricted packet. No
+`docs/audit/data/*.json` files are modified and no audit_status
+promotion is requested.

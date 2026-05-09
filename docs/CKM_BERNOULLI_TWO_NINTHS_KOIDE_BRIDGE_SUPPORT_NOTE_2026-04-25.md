@@ -388,3 +388,34 @@ The runner uses Python's `fractions.Fraction` for exact-rational arithmetic
 - (NOT cited as derivation input) the `_SUPPORT_NOTE_` for the cross-sector
   A²-Koide bridge, which is the conditional path to Koide 2/9 closure that
   this note articulates but does not close.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-04-30 by
+`codex-audit-loop-critical-sweep-20260430` and returned `audited_conditional`.
+The chain-closure rationale recorded in the ledger is:
+
+> *The local step cannot be promoted because direct upstream authorities
+> remain unaudited, support/open/unknown, or terminal non-clean:
+> `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`,
+> `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`,
+> `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`.*
+
+The three declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #764 added exact-symbolic verification, awaiting re-audit) |
+| [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `unaudited` |
+| [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #766 added exact-symbolic magnitude-count verification, awaiting re-audit) |
+
+All three direct deps are `unaudited`, so this row stays at
+`audited_conditional` until the deps reach retained-grade or
+audited-clean status. PRs #764 and #766 added new exact-symbolic
+verification evidence to two of the three unaudited deps but do not
+themselves promote audit status; the audit lane will re-evaluate on
+the next pass. The local class-(A) algebra and the cached runner
+`scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py` remain
+fresh (`PASS=31, FAIL=0`).

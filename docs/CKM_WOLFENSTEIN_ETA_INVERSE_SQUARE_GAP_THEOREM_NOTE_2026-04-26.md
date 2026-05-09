@@ -215,3 +215,59 @@ The runner:
 - cross-checks Bernoulli compatibility,
 - audits that `W2` is a generic factorization on the count surface rather than
   an SM-uniqueness statement.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-05-05 by
+`codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_wolfenstein_eta_inve-090`
+and returned `audited_conditional`. The verdict identifies a
+concrete local extraction gap, not just upstream-conditional propagation:
+
+> *Direct authorities in the restricted packet are not retained-grade:
+> several are marked unaudited and CKM_MAGNITUDES is audited_conditional;
+> additionally, the runner exits nonzero because it cannot extract the
+> asserted Q_L literal from LEFT_HANDED_CHARGE_MATCHING_NOTE.*
+
+The six declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) | `unaudited` |
+| [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) | `unaudited` |
+| [`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+| [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #764 added exact-symbolic verification, awaiting re-audit) |
+| [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `unaudited` |
+| [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #766 added exact-symbolic magnitude-count verification, awaiting re-audit) |
+
+### Local extraction gap (report-only)
+
+The ledger-recorded runner failure at
+`scripts/frontier_ckm_wolfenstein_eta_inverse_square_gap.py` reports
+
+```text
+S1 source extraction from retained matter-content literal
+  [FAIL (D)] Extract Q_L:(a,b) from retained doc
+FATAL: could not extract Q_L literal.
+```
+
+This is the same Q_L-literal extraction failure that affects
+[`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md):
+`LEFT_HANDED_CHARGE_MATCHING_NOTE.md` does discuss the `(2,3)` and
+`(2,1)` blocks of the LH-doublet sector, but does not write the Q_L
+literal in the `Q_L : (a,b)_{Y}` form the runner pattern expects. Two
+repair paths remain, both deferred to a separate proof-walk PR rather
+than this audit-sweep:
+
+1. *Source-side repair*: amend `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` to
+   include the explicit literal `Q_L : (2,3)_{+1/3}` so the extractor
+   succeeds.
+2. *Runner-side repair*: relax the extractor pattern to accept the
+   existing `(2,3)` block discussion plus the surrounding
+   "LH-doublet sector" context.
+
+Until one of those lands, this row is upstream-conditional on the
+unaudited matter-content authorities AND additionally fails its own
+local extraction step, so it cannot be promoted. The local
+class-(A) algebra in §§W1--W6 is unaffected.

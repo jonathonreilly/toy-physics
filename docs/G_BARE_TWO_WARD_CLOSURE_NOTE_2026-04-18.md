@@ -197,3 +197,44 @@ F_Htt^(0)(g_bare) = 1 / sqrt(6)     (independent of g_bare)
 F_Htt^(0)(g_bare)^2 = g_bare² / 6   (same Gamma^(4) coefficient)
 => g_bare = 1.
 ```
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-04-30 by
+`codex-audit-loop-critical-sweep-20260430` and returned `audited_conditional`.
+The chain-closure rationale recorded in the ledger is:
+
+> *The local step cannot be promoted because direct upstream authorities
+> remain unaudited, support/open/unknown, or terminal non-clean:
+> `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`,
+> `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`,
+> `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`,
+> `G_BARE_RIGIDITY_THEOREM_NOTE.md`,
+> `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`.*
+
+The five declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md) | `retained_bounded` (cross-confirmed `audited_clean`, 2026-05-05) |
+| [`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md) | `audited_conditional` |
+| [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) | `unaudited` |
+| [`G_BARE_RIGIDITY_THEOREM_NOTE.md`](G_BARE_RIGIDITY_THEOREM_NOTE.md) | `unaudited` |
+| [`G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md) | `unaudited` |
+
+The Rep-B-independence dep has reached retained-grade audit status since the
+2026-04-30 verdict snapshot. The four other deps remain `unaudited` or
+`audited_conditional`, so this row stays at `audited_conditional` until the
+remaining deps are audited; the local class-(A) algebra and the proof in
+§§A--C are unchanged. The cached runner
+`scripts/frontier_g_bare_two_ward_closure.py` remains fresh
+(`PASS=18, FAIL=0`).
+
+Downstream cross-reference: PR #767's upgrade theorem
+[`G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md`](G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md)
+and the same-1PI pinning theorem audit-sweep footer
+([`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md))
+both reference the same upstream-conditional structure. This row is the
+parent integration note; it inherits the unaudited deps directly.

@@ -288,3 +288,38 @@ The runner uses the Python standard library plus the canonical
   -- retained `lambda^2 = alpha_s(v)/2`.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   -- canonical `alpha_s(v)` derivation.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-04-30 by
+`codex-audit-loop-critical-sweep-20260430` and returned `audited_conditional`.
+The chain-closure rationale recorded in the ledger is:
+
+> *The local step cannot be promoted because direct upstream authorities
+> remain unaudited, support/open/unknown, or terminal non-clean:
+> `CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`,
+> `ALPHA_S_DERIVED_NOTE.md`,
+> `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`,
+> `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`,
+> `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`.*
+
+The five declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+| [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md) | `audited_conditional` |
+| [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #764 added exact-symbolic verification, awaiting re-audit) |
+| [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `unaudited` |
+| [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #768 added exact-symbolic right-angle verification, awaiting re-audit) |
+
+Three of the five direct deps are `unaudited` and two are `audited_conditional`,
+so this row stays at `audited_conditional` until the deps reach retained-grade
+or audited-clean status. PRs #764 and #768 added new exact-symbolic verification
+evidence to two of the unaudited deps but do not themselves promote audit
+status; the audit lane will re-evaluate on the next pass. The local
+class-(A) algebra and the cached runner
+`scripts/frontier_ckm_thales_cross_system_cp_ratio.py` remain fresh
+(`PASS=35, FAIL=0`).

@@ -465,3 +465,39 @@ authorities are retained on `main`.
   -- retained `N_quark = N_pair × N_color = 6`, `N_pair = 2`, `N_color = 3`.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   -- canonical `α_s(v)` retained input.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-05-05 by
+`codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_jarlskog_exact_nlo_c-076`
+and returned `audited_conditional`. The chain-closure rationale
+recorded in the ledger is:
+
+> *The derivation is an algebraic consequence of imported W1/W2/N2/count
+> and alpha_s inputs, but the restricted packet marks direct cited
+> authorities as unaudited or audited_conditional rather than
+> retained-grade. The rubric forbids audited_clean when any cited
+> authority is not retained-grade, and the runner verifies substitutions
+> and comparator consistency rather than closing those upstream premises.*
+
+The five declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md) | `audited_conditional` |
+| [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #764 added exact-symbolic verification, awaiting re-audit) |
+| [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `unaudited` |
+| [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #772 added exact-symbolic protection-identity verification, awaiting re-audit) |
+| [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #766 added exact-symbolic magnitude-count verification, awaiting re-audit) |
+
+Four of the five direct deps are `unaudited` and one is
+`audited_conditional`, so this row stays at `audited_conditional` until
+the deps reach retained-grade or audited-clean status. PRs #764, #766,
+and #772 added new exact-symbolic verification evidence to three of the
+unaudited deps but do not themselves promote audit status; the audit
+lane will re-evaluate on the next pass. The local class-(A) algebra
+and the cached runner
+`scripts/frontier_ckm_jarlskog_exact_nlo_closed_form.py` remain fresh
+(`PASS=36, FAIL=0`).

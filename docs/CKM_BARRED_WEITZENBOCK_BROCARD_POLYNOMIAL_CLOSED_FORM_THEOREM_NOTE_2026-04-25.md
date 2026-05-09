@@ -526,3 +526,41 @@ load-bearing here):**
   context in the W7 unification observation; each form of `P(α_s)`
   is independently re-derived here from retained inputs).
 - Any candidates-tier theorem.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-05-05 by
+`codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_barred_weitzenbock_b-087`
+and returned `audited_conditional`. The chain-closure rationale
+recorded in the ledger is:
+
+> *The load-bearing identities are class-A algebra, but the cited
+> authority packet marks upstream inputs as audited_conditional or
+> unaudited. The theorem depends on rho_bar, eta_bar, N_pair, N_color,
+> N_quark, and related retained-input claims whose retained-grade
+> closure is not established in this restricted packet.*
+
+The eight declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #772 added exact-symbolic protection-identity verification, awaiting re-audit) |
+| [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #766 added exact-symbolic magnitude-count verification, awaiting re-audit) |
+| [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `unaudited` |
+| [`CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+| [`CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+| [`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+| [`CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+| [`CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md) | `audited_conditional` |
+
+Three of the eight direct deps are `unaudited` and five are
+`audited_conditional`, so this row stays at `audited_conditional` until
+the deps reach retained-grade or audited-clean status. PRs #766 and
+#772 added new exact-symbolic verification evidence to two of the
+unaudited deps but do not themselves promote audit status; the audit
+lane will re-evaluate on the next pass. The local class-(A) algebra
+and the cached runner
+`scripts/frontier_ckm_barred_weitzenbock_brocard_polynomial_closed_form.py`
+remain fresh (`PASS=28, FAIL=0`).

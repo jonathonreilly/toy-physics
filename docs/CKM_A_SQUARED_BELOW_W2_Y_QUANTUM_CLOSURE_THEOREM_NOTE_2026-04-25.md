@@ -533,3 +533,62 @@ The runner:
 - CL3_SM_EMBEDDING_THEOREM (support-tier; explicitly "not part of the
   accepted minimal-input stack").
 - Any unmerged branches.
+
+---
+
+## Current audit-lane disposition (informational)
+
+This row was audited on 2026-05-05 by
+`codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_a_squared_below_w2_y-070`
+and returned `audited_conditional`. The verdict identifies a concrete
+local extraction gap, not just upstream-conditional propagation:
+
+> *The proof imports a retained Q_L representation source and an
+> identification of CKM counts with its representation dimensions, but
+> the cited authority packet does not close either point. Without a
+> retained Q_L literal and an audited bridge from CKM N_pair/N_color to
+> matter-representation dimensions, the result is a conditional
+> definition/import rather than a below-W2 theorem.*
+
+The seven declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) |
+|---|---|
+| [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) | `unaudited` |
+| [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) | `unaudited` |
+| [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) | `meta` |
+| [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) | `retained_bounded` (cross-confirmed `audited_clean`, 2026-05-07) |
+| [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | `unaudited` (PR #764 added exact-symbolic verification, awaiting re-audit) |
+| [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | `unaudited` (PR #766 added exact-symbolic magnitude-count verification, awaiting re-audit) |
+| [`CL3_TASTE_GENERATION_THEOREM.md`](CL3_TASTE_GENERATION_THEOREM.md) | `audited_conditional` |
+
+### Local extraction gap (report-only)
+
+The ledger-recorded runner failure at
+`scripts/frontier_ckm_a_squared_below_w2_y_quantum_closure.py` reports
+
+```text
+S1 P2: Extract retained Q_L representation literal (NOT hard-coded)
+  Reading docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  Searching for retained literal: Q_L : (a,b)_{Y}
+  Extracted (dim_SU2, dim_SU3) for Q_L: None
+  [FAIL] S1 P2: Q_L representation literal extracted from retained doc
+```
+
+`LEFT_HANDED_CHARGE_MATCHING_NOTE.md` does discuss the `(2,3)` and `(2,1)`
+blocks of the LH-doublet sector, but does not write the Q_L literal in
+the `Q_L : (a,b)_{Y}` form the runner pattern expects. Two repair paths
+remain, both deferred to a separate proof-walk PR rather than this
+audit-sweep:
+
+1. *Source-side repair*: amend `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` to
+   include the explicit literal `Q_L : (2,3)_{+1/3}` so the extractor
+   succeeds.
+2. *Runner-side repair*: relax the extractor pattern to accept the
+   existing `(2,3)` block discussion plus the surrounding
+   "LH-doublet sector" context.
+
+Until one of those lands, this row is upstream-conditional on the
+unaudited matter-content authorities AND additionally fails its own
+local extraction step, so it cannot be promoted. The local
+class-(A) algebra in the body of the note is unaffected.
