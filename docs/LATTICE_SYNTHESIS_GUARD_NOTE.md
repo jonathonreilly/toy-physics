@@ -1,5 +1,7 @@
 # Lattice Synthesis Guard Note
 
+**Type:** meta
+
 **Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
 **Status:** support / narrow synthesis guard note; NN refinement is a bounded bridge, not a continuum theorem and not a tier-ratifiable continuum claim.
 

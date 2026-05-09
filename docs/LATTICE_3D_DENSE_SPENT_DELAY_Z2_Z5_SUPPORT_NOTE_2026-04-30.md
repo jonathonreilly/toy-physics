@@ -1,5 +1,7 @@
 # 3D Dense Spent-Delay `z=2..5` Support Note
 
+**Type:** meta
+
 **Date:** 2026-04-30
 **Status:** support. Salvage note for the runner-supported portion of the
 3D dense spent-delay wrapper after its wider attractive-window claim failed

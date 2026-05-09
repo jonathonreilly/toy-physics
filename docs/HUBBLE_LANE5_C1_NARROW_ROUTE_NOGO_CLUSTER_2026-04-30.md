@@ -5,6 +5,7 @@
 no-go observations whose wrapper exhaustion claim failed audit. This
 note does not claim route exhaustion, Axiom* minimality, or `(G1)` /
 `(C1)` closure status.
+**Type:** meta
 
 ---
 

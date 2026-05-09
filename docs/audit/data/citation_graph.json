@@ -30462,11 +30462,11 @@
     },
     "ai_methodology.raw.prompts_session_04c820e1": {
       "claim_id": "ai_methodology.raw.prompts_session_04c820e1",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "75bb704d1b169cc9c76963344562f78625b469e4c71cf1bc868e63233007507e",
+      "note_hash": "54a9869cf606d6a2b345ad8d42f68528fddb7bb9e93b04e961caa559459e05ad",
       "path": "docs/ai_methodology/raw/prompts_session_04c820e1.md",
       "runner_path": null,
       "title": "Claude Session \u2014 04c820e1-77cd-416f-8917-21767de255fd"
@@ -30682,11 +30682,11 @@
     },
     "ai_methodology.raw.prompts_session_9fc3990b_jonreilly": {
       "claim_id": "ai_methodology.raw.prompts_session_9fc3990b_jonreilly",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "8a3583d4a5a859a19ce6d8fbc7a96aacb570d57d7cd62da89af9a3dee8972b54",
+      "note_hash": "e0e8a6dcaf618c7e433fa0c684badd9d265fb5c88765be1e321c18dd27334f60",
       "path": "docs/ai_methodology/raw/prompts_session_9fc3990b_jonreilly.md",
       "runner_path": null,
       "title": "Claude Session \u2014 9fc3990b-c690-4f72-a5a6-996f5baaa803"
@@ -30726,11 +30726,11 @@
     },
     "ai_methodology.raw.prompts_session_current": {
       "claim_id": "ai_methodology.raw.prompts_session_current",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "22bc007b58508448a1ac78b2f6d9752672d13310423bbee90766441b217f8791",
+      "note_hash": "d3a8b668c5a099043d2b31feb43f6ad1956c0fa6b3a6b4af99fae8e54b05e655",
       "path": "docs/ai_methodology/raw/prompts_session_current.md",
       "runner_path": null,
       "title": "Claude Session \u2014 Current (2026-04-25, in progress)"
@@ -31708,11 +31708,11 @@
     },
     "audit_dm_runner_stale_path_cleanup_note_2026-05-01": {
       "claim_id": "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "f90a0e80282addd84d760ba2218aa4af9be5442b7c3fd62833b830323c705c29",
+      "note_hash": "a6df14e138dc6eb25ee0440e8efc66481b09d2a138639de1c1969586b54d2f3d",
       "path": "docs/AUDIT_DM_RUNNER_STALE_PATH_CLEANUP_NOTE_2026-05-01.md",
       "runner_path": null,
       "title": "Audit DM Runner Stale-Path Cleanup"
@@ -35424,11 +35424,11 @@
     },
     "dm_abcc_basin_finite_search_support_note_2026-04-30": {
       "claim_id": "dm_abcc_basin_finite_search_support_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "94edf556047aada8528e25f85d3def7f85c333b2ff0d77c8d3dda6277e7e0d7d",
+      "note_hash": "b7bc830a42ff721d23bddda24e205be77d2e06687f99504b9e0b1caf5e3baea4",
       "path": "docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "DM A-BCC Basin Finite-Search Support Note"
@@ -35542,9 +35542,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "98bcba48baf02d11f3380456c2492e400610201d7ddbfe84ea044d514bd457bf",
+      "note_hash": "65fc2c88c89e4bc7b49b9215a860e1aee2068154dd99efd4507b36c5a43d23b9",
       "path": "docs/DM_CHAMBER_SIGNATURE_STRUCTURE_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_dple_theorem.py",
       "title": "DM Chamber Signature Structure -- F4 Closed by DPLE Theorem"
     },
     "dm_continuum_limit_velocity_note": {
@@ -37476,11 +37476,11 @@
     },
     "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15": {
       "claim_id": "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "72b74d7bd0613cb82b1fe063b66468919812b4856108b19e048a109ea604706d",
+      "note_hash": "7cbba2c49660875a89c790dd40fcb53769e139e00043d79e095607daf4c83931",
       "path": "docs/DM_NEUTRINO_TWO_HIGGS_CLOSURE_ATTACKS_NOTE_2026-04-15.md",
       "runner_path": null,
       "title": "DM Neutrino Two-Higgs Closure Attacks"
@@ -38613,9 +38613,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "3cbcd386fb3bf68bd3b43357aae3f87e8d79a74132e27d0390e5bfe22817772d",
+      "note_hash": "5eb3ca8e3d6fba15d71ee37ad367e16a358b27daf0622c198f09a973073bbcc2",
       "path": "docs/EDGE_DELETION_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/edge_deletion_boundary_sweep.py",
       "title": "Edge Deletion Boundary: Gravity Sign Flip"
     },
     "edge_deletion_boundary_sweep_note": {
@@ -38738,9 +38738,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "cd016c4a4943c45c8aa13c3634e29c61f0467dc5c13b98b2546ed6389f11f4e2",
+      "note_hash": "b4e53212cc6ab50280acb5bc853a3d2703f465fb469518e46169accb5824125e",
       "path": "docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_emergent_product_law.py",
       "title": "Emergent M1*M2 Product Law Audit"
     },
     "emergent_product_law_note": {
@@ -39097,9 +39097,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "00ee4a6d6225212eb7bc2a5cca58a62650247886921f11e770b28e3328d808e5",
+      "note_hash": "5e4309eb1da168a9122eaf1931faf89d9e31154e37ed7f61677f47cbfa1a28af",
       "path": "docs/FIELD_EQUATION_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_field_equation_uniqueness.py",
       "title": "Field Equation Derivation \u2014 Variational Argument"
     },
     "fifth_family_complex_boundary_note": {
@@ -39199,11 +39199,11 @@
     },
     "flagship_paper_contribution_statement_note": {
       "claim_id": "flagship_paper_contribution_statement_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "4ea661c2ade5b573bb6a22e6b307c7894c3ff7357f22f2face54054937df7ced",
+      "note_hash": "be1c7aae8b7922640125bccea0bbc7be44140bcc9ca9cf5311d8a6d60e0a5082",
       "path": "docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md",
       "runner_path": null,
       "title": "Flagship Paper Contribution Statement Note"
@@ -39273,11 +39273,11 @@
     },
     "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30": {
       "claim_id": "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "ea1071a99b1bd0e8ffd357cba35232305a5f4f8768fed872509db053a1d8d11d",
+      "note_hash": "a45f7f26421fee4f3cda8539aea537c492490cf7565900bea90aa6a40c1c6358",
       "path": "docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "Framework Bare Alpha Ratio Assumed-Input Identity Support Note"
@@ -41857,11 +41857,11 @@
     },
     "higher_dimension_status_2026-04-01": {
       "claim_id": "higher_dimension_status_2026-04-01",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "431792951752d71a1610b7625a92ab0be3adb341dff2853f2baedef1dafe7c11",
+      "note_hash": "b204634cf75c92d473e4a30136db53c371db47657c02bf6250d54849e83329ba",
       "path": "docs/HIGHER_DIMENSION_STATUS_2026-04-01.md",
       "runner_path": null,
       "title": "Higher-Dimension Status"
@@ -42071,11 +42071,11 @@
     },
     "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30": {
       "claim_id": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "a58c078fa23b3588d7b09c9acd9173ffd2c3d623a95d6a1ce5ff7e95868ad73a",
+      "note_hash": "0ade7802671831da3762743fa14d9cc341764f9405fb6b7eb65faf696a406a6f",
       "path": "docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md",
       "runner_path": null,
       "title": "Hubble Lane 5 C1 Narrow Route No-Go Cluster"
@@ -42403,9 +42403,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "8af5157d3863ea17ea9b48aa6d94fa9101b6543e0bdb67cd9d107ee20d0183d2",
+      "note_hash": "b2a579427d14557abe92724f62c97a9a5f02014f71862b7f665f7452380dc361",
       "path": "docs/INVERSE_PROBLEM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/inverse_problem_graph_requirements.py",
       "title": "Inverse Problem: What Does Newton+Born Require of the Network?"
     },
     "irregular_directional_observable_note_2026-04-11": {
@@ -44723,11 +44723,11 @@
     },
     "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30": {
       "claim_id": "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "0db3469239c5c9293af057ae8a96a320796d8c18328fff6924f14829a876c38e",
+      "note_hash": "7ffbb5780258c61879f9fc55f32d5ddca414ba003cfc72eec373778b5ce662d1",
       "path": "docs/LATTICE_3D_DENSE_SPENT_DELAY_Z2_Z5_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "3D Dense Spent-Delay `z=2..5` Support Note"
@@ -45042,11 +45042,11 @@
     },
     "lattice_synthesis_guard_note": {
       "claim_id": "lattice_synthesis_guard_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "b9e06290d1972580da24b31d3fd237c048c2683e9d0612891a2f43a7544c3202",
+      "note_hash": "af8bf5b72c7a524946a57ffe347c1a09b9a641c7c4072bba10d47de12d850ad4",
       "path": "docs/LATTICE_SYNTHESIS_GUARD_NOTE.md",
       "runner_path": null,
       "title": "Lattice Synthesis Guard Note"
@@ -45650,11 +45650,11 @@
     },
     "memory_decay_diagnosis_2026-04-11": {
       "claim_id": "memory_decay_diagnosis_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "b2051980eba2d6711d32782c8791e604e5903a44c13de4987ba745b73fbc99bb",
+      "note_hash": "352c229ebb5bd33600428844193ec3cc0e8c82a7058fe9346e391c45be0fa910",
       "path": "docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md",
       "runner_path": null,
       "title": "Memory Signal Decay \u2014 Root Cause: Yukawa Screening"
@@ -47448,9 +47448,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1328541d852f206ca2297e255bc4b82c061f7730280fd12c9e1f5053bfdebc5b",
+      "note_hash": "b903af91f033b62222974015471c8ece213c570ac07b293514728a68ec9a4c4e",
       "path": "docs/NEWTON_PERSISTENT_PATTERN_CONTROL_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_inertial_object_probe.py",
       "title": "Newton Persistent-Pattern Control Note"
     },
     "newtonian_distance_law_confirmed": {
@@ -55659,11 +55659,11 @@
     },
     "synthesis_note_3d": {
       "claim_id": "synthesis_note_3d",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "e145275ec311df81de8c78f90509f6124d548a81992ccf0a784efbffeb2dbaa6",
+      "note_hash": "ec1b71221fa16d4ab9df21bc5d794116574c321eeaacef7d177dc9682cd5939d",
       "path": "docs/SYNTHESIS_NOTE_3D.md",
       "runner_path": null,
       "title": "Synthesis Note: 3D Extension of Discrete Causal DAG Model"
@@ -56566,11 +56566,11 @@
     },
     "unified_basin_signed_source_control_support_note_2026-04-30": {
       "claim_id": "unified_basin_signed_source_control_support_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "3660d5709c77e310a24f243bd197ec86fd7eccc7df3ffdf14a95cb33ac97ff4f",
+      "note_hash": "8152f9da77e662e17203f5cb0ea2e7283b87a768769ecb3587bf981c7c1c1de9",
       "path": "docs/UNIFIED_BASIN_SIGNED_SOURCE_CONTROL_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "Unified Basin Signed-Source Control Support Note"
@@ -56884,11 +56884,11 @@
     },
     "universal_gr_polarization_frame_bundle_attempt": {
       "claim_id": "universal_gr_polarization_frame_bundle_attempt",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "12fff61cac271d01633940d9c88438880238347b2696a34bbaacc9d153a414b7",
+      "note_hash": "d76ee7a6e988a6e6b2eb66eeaa4a779153da57a67f8bfb8662c2ef9b2e326afd",
       "path": "docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md",
       "runner_path": null,
       "title": "Universal GR Polarization-Frame Bundle Attempt on `PL S^3 x R`"
@@ -60964,24 +60964,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 156,
-      "meta": 17,
+      "meta": 33,
       "no_go": 14,
-      "none": 1693,
+      "none": 1677,
       "open_gate": 19,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 661,
-      "meta": 17,
+      "bounded_theorem": 657,
+      "meta": 33,
       "no_go": 122,
       "none": 459,
-      "open_gate": 113,
-      "positive_theorem": 618
+      "open_gate": 109,
+      "positive_theorem": 610
     },
     "edge_count": 7415,
     "leaf_count": 532,
     "node_count": 1990,
     "root_count": 825,
-    "runners_with_path": 1581
+    "runners_with_path": 1587
   }
 }

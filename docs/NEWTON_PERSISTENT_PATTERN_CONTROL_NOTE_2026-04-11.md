@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-11  
 **Status:** bounded negative control for the Newton derivation path
+**Primary runner:** scripts/persistent_inertial_object_probe.py
 
 ## What Was Checked
 

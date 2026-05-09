@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-01
 **Status:** support - structural or confirmatory support note
+**Type:** meta
 
 ## The claim
 

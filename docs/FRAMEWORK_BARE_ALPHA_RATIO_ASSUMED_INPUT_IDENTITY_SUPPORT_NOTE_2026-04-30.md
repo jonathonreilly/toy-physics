@@ -1,5 +1,7 @@
 # Framework Bare Alpha Ratio Assumed-Input Identity Support Note
 
+**Type:** meta
+
 **Date:** 2026-04-30
 **Status:** support. Salvage note for algebraic identities preserved after
 the dimension-fixed bare-coupling wrapper failed audit.

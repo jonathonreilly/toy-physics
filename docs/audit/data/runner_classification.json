@@ -3252,6 +3252,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_dm_candidate_mass_window_theorem.py"
     },
+    "dm_chamber_signature_structure_note_2026-04-19": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_dm_dple_theorem.py"
+    },
     "dm_continuum_limit_velocity_note": {
       "assert_count": 0,
       "counts": {
@@ -5712,6 +5724,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dt1_time_dimension_proof_walk_lattice_independence.py"
     },
+    "edge_deletion_boundary_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/edge_deletion_boundary_sweep.py"
+    },
     "edge_deletion_boundary_sweep_note": {
       "assert_count": 0,
       "counts": {
@@ -5831,6 +5855,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_emergent_lorentz_invariance.py"
+    },
+    "emergent_product_law_audit_2026-04-11": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_emergent_product_law.py"
     },
     "emergent_product_law_note": {
       "assert_count": 0,
@@ -6107,6 +6143,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/fermion_parity_z2_grading_check.py"
+    },
+    "field_equation_derivation_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_field_equation_uniqueness.py"
     },
     "fifth_family_complex_boundary_note": {
       "assert_count": 0,
@@ -8737,6 +8785,18 @@
       "runner": "scripts/frontier_industrial_sdp_bootstrap_block02.py"
     },
     "inverse_problem_graph_requirements_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/inverse_problem_graph_requirements.py"
+    },
+    "inverse_problem_note": {
       "assert_count": 0,
       "counts": {
         "A": 0,
@@ -11999,6 +12059,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_distance_law_definitive.py"
+    },
+    "newton_persistent_pattern_control_note_2026-04-11": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/persistent_inertial_object_probe.py"
     },
     "newtonian_distance_law_confirmed": {
       "assert_count": 0,
@@ -21482,6 +21554,7 @@
     "scripts/edge_deletion_boundary_sweep.py": {
       "assert_count": 0,
       "claims": [
+        "edge_deletion_boundary_note",
         "edge_deletion_boundary_sweep_note"
       ],
       "counts": {
@@ -23982,6 +24055,7 @@
     "scripts/frontier_dm_dple_theorem.py": {
       "assert_count": 1,
       "claims": [
+        "dm_chamber_signature_structure_note_2026-04-19",
         "dm_dple_abcc_no_go_note_2026-04-19",
         "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19"
       ],
@@ -26999,6 +27073,7 @@
     "scripts/frontier_emergent_product_law.py": {
       "assert_count": 0,
       "claims": [
+        "emergent_product_law_audit_2026-04-11",
         "emergent_product_law_note"
       ],
       "counts": {
@@ -27145,6 +27220,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_field_equation_uniqueness.py": {
+      "assert_count": 0,
+      "claims": [
+        "field_equation_derivation_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_finite_rank_source_to_metric_theorem.py": {
@@ -37771,7 +37861,8 @@
     "scripts/inverse_problem_graph_requirements.py": {
       "assert_count": 0,
       "claims": [
-        "inverse_problem_graph_requirements_note"
+        "inverse_problem_graph_requirements_note",
+        "inverse_problem_note"
       ],
       "counts": {
         "A": 0,
@@ -39143,6 +39234,7 @@
     "scripts/persistent_inertial_object_probe.py": {
       "assert_count": 0,
       "claims": [
+        "newton_persistent_pattern_control_note_2026-04-11",
         "persistent_inertial_object_probe_note"
       ],
       "counts": {
@@ -41465,12 +41557,12 @@
     "dominant_class_distribution": {
       "A": 21,
       "B": 174,
-      "C": 628,
+      "C": 629,
       "D": 232,
       "none": 426
     },
-    "runners_classified": 1481,
-    "runners_with_C": 758,
+    "runners_classified": 1482,
+    "runners_with_C": 759,
     "runners_with_D": 378
   }
 }

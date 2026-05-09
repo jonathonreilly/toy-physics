@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-11  
 **Status:** approved for bounded promotion to `main`
+**Primary runner:** scripts/frontier_emergent_product_law.py
 
 ## Decision
 

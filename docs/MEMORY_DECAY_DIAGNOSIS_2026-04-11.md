@@ -1,5 +1,7 @@
 # Memory Signal Decay — Root Cause: Yukawa Screening
 
+**Type:** meta
+
 **Status:** support - diagnostic explanation for memory-screening results
 **Date:** 2026-04-11
 

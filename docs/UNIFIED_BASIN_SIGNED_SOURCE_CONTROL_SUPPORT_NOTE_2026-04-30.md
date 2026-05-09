@@ -1,5 +1,7 @@
 # Unified Basin Signed-Source Control Support Note
 
+**Type:** meta
+
 **Date:** 2026-04-30
 **Status:** support. Salvage note for the signed-source control observations
 preserved after the unified-basin wrapper failed audit.

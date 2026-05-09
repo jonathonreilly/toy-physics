@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-04
 **Status:** support - structural or confirmatory support note
+**Primary runner:** scripts/edge_deletion_boundary_sweep.py
 
 ## Result
 

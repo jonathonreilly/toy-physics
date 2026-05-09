@@ -4,6 +4,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / attempt note  
+**Type:** meta
 **Purpose:** test whether the current axiom-first universal stack can derive a
 canonical covariant `3+1` polarization-frame / projector bundle before
 curvature localization

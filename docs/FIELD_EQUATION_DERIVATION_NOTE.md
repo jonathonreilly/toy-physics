@@ -2,6 +2,7 @@
 
 **Status:** support - structural or confirmatory support note
 **Date:** 2026-04-11
+**Primary runner:** scripts/frontier_field_equation_uniqueness.py
 
 ## The Problem
 

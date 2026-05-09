@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Status:** bounded - bounded or caveated result note
+**Type:** meta
 
 ## Exact live gaps
 
