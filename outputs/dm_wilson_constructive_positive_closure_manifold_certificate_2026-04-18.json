@@ -1,4 +1,23 @@
 {
+  "analytic_F_prime_at_midpoint": {
+    "F_prime_mid": 0.034474247847878794,
+    "P_row1_at_mid": [
+      0.018813661294164907,
+      0.9432826622362294,
+      0.037903676469605685
+    ],
+    "computed_via": "exact eigenvector derivative formula at mp.prec=200",
+    "dP_row1_at_mid": [
+      0.004433091071444831,
+      -0.004405782317402316,
+      -2.7308754042514806e-05
+    ],
+    "psi_prime_at_P_row1": [
+      0.19803724658555752,
+      -0.0008328587840814314,
+      -0.012376309999802907
+    ]
+  },
   "base_point": {
     "a": 1.16845863,
     "b": 0.46803892,
@@ -7,52 +26,97 @@
     "e_base": 1.88733851171
   },
   "bracket": {
-    "F_hi": 3.446009704344277e-05,
-    "F_lo": -3.448839492214972e-05,
-    "F_mid": -7.993605777301127e-15,
+    "F_hi": 3.446009704378433e-05,
+    "F_lo": -3.4488394921916335e-05,
+    "F_mid": -7.745780574379664e-15,
     "delta_e": 0.001,
     "e_hi": 1.88833851171,
-    "e_lo": 1.8863385117100002,
+    "e_lo": 1.88633851171,
     "floating_point_noise_floor_used": 1e-12,
     "sign_change": true,
-    "sign_change_margin": 3.446009704344277e-05
+    "sign_change_margin": 3.446009704378433e-05
   },
-  "central_fd_step_stability": {
-    "max_value": 0.03447425067637511,
-    "min_value": 0.03447424598279625,
-    "span": 4.693578858905312e-09,
-    "step_sizes": [
-      0.001,
-      0.0001,
-      1e-05,
-      1e-06,
-      1e-07
+  "certificate_kind": "krawczyk_interval_regular_root_with_davis_kahan_eigenvector_perturbation",
+  "claim_id": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+  "davis_kahan_eigenvector_deviation_bounds": {
+    "DK_bounds_per_k": [
+      0.0014525763791904066,
+      0.0014525763791904066,
+      0.00011632435695108686
     ],
-    "step_stability_threshold_used": 1e-06,
-    "values": [
-      0.03447424598279625,
-      0.03447424782865305,
-      0.034474247878613085,
-      0.034474247845306394,
-      0.03447425067637511
+    "P_intervals_hi": [
+      0.019333510452086002,
+      0.9468376382969017,
+      0.03796398258521405
+    ],
+    "P_intervals_lo": [
+      0.018302252048793332,
+      0.9397361260881063,
+      0.03784342447942139
     ]
   },
-  "certificate_kind": "validated_numerics_regular_root_with_uniform_slope_lower_bound",
-  "claim_id": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
-  "constructive_positive_branch_on_bracket": {
-    "min_Delta_src": 0.0007990900600199524,
-    "min_E1": 0.30266301883942304,
-    "min_E2": 2.00340048277831,
-    "min_gamma": 0.10382241684998877
+  "interval_F_prime_over_bracket": {
+    "F_prime_hi": 0.051414956359356535,
+    "F_prime_lo": 0.01913174425252897,
+    "F_prime_uniformly_nonzero": true,
+    "F_prime_width": 0.032283212106827566,
+    "dP_intervals_hi": [
+      0.006258312462425314,
+      -0.0026008472005613213,
+      0.000142157203177314
+    ],
+    "dP_intervals_lo": [
+      0.002612911816492506,
+      -0.00622020613964233,
+      -0.00019654720448825891
+    ],
+    "psi_p_intervals_hi": [
+      0.2088753132039456,
+      -0.0007799713910810383,
+      -0.011614300591699449
+    ],
+    "psi_p_intervals_lo": [
+      0.1872509312453151,
+      -0.0008864755762637614,
+      -0.013140944471751851
+    ]
+  },
+  "interval_H_bounds_over_bracket": {
+    "eigenvalues_at_mid": [
+      0.002554687545955301,
+      0.15356321455954144,
+      2.037471095924915
+    ],
+    "frob_norm_H_perturbation_eps_H": 0.0001549457272387681,
+    "gap_min": 0.15100852701358614,
+    "individual_gaps_at_mid": [
+      0.15100852701358614,
+      0.15100852701358614,
+      1.8839078813653738
+    ],
+    "spectral_gap_strict": true
+  },
+  "kernel_data_provenance": {
+    "n_grid_points": 20000,
+    "note": "Transport kernel (z_grid, source_profile, washout_tail) is e-independent and is computed once via frontier_dm_leptogenesis_flavor_column_functional_theorem.flavored_transport_kernel(k_decay_exact). The certificate treats the precomputed kernel as the exact numerical object for which the regular-root statement is being made; the kernel-level numerical error is uniform across all e values in the bracket and does not affect the e-dependence-driven Krawczyk contraction conclusion.",
+    "scale_factor": 39.08979378718634,
+    "z_max": 35.0,
+    "z_min": 0.001
+  },
+  "krawczyk_operator": {
+    "K_image_half_width_upper_bound": 0.0004914018311284459,
+    "K_strictly_contained_in_bracket_interior": true,
+    "contraction_factor": 0.49140183090376277,
+    "contraction_factor_below_one": true,
+    "krawczyk_strict_pass": true,
+    "newton_correction_abs": 2.24683091232584e-13,
+    "newton_inside_contracted_interior": true,
+    "r_bracket_half_width": 0.001
   },
   "produced_by": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_certificate_2026_04_18.py",
-  "uniform_slope_lower_bound": {
-    "grid_max_discrete_slope": 0.034501125762979507,
-    "grid_mid_discrete_slope": 0.034472832932678686,
-    "grid_min_discrete_slope": 0.034447359824611355,
-    "grid_slope_span": 5.37659383681513e-05,
-    "n_grid_points": 21,
-    "slope_threshold_used": 0.001
-  },
-  "verdict": "F changes sign on the bracket and its discrete slope is uniformly bounded away from zero on the same bracket, so a regular root of F exists in the bracket. This is the validated-numerics version of the regular-root hypothesis used by the manifold theorem."
+  "verdict": "Krawczyk-interval test passes: the operator K(I_e) is strictly contained in the interior of I_e, with contraction factor < 1, and F'(I_e) is uniformly bounded away from zero. By the Krawczyk uniqueness theorem (a quantitative form of the contraction-mapping theorem applied to Newton's method), this certifies a UNIQUE REGULAR ZERO of F in I_e, i.e. a regular-root certificate for the closure equation F(a,b,c,d,e) = 0 at the named (a,b,c,d) base point in the phase direction. The implicit-function-theorem hypothesis at the base point is now rigorously satisfied.",
+  "working_precision": {
+    "iv_prec_bits": 200,
+    "mp_prec_bits": 200
+  }
 }
