@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 946 |
+| unaudited | 945 |
 | meta | 56 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 373 |
+| ~~audited_conditional~~ | 374 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 391 |
-| `audited_conditional` | 373 |
+| `audited_conditional` | 374 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 28 |
-| `unaudited` | 1002 |
+| `unaudited` | 1001 |
 
 | claim_type | count |
 |---|---:|
@@ -625,6 +625,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -3861,6 +3862,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The refreshed branch fixes gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3, and K00 = 2, yielding the exact CP tensor channels and the epsilon_1 / epsilon_DI = 0.9276209209 kernel result.  _(class `E`)_
 - **chain closes:** False — The restricted packet does not derive gamma, E1, E2, or K00 from Cl(3) on Z^3; the runner assigns these values directly and checks downstream arithmetic. The missing step is the actual first-principles derivation of the exact source and diagonal package from the stated axiom.
 - **rationale:** Although the runner labels six checks as class C, its source code hard-codes the claimed exact package values rather than deriving them from the axiom. The epsilon and eta calculations are downstream numerical arithmetic once those values and retained benchmark constants are accepted. The audit therefore cannot ratify the source-package closure as a first-principles theorem from the restricted packet.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the note's bounded boundary claim that all refreshed DM leptogenesis transport ingredients except the radiation-era expansion law are closed, so eta is unique once H_rad(T) or E_H(z) with normalization is supplied.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0dae-ba70-7f52-98de-e24a16cb8b0a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given H_rad(T), the refreshed branch now fixes eta uniquely, leaving H_rad(T) as the single remaining non-axiom object.  _(class `E`)_
+- **chain closes:** False — The restricted packet does not provide a theorem or cited authority showing that the source, transfer coefficients, projection law, coherent kernel, equilibrium factors, and direct transport integral are all closed or that eta is uniquely determined by H_rad(T). The runner's decisive boundary-collapse checks are asserted with True rather than computed.
+- **rationale:** Issue: the note explicitly leaves H_rad(T) as a non-axiom input and the uniqueness claim for eta is not derived in the restricted packet. Why this blocks: the bounded boundary can only be accepted if a retained bridge proves every other transport ingredient is closed and functional only on H_rad(T), but no one-hop dependencies are supplied and the runner hard-codes the decisive boundary checks. Repair target: add the retained theorem or executable derivation constructing the transport map and proving H_rad(T) is the only free object. Claim boundary until fixed: this remains a scoped boundary statement, not a closed theorem from Cl(3) on Z^3.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16`
