@@ -3,6 +3,22 @@
 **Date:** 2026-04-16  
 **Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_dm_neutrino_exact_h_source_surface_preimage_bundle_theorem.py`
+**Primary runner:** `scripts/frontier_dm_neutrino_exact_h_source_surface_preimage_bundle_theorem.py`
+
+## Inputs
+
+This note depends on:
+
+- [DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
+- [DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md)
+- [DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md)
+
+The exact `H`-side source-surface theorem supplies the inverse-image surface;
+the positive-polar Hermitian CP theorem supplies the active 7-coordinate
+Hermitian grammar, the formula `cp_formula(...)`, and the direct intrinsic
+pair `cp_pair_from_h(H)`; the projected-source triplet sign theorem supplies
+the exact source-oriented package whose values this two-sheet preimage bundle
+parametrises.
 
 ## Question
 

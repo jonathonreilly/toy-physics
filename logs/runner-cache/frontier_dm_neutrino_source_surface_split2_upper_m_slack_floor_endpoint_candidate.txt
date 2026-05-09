@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py
+runner_sha256: 738ab8cbd4c8fb7e16209eef36938380532a0f9893be38aeca9967ffb63cd0d7
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 1.33
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 UPPER-m SLACK-FLOOR ENDPOINT CANDIDATE
+========================================================================================
+
+Question:
+  Once the tested split-2 pressure is pushed to the upper-m ridge, does
+  the residual lower-repair search collapse to one slack-floor endpoint?
+
+========================================================================================
+PART 1: THE TESTED UPPER-m SLACK-FLOOR ENDPOINT IS EXPLICIT
+========================================================================================
+  [PASS] The tested upper-m slack-floor endpoint delta_edge is reproduced stably  (delta_edge=1.188955544069)
+  [PASS] At that endpoint the repair equals the preferred recovered floor  (Lambda_+=1.586874714730)
+  [PASS] The tested endpoint transport data are reproduced stably  ((winner,eta,dist,col)=(2,0.883631424817,0.233274467128,[0.04461472 0.19592604 0.75945924]))
+
+========================================================================================
+PART 2: THE TESTED FEASIBLE INTERVAL IS MONOTONE TOWARD THAT ENDPOINT
+========================================================================================
+  [PASS] On the tested feasible interval the repair profile is reproduced stably at both ends  ((repair_min,repair_end)=(1.508351971007,1.586874714730))
+  [PASS] On the tested feasible interval the eta profile is reproduced stably at both ends  ((eta_min,eta_end)=(0.861112802893,0.883631424817))
+  [PASS] On the tested feasible interval the packet-distance profile is reproduced stably at both ends  ((dist_min,dist_end)=(0.437025762194,0.233274467128))
+  [PASS] Repair is strictly increasing along the tested upper-m slack-floor feasible interval  ((repair_min,repair_end)=(1.508351971007,1.586874714730))
+  [PASS] The best lower-repair transport value is strictly increasing along that tested interval  ((eta_min,eta_end)=(0.861112802893,0.883631424817))
+  [PASS] The packet distance to the preferred quotient is strictly decreasing along that tested interval  ((dist_min,dist_end)=(0.437025762194,0.233274467128))
+  [PASS] The winning transport column label stays fixed on the tested interval  (winners=[2])
+
+========================================================================================
+PART 3: THE NOTE RECORDS THE ENDPOINT REDUCTION
+========================================================================================
+  [PASS] The note records the tested endpoint delta and its transport data
+  [PASS] The note records the monotone feasible-interval reduction toward the endpoint
+  [PASS] The note keeps the boundary honest: this is still a tested-line endpoint candidate
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive-path carrier reduction:
+    - on the tested upper-m slack-floor feasible interval, both
+      transport-facing objectives are driven to the same endpoint
+    - that endpoint is delta_edge ~= 1.188955544069 on (m,s)=(-0.14,0)
+  RESULT: the tested residual lower-repair pressure collapses to one
+  upper-m slack-floor endpoint
+
+SUMMARY: PASS=13 FAIL=0
+
+----- stderr -----
+

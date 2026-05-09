@@ -4,7 +4,23 @@
 **Date:** 2026-04-16  
 **Branch:** `codex/dm-main-refresh`  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py`  
+**Primary runner:** `scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py`
 **Framework convention:** "axiom" means only `Cl(3)` on `Z^3`
+
+## Inputs
+
+This note depends on:
+
+- [DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md)
+- [PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md](./PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
+- [PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md](./PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md)
+
+The projector-interface note supplies the active/passive branch packet
+language and the active Hermitian block structure used here; the active
+four-real-source-from-transport note supplies the PMNS-side native seed/source
+data (`xi_1, xi_2, eta_1, eta_2, delta`) that this reduction localises onto;
+the sector-orientation orbit note supplies the active/passive orientation bit
+imported as native PMNS data in section 4.
 
 ## Status
 

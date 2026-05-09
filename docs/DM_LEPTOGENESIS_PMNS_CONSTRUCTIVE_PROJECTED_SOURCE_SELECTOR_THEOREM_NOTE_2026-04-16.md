@@ -3,6 +3,25 @@
 **Date:** 2026-04-16  
 **Status:** exact constructive theorem on the open PMNS comparator gate  
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_constructive_projected_source_selector_theorem.py`
+**Primary runner:** `scripts/frontier_dm_leptogenesis_pmns_constructive_projected_source_selector_theorem.py`
+
+## Inputs
+
+This note depends on:
+
+- [DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md)
+- [DM_LEPTOGENESIS_FULL_MICROSCOPIC_REDUCTION_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_FULL_MICROSCOPIC_REDUCTION_NOTE_2026-04-16.md)
+- [DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md)
+- [DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md)
+
+The transport-extremal source candidate supplies the comparator class
+(`part2_transport_extremality_selects_a_positive_off_seed_candidate` and
+related off-seed candidate routines) imported by the runner; the full
+microscopic reduction supplies the active `N_e` seed surface and projected-
+response pack `(R..., S..., A...)`; the `N_e` projected-source-law
+derivation supplies the `(gamma, E1, E2)` projection formulas this witness
+realises; the `N_e` projected-source triplet-sign theorem supplies the exact
+sign chamber `gamma > 0`, `E1 > 0`, `E2 > 0`.
 
 ## Question
 

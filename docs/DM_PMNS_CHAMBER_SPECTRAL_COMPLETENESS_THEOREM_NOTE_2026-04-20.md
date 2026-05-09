@@ -12,6 +12,21 @@
 **Primary runner:**  
 `scripts/frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py`
 
+## Inputs
+
+This note depends on:
+
+- [DM_PMNS_ASYMPTOTIC_SOURCE_NO_GO_NOTE_2026-04-20.md](./DM_PMNS_ASYMPTOTIC_SOURCE_NO_GO_NOTE_2026-04-20.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
+
+The asymptotic source no-go removes the unbounded basin loophole that this
+compact-chamber theorem complements; the active-half-plane theorem supplies
+the chamber inequality `q_+ + delta >= sqrt(8/3)`; the affine point-selection
+boundary supplies the affine Hermitian family
+`H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q` on which the
+chamber chi^2 = 0 set is enumerated.
+
 ---
 
 ## 0. Question

@@ -3,6 +3,23 @@
 **Date:** 2026-04-16  
 **Status:** support - structural or confirmatory support note
 **Script:** `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py`
+**Primary runner:** `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py`
+
+## Inputs
+
+This note depends on:
+
+- [PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md](./PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md)
+- [PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md](./PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)
+- [PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md](./PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
+
+The selection-structure note supplies the graph-first selected-axis route and
+the residual antiunitary symmetry that pin the reduced channel to the
+`3`-real family `(u, v, w) <-> (u + i v, w, u - i v)`; the channel value-law
+note supplies the native observable law `(c_1, c_2, c_3) = diag(A C^dagger)`
+that reads `(u, v, w)` exactly off the active block; the active-four-real-
+source-from-transport note supplies the lower-level active transport /
+response chain on which every reduced-channel point is exactly realised.
 
 ## Question
 

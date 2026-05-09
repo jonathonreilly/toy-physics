@@ -2,6 +2,22 @@
 
 **Date:** 2026-04-18  
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** `scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py`
+
+## Inputs
+
+This note depends on:
+
+- [DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md)
+
+The carrier and bundle theorems supply the active slack chart, the preferred
+quotient, and the repair threshold; the split-2 reduction chain (upper-m
+ridge, upper-face extremals) supplies the prior compression on which this
+slack-floor endpoint scan is phrased.
 
 ## Question
 
