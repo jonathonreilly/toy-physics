@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 234 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 898 |
+| unaudited | 897 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 418 |
+| ~~audited_conditional~~ | 419 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 418 |
+| `audited_conditional` | 419 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 952 |
+| `unaudited` | 951 |
 
 | claim_type | count |
 |---|---:|
@@ -518,6 +518,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1698,6 +1699,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `independent proof of m_gap>0 or valid thermal clustering hypotheses for the canonical Cl(3) Z^3 Hamiltonian/state`
   - `verification that Hastings-Koma assumptions apply to the stated finite-range interaction and state`
   - `replacement of 1D free-fermion proxy runner with a theorem-level check or exact model-specific verification`
+- **auditor confidence:** high
+
+### `axiom_first_cpt_theorem_stretch_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded CPT stretch claim for canonical pure-staggered fermions on Z^3 plus the claimed extension to the SU(3) Wilson plaquette gauge sector.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c6b-5c08-7a61-8061-8e7945274c61`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note asserts that the Wilson plaquette gauge action is CPT-invariant by inspection because Re tr U_P is unchanged under U_P -> U_P^*.  _(class `A`)_
+- **chain closes:** False — The fermion-sector finite-block identities close in the runner, but the full canonical action claim does not close because the SU(3) Wilson-plaquette operator-level CPT lift is explicitly deferred and no retained authority is supplied in the restricted packet.
+- **rationale:** Issue: the gauge-sector CPT step is asserted at the scalar Re-trace level and the note explicitly says the full SU(3) representation-level identity is deferred. Why this blocks: CPT3-CPT5 for the full canonical action require the CPT action on gauge-link configuration space, not only the pure-staggered fermion block checks. Repair target: add a retained theorem and runner constructing the CPT map on SU(3) Wilson links and proving Re tr plaquette invariance in representation-level generality. Claim boundary until fixed: retained only as a fermion-sector finite-block/pure-staggered CPT exhibit, not a closed full A_min CPT theorem.
 - **auditor confidence:** high
 
 ### `axiom_first_lattice_noether_theorem_note_2026-04-29`
