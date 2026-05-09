@@ -480,6 +480,18 @@
       "dominant_class": null,
       "runner": "scripts/architecture_directional_measure_table_runner_2026_05_03.py"
     },
+    "architecture_portability_sweep_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_architecture_portability_sweep.py"
+    },
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -1104,6 +1116,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_bminusl_anomaly_freedom.py"
     },
+    "bmv_bounded_negative_note": {
+      "assert_count": 7,
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/bmv_bounded_negative.py"
+    },
     "bmv_entanglement_note_2026-04-11": {
       "assert_count": 0,
       "counts": {
@@ -1440,6 +1464,18 @@
       "dominant_class": null,
       "runner": "scripts/central_band_born_largeN.py"
     },
+    "central_band_collapse_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/central_band_collapse_joint_card.py"
+    },
     "central_band_collapse_strength_note": {
       "assert_count": 0,
       "counts": {
@@ -1691,6 +1727,42 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py"
+    },
+    "chiral_bottleneck_card_proposal": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_chiral_bottleneck_card.py"
+    },
+    "chiral_layer_oscillation_2026-04-09": {
+      "assert_count": 4,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_chiral_layer_oscillation.py"
+    },
+    "chiral_split_mass_gravity_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_chiral_split_mass_gravity.py"
     },
     "chiral_walk_synthesis_2026-04-10_addendum": {
       "assert_count": 0,
@@ -2940,6 +3012,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_dirac_walk_3plus1d_core_card.py"
     },
+    "dirac_decoherence_probe_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_dirac_walk_3plus1d_decoherence_probe.py"
+    },
     "dirac_field_smoothing_note": {
       "assert_count": 0,
       "counts": {
@@ -2999,6 +3083,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_dirac_walk_3plus1d_weak_coupling_scan.py"
+    },
+    "directional_b_density_stencil_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/directional_b_density_stencil_transfer.py"
     },
     "directional_b_geometry_normalized_holdout_transfer_mass5_note": {
       "assert_count": 0,
@@ -20587,6 +20683,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/bmv_bounded_negative.py": {
+      "assert_count": 7,
+      "claims": [
+        "bmv_bounded_negative_note"
+      ],
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/born_compare_modular_central_ln.py": {
       "assert_count": 0,
       "claims": [
@@ -20787,6 +20898,21 @@
       "assert_count": 0,
       "claims": [
         "central_band_born_largen_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/central_band_collapse_joint_card.py": {
+      "assert_count": 0,
+      "claims": [
+        "central_band_collapse_note"
       ],
       "counts": {
         "A": 0,
@@ -21984,6 +22110,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/directional_b_density_stencil_transfer.py": {
+      "assert_count": 0,
+      "claims": [
+        "directional_b_density_stencil_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/directional_b_geometry_normalized_holdout_transfer.py": {
       "assert_count": 0,
       "claims": [
@@ -22539,6 +22680,21 @@
         "B": 0,
         "C": 2,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_architecture_portability_sweep.py": {
+      "assert_count": 0,
+      "claims": [
+        "architecture_portability_sweep_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -23255,6 +23411,7 @@
     "scripts/frontier_chiral_bottleneck_card.py": {
       "assert_count": 0,
       "claims": [
+        "chiral_bottleneck_card_proposal",
         "lanes.coin-walks.readme"
       ],
       "counts": {
@@ -23265,6 +23422,36 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_chiral_layer_oscillation.py": {
+      "assert_count": 4,
+      "claims": [
+        "chiral_layer_oscillation_2026-04-09"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/frontier_chiral_split_mass_gravity.py": {
+      "assert_count": 0,
+      "claims": [
+        "chiral_split_mass_gravity_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_chronology_operational_no_past_signaling.py": {
@@ -24364,6 +24551,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_dirac_walk_3plus1d_decoherence_probe.py": {
+      "assert_count": 0,
+      "claims": [
+        "dirac_decoherence_probe_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_dirac_walk_3plus1d_field_smoothing_scan.py": {
@@ -42214,16 +42416,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 132,
+    "decoration_candidates": 134,
     "dominant_class_distribution": {
-      "A": 22,
+      "A": 24,
       "B": 174,
-      "C": 642,
+      "C": 645,
       "D": 242,
-      "none": 426
+      "none": 428
     },
-    "runners_classified": 1506,
-    "runners_with_C": 776,
-    "runners_with_D": 398
+    "runners_classified": 1513,
+    "runners_with_C": 779,
+    "runners_with_D": 399
   }
 }

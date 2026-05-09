@@ -2,6 +2,9 @@
 
 **Date:** 2026-04-05
 **Status:** s² coupling confirmed; no discrete spacetime correction found
+**Type:** no_go
+
+**Primary runner:** [`scripts/bmv_bounded_negative.py`](../scripts/bmv_bounded_negative.py)
 
 ## What was tested
 
@@ -11,6 +14,11 @@ entanglement (1 - overlap) between beam states conditioned on the
 two mass positions.
 
 ## Results
+
+The frozen runner verifies the bounded no-go core: exact `s^2` coupling
+and monotone lattice-to-continuum convergence of the phase-sum proxy. The
+finite-`h` separation-exponent table below is historical inline provenance,
+not an independently retained exact exponent table.
 
 ### Coupling dependence
 
@@ -34,8 +42,8 @@ from -2.0.
 ## Bounded interpretation
 
 The s² coupling is an exact lattice reproduction of the continuum BMV
-prediction. This is non-trivial as a verification (10^5 paths contribute),
-but it is NOT a discrete spacetime prediction — it converges to the
+prediction. This is non-trivial as a bounded verification, but it is NOT
+a discrete spacetime prediction — it converges to the
 continuum.
 
 The separation exponent has a finite-h correction that vanishes in the
@@ -50,8 +58,8 @@ continuum, and the separation dependence converges to the continuum
 value at finer h. There is no discrete spacetime signature in the BMV
 observable on this model.
 
-## Missing artifact chain
+## Artifact boundary
 
-This note is based on inline tests (not a frozen script+log). A frozen
-harness exists only for the coupling-dependence check. The separation
-convergence was tested inline across h=0.5, 0.25 but not frozen.
+The primary runner now freezes the `s^2` and continuum-convergence
+checks. It does not promote an exact finite-`h` separation-exponent table
+or any positive discrete-correction prediction.

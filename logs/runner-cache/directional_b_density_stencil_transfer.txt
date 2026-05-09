@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/directional_b_density_stencil_transfer.py
+runner_sha256: e11451ec02a919a445ad9e323a239c897f4caacb11b8125ee2159ff4ff095aac
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+====================================================================================================================================
+DIRECTIONAL-MEASURE B DENSITY STENCIL TRANSFER
+====================================================================================================================================
+Freeze the 3-NN and 4-NN density-load thresholds on the original dense reference sample, then
+apply them without refit to the tree control and the center-biased midlayer sentinel.
+
+Frozen density-load rules from the original dense reference sample:
+  3-NN : knn3_density_load >= 1.9783
+  4-NN : knn4_density_load >= 2.7354
+
+               set rows  ovlp       3-NN tp/fp/fn/tn acc       4-NN tp/fp/fn/tn acc
+------------------------------------------------------------------------------------------------------------------------------------
+    reference+tree   63    24           22/5/2/34 0.8889           21/2/3/37 0.9206
+ midlayer-sentinel   40    10            8/0/2/30 0.9500            4/0/6/30 0.8500
+   extended-sample  103    34           30/5/4/64 0.9126           25/2/9/67 0.8932
+
+Midlayer family split:
+        family rows  ovlp   3-NN acc   4-NN acc
+--------------------------------------------------------
+midgamma1.4-m3   20     3     0.9500     0.9000
+midgamma1.4-m5   20     7     0.9500     0.8000
+
+Frozen 4-NN false negatives on the midlayer sentinel:
+        family    N seed       mu target_ct  below  above     3-NN     4-NN  3-NN rescue
+----------------------------------------------------------------------------------------------
+midgamma1.4-m3   25    3   -0.179         1      1      0    1.984    1.791          yes
+midgamma1.4-m3   25    4   -0.006         1      1      0    1.418    1.324           no
+midgamma1.4-m5   12    1   -0.098         1      1      0    2.363    2.153          yes
+midgamma1.4-m5   25    4   -0.079         1      1      0    2.363    2.207          yes
+midgamma1.4-m5   25    6   -0.203         2      0      2    2.189    2.037          yes
+midgamma1.4-m5   25    7   -0.306         3      1      2    1.558    2.495           no
+
+Interpretation:
+  1. The original reference+tree sample still prefers the 4-NN stencil, so this is not a retroactive rewrite of the earlier dense-family fit.
+  2. The center-biased midlayer sentinel reverses that preference: the frozen 3-NN law rises to 0.9500,
+     while the frozen 4-NN law falls to 0.8500 with six false negatives and no false positives.
+  3. On the extended sample, 3-NN now exceeds 4-NN
+     by accuracy: 0.9126 vs 0.8932.
+  4. The midlayer 4-NN miss mode is mostly one-sided low-occupancy support: 5/6
+     false negatives have in-band nodes on only one side of the target plane, and 3-NN rescues 4/6 of them.
+  5. The portable coarse statement is still occupancy-first, but if one frozen smooth density law
+     must be carried onto the current expanded sample, 3-NN is the better stencil candidate than 4-NN.
+
+----- stderr -----
+

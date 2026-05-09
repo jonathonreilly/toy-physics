@@ -32849,9 +32849,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "f13c3e02b165c853efba73b296cc9a9a6f2bf93b6a7111ca0995603ae0160acc",
+      "note_hash": "94f70885e300466105a24e2ab3269c3b17aa64876791289c0779014a3eeda8f9",
       "path": "docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_architecture_portability_sweep.py",
       "title": "Architecture Portability Sweep"
     },
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25": {
@@ -33175,11 +33175,11 @@
     },
     "axiom_change_proposal_2026-04-10": {
       "claim_id": "axiom_change_proposal_2026-04-10",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "7a0fb5fe0d5a73067f67aa9a2ee1ca65c70fc285ae1c759981f4efa997f6cd3c",
+      "note_hash": "8aec993f3d9fc71ecae7bf4812a555730c57446a4c3a8ab2d0fe71cd8f909a28",
       "path": "docs/AXIOM_CHANGE_PROPOSAL_2026-04-10.md",
       "runner_path": null,
       "title": "Axiom Update And Interpretation Change"
@@ -33694,13 +33694,13 @@
     },
     "bmv_bounded_negative_note": {
       "claim_id": "bmv_bounded_negative_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "a9f6d67829d20944944580ecede08aec87d40ae0074dfebff3ef2ac140fc983a",
+      "note_hash": "0f2049ae80ffbdcbefcf6e8d159666906f5df80d977fb6e1b2c7c9251df30950",
       "path": "docs/BMV_BOUNDED_NEGATIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/bmv_bounded_negative.py",
       "title": "BMV Gravitational Entanglement: Bounded Negative"
     },
     "bmv_entanglement_note_2026-04-11": {
@@ -34504,9 +34504,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "81836dbcbad7bc2bd41470b1c42b5dcf5c08b454d24ff8b51025d8f292b43e9a",
+      "note_hash": "a20696695609dcbe04bfdd02c837a81ea9b5d3bee27ef4c9b557ce66adb874be",
       "path": "docs/CENTRAL_BAND_COLLAPSE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/central_band_collapse_joint_card.py",
       "title": "Central Band Hard-Geometry + Collapse Note"
     },
     "central_band_collapse_strength_note": {
@@ -34869,24 +34869,24 @@
     },
     "chiral_bottleneck_card_proposal": {
       "claim_id": "chiral_bottleneck_card_proposal",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "fcac9e5e5b192b18fd1894e15c26e2fcb1bef624891aa362078484640f2d16b1",
+      "note_hash": "eb282f53f375043673b8b09fcf220fc4f97a887df53e4ac9c4a2aa00249cb523",
       "path": "docs/CHIRAL_BOTTLENECK_CARD_PROPOSAL.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_bottleneck_card.py",
       "title": "Chiral Expanded Core Card"
     },
     "chiral_layer_oscillation_2026-04-09": {
       "claim_id": "chiral_layer_oscillation_2026-04-09",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "9e3f7a16782601f4c4657afaf53c922811e81907b7757e4b7608379027fd1c80",
+      "note_hash": "a7de246849f29fea2c01a1d1bc25ef5ec3c91e5512e1857a3ad4d7ca45ec1db4",
       "path": "docs/CHIRAL_LAYER_OSCILLATION_2026-04-09.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_layer_oscillation.py",
       "title": "Chiral Walk Layer Oscillation \u2014 Gravity Sign Depends on N"
     },
     "chiral_split_mass_gravity_note": {
@@ -34895,9 +34895,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "02e94af28395e23dabe800457721dbda21ece6a997873157d655c4571d4d855e",
+      "note_hash": "03ad01043e59d5005c7ee01a16b266e6868033af6bbb09a963064b4a00f1de71",
       "path": "docs/CHIRAL_SPLIT_MASS_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_chiral_split_mass_gravity.py",
       "title": "Chiral Split-Mass / Split-Gravity Note"
     },
     "chiral_walk_synthesis_2026-04-09": {
@@ -36439,22 +36439,22 @@
     },
     "decoherence_decision_note": {
       "claim_id": "decoherence_decision_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "c242cba4bfa32ed6c6813b7a213517bdc587d5b1eea318834897438d585cfbbb",
+      "note_hash": "8b88d24a287b4770d1ec80c79e3b7c885628d329b5693cb91cee7637d579c3cb",
       "path": "docs/DECOHERENCE_DECISION_NOTE.md",
       "runner_path": null,
       "title": "Decoherence Decision Note"
     },
     "decoherence_failure_analysis": {
       "claim_id": "decoherence_failure_analysis",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "beda0d071fdec523c651e6f4b472fa19ea727ab6551c88a8b596adb21acd1d2f",
+      "note_hash": "f4e019215ba41880d66eaff09e88b9f8750d5c4453b7f043b776a06efa30d38b",
       "path": "docs/DECOHERENCE_FAILURE_ANALYSIS.md",
       "runner_path": null,
       "title": "Decoherence Failure Analysis"
@@ -36602,9 +36602,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "3e0d80ccddb430209e53278f07d00156e935e00b627adee89cdc466978210bd3",
+      "note_hash": "4bcb009c9f9bebb8851bd0cb77fd32233e2b41c18b1ffed6dbb576dd91fb5e51",
       "path": "docs/DIRAC_DECOHERENCE_PROBE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_decoherence_probe.py",
       "title": "Dirac Decoherence / Record Probe"
     },
     "dirac_field_smoothing_note": {
@@ -36670,9 +36670,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2246fbd7e914df830c7255760379ad916d8a0177c7f9790d2ad3cbc71c1ce025",
+      "note_hash": "0d0514b3035ff8e8824fa547780234c8d6b2f02b007ca42a4664ecf706f019f3",
       "path": "docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/directional_b_density_stencil_transfer.py",
       "title": "Directional-B Density Stencil Note"
     },
     "directional_b_geometry_normalized_holdout_transfer_mass5_note": {
@@ -63000,20 +63000,20 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 182,
+      "bounded_theorem": 183,
       "decoration": 1,
-      "meta": 22,
-      "no_go": 14,
-      "none": 1681,
+      "meta": 26,
+      "no_go": 15,
+      "none": 1675,
       "open_gate": 21,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 687,
+      "bounded_theorem": 688,
       "decoration": 1,
-      "meta": 22,
-      "no_go": 122,
-      "none": 458,
+      "meta": 26,
+      "no_go": 123,
+      "none": 452,
       "open_gate": 112,
       "positive_theorem": 609
     },
@@ -63021,6 +63021,6 @@
     "leaf_count": 531,
     "node_count": 2011,
     "root_count": 799,
-    "runners_with_path": 1612
+    "runners_with_path": 1620
   }
 }
