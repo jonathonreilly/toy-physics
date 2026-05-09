@@ -32433,11 +32433,11 @@
     },
     "charged_lepton_lane6_theorem_plan_note_2026-04-28": {
       "claim_id": "charged_lepton_lane6_theorem_plan_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "bf5be9cf6401b12aeec047343d87f566b948ee6ab6e5cd88313c90b362a1e563",
+      "note_hash": "3a767e5bb67c35deb628fd4b5164c1bddd91d6e207d93d795ef1362bf8c1ea97",
       "path": "docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering"
@@ -32553,33 +32553,33 @@
     },
     "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28": {
       "claim_id": "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "19f38c079ad01217376c731bfd347218234f4776116dc37cf91192c87ff9bd6a",
+      "note_hash": "806ce8d9b053f4bbc4a492ad948629195f1b60f8856a3b43b747afb207741f17",
       "path": "docs/CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "`y_\u03c4` Identity Mechanism \u2014 Stuck Fan-Out"
     },
     "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28": {
       "claim_id": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "655e84a6564cab34c3dafa04a324c0a99d25bb23655d1dac5cdafd62d28ef138",
+      "note_hash": "bd520e4ed9c19b2d70db15cb21dad1be8c1e3d0271f2d95c831ba0ab64562d15",
       "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "`y_\u03c4` Ward Identity from `SU(2)` Anchor \u2014 Stretch Attempt (SA-A)"
     },
     "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28": {
       "claim_id": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "f41095b87c0f43297f4eabb9e7dbbe1509a5b6fbeaa71e9c67865f6ee12ba2a3",
+      "note_hash": "e93096324f70505d0da7a5cca1ede7bef2fd550c722a928ea69443e69bb099e3",
       "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "`y_\u03c4` Ward Identity from `U(1)_Y` Anchor \u2014 Stretch Attempt (SA-B)"
@@ -33579,11 +33579,11 @@
     },
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19": {
       "claim_id": "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "9e1f45295dd2d6c87e76858da3fe4a21dd6545d013f3e5831862b165cd832156",
+      "note_hash": "ffe6f714e8aa33313874a2a8a06713093be1714e96796967da43ad9d2b27c683",
       "path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
@@ -59772,8 +59772,8 @@
       "bounded_theorem": 142,
       "meta": 15,
       "no_go": 14,
-      "none": 1699,
-      "open_gate": 13,
+      "none": 1694,
+      "open_gate": 18,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {

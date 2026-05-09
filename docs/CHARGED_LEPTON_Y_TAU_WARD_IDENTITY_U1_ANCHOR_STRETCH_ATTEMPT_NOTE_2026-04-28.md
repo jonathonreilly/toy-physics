@@ -1,7 +1,9 @@
 # `y_τ` Ward Identity from `U(1)_Y` Anchor — Stretch Attempt (SA-B)
 
+**Type:** open_gate
+
 **Date:** 2026-04-28
-**Status:** open branch-local **stretch-attempt** note on
+**Status:** open_gate — branch-local **stretch-attempt** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 3 of the charged-
 lepton loop: attempts SA-B `y_τ` Ward identity construction
 anchored on `U(1)_Y` hypercharge `g_1`, after Cycle 2 excluded the

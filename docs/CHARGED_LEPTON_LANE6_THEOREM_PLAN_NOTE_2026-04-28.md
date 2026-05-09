@@ -1,12 +1,15 @@
 # Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering
 
+**Type:** open_gate
+
 **Date:** 2026-04-28
-**Status:** open branch-local theorem-plan note on
+**Status:** open_gate — branch-local theorem-plan note on
 `frontier/charged-lepton-pickup-20260428`. Reduces Lane 6 (charged-
 lepton mass retirement) to a sharp `m_e, m_μ, m_τ` closure roadmap
 using retained gauge content + retained electroweak hierarchy `v` +
 retained `y_t / g_s = 1/sqrt(6)` analog template + the Koide flagship
-lane's in-flight Q/δ closures.
+lane's in-flight Q/δ closures. This is a planning/roadmap note; no
+theorem is closed here — see referenced sub-notes for the actual gates.
 **Lane:** 6 — Charged-lepton mass retention (full closure)
 **Loop:** `charged-lepton-pickup-20260428`
 
