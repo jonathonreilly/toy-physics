@@ -1393,6 +1393,14 @@
       "to": "lattice_3d_l2_tail_stats_note"
     },
     {
+      "from": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
       "from": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
       "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
     },
@@ -32385,6 +32393,20 @@
       "runner_path": "scripts/lattice_2d3d_continuum_check.py",
       "title": "Branch Summary: claude/distracted-napier"
     },
+    "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09": {
+      "claim_id": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "koide_circulant_character_derivation_note_2026-04-18"
+      ],
+      "note_hash": "4c8c397c82409211f434e1c136af2c19e858e20ec822cf32a0b946bdb71a27e2",
+      "path": "docs/BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_bae_rename_meta.py",
+      "title": "Brannen Amplitude Equipartition (BAE) Rename Meta Note"
+    },
     "breakthrough_direction_memo_2026-04-10": {
       "claim_id": "breakthrough_direction_memo_2026-04-10",
       "claim_type_author_hint": null,
@@ -60942,7 +60964,7 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 156,
-      "meta": 16,
+      "meta": 17,
       "no_go": 14,
       "none": 1693,
       "open_gate": 19,
@@ -60950,16 +60972,16 @@
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 661,
-      "meta": 16,
+      "meta": 17,
       "no_go": 122,
       "none": 459,
       "open_gate": 113,
       "positive_theorem": 618
     },
-    "edge_count": 7413,
-    "leaf_count": 531,
-    "node_count": 1989,
+    "edge_count": 7415,
+    "leaf_count": 532,
+    "node_count": 1990,
     "root_count": 825,
-    "runners_with_path": 1580
+    "runners_with_path": 1581
   }
 }

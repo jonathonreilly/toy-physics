@@ -1188,6 +1188,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_branch_entanglement_robustness.py"
     },
+    "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_bae_rename_meta.py"
+    },
     "bridge_gap_hk_cube_perron_note_2026-05-06": {
       "assert_count": 0,
       "counts": {
@@ -22114,6 +22126,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_bae_rename_meta.py": {
+      "assert_count": 1,
+      "claims": [
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_baryogenesis.py": {
       "assert_count": 0,
       "claims": [
@@ -41434,15 +41461,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 130,
+    "decoration_candidates": 131,
     "dominant_class_distribution": {
       "A": 21,
-      "B": 173,
+      "B": 174,
       "C": 628,
       "D": 232,
       "none": 426
     },
-    "runners_classified": 1480,
+    "runners_classified": 1481,
     "runners_with_C": 758,
     "runners_with_D": 378
   }
