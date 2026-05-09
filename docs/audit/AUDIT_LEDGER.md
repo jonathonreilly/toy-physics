@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 64 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 236 |
+| **retained_bounded** | 237 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 11 |
-| unaudited | 954 |
+| unaudited | 953 |
 | meta | 55 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 27 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 389 |
+| `audited_clean` | 390 |
 | `audited_conditional` | 369 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 27 |
-| `unaudited` | 1009 |
+| `unaudited` | 1008 |
 
 | claim_type | count |
 |---|---:|
@@ -179,6 +179,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `edge_deletion_boundary_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electric_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electrostatics_card_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4685,6 +4686,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The earlier claim "gravity survives 70% edge deletion" was from  _(class `B`)_
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
+- **auditor confidence:** medium
+
+### `edge_deletion_boundary_sweep_note`
+
+- **Note:** [`EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`](../../docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded multi-seed edge-deletion sweep on the retained 3D valley-linear family for h=0.5, W=8, L=12, max_d=3, keep fractions 1.00 to 0.75, and seeds 20260404..20260415.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e0d77-2287-7010-b1fd-77ed392fecf1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The sweep table reports TOWARD 12/12 with positive mean delta at every tested keep fraction from 1.00 down to 0.75.  _(class `C`)_
+- **chain closes:** True — Within the restricted claim scope, the runner directly constructs the listed lattice instances, measures gravity_delta for each keep fraction and seed, and the stdout matches the frozen table. The conclusion is explicitly bounded to absence of a sign flip in this tested range, not a universal graph theorem.
+- **rationale:** The load-bearing result is a bounded computational sweep, and the runner source does not merely print constants: it builds GraphLattice3D cases, deletes edges by keep fraction and seed, propagates free and field amplitudes, and computes centroid deltas. The note's claim boundary is already narrow: sign stability through 25% edge deletion on this retained family and seed set, with no claimed threshold transition or universal theorem. A second auditor should only re-check that the imported GraphLattice3D family implementation is the intended retained family, but that is outside the supplied packet and not needed for this bounded replay verdict.
 - **auditor confidence:** medium
 
 ### `eigenvalue_anderson_phase_note_2026-04-11`
