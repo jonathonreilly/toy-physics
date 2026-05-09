@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 236 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 890 |
+| unaudited | 889 |
 | meta | 54 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 28 |
-| ~~audited_conditional~~ | 423 |
+| ~~audited_conditional~~ | 424 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 386 |
-| `audited_conditional` | 423 |
+| `audited_conditional` | 424 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 28 |
-| `unaudited` | 944 |
+| `unaudited` | 943 |
 
 | claim_type | count |
 |---|---:|
@@ -753,6 +753,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `inverse_problem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `k_dependence_review_safe_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -7554,6 +7555,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Kernel-generic absorption occurs under any nonzero field for gamma > 0, while only the localized 1/r gravity field produces the TOWARD -> AWAY deflection crossover.  _(class `C`)_
 - **chain closes:** False — The live runner supports the gravity-specific crossover and gamma=0.5 escape suppression, but it contradicts the source's stronger detector-escape claim for any gamma > 0: several nonzero-field rows at gamma=0.1 or 0.2 still have escape ratios above 1.
 - **rationale:** Issue: the source conflates link-level imaginary-action damping with the detector escape observable. The factor exp(-k gamma L f) is below 1 for f > 0 and gamma > 0, but the runner's detector escape ratios are still above 1 for UNIFORM f=0.005 at gamma=0.1 and 0.2, UNIFORM f=0.01 at gamma=0.1 and 0.2, and GRAVITY at gamma=0.1 and 0.2. Why this blocks: the retained separation claim says kernel-generic absorption occurs under any nonzero field at gamma > 0, but the measured observable used by the note only shows suppression at sufficiently large gamma in this setup. Repair target: distinguish local per-link attenuation from total detector escape, or add a theorem/runner proving a thresholded escape-suppression criterion across gamma and field families. Claim boundary until fixed: safely claim only that gamma=0.5 suppresses detector escape for the tested nonzero fields, and that the 1/r gravity field uniquely shows the tested TOWARD -> AWAY centroid crossover by gamma=0.2.
+- **auditor confidence:** high
+
+### `koide_a1_loop_final_status_2026-04-22`
+
+- **Note:** [`KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md`](../../docs/KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that the Koide-Nishiura quartic potential algebraically forces A1/Koide Q=2/3 if that potential is assumed as the charged-lepton effective potential, while the physical bridge to that potential is not closed.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e0c83-671b-7ba2-bbeb-a1d6dbf7071a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given the quartic potential V(Phi) = [2(tr Phi)^2 - 3 tr(Phi^2)]^2 on the circulant charged-lepton operator, its minimum occurs at a^2 = 2|b|^2, but deriving this V(Phi) from Cl(3)/Z^3 remains open.  _(class `A`)_
+- **chain closes:** False — The algebra from the assumed quartic V(Phi) to A1 closes. The missing step is a retained derivation that the physical charged-lepton effective action actually contains this specific V(Phi), or equivalently that the charged-lepton packet extremizes the stated block functional.
+- **rationale:** Issue: the runner and note assume or import the specific Koide-Nishiura quartic potential as the effective charged-lepton potential. Why this blocks: the algebraic minimum at A1 is valid only after that physical potential/readout bridge is supplied, and the note explicitly says all current bridge mechanisms fail. Repair target: prove from retained Cl(3)/Z^3 structure that the charged-lepton effective action contains V(Phi) = [2(tr Phi)^2 - 3tr(Phi^2)]^2, or derive the block-total extremum as a retained primitive. Claim boundary until fixed: this is a conditional variational route to A1, not an axiom-native derivation of the charged-lepton Koide relation.
 - **auditor confidence:** high
 
 ### `koide_a1_physical_bridge_attempt_2026-04-22`
