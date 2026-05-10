@@ -22,9 +22,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1083 |
+| unaudited | 1082 |
 | meta | 98 |
-| ~~audited_numerical_match~~ | 18 |
+| ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 255 |
 | ~~audited_failed~~ | 25 |
@@ -43,9 +43,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 255 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
-| `audited_numerical_match` | 18 |
+| `audited_numerical_match` | 19 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1181 |
+| `unaudited` | 1180 |
 
 | claim_type | count |
 |---|---:|
@@ -852,6 +852,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `lattice_distance_law_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `monopole_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -6168,6 +6169,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact retained Gamma_1 second-order return gives R_{Gamma_1}(W_1) = diag(u, v, w), and Fourier transport gives H_Gamma = F diag(u, v, w) F^dagger = (r0/3)B0 + (r1/6)B1 + (r2/6)B2 with r0 = u + v + w, r1 = 2u - v - w, r2 = sqrt(3)(v - w).  _(class `A`)_
 - **chain closes:** True — Within the scoped claim, the chain closes by finite matrix/projector algebra plus symbolic Fourier transport, and the cited retained full-cube orbit-law authority supplies the cross-axis cyclic family. The source note explicitly leaves the value law for (u, v, w) and the selector mechanism open.
 - **rationale:** The load-bearing step is exact linear algebra on an already specified three-slot return object, and the runner computes the finite Gamma/projector shape and symbolic circulant decomposition rather than deriving a hidden fitted parameter. The one-hop axis-covariant authority is retained-grade and closes the cross-axis basis step that the runner still labels as candidate. The observed charged-lepton witness imports measured amplitudes, but it is not used to claim a value-law or selector derivation, which the note correctly marks as open.
+- **auditor confidence:** high
+
+### `koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18`
+
+- **Note:** [`KOIDE_GAMMA_ORBIT_EXPONENTIAL_VALUE_LAW_CANDIDATE_NOTE_2026-04-18.md`](../../docs/KOIDE_GAMMA_ORBIT_EXPONENTIAL_VALUE_LAW_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claimed one-parameter positive exponential witness family using the imported H_* pin and Koide selector cone, including its tuned charged-lepton direction match.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1390-3ce9-7162-ad9d-a7cb552231e0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Take the live Hermitian H_* from the repo’s neutrino-sector pin, set X_beta = exp(beta H_*), read v(beta), w(beta), and choose beta_* so the small-root Koide-cone branch matches the charged-lepton sqrt(m) direction.  _(class `G`)_
+- **chain closes:** False — The algebraic construction closes as a candidate family, but the charged-lepton value claim depends on an observationally pinned H_* and an optimized beta_* chosen by comparison to PDG sqrt(m). The restricted packet does not derive the generator choice, branch choice, or beta selection from retained microscopic dynamics.
+- **rationale:** Issue: the load-bearing result is a tuned numerical match using an imported neutrino-sector H_* and an optimized beta against PDG charged-lepton amplitudes. Why this blocks: the note itself admits the selector and H_* are inputs, so the near-perfect direction match is not a retained derivation of charged-lepton values. Repair target: derive H_*, the small-root branch, and beta_* from retained charged-lepton microscopic dynamics without PDG-target optimization. Claim boundary until fixed: a sharp positive calibrated witness family, not a retained value law theorem.
 - **auditor confidence:** high
 
 ### `koide_gamma_orbit_selector_bridge_note_2026-04-18`
