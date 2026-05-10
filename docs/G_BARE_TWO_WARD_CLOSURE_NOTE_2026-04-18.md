@@ -1,11 +1,28 @@
 # Two-Representation Ward Closure on `g_bare`
 
-**Date:** 2026-04-19
-**Status:** CLOSED — two-Ward closure established on the accepted Wilson surface
+**Date:** 2026-04-19 (originally); 2026-05-10 (audit-narrowing refresh:
+status-line scoping + dep-status table at footer).
+**Status:** `audited_conditional` per 2026-04-30 audit; the local
+two-Ward closure algebra is unchanged, but the row inherits one-hop
+dependency on five upstream authorities, of which one
+(Rep-B independence) has reached `audited_clean / retained_bounded`
+since the snapshot, one (same-1PI pinning) is `audited_conditional`,
+and three (YT_WARD, rigidity, structural normalization) remain
+`unaudited`. See "Audit boundary" footer for the full dep-status
+table.
+**Type:** positive_theorem (in-note algebra) under upstream-conditional
+imports.
+**Status authority:** independent audit lane only.
+**Authority role:** records the in-note class-B closure algebra
+combining Rep-B independence and the same-1PI pinning identity. Does
+**not** propose retained or promoted-status promotion until the four
+non-clean upstream authorities (same-1PI pinning, YT_WARD, rigidity,
+structural normalization) are ratified to `audited_clean`.
 **Primary runner:** `scripts/frontier_g_bare_two_ward_closure.py`
+(`PASS=18, FAIL=0`)
 **Load-bearing theorems:**
-- [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
-- [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
+- [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md) (`audited_clean / retained_bounded`, audit_date 2026-05-05)
+- [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md) (`audited_conditional`, audit_date 2026-04-30)
 
 ---
 
@@ -197,3 +214,65 @@ F_Htt^(0)(g_bare) = 1 / sqrt(6)     (independent of g_bare)
 F_Htt^(0)(g_bare)^2 = g_bare² / 6   (same Gamma^(4) coefficient)
 => g_bare = 1.
 ```
+
+---
+
+## Audit boundary (2026-05-10 refresh of 2026-04-30 verdict)
+
+This row was audited on 2026-04-30 by
+`codex-audit-loop-critical-sweep-20260430` and returned
+`audited_conditional`. The chain-closure rationale recorded in the
+ledger is:
+
+> *The local step cannot be promoted because direct upstream authorities
+> remain unaudited, support/open/unknown, or terminal non-clean:
+> `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`,
+> `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`,
+> `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`,
+> `G_BARE_RIGIDITY_THEOREM_NOTE.md`,
+> `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`.*
+
+The audit's `verdict_rationale` (load-bearing-step class B):
+
+> *The load-bearing step still imports unratified direct authority.
+> Repair target: ratify or repair the listed upstream theorem/bridge
+> rows and rerun the local runner so it computes the disputed bridge
+> rather than only checking consequences. Claim boundary until fixed:
+> the note may be cited as conditional/supporting local structure, but
+> no retained or promoted audit status propagates through this row.*
+
+The five declared upstream authorities now sit at:
+
+| Upstream authority | Effective status (current) | Movement since 2026-04-30 audit snapshot |
+|---|---|---|
+| [`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md) | `audited_clean` / `retained_bounded` (audit_date 2026-05-05) | promoted from `audited_conditional` to `audited_clean / retained_bounded` |
+| [`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md) | `audited_conditional` (audit_date 2026-04-30) | unchanged |
+| [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) | `unaudited` | unchanged |
+| [`G_BARE_RIGIDITY_THEOREM_NOTE.md`](G_BARE_RIGIDITY_THEOREM_NOTE.md) | `unaudited` | unchanged |
+| [`G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md) | `unaudited` | unchanged |
+
+The Rep-B-independence dep has reached `audited_clean / retained_bounded`
+since the 2026-04-30 verdict snapshot. The same-1PI pinning dep
+remains `audited_conditional`, and three deps (YT_WARD, rigidity,
+structural normalization) remain `unaudited`. This row therefore
+stays at `audited_conditional` until those four deps are audited
+clean; the local class-B algebra and the proof in §§A--C are
+unchanged. The cached runner
+`scripts/frontier_g_bare_two_ward_closure.py` remains fresh
+(`PASS=18, FAIL=0`).
+
+**Cross-reference.** The same-cluster theorem note
+[`G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md`](G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md)
+exists in `docs/` and treats the Rep-B-only forcing branch as a
+stand-alone bounded theorem. It depends on the same Rep-B
+independence authority and on this row's two-Ward closure chain; it
+does not retire any of this row's four non-clean deps.
+
+**Repair path until fixed.** Per the audit verdict, the closure of
+this row requires either (i) ratification of the four non-clean
+upstream authorities (same-1PI pinning, YT_WARD, rigidity, structural
+normalization) to `audited_clean`, or (ii) a runner extension that
+computes the disputed bridge `F_Htt^(0)(g_bare)^2 = g_bare^2 / (2 N_c)`
+directly rather than checking consequences at a chosen `g_bare`. No
+repair is attempted in this audit-narrowing refresh; the in-note
+algebra and proof are unchanged.
