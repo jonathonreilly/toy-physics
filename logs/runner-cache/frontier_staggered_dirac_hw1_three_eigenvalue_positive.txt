@@ -1,0 +1,123 @@
+
+----------------------------------------------------------------------------------------
+Premises and symbolic setup
+----------------------------------------------------------------------------------------
+  [PASS (A)] C^3 = I (cyclic permutation cubes to identity)  (explicit matrix product)
+  [PASS (A)] 1 + w + w^2 = 0 (sum of cube roots of unity)  (explicit value)
+  [PASS (A)] w^3 = 1 (cube root of unity)  (explicit value)
+
+----------------------------------------------------------------------------------------
+Part 1: Schur reduction — circulant form for [H, C] = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] H = a I + b C + bbar C^2 is Hermitian (H = H^dagger)  (check by direct conjugate-transpose)
+  [PASS (A)] [H, C] = 0 (H commutes with the cyclic generator C)  (commutator H C - C H = 0 elementwise)
+  [PASS (A)] Centralizer of C in M_3(C)_Herm has 3 real parameters (circulant family)  (solution count = 1, expected = 1 family)
+  [PASS (A)] Centralizer is circulant: diag(H) = (a, a, a)  (diag = [h33, h33, h33])
+  [PASS (A)] Centralizer is circulant: H[i, (i+1) mod 3] all equal (= b)  (upper off-diagonals = [I*h23i + h23r, I*h23i + h23r, I*h23i + h23r])
+  [PASS (A)] Centralizer is circulant: H[i, (i-1) mod 3] all equal (= bbar)  (lower off-diagonals = [-I*h23i + h23r, -I*h23i + h23r, -I*h23i + h23r])
+  [PASS (A)] Upper off-diagonal = conjugate(lower) (Hermiticity in circulant family)  (b = conjugate(bbar))
+
+----------------------------------------------------------------------------------------
+Part 2: Eigenvalue formula on the circulant family
+----------------------------------------------------------------------------------------
+  [PASS (A)] H v_0 = lambda_0 v_0 with lambda_0 = a + b w^0 + bbar w^{-0}  (residual = [0, 0, 0])
+  [PASS (A)] H v_1 = lambda_1 v_1 with lambda_1 = a + b w^1 + bbar w^{-1}  (residual = [0, 0, 0])
+  [PASS (A)] H v_2 = lambda_2 v_2 with lambda_2 = a + b w^2 + bbar w^{-2}  (residual = [0, 0, 0])
+
+----------------------------------------------------------------------------------------
+Part 3: Cosine form lambda_k = a + 2 |b| cos(arg(b) + 2 pi k / 3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] lambda_0(a, |b|, arg(b)) = a + 2 |b| cos(arg(b) + 2 pi * 0 / 3)  (trig-simplified diff = 0)
+  [PASS (A)] lambda_1(a, |b|, arg(b)) = a + 2 |b| cos(arg(b) + 2 pi * 1 / 3)  (trig-simplified diff = 0)
+  [PASS (A)] lambda_2(a, |b|, arg(b)) = a + 2 |b| cos(arg(b) + 2 pi * 2 / 3)  (trig-simplified diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: Generic three-distinctness on the circulant family
+----------------------------------------------------------------------------------------
+  [PASS (A)] At (a, |b|, arg(b)) = (0, 1, 2/9), three eigenvalues are pairwise distinct  (lambda = [1.950820170778895, -1.3571501749289823, -0.5936699958499126])
+  [PASS (A)] At (a, |b|, arg(b)) = (0, 1, 0), two eigenvalues coincide (cos(2pi/3) = cos(4pi/3))  (lambda = [2.0, -1.0, -1.0])
+  [PASS (A)] At b = 0, spectrum collapses to (a, a, a)  (lambda = [2.0, 2.0, 2.0])
+  [PASS (A)] Tr(H) = 3 a (independent of b)  (Tr(H) = 3 at (a=1, b=1+2i))
+  [PASS (A)] Sum lambda_k = 3 a (independent of b)  (sum lambda_k = 3 at (a=1, b=1+2i))
+
+----------------------------------------------------------------------------------------
+Part 5: Mass-ordering convention sanity (assign species labels)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Mass-ordering: sorted eigenvalues are three distinct real numbers  (sorted = [-1.3571501749289823, -0.5936699958499126, 1.950820170778895])
+  [PASS (A)] Mass-ordering assigns (e, mu, tau) to (smallest, middle, largest) eigenvalue  (convention: [('e', -1.3571501749289823), ('mu', -0.5936699958499126), ('tau', 1.950820170778895)])
+
+----------------------------------------------------------------------------------------
+Part 6: Review-hygiene checks on the note
+----------------------------------------------------------------------------------------
+  [PASS (A)] Note exists at expected path  (docs/STAGGERED_DIRAC_HW1_THREE_EIGENVALUE_STRUCTURE_POSITIVE_THEOREM_NOTE_2026-05-10.md)
+  [PASS (A)] Note declares Type: positive_theorem  (line: **Type:** positive_theorem)
+  [PASS (A)] Note declares Claim type: positive_theorem  (line: **Claim type:** positive_theorem)
+  [PASS (A)] Note declares Status authority: independent audit lane only  (line: **Status authority:** independent audit lane only)
+  [PASS (A)] Note declares Authority role: source-note proposal  (line: source-note proposal)
+  [PASS (A)] Forbidden vocabulary not used: 'AC_λ.struct'  (absence of forbidden vocabulary tag 'AC_λ.struct')
+  [PASS (A)] Forbidden vocabulary not used: 'AC_λ.label'  (absence of forbidden vocabulary tag 'AC_λ.label')
+  [PASS (A)] Forbidden vocabulary not used: 'AC_lambda.struct'  (absence of forbidden vocabulary tag 'AC_lambda.struct')
+  [PASS (A)] Forbidden vocabulary not used: 'AC_lambda.label'  (absence of forbidden vocabulary tag 'AC_lambda.label')
+  [PASS (A)] Forbidden vocabulary not used: 'BAE-decomposition'  (absence of forbidden vocabulary tag 'BAE-decomposition')
+  [PASS (A)] Forbidden vocabulary not used: 'three-mass structure'  (absence of forbidden vocabulary tag 'three-mass structure')
+  [PASS (A)] Forbidden vocabulary not used: 'AC_φλ dissolution'  (absence of forbidden vocabulary tag 'AC_φλ dissolution')
+  [PASS (A)] Forbidden vocabulary not used: 'AC_phi_lambda dissolution'  (absence of forbidden vocabulary tag 'AC_phi_lambda dissolution')
+  [PASS (A)] Markdown-link citation present: 'STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md'  (markdown-link form)
+  [PASS (A)] Markdown-link citation present: 'KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md'  (markdown-link form)
+  [PASS (A)] Markdown-link citation present: 'KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md'  (markdown-link form)
+  [PASS (A)] Markdown-link citation present: 'C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md'  (markdown-link form)
+  [PASS (A)] Markdown-link citation present: 'BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09.md'  (markdown-link form)
+  [PASS (A)] Markdown-link citation present: 'MINIMAL_AXIOMS_2026-05-03.md'  (markdown-link form)
+  [PASS (A)] PDG numerical input absent: '0.510998'  (no charged-lepton mass values used)
+  [PASS (A)] PDG numerical input absent: '105.6583'  (no charged-lepton mass values used)
+  [PASS (A)] PDG numerical input absent: '1776.86'  (no charged-lepton mass values used)
+  [PASS (A)] No new axiom admission language  (audit-yaml block has new_axiom_admission: false)
+  [PASS (A)] BAE explicitly NOT consumed (excluded from positive statement)  (amplitude-equipartition deliberately excluded)
+  [PASS (A)] Koide Q = 2/3 deliberately excluded  (Koide excluded; depends on BAE)
+
+----------------------------------------------------------------------------------------
+Narrow positive theorem summary
+----------------------------------------------------------------------------------------
+
+  Positive theorem statement:
+
+  HYPOTHESIS:
+    A1: Cl(3) per-site local algebra.
+    A2: Z^3 spatial substrate with APBC.
+    R1: BZ-corner forcing of M_3(C) on H_{hw=1} == C^3, with Z/3Z
+        cyclic generator C permuting the three hw=1 corners.
+    R2: Schur reduction of Hermitian operators commuting with the
+        Z/3Z regular representation on H_{hw=1}, yielding the
+        circulant form a I + b C + bbar C^2 with (a, b) in R x C.
+
+  CONCLUSION (T1, T2, T3, T4):
+    (T1)  Operator class on H_{hw=1} reduces to circulants
+              H = a I + b C + bbar C^2,    (a, b) in R x C.
+    (T2)  Eigenvalues take the closed form
+              lambda_k = a + 2 |b| cos(arg(b) + 2 pi k / 3),
+              k = 0, 1, 2.
+    (T3)  For b != 0 and arg(b) mod 2 pi / 3 outside the discrete
+          coincidence set, the three eigenvalues are pairwise
+          distinct real numbers.
+    (T4)  Species labels {e, mu, tau} are assigned to the ordered
+          eigenvalue triple by the standard mass-ordering convention,
+          parallel to the SM conventions for (u, c, t),
+          (nu_1, nu_2, nu_3), (K_S, K_L).
+
+  Audit-lane class:
+    (A) - pure representation theory / polynomial algebra over R x C
+    with the standard root-of-unity identity 1 + w + w^2 = 0. No
+    PDG numerical input, no Koide identity, no BAE assumption,
+    no species-naming dependence on intrinsic operator properties.
+
+  This positive theorem isolates the structural three-eigenvalue
+  prediction (the "preserved-C_3 reading" of the framework's hw=1
+  triplet) plus the mass-ordering labeling convention, deliberately
+  excluding BAE and Koide Q = 2/3 (which require additional
+  amplitude-ratio admission).
+
+
+========================================================================================
+  TOTAL: PASS=48, FAIL=0
+========================================================================================
+PASS=48 FAIL=0
