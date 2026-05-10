@@ -28,6 +28,55 @@ pipeline from `audit_status` + `claim_type` + dependency chain.
 **Branch:** `claude/single-clock-codimension1-evolution-theorem-2026-05-03`
 **Runner:** `scripts/axiom_first_single_clock_codimension1_evolution_check.py`
 
+## Audit-status note (2026-05-09)
+
+The 2026-05-05 audit verdict (`audited_conditional`, chain_closes=false)
+ratified the lattice-form S1/S2/S3 algebra as internally coherent but
+flagged that every one-hop input authority is currently unaudited or
+audited_conditional, so the rubric blocks retained closure from
+propagating through the citation chain even though each step is
+internally clean. Specifically the verdict text reads:
+
+> "multiple one-hop inputs are not retained-grade or are explicitly
+> conditional, including reflection positivity, spectrum condition,
+> cluster decomposition, microcausality/Lieb-Robinson, Cl(3) physical
+> per-site Hilbert realization, and the superseded A_min carrier for
+> A3/A4."
+
+Per-input current status:
+
+- [AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+  — unaudited.
+- [AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
+  — unaudited.
+- [AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
+  — `audited_conditional`.
+- [AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md](AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)
+  — unaudited; the finite-range H plus `v_LR = 2erJ` derivation now
+  lives in the bounded PR #806 bridge note.
+- [AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+  — narrowed to the A1-only U1–U3 representation-classification result
+  (bounded_theorem). The A3-dependent per-site Hilbert realization used
+  in (R-CL3) of this note has been moved out to the staggered-Dirac
+  gate substep and is itself currently unaudited.
+- [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+  — `audited_conditional` (bounded conditional structural-dispersion
+  support; bounds the continuum corollary only, not the lattice form).
+- [LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
+  — unaudited (bounds the continuum corollary only).
+- [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) carrier
+  — meta; the auditor flagged that A3/A4 are recategorised as open
+  gates on the current carrier surface.
+
+Blocked-on: this single-clock codimension-1 evolution theorem stays
+audited-conditional until the cited support theorems advance to
+retained-grade. The S1/S2/S3 algebra (Steps 1–5 below) is unaffected
+by this status note; the change is purely upstream propagation
+accounting on the (R-RP)/(R-SC)/(R-CD)/(R-LR)/(R-CL3) bridge premises
+and on the A3/A4 carrier-gate status. The continuum-limit corollary
+is independently bounded by the emergent-Lorentz cite chain; that
+bound is unchanged.
+
 ## Scope
 
 `ANOMALY_FORCES_TIME_THEOREM.md` (Step 4) cites "single-clock

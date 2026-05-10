@@ -10,6 +10,34 @@ at finite `a`
 `ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`,
 [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
 
+## Audit-status note (2026-05-09)
+
+The 2026-05-05 audit verdict (`audited_conditional`, chain_closes=false)
+ratified the narrow free-scalar continuum-limit covariance core but
+flagged that the full retained claim imports dim-6 LV inheritance,
+CPT/P protection, and Planck-scale suppression from cited authorities
+that are themselves not retained-grade. Specifically:
+
+- [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+  is `audited_conditional` (now narrowed to bounded conditional
+  structural-dispersion support per the PR #803 salvage).
+- [LIGHT_CONE_FRAMING_NOTE.md](LIGHT_CONE_FRAMING_NOTE.md) is
+  `audited_conditional` (Lieb-Robinson framing only; finite-`a` cone
+  diagnostic now bounded via the PR #816 Crank-Nicolson companion).
+- [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md)
+  is `audited_conditional` (blocked on the same emergent-Lorentz cite).
+- [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+  is `audited_conditional` (current package pin, not yet a theorem).
+
+Blocked-on: this 3+1D boost-covariance result therefore stays
+audited-conditional until each of the four cited authorities advances
+to retained-grade. The free-scalar Hamiltonian-lattice continuum core
+(Steps 1–6 below, plus Step 8 combined SO(3,1) statement at the
+free-scalar level) is unaffected by this status note; the change is
+purely upstream propagation accounting on the dim-6 LV inheritance
+(Step 7), CPT/P protection citations, and the Planck-suppression
+phenomenological table.
+
 ## Theorem
 
 **Theorem (3+1D SO(3,1) boost covariance, Phase 4).**
