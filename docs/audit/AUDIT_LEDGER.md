@@ -22,10 +22,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 232 |
 | open_gate | 11 |
-| unaudited | 1093 |
+| unaudited | 1094 |
 | meta | 65 |
 | ~~audited_numerical_match~~ | 21 |
-| ~~audited_renaming~~ | 25 |
+| ~~audited_renaming~~ | 24 |
 | ~~audited_conditional~~ | 259 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
@@ -44,8 +44,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
-| `audited_renaming` | 25 |
-| `unaudited` | 1158 |
+| `audited_renaming` | 24 |
+| `unaudited` | 1159 |
 
 | claim_type | count |
 |---|---:|
@@ -844,7 +844,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_full_self_consistency_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
-| `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5.5 | E | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -7273,19 +7272,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the reduced graph-first PMNS family, J_chi(A_fwd) = chi = u + i v, and the current exact bank still annihilates this current on all retained routes.  _(class `A`)_
 - **chain closes:** False — The Fourier-projection identity is plausible as algebra over specified holonomies, but the restricted packet does not provide the holonomy/readout formulas or a proof that the listed sole-axiom routes annihilate J_chi. The missing step is a closed derivation of the native C3 holonomies and boundary vanishing from the axiom.
 - **rationale:** There are no cited authorities and no runner source or stdout, so the note must close from its own text. It defines J_chi and asserts both the value extraction J_chi(A_fwd)=u+iv and the route-wise boundary J_chi=0, but the restricted packet does not derive the native holonomy values or the current-bank annihilation theorem. The result therefore imports an unstated readout/boundary theorem rather than providing a first-principles axiom derivation.
-- **auditor confidence:** high
-
-### `pmns_commutant_eigenoperator_selector_note`
-
-- **Note:** [`PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`](../../docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded claim that a non-Cl(3) projected commutant eigenoperator on the hw=1 triplet yields a native even/odd C3 selector law for the passive offset and orientation labels, while not closing the active 5-real PMNS source.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-pmns_commutant_eigenoper-090`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The C3-even Fourier mode of the lifted projected commutant generator fixes the passive offset class, and the C3-odd Fourier mode fixes the branch/orientation selector.  _(class `F`)_
-- **chain closes:** False — The runner computes a projected commutant generator, corner traces, and their C3 Fourier split, but it does not derive the physical readout that identifies the even mode with the passive offset class or the odd mode with the branch/orientation selector. The missing step is a bridge theorem from the computed corner-profile modes to the PMNS selector labels tau and q.
-- **rationale:** Issue: the computed C3 Fourier modes are renamed as passive-offset and branch/orientation selectors without an internal theorem deriving that readout. Why this blocks: the finite linear-algebra computation establishes a nonzero corner-distinguishing profile, but the selector interpretation and the specific tau/q extraction are asserted by definition-level code. Repair target: prove a bridge theorem that the relevant PMNS selector observables are exactly these even/odd Fourier invariants with the stated normalization and q/tau maps. Claim boundary until fixed: the packet supports a projected-commutant corner-profile decomposition, not an axiom-native PMNS selector value law.
 - **auditor confidence:** high
 
 ### `pmns_corner_transport_active_block_note`

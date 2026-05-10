@@ -1,23 +1,33 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_pmns_commutant_eigenoperator_selector.py
-runner_sha256: b4908c9336b4b2680fc119fdce00e712ccb482a79862383159a927751790a533
+runner_sha256: 6145b57c896bf028dd1594f62221ab2070a723f9a78e826c1947f37864aea6ba
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.09
+elapsed_sec: 0.14
 status: ok
 ----- stdout -----
 ========================================================================================
-PMNS COMMUTANT EIGENOPERATOR SELECTOR
+PMNS COMMUTANT EIGENOPERATOR SELECTOR (NARROWED SCOPE 2026-05-09)
 ========================================================================================
 
 Inputs reused:
   - Cl(3) on Z^3 generation boundary
   - projected commutant / corner-distinguishing generator geometry
   - hw=1 corner orbit and C3[111] transport
+  - C3 cyclic group representation theory
 
-Question:
-  Can a non-Cl(3) projected commutant eigenoperator on the hw=1
-  triplet produce a native value law for the unresolved PMNS data?
+Question (narrowed):
+  Does the corner-trace profile of a projected non-Cl(3) commutant
+  eigenoperator admit a derivable C3 representation-theoretic
+  decomposition with a one-way Cl(3)-span vanishing check and a
+  demonstrated nonzero C3-fundamental-rep example?
+
+Narrowing context:
+  Audit verdict 2026-05-05 (codex-cli-gpt-5.5) flagged the prior
+  identification of v_0 with PMNS q and v_+ with PMNS tau as a
+  renaming. This runner narrows the load-bearing chain to the
+  C3 representation-theoretic content only; q/tau are framed as
+  operational definitions, not derived PMNS observables.
 
 ========================================================================================
 PART 1: PROJECTED COMMUTANT GENERATORS PROVIDE CORNER SPECTRA
@@ -26,63 +36,129 @@ PART 1: PROJECTED COMMUTANT GENERATORS PROVIDE CORNER SPECTRA
   [PASS (A)] The projected commutant at X2 has dimension 4
   [PASS (A)] The projected commutant at X3 has dimension 4
   [PASS (A)] A projected commutant generator outside the projected Cl(3) span exists  (corner-distinguishing projected non-Cl(3) generator found)
-  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X1  (trace=0.267862)
-  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X2  (trace=0.133931)
-  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X3  (trace=0.133931)
-  [PASS (A)] The projected non-Cl(3) generator distinguishes the three corners  (traces=[np.float64(0.2678624284533773), np.float64(0.1339312142266887), np.float64(0.1339312142266887)])
+  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X1  (trace=1.659016)
+  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X2  (trace=0.829508)
+  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X3  (trace=0.829508)
+  [PASS (A)] The projected non-Cl(3) generator distinguishes the three corners  (traces=[np.float64(1.6590157818996238), np.float64(0.8295078909498119), np.float64(0.8295078909498119)])
   [PASS (A)] The C3 unitary maps X1 into X2 with unit singular values  (svs=[1. 1. 1. 1.])
 
 ========================================================================================
-PART 2: FOURIER DECOMPOSITION OF THE CORNER SPECTRUM
+PART 2: C3 FOURIER DECOMPOSITION (REPRESENTATION-THEORETIC IDENTITY)
 ========================================================================================
-  [PASS (A)] The C3-even Fourier mode is the corner average  (v0=0.178575+0.000000j, mean=0.178575+0.000000j)
-  [PASS (A)] The two C3-odd Fourier modes are exchanged by conjugation on a real profile  (v1=0.044644+0.000000j, v2=0.044644+0.000000j)
-  [PASS (A)] The odd mode is nonzero because the projected commutant generator distinguishes corners  (|v1|=0.044644)
-  [INFO] The even mode is invariant under cyclic relabeling of the corners  (orbit average is sector-even)
+  [PASS (A)] The C3-trivial-rep (even) Fourier mode is the corner average  (v0=1.106011+0.000000j, mean=1.106011+0.000000j)
+  [PASS (A)] The two C3-fundamental-rep (odd) Fourier modes are exchanged by conjugation on a real profile  (v1=0.276503+0.000000j, v2=0.276503+0.000000j)
+  [PASS (A)] The odd mode is nonzero because the projected commutant generator distinguishes corners  (|v1|=0.276503)
+  [INFO] The even mode is invariant under cyclic relabeling of the corners  (orbit average is C3-trivial)
 
-  This is the exact projected-commutant eigenoperator selector law:
-    - even Fourier mode = passive offset class
-    - odd Fourier mode  = sector-orientation selector
+  This is the exact C3 representation-theoretic decomposition:
+    - C3-trivial rep:   v_0 = orbit average
+    - C3-fundamental:   (v_+, v_-) = conjugate pair on real profiles
     - corner-distinguishing data enter only through the C3 orbit
+  NOTE (narrowed scope): identification of v_0/v_+ with PMNS
+  observables tau, q is NOT in the load-bearing chain (see Part 3a).
 
 ========================================================================================
-PART 3: THE SELECTOR LAW FIXES THE BRANCH AND PASSIVE OFFSET CLASS
+PART 2a: C3 REPRESENTATION-THEORY BRIDGE (DERIVATION)
 ========================================================================================
-  [PASS (A)] The sector-orientation selector is a one-bit quantity  (tau=0)
-  [PASS (A)] The passive offset selector is a Z_3-valued class label  (q=2)
-  [INFO] The selector law is supported on the non-Cl(3) projected commutant generator  (the odd Fourier mode is sourced by the non-Cl(3) part)
-  [INFO] The selector law does not encode a 5-real active source  (selector output is only a one-bit / Z_3 class)
+  [PASS (A)] C3 character e_0 has unit-normalized inner product with itself  (<e0|e0>=0.333333+0.000000j)
+  [PASS (A)] C3 character e_+ is orthogonal to e_0  (<e0|e_+>=-0.000000+0.000000j)
+  [PASS (A)] C3 character e_- is orthogonal to e_0  (<e0|e_->=-0.000000+0.000000j)
+  [PASS (A)] C3 characters e_+ and e_- are orthogonal  (<e_+|e_->=0.000000-0.000000j)
+  [PASS (A)] On a C3-symmetric profile, the even mode equals the constant value  (v0=2.500000+0.000000j)
+  [PASS (A)] On a C3-symmetric profile, the C3-fundamental-rep modes vanish identically  (|v_+|=2.96e-16, |v_-|=2.96e-16)
+  [PASS (A)] Every projected Cl(3) basis element has vanishing C3-fundamental-rep modes  (max_odd=4.68e-16, profiles=[[4.0, 4.0, 4.0], [-0.0, 0.0, 0.0], [0.0, -0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]])
+  [PASS (A)] Linearity extends odd-mode vanishing from the projected Cl(3) basis to its span  (Fourier projection and corner trace are linear)
 
-  Therefore the projected commutant eigenoperator route fixes the
-  branch bit and passive offset class, but not the active 5-real
-  corner-breaking source.
+  Bridge derivation summary:
+    (i)  C3 character orthogonality: e_0, e_+, e_- are pairwise orthogonal
+         under the standard C3 inner product. (Verified above.)
+    (ii) C3-symmetric => fundamental-rep modes vanish: any constant
+         3-vector projects to zero under the C3-fundamental projector.
+    (iii) The projected Cl(3) basis has C3-symmetric profiles; by
+          linearity, the projected Cl(3) span has zero odd modes.
+    (iv) The nonzero odd mode on the demonstrated non-Cl(3) generator
+         is an explicit example, not a converse theorem.
+         Zero odd mode is not used as a Cl(3)-membership test.
+
+  This is the derivable bridge content of the narrowed theorem.
+  The PMNS-observable bridge (Fourier mode -> tau/q) is NOT
+  derivable here and is excluded from the load-bearing chain.
 
 ========================================================================================
-PART 4: THE ROUTE IS TOO SMALL TO FIX THE FULL ACTIVE VALUE LAW
+PART 3: OPERATIONAL q/tau DEFINITIONS ON THE FOURIER MODES
+========================================================================================
+
+  Per audit verdict (audited_renaming, codex-cli-gpt-5.5-20260505):
+  the previous load-bearing identification of v_0 with the PMNS
+  passive-offset class q and v_+ with the PMNS branch bit tau
+  was a definitional substitution rather than a derivation.
+
+  Under the narrowed claim scope (2026-05-09), q and tau are now
+  operational definitions on the Fourier modes, not derived PMNS
+  observables.
+
+  [PASS (OP)] Operational tau is a one-bit quantity by definition  (operational tau=0, by definition tau := (sign(Re v_+) < 0))
+  [PASS (OP)] Operational q is a Z_3-valued class label by definition  (operational q=2, by definition q := argmax(Re v_0, Re v_0 +/- Re v_+))
+
+  Operational q/tau values on the demonstrated generator: tau=0, q=2
+  These are tags from the canonical Fourier readout, not
+  PMNS-physical observables.
+
+========================================================================================
+PART 4: THE 3-CORNER FOURIER ROUTE IS TOO SMALL FOR THE 5-REAL SOURCE
 ========================================================================================
   [PASS (A)] The active corner-breaking source has five real coordinates  (xi1, xi2, eta1, eta2, delta)
   [PASS (A)] The projected commutant eigenoperator route supplies only the 3-corner orbit data  (one even mode + two odd modes)
-  [PASS (A)] A 3-corner selector cannot uniquely determine a 5-real active source  (5 > 3)
+  [PASS (A)] A 3-corner Fourier readout cannot uniquely determine a 5-real active source  (5 > 3)
 
-  So this route is a genuine native selector law, but it is not the
-  full microscopic value law for the active PMNS deformation.
+  So even on the narrowed Fourier-decomposition reading, the
+  3-corner orbit data is too small to determine the full active
+  5-real corner-breaking source. (Independent of any PMNS-
+  observable bridge interpretation.)
 
 ========================================================================================
-RESULT
+PART 5: SCOPE DISCIPLINE (AUDIT-NARROWING VERIFICATION)
 ========================================================================================
-  Exact theorem status:
-    - positive native selector law: YES
-    - full microscopic closure from this route: NO
 
-  What the route fixes:
-    - sector-orientation selector (one bit)
-    - passive offset class (Z_3 class label)
+  Verifies that the load-bearing chain under the narrowed claim
+  scope contains only the C3 representation-theoretic content,
+  and does NOT contain the previously-load-bearing PMNS-observable
+  identification.
 
-  What it does not fix:
-    - the active seed pair
-    - the active 5-real corner-breaking source
+  [PASS (A)] Load-bearing chain class set includes only algebraic class (A)  (load-bearing checks tagged class=A only)
+  [PASS (A)] Operational q/tau definitions are tagged as scope-only (class OP)  (q/tau outputs scoped as operational definitions)
+  [PASS (A)] PMNS-observable bridge (Fourier mode -> tau/q) is NOT in load-bearing chain  (narrowing per audit verdict 2026-05-05 (codex-cli-gpt-5.5))
 
-PASS=17  FAIL=0
+  Bounded scope (load-bearing):
+    - C3 even/odd Fourier decomposition of corner-trace profile
+    - projected Cl(3)-span odd-mode vanishing (one-way)
+    - demonstrated non-Cl(3) generator with nonzero odd mode
+  Excluded from load-bearing chain:
+    - bridge from v_0 to PMNS q observable
+    - bridge from v_+ to PMNS tau observable
+    - any axiom-native PMNS selector value law
+
+========================================================================================
+RESULT (NARROWED SCOPE)
+========================================================================================
+  Exact theorem status (under narrowed claim 2026-05-09):
+    - C3 representation-theoretic decomposition: YES (load-bearing)
+    - odd-mode vanishing on projected Cl(3) span: YES (derived)
+    - zero odd mode => projected Cl(3) membership: NOT claimed
+    - PMNS-observable bridge to tau/q: NOT in load-bearing chain
+
+  Bounded scope (load-bearing):
+    - canonical even + odd Fourier decomposition of corner-trace
+      profile via C3 character orthogonality
+    - projected Cl(3)-basis profiles are C3-symmetric, hence
+      the projected Cl(3) span has vanishing odd modes by linearity
+
+  Excluded from load-bearing chain (operational only):
+    - q := argmax(Re v_0, Re v_0 +/- Re v_+)
+    - tau := (sign(Re v_+) < 0)
+    - any PMNS-physical observable identification
+
+PASS=28  FAIL=0
 
 ----- stderr -----
 

@@ -50738,7 +50738,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ad89a8d836b5b3e757218e34e81ab06b55b0fc7f150e311704a8741d6595714c",
+      "note_hash": "06c3604178d84d16b84535cee53f3219a2fda1594298cf1276508a73b774289c",
       "path": "docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md",
       "runner_path": "scripts/frontier_pmns_commutant_eigenoperator_selector.py",
       "title": "PMNS Commutant Eigenoperator Selector"
