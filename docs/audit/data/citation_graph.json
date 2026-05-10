@@ -13285,6 +13285,46 @@
       "to": "dm_neutrino_postcanonical_polar_section_note_2026-04-15"
     },
     {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
       "from": "koide_taste_cube_cyclic_source_descent_note_2026-04-18",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -48308,6 +48348,28 @@
       "runner_path": "scripts/cl3_koide_s_L1_topological_2026_05_08_probeS_L1_topological.py",
       "title": "Probe S-L1-Topological \u2014 Chern-Simons / Knot Invariants and the QCD \u03b2_2/\u03b2_3 Channel-Weight Obstruction"
     },
+    "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda": {
+      "claim_id": "koide_s_substep4_aclambda_new_science_note_2026-05-08_probes_substep4_aclambda",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "conventions_unification_companion_note_2026-05-08"
+      ],
+      "note_hash": "d100e01f76392e603585260e2dc504fd3ee14264b1a6d2f378c79f849b053150",
+      "path": "docs/KOIDE_S_SUBSTEP4_ACLAMBDA_NEW_SCIENCE_NOTE_2026-05-08_probeS_substep4_aclambda.md",
+      "runner_path": "scripts/cl3_koide_s_substep4_aclambda_2026_05_08_probeS_substep4_aclambda.py",
+      "title": "Substep-4 AC_\u03bb Imported-Tool Closure Attempt (Bounded)"
+    },
     "koide_scale_selector_reparameterization_theorem_note_2026-04-20": {
       "claim_id": "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -65659,7 +65721,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 236,
+      "bounded_theorem": 237,
       "decoration": 1,
       "meta": 59,
       "no_go": 17,
@@ -65668,7 +65730,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 718,
+      "bounded_theorem": 719,
       "decoration": 1,
       "meta": 59,
       "no_go": 124,
@@ -65676,10 +65738,10 @@
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8215,
+    "edge_count": 8225,
     "leaf_count": 532,
-    "node_count": 2048,
+    "node_count": 2049,
     "root_count": 764,
-    "runners_with_path": 1663
+    "runners_with_path": 1664
   }
 }
