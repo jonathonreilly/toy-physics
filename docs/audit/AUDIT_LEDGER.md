@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1092 |
+| unaudited | 1091 |
 | meta | 66 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 260 |
+| ~~audited_conditional~~ | 261 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 260 |
+| `audited_conditional` | 261 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1158 |
+| `unaudited` | 1157 |
 
 | claim_type | count |
 |---|---:|
@@ -570,6 +570,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3250,6 +3251,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The runner genuinely checks the finite selector Hessian and the Schur complement identity for explicitly constructed matrices, so the core Schur return is class A algebra on supplied inputs. However, the note also relies on unclosed inputs: the retained weak-axis Higgs family, the direct Gamma_1 bridge, the bosonic normalization j=g_weak/sqrt(2), and the DM staircase conversion. The runner hard-codes or locally defines these inputs rather than deriving them from cited retained authorities, and the source note itself narrows the status to conditional algebra.
 - **open / conditional deps cited:**
   - `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_BUNDLE_WINDOW_TRICHOTOMY_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_BUNDLE_WINDOW_TRICHOTOMY_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical candidate on delta in [-2.5, 2.5], r31 in [0.5, 4.0], and the three stated m windows comparing broad-bundle repair minima to the preferred recovered floor.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11eb-ae48-7eb2-91f0-0923f61ea8db`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the broad tested exact bundle box, endpoint and split-1 minima are above Lambda_+(x_*)=1.586874714730 while split-2 has minimum 1.500442491658 below that floor, so broad exact-bundle dominance already fails on split-2.  _(class `B`)_
+- **chain closes:** False — The numerical trichotomy follows if the imported quotient bundle map, repair functional, and preferred recovered floor are accepted. The restricted packet gives no retained dependency or source proof closing those imported objects, so the chain does not close from cited inputs alone.
+- **rationale:** Issue: the note rests on a numerical optimization over quotient_gauge_h and an imported preferred floor from unprovided support modules, with no one-hop retained authorities listed for the exact-bundle carrier, repair readout, or floor normalization. Why this blocks: the runner recomputes the minima from those imports and checks against hard-coded expected values, but this packet cannot verify that those objects are derived rather than assumed upstream. Repair target: add retained dependency edges or include a runner/certificate deriving quotient_gauge_h, repair_from_slack_point, and PREFERRED_RECOVERED_LIFT from retained primitives, ideally with interval certification of the box minima and signs. Claim boundary until fixed: it remains a bounded numerical candidate on the stated broad box, not a closed exact-carrier theorem.
+- **open / conditional deps cited:**
+  - `scripts/dm_selector_branch_support.py`
+  - `scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py`
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`
