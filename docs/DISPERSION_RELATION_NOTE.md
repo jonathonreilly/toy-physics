@@ -133,4 +133,6 @@ The original analysis (2D only) concluded "decisively non-relativistic." The 3D 
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [3d_correction_master_note](3D_CORRECTION_MASTER_NOTE.md)
+(Forward-pointer only; written as plain text in backticks per the PR #306 cleanup pattern so the citation-graph builder does not parse it as an upstream dep edge. The pointed-to note is reclassified as `meta` per `frontier_3d_correction_master_note_meta_narrowing_check.py`, so this back-edge is not load-bearing on this dispersion note's claim scope and the cycle-0003 length-2 cycle between `3d_correction_master_note` and `dispersion_relation_note` is broken from the meta side.)
+
+- `3D_CORRECTION_MASTER_NOTE.md`

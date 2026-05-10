@@ -2,21 +2,19 @@
   "claim_type_counts": {
     "bounded_theorem": 802,
     "decoration": 13,
-    "meta": 106,
+    "meta": 107,
     "no_go": 195,
     "open_gate": 101,
-    "positive_theorem": 726
+    "positive_theorem": 725
   },
   "cycle_examples": [
-    [
-      "3d_correction_master_note",
-      "dispersion_relation_note"
-    ],
     [
       "axiom_first_reflection_positivity_theorem_note_2026-04-29",
       "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     ],
     [
+      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "lorentz_kernel_positive_closure_note",
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
       "planck_scale_conditional_completion_note_2026-04-24",
@@ -27,12 +25,10 @@
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
       "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
       "anomaly_forces_time_theorem",
-      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-      "lorentz_kernel_positive_closure_note"
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
-      "angular_kernel_underdetermination_no_go_note",
+      "lorentz_kernel_positive_closure_note",
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
       "planck_scale_conditional_completion_note_2026-04-24",
@@ -43,16 +39,23 @@
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
       "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
       "anomaly_forces_time_theorem",
-      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-      "lorentz_kernel_positive_closure_note"
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
       "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
       "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+    ],
+    [
+      "planck_boundary_density_extension_theorem_note_2026-04-24",
+      "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+      "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+      "area_law_native_car_semantics_tightening_note_2026-04-25",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+      "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     ]
   ],
-  "cycles_detected": 304,
+  "cycles_detected": 303,
   "effective_status_counts": {
     "audited_conditional": 239,
     "audited_failed": 24,
@@ -66,12 +69,12 @@
     "decoration_under_linear_response_true_kubo_note": 1,
     "decoration_under_moving_source_retarded_portability_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
-    "meta": 98,
+    "meta": 99,
     "open_gate": 12,
     "retained": 66,
     "retained_bounded": 234,
     "retained_no_go": 124,
-    "unaudited": 1101
+    "unaudited": 1100
   },
   "retained_pending_chain_count": 0,
   "retained_pending_chain_examples": []
