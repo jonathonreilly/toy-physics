@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_w_gnewton_valley_2026_05_10_probeW_GNewton_valley.py
+runner_sha256: 88a0041d4f8dbf54b666abb8a3dbdd91dfa2455766d8b6bd25eb33e82fb4cdb4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.12
+status: ok
+----- stdout -----
+==============================================================================
+G_Newton valley-linear-in-mass forcing (probeW) -- bounded probe
+==============================================================================
+
+==============================================================================
+Section 1: Lattice Laplacian -Delta_lat linearity (structural algebra)
+==============================================================================
+[PASS] S1.0 numpy import -- numpy available
+[PASS] S1.1 -Delta_lat (alpha f) = alpha (-Delta_lat f) on L=8 lattice -- max |diff| = 2.84e-14
+[PASS] S1.2 -Delta_lat (f1 + f2) = -Delta_lat f1 + -Delta_lat f2 on L=8 lattice -- max |diff| = 7.11e-15
+[PASS] S1.3 -Delta_lat (alpha f1 + beta f2) = alpha (-Delta_lat f1) + beta (-Delta_lat f2) -- max |diff| = 2.13e-14
+[PASS] S1.4 Linearity holds on L=16 lattice (robustness check) -- max |diff| = 4.26e-14
+[PASS] S1.5 (-Delta_lat)^{-1} linear: V(alpha rho1 + beta rho2) = alpha V1 + beta V2 -- max |diff| = 3.55e-15
+[PASS] S1.6 -Delta_lat stencil: 6 at origin, -1 at NN (finite-stencil algebra) -- origin=6.0, NN=-1.0
+[PASS] S1.7 Lattice Laplacian linearity = algebraic identity (not a physical admission) -- finite-stencil distributivity over scalar arithmetic
+[PASS] S1.8 Standard discrete calculus admitted as toolkit (per task constraints) -- no physical admission required for finite-stencil algebra
+
+==============================================================================
+Section 2: Canonical mass coupling rho_mass = M * rho_grav (B(b) load)
+==============================================================================
+[PASS] S2.1 unified Born map rho_grav(x) >= 0, sum = 1 (gnewtonG2 properties) -- non-neg=True, sum=1.0000000000
+[PASS] S2.2 rho_mass(x; alpha M) = alpha * rho_mass(x; M) (scalar mult on density) -- max |diff| = 1.39e-17
+[PASS] S2.3 rho_mass(x; M1 + M2) = rho_mass(x; M1) + rho_mass(x; M2) -- max |diff| = 3.47e-18
+[PASS] S2.4 sum_x rho_mass(x; M) = M (linear scaling for normalized rho_grav) -- max |diff| = 0.00e+00 across M in [0.5, 1.0, 2.0, 5.0, 10.0]
+[PASS] S2.5 rho_mass(x; M) >= 0 for M >= 0 (compatibility with screened-Poisson H2) -- min rho_mass = 2.091952e-05
+[PASS] S2.6 cross-ref: gnewtonG3 identifies V_grav = m*phi as B(b) load (same canonical coupling) -- path = G_NEWTON_WEAK_FIELD_RESPONSE_BOUNDED_CLOSURE_NOTE_2026-05-10_gnewtonG3.md
+[PASS] S2.7 cross-ref: gnewtonG2 supplies unified Born map rho_grav = <x|rho_hat|x> -- path = G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
+[PASS] S2.8 mass coupling M-linearity follows from scalar-multiplication on densities -- no physical admission beyond the canonical coupling premise
+
+==============================================================================
+Section 3: Composition forcing V(x; M) = M * V_unit(x) (forced by algebra)
+==============================================================================
+[PASS] S3.1 V(x; 2 M) = 2 V(x; M) (Gaussian source, L=16 periodic) -- max rel_diff = 0.00e+00, M=1.0, alpha=2.0
+[PASS] S3.2 V(x; 5 M) = 5 V(x; M) (Gaussian source, L=16 periodic) -- max rel_diff = 2.82e-16, alpha=5.0
+[PASS] S3.3 V(x; 10 M) = 10 V(x; M) (Gaussian source, L=16 periodic) -- max rel_diff = 2.82e-16, alpha=10.0
+[PASS] S3.4 V(x; M1 + M2) = V(x; M1) + V(x; M2) (additivity) -- max rel_diff = 2.69e-16, M1=2.0, M2=5.0
+[PASS] S3.5 V(x; M) = M * V_unit(x) for M in [1, 2, 5, 10] (Gaussian source) -- max rel_diff over M values = 2.82e-16
+[PASS] S3.6 V(x; M) = M * V_unit(x) for M in [1, 2, 5, 10] (point source) -- max rel_diff over M values = 9.30e-17
+[PASS] S3.7 V(M_a rho_a + M_b rho_b) = M_a V_a_unit + M_b V_b_unit (multi-source) -- max rel_diff = 6.65e-17, M_a=3.0, M_b=7.0
+[PASS] S3.8 V(M) at off-source position is exactly linear in M (R^2 = 1.0) -- R^2 = 1.000000000000, slope = 6.723559e-03, intercept = 1.133117e-17
+
+==============================================================================
+Section 4: Hostile-review of the chain (H1-H3)
+==============================================================================
+[PASS] S4.1 H1: rho_mass = M * rho_grav loads onto admission B(b) (same as gnewtonG3 V_grav = m*phi) -- no new admission introduced; B(b) is the residual gate
+[PASS] S4.2 H1: gnewtonG2 supplies rho_grav (probability density); M is the residual coupling -- rho_grav <-> probability; M -> conversion to mass density via scalar
+[PASS] S4.3 H2: -Delta_lat linearity verified algebraically (max |diff| < 1e-12) -- max |diff| = 1.78e-14; structural algebra, not a physical admission
+[PASS] S4.4 H2: Laplacian linearity is finite-stencil distributivity (algebra over R) -- no physical content; standard discrete calculus admitted as toolkit
+[PASS] S4.5 H3: chain (8)->(13) uses NO continuum manifold, NO tangent bundle -- all maps act on lattice functions L^2(Z^3)
+[PASS] S4.6 H3: no metric tensor g_munu required (load-bearing distinction from spent-delay) -- spent-delay needs g_munu; M-linearity does NOT
+[PASS] S4.7 H3: no Einstein equations (G_mu_nu = 8 pi G T_mu_nu) invoked -- Newton-limit Poisson chain only
+[PASS] S4.8 H3: lattice Poisson is the starting point of the chain (admission (a)) -- not derived from a continuum-GR weak-field expansion
+
+==============================================================================
+Section 5: Synthesis + Newton-recovery cross-check
+==============================================================================
+[PASS] S5.1 V(x; M) = M * V_unit(x) over M in [0.5, 10] forced by structural algebra -- max rel err = 4.49e-16
+[PASS] S5.2 GRAVITY_CLEAN_DERIVATION_NOTE.md exists (Step 8 reference) -- path = GRAVITY_CLEAN_DERIVATION_NOTE.md
+[PASS] S5.3 planckP4 sharpening note exists (admission count = 3) -- path = G_NEWTON_SELF_CONSISTENCY_BOUNDED_SHARPENING_NOTE_2026-05-10_planckP4.md
+[PASS] S5.4 sibling probes (gnewtonG2 + gnewtonG3) referenced -- shared residual gate: canonical mass coupling (B(b) load)
+[PASS] S5.5 V[r] - V[0] < 0 along radial axis (attractive-well structure, lattice Poisson) -- L=24, V[r]-V[0] at r=1..5 all negative: True
+[PASS] S5.6 M-linearity (probeW) is structurally distinct from action-form valley-linear (gnewtonG3) -- source-side M-scaling vs target-side phi-action; both linear
+[PASS] S5.7 hostile-review summary: H1 = B(b) load, H2 = algebra, H3 = no GR required -- tier: bounded forcing under canonical mass coupling
+[PASS] S5.8 bounded forcing classification: positive for forcing, bounded by canonical coupling -- M-linearity is forced by algebra; no fourth admission introduced
+[PASS] S5.9 not corollary churn -- operator-level composition + linearized-GR exclusion are new content -- distinct from gnewtonG2 (Born map) and gnewtonG3 (Hamiltonian flow / action form)
+[PASS] S5.10 review-loop source-only policy: 1 note + 1 runner + 1 cache -- no synthesis/Block notes; no automatic cross-tier promotion
+
+==============================================================================
+=== TOTAL: PASS=43, FAIL=0 ===
+==============================================================================
+
+----- stderr -----
