@@ -1,12 +1,63 @@
 # Newton's Law Derived from Cl(3) on Z^3
 
 **Status:** support - structural or confirmatory support note
+
+## Audit-conditional perimeter (2026-05-10)
+
+The audit lane has classified this row `audited_conditional` with
+load-bearing step class `A`. The audit verdict-rationale records the
+boundary explicitly:
+
+> "Issue: the note claims Newton's law follows without additional
+> assumptions, but its load-bearing Poisson equation is only supported
+> by a cited authority that is conditional on a stipulated closure
+> identity. Why this blocks: retained propagation cannot treat an
+> open/stipulated operator identification as an unconditional theorem
+> from Cl(3). Repair target: supply a retained bridge theorem deriving
+> L^{-1}=G_0, or narrow this note to a bounded theorem conditional on
+> the Poisson equation. Claim boundary until fixed: from stipulated
+> Poisson on Z^3, Green asymptotics and linearity give the stated
+> inverse-square/product form."
+
+The audit-stated repair is `missing_bridge_theorem`: "derive the
+closure identity L^{-1}=G_0 from the Cl(3) on Z^3 axiom, or revise the
+claim scope to explicitly remain conditional on the Poisson equation."
+
+The cited one-hop dependency
+[`GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+is itself a *bounded conditional* theorem: it derives `L = -Δ_lat`
+*given* the stipulated closure `L^{-1} = G_0`, but does not derive
+that identity from Cl(3) on Z^3. The required bridge — a retained
+theorem deriving `L^{-1} = G_0` from the Cl(3)-on-Z³ axiom —
+is the open D-row gap acknowledged in the parent's own "What Remains
+Open" section. Until that bridge lands, this note's scope is
+*conditional on the Poisson equation* (audit verdict's second repair
+path), not "Newton's law without additional assumptions".
+
+The "What Remains Open: Nothing" language elsewhere in this note is
+incompatible with the audit-flagged dependency posture and is
+explicitly narrowed below.
+
+This rigorization edit only sharpens the conditional perimeter and
+selects the audit's second repair path (claim-scope narrowing to
+Poisson-equation conditional) without modifying the runner or
+validation chain; nothing here promotes audit status, no new
+derivation is asserted, no audit JSON is modified, and the runner
+SHA256 for `frontier_distance_law_definitive.py` remains
+`f8f86ac9104aac9acfd1d446d48a8c96dcb88ad461f5bd684da1a4631ed1e554`.
+
 ## Status
 
-**Closed** on the retained framework surface.
+**Closed** on the retained framework surface, **conditional on the
+lattice Poisson equation `(-Δ_lat) φ = ρ`** — see
+"Audit-conditional perimeter (2026-05-10)" above.
 
-Newton's inverse-square law F = G M1 M2 / r^2 follows from the Poisson
-equation on Z^3 without additional assumptions.
+Newton's inverse-square law F = G M1 M2 / r^2 follows from the lattice
+Poisson equation on Z^3 *under* the stipulated closure identity
+`L^{-1} = G_0` carried by `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`. The
+audit-flagged repair path requires either deriving that closure
+identity from Cl(3) on Z^3 or narrowing the claim to remain
+Poisson-conditional; this note adopts the second repair path.
 
 ## Theorem / Claim
 
@@ -31,12 +82,23 @@ equation on Z^3 without additional assumptions.
 
 1. Cl(3) on Z^3 (the framework axiom).
 2. The staggered scalar field obeys the lattice Poisson equation
-   (-Delta_lat) phi = rho (equation of motion from the action).
+   `(-Δ_lat) φ = ρ` (equation of motion from the action). **This is
+   the audit-flagged stipulated assumption** — see the
+   "Audit-conditional perimeter (2026-05-10)" block at the top. It is
+   *not* derived from Cl(3) on Z^3 inside this note's cited
+   authority chain; the cited parent
+   `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md` records this as the
+   stipulated closure identity `L^{-1} = G_0`.
 3. The asymptotic theorem for the lattice Green's function
    (standard lattice potential theory, not a framework-specific claim).
 
-No additional physics is imported. The coupling constant G_N, the product
-law, the inverse-square exponent, and the distance dependence all follow.
+No additional physics is imported beyond the listed assumptions; in
+particular, the coupling constant G_N, the product law, the
+inverse-square exponent, and the distance dependence all follow
+*given* assumption 2. The unconditional "Newton's law from the Cl(3)
+axiom alone" reading depends on a retained bridge theorem deriving
+assumption 2 from assumption 1, which the audit lane has flagged as
+the open D-row gap.
 
 ## What Is Actually Proved
 
@@ -62,43 +124,76 @@ law, the inverse-square exponent, and the distance dependence all follow.
 
 ## What Remains Open
 
-Nothing in the Newton's law derivation chain remains open. The derivation
-is complete on the framework's theorem surface:
+Per the audit verdict (2026-05-10) recorded in the
+"Audit-conditional perimeter" block at the top, *one* item remains
+open in the chain: the closure-identity bridge `L^{-1} = G_0` from
+Cl(3) on Z^3. The cited parent note
+`GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md` is bounded-conditional on
+this identity and does not derive it from the framework axiom; this
+is the open D-row gap acknowledged in that parent.
 
-- The Poisson equation is the equation of motion.
-- The Green's function asymptotics are a mathematical theorem.
-- The product law is exact from linearity.
-- The exponent is exactly d - 1 = 2.
+**Open (audit-flagged):**
 
-The only bounded element is the finite-lattice numerical precision of
-the checks, which is a verification limitation, not a logical gap.
+- The closure identity `L^{-1} = G_0` is stipulated, not derived from
+  Cl(3) on Z^3. A retained bridge theorem deriving this identity from
+  the framework axiom is required to close the chain unconditionally.
+
+**Conditionally closed (given the Poisson equation):**
+
+- Given the lattice Poisson equation `(-Δ_lat) φ = ρ` as the equation
+  of motion, the Green's function asymptotic, the product law, the
+  exponent d − 1, and the inverse-square form follow as stated. This
+  is the audit verdict's "claim boundary until fixed" — it is the
+  path adopted here.
+
+**Bounded numerical confirmations (unchanged):**
+
+- The finite-lattice numerical precision of the checks (Green's
+  function ratio, deflection exponent, product law) remains a
+  verification limitation in the bounded sense; this is unchanged.
 
 ## How This Changes The Paper
 
 This derivation belongs in the paper as a clean worked example of how
-a macroscopic force law emerges from the framework without additional input:
+a macroscopic force law emerges from the framework *given the lattice
+Poisson equation as the equation of motion*. Manuscript text should
+preserve the audit-flagged conditional posture:
 
-> The inverse-square gravitational force law F = G M1 M2 / r^2 is a
-> consequence of the lattice Poisson equation on Z^3. The Green's function
-> of the lattice Laplacian approaches 1/(4 pi r) at large distances
-> (a standard result of lattice potential theory). The product M1 M2
-> emerges from Poisson linearity with cross-coupling between independent
-> sources. The exponent 2 = d - 1 follows from the spatial dimension d = 3,
-> itself determined by Cl(3).
+> Given the lattice Poisson equation `(-Δ_lat) φ = ρ` on Z^3 as the
+> equation of motion, the inverse-square gravitational force law
+> F = G M1 M2 / r^2 follows: the Green's function of the lattice
+> Laplacian approaches 1/(4 π r) at large distances (a standard
+> result of lattice potential theory), the product M1 M2 emerges
+> from Poisson linearity with cross-coupling between independent
+> sources, and the exponent 2 = d − 1 follows from the spatial
+> dimension d = 3 carried by Cl(3). The promotion of `(-Δ_lat) φ =
+> ρ` from "stipulated equation of motion under the closure identity
+> `L^{-1} = G_0`" to "Cl(3)-axiom-forced equation of motion" is the
+> open bridge identified by the audit lane (verdict 2026-05-10).
 
-This closes the loop from the framework axiom Cl(3) on Z^3 to Newton's
-law with no free parameters beyond the overall coupling normalization.
+This closes the *Poisson-conditional* loop from `(-Δ_lat) φ = ρ` to
+Newton's law with no free parameters beyond the overall coupling
+normalization, on the cited authority chain. The unconditional
+"Cl(3)-axiom ⇒ Newton's law" reading remains
+closure-identity-bridge-conditional.
 
-This is the retained weak-field gravity claim. Broader GR-signature notes
-(WEP, time dilation, light bending, geodesics, strong-field extension) should
-still be carried separately with their actual bounded status.
+This is the retained weak-field gravity claim *under the conditional
+perimeter above*. Broader GR-signature notes (WEP, time dilation,
+light bending, geodesics, strong-field extension) should still be
+carried separately with their actual bounded status.
 
 ## Commands Run
 
 ```bash
-cd /Users/jonreilly/Projects/Physics
-python3 scripts/frontier_newton_derived.py
+# Run from the repo root.
+python3 scripts/frontier_distance_law_definitive.py
 ```
+
+The audit-recorded primary runner for this row is
+`scripts/frontier_distance_law_definitive.py` (per the audit ledger);
+the older `scripts/frontier_newton_derived.py` and the earlier
+absolute-path command line are stale and have been replaced with the
+repo-relative invocation pointing at the audit-recorded runner.
 
 ## Supporting Evidence
 
