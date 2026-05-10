@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
-| unaudited | 1173 |
+| unaudited | 1172 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 214 |
+| ~~audited_conditional~~ | 215 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 370 |
-| `audited_conditional` | 214 |
+| `audited_conditional` | 215 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1241 |
+| `unaudited` | 1240 |
 
 | claim_type | count |
 |---|---:|
@@ -569,6 +569,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -4111,6 +4112,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** But the residual environment operator already closed on main satisfies R_beta^env chi_(p,q) = rho_(p,q)(beta) chi_(p,q); therefore R_beta^env = C_(Z_beta^env).  _(class `F`)_
 - **chain closes:** False — The restricted packet does not include the parent residual-environment identification theorem or a derivation that the coefficients of the true unmarked spatial Wilson environment equal the residual operator eigenvalues. The runner packages a chosen positive symmetric rho_env sequence rather than constructing the unmarked spatial environment.
 - **rationale:** Issue: the load-bearing equality R_beta^env = C_(Z_beta^env) imports an already-closed residual-environment identification and equates the residual diagonal data with boundary character coefficients without that bridge in the packet. Why this blocks: the runner uses a generic hard-coded positive conjugation-symmetric rho_env, so it verifies packaging, not the physical unmarked spatial Wilson environment. Repair target: provide the retained parent theorem constructing R_beta^env from the unmarked spatial Wilson boundary integral, or a runner that computes those coefficients from the actual environment. Claim boundary until fixed: this is an open-gate reformulation of the remaining datum as boundary character data, not a closed derivation of the environment operator.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite NMAX=4, MODE_MAX=80 SU(3) Wilson coefficient and fusion-recursion packet constructing one truncated tensor-transfer word and checking positivity, conjugation symmetry, and unit-vector boundary nonnegativity; not the full spatial-environment boundary identity or Perron data.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1259-0990-7e33-b314-e0df0dc5da21`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By Theorems 1 and 2, the unmarked spatial boundary character coefficients then satisfy structurally z_(p,q)^env(beta) = <chi_(p,q), (T_beta^env,tensor)^(L_perp-1) eta_beta^env>.  _(class `A`)_
+- **chain closes:** False — The finite runner verifies a constructed positive tensor word, but the note does not derive that this word is the actual unmarked spatial-environment slice transfer or that the stated boundary readout equals the actual z_(p,q)^env(beta). The source explicitly leaves the full untruncated beta=6 tensor-transfer construction, multi-word coverage, and Perron/boundary evaluation open.
+- **rationale:** Issue: the load-bearing boundary-character identity is asserted structurally, while the runner only checks one truncated positive tensor word built from local ingredients. Why this blocks: positivity and swap symmetry of that finite word do not prove that actual residual spatial-environment boundary amplitudes arise from the claimed transfer operator. Repair target: a retained bridge theorem and runner constructing the actual spatial-environment slice transfer, boundary state, and readout, or a split note scoped only to the one finite tensor-word packet. Claim boundary until fixed: bounded evidence for local Wilson coefficients, SU(3) fusion primitives, and one NMAX=4/MODE_MAX=80 positivity example.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17`
