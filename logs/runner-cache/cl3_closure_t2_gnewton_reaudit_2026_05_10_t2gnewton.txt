@@ -1,0 +1,154 @@
+===== runner cache v1 =====
+runner: scripts/cl3_closure_t2_gnewton_reaudit_2026_05_10_t2gnewton.py
+runner_sha256: e2593e35364ff9f683886dc8965ec740e6ccd89a280538e711e49e4f5745b939
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+
+############################################################################
+# T2 G_NEWTON RE-AUDIT RUNNER
+# Source note: docs/CLOSURE_T2_GNEWTON_REAUDIT_NOTE_2026-05-10_t2gnewton.md
+############################################################################
+
+============================================================================
+T1: Hamiltonian skeleton L_H = H = -Delta_lat in static sector
+============================================================================
+  [PASS] T1.a: L_H equals -Delta_lat by construction (Hamiltonian skeleton)
+         max|L_H - (-Delta_lat)| = 0.000e+00
+  [PASS] T1.b: L_H is symmetric (Hermitian)
+         max|L_H - L_H^T| = 0.000e+00
+  [PASS] T1.c: L_H is positive semi-definite
+         min eigenvalue = 1.215e-15
+
+============================================================================
+T2: Lattice d'Alembertian static-sector reduction to H
+============================================================================
+  [PASS] T2.a: d_t^2 annihilates t-constant fields (static sector)
+         max|d_t^2 @ const_t| = 0.000e+00
+  [PASS] T2.b: L_box on t-constant field equals nL on spatial slice
+         max|L_box phi - nL phi_s| = 3.553e-15 (static restriction)
+  [PASS] T2.c: L_box exactly decomposes as Dt2 (x) I_s + I_t (x) nL
+         residual = 0.000e+00
+
+============================================================================
+T3: Euclidean / complex-action skeleton static-sector reduction to H
+============================================================================
+  [PASS] T3.a: K_E on tau-constant field reduces to nL on spatial slice
+         max|K_E phi - nL phi_s| = 1.776e-15
+  [PASS] T3.b: K_E is Hermitian (symmetric)
+         max|K_E - K_E^T| = 0.000e+00
+  [PASS] T3.c: K_E is positive semi-definite (Euclidean signature)
+         min eigenvalue = -1.776e-15
+
+============================================================================
+T4: Closure identity L^{-1} = G_0 is definitional under L = H
+============================================================================
+  [PASS] T4.a: L^{-1} = H^{-1} once L = H (definitional)
+         max|L^-1 - H^-1| = 0.000e+00 (machine precision)
+  [PASS] T4.b: L^{-1} = G_0 by closure identity (definitional)
+         max|L^-1 - G_0| = 0.000e+00
+
+============================================================================
+T5: HIDDEN MODELING STEP — static-sector privilege (F1.2)
+============================================================================
+  [PASS] T5.a: L_box != I_t (x) nL on non-static (pulse) field
+         max|L_box pulse - I_t x nL pulse| = 6.147e+00 (non-trivial: d_t^2 active)
+  [PASS] T5.b: d_t^2 (x) I_s contribution on pulse is non-zero
+         ||Dt2 contribution|| = 1.946e+01
+  [PASS] T5.c: F1.2 confirmed — static-sector privilege is a modeling step
+         static restriction is non-trivial; outside it L_box has retardation and L_box != H
+
+============================================================================
+T6: gnewtonG2 unified position-density Born map
+============================================================================
+  [PASS] T6.a: pure-state rho_hat has trace 1
+         |Tr rho - 1| = 2.221e-16
+  [PASS] T6.b: pure-state reduction rho_grav(x) = |psi(x)|^2
+         max|<x|rho|x> - |psi(x)|^2| = 1.388e-17
+  [PASS] T6.c: pure-state rho_grav is non-negative
+         min(rho_grav) = 9.024e-05
+  [PASS] T6.d: pure-state rho_grav sums to Tr(rho) = 1
+         sum(rho_grav) = 1.000000
+  [PASS] T6.e: mixed-state rho_hat has trace 1
+         |Tr rho_mixed - 1| = 1.111e-16
+  [PASS] T6.f: mixed-state reduction rho_grav(x) = sum p_i |psi_i(x)|^2
+         max|<x|rho|x> - sum p_i |psi_i|^2| = 6.939e-18
+  [PASS] T6.g: mixed-state rho_grav is non-negative
+         min(rho_grav_mixed) = 9.389e-05
+  [PASS] T6.h: linearity rho_grav(a*rho1 + b*rho2) = a*rho_grav(rho1) + b*rho_grav(rho2)
+         max linearity dev = 6.939e-18
+
+============================================================================
+T7: CITATION DEFECT — gnewtonG2 -> CONVENTIONS_UNIFICATION (F2.1)
+============================================================================
+  [PASS] T7.a: CONVENTIONS_UNIFICATION_COMPANION_NOTE.md exists
+         path = docs/CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08.md, lines = 235
+  [PASS] T7.b: 'Born' (case-sensitive) count is ZERO in cited note
+         'Born' matches = 0
+  [PASS] T7.c: 'born' (lowercase) count is ZERO in cited note
+         'born' matches = 0
+  [PASS] T7.d: case-insensitive 'born' count is ZERO in cited note
+         case-insensitive 'born' matches = 0
+  [PASS] T7.e: cited note IS about labeling/unit conventions (positive check)
+         'labeling/label' present: True, 'unit' present: True
+  [PASS] T7.f: F2.1 confirmed — gnewtonG2 cite to CONVENTIONS_UNIFICATION for Born-rule operationalism is empty
+         audit lane should require gnewtonG2 to fix the citation
+
+============================================================================
+T8: SCOPE LIMITATION — source-coupling question untouched (F2.2)
+============================================================================
+  [PASS] T8.a: alternative source <x|H*rho|x> is also a valid linear map
+         max|Im(<x|H*rho|x>)| = 1.342e-01
+  [PASS] T8.b: alternative source w(x)*<x|rho|x> is also a valid linear map
+         weighted source non-negative when w >= 0
+  [PASS] T8.c: alternative source <x|H*rho|x> is NOT equal to <x|rho|x>
+         ||rho_grav - rho_kin (norm)|| > 0 confirms distinct candidates
+  [PASS] T8.d: F2.2 confirmed — gnewtonG2 does not derive which observable expectation gravity sources from
+         source-coupling question (why position density?) remains open
+  [PASS] T8.e: gnewtonG2 itself acknowledges 'does not derive that gravity must use this readout'
+         see gnewtonG2.md Conclusion: explicitly out-of-scope
+
+============================================================================
+T9: ADMISSION COUNT PRESERVATION — planckP4 three-admission framing
+============================================================================
+  [PASS] T9.(a): admission (a) L^{-1} = G_0 is SIZE-REDUCED, not ELIMINATED
+         original: closure identity, stipulated; after: static-sector privilege, modeling step
+  [PASS] T9.(b): admission (b) rho = |psi|^2 is SIZE-REDUCED, not ELIMINATED
+         original: Born map as gravity source, target-side; after: source-coupling question (canonical position density not derived)
+  [PASS] T9.(c): admission (c) S = L(1 - phi) is SIZE-REDUCED, not ELIMINATED
+         original: valley-linear vs spent-delay, empirical match; after: valley-linear under canonical V_grav coupling (coupling admitted)
+  [PASS] T9.total: three-admission count preserved (3 of 3 admissions remain)
+         total open admissions = 3 (planckP4 framing intact)
+
+============================================================================
+T10: HOSTILE-REVIEW FINDING SYNTHESIS — named weaknesses for audit lane
+============================================================================
+  [PASS] T10.F1.1: named weakness 'F1.1' surfaced for audit lane
+         description: cited-support audit status (R-RP, R-SC, R-LR, R-SCC, R-PL all unaudited/audited_conditional); status: documented in source note
+  [PASS] T10.F1.2: named weakness 'F1.2' surfaced for audit lane
+         description: hidden modeling step: static-sector privilege replaces closure identity as the admission; status: named in F5
+  [PASS] T10.F2.1: named weakness 'F2.1' surfaced for audit lane
+         description: citation defect: gnewtonG2 cites CONVENTIONS_UNIFICATION_COMPANION for Born-rule operationalism (zero Born matches in cited note); status: verified by T7
+  [PASS] T10.F2.2: named weakness 'F2.2' surfaced for audit lane
+         description: source-coupling question untouched: why gravity couples to <x|rho|x> rather than another observable; status: verified by T8 + gnewtonG2 own Conclusion
+  [PASS] T10.R1: gnewtonG1 is legitimate bounded support
+         algebraic core verified T1-T4; named weaknesses F1.1, F1.2
+  [PASS] T10.R2: gnewtonG2 is legitimate bounded support WITH citation defect
+         algebraic core verified T6; named weaknesses F2.1 (defect), F2.2 (scope)
+  [PASS] T10.R3: planckP4 three-admission count preserved
+         neither narrowing closes its admission; T9 confirms count = 3
+  [PASS] T10.D1: downstream C-B(b) inherits F2.1 citation defect
+         load-bearing chain uses Born map identification but does not derive Born from the framework baseline; F2.1 flows downstream
+  [PASS] T10.summary: hostile-review result is bounded open-gate support, not closure attempt
+         audit-lane authority preserved; no status change implied
+
+
+============================================================================
+=== TOTAL: PASS=46, FAIL=0 ===
+============================================================================
+
+
+----- stderr -----
+

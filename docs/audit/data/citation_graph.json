@@ -4289,6 +4289,62 @@
       "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
     },
     {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "gravity_clean_derivation_note"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "gravity_full_self_consistency_note"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "born_rule_analysis_2026-04-11"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "self_gravity_born_hardening_note"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "staggered_fermion_card_2026-04-11"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "wave_equation_gravity_note"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "newton_law_derived_note"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "propagator_family_unification_note"
+    },
+    {
+      "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
@@ -38290,6 +38346,32 @@
       "runner_path": "scripts/cl3_closure_c_staggered_2026_05_10_cStaggered.py",
       "title": "Staggered Dirac Gate: C8 Assembly Candidate and Order-One Open Gate"
     },
+    "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton": {
+      "claim_id": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+        "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+        "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
+        "gravity_clean_derivation_note",
+        "gravity_full_self_consistency_note",
+        "conventions_unification_companion_note_2026-05-08",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "born_rule_analysis_2026-04-11",
+        "self_gravity_born_hardening_note",
+        "staggered_fermion_card_2026-04-11",
+        "wave_equation_gravity_note",
+        "newton_law_derived_note",
+        "propagator_family_unification_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "0387cb8ee7bf9b234070bafe68c2c0871386b0ad2fc8fd54ab404ad6aee05ec4",
+      "path": "docs/CLOSURE_T2_GNEWTON_REAUDIT_NOTE_2026-05-10_t2gnewton.md",
+      "runner_path": "scripts/cl3_closure_t2_gnewton_reaudit_2026_05_10_t2gnewton.py",
+      "title": "T2 G_Newton Re-Audit \u2014 Skeleton-Selection + Born-as-Source Hostile Review"
+    },
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
       "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
       "claim_type_author_hint": null,
@@ -66585,7 +66667,7 @@
       "meta": 59,
       "no_go": 23,
       "none": 1626,
-      "open_gate": 27,
+      "open_gate": 28,
       "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
@@ -66594,13 +66676,13 @@
       "meta": 59,
       "no_go": 130,
       "none": 449,
-      "open_gate": 115,
+      "open_gate": 116,
       "positive_theorem": 593
     },
-    "edge_count": 8332,
-    "leaf_count": 539,
-    "node_count": 2076,
+    "edge_count": 8346,
+    "leaf_count": 537,
+    "node_count": 2077,
     "root_count": 769,
-    "runners_with_path": 1691
+    "runners_with_path": 1692
   }
 }
