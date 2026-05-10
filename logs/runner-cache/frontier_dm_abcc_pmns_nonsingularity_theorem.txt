@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py
-runner_sha256: 3d2d94c0a9ea5e4bff6bb9ccca8d38b461f0d1518ed6042f113b4b445c82c782
+runner_sha256: 96815676bcc46f0e2c499031e458e815243f43e224080988eb2299371cd1e54e
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 2.96
+elapsed_sec: 1.93
 status: ok
 ----- stdout -----
 A-BCC PMNS Non-Singularity Theorem Runner
@@ -101,8 +101,33 @@ Physical constants: E1=1.632993=sqrt(8/3), E2=0.942809=sqrt(8)/3, Gamma=0.5
   [PASS] Unique chi^2=0 basin satisfying PNS is C_base (Basin 1)  (1 C_base PNS-consistent basin(s))
   [PASS] All C_neg basins violate PNS  (2 C_neg basins violate PNS)
 
+=== T10: U_PMNS unitarity from Cl(3) spectral theorem (algebraic) ===
+  Claim: Given Hermitian H in Cl(3),
+         the diagonalizing U from H = U diag(lambda) U^dag is in U(3).
+         Then U_PMNS = U_e^dag U_nu is unitary by U(3) closure.
+  This is the algebraic PMNS-matrix unitarity companion; it does
+  not prove endpoint or path determinant nonzero.
+  [PASS] Random Cl(3) Hermitian samples: ||U^dag U - I||_F < 1e-10  (max residual = 2.02e-15)
+  [PASS] Random Cl(3) Hermitian samples: |det U| = 1 (in U(3))  (max ||det U| - 1| = 1.55e-15)
+  [PASS] H_base diagonalizer is in U(3): ||U^dag U - I|| < 1e-12  (residual = 1.27e-15)
+  [PASS] H_base diagonalizer is in U(3): |det U| = 1  (|det U| = 1.000000000000)
+  [PASS] Basin 1 endpoint diagonalizer is in U(3): ||U^dag U - I|| < 1e-12  (residual = 8.31e-16)
+  [PASS] Basin 1 endpoint diagonalizer is in U(3): |det U| = 1  (|det U| = 1.000000000000)
+  [PASS] U_PMNS = U_e^dag U_nu is unitary: ||U_PMNS^dag U_PMNS - I|| < 1e-12  (residual = 1.57e-15)
+  [PASS] U_PMNS = U_e^dag U_nu has |det| = 1 (U(3) closure)  (|det U_PMNS| = 1.000000000000)
+
+=== T11: Symbolic spectral-theorem unitarity (Cl(3) 3x3 Hermitian) ===
+  [PASS] H_sym is Hermitian (H = H^dag)
+  [PASS] symbolic det(H_base) > 0 (matches numeric 5.028)  (sym det = 5.028315)
+  [PASS] Eigenvectors of H_sym (rational+sqrt entries) are orthonormal  (||V^dag V - I|| = 9.28e-16)
+  [PASS] |det V| = 1 for diagonalizer of H_sym (V in U(3))  (|det V| = 1.000000000000)
+  [PASS] U1 (real rotation) unitary symbolically
+  [PASS] U2 (phase) unitary symbolically
+  [PASS] Product U1*U2 unitary symbolically (U(3) closure)
+  [PASS] U_PMNS = U_1^dag U_2 unitary symbolically (closure)
+
 ==================================================
-FINAL: PASS=33 FAIL=0
+FINAL: PASS=49 FAIL=0
 
 ----- stderr -----
 

@@ -37121,7 +37121,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "b5a4766380746e251ee294b315a11c7f12ece73958c3a4b59eae88fcd8e15a96",
+      "note_hash": "7eeebddfadd4a66a060885ac5ba71ececaf80f25bf82c59ce864082c7fe073bd",
       "path": "docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py",
       "title": "DM A-BCC: PMNS Non-Singularity Theorem"

@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1092 |
+| unaudited | 1093 |
 | meta | 66 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 260 |
+| ~~audited_conditional~~ | 259 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 260 |
+| `audited_conditional` | 259 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1158 |
+| `unaudited` | 1159 |
 
 | claim_type | count |
 |---|---:|
@@ -546,7 +546,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -2624,19 +2623,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the corrected retained five-basin chart, chamber survivors are {Basin 1, Basin 2, Basin X}, with F_4 true only for Basin 1, so chamber ∩ F_4 selects Basin 1 uniquely.  _(class `A`)_
 - **chain closes:** False — The finite algebraic/numerical check closes on the provided basin coordinates and runner definitions. The broader theorem still imports the retained five-basin source chart and selector structure without any cited retained authority or first-principles derivation in the restricted packet.
 - **rationale:** The runner does perform nontrivial finite computation of chamber membership, cubic coefficients, discriminants, Newton/sampling checks, and the final intersection; it is not merely printing constants. However, those computations are over hard-coded basin coordinates, H_base/J_B matrices, and an asserted selector framework, and the note explicitly says the five-basin source chart is not derived from Cl(3)/Z^3. The audited result is therefore a conditional algebraic support theorem on imported retained-chart inputs, not a clean first-principles closure.
-- **auditor confidence:** high
-
-### `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`
-
-- **Note:** [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Formal conditional implication that PMNS Non-Singularity plus det(H_base)>0 preserves positive determinant along the linear coupling path; fixed-basin runner checks are supporting numerical consistency only.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_abcc_pmns_nonsingular-104`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** With f(t)=det(H_base+tJ_phys), f(0)>0 and PNS asserting f(t) != 0 on [0,1], the intermediate value theorem forces f(1)>0.  _(class `A`)_
-- **chain closes:** True — The conditional implication PNS => A-BCC closes by continuity/IVT. PNS itself is an explicit imported axiom and is not derived or retained by the restricted packet.
-- **rationale:** Issue: the proof imports PMNS Non-Singularity as an axiom rather than deriving it. Why this blocks: the physical A-BCC conclusion is only as strong as that unclosed path premise, and the runner only checks fixed basin examples plus the IVT logic. Repair target: provide a retained bridge theorem deriving PNS for the physical coupling path. Claim boundary until fixed: the IVT conditional theorem is valid, but A-BCC is not axiom-free.
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
