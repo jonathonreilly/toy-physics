@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1130 |
+| unaudited | 1129 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 237 |
+| ~~audited_conditional~~ | 238 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 237 |
+| `audited_conditional` | 238 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1197 |
+| `unaudited` | 1196 |
 
 | claim_type | count |
 |---|---:|
@@ -687,6 +687,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -8734,6 +8735,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current retained harness reproduces the force-based staggered card surface: 1D n=61 and 3D n=9/11/13 all score 17/17, with the documented n>9 C17 family-coverage gate.  _(class `C`)_
 - **chain closes:** True — The source note scopes the result to the force-based card and states the weaker row semantics and family-coverage caveats. The repo-local runner completed and reproduced the stated 17/17 outputs without external imports or stale numerical mismatch.
 - **rationale:** The load-bearing claim is bounded to a fixed finite runner and operating point, not a repo-wide centroid-gravity claim or a universal physical theorem. The runner computes the card rows and reproduces the note's listed values for 1D n=61 and 3D n=9/11/13, including the documented C17 limitation at n=11 and n=13. Residual risk is scope leakage: this clean verdict should not be read as validating centroid-based card semantics, dynamic/cosmological extensions, or full six-family 3D coverage above n=9.
+- **auditor confidence:** high
+
+### `staggered_fermion_card_2026-04-11`
+
+- **Note:** [`STAGGERED_FERMION_CARD_2026-04-11.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional finite-harness numerical score surface for the supplied parity-coupled staggered canonical 1D/3D runner on enumerated finite cards and chosen operating parameters.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1216-3fd2-7241-b595-1405b6aed601`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "Conditional on (H1)–(H9), the registered parity-coupled runner outputs reproduce the score surface tabulated below on the enumerated finite cards."  _(class `C`)_
+- **chain closes:** False — The supplied runner computes the canonical 1D/3D score surface, but the physical bridge premises H1-H9 are admitted rather than derived. The only cited authority for the staggered-Dirac anchor is a superseded meta note, and the runner hard-codes an external negative potential rather than deriving the screened-Poisson positive-source bridge claimed in H1-H2.
+- **rationale:** Issue: the note's closure depends on admitted screened-Poisson, positive-source, sign-convention, static-lattice, graph-family, parameter, and staggered-Dirac premises, while the cited A_min authority is explicitly superseded/meta. Why this blocks: the finite PASS surface is a harness result under selected inputs, not a bounded theorem from retained one-hop authorities. Repair target: supply retained bridge theorems or retained dependency edges for H1-H9, and align runner artifacts with the claimed source law and full tabulated score surface. Claim boundary until fixed: canonical finite-runner outputs may be cited only as conditional numerical evidence under the listed harness assumptions.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `staggered_geometry_superposition_note_2026-04-11`

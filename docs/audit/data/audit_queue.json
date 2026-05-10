@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 697,
+    "critical": 696,
     "high": 23,
     "leaf": 266,
     "medium": 150
@@ -6057,29 +6057,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "staggered_fermion_card_2026-04-11",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-04-11"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.333,
-      "note_path": "docs/STAGGERED_FERMION_CARD_2026-04-11.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_staggered_17card.py",
-      "transitive_descendants": 644
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -25517,7 +25494,7 @@
       "claim_id": "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint_after_invalidation",
+      "claim_type_provenance": "author_hint",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
@@ -36046,6 +36023,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 120,
-  "total_pending": 1136
+  "ready_count": 119,
+  "total_pending": 1135
 }
