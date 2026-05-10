@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 704,
+    "critical": 703,
     "high": 25,
     "leaf": 268,
     "medium": 148
@@ -7286,27 +7286,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_bell_inequality.py",
       "transitive_descendants": 365
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "poisson_self_gravity_born_audit_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.435,
-      "note_path": "docs/POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/poisson_self_gravity_born_audit.py",
-      "transitive_descendants": 345
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -37524,6 +37503,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 110,
-  "total_pending": 1145
+  "ready_count": 109,
+  "total_pending": 1144
 }
