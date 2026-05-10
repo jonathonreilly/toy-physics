@@ -33,6 +33,17 @@ It does not support:
 
 - exact `m_H = 125 GeV`
 - one final theorem-grade Higgs route
+- a framework-native derivation of `lambda(M_Pl) = 0` (Gap #7
+  clarification, 2026-05-10): the earlier "composite-Higgs /
+  no-elementary-scalar" slogan was retired in PR #937 (NJL
+  counterexample); cycle-20 stretch attempt
+  ([`COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md`](./COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md))
+  remains open with three named residual obstructions. The
+  boundary-condition derivation is OPEN; downstream notes consume
+  `lambda(M_Pl) = 0` as admitted-context literature-standard input
+  on equal footing with Buttazzo / Degrassi SM analyses. See
+  [`VACUUM_CRITICAL_STABILITY_NOTE.md`](./VACUUM_CRITICAL_STABILITY_NOTE.md)
+  for the open-gate audit.
 
 <!--
 Cycle-break (2026-05-06): the "Audit dependency repair links" back-edge
