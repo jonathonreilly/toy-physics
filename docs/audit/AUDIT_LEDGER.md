@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1100 |
+| unaudited | 1099 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 241 |
+| ~~audited_conditional~~ | 242 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 241 |
+| `audited_conditional` | 242 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1198 |
+| `unaudited` | 1197 |
 
 | claim_type | count |
 |---|---:|
@@ -565,6 +565,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_chamber_signature_structure_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -2887,6 +2888,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** By Lemma 3, gamma(0) has signature (1,0,2) and gamma(1) has signature (2,0,1); these are distinct connected components of GL(Herm_3), so gamma must exit GL(Herm_3) at det=0.  _(class `A`)_
 - **chain closes:** False — The distinct-component argument closes for endpoints whose signatures are independently established, including the listed Basin 2/X numerical endpoints. The note's broader claims that determinant-defined C_base/C_neg are single signature chambers and that arbitrary paths have exactly one zero crossing are supported only by finite scans/reparameterized line checks and are not proved by the restricted packet.
 - **rationale:** Issue: the proof promotes checked endpoint signatures and finite region scans into a universal chamber theorem, and it states total spectral-flow uniqueness for arbitrary paths where only net spectral flow/at least one crossing follows. Why this blocks: the advertised path-independent C_neg/C_base and exactly-one crossing conclusions are broader than the theorem and runner establish; the runner also disagrees with the note's PASS=54 by reporting PASS=43. Repair target: add an algebraic proof of the full parameter-domain chamber classification and correct the spectral-flow wording and runner count, or split out the clean Basin 2/X endpoint theorem. Claim boundary until fixed: H_base and the listed Basin 2/X endpoints have different inertias, so any continuous Hermitian path to those listed endpoints must hit det=0.
+- **auditor confidence:** high
+
+### `dm_chamber_signature_structure_note_2026-04-19`
+
+- **Note:** [`DM_CHAMBER_SIGNATURE_STRUCTURE_NOTE_2026-04-19.md`](../../docs/DM_CHAMBER_SIGNATURE_STRUCTURE_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited whether the source note closes the demotion of DM F4 from axiom to d=3 DPLE theorem using only the supplied note, no one-hop authorities, and the DPLE runner artifact.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1365-9058-7ba1-869e-7e8759b600b3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "F4 reduces to a theorem via the dim-parametric DPLE principle" and, at d = 3, the DPLE bound gives a binary selector equivalent to F4 on the retained pencil.  _(class `B`)_
+- **chain closes:** False — The chain depends on the primary DPLE theorem note, retained H_base/J_* inputs, the retained linear-path signature theorem, and the A-BCC physical-sheet condition, but no cited authorities were supplied in the ledger deps. The runner samples and hard-codes representative basin data; it does not by itself prove the imported DPLE theorem or the retained-input provenance.
+- **rationale:** Issue: the load-bearing DPLE theorem and retained-pencil inputs are imported but absent from the allowed one-hop dependency packet. Why this blocks: without those authorities, the note's central reduction of F4 to a theorem is an asserted cross-note dependency plus numerical/algebraic checks on hard-coded basin data, not a closed derivation. Repair target: add and audit the direct dependency edge to the DPLE theorem note and retained linear-path/input notes, or inline a proof-level derivation sufficient for this claim. Claim boundary until fixed: the runner supports local consistency of the d=3 F3/F4 predicate on the four encoded basins only.
+- **open / conditional deps cited:**
+  - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `dm_continuum_limit_velocity_note`
