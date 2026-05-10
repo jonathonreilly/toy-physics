@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1106 |
+| unaudited | 1105 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 236 |
+| ~~audited_conditional~~ | 237 |
 | ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 236 |
+| `audited_conditional` | 237 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1204 |
+| `unaudited` | 1203 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 796 |
+| `bounded_theorem` | 797 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 731 |
+| `positive_theorem` | 730 |
 
 | criticality | count |
 |---|---:|
@@ -552,6 +552,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
@@ -2581,6 +2582,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The arithmetic budget follows from the cited retained_bounded moving-source rows by taking nonzero absolute minima and dividing by three. The note also correctly leaves the absolute lab NV budget open because the proxy-to-readout transfer coefficient is missing.
 - **rationale:** The runner hard-codes the retained upstream geometry and scaling rows, then performs only standard arithmetic reductions: nonzero minima, maxima, and division by three. There is no first-principles compute and no external comparator check. Because the chain reduces to a single retained_bounded parent claim plus algebraic processing, the appropriate conservative verdict is audited_decoration rather than audited_clean.
 - **decoration parent:** `moving_source_retarded_portability_note`
+- **auditor confidence:** high
+
+### `dimension_selection_note`
+
+- **Note:** [`DIMENSION_SELECTION_NOTE.md`](../../docs/DIMENSION_SELECTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite d=1..5 numerical sweep plus a claimed combination with external stability upper bounds to select d=3.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1352-a39d-75f1-9997-3e18273f39e3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Combined with the known upper bound from orbital and atomic stability (d <= 3), this uniquely gives d = 3.  _(class `B`)_
+- **chain closes:** False — The runner itself finds that d=3,4,5 pass the advertised three observables, so the unique d=3 conclusion depends on orbital and atomic stability inputs that are not included as one-hop authorities. The lower-bound numerics also use a selected 2D propagation readout through hand-coded analytic d-dimensional potentials, not a closed theorem equating that readout with self-consistent d-dimensional gravity.
+- **rationale:** Issue: the note imports the d<=3 upper bound and the phase-to-force/readout bridge without retained cited support. Why this blocks: without those inputs, the supplied evidence only shows that the selected runner criteria pass for d=3,4,5 and fail for d<=2 under chosen parameters. Repair target: add retained one-hop stability authorities and a bridge theorem tying the runner readout to the claimed gravitational observable, or split the note to the finite numerical lower-bound claim. Claim boundary until fixed: runner-specific evidence for excluding d<=2 under the stated setup, not a retained dimension-selection theorem.
 - **auditor confidence:** high
 
 ### `dimensional_gravity_table`
