@@ -6,6 +6,29 @@
 **Companion runners:**
 - `scripts/frontier_wilson_two_body_laws.py` (post-selected law characterizations)
 
+**Audit-conditional perimeter (2026-05-10):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+supplied runner source and stdout close the narrow 8/8 attractive and
+clean primary-runner surface. The full source-note conclusion also
+depends on distance-falloff, partner-source-scaling, and screening-
+mass sweep claims whose companion runner source/stdout are not
+supplied and have no one-hop authority in the restricted packet."
+This rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The audit-clean
+content of this note is exactly the §"Open-Boundary Wilson Result"
+8/8 attractive / 8/8 clean primary-runner surface at `side=11,13`,
+`G=5`, `mu^2=0.22`, `d=3..6` (backed by
+[`scripts/frontier_wilson_two_body_open.py`](../scripts/frontier_wilson_two_body_open.py)
+and its registered cache); the §"Law Sweeps" distance falloff,
+§"Partner-source scaling", §"Screening-Mass Addendum", and
+§"Both-Masses Audit" rows are out of the restricted packet's authority
+and are bounded companion characterizations carried only by the
+secondary `frontier_wilson_two_body_laws.py` and
+`frontier_newton_both_masses.py` runners — they are not load-bearing
+for the audit-clean perimeter.
+
 ## Inputs (registered runners with caches)
 
 The note's load-bearing claims are backed by two registered audit runners:

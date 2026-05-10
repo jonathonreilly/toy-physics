@@ -12,6 +12,27 @@
 **Date:** 2026-04-07
 **Status:** proposed_retained positive — frozen rule `free_coh ≥ 7.96e-04` (fitted on the 26-family swept set ONLY) applied without refit to 12 brand-new generators achieves **10/12 = 83.3%**, beating the old node-level 2-property rule (6/12 = 50%) by **+33 points**. Combined with the first batch: **17/21 = 81.0%** cross-generator on two independent held-out sets.
 
+**Audit-conditional perimeter (2026-04-30):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "No.
+One-hop dependencies are not all retained
+(global_coherence_off_scaffold_note=bounded,
+global_coherence_predictor_note=audited_failed), so the chain does
+not close under the leaf audit rule." This rigorization edit only
+sharpens the boundary of the conditional perimeter; nothing here
+promotes audit status. The audit-clean content of this note is the
+finite 12-generator scaffolded held-out table reproduced verbatim by
+the registered runner; the headline 17/21 cross-generator combined
+statistic is bounded interpretation that depends on
+[`GLOBAL_COHERENCE_PREDICTOR_NOTE.md`](GLOBAL_COHERENCE_PREDICTOR_NOTE.md)
+(currently `audited_failed`) for the 9-family first batch and on the
+off-scaffold note (currently `bounded`) for the off-scaffold negative
+header callout. The audit-clean perimeter is just the in-this-note
+12-family table; the cross-batch combination is governed by the
+upstream notes' statuses. This is exactly the leaf-audit chain-rule
+non-closure stated in the verdict.
+
 ## Artifact chain
 
 - [`scripts/global_coherence_held_out2.py`](../scripts/global_coherence_held_out2.py)

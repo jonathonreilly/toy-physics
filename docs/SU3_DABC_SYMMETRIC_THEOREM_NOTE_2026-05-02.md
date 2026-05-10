@@ -18,6 +18,27 @@ audit pipeline after independent review.
 **Runner:** `scripts/su3_dabc_symmetric_check.py`
 **Log:** `outputs/su3_dabc_symmetric_check_2026-05-02.txt`
 
+**Audit-conditional perimeter (2026-05-05):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = true`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+restricted packet supplies the Gell-Mann basis and trace
+normalization, and the claimed d-symbol identities follow by trace
+projection and direct matrix algebra. The physical identification of
+this algebraic carrier with SM color remains outside the audited
+scope." This rigorization edit only sharpens the boundary of the
+conditional perimeter; nothing here promotes audit status. The
+audit-clean content of this note is precisely the algebraic theorem
+on the Gell-Mann basis: (D1)–(D6) as derived by trace projection in
+the Gell-Mann basis with `Tr[T^a T^b] = (1/2) δ^{ab}`. The audit
+perimeter is the algebraic content; the **physical identification**
+of this algebraic carrier with SM color (i.e. that this `T^a` is the
+gauge connection of the Standard Model gluon sector) is explicitly
+out of scope and is the chain_closure conditional gap. That bridge
+is the responsibility of upstream gauge-closure / graph-first SU(3)
+notes (currently retained_bounded), not of this algebraic-identity
+note.
+
 ## Cited authorities (one hop)
 
 - [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md)

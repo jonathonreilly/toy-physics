@@ -10,6 +10,31 @@
 **Runner:** `scripts/gluon_tree_level_massless_check.py`
 **Log:** `outputs/gluon_tree_level_massless_check_2026-05-02.txt`
 
+**Audit-conditional perimeter (2026-05-02):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+cited dependencies retain bounded structural su(3) closure on graph-
+first/cubic surfaces, but they do not themselves construct a local
+Lorentz-covariant Yang-Mills connection, gauge action, or propagator
+for framework gluons. The runner verifies the standard Yang-Mills
+algebra after assuming that bridge, not the bridge from the retained
+framework structure." This rigorization edit only sharpens the
+boundary of the conditional perimeter; nothing here promotes audit
+status. The audit-clean content of this note is the standard Yang-
+Mills algebra theorem (G1)–(G3): given a local Lorentz-covariant
+SU(3) gauge connection `A_μ^a` with the standard non-abelian
+transformation law, no quadratic-in-A gauge-invariant mass term
+exists, so the tree-level gluon propagator pole is at p² = 0. The
+conditional gap is the bridge from the framework's retained graph-
+first / cubic structural SU(3) closure (cited authorities) to a local
+Lorentz-covariant Yang-Mills connection on the framework surface;
+this note's "Admitted-context inputs" already lists this bridge as
+admitted-context. A future bridge-theorem note would close the
+conditional perimeter; this note remains a tree-level theorem on the
+admitted Yang-Mills surface, not a bridge from the retained graph-
+first structure.
+
 ## Cited authorities (one hop)
 
 - [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — current ledger effective status `retained_bounded` (the SU(2) and structural SU(3) parts; the bounded-only piece is the abelian hypercharge-like surface, which this note does not depend on).

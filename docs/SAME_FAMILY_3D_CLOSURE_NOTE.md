@@ -9,6 +9,30 @@ runs on 2026-04-04; row 10 is replayed from the W=12 width-companion log).
 The script is therefore a print-aggregation wrapper for an already-frozen
 multi-log core, not a live re-derivation harness.
 
+**Audit-conditional perimeter (2026-05-02):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+source note itself says the wrapper aggregates and prints frozen rows
+and does not recompute the load-bearing observables. With deps=[] and
+no retained log/runner dependency chain, the closure card cannot be
+retained as an independently audited theorem." This rigorization edit
+only sharpens the boundary of the conditional perimeter; nothing here
+promotes audit status. The audit-clean content of this note is the
+print-aggregation wrapper itself: the script
+[`scripts/same_family_3d_closure.py`](../scripts/same_family_3d_closure.py)
+prints the frozen 10-row table and the registered cache
+[`logs/runner-cache/same_family_3d_closure.txt`](../logs/runner-cache/same_family_3d_closure.txt)
+captures the wrapper output. The note is honest in §"What remains
+open" that the wrapper is replay-only; that honesty is exactly the
+audit-stated reason the row cannot promote — there are no live
+deps=[] in the wrapper. The audit-clean perimeter is the wrapper
+print itself, not the underlying closure checks. A future repair
+would explicitly enumerate the per-`L` and per-`W` runs as
+dependencies (with their own ledger entries) so the chain rule could
+close; that step is deferred to a downstream rebuild and is not in
+the scope of this print-aggregation note.
+
 ## Current on-disk artifacts
 
 - Script: [`scripts/same_family_3d_closure.py`](/Users/jonreilly/Projects/Physics/scripts/same_family_3d_closure.py)
