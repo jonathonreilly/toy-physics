@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1093 |
+| unaudited | 1092 |
 | meta | 66 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 259 |
+| ~~audited_conditional~~ | 260 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 259 |
+| `audited_conditional` | 260 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1159 |
+| `unaudited` | 1158 |
 
 | claim_type | count |
 |---|---:|
@@ -502,6 +502,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -1310,6 +1311,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the note's L2 step still depends on an explicit mass-gap input and on a spatial gap-plus-LR or spatial transfer-matrix clustering theorem that the packet says is open. Why this blocks: LR bounds control commutators/light cones, and the cited bridge only proves a finite-block temporal spectral lemma conditional on Δ_T > 0, so the advertised spatial thermal connected-correlator bound for canonical states is not derived from retained inputs. Repair target: derive Δ_T > 0 on the canonical Cl(3) ⊗ Z^3 staggered + Wilson Hamiltonian and add a retained spatial cluster-decomposition theorem with constants. Claim boundary until fixed: retain only L1/L3/L4 and conditional temporal gap-to-clustering support, not unconditional L2 spatial clustering.
 - **open / conditional deps cited:**
   - `CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md`
+- **auditor confidence:** high
+
+### `axiom_first_lattice_noether_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded lattice Noether identity for U(1) fermion-number current and (2Z)^3 sublattice-momentum current on the admitted staggered/Grassmann carrier, not a derivation of that carrier from A1+A2.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11e7-cded-7770-b78c-b79fcc974494`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given the admitted staggered/Grassmann action, promoting the symmetry parameter to a site-dependent lattice field yields the bilateral current (5), with U(1) current (4) by substitution and the (2Z)^3 momentum current (3) by a discrete Ward-identity route verified directly.  _(class `A`)_
+- **chain closes:** False — The variational and runner checks close on the admitted staggered carrier, but the carrier itself is explicitly an open gate in the cited framework memo. The note also carries a structural g_bare canonical-normalization gate, so the result is conditional on named admitted inputs rather than closed from retained-grade axioms alone.
+- **rationale:** Issue: the note explicitly imports the staggered-Dirac realization gate, and also names the g_bare canonical-normalization gate, while the cited authority classifies these as open derivation targets. Why this blocks: the Noether algebra may be valid on the admitted carrier, but the restricted packet does not derive that carrier from A1+A2, so retained status cannot propagate through the open identification. Repair target: package and audit a retained derivation of the staggered-Dirac carrier, and separately close or remove the structural g_bare dependency if it is not load-bearing. Claim boundary until fixed: bounded theorem on the admitted staggered/Grassmann carrier only.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03`
