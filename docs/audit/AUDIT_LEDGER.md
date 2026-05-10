@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 125 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1088 |
+| unaudited | 1087 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 250 |
+| ~~audited_conditional~~ | 251 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 250 |
+| `audited_conditional` | 251 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1186 |
+| `unaudited` | 1185 |
 
 | claim_type | count |
 |---|---:|
@@ -635,6 +635,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | F | - |
+| `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gravity_sign_audit_2026-04-10` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `h0125_wider_replay_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -5260,6 +5261,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Correlation-matrix formalism for free fermions: the joint state is tracked via a 2N x 2N one-body density matrix. Time evolution uses Trotter steps with self-consistent Poisson coupling at each step. Cross-correlations between A and B are computed via the RPA (random phase approximation): the static density-density susceptibility chi = C(1-C) mediates gravit  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 6 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `gravitational_wave_probe_note`
+
+- **Note:** [`GRAVITATIONAL_WAVE_PROBE_NOTE.md`](../../docs/GRAVITATIONAL_WAVE_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the supplied 20^3 lattice runner showing toy-model sensitivity to truncated fields, hand-implemented retarded source sampling, layer-order perturbations, and an added f^2 action term.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1381-fe92-7011-8103-4a4124cb41c7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The framework goes beyond Newtonian gravity in three specific ways: causal information propagation, retardation effects, and post-Newtonian action."  _(class `F`)_
+- **chain closes:** False — The runner computes internal toy-lattice differences, but the note relabels those differences as post-Newtonian or gravitational-wave-adjacent physics without a cited bridge theorem deriving the retarded potential, c_lattice, PN observable, or GR coefficient from retained inputs. The supplied packet has no one-hop authorities to close that physical identification.
+- **rationale:** Issue: the numerical runner distinguishes several internally defined variants, but the load-bearing claim that these are genuine beyond-Newtonian or 1PN effects is an uncited physical-observable bridge. Why this blocks: hand-defining a retarded source position and adding S=L(1-f-f^2/2) shows sensitivity to those choices, not that the framework derives GR retardation or PN corrections. Repair target: add a bridge theorem deriving the dynamical carrier, retarded source law, c_lattice normalization, and PN coefficient from retained primitives, with a runner that constructs those rather than imposing them. Claim boundary until fixed: retain only the bounded toy-model sensitivity results and the honest negative for Poisson-field gravitational waves.
 - **auditor confidence:** high
 
 ### `gravitomagnetic_note`
