@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 125 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1089 |
+| unaudited | 1088 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 249 |
+| ~~audited_conditional~~ | 250 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 249 |
+| `audited_conditional` | 250 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1187 |
+| `unaudited` | 1186 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 810 |
+| `bounded_theorem` | 811 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 198 |
 | `open_gate` | 102 |
-| `positive_theorem` | 718 |
+| `positive_theorem` | 717 |
 
 | criticality | count |
 |---|---:|
@@ -630,6 +630,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `geometry_lane_head_to_head_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
@@ -5096,6 +5097,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the audited scope, the only load-bearing inputs are the explicitly constructed local generators in the runner. The runner verifies rank-one projectors, full 9-dimensional generated algebra, and scalar commutant; excluded physical bridge claims are not needed for this bounded theorem.
 - **rationale:** Clean for the bounded algebraic scope. The runner source constructs the local diagonal translation operators and C3 cycle, derives the projectors, checks generated algebra dimension 9, and checks commutant dimension 1. These are finite-dimensional A-class algebra checks over supplied local inputs, not hidden physical-species or substrate-fundamentality derivations. The clean verdict does not extend beyond the note's explicit boundary.
 - **auditor confidence:** high
+
+### `geometry_lane_head_to_head_note`
+
+- **Note:** [`GEOMETRY_LANE_HEAD_TO_HEAD_NOTE.md`](../../docs/GEOMETRY_LANE_HEAD_TO_HEAD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite matched-seed comparison of four bounded geometry configurations at N=25,40,60,80,100 using the supplied runner's pur_min, gravity mean, and g/SE readouts.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e137f-7caf-7360-a7c9-fd5786758087`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "There is no single universal winner across the whole matched sweep" and the repo should keep both imposed modular gap + layer norm and simple central-band removal + layer norm as top bounded geometry lanes.  _(class `C`)_
+- **chain closes:** False — The supplied stdout supports the finite four-configuration table, but the broader claim that these are the best/top bounded geometry lanes and that the modular and central-band routines implement the same readout is not closed by any cited authority. The primary runner delegates the load-bearing metric definitions to imported modules not included in the restricted packet.
+- **rationale:** Issue: the note's numerical table is a bounded runner summary, but its practical conclusion promotes the two families as top bounded geometry lanes and assumes readout equivalence across separate imported implementations. Why this blocks: no one-hop authority or supplied code closes the lane-selection criterion or verifies that run_joint, run_pur_min, and run_gravity compute identical layer-normalized observables. Repair target: narrow the claim to the four-config finite benchmark or add audited dependencies/source for lane selection and readout equivalence. Claim boundary until fixed: the supplied packet supports only the descriptive matched-sweep stdout values.
+- **auditor confidence:** medium
 
 ### `geometry_superposition_dag_ensemble_note_2026-04-11`
 
