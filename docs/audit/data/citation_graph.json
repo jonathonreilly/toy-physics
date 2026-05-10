@@ -1501,6 +1501,78 @@
       "to": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
     },
     {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "n_f_v3_normalization_bounded_note_2026-05-07_w2norm"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "alpha_s_direct_wilson_loop_honest_status_audit_note_2026-05-02"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "exact_tier_ewitness_bounded_note_2026-05-07_ewitness"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "exact_tier_path_integral_bounded_note_2026-05-07_exact"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
       "from": "broad_gravity_derivation_note",
       "to": "gravity_clean_derivation_note"
     },
@@ -33996,6 +34068,36 @@
       "runner_path": "scripts/probe_hk_time_derivation.py",
       "title": "Bridge Gap \u2014 Heat-Kernel Time from Canonical Cl(3) Tr-Form (Block 01)"
     },
+    "bridge_lanes_promotion_proposal_note_2026-05-10_lanes": {
+      "claim_id": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "n_f_bounded_z2_reduction_theorem_note_2026-05-07_w2",
+        "n_f_v3_normalization_bounded_note_2026-05-07_w2norm",
+        "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+        "higgs_mass_from_axiom_note",
+        "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
+        "minimal_axioms_2026-05-03",
+        "alpha_s_direct_wilson_loop_honest_status_audit_note_2026-05-02",
+        "graph_first_su3_integration_note",
+        "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "exact_tier_ewitness_bounded_note_2026-05-07_ewitness",
+        "c_iso_derived_theorem_note_2026-05-07_w3",
+        "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+      ],
+      "note_hash": "7b5a74cb4e63798502c959bb0a77ef246e4f9c0d7b09a1665d91c13af14c1341",
+      "path": "docs/BRIDGE_LANES_PROMOTION_PROPOSAL_NOTE_2026-05-10_lanes.md",
+      "runner_path": "scripts/frontier_bridge_lanes_promotion_2026_05_10_lanes.py",
+      "title": "Bridge-Dependent Lanes \u2014 Retained_Bounded Promotion Evaluation"
+    },
     "broad_gravity_derivation_note": {
       "claim_id": "broad_gravity_derivation_note",
       "claim_type_author_hint": null,
@@ -63082,7 +63184,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 183,
       "decoration": 1,
-      "meta": 26,
+      "meta": 27,
       "no_go": 15,
       "none": 1675,
       "open_gate": 21,
@@ -63091,16 +63193,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 688,
       "decoration": 1,
-      "meta": 26,
+      "meta": 27,
       "no_go": 123,
       "none": 452,
       "open_gate": 112,
       "positive_theorem": 609
     },
-    "edge_count": 7788,
-    "leaf_count": 530,
-    "node_count": 2011,
+    "edge_count": 7806,
+    "leaf_count": 527,
+    "node_count": 2012,
     "root_count": 796,
-    "runners_with_path": 1620
+    "runners_with_path": 1621
   }
 }

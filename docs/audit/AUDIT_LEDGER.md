@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1093 |
-| meta | 65 |
+| unaudited | 1092 |
+| meta | 66 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 259 |
+| ~~audited_conditional~~ | 260 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,7 +40,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 259 |
+| `audited_conditional` | 260 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
@@ -51,7 +51,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `bounded_theorem` | 751 |
 | `decoration` | 12 |
-| `meta` | 72 |
+| `meta` | 73 |
 | `no_go` | 191 |
 | `open_gate` | 105 |
 | `positive_theorem` | 773 |
@@ -61,16 +61,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 1012 |
 | `high` | 39 |
 | `medium` | 230 |
-| `leaf` | 623 |
+| `leaf` | 624 |
 
 - **Retained pending chain closure:** 0
 - **Citation cycles detected:** 231
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1513
-- runners with (C) first-principles compute hits: 779
-- runners with (D) external comparator hits: 399
+- runners classified: 1514
+- runners with (C) first-principles compute hits: 780
+- runners with (D) external comparator hits: 400
 - decoration candidates (no C, no D): 134
 
 ## Top 25 by load-bearing score (topology only)
@@ -79,31 +79,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 804 | 62.15 | `unaudited` | meta |
-| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 568 | 40.65 | `unaudited` | unaudited |
-| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 790 | 38.63 | `audited_clean` | open_gate |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 652 | 37.85 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 779 | 37.11 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 707 | 33.97 | `unaudited` | meta |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 562 | 33.64 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 316 | 30.81 | `unaudited` | unaudited |
-| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 562 | 30.64 | `unaudited` | unaudited |
-| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 769 | 30.09 | `audited_clean` | **retained_bounded** |
-| 11 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 316 | 29.81 | `unaudited` | unaudited |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 624 | 28.79 | `unaudited` | unaudited |
-| 13 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 565 | 27.64 | `audited_clean` | **retained_bounded** |
-| 14 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 276 | 27.61 | `unaudited` | unaudited |
-| 15 | `three_generation_structure_note` | bounded_theorem | critical | 489 | 27.44 | `unaudited` | unaudited |
-| 16 | `left_handed_charge_matching_note` | bounded_theorem | critical | 634 | 27.31 | `unaudited` | unaudited |
-| 17 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 276 | 27.11 | `unaudited` | unaudited |
-| 18 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 276 | 25.61 | `unaudited` | unaudited |
-| 19 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 303 | 25.25 | `unaudited` | unaudited |
-| 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 345 | 24.93 | `unaudited` | unaudited |
-| 21 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 316 | 24.81 | `unaudited` | unaudited |
-| 22 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 361 | 24.50 | `unaudited` | unaudited |
-| 23 | `one_generation_matter_closure_note` | bounded_theorem | critical | 454 | 24.33 | `unaudited` | unaudited |
-| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 572 | 24.16 | `audited_clean` | **retained_bounded** |
-| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 628 | 23.30 | `audited_clean` | **retained** |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 805 | 62.66 | `unaudited` | meta |
+| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 569 | 40.66 | `unaudited` | unaudited |
+| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 791 | 38.63 | `audited_clean` | open_gate |
+| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 653 | 37.85 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 780 | 37.61 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 708 | 33.97 | `unaudited` | meta |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 563 | 33.64 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 317 | 30.81 | `unaudited` | unaudited |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 563 | 30.64 | `unaudited` | unaudited |
+| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 770 | 30.09 | `audited_clean` | **retained_bounded** |
+| 11 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 317 | 29.81 | `unaudited` | unaudited |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 625 | 28.79 | `unaudited` | unaudited |
+| 13 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 277 | 28.12 | `unaudited` | unaudited |
+| 14 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 566 | 27.65 | `audited_clean` | **retained_bounded** |
+| 15 | `three_generation_structure_note` | bounded_theorem | critical | 490 | 27.44 | `unaudited` | unaudited |
+| 16 | `left_handed_charge_matching_note` | bounded_theorem | critical | 635 | 27.31 | `unaudited` | unaudited |
+| 17 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 277 | 27.12 | `unaudited` | unaudited |
+| 18 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 277 | 25.62 | `unaudited` | unaudited |
+| 19 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 304 | 25.25 | `unaudited` | unaudited |
+| 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 346 | 24.94 | `unaudited` | unaudited |
+| 21 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 317 | 24.81 | `unaudited` | unaudited |
+| 22 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 362 | 24.50 | `unaudited` | unaudited |
+| 23 | `one_generation_matter_closure_note` | bounded_theorem | critical | 455 | 24.33 | `unaudited` | unaudited |
+| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 573 | 24.16 | `audited_clean` | **retained_bounded** |
+| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 629 | 23.30 | `audited_clean` | **retained** |
 
 
 ## Applied audits
@@ -604,6 +604,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4641,6 +4642,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** After stripping the two marked half-slice multipliers, the residual source-sector compression C_beta is central on class functions and therefore diagonal in the SU(3) character basis, giving T_src(beta)=exp[(beta/2)J] D_beta exp[(beta/2)J].  _(class `A`)_
 - **chain closes:** True — Within this boundary, the construction closes: once the residual compression is the positive central diagonal operator D_beta, the factorized matrix law follows algebraically. The chain does not compute or identify the Wilson beta=6 kappa sequence, and the note explicitly leaves that datum open.
 - **rationale:** The audited content is a bounded structural factorization, not a numerical evaluation of Wilson residual data. The runner supports this as a finite algebraic witness: it builds exp(3J), injects a generic positive conjugation-symmetric diagonal kappa, and verifies the factorized matrix formula. Because the claim explicitly excludes evaluation of D_6/kappa and Perron data, there is no hidden numerical closure being asserted.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the claimed identification of the residual plaquette environment operator with normalized convolution by the boundary character measure of the unmarked spatial Wilson environment.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11de-5a91-7230-bddc-096ea9db9dea`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** But the residual environment operator already closed on main satisfies R_beta^env chi_(p,q) = rho_(p,q)(beta) chi_(p,q); therefore R_beta^env = C_(Z_beta^env).  _(class `F`)_
+- **chain closes:** False — The restricted packet does not include the parent residual-environment identification theorem or a derivation that the coefficients of the true unmarked spatial Wilson environment equal the residual operator eigenvalues. The runner packages a chosen positive symmetric rho_env sequence rather than constructing the unmarked spatial environment.
+- **rationale:** Issue: the load-bearing equality R_beta^env = C_(Z_beta^env) imports an already-closed residual-environment identification and equates the residual diagonal data with boundary character coefficients without that bridge in the packet. Why this blocks: the runner uses a generic hard-coded positive conjugation-symmetric rho_env, so it verifies packaging, not the physical unmarked spatial Wilson environment. Repair target: provide the retained parent theorem constructing R_beta^env from the unmarked spatial Wilson boundary integral, or a runner that computes those coefficients from the actual environment. Claim boundary until fixed: this is an open-gate reformulation of the remaining datum as boundary character data, not a closed derivation of the environment operator.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`

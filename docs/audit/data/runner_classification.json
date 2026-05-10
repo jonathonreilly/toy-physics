@@ -1272,6 +1272,18 @@
       "dominant_class": "C",
       "runner": "scripts/probe_hk_time_derivation.py"
     },
+    "bridge_lanes_promotion_proposal_note_2026-05-10_lanes": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 14
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_bridge_lanes_promotion_2026_05_10_lanes.py"
+    },
     "broad_surrogate_point_source_compare_note": {
       "assert_count": 0,
       "counts": {
@@ -23180,6 +23192,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_bridge_lanes_promotion_2026_05_10_lanes.py": {
+      "assert_count": 1,
+      "claims": [
+        "bridge_lanes_promotion_proposal_note_2026-05-10_lanes"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 14
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_c3_symmetry_preserved_interpretation.py": {
       "assert_count": 1,
       "claims": [
@@ -42421,11 +42448,11 @@
       "A": 24,
       "B": 174,
       "C": 645,
-      "D": 242,
+      "D": 243,
       "none": 428
     },
-    "runners_classified": 1513,
-    "runners_with_C": 779,
-    "runners_with_D": 399
+    "runners_classified": 1514,
+    "runners_with_C": 780,
+    "runners_with_D": 400
   }
 }
