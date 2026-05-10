@@ -1,0 +1,113 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_C_arm_derivation.py
+runner_sha256: 68552e317149ed9aa83358fef7d0f9a1f472f220cd379c0ae7dac0610e7da2fc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+==============================================================================
+BOUNDED COHERENT-SADDLE SUPPORT FOR C_arm
+==============================================================================
+
+Frozen harness parameters (from scripts/lattice_nn_deterministic_rescale.py):
+  BETA      = 0.8
+  k         = 5.0
+  L_total   = 40.0     (source -> detector)
+  FANOUT    = 3.0
+  L_1       = 13.3333  (source -> slit, layer nl//3)
+  L_2       = 26.6667  (slit   -> detector, layer 2*nl//3)
+
+Diagnostic fit reference (4-point fit, h <= 0.25):
+  C_arm_numeric = 2.7107
+  alpha_numeric = 0.5256    (geodesic predicts 1/2)
+
+------------------------------------------------------------------------------
+STAGE 1: Incoherent random-walk estimate (|f|^2 as probability)
+------------------------------------------------------------------------------
+  |f(0;h)|^2  = 1/FANOUT       = 0.333333
+  |f(+/-1)|^2 = exp(-BETA pi^2 / 8) / (2 FANOUT) = 0.062118
+  W           = |f(0)|^2 + 2|f(+/-1)|^2          = 0.457569
+  P(diy=0)    = 0.728487
+  P(diy=+/-1) = 0.135756
+  Var(diy_eff) = 2 P(+/-1)                       = 0.271513
+  C_arm^2_incoh = L_total * Var(diy_eff)         = 10.860515
+  C_arm_incoh   = sqrt(C_arm^2_incoh)            = 3.295529
+  residual vs diagnostic fit = +21.57%
+
+------------------------------------------------------------------------------
+STAGE 2: Phase-coherence diagnostic
+------------------------------------------------------------------------------
+  Path phase has leading drift k L_total * <sqrt(1+diy^2)> plus
+  fluctuation Var = (k h)^2 * N * Var(sqrt(1+diy^2)) = k^2 h L_total Var(...).
+  If << 1 phases are coherent (constructive); if >> 1 phases dephase
+  and the incoherent estimate becomes correct.
+
+        h    phase_rms (rad)  regime
+   0.2500             2.9127  decoherent
+   0.1250             2.0596  decoherent
+   0.0625             1.4564  decoherent
+
+  The phase rms is order 1 across the fitted range, so neither pure
+  limit is exact. The coherent path-integral formula below is the
+  right tool: it integrates over the q-spectrum exactly, no h -> 0
+  small-phase assumption.
+
+------------------------------------------------------------------------------
+STAGE 3: Coherent path-integral estimate
+------------------------------------------------------------------------------
+  Per-step lateral characteristic function:
+      g(q; h) = a_0(h) + 2 a_pm(h) cos(q h)
+  Saddle at q=0 (a_+ = a_-) gives complex Gaussian
+      g(q; h)^N = g(0)^N * exp(-N r(h) (q h)^2 + O(q^4))
+  with r(h) = a_pm(h) / g(0; h). FT of complex Gaussian:
+      |A(y)|^2  is real Gaussian, var = N h^2 |r|^2 / Re(r)
+  i.e. C_arm^2(h) = L * |a_pm|^2 / [Re(a_pm * conj(a_0)) + 2 |a_pm|^2].
+
+  Two natural choices for L:
+    (a) L = L_total = 40   (full source -> detector spread)
+    (b) L = L_2     = 2 L_total / 3 = 26.667 (slit -> detector spread)
+
+  The slit at layer nl//3 forces the per-arm wave through y = SLIT_Y,
+  so the post-slit propagation length L_2 sets the spreading.
+
+        h   C_arm(L_total)   sigma(L_total)   C_arm(L_2)   sigma(L_2)   sigma_fit
+   0.0625           3.0510           0.7627       2.4911       0.6228      0.6312
+   0.1250           3.0717           1.0860       2.5081       0.8867      0.9087
+   0.1875           3.1068           1.3453       2.5367       1.0984      1.1245
+   0.2500           3.1572           1.5786       2.5778       1.2889      1.3081
+
+  h -> 0 limit (geodesic alpha = 1/2 exact, no phase correction):
+    C_arm_analytic(L_total) = 3.0441    residual = +12.30%
+    C_arm_analytic(L_2)     = 2.4855    residual = -8.31%
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+  C_arm_incoh           = 3.2955    residual = 21.57% (sharp upper bound)
+  C_arm_coherent_full   = 3.0441    residual = 12.30% (full-length coherent)
+  C_arm_coherent_slit   = 2.4855    residual = 8.31% (post-slit coherent)
+
+  The coherent post-slit estimate matches the diagnostic fit to within
+  8.3%, inside the 10% bounded comparison band.
+  C_arm_analytic := C_arm_coherent_slit = sqrt((2/3) L_total |a_pm|^2 /
+  [Re(a_pm conj(a_0)) + 2 |a_pm|^2])  is the closed form.
+
+  Per-h cross-check using the exact coherent formula (with phase term):
+        h  sigma_pred   sigma_fit   reldiff
+   0.0625      0.6228      0.6312    -1.34%
+   0.1250      0.8867      0.9087    -2.42%
+   0.1875      1.0984      1.1245    -2.32%
+   0.2500      1.2889      1.3081    -1.47%
+
+  All four points agree with the diagnostic fit to within 2.5%.
+
+  Bounded-support guards:
+    PASS: post-slit coherent residual <= 10%
+    PASS: per-h phase-corrected residual <= 2.5%
+    PASS: post-slit length improves on full-length estimate
+    PASS: coherent estimate improves on incoherent estimate
+    PASS: h->0 post-slit value is stable
+
+----- stderr -----
+
