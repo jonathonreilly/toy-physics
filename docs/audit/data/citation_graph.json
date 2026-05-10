@@ -19685,6 +19685,54 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "s3_taste_cube_decomposition_note"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "s3_mass_matrix_no_go_note"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "three_generation_structure_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -61176,6 +61224,17 @@
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem \u2014 Dep-Chain Audit"
     },
+    "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10": {
+      "claim_id": "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "0f5c15d7823d42f08c720e05cffda9da43ccb317a6c755cac320c596bc9f9576",
+      "path": "docs/THREE_GENERATION_OBSERVABLE_M3C_BURNSIDE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_three_generation_observable_m3c_burnside_narrow.py",
+      "title": "Three-Generation Observable M_3(C) Burnside Narrow Theorem"
+    },
     "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02": {
       "claim_id": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -61211,6 +61270,30 @@
       "path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem Note"
+    },
+    "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "claim_id": "three_generation_structure_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "site_phase_cube_shift_intertwiner_note",
+        "s3_taste_cube_decomposition_note",
+        "s3_mass_matrix_no_go_note",
+        "z2_hw1_mass_matrix_parametrization_note",
+        "minimal_axioms_2026-05-03",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "4d78d9412c13b3cf86c69fe04d6d0d70cacd8647a41aea15c2e6f7b435187f9f",
+      "path": "docs/THREE_GENERATION_STRUCTURE_CHAIN_AUDIT_MAP_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_three_generation_structure_chain_audit_map_synthesis.py",
+      "title": "Three-Generation Structure Chain Audit Map Synthesis Meta Note"
     },
     "three_generation_structure_note": {
       "claim_id": "three_generation_structure_note",
@@ -65669,6 +65752,7 @@
     "thales_right_angle_narrow_theorem_note_2026-05-02",
     "third_grown_family_boundary_note",
     "three_generation_observable_count_corollary_note_2026-05-03",
+    "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10",
     "triple_stack_collapse_scaling_note",
     "two_field_retarded_family_closure_note_2026-04-10",
     "two_field_retarded_probe_note_2026-04-10",
@@ -65755,25 +65839,25 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 238,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
-    "edge_count": 8229,
+    "edge_count": 8241,
     "leaf_count": 533,
-    "node_count": 2050,
-    "root_count": 764,
-    "runners_with_path": 1665
+    "node_count": 2052,
+    "root_count": 765,
+    "runners_with_path": 1667
   }
 }
