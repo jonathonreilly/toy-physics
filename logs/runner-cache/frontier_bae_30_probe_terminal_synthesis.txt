@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bae_30_probe_terminal_synthesis.py
+runner_sha256: e0bb3e7baef7b962493090d862f81e24e67e770e763a39e4edcc7743517b83e7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+30-probe BAE campaign terminal synthesis check
+note: docs/KOIDE_BAE_30_PROBE_CAMPAIGN_TERMINAL_SYNTHESIS_META_NOTE_2026-05-09.md
+
+PASS: synthesis note is meta
+PASS: does not declare pipeline status
+PASS: PR cross-reference: #727
+PASS: PR cross-reference: #730
+PASS: PR cross-reference: #731
+PASS: PR cross-reference: #732
+PASS: PR cross-reference: #735
+PASS: PR cross-reference: #733
+PASS: PR cross-reference: #736
+PASS: PR cross-reference: #734
+PASS: PR cross-reference: #738
+PASS: PR cross-reference: #737
+PASS: PR cross-reference: #740
+PASS: PR cross-reference: #751
+PASS: PR cross-reference: #755
+PASS: PR cross-reference: #763
+PASS: PR cross-reference: #784
+PASS: PR cross-reference: #788
+PASS: PR cross-reference: #789
+PASS: PR cross-reference: #787
+PASS: PR cross-reference: #790
+PASS: PR cross-reference: #792
+PASS: PR cross-reference: #799
+PASS: PR cross-reference: #798
+PASS: PR cross-reference: #800
+PASS: PR cross-reference: #801
+PASS: PR cross-reference: #813
+PASS: PR cross-reference: #814
+PASS: PR cross-reference: #820
+PASS: PR cross-reference: #818
+PASS: PR cross-reference: #824
+PASS: PR cross-reference: #827
+PASS: PR cross-reference: #825
+PASS: PR cross-reference: #826
+PASS: Probe 19 m_τ Wilson chain recorded
+PASS: Probe 24 Step 1 φ_dimensionless = 2/9 recorded
+PASS: Probe 14 impossibility (no retained U(1) projects to U(1)_b) recorded
+PASS: Probe 17 impossibility (U(1)_b spectrum-non-preserving) recorded
+PASS: Probes 25+27+28 (F1 structurally absent) recorded
+PASS: Probe 29 partial falsification recorded
+PASS: κ=1 vs κ=2 disagreement recorded
+PASS: factor-of-2 disagreement quantified
+PASS: BAE remaining admission named
+PASS: P (radian bridge) remaining admission named
+PASS: admission count is 2 (not 3)
+PASS: no theorem promotion
+PASS: no axiom added
+PASS: strategic options listed (3 options)
+PASS: synthesis does not select option
+PASS: cross-references retained note: MINIMAL_AXIOMS_2026-05-03
+PASS: cross-references retained note: PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08
+PASS: cross-references retained note: C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08
+PASS: cross-references retained note: BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09
+PASS: cross-references retained note: KOIDE_A1_11_PROBE_CAMPAIGN_BOUNDED_ADMISSION_META_NOTE_2026-05-08
+PASS: minimal axioms note has Cl(3) A1
+PASS: minimal axioms note has Z³ A2
+PASS: naming-collision warning present
+PASS: review-loop rule for future branches present
+PASS: review-loop rule notes campaign is terminal
+PASS: campaign rounds enumerated (≥7 distinct rounds) | rounds counted: 9/9
+
+TOTAL: PASS=60 FAIL=0
+30-probe BAE campaign terminal synthesis check passed: all 30 probes cited, 2 positive candidate results recorded, structural impossibility claims recorded, partial-falsification candidate recorded, 2 remaining admissions correctly counted, no theorem promotion, no axiom added, strategic options listed without selection.
+
+----- stderr -----
+

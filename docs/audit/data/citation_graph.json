@@ -10877,6 +10877,14 @@
       "to": "koide_q_second_order_support_batch_note_2026-04-22"
     },
     {
+      "from": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
       "from": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
       "to": "minimal_axioms_2026-05-03"
     },
@@ -44838,6 +44846,20 @@
       "runner_path": null,
       "title": "Koide April 22 Axiom-Native Support Batch"
     },
+    "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09": {
+      "claim_id": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "note_hash": "96f7b777b18f2a44aaf8f7a13121f6270c7bedb5c3a5196a3204c8a1c0cb9845",
+      "path": "docs/KOIDE_BAE_30_PROBE_CAMPAIGN_TERMINAL_SYNTHESIS_META_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_bae_30_probe_terminal_synthesis.py",
+      "title": "Koide BAE 30-Probe Campaign Terminal Synthesis Meta Note"
+    },
     "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18": {
       "claim_id": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
       "claim_type_author_hint": "bounded_theorem",
@@ -63204,7 +63226,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 184,
       "decoration": 1,
-      "meta": 27,
+      "meta": 28,
       "no_go": 15,
       "none": 1675,
       "open_gate": 21,
@@ -63213,16 +63235,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 689,
       "decoration": 1,
-      "meta": 27,
+      "meta": 28,
       "no_go": 123,
       "none": 452,
       "open_gate": 112,
       "positive_theorem": 608
     },
-    "edge_count": 7810,
-    "leaf_count": 527,
-    "node_count": 2012,
+    "edge_count": 7812,
+    "leaf_count": 528,
+    "node_count": 2013,
     "root_count": 795,
-    "runners_with_path": 1621
+    "runners_with_path": 1622
   }
 }
