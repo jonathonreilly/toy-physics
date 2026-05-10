@@ -17,7 +17,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | unaudited | critical | 405 | 17.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_alpha_lm_geometric_mean_identity.py` |
 | 2 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 392 | 11.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
-| 3 | `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 379 | 9.07 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_schur_covariance_inheritance_narrow.py` |
+| 3 | `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | critical | 379 | 9.07 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_schur_covariance_inheritance_narrow.py` |
 | 4 | `bell_inequality_derived_note` | bounded_theorem | unaudited | critical | 374 | 11.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bell_inequality.py` |
 | 5 | `newton_law_derived_note` | positive_theorem | unaudited | critical | 351 | 13.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_distance_law_definitive.py` |
 | 6 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | unaudited | critical | 351 | 10.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_commutant_eigenoperator_selector.py` |
