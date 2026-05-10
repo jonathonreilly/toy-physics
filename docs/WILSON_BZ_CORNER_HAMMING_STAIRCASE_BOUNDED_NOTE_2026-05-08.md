@@ -113,7 +113,12 @@ arithmetic.
 `HIGGS_MASS_FROM_AXIOM_NOTE.md` is the parent gap-chain surface this
 note is meant to support, not a load-bearing dependency of the
 combinatorial identity. The parent points here for the staircase-only
-authority; the quantitative effect on `m_H_tree` remains open.
+authority; the quantitative effect on `m_H_tree` remains open. (Per
+Gap #3 lite 2026-05-10 the parent note's `v/(2 u_0)` quantity is
+labeled `m_curv_tree` — a per-channel symmetric-point curvature scale
+of V_taste, NOT a Higgs-mass pole; this combinatorial-identity note
+continues to use the older `m_H_tree` symbol for backward
+compatibility.)
 
 These are imported authorities for a bounded theorem. The row remains
 unaudited until the independent audit lane reviews this note, its

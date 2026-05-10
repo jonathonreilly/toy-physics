@@ -186,8 +186,14 @@ member of the **lattice → continuum / physical matching cluster**.
 formula
 
 ```
-m_H_tree = v · sqrt(4 / (u_0² · N_taste)) = v / (2 u_0) = 140.3 GeV
+m_curv_tree = v · sqrt(4 / (u_0² · N_taste)) = v / (2 u_0) = 140.3 GeV
 ```
+
+(per Gap #3 lite 2026-05-10: the parent note now labels this quantity
+`m_curv_tree` — a per-channel symmetric-point curvature scale of
+V_taste, NOT a Higgs-mass pole; previously labeled `m_H_tree` in earlier
+drafts and in some sister bounded-source notes that have not yet been
+relabeled)
 
 with N_c cancellation tracked at every step (per Step 6 of the parent
 note) is a closed-form algebraic chain on the Cl(3)/Z³ surface, modulo

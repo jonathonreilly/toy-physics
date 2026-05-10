@@ -53,7 +53,7 @@ where each `δ_i` is evaluated from cited source-stack inputs with one named adm
 |---|---|---|
 | physical `Cl(3)` local algebra | baseline local algebra | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
 | `Z^3` spatial substrate | baseline spatial substrate | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
-| TREE | `m_H_tree = v / (2 u_0) = 140.31 GeV` (tree-level mean-field bounded source surface) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
+| TREE | `m_H_tree = v / (2 u_0) = 140.31 GeV` (tree-level mean-field bounded source surface; per Gap #3 lite 2026-05-10 the parent note labels this quantity `m_curv_tree` — a per-channel symmetric-point curvature scale of V_taste, NOT a Higgs-mass pole. This decomposition note continues to use the older `m_H_tree` symbol internally for the bounded sub-step accounting; the imported quantity should be read as `m_curv_tree` for first-principles-honest scope.) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
 | Plaq-MC | `<P>_iso(β=6, isotropic) = 0.5934` (registered MC datum on cited source stack) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
 | Hier | `v_EW = M_Pl · (7/8)^{1/4} · α_LM¹⁶ = 246.30 GeV` (hierarchy theorem, retained) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
 | CMT | `α_s(v) = α_bare / u_0² = 0.1033` (Coupling Map Theorem) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) §3.1 |

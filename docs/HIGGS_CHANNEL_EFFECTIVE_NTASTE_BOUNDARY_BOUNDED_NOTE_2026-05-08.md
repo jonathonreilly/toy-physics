@@ -114,7 +114,13 @@ it.
   for the parent assertion (formula [5]: `m_H/v = 1/(2 u_0)` with
   `N_taste = 16`) being bounded by this note. This note bounds the
   parent's `N_taste` slot from below; it does not promote, replace, or
-  extend the parent.
+  extend the parent. (Per Gap #3 lite 2026-05-10 the parent note now
+  labels the `v/(2 u_0)` quantity `m_curv_tree` — a per-channel
+  symmetric-point curvature scale of V_taste, NOT a Higgs-mass pole;
+  this channel-boundary note continues to use the older `m_H_tree`
+  symbol internally for the bounded staircase calculation, but the
+  imported quantity should be read as `m_curv_tree` for
+  first-principles-honest scope.)
 - [`WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md`](WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md)
   for the upstream load-bearing combinatorial input (the
   `(1, 4, 6, 4, 1)` multiplicities and `(0, 2r, 4r, 6r, 8r)` Wilson
