@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1092 |
+| unaudited | 1091 |
 | meta | 66 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 261 |
+| ~~audited_conditional~~ | 262 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 261 |
+| `audited_conditional` | 262 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1158 |
+| `unaudited` | 1157 |
 
 | claim_type | count |
 |---|---:|
@@ -571,6 +571,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3266,6 +3267,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `scripts/dm_selector_branch_support.py`
   - `scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py`
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the stated bounded numerical candidate: endpoint m in [-1.899713, -1.87] on the compact exact-bundle box delta in [-2.5, 2.5], r31 in [0.5, 4.0], plus the two listed tail challenges, stays above the imported preferred recovered repair floor.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11ef-8481-7d61-90ea-012af9053bb6`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The global differential-evolution refinement over the endpoint box finds best repair 3.027555919409, which remains above the preferred recovered floor Lambda_+(x_*) = 1.586874714730, with tested tails higher.  _(class `B`)_
+- **chain closes:** False — The numerical search is internally consistent in the supplied runner output, but the restricted packet does not include retained authorities deriving the exact shift-quotient bundle, the preferred recovered floor, or the endpoint/rival-side window. The missing step is a retained bridge showing these imported runner objects and domain choices are the closed physical bundle/readout for the claimed local dominance statement.
+- **rationale:** Issue: the runner computes over imported objects, including PREFERRED_RECOVERED_LIFT, repair_from_slack_point, and quotient_gauge_h, while no one-hop authorities are supplied for those inputs. Why this blocks: the audit can verify a bounded numerical scan conditional on those imports, but cannot certify the exact bundle, preferred floor, carrier/readout, or endpoint window as retained-grade consequences of the restricted packet. Repair target: cite and include retained theorem notes deriving the shift-quotient bundle, floor, and endpoint domain, with a runner that constructs those objects from retained primitives. Claim boundary until fixed: a strong bounded numerical dominance candidate on the tested imported bundle, not theorem closure for local rival-window dominance.
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`

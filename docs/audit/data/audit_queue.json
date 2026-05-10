@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 666,
+    "critical": 665,
     "high": 22,
     "leaf": 264,
     "medium": 146
@@ -5883,27 +5883,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.817,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate.py",
-      "transitive_descendants": 318
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -34843,6 +34822,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 117,
-  "total_pending": 1098
+  "ready_count": 116,
+  "total_pending": 1097
 }
