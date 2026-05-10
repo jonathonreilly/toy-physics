@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1130 |
+| unaudited | 1129 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 219 |
+| ~~audited_conditional~~ | 220 |
 | ~~audited_failed~~ | 17 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 382 |
-| `audited_conditional` | 219 |
+| `audited_conditional` | 220 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1228 |
+| `unaudited` | 1227 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 778 |
+| `bounded_theorem` | 779 |
 | `decoration` | 13 |
 | `meta` | 105 |
 | `no_go` | 193 |
 | `open_gate` | 99 |
-| `positive_theorem` | 746 |
+| `positive_theorem` | 745 |
 
 | criticality | count |
 |---|---:|
@@ -495,6 +495,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_born_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_joint_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `asymmetry_persistence_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1084,6 +1085,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At dense N=80/100, the generated lane stays Born-clean and improves decoherence, but gravity is not robust enough for a gravity+decoherence joint-lane claim.  _(class `C`)_
 - **chain closes:** False — The supplied runner stdout supports the N=80 and N=100 table values for decoherence and Born cleanliness. The note also invokes an N=120 boundary check and a central-band/best-lane comparison that are not present in the allowed runner output, runner source, or cited authorities.
 - **rationale:** Issue: the clean finite N=80/100 card is mixed with an unsupported N=120 boundary statement and an unsupported comparison to a central-band/best gravity+decoherence benchmark. Why this blocks: the claimed bounded range and joint-lane ranking cannot be derived from the restricted packet. Repair target: add the completed N=120 artifact and the benchmark authority as direct dependencies, or split the note so the audited claim is only the N=80/100 same-graph decoherence/Born card. Claim boundary until fixed: the supplied packet supports only the reported N=80/100 numerical table and its local decoherence/Born-clean interpretation.
+- **auditor confidence:** high
+
+### `asymmetry_persistence_mass_scaling_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_MASS_SCALING_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_MASS_SCALING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite N=100, npl=60, eight-seed generated-graph mass-scaling sweep with unweighted power-law fits over M={2,3,5,8}.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1309-e652-7fc2-9a0b-641d1b0980c0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Generated hard geometry helps the mass window, but it does not solve the mass law.  _(class `C`)_
+- **chain closes:** False — The reported coefficients and R^2 values match the supplied stdout, but the packet supplies no one-hop authority or source for the imported graph construction, field, propagation, and gravity readout primitives. The qualitative improvement claim also lacks an explicit pass/fail or uncertainty criterion despite large SEs relative to the means.
+- **rationale:** Issue: the note promotes a descriptive runner sweep into a closed mass-window result while relying on unprovided imported primitives and no listed authorities. Why this blocks: a hostile reviewer cannot verify that the generated hard geometry or gravity_delta readout is the claimed framework object, and the runner prints fits without testing that the threshold improvement is statistically or procedurally significant. Repair target: add the missing dependency edges/source packet for the graph/readout/propagation definitions and encode an explicit improvement criterion with uncertainty. Claim boundary until fixed: the packet supports only that this runner stdout reports the listed positive mean fits.
 - **auditor confidence:** high
 
 ### `asymmetry_persistence_mass_window_note`
