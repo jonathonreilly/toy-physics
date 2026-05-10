@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1140 |
+| unaudited | 1139 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 235 |
+| ~~audited_conditional~~ | 236 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 235 |
+| `audited_conditional` | 236 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1207 |
+| `unaudited` | 1206 |
 
 | claim_type | count |
 |---|---:|
@@ -580,6 +580,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `gap_physics_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `gate_b_farfield_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_nonlabel_sign_grown_transfer_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -3816,6 +3817,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A fixed connectivity backbone survives substantial position noise, while geometry-recomputed connectivity is the first place the response becomes mixed.  _(class `C`)_
 - **chain closes:** True — The runner is self-contained and its current stdout matches the frozen tables in the note. The note explicitly bounds the result to the replay and does not promote the F~M values or Gate B closure.
 - **rationale:** The audited claim is narrow enough to close: within the fixed valley-linear replay, the computed jitter and architecture outputs match the note and support the qualitative bounded comparison. There is no hidden dependency or external comparator because the note explicitly disclaims a dynamics theorem, universality of F~M, and Gate B closure. Residual risk is limited to the qualitative wording of 'tolerated', which is acceptable only under the stated finite replay boundary.
+- **auditor confidence:** high
+
+### `gate_b_farfield_note`
+
+- **Note:** [`GATE_B_FARFIELD_NOTE.md`](../../docs/GATE_B_FARFIELD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical claim that the supplied h=0.5 grown-geometry far-field harness produces the declared TOWARD and F~M rows under assumed growth, source, propagation, action, and readout rules.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e123e-fecd-7001-b3d6-62c8e6528d02`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the runner-defined h=0.5 family with the admitted-context ingredients listed above, the harness reports 100% TOWARD-z-centroid plus linear F ~ M = 1.00 at all four tested drift/restore levels for z = 3, 4, 5, twelve seeds per row.  _(class `C`)_
+- **chain closes:** False — The runner source genuinely constructs and propagates the declared lattice observable, but the supplied stdout is only RUNNER_TIMEOUT after 240s, so the declared numerical rows are not verified by a completed run in the restricted packet. Independently, the note admits that the physical gravity bridge from accepted primitives to the chosen source law/readout is not derived here.
+- **rationale:** Issue: the bounded numerical table is load-bearing but no completed runner stdout or cached certificate is supplied, and the physical-gravity bridge is explicitly assumed rather than derived. Why this blocks: the packet cannot justify either completed numerical closure for the stated rows or propagation to a physical Gate B far-field gravity claim. Repair target: provide a completed run artifact or sliced deterministic certificate for scripts/gate_b_farfield_harness.py, and a separate bridge theorem deriving the source law, propagation/readout map, and TOWARD/F~M criterion from accepted primitives. Claim boundary until fixed: at most a runner-defined conditional numerical scenario under the stated admitted ingredients.
 - **auditor confidence:** high
 
 ### `gate_b_grown_distance_law_note`
