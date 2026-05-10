@@ -2,7 +2,10 @@
 
 **Date:** 2026-04-13 (initial); 2026-05-07 scope-narrowed to bounded
 conditional exact-algebra statement per
-`OBSERVABLE_PRINCIPLE_AUDIT_NOTE_2026-05-02` finding.
+`OBSERVABLE_PRINCIPLE_AUDIT_NOTE_2026-05-02` finding;
+2026-05-09 internal derivation of P2/P3/P4 from staggered-axiom retained
+primitives reduces the admitted-premise set on the conditional surface
+from {P1, P2, P3, P4} to {P1}.
 **Type:** bounded_theorem (exact lattice algebra given four explicitly
 admitted physical-principle / regularity premises).
 **Claim scope (post-2026-05-07 scope narrowing):** the load-bearing claim
@@ -20,11 +23,24 @@ minimal hierarchy block:
 > Klein-four invariant and selects `L_t = 4` as the unique minimal
 > resolved orbit on the APBC temporal circle.
 
-The four premises are **not** derived by this note. They are admitted
-selection premises with the role classifications recorded in
+As of the 2026-05-07 scope narrowing, all four premises P1-P4 were
+admitted selection premises with the role classifications recorded in
 `OBSERVABLE_PRINCIPLE_AUDIT_NOTE_2026-05-02.md` §1. The exact-algebra
 closure GIVEN those premises is the load-bearing content; that is what
 the runner verifies.
+
+As of the 2026-05-09 update (see §"Internal derivation of P2/P3/P4
+from staggered-axiom retained primitives" below), three of the four
+premises (P2 CPT-even phase blindness, P3 continuity / minimal
+regularity, P4 normalization choice) retire to runner-internal
+consequences of the staggered-axiom retained content
+(`CPT_EXACT_NOTE`) plus finite-block algebraic regularity. P1 (scalar
+additivity on independent subsystems) remains admitted as a
+physical-principle premise. The conditional load-bearing statement is
+unchanged in form, but the admitted-premise set on the conditional
+surface narrows from {P1, P2, P3, P4} to {P1}. The audit row remains
+`audited_conditional` and is **not** promoted by this note; the
+narrowing is recorded for independent re-audit consideration.
 
 The `v = 246.28 GeV` **numerical readout** in §"Consequence for v"
 depends on the canonical hierarchy baseline
@@ -232,20 +248,28 @@ premises remain admitted; this note does not derive them.
 
 ## Honest status
 
-Under the **conditional scope** (P1-P4 admitted), the hierarchy closure
-is as clean as the current framework can make it on the in-scope
-axiom-to-observable map.
+Under the **conditional scope** (P1 admitted; P2/P3/P4 derived from
+staggered-axiom retained primitives as of the 2026-05-09 update — see
+§"Internal derivation of P2/P3/P4 from staggered-axiom retained
+primitives" below), the hierarchy closure is as clean as the current
+framework can make it on the in-scope axiom-to-observable map.
 
 The remaining `0.03%` is no longer an open theorem gap in the
 observable-principle algebra under that scope. It sits in the canonical
 same-surface plaquette evaluation and its downstream normalization chain
 rather than in the axiom-to-observable algebra itself.
 
-The unconditional retention question — whether P1-P4 can be derived from
-retained-grade primitives so this row can move beyond the current bounded
-conditional surface — is recorded in
+The unconditional retention question — whether the **remaining** P1
+(scalar additivity on independent subsystems) can be derived from
+retained-grade primitives so this row can move beyond the current
+bounded conditional surface — is recorded in
 `OBSERVABLE_PRINCIPLE_AUDIT_NOTE_2026-05-02.md` §4 ("Path to retention")
-and is **not** in scope for this note.
+and is **not** in scope for this note. P2-P4 are no longer in that
+"path to retention" list because they are now runner-internal
+consequences of `CPT_EXACT_NOTE` and finite-block algebraic regularity;
+the audit lane may treat the remaining open question as deriving P1
+alone, and the audit row remains `audited_conditional` until that
+derivation is independently audited.
 
 ## Audit-named conditional scope (2026-05-07 scope narrowing)
 
@@ -310,6 +334,145 @@ Re-audit trigger (per `notes_for_re_audit_if_any` in the audit ledger):
 This note implements the second branch; the audit row may now be
 re-evaluated against the conditional load-bearing statement above
 rather than the unconditional 2026-04-13 framing.
+
+## Internal derivation of P2/P3/P4 from staggered-axiom retained primitives (2026-05-09)
+
+The 2026-05-07 conditional scope above admits four bridge premises
+P1-P4. Three of those premises are not independent of the staggered
+axiom and the existing retained-grade structure of the framework:
+they reduce to runner-internal consequences of `CPT_EXACT_NOTE`
+retained content plus finite-block algebraic regularity. This section
+records the derivation; the runner verifies it as Part 7
+(`test_premise_internal_derivations`).
+
+### P2 (CPT-even phase blindness) — derived from real anti-Hermitian `D`
+
+The staggered Cl(3) framework's lattice Dirac operator `D` on the exact
+minimal hierarchy block is **real anti-Hermitian** as a retained
+property of `CPT_EXACT_NOTE` (see "T operator: complex conjugation acts
+trivially on H because all staggered phases and hoppings are real" and
+`D + D^dagger = 0`). Real anti-Hermitian on a complex space is
+equivalent to **real anti-symmetric** (`D^T = -D`) when `D` has zero
+imaginary part. For any real-symmetric source `J = j I`:
+
+- `(D + J)^T = D^T + J^T = -D + J = -(D - J)`;
+- `det((D + J)^T) = det(D + J)` (transpose preserves determinant);
+- `det(-(D - J)) = (-1)^n det(D - J)` where `n = dim(D)`.
+
+On the runner's even-dim staggered blocks (`n = 16, 32`), `(-1)^n = 1`,
+so `det(D + jI) = det(D - jI)` exactly. In particular
+`|det(D + jI)| = |det(D - jI)|` is forced, giving `W(j) = W(-j)`
+exactly. (For odd `n`, the equality becomes `det(D + jI) = -det(D - jI)`,
+which still implies `|det(D + jI)| = |det(D - jI)|`, so `W` is even
+regardless of dimension parity.)
+
+This is a **structural** consequence of the staggered axiom, not an
+admitted physical-principle premise. The runner's Part 7 verifies:
+
+- `||Im(D)||_F = 0` and `D + D^dagger = 0` on the runner blocks
+  (so `D` is real anti-Hermitian);
+- `Re(spec(D)) = 0` (purely imaginary spectrum, the sharper algebraic
+  consequence);
+- `|det(D + jI)| = |det(D - jI)|` to machine precision for several
+  values of `j` (so `W` is automatically even);
+- the determinant equality `det(D + jI) = det(D - jI)` on the
+  even-dim runner blocks (the unsigned form of the source-flip
+  identity that underlies CPT-evenness; both sides are real on real
+  `D`, so the conjugation form `det(D + jI) = conj(det(D - jI))`
+  follows trivially from realness).
+
+P2 therefore retires from "admitted physical-principle premise" to
+"derived corollary of `CPT_EXACT_NOTE` retained primitives applied to
+the source-deformed Dirac operator on the staggered block".
+
+### P3 (continuity / minimal regularity) — derived from finite-block polynomial structure
+
+For finite-dimensional `D`, the map
+
+`j -> det(D + jI) = sum_{k=0}^{n} c_k(D) j^k`
+
+is a polynomial in `j` of degree `n = dim(D)`, with coefficients
+`c_k(D)` fixed by the elementary symmetric functions of the eigenvalues
+of `D`. Therefore:
+
+- `j -> det(D + jI)` is real-analytic on all of `R`;
+- `j -> log|det(D + jI)|` is real-analytic on every neighborhood of
+  `j` where the polynomial is nonzero;
+- in particular, on a neighborhood of `j = 0`, analyticity holds iff
+  `det(D) != 0` (i.e., `D` is invertible);
+- `D` is invertible on the runner block (verified by `sigma_min(D) > 0`),
+  so `W(j) = log|det(D + jI)| - log|det D|` is real-analytic in a
+  neighborhood of the origin and the multiplicative-to-additive
+  functional equation has a real-analytic (hence continuous) `W`
+  satisfying it. Cauchy's functional-equation uniqueness theorem
+  then forces `W = c log r + const`.
+
+The runner's Part 7 verifies `D` is invertible on the staggered block
+and that the small-`j` Taylor ratio `W(j) / j^2` converges to the exact
+quadratic coefficient `A(L_t)`, consistent with analyticity.
+
+P3 therefore retires from "admitted mathematical regularity" to
+"runner-internal corollary of finite-block polynomial structure plus
+runner-verified `D` invertibility".
+
+### P4 (normalization choice) — derived from zero-source baseline convention
+
+The functional equation `W(r_1 r_2) = W(r_1) + W(r_2)` with continuous
+`W: R_+ -> R` has solution `W(r) = c log r + const`. The two free
+parameters (overall scale `c` and additive constant) are fixed by:
+
+- `c = 1` (canonical natural log, since `W` is consumed as a real
+  scalar generator without dimensional rescaling on the runner block);
+- additive constant `= - log|det D|` (zero-source baseline subtraction),
+  enforcing `W(0) = 0`.
+
+Both are conventional choices. Importantly, the additive constant does
+**not** propagate to local source-derivative observables: any other
+constant `c_alt` gives `W_alt = W + (c_alt - 0)` and
+`d/dj W_alt = d/dj W` exactly. The runner's Part 7 verifies this
+invariance: source-derivative observables are identical for the
+zero-source-baseline convention and for an arbitrary additive shift.
+
+P4 therefore retires from "admitted normalization premise" to
+"convention only, with no propagation to physical observables".
+
+### What remains admitted: P1 (scalar additivity) only
+
+P1 — that `W` must satisfy `W[J_1 (+) J_2] = W[J_1] + W[J_2]` on
+independent subsystems — remains an admitted physical-principle
+premise. It is the criterion that selects the **additive** class of
+generators when defining "physical scalar bosonic observable
+generator". It cannot be derived from the staggered axiom alone
+without an additional classification axiom about which functionals on
+`Z[J]` are admissible scalar observable generators. This row does not
+attempt that derivation; the route to retiring P1 (e.g., by deriving
+"physical scalar bosonic observable" from a retained primitive) is
+explicitly out of scope.
+
+### Updated conditional load-bearing statement
+
+> **Given P1 (scalar additivity on independent subsystems)** alone — and
+> with P2, P3, P4 now derived from staggered-axiom retained primitives
+> + finite-block algebraic regularity + zero-source baseline
+> convention — the four exact-algebra identities in §"Claim scope" hold
+> verbatim on the exact minimal hierarchy block.
+
+Downstream rows that cite this note may now do so as
+*"…follows from `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE` **given P1
+(scalar additivity)**…"*, with the understanding that P2, P3, P4
+no longer appear in the citation list (they are derived corollaries,
+not admitted premises).
+
+This narrowing does **not** promote audit status. The audit row remains
+`audited_conditional` until the conditional surface is independently
+re-audited under the new admitted-premise set {P1} and the audit lane
+issues a verdict. The `notes_for_re_audit_if_any` re-audit trigger
+(missing bridge theorem deriving scalar additivity, CPT-even phase
+blindness, continuity/minimal regularity, normalization selection from
+retained primitives) is partially addressed: bridge derivations for
+CPT-even phase blindness, continuity/minimal regularity, and
+normalization selection are now provided; bridge derivation for scalar
+additivity is **not** provided and remains the open path.
 
 ## Out of scope (admitted-context to this note)
 
