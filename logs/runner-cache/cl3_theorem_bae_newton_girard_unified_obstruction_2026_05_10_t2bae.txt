@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/cl3_theorem_bae_newton_girard_unified_obstruction_2026_05_10_t2bae.py
+runner_sha256: 4c260ae804e47abe3eb3f4a9f08077e0f0c374d27f038e8cb15a0d6912a1b0f0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================
+BAE Newton-Girard Unified Obstruction Theorem — verification runner
+========================================================================
+
+Source-note: docs/THEOREM_BAE_NEWTON_GIRARD_UNIFIED_OBSTRUCTION_NOTE_2026-05-10_t2bae.md
+
+
+=== Section 1: Newton-Girard reduction to power sums ===
+
+  [PASS] S1.NG1 Newton-Girard P_2 = e_1^2 - 2 e_2 holds on 100 random (a,b) | max-relerror over 100 trials < 1e-9
+  [PASS] S1.NG2 Newton-Girard P_3 = e_1 P_2 - e_2 P_1 + 3 e_3 holds | max-relerror over 100 trials < 1e-9
+  [PASS] S1.NG3 |b|^2/a^2 spans 0.5 over random samples (BAE not pinned by NG) | |b|^2/a^2 range = [0.003694, 6622]
+  [PASS] S1.NG4 P_n = Tr(H^n) for n = 1, 2, 3, 4 over 50 random circulants | symmetric multiset and matrix trace agree
+
+=== Section 2: Power-sum dependence on (a, |b|^2) + cos(3 arg b) ===
+
+  [PASS] S2.PS1 P_1 = 3a independent of arg(b) (50 trials, paired phi_a vs phi_b) | max diff < 1e-9
+  [PASS] S2.PS2 P_2 = 3a^2 + 6|b|^2 independent of arg(b) (50 trials) | max diff < 1e-9
+  [PASS] S2.PS3 P_3 invariant under arg(b) -> arg(b) + 2π/3 (Z_3-symmetry; 50 trials) | cos(3 arg b) is the only phase dependence
+
+=== Section 3: Group-ring Hopf coproduct on C[C_3] ===
+
+  [PASS] S3.HF1 Tr(Δ(H)^n) = 3 Tr(H^n) for n = 1, 2, 3, 4 across 50 random circulants | grouplike coproduct preserves multiset structure (mult 3)
+  [PASS] S3.HF2 9 (i, j) isotypes collapse to 3 classes of mult 3 by (i+j) mod 3 | canonical group-ring coproduct collapse
+  [PASS] S3.HF3 Class representatives equal H_circ eigenvalues λ_0, λ_1, λ_2 | Δ-spectrum is the H-multiset, each with multiplicity 3
+
+=== Section 4: Isotype split and BAE as weight constraint ===
+
+  [PASS] S4.IS1 Frobenius <I, C+C^2> = 0 (trivial vs doublet orthogonal) | |<I, sym>| = 0.00e+00
+  [PASS] S4.IS2 Frobenius <I, i(C-C^2)> = 0 (trivial vs doublet orthogonal) | |<I, asym>| = 0.00e+00
+  [PASS] S4.IS3 Frobenius <C+C^2, i(C-C^2)> = 0 (doublet basis orthogonal) | |<sym, asym>| = 0.00e+00
+  [PASS] S4.IS4 ||I||^2 = 3 (trivial-isotype real-dim count 1; magnitude factor 3) | ||I||^2 = 3
+  [PASS] S4.IS5 ||C+C^2||^2 = 6, ||i(C-C^2)||^2 = 6 (doublet real-dim 2) | ||sym||^2 = 6, ||asym||^2 = 6
+  [PASS] S4.WC1 F_(1,1) extremum at BAE: F_(1,1)(a=1, |b|=1/sqrt(2)) = 0 | F_(1,1) = -1.11022e-16 (vanishes at BAE)
+  [PASS] S4.WC2 F_(1,2) extremum NOT at BAE: F_(1,2)(a=1, |b|=1/sqrt(2)) > 0 | F_(1,2) = 0.5 (positive at BAE; vanishes at κ=1)
+  [PASS] S4.WC3 F_(1,2) extremum at κ=1: F_(1,2)(a=1, |b|=1) = 0 | F_(1,2) = 0 (vanishes at κ=1, NOT BAE)
+  [PASS] S4.WC4 F_(1,1) NOT zero at κ=1: F_(1,1)(a=1, |b|=1) = -1/2 | F_(1,1) = -0.5 (the weight-choice residue)
+
+=== Section 5: S_3 reflection structure on Herm_circ(3) ===
+
+  [PASS] S5.S3R1 S_3 reflection b ↔ b̄ leaves (a, |b|^2) invariant (50 trials) | |b|^2 is the only doublet magnitude; reflection preserves it
+  [PASS] S5.S3R2 Character chi_e of Herm_circ(3) = 3 (trivial dimension) | chi_e = 3
+  [PASS] S5.S3R3 Standard 2d S_3-irrep absent on Herm_circ(3): multiplicity c = 0 | c (standard) = 0; only trivial + sign present
+
+=== Section 6: Eight-attack collapse summary ===
+
+    Probe 28 (operator): case (i) — Symmetric extremization of Tr(H^n) and Tr log K[H]
+    Probe X (Pauli antisymm.): case (ii) — H^⊗3 alternating-trace functional
+    Probe Y (K-theory): case (i) — Spectral K-class determined by spec(H) multiset
+    Probe V-MaxEnt: case (i) — Entropy functional of spec(H)
+    Probe V-S3: case (i) — S_3 standard 2d irrep absent; (a, |b|^2) invariant
+    Probe U-NCG: case (i) — Spectral action Tr f(D/Λ) symmetric in spec(D)
+    Probe U-qdef: case (ii) — U_q(C_3) ≅ C[C_3] for abelian C_3
+    Probe T-Hopf: case (ii) — Canonical group-ring coproduct
+  [PASS] S6.EA1 All 8 tested-route summaries classified as case (i) or (ii) | case (i): 5, case (ii): 3, sum = 8
+  [PASS] S6.EA2 Tested route summaries cover cases (i) + (ii) | symmetric eigenvalue functionals + grouplike-coproduct extensions
+  [PASS] S6.EA3 Case (i) cannot pin BAE (Newton-Girard reduction to power sums) | verified in Section 1: P_n supplies no BAE selector
+  [PASS] S6.EA4 Case (ii) cannot pin BAE (group-ring coproduct collapse) | verified in Section 3: Tr(Δ(H)^n) = 3 Tr(H^n)
+
+=== TOTAL: PASS=26, FAIL=0 (of 26) ===
+
+----- stderr -----
+

@@ -18252,6 +18252,30 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_thales_right_angle_narrow.py"
     },
+    "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_theorem_bae_newton_girard_unified_obstruction_2026_05_10_t2bae.py"
+    },
+    "theorem_l1_4attack_terminality_note_2026-05-10_t2l1": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_theorem_l1_4attack_terminality_2026_05_10_t2l1.py"
+    },
     "third_grown_family_boundary_note": {
       "assert_count": 0,
       "counts": {
@@ -23135,6 +23159,36 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_theorem_bae_newton_girard_unified_obstruction_2026_05_10_t2bae.py": {
+      "assert_count": 1,
+      "claims": [
+        "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_theorem_l1_4attack_terminality_2026_05_10_t2l1.py": {
+      "assert_count": 1,
+      "claims": [
+        "theorem_l1_4attack_terminality_note_2026-05-10_t2l1"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cluster_decomposition_mass_gap_bridge_check.py": {
@@ -44186,12 +44240,12 @@
     "dominant_class_distribution": {
       "A": 112,
       "B": 160,
-      "C": 649,
+      "C": 651,
       "D": 249,
       "none": 406
     },
-    "runners_classified": 1576,
-    "runners_with_C": 814,
-    "runners_with_D": 441
+    "runners_classified": 1578,
+    "runners_with_C": 816,
+    "runners_with_D": 443
   }
 }

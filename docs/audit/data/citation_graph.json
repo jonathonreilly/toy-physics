@@ -19901,6 +19901,82 @@
       "to": "tensor_matching_completion_theorem_note"
     },
     {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_a1_route_d_newton_girard_bounded_obstruction_note_2026-05-08_routed"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "to": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic"
+    },
+    {
+      "from": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "to": "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological"
+    },
+    {
+      "from": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "to": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d"
+    },
+    {
+      "from": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "to": "qcd_low_energy_running_bridge_note_2026-05-01"
+    },
+    {
       "from": "third_grown_family_complex_boundary_note",
       "to": "third_grown_family_sign_note"
     },
@@ -61711,6 +61787,49 @@
       "runner_path": "scripts/frontier_thales_right_angle_narrow.py",
       "title": "Thales Right-Angle Narrow Theorem"
     },
+    "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae": {
+      "claim_id": "theorem_bae_newton_girard_unified_obstruction_note_2026-05-10_t2bae",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded structural no-go)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+        "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "koide_a1_route_d_newton_girard_bounded_obstruction_note_2026-05-08_routed",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+      ],
+      "note_hash": "92dad0f47d64e85623b7dce32075ac11cbc0d7b1ad66d9f8fd1253564b3b3558",
+      "path": "docs/THEOREM_BAE_NEWTON_GIRARD_UNIFIED_OBSTRUCTION_NOTE_2026-05-10_t2bae.md",
+      "runner_path": "scripts/cl3_theorem_bae_newton_girard_unified_obstruction_2026_05_10_t2bae.py",
+      "title": "BAE Newton-Girard Unified Obstruction Theorem"
+    },
+    "theorem_l1_4attack_terminality_note_2026-05-10_t2l1": {
+      "claim_id": "theorem_l1_4attack_terminality_note_2026-05-10_t2l1",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded structural no-go with named",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+        "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological",
+        "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+        "minimal_axioms_2026-05-03",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "qcd_low_energy_running_bridge_note_2026-05-01"
+      ],
+      "note_hash": "c2732fb5d216d6b492c30b8b059f64c9b89b6a1480ba2faebf1c22c2af717c67",
+      "path": "docs/THEOREM_L1_4ATTACK_TERMINALITY_NOTE_2026-05-10_t2l1.md",
+      "runner_path": "scripts/cl3_theorem_l1_4attack_terminality_2026_05_10_t2l1.py",
+      "title": "L1 \u03b2_2/\u03b2_3 4-Attack Terminality Theorem"
+    },
     "third_grown_family_boundary_note": {
       "claim_id": "third_grown_family_boundary_note",
       "claim_type_author_hint": null,
@@ -66427,7 +66546,7 @@
       "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
-      "no_go": 20,
+      "no_go": 22,
       "none": 1626,
       "open_gate": 27,
       "positive_theorem": 93
@@ -66436,15 +66555,15 @@
       "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
-      "no_go": 127,
+      "no_go": 129,
       "none": 449,
       "open_gate": 115,
       "positive_theorem": 593
     },
-    "edge_count": 8308,
-    "leaf_count": 538,
-    "node_count": 2073,
+    "edge_count": 8327,
+    "leaf_count": 539,
+    "node_count": 2075,
     "root_count": 769,
-    "runners_with_path": 1688
+    "runners_with_path": 1690
   }
 }

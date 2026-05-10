@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/cl3_theorem_l1_4attack_terminality_2026_05_10_t2l1.py
+runner_sha256: 099b7e0a589c0e1d85b05a0b6eb544a55593bc200a8668c84f847fa5235fb034
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================
+L1 β_2/β_3 4-Attack Terminality Theorem — verification runner
+========================================================================
+
+Source-note: docs/THEOREM_L1_4ATTACK_TERMINALITY_NOTE_2026-05-10_t2l1.md
+
+
+=== Section 1: Channel skeleton retention from Casimir algebra ===
+
+  [PASS] S1.CK1 C_F = 4/3 at SU(3) | C_F = 4/3
+  [PASS] S1.CK2 C_A = 3 at SU(3) | C_A = 3
+  [PASS] S1.CK3 T_F = 1/2 | T_F = 1/2
+  [PASS] S1.CK4 beta_0 = (11 C_A - 4 T_F N_f)/3 = 7 at SU(3), N_f=6 | beta_0 = 7
+  [PASS] S1.CK5 beta_1 = 26 at SU(3), N_f=6 | beta_1 = 26
+  [PASS] S1.CK6 3-loop MS-bar channel skeleton has 6 distinct channels | channels: ['C_A^3', 'C_A^2 (T_F N_f)', 'C_F C_A (T_F N_f)', 'C_A (T_F N_f)^2', 'C_F (T_F N_f)^2', 'C_F^2 (T_F N_f)']
+
+=== Section 2: MS-bar scheme-foreign barrier ===
+
+  [PASS] S2.MS1 TVZ beta_2(N_f=6) = -65/2 (consistency check) | beta_2(N_f=6) = -65/2
+  [PASS] S2.MS2 TVZ beta_2 closed form has at most degree 2 in n_f | excludes quartic-Casimir channel at 3-loop
+  [PASS] S2.MS3 HK plaquette coefficients [s_t^n] = (4/3, -8/9, 32/81, -32/243) | HK coeffs at n=1..4: ['4/3', '-8/9', '32/81', '-32/243']
+  [PASS] S2.MS4 HK / MS-bar 3-loop ratio = 64/5265 ~ 0.01215 (structural scheme gap) | |HK / MS-bar| = 64/5265 ≈ 0.012156
+  [PASS] S2.MS5 MS-bar channel weights are dim-reg 3-/4-loop master integrals | dim-reg foreign to lattice/<P>-scheme native framework
+
+=== Section 3: Casimir-value vs channel-weight separation ===
+
+  [PASS] S3.CV1 Gell-Mann matrices satisfy Tr(t^a t^b) = (1/2) δ^ab | standard SU(3) generator normalization
+  [PASS] S3.CV2 Quadratic Casimir in fundamental = (4/3) I (C_F = 4/3) | from explicit Σ t^a t^a sum
+  [PASS] S3.CV3 d_F^abcd d_F^abcd / N_F = 5/12 (SU(3), group-theoretic value) | value = 5/12; support-only retention
+  [PASS] S3.CV4 d_F^abcd d_A^abcd / N_F = 5/2 (SU(3)) | value = 5/2
+  [PASS] S3.CV5 d_A^abcd d_A^abcd / N_A = 135/8 (SU(3)) | value = 135/8
+  [PASS] S3.CV6 beta_2 contains zero quartic-Casimir channels (TVZ closed form) | conjecture 'beta_2 from quartic Casimirs' structurally foreclosed
+  [PASS] S3.CV7 beta_3 quartic-Casimir scalar weights are 4-loop integrals | rational + ζ_3 combinations; NOT framework-supported
+
+=== Section 4: Borel-plane retention; Stokes constants admitted ===
+
+  [PASS] S4.RS1 IR renormalon at z_* = 4π/7 (from beta_0 = 7) | z_* = 1.7952
+  [PASS] S4.RS2 UV renormalon ladder z = -4π/(7 n) for n = 1, 2, 3, 4 | ladder structure from retained beta_0
+  [PASS] S4.RS3 Asymptotic growth rate (β_0/4π)^(n+1) = (7/4π)^(n+1) | per-order multiplier = 0.557042
+  [PASS] S4.RS4 Subleading exponent leading piece: 1 - β_1/β_0² = 23/49 | leading b = 23/49
+  [PASS] S4.RS5 Benchmark β_2^asymp(S_IR=1, b=23/49) is structurally too small | |β_2^MS-bar / β_2^asymp| = 367.6; finite-n corrections matter
+  [PASS] S4.RS6 Stokes constant S_IR closed form NOT retained | requires QCD instanton moduli ↔ Cl(3)/Z^3 identification (unproved)
+
+=== Section 5: Topological mismatch (Chern-Simons / knot) ===
+
+  [PASS] S5.TP1 CS(T^3, SU(3)_k) partition functions at k=1,2,3,4 = (3, 6, 10, 15) | Z = [3, 6, 10, 15]; finite/algebraic at each k
+  [PASS] S5.TP2 h^∨(SU(3)) = 3 | dual Coxeter number = N for SU(N)
+  [PASS] S5.TP3 β_0(SU(3)) matter-content dependent: β_0(n_f=0) = 11, β_0(n_f=6) = 7 | matter-content dependent; h^∨ = 3 is constant
+  [PASS] S5.TP4 'k+h^∨ = β_0' identification structurally falsified | h^∨ depends on simple Lie algebra only; β_0 depends on n_f
+  [PASS] S5.TP5 TVZ 3-loop channel weights are pure rationals (6 distinct values) | weights = ['2857/54', '-1415/54', '-205/18', '79/54', '11/9', '1/2']
+  [PASS] S5.TP6 Unknot quantum dim [3]_q at k=2 = golden ratio (1+√5)/2 ≈ 1.618 | [3]_q(k=2) = 1.61803; phi = 1.61803
+  [PASS] S5.TP7 CS/knot route does not construct the specific TVZ channel vector | no derived map from Q[ζ_(k+3)] to TVZ 6-tuple
+
+=== Section 6: P-L1-D rank deficit and 3 named sub-functor decomposition ===
+
+  [PASS] S6.PD1 P_Cl(3)^HK loop values T(n) at n=1..4 = (4/3, -8/9, 32/81, -32/243) | T = ['4/3', '-8/9', '32/81', '-32/243']
+  [PASS] S6.PD2 [bubble]_q = q for q=2,3,5 (Kirchhoff = α_0 + α_1) | [bubble] at q=(2,3,5) = (2, 3, 5)
+  [PASS] S6.PD3 [sunset]_q = q^2 for q=2,3,5 (Kirchhoff = α_0 α_1 + α_0 α_2 + α_1 α_2) | [sunset] at q=(2,3,5) = (4, 9, 25)
+  [PASS] S6.PD4 [K_4]_q at q=2 = 36, q=3 = 261 (Schnetz F_q point counts) | [K_4] at q=(2,3) = (36, 261)
+  [PASS] S6.PD5 K_4 c_2 residues: q=2: ⌊36/4⌋ mod 2 = 1, q=3: ⌊261/9⌋ mod 3 = 2 | c_2 at q=(2,3) = (1, 2) — consistent with 6 ζ_3 period
+  [PASS] S6.PD6 P_Cl(3) rank = 2; MS-bar rank = 6; deficit = 4 missing rationals | rank(P_Cl(3)) = 2; rank(MS-bar) = 6; deficit = 4
+    Missing sub-functor (a): HK ↔ MS-bar 3-loop scheme conversion
+        Reference: Plaquette-coupling matching integral (Alles-Feo-Panagopoulos 1996)
+    Missing sub-functor (b): c_2 ↔ rational-coefficient extraction
+        Reference: Brown-Schnetz period evaluation
+    Missing sub-functor (c): per-graph Casimir channel projection
+        Reference: Combinatorial bookkeeping compounding (a) and (b)
+  [PASS] S6.PD7 Three named sub-functor missing ingredients identified | (a) scheme conversion + (b) c_2 → rational + (c) per-graph projection
+
+=== Section 7: Four-attack terminality summary ===
+
+    Attack 1 (MS-bar dim-reg): channel WEIGHTS = dim-reg 3-/4-loop master integrals; scheme foreign
+    Attack 2 (Casimir): Casimir VALUES retained; channel WEIGHTS = loop integrals
+    Attack 3 (Resurgence): Borel-plane retained; Stokes constants admitted
+    Attack 4 (Topological): CS / knot data cyclotomic; TVZ vector not constructed
+  [PASS] S7.FA1 Four-route bounded no-go: each lands at named obstacle | MS-bar + Casimir + Resurgence + Topological = tested axes
+  [PASS] S7.FA2 Per P-L1-D synthesis: open-gate residue decomposes to 3 named sub-functors | (a) HK-MS conversion; (b) c_2 → coef; (c) per-graph projection
+  [PASS] S7.FA3 L1 admission count UNCHANGED by this theorem | bounded no-go + sharpened residue; no new admission
+
+=== TOTAL: PASS=41, FAIL=0 (of 41) ===
+
+----- stderr -----
+
