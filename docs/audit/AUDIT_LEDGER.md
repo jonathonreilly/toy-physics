@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1135 |
+| unaudited | 1134 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 214 |
+| ~~audited_conditional~~ | 215 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 214 |
+| `audited_conditional` | 215 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1232 |
+| `unaudited` | 1231 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 775 |
 | `decoration` | 13 |
-| `meta` | 103 |
+| `meta` | 104 |
 | `no_go` | 193 |
 | `open_gate` | 99 |
-| `positive_theorem` | 750 |
+| `positive_theorem` | 749 |
 
 | criticality | count |
 |---|---:|
@@ -612,6 +612,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `kubo_continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -5628,6 +5629,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The implication from linear response to F~M = 1 closes as standard log-log slope algebra once the upstream Kubo coefficient and the runner's selected linearity subset are accepted. It does not establish an independent positive theorem because the F~M result is forced by the same measured linearity condition used to define the subset.
 - **rationale:** Issue: the decisive step is the algebraic identity that a response proportional to s has log-log slope 1. Why this blocks: the runner's headline 15/41 subset is selected by measured linearity ratios across the same strengths used to fit F~M, so the near-1 F~M result is a corollary of the subset definition rather than an independent derivation of a new battery condition. Repair target: present this as a bounded range-of-validity diagnostic under the true-Kubo parent, or add an independent criterion that does not mathematically enforce the F~M slope. Claim boundary until fixed: the runner supports that its selected linearity-regime families have the reported F~M statistics, conditional on the upstream Kubo coefficient.
 - **decoration parent:** `linear_response_true_kubo_note`
+- **auditor confidence:** high
+
+### `lanes.ordered-lattice.readme`
+
+- **Note:** [`lanes/ordered-lattice/README.md`](../../docs/lanes/ordered-lattice/README.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audited only as a lane index/overview that points to ordered-lattice subprogram notes and runners, not as an independent positive theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12f7-05ce-77d1-a6f6-7dfb01dcf900`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note's only substantive standing claim is that the ordered-lattice lane is a historical candidate retained-grade major program where several retained positives remain, while listing covered branches and key runners.  _(class `B`)_
+- **chain closes:** False — The note contains no theorem statement and no load-bearing derivation; it relies on unprovided or non-propagating authorities for any retained physics content. The supplied runner computes a finite 10-property card, but the README does not state a precise scoped result that follows from it.
+- **rationale:** Issue: the source note is a stale narrative/index wrapper, not a theorem, and its retained-positives language is not supported by the restricted one-hop packet. Why this blocks: one cited authority is explicitly meta and non-propagating, the other is only a bounded structured-chokepoint slice, and the dense lattice note needed to support the named runner is not supplied as a retained dependency. Repair target: relabel this row as meta only, or split out a bounded claim directly tied to the lattice_3d_dense_10prop.py card with the missing dense spent-delay note wired as a retained-grade one-hop authority. Claim boundary until fixed: at most a historical lane index listing branches and runners.
+- **open / conditional deps cited:**
+  - `CONTINUUM_BRIDGE_NOTE.md`
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`
