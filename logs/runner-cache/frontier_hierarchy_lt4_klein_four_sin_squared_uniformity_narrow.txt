@@ -1,0 +1,117 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_lt4_klein_four_sin_squared_uniformity_narrow.py
+runner_sha256: b860851268527950216bcdfba9dbad8e68216e77b75682e3c5bd599a03fcdc35
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.96
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: L_t=4 Klein-four sin^2 uniformity
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: uniformity at L_t = 2 (T1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T1: sin^2((2n+1)pi/2) = 1 for n in {0,1} (uniform at L_t=2)  (values = ['1', '1'])
+
+----------------------------------------------------------------------------------------
+Part 2: uniformity at L_t = 4 (T2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T2: sin^2((2n+1)pi/4) = 1/2 for n in {0,1,2,3} (uniform at L_t=4)  (values = ['1/2', '1/2', '1/2', '1/2'])
+
+----------------------------------------------------------------------------------------
+Part 3: non-uniformity at L_t = 6 (T3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T3: at L_t=6, sin^2 values are {1/4, 1, 1/4, 1/4, 1, 1/4} (non-uniform)  (values = ['1/4', '1', '1/4', '1/4', '1', '1/4'])
+
+----------------------------------------------------------------------------------------
+Part 4: non-uniformity at L_t = 8 (T4)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T4: at L_t=8, sin^2 values include 1/2 - sqrt(2)/4 and 1/2 + sqrt(2)/4 (non-uniform)  (has 1/2-sqrt(2)/4 = True, has 1/2+sqrt(2)/4 = True, distinct symbolic values present)
+
+----------------------------------------------------------------------------------------
+Part 5: scanned uniformity profile (T5)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T5: uniformity holds exactly at L_t in {2, 4} for even L_t in {2,4,6,8,10,12,14,16}  (profile = L_t=2:uniform, L_t=4:uniform, L_t=6:split, L_t=8:split, L_t=10:split, L_t=12:split, L_t=14:split, L_t=16:split)
+
+----------------------------------------------------------------------------------------
+Part 6: V_4 invariances of sin^2 (T6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T6: sin^2(pi - omega) = sin^2(omega + pi) = sin^2(-omega) = sin^2(omega) symbolically  (sigma_1 diff = 0, sigma_2 diff = 0, sigma_3 diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: V_4 orbit closure of M(4) (T7)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T7: V_4 orbit of seed pi/4 reproduces M(4) = {pi/4, 3pi/4, 5pi/4, 7pi/4}  (orbit = ['3*pi/4', '5*pi/4', '7*pi/4', 'pi/4']; M(4) = ['3*pi/4', '5*pi/4', '7*pi/4', 'pi/4'])
+
+----------------------------------------------------------------------------------------
+Part 8: single-orbit at L_t=4 vs split-orbit at L_t=6 (T8)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T8: M(4) is a single V_4 orbit (w=1/2); M(6) splits 4+2 with w=(1/4, 1) distinct  (L_t=4 orbits = 1 (sizes=[4], weights=['1/2']); L_t=6 orbits = 2 (sizes=[2, 4], weights=['1/4', '1']))
+
+----------------------------------------------------------------------------------------
+Part 9: V_4 group structure (T9)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T9: V_4 group structure: sigma_i^2 = id and pairwise products = third (on R/2piZ)  (seed=pi/4: order_2=True, prods=True | seed=pi/6: order_2=True, prods=True | seed=2*pi/5: order_2=True, prods=True)
+
+----------------------------------------------------------------------------------------
+Part 10: trivial V_4 orbit at L_t = 2 (T10)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T10: V_4 orbit of seed pi/2 reproduces M(2) = {pi/2, 3pi/2}; sigma_1 fixes pi/2  (orbit = ['3*pi/2', 'pi/2']; M(2) = ['3*pi/2', 'pi/2']; sigma_1(pi/2) = pi/2: True)
+
+----------------------------------------------------------------------------------------
+Informational: per-L_t mode list
+----------------------------------------------------------------------------------------
+
+  Mode-by-mode sin^2 values (informational):
+    L_t =  2: ['1', '1']
+    L_t =  4: ['1/2', '1/2', '1/2', '1/2']
+    L_t =  6: ['1/4', '1', '1/4', '1/4', '1', '1/4']
+    L_t =  8: ['1/2 - sqrt(2)/4', 'sqrt(2)/4 + 1/2', 'sqrt(2)/4 + 1/2', '1/2 - sqrt(2)/4', '1/2 - sqrt(2)/4', 'sqrt(2)/4 + 1/2', 'sqrt(2)/4 + 1/2', '1/2 - sqrt(2)/4']
+    L_t = 10: ['3/8 - sqrt(5)/8', 'sqrt(5)/8 + 3/8', '1', 'sqrt(5)/8 + 3/8', '3/8 - sqrt(5)/8', '3/8 - sqrt(5)/8', 'sqrt(5)/8 + 3/8', '1', 'sqrt(5)/8 + 3/8', '3/8 - sqrt(5)/8']
+    L_t = 12: ['1/2 - sqrt(3)/4', '1/2', 'sqrt(3)/4 + 1/2', 'sqrt(3)/4 + 1/2', '1/2', '1/2 - sqrt(3)/4', '1/2 - sqrt(3)/4', '1/2', 'sqrt(3)/4 + 1/2', 'sqrt(3)/4 + 1/2', '1/2', '1/2 - sqrt(3)/4']
+    L_t = 14: ['sin(pi/14)**2', 'sin(3*pi/14)**2', 'cos(pi/7)**2', '1', 'cos(pi/7)**2', 'sin(3*pi/14)**2', 'sin(pi/14)**2', 'sin(pi/14)**2', 'sin(3*pi/14)**2', 'cos(pi/7)**2', '1', 'cos(pi/7)**2', 'sin(3*pi/14)**2', 'sin(pi/14)**2']
+    L_t = 16: ['sin(pi/16)**2', 'sin(3*pi/16)**2', 'sin(5*pi/16)**2', 'sin(7*pi/16)**2', 'sin(7*pi/16)**2', 'sin(5*pi/16)**2', 'sin(3*pi/16)**2', 'sin(pi/16)**2', 'sin(pi/16)**2', 'sin(3*pi/16)**2', 'sin(5*pi/16)**2', 'sin(7*pi/16)**2', 'sin(7*pi/16)**2', 'sin(5*pi/16)**2', 'sin(3*pi/16)**2', 'sin(pi/16)**2']
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement (recapitulation):
+
+  HYPOTHESIS:
+    Let L_t >= 2 be an even integer. Define
+       M(L_t)  =  { (2n+1) pi / L_t : n = 0, ..., L_t - 1 }
+    and the per-mode weight w(omega) = sin^2(omega).
+
+  CONCLUSION:
+    Among even L_t in {2, 4, 6, 8, 10, 12, 14, 16}, the multiset
+       { w(omega) : omega in M(L_t) }
+    is constant (uniform) exactly at L_t in {2, 4} (with values 1
+    and 1/2 respectively); at every other scanned L_t the multiset
+    contains at least two distinct symbolic values. At L_t = 4 the
+    entire mode set forms a single V_4 = Z_2 x Z_2 orbit, which
+    structurally explains the uniformity.
+
+  Audit-lane class:
+    (A) - pure exact-algebraic / rational arithmetic + elementary
+    group-orbit decomposition. No external observed/fitted/literature/
+    PDG input. No framework axiom or admission consumed.
+
+  This narrow theorem is independent of:
+    - The framework's selection of L_t = 4 as the physical block
+      (separate, bilinear-selector question).
+    - The hierarchy formula v = M_Pl x alpha_LM^16 x (7/8)^(1/4).
+    - The (7/8) and (1/4) exponents (separate narrow theorems).
+    - Any physical interpretation of M(L_t) beyond its algebraic
+      definition.
+
+
+========================================================================================
+  TOTAL: PASS=10, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -8592,6 +8592,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_heat_kernel_d4_compression.py"
     },
+    "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hierarchy_lt4_klein_four_sin_squared_uniformity_narrow.py"
+    },
     "hierarchy_matsubara_decomposition_note": {
       "assert_count": 0,
       "counts": {
@@ -30405,6 +30417,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_lt4_klein_four_sin_squared_uniformity_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_matsubara_decomposition.py": {
       "assert_count": 0,
       "claims": [
@@ -43647,11 +43674,11 @@
       "A": 111,
       "B": 160,
       "C": 642,
-      "D": 237,
+      "D": 238,
       "none": 406
     },
-    "runners_classified": 1556,
+    "runners_classified": 1557,
     "runners_with_C": 804,
-    "runners_with_D": 427
+    "runners_with_D": 428
   }
 }
