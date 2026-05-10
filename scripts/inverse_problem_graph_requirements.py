@@ -387,6 +387,49 @@ def main() -> None:
         print(f"  - k=0 range: {min(k0_vals):+.6e} to {max(k0_vals):+.6e}")
     if nf_vals:
         print(f"  - no-field range: {min(nf_vals):+.6e} to {max(nf_vals):+.6e}")
+
+    # Bounded-table assertions tied to docs/INVERSE_PROBLEM_NOTE.md.
+    # These pin the narrowed claim: Born stays machine-clean on every
+    # variant, TOWARD holds for the four structure-preserving variants,
+    # heavy_delete_70 is a known AWAY counterexample, and the k=0 and
+    # no-field controls are exactly zero.
+    by_name = {r["variant"]: r for r in rows}
+    expected_signs = {
+        "baseline": "TOWARD",
+        "heavy_delete_70": "AWAY",
+        "asym_zpos_removed": "TOWARD",
+        "jitter_0.5h": "TOWARD",
+        "sparse_nn_only": "TOWARD",
+    }
+    for variant, want in expected_signs.items():
+        got = str(by_name[variant]["grav_sign"])
+        assert got == want, (
+            f"variant {variant} expected {want}, got {got} "
+            f"(grav={by_name[variant]['grav']:+.6e}); "
+            "the narrowed bounded note table in "
+            "docs/INVERSE_PROBLEM_NOTE.md must be re-synced."
+        )
+    for variant in expected_signs:
+        born = float(by_name[variant]["born"])
+        assert abs(born) < 1e-13, (
+            f"variant {variant} Born drift |{born:.2e}| >= 1e-13 "
+            "violates the bounded Born-cleanliness claim."
+        )
+    for variant in expected_signs:
+        k0_val = float(by_name[variant]["k0"])
+        nf_val = float(by_name[variant]["no_field"])
+        assert k0_val == 0.0, (
+            f"variant {variant} k=0 control nonzero: {k0_val:+.6e}"
+        )
+        assert nf_val == 0.0, (
+            f"variant {variant} no-field control nonzero: {nf_val:+.6e}"
+        )
+    print(
+        "PASS: bounded inverse-problem table matches the narrowed note "
+        "(Born clean on all five variants; TOWARD on baseline/asym/jitter/"
+        "sparse; AWAY on heavy_delete_70; controls exactly zero)."
+    )
+
     print(f"\nTotal time: {time.time() - t0:.0f}s")
 
 

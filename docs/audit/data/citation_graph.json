@@ -36327,7 +36327,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "49148e41ca22cd00b5c8b9e6c4f3b38b02b158ed2522acaf198d491550c11fad",
+      "note_hash": "3639d74a39b0539640ae4cb30ebbda5a533c9791243c10a4ca070c05cdecc852",
       "path": "docs/CHIRAL_3PLUS1D_RECURRENCE_NOTE.md",
       "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "3+1D Periodic Chiral Sign Windows: Wrap and Recurrence Scale"
@@ -38310,9 +38310,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3e5e5017cc9c7e3a43858e1bcda6762bccaefd59a7e2e33fae28b2dd70634d7e",
+      "note_hash": "d901a814d24a8d3a16d62bfc9dc623115061b5ff818ac53b74469c7f8cccafc6",
       "path": "docs/DISTANCE_LAW_PORTABILITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py",
       "title": "Distance Law Portability Across Retained Structured Families"
     },
     "distance_law_preserving_third_family_note": {
@@ -43996,7 +43996,7 @@
       "deps": [
         "global_coherence_off_scaffold_note"
       ],
-      "note_hash": "2f240a64449669d4761bdbe4619d820372a17e16ed9c03724599c2dd37c6061e",
+      "note_hash": "18feae857e1c48d96b3c19556b1626a8fedcc49d60b0a7368f01ac7072571717",
       "path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
       "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
@@ -45666,7 +45666,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "b2a579427d14557abe92724f62c97a9a5f02014f71862b7f665f7452380dc361",
+      "note_hash": "5de36002de5844c83c2c4d5ef9080563433c219d5c4946d35aad4fcd9b8f40cf",
       "path": "docs/INVERSE_PROBLEM_NOTE.md",
       "runner_path": "scripts/inverse_problem_graph_requirements.py",
       "title": "Inverse Problem: What Does Newton+Born Require of the Network?"
@@ -49395,9 +49395,9 @@
       "claim_id": "matched_2d_4d_decoherence_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "32bd997090ed7e15575b1cba6af027c6e0d37b348f8e15cc1101691301e45093",
+      "note_hash": "7308275c6b2a25056bb0f910ea23f10d0e2c937e326b2c352f5a76a4f2ed2050",
       "path": "docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md",
       "runner_path": "scripts/matched_2d_4d_decoherence.py",
       "title": "Matched 2D vs 4D Decoherence Note"
@@ -51489,7 +51489,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "fd46bd4c89855208c98674f91aa5673188b1714423829b171585adaced690733",
+      "note_hash": "34ee3540f26f3302b33b8ba01b25db485150751b4683cafc3a10a916b39d61bf",
       "path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
       "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch 2D Note"
@@ -59517,7 +59517,7 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e5fc0ff1ad3e58c555d7b8e8c42eb111495829bc6e4115dbb13385fab882f49a",
+      "note_hash": "660bf7c687f4bb0d735fe03d85878934e05c5d242864e935e4e66c9c2e190e59",
       "path": "docs/SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py",
       "title": "SU(3) Wilson Plaquette Closed-Form Fan-Out at \u03b2 = 6"
@@ -65020,18 +65020,18 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 719,
+      "bounded_theorem": 720,
       "decoration": 1,
       "meta": 29,
       "no_go": 123,
       "none": 451,
       "open_gate": 113,
-      "positive_theorem": 598
+      "positive_theorem": 597
     },
     "edge_count": 8119,
     "leaf_count": 533,
     "node_count": 2034,
     "root_count": 768,
-    "runners_with_path": 1649
+    "runners_with_path": 1650
   }
 }

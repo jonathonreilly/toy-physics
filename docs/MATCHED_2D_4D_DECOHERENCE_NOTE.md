@@ -1,9 +1,32 @@
 # Matched 2D vs 4D Decoherence Note
 
-**Status:** support - structural or confirmatory support note
-**Date:** 2026-04-03
-**Purpose:** Test whether the current 4D decoherence claim survives a degree-matched comparison against the 2D modular family.
+**Status:** support — bounded comparison note. Honest narrowing 2026-05-10:
+the claim is the bounded numerical-replay statement on the explicitly
+named generator definitions below. No upstream "modular family"
+abstraction is being imported as an audited authority.
+**Date:** 2026-04-03 (note); 2026-05-10 (rigorization sync)
+**Purpose:** Test whether the current 4D decoherence claim survives a degree-matched comparison against the 2D modular family **as defined by the generator routines below**.
 **Primary runner:** `scripts/matched_2d_4d_decoherence.py`
+
+## One-hop generator dependencies (explicit)
+
+The runner imports two graph generators directly:
+
+- `generate_modular_dag` from `scripts/topology_families.py` — 2D
+  hierarchical/modular DAG generator. The exact 2D family used here is
+  the one defined by that function at the runner's pinned arguments
+  (`radius=3.0`, `gap=3.0`, `npl=25`, seed range as enumerated in the runner).
+- `generate_4d_modular_dag` from `scripts/four_d_decoherence_large_n.py`
+  — 4D modular DAG generator. The exact 4D family used here is the one
+  defined by that function at the per-`N` matched radius `r = 4.75`
+  (selected from a sweep grid against the 2D mean degree).
+
+These two source files are the bounded definitions of the "modular
+family" referenced in the comparison. The note's claim is **not** an
+abstract universality statement about modular DAGs; it is a bounded
+numerical statement about the specific output of these two generator
+routines on this harness, with the same slit/barrier convention,
+mass-selection rule, `pur_min` metric, and `k`-band on both sides.
 
 
 ## Setup

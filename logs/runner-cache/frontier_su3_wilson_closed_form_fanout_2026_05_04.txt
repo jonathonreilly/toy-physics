@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py
-runner_sha256: 773caac6b95f7ae12db813aa7b5d71c447df9ad49ef8e30a6c5b068583b86a40
+runner_sha256: 268cdd1aba19c8c089839a1d4df21c489ec2f5a5e6ab94c0d3bb21049aa8b7f7
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.56
+elapsed_sec: 0.45
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -93,6 +93,9 @@ committing multi-day engineering on the L_s>=3 Wigner-Racah engine.
   ~ 0.59. Exact closure would need a full lattice tensor-network
   contraction route, a different audited derivation, or numerical MC.
 
+PASS: comparator-independent (M1, M2, M4, M5) closed-form table matches the bounded internal record in the note.
+
+NOTE (provenance): the MC reference value 0.5934 and the epsilon_witness target 3.03e-4 are external comparator-only inputs. The 'ruling-out at epsilon_witness' reading inherits their provenance and is not promoted as a standalone theorem.
 ==============================================================================
 SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
 ==============================================================================

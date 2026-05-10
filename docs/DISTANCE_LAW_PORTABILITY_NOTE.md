@@ -1,6 +1,21 @@
 # Distance Law Portability Across Retained Structured Families
 
-**Status:** bounded - bounded or caveated result note
+**Status:** bounded — bounded sweep result.
+**Last sync:** 2026-05-10 — registered the primary runner explicitly,
+declared the four retained generator dependencies, and pinned the table
+values with assertions inside the runner. No table values change.
+**Primary runner:** [`scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py`](../scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py)
+**Retained generator dependencies (explicit):**
+- `scripts/gate_b_no_restore_farfield.py` — `grow` baseline geometry
+- `scripts/ALT_CONNECTIVITY_FAMILY_SIGN_SWEEP.py` — `_build_alt_connectivity`
+- `scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py` — `_build_third_connectivity`
+- `scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py` — `_build_quadrant_reflection_connectivity`
+
+The radial-shell builder (`_build_radial_shell_connectivity`) used for
+the `fifth-family radial` row is defined inline in
+`scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py` itself; it has no separate
+upstream module.
+
 This sweep asked a narrow question:
 
 Can the retained near-Newtonian distance tail transfer beyond the first two grown families into the newer retained structured families?

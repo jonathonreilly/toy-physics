@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/matched_2d_4d_decoherence.py
-runner_sha256: 8d3d9788424f956292741ae649c7dabbd57578205517969894caf5fe7061cb85
+runner_sha256: 2c141136624f12614a1e0f71a508685f55ac0d788b124561bdbf0d9d574db6c7
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 49.03
+elapsed_sec: 18.16
 status: ok
 ----- stdout -----
 ============================================================================================
@@ -25,6 +25,7 @@ MATCHED 2D vs 4D DECOHERENCE EXPONENT COMPARISON
   4D matched alpha: -2.704 ± 0.620
   alpha delta (4D - 2D): -2.546
   Verdict: 4D does not flatten the ceiling after degree matching
+PASS: bounded matched-2D-vs-4D table matches the note (pur_min, <k>, r4 within tolerance; alphas within +/-0.05; delta within +/-0.1).
 
 ----- stderr -----
 

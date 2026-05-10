@@ -37,6 +37,14 @@ import math
 import os
 import sys
 
+# Heavy compute / sweep runner — full live replay takes ~5 min for the
+# 26-swept + 9-independent generator sweep on this hardware. The audit
+# loop's default 120s budget is too tight; bump to 900s so the live
+# replay can complete inside the audit window. The frozen archived log
+# at logs/2026-04-07-global-coherence-predictor.txt is the deterministic
+# fallback comparator and is asserted at the end of this runner.
+AUDIT_TIMEOUT_SEC = 900
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import independent_generators_heldout as ind
 import universality_classifier as uc
@@ -287,6 +295,32 @@ def main():
     else:
         print(f"  WORSE — single-property global rule at {single_cross_acc:.0%}, "
               f"worse than the old rule")
+
+    # Archived-table assertions tied to docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md.
+    # These pin the headline numbers from the frozen log
+    # logs/2026-04-07-global-coherence-predictor.txt: scaffolded swept-set
+    # 7/9 = 77.8% via free_coh >= 7.96e-04 and 6/9 = 66.7% via the old
+    # 2-property rule. The note already records the off-scaffold reversal
+    # (5/9 in GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE) and is closed.
+    assert n_eval == 9, f"expected 9 independent-generator evaluations, got {n_eval}"
+    assert old_correct == 6, (
+        f"old 2-property rule should match 6/9 on the held-out set, got {old_correct}"
+    )
+    assert cor_s == 7, (
+        f"single-property global rule should match 7/9 on the held-out set, got {cor_s}"
+    )
+    assert p_s == "free_coh", (
+        f"single-property global winner should be free_coh, got {p_s}"
+    )
+    # Threshold close to 7.96e-04 (within numerical precision of the swept set).
+    assert abs(t_s - 7.9597e-04) <= 1e-5 or abs(t_s - 8.0e-04) <= 5e-5, (
+        f"free_coh threshold drift: got {t_s}"
+    )
+    assert d_s == ">=", f"free_coh direction should be >=, got {d_s}"
+    print(
+        "PASS: bounded archived-replay assertions match the frozen 7/9 vs "
+        "6/9 scaffolded result in the note."
+    )
 
 
 if __name__ == "__main__":

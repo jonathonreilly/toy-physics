@@ -381,6 +381,61 @@ def main():
         else:
             print("  Verdict: 4D does not flatten the ceiling after degree matching")
 
+    # Bounded-table assertions tied to docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md.
+    # The note's claim is the bounded numerical replay of the table at the
+    # default arguments (n_layers=[25,40,60,80,100], 8 seeds, npl=25,
+    # gap=3.0, 2D radius=3.0). Skip the assertion check if the runner is
+    # invoked with non-default arguments.
+    default_ns = (25, 40, 60, 80, 100)
+    is_default_run = (
+        tuple(ns) == default_ns
+        and args.n_seeds == 8
+        and args.npl == 25
+        and args.gap == 3.0
+        and args.radius_2d == 3.0
+    )
+    if is_default_run and fit_2d and fit_4d:
+        expected_pur = {
+            #  N    2D pur     2D <k>   4D pur     4D <k>    r4
+            25: (0.9341, 9.76, 0.9647, 9.52, 4.75),
+            40: (0.9577, 9.98, 0.9559, 9.69, 4.75),
+            60: (0.9555, 10.11, 0.9378, 9.78, 4.75),
+            80: (0.9667, 10.24, 0.9812, 9.89, 4.75),
+            100: (0.9428, 10.25, 0.9991, 9.89, 4.75),
+        }
+        for n in default_ns:
+            assert n in series_2d and n in series_4d, (
+                f"matched comparison missing rows for N={n}"
+            )
+            p2 = _mean(list(series_2d[n].values()))
+            p4 = _mean(list(series_4d[n].values()))
+            k2 = mean_deg_2d[n]
+            k4 = mean_deg_4d[n]
+            r4 = radius_4d[n]
+            ep2, ek2, ep4, ek4, er4 = expected_pur[n]
+            assert abs(p2 - ep2) <= 0.005, f"2D pur_min N={n} drift: {p2:.4f} vs {ep2}"
+            assert abs(p4 - ep4) <= 0.005, f"4D pur_min N={n} drift: {p4:.4f} vs {ep4}"
+            assert abs(k2 - ek2) <= 0.05, f"2D <k> N={n} drift: {k2:.2f} vs {ek2}"
+            assert abs(k4 - ek4) <= 0.05, f"4D <k> N={n} drift: {k4:.2f} vs {ek4}"
+            assert abs(r4 - er4) <= 0.01, f"r4 N={n} drift: {r4:.2f} vs {er4}"
+        # Pinned alpha values from the note.
+        assert abs(fit_2d[1] - (-0.158)) <= 0.05, (
+            f"2D matched alpha drift: got {fit_2d[1]:+.3f}, expected -0.158"
+        )
+        assert abs(fit_4d[1] - (-2.704)) <= 0.05, (
+            f"4D matched alpha drift: got {fit_4d[1]:+.3f}, expected -2.704"
+        )
+        delta_e = -2.546
+        delta_got = fit_4d[1] - fit_2d[1]
+        assert abs(delta_got - delta_e) <= 0.1, (
+            f"alpha delta drift: got {delta_got:+.3f}, expected {delta_e}"
+        )
+        print(
+            "PASS: bounded matched-2D-vs-4D table matches the note "
+            "(pur_min, <k>, r4 within tolerance; alphas within +/-0.05; "
+            "delta within +/-0.1)."
+        )
+
 
 if __name__ == "__main__":
     main()

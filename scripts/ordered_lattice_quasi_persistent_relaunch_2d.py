@@ -267,6 +267,13 @@ def main() -> None:
     print("=" * 92)
     print()
 
+    # Bounded numerical replay table. Each value is pinned by an assertion
+    # below tied to docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md.
+    # No acceptance threshold, packet-class, or invariance guarantee is being
+    # claimed; the note's narrowed claim is only that this six-row table
+    # reproduces deterministically.
+    measured: dict[tuple[str, float], dict[str, float]] = {}
+
     for action in ACTIONS:
         print(f"ACTION: {action}")
         print(
@@ -299,18 +306,45 @@ def main() -> None:
                 free_field,
                 mass_field,
             )
+            measured[(action, strength)] = {
+                "capture": capture,
+                "carry": carry,
+                "shift": shift,
+                "relaunch": relaunch_shift,
+                "width": spread_ratio,
+            }
             print(
                 f"{strength:10.0e} {capture:8.3f} {carry:8.3f} "
                 f"{shift:+10.6f} {relaunch_shift:+10.6f} {spread_ratio:8.3f}"
             )
         print()
 
+    # Bounded numerical-replay assertions (pinned to the note table).
+    # Tolerance: 1e-3 absolute on rounded reported values; this is the
+    # display precision used in the note table and the runner output.
+    expected = {
+        ("valley_linear", 2e-05): (0.344, 0.911, +0.000394, +0.000205, 1.000),
+        ("valley_linear", 5e-05): (0.344, 0.911, +0.000985, +0.000512, 1.000),
+        ("valley_linear", 1e-04): (0.344, 0.911, +0.001968, +0.001024, 1.000),
+        ("spent_delay",   2e-05): (0.344, 0.911, +0.111785, +0.073447, 0.996),
+        ("spent_delay",   5e-05): (0.344, 0.911, +0.174422, +0.115193, 0.993),
+        ("spent_delay",   1e-04): (0.344, 0.911, +0.242946, +0.161549, 0.990),
+    }
+    tol = 1.0e-3
+    for key, (cap_e, car_e, sh_e, rel_e, wid_e) in expected.items():
+        m = measured[key]
+        assert abs(m["capture"]  - cap_e) <= tol, f"{key} capture drift: got {m['capture']:.6f}, expected {cap_e}"
+        assert abs(m["carry"]    - car_e) <= tol, f"{key} carry drift: got {m['carry']:.6f}, expected {car_e}"
+        assert abs(m["shift"]    - sh_e ) <= tol, f"{key} shift drift: got {m['shift']:+.6f}, expected {sh_e:+.6f}"
+        assert abs(m["relaunch"] - rel_e) <= tol, f"{key} relaunch drift: got {m['relaunch']:+.6f}, expected {rel_e:+.6f}"
+        assert abs(m["width"]    - wid_e) <= tol, f"{key} width drift: got {m['width']:.6f}, expected {wid_e}"
+    print("PASS: bounded numerical-replay table matches the narrowed note "
+          "(six rows; capture/carry/shift/relaunch/width within +/-1e-3).")
+
     print("SAFE READ")
-    print("  - If capture and carry stay high and width stays near 1, the packet surrogate")
-    print("    is family-generic enough to justify a bounded quasi-persistent control.")
-    print("  - If capture or carry collapses here, the relaunch idea is fragile and probably")
-    print("    should remain a 3D-only bounded surrogate.")
-    print("  - This is still a control, not a persistent-mass theorem.")
+    print("  - This is a bounded numerical replay only. It is not a persistent-mass theorem.")
+    print("  - It is not a family-generic claim; only the one fixed harness is tested.")
+    print("  - The displayed values are pinned by the assertions above.")
     print()
     print(f"Total runtime: {time.time() - t_total:.1f}s")
 
