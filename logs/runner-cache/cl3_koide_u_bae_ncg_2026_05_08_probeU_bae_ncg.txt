@@ -1,0 +1,145 @@
+========================================================================
+Probe U-BAE-NCG — Connes-Chamseddine NCG Spectral Triple
+Date: 2026-05-08
+Tier: bounded_theorem (sixth-level structural rejection)
+Source: docs/KOIDE_U_BAE_NCG_SPECTRAL_TRIPLE_NOTE_2026-05-08_probeU_bae_ncg.md
+========================================================================
+
+Section 0 — Retained sanity (C_3 cycle, H_circ, eigenvalues, P1)
+  [PASS] 0.1: C_3 cycle is unitary | max |U†U - I| = 0.00e+00
+  [PASS] 0.2: C^3 = I (order 3) | max |C^3 - I| = 0.00e+00
+  [PASS] 0.3: det(C) = +1 | det(C) = 1.000000 (target 1.0)
+  [PASS] 0.4: H_circ Hermitian for sample (a=1, b=0.5+0.3i) | max |H - H†| = 0.00e+00
+  [PASS] 0.5: H_circ commutes with C (C_3-equivariant) | max |[H, C]| = 0.00e+00
+  [PASS] 0.6: closed-form eigenvalues match numerical | diff = 6.66e-16
+  [PASS] 0.7: P1 Brannen identification gives Koide Q = 2/3 at BAE | Q = 0.6666666667 (target 2/3 ≈ 0.66667)
+  [PASS] 0.8: BAE algebraic equivalence: a^2 = 2|b|^2 at |b|/a = 1/√2 | a^2 - 2|b|^2 = 0.00e+00
+
+Section 1 — NCG-AV1: spectral triple (A, H, D = H_circ) well-defined
+    Tests: D self-adjoint, finite-rank resolvent, [D, a] bounded.
+  [PASS] 1.1: D = H_circ is self-adjoint | max |D - D†| = 0.00e+00
+  [PASS] 1.2: D has compact resolvent (finite rank on hw=1) | rank(R) = 3 (finite, hence compact)
+  [PASS] 1.3: D eigenvalues match parameterization λ_k = a + 2|b| cos(arg(b) + 2πk/3) | (a, b) enters D directly; parameterization of H realized
+  [PASS] 1.4: [D, a] bounded for a = I (trivially) | [D, I] = 0
+  [PASS] 1.5: [D, a] bounded for generic Hermitian a | |[D, a]| = 1.8103 (finite)
+  [PASS] 1.6: parameterization of H by (a, b) achieved (D varies with b) | |D(b=0.5) - D(b=0.7)| = 0.4899
+  [PASS] 1.7: P1 retained identification eigenvalues(D) = √m_k (structural) | per KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md R2
+
+Section 2 — NCG-AV2: heat-kernel Seeley-de Witt coefficients
+    Tests: a_0, a_2, a_4 computed; stationary points NOT at BAE.
+  [PASS] 2.1: a_0(D^2) = Tr(I) = dim(H) = 3 | a_0 = 3
+  [PASS] 2.2: Tr(D^2) = 3a^2 + 6|b|^2 (block-total Frobenius) | Tr(D^2) = 4.500000 (form 4.500000)
+  [PASS] 2.3: ∂a_2/∂|b| ≠ 0 at BAE point |b|/a = 1/√2 | ∂a_2/∂|b| at BAE = -8.4853 (nonzero)
+  [PASS] 2.4: ∂a_2/∂|b| = 0 only at |b| = 0 (NOT at BAE) | ∂a_2/∂|b||_{|b|=0} = -0.0
+  [PASS] 2.5: Tr(D^4) closed form at arg(b)=0 | Tr(D^4) = 16.125000 (form 16.125000)
+  [PASS] 2.6: ∂[Tr(D^4)]/∂|b| ≠ 0 at BAE point | ∂Tr(D^4)/∂|b| at BAE = 112.3675
+  [PASS] 2.7: ∂[Tr(D^4)]/∂|b| = 0 at |b| = 0 only (NOT at BAE) | ∂Tr(D^4)/∂|b||_{|b|=0} = 0.0
+  [PASS] 2.8: BAE point (|b|/a = 1/√2) is generic, NOT stationary of any a_n | verified for a_0 (trivially), a_2 (above), a_4 (above)
+  [PASS] 2.9: Tr exp(-t D^2) expansion matches series at small t (BAE point) | |num - series| = 3.2524e-05 at t=0.01
+
+Section 3 — NCG-AV3: cutoff function f convention dependence
+    Tests: moments f_0, f_2, f_4 differ across natural cutoffs.
+    Gaussian: f_0 = 0.886227, f_2 = 0.443113, f_4 = 0.664670
+      f_2/f_0 = 0.500000, f_4/f_0 = 0.750000
+  [PASS] 3.1: Gaussian f_0 = √π/2 | f_0 = 0.886227 ≈ √π/2 = 0.886227
+  [PASS] 3.2: Gaussian f_2 = √π/4 | f_2 = 0.443113 ≈ √π/4 = 0.443113
+    Rational (1+x^2)^-4: f_0 = 0.490874, f_2 = 0.098175, f_4 = 0.098175
+      f_2/f_0 = 0.200000, f_4/f_0 = 0.200000
+  [PASS] 3.3: Rational moments computed | r_0 = 0.490874
+    Mod-Gaussian: f_0 = 0.837043, f_2 = 0.342167, f_4 = 0.381772
+      f_2/f_0 = 0.408781, f_4/f_0 = 0.456096
+  [PASS] 3.4: Modified-Gaussian moments computed | m_0 = 0.837043
+  [PASS] 3.5: f_2/f_0 spread > 0.1 across natural cutoffs (convention dependence) | spread = 0.3000 (Gauss/Rational/Mod-Gauss)
+  [PASS] 3.6: f_4/f_0 spread > 0.1 across natural cutoffs (convention dependence) | spread = 0.5500
+  [PASS] 3.7: Probe 4 S2 barrier (cutoff f convention) preserved under D = H_circ | Per KOIDE_A1_PROBE_SPECTRAL_ACTION_BOUNDED_OBSTRUCTION (PR #734)
+
+Section 4 — NCG-AV4: numerical scan of Tr f(D^2/Λ^2)
+    Tests: BAE not stationary for any of four natural cutoffs.
+    exp(-x): critical points {1.000}
+  [PASS] 4.1: exp(-x) critical point near 1.0, NOT at BAE | crits = {1.000} (near 1.0: True; at BAE: False)
+    exp(-x^2): critical points {1.000}
+  [PASS] 4.2: exp(-x^2) critical point near 1.0, NOT at BAE | crits = {1.000} (near 1.0: True; at BAE: False)
+    (1+x)^-4: critical points {1.000}
+  [PASS] 4.3: (1+x)^-4 critical point near 1.0, NOT at BAE | crits = {1.000} (near 1.0: True; at BAE: False)
+    exp(-x)(1+x): critical points {}
+  [PASS] 4.4: exp(-x)(1+x) BAE non-criticality | crits = {} (BAE = 0.707 not in)
+  [PASS] 4.5: BAE point |b|/a = 1/√2 NOT a stationary point of Tr f(D^2/Λ^2) for any natural cutoff | BAE_RATIO = 0.707107; no cutoff f yields a critical point there
+  [PASS] 4.6: BAE deviation from typical critical point Δ ≈ 0.29 | Δ(|b|/a) = 0.2929
+  [PASS] 4.7: Probe 4 S3 barrier (non-criticality at BAE) preserved under D = H_circ | Per KOIDE_A1_PROBE_SPECTRAL_ACTION_BOUNDED_OBSTRUCTION (PR #734)
+
+Section 5 — NCG-AV5: first-order condition gap [[D, a], J b J^-1] = 0
+    Tests: J, γ admission count; net primitive count under D = H_circ.
+  [PASS] 5.1: Cl(3) has natural involution α (real-structure candidate) | α(γ_i) = -γ_i extends to Cl(3); standard mathematical structure
+  [PASS] 5.2: Extension of α to hw=1 lepton states NOT unique | ≥ 3 natural antiunitary candidates; J not pinned
+  [PASS] 5.3: First-order condition [[D, a], JbJ^-1] = 0 nontrivial constraint | |[[D, a], JbJ^-1]| = 0.6314 (nonzero ⟹ J must be specifically chosen)
+  [PASS] 5.4: Net primitive admission count under D = H_circ = 4 | Probe U: 4 (J, γ, f, action principle); Probe 4: 4; same
+  [PASS] 5.5: Probe 4 S1 barrier preserved under D = H_circ | D shifted from admitted to derived-from-P1; J, γ, f, principle remain
+
+Section 6 — NCG-AV6: spectral action via power sums; BAE not selectable
+    Tests: P_n stationary points; BAE not selectable from symmetric functionals.
+  [PASS] 6.1: P_1 = 3a (linear in a, no |b| dependence) | P_1 = 3.000000 (target 3a = 3.0)
+  [PASS] 6.2: P_2 = 3a^2 + 6|b|^2 | P_2 = 4.500000 (form 4.500000)
+  [PASS] 6.3: ∂P_2/∂|b| = 0 only at |b| = 0 (NOT at BAE) | ∂P_2/∂|b| at BAE = 8.4853
+  [PASS] 6.4: P_3 = 3a^3 + 18 a|b|^2 + 6|b|^3 cos(3 arg(b)) | P_3 = 8.250000 (form 8.250000)
+  [PASS] 6.5: P_4 = (a+2|b|)^4 + 2(a-|b|)^4 at arg(b)=0 | P_4 = 16.125000 (exact 16.125000)
+    ∂P_2/∂|b| at BAE = 8.485281
+    ∂P_3/∂|b| at BAE = 34.455844
+    ∂P_4/∂|b| at BAE = 112.367532
+    ∂P_6/∂|b| at BAE = 984.120454
+  [PASS] 6.6: ∂P_n/∂|b| ≠ 0 at BAE for n = 2, 3, 4, 6 (BAE not stationary of any P_n) | BAE is generic for all power sums
+  [PASS] 6.7: spectral action Tr f(D^2/Λ^2) is a symmetric function of eigenvalues | By Newton-Girard, expressible as polynomial in {P_n}
+  [PASS] 6.8: BAE balances Frobenius (3a^2 = 6|b|^2) but unbalances (a, |b|) ratio | 3a^2 = 3.0000, 6|b|^2 = 3.0000 (equal at BAE)
+  [PASS] 6.9: symmetric eigenvalue functionals lose isotype-weight information | Symmetric functions of {λ_k} expressible via P_n; isotype split not recoverable
+  [PASS] 6.10: V-MaxEnt 'parameterizes H' target realized but insufficient | (a, b) enters D directly; yet symmetric functionals can't pin BAE
+
+Section 7 — Six-level closure synthesis (Probes 12-30, X, Y, V-MaxEnt, V-S_3, U)
+    Probes 12-30 / Probe 28 (operator-level (Hilbert states)): C_3 rep theory: (1, 2) real-dim on Herm_circ(3) → F1/BAE absent at operator level
+  [PASS] 7.1: Probes 12-30 / Probe 28 closes BAE negatively at operator-level (Hilbert states) | C_3 rep theory: (1, 2) real-dim on Herm_circ(3)
+    Probe X (wave-function-level (∧^N tensors)): Pauli antisym → trivial-isotype singlet, b-decoupled → Slater singlet b-decoupled
+  [PASS] 7.2: Probe X closes BAE negatively at wave-function-level (∧^N tensors) | Pauli antisym → trivial-isotype singlet, b-decoupled
+    Probe Y (topological-level (bundles, K-theory)): K_C3(pt) = Z⊕Z⊕Z; integer-quantized → (a, b) absent from topological data
+  [PASS] 7.3: Probe Y closes BAE negatively at topological-level (bundles, K-theory) | K_C3(pt) = Z⊕Z⊕Z; integer-quantized
+    Probe V-MaxEnt (thermodynamic-level (states ρ at fixed H)): MaxEnt over states ρ at fixed H → (a, b) parameterizes H not ρ
+  [PASS] 7.4: Probe V-MaxEnt closes BAE negatively at thermodynamic-level (states ρ at fixed H) | MaxEnt over states ρ at fixed H
+    Probe V-S_3 (larger-symmetry-level (S_3 reflection on Herm_circ(3))): S_3 rep symmetric under b ↔ b̄ → reflection rep does not pin |b|
+  [PASS] 7.5: Probe V-S_3 closes BAE negatively at larger-symmetry-level (S_3 reflection on Herm_circ(3)) | S_3 rep symmetric under b ↔ b̄
+    Probe U (this probe) (NCG-spectral-action-level (D = H_circ)): spectral action via power sums; BAE not stationary → parameterization realized but insufficient
+  [PASS] 7.6: Probe U (this probe) closes BAE negatively at NCG-spectral-action-level (D = H_circ) | spectral action via power sums; BAE not stationary
+  [PASS] 7.7: All SIX accessible structural layers close BAE negatively | operator + wave-function + topology + thermodynamics + larger-symmetry + NCG-spectral-action
+  [PASS] 7.8: Probe U uniquely PARAMETERIZES H via D = H_circ; others act on H | V-MaxEnt-authorized 'parameterizes-not-acts-on' target realized in Probe U only
+  [PASS] 7.9: Probe U cross-confirms Probe 4 (PR #734) under D = H_circ reformulation | Probe 4 'S_b acts on H' barriers preserved under 'D = H_circ parameterizes H'
+
+Section 8 — Convention robustness (basis change, cycle inverse)
+  [PASS] 8.1: H_circ eigenvalues invariant under unitary basis change | Spectral action depends only on eigenvalues; convention-invariant
+  [PASS] 8.2: H_circ eigenvalues invariant under cycle-inverse (b ↔ b̄) | C_3-orientation-reversal symmetry preserved
+  [PASS] 8.3: Spectral action invariant under b ↔ b̄ (orientation-reversal) | |S(b) - S(b̄)| = 4.44e-16
+  [PASS] 8.4: BAE condition |b|^2/a^2 = 1/2 invariant under all retained symmetries | Convention-invariant; the failure mode is structural, not convention-driven
+
+Section 9 — Does-not disclaimers
+  [PASS] 9.1: does NOT close BAE | BAE admission count UNCHANGED
+  [PASS] 9.2: does NOT add new framework axiom | NCG admitted as mathematical toolkit per 'new science' authorization
+  [PASS] 9.3: does NOT add new admission | no new admission introduced
+  [PASS] 9.4: does NOT modify retained theorem | Probes 12-30, X, Y, V-MaxEnt, V-S_3, Probe 4 unchanged
+  [PASS] 9.5: does NOT promote downstream theorem | no retained-tier promotion
+  [PASS] 9.6: does NOT load-bear PDG values | no PDG mass values used as derivation input
+  [PASS] 9.7: does NOT promote external surveys | Connes-Chamseddine cited as toolkit, not retained authority
+  [PASS] 9.8: does NOT replace Probe 4 (PR #734) | complements Probe 4 with 'parameterizes H' lens; conclusion preserved
+  [PASS] 9.9: does NOT propose alternative κ as physical | BAE residual unchanged; no κ remapping
+  [PASS] 9.10: does NOT promote sister bridge gaps | L3a, L3b, C-iso, W1.exact unchanged
+  [PASS] 9.11: does NOT introduce new physics axioms | NCG used to derive consequences from retained content
+
+=== TOTAL: PASS=77, FAIL=0 (of 77) ===
+
+========================================================================
+VERDICT: BOUNDED OBSTRUCTION (NCG-spectral-action-level decoupling)
+
+The Connes-Chamseddine spectral triple (A, H, D = H_circ) on
+retained Cl(3) ⊗ C^∞(Z^3) realizes the V-MaxEnt-authorized
+'parameterizes H itself' target — yet the spectral action
+Tr f(D/Λ), being a symmetric function of D's eigenvalues,
+depends on (a, b) only through power sums P_n. BAE is NOT a
+stationary condition of any P_n-polynomial under natural
+cutoff functions. Sixth-level structural rejection of BAE.
+
+BAE admission count UNCHANGED. No new framework axiom.
+========================================================================
