@@ -1332,6 +1332,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py"
     },
+    "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 31,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_c_iso_numerical_convergence_2026_05_10_numconv.py"
+    },
     "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo": {
       "assert_count": 0,
       "counts": {
@@ -21543,6 +21555,21 @@
         "B": 0,
         "C": 11,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_c_iso_numerical_convergence_2026_05_10_numconv.py": {
+      "assert_count": 1,
+      "claims": [
+        "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 31,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -43079,12 +43106,12 @@
     "dominant_class_distribution": {
       "A": 24,
       "B": 176,
-      "C": 656,
+      "C": 657,
       "D": 251,
       "none": 428
     },
-    "runners_classified": 1535,
-    "runners_with_C": 795,
-    "runners_with_D": 414
+    "runners_classified": 1536,
+    "runners_with_C": 796,
+    "runners_with_D": 415
   }
 }

@@ -1,17 +1,17 @@
 ===== runner cache v1 =====
 runner: scripts/cl3_a3_route1_higgs_yukawa_2026_05_08_r1.py
-runner_sha256: 992b49e5ff6c126d9b1ff720619ecca457e04153801c838f023ba4dd6856cde1
-timeout_sec: 120
+runner_sha256: 5cd36874a45124da035a223ffab5c4c0b4d8de7da321ae0614549d7f7e1fd1b8
+timeout_sec: 300
 exit_code: 0
-elapsed_sec: 0.18
+elapsed_sec: 0.61
 status: ok
 ----- stdout -----
 ======================================================================
-A3 Route 1 — Higgs/Yukawa C_3-Breaking Definitive Obstruction
+Bridge-Gap Route 1 — Higgs/Yukawa C_3-Breaking Bounded Obstruction
 Source note:
   docs/A3_ROUTE1_HIGGS_YUKAWA_C3_BREAKING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r1.md
 ======================================================================
-Section 1 — Primitive C_3 symmetry of A1+A2+Tr-canon
+Section 1 — Primitive C_3 symmetry of physical Cl(3), Z^3, and Tr-canon
   PASS : C_3[111] axis permutation has order 3 | C3^3 = I
   PASS : C_3 outer automorphism preserves Clifford relations | {σ_a, σ_b} = 2δ_ab I preserved under cycle
   PASS : Canonical Killing form Tr(σ_a σ_b) is C_3-invariant | Tr(σ_perm[a] σ_perm[b]) = Tr(σ_a σ_b)
@@ -42,11 +42,11 @@ Section 6 — Loop integrals preserve C_3-equivariance
 Section 7 — Counterfactual: explicit C_3-breaking input
   PASS : Non-circulant Y_break does NOT commute with U_C3 | max |[Y_break, U_C3]| = 1.000
   PASS : Y_break has α-dependent corner expectations | corner_exp = [np.float64(1.0), np.float64(0.0), np.float64(0.0)]
-  PASS : Y_break would close AC_φ but is NOT derivable from primitives | C_3-equivariance theorem (Step 2 of THEOREM_NOTE) blocks derivation
+  PASS : Y_break would satisfy AC_φ but is NOT derivable from the stated source baseline | C_3-equivariance theorem (Step 2 of source note) blocks derivation
 Section 8 — Counterfactual: species = C_3-Fourier basis
   PASS : In C_3-Fourier basis, circulant Y has 3 distinct diagonals | diag = [1.3000000000000005, 1.092820323027551, -0.292820323027551]
   PASS : Circulant Y is diagonal in C_3-Fourier basis (no mass mixing) | max off-diag = 2.06e-16
-  PASS : Species = Fourier basis closes AC_φ via mass eigenvalues | but this is a re-identification — not the original AC_residual
+  PASS : Species = Fourier basis would satisfy AC_φ via mass eigenvalues | but this is a re-identification — not the original AC_residual
 
 ======================================================================
 EXACT      : PASS = 28, FAIL = 0
@@ -54,14 +54,15 @@ BOUNDED    : PASS = 0, FAIL = 0
 TOTAL      : PASS = 28, FAIL = 0
 ======================================================================
 
-Bounded obstruction verdict:
-  Route 1 closed NEGATIVELY: deriving C_3-breaking dynamics
-  from Cl(3)/Z³ + retained-theorems is structurally impossible.
+Bounded obstruction result:
+  Route 1 is bounded-obstructed: deriving C_3-breaking
+  dynamics from physical Cl(3), Z^3, canonical trace,
+  and cited C_3-equivariant source claims fails this route.
 
   AC_φ closure (substep 4 atom) requires explicit C_3-breaking
-  input — either explicitly approved A3-style admission,
-  new primitive, or alternative species identification.
-  No new axiom is proposed by this runner.
+  input: an explicitly approved new premise or axiom, a new
+  primitive, or an alternative species identification.
+  No new repo-wide axiom is proposed by this runner.
 
 ----- stderr -----
 

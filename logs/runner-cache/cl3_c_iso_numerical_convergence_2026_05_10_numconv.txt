@@ -1,0 +1,138 @@
+===== runner cache v1 =====
+runner: scripts/cl3_c_iso_numerical_convergence_2026_05_10_numconv.py
+runner_sha256: 097610408a356dde37b484c0b9b6125df46dbc2d4d723edc34f6f295ca8bc106
+timeout_sec: 300
+exit_code: 0
+elapsed_sec: 0.96
+status: ok
+----- stdout -----
+
+=== Convention C-iso numerical convergence push ===
+Date: 2026-05-10  |  Mode: analytic
+Target ε_witness: 0.0003
+P_KS central (PR #685): 0.441
+
+
+======================================================================
+SELF-TEST: SU(3) NLO closed form vs numerical Weyl integration
+======================================================================
+  beta_W=   12  P_W_num=0.3223280  P_W_NLO=0.3263889  (P_W*b-4)*b = -1.58477
+  beta_W=   24  P_W_num=0.1645476  P_W_NLO=0.1649306  (P_W*b-4)*b = -1.22059
+  beta_W=   48  P_W_num=0.0828563  P_W_NLO=0.0828993  (P_W*b-4)*b = -1.09917
+  beta_W=   96  P_W_num=0.0415530  P_W_NLO=0.0415582  (P_W*b-4)*b = -1.04725
+  beta_W=  192  P_W_num=0.0208056  P_W_NLO=0.0208062  (P_W*b-4)*b = -1.02308
+  beta_W=  384  P_W_num=0.0104098  P_W_NLO=0.0104099  (P_W*b-4)*b = -1.01141
+  beta_W=  768  P_W_num=0.0052066  P_W_NLO=0.0052066  (P_W*b-4)*b = -1.00567
+  beta_W= 1500  P_W_num=0.0026662  P_W_NLO=0.0026662  (P_W*b-4)*b = -1.00290
+  beta_W= 3000  P_W_num=0.0013332  P_W_NLO=0.0013332  (P_W*b-4)*b = -1.00145
+
+  Asymptotic c_2 (large-beta): -1.00145
+  Analytic prediction: -1.00000
+  PASS = True
+
+======================================================================
+VOL-SCAN REFIT: L=3,4,6 (PR #685) + L=8,10 (this work)
+======================================================================
+  Volumes: L = [3.0, 4.0, 6.0, 8.0, 10.0]
+  <P_sigma> = ['0.44545', '0.44329', '0.44207', '0.44099', '0.44090']
+  stderr    = ['0.00034', '0.00016', '0.00022', '0.00026', '0.00023']
+
+  Fit: P(L) = P_inf + a/L² + b/L⁴
+    P_inf = 0.44044 ± 0.00026
+    a = +0.0497
+    b = -0.0465
+    chi² = 2.637 (dof = 2)
+
+  PR #685 (L=3,4,6 only): P_inf = 0.441 ± 0.0006
+  Improvement (this work): ε_vol = 0.00026 (from 0.00060)
+  → ε_vol tightened by 2.35x
+  → Using refit P_KS_central = 0.44044 ± 0.00026
+
+======================================================================
+CONVERGENCE TEST: <P>_KS_combined(xi) across xi = 4, 8, 16
+======================================================================
+  Central P_KS reference (PR #685 L→∞ fit at xi=4): 0.44043853159983615
+
+    xi    P_lattice  P_lat err  P_combined NLO  P_combined NNLO  P_combined Weyl  res truth   c_3 band
+  --------------------------------------------------------------------------------------------------------------
+     4      0.44545    0.00034         0.41463          0.41542          0.41559    0.00017    0.00001
+     4      0.44329    0.00016         0.41262          0.41340          0.41358    0.00017    0.00001
+     4      0.44207    0.00022         0.41148          0.41226          0.41244    0.00017    0.00001
+     4      0.44099    0.00026         0.41048          0.41126          0.41143    0.00017    0.00001
+     4      0.44090    0.00023         0.41039          0.41117          0.41135    0.00017    0.00001
+     8      0.40949    0.00050         0.39495          0.39514          0.39515    0.00002    0.00000
+    16      0.28350    0.00069         0.27840          0.27843          0.27843    0.00000    0.00000
+
+  Cross-xi spread of P_combined_NLO:  0.13623
+  Cross-xi spread of P_combined_NNLO: 0.13698
+  Cross-xi mean of P_combined_NLO:   0.39042
+  Cross-xi mean of P_combined_NNLO:  0.39101
+
+  → Cross-xi spread 35.0% too large for pure single-plaquette correction.
+  → Multi-plaquette structure dominates at large xi.
+  → Optimal operating xi: xi=4 (moderate β_σ regime).
+
+======================================================================
+COMBINED ERROR BUDGET (NLO + NNLO + lattice)
+======================================================================
+  Target ε_witness: 0.0003 = 3e-4 absolute on <P>_KS
+
+  Optimal operating point: xi=4 (L→∞ vol scan available, β_σ=1.5)
+
+  Budget A: at xi=4, L→∞ thermodynamic-limit reference
+    P_lattice(xi=4, L=∞) = 0.44044 ± 0.00026
+    P_combined_NLO       = 0.40996
+    P_combined_NNLO      = 0.41074
+    P_combined_Weyl      = 0.41092  (PRIMARY)
+
+    Budget with NNLO truncation:
+      eps_vol=0.00026 eps_NNLO=0.00017 eps_c3=0.00001 -> total=0.00031
+    Budget with Weyl-truth correction (PRIMARY):
+      eps_vol=0.00026 eps_quad=0.000001 -> total=0.00026
+    Weyl-truth: PASS ε_witness=0.0003
+    NNLO trunc: FAIL ε_witness=0.0003
+
+  Budget B: per-xi 4^3 x 16 lattice (no L→∞ extrapolation)
+    xi=  4: stat=0.00034 vol=0.00060 (calibrated_L=3,4,6) NNLO=0.00017 c3=0.00001 -> total=0.00071 (FAIL)
+    xi=  4: stat=0.00016 vol=0.00060 (calibrated_L=3,4,6) NNLO=0.00017 c3=0.00001 -> total=0.00065 (FAIL)
+    xi=  4: stat=0.00022 vol=0.00060 (calibrated_L=3,4,6) NNLO=0.00017 c3=0.00001 -> total=0.00066 (FAIL)
+    xi=  4: stat=0.00026 vol=0.00060 (calibrated_L=3,4,6) NNLO=0.00017 c3=0.00001 -> total=0.00068 (FAIL)
+    xi=  4: stat=0.00023 vol=0.00060 (calibrated_L=3,4,6) NNLO=0.00017 c3=0.00001 -> total=0.00067 (FAIL)
+    xi=  8: stat=0.00050 vol=0.00150 (uncalibrated_proxy_3x_stat) NNLO=0.00002 c3=0.00000 -> total=0.00158 (FAIL)
+    xi= 16: stat=0.00069 vol=0.00207 (uncalibrated_proxy_3x_stat) NNLO=0.00000 c3=0.00000 -> total=0.00218 (FAIL)
+
+======================================================================
+BOUNDED SUPPORT SUMMARY
+======================================================================
+  Lattice (this work refit L=3,4,6,8,10): <P_σ>(g²=1, xi=4, L→∞) = 0.44044 ± 0.00026
+  SU(3) C-iso correction at xi=4 (s_t=0.125):
+    rel_shift_NLO  = (7/12) s_t = 0.0729
+    rel_shift_truth (Weyl)      = 0.0718
+
+  Combined estimator at xi=4, L→∞:
+    P_combined_NLO  = 0.40996
+    P_combined_NNLO = 0.41074
+    P_combined_Weyl = 0.41092  (PRIMARY)
+    eps_total (Weyl)  = 0.00026
+    eps_total (NNLO)  = 0.00031
+
+  Multi-plaquette structural obstruction at high xi:
+    Cross-xi P_combined spread: 0.13698 (35.0%)
+    → single-plaquette C-iso correction does NOT capture the full
+      systematic at xi=8, 16; optimal operating xi = 4.
+
+  ε_witness 0.0003 -> budget met via Weyl-truth correction at xi=4
+  (NNLO-truncation budget would FAIL: 0.00031)
+
+=== TOTAL: PASS=5, FAIL=0 ===
+  [PASS] SU(3) NLO closed-form self-test (c_2 = -1)
+  [PASS] Combined xi=4 L→∞ NNLO correction applies: 0.41127 (C-iso shift +0.02973)
+  [PASS] Weyl-truth residual at xi=4 below ε_witness (0.00017 < 0.0003)
+  [PASS] ε_witness budget met under imported summary values (total=0.00026)
+  [PASS] Multi-plaquette obstruction at large xi: detected via cross-xi spread 0.13698 (= 35.0%); optimal xi=4 confirmed
+
+Wall time: 0.7s
+Saved: outputs/action_first_principles_2026_05_10/c_iso_numerical_convergence/results_mode-analytic.json
+
+----- stderr -----
+

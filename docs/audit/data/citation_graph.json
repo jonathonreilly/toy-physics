@@ -4541,6 +4541,26 @@
       "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     },
     {
+      "from": "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv",
+      "to": "exact_tier_ewitness_bounded_note_2026-05-07_ewitness"
+    },
+    {
+      "from": "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv",
+      "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv",
+      "to": "exact_tier_path_integral_bounded_note_2026-05-07_exact"
+    },
+    {
+      "from": "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
       "from": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
       "to": "c_iso_derived_theorem_note_2026-05-07_w3"
     },
@@ -32570,10 +32590,10 @@
         "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
         "l3a_v3_trace_surface_bounded_obstruction_note_2026-05-07_l3a"
       ],
-      "note_hash": "f75782b0bf426b4e1ae393ad48662fc2ea4037e54115ea7c0cea4d25a60d8aca",
+      "note_hash": "f0a945f5515ac0d3201da3e6577e1f67e84dfc7e37258a33986c3083df27240f",
       "path": "docs/A3_ROUTE1_HIGGS_YUKAWA_C3_BREAKING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r1.md",
       "runner_path": "scripts/cl3_a3_route1_higgs_yukawa_2026_05_08_r1.py",
-      "title": "A3 Route 1 \u2014 Higgs/Yukawa C_3-Breaking Dynamics Bounded Obstruction"
+      "title": "Bridge-Gap Route 1 \u2014 Higgs/Yukawa C_3-Breaking Dynamics Bounded Obstruction"
     },
     "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2": {
       "claim_id": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
@@ -35373,6 +35393,23 @@
       "path": "docs/C_ISO_DERIVED_THEOREM_NOTE_2026-05-07_w3.md",
       "runner_path": "scripts/cl3_c_iso_lieb_robinson_velocity_2026_05_07_w3_check.py",
       "title": "Convention C-iso Temporal-Step Boundary"
+    },
+    "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv": {
+      "claim_id": "c_iso_numerical_convergence_bounded_support_note_2026-05-10_numconv",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "exact_tier_ewitness_bounded_note_2026-05-07_ewitness",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "c_iso_derived_theorem_note_2026-05-07_w3",
+        "exact_tier_path_integral_bounded_note_2026-05-07_exact",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+      ],
+      "note_hash": "c8c70b60d1638dcd377e80fb17d62615bf83f655f60e9f5b15d1ce527ab5ab91",
+      "path": "docs/C_ISO_NUMERICAL_CONVERGENCE_BOUNDED_SUPPORT_NOTE_2026-05-10_numconv.md",
+      "runner_path": "scripts/cl3_c_iso_numerical_convergence_2026_05_10_numconv.py",
+      "title": "C-iso Numerical Convergence Bounded Support Note"
     },
     "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo": {
       "claim_id": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
@@ -64902,7 +64939,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 223,
+      "bounded_theorem": 224,
       "decoration": 1,
       "meta": 29,
       "no_go": 15,
@@ -64911,7 +64948,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 717,
+      "bounded_theorem": 718,
       "decoration": 1,
       "meta": 29,
       "no_go": 123,
@@ -64919,10 +64956,10 @@
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8102,
-    "leaf_count": 532,
-    "node_count": 2032,
+    "edge_count": 8107,
+    "leaf_count": 533,
+    "node_count": 2033,
     "root_count": 769,
-    "runners_with_path": 1647
+    "runners_with_path": 1648
   }
 }

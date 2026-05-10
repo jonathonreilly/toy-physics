@@ -1,5 +1,5 @@
 """
-A3 Route 1 — Higgs/Yukawa C_3-Breaking Dynamics: bounded obstruction verification.
+Bridge-Gap Route 1 — Higgs/Yukawa C_3-Breaking Dynamics: bounded obstruction verification.
 
 Verifies the structural facts underlying the Route 1 bounded obstruction:
 
@@ -30,8 +30,8 @@ constructions and linear-algebra identities).
 
 Forbidden imports respected: no PDG, no lattice MC, no fitted
 matching coefficients, no same-surface family arguments, no new
-axioms (this verifies a bounded-obstruction theorem on existing
-primitives).
+repo-wide axioms (this verifies a bounded-obstruction theorem on the
+existing physical Cl(3) local algebra and Z^3 spatial substrate).
 """
 
 import numpy as np
@@ -83,11 +83,11 @@ def passfail(name: str, ok: bool, detail: str = ""):
 
 
 # --------------------------------------------------------------------
-# Section 1 — Primitive C_3 symmetry of A1+A2+Tr-canon
+# Section 1 — Primitive C_3 symmetry of physical Cl(3), Z^3, and Tr-canon
 # --------------------------------------------------------------------
 
 def section1_primitive_c3_symmetry():
-    print("Section 1 — Primitive C_3 symmetry of A1+A2+Tr-canon")
+    print("Section 1 — Primitive C_3 symmetry of physical Cl(3), Z^3, and Tr-canon")
     results = []
 
     # 1.1 — C_3 axis permutation has order 3 and is a permutation
@@ -502,13 +502,13 @@ def section7_counterfactual_c3_breaking():
         f"corner_exp = {corner_exp_break}",
     ))
 
-    # 7.3 — Y_break thus distinguishes corners (closes AC_φ if derivable)
-    # But Y_break is NOT derivable from C_3-symmetric primitives (no source)
+    # 7.3 — Y_break distinguishes corners if supplied as extra input.
+    # But Y_break is not derivable from the stated C_3-symmetric source baseline.
     # This is the negative core of the Route 1 obstruction.
     results.append(passfail(
-        "Y_break would close AC_φ but is NOT derivable from primitives",
+        "Y_break would satisfy AC_φ but is NOT derivable from the stated source baseline",
         True,
-        "C_3-equivariance theorem (Step 2 of THEOREM_NOTE) blocks derivation",
+        "C_3-equivariance theorem (Step 2 of source note) blocks derivation",
     ))
 
     return results
@@ -552,11 +552,11 @@ def section8_counterfactual_fourier_species():
         f"max off-diag = {max(abs(Y_in_fourier[i,j]) for i in range(3) for j in range(3) if i != j):.2e}",
     ))
 
-    # 8.3 — If species = Fourier basis, then AC_φ closes via mass-eigenvalue
-    # distinguishability — this is a re-identification, not a closure
+    # 8.3 — If species = Fourier basis, then AC_φ is satisfied via
+    # mass-eigenvalue distinguishability. This is a re-identification, not a closure
     # of AC_φ as originally stated.
     results.append(passfail(
-        "Species = Fourier basis closes AC_φ via mass eigenvalues",
+        "Species = Fourier basis would satisfy AC_φ via mass eigenvalues",
         True,
         "but this is a re-identification — not the original AC_residual",
     ))
@@ -570,7 +570,7 @@ def section8_counterfactual_fourier_species():
 
 def main():
     print("=" * 70)
-    print("A3 Route 1 — Higgs/Yukawa C_3-Breaking Definitive Obstruction")
+    print("Bridge-Gap Route 1 — Higgs/Yukawa C_3-Breaking Bounded Obstruction")
     print("Source note:")
     print("  docs/A3_ROUTE1_HIGGS_YUKAWA_C3_BREAKING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r1.md")
     print("=" * 70)
@@ -596,15 +596,16 @@ def main():
     print(f"TOTAL      : PASS = {n_pass}, FAIL = {n_fail}")
     print("=" * 70)
     print()
-    print("Bounded obstruction verdict:")
+    print("Bounded obstruction result:")
     if n_fail == 0:
-        print("  Route 1 closed NEGATIVELY: deriving C_3-breaking dynamics")
-        print("  from Cl(3)/Z³ + retained-theorems is structurally impossible.")
+        print("  Route 1 is bounded-obstructed: deriving C_3-breaking")
+        print("  dynamics from physical Cl(3), Z^3, canonical trace,")
+        print("  and cited C_3-equivariant source claims fails this route.")
         print()
         print("  AC_φ closure (substep 4 atom) requires explicit C_3-breaking")
-        print("  input — either explicitly approved A3-style admission,")
-        print("  new primitive, or alternative species identification.")
-        print("  No new axiom is proposed by this runner.")
+        print("  input: an explicitly approved new premise or axiom, a new")
+        print("  primitive, or an alternative species identification.")
+        print("  No new repo-wide axiom is proposed by this runner.")
     else:
         print("  Route 1 verification has FAIL items — see runner output above.")
 
