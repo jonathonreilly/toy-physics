@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1082 |
+| unaudited | 1081 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 255 |
+| ~~audited_conditional~~ | 256 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 398 |
-| `audited_conditional` | 255 |
+| `audited_conditional` | 256 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1180 |
+| `unaudited` | 1179 |
 
 | claim_type | count |
 |---|---:|
@@ -664,6 +664,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `kubo_continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -6418,6 +6419,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The runner performs many genuine symbolic algebra checks, but several load-bearing support claims rely on imported premises: Frobenius uniqueness as the forced functional, PL/O smoothability/equivariant smoothing facts, ABSS applicability, and the retained kinematics list itself. With no cited authorities provided, those premises cannot be treated as closed retained-grade inputs in this restricted audit. The note is also careful to leave the physical Q and delta bridges open, so the audited scope is only conditional internal support-chain cleanliness.
 - **open / conditional deps cited:**
   - `KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological`
+
+- **Note:** [`KOIDE_S_L1_TOPOLOGICAL_CHERN_SIMONS_NOTE_2026-05-08_probeS_L1_topological.md`](../../docs/KOIDE_S_L1_TOPOLOGICAL_CHERN_SIMONS_NOTE_2026-05-08_probeS_L1_topological.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the specific CS-on-T^3/Wilson-loop/level-shift route as presented, not a global theorem excluding all topological routes to beta-function channel weights.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1390-d27b-7b40-b5de-b18932d54c64`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Even granting Z^3->T^3, CS-on-T^3, Wilson loops, and the level shift, there is no derived map from a knot-polynomial value to a beta_n channel-weight rational plus zeta term.  _(class `B`)_
+- **chain closes:** False — The note's negative conclusion depends on standard CS/knot facts, TVZ/VVL beta-function comparators, SU(3) data, and the O13 obstruction, but the restricted packet lists no one-hop cited authorities. The runner mostly hard-codes or arithmetically checks those imported premises; it does not prove the no-go from retained inputs.
+- **rationale:** Issue: the source note names load-bearing external and repo authorities, but the audit ledger provides none as one-hop dependencies. Why this blocks: the CS formulas, beta-channel comparators, and O13 obstruction cannot be assumed under the restricted audit packet, and the runner does not replace them with a retained derivation. Repair target: wire and audit the direct dependency edges, then re-audit whether the O13/dimensional/underspecification arguments establish a bounded no-go rather than merely showing no map was supplied. Claim boundary until fixed: clean only as an admission that this note and runner do not derive beta_2 or beta_3 channel weights.
 - **auditor confidence:** high
 
 ### `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20`
