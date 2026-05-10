@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1105 |
+| unaudited | 1104 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 237 |
+| ~~audited_conditional~~ | 238 |
 | ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 237 |
+| `audited_conditional` | 238 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1203 |
+| `unaudited` | 1202 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 797 |
+| `bounded_theorem` | 798 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 730 |
+| `positive_theorem` | 729 |
 
 | criticality | count |
 |---|---:|
@@ -553,6 +553,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dirac_decoherence_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
@@ -2621,6 +2622,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The integrated DIR-3D core-card runner reports a bounded 12/16 result, with twelve retained positives and four named failures that remain the gravity/isotropy/k-achromaticity blockers.  _(class `C`)_
 - **chain closes:** True — The note's bounded scorecard matches the registered runner: C1-C8, C12, and C14-C16 pass, while C9-C11 and C13 fail. The note explicitly carries forward those failures instead of promoting the lane to full 3+1D closure.
 - **rationale:** The prior infrastructure blocker is resolved because the runner emits classified C-class PASS lines. The bounded inventory closes on its own terms: the runner reproduces the stated 12/16 integrated core-card score and the same four failures named by the note. This clean audit is limited to the scorecard/inventory claim and does not promote the Dirac lane beyond the note's bounded status because monotone gravity growth, distance law, strict isotropy, and fixed-theta k-achromaticity remain unresolved.
+- **auditor confidence:** high
+
+### `dirac_decoherence_probe_note`
+
+- **Note:** [`DIRAC_DECOHERENCE_PROBE_NOTE.md`](../../docs/DIRAC_DECOHERENCE_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of whether the supplied compact Dirac double-slit runner justifies diagnosing the closure-card decoherence/purity failure as a metric/harness mismatch rather than an architecture failure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1354-6baa-73d0-a949-c27a7a1a1b73`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The probe supports a harness mismatch diagnosis, not a clear Dirac architecture failure, because the detector proxy stays near 0.06-0.07 while the record-mixture purity is about 0.500 and the clean-vs-record residual is large.  _(class `C`)_
+- **chain closes:** False — The runner computes the reported toy-geometry metrics, but the restricted packet does not establish that the single-slit branch-sum construction is the actual Dirac which-path record channel or that the closure-card purity row is the detector concentration proxy used here. The architecture-level diagnosis therefore needs an unprovided readout/record-channel bridge.
+- **rationale:** Issue: the central proxy-versus-purity gap is computed after defining record purity from isolated single-slit branch weights, while the note uses it as an actual Dirac which-path record readout and as evidence about the current closure-card row. Why this blocks: those observable and harness-identification bridges are not provided by any cited authority, and the runner has no PASS criterion proving that the constructed branch mixture is the same channel the failed harness was meant to test. Repair target: add an audited theorem or dependency tying the 4-component walk, the path-record channel, and the closure-card proxy to the same normalized observable. Claim boundary until fixed: the runner supports only a bounded toy-geometry metric discrepancy for the implemented proxy and implemented branch-weight formula.
 - **auditor confidence:** high
 
 ### `dirac_observable_panel_note`
