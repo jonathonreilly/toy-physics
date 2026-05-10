@@ -624,6 +624,18 @@
       "dominant_class": null,
       "runner": "scripts/asymmetry_persistence_mass_scaling.py"
     },
+    "asymmetry_persistence_mass_window_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/asymmetry_persistence_mass_scaling.py"
+    },
     "asymmetry_persistence_pilot_note": {
       "assert_count": 0,
       "counts": {
@@ -20713,7 +20725,8 @@
     "scripts/asymmetry_persistence_mass_scaling.py": {
       "assert_count": 0,
       "claims": [
-        "asymmetry_persistence_mass_scaling_note"
+        "asymmetry_persistence_mass_scaling_note",
+        "asymmetry_persistence_mass_window_note"
       ],
       "counts": {
         "A": 0,

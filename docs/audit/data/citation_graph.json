@@ -34577,7 +34577,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "c7ac30f4e8dda9c6ed390f0b5dd735f56fddb969f655851f62811b027bff6904",
+      "note_hash": "191d59ffbbd5eda849aeaf523b3bf424da4a606e2d6139d8204f40a926c8d9b6",
       "path": "docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md",
       "runner_path": "scripts/asymmetry_persistence_born_calibration.py",
       "title": "Asymmetry Persistence Born Calibration Note"
@@ -34588,7 +34588,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c3ea31ae7c17152d9fc68d55803f00514efe1c39f21211ca6938e203fd96711a",
+      "note_hash": "0dbb525ed31227ebba321a7baa2102fbd29ea97db5e48b895508830ab8194659",
       "path": "docs/ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md",
       "runner_path": "scripts/asymmetry_persistence_collapse_pilot.py",
       "title": "Asymmetry Persistence + Collapse Note"
@@ -34621,9 +34621,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "681b3f0011f4ecc1d5227b429a2776d881612c8c1f30c1c98bcf498eebb5c987",
+      "note_hash": "b172ccf6365fa16e4cba0a80adc87a15f3074e8d5ae8b09576165e3da76ce905",
       "path": "docs/ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/asymmetry_persistence_mass_scaling.py",
       "title": "Asymmetry Persistence Mass Window Note"
     },
     "asymmetry_persistence_pilot_note": {
@@ -34632,7 +34632,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "509f89c6574016090e53657dcf11e8d7726536874279621ec57143207baacaa8",
+      "note_hash": "57b9a267a84c03e2a0c4dba2920ef2aac1924a0a8073d6752bc32054fde7adb3",
       "path": "docs/ASYMMETRY_PERSISTENCE_PILOT_NOTE.md",
       "runner_path": "scripts/asymmetry_persistence_pilot.py",
       "title": "Asymmetry Persistence Pilot Note"
@@ -65301,6 +65301,6 @@
     "leaf_count": 527,
     "node_count": 2036,
     "root_count": 762,
-    "runners_with_path": 1651
+    "runners_with_path": 1652
   }
 }

@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1146 |
+| unaudited | 1150 |
 | meta | 77 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 225 |
+| ~~audited_conditional~~ | 221 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 225 |
+| `audited_conditional` | 221 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1223 |
+| `unaudited` | 1227 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 778 |
+| `bounded_theorem` | 776 |
 | `decoration` | 13 |
 | `meta` | 84 |
 | `no_go` | 192 |
 | `open_gate` | 103 |
-| `positive_theorem` | 759 |
+| `positive_theorem` | 761 |
 
 | criticality | count |
 |---|---:|
@@ -490,10 +490,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `asymmetry_persistence_born_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `asymmetry_persistence_collapse_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -1059,64 +1055,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The chain closes because the canonical entropy values from the stated finite data are computed directly and none equals 1/4 in natural units, while the tuned gapped-edge value requires p_* not fixed by the primitive rank pair (16,4). With no dependencies, there is no unresolved upstream status blocking the scoped no-go.
 - **rationale:** The no-go is scoped to exact finite-cell entropy constructions and a gapped two-level edge example, not to all possible entropy-carrier theorems. The note explicitly distinguishes the primitive trace Tr((I_16/16)P_A)=1/4 from von Neumann and binary entropy values, and the runner reproduces those finite arithmetic checks with current PASS=26 FAIL=0. No hidden physical identification is used to claim a positive entropy coefficient; the conclusion is negative and leaves positive routes open only if they add a selector or operational entropy theorem.
 - **auditor confidence:** high
-
-### `asymmetry_persistence_born_note`
-
-- **Note:** [`ASYMMETRY_PERSISTENCE_BORN_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Asymmetry Persistence Born Calibration Note: Asymmetry Persistence Born Calibration Note  _(class `B`)_
-- **chain closes:** False — No. The load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
-- **open / conditional deps cited:**
-  - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `asymmetry_persistence_collapse_note`
-
-- **Note:** [`ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-stale-rationale-20260430-11`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The generated asymmetry-persistence geometry remains useful in the unitary lane, is not a broad collapse-side win, and retains only one narrow layernorm-assisted collapse pocket.  _(class `C`)_
-- **chain closes:** False — The primary runner is registered, but it did not complete within the 60s audit-loop runtime budget during re-audit. Until the runner is optimized, marked as intentionally slow with a reason, or replaced by a bounded proof artifact, the frozen replay cannot be checked in the standard audit loop.
-- **rationale:** The stale missing-runner blocker is resolved because the row has a registered primary runner. The row remains conditional for a live Category 7 blocker: scripts/asymmetry_persistence_collapse_pilot.py did not complete within the 60s audit-loop wall-time budget during targeted re-audit. Claim boundary remains the source note's bounded pilot read until the runner is repaired, inventoried as genuinely slow with a reason, or replaced by a compact audit artifact.
-- **open / conditional deps cited:**
-  - `runner_timeout_60s:scripts/asymmetry_persistence_collapse_pilot.py`
-- **auditor confidence:** high
-
-### `asymmetry_persistence_mass_window_note`
-
-- **Note:** [`ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited whether the note's stated mass-response window follows from the restricted packet's supplied fits and dependencies.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e0943-233d-7c71-84a2-0227a8f86dc3`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The pruned LN rows give the cleanest mass-response windows, with threshold 0.10 fit delta ~= 0.4032 * M^0.420 and R^2 = 0.970, and threshold 0.20 fit delta ~= 0.5332 * M^0.262 and R^2 = 0.892.  _(class `B`)_
-- **chain closes:** False — The chain depends on an external retained log, generated-family construction, pruning rule, and fit calculation that are not included as cited authorities or runner output. The packet does not show the source data or computation establishing the quoted exponents and R^2 values.
-- **rationale:** Issue: the note imports the retained log and summarized fitted mass-scaling rows without providing the log, data, pruning rule, or runner. Why this blocks: the conclusion that the lane has a real bounded mass-response window rests entirely on those quoted fits and their selected thresholds, so the restricted packet cannot verify the computation or selection. Repair target: provide the retained log or a runner that reconstructs the generated family, applies the pruning, and recomputes the fits from raw outputs. Claim boundary until fixed: at most a report that a prior retained summary claimed these mass-response fits, not an independently closed theorem.
-- **open / conditional deps cited:**
-  - `logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`
-- **auditor confidence:** high
-
-### `asymmetry_persistence_pilot_note`
-
-- **Note:** [`ASYMMETRY_PERSISTENCE_PILOT_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_PILOT_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded claim that an asymmetry-persistence generated-geometry rule improves decoherence/Born cleanliness through dense N=100 and complements layernorm regulation.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e0944-a164-7953-b821-eb235508afa0`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The reported simulations are asserted to show that asymmetry-based candidate rejection creates a Born-safe generated-geometry decoherence lane that survives dense N=100 and stacks with layernorm.  _(class `B`)_
-- **chain closes:** False — The supplied primary runner reproduces only the sparse N=40/60/80 table and imports the metric/readout implementation from an unprovided script. The dense N=80/100 and layernorm-stacking conclusions lack in-packet runner evidence or a retained bridge theorem for the readouts.
-- **rationale:** Issue: the note's conclusion depends on simulation readouts and dense/layernorm follow-up results that are not closed by the restricted packet; the provided runner computes only sparse rows and imports `measure`/`K_BAND` from unavailable code. Why this blocks: without the metric/readout implementation and the dense/layernorm runner artifacts, the reported Born-safe decoherence lane and stacking conclusion cannot be verified from cited retained inputs. Repair target: provide the measure/harness authority plus completed dense and layernorm runner stdout/source or a retained theorem constructing those readouts. Claim boundary until fixed: the packet supports only that this script generated the sparse rows shown, not the full dense-N100 or complementary layernorm science claim.
-- **auditor confidence:** medium
 
 ### `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29`
 
