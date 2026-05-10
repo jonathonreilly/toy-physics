@@ -1,33 +1,64 @@
 # Universal GR Isotropic Glue Operator on `PL S^3 x R`
 
-**Status:** support - exact isotropic glue-operator step
-**Date:** 2026-04-14  
+**Status:** bounded structural-assembly note. The note assembles already-derived
+local Hessian, slice-generator `Lambda_R`, canonical block projectors, and
+Schur-irreducibility ingredients into a single covariant quadratic operator
+`K_GR^iso(D) = M_D ⊗ Lambda_R` on the invariant background `D = diag(a,b,b,b)`.
+It is **not** an axiom-first uniqueness theorem; the "no remaining covariant
+quadratic freedom" statement is the bookkeeping consequence of the imported
+ingredients above, not a derivation closing them.
+**Date:** 2026-04-14 (audit-narrowing refresh: 2026-05-10)  
 **Branch:** `codex/review-active`  
-**Role:** direct universal route / exact gluing step
+**Role:** direct universal route / structural-assembly step
+**Claim type:** bounded_structural_assembly
+**Status authority:** independent audit lane only.
 
-## Verdict
+## Audit boundary
 
-The direct universal branch now closes at the exact isotropic quadratic
-Einstein/Regge-operator level.
+This note assembles imported objects into one composite operator on the
+invariant background `D = diag(a,b,b,b)`. The "uniqueness" language used
+historically below has been narrowed: the operator `K_GR^iso(D)` is the
+**unique covariant quadratic combination of the four imported ingredients
+listed below**, not a uniqueness theorem over all possible covariant quadratic
+operators on `PL S^3 x R`. Eliminating other covariant quadratic terms requires
+the imported Schur-irreducibility and block-localization authorities to be
+independently accepted.
 
-The last direct-universal gap was the gluing law between:
+**Admitted authority inputs (cited but not derived in this note):**
 
-- the exact local isotropic supermetric normal form
-- the exact Route-2 slice generator `Lambda_R`
+- the exact local universal Hessian `M_D = a^-2 P_lapse + (ab)^-1 P_shift +
+  b^-2 P_trace + b^-2 P_shear` on the invariant background, taken from the
+  support-tier discrete-Einstein/Regge lift chain;
+- the exact slice generator `Lambda_R` (symmetric and positive on the
+  invariant block), taken from the Route-2 slice-generator construction;
+- the canonical lapse / shift / trace / shear block projectors
+  `(P_lapse, P_shift, P_trace, P_shear)`, taken from the canonical `3+1`
+  block-localization chain;
+- the Schur-irreducibility statement on the shift and shear sectors over the
+  invariant background, taken from the invariant-background Schur localization.
 
-On the invariant background `D = diag(a,b,b,b)`, that gluing is now forced.
+This note does **not** re-derive any of those four imports. It only states
+that, conditional on them, the tensor-product combination
+`K_GR^iso(D) = M_D ⊗ Lambda_R` is the unique covariant quadratic combination
+that uses each imported ingredient exactly once and respects the imported
+block decomposition.
 
-The unique exact covariant quadratic glued operator is
+## Verdict (scope-bounded)
 
-`K_GR^iso(D) = M_D \otimes Lambda_R`
+The direct universal branch assembles, at this bounded scope, into the
+**single covariant quadratic combination** of the four imported ingredients:
+
+`K_GR^iso(D) = M_D ⊗ Lambda_R`
 
 with
 
 `M_D = a^-2 P_lapse + (ab)^-1 P_shift + b^-2 P_trace + b^-2 P_shear`.
 
-So the direct universal branch no longer stops at “localized Hessian +
-separate slice generator.” Those two objects already glue uniquely into one
-exact isotropic quadratic operator on `PL S^3 x R`.
+This is a bookkeeping assembly, not a uniqueness theorem over arbitrary
+covariant quadratic operators on `PL S^3 x R`. Any stricter uniqueness claim
+would require a retained-grade derivation of the four imported ingredients
+and an independent argument excluding covariant quadratic terms outside the
+imported block decomposition.
 
 ## Exact inputs
 
@@ -44,29 +75,33 @@ Already exact on the branch:
 The only question was whether these are merely compatible objects or whether
 they already force one exact glued operator.
 
-## Exact gluing theorem
+## Bounded structural-assembly statement
 
-They do force one.
+Conditional on the four admitted authority inputs above (each of which lives
+on its own support-tier authority — none re-derived here):
 
-Because:
+1. the local universal Hessian `M_D = a^-2 P_lapse + (ab)^-1 P_shift +
+   b^-2 P_trace + b^-2 P_shear` on the invariant background is taken as given;
 
-1. the local universal Hessian is already exactly
+2. the Route-2 slice generator `Lambda_R` is taken as symmetric and positive on
+   the invariant block;
 
-   `M_D = a^-2 P_lapse + (ab)^-1 P_shift + b^-2 P_trace + b^-2 P_shear`
+3. the canonical block projectors are taken as canonical and exact;
 
-   on the invariant background;
+4. the shift and shear sectors are taken as irreducible scalar Schur blocks
+   over the invariant background;
 
-2. the Route-2 slice generator `Lambda_R` is exact, symmetric, and positive;
-
-3. the block projectors are exact and canonical;
-
-4. the shift and shear sectors are already irreducible scalar Schur blocks;
-
-there is no remaining covariant quadratic freedom.
-
-So the exact glued operator is forced to be
+the **unique covariant quadratic combination of these imported ingredients**
+that uses each ingredient exactly once and respects the imported block
+decomposition is
 
 `K_GR^iso(D) = M_D ⊗ Lambda_R`.
+
+This is a bounded structural-assembly statement, not a uniqueness theorem
+over arbitrary covariant quadratic operators on `PL S^3 x R`. The
+"no remaining covariant quadratic freedom" phrase historically used here
+refers only to freedom *within the four imported ingredients*; freedom
+outside the imported block decomposition is not addressed.
 
 ## Why this is the right Einstein/Regge operator on the current route
 
@@ -84,15 +119,18 @@ Einstein/Regge lift after the background-rescaling already encoded by
 On the shift and shear sectors, Schur irreducibility leaves no additional
 covariant block freedom.
 
-So on the invariant background, this is not just a candidate anymore. It is
-the unique exact covariant quadratic gluing of the universal local tensor
-structure to the exact slice generator.
+So on the invariant background, this is the unique covariant quadratic
+combination of the four imported ingredients within the imported block
+decomposition. No claim is made here about uniqueness outside that
+decomposition.
 
-## What is now closed
+## What is now assembled (at this bounded scope)
 
-The direct universal branch is now closed at:
+The direct universal branch assembles at this bounded scope into:
 
-- exact isotropic quadratic `3+1` Einstein/Regge operator on `PL S^3 x R`
+- a single composite isotropic quadratic `3+1` operator
+  `K_GR^iso(D) = M_D ⊗ Lambda_R` on `PL S^3 x R`, conditional on the four
+  imported ingredients above remaining valid.
 
 That is stronger than:
 
@@ -100,7 +138,9 @@ That is stronger than:
 - mere supermetric normal form
 - mere separate slice dynamics
 
-because it glues them into one exact operator.
+only in the bookkeeping sense that it groups the four imported ingredients
+into one composite expression. It is not stronger as a derivation, because
+the four ingredients themselves are imported, not re-derived here.
 
 ## What remains open
 
@@ -117,14 +157,18 @@ quadratic gluing problem itself.
 
 ## Honest status
 
-The direct universal route is now:
+At this bounded scope, the direct universal route assembles:
 
-- exact at the scalar observable level
-- exact at the `3+1` lift level
-- exact at the quotient-kernel level
-- exact at the canonical block-localization level
-- exact at the invariant-background Schur-localization level
-- exact at the local isotropic supermetric-normal-form level
-- exact at the isotropic quadratic Einstein/Regge glue-operator level
+- a scalar observable level (imported)
+- a `3+1` lift level (imported)
+- a quotient-kernel level (imported)
+- a canonical block-localization level (imported)
+- an invariant-background Schur-localization level (imported)
+- a local isotropic supermetric-normal-form level (imported)
+- a structural-assembly composite isotropic quadratic operator on the
+  invariant background `D = diag(a,b,b,b)`, conditional on the imports above.
 
-That is the strongest exact universal gravity result currently on the branch.
+This is a structural-assembly checkpoint, not a closure theorem on its own.
+Any stronger claim on this row requires retained-grade authorities for the
+imported ingredients and a separate uniqueness argument outside the imported
+block decomposition.
