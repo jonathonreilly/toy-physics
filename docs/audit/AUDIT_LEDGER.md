@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 69 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 238 |
-| _retained_pending_chain_ | 2 |
+| _retained_pending_chain_ | 3 |
 | open_gate | 11 |
-| unaudited | 857 |
+| unaudited | 856 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 396 |
+| `audited_clean` | 397 |
 | `audited_conditional` | 419 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 906 |
+| `unaudited` | 905 |
 
 | claim_type | count |
 |---|---:|
@@ -62,7 +62,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 522 |
 | `leaf` | 650 |
 
-- **Retained pending chain closure:** 2
+- **Retained pending chain closure:** 3
 - **Citation cycles detected:** 36
 
 ### Runner classification (static heuristic)
@@ -409,6 +409,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `staggered_dirac_grassmann_forcing_theorem_note_2026-05-07` | bounded_theorem | ~~audited_clean~~ | _retained_pending_chain_ | fresh_context | claude-opus | B | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -11629,6 +11630,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The staggered force-first lane is not confined to periodic cubic lattices; it survives a narrow layered acyclic template with forward-depth bias, machine-clean norm/Born, and stable inward proxy response under the prescribed attractive sign, even though the live transport operator is still symmetrized rather than truly directed.  _(class `C`)_
 - **chain closes:** True — The runner directly evaluates the three layered DAG-derived configurations and reproduces the load-bearing 6/6 score surface, TOWARD forces, N-stability, Born linearity, forward-depth fraction, and state-family robustness. The small norm-row roundoff difference remains at machine precision and does not affect the bounded compatibility claim.
 - **rationale:** The source note is narrowly framed as a compatibility control, not a proof of truly directed DAG Hamiltonian transport. The current runner gives 6/6 on all three configurations, with TOWARD force, 14/14 N-stability, machine-clean norm/Born behavior, forward-depth fraction 0.1266, and 3/3 state families. Residual risk is limited to the symmetrized-adjacency scope boundary, which the note states explicitly.
+- **auditor confidence:** high
+
+### `staggered_dirac_grassmann_forcing_theorem_note_2026-05-07`
+
+- **Note:** [`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`](../../docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On A1 (Cl(3) local algebra) + A2 (Z³ substrate) + U2+U3 (A1-only retained Cl(3) per-site chirality irrep classification) plus standard finite Grassmann calculus, the matter measure on the framework's Cl(3)⊗Z³ substrate must be the finite Grassmann partition with one (χ_x,χ̄_x) pair per site; bosonic 2nd-quantization is ruled out at the operator-algebra level (no U4, no S2, no A3 dependency at the load-bearing step)
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** _retained_pending_chain_  (reason: `chain_waiting_on:staggered_dirac_realization_gate_note_2026-05-03`)
+- **auditor:** `claude-opus-fresh-context-phaseB-2026-05-10-e4b82eff`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Step 2 of restructured Theorem 1 proof — operator-algebra obstruction: bosonic CCR generators (with [a,a†]=I, a²≠0 on Fock) cannot satisfy the Cl(3) defining relations {γ_i,γ_j}=2δ_ij since γ_i²=I requires unit-square generators absent from the bosonic ladder algebra; combined with U2+U3 (A1-only retained Cl(3) chirality classification) this forces the matter measure to be the finite Grassmann partition with one (χ_x,χ̄_x) pair per site  _(class `B`)_
+- **chain closes:** True — After the 2026-05-10 restructure the only load-bearing upstream is the cl3 per-site uniqueness theorem at its narrowed A1-only U1–U3 scope, which the prompt specifies as audited_clean/retained. The bosonic-incompatibility argument (Step 2) is now internal operator-algebra content needing only Cl(3)'s defining relations — no per-site Hilbert-dim input (U4) and no spin-statistics S2 input. The prior cycles (substep1 ↔ dim_two, substep1 ↔ S2 → U4 → substep1) are eliminated. The script's K5 numerically exhibits σ_x²=I yet bosonic a²≠I (so the bosonic ladder has no unit-square Cl(3) generator candidate), K6 exhibits σ_+²=0 and {σ_+,σ_-}=I matching the U2 chirality 2-dim irrep, K7 records the CCR⊕CAR exhaustion, K8 records the bounded theorem. All eight K-checks PASS by inspection of the script logic; the cached runner log is acknowledged stale per the prompt. The only load-bearing cited authority is retained, so the bounded_theorem closes at the stated conditional scope.
+- **rationale:** The note self-types as bounded_theorem with explicit conditional scope (A1+A2+U2+U3 + standard finite Grassmann calculus). The restructured proof's load-bearing step is an internal operator-algebra obstruction (γ_i²=I unattainable for any bosonic ladder element), which the runner exhibits numerically via Pauli σ_x² (K5: σ_x²=I) and a 4-truncated bosonic Fock (K5: a²≠I) — both checks correct; K6 then exhibits the matching Grassmann/Pauli σ_+ realization on the 2-dim chirality irrep. The only load-bearing one-hop dependency is the cl3 per-site uniqueness theorem at its retained A1-only U1–U3 scope (audited_clean/retained per prompt); the formerly load-bearing U4 and S2 are explicitly removed and demoted to non-load-bearing context. No forbidden imports (no PDG, no MC, no same-surface family arguments, no new axioms beyond A1+A2). Nothing in the load-bearing path is unaudited/conditional/support/open, so the audited_conditional tie-break does not trigger. The stale runner-cache log does not affect the verdict since the prompt directs the script source as the source of truth, and the script implements the restructured A1-only argument correctly.
 - **auditor confidence:** high
 
 ### `staggered_dirac_realization_gate_note_2026-05-03`
