@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 414 |
-| critical | `audited_conditional` | 91 |
+| critical | `unaudited` | 413 |
+| critical | `audited_conditional` | 92 |
 | critical | `audited_numerical_match` | 9 |
 | critical | `audited_renaming` | 8 |
 | critical | `audited_failed` | 5 |
@@ -409,7 +409,7 @@ publication tables phrase it.
 | critical | `pmns_selector_unique_amplitude_slot_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `pmns_sigma_zero_nogo_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
-| critical | `pmns_three_flux_holonomy_closure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `pmns_three_flux_holonomy_closure_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `pmns_transfer_operator_dominant_mode_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |
 | critical | `poisson_exhaustive_uniqueness_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `primordial_spectrum_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md |

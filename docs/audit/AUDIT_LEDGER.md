@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 224 |
 | open_gate | 11 |
-| unaudited | 1168 |
+| unaudited | 1167 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 221 |
+| ~~audited_conditional~~ | 222 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 373 |
-| `audited_conditional` | 221 |
+| `audited_conditional` | 222 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1236 |
+| `unaudited` | 1235 |
 
 | claim_type | count |
 |---|---:|
@@ -639,6 +639,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_lower_level_end_to_end_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `pmns_oriented_cycle_selection_structure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
+| `pmns_three_flux_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -6851,6 +6852,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The support proposal assumes the two live candidate selector laws delta * q_+ = Q_Koide and det(H) = E2 and reports a numerically recovered interior solution with PMNS observables in current NuFit 1 sigma bands.  _(class `G`)_
 - **chain closes:** False — The chain does not close because delta * q_+ = Q_Koide and det(H) = E2 are explicitly proposed inputs, not derived retained identities. The numerical PMNS fit is therefore support conditional on those candidate selector laws, not a closure theorem.
 - **rationale:** No runner stdout or source is available, so the code cannot be credited as a first-principles computation. The note itself explicitly labels the determinant and product equations as proposed selector laws and lists their retained derivations as open promotion requirements. The reported solution and NuFit agreement may be useful support, but the conclusion depends on open premises inside the restricted packet.
+- **auditor confidence:** high
+
+### `pmns_three_flux_holonomy_closure_note`
+
+- **Note:** [`PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md`](../../docs/PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded algebraic claim that three chosen flux-angle readouts invert the reduced three-coordinate cycle family, assuming the one-angle holonomy law on that family.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e127f-35e6-7652-8588-61f29ca12a69`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the reduced graph-first cycle family A_fwd(u,v,w) = u B1 + v B2 + w B3, the one-angle flux holonomy is the exact linear functional h_phi(A_fwd) = 2 u cos(phi) + 2 v sin(phi) + w.  _(class `B`)_
+- **chain closes:** False — The matrix inversion step closes algebraically once the one-angle holonomy law is granted. But that law is imported from an uncited runner module and no cited authority is provided for the definitions of the reduced cycle family, flux holonomy, or the claimed coefficient formula.
+- **rationale:** Issue: the load-bearing holonomy formula is asserted, and the runner imports the underlying reduced-family and flux-holonomy functions from an unprovided module. Why this blocks: with no one-hop authorities, the restricted packet cannot verify that the readout is native or that the coefficient law follows from retained inputs rather than being supplied by the imported implementation. Repair target: add and audit the direct dependency proving the one-angle twisted-flux transfer law and the reduced cycle frame, or inline a proof-level derivation in this note. Claim boundary until fixed: the three-angle invertibility theorem is clean conditional algebra over the assumed linear holonomy law.
 - **auditor confidence:** high
 
 ### `pmns_transfer_operator_dominant_mode_note`
