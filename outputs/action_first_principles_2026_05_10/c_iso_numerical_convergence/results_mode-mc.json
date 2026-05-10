@@ -1,0 +1,229 @@
+{
+  "args": {
+    "mode": "mc",
+    "target_eps_witness": 0.0003,
+    "P_KS_central": 0.441,
+    "out_dir": "outputs/action_first_principles_2026_05_10/c_iso_numerical_convergence",
+    "seeds": "1,2",
+    "n_measure": 100
+  },
+  "version": "c-iso-numerical-convergence-2026-05-10",
+  "module": "cl3_c_iso_numerical_convergence_2026_05_10_numconv",
+  "self_test": {
+    "rows": [
+      {
+        "beta": 12,
+        "P_W_num": 0.32232796262486463,
+        "P_W_NLO": 0.3263888888888889,
+        "nlo_form": -1.5847733820194936
+      },
+      {
+        "beta": 24,
+        "P_W_num": 0.16454759422829923,
+        "P_W_NLO": 0.16493055555555555,
+        "nlo_form": -1.2205857244996423
+      },
+      {
+        "beta": 48,
+        "P_W_num": 0.08285626224425513,
+        "P_W_NLO": 0.08289930555555555,
+        "nlo_form": -1.0991717892361805
+      },
+      {
+        "beta": 96,
+        "P_W_num": 0.04155303297183155,
+        "P_W_NLO": 0.04155815972222222,
+        "nlo_form": -1.0472481316004405
+      },
+      {
+        "beta": 192,
+        "P_W_num": 0.02080558041256353,
+        "P_W_NLO": 0.02080620659722222,
+        "nlo_form": -1.023083671258064
+      },
+      {
+        "beta": 384,
+        "P_W_num": 0.01040980759202581,
+        "P_W_NLO": 0.010409884982638888,
+        "nlo_form": -1.0114117102421005
+      },
+      {
+        "beta": 768,
+        "P_W_num": 0.00520662829264984,
+        "P_W_NLO": 0.005206637912326389,
+        "nlo_form": -1.0056739161009318
+      },
+      {
+        "beta": 1500,
+        "P_W_num": 0.0026662209346062227,
+        "P_W_NLO": 0.002666222222222222,
+        "nlo_form": -1.0028971359989924
+      },
+      {
+        "beta": 3000,
+        "P_W_num": 0.0013332220614997725,
+        "P_W_NLO": 0.0013332222222222222,
+        "nlo_form": -1.001446502047365
+      }
+    ],
+    "c_2_asym": -1.001446502047365,
+    "pass": true
+  },
+  "mc_ensembles": {
+    "source": "MC cross-check this run",
+    "fresh_mc": {
+      "P_sigma": 0.41454000397196966,
+      "P_sigma_err": 0.0012328493011765035,
+      "n_seeds": 2,
+      "n_measure": 200,
+      "vol": "4^3 x 8"
+    },
+    "ensembles": {
+      "xi=4_4cubed_x16": {
+        "P_sigma": 0.44329,
+        "P_sigma_err": 0.00016,
+        "P_sigma_seed_std": 0.00029,
+        "n_seeds": 5
+      },
+      "xi=8_4cubed_x16": {
+        "P_sigma": 0.40949,
+        "P_sigma_err": 0.0005,
+        "P_sigma_seed_std": 0.00107,
+        "n_seeds": 5
+      },
+      "xi=16_4cubed_x16": {
+        "P_sigma": 0.2835,
+        "P_sigma_err": 0.00069,
+        "P_sigma_seed_std": 0.00112,
+        "n_seeds": 5
+      },
+      "xi=4_Linfty": {
+        "P_sigma": 0.441,
+        "P_sigma_err": 0.0006,
+        "n_seeds": "vol-scan L=3,4,6"
+      }
+    }
+  },
+  "convergence_test": {
+    "results_per_xi": [
+      {
+        "xi": 4,
+        "key": "xi=4_4cubed_x16",
+        "P_lattice": 0.44329,
+        "P_lattice_err": 0.00016,
+        "P_combined_NLO": 0.41261678858722156,
+        "abs_shift_NLO": 0.030673211412778456,
+        "P_combined_NNLO": 0.4134015262212064,
+        "abs_shift_NNLO": 0.02988847377879361,
+        "residual_NNLO": 0.0007806837433447727,
+        "c_3_band": 9.03634100126527e-06
+      },
+      {
+        "xi": 8,
+        "key": "xi=8_4cubed_x16",
+        "P_lattice": 0.40949,
+        "P_lattice_err": 0.0005,
+        "P_combined_NLO": 0.3949491788142518,
+        "abs_shift_NLO": 0.014540821185748232,
+        "P_combined_NNLO": 0.39513571321289764,
+        "abs_shift_NNLO": 0.014354286787102377,
+        "residual_NNLO": 0.00020088810423410088,
+        "c_3_band": 2.32190480911465e-06
+      },
+      {
+        "xi": 16,
+        "key": "xi=16_4cubed_x16",
+        "P_lattice": 0.2835,
+        "P_lattice_err": 0.00069,
+        "P_combined_NLO": 0.2783999336566548,
+        "abs_shift_NLO": 0.0051000663433452,
+        "P_combined_NNLO": 0.27843270826395916,
+        "abs_shift_NNLO": 0.005067291736040813,
+        "residual_NNLO": 5.098272247345492e-05,
+        "c_3_band": 5.890572291734619e-07
+      }
+    ],
+    "P_KS_central_input": 0.441,
+    "cross_xi_spread_NLO": 0.1342168549305668,
+    "cross_xi_spread_NNLO": 0.13496881795724724,
+    "cross_xi_mean_NLO": 0.3619886336860427,
+    "cross_xi_mean_NNLO": 0.3623233158993544,
+    "obstruction": "multi_plaquette_at_large_xi"
+  },
+  "error_budget": {
+    "budget_A_xi4_Linfty": {
+      "P_combined_NLO": 0.4104852438966922,
+      "P_combined_NNLO": 0.411265927640037,
+      "eps_vol": 0.0006,
+      "eps_NNLO": 0.0007806837433447727,
+      "eps_c3": 9.03634100126527e-06,
+      "eps_total": 0.0009846566724404492,
+      "passes_eps_witness": false
+    },
+    "budget_B_per_xi_finite_L": {
+      "rows": [
+        {
+          "xi": 4,
+          "eps_stat": 0.00016,
+          "eps_vol": 0.0006,
+          "eps_NNLO": 0.0007806837433447727,
+          "eps_c3": 9.03634100126527e-06,
+          "eps_total": 0.0009975714323202615,
+          "passes_eps_witness": false,
+          "vol_status": "calibrated_L=3,4,6"
+        },
+        {
+          "xi": 8,
+          "eps_stat": 0.0005,
+          "eps_vol": 0.0015,
+          "eps_NNLO": 0.00020088810423410088,
+          "eps_c3": 2.32190480911465e-06,
+          "eps_total": 0.00159385112907847,
+          "passes_eps_witness": false,
+          "vol_status": "uncalibrated_proxy_3x_stat"
+        },
+        {
+          "xi": 16,
+          "eps_stat": 0.00069,
+          "eps_vol": 0.00207,
+          "eps_NNLO": 5.098272247345492e-05,
+          "eps_c3": 5.890572291734619e-07,
+          "eps_total": 0.0021825672005643315,
+          "passes_eps_witness": false,
+          "vol_status": "uncalibrated_proxy_3x_stat"
+        }
+      ]
+    },
+    "best_eps_total": 0.0009846566724404492,
+    "best_xi": 4,
+    "passes_eps_witness": false,
+    "target_eps_witness": 0.0003
+  },
+  "pass_fail": {
+    "n_pass": 4,
+    "n_fail": 1,
+    "notes": [
+      {
+        "verdict": "PASS",
+        "msg": "SU(3) NLO closed-form self-test (c_2 = -1)"
+      },
+      {
+        "verdict": "PASS",
+        "msg": "Combined xi=4 L\u2192\u221e NNLO-corrected: 0.41127 (C-iso shift +0.02973)"
+      },
+      {
+        "verdict": "PASS",
+        "msg": "NNLO residual at xi=8 below \u03b5_witness (0.00020 < 0.0003)"
+      },
+      {
+        "verdict": "FAIL",
+        "msg": "\u03b5_witness frontier: best=0.00098 > 0.0003; dominated by NNLO (=0.00078)"
+      },
+      {
+        "verdict": "PASS",
+        "msg": "Multi-plaquette obstruction at large xi: detected via cross-xi spread 0.13497 (= 37.3%); optimal xi=4 confirmed"
+      }
+    ]
+  },
+  "wall_time_s": 10.07541799545288
+}
