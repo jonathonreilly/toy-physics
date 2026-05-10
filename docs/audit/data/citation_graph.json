@@ -8697,6 +8697,14 @@
       "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
     },
     {
+      "from": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+    },
+    {
       "from": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
       "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
     },
@@ -44655,6 +44663,20 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem"
     },
+    "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10": {
+      "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "note_hash": "c5f74068cc68486a32db89887df0536c946656da1086f6af0dc1345592ce197a",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_ONE_WORD_PACKET_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow.py",
+      "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer One-Word Packet Narrow Theorem"
+    },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
       "claim_type_author_hint": "bounded_theorem",
@@ -66379,7 +66401,7 @@
       "no_go": 19,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 728,
@@ -66388,12 +66410,12 @@
       "no_go": 126,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
-    "edge_count": 8305,
-    "leaf_count": 535,
-    "node_count": 2070,
+    "edge_count": 8307,
+    "leaf_count": 536,
+    "node_count": 2071,
     "root_count": 768,
-    "runners_with_path": 1685
+    "runners_with_path": 1686
   }
 }
