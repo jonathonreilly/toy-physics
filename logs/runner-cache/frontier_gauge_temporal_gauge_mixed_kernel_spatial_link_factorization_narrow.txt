@@ -1,0 +1,120 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow.py
+runner_sha256: 55d1c4cacc1e0cdf420c9644f3748a3eff04dc566161d6ce7a41e96a8594a0e2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 25.74
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: temporal-gauge mixed-kernel spatial-link factorization on a compact group
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+(T2) Per-link convolution diagonalization: c_lambda / d_lambda
+----------------------------------------------------------------------------------------
+  [PASS (A)] Z_3: convolution by w_beta diagonalizes on characters chi_k with eigenvalue c_k  (all 3 eigenvalues matched within 1e-10)
+  [PASS (A)] Z_4: convolution by w_beta diagonalizes on characters chi_k with eigenvalue c_k  (all 4 eigenvalues matched within 1e-10)
+  [PASS (A)] Z_5: convolution by w_beta diagonalizes on characters chi_k with eigenvalue c_k  (all 5 eigenvalues matched within 1e-10)
+  [PASS (A)] Z_7: convolution by w_beta diagonalizes on characters chi_k with eigenvalue c_k  (all 7 eigenvalues matched within 1e-10)
+  [PASS (A)] Z_9: convolution by w_beta diagonalizes on characters chi_k with eigenvalue c_k  (all 9 eigenvalues matched within 1e-10)
+
+----------------------------------------------------------------------------------------
+(T3) Trivial-channel normalization: a_0(beta) = 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] a_0(beta) = c_0(beta) / (d_0 c_0(beta)) = 1 symbolically (d_0 = 1)  (a_0 = 1, simplified = 1)
+  [PASS (A)] Z_3 numerical: a_0(beta=1.7) = 1  (a_0_num = 1.0)
+  [PASS (A)] Z_4 numerical: a_0(beta=1.7) = 1  (a_0_num = 1.0)
+  [PASS (A)] Z_5 numerical: a_0(beta=1.7) = 1  (a_0_num = 1.0)
+  [PASS (A)] Z_7 numerical: a_0(beta=1.7) = 1  (a_0_num = 1.0)
+
+----------------------------------------------------------------------------------------
+(T1)+(T4) Tensor factorization + marked / non-marked compression map
+----------------------------------------------------------------------------------------
+  [PASS (A)] Z_3 L_s=4: marked subset |M|=1 labels=[1] factorization  (max abs diff = 3.199e-14)
+  [PASS (A)] Z_3: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=1]  (norm_eig=0.797395-0.000000j, prod a_k = 0.797395-0.000000j)
+  [PASS (A)] Z_3 L_s=4: marked subset |M|=2 labels=[1, 2] factorization  (max abs diff = 1.266e-14)
+  [PASS (A)] Z_3: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=2]  (norm_eig=0.635838-0.000000j, prod a_k = 0.635838-0.000000j)
+  [PASS (A)] Z_3 L_s=4: marked subset |M|=3 labels=[1, 2, 0] factorization  (max abs diff = 1.266e-14)
+  [PASS (A)] Z_3: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=3]  (norm_eig=0.635838-0.000000j, prod a_k = 0.635838-0.000000j)
+  [PASS (A)] Z_3 L_s=4: marked subset |M|=4 labels=[1, 2, 0, 1] factorization  (max abs diff = 7.511e-15)
+  [PASS (A)] Z_3: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=4]  (norm_eig=0.507014-0.000000j, prod a_k = 0.507014-0.000000j)
+  [PASS (A)] Z_4 L_s=4: marked subset |M|=1 labels=[1] factorization  (max abs diff = 1.421e-14)
+  [PASS (A)] Z_4: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=1]  (norm_eig=0.691069-0.000000j, prod a_k = 0.691069-0.000000j)
+  [PASS (A)] Z_4 L_s=4: marked subset |M|=2 labels=[1, 2] factorization  (max abs diff = 2.875e-15)
+  [PASS (A)] Z_4: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=2]  (norm_eig=0.330039-0.000000j, prod a_k = 0.330039-0.000000j)
+  [PASS (A)] Z_4 L_s=4: marked subset |M|=3 labels=[1, 2, 3] factorization  (max abs diff = 2.356e-15)
+  [PASS (A)] Z_4: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=3]  (norm_eig=0.228080-0.000000j, prod a_k = 0.228080-0.000000j)
+  [PASS (A)] Z_4 L_s=4: marked subset |M|=4 labels=[1, 2, 3, 0] factorization  (max abs diff = 2.356e-15)
+  [PASS (A)] Z_4: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=4]  (norm_eig=0.228080-0.000000j, prod a_k = 0.228080-0.000000j)
+  [PASS (A)] Z_5 L_s=4: marked subset |M|=1 labels=[1] factorization  (max abs diff = 3.020e-14)
+  [PASS (A)] Z_5: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=1]  (norm_eig=0.652683-0.000000j, prod a_k = 0.652683-0.000000j)
+  [PASS (A)] Z_5 L_s=4: marked subset |M|=2 labels=[1, 2] factorization  (max abs diff = 1.423e-14)
+  [PASS (A)] Z_5: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=2]  (norm_eig=0.201772-0.000000j, prod a_k = 0.201772-0.000000j)
+  [PASS (A)] Z_5 L_s=4: marked subset |M|=3 labels=[1, 2, 3] factorization  (max abs diff = 2.542e-15)
+  [PASS (A)] Z_5: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=3]  (norm_eig=0.062377-0.000000j, prod a_k = 0.062377-0.000000j)
+  [PASS (A)] Z_5 L_s=4: marked subset |M|=4 labels=[1, 2, 3, 4] factorization  (max abs diff = 2.463e-15)
+  [PASS (A)] Z_5: normalized eigenvalue = prod_{m in M} a_(k_m) [|M|=4]  (norm_eig=0.040712-0.000000j, prod a_k = 0.040712-0.000000j)
+
+----------------------------------------------------------------------------------------
+(T4) Marked = 4 special case mirrors the four-link plaquette structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] Z_3: |M|=4 four-link special case, eigenvalue = c_1^4 c_0^1  (max abs diff = 3.912e-14)
+  [PASS (A)] Z_3: |M|=4 normalized eigenvalue = a_1^4 (downstream 4-link plaquette pattern)  (norm_eig = 0.404290-0.000000j, a_1^4 = 0.404290-0.000000j)
+  [PASS (A)] Z_4: |M|=4 four-link special case, eigenvalue = c_1^4 c_0^1  (max abs diff = 8.016e-15)
+  [PASS (A)] Z_4: |M|=4 normalized eigenvalue = a_1^4 (downstream 4-link plaquette pattern)  (norm_eig = 0.228080-0.000000j, a_1^4 = 0.228080-0.000000j)
+  [PASS (A)] Z_5: |M|=4 four-link special case, eigenvalue = c_1^4 c_0^1  (max abs diff = 6.928e-14)
+  [PASS (A)] Z_5: |M|=4 normalized eigenvalue = a_1^4 (downstream 4-link plaquette pattern)  (norm_eig = 0.181472-0.000000j, a_1^4 = 0.181472-0.000000j)
+
+----------------------------------------------------------------------------------------
+(D) Counterexample: WITHOUT temporal-gauge spatial-link factorization, marked/non-marked compression fails
+----------------------------------------------------------------------------------------
+  [PASS (A)] Factorized kernel (T1): marked-link character is eigenvector with eigenvalue c_k c_0^(L_s-1)  (max abs diff = 1.831e-15)
+  [PASS (A)] WITHOUT (T1) factorization: marked/non-marked compression FAILS — eigenvalue differs from c_k c_0^(L_s-1)  (|eig_nonfact - c_k c_0^(L-1)| / |c_k c_0^(L-1)| = 8.345e-01 (>>1e-3 expected))
+  [PASS (A)] Factorized kernel: K(U',U) / prod_x w(U'_x - U_x) = 1 identically (true per-link product)  (max deviation from 1 = 1.110e-16)
+  [PASS (A)] WITHOUT factorization: K_nonfact(U',U) / prod_x w(U'_x - U_x) NOT constant (NOT a per-link product)  (std of residual = 5.373e-01 (>>0 confirms non-factorization))
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    G compact group with normalized Haar measure dg;
+    w_beta a real positive class function on G with character expansion
+        w_beta(g) = sum_lambda c_lambda(beta) chi_lambda(g),
+        c_lambda(beta) = integral conj(chi_lambda(g)) w_beta(g) dg;
+    finite hypercubic Wilson lattice in temporal gauge U_t = 1.
+
+  CONCLUSION:
+    (T1) One-step mixed kernel K(U', U) = prod_(x,mu) w_beta(U'(x,mu) U(x,mu)^-1).
+    (T2) Per-link convolution diagonalization: each per-link factor acts on
+         every matrix coefficient of irrep lambda by c_lambda / d_lambda
+         (Schur orthogonality).
+    (T3) Trivial-channel normalization: a_0(beta) = c_0 / (d_0 c_0) = 1.
+    (T4) Marked/non-marked compression map: marked links contribute a_lambda,
+         non-marked links contribute the trivial-channel scalar c_0 (= 1 after
+         normalization).
+
+  Audit-lane class:
+    (A) pure compact-group convolution algebra + algebraic structure of the
+    Wilson action in temporal gauge. No SU(3) / beta = 6 / marked-plaquette /
+    source-sector / framework physical identification consumed.
+
+  This narrow theorem isolates the temporal-gauge mixed-kernel spatial-link
+  factorization and the marked/non-marked compression map flagged by the
+  audit verdict on
+  GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md
+  as the missing bridge theorem. The narrow content can be ratified
+  independently of any disposition of the parent note or its companion
+  spatial-environment notes.
+
+
+========================================================================================
+  TOTAL: PASS=44, FAIL=0
+========================================================================================
+
+----- stderr -----
+

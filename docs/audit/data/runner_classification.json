@@ -7332,6 +7332,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py"
     },
+    "gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow.py"
+    },
     "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17": {
       "assert_count": 1,
       "counts": {
@@ -29696,6 +29708,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py": {
       "assert_count": 1,
       "claims": [
@@ -44105,12 +44132,12 @@
     "dominant_class_distribution": {
       "A": 112,
       "B": 160,
-      "C": 647,
+      "C": 648,
       "D": 248,
       "none": 406
     },
-    "runners_classified": 1573,
-    "runners_with_C": 812,
+    "runners_classified": 1574,
+    "runners_with_C": 813,
     "runners_with_D": 440
   }
 }
