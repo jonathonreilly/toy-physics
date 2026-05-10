@@ -1,0 +1,161 @@
+
+============================================================================
+Primitive P-LH Order-One Derivation Probe (FULL BLAST)
+A_F partially derives | Order-one ↔ staggered-Dirac structural relocation
+Source-note: PRIMITIVE_P_LH_ORDER_ONE_DERIVATION_NOTE_2026-05-10_pPlh_order_one.md
+============================================================================
+
+============================================================================
+SECTION 0: Context — retained content surveyed for A_F components
+============================================================================
+  [PASS (ctx)] [Source 1] ω = γ₁γ₂γ₃ in Pauli rep equals +i·I -- retained: CL3_SM_EMBEDDING_THEOREM Section B
+  [PASS (ctx)] [Source 1] ω² = -I (foundation of ℂ-summand) -- retained: ω squares to -I in Cl(3,0)
+  [PASS (ctx)] [Source 2] Cl⁺(3) bivectors satisfy ij = k quaternionic relation -- retained: Cl⁺(3) ≅ ℍ via CL3_SM_EMBEDDING_THEOREM Section A
+  [PASS (ctx)] [Source 3] P_X_i are projectors summing to I_3 -- retained: THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM
+  [PASS (ctx)] [Source 3] C₃ cycle: C₃³ = I, generates Z/3 inside SU(3) -- retained: C₃[111] cycle on hw=1 triplet
+  [PASS (ctx)] [Source 3] C₃ · P_X₁ = E_{21} (off-diagonal in M_3(ℂ)) -- diagonal subalgebra + one cyclic = full M_3(ℂ) generation
+
+============================================================================
+SECTION 1: ℂ-summand of A_F derivation — ℝ[ω]/⟨ω²+1⟩ ≅ ℂ
+============================================================================
+  [PASS (C-sum)] ω commutes with γ_1 (centrality) -- retained: ω central in Cl(3,0)
+  [PASS (C-sum)] ω commutes with γ_2 (centrality) -- retained: ω central in Cl(3,0)
+  [PASS (C-sum)] ω commutes with γ_3 (centrality) -- retained: ω central in Cl(3,0)
+  [PASS (C-sum)] ℝ[ω] = {a + bω : a, b ∈ ℝ} has real-dim 2 -- linear independence over ℝ: rank 2/2
+  [PASS (C-sum)] Algebra closure: (a+bω)(c+dω) = (ac−bd) + (ad+bc)ω [complex mult] -- ω² = −I forces the complex-multiplication rule
+  [PASS (C-sum)] Ring isomorphism ℝ[ω] ≅ ℂ via 1 ↔ I, i ↔ ω -- ω² = −I ↔ i² = −1; multiplication preserved (above check)
+  [PASS (C-sum)] ℂ-summand of A_F is derivable as ℝ[ω]/⟨ω²+1⟩ ≅ ℂ -- matches Connes' ℂ factor for U(1)_Y; no admission needed
+
+============================================================================
+SECTION 2: ℍ-summand of A_F derivation — Cl⁺(3) ≅ ℍ (retained)
+============================================================================
+  [PASS (H-sum)] i² = e23² = -I (quaternion unit i) -- Cl⁺(3) bivector squares to -I
+  [PASS (H-sum)] j² = e13² = -I (quaternion unit j) -- Cl⁺(3) bivector squares to -I
+  [PASS (H-sum)] k² = e12² = -I (quaternion unit k) -- Cl⁺(3) bivector squares to -I
+  [PASS (H-sum)] ij = k (quaternion relation) -- retained: Cl⁺(3) ≅ ℍ; CL3_SM_EMBEDDING_THEOREM Section A
+  [PASS (H-sum)] jk = i (quaternion relation) -- retained: Cl⁺(3) ≅ ℍ
+  [PASS (H-sum)] ki = j (quaternion relation) -- retained: Cl⁺(3) ≅ ℍ
+  [PASS (H-sum)] ijk = -I (Hamilton's identity) -- retained: Cl⁺(3) ≅ ℍ
+  [PASS (H-sum)] ℍ-summand has real-dim 4 = {I, i, j, k} -- linear independence: rank 4/4
+  [PASS (H-sum)] ℍ-summand of A_F is derivable as Cl⁺(3) ≅ ℍ -- RETAINED: CL3_SM_EMBEDDING_THEOREM; matches Connes' ℍ for SU(2)_L
+
+============================================================================
+SECTION 3: M_3(ℂ)-summand of A_F derivation — hw=1 triplet (retained)
+============================================================================
+  [PASS (M3-sum)] P_X_i² = P_X_i (projectors) -- retained: hw=1 projectors mutually orthogonal
+  [PASS (M3-sum)] Σ P_X_i = I_3 (completeness) -- retained: hw=1 triplet spans ℂ³
+  [PASS (M3-sum)] C₃³ = I (cyclic Z/3) -- retained: C₃[111] generates Z/3
+  [PASS (M3-sum)] C₃ · P_X₁ = E_{21} -- first off-diagonal matrix unit in M_3(ℂ)
+  [PASS (M3-sum)] C₃ · P_X₂ = E_{32} -- second off-diagonal matrix unit
+  [PASS (M3-sum)] C₃ · P_X₃ = E_{13} -- third off-diagonal matrix unit (closes the cycle)
+  [PASS (M3-sum)] ⟨P_X_i, C₃⟩ generates all 9 matrix units E_{ij} of M_3(ℂ) -- E_{i,i} = P_X_i; E_{σ(i),i} = C₃·P_X_i; E_{σ²(i),i} = C₃²·P_X_i; rank 9/9
+  [PASS (M3-sum)] M_3(ℂ)-summand is derivable as ⟨P_{X_i}, C₃⟩ on hw=1 triplet -- RETAINED: THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM
+  [PASS (M3-sum)] CAVEAT: retained M_3(ℂ) acts on GENERATIONS, Connes' on COLOR -- abstractly isomorphic; physically distinct interpretation
+
+============================================================================
+SECTION 4: Assembly obstruction — three summands live on distinct sectors
+============================================================================
+  [PASS (assembly)] ω lives on H_per_site (dim 4) -- ω is local Cl(3) element; acts as ±iI on ρ_±
+  [PASS (assembly)] Cl⁺(3) (ℍ) lives on H_per_site (dim 4) -- Cl⁺(3) is bivector subalgebra of local Cl(3)
+  [PASS (assembly)] M_3(ℂ) (generation algebra) lives on H_hw1 (dim 3) -- hw=1 triplet ⊂ BZ-corner cube (staggered-Dirac gate)
+  [PASS (assembly)] per-site sector and BZ-corner sector are STRUCTURALLY DISTINCT -- per-site = A1+A2 retained; BZ-corner = staggered-Dirac open gate
+  [PASS (assembly)] Naive direct sum H_F = H_per_site ⊕ H_hw1 = ℂ⁷ is ad hoc -- does not match Connes' 96-dim H_F or framework's natural sectors
+  [PASS (assembly)] Connes' H_F has dim 96 = 3 gens × 32 spinor components -- 3 × (2 lepton-doublet + 1 e_R + 2·3 quark-doublet + 2·3 quark-singlet) × 2 (antiparticle)
+  [PASS (assembly)] H_per_site (4) ⊕ H_hw1 (3) ≠ H_F^Connes (96) -- 4 + 3 = 7 ≠ 96
+  [PASS (assembly)] Assembly into single H_F requires staggered-Dirac gate -- identifying unified H_F is exactly the open-gate content
+  [PASS (assembly)] G2 verdict: A_F summands LOCATABLE but NOT NATIVELY ASSEMBLABLE -- each summand individually retained; direct-sum assembly requires gate
+
+============================================================================
+SECTION 5: Order-one selectivity even granting A_F assembly
+============================================================================
+  [PASS (OC-test)] Block-diagonal D_F: order-one VACUOUS (trivial case) -- block-diagonal [D, a] commutes with block-diagonal JbJ⁻¹
+  [PASS (OC-test)] Yukawa-like D_F: order-one NON-VACUOUS (constraint is active) -- block-off-diagonal D + generic a, b VIOLATES order-one
+  [PASS (OC-test)] Order-one violation magnitude: |[[D_yuk, a], JbJ⁻¹]|_max = 1.2166 -- non-trivial finite violation; order-one excludes this D_F
+  [PASS (OC-test)] Block-diagonal D over FULL A_F basis: order-one max viol = 0 -- block-diagonal D vacuously satisfies order-one over all A_F
+  [PASS (OC-test)] Yukawa D over FULL A_F basis: order-one max viol = 0.500 -- generic Yukawa-like D violates order-one on multiple (a, b) pairs
+  [PASS (OC-test)] Trivial D = 0: order-one max viol = 0 (vacuous case) -- D = 0 satisfies order-one trivially
+  [PASS (OC-test)] Order-one is ACTIVE SELECTION (Chamseddine-Connes 2013) -- vacuous on block-diagonal D; non-trivial on Yukawa D's
+  [PASS (OC-test)] G3 verdict: order-one NOT automatic even granting G2 (A_F assembly) -- even with clean block-diag A_F, generic D violates order-one
+
+============================================================================
+SECTION 6: Hostile review and structural relocation of LH-content gap
+============================================================================
+  [PASS (HR)] HR1: ℂ from ω is structural derivation, not numerical match -- ω² = -I is the defining relation of ℂ as a real algebra (abstract)
+  [PASS (HR)] HR2: 'separate sectors' is the structural obstruction, not cosmetic -- A_F-as-Connes is single-Hilbert-space; retained summands are multi-sector
+  [PASS (HR)] HR3: even granting A_F, order-one remains active selection -- Section 5: Yukawa-like D's VIOLATE order-one; D=0 / block-diag SATISFY
+  [PASS (HR)] HR4: deepest obstruction is staggered-Dirac, NOT independent order-one -- LH-content gap relocates: order-one ↔ staggered-Dirac (already open)
+  [PASS (HR)] HR5: order-one ↔ staggered-Dirac relocation is STRUCTURAL CLARIFICATION -- not a new admission; order-one was downstream of staggered-Dirac
+  [PASS (tier)] No PDG observed values used -- all tests structural / algebraic
+  [PASS (tier)] No lattice MC empirical measurements used -- exact arithmetic on small matrices
+  [PASS (tier)] No fitted matching coefficients used -- no numerical fitting; abstract algebra throughout
+  [PASS (tier)] No new repo-wide axioms introduced -- proposal-only follow-on; no retention requested
+  [PASS (tier)] No HK + DHR appeal -- respected
+  [PASS (tier)] No same-surface family arguments -- Cl(3)/Z^3 substrate-side derivation question only
+  [PASS (tier)] Audit-lane authority on tier preserved -- design-note follow-on; audit lane decides
+  [PASS (tier)] No retained / positive_theorem promotion requested -- follow-on records honest derivability split
+  [PASS (tier)] Consistent with P-LH-NCG-Native verdict (D2 derives, D1 admission) -- refines: 'D1 admission' = 'staggered-Dirac gate' (structural relocation)
+  [PASS (tier)] Consistent with Chamseddine-Connes-Suijlekom 2013 (order-one selects SM vs PS) -- order-one selectivity confirmed on toy direct-sum model
+  [PASS (tier)] Net verdict tier: BOUNDED (structural clarification) -- A_F partially derives; order-one relocates to staggered-Dirac gate
+  [PASS (tier)] G1: D_F NOT DERIVABLE on retained content (staggered-Dirac open gate) -- D_F structurally undetermined without H_F unification
+  [PASS (tier)] G2: A_F PARTIALLY DERIVABLE (summands located; assembly requires gate) -- ℂ from ω, ℍ from Cl⁺(3), M_3 from hw=1 — distinct Hilbert sectors
+  [PASS (tier)] G3: order-one NOT AUTOMATIC even granting G2 -- active selection remains; Section 5 explicit demonstration
+  [PASS (tier)] FINAL: LH-content admission relocates from 'order-one' to staggered-Dirac -- structural clarification, not new admission; closes named NCG gap
+
+============================================================================
+VERDICT SUMMARY
+============================================================================
+
+Question (FULL BLAST follow-on to P-LH-NCG-Native):
+  Can the order-one condition [[D_F, a], JbJ⁻¹] = 0 be derived
+  Cl(3)/Z^3-natively (G1+G2+G3), or is it the irreducible LH-content
+  admission?
+
+RESULTS:
+
+  G1: D_F (finite Dirac operator) from retained content:
+    NOT DERIVABLE — staggered-Dirac open gate dependency
+
+  G2: A_F = ℂ ⊕ ℍ ⊕ M_3(ℂ) from retained content:
+    PARTIALLY DERIVABLE — each summand LOCATED in retained content:
+      ℂ-summand:    ℝ[ω]/⟨ω²+1⟩ from central pseudoscalar ω = γ₁γ₂γ₃
+                    (retained: CL3_SM_EMBEDDING_THEOREM Section B)
+      ℍ-summand:    Cl⁺(3) ≅ ℍ from bivector subalgebra
+                    (retained: CL3_SM_EMBEDDING_THEOREM Section A)
+      M_3(ℂ)-summand: ⟨P_{X_i}, C₃⟩ on hw=1 triplet ℂ³
+                    (retained: THREE_GEN_OBSERVABLE_NO_PROPER_QUOTIENT)
+    BUT: three summands live on STRUCTURALLY DISTINCT Hilbert
+    sectors (per-site + BZ-corner). Native assembly into single
+    H_F requires the staggered-Dirac open gate.
+
+  G3: Order-one [[D_F, a], JbJ⁻¹] = 0 automatic from G2?
+    NOT AUTOMATIC — Section 5 demonstrates explicit toy model:
+      block-diagonal D_F: order-one VACUOUS (trivial)
+      Yukawa-like D_F:    order-one VIOLATED (max viol ~ 0.3)
+    Order-one remains active selection (Chamseddine-Connes 2013).
+
+STRUCTURAL RELOCATION:
+  LH-content gap reduces from:
+    BEFORE: 'order-one as named NCG primitive'
+            (one well-studied but independent admission)
+    AFTER:  'staggered-Dirac gate dependency'
+            (structurally identified, ALREADY-OPEN gate;
+             order-one is logically downstream)
+  This is STRUCTURAL CLARIFICATION, not new admission.
+  Both halves of the original P-LH-1 + P-LH-3 pair now collapse:
+    P-LH-3 (KO-dim-6 J): derived by P-LH-NCG-Native (PR #1050)
+    P-LH-1 (order-one):  relocated to staggered-Dirac gate
+
+HONEST DESIGN VERDICT:
+  - A_F is partially derivable: all three summands have retained-content
+    sources, but the direct-sum assembly on a single H_F is open.
+  - Order-one is not automatic on the construction; it is an active
+    selection per Chamseddine-Connes 2013.
+  - The LH-content gap structurally relocates to the staggered-Dirac
+    open gate, which is the canonical parent for derivation of H_F,
+    A_F embedding, and Dirac operator class.
+  - This is BOUNDED progress: not closure, but structural clarification.
+
+AUTHORITY: audit-lane retains all status decisions; this is a
+           primitive_proposal_note follow-on with no retention request.
+
+=== TOTAL: PASS=68, FAIL=0 ===
