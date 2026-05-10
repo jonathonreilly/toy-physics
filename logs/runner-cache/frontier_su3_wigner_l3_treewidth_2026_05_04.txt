@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_l3_treewidth_2026_05_04.py
+runner_sha256: 78af7a5b863d0e46d2eda1b37dc4b4e24367f947e8e56937ee3ad34b2efd46bb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.29
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wigner Engine — L_s=3 PBC Cube Treewidth Analysis
+==============================================================================
+
+--- Section A: L_s=3 PBC cube geometry ---
+  unique plaquettes: 81
+  unique directed links: 81
+  PASS: 81 × 81 cube geometry.
+
+--- Section B: link adjacency graph (shared cyclic indices) ---
+  nodes: 81
+  edges: 324
+  degree stats: min=8, max=8, mean=8.00
+  PASS: 81 nodes × 324 edges = 8-regular (4 plaq × 2 adj/plaq).
+
+--- Section C: min-degree elimination order (treewidth upper bound) ---
+  [0.00s] min-degree completed
+  Elimination length: 81 (expected 81)
+  Max clique size during elimination: 30
+  Treewidth UPPER BOUND (min-degree): 29
+  Worst intermediate size: 8^30 = 1,237,940,039,285,380,274,899,124,224 entries = 18446744073709551616.00 GB
+
+--- Section D: min-fill elimination order ---
+  [0.04s] min-fill completed
+  Max clique size during elimination: 30
+  Treewidth UPPER BOUND (min-fill): 29
+  Worst intermediate size: 8^30 = 1,237,940,039,285,380,274,899,124,224 entries = 18446744073709551616.00 GB
+
+--- Section E: feasibility verdict ---
+
+  Memory budget:                   4.0 GB
+  Min-degree max intermediate:     18446744073709551616.00 GB
+  Min-fill max intermediate:       18446744073709551616.00 GB
+
+  Best heuristic: min-degree with treewidth bound 29
+  Best max intermediate: 8^30 = 18446744073709551616.00 GB
+
+  INFEASIBLE: best heuristic gives 18446744073709551616.0 GB intermediate, exceeds 4 GB budget by 4611686018427387904×.
+  Closure path: alternative methods needed:
+    - tensor-train / matrix-product-state ansatz
+    - hierarchical tucker decomposition
+    - adopt opt_einsum library (changes import policy)
+
+==============================================================================
+SUMMARY: THEOREM PASS=2 SUPPORT=1 FAIL=0
+==============================================================================
+
+Headline:
+  L_s=3 PBC cube link adjacency graph: 81 nodes, 324 edges, degree stats 8-8
+  Min-degree treewidth bound: 29 (intermediate 8^30 = 18446744073709551616.00 GB)
+  Min-fill treewidth bound:   29 (intermediate 8^30 = 18446744073709551616.00 GB)
+  Best heuristic intermediate: 18446744073709551616.00 GB
+  Memory budget: 4.0 GB
+  Verdict: NEEDS BETTER ORDERING or alternative method
+
+----- stderr -----
+

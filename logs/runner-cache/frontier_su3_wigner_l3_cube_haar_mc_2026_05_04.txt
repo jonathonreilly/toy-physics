@@ -1,0 +1,96 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_l3_cube_haar_mc_2026_05_04.py
+runner_sha256: 77a4015f96f25b2a613ff5d5d071c89a7342b18a7897c7fe30107aba8db8e2a1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 29.81
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wigner Engine — L_s=3 PBC Cube Haar Monte Carlo
+==============================================================================
+
+--- Geometry (L_s=3 PBC) ---
+  total directed links: 81 = 81
+  unique Wilson plaquettes: 81
+  directed links used in plaquettes: 81
+  PASS: 81 unique Wilson plaquettes on L_s=3 PBC cube.
+
+--- Haar MC: N_samples = 5000 ---
+  irreps tracked: (0,0), (1,0), (0,1), (1,1), (2,0), (0,2), (2,1)
+
+  [3.2s] sample 500/5000
+  [5.5s] sample 1000/5000
+  [8.2s] sample 1500/5000
+  [10.7s] sample 2000/5000
+  [12.9s] sample 2500/5000
+  [15.6s] sample 3000/5000
+  [17.8s] sample 3500/5000
+  [20.4s] sample 4000/5000
+  [23.3s] sample 4500/5000
+  [25.5s] sample 5000/5000
+  total runtime: 25.5s
+
+--- Haar MC integrand averages (per irrep) ---
+
+  irrep       <integrand>     +/- error        T_lambda      normalized
+  -------- --------------  ------------  --------------  --------------
+  (0, 0)     1.000000e+00    0.0000e+00      1.0000e+00    1.000000e+00
+  (1, 0)    -6.332696e-05    5.8568e-05     -1.4281e-43   -1.428128e-43
+  (0, 1)    -6.332696e-05    5.8568e-05     -1.4281e-43   -1.428128e-43
+  (1, 1)     9.541717e-18    8.0145e-18      6.7505e-91    6.750526e-91
+  (2, 0)     3.545835e-09    4.1219e-09      3.3073e-72    3.307252e-72
+  (0, 2)     3.545835e-09    4.1219e-09      3.3073e-72    3.307252e-72
+  (2, 1)     1.170602e+08    1.2451e+08      6.3829e-88    6.382891e-88
+
+--- Constructing rho_lambda(6) for source-sector factorization ---
+
+  rho_(0, 0)(6) = 1.000000e+00
+  rho_(1, 0)(6) = -1.390006e+04
+  rho_(0, 1)(6) = -1.390006e+04
+  rho_(1, 1)(6) = 1.435493e-08
+  rho_(2, 0)(6) = 2.436242e-16
+  rho_(0, 2)(6) = 2.436242e-16
+  rho_(2, 1)(6) = 5.282245e-04
+
+--- Source-sector Perron solve ---
+  Perron eigenvalue: 0.9176428152
+  P_cube(L=3, beta=6, MC) = 0.1075862401
+
+--- Bridge comparison ---
+  P_triv (rho = delta):         0.4225317396
+  P_loc (rho = 1):              0.4524071590
+  P_candidate(L=2 PBC):         0.4291049969
+  P_cube(L=3 PBC, MC, this):    0.1075862401
+  bridge-support target:        0.5935306800
+  epsilon_witness:              3.030e-04
+
+  |P_cube - bridge_target|:     0.485944
+  gap factor: 1604x epsilon_witness
+
+--- Honest caveats ---
+
+  This is a Haar Monte Carlo with N_samples = 5000.
+  Statistical error on T_lambda values may be large for high
+  irreps. The integrand product across 81 plaquettes has
+  large variance because each plaquette's chi can be near 0
+  with occasional large fluctuations.
+
+  The truncation to 7 irreps may also bias the Perron
+  solve relative to the full source-sector Perron solve at NMAX=7.
+
+==============================================================================
+SUMMARY: THEOREM PASS=1 SUPPORT=1 FAIL=0
+==============================================================================
+
+Headline:
+  L_s=3 PBC cube Haar MC at beta=6.0, N_samples=5000:
+    P_cube(L=3 PBC, MC) = 0.1076
+    bridge target       = 0.5935
+    gap                 = 0.4859 = 1604x epsilon_witness
+  Result: Haar MC does not provide a bridge-support signal here;
+  the reported P_cube is noise-dominated, not a derived value.
+  next step: exact/rank-aware tensor-network route, not status promotion.
+
+----- stderr -----
+

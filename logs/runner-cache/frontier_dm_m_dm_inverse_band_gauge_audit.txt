@@ -1,0 +1,201 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_m_dm_inverse_band_gauge_audit.py
+runner_sha256: f9a85cfe53fec696c61114fd448641d515f03018218665683c4a8d0e3937e753
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+
+========================================================================================
+ frontier_dm_m_dm_inverse_band_gauge_audit.py
+========================================================================================
+ Bounded source note: under bounded admissions x_F ∈ [22, 28],
+   S_vis/S_dark ∈ [1.4, 1.7] at alpha_X = alpha_LM, the inverse target
+   m_DM_target = sqrt(eta_obs / C) lies in band [3422.52, 4254.75] GeV.
+   Two uniqueness statements: (I) only N_sites · v = 16 v inside band among
+   parent's structural candidates; (II) only SU(3) inside band among
+   Origin-B gauge-group choices N ∈ {2..6}. Quantitative tightening of
+   parent's +2.09% central-point match to bounded-band uniqueness.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Inverse-Target Band & Gauge-Group Audit  (marker = 'Inverse-Target Band & Gauge-Group Audit')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only; audit verdict and')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: freezeout identity (1) cited  (marker = 'eta  =  C · m_DM^2,')
+  [PASS] contains: inversion (2) stated  (marker = 'm_DM_target ( x_F, S_vis/S_dark, alpha_X )  =  sqrt')
+  [PASS] contains: bounded band (3) [3422.52, 4254.75] stated  (marker = '[  3422.52  ,  4254.75  ]  GeV')
+  [PASS] contains: Result I uniqueness statement  (marker = 'the unique candidate inside\nthe band (3) is `N_sites · v')
+  [PASS] contains: Result II Origin-B gauge-group uniqueness  (marker = 'the unique\ngauge group `SU(N)` placing')
+  [PASS] contains: Origin-B form (4) stated  (marker = '6 ( N^2 - 1 ) v / N')
+  [PASS] contains: SU(2,3,4,5,6) tabulated  (marker = 'SU(6):')
+  [PASS] contains: does NOT close +12% eta chain stated  (marker = 'close the +12 % `eta` chain')
+  [PASS] contains: does NOT derive m_DM = N_sites · v from Wilson action  (marker = 'lane G1 still open')
+  [PASS] contains: does NOT promote SU(3) to derived consequence  (marker = 'promote `SU(3)` from an upstream framework authority')
+  [PASS] contains: parent freezeout-bypass note cited  (marker = 'DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25')
+  [PASS] contains: R_BASE upstream cited  (marker = 'R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24')
+  [PASS] contains: HIGGS_MASS_FROM_AXIOM upstream cited  (marker = 'HIGGS_MASS_FROM_AXIOM_NOTE.md')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: eta_obs = Planck live-surface import flagged  (marker = 'live-surface Planck')
+  [PASS] contains: self-consistency-audit framing for II stated  (marker = '(II) is a self-consistency audit')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent (note + runner)
+----------------------------------------------------------------------------------------
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams (all on origin/main)
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md
+  [PASS] upstream exists: docs/R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+ Part 4: C(x_F, S) monotonicity at corners of [22,28]×[1.4,1.7]
+----------------------------------------------------------------------------------------
+  C(x_F, S) at four corners (alpha_X = alpha_LM = 0.09067):
+    (x_F=22, S=1.40): C = 4.1051e-17
+    (x_F=22, S=1.70): C = 3.3807e-17
+    (x_F=28, S=1.40): C = 5.2247e-17
+    (x_F=28, S=1.70): C = 4.3027e-17
+  [PASS] C(28, 1.4) > C(22, 1.4) (monotone increasing in x_F)  (C(28) = 5.2247e-17, C(22) = 4.1051e-17)
+  [PASS] C(28, 1.7) > C(22, 1.7) (monotone increasing in x_F)  (C(28) = 4.3027e-17, C(22) = 3.3807e-17)
+  [PASS] C(22, 1.4) > C(22, 1.7) (monotone decreasing in S = S_vis/S_dark)  (C(S=1.4) = 4.1051e-17, C(S=1.7) = 3.3807e-17)
+  [PASS] C(28, 1.4) > C(28, 1.7) (monotone decreasing in S = S_vis/S_dark)  (C(S=1.4) = 5.2247e-17, C(S=1.7) = 4.3027e-17)
+
+----------------------------------------------------------------------------------------
+ Part 5: inverse-target band on m_DM ∈ [m_lo, m_hi]
+----------------------------------------------------------------------------------------
+  m_DM_target at four corners:
+    (x_F=22, S=1.4): 3861.12 GeV
+    (x_F=22, S=1.7): 4254.75 GeV  <-- max m
+    (x_F=28, S=1.4): 3422.52 GeV  <-- min m
+    (x_F=28, S=1.7): 3771.43 GeV
+  m_DM_target ∈ [3422.52, 4254.75] GeV
+  bandwidth = 832.23 GeV
+  [PASS] m_lo ≈ 3422.52 GeV (within 1 GeV)  (computed m_lo = 3422.5155, diff from 3422.52 = 0.0045 GeV)
+  [PASS] m_hi ≈ 4254.75 GeV (within 1 GeV)  (computed m_hi = 4254.7450, diff from 4254.75 = 0.0050 GeV)
+  [PASS] bandwidth ≈ 832 GeV (within 5 GeV)  (bandwidth = 832.2295, diff from 832 = 0.2295 GeV)
+
+----------------------------------------------------------------------------------------
+ Part 6: structural-candidate band-membership audit (Result I)
+----------------------------------------------------------------------------------------
+  Band: [3422.52, 4254.75] GeV
+
+    N_sites · v = 16 v                   m =  3939.52 GeV  INSIDE  (62.1% into band from m_lo)
+    v · 4 pi                             m =  3094.09 GeV  OUTSIDE  (-9.6% from m_lo)
+    v · R_base^2                         m =  2921.20 GeV  OUTSIDE  (-14.6% from m_lo)
+    M_Pl · alpha_LM^15                   m =  2809.53 GeV  OUTSIDE  (-17.9% from m_lo)
+    M_Pl · alpha_LM^15 · 2 u_0           m =  4931.29 GeV  OUTSIDE  (+15.9% from m_hi)
+    v / alpha_LM                         m =  2715.56 GeV  OUTSIDE  (-20.7% from m_lo)
+    v / alpha_s(v)                       m =  2383.54 GeV  OUTSIDE  (-30.4% from m_lo)
+  [PASS] exactly one structural candidate inside band: N_sites · v  (inside_count = 1)
+  [PASS] N_sites · v = 16 v INSIDE band [m_lo, m_hi]  (16 v = 3939.52 GeV)
+  [PASS] v · 4π OUTSIDE band (closest below)  (4 pi v = 3094.09 GeV vs m_lo = 3422.52)
+  [PASS] M_Pl · alpha_LM^15 · 2 u_0 OUTSIDE band (closest above)  (= 4931.29 GeV vs m_hi = 4254.75)
+
+----------------------------------------------------------------------------------------
+ Part 7: Origin-B gauge-group audit SU(N) for N ∈ {2..6} (Result II)
+----------------------------------------------------------------------------------------
+  Origin-B form: m_phys(N) = 6 (N^2 - 1) v / N  [Fraction-exact]
+  Band: [3422.52, 4254.75] GeV  [float; depends on sqrt(g_*), pi]
+
+    SU(2):  m =  2215.98 GeV  OUTSIDE  (-35.3% from m_lo)
+    SU(3):  m =  3939.52 GeV  INSIDE band  (inside band)
+    SU(4):  m =  5539.95 GeV  OUTSIDE  (+30.2% from m_hi)
+    SU(5):  m =  7091.14 GeV  OUTSIDE  (+66.7% from m_hi)
+    SU(6):  m =  8617.70 GeV  OUTSIDE  (+102.5% from m_hi)
+  [PASS] exactly one Origin-B gauge group inside band  (inside_count = 1)
+  [PASS] Origin-B inside-band gauge group is SU(3)  (inside_N = 3)
+  [PASS] SU(2) gives m below m_lo (35% below)  (SU(2) m = 2215.98 GeV)
+  [PASS] SU(4) gives m above m_hi (30% above)  (SU(4) m = 5539.95 GeV)
+
+----------------------------------------------------------------------------------------
+ Part 8: Origin-B at N=3 equals N_sites · v EXACTLY
+----------------------------------------------------------------------------------------
+  [PASS] m_origin_B(3) = 16 v EXACTLY in Fraction  (m_origin_B(3) = 98488/25, 16 v = 98488/25)
+  m_origin_B(3) = 6 · (3² - 1) · v / 3 = 6 · 8/3 · v = 16 v
+                = 3939.5200 GeV
+  N_sites · v   = 16 · 246.22 = 3939.5200 GeV
+  Identical EXACTLY (no floating-point drift)
+
+----------------------------------------------------------------------------------------
+ Part 9: band sensitivity under tighter input bounds
+----------------------------------------------------------------------------------------
+  Tightened admissions: x_F ∈ [24, 26], S ∈ [1.50, 1.65]
+  Tightened band: [3676.37, 4013.26] GeV
+  [PASS] tighter (x_F, S) bands give tighter inverse-target band  (orig: [3422.52, 4254.75], tight: [3676.37, 4013.26])
+  [PASS] N_sites · v = 16 v REMAINS INSIDE tighter band  (16 v = 3939.52 GeV, tight band = [3676.37, 4013.26])
+
+----------------------------------------------------------------------------------------
+ Part 10: stdlib-only / no PDG pins
+----------------------------------------------------------------------------------------
+  [PASS] all top-level imports are stdlib (no numpy/scipy/sympy/etc.)  (stdlib only)
+  [PASS] eta_obs declared as Planck import on live surface (per parent)
+  [PASS] no PDG pins beyond parent-imported eta_obs  (none (clean))
+
+----------------------------------------------------------------------------------------
+ Part 11: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: close the +12 % `eta` chain
+  [PASS] note explicitly does not close: lane G1 still open
+  [PASS] note explicitly does not close: promote `SU(3)` from an upstream framework authority
+  [PASS] note explicitly does not close: close the parent A0
+  [PASS] note explicitly does not close: promote the parent freeze-out-bypass note's status
+  [PASS] note explicitly does not close: derive the `(8/3) = dim(adj_3)/N_c` color-enhancement
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+  [PASS] (II) framed as self-consistency audit, not derivation of SU(3)
+  [PASS] eta_obs treated as imported observable, not derived value
+
+========================================================================================
+ TOTAL: PASS=87, FAIL=0
+========================================================================================
+
+ VERDICT: under bounded admissions on (x_F, S_vis/S_dark) at alpha_X = alpha_LM,
+ the inverse-target band on m_DM is [3422.52, 4254.75] GeV. The unique
+ structural candidate from the parent freeze-out-bypass audit table inside
+ the band is N_sites · v = 16 v = 3939.52 GeV; the unique Origin-B gauge-
+ group choice (N ∈ {2,3,4,5,6}) inside the band is SU(3). All other
+ candidates and gauge-group choices lie >10% outside the band edges. This
+ quantifies the parent's +2.09% central-point match as a bounded-band
+ uniqueness statement, without retiring any of the parent's open lanes.
+
+----- stderr -----
+

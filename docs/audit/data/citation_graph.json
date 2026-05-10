@@ -5341,6 +5341,26 @@
       "to": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15"
     },
     {
+      "from": "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09",
+      "to": "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09",
+      "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
+    },
+    {
+      "from": "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
       "to": "dm_neutrino_schur_suppression_theorem_note_2026-04-15"
     },
@@ -9643,6 +9663,38 @@
     {
       "from": "higgs_mass_wilson_loop_spectroscopy_bounded_note_2026-05-10_higgsh3",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "to": "wilson_m_h_per_channel_closure_bounded_note_2026-05-09"
     },
     {
       "from": "higgs_vacuum_explicit_systematic_note",
@@ -18711,6 +18763,26 @@
     {
       "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
       "to": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
+      "to": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04"
+    },
+    {
+      "from": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_l3_treewidth_infeasible_2026-05-04",
+      "to": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04"
+    },
+    {
+      "from": "su3_wigner_l3_treewidth_infeasible_2026-05-04",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
     },
     {
       "from": "su3_z3_apbc_variant_probe_2026-05-04",
@@ -39114,6 +39186,23 @@
       "runner_path": "scripts/frontier_sigma_hier_uniqueness_theorem.py",
       "title": "Dark Matter and Lepton Sector \u2014 Synthesis Note"
     },
+    "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09": {
+      "claim_id": "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
+        "r_base_group_theory_derivation_theorem_note_2026-04-24",
+        "higgs_mass_from_axiom_note",
+        "observable_principle_from_axiom_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "df3b1abde9967e3d4946a5906034fdf3f8ba47a7777be3f09b13d96c3719aa42",
+      "path": "docs/DM_M_DM_INVERSE_BAND_GAUGE_AUDIT_BOUNDED_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_dm_m_dm_inverse_band_gauge_audit.py",
+      "title": "DM m_DM Inverse-Target Band & Gauge-Group Audit \u2014 Bounded Note"
+    },
     "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
       "claim_type_author_hint": null,
@@ -44844,6 +44933,26 @@
       "path": "docs/HIGGS_MECHANISM_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs Mechanism Note"
+    },
+    "higgs_taste_singlet_projection_bounded_note_2026-05-09": {
+      "claim_id": "higgs_taste_singlet_projection_bounded_note_2026-05-09",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "higgs_mass_from_axiom_note",
+        "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
+        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "wilson_m_h_tree_at_extremum_all_orders_bounded_note_2026-05-08",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03",
+        "wilson_m_h_per_channel_closure_bounded_note_2026-05-09"
+      ],
+      "note_hash": "cbc368a1649a28007fd7bb3f647790f2dab0d6405ecae15b7f36ad892981fa02",
+      "path": "docs/HIGGS_TASTE_SINGLET_PROJECTION_BOUNDED_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_higgs_taste_singlet_projection.py",
+      "title": "Higgs Taste-Singlet Projection on Hamming-Weight Staircase \u2014 Bounded Note"
     },
     "higgs_vacuum_explicit_systematic_note": {
       "claim_id": "higgs_vacuum_explicit_systematic_note",
@@ -59286,6 +59395,35 @@
       "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
       "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict"
     },
+    "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04": {
+      "claim_id": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+        "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+      ],
+      "note_hash": "e8aab23c32438a7fbb9f3634e82dc7fd2f7dabfcef920516282c1c562a464e21",
+      "path": "docs/SU3_WIGNER_L3_CUBE_HAAR_MC_NEGATIVE_RESULT_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_wigner_l3_cube_haar_mc_2026_05_04.py",
+      "title": "SU(3) L_s=3 PBC Cube Haar Monte Carlo: Honest Negative Result"
+    },
+    "su3_wigner_l3_treewidth_infeasible_2026-05-04": {
+      "claim_id": "su3_wigner_l3_treewidth_infeasible_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+      ],
+      "note_hash": "c1d383e1594f0280d2988cfeb402427daca1565d6ee5c99545401bb28fb7b7a9",
+      "path": "docs/SU3_WIGNER_L3_TREEWIDTH_INFEASIBLE_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_wigner_l3_treewidth_2026_05_04.py",
+      "title": "SU(3) L_s=3 Cube Exact TN: Treewidth Analysis Shows Naive Contraction Infeasible"
+    },
     "su3_wilson_closed_form_fanout_theorem_note_2026-05-04": {
       "claim_id": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
       "claim_type_author_hint": "bounded_theorem",
@@ -64764,7 +64902,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 219,
+      "bounded_theorem": 223,
       "decoration": 1,
       "meta": 29,
       "no_go": 15,
@@ -64773,7 +64911,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 713,
+      "bounded_theorem": 717,
       "decoration": 1,
       "meta": 29,
       "no_go": 123,
@@ -64781,10 +64919,10 @@
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8084,
-    "leaf_count": 530,
-    "node_count": 2028,
+    "edge_count": 8102,
+    "leaf_count": 532,
+    "node_count": 2032,
     "root_count": 769,
-    "runners_with_path": 1643
+    "runners_with_path": 1647
   }
 }

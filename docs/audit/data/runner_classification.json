@@ -4152,6 +4152,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_sigma_hier_uniqueness_theorem.py"
     },
+    "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_dm_m_dm_inverse_band_gauge_audit.py"
+    },
     "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15": {
       "assert_count": 1,
       "counts": {
@@ -8663,6 +8675,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_derived.py"
+    },
+    "higgs_taste_singlet_projection_bounded_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_higgs_taste_singlet_projection.py"
     },
     "higgs_vacuum_explicit_systematic_note": {
       "assert_count": 0,
@@ -17015,6 +17039,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_wigner_l3_cube_partition.py"
+    },
+    "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 38,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_l3_cube_haar_mc_2026_05_04.py"
+    },
+    "su3_wigner_l3_treewidth_infeasible_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 25,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_l3_treewidth_2026_05_04.py"
     },
     "su3_wilson_closed_form_fanout_theorem_note_2026-05-04": {
       "assert_count": 1,
@@ -26138,6 +26186,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_dm_m_dm_inverse_band_gauge_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "dm_m_dm_inverse_band_gauge_audit_bounded_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_dm_neutrino_atmospheric_scale_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -30060,6 +30123,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_higgs_taste_singlet_projection.py": {
+      "assert_count": 1,
+      "claims": [
+        "higgs_taste_singlet_projection_bounded_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py": {
@@ -35925,6 +36003,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_wigner_l3_cube_haar_mc_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 38,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_wigner_l3_cube_partition.py": {
       "assert_count": 1,
       "claims": [
@@ -35935,6 +36028,21 @@
         "B": 0,
         "C": 56,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_su3_wigner_l3_treewidth_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wigner_l3_treewidth_infeasible_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 25,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -42971,12 +43079,12 @@
     "dominant_class_distribution": {
       "A": 24,
       "B": 176,
-      "C": 654,
-      "D": 249,
+      "C": 656,
+      "D": 251,
       "none": 428
     },
-    "runners_classified": 1531,
-    "runners_with_C": 792,
-    "runners_with_D": 411
+    "runners_classified": 1535,
+    "runners_with_C": 795,
+    "runners_with_D": 414
   }
 }
