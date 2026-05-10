@@ -4,7 +4,7 @@
 **Type:** bounded_theorem
 **Admitted context inputs:** staggered-Dirac realization derivation target
 (canonical parent:
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md);
+`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`;
 see `MINIMAL_AXIOMS_2026-05-03.md`).
 **Status:** structural representation-theory / algebraic embedding-consistency
 theorem on the current graph-first SU(3) × SU(2) × U(1)_Y surface plus the

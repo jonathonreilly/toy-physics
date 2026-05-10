@@ -1150,10 +1150,6 @@
     },
     {
       "from": "canonical_harness_index",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "canonical_harness_index",
       "to": "hopping_bilinear_hermiticity_theorem_note_2026-05-02"
     },
     {
@@ -3035,10 +3031,6 @@
     {
       "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
@@ -6786,10 +6778,6 @@
     },
     {
       "from": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
       "to": "g_bare_derivation_note"
     },
     {
@@ -6942,10 +6930,6 @@
     },
     {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "to": "g_bare_derivation_note"
     },
     {
@@ -6970,19 +6954,11 @@
     },
     {
       "from": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
       "to": "g_bare_derivation_note"
     },
     {
       "from": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
@@ -7554,10 +7530,6 @@
     },
     {
       "from": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
       "to": "g_bare_derivation_note"
     },
     {
@@ -7814,15 +7786,7 @@
     },
     {
       "from": "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29",
@@ -8430,10 +8394,6 @@
     },
     {
       "from": "koide_full_lattice_schur_inheritance_note_2026-04-18",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "koide_full_lattice_schur_inheritance_note_2026-04-18",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
@@ -8778,10 +8738,6 @@
     },
     {
       "from": "koide_q_minimal_scale_free_selector_note_2026-04-22",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "koide_q_minimal_scale_free_selector_note_2026-04-22",
       "to": "minimal_axioms_2026-05-03"
     },
     {
@@ -8846,15 +8802,7 @@
     },
     {
       "from": "koide_q_so2_phase_erasure_support_note_2026-04-25",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "koide_q_so2_phase_erasure_support_note_2026-04-25",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
@@ -8951,10 +8899,6 @@
     {
       "from": "koide_sqrtm_amplitude_principle_note_2026-04-18",
       "to": "dm_neutrino_postcanonical_polar_section_note_2026-04-15"
-    },
-    {
-      "from": "koide_taste_cube_cyclic_source_descent_note_2026-04-18",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "koide_taste_cube_cyclic_source_descent_note_2026-04-18",
@@ -9371,10 +9315,6 @@
     {
       "from": "lh_doublet_su2_squared_hypercharge_anomaly_cancellation_note_2026-05-01",
       "to": "one_generation_matter_closure_note"
-    },
-    {
-      "from": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
@@ -11622,10 +11562,6 @@
     },
     {
       "from": "pmns_c3_character_mode_reduction_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "pmns_c3_character_mode_reduction_note",
       "to": "minimal_axioms_2026-05-03"
     },
     {
@@ -11822,10 +11758,6 @@
     },
     {
       "from": "pmns_selector_bank_nonrealization_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "pmns_selector_bank_nonrealization_note",
       "to": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17"
     },
     {
@@ -11946,10 +11878,6 @@
     },
     {
       "from": "pmns_twisted_flux_transfer_holonomy_boundary_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "pmns_twisted_flux_transfer_holonomy_boundary_note",
       "to": "minimal_axioms_2026-05-03"
     },
     {
@@ -12042,10 +11970,6 @@
     },
     {
       "from": "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19",
       "to": "minimal_axioms_2026-05-03"
     },
     {
@@ -12058,15 +11982,7 @@
     },
     {
       "from": "quark_bimodule_norm_naturality_theorem_note_2026-04-19",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "quark_bimodule_norm_naturality_theorem_note_2026-04-19",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "quark_c3_oriented_ward_splitter_support_note_2026-04-28",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "quark_c3_oriented_ward_splitter_support_note_2026-04-28",
@@ -12098,19 +12014,11 @@
     },
     {
       "from": "quark_five_sixths_scale_selection_boundary_note_2026-04-28",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "quark_five_sixths_scale_selection_boundary_note_2026-04-28",
       "to": "g_bare_derivation_note"
     },
     {
       "from": "quark_five_sixths_scale_selection_boundary_note_2026-04-28",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28",
@@ -12166,15 +12074,7 @@
     },
     {
       "from": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "quark_lane3_stuck_fanout_synthesis_2026-04-28",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "quark_lane3_stuck_fanout_synthesis_2026-04-28",
@@ -12351,10 +12251,6 @@
     {
       "from": "quark_route2_exact_time_coupling_note_2026-04-19",
       "to": "quark_route2_exact_readout_map_note_2026-04-19"
-    },
-    {
-      "from": "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "quark_route2_rconn_center_ratio_bridge_obstruction_note_2026-04-28",
@@ -14014,10 +13910,6 @@
     },
     {
       "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "su5_embedding_from_graph_first_surface_theorem_note_2026-05-07",
       "to": "hypercharge_identification_note"
     },
     {
@@ -14059,10 +13951,6 @@
     {
       "from": "symmetry_head_to_head_note",
       "to": "higher_symmetry_gravity_probe_note"
-    },
-    {
-      "from": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
@@ -29682,7 +29570,6 @@
         "three_generation_structure_note",
         "three_generation_observable_theorem_note",
         "three_generation_chirality_boundary_note",
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
         "ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25",
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
@@ -29938,7 +29825,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "e24099ed1e3ba9e6f0da388da5c5e464748f7cd9fd0322433b51318ec7b25052",
+      "note_hash": "9824497a4013bb986e1a410339db12462616b164d19763330d4ebc28b2f8317b",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -31077,11 +30964,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "2b5028aaa41b0579ae53842826e7f44629f2656aafde09cccbef320a68ac9f07",
+      "note_hash": "816e6ad629aa732286627b2aa83be7db964f0cb648c187bffd99ad4aa755cac4",
       "path": "docs/CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py",
       "title": "CKM Moduli-Only Unitarity and Jarlskog Area Certificate Theorem"
@@ -37074,12 +36960,11 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "fe88c358371a63db92044baee530a4acb3c7d5e6d0b8f2caa9d72e04bee4f359",
+      "note_hash": "297f9ec10b9011af0b5aeca1b4a05b6cd71b8aa917d755e3817a16a3c6c8b15b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "title": "Gauge-Vacuum Plaquette Distinct-Shell Theorem"
@@ -37422,11 +37307,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "766f5d44f7eb74e9386db73f3c25af2f480fdb804db1ef246bbacf34541c4df7",
+      "note_hash": "bf63d66c71a9a1cb03b78eb3ecdeefedca6eefea2e81e19fd28ed1f3b1a14a5d",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
       "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem"
@@ -37520,11 +37404,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "77f948121d00f9d20491b31baa8ec9d805e5f4d3964469a969f91cd3db4ae678",
+      "note_hash": "08433fb378cfd2198448be2cc3b0dc0d0d5a78538ac0693e1e07dc0ffeb3033d",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
       "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem"
@@ -37535,11 +37418,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "1ee250da5987c850fa2dc3d34024b05d3ad8c96cf8941e6d591612dcf4048992",
+      "note_hash": "633f478bbcf5d87f37dfcf7f4527c5ff765f0776bef1ebf5c9f86a059697674f",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem"
@@ -38281,11 +38163,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "c7e81852b2bee37c565be9541c37f319a3505260dcf679c9c59fe135bdc27f06",
+      "note_hash": "c20fc6ff71260048aca61a0c49fac6ea0e4af325b1b58855f65e4deedca21609",
       "path": "docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
       "title": "Hadron Lane 1 Confinement-To-Mass Firewall"
@@ -38765,10 +38646,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "265c6b2dbbb47defb68e10d09539ee5fc91256cf7240d25b9e53b48bc24d3128",
+      "note_hash": "eb5d9499c358dfc7f4d53cd2164ca1cd87cd59900a5372ca24a5a6b8396e96b9",
       "path": "docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_hubble_lane5_c1_a1_grassmann_boundary_car_obstruction.py",
       "title": "Lane 5 `(C1)` A1 Grassmann-To-Boundary CAR Obstruction Note"
@@ -38790,11 +38670,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "ea9ac16dc9c0386f50b006b176eef5acf1119f665fc6135b0ba03c5631cdf8fe",
+      "note_hash": "2b81ea5411626d06024710f3cf63b45bae029db9dbef2241f09fc6045c5b941b",
       "path": "docs/HUBBLE_LANE5_C1_A2_ACTION_UNIT_METROLOGY_OBSTRUCTION_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py",
       "title": "Lane 5 `(C1)` A2 Action-Unit Metrology Obstruction Note"
@@ -39754,11 +39633,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "site_phase_cube_shift_intertwiner_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "487886f4c174439c729b36106dda7a9a557d90cd5e537be3e84e6509841b0dd9",
+      "note_hash": "af341a0c59b4bbc777ff48de232319d74c6ab62e50fc80296e596509512c730a",
       "path": "docs/KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_full_lattice_schur_inheritance.py",
       "title": "Koide Full-Lattice Schur-Inheritance Note"
@@ -40227,10 +40105,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "39fd4db0e27549288c12ddc5cfd7948cfa388340118a3f17ac3bff9909dfe004",
+      "note_hash": "d37e2a5676fbb97e5ea144796241c41d400076643dd2ff41d48606fe3518a48f",
       "path": "docs/KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md",
       "runner_path": "scripts/frontier_koide_q_minimal_scale_free_selector.py",
       "title": "Koide Q Minimal Scale-Free Selector"
@@ -40370,10 +40247,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "9d5b3d5a54fe474939ae4a866bcd69859e8cd72231275f0501f8211e3967b71e",
+      "note_hash": "0c0fb49f4a93f84e547a01c5ce008bce479182035bd050a497da96919ab87bd8",
       "path": "docs/KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_koide_q_so2_phase_erasure_support.py",
       "title": "Koide Q SO(2) Phase-Erasure Support Note"
@@ -40384,10 +40260,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "727936657d1f14655f0b01396b5ee1025afee4cf2a54ee52c6f0c85cdd4fe458",
+      "note_hash": "9a4b313189de6b88235641e17160e70b239a54d7c586e83b3b033056677d7f72",
       "path": "docs/KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_koide_q_source_domain_canonical_descent.py",
       "title": "Koide Q Source-Domain Canonical Descent Theorem"
@@ -40534,10 +40409,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "4c0dd086f2aca580caa03a8c20abbf9a177b776cfd0cd94afa90ac0fb57a6024",
+      "note_hash": "8d24068aa98af79e5ade41076de70bb2463a50f293be5d4114f2ce9b64d4d13a",
       "path": "docs/KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_taste_cube_cyclic_source_descent.py",
       "title": "Koide Taste-Cube Cyclic-Source Descent Note"
@@ -41678,12 +41552,11 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "graph_first_su3_integration_note",
         "graph_first_selector_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "aee9f879886e6e83a189bc585171f5c8a4786e94b6254becb8a348cdc05bf533",
+      "note_hash": "89f290b18ed41cc9d11b4984c40e860702ba27165f7eadac30b43b18f349f95b",
       "path": "docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
       "title": "LH-Doublet Traceless Abelian Eigenvalue Ratio (Narrow Theorem)"
@@ -44909,10 +44782,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "1207b70c846897d26ebac9a5f051367aba282863a504d0df89daec357042d082",
+      "note_hash": "8d89097cfce3cf9d16a763781ecf0fcc389603e75ba6dbb06945a67d3ffb44c8",
       "path": "docs/PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_c3_character_mode_reduction.py",
       "title": "PMNS `C3` Character-Mode Reduction"
@@ -45203,11 +45075,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "1ebba345cddb752caf0d7c1ce95f085aa6923b497120c9e14ce3496d483e26b0",
+      "note_hash": "21e988c101a721bad99f2f22f91c949070d024d86e2c5bf689316e33364fd630",
       "path": "docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_selector_bank_nonrealization.py",
       "title": "PMNS Selector-Bank Nonrealization"
@@ -45410,10 +45281,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "207178efa0f0ef21badd92e07854f4acf74a11e923638f78f347b0ea038e9d45",
+      "note_hash": "3b0adbb9e42fbddfdb7c8302e020b61fbc016c6b67f3ad95b2fb1492f02f09d7",
       "path": "docs/PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py",
       "title": "PMNS Twisted Flux Transfer Holonomy Boundary"
@@ -48161,10 +48031,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "77b5f0c6be390956cc564bb616959b976905e1f59d479cece9b9dbfbc80a153e",
+      "note_hash": "e096462c6553da4448a1727c4c986aa008c772e0dc197f7c8458a56b29113663",
       "path": "docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py",
       "title": "Quark BICAC Endpoint Obstruction Theorem"
@@ -48200,10 +48069,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "8c9e838d8440fb026a08f0901befb6c91f9eb266c48d02ad398ad9efbc121dd6",
+      "note_hash": "2479574d180a06466632edd8564ff0eb36dfd43f7ceddbbae36eba7f3dc02332",
       "path": "docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_bimodule_norm_naturality_theorem.py",
       "title": "Quark Bimodule NORM-Naturality Theorem"
@@ -48236,10 +48104,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "066a01b9c28c634131af2733f912ce9a97c483e45f5cf0c7cc57442b3f4d3323",
+      "note_hash": "e23c99c0fe4446e32a04c05605320a8c7c1d10e6fd2d1490833a27ae1893ca43",
       "path": "docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_c3_oriented_ward_splitter_support.py",
       "title": "Quark `C3`-Oriented Ward Splitter Support Note"
@@ -48324,11 +48191,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "764d48492d2df673b48baecf29d879ef856030ab62d5d28804df6a98d023bb4e",
+      "note_hash": "0b433eba2f5c0a4b3e8bfdde2b280fe74c2d8a00ccd847699bff53ddb14340b4",
       "path": "docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_five_sixths_scale_selection_boundary.py",
       "title": "Quark Five-Sixths Scale-Selection Boundary"
@@ -48339,10 +48205,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "85926b9e11a08f39e2c30940e41af3ea1e4e46b6897a9d6dc7f1952b51f07ded",
+      "note_hash": "1c8af1c11ed447b08e100d2c7b6f1320d08a2b00a9b37c48abe261145b9a94d6",
       "path": "docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_generation_equivariant_ward_degeneracy_no_go.py",
       "title": "Quark Generation-Equivariant Ward Degeneracy No-Go"
@@ -48424,10 +48289,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "62e235d7686f131408f3dccdf97569dd8f03eaa03d7692fa5a861bb4ca1eb66a",
+      "note_hash": "d7f7dcd08a1242503d6b31f462fb9fb2dd8ee88d2151471d9368567972382b7e",
       "path": "docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py",
       "title": "Quark Lane 3 Bounded-Companion Retention Firewall"
@@ -48438,10 +48302,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "bef9c0d1a75900d0bb95ebeaaa4b42ad0b102979416fe7c911a69ac3e21bf2d6",
+      "note_hash": "082c2cc9db41bfab8d43c7da1fe7c3f4be09fa9b0ad99ce7503baa1e5b24947f",
       "path": "docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_lane3_stuck_fanout_synthesis.py",
       "title": "Quark Lane 3 Stuck Fan-Out Synthesis"
@@ -48589,11 +48452,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "ecf1502e2de990e2990067b38f053364e513fbfaa9d4c65dc5b6fdbfc2cf934e",
+      "note_hash": "b9295b8f8019780a4c287ebe1b3d662f85bdf602647ac95eb9dfccc054580e34",
       "path": "docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md",
       "runner_path": "scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py",
       "title": "Quark Route-2 R_conn Center-Ratio Bridge Obstruction"
@@ -51776,7 +51638,6 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "hypercharge_identification_note",
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note",
@@ -51785,7 +51646,7 @@
         "three_generation_structure_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "9e5e37ce1e7c90068e6795a048600a2bcf809162a03d99e021ac80342c488591",
+      "note_hash": "34b1d8f3bc1317e857c94feb256bbfb7e71c37660973578d24ba978ed72e676e",
       "path": "docs/SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_su5_embedding_from_graph_first_surface.py",
       "title": "SU(5) Embedding Consistency from Graph-First Surface"
@@ -51867,10 +51728,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "4de27cb9f4a53dd24754d9dc50cdbe40653d507cf8554986e8adb41a78363e9f",
+      "note_hash": "3a703926ff7f246d29e60e1d00559cb00865795360b145e0f33e9e11e5eed700",
       "path": "docs/TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py",
       "title": "Taste-Scalar Fermion Coleman-Weinberg Isotropy \u2014 Narrow Theorem"
@@ -57031,7 +56891,7 @@
       "open_gate": 114,
       "positive_theorem": 622
     },
-    "edge_count": 6760,
+    "edge_count": 6732,
     "leaf_count": 548,
     "node_count": 1934,
     "root_count": 843,

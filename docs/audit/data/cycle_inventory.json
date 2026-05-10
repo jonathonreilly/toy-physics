@@ -1553,10 +1553,10 @@
           "transitive_descendants": 89
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
           "transitive_descendants": 89

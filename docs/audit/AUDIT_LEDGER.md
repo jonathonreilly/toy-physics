@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 8 |
 | open_gate | 11 |
-| unaudited | 851 |
+| unaudited | 859 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 419 |
+| ~~audited_conditional~~ | 411 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,27 +39,27 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 402 |
-| `audited_conditional` | 419 |
+| `audited_conditional` | 411 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 900 |
+| `unaudited` | 908 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 673 |
+| `bounded_theorem` | 674 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 788 |
-| `unset` | 1 |
+| `positive_theorem` | 786 |
+| `unset` | 2 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 183 |
-| `high` | 472 |
+| `critical` | 182 |
+| `high` | 473 |
 | `medium` | 522 |
 | `leaf` | 650 |
 
@@ -84,26 +84,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 3 | `minimal_axioms_2026-04-11` | meta | critical | 564 | 32.64 | `unaudited` | meta |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 357 | 31.98 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `native_gauge_closure_note` | bounded_theorem | critical | 643 | 29.33 | `audited_clean` | **retained_bounded** |
-| 6 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `audited_conditional` | ~~audited_conditional~~ |
+| 6 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | - | critical | 89 | 28.99 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 145 | 28.19 | `unaudited` | unaudited |
 | 8 | `minimal_axioms_2026-05-03` | meta | critical | 551 | 28.11 | `unaudited` | meta |
 | 9 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
 | 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 236 | 25.89 | `audited_clean` | **retained_bounded** |
-| 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 532 | 25.56 | `audited_clean` | open_gate |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 514 | 25.51 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `three_generation_structure_note` | bounded_theorem | critical | 370 | 25.04 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 231 | 24.86 | `audited_clean` | _retained_pending_chain_ |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 423 | 24.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 213 | 23.74 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `one_generation_matter_closure_note` | bounded_theorem | critical | 356 | 23.48 | `unaudited` | unaudited |
-| 18 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 70 | 23.15 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 395 | 22.13 | `audited_clean` | **retained** |
-| 20 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 423 | 21.73 | `audited_clean` | **retained_bounded** |
-| 21 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 200 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 396 | 21.63 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 149 | 20.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 123 | 19.95 | `unaudited` | unaudited |
-| 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 84 | 19.91 | `unaudited` | unaudited |
+| 11 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 514 | 25.51 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `three_generation_structure_note` | bounded_theorem | critical | 370 | 25.04 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 231 | 24.86 | `audited_clean` | _retained_pending_chain_ |
+| 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 423 | 24.23 | `unaudited` | unaudited |
+| 15 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 213 | 23.74 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `one_generation_matter_closure_note` | bounded_theorem | critical | 356 | 23.48 | `unaudited` | unaudited |
+| 17 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | - | critical | 70 | 23.15 | `unaudited` | unaudited |
+| 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 395 | 22.13 | `audited_clean` | **retained** |
+| 19 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 423 | 21.73 | `audited_clean` | **retained_bounded** |
+| 20 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 200 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 396 | 21.63 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 149 | 20.23 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 123 | 19.95 | `unaudited` | unaudited |
+| 24 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 84 | 19.91 | `unaudited` | unaudited |
+| 25 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 202 | 19.66 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -586,12 +586,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25` | decoration | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | B | - |
 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_from_mass_hierarchy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | A | - |
 | `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_n9_structural_family_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -724,7 +722,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_weak_connectivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `gauge_vacuum_plaquette_distinct_shell_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -734,11 +731,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -792,9 +786,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_nn_rg_gravity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `left_handed_charge_matching_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | B | - |
 | `lensing_deflection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -2759,24 +2751,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
-### `ckm_cp_phase_structural_identity_theorem_note_2026-04-24`
-
-- **Note:** [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](../../docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Structural-identity subtheorem of the parent CKM atlas: exact algebra over imported inputs giving rho=1/6, eta=sqrt(5)/6, cos^2(delta_CKM)=1/6, tan(delta_CKM)=sqrt(5), delta_CKM=arccos(1/sqrt(6))=65.905... deg, and the atlas Jarlskog factorisation J_0=alpha_s(v)^3 sqrt(5)/72 (numerical value of J_0 conditional on imported alpha_s(v)).
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-fresh-context-phaseA-2026-05-10-1a67d56a`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** Combine the imported '1+5' center-excess projector weights (w_A1=1/6, w_perp=5/6) on the dim(Q_L)=2x3=6 quark block with the imported bright/tensor CP radius r^2=1/6 to obtain rho^2=(1/6)(1/6)=1/36 and eta^2=(1/6)(5/6)=5/36, hence cos^2(delta_CKM)=rho^2/(rho^2+eta^2)=1/6, tan(delta_CKM)=sqrt(5), delta_CKM=arccos(1/sqrt(6)), and J_0 = lambda^6 A^2 eta = alpha_s(v)^3 sqrt(5)/72.  _(class `B`)_
-- **chain closes:** True — On the cited inputs, the local algebra closes exactly: from r^2=1/6 and (w_A1, w_perp)=(1/6, 5/6), exact Fraction arithmetic gives rho^2=1/36, eta^2=5/36, cos^2(delta)=1/6, tan(delta)=sqrt(5). The runner verifies all 27 checks via fractions.Fraction (Parts 0-2 are exact rational identities; Part 3 verifies the J_0 factorisation as a 1e-15 float identity; Part 4 contains 3 downstream observation-comparator checks the note explicitly marks as not load-bearing). The note is forthright that the '1+5' projector split, the radius r^2=1/6, the dim(Q_L)=6 count, and alpha_s(v) are imported from cited authorities and not re-derived here.
-- **rationale:** The local algebra is exact rational/Fraction-level closure (Parts 0-3, 24 of 27 PASS checks) and the structural identities cos^2(delta)=1/6, tan(delta)=sqrt(5), rho=1/6, eta=sqrt(5)/6 are correctly derived from the stated imports. However, every load-bearing import surfaces an unaudited/conditional/bounded upstream authority: (a) the parent CKM_ATLAS_AXIOM_CLOSURE_NOTE.md is itself a 'package-level conditional packaging statement' that lists this very note as one of its own named subtheorems (circular packaging), and the parent's r^2=1/6 and 1+5 projector split rely on tensor-support/K_R primitives that are not re-derived here; (b) LEFT_HANDED_CHARGE_MATCHING_NOTE.md (cited for dim(Q_L)=2x3=6) carries ledger verdict audited_conditional (2026-05-05) and propagates a normalization-convention boundary; (c) ALPHA_S_DERIVED_NOTE.md (cited for the J_0 factorisation numeric) carries author tier 'bounded' (amended 2026-05-01), with explicit unclosed plaquette beta=6 analytic insertion. Per tie-break rule (load-bearing cited authority is unaudited/conditional/bounded), verdict is audited_conditional.
-- **open / conditional deps cited:**
-  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md (parent atlas; conditional packaging statement; circularly lists this note as a named subtheorem; r^2=1/6 and 1+5 projector split imported from there without independent re-derivation in this note)`
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md (ledger audited_conditional 2026-05-05; bounded_theorem; convention-normalized; supplies dim(Q_L)=2x3=6 via Q_L:(2,3) block identification)`
-  - `ALPHA_S_DERIVED_NOTE.md (author tier 'bounded' as of 2026-05-01; load-bearing for the numerical value of J_0 = alpha_s(v)^3 sqrt(5)/72; upstream PLAQUETTE_SELF_CONSISTENCY beta=6 analytic insertion explicitly open)`
-  - `tensor-support / bilinear K_R primitive notes (S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md, S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md) cited via the parent atlas as the structural justification for r^2=1/6 on the bright/tensor surface — not re-audited at this hop`
-- **auditor confidence:** high
-
 ### `ckm_down_type_scale_convention_support_note_2026-04-22`
 
 - **Note:** [`CKM_DOWN_TYPE_SCALE_CONVENTION_SUPPORT_NOTE_2026-04-22.md`](../../docs/CKM_DOWN_TYPE_SCALE_CONVENTION_SUPPORT_NOTE_2026-04-22.md)
@@ -2874,24 +2848,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Substitute the four parametric input identities into the five Wolfenstein-leading squared-magnitude formulas and apply n_quark = n_pair * n_color.  _(class `A`)_
 - **chain closes:** True — The scoped claim is purely algebraic and all substitutions close from the stated hypotheses. No cited external authority, numerical alpha_s value, physical CKM identification, or comparator is needed.
 - **rationale:** The correct audited object is a bounded theorem: exact closed forms follow conditionally from explicitly supplied identities and the count constraint. The runner's own PASS labels identify the load-bearing operations as Pattern A algebraic substitution; the provided automated classifier breakdown conflicts with those labels but does not expose a failed algebraic step. Because the note disclaims derivation of the hypotheses and physical/comparator interpretation, there are no hidden dependencies within the scoped row.
-- **auditor confidence:** high
-
-### `ckm_magnitudes_structural_counts_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** structural-identity packaging subtheorem of the CKM atlas; five atlas-leading off-diagonal squared CKM magnitudes expressed as exact algebra over cited structural counts (n_pair, n_color, n_quark) and canonical alpha_s(v); not a cross-sector or dimension-uniqueness claim
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-fresh-context-phaseA-2026-05-10-5bf4d82f`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** Algebraic packaging of (M1)-(M5): from imported lambda^2 = alpha_s(v)/n_pair, A^2 = n_pair/n_color, rho = 1/n_quark, eta^2 = (n_quark-1)/n_quark^2, and Thales reading (1-rho)^2+eta^2 = 1-rho, derive |V_us|_0^2, |V_cb|_0^2, |V_ts|_0^2, |V_ub|_0^2 = alpha_s(v)^3/(8 n_color^2) (with exact n_pair cancellation), and |V_td|_0^2 = (n_quark-1) alpha_s(v)^3/(8 n_color^2).  _(class `A`)_
-- **chain closes:** True — The local algebra is closed and verified by the runner: 32/32 PASS, exit_code 0. Each (M1)-(M5) identity reduces to imported Wolfenstein/CP-phase/Thales identities and canonical alpha_s(v); the n_pair cancellation in (M4) is explicitly regression-tested (Wolfenstein A^2 lambda^6 (rho^2+eta^2) form numerically equals compact alpha_s(v)^3/(8 n_color^2) form). All five cited one-hop authorities exist on disk and the note's scope guards are present in source.
-- **rationale:** The note explicitly declares its conditional packaging scope and disclaims retained-grade upstream closure. The local algebra closes exactly (runner 32/32 PASS) and the five (M1)-(M5) identities follow from the cited inputs as claimed. However, at least one load-bearing one-hop authority is non-retained: ALPHA_S_DERIVED_NOTE.md carries explicit bounded status (status amended 2026-05-01 from candidate retained-grade to bounded), and the parent CKM_ATLAS_AXIOM_CLOSURE_NOTE itself is a conditional packaging note. Per tie-break (load-bearing cited authority is bounded/conditional), the verdict is audited_conditional rather than retained.
-- **open / conditional deps cited:**
-  - `ckm_magnitudes_structural_counts -> ALPHA_S_DERIVED_NOTE (bounded; plaquette beta=6 analytic insertion is open work; v->M_Z bridge is bounded standard infrastructure)`
-  - `ckm_magnitudes_structural_counts -> CKM_CP_PHASE_STRUCTURAL_IDENTITY -> parent CKM_ATLAS_AXIOM_CLOSURE_NOTE (imports r^2 = rho^2+eta^2 = 1/6 from parent atlas, not independently re-derived)`
-  - `ckm_magnitudes_structural_counts -> CKM_ATLAS_TRIANGLE_RIGHT_ANGLE -> CKM_CP_PHASE_STRUCTURAL_IDENTITY (apex coordinates imported, not re-derived)`
-  - `ckm_magnitudes_structural_counts -> WOLFENSTEIN_LAMBDA_A -> NATIVE_GAUGE_CLOSURE_NOTE / GRAPH_FIRST_SU3_INTEGRATION_NOTE (n_pair=2, n_color=3 imports)`
 - **auditor confidence:** high
 
 ### `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25`
@@ -6180,22 +6136,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The retained claim is a no-go, not support for the remaining beta-dependent program. The obstruction closes by exact small-beta algebra: equal analytic expansions of the same plaquette observable require equal first derivatives at beta=0, and the candidate constant lift has the wrong derivative. The runner hard-codes the elementary Haar slope rather than independently deriving Haar integration, but the source derivation is explicit enough and the runner checks the decisive slope mismatch for the scoped no-go. Residual risk is limited to normalization conventions for the plaquette/action; within the conventions stated in the note, the conclusion follows.
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_distinct_shell_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Finite distinct-plaquette shell geometry around a marked plaquette on the accepted Wilson 3 spatial + 1 derived-time surface: minimal connected distinct shell has six total plaquettes, giving beta^5 numerator and beta^6 vacuum shell orders.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-gauge_vacuum_plaquette_d-034`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The runner exhaustively checks all 5^4 one-per-observed-edge distinct choices and finds no four-action shell closes, while the five-action elementary cube complement does close.  _(class `C`)_
-- **chain closes:** False — The finite geometric enumeration closes on the admitted Wilson surface. The overall claim remains conditional because the source note explicitly admits the staggered-Dirac realization gate and the g_bare = 1 derivation target, both not retained-grade in the restricted packet.
-- **rationale:** The runner source performs a real finite enumeration of local plaquette geometry and checks the cube-shell witness rather than merely printing constants. That supports the stated distinct-shell theorem on the accepted surface. However, the note itself lists two admitted context inputs, and the cited authorities identify the staggered-Dirac realization as open_gate and G_BARE_DERIVATION_NOTE.md as unaudited/open main gate. Under the rubric, retained status does not propagate through these open dependencies.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-  - `G_BARE_DERIVATION_NOTE.md`
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md)
@@ -6435,22 +6375,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `missing cited retained dependency for the exact transfer-operator / character-recurrence theorem proving strict positivity of T_(L_s,beta)`
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_reduction_existence_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Exact implicit existence and uniqueness of beta_eff,L(beta) on finite periodic Wilson L^4 evaluation surfaces, with onset data imported from prior strong-coupling/mixed-cumulant results.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-gauge_vacuum_plaquette_r-035`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Since P_1plaq is a bijection [0,infinity) -> [0,1) and P_L(beta) lies in [0,1), beta_eff,L(beta) := P_1plaq^{-1}(P_L(beta)) is well-defined and unique.  _(class `A`)_
-- **chain closes:** False — The local implicit inverse construction closes as standard mathematics on the finite Wilson surface. The full bounded lane does not close as an unconditional theorem because the packet cites open/unaudited gates for the staggered-Dirac realization and g_bare = 1, and the beta=6/canonical plaquette application depends on those admitted inputs.
-- **rationale:** The core existence/uniqueness step is an algebraic/analytic inverse-function construction, not a first-principles numerical compute. The runner supports nonconstancy witnesses, imported onset values, and numerical inversion, but it does not independently close the open framework gates or derive the canonical beta=6 surface. Because cited authorities include an open staggered-Dirac gate and an unaudited/open g_bare parent, the restricted packet cannot support an unconditional audited_clean verdict.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-  - `G_BARE_DERIVATION_NOTE.md`
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
@@ -6530,38 +6454,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Within the restricted structural surface stated in the note, the constructive counterexample closes: two positive self-adjoint swap-symmetric witnesses are built and shown to give distinct normalized boundary data and distinct sample triples. This audits underdetermination of the structural conditions, not construction of the physical S_6^env or eta_6.
 - **rationale:** The load-bearing step is a constructive algebraic counterexample to uniqueness under the note's stated structural assumptions. The runner does more than print constants: it builds the finite operator, constructs two transfer/boundary pairs, checks symmetry, positivity, normalization, rho separation, and downstream sample separation. The support checks read upstream notes not supplied as cited authorities, so they do not independently validate the broader repo stack, but the no-go conclusion scoped to structural underdetermination follows from the provided construction.
 - **auditor confidence:** medium
-
-### `gauge_vacuum_plaquette_spectral_measure_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Finite periodic Wilson L^4 source surfaces: existence, Laplace-transform representation, cumulant hierarchy, and Hausdorff uniqueness of the Haar-pushforward average-plaquette spectral measure mu_L, without explicit identification at beta = 6.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-gauge_vacuum_plaquette_s-036`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Since sum_p X_p(U) = N_plaq A_L(U), pushing forward normalized Haar measure by A_L gives Z_L(beta) = Z_L(0) integral exp(beta N_plaq a) dmu_L(a), and compact support makes the moment problem determinate.  _(class `A`)_
-- **chain closes:** True — The finite-surface spectral-measure representation follows from compactness, continuity, pushforward measure, and the Wilson partition-function definition. The packet does not close the separate open identification of mu_L or its Laplace transform at beta = 6, nor the upstream gates for the accepted physical Wilson surface.
-- **rationale:** The load-bearing theorem is a genuine algebraic/measure-theoretic closure on the finite Wilson surface, and the runner's nontrivial computations only witness support/nonconstancy while several theorem checks are direct logical assertions. However, the note explicitly lists two admitted open context inputs, and the cited authorities include an open staggered-Dirac gate and an unaudited/open g_bare parent. Under the rubric, open cited authorities force a conditional verdict even though the bounded finite-surface measure statement itself closes.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-  - `G_BARE_DERIVATION_NOTE.md`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_susceptibility_flow_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Exact finite-volume Wilson plaquette susceptibility identities and the calculus flow law for the implicit one-plaquette reduction map, conditional on the admitted Wilson evaluation surface and upstream reduction-law setup.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-gauge_vacuum_plaquette_s-037`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Differentiating the implicit reduction law P_L(beta)=P_1plaq(beta_eff,L(beta)) gives chi_L(beta)=chi_1plaq(beta_eff,L(beta))*beta_eff,L'(beta), hence beta_eff,L'(beta)=chi_L(beta)/chi_1plaq(beta_eff,L(beta)).  _(class `A`)_
-- **chain closes:** False — The calculus step closes on its own terms, but the audited packet explicitly admits open upstream gates for the staggered-Dirac realization and g_bare=1/Wilson beta=6 normalization surface. Those dependencies prevent the full lane from closing as an unconditional positive theorem.
-- **rationale:** The central derivation is a genuine algebraic/calculus consequence of the implicit reduction law and susceptibility definitions, not a numerical match or renaming. The runner mostly verifies coefficient differentiations and imports/checks upstream plaquette constants and implicit-beta support values; it does not compute the Wilson susceptibility profile from first principles. Because the source note itself lists the staggered-Dirac realization gate and the g_bare=1 derivation target as admitted open inputs, the bounded theorem remains conditional under the rubric.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-  - `G_BARE_DERIVATION_NOTE.md`
-- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 
@@ -8372,25 +8264,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The claim is bounded to the tested weak-field lattice pocket and does not assert an asymptotic or universal lattice theorem. The runner does not hard-code the exponent or fit; it computes the observables, applies the stated retention criteria, and fits the retained rows, reproducing 1.0467 * N^(-0.222) with R^2 = 0.9683. Residual risk is model-level and finite-window only, which is already part of the scoped bounded claim.
 - **auditor confidence:** high
 
-### `left_handed_charge_matching_note`
-
-- **Note:** [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](../../docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Eigenvalue pattern (+1/3, -1) on (2,3) and (2,1) blocks of LH-doublet sector under graph-first commutant decomposition, with overall scale fixed by lepton-doublet=-1 convention; SM hypercharge identification out of scope (separate downstream labelling).
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-fresh-context-phaseA-2026-05-10-dcb54fd0`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** On the graph-first selected-axis surface, the unique traceless abelian direction in the gl(3) ⊕ gl(1) commutant has eigenvalue ratio 1:(-3) on the (2,3) Sym² and (2,1) Anti² LH-doublet blocks (forced by 6α+2β=0), with overall scale α=+1/3 fixed by the convention β=-1 (lepton-doublet eigenvalue). Yields exact pattern (+1/3, -1) on (6,2) state count. SM hypercharge identification (Q=T_3+Y/2) explicitly out of scope.  _(class `B`)_
-- **chain closes:** True — Within its declared scope, the chain closes: (i) graph-first selector derivation supplies the canonical axis (one-hop retained-grade authority); (ii) graph-first SU(3) integration supplies the gl(3)⊕gl(1) commutant with the 6+2 LH-doublet decomposition (one-hop retained-grade authority); (iii) tracelessness 6α+2β=0 forces ratio 1:(-3) (cited narrow theorem, audited_conditional); (iv) the convention β=-1 fixes the absolute pattern (+1/3, -1). Runner shows 111 PASS / 0 FAIL across all three axes, including explicit verification that Y_hyp=(1/3)Π_+ - 1·Π_- has spectrum (+1/3 ×6, -1 ×2). The Q=T_3+Y/2 step is correctly excluded from the load-bearing chain. However, closure is conditional: the cited narrow ratio packet inherits an admitted-context input (staggered-Dirac realization gate, open_gate), which propagates here per the note's own explicit acknowledgement; and the absolute scale is convention-fixed rather than derived from nonconventional premises.
-- **rationale:** Tie-break applies: the load-bearing one-hop cited authority `LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md` is itself `audited_conditional` (depends on the open `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`), so this row inherits conditional status. The note correctly and transparently scopes around Q=T_3+Y/2 (that admission is genuinely not load-bearing for the eigenvalue-pattern claim). However, the note also acknowledges that retained-grade reuse of the exact-pattern claim remains conditional on (a) ratification of the narrow ratio packet and (b) a separate retained-grade absolute-normalization derivation. The runner is fully green (111 PASS), and the structural content (ratio + convention) is sound, but the open-gate inheritance and the explicit convention-vs-derivation boundary preclude unconditional retained promotion. The proposed claim_type bounded_theorem and load_bearing_step_class B (bounded/convention-normalized algebraic) match the canonical disposition.
-- **open / conditional deps cited:**
-  - `left_handed_charge_matching_note`
-  - `LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02`
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03 (open_gate)`
-  - `left_handed_charge_matching_note`
-  - `convention β=-1 (no retained-grade derivation of absolute normalization in this row's chain)`
-- **auditor confidence:** high
-
 ### `lensing_adjoint_kernel_reduced_model_note`
 
 - **Note:** [`LENSING_ADJOINT_KERNEL_REDUCED_MODEL_NOTE.md`](../../docs/LENSING_ADJOINT_KERNEL_REDUCED_MODEL_NOTE.md)
@@ -8433,21 +8306,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The bounded table reports a total slope range of about 2.02, from +0.58 to -1.43, across the enumerated kH sweep, so the fitted internal slope is strongly k-dependent on this setup.  _(class `C`)_
 - **chain closes:** True — The current cache is SHA-pinned to the runner, completed with exit_code=0, and its stdout reproduces the source slope table and kH=5.0 fit failures. The runner computes the finite DAG propagation/Kubo values and log-log fits over the enumerated grid rather than importing the reported slopes; closure is only for that bounded internal numerical sweep.
 - **rationale:** The finite numerical artifact closes: the source table matches the completed cache, and the runner source constructs the Fam1 DAGs, sweeps kH/seeds/b, computes Kubo responses, and fits slopes without hard-coding the table values. I count the runner as a C-style bounded computation rather than the mechanical D label because the scoped claim is internal runner output, not an external comparator match. Clean status is granted only under the narrowed scope; the source's mechanism, periodicity, eikonal, and physical gravitational-response language remains outside the audited claim.
-- **auditor confidence:** high
-
-### `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
-
-- **Note:** [`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Exact structural eigenvalue ratio 1:(-3) on the Sym² and Anti² sub-decompositions of the LH-doublet sector under the graph-first selected-axis commutant decomposition, with no specific normalization, SM hypercharge identification, charge formula, or anomaly claim.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-lh_doublet_traceless_abe-039`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Tracelessness over the 6-state Sym² and 2-state Anti² LH-doublet decomposition gives 6·α + 2·β = 0, hence β = -3α and the eigenvalue ratio Sym²:Anti² is 1:(-3).  _(class `A`)_
-- **chain closes:** False — The algebraic ratio follows from the retained graph-first 6+2 decomposition. The full bounded claim remains conditional because the source note explicitly admits dependence on the open staggered-Dirac realization gate.
-- **rationale:** The load-bearing step is a genuine class (A) algebraic closure once the 6 and 2 multiplicities are accepted. However, the restricted packet includes the staggered-Dirac realization gate as an admitted context input and cited authority with effective_status open_gate, so retained status cannot propagate through it. The runner also exits nonzero because it still expects positive_theorem tags, which is a runner artifact rather than a scientific failure of the narrowed ratio algebra.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `light_cone_framing_note`
