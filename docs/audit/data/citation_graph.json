@@ -35958,6 +35958,17 @@
       "runner_path": "scripts/frontier_baryon_charge_integrality.py",
       "title": "Baryon Charge Integrality Q_baryon = N_u \u2212 1 from Quark Hypercharges"
     },
+    "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10": {
+      "claim_id": "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "727ed75df6d41f76a1985733cf99ab65cad12730a9fa78009a48cc9a07218584",
+      "path": "docs/BBS_RG_BANACH_CONTRACTION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bbs_rg_banach_contraction_external_narrow.py",
+      "title": "BBS RG Banach Contraction \u2014 External Narrow Theorem"
+    },
     "bell_inequality_derived_note": {
       "claim_id": "bell_inequality_derived_note",
       "claim_type_author_hint": null,
@@ -66062,6 +66073,7 @@
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_reduction_note",
     "background_independence_note",
+    "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10",
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
     "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
@@ -66734,7 +66746,7 @@
       "no_go": 23,
       "none": 1626,
       "open_gate": 29,
-      "positive_theorem": 95
+      "positive_theorem": 96
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66743,12 +66755,12 @@
       "no_go": 130,
       "none": 449,
       "open_gate": 117,
-      "positive_theorem": 595
+      "positive_theorem": 596
     },
     "edge_count": 8352,
-    "leaf_count": 539,
-    "node_count": 2080,
-    "root_count": 771,
-    "runners_with_path": 1695
+    "leaf_count": 540,
+    "node_count": 2081,
+    "root_count": 772,
+    "runners_with_path": 1696
   }
 }

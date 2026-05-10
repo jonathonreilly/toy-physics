@@ -1056,6 +1056,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_baryon_charge_integrality.py"
     },
+    "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_bbs_rg_banach_contraction_external_narrow.py"
+    },
     "bell_inequality_derived_note": {
       "assert_count": 2,
       "counts": {
@@ -24441,6 +24453,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_bbs_rg_banach_contraction_external_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_bell_inequality.py": {
       "assert_count": 2,
       "claims": [
@@ -44371,15 +44398,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 164,
+    "decoration_candidates": 165,
     "dominant_class_distribution": {
       "A": 113,
-      "B": 162,
+      "B": 163,
       "C": 652,
       "D": 250,
       "none": 406
     },
-    "runners_classified": 1583,
+    "runners_classified": 1584,
     "runners_with_C": 817,
     "runners_with_D": 445
   }

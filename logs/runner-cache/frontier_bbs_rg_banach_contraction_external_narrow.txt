@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bbs_rg_banach_contraction_external_narrow.py
+runner_sha256: ce8497481bf36d18fa8a5588b3b698ac31e6a2433fb82be6bd665548eb635c0e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+# BBS RG Banach contraction external theorem runner
+# Source note: docs/BBS_RG_BANACH_CONTRACTION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md
+
+==============================================================================
+T1: scalar contraction iterates
+==============================================================================
+  [PASS] scalar examples saturate ||T^N x0|| = kappa^N ||x0||
+         kappas=[Fraction(1, 2), Fraction(1, 10), Fraction(9, 10)], N=[0, 1, 4, 8, 16]
+
+==============================================================================
+T2: geometric tail
+==============================================================================
+  [PASS] sum_{k>=16} (1/2)^k = (1/2)^15
+         tail=1/32768
+
+==============================================================================
+T3: composition of contractions
+==============================================================================
+  [PASS] composition bound equals product of contraction constants in scalar case
+         x3=11/210, bound=11/210
+
+==============================================================================
+T4: affine fixed-point error
+==============================================================================
+  [PASS] affine contraction error equals kappa^N initial error in equality case
+         error=96/3125, bound=96/3125
+
+==============================================================================
+T5: sharpness
+==============================================================================
+  [PASS] kappa=1 has no decay while kappa<1 decays geometrically
+         decays=[True, True]
+
+==============================================================================
+T6: finite-dimensional diagonal operator
+==============================================================================
+  [PASS] diagonal sup-norm operator obeys ||T^N x|| <= kappa^N ||x||
+         lhs=243/1024, rhs=729/1024
+
+==============================================================================
+T7: source-note boundary
+==============================================================================
+  [PASS] note declares positive_theorem
+  [PASS] note avoids framework bridge and status overclaims
+
+=== TOTAL: PASS=8, FAIL=0 ===
+
+----- stderr -----
+
