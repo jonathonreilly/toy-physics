@@ -12936,6 +12936,18 @@
       "dominant_class": null,
       "runner": "scripts/lattice_nn_rescaled_response_exponents.py"
     },
+    "nn_lattice_rescaled_universal_parameter_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/lattice_nn_rescaled_universal_parameter_verification.py"
+    },
     "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -40595,6 +40607,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/lattice_nn_rescaled_universal_parameter_verification.py": {
+      "assert_count": 0,
+      "claims": [
+        "nn_lattice_rescaled_universal_parameter_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/lattice_nn_rg_alpha_sweep.py": {
       "assert_count": 0,
       "claims": [
@@ -43917,11 +43944,11 @@
       "A": 112,
       "B": 160,
       "C": 646,
-      "D": 242,
+      "D": 243,
       "none": 406
     },
-    "runners_classified": 1566,
+    "runners_classified": 1567,
     "runners_with_C": 811,
-    "runners_with_D": 434
+    "runners_with_D": 435
   }
 }
