@@ -17,12 +17,13 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 415 |
+| critical | `unaudited` | 414 |
 | critical | `audited_conditional` | 91 |
 | critical | `audited_numerical_match` | 9 |
 | critical | `audited_renaming` | 8 |
 | critical | `audited_failed` | 5 |
 | medium | `unaudited` | 3 |
+| critical | `audit_in_progress` | 1 |
 | critical | `open_gate` | 1 |
 
 **Total non-retained-grade rows in publication tables:** 532
@@ -119,7 +120,7 @@ publication tables phrase it.
 | critical | `dark_energy_eos_retained_corollary_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
-| critical | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md |
 | critical | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `dm_candidate_mass_window_theorem_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
