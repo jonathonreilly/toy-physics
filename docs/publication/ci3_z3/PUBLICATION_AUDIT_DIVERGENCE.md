@@ -17,12 +17,13 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 416 |
+| critical | `unaudited` | 415 |
 | critical | `audited_conditional` | 92 |
 | critical | `audited_numerical_match` | 9 |
 | critical | `audited_renaming` | 8 |
 | critical | `audited_failed` | 5 |
 | medium | `unaudited` | 3 |
+| critical | `audit_in_progress` | 1 |
 | critical | `open_gate` | 1 |
 
 **Total non-retained-grade rows in publication tables:** 534
@@ -283,7 +284,7 @@ publication tables phrase it.
 | critical | `koide_explicit_calculations_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | `audited_failed` | `audited_failed` | RESULTS_INDEX.md |
 | critical | `koide_full_lattice_schur_inheritance_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
-| critical | `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
+| critical | `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `koide_gamma_orbit_selected_line_closure_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
