@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 124 |
-| **retained_bounded** | 233 |
+| **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1102 |
+| unaudited | 1101 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 391 |
+| `audited_clean` | 392 |
 | `audited_conditional` | 239 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1200 |
+| `unaudited` | 1199 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 801 |
+| `bounded_theorem` | 802 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 727 |
+| `positive_theorem` | 726 |
 
 | criticality | count |
 |---|---:|
@@ -162,6 +162,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cyclic_projector_compression_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_source_smoothing_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `dirac_weak_coupling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_assumptions_audit_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2690,6 +2691,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At the tuned mass point, the closure score improves from the weaker 6/10 case to 7/10, but the remaining gravity monotonicity and distance-law failures persist.  _(class `C`)_
 - **chain closes:** False — The supplied stdout is for mass0=0.300, while the note's load-bearing claims are about mass0=0.10. The stdout also contradicts the note's reported values: closure is 6/10 rather than 7/10, and the distance-law sweep is 0/5 TOWARD rather than mixed 3/5 TOWARD.
 - **rationale:** Issue: the note's headline numerical claims are stale or unsupported relative to the supplied completed runner output. Why this blocks: the claimed m0=0.10 improvement and distance-law pattern do not follow from the restricted packet, and the current stdout gives different results. Repair target: supply the completed --mass0 0.10 run artifact or update the note to the actual mass0=0.300 output. Claim boundary until fixed: the supplied runner only supports a default-mass finite diagnostic showing 6/10 closure and persistent monotonicity/distance failures.
+- **auditor confidence:** high
+
+### `dirac_weak_coupling_note`
+
+- **Note:** [`DIRAC_WEAK_COUPLING_NOTE.md`](../../docs/DIRAC_WEAK_COUPLING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the supplied periodic 3+1D Dirac v4 weak-coupling scan grid, decreasing strength from 5.0e-04 to 5.0e-05 does not improve the sign-stability totals, while larger lambda improves only the fitted |bias| magnitude law in the reported outputs.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e135b-5c46-72e2-b247-c36236b7c520`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The weaker-coupling sweep does not show a strength-driven rescue of the remaining periodic Dirac gravity failures" because cross-strength sign-stability counts are unchanged and the signed delta-law fit never becomes available.  _(class `A`)_
+- **chain closes:** True — The note's numerical summaries match the supplied completed runner stdout, and the bounded negative conclusion follows directly from the unchanged 6/12 stable-row and 2/12 positive-stable counts across all strengths. The claim does not close as a general physics theorem beyond this scan grid, so the audited scope must remain bounded to the supplied harness and outputs.
+- **rationale:** The load-bearing claim is a bounded arithmetic summary of the completed runner output, not a first-principles derivation or external comparator. The stdout supports the stated cross-strength invariance, absence of signed delta-law fits, and lambda-dependent |bias| fit improvement. Clean status applies only to the reported scan-grid conclusion, not to any broader Dirac-gravity theorem or unsupplied v4 helper implementation.
 - **auditor confidence:** high
 
 ### `directional_b_density_stencil_note`
