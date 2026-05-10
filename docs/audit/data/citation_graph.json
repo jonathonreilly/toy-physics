@@ -19122,19 +19122,11 @@
     },
     {
       "from": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10",
-      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
-    },
-    {
-      "from": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10",
       "to": "cl3_color_automorphism_theorem"
     },
     {
       "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
-    },
-    {
-      "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
-      "to": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
     },
     {
       "from": "su3_cube_full_rho_perron_2026-05-04",
@@ -60141,17 +60133,16 @@
     },
     "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10": {
       "claim_id": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10",
-      "claim_type_author_hint": "bounded_theorem",
-      "claim_type_author_hint_raw": "bounded_theorem",
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "su3_casimir_fundamental_theorem_note_2026-05-02",
         "cl3_color_automorphism_theorem"
       ],
-      "note_hash": "2eb928b464517f04090549612d9b354e0f3f7e0e50eb24400dd3f9fad9c9a705",
+      "note_hash": "73589d2e67ceb664bbdb8e357b983d4df3976eb768ae36ea05ece3fcad1cfb3c",
       "path": "docs/SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md",
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
-      "title": "SU(3) Quadratic Casimir on V_3 \u2014 Algebraic K1-K3 Narrow Proof-Walk Bounded Note"
+      "title": "SU(3) Quadratic Casimir on V_3 \u2014 Algebraic K1-K3 Narrow Theorem"
     },
     "su3_casimir_fundamental_theorem_note_2026-05-02": {
       "claim_id": "su3_casimir_fundamental_theorem_note_2026-05-02",
@@ -60159,10 +60150,9 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "cl3_color_automorphism_theorem",
-        "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
+        "cl3_color_automorphism_theorem"
       ],
-      "note_hash": "0623b2eed25d484abb4c19ef41c2e2aca2b22a7231f9aa20d7fc1eac5a349839",
+      "note_hash": "933a7eebc80ea05be06cb0a5ca68c49d3fa9cfbd0ea8d87916d22c3bb15327be",
       "path": "docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
@@ -65873,25 +65863,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 240,
+      "bounded_theorem": 239,
       "decoration": 1,
       "meta": 59,
       "no_go": 18,
       "none": 1626,
       "open_gate": 20,
-      "positive_theorem": 91
+      "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 722,
+      "bounded_theorem": 721,
       "decoration": 1,
       "meta": 59,
       "no_go": 125,
       "none": 449,
       "open_gate": 108,
-      "positive_theorem": 591
+      "positive_theorem": 592
     },
-    "edge_count": 8241,
-    "leaf_count": 534,
+    "edge_count": 8239,
+    "leaf_count": 535,
     "node_count": 2055,
     "root_count": 766,
     "runners_with_path": 1670

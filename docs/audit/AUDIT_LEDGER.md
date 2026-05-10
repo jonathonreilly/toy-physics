@@ -49,22 +49,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 811 |
+| `bounded_theorem` | 810 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 198 |
 | `open_gate` | 103 |
-| `positive_theorem` | 717 |
+| `positive_theorem` | 718 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 1027 |
+| `critical` | 1026 |
 | `high` | 48 |
 | `medium` | 241 |
-| `leaf` | 632 |
+| `leaf` | 633 |
 
 - **Retained pending chain closure:** 0
-- **Citation cycles detected:** 304
+- **Citation cycles detected:** 303
 
 ### Runner classification (static heuristic)
 

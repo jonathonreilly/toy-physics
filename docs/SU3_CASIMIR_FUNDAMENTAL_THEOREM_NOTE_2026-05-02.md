@@ -218,27 +218,35 @@ the algebraic computation itself. Promoting the verdict requires either
   physical-quark corollaries to a separate downstream note keyed on
   that bridge.
 
-## Companion narrow proof-walk 2026-05-10
+## Companion narrow theorem 2026-05-10 (informational)
 
-The audit-recommended scope-narrowing branch lives in the companion
-note
-[`SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md`](SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md).
-That companion records a narrow proof-walk that scopes the audited
-claim explicitly to the algebraic K1-K3 statement (centrality of
-`C_2`, Schur scalar property, value `4/3`) on the cited 3-dim
-symmetric base subspace `V_3`, with **no** physical-quark color
-identification load-bearing in the audited chain.
+The audit-recommended scope-narrowing branch lives in the standalone
+companion source note
+`SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10`
+(plain-text reference; the companion is a downstream surface that cites
+`cl3_color_automorphism_theorem` as its single load-bearing one-hop
+authority and does not consume any content from this parent note). That
+companion records a standalone positive-theorem narrow note that scopes
+the algebraic statement explicitly to K1-K3 (centrality of `C_2`, Schur
+scalar property, value `4/3`) on the cited 3-dim symmetric base subspace
+`V_3`, with **no** physical-quark color identification load-bearing in
+the audited chain.
 
 The companion does not change the parent note's load-bearing step
 or claim scope; this parent note continues to carry the broader
 claim including K4 / C1-C5 physical-quark readouts, and continues
 to inherit the `audited_conditional` upstream bound on physical SM
-color identification. The companion is purely a scope-narrowing
-proof-walk on the audited K1-K3 portion, not a status promotion.
+color identification. The companion is a separate, narrower source-note
+surface, not a status promotion of this parent note.
 
-The companion runner is the same `scripts/su3_casimir_fundamental_check.py`
-already cited above; the new content is the explicit scope-narrowing
-in source-note text recording the audit-recommended split.
+This subsection is intentionally a plain-text cross-reference rather
+than a markdown citation: the parent and companion form cycle-0016 in
+the audit queue, and the cycle-break instruction calls for the parent
+side of the source graph to drop the reciprocal markdown link so the
+citation graph records the unidirectional dependency
+companion → cl3_color_automorphism_theorem only. The companion runner
+is the same `scripts/su3_casimir_fundamental_check.py` already cited
+above.
 
 ```yaml
 claim_type_author_hint: positive_theorem
