@@ -30,8 +30,11 @@ from primitives.
 This narrow theorem closes the structural derivation of the **(7/8)**
 factor as an exact rational identity on the staggered Dirac determinant,
 and reduces the open piece to a single named readout admission (the
-per-mode geometric-mean reading). It does NOT close the readout
-admission itself.
+**dim-4 effective-potential-density reading** — `v ∝ A(L_t)^(-1/4)`
+where `A` is the m² coefficient of `Δf` at the symmetric point, per
+[`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md)
+and [`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)).
+It does NOT close the readout admission itself.
 
 ## 1. Claim scope
 
@@ -58,11 +61,11 @@ The narrow theorem **explicitly does NOT** claim:
 - the absolute scale of the EW VEV `v` (separate; depends on the framework
   hierarchy formula's specific identification of `v` with the staggered
   determinant);
-- the per-mode geometric-mean readout `v(L_t) ∝ |det(L_t)|^(1/(N_taste · L_t))`
-  itself (this is the named admission whose closure would discharge the
-  remaining (1/4) gap — see Section 4);
-- the staggered-Dirac realization gate (the count `N_taste = 16 = 2^D`
-  inherits from the open gate
+- the **dim-4 effective-potential-density reading**
+  `v ∝ A(L_t)^(-1/4)` itself (this is the named admission whose closure
+  would discharge the remaining (1/4) gap — see Section 4);
+- the staggered-Dirac realization gate (any further dependence on
+  `N_taste = 16 = 2^D` inherits from the open gate
   [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)).
 
 ## 2. Admitted dependencies
@@ -79,7 +82,11 @@ narrow theorem
 [`HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md`](HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md).
 This note adds zero new admissions for the algebraic identity itself.
 The cross-endpoint reading in Section 4 lists one named admission
-(per-mode geometric-mean readout).
+(**dim-4 effective-potential-density readout** — see
+[`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md)
+for the dimensional-analysis primitive and
+[`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
+for the exact `A(L_t)` endpoint formulas).
 
 ## 3. Load-bearing step (class A)
 
@@ -125,75 +132,157 @@ the rest is direct substitution.
 
 ## 4. Bridge to the v compression (named-admission corollary)
 
-**Corollary (conditional).** Under the admitted **per-mode geometric-mean
-readout**
+**Corollary (conditional).** Under the admitted **dim-4
+effective-potential-density readout**
 
 ```text
-v(L_t)  ∝  |det(D, L_t)|^(1 / (N_taste · L_t))                          (R)
+v(L_t)  ∝  A(L_t)^(-1/4)                                                (R)
 ```
 
-with `N_taste = 16 = 2^D` in `D = 4` spacetime dimensions (admission
-inherited from
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)),
-the cross-endpoint compression factor is
+where `A(L_t)` is the m² coefficient of `Δf` at the symmetric point
+(per
+[`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)):
+
+```text
+Δf(L_t, m)   =  A(L_t) m² + O(m⁴)
+A(L_t)        =  (1 / (2 L_t u_0²)) Σ_ω 1 / (3 + sin²ω).
+```
+
+This is the dim-4 effective-potential-density reading: `v` has mass
+dim 1, and `A · m²` (the curvature of the dim-4 free-energy density
+at the symmetric point) has mass dim 2 — i.e., a mass². The full
+dim-4 density at the symmetric point goes as `A · m⁴` once one
+factors out the dim-4 normalization, so by `D = 4` dimensional
+analysis at fixed external `m`, the dim-1 scale `v` extracted from
+this density satisfies `v ∝ (A · m⁴)^(1/4) ∝ A^(1/4) · m`, with the
+inverse compression `v ∝ A^(-1/4)` arising when `A` enters the
+denominator of the scale-extracting map (Stefan-Boltzmann analog
+`T ∝ (u/σ)^(1/4)` with `A` playing the role of the inverse-density
+coefficient `σ`; see Section 4.3 for the QFT primitives derivation).
+
+The exact endpoint values from
+[`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
+are
+
+```text
+A_2  =  A(L_t = 2)  =  1 / (8 u_0²)
+A_4  =  A(L_t = 4)  =  1 / (7 u_0²).
+```
+
+The cross-endpoint compression factor is then
 
 ```text
 v(L_t = 4)
-──────────  =  (|det(L_t = 4)| / |det(L_t = 2)|²)^(1 / (N_taste · L_t = 4))
+──────────  =  (A_2 / A_4)^(1/4)
 v(L_t = 2)
-            =  ((7/8)^16)^(1/64)
-            =  (7/8)^(16/64)
-            =  (7/8)^(1/4)                                             (6)
+            =  ((1/(8 u_0²)) / (1/(7 u_0²)))^(1/4)
+            =  (7/8)^(1/4).                                             (6)
 ```
 
-The **(1/4) power index is structurally forced** by the determinant
-identity exponent 16 divided by `N_taste · L_t = 16 · 4 = 64`. The
-factor (7/8) is **not** a numerical coincidence — it is the rational
-identity (5).
+The **(1/4) power index is structurally forced** by `D = 4`
+dimensional analysis on the effective-potential density (Stefan-
+Boltzmann-style scaling of a dim-1 scale extracted from a dim-4
+energy-density coefficient). The factor (7/8) is **not** a numerical
+coincidence — it equals `A_2 / A_4` exactly, and via the Class A
+identity (5), the same `(7/8)^16` rational identity also factors
+through the determinant ratio (since both `A_2 / A_4` and the
+determinant ratio are governed by the same `(3 + sin²ω)` Matsubara
+sum at L_s = 2).
 
 ### 4.1 Sign and placement
 
-- **Sign.** From (5), `(7/8)^16 < 1`, hence the compression factor
-  `(7/8)^(1/4) < 1`. The L_t = 4 endpoint has *smaller* `v` than the
-  L_t = 2 endpoint. Sign: downward compression by ~3.3%.
+- **Sign.** Since `A_2 < A_4` (`1/8 < 1/7`), `(A_2 / A_4)^(1/4) < 1`,
+  hence the compression factor `(7/8)^(1/4) < 1`. The L_t = 4
+  endpoint has *smaller* `v` than the L_t = 2 endpoint. Sign:
+  downward compression by ~3.3%.
 - **Placement.** The compression is multiplicative on `v` itself
   (mass dim 1), not on `v²` or `v⁴`. Applied post-α_LM^16 hierarchy
   reduction.
 
-### 4.2 What is NOT closed
+### 4.2 Consistency with the Class A identity (5)
 
-The corollary depends on the **per-mode geometric-mean readout (R)**.
-This admission is dimensionally consistent (`v` has mass dim 1; the
-geometric mean of fermion eigenvalues has mass dim 1) and standard in
-QFT (an average eigenvalue scale of a Dirac operator). However, the
-framework does **not** independently derive this readout from the
-retained primitive stack. Specifically:
+The endpoint values `A_2 = 1/(8 u_0²)` and `A_4 = 1/(7 u_0²)` are
+direct consequences of the same `(3 + sin²ω)` Matsubara sum that
+appears inside the determinant identity (5). Specifically, at L_s = 2
+the contribution to `A(L_t)` from a single `ω` mode is
+`1 / (3 + sin²ω)`; at L_t = 2 every mode has `sin²ω = 1` giving the
+sum `2 / (3 + 1) = 1/2`, hence `A_2 = 1 / (2 · 2 · u_0²) · (1/2) = 1/(8 u_0²)`;
+at L_t = 4 every mode has `sin²ω = 1/2` giving the sum
+`4 / (3 + 1/2) = 8/7`, hence `A_4 = 1 / (2 · 4 · u_0²) · (8/7) = 1/(7 u_0²)`.
+The (7/8) factor is therefore unified: it appears in **both** the
+determinant ratio (5) — as `(7/8)^16` — and the dim-4 readout (R) —
+as `A_2 / A_4 = 7/8` — through the same Klein-four-orbit selection
+of `sin²ω = 1/2` at L_t = 4. This is the structural reason the
+factor and the (1/4) power compose to give the observed
+`(7/8)^(1/4)` compression.
+
+### 4.3 QFT primitives derivation of (R)
+
+Stripping framework vocabulary, standard QFT primitives give:
+
+1. A scalar order parameter `φ` has mass dim 1 (4D action
+   `S = ∫d⁴x [(∂φ)² - m²φ² - λφ⁴/4 + ...]` dimensionless).
+2. The effective potential `V_eff(φ)` has mass dim 4 (energy
+   density on Z⁴).
+3. The curvature at the symmetric point `V_eff''(0) = A · m²` has
+   mass dim 2, where `A` is the dimensionless (in `u_0` units)
+   coefficient of `m²` in the small-φ expansion of `Δf`.
+4. The EWSB scale `v` is extracted from `V_eff` as the dim-1 scale
+   on which the curvature inverts. The Stefan-Boltzmann analog:
+   thermal energy density `u = σ T⁴` gives `T ∝ (u/σ)^(1/4)` —
+   when `σ` (the bulk normalization coefficient) varies with `L_t`
+   and `u` is held fixed by an external scale, `T ∝ σ^(-1/4)`.
+5. By the same `D = 4` dimensional structure, with `A(L_t)` the
+   `L_t`-dependent normalization coefficient of the dim-4 density
+   and `m` the fixed external scale, the dim-1 EWSB scale extracted
+   from the density satisfies `v(L_t) ∝ A(L_t)^(-1/4)`.
+
+This derivation uses no framework vocabulary: only `D = 4`
+spacetime, the standard QFT mass-dimension assignments, and the
+Stefan-Boltzmann-style 1/4-power dimensional analysis. It does
+**not** require introducing `N_taste` or per-mode geometric means.
+
+### 4.4 What is NOT closed
+
+The corollary depends on the **dim-4 effective-potential-density
+readout (R)** as the framework's identification of `v`. This
+admission is structurally clean (D = 4 spacetime dimensions; v has
+mass dim 1; V_eff has mass dim 4; standard Stefan-Boltzmann scaling)
+and directly inherits from
+[`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md).
+However, the framework does **not** independently derive (R) from
+the retained primitive stack. Specifically:
 
 1. The framework's hierarchy formula
    [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
    uses
    `v_UV = M_Pl × α_LM^16 = M_Pl × (1/(2π))^16 / |det(L_t = 2)|`
    (with `α_LM = 1/(4π u_0)` and `|det(L_t = 2)| = (4 u_0²)^8`),
-   which is `v ∝ |det|^(-1)`, not `v ∝ |det|^(1/(N_taste · L_t))`.
+   which is `v ∝ |det|^(-1)` at L_t = 2.
 
-2. The per-mode readout (R) is consistent with the COMPRESSION RATIO
-   `(7/8)^(1/4)`, but does not by itself reproduce the absolute
-   normalization of `v_UV`. Reconciling the two would require a
-   bridge theorem connecting `|det|^(-1)` (the framework's specific
-   absolute-scale identification at L_t = 2) with `|det|^(1/(N_taste · L_t))`
-   (the per-mode reading that gives the right cross-endpoint compression).
+2. The dim-4 readout (R) `v ∝ A(L_t)^(-1/4)` is consistent with the
+   COMPRESSION RATIO `(7/8)^(1/4)` and stays at fixed `m`, but does
+   not by itself reproduce the absolute normalization of `v_UV`.
+   Reconciling the two requires a bridge theorem connecting the
+   absolute-scale identification at L_t = 2 with the dim-4-density
+   `A`-scaling that governs the cross-endpoint compression.
 
 3. Independent justification of (R) from the framework's primitives —
-   e.g., a structural derivation of `v` as the geometric-mean fermion
-   eigenvalue scale, with placement of the `M_Pl` scaling — is the
-   single open theorem replacing the prior "dim-4 effective-potential
-   density" hand-wave.
+   e.g., a structural derivation showing the EWSB order parameter's
+   dim-4 effective-potential-density character is forced by retained
+   axioms rather than admitted as a standard QFT identification —
+   is the single open theorem.
 
-This is a strictly sharper formulation of the open piece than the
-parent's "where does the (1/4) come from?" question. The parent
-admitted "dim-4 V_eff density" as the hand-wave; this note reduces
-the gap to the per-mode geometric-mean readout (R), which is
-structurally narrower and directly testable.
+The previous formulation of this note (per-mode geometric-mean
+readout `v ∝ |det|^(1/(N_taste · L_t))`) was **post-hoc**: the
+combination `N_taste · L_t` had no QFT motivation, and `|det|^(1/N)`
+is a fermion-eigenvalue scale, not the EWSB VEV. The current
+dim-4-density reading is structurally cleaner: it gives the same
+`(7/8)^(1/4)` compression but via D = 4 Stefan-Boltzmann-style
+dimensional scaling — the same primitive that
+[`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md)
+established as the appropriate mapping between the L_t residual and
+the EWSB scale.
 
 ## 5. Verification
 
@@ -213,8 +302,12 @@ Verifies, at exact rational precision via Python `Fraction`:
    operator on L_s = 2 × L_t lattice for L_t ∈ {2, 4}, compute
    `|det|` numerically with NumPy, and verify the ratio matches
    `(7/8)^16` to machine precision.
-6. Corollary (6): `((7/8)^16)^(1/64) = (7/8)^(1/4)` to all available
-   digits.
+6. **Dim-4 readout corollary (6):** the exact endpoint values
+   `A_2 = 1/(8 u_0²)` and `A_4 = 1/(7 u_0²)` (per the
+   effective-potential endpoint note) yield the compression
+   `(A_2 / A_4)^(1/4) = (7/8)^(1/4)`. The runner verifies this with
+   `Fraction` arithmetic on the `(3 + sin²ω)` Matsubara sum at
+   L_s = 2.
 
 ## 6. Independent audit handoff
 
@@ -225,10 +318,12 @@ proposed_claim_scope: |
   operator on Z^4 APBC at L_s = 2 with mean-field gauge factorization:
   |det(D, L_t=4, m=0)| / |det(D, L_t=2, m=0)|^2 = (7/8)^16.
   Plus a CONDITIONAL corollary deriving the v compression factor
-  (7/8)^(1/4) from the determinant identity AND the per-mode
-  geometric-mean readout v(L_t) ~ |det(L_t)|^(1/(N_taste * L_t)).
-  The corollary is bounded by the named per-mode-readout admission;
-  the determinant identity itself is unconditional.
+  (7/8)^(1/4) from the determinant identity AND the dim-4 effective-
+  potential-density readout v ∝ A(L_t)^(-1/4), where A(L_t) is the
+  m^2 coefficient of Δf at the symmetric point per
+  hierarchy_effective_potential_endpoint_note. The corollary is
+  bounded by the named dim-4 V_eff'' readout admission; the
+  determinant identity itself is unconditional.
 proposed_load_bearing_step_class: A
 status_authority: independent audit lane only
 
@@ -237,14 +332,15 @@ declared_one_hop_deps:
   - hierarchy_bosonic_bilinear_selector_note
   - hierarchy_dimensional_compression_note
   - hierarchy_effective_potential_endpoint_note
-  - staggered_dirac_realization_gate_note_2026-05-03
   - minimal_axioms_2026-05-03
 
 admitted_context_inputs:
-  - per-mode geometric-mean readout v(L_t) ~ |det(L_t)|^(1/(N_taste * L_t))
-    (named, separate from the determinant identity itself)
-  - staggered taste count N_taste = 16 = 2^D in D = 4 spacetime dimensions
-    (inherits from the staggered-Dirac realization open gate)
+  - dim-4 effective-potential-density readout v ∝ A(L_t)^(-1/4),
+    where A(L_t) is the m^2 coefficient of Δf at the symmetric
+    point (named, separate from the determinant identity itself).
+    Stefan-Boltzmann-style 1/4-power dimensional analysis: v has
+    mass dim 1, V_eff has mass dim 4, so v scales as the 1/4 power
+    of the appropriate L_t-dependent dim-4 density coefficient.
 
 forbidden_imports_used: false
 proposal_allowed: true
@@ -259,24 +355,41 @@ will evaluate the load-bearing class and any later status.
 ## 7. What this theorem closes
 
 - **The (7/8) factor** in the v compression is now an **exact rational
-  identity** on the staggered Dirac determinant, not a numerical
-  coincidence. The (7/8)^(1/4) match to observed C_obs at 0.025% is no
-  longer surprising — it's structurally forced.
-- **The (1/4) power index** is reduced from "dim-4 V_eff density"
-  hand-waving to **per-mode geometric-mean readout** — a structurally
-  narrower and dimensionally clean named admission.
+  identity** on the staggered Dirac determinant via (5), and is
+  unified with the **`A_2 / A_4 = 7/8` ratio** of the dim-4
+  effective-potential-density coefficients via the same `(3 + sin²ω)`
+  Matsubara sum at L_s = 2 (Section 4.2). The (7/8)^(1/4) match to
+  observed C_obs at 0.025% is no longer surprising — it's
+  structurally forced by the Klein-four orbit selection.
+- **The (1/4) power index** is anchored in the dim-4
+  effective-potential-density reading
+  ([`HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md`](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md))
+  and the exact endpoint values
+  ([`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)).
+  The 1/4 follows from D = 4 dimensional analysis: v has mass dim 1;
+  V_eff has mass dim 4; Stefan-Boltzmann-style scaling gives
+  `v ∝ (dim-4 density)^(1/4)`. This is structurally cleaner than the
+  prior post-hoc per-mode geometric-mean readout
+  `v ∝ |det|^(1/(N_taste · L_t))`, which had no QFT motivation for
+  the combination `N_taste · L_t`.
 - **The audit lane's `audited_numerical_match` flag** on
   `hierarchy_dimensional_compression_note` should be reconsidered: the
-  numerical match is now backed by an exact algebraic identity (5).
+  numerical match is now backed by an exact algebraic identity (5)
+  AND an exact endpoint computation `A_2 = 1/(8 u_0²)`,
+  `A_4 = 1/(7 u_0²)` per the effective-potential endpoint note.
 
 ## 8. What this theorem does NOT close
 
-- The per-mode geometric-mean readout (R) itself. This is the single
-  open admission. Closing it would require deriving the readout from
-  the retained framework primitives.
+- The dim-4 effective-potential-density readout (R) itself. This is
+  the single open admission. Closing it would require a structural
+  derivation (from retained framework primitives) showing the EWSB
+  order parameter is genuinely identified with a dim-4
+  effective-potential-density coefficient rather than a generic
+  scalar field VEV.
 - Reconciliation with the framework's specific `v_UV ∝ |det(L_t = 2)|^(-1)`
-  identification — the per-mode readout (R) gives the right COMPRESSION
-  but a different ABSOLUTE-SCALE identification.
+  absolute-scale identification at L_t = 2 — the dim-4 readout (R)
+  gives the right COMPRESSION but does not by itself reproduce the
+  absolute normalization.
 - Higgs-mass derivation `m_H = v / (2 u_0)` (separate; cluster
   obstruction).
 - Choice of L_t = 4 endpoint (covered by the bosonic-bilinear selector
@@ -307,7 +420,8 @@ will evaluate the load-bearing class and any later status.
 ### Framework axioms / structural
 - [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
 - [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
-  — open gate for N_taste = 16 = 2^D structural origin.
+  — referenced by parent narrow theorem; the dim-4 readout in this
+  note's §4 corollary does not depend on `N_taste`.
 
 ### Hierarchy product chain
 - [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)

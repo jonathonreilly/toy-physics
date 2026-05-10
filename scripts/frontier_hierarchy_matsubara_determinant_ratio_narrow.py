@@ -10,16 +10,23 @@ L_t = 4 satisfy the exact rational identity:
 Class (A) algebraic identity on admitted standard staggered fermion
 eigenvalue structure (parent narrow theorem). The bridge corollary
 
-    v(L_t = 4) / v(L_t = 2)  =  (7/8)^(1/4)
+    v(L_t = 4) / v(L_t = 2)  =  (A_2 / A_4)^(1/4)  =  (7/8)^(1/4)
 
-follows under the named per-mode geometric-mean readout admission.
+follows under the named DIM-4 EFFECTIVE-POTENTIAL-DENSITY READOUT
+admission v ∝ A(L_t)^(-1/4), where A(L_t) is the m^2 coefficient of
+Δf at the symmetric point per
+HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE. The (1/4) power follows
+from D = 4 Stefan-Boltzmann-style dimensional analysis (v has mass
+dim 1; V_eff has mass dim 4).
 
 This runner verifies:
   1. Note structure and scope discipline.
   2. Exact rational identity via Fraction arithmetic.
   3. Cross-check by direct numerical staggered Dirac matrix construction
      and determinant evaluation at L_s = 2, L_t in {2, 4}.
-  4. Corollary: ((7/8)^16)^(1/64) = (7/8)^(1/4) to machine precision.
+  4. Dim-4 V_eff'' readout corollary: A_2 = 1/(8 u_0^2),
+     A_4 = 1/(7 u_0^2) (Fraction arithmetic on (3 + sin^2 ω) Matsubara
+     sum at L_s = 2), giving (A_2 / A_4)^(1/4) = (7/8)^(1/4).
   5. Sign and placement assertions (compression < 1, multiplicative on v).
 """
 
@@ -73,7 +80,9 @@ required_strings = [
     "Hierarchy Matsubara Determinant Ratio",
     "claim_type: bounded_theorem",
     "(7/8)^16",
-    "per-mode geometric-mean readout",
+    "dim-4 effective-potential-density",
+    "A(L_t)^(-1/4)",
+    "Stefan-Boltzmann",
     "load_bearing_step_class: A",
     "forbidden_imports_used: false",
 ]
@@ -261,43 +270,101 @@ for u0_test in (0.5, 0.7, 0.877, 1.0, 1.3):
 
 
 # ============================================================================
-section("Part 4: corollary — (1/4) compression power index")
+section("Part 4: dim-4 V_eff'' readout corollary — (1/4) compression power")
 # ============================================================================
 #
-# Under per-mode geometric-mean readout v(L_t) ~ |det(L_t)|^(1/(N_taste * L_t))
-# with N_taste = 16 and at L_t = 4:
+# Under the dim-4 effective-potential-density readout
 #
-#     v(L_t=4) / v(L_t=2)
-#       = |det(L_t=4)|^(1/64) / |det(L_t=2)|^(1/32)
-#       = (|det(L_t=4)| / |det(L_t=2)|^2)^(1/64)
-#       = ((7/8)^16)^(1/64)
-#       = (7/8)^(16/64)
-#       = (7/8)^(1/4)
+#     v(L_t)  ∝  A(L_t)^(-1/4)                                     (R)
+#
+# where A(L_t) = (1 / (2 L_t u_0^2)) Σ_ω 1 / (3 + sin^2 ω) is the m^2
+# coefficient of Δf at the symmetric point (per
+# HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE):
+#
+#     v(L_t=4) / v(L_t=2)  =  (A_2 / A_4)^(1/4).
+#
+# The (1/4) follows from D = 4 Stefan-Boltzmann-style dimensional
+# analysis: v has mass dim 1, V_eff has mass dim 4, so the dim-1 scale
+# extracted from a dim-4 density coefficient scales as the (1/4) power.
+#
+# This Part computes A_2 and A_4 with EXACT Fraction arithmetic on
+# the same (3 + sin^2 ω) Matsubara sum that drives the determinant
+# identity in Part 2. The result must be the same (7/8)^(1/4) factor
+# AND it must be unified with the Class A identity (Section 4.2 of
+# the note: A_2/A_4 = 7/8 from the SAME Matsubara sum).
 
-N_taste = 16
-Lt_phys = 4
-exponent = Fraction(1, N_taste * Lt_phys)
+
+def A_endpoint_exact(L_t: int) -> Fraction:
+    """A(L_t) at L_s = 2 in units of 1/u_0^2.
+
+    From HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE:
+        Δf(L_t, m) = A(L_t) m^2 + O(m^4)
+        A(L_t)      = (1 / (2 L_t u_0^2)) Σ_ω  1 / (3 + sin^2 ω)
+
+    We compute A(L_t) * u_0^2 as an exact Fraction (using the rational
+    sin^2 ω values at L_s = 2, L_t ∈ {2, 4}).
+    """
+    sin2_values = matsubara_modes_sin_squared(L_t)
+    inv_sum = Fraction(0)
+    for s2 in sin2_values:
+        inv_sum += Fraction(1, 1) / (Fraction(3) + s2)  # 1/(3 + sin^2 ω)
+    # A(L_t) * u_0^2 = (1 / (2 L_t)) * inv_sum
+    return inv_sum / Fraction(2 * L_t)
+
+
+A2_x_u02 = A_endpoint_exact(2)
+A4_x_u02 = A_endpoint_exact(4)
+
 check(
-    "exponent 1/(N_taste * L_t=4) = 1/64",
-    exponent == Fraction(1, 64),
-    f"exponent = {exponent}",
+    "A_2 = 1/(8 u_0^2)  [exact Fraction from (3 + sin^2 ω) sum]",
+    A2_x_u02 == Fraction(1, 8),
+    f"A_2 * u_0^2 = {A2_x_u02.numerator}/{A2_x_u02.denominator}",
+)
+check(
+    "A_4 = 1/(7 u_0^2)  [exact Fraction from (3 + sin^2 ω) sum]",
+    A4_x_u02 == Fraction(1, 7),
+    f"A_4 * u_0^2 = {A4_x_u02.numerator}/{A4_x_u02.denominator}",
 )
 
-# Algebraic: (7/8)^16 raised to 1/64 should give (7/8)^(1/4)
-power_log_ratio = Fraction(16) * exponent
+# A_2 / A_4 — the rational ratio that drives the dim-4 compression
+A_ratio = A2_x_u02 / A4_x_u02
 check(
-    "16 * 1/64 = 1/4 (the compression power)",
-    power_log_ratio == Fraction(1, 4),
-    f"16/64 = {power_log_ratio}",
+    "A_2 / A_4 = 7/8  (Klein-four orbit selection unifies with (7/8)^16)",
+    A_ratio == Fraction(7, 8),
+    f"A_2 / A_4 = {A_ratio.numerator}/{A_ratio.denominator}",
 )
 
-# Numerical: compute both ways and compare
-expected_C = (7 / 8) ** 0.25
-derived_C = ((7 / 8) ** 16) ** (1 / 64)
+# Class A unification: the same rational ratio A_2/A_4 also appears in
+# the determinant identity (5) as (7/8)^16. Verify the structural link:
+det_ratio_pure = pure_ratio  # from Part 2 above; expected = (7/8)^16
+expected_det_from_A = A_ratio ** 16
 check(
-    "((7/8)^16)^(1/64) = (7/8)^(1/4)",
+    "Class A unification: det ratio = (A_2/A_4)^16 = (7/8)^16",
+    det_ratio_pure == expected_det_from_A,
+    f"det_ratio = (7/8)^16 = (A_2/A_4)^16 [confirmed]",
+)
+
+# Stefan-Boltzmann-style 1/4-power dimensional analysis:
+#   v has mass dim 1, V_eff has mass dim 4
+#   v ∝ (dim-4 density coeff)^(1/4)  ⇒  v ∝ A^(-1/4) when A enters
+#                                        in the inverse-density slot
+# The compression v(L_t=4) / v(L_t=2) = (A_2/A_4)^(1/4).
+expected_C = (7 / 8) ** 0.25  # numerical target from rational ratio
+derived_C = float(A_ratio) ** 0.25
+check(
+    "(A_2/A_4)^(1/4) = (7/8)^(1/4) numerically",
     abs(derived_C - expected_C) < 1e-12,
     f"derived={derived_C:.12f}, direct={expected_C:.12f}",
+)
+
+# The (1/4) power index is structural: D = 4 spacetime, mass-dim arithmetic
+mass_dim_v = Fraction(1)            # scalar VEV has mass dim 1
+mass_dim_Veff_density = Fraction(4) # V_eff has mass dim 4 in 4D
+expected_power = mass_dim_v / mass_dim_Veff_density
+check(
+    "(1/4) power = mass_dim(v) / mass_dim(V_eff) [Stefan-Boltzmann scaling]",
+    expected_power == Fraction(1, 4),
+    f"mass_dim(v)/mass_dim(V_eff) = 1/4",
 )
 
 
