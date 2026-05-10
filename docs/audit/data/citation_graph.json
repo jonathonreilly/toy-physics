@@ -1054,10 +1054,6 @@
     },
     {
       "from": "axiom_first_lattice_noether_theorem_note_2026-04-29",
-      "to": "minimal_axioms_2026-04-11"
-    },
-    {
-      "from": "axiom_first_lattice_noether_theorem_note_2026-04-29",
       "to": "minimal_axioms_2026-05-03"
     },
     {
@@ -33496,14 +33492,13 @@
     },
     "axiom_first_lattice_noether_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "minimal_axioms_2026-04-11",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "b07d0c56550229d9610962051afb3211eda0acb36a6448354070cf7a7d759bfc",
+      "note_hash": "8285cbf8c55e1a69e36d857668095f5f8b49c1f06e1678ffd6cf6598002509b8",
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
@@ -63202,24 +63197,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 183,
+      "bounded_theorem": 184,
       "decoration": 1,
       "meta": 27,
       "no_go": 15,
       "none": 1675,
       "open_gate": 21,
-      "positive_theorem": 90
+      "positive_theorem": 89
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 688,
+      "bounded_theorem": 689,
       "decoration": 1,
       "meta": 27,
       "no_go": 123,
       "none": 452,
       "open_gate": 112,
-      "positive_theorem": 609
+      "positive_theorem": 608
     },
-    "edge_count": 7810,
+    "edge_count": 7809,
     "leaf_count": 527,
     "node_count": 2012,
     "root_count": 795,

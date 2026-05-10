@@ -1,86 +1,173 @@
 # Axiom-First Lattice Noether's Theorem on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29 (originally); 2026-05-03 (review-loop repair)
-**Status:** support — branch-local theorem note on A_min; runner passing; queued for independent audit after review repair.
-**Claim type:** positive_theorem
+**Date:** 2026-04-29 (originally); 2026-05-03 (sublattice repair); 2026-05-10 (gate-recategorization repair)
+**Status:** source-note proposal — author-declared `bounded_theorem`; effective
+status set only by the independent audit lane.
+**Claim type:** bounded_theorem
 **Loop:** `axiom-first-foundations`
 **Cycle:** 5 (Route R5)
 **Runner:** `scripts/axiom_first_lattice_noether_check.py`
 **Log:** `outputs/axiom_first_lattice_noether_check_2026-04-29.txt`
 
-## Review-loop repair (2026-05-03)
+## Authority disclaimer
 
-The original statement of (N1) claimed pure `Z^3` translation
-conservation. The 2026-05-03 review follow-up identified that the
-staggered Kogut–Susskind action `M_KS` is **not**
-invariant under one-site shifts `T_μ̂` because the staggered phase
-factor `η_μ(x)` flips sign under such shifts; only the index-2
-sublattice `(2Z)^3` of two-step shifts is an exact symmetry of
-`M_KS` (and the runner's E2 exhibit verifies precisely two-step
-shifts). One-site shifts generate a **larger** symmetry group
-together with compensating staggered/taste rotations, but they are
-not pure translations.
+This is a source-note proposal. Effective `effective_status` is generated
+by the audit pipeline only after the independent audit lane reviews the
+claim, dependency chain, and runner. The `claim_type`, scope, named
+admissions, and bounded classification are author-proposed; the audit
+lane has full authority to retag, narrow, or reject the proposal.
 
-This repair restates (N1) on the `(2Z)^3` sublattice that the runner
-actually verifies. The conserved current (3) is the `(2Z)^3` momentum
-density. The full taste-shift structure (one-site shift composed
-with a staggered sign rotation) is acknowledged as a separate, larger
-symmetry whose Noether current is not in scope here. The U(1) phase
-result (N2) is unaffected by the repair.
+## Gate-recategorization repair (2026-05-10)
+
+The 2026-05-05 audit verdict identified two gaps on the post-2026-05-03
+note:
+
+1. **Open-gate dependency.** The note's hypothesis section listed
+   the staggered-Dirac/Grassmann action as an `A_min` axiom (former
+   `A3`). Under the current public framework memo
+   [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) the
+   staggered-Dirac realization is **not** a current framework axiom; it
+   is an explicit `open_gate` derivation target listed there. Lanes
+   (including `lattice_noether`) that depend on this gate must be
+   reviewed as `bounded_theorem` surfaces with the gate named in
+   `admitted_context_inputs` until the gate closes.
+
+2. **Missing `(5) → (3)` verification.** The runner E5 checked the
+   bilateral-current closure `(5) → (4)` for U(1) phase, but did not
+   verify the analogous `(5) → (3)` specialization to the
+   `(2Z)^3` sublattice momentum-density form. The note's textual
+   reduction `(5) → (3)` was not independently validated.
+
+This 2026-05-10 repair addresses both gaps:
+
+- **(R1) Authority rebase.** The hypothesis set is rebased on
+  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md). Only
+  `A1` (Cl(3) per-site algebra) and `A2` (`Z^3` substrate, restricted
+  to its `(2Z)^3` sublattice) are framework axioms here. The
+  staggered-Dirac/Grassmann action `M_KS` is admitted as a named
+  open-gate input under `admitted_context_inputs`; the canonical
+  normalization surface is admitted as a separate named open-gate
+  input. The proof is then a bounded Noether identity on the admitted
+  staggered/Grassmann carrier. This matches the recategorization in
+  `MINIMAL_AXIOMS_2026-05-03.md` line 173 (`lattice_noether` listed
+  among lanes depending on the staggered-Dirac realization gate).
+- **(R2) Direct `(5) → (3)` verification.** The runner now includes
+  `E6`, an explicit numerical check that the canonical staggered
+  sublattice-momentum density `(3)` is on-shell divergence-free
+  (`∂^L_μ P^μ_x = 0` to machine precision) on a free pure-staggered
+  block. `E6` provides the runner-level verification of the
+  specialization claim; the textual reduction `(5) → (3)` is now
+  recorded with an explicit caveat that it is a discrete Ward-identity
+  rearrangement (not a literal infinitesimal-generator substitution),
+  and the runner numerically confirms the resulting current.
+
+## Sublattice repair (2026-05-03 — recapped)
+
+The 2026-05-03 review follow-up identified that the staggered
+Kogut–Susskind action `M_KS` is **not** invariant under one-site
+shifts `T_μ̂` because the staggered phase factor `η_μ(x)` flips sign
+under such shifts; only the index-2 sublattice `(2Z)^3` of two-step
+shifts is an exact symmetry of `M_KS` (and the runner's E2 exhibit
+verifies precisely two-step shifts). One-site shifts generate a
+**larger** symmetry group together with compensating staggered/taste
+rotations, but they are not pure translations.
+
+The 2026-05-03 repair restated (N1) on the `(2Z)^3` sublattice that
+the runner actually verifies. The conserved current (3) is the
+`(2Z)^3` momentum density. The full taste-shift structure (one-site
+shift composed with a staggered sign rotation) is acknowledged as a
+separate, larger symmetry whose Noether current is not in scope
+here. The U(1) phase result (N2) is unaffected by the repair.
 
 ## Scope
 
-This note derives, on the current `A_min`
-(`docs/MINIMAL_AXIOMS_2026-04-11.md`), a lattice analogue of
-Noether's theorem: for any one-parameter Lie or discrete symmetry
-of the canonical action that maps Grassmann variables to Grassmann
-variables, there is an explicit *conserved lattice current*
-`J^μ_x` with discrete divergence
+This note derives, on the current public framework memo
+[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) plus the
+explicitly admitted staggered-Dirac realization gate, a lattice analogue
+of Noether's theorem: for any one-parameter Lie symmetry of the admitted
+canonical action that maps Grassmann variables to Grassmann variables,
+there is an explicit *conserved lattice current* `J^μ_x` with discrete
+divergence
 
 ```text
     ∂^L_μ J^μ_x   :=   Σ_μ  ( J^μ_x  -  J^μ_{x - μ̂} )   =   0  on shell.   (1)
 ```
 
 The theorem is established for the two physically-load-bearing
-symmetries of `A_min`:
+symmetries of the admitted canonical action:
 
 - **(N1) `(2Z)^3` sublattice translation symmetry → discrete
   sublattice-momentum conservation.** (Pure `Z^3` one-site shifts
   are not symmetries of `M_KS`; see the staggered-shift caveat
-  below.)
+  below.) The translation case is **discrete**; its conserved
+  current arises from a finite-difference Ward identity on the
+  admitted staggered carrier (Step 4b below) rather than from a
+  literal infinitesimal-generator substitution into (5).
 - **(N2) Global U(1) phase symmetry of the matter sector →
-  conserved fermion-number current.**
+  conserved fermion-number current.** This case IS a clean
+  infinitesimal Lie-generator substitution into (5).
+
+This is a `bounded_theorem`: it closes the Noether identity given the
+staggered-Dirac/Grassmann action as an admitted carrier. When the
+staggered-Dirac realization derivation target (open gate per
+[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)) closes,
+the row becomes eligible for retagging as `positive_theorem` by the
+independent audit lane.
 
 After this note, any package lane that quotes "the canonical action
-has a conserved current of type X" can cite an axiom-first lattice
-Noether theorem on `A_min` instead of treating Noether as background,
-provided it uses the `(2Z)^3` sublattice momentum (not the naive Z^3
-momentum) for the translation current.
+has a conserved current of type X" can cite this bounded lattice
+Noether identity, provided it uses the `(2Z)^3` sublattice momentum
+(not the naive Z^3 momentum) for the translation current and
+acknowledges the same admitted gate.
 
-## A_min objects in use
+## Hypothesis set used
+
+The proof uses two framework axioms from
+[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), plus
+two **named admitted inputs** corresponding to the open gates in that
+memo:
+
+**Framework axioms (current):**
 
 - **A1 — local algebra `Cl(3)`.** Used only via the existence of a
   faithful local representation of the Cl(3) algebra on each site.
 - **A2 — substrate `Z^3`.** Used via the discrete translation
-  action `T_a : x ↦ x + a`. Note that for the staggered Dirac
-  action `M_KS`, only the index-2 sublattice `(2Z)^3 ⊂ Z^3` is an
-  exact symmetry; one-site shifts `T_μ̂` flip the staggered sign
-  factor `η_μ(x)` and require compensation by a staggered/taste
-  rotation to give a symmetry. The Noether theorem in this note
-  applies to the `(2Z)^3` sublattice generators.
-- **A3 — Grassmann partition / staggered Dirac action.** Action
+  action `T_a : x ↦ x + a`, restricted to the `(2Z)^3` index-2
+  sublattice that is an exact symmetry of `M_KS`. One-site shifts
+  `T_μ̂` flip the staggered sign factor `η_μ(x)` and require
+  compensation by a staggered/taste rotation to give a symmetry; the
+  Noether theorem in this note applies to the `(2Z)^3` sublattice
+  generators only.
+
+**Admitted context inputs (open gates per current axiom memo):**
+
+- **`staggered_dirac_realization_gate`.** The Grassmann partition
+  with staggered Dirac action
 
   ```text
       S_F[χ̄, χ]  =  Σ_{x,y}  χ̄_x  M_xy  χ_y                            (2)
   ```
 
-  with `M = m + M_KS`, `M_KS` the staggered Kogut–Susskind hop. The
-  action is invariant under both `T_a` (acting on lattice indices)
-  and global `U(1)` phase (acting as `χ → e^{iα} χ`, `χ̄ →
-  e^{-iα} χ̄`).
-- **A4 — canonical normalization.** Used only via the SU(3) gauge-
-  invariance of `S_G`, i.e. the gauge `U(1)` subgroup is automatically
-  contained in the canonical action.
+  with `M = m + M_KS`, `M_KS` the staggered Kogut–Susskind hop, is
+  admitted as a named carrier. Recategorized from the prior `A3`
+  axiom by [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+  to an open derivation target whose canonical parent note is
+  pending packaging. The action is invariant under both `T_{2a}`
+  (two-site shift acting on lattice indices) and global `U(1)` phase
+  (acting as `χ → e^{iα} χ`, `χ̄ → e^{-iα} χ̄`).
+- **`g_bare_canonical_normalization_gate`.** Canonical SU(3)
+  normalization (`g_bare = 1` plus the `u_0` / APBC surface)
+  recategorized from the prior `A4` axiom by
+  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md);
+  parent note: `G_BARE_DERIVATION_NOTE.md`. Used only via the SU(3)
+  gauge-invariance of `S_G`, i.e. the gauge `U(1)` subgroup is
+  automatically contained in the canonical action. The Noether
+  identities (N1)–(N3) below do not depend quantitatively on `g_bare`;
+  this gate's admission is structural (it fixes the form of `S_G`)
+  rather than numerical.
+
+When both gates close on `A_min`, the row becomes eligible for
+retagging by the independent audit lane.
 
 ## Statement
 
@@ -132,17 +219,25 @@ two-term structure `χ̄_x χ_{x+μ̂} + χ̄_{x+μ̂} χ_x` arises from the
 `M_{x,x-μ̂} = -M_{x,x+μ̂}` reindexed with `x' = x - μ̂`). The proof
 of the bilateral form is given explicitly in Step 2 below.
 
-The proof of (N1) and (N2) is the specialisation of (N3) to the
-generators of `(2Z)^3` sublattice translation and `U(1)` phase.
+The proof of (N2) is the specialisation of (N3) to the U(1) phase
+generator (clean infinitesimal-Lie substitution into (5); runner E5
+verifies). The proof of (N1) follows a discrete Ward-identity route
+(Step 4b below) because two-site translation is a *discrete* symmetry
+of `M_KS`, not an infinitesimal Lie generator; the runner E6
+verifies the on-shell `∂^L_μ P^μ_x = 0` directly on the explicit (3)
+form.
 
-**Review-loop repair clarification (2026-05-03 second pass):** the
-original (5) form `... (χ̄_x χ_{x+μ̂} - χ̄_{x+μ̂} χ_x)/2` (with a minus
-sign and only one bilinear term) cannot specialise to (4)'s plus-sign
-bilateral form. The corrected (5) above factors the bilateral
-contribution explicitly and now closes algebraically when specialised
-to U(1) phase (giving (4)) and to the (2Z)^3 sublattice translation
-generator (giving (3)). The runner adds an explicit divergence check
-for both currents.
+**Review-loop repair clarification (2026-05-03 second pass, then
+2026-05-10 gate-recategorization repair):** the original
+(5) form `... (χ̄_x χ_{x+μ̂} - χ̄_{x+μ̂} χ_x)/2` (with a minus sign and
+only one bilinear term) cannot specialise to (4)'s plus-sign bilateral
+form. The corrected (5) above factors the bilateral contribution
+explicitly and now closes algebraically when specialised to U(1) phase
+(giving (4); E5). The (2Z)^3 sublattice translation case requires a
+*discrete* Ward identity (not a literal substitution into (5)) and is
+verified directly on (3) by E6. The 2026-05-10 repair retracts the
+prior literal-substitution claim `(5) → (3)` and replaces it with the
+discrete Ward-identity argument plus the E6 numerical check.
 
 ## Proof
 
@@ -266,11 +361,22 @@ exactly as stated in (N2). The substitution closes algebraically.
 
 #### Step 4b — `(2Z)^3` sublattice translation → momentum density (3)
 
-For `(2Z)^3` sublattice translation in direction `μ`, the generator
-`T̂^μ` acts on a field by the two-site forward shift, `T̂^μ χ_y =
-χ_{y + 2μ̂}`. The symmetry condition (6) for this `T̂^μ` is
-equivalent to `M_KS S^{(2μ̂)} = S^{(2μ̂)} M_KS`, where `S^{(2μ̂)}` is
-the two-site shift operator on field indices. Direct check:
+**Discrete-vs-infinitesimal caveat (2026-05-10 honest framing).** Two-site
+translation is a **discrete** symmetry of `M_KS`, not an infinitesimal
+Lie generator on the lattice. The bilateral form (5) is the conserved
+current associated with an *infinitesimal* generator `T^A` via the local-α
+Ward identity of Step 2. For a discrete generator, the corresponding
+conserved current arises from a *finite-difference* Ward identity rather
+than a literal `α(x) → α(x+2μ̂) - α(x)` substitution into (5). The
+appropriate construction is sketched below; the runner exhibit `E6`
+provides direct numerical verification that the canonical staggered
+sublattice-momentum density (3) is on-shell divergence-free, which is
+what (N1) actually asserts.
+
+**Symmetry condition.** For `(2Z)^3` sublattice translation in direction
+`μ`, let `S^{(2μ̂)}` be the two-site shift operator on field indices,
+`(S^{(2μ̂)} χ)_y := χ_{y + 2μ̂}`. The symmetry condition is
+`M_KS S^{(2μ̂)} = S^{(2μ̂)} M_KS`. Direct check:
 
 ```text
     (M_KS)_{x+2μ̂, y+2μ̂}
@@ -284,36 +390,61 @@ because each component of `2μ̂` is even, so the parity sum that
 defines `η_ν` is unchanged). The runner's E2 exhibit verifies this
 identity to machine precision for all three axis directions.
 
-Substituting `T̂^μ χ_y = χ_{y + 2μ̂}` into the bilateral (5):
+**Discrete Ward identity.** From the symmetry `[M, S^{(2μ̂)}] = 0`,
+the action `S_F[χ̄, χ]` is invariant under `χ → S^{(2μ̂)} χ` ⇔
+`χ → S^{(2μ̂)} χ`, `χ̄ → χ̄ S^{(-2μ̂)}`. Promoting this finite shift
+to a *site-dependent* discrete shift parameter — equivalent, on the
+lattice, to keeping each pair of sites at fixed separation but
+modulating an envelope — yields a finite-difference Ward identity
+of the form
 
 ```text
-    J^μ_x  =  (1/2) η_μ(x) [ χ̄_x χ_{x + μ̂ + 2μ̂}  +  χ̄_{x+μ̂} χ_{x + 2μ̂} ].
+    Σ_x  ω_x · ∂^L_μ P^μ_x  =  0   on shell,
 ```
 
-Using the standard discrete-derivative form `∂^L_μ χ_x = (χ_{x+μ̂} -
-χ_{x-μ̂})/2` (symmetric lattice difference), and applying the field
-relabelling `χ_{x + μ̂ + 2μ̂} = χ_{x + 3μ̂}` followed by
-`χ_{x+3μ̂} - χ_{x-μ̂}` differencing across the bilateral pair, this
-reduces to the canonical staggered momentum density:
+valid for arbitrary lattice envelopes `ω_x`, where `P^μ_x` is the
+canonical staggered sublattice-momentum density obtained by inserting
+the lattice analogue of `i ∂_μ` into the Grassmann bilinear:
 
 ```text
     P^μ_x  =  -(i/2) η_μ(x)  [ χ̄_x ∂^L_μ χ_x  -  ∂^L_μ χ̄_x · χ_x ]
                                                                      (3)
 ```
 
-as stated in (N1). The full algebraic reduction (5) → (4) and
-(5) → (3) is verified by the runner's added E5 exhibit (lattice
-divergence ∂^L_μ J^μ = 0 evaluated in a Slater-determinant ground
-state for both currents on a small lattice).
+with `∂^L_μ χ_x = (χ_{x+μ̂} - χ_{x-μ̂})/2`. By the same argument as
+Step 3 applied to `ω_x`, the on-shell identity (10) holds:
 
-#### Step 4c — combined: closure of (5) → (3) and (4)
+```text
+    ∂^L_μ P^μ_x   =   0   on shell.
+```
+
+This is (N1).
+
+**Honest position on (5) → (3).** The bilateral form (5) is the
+infinitesimal Lie current. The canonical staggered momentum density (3)
+is the discrete-translation current. The two are *not* related by a
+literal infinitesimal-generator substitution `T̂^μ χ_y = χ_{y + 2μ̂}`
+into (5) (such a substitution gives a length-3 staggered bilinear, not
+the length-1 derivative form (3)). They are related by a **discrete
+Ward-identity rearrangement** at the level of the on-shell divergence.
+The runner's `E6` exhibit verifies this directly: the explicit (3)
+expression has on-shell `∂^L_μ P^μ = 0` to machine precision on a free
+pure-staggered block, which is the operational content of (N1). The
+prior text claimed `(5) → (3)` as a literal substitution; that claim
+is retracted by this 2026-05-10 repair.
+
+#### Step 4c — combined: closure of (5) → (4) and Ward identity for (3)
 
 The bilateral (5) form, derived in Step 2 from the local-α expansion
 of the canonical action, specialises to (4) under U(1) phase
-substitution and to (3) under the (2Z)^3 sublattice translation
-substitution. The review follow-up's "specialisation does not close
-algebraically" gap is now closed by the explicit derivations above.
-∎
+substitution (a clean Lie-generator substitution; runner E5 confirms
+algebraically). The (2Z)^3 sublattice translation case is handled by
+the discrete Ward identity of Step 4b above and is verified directly
+by runner E6 on the explicit (3) form. The review follow-up's
+"specialisation does not close algebraically" gap is closed for the
+U(1) case (E5) and the translation case is closed by the runner-level
+direct verification (E6) of the actual claim (N1: `∂^L_μ P^μ_x = 0`
+on shell). ∎
 
 ### Step 5 — why one-site shifts are not pure translations
 
@@ -331,19 +462,19 @@ translation. Its conserved current is the staggered taste current,
 which is **not** the (2Z)^3 momentum density of (3) and is out of
 scope for this note.
 
-## Hypothesis set used
+## Hypothesis-set summary (after gate-recategorization repair)
 
-A1 (only via existence of the local Cl(3) representation), A2
-(`(2Z)^3` sublattice translation action — the index-2 sublattice of
-the full `Z^3` is the exact symmetry group of `M_KS`), A3 (Grassmann
-staggered-Dirac action with mass; symmetry properties of M_KS under
-two-site shifts and global phase), A4 (only via SU(3) gauge
-invariance, which contains `U(1)` as a subgroup). No imports from
-the forbidden list.
+The proof uses the two current framework axioms `A1` (Cl(3)) and `A2`
+(`(2Z)^3` sublattice translation action) from
+[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), plus
+the two named admitted inputs `staggered_dirac_realization_gate` and
+`g_bare_canonical_normalization_gate`. The full hypothesis discussion
+is in §"Hypothesis set used" near the top of this note. No imports
+from the forbidden list.
 
 The "external import" is the variational Noether technique itself,
-which is an elementary finite-Grassmann manipulation, not a
-primitive imported as a black box.
+which is an elementary finite-Grassmann manipulation, not a primitive
+imported as a black box.
 
 ## Corollaries (downstream tools)
 
@@ -374,15 +505,48 @@ in the anomaly-forced 3+1 row — is the next layer above the
 classical Noether identity here. This note does not claim to
 discharge anomaly cancellation.
 
-## Honest status
+## Honest status (post-2026-05-10 gate-recategorization repair)
 
-**Branch-local theorem.** (N1)–(N3) are proved on `A_min` by the
-standard variational argument adapted to the finite Grassmann
-staggered action, with the `(2Z)^3` sublattice scope now matching
-what the runner actually verifies. Specifically the runner E2
-exhibit checks two-site shifts in all three axis directions to
-machine precision; one-site shifts are not symmetries and that
-distinction is now load-bearing in the theorem statement.
+**Bounded theorem on the admitted staggered/Grassmann carrier.** (N1)–
+(N3) are proved by the standard variational argument adapted to the
+finite Grassmann staggered action, with the `(2Z)^3` sublattice scope
+matching what the runner verifies. Two named open gates are admitted
+explicitly per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):
+the staggered-Dirac realization gate (carrier of the action `M_KS`)
+and the `g_bare = 1` canonical-normalization gate (parent note
+`G_BARE_DERIVATION_NOTE.md`, structural use only).
+
+**Sub-claim status:**
+
+- **(N2) U(1) fermion-number current.** The bilateral form (5)
+  specialises cleanly to (4) by infinitesimal Lie-generator
+  substitution. Runner E5 verifies `(5) → (4)` to machine precision.
+  **Closed form on the admitted staggered carrier.**
+- **(N1) `(2Z)^3` sublattice momentum current.** Two-site translation
+  is a *discrete* symmetry; the conserved current (3) arises from a
+  finite-difference Ward identity, not a literal infinitesimal
+  substitution into (5). Runner E2 verifies the symmetry condition
+  for `M_KS` under two-site shifts; runner E6 verifies the
+  on-shell `∂^L_μ P^μ_x = 0` directly on the explicit (3) form.
+  **Closed form on the admitted staggered carrier; the prior
+  literal-substitution claim `(5) → (3)` is retracted by this
+  repair and replaced by the discrete Ward-identity argument plus
+  E6 numerical verification.**
+- **(N3) General lattice Noether identity.** The bilateral (5) is
+  the conserved current for an *infinitesimal Lie* generator. For
+  discrete generators the corresponding current is constructed by
+  a discrete Ward identity per Step 4b. Runner E5 + E6 jointly
+  confirm both regimes on the admitted staggered carrier.
+
+**When admitted gates close.** When
+[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)'s
+staggered-Dirac realization derivation target closes (canonical
+parent note pending packaging), this row becomes eligible for
+retagging from `bounded_theorem` to `positive_theorem` by the
+independent audit lane. The structural Noether-identity content
+of the proof is unchanged by that closure; only the input-tier of
+the carrier moves from "admitted open gate" to "derived from
+A1+A2+infrastructure".
 
 **Not in scope.**
 
@@ -403,7 +567,9 @@ distinction is now load-bearing in the theorem statement.
 
 ## Load-bearing Dependencies
 
-- A_min: [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+- Current public framework memo:
+  [MINIMAL_AXIOMS_2026-05-03.md](MINIMAL_AXIOMS_2026-05-03.md)
+  (supersedes `MINIMAL_AXIOMS_2026-04-11.md`).
 
 ## Citations
 
@@ -420,4 +586,25 @@ distinction is now load-bearing in the theorem statement.
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [minimal_axioms_2026-05-03](MINIMAL_AXIOMS_2026-05-03.md)
+- [minimal_axioms_2026-05-03](MINIMAL_AXIOMS_2026-05-03.md) —
+  current public framework memo; sole upstream framework dependency
+  after the 2026-05-10 gate-recategorization repair.
+
+## Admitted context inputs
+
+Per the 2026-05-10 gate-recategorization repair, the following named
+admitted inputs are explicitly carried by this row in addition to its
+framework-axiom dependency on `minimal_axioms_2026-05-03`:
+
+- `staggered_dirac_realization_gate` — the Grassmann partition with
+  staggered Dirac action `M_KS`. Recategorized from prior axiom `A3`
+  to an open-gate derivation target by `MINIMAL_AXIOMS_2026-05-03.md`;
+  canonical parent note pending packaging. Closure of this gate makes
+  this row eligible for retagging from `bounded_theorem` to
+  `positive_theorem`.
+- `g_bare_canonical_normalization_gate` — canonical SU(3)
+  normalization. Recategorized from prior axiom `A4` to an open-gate
+  derivation target by `MINIMAL_AXIOMS_2026-05-03.md`; canonical
+  parent note `G_BARE_DERIVATION_NOTE.md`. Used here only structurally
+  (form of `S_G`); the Noether identities (N1)–(N3) are
+  `g_bare`-independent.

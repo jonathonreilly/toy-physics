@@ -47,16 +47,16 @@
       "transitive_descendants": 780
     },
     {
-      "claim_id": "minimal_axioms_2026-04-11",
-      "criticality": "critical",
-      "load_bearing_score": 33.97,
-      "transitive_descendants": 708
-    },
-    {
       "claim_id": "alpha_s_derived_note",
       "criticality": "critical",
       "load_bearing_score": 33.64,
       "transitive_descendants": 563
+    },
+    {
+      "claim_id": "minimal_axioms_2026-04-11",
+      "criticality": "critical",
+      "load_bearing_score": 33.449,
+      "transitive_descendants": 698
     },
     {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",

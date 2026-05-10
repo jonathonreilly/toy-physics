@@ -1,17 +1,19 @@
 ===== runner cache v1 =====
 runner: scripts/axiom_first_lattice_noether_check.py
-runner_sha256: 791053d1688ee9e1618f13eb731ec5d81227f8cf04973c9eb9af003442ddeae4
+runner_sha256: fd58381824adb69037ac18189818ba89ca3ebb06547718a2bdf13546431e4389
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.07
+elapsed_sec: 0.13
 status: ok
 ----- stdout -----
 ========================================================================
  axiom_first_lattice_noether_check.py
  Loop: axiom-first-foundations, Cycle 5 / Route R5
  Exhibits the lattice Noether theorem (U(1) phase + (2Z)^d sublattice
- translation) on the canonical pure-staggered Cl(3) (x) Z^d action.
- 2026-05-03 review-loop re-pass: + E5 algebraic closure (5) -> (4) check
+ translation) on the admitted staggered/Grassmann carrier (open gate per
+ MINIMAL_AXIOMS_2026-05-03.md). Bounded theorem.
+ 2026-05-03 review-loop: + E5 algebraic closure (5) -> (4) check
+ 2026-05-10 gate-recategorization repair: + E6 direct (3) divergence check
 ========================================================================
 
 --- Exhibit E1: U(1) phase symmetry condition [T_U1, M] = 0 ---
@@ -40,6 +42,14 @@ status: ok
   Bilateral (5) under T = i I closes algebraically to (4):
   E5 verdict: PASS
 
+--- Exhibit E6: direct (3) momentum-density divergence on shell ---
+  L=4, dim=3, mass=0.3, sites checked=64
+  max |∂^L · <P>| = 3.331e-16    (target: 0 to machine precision)
+  mean |∂^L · <P>| = 8.847e-17
+  E6 verdict: PASS
+  -> verifies (N1): canonical staggered sublattice-momentum density (3)
+     has on-shell ∂^L_μ P^μ = 0 directly (no (5) -> (3) substitution claim).
+
 ========================================================================
  SUMMARY
 ========================================================================
@@ -48,11 +58,14 @@ status: ok
    E3 (current divergence-free on shell): PASS
    E4 (global charge conservation): PASS
    E5 (bilateral (5) -> (4) algebraic closure): PASS
+   E6 (direct (3) momentum-density divergence): PASS
 
-   PASSED: 5/5
+   PASSED: 6/6
 
- verdict: lattice Noether theorem (N1)-(N3) exhibited on Cl(3) ⊗ Z^d
-          with the (2Z)^d sublattice scope from the 2026-05-03 repair.
+ verdict: bounded lattice Noether theorem (N1)-(N3) exhibited on the
+          admitted staggered/Grassmann carrier; (2Z)^d sublattice scope
+          from the 2026-05-03 repair; (3) divergence verified directly
+          by E6 from the 2026-05-10 gate-recategorization repair.
 
 ----- stderr -----
 

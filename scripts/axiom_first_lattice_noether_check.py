@@ -28,6 +28,21 @@ the same Noether structure for U(1) ⊂ SU(3)):
 
   E4.  On-shell global charge conservation: total fermion number
        Q = Σ_x ⟨χ̄_x χ_x⟩ is constant under temporal translation.
+
+  E5.  Algebraic closure (5) -> (4): under U(1) phase substitution
+       T = i I, the bilateral current formula (5) reduces to the
+       fermion-number current (4) up to the convention factor -i.
+
+  E6.  Direct verification of (3): the canonical staggered sublattice-
+       momentum density P^μ_x = -(i/2) η_μ(x) [χ̄_x ∂^L_μ χ_x -
+       ∂^L_μ χ̄_x · χ_x] has on-shell ∂^L_μ P^μ_x = 0 to machine
+       precision in the free pure-staggered ground state. Added by
+       the 2026-05-10 gate-recategorization repair to discharge the
+       audit's "missing (5) -> (3) verification" gap. The textual
+       reduction (5) -> (3) is honestly a discrete Ward-identity
+       rearrangement (not a literal infinitesimal substitution; the
+       theorem note's Step 4b makes this explicit). E6 verifies the
+       operational content of (N1) directly on the (3) form.
 """
 
 from __future__ import annotations
@@ -243,19 +258,98 @@ def exhibit_E5(L=4, dim=3, mass=0.3, tol=1e-12):
     return e5_pass
 
 
+# ---------------------------------------------------------------------------
+# E6 — direct verification of the (3) momentum-density divergence
+#      (added 2026-05-10 for gate-recategorization repair).
+#
+# The note's textual reduction (5) -> (3) is honestly a discrete
+# Ward-identity rearrangement, not a literal infinitesimal substitution
+# (two-site translation is a discrete generator, not a Lie generator,
+# so the bilateral form (5) does not directly specialise to (3)).
+# Step 4b of the note now states this explicitly. To discharge the
+# audit's "missing (5) -> (3) verification" gap, this exhibit verifies
+# directly that the explicit (3) form has on-shell ∂^L_μ P^μ = 0,
+# which is the operational content of (N1).
+# ---------------------------------------------------------------------------
+
+def exhibit_E6(L=4, dim=3, mass=0.3, tol=1e-9):
+    print("\n--- Exhibit E6: direct (3) momentum-density divergence on shell ---")
+    M, sites, idx = build_M_pure_staggered(L, mass=mass, dim=dim)
+    N = len(sites)
+    Minv = np.linalg.inv(M)
+
+    # Canonical staggered sublattice-momentum density (3):
+    #   P^mu_x = -(i/2) eta_mu(x) [chibar_x d^L_mu chi_x - d^L_mu chibar_x . chi_x]
+    # with d^L_mu chi_x = (chi_{x+mu} - chi_{x-mu})/2 (symmetric difference).
+    # In the free-fermion ground state, the Wick contraction is
+    #   <chibar_a chi_b> = (M^-1)_{ba}.
+    # So
+    #   <P^mu_x> = -(i/2) eta_mu(x) * (1/2) *
+    #              [ <chibar_x chi_{x+mu}> - <chibar_x chi_{x-mu}>
+    #                - <chibar_{x+mu} chi_x> + <chibar_{x-mu} chi_x> ]
+    #            = -(i/4) eta_mu(x) *
+    #              [ G(x+mu, x) - G(x-mu, x) - G(x, x+mu) + G(x, x-mu) ]
+    # with G(a,b) = (M^-1)_{a,b}.
+    #
+    # Then check ∂^L_mu <P^mu_x> = Σ_mu (<P^mu_x> - <P^mu_{x-mu}>) = 0 on shell.
+
+    def P_expectation(x_tuple, mu):
+        ehat = tuple(1 if k == mu else 0 for k in range(dim))
+        xp = tuple((x_tuple[k] + ehat[k]) % L for k in range(dim))
+        xm = tuple((x_tuple[k] - ehat[k]) % L for k in range(dim))
+        ix = idx[x_tuple]
+        ixp = idx[xp]
+        ixm = idx[xm]
+        eta = staggered_eta(x_tuple, mu)
+        # <P^mu_x> using <chibar_a chi_b> = G(b,a) = Minv[a,b]^T  -> Minv[b,a]
+        # <chibar_x chi_y> = Minv[y,x]
+        return -0.25j * eta * (
+            Minv[ixp, ix] - Minv[ixm, ix]
+            - Minv[ix, ixp] + Minv[ix, ixm]
+        )
+
+    div_max = 0.0
+    div_typical = 0.0
+    n_checked = 0
+    for x in sites:
+        div_x = 0.0 + 0j
+        for mu in range(dim):
+            ehat = tuple(1 if k == mu else 0 for k in range(dim))
+            xm = tuple((x[k] - ehat[k]) % L for k in range(dim))
+            P_x = P_expectation(x, mu)
+            P_xm = P_expectation(xm, mu)
+            div_x += P_x - P_xm
+        div_max = max(div_max, abs(div_x))
+        div_typical += abs(div_x)
+        n_checked += 1
+    div_typical /= n_checked
+
+    print(f"  L={L}, dim={dim}, mass={mass}, sites checked={n_checked}")
+    print(f"  max |∂^L · <P>| = {div_max:.3e}    (target: 0 to machine precision)")
+    print(f"  mean |∂^L · <P>| = {div_typical:.3e}")
+    e6_pass = div_max < tol
+    print(f"  E6 verdict: {'PASS' if e6_pass else 'FAIL'}")
+    print(f"  -> verifies (N1): canonical staggered sublattice-momentum density (3)")
+    print(f"     has on-shell ∂^L_μ P^μ = 0 directly (no (5) -> (3) substitution claim).")
+    return e6_pass
+
+
 def main():
     print("=" * 72)
     print(" axiom_first_lattice_noether_check.py")
     print(" Loop: axiom-first-foundations, Cycle 5 / Route R5")
     print(" Exhibits the lattice Noether theorem (U(1) phase + (2Z)^d sublattice")
-    print(" translation) on the canonical pure-staggered Cl(3) (x) Z^d action.")
-    print(" 2026-05-03 review-loop re-pass: + E5 algebraic closure (5) -> (4) check")
+    print(" translation) on the admitted staggered/Grassmann carrier (open gate per")
+    print(" MINIMAL_AXIOMS_2026-05-03.md). Bounded theorem.")
+    print(" 2026-05-03 review-loop: + E5 algebraic closure (5) -> (4) check")
+    print(" 2026-05-10 gate-recategorization repair: + E6 direct (3) divergence check")
     print("=" * 72)
 
     e1 = exhibit_E1(L=2, dim=3)
     e2 = exhibit_E2(L=4, dim=3)
     e3, e4 = exhibit_E3_E4(L=4, dim=3)
     e5 = exhibit_E5(L=4, dim=3)
+    e6 = exhibit_E6(L=4, dim=3)
 
     print()
     print("=" * 72)
@@ -265,7 +359,8 @@ def main():
                "E2 ((2Z)^d sublattice translation sym)": e2,
                "E3 (current divergence-free on shell)": e3,
                "E4 (global charge conservation)": e4,
-               "E5 (bilateral (5) -> (4) algebraic closure)": e5}
+               "E5 (bilateral (5) -> (4) algebraic closure)": e5,
+               "E6 (direct (3) momentum-density divergence)": e6}
     n_pass = sum(1 for v in results.values() if v)
     n_total = len(results)
     for k, v in results.items():
@@ -273,8 +368,10 @@ def main():
     print(f"\n   PASSED: {n_pass}/{n_total}")
     print()
     if n_pass == n_total:
-        print(" verdict: lattice Noether theorem (N1)-(N3) exhibited on Cl(3) ⊗ Z^d")
-        print("          with the (2Z)^d sublattice scope from the 2026-05-03 repair.")
+        print(" verdict: bounded lattice Noether theorem (N1)-(N3) exhibited on the")
+        print("          admitted staggered/Grassmann carrier; (2Z)^d sublattice scope")
+        print("          from the 2026-05-03 repair; (3) divergence verified directly")
+        print("          by E6 from the 2026-05-10 gate-recategorization repair.")
         return 0
     else:
         print(" verdict: at least one structural exhibit failed.")
