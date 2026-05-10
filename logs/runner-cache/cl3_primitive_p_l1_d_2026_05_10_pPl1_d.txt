@@ -1,0 +1,126 @@
+===== runner cache v1 =====
+runner: scripts/cl3_primitive_p_l1_d_2026_05_10_pPl1_d.py
+runner_sha256: 34bd8b545c96f98e3933c06a93c6eea53ec15413f2ac0b78ea33ed4bf20e1020
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+======================================================================
+Open-Gate Probe P-L1-D --
+  physical Cl(3) local algebra / Z^3-native period functor on 1PI Feynman graphs
+======================================================================
+Date: 2026-05-10
+Authority role: source-note open_gate
+Source-note: docs/PRIMITIVE_P_L1_D_PERIOD_FUNCTOR_NOTE_2026-05-10_pPl1_d.md
+Companion source note: P-L1-Channel-Weight
+  (P_L1-D left as open design problem)
+
+Section 1 -- Existing support
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^1 = 4/3 | computed = 4/3
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^2 = -8/9 | computed = -8/9
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^3 = 32/81 | computed = 32/81
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^4 = -32/243 | computed = -32/243
+  [PASS] beta_0 = 7 from S1 identification at N_color = 3, N_quark = 6 | = 7
+  [PASS] beta_1 = 26 at N_color = 3, N_f = 6 | = 26
+  [PASS] beta_2^MSbar at N_f = 6 = -65/2 = -65/2 | closed-form TVZ value reproduces literature
+
+Section 2 -- P_Cl(3)^HK : 1PI Graph -> Q (heat-kernel-scheme functor)
+    Heat-kernel period T(1) = 4/3
+    Heat-kernel period T(2) = -8/9
+    Heat-kernel period T(3) = 32/81
+  [PASS] P_Cl(3)^HK at 1-loop period value = 4/3 | T(1) = (4/3) s_t coefficient
+  [PASS] P_Cl(3)^HK at 2-loop period value = -8/9 | T(2) = -(8/9) s_t^2 coefficient (sign indicates IR-attractive)
+    beta_2^HK candidate = 32/81 = 0.395062
+    beta_2^MSbar (N_f = 6) = -65/2 = -32.500000
+    |beta_2^MSbar / beta_2^HK| = 82.3
+  [PASS] P_Cl(3)^HK at 3-loop does NOT match MSbar beta_2 | HK = 32/81, MSbar = -65/2, ratio ~ 82x
+  [OPEN] P_Cl(3)^HK at 3-loop: scheme conversion HK <-> MSbar is missing | the conversion is a 3-loop lattice integral computation (Alles-Feo-Panagopoulos 1996, Bode-Panagopoulos 2002) -- exactly the missing primitive named in MSbar-native route context
+
+Section 3 -- P_Cl(3)^Schnetz : 1PI Graph -> Z[q] (Kirchhoff Fq counting)
+  [PASS] 1-loop bubble Kirchhoff polynomial = alpha_0 + alpha_1 | computed = [((0, 1), 1), ((1, 0), 1)]
+  [PASS] [bubble]_2 = 2 (linear polynomial; q solutions) | computed = 2
+  [PASS] [bubble]_3 = 3 (linear polynomial; q solutions) | computed = 3
+  [PASS] [bubble]_5 = 5 (linear polynomial; q solutions) | computed = 5
+  [PASS] [bubble]_7 = 7 (linear polynomial; q solutions) | computed = 7
+  [PASS] 1-loop bubble c_2 invariant = 0 (rational period) | [bubble]_q = q is degree-1 in q so c_2 = 0
+  [PASS] 2-loop sunset Kirchhoff polynomial = a_0 a_1 + a_0 a_2 + a_1 a_2 | computed = [((0, 1, 1), 1), ((1, 0, 1), 1), ((1, 1, 0), 1)]
+    Sunset point counts: {2: 4, 3: 9, 5: 25, 7: 49}
+  [PASS] 2-loop sunset point-count IS polynomial in q (Lagrange predict q=2 vs measured) | predict = 4, measured = 4
+  [PASS] 2-loop sunset polynomial leading coefficient is rational | a (q^2 coeff) = 1, b = 0, c = 0
+  [PASS] 2-loop sunset c_2 invariant signature consistent with rational period | Brown-Yeats: sunset is mixed Tate type -- period rational
+  [PASS] K_4 has 16 spanning trees (Cayley's theorem) | computed = 16
+  [PASS] K_4 Kirchhoff polynomial monomials all of degree |E|-|V|+1 = 3 | loop number 3 => degree-3 polynomial
+
+    Computing [K_4]_q for q = 2 and q = 3 (this may take ~10s)...
+    [K_4]_2 = 36
+    [K_4]_3 = 261
+  [PASS] K_4 point counting at q = 2 is well-defined (substrate-native) | [K_4]_2 = 36 (range [0, 64])
+  [PASS] K_4 point counting at q = 3 is well-defined (substrate-native) | [K_4]_3 = 261 (range [0, 729])
+    c_2 invariant signature: residues of [K_4]_q / q^2 mod q
+      q = 2: floor([K_4]_q / q^2) mod q = 1
+      q = 3: floor([K_4]_q / q^2) mod q = 2
+    -> P_Cl(3)^Schnetz: well-defined diagnostic; substrate-native;
+       produces finite-field arithmetic data for the period problem.
+    -> CANNOT recover RATIONAL COEFFICIENT in front of zeta_3, only
+       a class-level diagnostic.  This is the structural obstruction.
+  [OPEN] P_Cl(3)^Schnetz diagnostic: c_2-style data is class-level but not rational coefficient | the finite-field diagnostic is well-defined; turning that diagnostic into a rational coefficient would require explicit master-integral evaluation -- the MSbar-native route context open gate
+
+Section 4 -- Composition P_Cl(3) = P_Cl(3)^HK x P_Cl(3)^Schnetz
+  [PASS] Composition P_Cl(3)^HK x P_Cl(3)^Schnetz produces 1 rational + Galois class | versus 6 independent MSbar rationals to reproduce
+  [PASS] Composition has rank 2 (1 rational + 1 class), MSbar has rank 6 | rank deficiency demonstrates structural incompleteness
+    HK 3-loop value = 32/81
+    Sum of TVZ 3-loop weights (with channel values, N_f=6) = -65/2
+    Ratio = -5265/64
+  [OPEN] P_Cl(3) full functor closing L1 open gate: rank-deficient | the HK-scheme single-loop-order rational and the Schnetz single Galois class do not span the 6-dimensional MSbar channel weight space
+  [OPEN] Missing ingredient (a): scheme-conversion 3-loop integral | the conversion <P>_HK <-> MSbar at 3-loop is the same lattice perturbation integral computed by Alles-Feo-Panagopoulos 1996, Bode-Panagopoulos 2002 -- exactly the MSbar-native route context
+  [OPEN] Missing ingredient (b): rational-coefficient extraction from c_2 | the finite-field c_2-style diagnostic does not extract the rational coefficient in front of zeta_3; this requires explicit master-integral evaluation -- the 'period oracle' from P_L1-C / Brown-Schnetz period theory
+  [OPEN] Missing ingredient (c): graph-level Casimir channel refinement | while Casimir-tensor decomposition T(Gamma) is group-theory and existing context, the channel-by-channel rational decomposition of the TOTAL period into the 6 monomial weights requires per-graph period evaluation per channel -- combinatorial bookkeeping that compounds (a) and (b)
+
+Section 5 -- Loop-by-loop empirical test
+  [PASS] P_Cl(3)^HK at 1-loop reproduces beta_0 = 7 (universal) | 1-loop coefficient is scheme-independent; group theory + S1 -> 7
+  [PASS] P_Cl(3)^HK at 2-loop reproduces beta_1 = 26 (universal) | 2-loop coefficient is scheme-independent (universal)
+  [PASS] P_Cl(3)^HK at 3-loop does NOT reproduce beta_2^MSbar | HK gives 32/81, MSbar gives -65/2
+  [OPEN] L1 channel-weight closure: foreclosed by all three sub-functors | P_Cl(3)^HK gives wrong scheme value (32/81 vs -65/2); P_Cl(3)^Schnetz gives only Galois class; composition is rank-deficient
+
+Section 6 -- Sharpened open-gate shape
+    [SHARPENED] missing ingredient: HK -> MSbar scheme conversion at 3-loop
+                prior authority    : Alles-Feo-Panagopoulos 1996
+    [SHARPENED] missing ingredient: c_2 -> rational coefficient extraction
+                prior authority    : Brown-Schnetz period oracle
+    [SHARPENED] missing ingredient: Casimir channel projection per graph
+                prior authority    : T(Gamma) refinement
+  [PASS] Sharpened open-gate shape: 3 independent missing ingredients | previously named as one piece; now decomposed
+  [OPEN] L1 channel-weight open-gate shape:  3 independent missing ingredients | sharper than P-L1 design note's single 'P_L1-D physical Cl(3) local algebra / Z^3-native period functor'; this construction attempt isolates THREE ingredients each of which separately cannot be constructed from the current substrate
+
+Section 7 -- Hostile-review self-audit
+  [PASS] hostile-review Q1: P_Cl(3)^HK substrate-native? | YES (heat-kernel context)
+  [PASS] hostile-review Q2: P_Cl(3)^Schnetz substrate-native? | YES (combinatorial + Fp)
+  [PASS] hostile-review Q3: Claims beyond computed? | NO (Brown-Yeats labelled CONJECTURE)
+  [PASS] hostile-review Q4: Clever construction could succeed? | Must provide 3 missing pieces
+  [PASS] hostile-review Q5: Lowers MSbar-native route context? | NO (extends + sharpens)
+  [PASS] hostile-review Q6: Result N_f-dependent? | NO (rank deficiency at any N_f)
+  [PASS] hostile-review Q7: Substrate extension? | Would require explicit primitive approval
+
+Section 8 -- Final summary
+    PASS:      37
+    FAIL:      0
+    OPEN:  8
+    Pass rate: 100.0 %
+
+    Verdict classification:
+        open_gate
+        NEGATIVE ON CLOSURE:
+          + P_Cl(3)^HK  : well-defined substrate-native functor
+                          (heat-kernel-scheme)
+          + P_Cl(3)^Schnetz : well-defined substrate-native functor
+                              (finite-field point counting)
+          - composition does NOT reproduce TVZ MSbar rationals
+          - 3 missing structural ingredients identified
+
+    Status authority disclaimer: this runner is a source-note
+    open-gate proposal.  Audit verdict and downstream status are set only
+    by the independent audit lane.
+
+----- stderr -----
+

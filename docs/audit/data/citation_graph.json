@@ -17013,6 +17013,30 @@
       "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
     },
     {
+      "from": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "to": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1"
+    },
+    {
+      "from": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
       "from": "propagator_family_unification_note",
       "to": "source_resolved_wavefield_mechanism_note"
     },
@@ -54030,6 +54054,24 @@
       "runner_path": "scripts/cl3_primitive_p_l1_2026_05_10_pPl1.py",
       "title": "L1 Channel-Weight Open Gate \u2014 Negative Candidate-Primitive Probe for QCD \u03b2_2/\u03b2_3 Scalar Weights"
     },
+    "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d": {
+      "claim_id": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "minimal_axioms_2026-04-11",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "su3_adjoint_casimir_theorem_note_2026-05-02"
+      ],
+      "note_hash": "09fa5872f50fec70d3e63057bf763615f8b33bde1c3674a58d265843b1cd2d68",
+      "path": "docs/PRIMITIVE_P_L1_D_PERIOD_FUNCTOR_NOTE_2026-05-10_pPl1_d.md",
+      "runner_path": "scripts/cl3_primitive_p_l1_d_2026_05_10_pPl1_d.py",
+      "title": "P-L1-D Period-Functor Open Gate --- Negative Construction Probe"
+    },
     "primordial_spectrum_note": {
       "claim_id": "primordial_spectrum_note",
       "claim_type_author_hint": null,
@@ -65937,7 +65979,7 @@
       "meta": 59,
       "no_go": 18,
       "none": 1626,
-      "open_gate": 21,
+      "open_gate": 22,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -65946,13 +65988,13 @@
       "meta": 59,
       "no_go": 125,
       "none": 449,
-      "open_gate": 109,
+      "open_gate": 110,
       "positive_theorem": 592
     },
-    "edge_count": 8248,
+    "edge_count": 8254,
     "leaf_count": 534,
-    "node_count": 2057,
+    "node_count": 2058,
     "root_count": 767,
-    "runners_with_path": 1672
+    "runners_with_path": 1673
   }
 }
