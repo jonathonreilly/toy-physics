@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1101 |
+| unaudited | 1100 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 239 |
+| ~~audited_conditional~~ | 240 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 239 |
+| `audited_conditional` | 240 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1199 |
+| `unaudited` | 1198 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 802 |
+| `bounded_theorem` | 803 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 726 |
+| `positive_theorem` | 725 |
 
 | criticality | count |
 |---|---:|
@@ -559,6 +559,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_field_smoothing_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dispersion_high_p_tiebreaker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -2717,6 +2718,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "So once the midlayer sentinel is added to the existing reference+tree sample, the frozen 3-NN stencil becomes the better smooth law on the current expanded dataset."  _(class `B`)_
 - **chain closes:** False — The note's arithmetic matches the supplied runner stdout, but the sample definitions, overlap labels, density-load features, threshold search, tree control, and midlayer sentinel are imported from unprovided scripts/notes with no cited authorities. The restricted packet therefore verifies only transfer-run consistency, not closure of the inputs used by that transfer.
 - **rationale:** Issue: the load-bearing comparison relies on an existing dense reference sample, tree control, and midlayer sentinel whose construction and labels are not supplied as one-hop authorities. Why this blocks: under the restricted audit rules, the runner imports those input-generating routines but their validity cannot be assumed from stdout alone. Repair target: add direct dependency edges or bundled authority text for the bridge card, tree control, midlayer holdout, and definitions of overlap/density-load thresholds. Claim boundary until fixed: the note is a completed diagnostic run whose reported counts match its stdout, not a closed retained bounded theorem.
+- **auditor confidence:** high
+
+### `dispersion_high_p_tiebreaker_note`
+
+- **Note:** [`DISPERSION_HIGH_P_TIEBREAKER_NOTE.md`](../../docs/DISPERSION_HIGH_P_TIEBREAKER_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical dispersion-fit comparison for the Fam1 grown DAG runner at H=0.5, seeds 0-7, and p in 0..6.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e135e-bde0-77c2-9cf8-a2e0658baff3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Klein-Gordon is eliminated from the candidate pool (R2=0.78, 0/8 seeds); the propagator is not relativistic in the standard sense.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the reported numerical table, but the key KG-elimination inference is not closed because the reported linearized KG R2 is computed in omega-squared space while Schrodinger and Linear R2 are computed in omega space. The note also extends the fit result to lensing and eikonal claims without any cited authority for the p-to-b mapping or baseline.
+- **rationale:** Issue: the load-bearing model comparison uses non-uniform fit objectives and then treats the resulting R2 values as directly comparable. Why this blocks: the conclusion that KG is eliminated, and therefore that no relativistic correction is needed, does not follow from the supplied runner even though the runner completed. Repair target: rerun the comparison with a common residual metric and explicit candidate-family/threshold definition, then cite or split the lensing implications. Claim boundary until fixed: only the raw finite-run dispersion table and this runner's ad hoc fit rankings are supported.
 - **auditor confidence:** high
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
