@@ -77,3 +77,105 @@ a certified unique root interval on the thermal layer itself.
 ```bash
 python3 scripts/frontier_dm_full_closure_same_surface_thermal_bounding_theorem.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit upstream authority
+citations named by the 2026-05-05 audit verdict's
+`chain_closure_explanation` for the live audit row
+`dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17`
+(`audited_conditional`, `chain_closes: false`,
+`claim_type: bounded_theorem`). The auditor read observes that the
+restricted packet does not include the load-bearing derivations or
+source for the imported certification routines that allegedly
+implement the continuum integral, monotonicity theorem, and positive
+series / tail enclosures, and that the visible runner delegates those
+steps to external common modules and then performs algebraic /
+bracketing checks on their returned values. This addendum does not
+promote the row or change the audited claim scope, which remains the
+bounded thermal-layer evaluation theorem on the certified endpoint
+enclosures and the one-scalar root interval on the admitted DM-side
+family.
+
+One-hop authorities cited:
+
+- [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_INTEGRAL_REPRESENTATION_THEOREM_NOTE_2026-04-16.md`](DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_INTEGRAL_REPRESENTATION_THEOREM_NOTE_2026-04-16.md)
+  — currently `audited_conditional` (audit row:
+  `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16`).
+  Upstream authority for the exact continuum integral representation
+  on the retained `x_f = 25` slice underlying ingredient (1) of the
+  three-step combination.
+- [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_MONOTONICITY_THEOREM_NOTE_2026-04-17.md`](DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_MONOTONICITY_THEOREM_NOTE_2026-04-17.md)
+  — currently `audited_conditional` (audit row:
+  `dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17`).
+  Upstream authority for the exact monotonicity theorem in the
+  selected coupling `alpha` underlying ingredient (2) of the
+  three-step combination and the unique-root-interval consequence on
+  the admitted family.
+- [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SERIES_TAIL_SUPPORT_NOTE_2026-04-17.md`](DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SERIES_TAIL_SUPPORT_NOTE_2026-04-17.md)
+  — currently `audited_conditional` (audit row:
+  `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17`).
+  Upstream authority for the exact positive-series / exact tail
+  enclosure machinery underlying ingredient (3) of the three-step
+  combination.
+- [`DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md`](DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md)
+  — currently `audited_conditional` (audit row:
+  `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16`).
+  Sibling upstream authority for the current-bank no_go that this
+  bounded theorem explicitly preserves in its "Honest Status" section.
+- [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SELECTOR_SENSITIVITY_BOUNDARY_NOTE_2026-04-16.md`](DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SELECTOR_SENSITIVITY_BOUNDARY_NOTE_2026-04-16.md)
+  — currently `audited_clean` / effective `retained_bounded` (audit row:
+  `dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16`).
+  Upstream authority for the retained sensitivity boundary that frames
+  the admitted-family root interval against the no-current-bank-selector
+  conclusion.
+
+Because three of the five cited upstream authorities are
+`audited_conditional`, one is the sibling no_go also at
+`audited_conditional`, and one is `retained_bounded`, the bounded
+thermal evaluation theorem cannot lift past `audited_conditional`
+under the standard cite-chain rule. This matches the live audit row's
+current `audited_conditional` verdict and does not require any audit
+JSON edit.
+
+The runner-checked content of this note (the certified
+`R(alpha_lo)`, `R(alpha_hi)` enclosures; the certified
+`Omega_DM(alpha_lo)`, `Omega_DM(alpha_hi)` intervals; and the
+certified one-scalar root interval
+`sigma in [0.145076..., 0.145078...]` /
+`alpha in [0.090899545..., 0.090899548...]`) is verified composition
+over the cited authorities' returned values and the algebraic /
+bracketing checks performed in the local runner. The cite chain is
+what supplies the upstream certification routines (continuum integral,
+monotonicity, positive-series / tail enclosure) whose retained
+verdicts gate this row's effective status.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with
+the observation that the restricted packet does not include the
+load-bearing derivations or source for the imported certification
+routines and that the visible runner delegates those steps to external
+common modules. The cite-chain repair above wires the three
+ingredient-level upstream authorities
+(`integral_representation`, `monotonicity`, `series_tail_support`),
+the sibling no_go (`numerator_selector_boundary`), and the retained
+sensitivity boundary as the explicit cite chain for this bounded
+theorem. All three ingredient-level authorities are currently
+`audited_conditional`, so they are registered explicitly here as open
+class D upstream gaps; closing those three upstream rows is the path
+to lifting the current `audited_conditional` verdict on this row, not
+local rewriting of this note. Effective status remains
+`audited_conditional` under the cite-chain rule. The note's
+`audit_status` is unchanged by this addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) with an
+explicit class D upstream gap registration. It does not change any
+algebraic content, runner output, or load-bearing step classification.
+It records the upstream authorities the audit verdict expected and
+matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
+trio (commit `7bb12badd`, PR #926).

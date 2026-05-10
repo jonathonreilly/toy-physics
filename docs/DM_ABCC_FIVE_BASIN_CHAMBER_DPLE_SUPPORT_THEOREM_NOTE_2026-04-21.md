@@ -213,3 +213,89 @@ The runner:
 
 See
 `scripts/frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit upstream authority
+citations named by the 2026-05-05 audit verdict's
+`chain_closure_explanation` for the live audit row
+`dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
+(`audited_conditional`, `chain_closes: false`). The auditor read closes
+the finite algebraic / numerical check on the provided basin
+coordinates and runner definitions but observes that the broader
+support theorem still imports the retained five-basin source chart and
+selector structure without a cited retained authority or first-principles
+derivation in the restricted packet. This addendum does not promote
+the row or change the audited claim scope, which remains the corrected
+five-basin `chamber ∩ F_4 = {Basin 1}` finite verification on the
+explicitly tabulated basin coordinates.
+
+One-hop authorities cited:
+
+- [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
+  — currently `audited_clean` / effective `retained_bounded` (audit row:
+  `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`). Upstream
+  authority for the DPLE / `F_4` cubic-discriminant selector that this
+  note's Section 3 evaluates pointwise on each basin.
+- [`DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`](DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md)
+  — currently `unaudited` (audit row:
+  `dm_abcc_chamber_bound_derivation_note_2026-04-20`). Upstream
+  authority candidate for the structural inequality
+  `q_+ + delta >= sqrt(8/3)` that defines the chamber filter applied in
+  Section 2.
+- [`DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md`](DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md)
+  — currently `unaudited` (audit row:
+  `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19`).
+  Upstream authority candidate for the four-basin chamber+DPLE route
+  that this note corrects to the five-basin chart by adding Basin 2.
+- [`DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md`](DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md)
+  — currently `unaudited` (audit row:
+  `dm_abcc_basin_finite_search_support_note_2026-04-30`). Upstream
+  authority candidate for the five-basin chart enumeration completeness
+  whose missing in-chamber Basin 2 motivated this support theorem.
+
+Because three of the four cited upstream authorities are `unaudited`
+and the fourth is `retained_bounded`, the broader chamber+DPLE source
+chart cannot lift past `audited_conditional` under the standard
+cite-chain rule. This matches the live audit row's current
+`audited_conditional` verdict and does not require any audit JSON edit.
+
+The runner-checked content of this note (corrected chamber survivors
+on the five-basin chart; closed-form, Newton, and sampled `F_4`
+agreement on each basin; `Basin 2` discriminant negativity; corrected
+composition `chamber ∩ F_4 = {Basin 1}`) is exact finite-dimensional
+arithmetic on the explicitly tabulated basin coordinates and is
+independent of the cited upstream authorities. The cite chain is what
+supplies the upstream source chart and selector structure that this
+note imports rather than derives.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with
+the observation that the finite algebraic check closes on the provided
+basin coordinates and runner definitions but the broader theorem
+imports the retained five-basin source chart and selector structure
+without a cited retained authority or first-principles derivation in
+the restricted packet. The cite-chain repair above wires
+`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19` (`retained_bounded`)
+as the DPLE / `F_4` selector authority and three `unaudited` siblings
+as the chamber-bound, four-basin closure, and finite-search candidates
+on the source-chart side. The fact that three upstream authorities are
+still `unaudited` is registered explicitly here as an open class D
+upstream gap (no retained one-hop authority on the chart-derivation
+side); closing those three upstream rows is the path to lifting the
+current `audited_conditional` verdict on this row, not local rewriting
+of this note. Effective status remains `audited_conditional` under the
+cite-chain rule. The note's `audit_status` is unchanged by this
+addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) with an
+explicit class D upstream gap registration. It does not change any
+algebraic content, runner output, or load-bearing step classification.
+It records the upstream authorities the audit verdict expected and
+matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
+trio (commit `7bb12badd`, PR #926).

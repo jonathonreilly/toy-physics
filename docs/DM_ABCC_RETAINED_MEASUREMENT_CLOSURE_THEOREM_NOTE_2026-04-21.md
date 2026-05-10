@@ -200,3 +200,100 @@ The runner also rechecks the direct basin-level endpoint facts:
 
 See
 `scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit upstream authority
+citations named by the 2026-05-05 audit verdict's
+`chain_closure_explanation` for the live audit row
+`dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
+(`audited_conditional`, `chain_closes: false`). The auditor read
+observes that the conclusion depends on upstream retained theorems and
+dependency runners that are named but not provided as cited authorities
+inside the restricted packet, and that the included runner mostly
+executes external scripts and checks their stdout plus hard-coded basin
+coordinates. This addendum does not promote the row or change the
+audited claim scope, which remains the integration-style closure of
+A-BCC on the retained measurement framework already carried in the
+April 21 package.
+
+One-hop authorities cited:
+
+- [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
+  — currently `audited_clean` / effective `retained_bounded` (audit row:
+  `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`). Upstream
+  authority for the PMNS Non-Singularity reduction theorem and the
+  retained P3 Sylvester linear-path implication used in Step 3 and
+  Step 4 of the proof.
+- [`DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`](DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md)
+  — currently `unaudited` (audit row:
+  `dm_abcc_signature_forcing_theorem_note_2026-04-19`). Upstream
+  authority candidate for the Sylvester signature-forcing theorem that
+  upgrades PMNS Non-Singularity to the all-path topological statement
+  used in Step 4 of the proof.
+- [`DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`](DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+  — currently `audited_conditional` (audit row:
+  `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20`).
+  Upstream authority for the exact upper-octant / source-cubic selector
+  that fixes `sigma_hier = (2,1,0)` in Step 2 of the proof.
+- [`DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`](DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+  — currently `unaudited` (audit row:
+  `dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20`).
+  Upstream authority candidate for the sigma-hier upper-octant selector
+  layer used by Step 2.
+- [`DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`](DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md)
+  — currently `audited_conditional` (audit row:
+  `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`).
+  Sibling upstream authority for the corrected chamber+DPLE route on
+  the five-basin chart that motivates Step 1 active-chamber
+  completeness.
+- [`DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md`](DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md)
+  — currently `audited_clean` / effective `retained_no_go` (audit row:
+  `dm_abcc_assumptions_audit_note_2026-04-19`). Upstream authority for
+  the boundary statement that the stricter axiom-native A-BCC target
+  remains outside the current closure grade.
+
+Because two of the six cited upstream authorities are `retained_bounded`
+or `retained_no_go`, one is `audited_conditional`, and three are
+`unaudited` or `audited_conditional`, the integration theorem cannot
+lift past `audited_conditional` under the standard cite-chain rule.
+This matches the live audit row's current `audited_conditional`
+verdict and does not require any audit JSON edit.
+
+The runner-checked content of this note (the integration runner
+re-executes the chamber completeness, upper-octant / source-cubic
+selector, sigma-hier upper-octant selector, retained P3 Sylvester,
+PMNS Non-Singularity, Sylvester signature-forcing, and sigma-chain
+attack-cascade runners; it also rechecks basin-level endpoint facts) is
+verified composition over the cited authorities and is independent of
+local rewriting of those authorities. The cite chain is what supplies
+the upstream theorems whose retained verdicts gate this row's effective
+status.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with
+the observation that the conclusion depends on upstream retained
+theorems and dependency runners that are named but not cited as
+authorities inside the restricted packet. The cite-chain repair above
+wires `DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19`
+(`retained_bounded`) and `DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19`
+(`retained_no_go`) as the retained anchors and explicitly registers the
+remaining four upstream authorities (one `audited_conditional`, three
+`unaudited` or `audited_conditional`) as open class D upstream gaps.
+Closing those four upstream rows is the path to lifting the current
+`audited_conditional` verdict on this row, not local rewriting of this
+note. Effective status remains `audited_conditional` under the
+cite-chain rule. The note's `audit_status` is unchanged by this
+addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) with an
+explicit class D upstream gap registration. It does not change any
+algebraic content, runner output, or load-bearing step classification.
+It records the upstream authorities the audit verdict expected and
+matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
+trio (commit `7bb12badd`, PR #926).
