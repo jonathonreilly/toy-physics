@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1128 |
+| unaudited | 1127 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 239 |
+| ~~audited_conditional~~ | 240 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,20 +40,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 239 |
+| `audited_conditional` | 240 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1195 |
+| `unaudited` | 1194 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 761 |
+| `bounded_theorem` | 760 |
 | `decoration` | 12 |
 | `meta` | 74 |
 | `no_go` | 192 |
-| `open_gate` | 104 |
+| `open_gate` | 105 |
 | `positive_theorem` | 769 |
 
 | criticality | count |
@@ -713,6 +713,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -10105,6 +10106,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For symmetric perturbations h,k on D=diag(a,b,b,b), B_D(h,k)=D^2W[0](h,k)=-Tr(D^-1 h D^-1 k), and in the canonical lapse/shift/trace/shear basis this has weights diag(-a^-2, -(ab)^-1 x3, -b^-2 x6).  _(class `A`)_
 - **chain closes:** True — The audited claim is explicitly bounded to the local algebraic Hessian once the log-det generator and invariant background are assumed. Jacobi's formula, the inverse-variation identity, cyclicity of trace, and the displayed orthonormal canonical basis suffice to derive the formula and diagonal weights without importing the excluded scalar-generator selection or Einstein/Regge gluing premises.
 - **rationale:** The load-bearing step is a closed matrix-calculus identity over explicitly stated local inputs, and the note's claim boundary excludes the unproved physical selection and dynamical gluing steps. The runner source directly differentiates the symbolic log determinant for general symmetric h,k, checks the canonical Gram matrix symbolically, and numerically replays the same algebra; it does not hard-code an external comparator or tune a scale. Residual risk is only scope leakage by downstream users: this clean verdict covers the local Hessian normal form, not the route-wide scalar-generator selection premise or full GR/Regge dynamics.
+- **auditor confidence:** high
+
+### `universal_gr_tensor_action_blocker_note`
+
+- **Note:** [`UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`](../../docs/UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the note's bounded naming of an unresolved GR tensor-action localization blocker, with no cited authorities or runner evidence supplied.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e121a-43d7-7a03-bb26-a76aae9d64d9`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The direct universal GR route is recorded here as blocked because no retained-grade object on the current branch identifies the scalar-generator Hessian with full Einstein/Regge metric dynamics."  _(class `E`)_
+- **chain closes:** False — The note openly names a missing primitive, but the inventory claim that no retained-grade branch object closes the Einstein/Regge identification is not verifiable from the restricted packet because no one-hop authorities are supplied. The route-level blocker therefore functions as an open gate, not a closed bounded theorem.
+- **rationale:** Issue: the load-bearing step is an inventory assertion plus a newly introduced blocker label, not a derivation from cited retained inputs. Why this blocks: with no cited authorities, the auditor cannot verify the imported scalar generator, lift, Hessian kernel, projector, or absence of a retained Einstein/Regge localization theorem. Repair target: add explicit dependency edges to the retained-grade inputs and, if the claim is to remain a blocker, an auditable branch-inventory artifact or scoped survey proving the missing localization primitive is absent from the supplied retained set. Claim boundary until fixed: this is only an open-gate blocker label naming the missing primitive.
 - **auditor confidence:** high
 
 ### `valley_linear_action_note`
