@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 722,
+    "critical": 721,
     "high": 26,
     "leaf": 275,
     "medium": 151
@@ -7936,29 +7936,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_bell_inequality.py",
       "transitive_descendants": 374
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "newton_law_derived_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gravity_full_self_consistency_note"
-      ],
-      "direct_in_degree": 11,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.959,
-      "note_path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_distance_law_definitive.py",
-      "transitive_descendants": 351
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38913,6 +38890,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 115,
-  "total_pending": 1174
+  "ready_count": 114,
+  "total_pending": 1173
 }

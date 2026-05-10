@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
-| unaudited | 1168 |
+| unaudited | 1167 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 218 |
+| ~~audited_conditional~~ | 219 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 371 |
-| `audited_conditional` | 218 |
+| `audited_conditional` | 219 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1236 |
+| `unaudited` | 1235 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 766 |
+| `bounded_theorem` | 767 |
 | `decoration` | 12 |
 | `meta` | 75 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 771 |
+| `positive_theorem` | 770 |
 
 | criticality | count |
 |---|---:|
@@ -619,6 +619,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
@@ -6216,6 +6217,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A_min axiom 3 is under-specified on the admissibility of Pfaffian / charge-+/-2 substrate extensions; the strict reading closes C2-X, while the permissive reading does not.  _(class `C`)_
 - **chain closes:** False — The note identifies a sharper substrate-class obstruction, but it does not derive the strict reading from fixed A_min. Its own boundary says unconditional C2-X and the Dirac global lift remain unclosed.
 - **rationale:** Issue: the claimed route to U(1)_V rigidity requires an extra substrate-admissibility decision excluding Pfaffian or charge-+/-2 extensions. Why this blocks: without that theorem or policy premise as retained input, the global Dirac lift cannot follow from fixed A_min. Repair target: prove substrate-class admissibility from A_min, or supply a retained no-go theorem for Pfaffian/pairing extensions. Claim boundary until fixed: stretch-attempt inventory with one falsified route and a named obstruction, not C2-X closure.
+- **auditor confidence:** high
+
+### `newton_law_derived_note`
+
+- **Note:** [`NEWTON_LAW_DERIVED_NOTE.md`](../../docs/NEWTON_LAW_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional derivation of a 1/r^2 force from a stipulated lattice Poisson equation on Z^3 plus the stated Green-function asymptotic.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e126b-c2c4-74c0-bae0-a58eb1472589`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The staggered scalar field obeys the lattice Poisson equation (-Delta_lat) phi = rho, so the Z^3 Green's function asymptotic gives phi ~ M/(4 pi r) and F ~ M M_test/(4 pi r^2).  _(class `A`)_
+- **chain closes:** False — The Poisson-to-inverse-square algebra closes once (-Delta_lat) phi = rho is assumed. The supplied one-hop authority explicitly says the identification making (-Delta_lat) the field operator rests on a stipulated closure identity L^{-1}=G_0, not a derivation from Cl(3) on Z^3.
+- **rationale:** Issue: the note claims Newton's law follows without additional assumptions, but its load-bearing Poisson equation is only supported by a cited authority that is conditional on a stipulated closure identity. Why this blocks: retained propagation cannot treat an open/stipulated operator identification as an unconditional theorem from Cl(3). Repair target: supply a retained bridge theorem deriving L^{-1}=G_0, or narrow this note to a bounded theorem conditional on the Poisson equation. Claim boundary until fixed: from stipulated Poisson on Z^3, Green asymptotics and linearity give the stated inverse-square/product form.
+- **open / conditional deps cited:**
+  - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
 - **auditor confidence:** high
 
 ### `newtonian_distance_law_confirmed`
