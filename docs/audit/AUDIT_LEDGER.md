@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1122 |
+| unaudited | 1123 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 244 |
+| ~~audited_conditional~~ | 243 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 244 |
+| `audited_conditional` | 243 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1189 |
+| `unaudited` | 1190 |
 
 | claim_type | count |
 |---|---:|
@@ -498,7 +498,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
-| `bell_inequality_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -1277,19 +1276,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Gcrit_0.011_not_sampled_or_reproduced_by_live_runner`
   - `field_strength_dependence_rows_s_0.001_and_s_0.016_not_present_in_current_runner`
   - `high_G_live_runner_shows_unstable_away_behavior_not_smooth_threshold_table`
-- **auditor confidence:** high
-
-### `bell_inequality_derived_note`
-
-- **Note:** [`BELL_INEQUALITY_DERIVED_NOTE.md`](../../docs/BELL_INEQUALITY_DERIVED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded model-surface claim that the runner-defined finite two-species lattice Hamiltonian exhibits CHSH violation at listed small lattices and selected couplings, with algebraic taste-operator checks and G=0 controls.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e122a-ffab-7c01-b7d2-413719185498`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** For the explicitly defined two-species staggered-lattice Hamiltonian with periodic Poisson density coupling, the listed finite lattices and selected nonzero G values give |S| > 2, while G = 0 gives |S| = 2.000.  _(class `C`)_
-- **chain closes:** False — The supplied stdout is only RUNNER_TIMEOUT after 240s, so the load-bearing numerical CHSH tables and null controls are not available as completed audit evidence. The source code appears to compute the finite-model quantities rather than print constants, but the bounded numerical claim cannot be closed from a noncompleted run alone.
-- **rationale:** Issue: the restricted packet lacks a completed runner log or cached certificate for the load-bearing CHSH values. Why this blocks: the claim is a bounded numerical model-surface theorem, so the listed |S| > 2 and G=0 controls must be verified from a completed run or equivalent certificate. Repair target: provide a completed audit-budget run, a sliced deterministic runner covering the listed cases, or an independent cached certificate for the CHSH tables. Claim boundary until fixed: code-defined finite-model construction is inspectable, but the numerical violation remains compute-blocked in this audit packet.
 - **auditor confidence:** high
 
 ### `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02`
