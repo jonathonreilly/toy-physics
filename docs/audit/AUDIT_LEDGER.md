@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1112 |
+| unaudited | 1111 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
 | ~~audited_conditional~~ | 232 |
-| ~~audited_failed~~ | 21 |
+| ~~audited_failed~~ | 22 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 389 |
 | `audited_conditional` | 232 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 65 |
+| `audited_failed` | 66 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1210 |
+| `unaudited` | 1209 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 793 |
+| `bounded_theorem` | 794 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 100 |
-| `positive_theorem` | 734 |
+| `positive_theorem` | 733 |
 
 | criticality | count |
 |---|---:|
@@ -750,6 +750,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_collapse_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_collapse_strength_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_dense_boundary_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `central_band_dense_largen_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_mass_window_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -1680,6 +1681,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** “N=60 is the retained same-graph joint row: LN + |y| keeps gravity positive; LN + |y| + collapse lowers purity further while keeping gravity positive.”  _(class `C`)_
 - **chain closes:** False — The runner supports a bounded finite computation for the N=60 rows, but the note does not close the stated machine-precision Born claim because the runner prints rounded mean±SE rather than a high-precision max |I3|/P threshold check. The note is also stale relative to the supplied stdout for the N=40 collapse row.
 - **rationale:** Issue: the note claims machine-precision Born cleanliness and records an N=40 collapse row of 0.587±0.065 purity and -0.554±0.493 gravity, while the supplied runner stdout gives 0.568±0.054 and -0.520±0.521. Why this blocks: rounded 0.000±0.000 mean/SE output is not a max |I3|/P < 1e-10 certificate, and stale table values prevent the note from being the audited numerical certificate it claims to be. Repair target: update the note to the current stdout and revise the runner/log to print or assert high-precision max |I3|/P per row. Claim boundary until fixed: the packet supports only a bounded finite sample in which the printed N=60 LN rows have positive mean gravity and rounded Born metric zero.
+- **auditor confidence:** high
+
+### `central_band_dense_largen_note`
+
+- **Note:** [`CENTRAL_BAND_DENSE_LARGEN_NOTE.md`](../../docs/CENTRAL_BAND_DENSE_LARGEN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Fixed-geometry dense central-band large-N computation for N = 80 and 100 with npl = 60, y_cut = 2.0, yz_range = 12.0, connect_radius = 3.0, four matched seeds, and collapse p = 0.2.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1342-89bc-71f2-b7f7-0a659861b2b5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The clean large-N takeaway is that central-band hard geometry survives the corrected Born gate at N = 80, 100 while the same-graph gravity side rolls over, preserving only a Born-safe pocket.  _(class `C`)_
+- **chain closes:** False — The source note's retained-row table disagrees with the supplied completed runner stdout for the collapse rows, including the N = 100 collapse purity and gravity sign. The runner source also delegates the core graph, Born, purity, and gravity calculations to unprovided helper modules, so the restricted packet cannot independently certify those implementations.
+- **rationale:** Issue: completed runner stdout contradicts the source note table: N = 80 collapse gravity is -0.498+/-0.072, not -0.576+/-0.045, and N = 100 collapse is purity 0.732 and gravity -0.005, not 0.680 and +0.097. This blocks the current claim because the table is the load-bearing evidence for the bounded large-N row set, and a stale sign/value cannot be retained by narrative interpretation. Repair target: update the note from the actual run or provide the exact artifact that generated the note table, then re-audit with the helper implementations included; until fixed, only the narrower observation that the supplied run reports Born-zero rows with gravity non-positive or failed is supported.
 - **auditor confidence:** high
 
 ### `central_band_mass_window_note`
