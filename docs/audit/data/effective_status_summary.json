@@ -1,12 +1,12 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 672,
+    "bounded_theorem": 673,
     "decoration": 10,
     "meta": 56,
     "no_go": 189,
     "open_gate": 110,
     "positive_theorem": 788,
-    "unset": 2
+    "unset": 1
   },
   "cycle_examples": [
     [
@@ -39,7 +39,6 @@
   ],
   "cycles_detected": 36,
   "effective_status_counts": {
-    "audit_in_progress": 2,
     "audited_conditional": 419,
     "audited_failed": 8,
     "audited_numerical_match": 20,
@@ -55,15 +54,18 @@
     "retained": 69,
     "retained_bounded": 238,
     "retained_no_go": 122,
-    "retained_pending_chain": 5,
-    "unaudited": 852
+    "retained_pending_chain": 8,
+    "unaudited": 851
   },
-  "retained_pending_chain_count": 5,
+  "retained_pending_chain_count": 8,
   "retained_pending_chain_examples": [
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
     "diamond_signal_budget_hardening_note",
     "s3_taste_cube_decomposition_note",
+    "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
     "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
-    "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+    "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+    "three_generation_observable_theorem_note"
   ]
 }
