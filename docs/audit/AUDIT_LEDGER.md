@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 227 |
+| **retained_bounded** | 228 |
 | open_gate | 11 |
-| unaudited | 1146 |
+| unaudited | 1145 |
 | meta | 79 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 380 |
+| `audited_clean` | 381 |
 | `audited_conditional` | 224 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1225 |
+| `unaudited` | 1224 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 776 |
+| `bounded_theorem` | 777 |
 | `decoration` | 13 |
 | `meta` | 86 |
 | `no_go` | 193 |
 | `open_gate` | 103 |
-| `positive_theorem` | 760 |
+| `positive_theorem` | 759 |
 
 | criticality | count |
 |---|---:|
@@ -143,6 +143,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `chiral_3plus1d_coupled_coin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
+| `chiral_3plus1d_mixing_period_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -1490,6 +1491,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The bounded claim is the measured monotone improvement of both observables under coin coupling on the named scan. The note correctly states this supports separability as a real blocker without claiming to recover a clean 3D KG law; the moderate dispersion R^2 caps any stronger interpretation.
 - **rationale:** Within the regime-finding scan scope, the chain closes by direct measurement on the runner. The note's interpretation 'coupling helps but not enough; better symmetry-matched generator still needed' matches the bounded measurement. No upgrade to a 3D transport theorem is implied.
 - **auditor confidence:** high
+
+### `chiral_3plus1d_mixing_period_note`
+
+- **Note:** [`CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`](../../docs/CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite periodic 3+1D chiral-walk sweep for theta0=0.3, strength=5e-4, n in {15,21,23,25,31}, and L in {12,14,16,18,20,28}, showing size-dependent coherent AWAY windows and persistent classical/phase-kill AWAY windows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e12d5-46b7-7612-86ed-b30b80dbc042`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The observed bad windows are therefore better described as geometry-shifted mixing resonances than as a universal pi/theta0 rule or a field-only phase shift.  _(class `C`)_
+- **chain closes:** True — Within the bounded finite sweep, the runner source computes the periodic coin-plus-shift evolution rather than hard-coding the listed windows, and the stdout matches the note's reported coherent, classical, and phase-kill sign classifications. The note does not derive a predictive recurrence law, but it explicitly excludes that stronger claim.
+- **rationale:** The clean result is bounded: the supplied runner directly computes the stated finite periodic architecture in coherent, probability, and phase-kill modes, and the reported sign-window table follows from that computation. There are no one-hop dependencies and no imported external comparator or tuned target value. Residual risk is only scope: the note is not a universal period theorem or a derived phase-offset law, and should not be cited as one.
+- **auditor confidence:** medium
 
 ### `chiral_3plus1d_recurrence_note`
 
