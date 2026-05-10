@@ -15565,6 +15565,18 @@
       "to": "lattice_nn_deterministic_rescale_note"
     },
     {
+      "from": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+      "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+    },
+    {
+      "from": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+      "to": "nn_lattice_rescaled_continuum_identification_note_2026-05-10"
+    },
+    {
+      "from": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+      "to": "lattice_nn_deterministic_rescale_note"
+    },
+    {
       "from": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10",
       "to": "nn_lattice_rescaled_kernel_identification_note_2026-05-10"
     },
@@ -52226,6 +52238,21 @@
       "runner_path": "scripts/lattice_nn_rescaled_C_arm_derivation.py",
       "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note"
     },
+    "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10": {
+      "claim_id": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (NLO saddle correction predicts the right",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+        "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
+        "lattice_nn_deterministic_rescale_note"
+      ],
+      "note_hash": "e7d12e5c6944bb8b3ef98b4bd5aaddc8189d7f266c617b43c32fb38cbb80be08",
+      "path": "docs/NN_LATTICE_RESCALED_C_ARM_NLO_SADDLE_NOTE_2026-05-10.md",
+      "runner_path": "scripts/lattice_nn_rescaled_C_arm_NLO_saddle.py",
+      "title": "Rescaled NN Lattice C_arm Next-to-Leading-Order Saddle Note"
+    },
     "nn_lattice_rescaled_continuum_identification_note_2026-05-10": {
       "claim_id": "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -66205,7 +66232,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 243,
+      "bounded_theorem": 244,
       "decoration": 1,
       "meta": 59,
       "no_go": 19,
@@ -66214,7 +66241,7 @@
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 725,
+      "bounded_theorem": 726,
       "decoration": 1,
       "meta": 59,
       "no_go": 126,
@@ -66222,10 +66249,10 @@
       "open_gate": 114,
       "positive_theorem": 592
     },
-    "edge_count": 8281,
-    "leaf_count": 535,
-    "node_count": 2066,
+    "edge_count": 8284,
+    "leaf_count": 536,
+    "node_count": 2067,
     "root_count": 768,
-    "runners_with_path": 1681
+    "runners_with_path": 1682
   }
 }

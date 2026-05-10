@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_C_arm_NLO_saddle.py
+runner_sha256: 7c615300822f46491299dd0dea348debaf7f22056c756eff0cc21a46ce7d1554
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+==============================================================================
+NLO SADDLE CORRECTION FOR C_arm IN THE RESCALED NN HARNESS
+==============================================================================
+
+Frozen harness parameters:
+  BETA      = 0.8
+  k         = 5.0
+  L_total   = 40.0
+  FANOUT    = 3.0
+  L_2       = 2 L_total / 3 = 26.6667
+  c         = exp(-BETA pi^2 / 16) = 0.610498
+
+Closed-form NLO coefficients:
+  A = c / (FANOUT sqrt(2))         = 0.143896
+  B = c^2 / FANOUT                 = 0.124236
+  A + B                            = 0.268132
+  omega = k (sqrt(2) - 1)          = 2.071068
+  A / (A + B)                      = 0.536661
+  C_LO^2 = L_2 (c^2/(2 FANOUT))/(A+B) = 6.177857
+  C_LO   = sqrt(C_LO^2)              = 2.485529
+
+Phase-NLO leading h^2 coefficient (candidate a):
+  d2_phase = (A/(A+B)) * omega^2 / 2     = 1.150955
+  d4_phase (next-order, h^4)             = 0.913297
+
+  delta_a(h) = (A+B) / (A cos(omega h) + B) - 1
+             ~ d2_phase * h^2 + d4_phase * h^4 + O(h^6)
+
+------------------------------------------------------------------------------
+PER-H CLOSED FORM: delta(h) and predicted sigma^2(h)
+------------------------------------------------------------------------------
+         h     delta_a      d2 h^2   dV_b/sig^2     sig^2_a    sig^2_a+b
+   0.50000    0.356719    0.287739     0.9196%    4.190809     4.229350
+   0.25000    0.075664    0.071935     0.2519%    1.661325     1.665510
+   0.12500    0.018209    0.017984     0.1052%    0.786294     0.787121
+   0.06250    0.004510    0.004496     0.0501%    0.387857     0.388052
+   0.03125    0.001125    0.001124     0.0248%    0.193275     0.193323
+   0.01562    0.000281    0.000281     0.0123%    0.096556     0.096568
+
+  Observation: delta_a(h) ~ d2_phase * h^2 to high accuracy on this
+  h range; the q^4 saddle correction (candidate b) is < 0.4% of the
+  phase correction at h <= 0.25. Candidate (a) DOMINATES.
+
+------------------------------------------------------------------------------
+CROSS-CHECK vs upstream measured sigma_arm(h)
+------------------------------------------------------------------------------
+         h  sigma_meas   sig^2_meas     sig^2_a     res_a    sig^2_a+b    res_a+b
+   0.25000      1.3198      1.74187     1.66133    -4.62%      1.66551    -4.38%
+   0.12500      0.8990      0.80820     0.78629    -2.71%      0.78712    -2.61%
+   0.06250      0.6282      0.39464     0.38786    -1.72%      0.38805    -1.67%
+   0.03125      0.4416      0.19501     0.19328    -0.89%      0.19332    -0.87%
+
+  Max |residual| (a+b): 4.38%
+
+------------------------------------------------------------------------------
+EFFECTIVE ALPHA (log-log linear fit on upstream four-point window)
+------------------------------------------------------------------------------
+  Model            alpha_eff   C_eff   |alpha_eff - 0.5256|
+  LO only          0.5000      2.4855   0.0256
+  cand (a) phase   0.5165      2.6186   0.0091
+  cand (a)+(b)     0.5170      2.6234   0.0086
+  EMPIRICAL        0.5256      2.7107   --
+
+  Empirical re-fit reproduces upstream: alpha = 0.5256, C = 2.7107.
+
+  Local alpha at h_geom = sqrt(0.25 * 0.03125) = 0.08839:
+    LO:        alpha_local = 0.5000
+    cand (a):  alpha_local = 0.5090
+    cand (a+b):alpha_local = 0.5094
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+
+  Closed-form NLO leading correction: delta(h) = d2 * h^2,
+     d2 = (A / (A + B)) * [k (sqrt(2) - 1)]^2 / 2 = 1.1510
+     This shifts alpha_eff (LSQ on 4-point window) from 0.5000 to 0.5170.
+
+  Empirical alpha_eff = 0.5256.  Predicted alpha_eff = 0.5170.
+  Residual gap |delta alpha| = 0.0086
+
+  BOUNDED THEOREM: NLO saddle has the right sign and ~5% magnitude
+  but does not fully close the alpha gap. Residual O(h^4) phase or
+  finite-slit-aperture corrections remain unaccounted for.
+
+  Bounded-support guards:
+    PASS: delta(h) > 0 in fit window
+    PASS: alpha_eff > 0.5000
+    PASS: alpha_eff < 0.5256 (NLO undershoots, not overshoots)
+    PASS: |delta alpha| <= 0.020 (right magnitude)
+    PASS: max per-h sigma^2 residual <= 5%
+    PASS: candidate (a) dominates (b): max dV/sig^2 < 1% on fit window
+    PASS: h -> 0 limit recovers C_LO^2 = 6.178
+
+  Outcome class: BOUNDED
+
+----- stderr -----
+
