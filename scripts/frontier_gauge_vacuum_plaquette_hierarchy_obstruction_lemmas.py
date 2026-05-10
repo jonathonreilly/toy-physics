@@ -172,8 +172,8 @@ def part1_note_structure():
          "(L2) Finite-periodic Wilson endpoint identities"),
         ("L3 Taylor support ⟺ polynomial",
          "(L3) Finite Taylor support ⟺ polynomial"),
-        ("L4 global-vs-formal convention",
-         "(L4) Global-vs-formal convention"),
+        ("L4 polynomial-growth bound on R",
+         "(L4) Polynomial-growth bound on `R`"),
         ("BA-1 Haar orthogonality stated",
          "(BA-1) **Compact Haar orthogonality.**"),
         ("BA-2 compact Laplace concentration stated",
@@ -452,30 +452,77 @@ def part9_L4_global_vs_formal():
         t2 = t * t
         print(f"    {t:10.1f} {t1:14.1f} {t2:14.1f}  no (unbounded)")
 
-    # A polynomial of degree d ≥ 1 has unbounded magnitude as t → ∞.
-    # P_L is bounded by 1. So K' can't be polynomial of degree ≥ 1.
-    # Therefore K' must be constant — but P_L(0) = 0 and P_L(∞) = 1 means
-    # the constant cannot be both 0 and 1. Contradiction.
+    # Concrete polynomial-growth check: any polynomial p(t) = a_d t^d +
+    # ... + a_0 with a_d ≠ 0 and d ≥ 1 has |p(t)| → ∞ as t → ∞.
+    # Verify by direct evaluation: t·p(t) for sample polynomials.
+    def poly_eval(coeffs: list[float], t: float) -> float:
+        """Evaluate sum a_n t^n given coefficients [a_0, ..., a_d]."""
+        return sum(c * (t ** n) for n, c in enumerate(coeffs))
+
+    # Test polynomials: p(t) = t (degree 1), p(t) = t² + 1 (degree 2)
+    test_polys = [
+        ([0.0, 1.0], "t (degree 1)"),
+        ([1.0, 0.0, 1.0], "1 + t² (degree 2)"),
+        ([0.0, -1.0, 0.0, 1.0], "t³ - t (degree 3)"),
+    ]
+    for coeffs, label in test_polys:
+        d = len(coeffs) - 1
+        # As t → ∞, |p(t)| / |t|^d → |a_d| > 0
+        ratio_at_1000 = abs(poly_eval(coeffs, 1000.0)) / (1000.0 ** d)
+        ratio_at_10000 = abs(poly_eval(coeffs, 10000.0)) / (10000.0 ** d)
+        leading_coeff = abs(coeffs[-1])
+        # Both should converge toward |a_d| at large t
+        ok = (
+            abs(ratio_at_1000 - leading_coeff) < 0.01
+            and abs(ratio_at_10000 - leading_coeff) < 0.001
+        )
+        check(
+            f"polynomial {label}: |p(t)|/|t|^d → |a_d| as t→∞ "
+            f"(unbounded |p(t)| if d ≥ 1)",
+            ok,
+            f"|p(1000)|/1000^d = {ratio_at_1000:.6f}, "
+            f"|p(10000)|/10000^d = {ratio_at_10000:.6f}, "
+            f"leading = {leading_coeff}",
+        )
+
+    # P_L is bounded by max F = 1 (per-plaquette source-deformed expectation
+    # of a function bounded by 1 on a compact group). Verify via direct
+    # bound on the U(1) representative:
+    test_ts_bound = [0.1, 1.0, 10.0, 100.0]
+    p_values = [P_1plaq_U1(t) for t in test_ts_bound]
+    bounded = all(0 <= p <= 1 for p in p_values)
     check(
-        "polynomial of degree ≥ 1 has unbounded magnitude as t → ∞",
-        True,  # this is elementary calculus, structural
+        "P_1plaq(t) ∈ [0, 1] verified at multiple t (bounded by max F = 1)",
+        bounded,
+        f"values = {[f'{p:.6f}' for p in p_values]}",
     )
 
+    # Combined: from L1.a (P=0 at t=0) and L1.b (P→1 at t=∞), P is not
+    # constant. From bounded growth, K' can't be polynomial of degree ≥ 1
+    # (would be unbounded). So K is not a polynomial of degree ≥ 1.
+    p_at_zero = P_1plaq_U1(0.0)
+    p_at_large = P_1plaq_U1(20.0)
+    p_not_constant = abs(p_at_large - p_at_zero) > 0.5
     check(
-        "P_L(t) ∈ [0, 1] for all real t (per-plaquette source-deformed expectation)",
-        True,  # structural, bounded by max F = 1
+        "P(0) = 0 vs P(20) > 0.97: P_1plaq is NOT constant on R "
+        "(combined with polynomial-growth ⟹ K not polynomial of degree ≥ 1)",
+        p_not_constant,
+        f"P(0) = {p_at_zero:.6f}, P(20) = {p_at_large:.6f}",
     )
 
+    # Verify the note's L4 heading is "Polynomial-growth bound on R"
+    # (renamed from earlier "Global-vs-formal convention" which was novel
+    # repo vocabulary)
     check(
-        "P_L(0) = 0 ≠ 1 = P_L(∞) ⟹ P_L not constant ⟹ K not polynomial of degree ≥ 1",
-        True,  # follows from L1.a + L1.b combined with polynomial-growth
+        "L4 heading is canonical 'Polynomial-growth bound on R'",
+        "(L4) Polynomial-growth bound on `R`" in NOTE_TEXT,
     )
 
-    # Verify the note explicitly flags global vs formal
+    # And the global-vs-formal distinction is still present in L4 prose:
     check(
-        "note explicitly distinguishes global vs formal",
-        "global" in NOTE_TEXT.lower() and "formal" in NOTE_TEXT.lower()
-        and "global-vs-formal" in NOTE_TEXT.lower(),
+        "L4 prose explicitly distinguishes global on R vs formal Taylor at t=0",
+        "globally on the real line" in NOTE_TEXT
+        and "formal Taylor-series identity at `t = 0`" in NOTE_TEXT,
     )
 
 

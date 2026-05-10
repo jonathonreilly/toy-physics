@@ -25,7 +25,7 @@
   [PASS] contains: L1 one-plaquette endpoints  (marker = '(L1) One-plaquette endpoint identities')
   [PASS] contains: L2 finite-periodic endpoints  (marker = '(L2) Finite-periodic Wilson endpoint identities')
   [PASS] contains: L3 Taylor support ⟺ polynomial  (marker = '(L3) Finite Taylor support ⟺ polynomial')
-  [PASS] contains: L4 global-vs-formal convention  (marker = '(L4) Global-vs-formal convention')
+  [PASS] contains: L4 polynomial-growth bound on R  (marker = '(L4) Polynomial-growth bound on `R`')
   [PASS] contains: BA-1 Haar orthogonality stated  (marker = '(BA-1) **Compact Haar orthogonality.**')
   [PASS] contains: BA-2 compact Laplace concentration stated  (marker = '(BA-2) **Compact Laplace concentration.**')
   [PASS] contains: BA-3 entire-function partition stated  (marker = '(BA-3) **Entire-function partition representation.**')
@@ -147,10 +147,13 @@
          100.0          100.0        10000.0  no (unbounded)
         1000.0         1000.0      1000000.0  no (unbounded)
        10000.0        10000.0    100000000.0  no (unbounded)
-  [PASS] polynomial of degree ≥ 1 has unbounded magnitude as t → ∞
-  [PASS] P_L(t) ∈ [0, 1] for all real t (per-plaquette source-deformed expectation)
-  [PASS] P_L(0) = 0 ≠ 1 = P_L(∞) ⟹ P_L not constant ⟹ K not polynomial of degree ≥ 1
-  [PASS] note explicitly distinguishes global vs formal
+  [PASS] polynomial t (degree 1): |p(t)|/|t|^d → |a_d| as t→∞ (unbounded |p(t)| if d ≥ 1)  (|p(1000)|/1000^d = 1.000000, |p(10000)|/10000^d = 1.000000, leading = 1.0)
+  [PASS] polynomial 1 + t² (degree 2): |p(t)|/|t|^d → |a_d| as t→∞ (unbounded |p(t)| if d ≥ 1)  (|p(1000)|/1000^d = 1.000001, |p(10000)|/10000^d = 1.000000, leading = 1.0)
+  [PASS] polynomial t³ - t (degree 3): |p(t)|/|t|^d → |a_d| as t→∞ (unbounded |p(t)| if d ≥ 1)  (|p(1000)|/1000^d = 0.999999, |p(10000)|/10000^d = 1.000000, leading = 1.0)
+  [PASS] P_1plaq(t) ∈ [0, 1] verified at multiple t (bounded by max F = 1)  (values = ['0.049938', '0.446390', '0.948600', '0.994987'])
+  [PASS] P(0) = 0 vs P(20) > 0.97: P_1plaq is NOT constant on R (combined with polynomial-growth ⟹ K not polynomial of degree ≥ 1)  (P(0) = 0.000000, P(20) = 0.974671)
+  [PASS] L4 heading is canonical 'Polynomial-growth bound on R'
+  [PASS] L4 prose explicitly distinguishes global on R vs formal Taylor at t=0
 
 ----------------------------------------------------------------------------------------
  Part 10: stdlib-only imports
@@ -170,7 +173,7 @@
   [PASS] BA-1 to BA-4 admitted as bounded inputs (not derived)
 
 ========================================================================================
- TOTAL: PASS=77, FAIL=0
+ TOTAL: PASS=80, FAIL=0
 ========================================================================================
 
  VERDICT: four lemmas (L1)-(L4) verified at numerical + structural

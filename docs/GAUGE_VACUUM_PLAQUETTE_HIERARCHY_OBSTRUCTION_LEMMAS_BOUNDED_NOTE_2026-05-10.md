@@ -63,7 +63,7 @@ analytic continuation of a finite-support Taylor series; the reverse
 direction is immediate (a polynomial has only finitely many nonzero
 Taylor coefficients).
 
-**(L4) Global-vs-formal convention.** The implication
+**(L4) Polynomial-growth bound on `R`.** The implication
 
 ```text
 [ K ( t )  is a polynomial of degree ≥ 1 on R ]
@@ -72,9 +72,9 @@ Taylor coefficients).
   ⟹  K' ( t )  is constant on R                                                (L4)
 ```
 
-holds in the **global** sense — i.e., on the real line where `K` is
-real-analytic — not merely as a formal Taylor-series identity at `t = 0`.
-The parent note's contradiction `P_1plaq(0) = 0 ≠ 1 = P_1plaq(∞)` against
+holds globally on the real line `R` (where `K` is real-analytic per
+(L3)), not merely as a formal Taylor-series identity at `t = 0`. The
+parent note's contradiction `P_1plaq(0) = 0 ≠ 1 = P_1plaq(∞)` against
 constancy of `P_1plaq` is therefore globally valid, not formal.
 
 ## Bounded admissions
@@ -84,10 +84,12 @@ analysis facts, listed here as explicit bounded admissions:
 
 (BA-1) **Compact Haar orthogonality.** On the normalized Haar measure
 of any compact Lie group `G`, every non-trivial irreducible character
-integrates to zero. In particular, for `G = SU(N)` with `N ≥ 1` (and
-the abelian `G = U(1)` case as the specialization), the matrix element
-`(1/N) · Re Tr U` of the fundamental representation integrates to zero
-under Haar.
+integrates to zero. The lemmas below apply to `G = SU(N)` with `N ≥ 2`
+(where the fundamental-rep character `(1/N) · Re Tr U` is non-trivial
+and integrates to zero under Haar) and to the abelian `G = U(1)` case
+(where the character `cos θ` is non-trivial and integrates to zero
+under `dθ / (2π)`). The `N = 1` SU(N) instance is trivial-group and
+not a gauge theory; it is excluded.
 
 (BA-2) **Compact Laplace concentration.** For a compact metric space
 `X` with regular probability measure `μ`, a continuous real-valued
