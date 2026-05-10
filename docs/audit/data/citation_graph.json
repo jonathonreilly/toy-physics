@@ -15545,6 +15545,22 @@
       "to": "lattice_nn_deterministic_rescale_note"
     },
     {
+      "from": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "to": "lattice_nn_high_precision_note"
+    },
+    {
+      "from": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "to": "lattice_nn_deterministic_rescale_note"
+    },
+    {
+      "from": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "to": "lattice_nn_continuum_note"
+    },
+    {
+      "from": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "to": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
+    },
+    {
       "from": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
       "to": "lattice_nn_high_precision_note"
     },
@@ -51993,6 +52009,22 @@
       "runner_path": "scripts/lattice_nn_rescaled_kernel_identification.py",
       "title": "NN Lattice Rescaled-Lane Kernel Identification"
     },
+    "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10": {
+      "claim_id": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "lattice_nn_high_precision_note",
+        "lattice_nn_deterministic_rescale_note",
+        "lattice_nn_continuum_note",
+        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
+      ],
+      "note_hash": "44229a7be1f1b43816a5bdd05009038c9797746da4b0a2c88416322be26c9e72",
+      "path": "docs/NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md",
+      "runner_path": "scripts/lattice_nn_rescaled_operator_cauchy.py",
+      "title": "NN Lattice Rescaled-Lane Response-Vector Cauchy Certificate"
+    },
     "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10": {
       "claim_id": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -65753,7 +65785,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 238,
+      "bounded_theorem": 239,
       "decoration": 1,
       "meta": 59,
       "no_go": 17,
@@ -65762,7 +65794,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 720,
+      "bounded_theorem": 721,
       "decoration": 1,
       "meta": 59,
       "no_go": 124,
@@ -65770,10 +65802,10 @@
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8229,
+    "edge_count": 8233,
     "leaf_count": 533,
-    "node_count": 2050,
+    "node_count": 2051,
     "root_count": 764,
-    "runners_with_path": 1665
+    "runners_with_path": 1666
   }
 }
