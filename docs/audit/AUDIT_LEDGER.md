@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1144 |
+| unaudited | 1143 |
 | meta | 77 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 227 |
+| ~~audited_conditional~~ | 228 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 227 |
+| `audited_conditional` | 228 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1221 |
+| `unaudited` | 1220 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 776 |
+| `bounded_theorem` | 777 |
 | `decoration` | 13 |
 | `meta` | 84 |
 | `no_go` | 192 |
 | `open_gate` | 103 |
-| `positive_theorem` | 761 |
+| `positive_theorem` | 760 |
 
 | criticality | count |
 |---|---:|
@@ -524,6 +524,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `complex_selectivity_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `complex_selectivity_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -2034,6 +2035,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "signed-source transfer is the portable feature: exact zero / neutral controls survive on several distinct structured families" while "complex action is more selective" and fails or narrows on the compared slices.  _(class `B`)_
 - **chain closes:** False — The supplied one-hop authorities support second-family complex retention and signed-source positives for the alt, third, and fourth families, but they do not supply the original grown-basin row, the alt complex-action failure, the alt F~M transfer value, or the second-family boundary tightening. Those missing inputs are load-bearing for the selectivity split.
 - **rationale:** Issue: the comparison imports several named but unsupplied dependency results, and the runner only renders hard-coded comparison rows. Why this blocks: the claimed selectivity split cannot be derived from the restricted packet because key failure and boundary facts are outside the one-hop authorities. Repair target: add direct dependency edges and retained-grade authorities for the original grown-basin sign/complex results, alt complex failure/F~M transfer, and second-family boundary note, or narrow the claim to the supplied authorities. Claim boundary until fixed: only a partial comparison over the supplied retained family notes is supported.
+- **auditor confidence:** high
+
+### `complex_selectivity_predictor_note`
+
+- **Note:** [`COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded predictor over the listed structured-family cards: retained complex-action rows are claimed to coincide with exact gamma=0 plus anchor-local TOWARD->AWAY crossover, while diagnosed boundary rows fail it.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12c8-800c-76c1-b605-ef4cdba3e98e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** the smallest stable discriminator we found is the anchor-local crossover: exact gamma=0 baseline plus `TOWARD -> AWAY` on the retained anchor row  _(class `B`)_
+- **chain closes:** False — The conclusion relies on comparison rows and mismatch details whose direct authorities are not in the supplied one-hop packet, especially the original grown-basin positive row and the second-family boundary-window statement. The supplied runner only renders hard-coded rows, so it does not independently close the missing comparison.
+- **rationale:** Issue: the source imports load-bearing row facts from unprovided authorities while presenting the table as a closed predictor comparison. Why this blocks: without those one-hop inputs, the claimed separation of positive families from diagnosed boundaries and the 'smallest stable discriminator' statement do not follow from the restricted packet. Repair target: add the missing dependency edges and use a runner that verifies row facts from cited outputs, or narrow the claim to only the supplied retained-grade authorities. Claim boundary until fixed: the packet supports only a partial bounded comparison, not the full predictor card.
 - **auditor confidence:** high
 
 ### `continuum_limit_note`
