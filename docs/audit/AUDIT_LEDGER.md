@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 232 |
 | open_gate | 11 |
-| unaudited | 1107 |
+| unaudited | 1106 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 251 |
+| ~~audited_conditional~~ | 252 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 251 |
+| `audited_conditional` | 252 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 22 |
-| `unaudited` | 1174 |
+| `unaudited` | 1173 |
 
 | claim_type | count |
 |---|---:|
@@ -720,6 +720,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_isotropic_glue_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -10255,6 +10256,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The chain closes for the limited support-level claim: the candidate action is syntactically lambda-free, and the note explicitly does not claim full GR closure.
 - **rationale:** The clean result applies only to the bounded claim that the direct universal A1-anchored candidate avoids the phase-lift L_lambda family. The note discloses the remaining complement-frame and curvature-localization obstruction instead of using it as hidden closure. The current-checkout runner passes all 9 checks after redirecting its hardcoded external root, so the remaining risk is runner hygiene rather than the local lambda-bypass claim.
 - **auditor confidence:** medium
+
+### `universal_gr_lorentzian_global_atlas_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact congruence invariance of the trace bilinear B_D under invertible chart/frame changes, with global finite-atlas stationary patching only conditional on imported atlas, cocycle, nondegeneracy, and pairing-covariance data.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1214-7411-77c0-87b0-92eb38b3d7a1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Under an invertible chart/frame change S, D' = S^T D S, h' = S^T h S, k' = S^T k S, and therefore B_{D'}(h',k') = B_D(h,k).  _(class `A`)_
+- **chain closes:** False — The trace congruence identity closes in-note as algebra. The global stationary patching conclusion imports finite-atlas, transition-cocycle, local nondegeneracy, and source/field-pairing covariance hypotheses, but the restricted packet contains no one-hop authorities for them.
+- **rationale:** Issue: the algebraic trace identity is closed, but the global finite-atlas stationary section statement depends on named imports that are not supplied as cited retained-grade authorities. Why this blocks: with no one-hop authorities, the atlas/cocycle, K_GR(D) nondegeneracy, and source/field-pairing covariance are unsupported premises. Repair target: add direct retained-grade dependency edges proving those inputs, or split the pure trace identity into a separate clean algebraic row. Claim boundary until fixed: exact congruence invariance of B_D is the safe in-note core.
+- **auditor confidence:** high
 
 ### `universal_gr_polarization_frame_bundle_attempt`
 
