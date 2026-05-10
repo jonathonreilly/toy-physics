@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1138 |
+| unaudited | 1136 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 212 |
+| ~~audited_conditional~~ | 214 |
 | ~~audited_failed~~ | 14 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 212 |
+| `audited_conditional` | 214 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1235 |
+| `unaudited` | 1233 |
 
 | claim_type | count |
 |---|---:|
@@ -525,6 +525,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
+| `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -660,6 +661,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `same_family_3d_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | B | - |
 | `scalar_selector_remaining_open_imports_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `source_driven_field_recovery_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -2014,6 +2016,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_path_registered_without_scripts_prefix`
   - `three_of_six_live_rows_degenerate`
   - `finite_size_scaling_and_multiseed_robustness_open`
+- **auditor confidence:** high
+
+### `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29`
+
+- **Note:** [`CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_PROMOTED_VIA_V8_THEOREM_NOTE_2026-04-29.md`](../../docs/CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_PROMOTED_VIA_V8_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** V8 (Block 1, Koide Q closure attempt) with the retained CKM atlas.  _(class `B`)_
+- **chain closes:** False — No. One-hop dependencies are not all retained (koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29=audited_conditional, cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25=audited_conditional, wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24=audited_conditional), so the chain does not close under the leaf audit rule.
+- **open / conditional deps cited:**
+  - `KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md`
+  - `CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
+  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
+  - `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `cycle_battery_note_2026-04-10`
@@ -7499,6 +7519,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
 - **auditor confidence:** high
+
+### `scalar_selector_reviewer_package_2026-04-20`
+
+- **Note:** [`SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`](../../docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The reviewer package summarizes scalar-selector package status across Koide kappa/theta, DM PMNS, and quark a_u while stating it is historical handoff context and not the current primary claim surface; the registered runner verifies only the Koide kappa spectrum-operator bridge.  _(class `B`)_
+- **chain closes:** False — The registered runner verifies the kappa bridge subset, but the full package summary imports unregistered and superseding surfaces.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3 package status documents`
+  - `Koide theta theorem runners`
+  - `DM PMNS theorem runners`
+  - `quark a_u theorem runners`
 
 ### `scalar_trace_tensor_no_go_note`
 
