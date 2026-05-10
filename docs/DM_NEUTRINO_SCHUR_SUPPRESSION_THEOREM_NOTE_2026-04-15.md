@@ -230,3 +230,52 @@ Promoting from bounded conditional to retained would require:
 5. A runner that reads or computes those declared inputs rather than
    hard-coding them, and that separates the exact Schur complement
    theorem from the downstream `k_eff` comparison.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authorities the
+load-bearing step relies on, in response to the 2026-05-05 audit verdict's
+`missing_dependency_edge` repair target. It does not promote this note or
+change the audited claim scope, which remains conditional algebra on the
+specified projectors and block.
+
+One-hop authorities cited:
+
+- [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
+  — currently `audited_clean`, retained. This is the upstream authority
+  for the post-EWSB `Gamma_1` bridge (the local Cl(4) Dirac realization
+  of the weak-axis branch convention `Y = P_R Gamma_1 P_L` and the chiral
+  off-diagonal property used in Part 1 of this note).
+- [`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+  — currently `unaudited` (conditional on the observable-principle
+  premise per its own status line). This is the upstream authority that
+  the audit packet expected for the bosonic-normalization input
+  `j = g_weak / sqrt(2)`. Status of this note is gated by the upstream
+  bosonic-normalization closure.
+- The selector-curvature input `m = 32` is the exact Hessian of
+  `V_sel(phi) = 32 sum_{i<j} phi_i^2 phi_j^2` at the weak-axis minimum,
+  also recorded as the admitted-context selector in
+  [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md).
+  The 2026-05-05 audit treats this as a separate dependency that has no
+  registered retained authority; it is included here as an open
+  registration target rather than a closed citation.
+- The DM staircase conversion `y_eff -> k_eff` reading
+  `k_eff ~= log(y_eff) / log(alpha_LM)` (Part 3 of the runner) currently
+  has no separate retained-grade authority registered. It is included
+  here as an open registration target.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the load-bearing Schur identity
+`P_T1 Gamma_1 P_int Gamma_1 P_T1 = I_{T_1}` is class-A algebra on the
+specified projectors and block, but the retained closure of
+`y_nu^eff = g_weak^2 / 64` additionally needs the selector curvature
+`m = 32`, the post-EWSB `Gamma_1` bridge, the bosonic normalization
+`j = g_weak / sqrt(2)`, and the staircase conversion to `k_eff` as audit-
+clean dependencies. The two structurally available upstream notes
+(`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15`,
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15`) are now
+explicitly cited; the selector-curvature and staircase-conversion
+dependencies remain open registration targets. The note's audit status
+is unchanged by this addendum.
