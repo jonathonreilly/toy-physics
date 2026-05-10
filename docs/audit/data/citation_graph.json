@@ -13285,6 +13285,26 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+      "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+    },
+    {
       "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -48345,6 +48365,23 @@
       "runner_path": "scripts/frontier_koide_sqrtm_amplitude_principle.py",
       "title": "Koide `\u221am` Amplitude Principle Note"
     },
+    "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf": {
+      "claim_id": "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+      ],
+      "note_hash": "54dc9a66fcd05dc318f1c6ce6904811099933a3c4ab32ba04717754aff26a13e",
+      "path": "docs/KOIDE_T_BAE_HOPF_COPRODUCT_ISOTYPE_NOTE_2026-05-08_probeT_bae_hopf.md",
+      "runner_path": "scripts/cl3_koide_t_bae_hopf_2026_05_08_probeT_bae_hopf.py",
+      "title": "Koide BAE Probe T \u2014 Canonical Hopf-Coproduct Obstruction"
+    },
     "koide_taste_cube_cyclic_source_descent_note_2026-04-18": {
       "claim_id": "koide_taste_cube_cyclic_source_descent_note_2026-04-18",
       "claim_type_author_hint": "bounded_theorem",
@@ -65532,7 +65569,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 232,
+      "bounded_theorem": 233,
       "decoration": 1,
       "meta": 59,
       "no_go": 15,
@@ -65541,7 +65578,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 714,
+      "bounded_theorem": 715,
       "decoration": 1,
       "meta": 59,
       "no_go": 122,
@@ -65549,10 +65586,10 @@
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8204,
+    "edge_count": 8209,
     "leaf_count": 530,
-    "node_count": 2042,
+    "node_count": 2043,
     "root_count": 762,
-    "runners_with_path": 1657
+    "runners_with_path": 1658
   }
 }

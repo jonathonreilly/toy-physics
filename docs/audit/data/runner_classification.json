@@ -10608,6 +10608,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_koide_sqrtm_amplitude_principle.py"
     },
+    "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_t_bae_hopf_2026_05_08_probeT_bae_hopf.py"
+    },
     "koide_taste_cube_cyclic_source_descent_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -22298,6 +22310,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_t_bae_hopf_2026_05_08_probeT_bae_hopf.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_t_bae_hopf_coproduct_isotype_note_2026-05-08_probet_bae_hopf"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py": {
@@ -43349,12 +43376,12 @@
     "dominant_class_distribution": {
       "A": 109,
       "B": 160,
-      "C": 640,
+      "C": 641,
       "D": 232,
       "none": 404
     },
-    "runners_classified": 1545,
-    "runners_with_C": 800,
-    "runners_with_D": 421
+    "runners_classified": 1546,
+    "runners_with_C": 801,
+    "runners_with_D": 422
   }
 }
