@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 67 |
+| **retained** | 68 |
 | **retained_no_go** | 126 |
 | **retained_bounded** | 239 |
 | open_gate | 12 |
-| unaudited | 1075 |
+| unaudited | 1074 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 400 |
+| `audited_clean` | 401 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1173 |
+| `unaudited` | 1172 |
 
 | claim_type | count |
 |---|---:|
@@ -488,6 +488,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lambda_bypass_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
+| `universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -10817,6 +10818,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Runner result: localization coefficients depend on frame choice, with max channel delta across two valid polarization frames = 6.767e-02 and PASS=11 FAIL=0.  _(class `A`)_
 - **chain closes:** True — The note claims a bounded negative/blocker result, not a positive universal-GR closure theorem: the available quotient/kernel data yield an orbit of localization responses while no distinguished projector bundle or connection is supplied. The SHA-pinned cached runner completed successfully and algebraically verifies frame-dependent channel coefficients across valid 3+1 polarization frames, which is enough for the stated no-canonical-projector blocker. No timeout, stale output, hidden dependency, or unratified physical bridge is load-bearing for this bounded claim because the note explicitly stops before identifying the Hessian with Einstein/Regge dynamics.
 - **rationale:** The note claims a bounded negative/blocker result, not a positive universal-GR closure theorem: the available quotient/kernel data yield an orbit of localization responses while no distinguished projector bundle or connection is supplied. The SHA-pinned cached runner completed successfully and algebraically verifies frame-dependent channel coefficients across valid 3+1 polarization frames, which is enough for the stated no-canonical-projector blocker. No timeout, stale output, hidden dependency, or unratified physical bridge is load-bearing for this bounded claim because the note explicitly stops before identifying the Hessian with Einstein/Regge dynamics.
+- **auditor confidence:** high
+
+### `universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`UNIVERSAL_GR_SO3_ISOTYPIC_ORBIT_FLAT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/UNIVERSAL_GR_SO3_ISOTYPIC_ORBIT_FLAT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For abstract Sym^2(R^4) under the block action 1 ⊕ SO(3) and isotropic spatial diagonal weights, the lapse-plus-spatial-trace projector is invariant, the complement weighted Frobenius energy is orbit-flat, generic complement coordinates move, and the stated quadratic alpha-beta energy is constant on SO(3) orbits.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e13a1-a7b5-7c12-bd8c-aad32ff8b17e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Since the SO(3)-trivial block is pointwise fixed and the weighted norm is additive across Pi_A1 ⊕ Pi_perp, ||Pi_perp(h')||^2_d = ||h'||^2_d - ||Pi_A1(h')||^2_d = ||h||^2_d - ||Pi_A1(h)||^2_d = ||Pi_perp(h)||^2_d.  _(class `A`)_
+- **chain closes:** True — The theorem is a self-contained finite-dimensional linear-algebra statement using only R_3^T R_3 = I, spatial trace invariance, Frobenius norm invariance, and weighted orthogonality of the Pi_A1/Pi_perp split under isotropic spatial weights. No cited authority or physical bridge is needed for the scoped conclusion.
+- **rationale:** The load-bearing identities are exact algebra on the given representation and weight, and the isotropic-weight premise is explicitly tested by an anisotropic control. The runner source symbolically verifies T1 and T2, checks the concrete coordinate-movement witness and random generic movement, and does not hard-code a contested physical bridge or numerical comparator. The result is properly scoped as a pure SO(3) representation-theory theorem, not a universal-GR physical closure claim.
 - **auditor confidence:** high
 
 ### `universal_gr_supermetric_normal_form_note`
