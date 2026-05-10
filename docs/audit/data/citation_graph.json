@@ -34699,7 +34699,7 @@
       "deps": [
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "8285cbf8c55e1a69e36d857668095f5f8b49c1f06e1678ffd6cf6598002509b8",
+      "note_hash": "63af6010dc0b9f1bf711b1c231644644168151713113e8d7baac98ffe7b47ff9",
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
