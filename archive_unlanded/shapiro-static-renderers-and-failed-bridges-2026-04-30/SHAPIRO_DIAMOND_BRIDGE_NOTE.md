@@ -1,7 +1,17 @@
 # Shapiro Diamond Bridge Note
 
 **Date:** 2026-04-06  
-**Status:** proxy-level bridge note for the proposed_retained c-dependent phase lag
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/` (the directory name encodes the failure reason: static renderers and failed bridges).
+- **Audit verdict_rationale (quoted verbatim from `docs/audit/data/audit_ledger.json`):**
+
+  > Issue: The bridge claim identifies the Shapiro phase lag with diamond/NV proxy phasor language without a runner or audit-clean causal and diamond-unit inputs. Why this blocks: failed causal-field dependencies cannot support a candidate retained-grade c-dependent phase lag, and unknown diamond bridge/unit notes cannot justify even proxy-level lab-facing translation beyond notation. Repair target: repair and audit the causal phase-lag derivation, audit the diamond phase-ramp and absolute-unit bridge notes, and add a runner constructing X, Y, phi, and phase-ramp quantities from the same data pipeline. Claim boundary until fixed: it is safe to say this note proposes X/Y/phi language as a handoff vocabulary for a supplied phase-lag table; it is not safe to claim a retained Shapiro-to-diamond bridge or lab-facing causal discriminator.
+
+- **Do not cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ## Artifact Chain
 

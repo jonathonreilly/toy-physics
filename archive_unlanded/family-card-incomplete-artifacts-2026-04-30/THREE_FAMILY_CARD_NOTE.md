@@ -1,7 +1,17 @@
 # Three Independent Grown Families: 9/9 Properties Match
 
 **Date:** 2026-04-06
-**Status:** proposed_retained positive — three families match to <5% on all properties
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/family-card-incomplete-artifacts-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/family-card-incomplete-artifacts-2026-04-30/` (the directory name encodes the failure reason: incomplete artifacts behind the family-card claim).
+- **Audit verdict_rationale (quoted verbatim from `docs/audit/data/audit_ledger.json`):**
+
+  > Issue: The note claims three families match on all 9 measurable properties, but the table explicitly has Family 3 Distance alpha marked '(not yet)' and the note provides no runner or log artifact to verify the cross-family card. Why this blocks: the load-bearing 9/9 statement is false on the face of the supplied table, and the broader inference that observables are geometry-independent cannot follow from a partial, hand-entered comparison. Repair target: add a runner that recomputes every listed property for all three families, including Family 3 Distance alpha, with explicit <5% assertions and at least one holdout check. Claim boundary until fixed: safe to cite this as a partial comparison of three selected drift/restore rows with eight populated properties and distance-alpha data only for Families 1 and 2; not safe to claim 9/9 three-family equality or geometry-independence.
+
+- **Do not cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ## Families
 

@@ -2,14 +2,20 @@
 
 **Date:** 2026-04-20
 **Lane:** Dark-matter A-BCC basin-selector (enumeration completeness).
-**Status:** **proposed_retained computational-certificate theorem.** Exhaustiveness
-of the retained chi²=0 basin chart on the DM source surface is certified
-by a bounded-enclosure dense grid + multistart Nelder–Mead scan under
-every retained σ-permutation, with explicit Lipschitz + basin-of-attraction
-tolerance analysis.
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
 **Dedicated runner:**
 `scripts/frontier_dm_abcc_basin_enumeration_completeness.py`
 **Runner result on land:** `PASS = 30, FAIL = 0`.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/` (the directory name encodes the failure reason: a finite/heuristic search was promoted to a completeness theorem; salvage attempted).
+- **Audit verdict_rationale (quoted verbatim from `docs/audit/data/audit_ledger.json`):**
+
+  > Issue: the runner verifies a large finite search and reproduces 30 PASS stamps, but the note promotes that search to a theorem-grade exhaustiveness certificate. Why this blocks: a dense grid plus Nelder-Mead can miss a narrow basin between seeds; the empirical 99.5-percentile Lipschitz estimate is not a worst-case bound, the far-field exclusion is random sampling rather than an analytic lower bound, and the claim that any unknown candidate basin would be reached analogously is exactly the missing theorem. Repair target: replace the heuristic certificate with an interval/branch-and-bound proof over the R=50 box, or a computer-algebra/root-isolation enumeration with certified eigenvalue-gap/Lipschitz bounds and a deterministic far-field asymptotic exclusion. Claim boundary until fixed: it is safe to claim that the current runner found only Basin 1, Basin 2, and Basin X in the active chamber under the retained sigma set, clustered them to the five-basin chart, and found no additional basin in this finite multistart/random-sampling scan; it is not an audited retained completeness theorem.
+
+- **Do not cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ---
 
