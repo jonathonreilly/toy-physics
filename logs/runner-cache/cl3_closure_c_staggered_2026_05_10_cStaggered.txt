@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/cl3_closure_c_staggered_2026_05_10_cStaggered.py
+runner_sha256: 2489e13e28e63763bdc0d0255535fad6b52bcc83009db002f1919acebf3a7d88
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.81
+status: ok
+----- stdout -----
+Staggered-Dirac finite-triple open-gate salvage
+Claim boundary: open_gate; no cascade closure or audit verdict
+
+========================================================================
+1. Staggered Cl(3) source representation on C^8
+========================================================================
+  [PASS] Gamma_1^2 = I_8
+  [PASS] Gamma_2^2 = I_8
+  [PASS] Gamma_3^2 = I_8
+  [PASS] {Gamma_1,2} anticommutator vanishes
+  [PASS] {Gamma_1,3} anticommutator vanishes
+  [PASS] {Gamma_2,3} anticommutator vanishes
+
+========================================================================
+2. C and H summands on the same C^8
+========================================================================
+  [PASS] omega^2 = -I_8
+  [PASS] omega commutes with Gamma_1
+  [PASS] omega commutes with Gamma_2
+  [PASS] omega commutes with Gamma_3
+  [PASS] e12^2 = -I_8
+  [PASS] e13^2 = -I_8
+  [PASS] e23^2 = -I_8
+  [PASS] Cl+(3) span has real rank 4
+
+========================================================================
+3. M_3(C) on the hamming-weight-one triplet
+========================================================================
+  [PASS] <P_Xi,C3> generates rank 9 on hw=1
+  [PASS] M_3(C) lift acts inside End(C^8)
+
+========================================================================
+4. Candidate D_F, chirality, and KO signs
+========================================================================
+  [PASS] D_min is self-adjoint
+  [PASS] D_min is odd under gamma_stag
+  [PASS] gamma_stag^2 = I_8
+  [PASS] J^2 = -I for J=omega K
+  [PASS] J D_min = D_min J
+  [PASS] J gamma = -gamma J
+
+========================================================================
+5. Order-one condition is an active open gate
+========================================================================
+  [PASS] finite algebra test set has 14 elements with rank at least 13 (rank=13)
+  [PASS] scalar D satisfies order-one vacuously (max=0.000e+00, zero_pairs=196/196)
+  [PASS] minimal staggered D violates order-one, so it is not a closed SM D_F (max=1.600e+01, zero_pairs=70/196)
+  [PASS] toy Yukawa-like D also leaves order-one as a selection problem (max=1.628e+01, zero_pairs=58/196)
+
+========================================================================
+6. Review-loop verdict
+========================================================================
+  [PASS] C/H/M_3(C) pieces are co-located on C^8 in this bounded model
+  [PASS] D_F selection remains open after the order-one test
+  [PASS] No new axiom or audit verdict is written by this runner
+
+TOTAL: PASS=29 FAIL=0
+Outcome class: OPEN_GATE
+
+----- stderr -----
+

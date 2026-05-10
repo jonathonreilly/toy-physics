@@ -4233,6 +4233,42 @@
       "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
     },
     {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "primitive_p_lh_content_proposal_note_2026-05-10_pplh"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one"
+    },
+    {
+      "from": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
@@ -38108,6 +38144,27 @@
       "runner_path": "scripts/cl3_closure_c_l1c_2026_05_10_cL1c.py",
       "title": "Closure C-L1c --- Six-Channel Casimir Span and Assignment/Weight Split"
     },
+    "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered": {
+      "claim_id": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "cl3_sm_embedding_theorem",
+        "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
+        "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native",
+        "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "21ef93a4d05d2ddd0f191614d00fc10d3c6d9e1c88a661770d97cb2e4146c1bd",
+      "path": "docs/CLOSURE_C_STAGGERED_DIRAC_GATE_NOTE_2026-05-10_cStaggered.md",
+      "runner_path": "scripts/cl3_closure_c_staggered_2026_05_10_cStaggered.py",
+      "title": "Staggered Dirac Gate: C8 Assembly Candidate and Order-One Open Gate"
+    },
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
       "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
       "claim_type_author_hint": null,
@@ -66321,7 +66378,7 @@
       "meta": 59,
       "no_go": 19,
       "none": 1626,
-      "open_gate": 26,
+      "open_gate": 27,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -66330,13 +66387,13 @@
       "meta": 59,
       "no_go": 126,
       "none": 449,
-      "open_gate": 114,
+      "open_gate": 115,
       "positive_theorem": 592
     },
-    "edge_count": 8296,
+    "edge_count": 8305,
     "leaf_count": 535,
-    "node_count": 2069,
+    "node_count": 2070,
     "root_count": 768,
-    "runners_with_path": 1684
+    "runners_with_path": 1685
   }
 }
