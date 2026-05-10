@@ -49636,6 +49636,17 @@
       "runner_path": "scripts/lensing_long_path_test.py",
       "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation"
     },
+    "lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10": {
+      "claim_id": "lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "b4d02602b52b8db6ad567bf3b5ae5731a04d83a640cf88a735714ce587d17237",
+      "path": "docs/LEPTON_BLOCK_SCALAR_SINGLET_COMPOSITE_UNIQUENESS_D17_PRIME_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lepton_block_scalar_singlet_composite_uniqueness.py",
+      "title": "Lepton Block Scalar-Singlet Composite Uniqueness (D17-prime)"
+    },
     "lepton_charge_universality_note_2026-05-02": {
       "claim_id": "lepton_charge_universality_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -65388,6 +65399,7 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_deflection_note",
     "lensing_k_sweep_note",
+    "lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10",
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
@@ -65725,7 +65737,7 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 17,
-      "none": 1626,
+      "none": 1627,
       "open_gate": 19,
       "positive_theorem": 90
     },
@@ -65736,12 +65748,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
     "edge_count": 8225,
-    "leaf_count": 532,
-    "node_count": 2049,
-    "root_count": 764,
-    "runners_with_path": 1664
+    "leaf_count": 533,
+    "node_count": 2050,
+    "root_count": 765,
+    "runners_with_path": 1665
   }
 }

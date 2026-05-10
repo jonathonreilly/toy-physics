@@ -11364,6 +11364,18 @@
       "dominant_class": "D",
       "runner": "scripts/lensing_long_path_test.py"
     },
+    "lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10": {
+      "assert_count": 8,
+      "counts": {
+        "A": 28,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_lepton_block_scalar_singlet_composite_uniqueness.py"
+    },
     "lepton_charge_universality_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -32245,6 +32257,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_lepton_block_scalar_singlet_composite_uniqueness.py": {
+      "assert_count": 8,
+      "claims": [
+        "lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 28,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_lepton_charge_universality.py": {
       "assert_count": 1,
       "claims": [
@@ -43534,15 +43561,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 161,
+    "decoration_candidates": 162,
     "dominant_class_distribution": {
-      "A": 111,
+      "A": 112,
       "B": 160,
       "C": 642,
       "D": 235,
       "none": 404
     },
-    "runners_classified": 1552,
+    "runners_classified": 1553,
     "runners_with_C": 804,
     "runners_with_D": 425
   }
