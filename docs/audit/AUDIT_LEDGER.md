@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 122 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1115 |
+| unaudited | 1114 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
 | ~~audited_conditional~~ | 231 |
-| ~~audited_failed~~ | 19 |
+| ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 388 |
 | `audited_conditional` | 231 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 63 |
+| `audited_failed` | 64 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1213 |
+| `unaudited` | 1212 |
 
 | claim_type | count |
 |---|---:|
@@ -746,6 +746,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `central_band_collapse_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `central_band_collapse_strength_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_mass_window_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -1611,6 +1612,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The full matched-seed card is claimed to report decoherence and gravity deltas for linear, LN, collapse, LN+|y|, and LN+|y|+collapse at N=25,40,60 under y_cut=2.0 and p=0.2.  _(class `C`)_
 - **chain closes:** False — No. The supplied completed runner stdout disagrees with several source-note collapse rows, for example N=25 collapse is 0.607+/-0.053 and +1.607+/-1.011 in stdout versus 0.637+/-0.047 and +1.807+/-1.029 in the note.
 - **rationale:** Issue: the note's exact recorded joint card is stale relative to the supplied completed runner output. Why this blocks: the claim is the numerical card itself, so mismatched row values prevent the source note from closing even though several qualitative sign statements still survive. Repair target: update the note from a current completed run and include or cite the helper source that defines graph construction and gravity/decoherence metrics if a computed theorem is retained. Claim boundary until fixed: only the runner stdout supports a parameter-specific table, not the note as written.
+- **auditor confidence:** high
+
+### `central_band_collapse_strength_note`
+
+- **Note:** [`CENTRAL_BAND_COLLAPSE_STRENGTH_NOTE.md`](../../docs/CENTRAL_BAND_COLLAPSE_STRENGTH_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The source note's finite central-band collapse-strength sweep values and conclusions for N=40,60 and p=0.05,0.10,0.20.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1338-28a2-7e33-85f5-b093a266fded`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** All of the `LN + |y| + collapse` rows remain Born-clean at machine precision, with lower `p` marginally cleaner than `p = 0.2`.  _(class `C`)_
+- **chain closes:** False — The supplied stdout confirms machine-precision PASS for the six LN+|y|+collapse rows, but the note's table and p-ordering are stale relative to that stdout. In particular, N=60 p=0.20 has the smallest mean in stdout, not a worse value than p=0.05 or p=0.10, and N=40 reports ok=4 rather than six matched seeds.
+- **rationale:** Issue: the source table and qualitative lower-p trend disagree with the supplied completed runner stdout. Why this blocks: this bounded theorem is a runner-backed calibration, so the exact row values, seed accounting, and p-ordering are load-bearing evidence. Repair target: regenerate the note from the current runner artifact, update the table and seed accounting, and narrow the interpretation to what the stdout actually supports. Claim boundary until fixed: the supplied stdout supports only that all six LN+|y|+collapse rows are below the 1e-10 machine-precision threshold.
 - **auditor confidence:** high
 
 ### `central_band_dense_joint_note`
