@@ -62,6 +62,14 @@ Use it to answer:
     lane building, claim review, review loops, backpressure integration, and
     methodology synthesis.
 
+13. [`ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md`](./ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md)
+    Methodology note for separating a provable algebraic core from
+    imports, numerical checks, and parent-claim ambitions before
+    packaging a source note and runner. It is a review discipline, not
+    a physics authority surface or audit verdict. Tactical agent-facing
+    reference at
+    [`skills/physics-loop/references/abstract-algebraic-core-extraction.md`](./skills/physics-loop/references/abstract-algebraic-core-extraction.md).
+
 ## Core Workflow Surfaces Elsewhere In The Repo
 
 - review workflow:

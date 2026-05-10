@@ -314,6 +314,11 @@ For publication-facing or quantitative work, also inspect
 5. **Generate route portfolio.** Produce several independent routes and score
    them by likely claim-state movement. See
    [`references/route-patterns.md`](references/route-patterns.md).
+   When a route will produce a new source note and companion runner,
+   use the abstract-algebraic core extraction reference to separate the
+   provable algebraic core from imports, numerical checks, and parent
+   ambitions before engineering the artifact. See
+   [`references/abstract-algebraic-core-extraction.md`](references/abstract-algebraic-core-extraction.md).
 6. **Build the opportunity queue.** In campaign mode or unattended runs longer
    than one major cycle, create `OPPORTUNITY_QUEUE.md` and keep at least three
    ranked science opportunities unless the repo has fewer viable open targets.
