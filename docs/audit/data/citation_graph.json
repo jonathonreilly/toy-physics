@@ -16945,6 +16945,90 @@
       "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
     },
     {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_note"
+    },
+    {
       "from": "qcd_low_energy_running_bridge_note_2026-05-01",
       "to": "plaquette_self_consistency_note"
     },
@@ -56391,6 +56475,39 @@
       "runner_path": null,
       "title": "What This Paper Does Not Claim"
     },
+    "publication_surface_gap_survey_synthesis_meta_note_2026-05-10": {
+      "claim_id": "publication_surface_gap_survey_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "observable_principle_from_axiom_note",
+        "alpha_s_derived_note",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "yt_ward_identity_derivation_theorem",
+        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+        "anomaly_forces_time_theorem",
+        "three_generation_structure_note",
+        "left_handed_charge_matching_note",
+        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
+        "ckm_atlas_axiom_closure_note",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "one_generation_matter_closure_note",
+        "plaquette_self_consistency_note",
+        "cosmological_constant_spectral_gap_identity_theorem_note",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "claude_complex_action_grown_companion_note"
+      ],
+      "note_hash": "bb3140c9b0237625a00fc577a575119666090960037c1ae62e6f0ff3172a4070",
+      "path": "docs/PUBLICATION_SURFACE_GAP_SURVEY_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_publication_surface_gap_survey_synthesis.py",
+      "title": "Publication Surface Gap Survey Synthesis Meta Note"
+    },
     "q_integer_spectrum_theorem_note_2026-05-02": {
       "claim_id": "q_integer_spectrum_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -65723,7 +65840,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 237,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
@@ -65732,16 +65849,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 719,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8225,
+    "edge_count": 8246,
     "leaf_count": 532,
-    "node_count": 2049,
+    "node_count": 2050,
     "root_count": 764,
-    "runners_with_path": 1664
+    "runners_with_path": 1665
   }
 }
