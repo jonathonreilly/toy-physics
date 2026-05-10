@@ -1,0 +1,191 @@
+
+======================================================================
+Section 0 — Retained sanity: C_3 cycle on hw=1, circulant H
+======================================================================
+[PASS]  0.1  C is unitary
+[PASS]  0.2  C has order 3 (C^3 = I)
+[PASS]  0.3  det(C) = +1 (3-cycle is even)
+         det(C) = 1.000000+0.000000j
+[PASS]  0.4  H = aI + bC + b̄C² is Hermitian
+[PASS]  0.5  [H, C] = 0 (C_3-equivariance)
+
+======================================================================
+Section 1 — C_3 isotype decomposition of V = ℂ³
+======================================================================
+[PASS]  1.1.0  e_0 eigenvector of C, eigenvalue ω^(-0) (isotype k)
+         ||C e_0 - ω^(-0) e_0|| = 0.00e+00
+[PASS]  1.1.1  e_1 eigenvector of C, eigenvalue ω^(-1) (isotype k)
+         ||C e_1 - ω^(-1) e_1|| = 3.39e-16
+[PASS]  1.1.2  e_2 eigenvector of C, eigenvalue ω^(-2) (isotype k)
+         ||C e_2 - ω^(-2) e_2|| = 5.27e-16
+[PASS]  1.2  Each isotype V_k = span(e_k) is 1-complex-dim (irrep of C_3)
+         V = V_0 ⊕ V_1 ⊕ V_2; dim_C V_k = 1 each
+[PASS]  1.3  Total dim_C V = 3 = sum of isotype dims
+         dim_C V = 1 + 1 + 1 = 3
+
+======================================================================
+Section 2 — TOP-AV1: Equivariant index theorem decoupling
+======================================================================
+[PASS]  2.1  Eigenvalues of H continuous in (a, b)
+         max ||λ(b_{i+1}) - λ(b_i)||₂ over Δb=0.1 = 0.2449
+[PASS]  2.2.(1, -1, -1)  Index integer-valued for chirality {0: 1, 1: -1, 2: -1}
+         ind = -1
+[PASS]  2.2.(1, 1, 1)  Index integer-valued for chirality {0: 1, 1: 1, 2: 1}
+         ind = 3
+[PASS]  2.2.(-1, 1, 1)  Index integer-valued for chirality {0: -1, 1: 1, 2: 1}
+         ind = 1
+[PASS]  2.3  Equivariant index ind_C3(D) does NOT depend on (a, b)
+         ind = sum_k chir(k) · dim_C V_k; (a, b) absent
+[PASS]  2.4  η-invariant at BAE point is integer (no BAE-pinning)
+         η(a=1, |b|=1/√2, φ=0) = 3 ∈ Z; same as for OTHER ratios
+[PASS]  2.5  η-invariant takes finitely many values across continuous (a, b) sweep
+         distinct η values across 6 ratios = {0, 3, -1}
+[PASS]  2.6  η at BAE = η at neighbors (no topological distinguishing of BAE)
+         η(|b|/a=0.69) = 3, η(BAE) = 3, η(|b|/a=0.72) = 3
+
+======================================================================
+Section 3 — TOP-AV2: K-theory class in K_C3(pt) = R(C_3)
+======================================================================
+[PASS]  3.1  V = ℂ³ as regular rep: [V] = (1, 1, 1) in R(C_3)
+         multiplicities = (1, 1, 1)
+[PASS]  3.2  χ_V(I) = 3 (trace of identity)
+         χ_V(I) = 3.0
+[PASS]  3.3  χ_V(C) = 0 (trace of cyclic shift)
+         χ_V(C) = 0.00e+00
+[PASS]  3.4  χ_V(C²) = 0 (trace of double shift)
+         χ_V(C²) = 0.00e+00
+[PASS]  3.5.0  Isotype multiplicity m_0 = 1 (integer)
+         m_0 = 1.000000
+[PASS]  3.5.1  Isotype multiplicity m_1 = 1 (integer)
+         m_1 = 1.000000
+[PASS]  3.5.2  Isotype multiplicity m_2 = 1 (integer)
+         m_2 = 1.000000
+[PASS]  3.6  K-theory class [V] does NOT depend on (a, b)
+         [V] = (1, 1, 1) ∈ R(C_3) regardless of (a, b)
+[PASS]  3.7  K_C3(pt) = R(C_3) = Z ⊕ Z ⊕ Z (free abelian, rank 3)
+         K-theory data is a 3-tuple of integers; cannot pin a continuous real ratio
+
+======================================================================
+Section 4 — TOP-AV3: Anomaly polynomial / Chern character
+======================================================================
+[PASS]  4.1  Chern character ch(V over pt) = rank(V) = 3 (integer)
+         ch(V) = 3
+[PASS]  4.2  Equivariant Chern character at C: ch_C3(V)(C) = sum_k m_k · ω^k = 0
+         ch_C3(V)(C) = 0.00e+00 + 3.33e-16j
+[PASS]  4.3  Anomaly polynomial for discrete C_3 = 0 in continuous form
+         Discrete groups have no continuous gauge curvature; only 't Hooft mode counts
+[PASS]  4.4  Anomaly poly Tr(F^k) does NOT depend on circulant (a, b)
+         Anomaly poly is a GAUGE-curvature class; (a, b) is matter-amplitude
+
+======================================================================
+Section 5 — TOP-AV4: Cech cohomology / sheaf cohomology
+======================================================================
+[PASS]  5.1  H^0(pt, Z) = Z (rank 1)
+         rank H^0 = 1
+[PASS]  5.2  H^q(pt, Z) = 0 for q > 0 (no higher cohomology on a point)
+         H^1 = H^2 = ... = 0
+[PASS]  5.3  H^2_C3(pt, Z) = Z/3Z (finite, 3-torsion)
+         3-torsion class; integer mod 3, not continuous
+[PASS]  5.4  C_3-equivariant line bundles on pt: |Hom(C_3, U(1))| = 3
+         3 line bundles ↔ 3 irreducible characters; rederives R(C_3) K-theory
+[PASS]  5.5  Cohomology gives (1, 1, 1) iso-mult, NOT (1, 1) [F1/BAE]
+         3 distinct isotype classes of equal multiplicity 1; not (1, 1)
+
+======================================================================
+Section 6 — TOP-AV5: 't Hooft anomaly matching
+======================================================================
+[PASS]  6.1  UV C_3-anomaly trace = (3, 0, 0) (integer)
+         Tr_V(C^k) for k=0,1,2 = (3, 0, 0)
+[PASS]  6.2  IR C_3-anomaly trace = (3, 0, 0) for ALL (a, b)
+         C_3 trace depends on V (representation), not H (amplitude)
+[PASS]  6.3  't Hooft matching gives INTEGER mode counts, not amplitude ratios
+         UV-IR match: integer-valued; cannot pin |b|^2/a^2
+
+======================================================================
+Section 7 — TOP-AV6: No bridge from topology to amplitude
+======================================================================
+[PASS]  7.1  Spectral flow integer for any (a, |b|)
+         sf(BAE)=6, sf(0.6)=6, sf(1.5)=6
+[PASS]  7.2  Spectral flow does NOT distinguish BAE from nearby ratios
+         sf(BAE)=6, sf(0.6)=6 → not BAE-specific
+[PASS]  7.3  Topological invariants of H locally constant in (a, b)
+         T can change only at eigenvalue zero crossings; locally constant
+[PASS]  7.4  Topological invariants sweep over (a, |b|): finitely many values
+         distinct invariant-tuples = {(3, 3, 3, 0), (-1, 3, 1, 2)}
+[PASS]  7.5  No topological invariant jump at BAE point r = 1/√2
+         jumps near BAE=0.7071: []
+[PASS]  7.6  η-jump location ≠ BAE point
+         η(BAE)=3 (all 3 positive); η(r=1)=0; η(r=1.1)=-1
+
+======================================================================
+Section 8 — TOP-AV7: Multiplicity counts from topology
+======================================================================
+[PASS]  8.1  Complex isotype multiplicity (over C): (1, 1, 1) — three distinct irreps
+         dim_C V_0 = dim_C V_1 = dim_C V_2 = 1
+[PASS]  8.2  Real isotype multiplicity on Herm_circ(3): (1, 2)
+         trivial: dim_R = 1; doublet: dim_R = 2
+[PASS]  8.3  Regular-rep multiplicities: (1, 1, 1)
+         V = ⊕_k V_k; each m_k = 1
+[PASS]  8.4  No topological count gives F1 / BAE multiplicity (1, 1)
+         complex=(1, 1, 1), real=(1, 2), regular=(1, 1, 1); F1=(1, 1) not matched by any
+[PASS]  8.5  (1, 2) real-dim count from topology ≡ (1, 2) from operator-level
+         Topology rederives Probe 28's (1, 2); doesn't add (1, 1)
+
+======================================================================
+Section 9 — Comparison with Probe X (Pauli) and Probe 28 (interacting)
+======================================================================
+[PASS]  9.1  Probe 28 (operator): closes BAE negatively
+         F3 (1, 2) real-dim weighting; F1 absent
+[PASS]  9.1  Probe X (wave-function): closes BAE negatively
+         Pauli singlet ∈ trivial isotype; b-decoupled
+[PASS]  9.1  Probe Y (topological): closes BAE negatively
+         Integer-quantized; (a, b)-decoupled from K-theory
+[PASS]  9.2  Three layers structurally distinct
+         operator (Hilbert states), wave-function (∧^N tensors), bundle (K-theory)
+[PASS]  9.3  All three layers rooted in C_3 representation theory
+         real-dim (1,2) | det(C)=+1 | K-theory (1,1,1)/R(C_3)
+[PASS]  9.4  BAE structurally inaccessible at operator + wave-function + topology
+         The (1, 1) multiplicity-counting principle absent at all 3 levels
+
+======================================================================
+Section 10 — Convention robustness
+======================================================================
+[PASS]  10.1  Inverse cycle C^(-1) = C^T (unitary inverse)
+[PASS]  10.2  C^(-1) eigenvalues: same set {1, ω, ω²} as C
+         K-theory class invariant under C → C^(-1)
+[PASS]  10.3  K-theory class invariant under unitary conjugation U^(-1) C U
+         eigvals(C) = [-0.5-8.66025404e-01j -0.5+8.66025404e-01j  1. -1.32561808e-34j], eigvals(U^t C U) = [-0.5-8.66025404e-01j -0.5+8.66025404e-01j  1. -1.32561808e-34j]
+[PASS]  10.4  Equivariant index of trivial Dirac is (a, b)-independent
+         ind = -1 for any (a, b)
+
+======================================================================
+Section 11 — Sharpened terminal residue: 3-level structural closure
+======================================================================
+[PASS]  11.1  operator-level (Probes 12-30) CLOSED
+         C_3 rep theory: (1, 2) real-dim on Herm_circ(3) → F3 canonical, F1 / BAE absent
+[PASS]  11.2  wave-function-level (Probe X) CLOSED
+         C_3 rep theory: det(C)=+1, Pauli ε ∈ trivial isotype → Slater singlet b-decoupled, BAE inaccessible
+[PASS]  11.3  topological-level (Probe Y, this probe) CLOSED
+         K-theory R(C_3) = Z⊕Z⊕Z; index, anomaly = integers → Continuous (a, b) absent from K-theory; no bridge
+[PASS]  11.4  THEOREM TOPO-DECOUPLE: BAE inaccessible at topological level
+         K_C3(pt)=R(C_3)=Z⊕Z⊕Z; index/anomaly/Cech all integer-quantized; (a, b) NOT in topological data; cannot pin |b|²/a²=1/2
+[PASS]  11.5  Three-level structural closure complete
+         BAE structurally absent at operator + wave-function + topology
+
+======================================================================
+Section 12 — What this probe does NOT do
+======================================================================
+[PASS]  12.1  Does NOT close the BAE-condition
+[PASS]  12.2  Does NOT add any new axiom or new admission
+[PASS]  12.3  Does NOT modify any retained theorem
+[PASS]  12.4  Does NOT promote any downstream theorem
+[PASS]  12.5  Does NOT load-bear PDG values into a derivation step
+[PASS]  12.6  Does NOT promote external surveys to retained authority
+[PASS]  12.7  Does NOT replace Probe X (wave-function) or Probe 28 (operator)
+[PASS]  12.8  Does NOT propose an alternative κ value as physical
+[PASS]  12.9  Does NOT promote sister bridge gaps (L3a, L3b, C-iso, W1.exact)
+[PASS]  12.10  Does NOT introduce new physics axioms (uses standard math only)
+
+======================================================================
+=== TOTAL: PASS=75, FAIL=0 ===
+======================================================================
