@@ -7,8 +7,12 @@ sum, beta = 6:
 
   (P1) nonnegativity of tensor_word matrix entries
   (P2) conjugation-swap symmetry of tensor_word
-  (P3.a) nonnegativity of boundary amplitude under unit-vector readout
-  (P3.b) conjugation-swap symmetry of the boundary amplitude
+  (P3) nonnegativity of boundary amplitude under unit-vector readout
+
+Plus consistency check (derived corollary, not separate load-bearing):
+  S · boundary0 = boundary0 exactly (since (0,0) is fixed by S),
+  and therefore S · amp = amp follows from (P2) — verified numerically
+  to confirm the chain composes consistently, not as a separate property.
 
 The construction is:
 
@@ -168,8 +172,9 @@ def part1_note_structure():
         ("Verification section header", "## Verification"),
         ("(P1) nonnegativity stated", "(P1) **Nonnegativity"),
         ("(P2) conjugation-swap stated", "(P2) **Conjugation-swap"),
-        ("(P3.a) boundary nonneg stated", "(P3.a)"),
-        ("(P3.b) boundary swap stated", "(P3.b)"),
+        ("(P3) boundary nonneg stated", "(P3) **Nonnegative boundary amplitude"),
+        ("(P3-corollary) S·boundary0=boundary0 derived from (P2)",
+         "Derived corollary of (P2)"),
         ("BA-1 truncated Wilson coefficients stated",
          "(BA-1) **Canonical truncated local Wilson coefficients.**"),
         ("BA-2 fusion multiplicities stated",
@@ -329,22 +334,37 @@ def part4_construct_and_verify_packet():
         f"max diff = {word_swap_diff:.2e}",
     )
 
-    # (P3.a) nonneg boundary amplitude
+    # (P3) nonneg boundary amplitude
     boundary0 = np.zeros(len(weights), dtype=float)
     boundary0[index[(0, 0)]] = 1.0
     amp = tensor_word @ boundary0
     amp_min = float(np.min(amp))
     amp_max = float(np.max(amp))
     check(
-        "(P3.a) min(amp) ≥ 0 (nonneg boundary amplitude)",
+        "(P3) min(amp) ≥ 0 (nonneg boundary amplitude)",
         amp_min >= 0.0,
         f"min = {amp_min:.6e}, max = {amp_max:.6e}",
     )
 
-    # (P3.b) boundary amplitude conjugation-swap symmetry: S·amp = amp
+    # (P3-corollary, derived from P2): the (0,0) state is fixed by S,
+    # so S · boundary0 = boundary0 trivially. Combined with (P2):
+    #   S · amp = S · tensor_word · boundary0
+    #          = tensor_word · S · boundary0   [by (P2)]
+    #          = tensor_word · boundary0
+    #          = amp.
+    # Verify the trivial S-fixed-point step explicitly, plus the
+    # consistency S · amp = amp at numerical precision.
+    s_b0_diff = int(np.max(np.abs(swap @ boundary0 - boundary0)))
+    check(
+        "(P3-corollary, EXACT) S · boundary0 = boundary0 (since (0,0) is "
+        "S-fixed)",
+        s_b0_diff == 0,
+        f"max |S·boundary0 - boundary0| = {s_b0_diff}",
+    )
     amp_swap_diff = float(np.max(np.abs(swap @ amp - amp)))
     check(
-        "(P3.b) ‖S · amp − amp‖_∞ < 10⁻¹² (boundary-amplitude conjugation symmetry)",
+        "(P3-corollary, consistency) ‖S · amp − amp‖_∞ < 10⁻¹² "
+        "(follows from (P2) + S·b0 = b0; consistency check, not separate load-bearing)",
         amp_swap_diff < 1e-12,
         f"max diff = {amp_swap_diff:.2e}",
     )
@@ -430,7 +450,9 @@ def main() -> int:
     print(" Bounded source note: one explicit positive matrix tensor_word,")
     print(" constructed at NMAX = 4, MODE_MAX = 80, beta = 6 from canonical")
     print(" truncated Wilson coefficients and SU(3) fusion multiplicities.")
-    print(" Verifies three structural properties (P1)-(P3) at double precision.")
+    print(" Verifies three load-bearing structural properties (P1)-(P3) at")
+    print(" double precision, plus the (P3-corollary) consistency check that")
+    print(" S·amp = amp follows from (P2) since S·boundary0 = boundary0.")
     print(" Implements 2026-05-10 audit verdict's repair-target option (b)")
     print(" 'a split note scoped only to the one finite tensor-word packet'")
     print(" on parent gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note.")
@@ -450,10 +472,13 @@ def main() -> int:
         print()
         print(" VERDICT: one explicit positive matrix tensor_word constructed from")
         print(" canonical truncated local Wilson coefficients (NMAX=4, MODE_MAX=80,")
-        print(" beta=6) and SU(3) fusion multiplicities verifies three structural")
-        print(" properties at double precision: (P1) nonnegativity of matrix entries,")
-        print(" (P2) conjugation-swap symmetry, (P3) nonnegative boundary amplitude")
-        print(" under (0,0)-component unit-vector readout. The parent's broader")
+        print(" beta=6) and SU(3) fusion multiplicities verifies three load-bearing")
+        print(" structural properties at double precision: (P1) nonnegativity of")
+        print(" matrix entries, (P2) conjugation-swap symmetry, (P3) nonnegative")
+        print(" boundary amplitude under (0,0)-component unit-vector readout. The")
+        print(" boundary-amplitude conjugation symmetry follows immediately from")
+        print(" (P2) since (0,0) is fixed by the conjugation swap (consistency")
+        print(" check, not a separate load-bearing property). The parent's broader")
         print(" matrix-element identity z_(p,q)^env = <chi, T^L eta> is NOT claimed")
         print(" here; this is a split-note bounded packet only.")
     return 0 if FAIL == 0 else 1

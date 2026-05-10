@@ -5,7 +5,9 @@
  Bounded source note: one explicit positive matrix tensor_word,
  constructed at NMAX = 4, MODE_MAX = 80, beta = 6 from canonical
  truncated Wilson coefficients and SU(3) fusion multiplicities.
- Verifies three structural properties (P1)-(P3) at double precision.
+ Verifies three load-bearing structural properties (P1)-(P3) at
+ double precision, plus the (P3-corollary) consistency check that
+ S·amp = amp follows from (P2) since S·boundary0 = boundary0.
  Implements 2026-05-10 audit verdict's repair-target option (b)
  'a split note scoped only to the one finite tensor-word packet'
  on parent gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note.
@@ -24,8 +26,8 @@
   [PASS] contains: Verification section header  (marker = '## Verification')
   [PASS] contains: (P1) nonnegativity stated  (marker = '(P1) **Nonnegativity')
   [PASS] contains: (P2) conjugation-swap stated  (marker = '(P2) **Conjugation-swap')
-  [PASS] contains: (P3.a) boundary nonneg stated  (marker = '(P3.a)')
-  [PASS] contains: (P3.b) boundary swap stated  (marker = '(P3.b)')
+  [PASS] contains: (P3) boundary nonneg stated  (marker = '(P3) **Nonnegative boundary amplitude')
+  [PASS] contains: (P3-corollary) S·boundary0=boundary0 derived from (P2)  (marker = 'Derived corollary of (P2)')
   [PASS] contains: BA-1 truncated Wilson coefficients stated  (marker = '(BA-1) **Canonical truncated local Wilson coefficients.**')
   [PASS] contains: BA-2 fusion multiplicities stated  (marker = '(BA-2) **`SU(3)` fundamental and anti-fundamental fusion')
   [PASS] contains: parent-note cite: GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER  (marker = 'GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md')
@@ -98,8 +100,9 @@
 
   [PASS] (P1) min(tensor_word) ≥ 0 (nonnegativity of all matrix entries)  (min = 0.000000e+00, max = 8.450635e-01)
   [PASS] (P2) ‖S · tensor_word − tensor_word · S‖_∞ < 10⁻¹² (conjugation-swap symmetry)  (max diff = 1.39e-17)
-  [PASS] (P3.a) min(amp) ≥ 0 (nonneg boundary amplitude)  (min = 0.000000e+00, max = 8.450635e-01)
-  [PASS] (P3.b) ‖S · amp − amp‖_∞ < 10⁻¹² (boundary-amplitude conjugation symmetry)  (max diff = 1.39e-17)
+  [PASS] (P3) min(amp) ≥ 0 (nonneg boundary amplitude)  (min = 0.000000e+00, max = 8.450635e-01)
+  [PASS] (P3-corollary, EXACT) S · boundary0 = boundary0 (since (0,0) is S-fixed)  (max |S·boundary0 - boundary0| = 0)
+  [PASS] (P3-corollary, consistency) ‖S · amp − amp‖_∞ < 10⁻¹² (follows from (P2) + S·b0 = b0; consistency check, not separate load-bearing)  (max diff = 1.39e-17)
 
   Sample tensor_word entries (boundary-projection diagonals):
     tensor_word[   (0, 0), (0,0)] = 8.450635e-01
@@ -131,14 +134,17 @@
   [PASS] (BA-1) and (BA-2) admitted as bounded textbook inputs
 
 ========================================================================================
- TOTAL: PASS=75, FAIL=0
+ TOTAL: PASS=76, FAIL=0
 ========================================================================================
 
  VERDICT: one explicit positive matrix tensor_word constructed from
  canonical truncated local Wilson coefficients (NMAX=4, MODE_MAX=80,
- beta=6) and SU(3) fusion multiplicities verifies three structural
- properties at double precision: (P1) nonnegativity of matrix entries,
- (P2) conjugation-swap symmetry, (P3) nonnegative boundary amplitude
- under (0,0)-component unit-vector readout. The parent's broader
+ beta=6) and SU(3) fusion multiplicities verifies three load-bearing
+ structural properties at double precision: (P1) nonnegativity of
+ matrix entries, (P2) conjugation-swap symmetry, (P3) nonnegative
+ boundary amplitude under (0,0)-component unit-vector readout. The
+ boundary-amplitude conjugation symmetry follows immediately from
+ (P2) since (0,0) is fixed by the conjugation swap (consistency
+ check, not a separate load-bearing property). The parent's broader
  matrix-element identity z_(p,q)^env = <chi, T^L eta> is NOT claimed
  here; this is a split-note bounded packet only.

@@ -73,13 +73,26 @@ Then
 
 ```text
 amp  :=  tensor_word · boundary0 ;
-amp[i]  ≥  0   for all i ∈ [0..24] ;                                      (P3.a)
-S · amp  =  amp   (entry-wise equal at machine precision).                (P3.b)
+amp[i]  ≥  0   for all i ∈ [0..24].                                       (P3)
 ```
 
-The runner verifies (P1), (P2), (P3.a), (P3.b) at full numpy
-double-precision tolerance on the explicit matrix constructed from the
-truncated canonical inputs.
+**Derived corollary of (P2)** (not a separate load-bearing property):
+since `(0, 0)` is fixed by the conjugation-swap (i.e., `S · boundary0 =
+boundary0` because `(0, 0) → (0, 0)` under `(p, q) → (q, p)`), property
+(P2) immediately yields
+
+```text
+S · amp  =  S · tensor_word · boundary0
+         =  tensor_word · S · boundary0    [by (P2)]
+         =  tensor_word · boundary0
+         =  amp.                                                          (P3-corollary)
+```
+
+The runner verifies (P1), (P2), (P3) at full numpy double-precision
+tolerance on the explicit matrix constructed from the truncated
+canonical inputs, and additionally verifies the (P3-corollary) numerical
+identity to confirm the chain `S · boundary0 = boundary0` plus (P2)
+combine consistently.
 
 ## Bounded admissions
 
@@ -115,8 +128,8 @@ truncated box.
 | Construct `tensor_word` per (3) by direct matrix products | algebra over real entries | none beyond (BA-1)–(BA-2) |
 | (P1) check `min(tensor_word) ≥ 0` by direct entry-wise minimum | numerical computation on the constructed matrix | runner-direct |
 | (P2) check `‖S · tensor_word − tensor_word · S‖_∞ < 10⁻¹²` (machine precision) | numerical computation | runner-direct |
-| (P3.a) check `min(tensor_word · boundary0) ≥ 0` by direct entry-wise minimum on the boundary amplitude | numerical computation | runner-direct |
-| (P3.b) check `‖S · amp − amp‖_∞ < 10⁻¹²` (machine precision) | numerical computation | runner-direct |
+| (P3) check `min(tensor_word · boundary0) ≥ 0` by direct entry-wise minimum on the boundary amplitude | numerical computation | runner-direct |
+| (P3-corollary, derived) verify `S · boundary0 = boundary0` exactly (trivially: `(0,0) → (0,0)` under conjugation swap), then check `‖S · amp − amp‖_∞ < 10⁻¹²` follows automatically from (P2) | derived from (P2) | runner-direct (consistency check) |
 
 All steps are class-A algebraic / direct-numerical computations on the
 explicitly constructed matrix. The chain closes from (BA-1)–(BA-2)
@@ -143,9 +156,14 @@ double precision.
 (D) **(P2) conjugation-swap symmetry.** `‖S · tensor_word −
 tensor_word · S‖_∞ < 10⁻¹²`.
 
-(E) **(P3.a)** `min_i (tensor_word · boundary0)[i] ≥ 0`.
+(E) **(P3)** `min_i (tensor_word · boundary0)[i] ≥ 0`.
 
-(F) **(P3.b)** `‖S · amp − amp‖_∞ < 10⁻¹²`.
+(F) **(P3-corollary, consistency)** `‖S · amp − amp‖_∞ < 10⁻¹²` follows
+immediately from (P2) because `S · boundary0 = boundary0` (the
+`(0, 0)` state is fixed by `(p, q) → (q, p)`). The runner verifies
+both `S · boundary0 = boundary0` exactly and the numerical
+`‖S · amp − amp‖_∞` bound to confirm the chain composes consistently;
+this is a consistency check, not a separate load-bearing property.
 
 (G) **Forbidden-import audit.** Imports limited to numpy + scipy
 (family convention with the retained_bounded sister
@@ -213,7 +231,10 @@ canonical truncated local Wilson coefficients (NMAX=4, MODE_MAX=80,
 beta=6) and SU(3) fusion multiplicities verifies three structural
 properties at double precision: (P1) nonnegativity of matrix entries,
 (P2) conjugation-swap symmetry, (P3) nonnegative boundary amplitude
-under (0,0)-component unit-vector readout. The parent's broader
-matrix-element identity z_(p,q)^env = <chi, T^L eta> is NOT claimed
-here; this is a split-note bounded packet only.
+under (0,0)-component unit-vector readout. The boundary-amplitude
+conjugation symmetry follows immediately from (P2) since (0,0) is
+fixed by the conjugation swap (consistency check, not a separate
+load-bearing property). The parent's broader matrix-element identity
+z_(p,q)^env = <chi, T^L eta> is NOT claimed here; this is a
+split-note bounded packet only.
 ```
