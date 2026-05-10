@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1149 |
+| unaudited | 1148 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 231 |
+| ~~audited_conditional~~ | 232 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 231 |
+| `audited_conditional` | 232 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1217 |
+| `unaudited` | 1216 |
 
 | claim_type | count |
 |---|---:|
@@ -634,6 +634,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_lower_level_pairing_nogo_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -6457,6 +6458,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the doubled nu_R line, the charge-(+2) adjoint eigenspace is exactly the one-dimensional slot E12, whose antisymmetric/Nambu completion is m J2 and whose phase is removed by local rephasing.  _(class `A`)_
 - **chain closes:** False — The local 2x2 algebra closes, but the claim that the current scalar transfer / response bank still misses exactly that slot imports the premise that the bank spans only diagonal Nambu lifts. No cited authority or runner data derives the actual bank span from the restricted packet.
 - **rationale:** The runner performs genuine elementary algebra checks for the doubled-line charge eigenspace, antisymmetric completion, and rephasing normal form. However, the final bank-missing conclusion is not derived from provided bank data; the code hard-codes the diagonal span as the relevant bank subspace and checks that J2 is not diagonal. Because the source note explicitly relies on prior branch facts about retained nu_R support and scalar/Nambu lifts that are not included as cited authorities, the full chain does not close within the restricted packet.
+- **auditor confidence:** high
+
+### `neutrino_mass_reduction_to_dirac_note`
+
+- **Note:** [`NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`](../../docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional gauge-structural reduction: given M_R,current=0 and an admitted electroweak Higgs doublet for lepton Yukawas, neutrino mass can live on the Dirac Yukawa lane, while Majorana/seesaw closure still needs a charge-2 primitive.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12b4-e3f3-7ee2-9e48-3797830b164a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Because the retained current-stack Majorana matrix is exactly zero, the current neutrino-mass closure problem reduces to deriving the Dirac Yukawa activation law.  _(class `A`)_
+- **chain closes:** False — The local SU(2)/hypercharge and neutral-mass block algebra is valid after assuming the Higgs doublet and the Majorana zero law. Retained-grade closure is blocked because the Higgs/CW electroweak-scalar lane is explicitly admitted/open or identification-conditioned in the supplied packet.
+- **rationale:** Issue: the theorem imports the electroweak Higgs-doublet lane as an admitted input. Why this blocks: without a retained-grade Higgs/Yukawa scalar authority, the conclusion is only a conditional reduction, not a retained-stack theorem. Repair target: retain or directly cite a retained Higgs-doublet/one-Higgs Yukawa gauge-selection theorem adequate to supply the scalar carrier. Claim boundary until fixed: with M_R,current=0 and admitted H, the remaining mass object is Y_nu; no Y_nu texture, masses, or PMNS data are derived.
+- **open / conditional deps cited:**
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
 - **auditor confidence:** high
 
 ### `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28`

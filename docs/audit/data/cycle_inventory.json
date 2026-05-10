@@ -3488,10 +3488,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -3925,10 +3925,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -5230,10 +5230,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -5297,10 +5297,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -5373,10 +5373,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -5440,10 +5440,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -5543,10 +5543,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -6575,10 +6575,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -6700,10 +6700,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -8083,10 +8083,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -8230,10 +8230,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -9017,10 +9017,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -9150,10 +9150,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -9790,10 +9790,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -10291,10 +10291,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -10423,10 +10423,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -10564,10 +10564,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -10777,10 +10777,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -10931,10 +10931,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -11330,10 +11330,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -11475,10 +11475,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -11629,10 +11629,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -11774,10 +11774,10 @@
       "max_transitive_descendants": 351,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -11964,10 +11964,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -12167,10 +12167,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -12438,10 +12438,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -12596,10 +12596,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -12799,10 +12799,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -12957,10 +12957,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -13317,10 +13317,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -13506,10 +13506,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -13726,10 +13726,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -13928,10 +13928,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -14121,10 +14121,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -14314,10 +14314,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -14507,10 +14507,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -14646,10 +14646,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -14839,10 +14839,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -15050,10 +15050,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -15234,10 +15234,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -15440,10 +15440,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -15637,10 +15637,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -15861,10 +15861,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -16098,10 +16098,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -16290,10 +16290,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -16576,10 +16576,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -16772,10 +16772,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -17004,10 +17004,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -17209,10 +17209,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -17441,10 +17441,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -17704,10 +17704,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -17994,10 +17994,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -18252,10 +18252,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -18447,10 +18447,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -18723,10 +18723,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -18945,10 +18945,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -19288,10 +19288,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -19568,10 +19568,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -19780,10 +19780,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -20064,10 +20064,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -20393,10 +20393,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -20704,10 +20704,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -21001,10 +21001,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -21271,10 +21271,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -21572,10 +21572,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -21891,10 +21891,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -22201,10 +22201,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -22439,10 +22439,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -22848,10 +22848,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -23041,10 +23041,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -23445,10 +23445,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -23768,10 +23768,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -24028,10 +24028,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -24378,10 +24378,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -24701,10 +24701,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -25069,10 +25069,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -25405,10 +25405,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -25723,10 +25723,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -26059,10 +26059,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -26440,10 +26440,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -26735,10 +26735,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -27084,10 +27084,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -27433,10 +27433,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -27782,10 +27782,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -28131,10 +28131,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -28480,10 +28480,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -28829,10 +28829,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -29106,10 +29106,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -29464,10 +29464,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -29885,10 +29885,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -30247,10 +30247,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -30591,10 +30591,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -30953,10 +30953,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -31315,10 +31315,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -31699,10 +31699,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -32074,10 +32074,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -32449,10 +32449,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -32824,10 +32824,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -33199,10 +33199,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -33574,10 +33574,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -33949,10 +33949,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -34324,10 +34324,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -34699,10 +34699,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -35074,10 +35074,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -35476,10 +35476,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -35828,10 +35828,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -36216,10 +36216,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -36604,10 +36604,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -36992,10 +36992,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -37290,10 +37290,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -37795,10 +37795,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -38191,10 +38191,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -38605,10 +38605,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -39019,10 +39019,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -39433,10 +39433,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -39847,10 +39847,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -40261,10 +40261,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -40675,10 +40675,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -41089,10 +41089,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -41503,10 +41503,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -41917,10 +41917,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -42344,10 +42344,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -42771,10 +42771,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -43198,10 +43198,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -43589,10 +43589,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -43917,10 +43917,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -44470,10 +44470,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -44897,10 +44897,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -45324,10 +45324,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -45751,10 +45751,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -46178,10 +46178,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -46618,10 +46618,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -47058,10 +47058,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -47480,10 +47480,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -47947,10 +47947,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -48387,10 +48387,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -48827,10 +48827,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -49267,10 +49267,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -49707,10 +49707,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -50147,10 +50147,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -50587,10 +50587,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -51027,10 +51027,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -51467,10 +51467,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -51907,10 +51907,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -52333,10 +52333,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -52804,10 +52804,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -53257,10 +53257,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -53710,10 +53710,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -54163,10 +54163,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -54616,10 +54616,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -55069,10 +55069,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -55522,10 +55522,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -55961,10 +55961,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351
@@ -56445,10 +56445,10 @@
           "transitive_descendants": 351
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
           "transitive_descendants": 351

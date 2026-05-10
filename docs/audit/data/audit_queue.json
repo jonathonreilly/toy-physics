@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 696,
+    "critical": 695,
     "high": 27,
     "leaf": 281,
     "medium": 151
@@ -942,7 +942,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 351,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -1440,7 +1440,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 351,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -1673,7 +1673,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 351,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -1957,7 +1957,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 351,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -7936,31 +7936,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "transitive_descendants": 353
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_mass_reduction_to_dirac_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "charged_lepton_two_higgs_canonical_reduction_note",
-        "publication.ci3_z3.derivation_atlas",
-        "publication.ci3_z3.publication_matrix"
-      ],
-      "direct_in_degree": 13,
-      "effective_status": "unaudited",
-      "load_bearing_score": 14.959,
-      "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
-      "transitive_descendants": 351
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38549,6 +38524,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 89,
-  "total_pending": 1155
+  "ready_count": 88,
+  "total_pending": 1154
 }
