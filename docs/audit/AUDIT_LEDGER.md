@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1108 |
+| unaudited | 1107 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
 | ~~audited_conditional~~ | 235 |
-| ~~audited_failed~~ | 22 |
+| ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 389 |
 | `audited_conditional` | 235 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 66 |
+| `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1206 |
+| `unaudited` | 1205 |
 
 | claim_type | count |
 |---|---:|
@@ -53,8 +53,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
-| `open_gate` | 100 |
-| `positive_theorem` | 732 |
+| `open_gate` | 101 |
+| `positive_theorem` | 731 |
 
 | criticality | count |
 |---|---:|
@@ -756,6 +756,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_dense_largen_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_mass_window_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `chiral_split_mass_gravity_note` | open_gate | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -1879,6 +1880,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current frozen runner checks the canonical 3+1D chiral-walk implementation at n=15 and observes both signs across the finite N sweep.  _(class `C`)_
 - **chain closes:** False — The source note and supplied stdout agree that the runner output contains both positive and negative signals. The claim that this is a property of the canonical 3+1D chiral walk does not close from the restricted packet because the actual evolve/probability_density implementation is imported from an unsupplied script.
 - **rationale:** Issue: the primary runner delegates the propagator and density computation to `frontier_chiral_3plus1d_converged`, whose source is not supplied. Why this blocks: stdout verifies a finite sign flip was reported, but clean closure for a bounded theorem about the canonical 3+1D chiral walk requires auditing the code that defines the walk and boundary behavior. Repair target: include or cite the imported implementation as a direct audit input, or make the runner self-contained, then rerun the finite N sweep. Claim boundary until fixed: the supplied artifact supports only that this runner output reports both signs on the stated finite sweep.
+- **auditor confidence:** high
+
+### `chiral_split_mass_gravity_note`
+
+- **Note:** [`CHIRAL_SPLIT_MASS_GRAVITY_NOTE.md`](../../docs/CHIRAL_SPLIT_MASS_GRAVITY_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited whether the supplied 1D split-parameter runner demonstrates that separating g from theta_m removes theta_m-dependent gravity response while preserving free KG and linear field-strength scaling.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e134b-0235-7930-a0b4-33ade150785d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** If the split model flattens the theta_m sweep while preserving KG and F ∝ M, then overloading theta_m is a genuine bottleneck.  _(class `G`)_
+- **chain closes:** False — The runner shows only a modest theta_m sensitivity reduction, not a flattened sweep: split exponent is still 2.803 and split CV is still 0.9013. The same output also shows severe k chromaticity with identical baseline and split CV_k = 2.6580, while the source note names k-achromaticity as an early-warning test.
+- **rationale:** Issue: the claimed bottleneck conclusion is inferred from a tuned toy runner threshold rather than demonstrated flattening of theta_m response. Why this blocks: the completed stdout contradicts the note's own closure condition because split response remains strongly theta-dependent and equally chromatic in k. Repair target: define quantitative pass thresholds in the note, require the runner verdict to include k-achromaticity and observable-consistency checks, and show actual theta flattening rather than a small CV improvement. Claim boundary until fixed: this is at most an exploratory diagnostic suggesting g gives an independent linear control at fixed theta_m.
 - **auditor confidence:** high
 
 ### `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02`
