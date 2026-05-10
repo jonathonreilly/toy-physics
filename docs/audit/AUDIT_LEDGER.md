@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1136 |
+| unaudited | 1135 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 213 |
+| ~~audited_conditional~~ | 214 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 213 |
+| `audited_conditional` | 214 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1233 |
+| `unaudited` | 1232 |
 
 | claim_type | count |
 |---|---:|
@@ -503,6 +503,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `central_band_dense_joint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1362,6 +1363,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_output_empty`
   - `archived_session_log_or_named_numeric_output_missing`
   - `seed_strength_and_geometry_independence_sweeps_not_reproducible`
+- **auditor confidence:** high
+
+### `central_band_dense_joint_note`
+
+- **Note:** [`CENTRAL_BAND_DENSE_JOINT_NOTE.md`](../../docs/CENTRAL_BAND_DENSE_JOINT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-run same-graph central-band numerical card for N=40 and N=60 reporting Born metric, purity/decoherence, and gravity delta under LN+|y| with and without collapse.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12f2-99ed-7d72-b1a2-ddf15009902e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** “N=60 is the retained same-graph joint row: LN + |y| keeps gravity positive; LN + |y| + collapse lowers purity further while keeping gravity positive.”  _(class `C`)_
+- **chain closes:** False — The runner supports a bounded finite computation for the N=60 rows, but the note does not close the stated machine-precision Born claim because the runner prints rounded mean±SE rather than a high-precision max |I3|/P threshold check. The note is also stale relative to the supplied stdout for the N=40 collapse row.
+- **rationale:** Issue: the note claims machine-precision Born cleanliness and records an N=40 collapse row of 0.587±0.065 purity and -0.554±0.493 gravity, while the supplied runner stdout gives 0.568±0.054 and -0.520±0.521. Why this blocks: rounded 0.000±0.000 mean/SE output is not a max |I3|/P < 1e-10 certificate, and stale table values prevent the note from being the audited numerical certificate it claims to be. Repair target: update the note to the current stdout and revise the runner/log to print or assert high-precision max |I3|/P per row. Claim boundary until fixed: the packet supports only a bounded finite sample in which the printed N=60 LN rows have positive mean gravity and rounded Born metric zero.
 - **auditor confidence:** high
 
 ### `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26`
