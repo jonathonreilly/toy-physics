@@ -18877,6 +18877,50 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "to": "planck_orientation_principle_bounded_note_2026-05-10_planckp3"
+    },
+    {
       "from": "symmetry_head_to_head_note",
       "to": "mirror_chokepoint_note"
     },
@@ -59526,6 +59570,29 @@
       "runner_path": "scripts/frontier_su5_embedding_from_graph_first_surface.py",
       "title": "SU(5) Embedding Consistency from Graph-First Surface"
     },
+    "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda": {
+      "claim_id": "substep4_ac_lambda_separate_closure_sharpened_note_2026-05-10_aclambda",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08",
+        "conventions_unification_companion_note_2026-05-08",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "planck_orientation_principle_bounded_note_2026-05-10_planckp3"
+      ],
+      "note_hash": "72b77cad99b13f8d6eea235684f0be46af0aa98e760eabda30465deed94871bc",
+      "path": "docs/SUBSTEP4_AC_LAMBDA_SEPARATE_CLOSURE_SHARPENED_NOTE_2026-05-10_aclambda.md",
+      "runner_path": "scripts/cl3_substep4_ac_lambda_separate_closure_2026_05_10_aclambda.py",
+      "title": "Substep-4 AC_\u03bb Separate-Closure Candidate (Sharpened, Partial)"
+    },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
       "claim_type_author_hint": null,
@@ -64939,7 +65006,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 224,
+      "bounded_theorem": 225,
       "decoration": 1,
       "meta": 29,
       "no_go": 15,
@@ -64948,7 +65015,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 718,
+      "bounded_theorem": 719,
       "decoration": 1,
       "meta": 29,
       "no_go": 123,
@@ -64956,10 +65023,10 @@
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8107,
+    "edge_count": 8118,
     "leaf_count": 533,
-    "node_count": 2033,
+    "node_count": 2034,
     "root_count": 769,
-    "runners_with_path": 1648
+    "runners_with_path": 1649
   }
 }

@@ -1,0 +1,101 @@
+===== runner cache v1 =====
+runner: scripts/cl3_substep4_ac_lambda_separate_closure_2026_05_10_aclambda.py
+runner_sha256: dd62758a5134f040cc4a9e44ba433f71e5d48087bbca2722f2e740ca7c5a476c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1
+status: ok
+----- stdout -----
+========================================================================================
+  Substep-4 AC_λ Separate-Closure Candidate (Sharpened, Partial)
+  Companion runner: docs/SUBSTEP4_AC_LAMBDA_SEPARATE_CLOSURE_SHARPENED_
+                    NOTE_2026-05-10_aclambda.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+  Section 1 — AC_λ atomic sub-decomposition validity
+----------------------------------------------------------------------------------------
+  [PASS] AC_λ sub-decomposition is logically independent — all 4 (struct, label) value combos consistent
+  [PASS] AC_λ ⇔ AC_λ.struct ∧ AC_λ.label — conjunction matches original atom phrasing in substep-4 narrowing
+
+----------------------------------------------------------------------------------------
+  Section 2 — AC_λ.struct: Kawamoto-Smit block-diagonality
+----------------------------------------------------------------------------------------
+  [PASS] Step (i): K(k) vanishes at every hw=1 BZ corner — sin(k_μ)=0 for all k_μ∈{0,π}; verified symbolically
+  [PASS] Step (i) interval-certified: sin(k_μ) ∈ I containing 0 — mpmath dps=50
+  [PASS] Step (ii): K commutes with (T_x, T_y, T_z) by translation invariance — structural property of staggered kinetic action; cited from KS forcing
+  [PASS] Step (iii): joint eigenvalues pairwise distinct — ((-1,1,1), (1,-1,1), (1,1,-1)) all pairwise distinct
+  [PASS] Reed-Simon I §VIII.5 simultaneous-diagonalization applies — non-degenerate joint eigenspaces of commuting (T_x, T_y, T_z)
+  [PASS] AC_λ.struct: K diagonal in corner basis ⇒ propagator block-diagonal — ⟨χ̄_{c_α}(x) χ_{c_β}(y)⟩_Ω = δ_{αβ} S_α(x−y)
+
+----------------------------------------------------------------------------------------
+  Section 3 — AC_λ.label: labeling-convention bridge
+----------------------------------------------------------------------------------------
+  [PASS] PR #728 records mass-ordering labels are conventions — {electron, muon, tau} convention identical in nature to {u, c, t}
+  [PASS] PR #729 unifies labeling and unit conventions as bookkeeping — neither convention type counts as physical import
+  [PASS] PR #790 separates BAE (= AC_φλ) from species-label content — BAE is amplitude-equipartition |b|²/a²=1/2; not species-label
+  [PASS] AC_λ.label ≡ kind-of-label is species (or labeling-convention bridge) — under {AC_λ.struct, C3pres, ConvU}: species-kind or labeling convention
+
+----------------------------------------------------------------------------------------
+  Section 4 — Independence from AC_φλ (= BAE)
+----------------------------------------------------------------------------------------
+  [PASS] AC_λ.struct independent of (a, b) BAE parameters — AC_λ.struct is about K (kinetic operator), not H = aI + bC + b̄C²
+  [PASS] AC_λ.label independent of BAE numerical condition — kind-of-label question is at convention layer, not parameter layer
+  [PASS] AC_φλ remains terminally bounded (per PR #836) — 30-probe BAE campaign synthesis; not touched by this note
+
+----------------------------------------------------------------------------------------
+  Section 5 — Independence from AC_φ
+----------------------------------------------------------------------------------------
+  [PASS] AC_φ equal-expectation lemma: ⟨c_α|H|c_α⟩ = a for all α — corner expectations [1.5, 1.5, 1.5]
+  [PASS] AC_λ.struct addresses K (kinetic op), AC_φ addresses H (C_3-sym op) — different operators; both claims hold simultaneously
+  [PASS] AC_λ.struct ∧ AC_φ equal-expect: jointly consistent — block-diagonal off-diagonals + equal diagonals: no contradiction
+  [PASS] AC_φ remains bounded structural no-go candidate within current framework surface — preserved-C_3 framing per PR #728; not touched by this note
+
+----------------------------------------------------------------------------------------
+  Section 6 — Partial-ratchet implication
+----------------------------------------------------------------------------------------
+  [PASS] Candidate atom count reduction: 3 atoms → 2 atoms — before={'AC_φ', 'AC_λ', 'AC_φλ'}, after={'AC_φ', 'AC_φλ'}
+  [PASS] AC_λ candidate removal from residual atomic stack — proposed as subsumed by Kawamoto-Smit upstream + audit-pending-meta conditional
+  [PASS] Substep-4 surface tier UNCHANGED (still bounded_theorem) — tier inherits from bounded Kawamoto-Smit upstream; no positive ratchet
+  [PASS] Inherited dependencies recorded — 1 upstream + 3 audit-pending-meta companion notes
+
+----------------------------------------------------------------------------------------
+  Section 7 — Forbidden-imports verification
+----------------------------------------------------------------------------------------
+  [PASS] No PDG values imported as derivation input — no m_e, m_μ, m_τ, m_Pl, G_N, c, hbar in runner
+  [PASS] No new axioms added — only physical Cl(3) local algebra + Z^3 spatial substrate + cited upstream authorities + audit-pending meta
+  [PASS] No fitted matching coefficients — all numerical content is symbolic / structural
+  [PASS] No HK + DHR appeal (Block 01 audit retired this) — decomposition argues via Reed-Simon simultaneous diagonalization
+  [PASS] No BAE-condition closure claim — AC_φλ remains terminally bounded per PR #836; not touched here
+  [PASS] No physical-observable distinguishability claim on H_{hw=1} — AC_φ remains bounded structural no-go candidate; not touched here
+
+----------------------------------------------------------------------------------------
+  Section 8 — Authority disclaimer / source-note hygiene
+----------------------------------------------------------------------------------------
+  [PASS] Runner is a verification, not an audit verdict — audit verdict and downstream status set only by independent audit lane
+  [PASS] Runner does not promote any retained or positive_theorem status — result is sharpened bounded; AC_λ inherits Kawamoto-Smit bounded tier
+  [PASS] Runner does not modify retained content on main — no modifications to existing theorem notes or retained derivations
+  [PASS] Source-note triplet: source note + paired runner + cached output — review-loop source-only policy respected (no output-packets, no synthesis)
+
+========================================================================================
+  TOTAL: PASS=33, FAIL=0
+========================================================================================
+
+Result classification:
+
+  AC_λ atom of the substep-4 atomic decomposition decomposes as
+    AC_λ = AC_λ.struct ∧ AC_λ.label
+
+  AC_λ.struct: runner-certified bounded candidate (Kawamoto-Smit)
+  AC_λ.label : labeling-convention bridge (audit-pending meta)
+
+  Conjunction AC_λ is proposed as a SHARPENED BOUNDED support
+  candidate for substep-4 with NO admitted observation of its
+  own beyond inherited Kawamoto-Smit upstream.
+
+  Proposed substep-4 admission count: 3 atoms → 2 atoms
+  (AUDIT-PENDING PARTIAL RATCHET)
+  Substep-4 surface tier   : bounded_theorem (UNCHANGED)
+
+  Independent audit lane has full authority for verdict and downstream
+  status.
