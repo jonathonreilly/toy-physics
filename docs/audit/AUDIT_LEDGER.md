@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 69 |
+| **retained** | 70 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 239 |
 | open_gate | 13 |
-| unaudited | 1095 |
+| unaudited | 1094 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 404 |
+| `audited_clean` | 405 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1193 |
+| `unaudited` | 1192 |
 
 | claim_type | count |
 |---|---:|
@@ -134,6 +134,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | D | - |
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
+| `bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_bounded_negative_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -1452,6 +1453,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Gcrit_0.011_not_sampled_or_reproduced_by_live_runner`
   - `field_strength_dependence_rows_s_0.001_and_s_0.016_not_present_in_current_runner`
   - `high_G_live_runner_shows_unstable_away_behavior_not_smooth_threshold_table`
+- **auditor confidence:** high
+
+### `bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`BBS_RG_BANACH_CONTRACTION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/BBS_RG_BANACH_CONTRACTION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** External functional-analysis theorem: bounded linear operators with norm at most kappa<1 obey geometric iterate and composition bounds; strict metric contractions obey the standard fixed-point iterate error bound; and the geometric tail identity holds. No CL3, RG bridge, physical-scale, or numerical-observation claim is audited or made.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e143d-97d9-7b53-9f06-a1586d4121a4`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** If T: B -> B is a bounded linear operator with ||T||_op <= kappa and 0 <= kappa < 1, then ||T^N x0|| <= kappa^N ||x0||; similarly compositions multiply operator-norm bounds, Banach contraction iterates satisfy d(T^N x0,x_*) <= kappa^N d(x0,x_*), and sum_{k>=N} kappa^k = kappa^N/(1-kappa).  _(class `A`)_
+- **chain closes:** True — The scoped result is standard functional analysis and elementary algebra: submultiplicativity of operator norm gives the iterate and composition bounds, Banach's contraction theorem gives the fixed-point estimate, and the tail formula is the ordinary geometric series identity. The note explicitly excludes framework blocking/coarse-graining, project couplings, hierarchy formulae, physical scales, and observational comparisons, so no CL3 or physics bridge is required for this narrow claim.
+- **rationale:** The claim closes exactly within the stated external-mathematics boundary. There are no hidden project-specific imports, no renaming of physical quantities, and no assertion that a BBS/RG hypothesis holds for any framework map. The BBS/Brydges-Slade material is only cited as context where such estimates are used, not as a load-bearing bridge claim.
 - **auditor confidence:** high
 
 ### `bell_inequality_derived_note`
