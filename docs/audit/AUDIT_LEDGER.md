@@ -22,10 +22,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1081 |
+| unaudited | 1080 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
-| ~~audited_renaming~~ | 17 |
+| ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 256 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
@@ -44,8 +44,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 19 |
-| `audited_renaming` | 17 |
-| `unaudited` | 1179 |
+| `audited_renaming` | 18 |
+| `unaudited` | 1178 |
 
 | claim_type | count |
 |---|---:|
@@ -872,6 +872,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
+| `koide_theta_hierarchy_open_scalar_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5.5 | E | - |
 | `poisson_self_field_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -6446,6 +6447,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the stated local-packet scope, the obstruction closes: constant local invariants cannot distinguish two branch points with different holonomy values. The result is a scoped no-go for local selected-line laws, not a no-go for nonlocal continuation or extra Wilson/lattice transport.
 - **rationale:** Issue checked: whether the selected-line local packet itself can select delta=2/d^2. Why this closes: the note and runner establish that the local Berry/FS/rho_delta data are constant while delta varies strictly, which is enough for the stated local no-go. Repair target: none for this scoped no-go; any positive bridge must instead supply a nonlocal branch rule or extra Wilson/lattice transport datum. Claim boundary until fixed elsewhere: this does not derive the physical point and does not rule out nonlocal or extra-structure bridges.
 - **auditor confidence:** medium
+
+### `koide_theta_hierarchy_open_scalar_note_2026-04-19`
+
+- **Note:** [`KOIDE_THETA_HIERARCHY_OPEN_SCALAR_NOTE_2026-04-19.md`](../../docs/KOIDE_THETA_HIERARCHY_OPEN_SCALAR_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that the selected charged-lepton Brannen-Zenczykowski phase offset is closed as the Berry holonomy of the CP1 tautological doublet ray, including the asserted delta = 2/9 selected point.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1392-264c-7ff2-9a81-ae4291f1ee32`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** That is the load-bearing theorem: the physical charged-lepton phase observable is the Berry holonomy of the canonical tautological line on the actual selected route.  _(class `F`)_
+- **chain closes:** False — The note and runner establish Hol = theta(m) - 2pi/3 = delta(m) after choosing the CP1 doublet ray and reference point. They do not derive the physical carrier/readout or the 2/9 selection; the runner sets DELTA_TARGET = 2/9 and solves for the corresponding m.
+- **rationale:** Issue: the claimed closure identifies the physical charged-lepton phase observable with the Berry holonomy of a chosen tautological CP1 doublet ray, and the runner hard-codes DELTA_TARGET = 2/9 before solving. Why this blocks: the equality Hol = delta is an algebraic readout once the carrier, reference point, and target value are supplied, not a derivation of the physical observable or exact value. Repair target: provide a retained bridge theorem deriving the CP1 carrier/readout and the 2/9 selection without setting the target in the runner. Claim boundary until fixed: the note supports an internal algebraic Berry-holonomy identity on the chosen selected line.
+- **auditor confidence:** high
 
 ### `koide_transport_gap_constant_no_go_note_2026-04-20`
 
