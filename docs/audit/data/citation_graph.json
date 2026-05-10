@@ -61776,6 +61776,17 @@
       "runner_path": "scripts/universal_gr_positive_background_local_closure.py",
       "title": "Universal GR Positive-Background Local Closure on `PL S^3 x R`"
     },
+    "universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10": {
+      "claim_id": "universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "6ddb32829879ee107daa95b02392450d20e57678ce30a6d5011c87fb222daa73",
+      "path": "docs/UNIVERSAL_GR_SO3_ISOTYPIC_ORBIT_FLAT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_universal_gr_so3_isotypic_orbit_flat_narrow.py",
+      "title": "SO(3) Isotypic Orbit-Flat Narrow Theorem on `Sym^2(R^4)`"
+    },
     "universal_gr_supermetric_normal_form_note": {
       "claim_id": "universal_gr_supermetric_normal_form_note",
       "claim_type_author_hint": "positive_theorem",
@@ -65745,6 +65756,7 @@
     "universal_gr_lorentzian_global_atlas_closure_note",
     "universal_gr_polarization_frame_bundle_attempt",
     "universal_gr_polarization_frame_bundle_blocker_note",
+    "universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10",
     "universal_gr_supermetric_normal_form_note",
     "universal_gr_tensor_action_blocker_note",
     "universal_qg_optional_textbook_comparison_note",
@@ -65818,7 +65830,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 722,
@@ -65827,12 +65839,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
     "edge_count": 8236,
-    "leaf_count": 533,
-    "node_count": 2052,
-    "root_count": 764,
-    "runners_with_path": 1667
+    "leaf_count": 534,
+    "node_count": 2053,
+    "root_count": 765,
+    "runners_with_path": 1668
   }
 }
