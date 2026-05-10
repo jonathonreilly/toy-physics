@@ -3,6 +3,29 @@
 **Date:** 2026-04-07
 **Status:** proposed_retained positive — the true first-order Kubo coefficient `kubo_true = d(cz)/ds` at s=0, computed by the parallel perturbation propagator on a static grown-DAG lattice with the imposed 1/r field, converges cleanly under lattice refinement. At H ∈ {0.5, 0.35, 0.25} with physical parameters held approximately constant, kubo_true goes 7.062 → 5.973 → **5.986** — the last refinement changes the coefficient by **only 0.2%**. This is the first continuum-stable physics result the program has produced on any refinement sweep. **Continuum-limit value: kubo_true ≈ +5.986**.
 
+**Status authority and audit hygiene (2026-05-10):**
+The audit lane has classified this note `audited_conditional` (verdict
+2026-05-05). The cached three-refinement runner stabilization is real and
+substantively computed. The conditional perimeter is two-fold and cited
+verbatim from `audit_ledger.json`:
+
+1. **Bounded numerical claim is what is sharp.** The audit-confirmed
+   `claim_scope` is "For the specified Fam1 grown-DAG static 1/r-field
+   harness at H = 0.50, 0.35, 0.25, the cached runner computes
+   kubo_true = 7.061910, 5.972756, 5.986043, with 0.2% last-step drift
+   under the runner's 5% criterion." Read this note's positive result
+   inside that scope only.
+2. **Stronger H → 0 continuum theorem is out of scope.** Treating the
+   three-point, Fam1-only stabilization as an H → 0 continuum theorem
+   is explicitly outside the audited claim. A retained-grade physical
+   continuum reading would require either an asymptotic theorem or a
+   stronger refinement certificate (more refinement steps and/or a
+   family portability check beyond Fam1).
+
+This rigorization edit makes the conditional perimeter explicit; nothing
+here promotes audit_status. Audit verdict and effective status are set
+by the independent audit lane only.
+
 ## Artifact chain
 
 - [`scripts/kubo_continuum_limit.py`](../scripts/kubo_continuum_limit.py)
@@ -162,6 +185,37 @@ significant higher-order terms.
   and the grown-DAG geometry all feed into the coefficient.
   Translation to lab units requires the full field-to-observable
   mapping that the lab-card lane was unable to produce.
+
+## Cited-authority chain (audit-explicit)
+
+The audit cites two one-hop dependencies for this note. Their current
+ledger statuses are:
+
+| Cited authority | `audit_status` | `effective_status` | `claim_type` |
+|---|---|---|---|
+| [`docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](LINEAR_RESPONSE_TRUE_KUBO_NOTE.md) | audited_clean | retained_bounded | bounded_theorem |
+| [`docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`](WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md) | audited_clean | retained_bounded | bounded_theorem |
+
+Both upstream authorities are now retained-grade (effective_status
+`retained_bounded`). The remaining audit-conditional perimeter is
+therefore not "dependency_not_retained" but the bounded scope of the
+three-point Fam1-only stabilization itself — see "Status authority and
+audit hygiene" at the top of this note.
+
+## Audit-aware repair path
+
+Per `audit_ledger.json`, `notes_for_re_audit_if_any` for
+`kubo_continuum_limit_note`: the cheapest path forward is to "split the
+claim scope between the bounded three-refinement runner result and any
+stronger physical H → 0 continuum-limit statement." The bounded reading
+above is already that split's bounded leg. A separate Nature-grade
+H → 0 theorem leg would need (a) an analytic / asymptotic continuum
+argument from the axiom that connects the parallel perturbation
+propagator's H → 0 limit to the cached three-point sequence, or (b) a
+stronger refinement certificate (additional refinement points beyond
+the current memory-feasible H ∈ {0.50, 0.35, 0.25} schedule and/or a
+family-portability check beyond Fam1). Neither is attempted in this
+note; both are open.
 
 ## Frontier map adjustment (Update 10)
 
