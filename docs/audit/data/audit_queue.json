@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 712,
+    "critical": 711,
     "high": 27,
     "leaf": 278,
     "medium": 152
@@ -7957,27 +7957,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "transitive_descendants": 352
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
-      "claim_scope": "Pure algebraic identities relating the C3-circulant Hermitian parameters (a,b) in R x C to the character coefficients (a_0,z) of the eigenvalue triple under the stated Fourier normalization.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 5,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.959,
-      "note_path": "docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_circulant_character_bridge_narrow.py",
-      "transitive_descendants": 351
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38830,6 +38809,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 106,
-  "total_pending": 1169
+  "ready_count": 105,
+  "total_pending": 1168
 }
