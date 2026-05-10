@@ -384,7 +384,7 @@ QED. ∎
 ## Hypothesis set used
 
 - The existing minimal-framework surfaces named in
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md),
+  `MINIMAL_AXIOMS_2026-05-03.md`,
   including the repo baseline physical `Cl(3)` local algebra and
   `Z^3` spatial substrate, with no fitted parameters and no observed
   values.

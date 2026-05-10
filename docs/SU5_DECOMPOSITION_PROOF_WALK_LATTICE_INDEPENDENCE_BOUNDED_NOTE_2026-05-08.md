@@ -124,8 +124,8 @@ SU(5) slots, and confirms the state-count identity `5 + 10 + 1 = 16`.
   for the three-generation orbit algebra (per-generation copies).
 - [`FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md`](FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md)
   for the cycle 16 trace identity that surfaces the same slot-matching.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
-  and [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  and `MINIMAL_AXIOMS_2026-05-03.md`
   for the open realization-gate context that this note does not close.
 
 These are imported authorities for a bounded theorem. Standard SU(5)

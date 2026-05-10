@@ -57,7 +57,7 @@ audit retention.
 ## 1. Closed admissions inherited from W2 + C-iso campaigns
 
 Under
-[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), the
+`MINIMAL_AXIOMS_2026-05-03.md`, the
 framework's public axiom set is exactly two: A1 (Cl(3)) + A2 (Z³).
 Two named open gates:
 
@@ -507,7 +507,7 @@ audit_required_before_effective_status_change: true
 
 ### Framework axioms / structural
 
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
 - [`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`](G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md)
 - [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)
 

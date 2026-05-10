@@ -33,8 +33,8 @@ The disclaimer **cannot be removed** from retained primitives alone. It is struc
 
 | ID | Statement | Class |
 |---|---|---|
-| A1 | `Cl(3)` local algebra | framework axiom; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
-| A2 | `Z³` spatial substrate | framework axiom; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| A1 | `Cl(3)` local algebra | framework axiom; see `MINIMAL_AXIOMS_2026-05-03.md` |
+| A2 | `Z³` spatial substrate | framework axiom; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | RP | A11 RP + OS reconstruction → `H_phys` with unique vacuum `Ω` | upstream authority: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md) |
 | RS | Reeh-Schlieder cyclicity | upstream authority: [`AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md) |
 | CD | Cluster decomposition + unique vacuum | upstream authority: [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md) |
@@ -267,14 +267,14 @@ Both Block 02 failure modes are addressed; the route's conclusion is honest abou
 - Three-generation observable theorem: [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
 - BZ-corner forcing (BlockT3 source): [`STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md`](STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md)
 - Kawamoto-Smit forcing (vector 6 reference): [`STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md`](STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md)
-- Parent open-gate: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- Parent open-gate: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - RP A11: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
 - Reeh-Schlieder: [`AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md)
 - Cluster decomposition: [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
 - Single-clock evolution: [`AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md`](AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md)
 - Lieb-Robinson microcausality: [`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)
 - Lattice Noether: [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
-- MINIMAL_AXIOMS: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- MINIMAL_AXIOMS: `MINIMAL_AXIOMS_2026-05-03.md`
 
 ## Command
 
@@ -298,6 +298,6 @@ Cached: [`logs/runner-cache/cl3_a3_route5_no_proper_quotient_2026_05_08_r5.txt`]
 
 ## Hypothesis set used (axiom-reset 2026-05-03)
 
-Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on the **staggered-Dirac realization derivation target** (the canonical parent open-gate). The note's load-bearing claims rely on the hw=1 BZ-corner triplet structure (BlockT3) and the no-proper-quotient algebra (NQ), both of which depend on the staggered-Dirac realization target. Therefore `claim_type: bounded_theorem` until that gate closes.
+Per `MINIMAL_AXIOMS_2026-05-03.md`, this note depends on the **staggered-Dirac realization derivation target** (the canonical parent open-gate). The note's load-bearing claims rely on the hw=1 BZ-corner triplet structure (BlockT3) and the no-proper-quotient algebra (NQ), both of which depend on the staggered-Dirac realization target. Therefore `claim_type: bounded_theorem` until that gate closes.
 
 When the gate closes, this lane becomes eligible for independent audit/governance retagging; the audit pipeline recomputes `effective_status`. The substantive science content of this note is unchanged by such retagging.

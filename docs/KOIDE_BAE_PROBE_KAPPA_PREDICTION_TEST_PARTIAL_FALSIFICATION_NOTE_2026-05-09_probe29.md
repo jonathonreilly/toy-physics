@@ -42,7 +42,7 @@ lane has full authority to retag, narrow, or reject the proposal.
 In this note:
 
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **"BAE-condition" (Brannen Amplitude Equipartition)** = the
   amplitude-ratio constraint `|b|²/a² = 1/2` for the
   `C_3`-equivariant Hermitian circulant `H = aI + bC + b̄C²` on
@@ -108,7 +108,7 @@ probe; the BAE admission count is UNCHANGED.
 
 | ID | Statement | Class |
 |---|---|---|
-| A1 | `Cl(3)` local algebra | framework axiom; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| A1 | `Cl(3)` local algebra | framework axiom; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | A2 | `Z³` spatial substrate | framework axiom; same source |
 | BZ | hw=1 BZ-corner triplet ≅ `ℂ³` with `C_3[111]` action | source dependency; see [`STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md`](STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md) |
 | Circulant | `C_3`-equivariant Hermitian on hw=1 is `aI + bC + b̄C²` | source dependency; see [`KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md) |
@@ -493,7 +493,7 @@ The runner verifies (Section 0, 1, 11):
 
 ### Foundational baseline
 
-- Minimal axioms: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- Minimal axioms: `MINIMAL_AXIOMS_2026-05-03.md`
 - Physical-lattice baseline: [`PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md`](PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md)
 - Substep-4 AC narrowing (PDG-input prohibition): [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)
 

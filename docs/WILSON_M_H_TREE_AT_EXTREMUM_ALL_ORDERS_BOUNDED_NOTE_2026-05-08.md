@@ -187,9 +187,9 @@ why leading-order is `~14 %` off.
   for the boundary statement that the uniform-`N_taste = 16` choice is
   itself a non-derived admission. **Forward-reference;** on a sister
   branch.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   for the staggered-Dirac realization gate context.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   for the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`).
 
 These are imported authorities for a bounded theorem. The row remains

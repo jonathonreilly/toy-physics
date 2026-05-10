@@ -43,7 +43,7 @@ audit lane).
   pure symmetries), and on that enlarged surface the Hodge ambiguity is
   broken because Hodge duality maps a one-link source to a three-link
   composite.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — current framework memo: physical `Cl(3)` on `Z^3` is the repo-wide
   axiom set, with the staggered-Dirac / Grassmann realization recategorized
   as an open gate rather than a framework axiom. The link-local

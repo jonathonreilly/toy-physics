@@ -27,7 +27,7 @@ Throughout the framework's audit ledger, two distinct objects share the
 label "A1":
 
 1. **Framework axiom A1** = the retained `Cl(3)` local-algebra axiom
-   per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+   per `MINIMAL_AXIOMS_2026-05-03.md`.
    This is one of two retained mathematical axioms (A1 + A2 = Cl(3) +
    Z³).
 

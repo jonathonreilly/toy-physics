@@ -85,8 +85,8 @@ under the standard Killing-form normalization.
 - [`SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md`](SU5_EMBEDDING_FROM_GRAPH_FIRST_SURFACE_THEOREM_NOTE_2026-05-07.md)
   for the embedding-consistency context that the source note §5a
   cross-references; this proof-walk does not promote that note.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
-  and [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  and `MINIMAL_AXIOMS_2026-05-03.md`
   for the open realization-gate context that this note does not close.
 
 These are imported authorities for a bounded theorem. The row remains

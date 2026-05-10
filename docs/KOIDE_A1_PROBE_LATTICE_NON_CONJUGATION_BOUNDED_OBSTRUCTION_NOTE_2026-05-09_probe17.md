@@ -41,7 +41,7 @@ lane has full authority to retag, narrow, or reject the proposal.
 In this note:
 
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **"A1-condition"** = the Brannen-Rivero amplitude-ratio constraint
   `|b|²/a² = 1/2` for the `C_3`-equivariant Hermitian circulant
   `H = aI + bC + b̄C²` on `hw=1 ≅ ℂ³`.
@@ -111,7 +111,7 @@ ambient `M_3(ℂ)`).
 
 | ID | Statement | Class |
 |---|---|---|
-| A1 | `Cl(3)` local algebra | framework axiom; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| A1 | `Cl(3)` local algebra | framework axiom; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | A2 | `Z³` spatial substrate | framework axiom; same source |
 | BZ | hw=1 BZ-corner triplet ≅ `ℂ³` with `C_3[111]` action | source dependency; see [`STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md`](STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md) |
 | 3GenObs | hw=1 carries `M_3(ℂ)` algebra; no proper exact quotient | source dependency; see [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) |
@@ -456,7 +456,7 @@ or readout-level. Probe 17 closes the algebra-level route negatively.
 
 ### Foundational baseline
 
-- Minimal axioms: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- Minimal axioms: `MINIMAL_AXIOMS_2026-05-03.md`
 - Per-site uniqueness: [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
 - Per-site SU(2) spin-1/2: [`PER_SITE_SU2_SPIN_HALF_THEOREM_NOTE_2026-05-02.md`](PER_SITE_SU2_SPIN_HALF_THEOREM_NOTE_2026-05-02.md)
 - Multi-site Pauli group: [`MULTISITE_PAULI_GROUP_THEOREM_NOTE_2026-05-02.md`](MULTISITE_PAULI_GROUP_THEOREM_NOTE_2026-05-02.md)

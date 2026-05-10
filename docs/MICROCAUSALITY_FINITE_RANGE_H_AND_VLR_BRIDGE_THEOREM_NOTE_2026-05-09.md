@@ -420,7 +420,7 @@ toy Hamiltonian. It does not construct the exact RP logarithm.
 
 ## Citations
 
-- A_min: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- A_min: `MINIMAL_AXIOMS_2026-05-03.md`
 - parent microcausality note (context only, not a load-bearing input):
   `AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`
 - parent RP note (action carriers):

@@ -132,11 +132,11 @@ on the same surface.
 | D13 | Wilson plaquette coupling `β = 2 N_c/g_bare²` at canonical surface | DERIVED from D5 + D7 + standard Wilson action | standard lattice QFT applied to D5, D7 |
 | D14 | CMT exact identity `<O(U)> = u_0^{n_link} <O_V(V)>_eff` (change-of-variables `U = u_0 V`) | DERIVED structural | [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md):213-221 |
 | D15 | `n_link = 1` per single vertex, `n_link = 2` per vacuum polarization | DERIVED structural | [`YT_VERTEX_POWER_DERIVATION.md`](YT_VERTEX_POWER_DERIVATION.md):29-38 |
-| C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | ADMITTED context input (canonical-surface choice; closure target = staggered-Dirac realization derivation, see `MINIMAL_AXIOMS_2026-05-03.md`:56-93) | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):182-191 |
-| C2 | `g_bare = 1` on canonical surface | ADMITTED context input (open-gate derivation target; canonical parent: `G_BARE_DERIVATION_NOTE.md`) | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):95-136 |
+| C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | ADMITTED context input (canonical-surface choice; closure target = staggered-Dirac realization derivation, see `MINIMAL_AXIOMS_2026-05-03.md`:56-93) | `MINIMAL_AXIOMS_2026-05-03.md`:182-191 |
+| C2 | `g_bare = 1` on canonical surface | ADMITTED context input (open-gate derivation target; canonical parent: `G_BARE_DERIVATION_NOTE.md`) | `MINIMAL_AXIOMS_2026-05-03.md`:95-136 |
 | S1 | SU(3) fundamental Casimir `C_F = (N_c²-1)/(2N_c) = 4/3` | STANDARD Lie-algebra fact | applied to D7 |
 | S2 | Lorentz-group Fierz: `(γ^μ)(γ_μ) = c_S(1)(1) + c_P(iγ_5)(iγ_5) + c_V(γ^μ)(γ_μ) + c_A(γ^μγ_5)(γ_μγ_5) + 0·σσ`, with `|c_S| = 1` | STANDARD Clifford-algebra identity | Itzykson-Zuber §2-5; verified by Block 8 of runner |
-| D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, C1-C2) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the cited action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):32-43 + D9 |
+| D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, C1-C2) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the cited action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from `MINIMAL_AXIOMS_2026-05-03.md`:32-43 + D9 |
 | D17 | Scalar-singlet composite uniqueness on the Q_L block: the unique unit-normalized (Z² = 6) color-singlet × iso-singlet × Dirac-scalar composite operator on Q_L = (2,3) is `H_unit = (1/√(N_c · N_iso)) Σ ψ̄ψ`. Other (1,8), (3,1), (8,3) irreps give `Z² = 8, 9/2, 24` respectively (Block 5 verified) — each distinct from `Z² = 6`, hence none are the framework's scalar singlet on this block | DERIVED and numerically verified (Block 5) | [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40 (D9); Block 5 of runner |
 
 The only AXIOMS are AX1 (Cl(3)) and AX2 (Z³). The remaining inputs are
@@ -254,7 +254,7 @@ claimed.**
 **Representation A — direct OGE computation in the bare action.**
 
 The cited bare action contains only the Wilson plaquette and the
-staggered Dirac operator (D16, [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):32-43; conditional on staggered-Dirac realization gate, see :56-93) — no
+staggered Dirac operator (D16, `MINIMAL_AXIOMS_2026-05-03.md`:32-43; conditional on staggered-Dirac realization gate, see :56-93) — no
 fundamental scalar field, no contact 4-fermion operator. At tree
 order in α_LM, the only Feynman diagram contributing to `Γ⁽⁴⁾(q²)` is
 single-gluon exchange:
@@ -404,7 +404,7 @@ framework but is not the source of the value.
 **Inputs used (cited framework inputs plus exact group-theoretic identities):**
 
 1. The bare Cl(3) × Z³ lattice action
-   ([`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):32-43; conditional on staggered-Dirac and `g_bare = 1` derivation gates) — contains exactly Wilson plaquette and
+   (`MINIMAL_AXIOMS_2026-05-03.md`:32-43; conditional on staggered-Dirac and `g_bare = 1` derivation gates) — contains exactly Wilson plaquette and
    staggered Dirac, no fundamental scalar, no contact 4-fermion.
 2. D9: composite-Higgs structural axiom, no independent fundamental
    Yukawa parameter ([`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40).

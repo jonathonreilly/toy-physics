@@ -168,7 +168,7 @@ the same circular-derivation trap.
 
 | ID | Statement | Class |
 |---|---|---|
-| A1 | Cl(3) local algebra | framework axiom; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| A1 | Cl(3) local algebra | framework axiom; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | A2 | Z³ spatial substrate | framework axiom; same source |
 | Embed | Cl⁺(3) ≅ ℍ → SU(2)_L; ω pseudoscalar → U(1)_Y; Y_L, Y_H fixed | retained: [`CL3_SM_EMBEDDING_THEOREM.md`](CL3_SM_EMBEDDING_THEOREM.md) |
 | Circulant | C_3-equivariant Hermitian on hw=1 is `aI + bC + b̄C²` | retained: [`KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md) R1 |
@@ -704,7 +704,7 @@ is to avoid one-step relabelings of already-landed cycles. This note:
 - C_3 symmetry preserved interpretation: [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md)
 - A1 physical bridge attempt summary: [`KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md`](KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md)
 - A1 loop final status: [`KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md`](KOIDE_A1_LOOP_FINAL_STATUS_2026-04-22.md)
-- MINIMAL_AXIOMS: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- MINIMAL_AXIOMS: `MINIMAL_AXIOMS_2026-05-03.md`
 
 ## Validation
 

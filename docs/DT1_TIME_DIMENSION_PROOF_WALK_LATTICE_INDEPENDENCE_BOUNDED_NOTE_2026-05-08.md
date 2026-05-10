@@ -39,7 +39,7 @@ This note does not close:
 
 - the spatial dimension `d_s = 3`. **`d_s = 3` is given directly by the
   framework axiom A2 (`Z^3` substrate) per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md). It is
+  `MINIMAL_AXIOMS_2026-05-03.md`. It is
   NOT derived from a proof-walk in this note and NOT derived from
   anomaly cancellation in
   [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md).**
@@ -143,10 +143,10 @@ Steps 1--4 with `fractions.Fraction`:
   note.
 - [`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md)
   for the LH-anomaly-trace bookkeeping.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   for the framework axiom A2 (`Z^3` spatial substrate) that supplies
   `d_s = 3` directly.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   for the open realization-gate context that this note does not close.
 
 These are imported authorities for a bounded theorem. The row remains

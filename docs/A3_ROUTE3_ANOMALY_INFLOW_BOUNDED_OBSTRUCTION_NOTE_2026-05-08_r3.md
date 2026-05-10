@@ -108,8 +108,8 @@ anomaly carriers act on H_{hw=1} as C_3-symmetric operators.
 
 | ID | Statement | Authority |
 |---|---|---|
-| A1 | Cl(3) local algebra | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
-| A2 | Z³ spatial substrate | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| A1 | Cl(3) local algebra | `MINIMAL_AXIOMS_2026-05-03.md` |
+| A2 | Z³ spatial substrate | `MINIMAL_AXIOMS_2026-05-03.md` |
 | RP | RP A11 + OS reconstruction → `H_phys` with unique vacuum `Ω` | [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md) |
 | CD | Cluster decomposition + unique vacuum | [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md) |
 | RS | Reeh-Schlieder cyclicity | [`AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md) |
@@ -270,7 +270,7 @@ path (b) excluded across seven sub-channels by R3-S1.
 - It does **not** lift any prior `bounded_theorem` row to
   `positive_theorem`. The L3a / W2 tier-stratification is unchanged.
 - It does **not** remove the staggered-Dirac realization gate
-  ([`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+  (`MINIMAL_AXIOMS_2026-05-03.md`
   formerly-A3). Closing that gate is the canonical closure path.
 
 ## Empirical AC_φ testability after Route 3
@@ -384,7 +384,7 @@ Per `feedback_physics_loop_corollary_churn.md`:
 
 ## Cross-references
 
-- Parent open-gate: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- Parent open-gate: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - Substep 4 AC narrowing: [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)
 - Substep 1 (upstream): [`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`](STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md)
 - Substep 2 (upstream): [`STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md`](STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md)
@@ -396,7 +396,7 @@ Per `feedback_physics_loop_corollary_churn.md`:
 - Brannen / Callan-Harvey candidate (bridge-conditioned): [`KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`](KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md)
 - Staggered chiral-symmetry spectrum (sublattice parity): [`STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md`](STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md)
 - CPT-exact (sublattice parity = staggered chirality): [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md)
-- MINIMAL_AXIOMS: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- MINIMAL_AXIOMS: `MINIMAL_AXIOMS_2026-05-03.md`
 - Three-generation observable (M_3(C) on hw=1): [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
 - No-proper-quotient: [`THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md`](THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md)
 
@@ -500,4 +500,4 @@ This is a *Route 3* result. It does NOT close A3. It DOES:
 Closing A3 unconditionally from A1+A2 + retained stack remains an
 open derivation target. The natural canonical closure path is the
 staggered-Dirac realization gate per
-[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+`MINIMAL_AXIOMS_2026-05-03.md`.

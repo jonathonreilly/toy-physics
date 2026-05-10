@@ -103,7 +103,7 @@ None of these primitives exists in the audit ledger as of 2026-05-10.
 
 | ID | Statement | Class |
 |---|---|---|
-| BASE-CL3 | Physical `Cl(3)` local algebra | repo baseline semantics; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| BASE-CL3 | Physical `Cl(3)` local algebra | repo baseline semantics; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | BASE-Z3 | `Z^3` spatial substrate | repo baseline semantics; same source |
 | GreenZ3 | Z³ lattice Laplacian Green function asymptotic `G(r) → 1/(4π|r|)` (Maradudin et al. 1971) | external math theorem |
 | MicroLR | Lieb-Robinson velocity `v_LR` exists; equal-time strict locality from Cl(3) tensor structure | unaudited (positive_theorem): [`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md) |
@@ -440,7 +440,7 @@ is to avoid one-step relabelings of already-landed cycles. This note:
 - Planck-from-structure no-go's:
   - [`PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md`](PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
   - [`PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md`](PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md)
-- MINIMAL_AXIOMS: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- MINIMAL_AXIOMS: `MINIMAL_AXIOMS_2026-05-03.md`
 
 ## Validation
 

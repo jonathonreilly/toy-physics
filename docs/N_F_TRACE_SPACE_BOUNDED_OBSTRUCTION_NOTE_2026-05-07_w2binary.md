@@ -269,7 +269,7 @@ distinguishing_content_from_prior_W2_note: |
   — C_F = 4/3 on V_3 in canonical Gell-Mann normalization (uses N_F = 1/2).
 - [`G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
   — Cl(3) → End(V) → su(3) embedding canonicity.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — current framework axioms A1 (Cl(3)) + A2 (Z^3).
 
 ## Bounded-result honest summary

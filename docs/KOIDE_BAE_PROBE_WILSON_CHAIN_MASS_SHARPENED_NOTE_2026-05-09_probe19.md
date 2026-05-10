@@ -25,7 +25,7 @@ not promote any downstream theorem.
 
 In this note:
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **"BAE-condition"** = Brannen Amplitude Equipartition: the
   amplitude-ratio constraint `|b|²/a² = 1/2` for the `C_3`-equivariant
   Hermitian circulant `H = aI + bC + b̄C²` on `hw=1 ≅ ℂ³` (legacy:
@@ -448,7 +448,7 @@ This note records, as repo-language clarification:
 
 ### Foundational
 
-- Minimal axioms: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- Minimal axioms: `MINIMAL_AXIOMS_2026-05-03.md`
 - Substep-4 AC narrowing (PDG-input prohibition):
   [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)
 - BAE rename meta:

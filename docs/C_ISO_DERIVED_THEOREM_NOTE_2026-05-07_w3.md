@@ -35,7 +35,7 @@ selected by the framework primitives.
 
 ## Dependencies
 
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) for the
+- `MINIMAL_AXIOMS_2026-05-03.md` for the
   `Cl(3)` / `Z^3` primitive surface.
 - [`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)
   for the Lieb-Robinson velocity form.
