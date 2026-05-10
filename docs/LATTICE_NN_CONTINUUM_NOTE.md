@@ -1,10 +1,24 @@
 # Nearest-Neighbor Lattice Refinement Note
 
-**Date:** 2026-04-03  
-**Status:** bounded open gate - finite-spacing refinement window only
+**Date:** 2026-04-03 (continuum-bridge identification addendum 2026-05-10)  
+**Status:** bounded refinement window through `h = 0.25` (the original bounded
+scope) PLUS continuum-operator-stable decoherence observables (`MI`, `1-pur`,
+`d_TV`, `Born`) identified by the geodesic-continuum bridge (see
+`NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md` /
+`NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md` /
+`NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md`); `h = 0.125` on the
+raw (non-rescaled) kernel remains an open gate.
+
+**Claim type:** bounded_theorem
 
 **Claim scope:** raw nearest-neighbor lattice refinement is Born-clean through
-`h = 0.25`; `h = 0.125` and the continuum question remain open.
+`h = 0.25` (the original bounded scope); the decoherence observables on that
+window are now continuum-operator-stable values matching the geodesic
+identification within 7.7e-3 at `h = 0.03125` (PR #957) and within 5e-4 on the
+Gaussian-arm prediction (PR #968); the fixed-strength gravity centroid remains
+bounded, and that bound is now structurally identified (geodesic limit gives 0;
+strength-saturation in PR #945 explains why simple strength-rescaling cannot
+lift it); `h = 0.125` and finer on the raw (non-rescaled) kernel remain open.
 
 This note freezes the canonical raw nearest-neighbor lattice refinement run.
 It is intentionally narrow:
@@ -101,6 +115,50 @@ The correct wording is:
 
 - the nearest-neighbor lattice shows a **Born-clean positive refinement trend through `h = 0.25`**
 - the raw kernel has a **computational resolution limit** at finer spacing
-- the continuum question remains open
+- the continuum question remains open on the raw kernel; the decoherence
+  observables on the bounded raw window are now identified with the
+  continuum-stable geodesic operator (see the 2026-05-10 addendum below)
 
-Do **not** promote this note to a full continuum theorem.
+Do **not** promote this note to a full continuum theorem on the raw kernel;
+the scope extension covers the decoherence observables only.
+
+## 2026-05-10 Continuum-Bridge Identification (Scope Extension)
+
+This addendum lifts the load-bearing decoherence-observable claims (`MI`,
+`1-pur`, `d_TV`, `Born`) on the bounded raw window from "fixed-`h` finite
+values" to "continuum-operator-stable values" by citing an upstream
+identification produced on the deterministic-rescale companion harness. The
+bounded harness scope (`BETA = 0.8`, `K_PHYS = 5.0`, slits at `±3`, `L = 40`)
+is unchanged; this is a **scope extension, not a tier upgrade**.
+
+Upstream load-bearing dependencies (each a single open PR against `main`):
+
+- [`NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md)
+  (PR #957) — `T_∞` exists on the 15-dim observable subspace of the rescaled
+  NN harness; Cauchy convergence at `r ≥ 1.51`; tail-bound `7.7e-3` at
+  `h = 0.03125`.
+- [`NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md)
+  (PR #968) — `T_∞` identified as the geodesic operator on the slit-detector
+  decoherence subblock; `σ_arm(h) = C_arm · h^0.526`, `R² = 0.9996`; the
+  Gaussian-arm prediction matches `MI` / `d_TV` to `5e-4`.
+- [`NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md)
+  (PR #1003) — closed-form analytic derivation of `C_arm = 2.4855` with `8.3%`
+  residual against the numerical `C_arm = 2.7107`.
+
+Consequences for this note:
+
+- the `MI`, `1-pur`, `d_TV`, `Born` columns of the canonical finite window are
+  no longer load-bearing only as "bounded fixed-`h` finite values" — they are
+  now load-bearing as continuum-operator-stable values matching the geodesic
+  identification to the tolerances above.
+- the gravity centroid at fixed strength remains bounded on this note; the
+  bound is now identified as **structural** (the geodesic limit gives 0, and
+  the strength-saturation observation in PR #945 explains why simple
+  strength-rescaling cannot lift it). This identification does **not** widen
+  the gravity claim — it only labels its known bound.
+- the raw `h = 0.125` gate is untouched: the raw kernel still fails there, and
+  the sub-`0.25` regime on the raw harness remains open. The continuum-stable
+  observables live on the deterministic-rescale companion harness, not on the
+  raw kernel.
+- `claim_type` stays `bounded_theorem`; the rows are still bounded by the
+  fixed harness parameters above.

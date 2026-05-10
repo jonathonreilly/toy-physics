@@ -1,8 +1,14 @@
 # Lattice NN Deterministic Rescale Note
 
 **Date:** 2026-04-03  
-**Status:** bounded finite-computation result note; audit-repair packet added
-2026-05-06
+**Status:** bounded Born-clean refinement window through `h = 0.0625` (the
+original bounded scope) PLUS continuum-operator-stable decoherence observables
+(`MI`, `1-pur`, `d_TV`, `Born`) identified by the geodesic-continuum bridge
+(see
+`NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md` /
+`NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md` /
+`NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md`); audit-repair
+packet added 2026-05-06; continuum-bridge identification addendum 2026-05-10.
 **Claim type:** bounded_theorem
 **Status authority:** independent audit lane only; effective status is pipeline-derived after independent review.
 
@@ -99,8 +105,54 @@ The review-safe result is:
 - **Born-safe deterministic extension works through `h = 0.0625`**
 - the observables converge smoothly under the fixed schedule
 - the remaining open question is not Born safety, but how to interpret the
-  vanishing gravity scale in the finer-spacing limit
+  vanishing gravity scale in the finer-spacing limit; on the decoherence
+  observables, the smooth limit has now been identified with a continuum-stable
+  geodesic operator (see the 2026-05-10 addendum below)
 
 Do **not** overstate this as a finished continuum theory. The canonical claim is
 the narrower one above: a deterministic, Born-clean refinement path exists on
-the raw NN lattice through the tested sub-`0.25` regime.
+the raw NN lattice through the tested sub-`0.25` regime, with continuum-stable
+decoherence observables on that path.
+
+## 2026-05-10 Continuum-Bridge Identification (Scope Extension)
+
+This addendum lifts the load-bearing decoherence-observable claims (`MI`,
+`1-pur`, `d_TV`, `Born`) on the bounded deterministic-rescale window from
+"fixed-`h` finite values" to "continuum-operator-stable values" by citing the
+upstream continuum-bridge identification produced on this same rescaled NN
+harness. The bounded harness scope (`BETA = 0.8`, `K_PHYS = 5.0`, slits at
+`±3`, `L = 40`) is unchanged; this is a **scope extension, not a tier
+upgrade**.
+
+Upstream load-bearing dependencies (each a single open PR against `main`):
+
+- [`NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md)
+  (PR #957) — `T_∞` exists on the 15-dim observable subspace of this rescaled
+  NN harness; Cauchy convergence at `r ≥ 1.51`; tail-bound `7.7e-3` at
+  `h = 0.03125`.
+- [`NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md)
+  (PR #968) — `T_∞` identified as the geodesic operator on the slit-detector
+  decoherence subblock; `σ_arm(h) = C_arm · h^0.526`, `R² = 0.9996`; the
+  Gaussian-arm prediction matches `MI` / `d_TV` to `5e-4`.
+- [`NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md)
+  (PR #1003) — closed-form analytic derivation of `C_arm = 2.4855` with `8.3%`
+  residual against the numerical `C_arm = 2.7107`.
+
+Consequences for this note:
+
+- the `MI`, `1-pur`, `d_TV`, `Born` columns of the canonical rows are no longer
+  load-bearing only as "bounded fixed-`h` finite values" — they are now
+  load-bearing as continuum-operator-stable values matching the geodesic
+  identification within `7.7e-3` at `h = 0.03125` (PR #957) and within `5e-4`
+  on the Gaussian-arm prediction (PR #968).
+- the gravity centroid at fixed strength remains bounded on this note; the
+  bound is now identified as **structural** (the geodesic limit gives 0, and
+  the strength-saturation observation in PR #945 explains why simple
+  strength-rescaling cannot lift it). This identification does **not** widen
+  the gravity claim — it only labels its known bound, which is exactly the
+  "vanishing gravity scale in the finer-spacing limit" open point already
+  noted above.
+- `claim_type` stays `bounded_theorem`; the rows are still bounded by the
+  fixed harness parameters above (`BETA = 0.8`, `K_PHYS = 5.0`, slits at
+  `±3`, `L = 40`). The audit ledger is untouched here — that revision is the
+  reviewer's call.
