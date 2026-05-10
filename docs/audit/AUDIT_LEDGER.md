@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1110 |
+| unaudited | 1109 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 233 |
+| ~~audited_conditional~~ | 234 |
 | ~~audited_failed~~ | 22 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 389 |
-| `audited_conditional` | 233 |
+| `audited_conditional` | 234 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1208 |
+| `unaudited` | 1207 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 794 |
+| `bounded_theorem` | 795 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 100 |
-| `positive_theorem` | 733 |
+| `positive_theorem` | 732 |
 
 | criticality | count |
 |---|---:|
@@ -524,6 +524,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_dense_joint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_layernorm_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `chiral_3plus1d_boundary_phase_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1812,6 +1813,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A selector from scalar quotient data to one generation label would have to pick a C3-fixed label, but the C3 action 0 -> 1 -> 2 -> 0 on generation labels is free, so no fixed singleton label exists; only based maps exist and those require extra basepoint/source/generation data.  _(class `A`)_
 - **chain closes:** True — The negative result closes as an exact group-action obstruction from the supplied premises: scalar Q/delta/z data are invariant under cyclic relabeling, while the target generation labels form a free C3 orbit. Therefore invariant scalar data cannot canonically select one physical generation label without additional based data. The runner directly checks the scalar invariance, carrier relabeling behavior, free action, absence of invariant singleton, and existence of only based maps.
 - **rationale:** The claim is a narrow no-go, not a positive charged-lepton mass closure. Its load-bearing step is exact algebra over the supplied C3 action and scalar-readout premise, and the runner checks the obstruction directly. No PDG masses, observed hierarchy label, or hidden physical generation identification are used as derivation input.
+- **auditor confidence:** high
+
+### `chiral_3plus1d_boundary_phase_note`
+
+- **Note:** [`CHIRAL_3PLUS1D_BOUNDARY_PHASE_NOTE.md`](../../docs/CHIRAL_3PLUS1D_BOUNDARY_PHASE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite n=21,31 boundary/mode phase scan for the implemented 3+1D chiral walk and its interpretation of periodic AWAY cells as boundary/recurrence artifacts.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1347-5e91-7c80-874e-bcadf451a576`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The periodic AWAY windows are not primarily a torus-observable artifact; they are mostly boundary-condition / recurrence artifacts because they disappear under reflecting BCs and almost entirely disappear under open/absorbing BCs.  _(class `C`)_
+- **chain closes:** False — The runner closes the finite sign-table summary, but the causal interpretation as recurrence artifact is stronger than what the restricted packet proves. No bridge theorem shows that changing to reflecting/open boundaries isolates recurrence rather than changing the dynamics, field geometry, absorption/norm behavior, or finite-size sector.
+- **rationale:** Issue: the note promotes a completed finite boundary scan into a causal recurrence-artifact interpretation. Why this blocks: disappearance under altered boundary rules is evidence of boundary sensitivity, but it does not by itself prove recurrence as the operative mechanism or boundary-agnostic instability. Repair target: split a clean bounded finite-grid sign-table claim from the artifact interpretation, or add a theorem/runner isolating recurrence while holding the rest of the dynamics and observable fixed. Claim boundary until fixed: the supplied runner supports only the reported finite grid signs and torus/raw agreement on that grid.
 - **auditor confidence:** high
 
 ### `chiral_3plus1d_coupled_coin_note`

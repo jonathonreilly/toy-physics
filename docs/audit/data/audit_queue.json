@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 25,
-    "leaf": 252,
+    "leaf": 251,
     "medium": 144
   },
   "cycle_break_target_count": 305,
@@ -31188,27 +31188,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "chiral_3plus1d_boundary_phase_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CHIRAL_3PLUS1D_BOUNDARY_PHASE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "chiral_layer_oscillation_2026-04-09",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37779,6 +37758,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 47,
-  "total_pending": 1116
+  "ready_count": 46,
+  "total_pending": 1115
 }
