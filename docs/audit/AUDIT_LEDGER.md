@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1126 |
+| unaudited | 1125 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 241 |
+| ~~audited_conditional~~ | 242 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 241 |
+| `audited_conditional` | 242 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1193 |
+| `unaudited` | 1192 |
 
 | claim_type | count |
 |---|---:|
@@ -595,6 +595,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -4389,6 +4390,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The full-slice local rim lift is declared to be the exact slice-space boundary function B_beta(W)(U) = integral_(Omega^rim(U)) dmu_H(Xi^rim) exp[(beta / 3) A^rim(U, Xi^rim; W)].  _(class `E`)_
 - **chain closes:** False — No cited authority or derivation from axioms is provided for the equality between the full-slice lift and the displayed rim integral. The note introduces the integral expression as the object rather than deriving that it is the unique/load-bearing boundary input.
 - **rationale:** The load-bearing move is a definition-style identification of B_beta(W) with a named local Wilson/Haar rim integral, followed by eta_beta(W)=P_cls B_beta(W). The supplied runner does not verify this theorem: it computes a separate first-three-sample positive-cone obstruction and only string-checks that the rim-lift note says explicit B_6 remains open. With no cited upstream authority and no first-principles derivation in the restricted packet, the theorem-grade conclusion reduces to introducing a symbol for the proposed boundary integral.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded claim that the normalized Wilson mixed-kernel compression on the marked-plaquette character sector is exactly the four marked-link local factor a_(p,q)(beta)^4, with non-marked links contributing only trivial-channel scalars.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e121c-0aca-7ab0-b5e4-6f569c4748f4`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Each marked-link factor contributes the normalized irrep eigenvalue a_(p,q)(beta), while every non-marked mixed-link factor contributes only a rep-independent scalar, hence D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
+- **chain closes:** False — The algebra from an independent product of normalized one-link Wilson convolution factors to a_(p,q)(beta)^4 is clear. The supplied one-hop authorities do not explicitly establish the load-bearing temporal-gauge mixed-kernel factorization into independent one-link convolutions on the marked source sector, and the runner hard-codes that structure rather than deriving it from the transfer kernel.
+- **rationale:** Issue: the note imports the temporal-gauge mixed-kernel linkwise factorization and its exact compression to one-link Wilson convolution eigenvalues without a supplied retained bridge theorem. Why this blocks: the cited transfer and source-sector notes establish the transfer setup and a central diagonal residual compression, but not the specific marked-link/non-marked-link decomposition that identifies the normalized diagonal sequence as a_(p,q)^4. Repair target: add or cite a retained theorem deriving the linkwise mixed-kernel factorization and compression map from the exact Wilson transfer kernel on the accepted 3+1 source surface. Claim boundary until fixed: conditional algebraic consequence that if the normalized mixed kernel is the stated product of one-link Wilson convolutions, then the marked sector factor is exactly a_(p,q)(beta)^4.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
