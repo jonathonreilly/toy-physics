@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1147 |
+| unaudited | 1146 |
 | meta | 69 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 233 |
-| ~~audited_failed~~ | 11 |
+| ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 378 |
 | `audited_conditional` | 233 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 55 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1216 |
+| `unaudited` | 1215 |
 
 | claim_type | count |
 |---|---:|
@@ -739,6 +739,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `dimensional_gravity_table` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -2230,6 +2231,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The arithmetic budget follows from the cited retained_bounded moving-source rows by taking nonzero absolute minima and dividing by three. The note also correctly leaves the absolute lab NV budget open because the proxy-to-readout transfer coefficient is missing.
 - **rationale:** The runner hard-codes the retained upstream geometry and scaling rows, then performs only standard arithmetic reductions: nonzero minima, maxima, and division by three. There is no first-principles compute and no external comparator check. Because the chain reduces to a single retained_bounded parent claim plus algebraic processing, the appropriate conservative verdict is audited_decoration rather than audited_clean.
 - **decoration parent:** `moving_source_retarded_portability_note`
+- **auditor confidence:** high
+
+### `dimensional_gravity_table`
+
+- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite inventory of the d=3 and d=4 cache-backed dimensional-gravity table rows for kernel 1/L^(d-1), field s/r^(d-2), action S=L(1-f), and measure h^(d-1), excluding the diagnostic-only d=2 row and any universality or closed 4D asymptotic-distance claim.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12bd-b206-7431-b27e-34e253b1895f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The d=3 and d=4 rows are backed by registered cached artifacts and asserted by the certificate runner.  _(class `B`)_
+- **chain closes:** False — The note's central table does not match the cache-backed runner output: the d=3 table reports Born <4e-15, while C6 asserts the registered 3D cache value Born = 4.20e-15. A bounded finite-entry inventory cannot be clean while displayed row numerics are stale relative to the supplied runner evidence.
+- **rationale:** Issue: the displayed table numerics are stale relative to the runner, most concretely d=3 Born <4e-15 versus runner-asserted Born = 4.20e-15. Why this blocks: the claim is a finite-entry inventory, so the table cells themselves are load-bearing and must match the registered cache assertions. Repair target: update the table to the exact cache-backed values or rerun/cache artifacts that support the displayed bounds, and extend the certificate to assert every displayed load-bearing cell. Claim boundary until fixed: the packet supports that the registered artifacts contain the asserted 3D and 4D cache strings, but not that the source table is audit-clean as written.
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`
