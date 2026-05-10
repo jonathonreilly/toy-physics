@@ -2,7 +2,7 @@
   "claim_type_counts": {
     "bounded_theorem": 776,
     "decoration": 13,
-    "meta": 84,
+    "meta": 85,
     "no_go": 192,
     "open_gate": 103,
     "positive_theorem": 761
@@ -66,7 +66,7 @@
     "decoration_under_linear_response_true_kubo_note": 1,
     "decoration_under_moving_source_retarded_portability_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
-    "meta": 77,
+    "meta": 78,
     "open_gate": 11,
     "retained": 66,
     "retained_bounded": 227,
