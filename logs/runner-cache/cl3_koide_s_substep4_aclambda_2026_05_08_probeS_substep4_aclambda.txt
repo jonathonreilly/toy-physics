@@ -1,0 +1,124 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_s_substep4_aclambda_2026_05_08_probeS_substep4_aclambda.py
+runner_sha256: e4ac2e6b4d93539af4b65d0ce1a4740212ad8cd663a69588f0eed2284a13aed0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+========================================================================================
+  Probe S-Substep4-AC_lambda — New-Science Attack on AC_λ
+  Companion runner: docs/KOIDE_S_SUBSTEP4_ACLAMBDA_NEW_SCIENCE_
+                    NOTE_2026-05-08_probeS_substep4_aclambda.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+  Section 1 — Probe target identification
+----------------------------------------------------------------------------------------
+  [PASS] AC_λ atom of substep-4 atomic decomposition — AC_λ = AC_λ.struct ∧ AC_λ.label per PR #890
+  [PASS] AC_λ.struct prior status: bounded via KS-inheritance — Kawamoto-Smit + Reed-Simon I §VIII.5 simultaneous-diagonalization
+  [PASS] AC_λ.label prior status: bounded via audit-pending meta — depends on PR #728 (C3pres), PR #729 (ConvU), PR #790 (BAErename)
+  [PASS] New-science scope authorized — feedback_derivation_surface_extends_via_new_science.md
+
+----------------------------------------------------------------------------------------
+  Section 2 — Tool K1: K-theory of BZ-corner bundle
+----------------------------------------------------------------------------------------
+  [PASS] K1.(a): hw=1 corner equivariant characters pairwise distinct — (-1,+1,+1), (+1,-1,+1), (+1,+1,-1) — Z³ characters all distinct
+  [PASS] K1.(b): K^0_{T³,equiv}(hw=1) decomposes as Z^3 — rank 3; one Z-summand per equivariant character class
+  [PASS] K1.(c): K-theory does NOT forbid off-diagonal couplings without translation-invariance — counter-example operator has [K, T_x] ≠ 0 (norm = 1.4142)
+  [PASS] K1.(d): K-theoretic closure of AC_λ.struct requires translation-invariance — = same KS load-bearing input; K-theory does NOT bypass KS-inheritance
+  [PASS] K1 hostile-review tiering: 3 RETAINED + 1 IMPORTED + 1 POSTULATED — T³/K^0/equiv-char RETAINED+IMPORTED; species-label bridge POSTULATED
+
+----------------------------------------------------------------------------------------
+  Section 3 — Tool K2: Categorical groupoid [Set_3 // C_3]
+----------------------------------------------------------------------------------------
+  [PASS] K2.(a): groupoid [Set_3 // C_3] has exactly 3 iso-classes — three C_3-equivariant bijections (cyclic shifts); matches PR #790
+  [PASS] K2.(b): all 3 candidate bijections are genuinely C_3-equivariant — f(σ·x) = σ·f(x) verified for each bijection × each x
+  [PASS] K2.(c): groupoid characterizes but does NOT select a specific iso-class — all 3 iso-classes are C_3-related; selection is labeling convention
+  [PASS] K2.(d): groupoid characterization = content-equivalent to PR #790 — no bypass of audit-pending meta dependency
+  [PASS] K2 hostile-review tiering: 2 RETAINED + 1 IMPORTED + 1 POSTULATED — C_3-action and orbit-count RETAINED; groupoid construction IMPORTED; label-bridge POSTULATED
+
+----------------------------------------------------------------------------------------
+  Section 4 — Tool K3: Modular flavor SL(2,Z)/Γ(3)
+----------------------------------------------------------------------------------------
+  [PASS] K3.(a): A_4 ≅ SL(2,Z)/Γ(3) has a 3-dim irrep — irrep dimensions [1, 1, 1, 3] include 3-dim (matches hw=1 triplet)
+  [PASS] K3.(b): modular flavor admits 3 primitive admissions — level + weight + dictionary; same convention-dependence trap as Probe 4
+  [PASS] K3.(c): modular flavor is multi-primitive admission (worse than baseline) — 3 primitives vs prior 0-primitive AC_λ partial bounded; mirrors Probe 4 trap
+  [PASS] K3.(d): retained content does NOT select (N=3, k=2) over alternatives — framework primitives are compatible with but do not derive this choice
+  [PASS] K3 hostile-review tiering: 1 RETAINED + 2 IMPORTED + 3 POSTULATED — C_3 RETAINED; SL(2,Z)/A_4 IMPORTED; (level, weight, dictionary) POSTULATED
+
+----------------------------------------------------------------------------------------
+  Section 5 — Unified obstruction synthesis
+----------------------------------------------------------------------------------------
+  [PASS] K1, K2, K3 each fail to bypass AC_λ bounded inheritances — 3 independent tools attempted; 0 succeed in bypass
+  [PASS] Unified meta-pattern: convention-dependence trap reproduced under new science — mirrors Routes A/D/E/F + Probe 4 + A1 11-probe campaign synthesis
+  [PASS] Substep-4 admission count UNCHANGED at 3 atoms — before={'AC_λ', 'AC_φ', 'AC_φλ'}, after={'AC_λ', 'AC_φ', 'AC_φλ'}; new science DOES NOT remove an atom
+  [PASS] PR #890 partial closure status UNCHANGED (still audit-pending) — this note adds 3 new lenses on AC_λ; does not promote or weaken PR #890
+
+  --- Result tier: BOUNDED (extends partial closure) ---
+  AC_λ resists new-science closure across three independent tools.
+  Substep-4 surface status remains bounded_theorem (UNCHANGED).
+
+
+----------------------------------------------------------------------------------------
+  Section 6 — Hostile-review tiering audit
+----------------------------------------------------------------------------------------
+  [PASS] K1 ingredient tiering complete — 2 RETAINED + 1 IMPORTED + 1 POSTULATED
+  [PASS] K2 ingredient tiering complete — 2 RETAINED + 1 IMPORTED + 1 POSTULATED
+  [PASS] K3 ingredient tiering complete — 1 RETAINED + 2 IMPORTED + 3 POSTULATED
+  [PASS] No new-science tool achieves zero POSTULATED count — each tool has ≥1 POSTULATED primitive → positive closure blocked
+
+----------------------------------------------------------------------------------------
+  Section 7 — Forbidden-imports verification
+----------------------------------------------------------------------------------------
+  [PASS] No PDG values imported as derivation input — no m_e, m_μ, m_τ, m_Pl, G_N, c, hbar in runner
+  [PASS] No new content axioms added — new-science tools are structural lenses, not new physics axioms
+  [PASS] No fitted matching coefficients — all numerical content is symbolic / structural
+  [PASS] No HK + DHR appeal (Block 01 audit retired this) — K-theory, groupoid, modular forms — none invoke HK+DHR
+  [PASS] No BAE-condition closure claim — AC_φλ remains terminally bounded per PR #836; not touched here
+  [PASS] No physical-observable distinguishability claim on H_{hw=1} — AC_φ remains bounded structural no-go candidate; not touched here
+  [PASS] No PR #890 status promotion claim — AC_λ partial closure remains audit-pending; this note adds characterizations only
+
+----------------------------------------------------------------------------------------
+  Section 8 — Authority disclaimer / source-note hygiene
+----------------------------------------------------------------------------------------
+  [PASS] Runner is a verification, not an audit verdict — audit verdict and downstream status set only by independent audit lane
+  [PASS] Runner does not promote any retained or positive_theorem status — result is bounded; AC_λ still resists new-science closure across 3 tools
+  [PASS] Runner does not modify retained content on main — no modifications to existing theorem notes or retained derivations
+  [PASS] Source-note triplet: source note + paired runner + cached output — review-loop source-only policy respected (no output-packets, no synthesis)
+
+========================================================================================
+  TOTAL: PASS=38, FAIL=0
+========================================================================================
+
+Result classification:
+
+  AC_λ atom of substep-4 atomic decomposition resists new-science
+  closure across three independent tools:
+
+    K1 (K-theory of BZ-corner bundle):
+        — Same bounded tier as KS-inheritance.
+        — 1 extra primitive (K-class ↔ species-label bridge).
+
+    K2 (Categorical groupoid [Set_3 // C_3]):
+        — Characterizes but does NOT select 3 iso-classes.
+        — Content-equivalent to PR #790 parameter-counting.
+
+    K3 (Modular flavor SL(2,Z) / Γ(3)):
+        — 3 primitive admissions (level, weight, dictionary).
+        — Materially worse; mirrors Probe 4 spectral-action trap.
+
+  Unified meta-pattern: convention-dependence trap reproduced.
+
+  Substep-4 admission count: UNCHANGED at 3 atoms
+  Substep-4 surface tier   : bounded_theorem (UNCHANGED)
+  PR #890 status           : UNCHANGED (still audit-pending)
+
+  Result tier: BOUNDED (extends partial closure of PR #890;
+                          does not ratchet to positive)
+
+  Independent audit lane has full authority for verdict and downstream
+  status.
+
+----- stderr -----
+
