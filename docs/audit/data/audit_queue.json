@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 25,
-    "leaf": 275,
+    "leaf": 274,
     "medium": 143
   },
   "cycle_break_target_count": 305,
@@ -31155,27 +31155,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "asymmetry_persistence_born_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/asymmetry_persistence_born_calibration.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "asymmetry_persistence_collapse_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38224,6 +38203,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 72,
-  "total_pending": 1138
+  "ready_count": 71,
+  "total_pending": 1137
 }

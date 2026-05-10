@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1132 |
+| unaudited | 1131 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 217 |
+| ~~audited_conditional~~ | 218 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 217 |
+| `audited_conditional` | 218 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1229 |
+| `unaudited` | 1228 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 775 |
+| `bounded_theorem` | 776 |
 | `decoration` | 13 |
 | `meta` | 104 |
 | `no_go` | 193 |
 | `open_gate` | 99 |
-| `positive_theorem` | 749 |
+| `positive_theorem` | 748 |
 
 | criticality | count |
 |---|---:|
@@ -494,6 +494,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `asymmetry_persistence_born_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1043,6 +1044,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Within the finite primitive-edge class whose local data are only the 16-state primitive cell, source-free state, rank-four projector, locality/additivity, and standard von Neumann or binary measurement entropy, there is no derivation of an entanglement area coefficient equal to 1/4.  _(class `A`)_
 - **chain closes:** True — The chain closes because the canonical entropy values from the stated finite data are computed directly and none equals 1/4 in natural units, while the tuned gapped-edge value requires p_* not fixed by the primitive rank pair (16,4). With no dependencies, there is no unresolved upstream status blocking the scoped no-go.
 - **rationale:** The no-go is scoped to exact finite-cell entropy constructions and a gapped two-level edge example, not to all possible entropy-carrier theorems. The note explicitly distinguishes the primitive trace Tr((I_16/16)P_A)=1/4 from von Neumann and binary entropy values, and the runner reproduces those finite arithmetic checks with current PASS=26 FAIL=0. No hidden physical identification is used to claim a positive entropy coefficient; the conclusion is negative and leaves positive routes open only if they add a selector or operational entropy theorem.
+- **auditor confidence:** high
+
+### `asymmetry_persistence_born_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_BORN_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_BORN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite bounded audit of the claimed Born-clean Sorkin |I3|/P calibration for the stated dense N=100 asymmetry-persistence probe, not an asymptotic Born theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12fb-3fb6-7373-81b1-946f0fb92f51`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The corrected Sorkin |I3|/P magnitudes in the table are reproducible from the registered runner at the narrow N=100, npl=60, 2 seeds, 4 realizations configuration.  _(class `B`)_
+- **chain closes:** False — The restricted packet has no one-hop cited authorities, while the runner relies on unprovided infrastructure for graph construction, persistence pruning, layernorm propagation, and collapse. The live stdout also times out before the load-bearing N=100 threshold rows, so the supplied packet does not certify the table.
+- **rationale:** Issue: the claimed finite Born-clean table depends on unlisted runner imports and a completed or cached narrow-run artifact that is not supplied in the restricted packet. Why this blocks: the source note's own table and prose cannot substitute for an audited dependency or completed reproducible runner output. Repair target: wire the needed infrastructure as direct audited dependencies or inline/supply their source, and provide a completed sliced N=100, npl=60, 2-seed, 4-realization runner log or certificate. Claim boundary until fixed: the note may be treated only as a density-limited attempted calibration, not a closed Born-clean result.
 - **auditor confidence:** high
 
 ### `asymmetry_persistence_mass_window_note`
