@@ -300,3 +300,106 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [yt_boundary_theorem](YT_BOUNDARY_THEOREM.md)
 - [yt_zero_import_authority_note](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+
+---
+
+## CORRECTION 2026-05-10 — Ward-BC `m_t = 169.4 GeV` is a trajectory-truncation artifact, not a QFP attractor closure
+
+**Catching PR:** [#1022](https://github.com/jonathonreilly/Physics/pull/1022) —
+*Probe W-Quark-RGFP: QFP-attractor route for top mass foreclosed
+(NEGATIVE).*
+**Catching authority role:** hostile audit of the dynamical (RGE-attractor)
+route to `m_t` under the framework's retained 1-loop SM RGE with
+`α_s(v) = α_bare/u_0² = 0.1033`.
+**Status:** source-only correction stanza appended at end. Does NOT
+modify the substantive content of Parts 1-6 above.
+
+### What this stanza corrects
+
+This support note (Parts 1-6 above) treats the Ward-BC backward-RGE
+prediction `y_t(v) ≈ 0.973`, `m_t = 169.4 GeV` as the converged result
+of a QFP-focusing flow. The numerical table in Part 2 lists this
+`m_t` value, and the bounded-support theorem in Part 5 asserts a ~3%
+systematic uncertainty from "the choice of RG flow above v".
+
+PR #1022 (W-Quark-RGFP) shows that **the actual IR QFP attractor of
+the same retained 1-loop SM RGE machinery sits at**:
+
+```
+y_t(v)|attractor ≈ 1.26    (m_t|attractor ≈ 218 GeV)
+```
+
+**not** at the SM-physical region `y_t(v) ≈ 0.95` (`m_t ≈ 173 GeV`).
+The Ward BC `y_t(M_Pl) = g_lattice/√6 = 0.4358` sits on the LOWER
+side of the QFP basin: the trajectory rises toward the attractor but
+runs out of running budget after 17 decades, landing at
+`y_t(v) ≈ 0.95` without finishing the climb.
+
+### Reclassification
+
+| Item | Original framing in this note | Corrected framing (PR #1022) |
+|------|-------------------------------|------------------------------|
+| `y_t(v) ≈ 0.973` | "Ward BC result", treated as QFP-focused closure | **UV-IR transient property** on a 17-decade truncation |
+| `m_t = 169.4 GeV` | "Backward Ward prediction" with ~3% RG-flow uncertainty | **Trajectory-truncation artifact**, not an attractor property |
+| QFP focusing as load-bearing | "Compresses UV differences" → the SM-physical `m_t` | Focusing is real but its IR target is `y_t(v) ≈ 1.26`, NOT `y_t(v) ≈ 0.97` |
+| Pendleton-Ross focusing ratio R | "Compression of UV variation onto IR band" | Compression onto `y_t(v) ≈ 1.26`, **not** onto `0.97` |
+
+The Ward-BC trajectory result is **dependent on the specific
+boundary value `0.4358`** lying below the attractor. It is NOT a
+structural attractor closure. A different Ward BC value would give a
+different `y_t(v)` along the same RG flow.
+
+### Bounded-support theorem (Part 5) — what survives
+
+The bounded statement that "any smooth flow satisfying the Ward BC
+and the gauge anchor, with the same QFP focusing structure, gives the
+same `y_t(v)` to within ~3%" is **internally correct** and survives
+the correction. What it does NOT establish is that this common
+`y_t(v)` is the SM-physical `m_t ≈ 173 GeV`. The shared `y_t(v) ≈
+0.973` is **a transient value of the trajectory at scale `v` after 17
+decades of running**, NOT the QFP attractor value.
+
+Equivalently: Parts 1-6's bound is "trajectory robustness to flow
+choice", not "attractor-closure robustness". This is a narrower claim
+than a casual reading of the title "QFP Insensitivity" would suggest.
+
+### Classification
+
+| Item | Tier |
+|------|------|
+| Numerical results in Parts 1-5 (RGE integration, sensitivity scan, 14/14 PASS) | **NUMERICALLY CORRECT** (unchanged) |
+| Bounded statement "trajectory `y_t(v)` robust to flow choice at ~3%" | **VALID** (Part 5 theorem) |
+| Reading "`m_t = 169.4 GeV` is the QFP attractor closure for top mass" | **REVOKED** by PR #1022 |
+| Reading "`m_t = 169.4 GeV` is a trajectory-truncation artifact at the chosen Ward BC" | **CORRECT** (this stanza, citing PR #1022) |
+| QFP-attractor route for top-mass closure | **NEGATIVE** (PR #1022 verdict — foreclosed at 5% precision tier on retained content) |
+
+### Where the correction must propagate
+
+Downstream notes and audits that cite this support note must
+distinguish:
+
+- **Trajectory-robustness claim** (Part 5 bound, ~3% RG-flow
+  uncertainty around `y_t(v) ≈ 0.973`) — survives.
+- **Attractor-closure claim** (any reading that `m_t = 169.4 GeV` is
+  forced by the IR fixed-point structure) — REVOKED. The actual
+  attractor sits at `m_t ≈ 218 GeV`.
+
+Any downstream that uses this note as authority for "retained-content
+positive theorem on `m_t`" must be reclassified. The retained-content
+positive route for `m_t` is foreclosed at the 5% tier per PR #1022.
+
+### Source-only review-loop compliance
+
+- This is a CORRECTION STANZA appended at the end. Parts 1-6 are
+  unchanged.
+- The catching PR (#1022) is cited.
+- A paired runner [`scripts/cl3_t1_corrections_v2_2026_05_10.py`](../scripts/cl3_t1_corrections_v2_2026_05_10.py)
+  reproduces the attractor mislocation and the trajectory-truncation
+  diagnostic numerically.
+- Cached output: [`logs/runner-cache/cl3_t1_corrections_v2_2026_05_10.txt`](../logs/runner-cache/cl3_t1_corrections_v2_2026_05_10.txt).
+
+### Authority disclaimer
+
+This is a source-only correction stanza. Audit verdict and downstream
+status (retention, tier promotion / demotion) are set only by the
+independent audit lane.
