@@ -24,6 +24,7 @@ on:
     paths:
       - 'docs/**/*.md'
       - 'docs/audit/scripts/**'
+      - 'logs/runner-cache/**'
       - 'scripts/**/*.py'
       - 'scripts/**/*.sh'
       - 'docs/audit/templates/audit_workflow.yml'
