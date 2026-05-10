@@ -941,6 +941,74 @@
       "to": "audit_dm_runner_stale_path_cleanup_note_2026-05-01"
     },
     {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "valley_linear_action_note"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "lattice_nn_mass_response_note"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "persistent_object_blended_readout_transfer_sweep_note_2026-04-16"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "lattice_3d_l2_numpy_h0125_bridge_note"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "dispersion_high_p_tiebreaker_note"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "dm_abcc_basin_finite_search_support_note_2026-04-30"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "dm_chamber_signature_structure_note_2026-04-19"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_note"
+    },
+    {
+      "from": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "to": "mesoscopic_surrogate_alternate_family_scout_note"
+    },
+    {
       "from": "axiom_first_bekenstein_bound_theorem_note_2026-05-01",
       "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     },
@@ -35007,6 +35075,35 @@
       "runner_path": null,
       "title": "Audit Low-Hanging-Fruit Leverage Map for Retained Promotion"
     },
+    "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10": {
+      "claim_id": "audit_ready_leaf_inventory_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "valley_linear_action_note",
+        "koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18",
+        "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological",
+        "lattice_nn_mass_response_note",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "persistent_object_blended_readout_transfer_sweep_note_2026-04-16",
+        "lattice_3d_l2_numpy_h0125_bridge_note",
+        "dispersion_high_p_tiebreaker_note",
+        "dm_abcc_basin_finite_search_support_note_2026-04-30",
+        "dm_chamber_signature_structure_note_2026-04-19",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "claude_complex_action_grown_companion_note",
+        "mesoscopic_surrogate_alternate_family_scout_note"
+      ],
+      "note_hash": "5191a4eb25c1417394eb0c12dcf6ff9b4d9348791ea88e83087550f97668494b",
+      "path": "docs/AUDIT_READY_LEAF_INVENTORY_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_audit_ready_leaf_inventory_synthesis.py",
+      "title": "Audit Ready-Leaf Inventory Synthesis Meta Note"
+    },
     "audited_symmetry_synthesis_note": {
       "claim_id": "audited_symmetry_synthesis_note",
       "claim_type_author_hint": null,
@@ -65755,7 +65852,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 238,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
@@ -65764,16 +65861,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
+    "edge_count": 8246,
+    "leaf_count": 526,
+    "node_count": 2051,
     "root_count": 764,
-    "runners_with_path": 1665
+    "runners_with_path": 1666
   }
 }
