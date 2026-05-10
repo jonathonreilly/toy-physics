@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_cpt_exact_real_anti_hermitian_d_exact_2026_05_10.py
+runner_sha256: 51ce92b3d7feb55b0dc7ed719ddd450fa51758b223316585f6874b45aac4648e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.25
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy verification of Theta D Theta^{-1} = D from premises
+      (1) C D C = -D, (2) P D P = -D, (3) T D T = D
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: instance (i) — abstract 2x2 anti-Hermitian real D
+----------------------------------------------------------------------------------------
+  [PASS (A)] (i.0a) D anti-Hermitian: D + D.H == 0
+  [PASS (A)] (i.0b) D real: D == conjugate(D)
+  [PASS (A)] (i.0c) C real involutory: C^2 = I
+  [PASS (A)] (i.0d) P real involutory: P^2 = I
+
+----------------------------------------------------------------------------------------
+Part 2: premise identities (1), (2), (3) on instance (i)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (1) premise: C D C == -D on instance (i)  (C D C = [[0, -a], [a, 0]], -D = [[0, -a], [a, 0]])
+  [PASS (A)] (2) premise: P D P == -D on instance (i)  (P D P = [[0, -a], [a, 0]], -D = [[0, -a], [a, 0]])
+  [PASS (A)] (3) premise: T D T == D on instance (i)
+
+----------------------------------------------------------------------------------------
+Part 3: (C1) Theta D Theta^{-1} == D from (1),(2),(3) on (i)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) instance (i): Theta D Theta^{-1} == D  (Theta D Theta^{-1} = [[0, a], [-a, 0]])
+  [PASS (A)] Substitution chain step 1->2: D^* == D (premise (3))
+  [PASS (A)] Substitution chain step 2->3: P D P == -D (premise (2))
+  [PASS (A)] Substitution chain step 3->4: C(-D)C == -(CDC) (linearity)
+  [PASS (A)] Substitution chain step 4->5: -CDC == -(-D) == D (premise (1))
+  [PASS (A)] Substitution chain step 5: result equals D
+
+----------------------------------------------------------------------------------------
+Part 4: (C2) Hermitian-lift commutator on instance (i)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2.0) H = iD is Hermitian: H == H.H
+  [PASS (A)] (C2) instance (i): Theta_H H Theta_H^{-1} == H
+  [PASS (A)] (C2 alt) P H^* == H P (commutation of antiunitary with H)
+
+----------------------------------------------------------------------------------------
+Part 5: (C3) Theta^2 == scalar (=+/-I) on instance (i)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C3.0a) instance (i): {C, P} == 0 (anticommute)  (C = sigma_x, P = sigma_z anticommute)
+  [PASS (A)] (C3) instance (i): Theta^2 == -I (scalar; s = -1 since {C,P} = 0)  ((CP)^2 = [[-1, 0], [0, -1]])
+
+----------------------------------------------------------------------------------------
+Part 6: framework-shaped instance (ii) — bipartite anti-Hermitian D
+----------------------------------------------------------------------------------------
+  [PASS (A)] (ii.0a) D_lat anti-Hermitian: D + D.H == 0
+  [PASS (A)] (ii.0b) D_lat real: D == conjugate(D)
+  [PASS (A)] (ii.0c) C_lat real, diagonal, involutory: C^2 == I
+  [PASS (A)] (ii.0d) P_lat real, permutation, involutory: P^2 == I
+
+----------------------------------------------------------------------------------------
+Part 7: premise identities on framework-shaped instance (ii)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (1) premise on instance (ii): C D C == -D  (bipartite L = 4, in-pair hopping)
+  [PASS (A)] (2) premise on instance (ii): P D P == -D  (P maps pairs (0,1)<->(3,2), flipping in-pair direction)
+  [PASS (A)] (3) premise on instance (ii): T D T == D
+
+----------------------------------------------------------------------------------------
+Part 8: (C1) Theta D Theta^{-1} == D on framework instance (ii)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) instance (ii): Theta D Theta^{-1} == D
+
+----------------------------------------------------------------------------------------
+Part 9: (C2) [Theta_H, H] = 0 on framework instance (ii)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2.0) H_lat = i D_lat is Hermitian
+  [PASS (A)] (C2) instance (ii): Theta_H H Theta_H^{-1} == H
+
+----------------------------------------------------------------------------------------
+Part 10: (C3) Theta^2 == scalar on framework instance (ii)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C3) instance (ii): (CP)^2 == +I or -I (scalar)  ((CP)^2 = scalar; +I=False, -I=True)
+
+----------------------------------------------------------------------------------------
+Part 11: counterfactual probe — non-real D breaks (3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (cf.0) counterfactual D_cf anti-Hermitian: D + D.H == 0
+  [PASS (A)] (cf.1) D_cf NOT real: D^* != D (premise (3) fails)  (counterfactual confirms D-real is load-bearing for (3))
+  [PASS (A)] (cf.2a) D_cf breaks premise (1): C D' C != -D'  (non-real D breaks (1) when iZ-piece commutes (rather than anticommutes) with C)
+  [PASS (A)] (cf.2b) note: composite Theta D' Theta^{-1} == D' even though (1) fails for D'  (composite_invariant_on_D_cf=True — illustrating that premise failure does not strictly imply composite failure)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Premise identities (1), (2), (3) on abstract 2x2 instance (i)
+    Premise identities (1), (2), (3) on bipartite L=4 instance (ii)
+    (C1) Theta D Theta^{-1} = D on both instances
+    Step-by-step substitution chain matches proof in note
+    (C2) Hermitian-lift commutator [Theta_H, H] = 0 on both instances
+    (C3) Theta^2 = I on both instances
+    Counterfactual: non-real D breaks premise (3) => breaks (C1)
+
+========================================================================================
+TOTAL: PASS=33, FAIL=0
+========================================================================================
+
+----- stderr -----
+

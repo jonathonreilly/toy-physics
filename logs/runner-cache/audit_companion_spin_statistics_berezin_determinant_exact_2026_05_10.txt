@@ -1,0 +1,87 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_spin_statistics_berezin_determinant_exact_2026_05_10.py
+runner_sha256: d465b89b921c4c3791c09d0077ff68fc3245153cfdba7de3ea3c83c54af03555
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+SPIN_STATISTICS_BEREZIN_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy verification of Berezin determinant identity and
+      two-point antisymmetry on Grassmann generators
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: Berezin determinant identity (D) at N = 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D) N=1: berezin_det_via_permutations(M) == sympy det(M)  (Z = m, det(M) = m)
+
+----------------------------------------------------------------------------------------
+Part 2: Berezin determinant identity (D) at N = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D) N=2: Berezin determinant identity  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: Berezin determinant identity (D) at N = 3
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D) N=3: Berezin determinant identity  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: Berezin determinant identity (D) at N = 4
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D) N=4: Berezin determinant identity
+
+----------------------------------------------------------------------------------------
+Part 5: (G1) anticommutation and (C1) Pauli exclusion
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G1) {chi_1, chi_2} = 0 (anticommute at distinct sites)
+  [PASS (A)] (G1 at x=x) chi_1^2 = 0 (Pauli exclusion / nilpotency)
+  [PASS (A)] (G1 at x=x) chi_2^2 = 0
+  [PASS (A)] (G2) {chibar_1, chibar_2} = 0
+  [PASS (A)] (G2 at x=x) chibar_1^2 = 0
+  [PASS (A)] (G3) {chibar_1, chi_2} = 0
+
+----------------------------------------------------------------------------------------
+Part 6: (A) two-point antisymmetry of correlators
+----------------------------------------------------------------------------------------
+  [PASS (A)] (A) O_x O_y + O_y O_x = 0 for O_x = chi_1, O_y = chi_2
+  [PASS (A)] (A) odd-odd: chi_1 chi_2 + chi_2 chi_1 = 0
+
+----------------------------------------------------------------------------------------
+Part 7: (C2) real-antisymmetric M gives det(M) = Pf(M)^2 >= 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2) 2x2 real-antisymmetric: det(M) = a^2 (= Pf(M)^2)  (det = a**2)
+  [PASS (A)] (C2) 4x4 real-antisymmetric: det(M) = Pf(M)^2 = (af - be + cd)^2  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: counterfactual — commuting (bosonic) generator breaks (D)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (cf) bosonic Z_B = sqrt(pi/m) != Grassmann Z_F = m (D fails for bosonic)  (bosonic - Grassmann = -m + sqrt(pi)/sqrt(m))
+
+----------------------------------------------------------------------------------------
+Part 9: framework instance — staggered-Dirac-like real M at N=3
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D framework instance) Berezin det = sympy det for staggered-like M at N=3  (det = 2*eps**2*m + m**3)
+  [PASS (A)] (D framework instance) det = m (m^2 + 2 eps^2) > 0 for m, eps > 0
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (D) Berezin determinant identity Z_F = det(M) at N = 1, 2, 3, 4
+    (G1) Anticommutation {chi_x, chi_y} = 0 (Jordan-Wigner instance)
+    (C1) Pauli exclusion chi_x^2 = 0 (nilpotency)
+    (G2), (G3) Companion anticommutation relations
+    (A) Two-point antisymmetry: chi_1 chi_2 + chi_2 chi_1 = 0
+    (C2) Real-antisymmetric M: det(M) = Pf(M)^2 at 2x2 and 4x4
+    Counterfactual: bosonic integral != Grassmann determinant
+    Framework instance: staggered-like real M at N=3, positive on mass surface
+
+========================================================================================
+TOTAL: PASS=17, FAIL=0
+========================================================================================
+
+----- stderr -----
+
