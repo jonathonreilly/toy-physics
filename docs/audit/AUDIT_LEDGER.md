@@ -22,10 +22,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 236 |
 | open_gate | 12 |
-| unaudited | 1092 |
+| unaudited | 1091 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
-| ~~audited_renaming~~ | 16 |
+| ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 248 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
@@ -44,17 +44,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
-| `audited_renaming` | 16 |
-| `unaudited` | 1190 |
+| `audited_renaming` | 17 |
+| `unaudited` | 1189 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 808 |
+| `bounded_theorem` | 809 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 197 |
 | `open_gate` | 102 |
-| `positive_theorem` | 720 |
+| `positive_theorem` | 719 |
 
 | criticality | count |
 |---|---:|
@@ -855,6 +855,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
+| `field_equation_derivation_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -4089,6 +4090,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "retained narrow comparison positive: shared weak-field linearity, with control-surface mismatch isolated rather than averaged away"  _(class `B`)_
 - **chain closes:** False — The comparison imports F~M/control facts from other family notes, but the restricted one-hop packet omits the retained grown-transfer authority and the FM-transfer authorities needed for the quoted 1.000 and 0.999994 values. The runner does not recompute controls or F~M values; it prints hard-coded rows.
 - **rationale:** Issue: the shared-law comparison rests on static copied values, with at least the grown-transfer source and FM-transfer value sources absent from the one-hop authority packet. Why this blocks: a hostile referee cannot verify the cross-family shared weak-field law from the supplied authorities, and the runner only renders constants rather than recomputing the observables. Repair target: add the missing dependency edges or a consolidated retained authority, then replace the comparison runner with one that recomputes the controls and F~M values on the stated observables. Claim boundary until fixed: the note can serve only as a support comparison card, not as a retained shared-law theorem.
+- **auditor confidence:** high
+
+### `field_equation_derivation_note`
+
+- **Note:** [`FIELD_EQUATION_DERIVATION_NOTE.md`](../../docs/FIELD_EQUATION_DERIVATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the variational derivation of screened Poisson from the explicitly chosen local quadratic graph field action, not a derivation of that action from upstream axioms.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1379-257f-78b2-8eec-ff1dd2f2843b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The simplest local quadratic field action on a graph is" the displayed graph-gradient plus scalar mass plus linear source action, whose variation gives (L + mu^2 I) Phi = G rho.  _(class `E`)_
+- **chain closes:** False — The Euler-Lagrange algebra closes once the action is stipulated, but the note's stronger claim that screened Poisson is uniquely selected rather than conventionally chosen does not close. The missing step is a theorem deriving the allowed scalar local quadratic action and excluding other local quadratic positive-definite operators or parameter choices from retained inputs.
+- **rationale:** Issue: the load-bearing move is the definition/selection of the field action, not a derivation of that action. Why this blocks: varying a chosen action only proves a chosen-action Euler-Lagrange identity and cannot establish non-conventional uniqueness of the field equation. Repair target: add a theorem deriving the action class, scalar mass term, source coupling, and uniqueness restrictions from retained primitives. Claim boundary until fixed: screened Poisson is the Euler-Lagrange equation of the stipulated quadratic graph action.
 - **auditor confidence:** high
 
 ### `fifth_family_complex_boundary_note`
