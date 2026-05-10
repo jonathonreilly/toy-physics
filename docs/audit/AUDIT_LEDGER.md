@@ -21,8 +21,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 68 |
 | **retained_no_go** | 126 |
 | **retained_bounded** | 239 |
-| open_gate | 12 |
-| unaudited | 1087 |
+| open_gate | 13 |
+| unaudited | 1086 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 401 |
+| `audited_clean` | 402 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1185 |
+| `unaudited` | 1184 |
 
 | claim_type | count |
 |---|---:|
@@ -360,6 +360,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `primitive_p_lh_content_proposal_note_2026-05-10_pplh` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -8120,6 +8121,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
   - `DISTANCE_LAW_PORTABILITY_NOTE.md`
   - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
+- **auditor confidence:** high
+
+### `primitive_p_lh_content_proposal_note_2026-05-10_pplh`
+
+- **Note:** [`PRIMITIVE_P_LH_CONTENT_PROPOSAL_NOTE_2026-05-10_pPlh.md`](../../docs/PRIMITIVE_P_LH_CONTENT_PROPOSAL_NOTE_2026-05-10_pPlh.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate design note recording three candidate substrate-side primitives, P-LH-1 order-one, P-LH-2 asymmetric action, and P-LH-3 KO-dim-6 real structure, for selecting SM LH/RH content over Pati-Salam, while explicitly making no status promotion and concluding that none is a clean single-primitive closure on existing physical Cl(3)/Z^3 inputs alone.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-audit-loop-019e13ff-4322-7591-8d6a-1949ed7212ab`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Net verdict: design-note records three candidate primitives; none is a clean single-primitive closure on the existing physical Cl(3)/Z^3 inputs.  _(class `A`)_
+- **chain closes:** True — The restricted packet supports the scoped open-gate claim: the note repeatedly disclaims theorem or primitive promotion, treats the three proposals as candidate imports, and states the same net no-closure conclusion in the comparative table, net design conclusion, and honest verdict. No direct ledger dependencies are listed, and the sibling probes are expressly contextual rather than load-bearing dependencies.
+- **rationale:** The audited claim is not that SM LH/RH content has been derived, but that the note honestly records three candidate substrate-side primitives and preserves the open-gate boundary. Within that scope the chain closes: P-LH-1 is conditional on importing NCG algebra/order-one structure, P-LH-2 is identified as circular/minimality-failing, and P-LH-3 is identified as insufficient alone. The runner output is consistent with this scoped status and reports 53 passing structural/procedural checks with no external comparator or numerical tuning.
 - **auditor confidence:** high
 
 ### `primordial_spectrum_note`

@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 26,
     "leaf": 222,
-    "medium": 150
+    "medium": 149
   },
   "cycle_break_target_count": 305,
   "cycle_break_targets": [
@@ -27323,27 +27323,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.5,
-      "note_path": "docs/PRIMITIVE_P_LH_CONTENT_PROPOSAL_NOTE_2026-05-10_pPlh.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/cl3_primitive_p_lh_2026_05_10_pPlh.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_3d_l2_numpy_h0125_bridge_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37387,6 +37366,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 6,
-  "total_pending": 1093
+  "ready_count": 5,
+  "total_pending": 1092
 }
