@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1150 |
+| unaudited | 1149 |
 | meta | 77 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 221 |
+| ~~audited_conditional~~ | 222 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 221 |
+| `audited_conditional` | 222 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1227 |
+| `unaudited` | 1226 |
 
 | claim_type | count |
 |---|---:|
@@ -495,6 +495,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -1163,6 +1164,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** All other ingredients (Born rule, Poisson field equation, valley-linear action, conformal metric, M1*M2 product law) are derived from self-consistency or forced by the requirement of attractive Newtonian gravity.  _(class `E`)_
 - **chain closes:** False — The restricted packet provides no cited authorities, runner output, or first-principles derivations closing the many asserted reductions from A1+A2+C1. The missing step is an explicit derivation showing each listed D-ingredient follows from the stated axioms and dimensional choice rather than being an imported premise, choice, normalization, or empirical requirement.
 - **rationale:** The note is an assumption-inventory/meta claim, but its load-bearing move is to classify many substantive ingredients as derived without supplying the underlying derivations in the restricted packet. Several reductions explicitly invoke extra bridges such as self-consistency, attraction, Newtonian mass law, weak-field matching to observation, nearest-neighbor lattice structure, and dimensional choice. With no authorities and no runner source or stdout, the audit cannot ratify the count as closed from the stated axioms alone.
+- **auditor confidence:** high
+
+### `b_independence_mechanism_note`
+
+- **Note:** [`B_INDEPENDENCE_MECHANISM_NOTE.md`](../../docs/B_INDEPENDENCE_MECHANISM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded mechanism diagnostic that b-independence in the current linear path-sum on retained modular DAG families is due to a graph-wide phase-valley field rather than path scrambling or an overly local kernel.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12cd-bb74-7662-9522-eb4c2088b67f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The graph preserves local paths while the field spreads enough to act as a smooth phase valley, so the integrated phase perturbation is dominated by a graph-averaged field and the force behaves topologically rather than like a geometric 1/b law.  _(class `B`)_
+- **chain closes:** False — The supplied one-hop packet contains only a meta framework memo and no diagnostic runner, frozen diagnostic log, modular-family generator, field-law closure, or distance-law closure. The source note itself says those missing dependency edges are load-bearing, so the mechanism conclusion is imported rather than closed in the restricted packet.
+- **rationale:** Issue: the load-bearing path-preservation, field-localization, retained-family, and distance-law-closure facts are not supplied as retained one-hop authorities or a runner certificate. Why this blocks: without those inputs, the phase-valley/topological-force mechanism is an asserted synthesis of unavailable diagnostics, not a derivation from the provided packet. Repair target: wire audited retained dependencies for the diagnostics, generator, field law, and distance-law closure, or provide a self-contained reproducible certificate. Claim boundary until fixed: conditional mechanism diagnostic only, not retained bounded closure.
 - **auditor confidence:** high
 
 ### `background_independence_note`

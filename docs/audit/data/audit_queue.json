@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 25,
     "leaf": 281,
-    "medium": 155
+    "medium": 154
   },
   "cycle_break_target_count": 305,
   "cycle_break_targets": [
@@ -27296,29 +27296,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "b_independence_mechanism_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-05-03"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.822,
-      "note_path": "docs/B_INDEPENDENCE_MECHANISM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 9
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_3d_dense_refinement_reconciliation_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -38606,6 +38583,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 90,
-  "total_pending": 1156
+  "ready_count": 89,
+  "total_pending": 1155
 }
