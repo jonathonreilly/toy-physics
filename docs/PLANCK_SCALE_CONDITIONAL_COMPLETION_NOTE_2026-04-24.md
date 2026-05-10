@@ -2,13 +2,69 @@
 
 **Date:** 2026-04-24
 **Status:** proposed_retained support / conditional completion packet, not an
-unqualified minimal-stack derivation
+unqualified minimal-stack derivation. Audit verdict: `audited_conditional`
+(status authority is the independent audit lane).
 **Runner:** `scripts/frontier_planck_conditional_completion_audit.py`
 **Companion support runner:**
 `scripts/frontier_planck_boundary_density_extension.py`
 **Companion no-go runners:**
 `scripts/frontier_planck_finite_response_nogo.py`,
 `scripts/frontier_planck_parent_source_hidden_character_nogo.py`
+
+## Cited authorities (one-hop deps)
+
+This note records explicit one-hop authority citations for the conditional
+completion packet. The audit verdict `audited_conditional` correctly flags the
+gravitational boundary/action density bridge as the named open premise; the
+citations below sharpen the conditional structure on the live authority chain
+without claiming to derive that bridge.
+
+- [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+  (`audited_conditional`) — the unique additive finite-boundary density
+  extension `N_A(P) = c_cell A(P) / a^2`, conditional on the gravitational
+  boundary/action density bridge premise (BP). PR #812 sharpened this note
+  with an explicit conditional carrier-share derivation matching `c_cell =
+  1/4` to `1/(4 G_Newton,lat)` via Wald-Noether on the cited authority
+  chain.
+- [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  (`audited_conditional`) — the upstream first-order coframe carrier
+  theorem selecting `P_A` as the unique first-order boundary carrier on the
+  primitive event cell. PR #829 sharpened this note's premise provenance:
+  first-order locality is sourced to the link-local first-variation route,
+  unit primitive response normalization is recorded as a canonical
+  scheme/normalization choice.
+- [`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+  — unaudited candidate authority for the substrate-to-`P_A` step from the
+  algebraic first variation of the retained link-local microscopic action.
+  This is the cited conditional route for the `P_A` selection that
+  underpins the primitive coefficient `c_cell = 1/4`.
+- [`PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`](PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
+  — separates the bare Green coefficient `G_kernel = 1/(4π)` from the
+  conditional physical lattice Newton coefficient `G_Newton,lat = 1` on the
+  carrier-normalized surface (forces `lambda = 1` from `c_cell = lambda/4`).
+  This resolves the old bare-source failure mode `a/l_P = 2 sqrt(pi)`
+  without removing the bridge premise itself.
+- [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
+  — composition surface recording the conditional chain
+  `c_cell = 1/4 ⇒ S_BH = A · c_cell = A/(4 G_Newton,lat)` with
+  `G_Newton,lat = 1` in framework lattice units, conditional on the
+  Wald-Noether formula admitted as universal physics input and on the same
+  bridge premise (BP). This is the composition surface cited by PR #812's
+  conditional carrier-share derivation.
+- [`PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md`](PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
+  (`retained_no_go`) — closes the finite-automorphism-only response target
+  negatively. Bare finite primitive-cell automorphisms have no
+  infinitesimal tangent.
+- [`PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md`](PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
+  (`retained_no_go`) — closes the unconstrained Schur/event scalar
+  shortcut negatively. Carrier commutation alone leaves an affine hidden
+  character `delta`.
+
+The above one-hop citations make the conditional completion packet's
+authority chain explicit. The named open premise (BP) — gravitational
+boundary/action density identified with the first-order coframe carrier — is
+unchanged: this note does not claim to derive (BP) and the audit verdict
+remains `audited_conditional`.
 
 ## Purpose
 
@@ -170,16 +226,25 @@ primitive coframe:
 
 On `P_A H_cell` with `rank(P_A)=4`, this is the irreducible
 `Cl_4(C) ~= M_4(C)` module, equivalently the two-mode complex CAR edge
-carrier. Combined with the primitive parity-gated area-law theorem, this gives
+carrier. The 2026-04-30 primitive Clifford-Majorana edge derivation theorem
+(`PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30`,
+audit verdict `audited_renaming`) constructs the four Hermitian generators
+explicitly on `K = P_A H_cell` from the cited spatial `Cl(3)` bivectors plus
+the anomaly-forced time axis. Its substrate-to-`P_A` provenance is sourced to
+the cited link-local first-variation candidate authority; the algebraic
+construction itself is unchanged. Combined with the primitive parity-gated
+area-law theorem, this gives
 
 ```text
 c_Widom = c_cell = 1/4.
 ```
 
 Thus the conditional packet has a precise positive carrier route under the
-primitive coframe-response premise. It is not promoted here to a minimal-stack
+primitive coframe-response premise, with the active-block algebra constructed
+explicitly on `P_A H_cell`. It is not promoted here to a minimal-stack
 retained theorem, because the coframe response on the active block remains the
-explicit bridge premise.
+explicit bridge premise and the substrate-to-`P_A` step remains conditional on
+the unaudited link-local first-variation candidate authority.
 
 ### 5. Finite-only target is blocked
 
@@ -245,12 +310,23 @@ The exact open blockers are now sharper than before:
 
 1. **Minimal-stack blocker.** The older minimal finite stack alone still does
    not derive the absolute lattice spacing.
-2. **Carrier-identification blocker.** To promote the conditional theorem to
-   a stronger derivation, derive that the primitive one-step worldtube count
-   is the microscopic carrier of the gravitational boundary/action density. If
-   this is attempted through the parent-source scalar route, it must include a
-   no-hidden-character law fixing `delta = 0`; the carrier-only scalar diagram
-   is now closed negatively.
+2. **Carrier-identification blocker (BP).** To promote the conditional
+   theorem to a stronger derivation, derive that the primitive one-step
+   worldtube count is the microscopic carrier of the gravitational
+   boundary/action density. This is the named open bridge premise (BP)
+   inherited from `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM` §5
+   and explicitly recorded in
+   `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM` after PR #812. If this is
+   attempted through the parent-source scalar route, it must include a
+   no-hidden-character law fixing `delta = 0`; the carrier-only scalar
+   diagram is now closed negatively.
+3. **Substrate-to-`P_A` blocker.** The `P_A` selection step underpinning the
+   primitive coefficient `c_cell = 1/4` is sourced (conditionally) to the
+   link-local first-variation candidate authority; the symmetry-only and
+   first-order Hodge-degeneracy no-gos rule out pure-symmetry routes. If
+   `PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM` audits clean,
+   this blocker resolves; if it fails audit, this route reverts to an
+   explicit cited assumption.
 
 Closed positive support theorem:
 
@@ -259,7 +335,15 @@ Closed positive support theorem:
   closes the finite-patch extension positively. Given the gravitational
   carrier identification, locality, additivity, and cubic-frame orientation
   symmetry uniquely extend `c_cell = 1/4` to `N_A(P) = c_cell A(P)/a^2` on
-  finite face-union boundary patches.
+  finite face-union boundary patches. Sharpened by PR #812 with an explicit
+  conditional carrier-share derivation matching `c_cell/a^2` to
+  `1/(4 G_Newton,lat)` via Wald-Noether.
+- **Primitive coframe boundary carrier.**
+  [PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md](./PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  selects `P_A` as the unique first-order coframe boundary carrier. PR #829
+  sharpened its premise provenance: first-order locality is sourced to the
+  link-local first-variation route; unit primitive response normalization
+  is recorded as a canonical scheme/normalization choice.
 
 Closed negative routes:
 

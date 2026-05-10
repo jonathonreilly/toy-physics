@@ -162,3 +162,45 @@ Primary reruns on the current package surface:
 Historical support, not canonical authority:
 
 - `frontier_alpha_s_determination.py`
+
+## Bridge-support progress 2026-05-09 (upstream plaquette insertion)
+
+Before this source edit, the 2026-05-05 audit pass on this row read
+`audited_conditional` because the upstream plaquette dependency
+([`PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md))
+explicitly leaves the analytic `beta = 6` insertion open and the running
+bridge ([`QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md`](QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md))
+imports standard SM RGE plus PDG threshold infrastructure. This edit does
+not request a clean verdict; the row remains non-retained until the
+independent audit lane rechecks the edited source and those upstream
+dependencies.
+
+A first concrete piece of the upstream plaquette repair target landed
+audited_clean on 2026-05-09 in
+[`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md),
+which delivers a bounded finite-box computation of the normalized
+single-link SU(3) Wilson boundary character coefficients
+`rho_(p,q)(6)` for `0 <= p,q <= 4` by two independent methods (a
+Schur-Weyl Bessel-determinant sum and direct Weyl integration with
+Vandermonde squared), with cross-method agreement to `4.136e-15`
+absolute / `7.952e-14` relative error.
+
+That audited_clean coefficient-table delivery does not by itself
+close either the upstream analytic `beta = 6` insertion gap or the
+load-bearing `B`-class value-transfer step of this row. The honest
+read remains:
+
+- the row is correctly carried as `bounded` (matching the load-bearing
+  step class `B` that the audit recorded);
+- the upstream plaquette path now has a first audited_clean component
+  on its repair target, but the parent plaquette row continues to
+  carry `audited_conditional` because the all-weight closure and the
+  spatial Wilson tensor-transfer / Perron problem remain open;
+- the running-bridge dependency continues to import standard SM RGE
+  plus PDG threshold infrastructure as documented in
+  [`QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md`](QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md);
+- retained-grade propagation remains blocked until both upstream
+  authorities reach independent retained-grade audit.
+
+This subsection is informational reuse-discipline only; it does not
+request a clean audit verdict and does not amend the load-bearing step.

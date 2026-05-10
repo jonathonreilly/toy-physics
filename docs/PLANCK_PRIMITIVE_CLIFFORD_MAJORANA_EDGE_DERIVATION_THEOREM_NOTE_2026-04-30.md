@@ -4,6 +4,59 @@
 **Status:** audited_renaming audit verdict; chain does not close
 **Runner:** `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py`
 
+## Cited authorities (one-hop deps)
+
+This note records explicit one-hop authority citations for the renaming-gap
+identified by audit: the algebraic `Cl_4(C)` construction here is correct on
+`C^4`, but the substrate action does not by itself force the active block to
+be `P_A H_cell`. The citations below make the conditional substrate-to-`P_A`
+provenance explicit on the live authority chain, while leaving the audit
+status of this row at `audited_renaming` (status authority is the independent
+audit lane).
+
+- [`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+  — unaudited candidate authority that supplies the conditional
+  substrate-to-`P_A` route from the named microscopic action surface. The
+  algebraic differential of the link-local staggered-Dirac / Grassmann
+  action with respect to its fundamental local link variables has support
+  on exactly the Hamming-weight-one packet `P_1`. Hodge-dual `P_3` is
+  excluded because Hodge maps a one-link source to a three-link composite,
+  which is not an automorphism of the fundamental source domain. That
+  theorem supplies the action-native provenance for the rank-four packet
+  selection on which the present note's `Cl_4(C)` construction acts.
+- [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  — companion conditional carrier note that selects `P_A` from the
+  first-order coframe boundary variation under the same link-local
+  first-variation provenance. Its closure status is `audited_conditional`;
+  it is the upstream surface on which the present `Cl_4(C)` carrier acts.
+- [`SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+  (`retained_no_go`) — exact negative boundary clarifying that
+  symmetry-only substrate content does *not* uniquely force `P_A`. This is
+  why the link-local first-variation route above is needed: the
+  substrate-to-`P_A` step requires action-source structure beyond pure
+  symmetries.
+- [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+  (`retained_no_go`) — exact Hodge-degeneracy negative boundary: pure
+  substrate symmetries cannot force first-order over Hodge-dual
+  third-order. The link-local first-variation route changes the premise
+  surface (it adds the action source domain as additional structure beyond
+  pure symmetries), and on that enlarged surface the Hodge ambiguity is
+  broken because Hodge duality maps a one-link source to a three-link
+  composite.
+- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+  — current framework memo: physical `Cl(3)` on `Z^3` is the repo-wide
+  axiom set, with the staggered-Dirac / Grassmann realization recategorized
+  as an open gate rather than a framework axiom. The link-local
+  first-variation route is therefore a conditional action-surface route,
+  not a new repo-wide axiom and not retained by this note.
+
+The one-hop dependencies above name the conditional substrate-to-`P_A`
+provenance and the negative boundaries it must respect. The present note's
+`Cl_4(C)` construction is unchanged; what is sharpened is the explicit
+provenance of the active-packet selection step that audit flagged as
+renaming, recorded as conditional on the cited link-local first-variation
+authority rather than left implicit.
+
 ## Purpose
 
 The Planck Target 3 Clifford bridge identified one explicit remaining premise:
@@ -236,6 +289,25 @@ faithful representation is a reducible two-copy module with non-scalar
 commutant. The rank-four primitive packet is therefore exactly the
 irreducible module, with no active spectator sector.
 
+**Substrate-to-`P_A` provenance (conditional, not derived here).** The audit
+verdict `audited_renaming` correctly flags that the equality `K = P_A H_cell`
+does not by itself follow from rank-matching and the cited spatial / time /
+gauge inputs alone — symmetry content does not uniquely select `P_A` from the
+17 rank-four equivariant projector classes (see the cited
+`SUBSTRATE_TO_P_A_FORCING_THEOREM` no-go), and the Hodge-dual `P_3` survives
+all listed constraints (see the cited
+`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM`). The present note's
+`Cl_4(C)` construction therefore takes `K = P_A H_cell` as an input on this
+surface, and its substrate-to-`P_A` provenance is sourced explicitly to the
+cited link-local first-variation candidate authority above, which selects
+`P_A` from the algebraic first variation of the retained link-local
+microscopic action. That route survives the listed no-gos because it adds the
+action source domain as additional structure beyond pure symmetries. The
+present note does not claim to derive that selection; it cites it as
+conditional provenance, with the named open premise being the gravitational
+boundary/action density bridge inherited from the upstream
+`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM` §5.
+
 Metric compatibility is now not an added response law. It is the Clifford
 anticommutator applied to the constructed primitive coframe:
 
@@ -340,7 +412,7 @@ rank-four packet.
 
 ## Connection To The Existing Conditional Chain
 
-This theorem closes the explicit premise of
+This theorem closes the active-block algebraic premise of
 `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`:
 
 ```text
@@ -356,21 +428,36 @@ the active primitive boundary response is generated by a local irreducible
 Clifford-Majorana edge algebra.
 ```
 
-Therefore the former conditional chain becomes, pending independent audit:
+once the active block is taken to be `P_A H_cell`. The remaining
+substrate-to-`P_A` step is sourced to the cited link-local first-variation
+candidate authority above; this note does not promote that step.
+
+Therefore the former conditional chain becomes, on the cited live authority
+chain and pending independent audit ratification of the link-local
+first-variation theorem:
 
 ```text
-retained Cl(3) spatial bivectors
-  + graph-first SU(3) / anomaly-complete gauge surface
-  + anomaly-forced time axis
-  + rank(P_A)=4 Hamming-weight-one primitive packet
-  -> irreducible Cl_4(C) module on K
-  -> F(C^2) two-mode CAR edge
-  -> c_Widom = c_cell = 1/4
-  -> G_Newton,lat = 1 and a/l_P = 1 in natural lattice units
+retained Cl(3) spatial bivectors                    [native_gauge_closure]
+  + graph-first SU(3) / anomaly-complete gauge surface  [graph_first_su3]
+  + anomaly-forced time axis                        [anomaly_forces_time]
+  + complex Hilbert / Born-rule packet              [i3_zero_exact_theorem]
+  + retained link-local first-variation P_A forcing
+        [PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM, unaudited candidate]
+  -> active block = P_A H_cell, rank 4              [substrate-to-P_A step]
+  -> irreducible Cl_4(C) module on K                [present note]
+  -> F(C^2) two-mode CAR edge                       [present note]
+  -> c_Widom = c_cell = 1/4                         [cross-validation]
+  -> G_Newton,lat = 1 in natural lattice units      [SOURCE_UNIT_NORMALIZATION]
+  -> a/l_P = 1                                      [BOUNDARY_DENSITY_EXTENSION]
+        conditional on (BP) gravitational boundary/action density bridge.
 ```
 
 The last arrow still uses the already separate source-unit normalization
-support theorem. The SI physical-units conversion remains metrology.
+support theorem. The SI physical-units conversion remains metrology. The
+named open bridge premise (BP) — that the framework's first-order coframe
+boundary carrier `P_A` is the microscopic gravitational boundary/action
+density carrier — is unchanged by this note and remains the residual Planck
+target inherited from `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM` §5.
 
 ## Cross-Validation
 
@@ -513,6 +600,21 @@ remaining scientific gap: an audit-clean positive route must derive a
 first-order boundary/orientation law, or bypass the full-cell carrier
 selection by an intrinsic active-block theorem that does not use `P_A` as an
 input.
+
+**Conditional repair route, cited (not promoted here).** The cited
+`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM` (one-hop deps above)
+supplies a candidate substrate-to-`P_A` route by deriving `P_A = P_1` from the
+algebraic first variation of the retained link-local microscopic action (see
+that note's Theorem and §3 for why this route survives the
+`SUBSTRATE_TO_P_A_FORCING_THEOREM` and
+`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM` no-gos). That theorem is
+currently unaudited. If it audits clean, the present note's substrate-to-`P_A`
+provenance inherits stronger derivational footing through the cited live
+authority chain. If it fails audit, the present note retains its
+`audited_renaming` status with the explicit conditional provenance of the
+`P_A` selection step recorded above. Either way, this rigorization does not
+re-open the audit verdict; the status authority remains the independent audit
+lane.
 
 ## Verification
 

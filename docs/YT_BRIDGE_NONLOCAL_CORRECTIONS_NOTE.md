@@ -65,3 +65,32 @@ This note does **not** remove the remaining YT bound by itself.
 It does show that the nonlocal correction on the forced UV window is bounded
 and numerically small on the viable families, so the remaining theorem gap is
 now microscopic rather than structural.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_numerical_match` with
+the substantive observation that the calculation depends on hard-coded
+external physical inputs and a target-`y_t` viability filter, so the
+small residuals reported above are best classified as a numerical match
+within a calibrated/tuned setup rather than a closed first-principles
+derivation. The note already calls itself a bounded-support result
+above.
+
+This addendum is graph-bookkeeping only. It does not change the
+numerical match status, does not promote the row, and does not modify
+the residual-norm or family-integrated numbers.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream authorities the
+nonlocal residual analysis reuses. It does not promote this note or
+change the audited claim scope.
+
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the constructive UV-localized family used in the residual scan.
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+  for the affine local-Hessian model `K_loc` whose residual is measured.
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV window definition.
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+  for the response-kernel structure used in the affine fit.

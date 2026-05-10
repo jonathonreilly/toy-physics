@@ -370,3 +370,45 @@ spuriously `proposed_retained`. Both downstream notes are mentioned by
 file path rather than as one-hop markdown links, since they are
 downstream consumers of this plaquette claim and turning them into
 graph deps would create citation cycles.
+
+## Bridge-support progress 2026-05-09 (rho_(p,q)(6) Wilson environment)
+
+The 2026-05-05 audit pass on this row recorded the explicit repair
+target:
+
+> missing_bridge_theorem: close or supply an independent completed
+> derivation of the physical beta=6 boundary character measure
+> rho_(p,q)(6), or explicitly restrict the row to structural same-surface
+> uniqueness with 0.5934 as an imported MC comparator.
+
+A first concrete piece of that repair target landed audited_clean on
+2026-05-09 in
+[`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md),
+which records a bounded finite-box computation of the normalized
+single-link SU(3) Wilson boundary character coefficients
+`rho_(p,q)(6)` for `0 <= p,q <= 4` by two independent methods (a
+Schur-Weyl Bessel-determinant sum and direct Weyl integration with
+Vandermonde squared), agreeing to `4.136e-15` absolute and
+`7.952e-14` relative error on the computed finite box.
+
+The audited_clean status of that finite-box computation does not by
+itself close the analytic insertion gap recorded above. It supplies a
+bounded coefficient table for the canonical normalized single-link
+Wilson boundary class function on the explicit finite box, against
+which downstream all-weight closure work and downstream Perron-state
+work can be checked. Specifically, the sibling note explicitly states
+that it does not close:
+
+- an all-weight formula for `rho_(p,q)(6)`;
+- the full unmarked spatial Wilson tensor-transfer / Perron problem;
+- analytic closure of canonical `P(6)`;
+- retained status for the parent residual-environment identification
+  notes.
+
+The honest read for this plaquette self-consistency row therefore
+remains bounded in source scope: the rho_(p,q)(6) audited_clean
+coefficient table narrows the remaining analytic insertion target
+without yet eliminating the strict-inequality slack documented in the
+explicit window above. Retained-grade propagation remains blocked until
+both the all-weight closure and the spatial Wilson tensor-transfer /
+Perron problem reach independent retained-grade audit.

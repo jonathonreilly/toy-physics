@@ -7488,6 +7488,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py"
     },
+    "gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 28,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_hierarchy_obstruction_lemmas.py"
+    },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
       "assert_count": 1,
       "counts": {
@@ -8519,6 +8531,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_retention_analysis.py"
+    },
+    "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 30
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_higgs_mass_wilson_chain_2026_05_10_higgsH1.py"
     },
     "higgs_mechanism_note": {
       "assert_count": 0,
@@ -10895,6 +10919,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_lattice_physical_matching_cluster_obstruction.py"
+    },
+    "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 20
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_lattice_physical_matching_2026_05_10_match.py"
     },
     "lattice_symmetry_unification_decision_note": {
       "assert_count": 0,
@@ -16656,6 +16692,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_su3_bridge_rho_modification_scoping_2026_05_04.py"
     },
+    "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/su3_casimir_fundamental_check.py"
+    },
     "su3_casimir_fundamental_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -21332,6 +21380,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_higgs_mass_wilson_chain_2026_05_10_higgsH1.py": {
+      "assert_count": 1,
+      "claims": [
+        "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 30
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py": {
       "assert_count": 1,
       "claims": [
@@ -21841,6 +21904,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_lattice_physical_matching_2026_05_10_match.py": {
+      "assert_count": 1,
+      "claims": [
+        "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 20
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_n_f_derivation_2026_05_07_w2_check.py": {
@@ -28722,6 +28800,21 @@
         "A": 0,
         "B": 0,
         "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_gauge_vacuum_plaquette_hierarchy_obstruction_lemmas.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 28,
         "D": 0
       },
       "decoration_candidate": false,
@@ -41788,6 +41881,7 @@
     "scripts/su3_casimir_fundamental_check.py": {
       "assert_count": 0,
       "claims": [
+        "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10",
         "su3_casimir_fundamental_theorem_note_2026-05-02"
       ],
       "counts": {
@@ -42528,12 +42622,12 @@
     "dominant_class_distribution": {
       "A": 24,
       "B": 176,
-      "C": 646,
-      "D": 243,
+      "C": 647,
+      "D": 245,
       "none": 428
     },
-    "runners_classified": 1517,
-    "runners_with_C": 782,
-    "runners_with_D": 401
+    "runners_classified": 1520,
+    "runners_with_C": 785,
+    "runners_with_D": 403
   }
 }

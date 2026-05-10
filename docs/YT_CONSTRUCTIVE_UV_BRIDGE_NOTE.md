@@ -67,3 +67,27 @@ The remaining gap is:
 > UV-localized constructive class.
 
 That is an operator/theorem problem, not a curve-fitting problem.
+
+## Honest auditor read
+
+The 2026-05-04 audit recorded this row as `audited_numerical_match`. The
+honest read is that the runner's three-family scan is a numerical match
+within a tuned constructive class against the imported physical endpoint
+`y_t(v) = 0.9176`, not a first-principles derivation that the exact
+interacting lattice bridge belongs to the UV-localized class. The note
+already states the remaining derivation gap explicitly above.
+
+This addendum is graph-bookkeeping only. It does not change the
+numerical match status, does not promote the row, and does not add new
+content to the constructive-class result.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream notes the runner
+and bridge stack depend on, so the audit citation graph can track them.
+It does not promote this note or change the audited claim scope.
+
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+- [YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md](YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md)
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)

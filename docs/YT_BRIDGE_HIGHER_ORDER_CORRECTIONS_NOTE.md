@@ -98,3 +98,32 @@ does **not** prove the exact microscopic origin of that selector and it does
 
 The remaining open question is the microscopic mechanism that enforces the
 positive local quadratic selector in the first place.
+
+## Honest auditor read
+
+The 2026-05-04 audit recorded this row as `audited_conditional` with the
+substantive observation that the load-bearing hierarchy is conditional
+on a chosen constructive bridge family and on embedded calibrated inputs
+(including the imported physical endpoint used to select the best
+bridge). The hierarchy ratio `|cubic + quartic|/quadratic = 7.124e-3`
+is therefore an amplitude-tube hierarchy on the existing viable family,
+not a first-principles bound on the exact microscopic bridge.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+amplitude-scan numerics or their bounded scope.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream
+authorities the amplitude hierarchy result reuses. It does not promote
+this note or change the audited claim scope.
+
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the constructive UV-localized family the amplitude scan deforms.
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+  for the leading positive local quadratic selector this note expands
+  one order higher.
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV-localized class on which the amplitude tube is
+  defined.

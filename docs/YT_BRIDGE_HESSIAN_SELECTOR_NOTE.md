@@ -106,3 +106,34 @@ selector that previously appeared only conditionally in the variational note.
 
 The remaining review target is to control the higher-order and nonlocal
 corrections, not to explain the selector itself.
+
+## Honest auditor read
+
+The 2026-05-04 audit recorded this row as `audited_conditional` with the
+substantive observation that the bridge stability and UV-locality
+premises are imported rather than closed in this packet. The note
+already calls those premises "earlier branch results" in the derivation
+section above; this addendum makes the citations explicit so the audit
+citation graph can track them.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+selector argument or its boundaries.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream
+authorities the leading-order selector argument relies on. It does not
+promote this note or change the audited claim scope.
+
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV-localized class premise.
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+  for the rearrangement step that pushes the surplus toward the UV.
+- [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+  for the moment-band closure used to pin the leading expansion.
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the constructive-family endpoint-stability input the runner reuses.
+- [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+  for the prior variational-selector statement this note refines at
+  leading order.

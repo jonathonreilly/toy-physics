@@ -217,4 +217,5 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 
 The conditional verdict flagged the asserted operator/surface premises (temporal-gauge mixed-kernel factorization over spatial links, accepted Wilson `3+1` source surface). Those premises are already established in:
 
-- [gauge_vacuum_plaquette_transfer_operator_character_recurrence_note](GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
+- [gauge_vacuum_plaquette_transfer_operator_character_recurrence_note](GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md) — establishes the one-clock Wilson transfer operator on the accepted `3 spatial + 1 derived-time` source surface and the `SU(3)` character recurrence on the marked-plaquette class-function sector.
+- [gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note](GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md) — establishes the marked half-slice multiplier `exp[(beta/2) J]`, the residual source-sector compression `D_beta` on the marked-plaquette class-function sector, and the central-diagonal action that supplies the marked / non-marked compression map invoked here. This upstream is `audited_clean` / `retained_bounded`.
