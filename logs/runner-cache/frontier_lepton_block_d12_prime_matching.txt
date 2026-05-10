@@ -1,0 +1,96 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_block_d12_prime_matching.py
+runner_sha256: 112715cea08d9a092cd2d78e565e9f2fdaeabe8f81d456a32b316bc4d4f03099
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.53
+status: ok
+----- stdout -----
+==============================================================================
+LEPTON BLOCK D12-PRIME MATCHING — STRUCTURAL NO-GO
+==============================================================================
+
+Tests the YT-style matching argument on the lepton (2,1) block.
+Result: matching does NOT yield a Ward identity for y_tau.
+Reason: D9's composite Higgs is a quark bilinear; no lepton
+        analog exists. Rep B's H_unit^lep is a mathematical
+        tensor (D17-prime) but not a physical field.
+
+
+==============================================================================
+PART 1: YT CHAIN MATCHING ON Q_L (RETAINED YT-T1)
+==============================================================================
+  [PASS] Rep A on Q_L: q^2 Gamma^(4)_OGE = g_s^2/(2 N_c) = g_s^2/6  (Rep A = g_s**2/6)
+  [PASS] Rep B on Q_L: q^2 Gamma^(4)_H_unit = y_t^2 (unit-normalized)  (Rep B = y_t**2)
+  [PASS] Matching solves: y_t = g_s/sqrt(6) (YT-T1)  (y_t = sqrt(6)*g_s/6)
+  [PASS] Numerical: y_t/g_s = 1/sqrt(6) ~ 0.408  (1/sqrt(6) = 0.4082482905)
+
+==============================================================================
+PART 2: NAIVE L_L MATCHING (IF MATCHING APPLIED FORMALLY)
+==============================================================================
+  [PASS] Rep A on L_L: q^2 Gamma^(4)_BE = g_1^2 * Y(L_L) Y(e_R) = g_1^2 / 2  (Rep A = g_1**2/2)
+  [PASS] Rep B on L_L: q^2 Gamma^(4)_H_unit^lep = y_tau^2 (unit-normalized per D17-prime)  (Rep B = y_tau**2)
+  [PASS] Naive matching SOLVES: y_tau = g_1/sqrt(2) (naive prediction)  (y_tau (naive) = sqrt(2)*g_1/2)
+  [PASS] Numerical: y_tau/g_1 (naive) = 1/sqrt(2) ~ 0.707  (1/sqrt(2) = 0.7071067812)
+
+==============================================================================
+PART 3: EMPIRICAL FALSIFICATION (NAIVE OFF BY ~35x)
+==============================================================================
+  [PASS] Naive y_tau(M_Pl) = g_1(M_Pl)/sqrt(2) ~ 0.354  (naive y_tau(M_Pl) = 0.353553)
+  [PASS] Empirical y_tau(M_Pl) ~ 0.01 (sqrt(2)*m_tau/v after slow running)  (empirical y_tau ~ 0.01)
+  [PASS] Naive prediction is ~35x larger than empirical y_tau  (ratio = 35.4x)
+  [PASS] No tree-level natural framework factor close to 35 (closest tree = 24)  (closest tree-level natural factor to 35 = 24, gap = 11.00)
+  [PASS] Even 4*pi^2 ~ 39.5 (a 1-loop factor) is 12% off; would need extra structural content  (4*pi^2 = 39.48; off by 12.8%)
+
+==============================================================================
+PART 4: STRUCTURAL REASON — D9 IDENTIFIES H AS QUARK BILINEAR
+==============================================================================
+  [PASS] D9 source explicitly identifies H as psi-bar_a psi_a (quark bilinear form)  (phrase 'psi-bar_a(x) psi_a(x)' found: True)
+  [PASS] D9 source identifies a as color index (1...N_c)  ('color index' or 'N_c' present: True)
+  [PASS] D9 source uses 'quark' keyword (not lepton)  ('quark' present: True)
+  [PASS] D9 source does NOT define an analog 'lepton composite Higgs'  (no lepton-composite phrasing in D9 source)
+
+==============================================================================
+PART 5: MATCHING IS INVALID ON LEPTON BLOCK (COMBINED CONCLUSION)
+==============================================================================
+  [PASS] Matching argument is valid for Q_L block (D9's quark composite is the H field)  (Both Rep A and Rep B refer to the QCD-generated H_unit)
+  [PASS] Matching argument is INVALID for L_L block (no lepton composite Higgs)  (Rep B's H_unit^lep is a mathematical tensor, not a physical field)
+  [PASS] Sharpens combined no-go #912 from 'no sqrt-rational form' to 'no matching at all'  (matching argument inapplicable on lepton block)
+  [PASS] M5-a research-level route from #912 is now FULLY obstructed  (D17-prime + D16-prime delivered; D12-prime matching fails structurally)
+
+==============================================================================
+PART 6: YT MATCHING (Q_L) vs D12-PRIME MATCHING (L_L)
+==============================================================================
+  YT matching (Q_L block):
+    Rep A: q^2 Gamma^(4) = g_s^2/(2 N_c) = g_s^2/6
+    Rep B: q^2 Gamma^(4) = y_t^2 (H_unit^Q_L unit-normalized)
+    Both Reps refer to SAME physical operator (QCD-generated H)
+    => Matching VALID, gives y_t = g_s/sqrt(6) ~ 0.408
+
+  D12-prime matching (L_L block, this PR):
+    Rep A: q^2 Gamma^(4) = g_1^2 * Y_LL Y_eR = g_1^2/2
+    Rep B: q^2 Gamma^(4) = y_tau^2 (H_unit^lep unit-normalized)
+    Rep B's H_unit^lep is mathematical tensor, NOT physical field
+    (D9: composite H is quark bilinear, no lepton analog)
+    => Matching INVALID structurally
+    Naive computation would give y_tau = g_1/sqrt(2) ~ 0.354
+    But empirical y_tau ~ 0.01: 35x falsification of naive prediction
+    => Confirms structural invalidity
+  [PASS] YT matching: Reps refer to same physical operator (valid)  (both Reps use QCD-generated H_unit)
+  [PASS] D12-prime matching: Reps refer to DIFFERENT operators (invalid)  (Rep B's H_unit^lep is tensor, not physical field)
+  [PASS] Naive prediction y_tau ~ 0.354 vs empirical ~ 0.01 (factor 35x)  (empirical falsification corroborates structural invalidity)
+
+==============================================================================
+SUMMARY CLASS-A ASSERTIONS
+==============================================================================
+  [PASS] YT-T1: y_t = g_s/sqrt(6) (sympy.simplify + sympy.solve)
+  [PASS] Naive y_tau = g_1/sqrt(2) (sympy.simplify + sympy.solve)
+  [PASS] Naive y_tau(M_Pl) = 0.5/sqrt(2) ~ 0.354 (math.isclose)
+  [PASS] Naive prediction is ~35x larger than empirical y_tau
+
+==============================================================================
+D12-PRIME MATCHING NO-GO: PASS=24 FAIL=0
+==============================================================================
+
+----- stderr -----
+

@@ -49722,6 +49722,17 @@
       "runner_path": "scripts/lensing_long_path_test.py",
       "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation"
     },
+    "lepton_block_d12_prime_matching_no_go_note_2026-05-10": {
+      "claim_id": "lepton_block_d12_prime_matching_no_go_note_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "3b3e1509424ce0f84d2fb7e61d41e6aaf1783dd64faae1158b63e2750a2e12fc",
+      "path": "docs/LEPTON_BLOCK_D12_PRIME_MATCHING_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lepton_block_d12_prime_matching.py",
+      "title": "Lepton Block D12-Prime Matching \u2014 No Composite-Higgs Identity (No-Go)"
+    },
     "lepton_charge_universality_note_2026-05-02": {
       "claim_id": "lepton_charge_universality_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -65551,6 +65562,7 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_deflection_note",
     "lensing_k_sweep_note",
+    "lepton_block_d12_prime_matching_no_go_note_2026-05-10",
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
@@ -65889,7 +65901,7 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 18,
-      "none": 1626,
+      "none": 1627,
       "open_gate": 20,
       "positive_theorem": 92
     },
@@ -65897,15 +65909,15 @@
       "bounded_theorem": 722,
       "decoration": 1,
       "meta": 59,
-      "no_go": 125,
+      "no_go": 126,
       "none": 449,
       "open_gate": 108,
       "positive_theorem": 592
     },
     "edge_count": 8241,
-    "leaf_count": 535,
-    "node_count": 2056,
-    "root_count": 767,
-    "runners_with_path": 1671
+    "leaf_count": 536,
+    "node_count": 2057,
+    "root_count": 768,
+    "runners_with_path": 1672
   }
 }
