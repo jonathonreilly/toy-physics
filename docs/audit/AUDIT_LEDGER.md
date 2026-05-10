@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1140 |
+| unaudited | 1139 |
 | meta | 79 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 227 |
-| ~~audited_failed~~ | 13 |
+| ~~audited_failed~~ | 14 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 383 |
 | `audited_conditional` | 227 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 57 |
+| `audited_failed` | 58 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1219 |
+| `unaudited` | 1218 |
 
 | claim_type | count |
 |---|---:|
@@ -763,6 +763,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `portable_card_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -5886,6 +5887,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the raw NN barrier refinement path, refined h=0.5 and h=0.25 retain a positive far-field distance signal with fixed-strength decay slopes near -1, while alpha=1.5 preserves but flattens the decay.  _(class `C`)_
 - **chain closes:** True — The current runner completed and reproduces the source note's distance rows, signs, slopes, and R^2 values. The cited one-hop dependency is now retained_bounded/audited_clean for the same raw NN finite window including h=1.0,0.5,0.25, so the prior upstream Born/k=0 bridge is closed within the restricted packet.
 - **rationale:** The claim is bounded to the barrier harness and finite h,b grid actually executed by the runner. The live output supports the far-field sign statements, fixed-strength near-1/b decay through h=0.25, and alpha=1.5 flattening comparison, while the audited-clean continuum note supplies the raw NN finite-window Born/k=0 controls. No continuum, universal attraction, or no-barrier branch claim is needed for closure.
+- **auditor confidence:** high
+
+### `lattice_nn_high_precision_note`
+
+- **Note:** [`LATTICE_NN_HIGH_PRECISION_NOTE.md`](../../docs/LATTICE_NN_HIGH_PRECISION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the h = 0.125 raw-NN float64 overflow claim and the small-lattice step-scale invariance check for normalized detector probabilities and centroid.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12ea-6c38-7a10-9fac-3f563f86205a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For the raw NN kernel at h = 0.125, nl = 321 and the per-edge factor is bounded by 3/h = 24, so the cumulative amplitude scale upper bound 24^321 exceeds float64 max by about 10^135, implying the raw row cannot be evaluated in float64.  _(class `A`)_
+- **chain closes:** False — The small-lattice normalized-probability and centroid invariance check closes for exactly those observables. The overflow conclusion does not close because the runner proves only an upper bound exceeding float64 range; that is not a lower-bound proof or completed raw-run certificate that the actual propagation must overflow.
+- **rationale:** Issue: the load-bearing overflow certificate turns an upper bound on possible amplitude scale into a claim of necessary float64 overflow. Why this blocks: an upper bound above float64 max does not by itself prove the actual amplitudes or intermediate accumulations exceed float64 range. Repair target: provide a completed raw h = 0.125 overflow trace, an interval/lower-bound theorem for the actual kernel, or a runner that certifies unavoidable overflow rather than bounding from above. Claim boundary until fixed: retain only the small-lattice invariance check and the fact that a crude upper bound exceeds float64, not closure of the h = 0.125 raw-kernel gate.
 - **auditor confidence:** high
 
 ### `lattice_nn_light_cone_note`
