@@ -9745,6 +9745,14 @@
       "to": "asymmetry_persistence_mass_window_note"
     },
     {
+      "from": "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10",
+      "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "hierarchy_bosonic_bilinear_selector_note",
       "to": "hierarchy_spatial_bc_and_u0_scaling_note"
     },
@@ -45925,6 +45933,20 @@
       "runner_path": "scripts/hard_geometry_local_support_pilot.py",
       "title": "Hard Geometry Local Support Note"
     },
+    "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10": {
+      "claim_id": "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "4322d11ddf31fa9790dcfb048d31d22492900675d5016fec6e33d15b065083c1",
+      "path": "docs/HIERARCHY_ALPHA_LM_EXPONENT_SPECIES_COUNT_BRIDGE_REGULATOR_DEPENDENCE_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go.py",
+      "title": "Hierarchy alpha_LM Exponent / Species-Count Bridge \u2014 Regulator-Dependence No-Go Note"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "claim_id": "hierarchy_bosonic_bilinear_selector_note",
       "claim_type_author_hint": null,
@@ -66719,7 +66741,7 @@
       "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
-      "no_go": 23,
+      "no_go": 24,
       "none": 1626,
       "open_gate": 29,
       "positive_theorem": 94
@@ -66728,15 +66750,15 @@
       "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
-      "no_go": 130,
+      "no_go": 131,
       "none": 449,
       "open_gate": 117,
       "positive_theorem": 594
     },
-    "edge_count": 8352,
+    "edge_count": 8354,
     "leaf_count": 538,
-    "node_count": 2079,
+    "node_count": 2080,
     "root_count": 770,
-    "runners_with_path": 1694
+    "runners_with_path": 1695
   }
 }
