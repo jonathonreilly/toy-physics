@@ -17088,6 +17088,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_fusion_engine.py"
     },
+    "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 56,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_l3_cube_partition.py"
+    },
     "su3_wigner_intertwiner_block1_theorem_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -36264,6 +36276,7 @@
     "scripts/frontier_su3_wigner_l3_cube_partition.py": {
       "assert_count": 1,
       "claims": [
+        "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10",
         "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
       ],
       "counts": {
