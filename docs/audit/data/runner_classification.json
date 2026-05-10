@@ -1224,6 +1224,18 @@
       "dominant_class": null,
       "runner": "scripts/gaussian_beam_eikonal.py"
     },
+    "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go.py"
+    },
     "bound_state_selection_note": {
       "assert_count": 0,
       "counts": {
@@ -24633,6 +24645,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go.py": {
+      "assert_count": 2,
+      "claims": [
+        "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_bound_state_selection.py": {
       "assert_count": 0,
       "claims": [
@@ -44402,12 +44429,12 @@
     "dominant_class_distribution": {
       "A": 113,
       "B": 163,
-      "C": 652,
+      "C": 653,
       "D": 250,
       "none": 406
     },
-    "runners_classified": 1584,
-    "runners_with_C": 817,
+    "runners_classified": 1585,
+    "runners_with_C": 818,
     "runners_with_D": 445
   }
 }

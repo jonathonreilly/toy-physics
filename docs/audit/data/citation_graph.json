@@ -1441,6 +1441,18 @@
       "to": "architecture_note_directional_measure"
     },
     {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+    },
+    {
       "from": "boundary_law_robustness_note_2026-04-11",
       "to": "holographic_probe_note_2026-04-11"
     },
@@ -36187,6 +36199,21 @@
       "runner_path": "scripts/gaussian_beam_eikonal.py",
       "title": "Born/Eikonal Scattering Comparison with Lattice Lensing"
     },
+    "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10": {
+      "claim_id": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "plaquette_self_consistency_note",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+      ],
+      "note_hash": "53c1c9c9a68980a5a90abed8c64a095c5290d0c995adab7a3008f03cf9c983b6",
+      "path": "docs/BOUGEROL_LACROIX_STAGGERED_BLOCKING_LYAPUNOV_BRIDGE_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go.py",
+      "title": "Bougerol-Lacroix Staggered-Blocking Lyapunov-Bridge \u2014 No-Go Narrow Theorem"
+    },
     "bound_state_selection_note": {
       "claim_id": "bound_state_selection_note",
       "claim_type_author_hint": null,
@@ -66787,7 +66814,7 @@
       "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
-      "no_go": 23,
+      "no_go": 24,
       "none": 1628,
       "open_gate": 29,
       "positive_theorem": 96
@@ -66796,15 +66823,15 @@
       "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
-      "no_go": 130,
+      "no_go": 131,
       "none": 451,
       "open_gate": 117,
       "positive_theorem": 596
     },
-    "edge_count": 8356,
-    "leaf_count": 540,
-    "node_count": 2083,
+    "edge_count": 8359,
+    "leaf_count": 541,
+    "node_count": 2084,
     "root_count": 773,
-    "runners_with_path": 1696
+    "runners_with_path": 1697
   }
 }
