@@ -941,6 +941,86 @@
       "to": "audit_dm_runner_stale_path_cleanup_note_2026-05-01"
     },
     {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "bh_entropy_derived_note"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "3d_correction_master_note"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "angular_kernel_underdetermination_no_go_note"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "architecture_note_directional_measure"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "discrete_einstein_regge_lift_note"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "area_law_coefficient_gap_note"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "universal_gr_constraint_action_stationarity_note"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+    },
+    {
+      "from": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "to": "alpha_s_derived_note"
+    },
+    {
       "from": "axiom_first_bekenstein_bound_theorem_note_2026-05-01",
       "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     },
@@ -34980,6 +35060,38 @@
       "runner_path": null,
       "title": "Audit DM Runner Stale-Path Cleanup"
     },
+    "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10": {
+      "claim_id": "audit_graph_cycle_break_analysis_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "bh_entropy_derived_note",
+        "3d_correction_master_note",
+        "angular_kernel_underdetermination_no_go_note",
+        "architecture_note_directional_measure",
+        "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+        "discrete_einstein_regge_lift_note",
+        "area_law_coefficient_gap_note",
+        "universal_gr_constraint_action_stationarity_note",
+        "area_law_native_car_semantics_tightening_note_2026-04-25",
+        "anomaly_forces_time_theorem",
+        "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+        "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09",
+        "gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10",
+        "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
+        "alpha_s_derived_note"
+      ],
+      "note_hash": "84bc6b17eb88bc28a6707082eeecda119b62eeb7b54b109a9cbf68af2030f35f",
+      "path": "docs/AUDIT_GRAPH_CYCLE_BREAK_ANALYSIS_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_audit_graph_cycle_break_analysis_synthesis.py",
+      "title": "Audit Graph Cycle-Break Analysis Synthesis Meta Note"
+    },
     "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01": {
       "claim_id": "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
       "claim_type_author_hint": "meta",
@@ -65723,7 +65835,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 237,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
@@ -65732,16 +65844,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 719,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8225,
+    "edge_count": 8245,
     "leaf_count": 532,
-    "node_count": 2049,
+    "node_count": 2050,
     "root_count": 764,
-    "runners_with_path": 1664
+    "runners_with_path": 1665
   }
 }
