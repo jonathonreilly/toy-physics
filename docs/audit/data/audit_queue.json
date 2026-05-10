@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 696,
+    "critical": 695,
     "high": 27,
     "leaf": 281,
     "medium": 151
@@ -7936,29 +7936,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "transitive_descendants": 353
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "wave_static_single_source_compare_note",
-      "claim_scope": "Bounded H=0.5 frozen-source comparison for z_phys = 3.0 and 0.0, auditing only the reported dM, dI, dIeq, dN, dS rows and the narrow conclusion that off-center comparator mismatches occur without source motion.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [
-        "wave_retardation_continuum_limit_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 8.964,
-      "note_path": "docs/WAVE_STATIC_SINGLE_SOURCE_COMPARE_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/wave_static_single_source_compare.py",
-      "transitive_descendants": 352
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38549,6 +38526,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 90,
-  "total_pending": 1155
+  "ready_count": 89,
+  "total_pending": 1154
 }
