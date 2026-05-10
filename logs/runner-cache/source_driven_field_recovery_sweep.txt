@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/source_driven_field_recovery_sweep.py
-runner_sha256: 2c2510d4f829b446dfd4976a57e954bd044c87f1636804ea6e066ccdf7cdf056
+runner_sha256: 0ec9baaf47685f0e818beeb68c9dc49c0d2901ea877a50e833e2b8c87412c857
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 103.94
+elapsed_sec: 32.92
 status: ok
 ----- stdout -----
 ====================================================================================
@@ -28,6 +28,14 @@ SAFE READ
   when the calibrated dynamic field stays small
   as the field calibration grows, the mass exponent drifts away from 1
   so the architecture is not dead, but it is calibration-sensitive
+
+HARD-BAR ASSERTIONS
+  PASS: TOWARD sign full on every row (7/7)
+  PASS: weak-field F~M >= 0.95 at target<=0.005 (alphas=[0.997, 0.994, 0.985])
+  PASS: strong-calibration drift F~M=0.642 < 0.80 at target=0.080
+  PASS: F~M is non-increasing with target (7 rows)
+  PASS: every row F~M in (0, 1.05)
+  === TOTAL: PASS=5, FAIL=0 ===
 
 ----- stderr -----
 
