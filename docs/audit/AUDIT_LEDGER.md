@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1151 |
+| unaudited | 1150 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 230 |
-| ~~audited_failed~~ | 10 |
+| ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -43,10 +43,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 376 |
 | `audited_conditional` | 230 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 54 |
+| `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1219 |
+| `unaudited` | 1218 |
 
 | claim_type | count |
 |---|---:|
@@ -738,6 +738,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | B | - |
 | `equivalence_principle_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -3011,6 +3012,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The runner establishes that Gamma_1 and Xi_5 are genuinely different operator surfaces: Gamma_1 is chiral off-diagonal, single-hop, and follows the adjacent-Hamming cascade, while Xi_5 is chiral diagonal, four-hop, and pairs opposite sectors.  _(class `C`)_
 - **chain closes:** True — The runner source and current output close the exact inequivalence claims with 10 passing matrix/rank/hop checks. The later audited-clean Dirac bridge changes the live physics interpretation but does not invalidate the older bounded obstruction fact that the two surfaces are inequivalent.
 - **rationale:** The audited scope is the exact obstruction: Gamma_1 and Xi_5 are not the same operator under chirality behavior, hop order, and orbit action. That chain closes from the supplied runner source and zero-fail live output, with the later audited-clean bridge only resolving which local chiral surface wins rather than erasing the inequivalence result. No hidden bridge is needed for the bounded obstruction statement itself.
+- **auditor confidence:** high
+
+### `dm_neutrino_triplet_even_response_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the stated algebraic factorization of the intrinsic DM CP tensor into gamma times the two named even response combinations, as supported by the supplied runner.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e129a-f26d-7781-8d92-4afff6ef9e1f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "Exactly two even response channels: E1 = delta + rho; E2 = A + b - c - d" with "cp1 = -2 gamma E1 / 3" and "cp2 = 2 gamma E2 / 3."  _(class `A`)_
+- **chain closes:** False — The runner checks the formulas at one fixed numerical point and under phi sign flip, but it does not prove the universal exact theorem or the exclusivity of exactly two channels. The source note supplies no derivation that rules out additional even-sector components.
+- **rationale:** Issue: the note states an exact two-channel theorem, but the supplied evidence is a single-instance algebraic/numerical check plus one tautological PASS. Why this blocks: a point check cannot establish the universal factorization or the word "exactly" for the even sector. Repair target: provide a symbolic derivation or exhaustive parameter-level algebra showing cp1/cp2 reduce identically to gamma times only E1/E2 and that no other even channel enters. Claim boundary until fixed: one worked canonical example satisfies the advertised formulas.
 - **auditor confidence:** high
 
 ### `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15`

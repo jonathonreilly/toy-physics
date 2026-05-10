@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 702,
+    "critical": 701,
     "high": 27,
     "leaf": 278,
     "medium": 151
@@ -7936,27 +7936,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "transitive_descendants": 352
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_triplet_even_response_theorem_note_2026-04-15",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.959,
-      "note_path": "docs/DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_triplet_even_response_theorem.py",
-      "transitive_descendants": 351
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38597,6 +38576,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 95,
-  "total_pending": 1158
+  "ready_count": 94,
+  "total_pending": 1157
 }
