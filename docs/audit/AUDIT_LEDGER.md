@@ -19,10 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 66 |
-| **retained_no_go** | 120 |
+| **retained_no_go** | 121 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1120 |
+| unaudited | 1119 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 386 |
+| `audited_clean` | 387 |
 | `audited_conditional` | 227 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1218 |
+| `unaudited` | 1217 |
 
 | claim_type | count |
 |---|---:|
@@ -133,6 +133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | D | - |
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `bmv_bounded_negative_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -1405,6 +1406,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The main marginalization, source update, symmetry, positivity, and determinant identity follow by direct block algebra from the stated PD block-matrix hypotheses. The associativity statement is only sketched as classical, but it is an algebraic property of iterated Schur complements under the same invertibility/PD hypotheses and introduces no external premise.
 - **rationale:** The load-bearing step is a genuine algebraic identity over the stated real symmetric PD block matrix and source, with no cited upstream authorities or imported physical assumptions. The runner performs exact SymPy checks of the Schur complement, source update, determinant identity, and completing-square residual rather than merely printing constants. The runner does not separately test sequential marginalization associativity, so that point rests on the note's standard algebraic assertion, but it does not create an open dependency or renaming.
 - **auditor confidence:** high
+
+### `bmv_bounded_negative_note`
+
+- **Note:** [`BMV_BOUNDED_NEGATIVE_NOTE.md`](../../docs/BMV_BOUNDED_NEGATIVE_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that this toy lattice phase-sum harness reproduces the continuum s^2 BMV coupling and shows monotone lattice-to-continuum convergence, with no retained finite-h discrete signature promoted.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e132b-403c-7740-a535-5c96955be1a2`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The model does not produce a distinguishable discrete correction to the BMV entanglement signal; the lattice gives the same s^2 coupling as the continuum and the separation dependence converges to the continuum value at finer h.  _(class `A`)_
+- **chain closes:** True — Within the restricted packet, the note's bounded claim follows from the runner's direct algebraic/numerical checks: s-dependence is exactly quadratic because the witness is phi^2 with phi linear in s, and the measured lattice phase errors decrease as h is refined. The scope is limited to this deterministic phase-sum proxy, not a full BMV simulation or externally validated physical model.
+- **rationale:** The note makes a bounded negative claim, not a positive new physics prediction. The runner source actually computes the lattice Riemann sum and analytic continuum phase, verifies exact s^2 scaling and monotone finite-h convergence, and does not hard-code a discrete correction or external comparator. Clean status is only for the narrow artifact boundary stated in the note: no retained discrete BMV signature in this toy lattice phase-sum observable.
+- **auditor confidence:** medium
 
 ### `bmv_entanglement_note_2026-04-11`
 
