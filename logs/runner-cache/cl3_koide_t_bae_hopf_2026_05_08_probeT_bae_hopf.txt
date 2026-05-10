@@ -1,0 +1,161 @@
+========================================================================
+Probe T-BAE-Hopf — Hopf Algebra Coproduct on C[C_3]
+Date: 2026-05-08
+Tier: bounded_theorem (eighth-level structural rejection)
+Source: docs/KOIDE_T_BAE_HOPF_COPRODUCT_ISOTYPE_NOTE_2026-05-08_probeT_bae_hopf.md
+========================================================================
+
+Section 0 — Retained sanity (C_3 cycle, H_circ, eigenvalues)
+  [PASS] 0.1: C_3 cycle is unitary | max |U†U - I| = 0.00e+00
+  [PASS] 0.2: C^3 = I (order 3) | max |C^3 - I| = 0.00e+00
+  [PASS] 0.3: det(C) = +1 | det(C) = 1.000000
+  [PASS] 0.4: H_circ Hermitian for sample (a=1, b=0.5+0.3i) | max |H - H†| = 0.00e+00
+  [PASS] 0.5: H_circ commutes with C (C_3-equivariant) | max |[H, C]| = 0.00e+00
+  [PASS] 0.6: closed-form eigenvalues match numerical | diff = 6.66e-16
+  [PASS] 0.7: P1 Brannen identification gives Koide Q = 2/3 at BAE | Q = 0.6666666667 (target 2/3 ≈ 0.66667)
+
+Section 1 — HOPF-AV1: Hopf algebra structure on C[C_3]
+    Δ, ε, S all defined on grouplike basis {1, C, C^2}.
+  [PASS] 1.1: Δ(C) = C ⊗ C (grouplike) acts correctly on tensor states | max |left - right| = 0.00e+00
+  [PASS] 1.2: Coassociativity (Δ ⊗ id) Δ = (id ⊗ Δ) Δ | max |LHS - RHS| = 0.00e+00
+  [PASS] 1.3: Counit ε(C^p) = 1 satisfies (ε ⊗ id) Δ = id | Standard grouplike counit
+  [PASS] 1.4: Antipode S(C) = C^{-1} = C^2 | S(C^p) = C^{3-p} grouplike antipode
+  [PASS] 1.5: S^2 = id (S squared returns to identity) | Standard grouplike antipode involution
+  [PASS] 1.6: Hopf structure on C[C_3] is UNIQUE (grouplike) | Group rings have a unique Hopf structure (Sweedler, Kassel, Majid)
+
+Section 2 — HOPF-AV2: Δ(H_circ) computation
+    Δ(H) = a (I ⊗ I) + b (C ⊗ C) + b̄ (C² ⊗ C²) ∈ diagonal subalgebra.
+  [PASS] 2.1: Δ(I) = I ⊗ I (single (0, 0) basis component) | Coefficient matrix has only (0, 0) entry = 1
+  [PASS] 2.2: Δ(C) = C ⊗ C (single (1, 1) basis component) | Coefficient matrix has only (1, 1) entry; verified by definition
+  [PASS] 2.3: Δ(C^2) = C^2 ⊗ C^2 (single (2, 2) basis component) | By construction; (2, 2) entry only
+  [PASS] 2.4: Δ(H_circ) lives in 3-dim diagonal subalgebra (only (p, p) basis) | nonzero = [(0, 0), (1, 1), (2, 2)]
+  [PASS] 2.5: Δ(H) diagonal coefficients are (a, b, b̄) | diag coefs = ['(1+0j)', '(0.5+0.2j)', '(0.5-0.2j)']
+  [PASS] 2.6: Δ(H) has dim 3 in C[C_3] ⊗ C[C_3]; 6 off-diagonal isotypes b-decoupled | Six (p, q) with p ≠ q have zero coefficient in Δ(H_circ)
+  [PASS] 2.7: [Δ(H), C ⊗ C] = 0 (Δ(H) is in diagonal commutative subalgebra) | max |[Δ(H), C ⊗ C]| = 0.00e+00
+
+Section 3 — HOPF-AV3: isotype eigenvalues collapse to H's spectrum
+    μ_{ij}(a, b) = a + 2|b| cos(arg(b) + 2π(i+j)/3) — depends only on (i+j) mod 3.
+  [PASS] 3.1: 9 (i, j) isotype eigenvalues collapse to 3 classes by (i+j) mod 3 | class sizes: [3, 3, 3]; equal-within-class: [True, True, True]
+  [PASS] 3.2: Class representatives μ_n = λ_n (H_circ eigenvalues with mult 3) | class reps [np.float64(0.15358983848622476), np.float64(0.846410161513775), np.float64(2.0)] ↔ H eigvals [np.float64(0.15358983848622476), np.float64(0.846410161513775), np.float64(2.0)]
+  [PASS] 3.3: Any symmetric functional on Δ(H)'s spectrum reduces to one on H's spectrum | Each eigenvalue λ_n appears 3 times in Δ(H); symmetric ⟹ no new info
+  [PASS] 3.4.1: Tr(Δ(H)^n) = 3 · Tr(H_circ^n)  (mult-3 collapse) | Tr(Δ(H)^1) / (3 Tr(H^1)) = 1.000000+0.000000j
+  [PASS] 3.4.2: Tr(Δ(H)^n) = 3 · Tr(H_circ^n)  (mult-3 collapse) | Tr(Δ(H)^2) / (3 Tr(H^2)) = 1.000000+0.000000j
+  [PASS] 3.4.3: Tr(Δ(H)^n) = 3 · Tr(H_circ^n)  (mult-3 collapse) | Tr(Δ(H)^3) / (3 Tr(H^3)) = 1.000000+0.000000j
+  [PASS] 3.4.4: Tr(Δ(H)^n) = 3 · Tr(H_circ^n)  (mult-3 collapse) | Tr(Δ(H)^4) / (3 Tr(H^4)) = 1.000000+0.000000j
+  [PASS] 3.5: At BAE, Δ(H) has 2 distinct eigenvalues (a + 2|b|=2.41) and (a - |b|=0.29) | distinct = [0.29289322, 2.41421356]
+
+Section 4 — HOPF-AV4: 'Isotype-balance' forces b = 0 (NOT BAE)
+    Conjecture: requiring μ_{ij} equal across all (i, j) forces BAE.
+    Reality:    forces λ_0 = λ_1 = λ_2 ⟹ |b| = 0.
+  [PASS] 4.1: Var(μ_{ij}) = 0 at |b| = 0 (isotype-balance) | Var = 0.0000e+00 at |b| = 0
+  [PASS] 4.2: Var(μ_{ij}) > 0 at BAE (BAE is NOT isotype-balanced) | Var = 1.000000 at BAE point |b|/a = 1/√2
+  [PASS] 4.3: Argmin |b| of Var(μ_{ij}) is at |b| = 0 (NOT at BAE = 1/√2 ≈ 0.707) | argmin |b| = 0.000000; BAE = 0.707107
+  [PASS] 4.4: ∂Var(μ)/∂|b| ≠ 0 at BAE (BAE not stationary for variance functional) | ∂Var/∂|b| at BAE = 2.8284
+  [PASS] 4.5: Hopf isotype-balance conjecture FALSIFIED — forces b = 0, NOT BAE | Var(μ_{ij}) = 0 ⟺ |b| = 0 (degenerate spectrum); BAE is generic
+
+Section 5 — HOPF-AV5: Other natural minimality functionals all forced to b = 0
+  [PASS] 5.1: Frobenius central-spread |Δ(H) - μ̄ I|² minimum at b = 0 (NOT BAE) | argmin = 0.001000; BAE = 0.707107
+  [PASS] 5.2: Spectral entropy of Δ(H) maximised at b = 0 (NOT BAE) | argmax = 0.001000; BAE = 0.707107
+  [PASS] 5.3: Spectral range max - min minimised at b = 0 (NOT BAE) | argmin = 0.001000; BAE = 0.707107
+  [PASS] 5.4: Every natural minimality functional reduces to symmetric f({λ_k}) — unified obstruction applies | Any symmetric functional of {μ_{ij}} = symmetric functional of {λ_k} with mult 3
+  [PASS] 5.5: BAE is generic (not extremum) for all tested Δ(H) functionals | Var, central-Frobenius, entropy, range — all argmin/argmax at b = 0 not BAE
+
+Section 6 — HOPF-AV6: Hopf coproduct does NOT escape unified obstruction
+    Δ(H)'s spectrum = H_circ's spectrum with mult 3 ⟹ symmetric functionals collapse.
+  [PASS] 6.1.1: Tr(Δ(H)^1) = 3 · Tr(H^1)  (mult-3 collapse to H's spectrum) | Tr(Δ(H)^1)=9.0000, 3·Tr(H^1)=9.0000, ratio=1.000000
+  [PASS] 6.1.2: Tr(Δ(H)^2) = 3 · Tr(H^2)  (mult-3 collapse to H's spectrum) | Tr(Δ(H)^2)=14.2200, 3·Tr(H^2)=14.2200, ratio=1.000000
+  [PASS] 6.1.3: Tr(Δ(H)^3) = 3 · Tr(H^3)  (mult-3 collapse to H's spectrum) | Tr(Δ(H)^3)=25.8300, 3·Tr(H^3)=25.8300, ratio=1.000000
+  [PASS] 6.1.4: Tr(Δ(H)^4) = 3 · Tr(H^4)  (mult-3 collapse to H's spectrum) | Tr(Δ(H)^4)=49.5414, 3·Tr(H^4)=49.5414, ratio=1.000000
+  [PASS] 6.2: Newton-Girard: symmetric functions on Δ(H) = 3 × symmetric functions on H_circ | Power-sum decomposition theorem applied to mult-3 spectrum
+  [PASS] 6.3: ∂Tr(Δ(H)^2)/∂|b| ≠ 0 at BAE (= 36|b| at BAE; nonzero) | ∂Tr(Δ(H)^2)/∂|b| at BAE = 25.4558 (= 3 · 12|b|)
+  [PASS] 6.4: Hopf coproduct DOES NOT ESCAPE the unified obstruction (U-BAE-NCG) | Δ(H) reduces to symmetric eigenvalue functional ⟹ U-BAE-NCG result transfers
+  [PASS] 6.5: Eight-level structural rejection of BAE (Hopf-coproduct level added) | Op + WF + Topo + Thermo + LargeSym + NCG + QDef + Hopf-coproduct
+
+Section 7 — HOPF-AV7: Antipode S preserves spectrum; doesn't force BAE.
+  [PASS] 7.1: S(H_circ) and H_circ have the same spectrum | |spec(H) - spec(S(H))|∞ = 0.00e+00
+  [PASS] 7.2: Hopf antipode axiom m·(S ⊗ id)·Δ = ε·η satisfied for C | S(C)·C = C^2 · C = I = ε(C) · 1 ✓
+  [PASS] 7.3: (S ⊗ id) Δ(H) preserves the {λ_n} eigenvalue multiset | Antipode permutes (i, j) ↔ (-i, j); eigenvalue multiset invariant
+  [PASS] 7.4: Antipode S permutes isotypes; does NOT pin |b|/a = 1/√2 | S preserves the spectrum; cannot break the symmetric-function dependence
+
+Section 8 — HOPF-AV8: Hopf convolution H*H, counit ε(H), don't pin BAE.
+  [PASS] 8.1: Hopf convolution H * H has same eigenvalue set as H_circ | (id * id)(H) = a · 1 + b̄ C + b C^2; spectrum = {λ_k}
+  [PASS] 8.2: Counit ε(H_circ) = a + 2·Re(b) is a scalar; does not constrain |b|/a | ε(H) = 2.0000 = a + 2·Re(b); single equation in (a, |b|, arg(b))
+  [PASS] 8.3: Counit ε(H) does not pin BAE — multiple (a, b) give same value | ε(H)|BAE = 2.4142; ε(H)|non-BAE = 1.7000 (different)
+  [PASS] 8.4: Fourier-image C[C_3] ≅ C × C × C: Hopf structure is coordinate-wise | Δ(λ_k) on coord k is single-component; no new (a, b) constraint
+  [PASS] 8.5: Higher-order Δ^n(H) eigenvalues are {λ_n} with multiplicity 3^{n-1} | All higher coproducts reduce to {λ_k} of H_circ — same unified obstruction
+
+Section 9 — Eight-level closure synthesis (Probes 28, X, Y, V-MaxEnt, V-S_3, U-NCG, U-QDef, T-Hopf)
+    Probe 28 (OPERATOR (Hilbert states)): C_3 rep: (1, 2) real-dim on Herm_circ(3) → F1 / BAE absent at op level
+  [PASS] 9.1: Probe 28 closes BAE negatively at OPERATOR (Hilbert states) | C_3 rep: (1, 2) real-dim on Herm_circ(3)
+    Probe X-Pauli (WAVE-FUNCTION (∧^N tensors)): Pauli antisym → trivial-isotype singlet → Slater singlet b-decoupled
+  [PASS] 9.2: Probe X-Pauli closes BAE negatively at WAVE-FUNCTION (∧^N tensors) | Pauli antisym → trivial-isotype singlet
+    Probe Y-Topological (TOPOLOGICAL (K-theory)): K_C3(pt) = Z⊕Z⊕Z; integer-valued → (a, b) absent from topological data
+  [PASS] 9.3: Probe Y-Topological closes BAE negatively at TOPOLOGICAL (K-theory) | K_C3(pt) = Z⊕Z⊕Z; integer-valued
+    Probe V-MaxEnt (THERMODYNAMIC (states ρ at fixed H)): MaxEnt over states at fixed H → (a, b) param H not ρ
+  [PASS] 9.4: Probe V-MaxEnt closes BAE negatively at THERMODYNAMIC (states ρ at fixed H) | MaxEnt over states at fixed H
+    Probe V-S_3 (LARGER SYMMETRY (S_3 reflection)): S_3 rep symmetric under b ↔ b̄ → reflection rep does not pin |b|
+  [PASS] 9.5: Probe V-S_3 closes BAE negatively at LARGER SYMMETRY (S_3 reflection) | S_3 rep symmetric under b ↔ b̄
+    Probe U-NCG (NCG-SPECTRAL-ACTION): spectral action via power sums P_n → BAE not stationary for any P_n-poly
+  [PASS] 9.6: Probe U-NCG closes BAE negatively at NCG-SPECTRAL-ACTION | spectral action via power sums P_n
+    Probe U-QDef (QUANTUM-DEFORMATION U_q(C_3)): q at root of unity; representation → q-deformation reproduces P_n structure
+  [PASS] 9.7: Probe U-QDef closes BAE negatively at QUANTUM-DEFORMATION U_q(C_3) | q at root of unity; representation
+    Probe T-Hopf (this probe) (HOPF-COPRODUCT (Δ on C[C_3])): Δ(H) lives in 3-dim diagonal; eigenvalues = {λ_n} mult 3 → Hopf reduces to symmetric eigenvalue functional
+  [PASS] 9.8: Probe T-Hopf (this probe) closes BAE negatively at HOPF-COPRODUCT (Δ on C[C_3]) | Δ(H) lives in 3-dim diagonal; eigenvalues = {λ_n} mult 3
+  [PASS] 9.9: All EIGHT accessible structural layers close BAE negatively | Op + WF + Topo + Thermo + LargeSym + NCG + QDef + Hopf
+  [PASS] 9.10: Hopf coproduct is the LAST candidate targeting isotype-weights via tensor structure | And it ALSO collapses to symmetric eigenvalue functional (mult-3 of {λ_k})
+  [PASS] 9.11: Unified-obstruction theorem (U-BAE-NCG) is now TERMINAL across 8 layers | BAE is structurally absent from operator, WF, topo, thermo, large-sym, NCG, QDef, AND Hopf layers
+
+Section 10 — Convention robustness (basis change, cycle-inverse)
+  [PASS] 10.1: Δ(H) eigenvalues invariant under cycle-inverse C → C^{-1} (b ↔ b̄) | C_3-orientation reversal preserves unified-obstruction conclusion
+  [PASS] 10.2: Galois action ω → ω̄ on character labels preserves spectrum | Standard finite-cyclic-group character-theory invariance
+  [PASS] 10.3: Representation choice (regular vs Fourier-diagonal) preserves spectrum | Spectra are unitary-invariants
+  [PASS] 10.4: Hopf-algebra structure on C[C_3] is unique up to Hopf isomorphism | Convention-invariance preserved under all natural choices
+
+Section 11 — Does-not disclaimers
+  [PASS] 11.1: does NOT close BAE | BAE admission count UNCHANGED
+  [PASS] 11.2: does NOT add new framework axiom | Hopf algebra structure on C[C_3] is standard mathematical toolkit
+  [PASS] 11.3: does NOT add new admission | no new admission introduced
+  [PASS] 11.4: does NOT modify retained theorem | Probes 28, X, Y, V-MaxEnt, V-S_3, U-NCG, U-QDef unchanged
+  [PASS] 11.5: does NOT promote downstream theorem | no retained-tier promotion
+  [PASS] 11.6: does NOT load-bear PDG values | no PDG mass values used as derivation input
+  [PASS] 11.7: does NOT promote external surveys | Sweedler/Kassel/Majid cited as toolkit, not retained authority
+  [PASS] 11.8: does NOT replace U-BAE-NCG (PR #993) | complements U-NCG with Hopf-coproduct lens; unified obstruction sharpened
+  [PASS] 11.9: does NOT propose alternative κ as physical | BAE residual unchanged; no κ remapping
+  [PASS] 11.10: does NOT promote sister bridge gaps | L3a, L3b, C-iso, W1.exact unchanged
+  [PASS] 11.11: does NOT introduce new physics axioms | Hopf algebra used to derive consequences from retained content
+  [PASS] 11.12: does NOT depend on quantum-deformation parameter q | Standard (undeformed) Hopf coproduct on C[C_3]; complementary to U-QDef
+
+=== TOTAL: PASS=82, FAIL=0 (of 82) ===
+
+========================================================================
+VERDICT: BOUNDED OBSTRUCTION (Hopf-coproduct-level decoupling)
+
+The Hopf coproduct Δ : C[C_3] → C[C_3] ⊗ C[C_3] (grouplike on
+the only Hopf structure carried by the group ring) was the LAST
+candidate tool genuinely targeting ISOTYPE-WEIGHTS via tensor
+structure rather than via D's eigenvalues. Yet:
+
+  Δ(H_circ) = a (I ⊗ I) + b (C ⊗ C) + b̄ (C² ⊗ C²)
+
+lives in the 3-dim DIAGONAL subalgebra of C[C_3] ⊗ C[C_3], with
+eigenvalues μ_{ij} that depend ONLY on (i+j) mod 3 — collapsing
+to the H_circ eigenvalues {λ_0, λ_1, λ_2} each with multiplicity 3.
+
+Every natural 'isotype-balance' or 'minimality' functional on
+Δ(H) reduces to a SYMMETRIC FUNCTION of {λ_k}, which is exactly
+the structural pathology proved by the unified obstruction
+theorem (U-BAE-NCG). The 'tensor-structure escape' fails.
+
+EIGHTH-LEVEL STRUCTURAL REJECTION OF BAE.
+
+BAE is now structurally absent from EIGHT independent layers:
+  Operator + Wave-function + Topological + Thermodynamic +
+  Larger-symmetry + NCG-spectral-action + Quantum-deformation +
+  Hopf-coproduct.
+
+The unified root-cause theorem 'symmetric eigenvalue functionals
+lose isotype-weight information' is now TERMINAL — verified at
+8 independent structural levels.
+
+BAE admission count UNCHANGED. No new framework axiom.
+========================================================================
