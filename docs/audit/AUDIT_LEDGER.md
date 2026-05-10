@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1124 |
+| unaudited | 1123 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 243 |
-| ~~audited_failed~~ | 8 |
+| ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 378 |
 | `audited_conditional` | 243 |
 | `audited_decoration` | 10 |
-| `audited_failed` | 52 |
+| `audited_failed` | 53 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1191 |
+| `unaudited` | 1190 |
 
 | claim_type | count |
 |---|---:|
@@ -760,6 +760,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | A | - |
+| `gravitomagnetic_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `grown_transfer_basin_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `h0125_failure_derivation` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
@@ -4791,6 +4792,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Correlation-matrix formalism for free fermions: the joint state is tracked via a 2N x 2N one-body density matrix. Time evolution uses Trotter steps with self-consistent Poisson coupling at each step. Cross-correlations between A and B are computed via the RPA (random phase approximation): the static density-density susceptibility chi = C(1-C) mediates gravit  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 6 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `gravitomagnetic_note`
+
+- **Note:** [`GRAVITOMAGNETIC_NOTE.md`](../../docs/GRAVITOMAGNETIC_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Claimed finite-runner observation that imposed source motion produces a portable antisymmetric velocity-dependent phase correction at c=0.5, s=0.004, z0=3.0 across three grown families.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1225-69fa-7e22-b8fe-5dd0c366197f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The gravitomagnetic correction is a retained, portable, antisymmetric observable from source motion."  _(class `C`)_
+- **chain closes:** False — No. Even accepting the note table, the reported deltas are not antisymmetric over the stated velocity set: mean delta(+0.5)=+0.0056 while mean delta(-0.5)=-0.0080, leaving a large even component. The runner also timed out, so the restricted packet contains no completed execution artifact reproducing the displayed values.
+- **rationale:** Issue: the note promotes the displayed finite numerical table to an antisymmetric gravitomagnetic/Shapiro correction, but the table itself fails strict antisymmetry at |v|=0.5 and no cited authority derives the Shapiro/gravitomagnetic observable bridge from the imposed-source runner. Why this blocks: the core claimed property does not follow from the supplied numbers, and the physical label is not closed by any one-hop dependency. Repair target: provide a completed or sliced runner artifact, either prove the odd-in-v component after subtracting even/systematic terms or restrict the claim to the supported small-v/sign result, and add a bridge theorem for the Shapiro/gravitomagnetic readout. Claim boundary until fixed: the supplied table suggests only a velocity-correlated phase shift in the chosen finite setup.
 - **auditor confidence:** high
 
 ### `graviton_mass_derived_note`

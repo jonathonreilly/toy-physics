@@ -17,11 +17,11 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 412 |
+| critical | `unaudited` | 411 |
 | critical | `audited_conditional` | 94 |
 | critical | `audited_renaming` | 11 |
 | critical | `audited_numerical_match` | 9 |
-| critical | `audited_failed` | 5 |
+| critical | `audited_failed` | 6 |
 | medium | `unaudited` | 3 |
 | critical | `open_gate` | 1 |
 
@@ -235,7 +235,7 @@ publication tables phrase it.
 | critical | `generation_axiom_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `gr_class_expansion_finite_rank_target_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `grav_decoherence_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `gravitomagnetic_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `gravitomagnetic_note` | `audited_failed` | `audited_failed` | DERIVATION_ATLAS.md |
 | critical | `graviton_mass_derived_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `graviton_mass_spectral_gap_identity_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `graviton_spectral_tower_theorem_note_2026-04-24` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
