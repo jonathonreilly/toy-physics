@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 99,
     "high": 354,
-    "leaf": 193,
+    "leaf": 194,
     "medium": 251
   },
   "cycle_break_target_count": 105,
@@ -24675,6 +24675,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/PLAQUETTE_HIERARCHY_POLYNOMIAL_BOUNDEDNESS_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_plaquette_hierarchy_polynomial_boundedness_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "plaquette_v1_picard_fuchs_ode_bounded_synthesis_note_2026-05-06",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -26063,5 +26086,5 @@
     }
   ],
   "ready_count": 6,
-  "total_pending": 897
+  "total_pending": 898
 }
