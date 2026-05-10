@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1143 |
+| unaudited | 1142 |
 | meta | 77 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 228 |
+| ~~audited_conditional~~ | 229 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 228 |
+| `audited_conditional` | 229 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1220 |
+| `unaudited` | 1219 |
 
 | claim_type | count |
 |---|---:|
@@ -710,6 +710,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_fixed_beam_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `work_history.potential_publication_discoveries_log` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -10249,6 +10250,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Cross-runner disagreements cannot be attributed to the `4*pi` factor alone unless all other differences are controlled simultaneously.  _(class `A`)_
 - **chain closes:** False — The methodological inference is valid in form, but the restricted packet does not provide the runner contents or independent evidence that the listed Wilson runners are internally coherent or that older runners differed in the named ways.
 - **rationale:** The note is a support/meta control note, not a first-principles derivation from the axiom. Its conclusion imports repository-specific facts about runner conventions, screening regimes, observables, geometries, boundary conditions, and hopping conventions, none of which are closed by cited authorities or runner source in the restricted packet. The safe negative caution about over-attributing discrepancies is reasonable as a methodological rule, but the concrete same-convention and mixed-runner claims remain conditional on unprovided runner verification.
+- **auditor confidence:** high
+
+### `wilson_two_body_open_note_2026-04-11`
+
+- **Note:** [`WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`](../../docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Open-boundary Wilson two-orbital Hartree mutual-acceleration readout on the supplied side=11,13, G=5, mu2=0.22, d=3..6 primary-runner surface; the note also asserts law-sweep extensions not verified by the supplied runner packet.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12ca-277b-7e80-86cb-de7afda8ebf8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Open-boundary Wilson two-orbital Hartree dynamics produces a robust mutual attraction channel on the audited G=5, mu^2=0.22 surface, with a clean screened distance falloff |a_mut| ~ d^-3.4 and sublinear partner-source scaling |a_mut| ~ m_B^0.48.  _(class `C`)_
+- **chain closes:** False — The supplied runner source and stdout close the narrow 8/8 attractive and clean primary-runner surface. The full source-note conclusion also depends on distance-falloff, partner-source-scaling, and screening-mass sweep claims whose companion runner source/stdout are not supplied and have no one-hop authority in the restricted packet.
+- **rationale:** Issue: the primary runner genuinely computes the open-boundary mutual-acceleration rows, but the note's retained/current-best statement includes law and screening calibrations not checked by the supplied runner packet. Why this blocks: those exponents and source-scaling claims are load-bearing for the stated bounded theorem and cannot be inferred from the 8-row open-attraction stdout alone. Repair target: either provide and audit scripts/frontier_wilson_two_body_laws.py with its completed output, or split this row so the clean primary-runner attraction surface is audited separately from the law-sweep claims. Claim boundary until fixed: only the side=11,13, G=5, mu2=0.22, d=3..6 attraction/clean-readout result is supported here.
 - **auditor confidence:** high
 
 ### `wilson_two_body_open_refined_note_2026-04-11`
