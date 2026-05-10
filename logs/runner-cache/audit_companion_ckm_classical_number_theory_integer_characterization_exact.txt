@@ -1,0 +1,117 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (P1)-(P4), (T1), (L1),
+(M1), (M2), and the five uniqueness routes (U1.c-g) at exact precision.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and imported retained counts
+----------------------------------------------------------------------------------------
+  retained N_pair  = 2
+  retained N_color = 3
+  retained N_quark = N_pair * N_color = 6
+  retained relation: N_pair = N_color - 1: True
+  [PASS (B)] framework constraint: N_quark == N_pair * N_color  (residual = 0)
+  [PASS (B)] consecutive scaffold: N_pair == N_color - 1  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 1: (P1) Perfect-number identity N_quark = 1 + N_pair + N_color
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P1) N_quark == 1 + N_pair + N_color (exact rational)  (residual = 0)
+  [PASS (B)] (P1) proper divisors of N_quark are exactly {1, N_pair, N_color}  (proper divisors of 6 = [1, 2, 3])
+
+----------------------------------------------------------------------------------------
+Part 2: (P2) Sigma-perfect condition sigma(N_quark) = 2 N_quark
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P2) sigma(N_quark) == 2 N_quark (exact)  (sigma(6) = 12, target = 12)
+
+----------------------------------------------------------------------------------------
+Part 3: (P3) Sum-product coincidence for proper divisors of 6
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P3) 1 + N_pair + N_color == N_quark  (residual = 0)
+  [PASS (B)] (P3) 1 * N_pair * N_color == N_quark  (residual = 0)
+  [PASS (B)] (P3) sum == product (sum-product coincidence)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (P4) Deficient/Perfect classification
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P4) N_pair = 2 is DEFICIENT (sigma(2) = 3 < 4)  (sigma(2) = 3, 2*N_pair = 4)
+  [PASS (B)] (P4) N_color = 3 is DEFICIENT (sigma(3) = 4 < 6)  (sigma(3) = 4, 2*N_color = 6)
+  [PASS (B)] (P4) N_quark = 6 is PERFECT (sigma(6) = 12 = 2 N_quark)  (sigma(6) = 12)
+
+----------------------------------------------------------------------------------------
+Part 5: (T1) Triangular ladder N_color = T_{N_pair}, N_quark = T_{N_color}
+----------------------------------------------------------------------------------------
+  [PASS (B)] (T1) N_color == T_{N_pair} = N_pair (N_pair + 1)/2 (parametric in N_pair)  (T_2 = 3, N_color = 3)
+  [PASS (B)] (T1) N_quark == T_{N_color} = N_color (N_color + 1)/2 (parametric in N_color)  (T_3 = 6, N_quark = 6)
+
+----------------------------------------------------------------------------------------
+Part 6: (L1) Lie-dimensional N_color = N_pair^2 - 1 = dim(adjoint SU(N_pair))
+----------------------------------------------------------------------------------------
+  [PASS (B)] (L1) N_color == N_pair^2 - 1 (= dim(adjoint SU(N_pair)))  (N_pair^2 - 1 = 3, N_color = 3)
+
+----------------------------------------------------------------------------------------
+Part 7: (M1) Mersenne identity N_color = 2^{N_pair} - 1
+----------------------------------------------------------------------------------------
+  [PASS (B)] (M1) N_color == 2^{N_pair} - 1 (smallest Mersenne prime)  (2^N_pair - 1 = 3, N_color = 3)
+
+----------------------------------------------------------------------------------------
+Part 8: (M2) Euclid-Euler N_quark = 2^{N_pair-1}(2^{N_pair} - 1)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (M2) N_quark == 2^{N_pair-1}(2^{N_pair} - 1) (smallest Euclid-Euler perfect)  (2^(N_pair-1)(2^N_pair - 1) = 6, N_quark = 6)
+
+----------------------------------------------------------------------------------------
+Part 9: (U1) Five independent uniqueness routes (a)+(b)+(x)
+----------------------------------------------------------------------------------------
+  Common scaffold: (a) N_pair = N_color - 1, (b) N_quark = N_pair * N_color
+
+  Route (c): N_quark = 1 + N_pair + N_color
+  [PASS (B)] (U1.c) (c-1)c - (1 + (c-1) + c) reduces to c(c - 3)  (reduced = c_var*(c_var - 3), factored = c_var*(c_var - 3))
+  [PASS (B)] (U1.c) positive-integer root pins N_color = 3  (positive roots = [3])
+
+  Route (d): N_quark = T_{N_color}
+  [PASS (B)] (U1.d) (c-1)c - c(c+1)/2 reduces to c(c-3)/2 (proportional to c(c-3))  (2*reduced = c_var*(c_var - 3), factored = c_var*(c_var - 3))
+  [PASS (B)] (U1.d) positive-integer root pins N_color = 3  (positive roots = [3])
+
+  Route (e): 1/N_pair + 1/N_color + 1/N_quark = 1 (Egyptian fraction)
+  [PASS (B)] (U1.e) cleared denominator residual reduces to -c(c-3) up to sign  (cleared = c_var*(3 - c_var))
+  [PASS (B)] (U1.e) positive-integer root pins N_color = 3  (positive roots = [3])
+
+  Route (f): N_color = N_pair^2 - 1
+  [PASS (B)] (U1.f) c - ((c-1)^2 - 1) reduces to -c(c - 3) up to sign  (-reduced = c_var*(c_var - 3), factored = c_var*(c_var - 3))
+  [PASS (B)] (U1.f) positive-integer root pins N_color = 3  (positive roots = [3])
+
+  Route (g): N_color = 2^{N_pair} - 1
+  [PASS (B)] (U1.g) f(c) = 2^{c-1} - c - 1 has f(3) = 0  (f(3) = 0)
+  [PASS (B)] (U1.g) f(1) = -1, f(2) = -1, f(3) = 0 (no other small positive integer root <= 3)  (f(1)=-1, f(2)=-1, f(3)=0)
+  [PASS (B)] (U1.g) f strictly increasing for c >= 3 and f(c) > 0 for c in {4,...,8}  (f(4..8) = [3, 10, 25, 56, 119])
+
+----------------------------------------------------------------------------------------
+Part 10: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: at N_pair = 3 with scaffold (a)+(b), q = 12, not 6  (q_alt = 12)
+  [PASS (B)] counterfactual: at q = 12, sigma(12) != 2*12 (not perfect)  (sigma(12) = 28)
+  [PASS (B)] counterfactual: at N_pair = 4, (M1) gives N_color = 15 != 3  (2^4 - 1 = 15)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision over the retained CKM counts:
+    (P1) N_quark == 1 + N_pair + N_color (perfect-number identity)
+    (P2) sigma(N_quark) == 2 N_quark (sigma-perfect)
+    (P3) sum and product of proper divisors of 6 both equal 6
+    (P4) classification: N_pair, N_color deficient; N_quark perfect
+    (T1) N_color = T_{N_pair}, N_quark = T_{N_color} (parametric)
+    (L1) N_color = N_pair^2 - 1 (Lie-dimensional)
+    (M1) N_color = 2^{N_pair} - 1 (Mersenne)
+    (M2) N_quark = 2^{N_pair-1}(2^{N_pair} - 1) (Euclid-Euler)
+    (U1.c-g) all five three-constraint routes reduce to c(c-3)=0
+             (or the f(c)=0 monotonicity for route g),
+             positive-integer-pinned to N_color = 3.
+    Counterfactuals confirm (N_pair, N_color) = (2, 3) ordering
+    is load-bearing for (P1)-(P2) and the (M1) Mersenne route.
+
+========================================================================================
+TOTAL: PASS=30, FAIL=0
+========================================================================================
