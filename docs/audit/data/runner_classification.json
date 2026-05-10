@@ -12804,6 +12804,18 @@
       "dominant_class": null,
       "runner": "scripts/valley_linear_wide_tail_replay.py"
     },
+    "nn_lattice_rescaled_c2_derivation_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/lattice_nn_rescaled_c2_derivation.py"
+    },
     "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10": {
       "assert_count": 0,
       "counts": {
@@ -40094,6 +40106,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/lattice_nn_rescaled_c2_derivation.py": {
+      "assert_count": 1,
+      "claims": [
+        "nn_lattice_rescaled_c2_derivation_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/lattice_nn_rescaled_kernel_identification.py": {
       "assert_count": 0,
       "claims": [
@@ -43428,14 +43455,14 @@
   "stats": {
     "decoration_candidates": 161,
     "dominant_class_distribution": {
-      "A": 110,
+      "A": 111,
       "B": 160,
       "C": 642,
       "D": 232,
       "none": 404
     },
-    "runners_classified": 1548,
-    "runners_with_C": 803,
+    "runners_classified": 1549,
+    "runners_with_C": 804,
     "runners_with_D": 422
   }
 }

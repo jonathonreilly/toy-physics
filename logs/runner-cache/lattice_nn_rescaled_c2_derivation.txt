@@ -1,0 +1,165 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_c2_derivation.py
+runner_sha256: 2449c4d7c17d36e582ab1c78e745f6a138326097ac052285f42cdf8c7852421f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+BOUNDED PHASE-SADDLE SUPPORT FOR c2_inf
+==============================================================================
+
+Frozen harness parameters (landed no-slit kernel runner):
+  BETA      = 0.8
+  k         = 5.0
+  L_total   = 40.0     (source -> detector)
+  FANOUT    = 3.0
+  slit_layer_fraction = 0.3333  (companion support only;
+                        NOT used for the no-slit phase saddle)
+  L_2       = 26.6667  (companion magnitude saddle; cross-check only)
+
+Diagnostic reference (landed no-slit runner cache):
+  c2_inf_diagnostic ~= 0.02995
+  K_PHYS / (4 L)   =  0.031250  (off by ~4%)
+  K_PHYS / (2 L)   =  0.062500  (ray-optics, off by 2x)
+
+------------------------------------------------------------------------------
+STAGE 1: Saddle-point closed form
+------------------------------------------------------------------------------
+
+  Per-step lateral characteristic function (C_arm support note):
+      g(q; h) = a_0(h) + 2 a_pm(h) cos(q h)
+
+  Saddle at q=0 (a_+ = a_-) gives complex Gaussian
+      g(q; h)^N = g(0)^N * exp(-N r(h) (q h)^2 + O(q^4))
+  with r(h) = a_pm(h) / g(0; h)  (complex).
+
+  Fourier transform:
+      A(y) = g(0)^N / sqrt(4 pi N r h^2) * exp(-y^2 / (4 N r h^2))
+
+  Real part of -y^2/(4 N r h^2) gives the Gaussian magnitude
+  (sigma_arm^2 = N h^2 |r|^2 / Re(r); C_arm support note).
+  Imaginary part of -y^2/(4 N r h^2) gives the quadratic phase:
+
+      arg A(y) ⊇ y^2 * Im(r) / (4 N h^2 |r|^2)
+
+  So  c2(h) = (1/2) d^2/dy^2 arg A(y)
+            = Im(r) / (4 N h^2 |r|^2)
+            = Im(a_pm * conj(a_0)) / (4 L h |a_pm|^2).
+
+------------------------------------------------------------------------------
+STAGE 2: Reduction with harness amplitudes
+------------------------------------------------------------------------------
+
+  c                = exp(-BETA pi^2 / 16) = 0.610498
+  |a_pm|^2         = c^2 / (2 FANOUT)    = 0.062118
+  a_pm * conj(a_0) = c/(sqrt(2)*FANOUT) * exp(i k h (sqrt(2)-1))
+  Im(a_pm * conj(a_0)) = c/(sqrt(2)*FANOUT) * sin(k h (sqrt(2)-1))
+
+  Substitute:
+      c2(h) = [c/(sqrt(2)*FANOUT) * sin(k h (sqrt(2)-1))]
+               / [4 L h * c^2 / (2 FANOUT)]
+            = sin(k h (sqrt(2)-1)) / (2 sqrt(2) c L h)
+
+  Continuum limit (sin x -> x):
+      c2_inf = k (sqrt(2)-1) / (2 sqrt(2) c L)
+             = k (2 - sqrt(2)) / (4 c L)
+
+  Numerical reduction at harness parameters:
+    sqrt(2) - 1                =  0.414214
+    2 - sqrt(2)                =  0.585786
+    (2-sqrt(2))/c              =  0.959522  (->1 in c->1 limit)
+    c2_inf_analytic            =  k (2-sqrt(2)) / (4 c L)
+                                = 5.0 * 0.585786
+                                  / (4 * 0.610498 * 40.0)
+                                =  0.029985
+
+------------------------------------------------------------------------------
+STAGE 3: Length identification (no-slit harness)
+------------------------------------------------------------------------------
+
+  The no-slit kernel-identification harness propagates from a single
+  source at the origin to the detector at x = L_total with NO slits
+  and NO blocked nodes. The slit re-anchoring that forced
+  L_eff = L_2 = 2 L_total / 3 in the C_arm support note does NOT apply here.
+  The propagation length entering the phase saddle is L_total.
+
+  Cross-check: evaluate the same closed form with L = L_2 to confirm
+  it does NOT match the no-slit numerics:
+
+    c2_inf(L = L_total = 40)   =  0.029985   residual = +0.12%
+    c2_inf(L = L_2     = 26.67) = 0.044978   residual = +50.18%
+
+  L = L_total wins by a factor of ~400 in residual.
+  -> The phase saddle is anchored by L_total, not L_2.
+
+------------------------------------------------------------------------------
+STAGE 4: Per-h cross-check with finite-h sin(...) formula
+------------------------------------------------------------------------------
+
+  Retain the full sin(k h (sqrt(2)-1)) instead of its small-x limit:
+      c2(h) = sin(k h (sqrt(2)-1)) / (2 sqrt(2) c L_total h)
+
+        h   c2_analytic  c2_diagnostic    residual
+   0.5000      0.024906       0.025062     -0.622%
+   0.2500      0.028663       0.028768     -0.364%
+   0.1250      0.029651       0.029676     -0.083%
+   0.0625      0.029901       0.029886     +0.052%
+
+  All four points agree with the diagnostic runner fit to within ~1%.
+
+------------------------------------------------------------------------------
+STAGE 5: Hessian of the saddle (diagnostic)
+------------------------------------------------------------------------------
+
+  H = d^2/dq^2 [-N log g(q;h)] at q=0 = 2 N r(h) h^2 = 2 L r(h) h.
+  Re(H) sets Gaussian width (sigma^2 = h^2 * N * |r|^2/Re(r) =
+  L h |r|^2/Re(r), so width^2 scales like L h).
+  Im(H) sets quadratic phase: c2 = Im(H) / (4 L^2 h^2 |r|^2/N)
+  Equivalently c2 = Im(r) / (4 L h |r|^2), independent of h in the
+  continuum limit because Im(r) -> Im(r)|_{h->0} like O(h^0).
+
+        h        Re H        Im H         |H|    Re H / h    Im H / h
+   0.5000      9.0306      5.6555     10.6553     18.0612     11.3110
+   0.2500      4.6078      1.3165      4.7922     18.4313      5.2661
+   0.1250      2.3136      0.3236      2.3361     18.5089      2.5892
+   0.0625      1.1580      0.0806      1.1608     18.5274      1.2892
+
+  H ~ h linearly as h -> 0 (since N = L/h and r is bounded), so
+  Re(H)/h and Im(H)/h stabilize to continuum limits. The phase
+  Hessian Im(H)/h -> 2 L * Im(r)|_{h->0}, which is finite, giving
+  c2_inf -> Im(r)|_0 / (4 L |r|_0^2) -- the 0.029985 result.
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+
+  c2_inf_analytic   =  k (2 - sqrt(2)) / (4 c L_total)
+                    =  0.029985
+
+  c2_inf_diagnostic =  0.02995
+  K_PHYS / (4 L)    =  0.031250  (diagnostic approximation)
+
+  Residual (analytic vs diagnostic):      0.117%
+  Residual (K/(4L) vs diagnostic):        4.341%
+
+  BOUNDED SUPPORT: the phase-saddle closed form
+
+      c2_inf  =  k (2 - sqrt(2)) / (4 c L_total)
+
+  matches the diagnostic c2_inf to 0.12%, ~30x sharper than
+  the K/(4L) heuristic. The factor (2 - sqrt(2))/c
+  ~= 0.9595 carries the ~4% gap between K/(4L)
+  and the computed 0.02995.
+
+  Bounded-support guards:
+    PASS: phase-saddle residual <= 1%
+    PASS: per-h finite-h residual <= 1%
+    PASS: per-h residuals shrink toward h -> 0
+    PASS: K/(4L) heuristic is worse than saddle formula
+    PASS: wrong L_2 length is decisively worse
+    PASS: ray-optics K/(2L) is decisively worse
+
+----- stderr -----
+
