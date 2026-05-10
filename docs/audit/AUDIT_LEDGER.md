@@ -22,10 +22,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 127 |
 | **retained_bounded** | 239 |
 | open_gate | 13 |
-| unaudited | 1093 |
+| unaudited | 1092 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
-| ~~audited_renaming~~ | 18 |
+| ~~audited_renaming~~ | 19 |
 | ~~audited_conditional~~ | 259 |
 | ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
@@ -44,8 +44,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
-| `audited_renaming` | 18 |
-| `unaudited` | 1191 |
+| `audited_renaming` | 19 |
+| `unaudited` | 1190 |
 
 | claim_type | count |
 |---|---:|
@@ -882,6 +882,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `field_equation_derivation_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
+| `gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -5003,6 +5004,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   - `G_BARE_DERIVATION_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_FINITE_BOX_BOUNDED_COEFFICIENT_NARROW_NOTE_2026-05-10.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_FINITE_BOX_BOUNDED_COEFFICIENT_NARROW_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite box B={0<=p,q<=4}: N1/N2 close as elementary diagonal-operator and Peter-Weyl convolution algebra over the retained bounded rho_(p,q)(6) table, but the R_6^env coincidence is only a definition/renaming of the stripped finite-box residual factor, not an independently derived residual-environment theorem.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1444-58e4-70e2-87a5-df9263929d48`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The last coincidence is a definitional fact at finite-box scope: the decomposition stripping defines the finite-box residual factor's action on chi_(p,q) by a real diagonal scalar, and the bounded coefficient companion supplies the numerical values of that sequence on B.  _(class `F`)_
+- **chain closes:** False — The finite-box algebra and retained coefficient import close narrowly. The advertised coincidence with R_6^env does not close as a theorem because R_6^env is defined/identified with the diagonal rho(6) object rather than derived from an independent source-sector kernel or retained physical bridge.
+- **rationale:** N1 is immediate from defining a real nonnegative diagonal operator, and N2 is standard finite-box Peter-Weyl convolution algebra. The direct dependency is operationally retained_bounded, so the rho_(p,q)(6) table can be consumed as bounded numerical input. The load-bearing N3 residual-factor statement, however, is explicitly definitional: the runner builds K_6^src using R[rho(6)] and strips it back, so it verifies packaging rather than independently deriving the residual environment. Thus the safe result is a bounded algebraic core plus a definition, not a clean bounded residual-environment theorem.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`

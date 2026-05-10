@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 26,
-    "leaf": 226,
+    "leaf": 225,
     "medium": 152
   },
   "cycle_break_target_count": 305,
@@ -31444,29 +31444,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_FINITE_BOX_BOUNDED_COEFFICIENT_NARROW_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37564,6 +37541,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 7,
-  "total_pending": 1099
+  "ready_count": 6,
+  "total_pending": 1098
 }
