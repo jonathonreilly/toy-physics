@@ -336,6 +336,107 @@ class ComputeEffectiveStatusTest(unittest.TestCase):
         new_rows, _cycles = m.compute_effective(rows)
         self.assertEqual(new_rows["child"]["effective_status"], "retained_pending_chain")
 
+    def test_criticality_bump_soft_reset_propagates_as_retained(self):
+        """A row in the criticality-bump soft-reset state (audit_in_progress
+        + awaiting_cross_confirmation + first_audit on file) keeps its
+        effective_status at retained. Downstream rows depending on it stay
+        retained — the criticality bump does not force them to re-audit."""
+        m = _import("compute_effective_status")
+        soft_reset_row = {
+            "claim_id": "soft_reset_dep",
+            "deps": [],
+            "audit_status": "audit_in_progress",
+            "blocker": "awaiting_cross_confirmation",
+            "claim_type": "positive_theorem",
+            "claim_type_provenance": "audited_pending_cross_confirmation_after_criticality_bump",
+            "cross_confirmation": {
+                "first_audit": {
+                    "auditor": "auditor-1",
+                    "auditor_family": "codex-gpt-5.5",
+                    "independence": "cross_family",
+                    "verdict": "audited_clean",
+                    "claim_type": "positive_theorem",
+                    "claim_scope": "test scope",
+                    "load_bearing_step_class": "A",
+                },
+                "second_audit": None,
+                "status": "awaiting_second",
+            },
+        }
+        rows = {
+            "soft_reset_dep": soft_reset_row,
+            "child": {
+                "claim_id": "child",
+                "deps": ["soft_reset_dep"],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+        }
+        new_rows, _ = m.compute_effective(rows)
+        self.assertEqual(new_rows["soft_reset_dep"]["effective_status"], "retained")
+        self.assertTrue(
+            new_rows["soft_reset_dep"]["effective_status_reason"].startswith(
+                "awaiting_cross_confirmation_after_criticality_bump:"
+            )
+        )
+        # Child's chain still closes against the first-pass clean evidence.
+        self.assertEqual(new_rows["child"]["effective_status"], "retained")
+
+    def test_criticality_bump_soft_reset_with_disagreement_drops(self):
+        """Once cross-confirmation disagrees, the soft-reset state ends and
+        the row drops to audit_in_progress. Downstream rows then properly
+        see the chain break and are flagged for re-audit."""
+        m = _import("compute_effective_status")
+        rows = {
+            "disagreed_dep": {
+                "claim_id": "disagreed_dep",
+                "deps": [],
+                "audit_status": "audit_in_progress",
+                "blocker": "cross_confirmation_disagreement",  # not awaiting_cross_confirmation
+                "claim_type": "positive_theorem",
+                "claim_type_provenance": "audited_pending_cross_confirmation_after_criticality_bump",
+                "cross_confirmation": {
+                    "first_audit": {"verdict": "audited_clean"},
+                    "second_audit": {"verdict": "audited_conditional"},
+                    "status": "disagreement",
+                },
+            },
+            "child": {
+                "claim_id": "child",
+                "deps": ["disagreed_dep"],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+        }
+        new_rows, _ = m.compute_effective(rows)
+        self.assertEqual(new_rows["disagreed_dep"]["effective_status"], "audit_in_progress")
+        self.assertEqual(new_rows["child"]["effective_status"], "retained_pending_chain")
+
+    def test_born_critical_first_pass_does_not_trigger_soft_reset_path(self):
+        """A born-critical claim in first-pass audit_in_progress (NOT from a
+        criticality bump) keeps the standard audit_in_progress effective_status.
+        The soft-reset path requires the specific provenance flag set by
+        invalidate_stale_audits.py — apply_audit.py uses a different
+        provenance for first-pass rows."""
+        m = _import("compute_effective_status")
+        rows = {
+            "born_critical": {
+                "claim_id": "born_critical",
+                "deps": [],
+                "audit_status": "audit_in_progress",
+                "blocker": "awaiting_cross_confirmation",
+                "claim_type": "positive_theorem",
+                "claim_type_provenance": "audited_pending_cross_confirmation",  # NOT the bump suffix
+                "cross_confirmation": {
+                    "first_audit": {"verdict": "audited_clean"},
+                    "second_audit": None,
+                    "status": "awaiting_second",
+                },
+            },
+        }
+        new_rows, _ = m.compute_effective(rows)
+        self.assertEqual(new_rows["born_critical"]["effective_status"], "audit_in_progress")
+
     def test_main_drops_stale_top_level_timestamp_keys(self):
         m = _import("compute_effective_status")
         _patch_repo_root(m, self.tmp_root)
