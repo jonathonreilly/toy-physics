@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 238 |
 | _retained_pending_chain_ | 4 |
 | open_gate | 11 |
-| unaudited | 855 |
+| unaudited | 853 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 419 |
+| ~~audited_conditional~~ | 421 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 398 |
-| `audited_conditional` | 419 |
+| `audited_conditional` | 421 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 904 |
+| `unaudited` | 902 |
 
 | claim_type | count |
 |---|---:|
@@ -872,6 +872,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | A | - |
+| `staggered_dirac_physical_species_direct_theorem_note_2026-05-07` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | A | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -11633,6 +11635,35 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The source note is narrowly framed as a compatibility control, not a proof of truly directed DAG Hamiltonian transport. The current runner gives 6/6 on all three configurations, with TOWARD force, 14/14 N-stability, machine-clean norm/Born behavior, forward-depth fraction 0.1266, and 3/3 state families. Residual risk is limited to the symmetrized-adjacency scope boundary, which the note states explicitly.
 - **auditor confidence:** high
 
+### `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07`
+
+- **Note:** [`STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md`](../../docs/STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** BZ-corner Hamming-weight 1+1+3+3 decomposition on staggered-Dirac Z^3 APBC and M_3(C) irreducible algebraic triplet support on hw=1 as bounded source support for substep 3 of the staggered-Dirac realization gate; physical-species identification explicitly out of scope
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `claude-opus-fresh-context-phaseB-2026-05-10-1228b0d2`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** On Kawamoto-Smit kinetic operator on Z^3 APBC (Block 03 substep 2) plus admissible staggered BZ-corner machinery: 8 BZ corners n in {0,1}^3 decompose UNIQUELY by Hamming weight as 1(hw=0)+3(hw=1)+3(hw=2)+1(hw=3); sublattice parity grades hw-even (4) vs hw-odd (4); on hw=1 triplet, the three lattice translations T_1,T_2,T_3 act as diag characters {(-1,+1,+1),(+1,-1,+1),(+1,+1,-1)} (three distinct joint characters) and C_3[111] cycles the three corners (3-cycle, no fixed points), so {T_x,T_y,T_z,C_3[111]} generate M_3(C) on H_hw=1 (per cited THREE_GENERATION_OBSERVABLE_THEOREM_NOTE) with no proper quotient (per cited NO_PROPER_QUOTIENT_NARROW). Therefore hw=1 is the distinguished algebraic triplet surface. Note explicitly does NOT assert physical-species / SM-generation reading.  _(class `A`)_
+- **chain closes:** True — Runner probe_bz_corner_decomposition.py executes cleanly (exit 0, 0.45s) with PASS=5/FAIL=0 across all five structural checks: (i) Hamming-weight decomposition 1+3+3+1=8 verified by direct enumeration; (ii) hw=1 translation characters {(-1,+1,+1),(+1,-1,+1),(+1,+1,-1)} match THREE_GENERATION_OBSERVABLE_THEOREM_NOTE support surface order-agnostically; (iii) joint characters distinct (3 unique tuples); (iv) C_3[111] cyclic shift acts as 3-cycle on hw=1 with (C_3)^3=I and no fixed points; (v) sublattice parity balanced (A=4, B=4). The note's Steps 1-6 chain together as a finite combinatorial/representation-theoretic argument: BZ-corner enumeration is structural (binary {0,1}^3), Hamming-weight grading is definitional, sublattice-parity assignment is forced by Block 03 K-S Step 1, and the M_3(C) generation + no-proper-quotient steps are explicitly delegated to the cited retained authorities. The note correctly bounds itself by stating it does NOT assert the physical species/SM-generation reading.
+- **rationale:** Class A bounded_theorem with clean runner (PASS=5/FAIL=0) and tight derivation. The note self-bounds correctly (no physical-species claim, explicit inheritance of S2 re-audit dependency). However, multiple LOAD-BEARING cited authorities are audited_conditional: (1) THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md is bounded_theorem with audited_conditional ledger status and admitted_context_inputs naming the open staggered-Dirac realization gate; (2) THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md is bounded_theorem with similar conditional status; (3) THREE_GENERATION_STRUCTURE_NOTE.md carries an explicit ledger verdict audited_conditional (2026-05-05); (4) S3_TASTE_CUBE_DECOMPOSITION_NOTE.md is bounded_theorem with audit pending. (5) The parent STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md is open_gate. (6) Substep 2 sibling (Kawamoto-Smit phase forcing), which provides BlockT2 as a load-bearing premise, is currently being audited in parallel (status not yet clean per task framing). Tie-break rule applies: any LOAD-BEARING cited authority unaudited/conditional/support/open forces audited_conditional. The clean SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md and the now-audited_clean Grassmann substep 1 do not lift the conditional residuals on the M_3(C), no-proper-quotient, and 1+1+3+3 spectral support imports.
+- **open / conditional deps cited:**
+  - `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07`
+  - `staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07`
+  - `(under parallel audit; substep 2 not yet clean)`
+  - `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07`
+  - `three_generation_observable_theorem_note`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate)`
+  - `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07`
+  - `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate)`
+  - `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07`
+  - `three_generation_structure_note`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate)`
+  - `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07`
+  - `s3_taste_cube_decomposition_note`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate)`
+- **auditor confidence:** high
+
 ### `staggered_dirac_grassmann_forcing_theorem_note_2026-05-07`
 
 - **Note:** [`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`](../../docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md)
@@ -11657,6 +11688,42 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Step 5: spin-rotation T(x) = sigma_1^{x_1} sigma_2^{x_2} sigma_3^{x_3} substituted into diagonalization condition T-dagger(x) gamma_mu T(x+mu_hat) = eta_mu(x) I_2 yields Kawamoto-Smit phases eta_1=1, eta_2(x)=(-1)^{x_1}, eta_3(x)=(-1)^{x_1+x_2} via Pauli algebra; uniqueness in Step 6 up to global U(1) gauge, boundary phases, and axis-permutation gauge  _(class `C`)_
 - **chain closes:** True — Runner exact-arithmetic verification on sympy 2x2 Pauli matrices: PASS=24/24 over all 8 sites of the 2^3 unit cell x 3 directions, exit_code=0, elapsed 0.50s. Independently verifies T-dagger(x) gamma_mu T(x+mu_hat) = eta_mu(x) I_2 with derived eta values matching expected K-S phases at every (x, mu); also cross-checks chirality central pseudoscalar sigma_1 sigma_2 sigma_3 = i I_2 (U2 content). Class C: runner constructs Pauli matrices, T(x), and the diagonalization product from scratch in exact rational+i arithmetic. Algebraic forcing chain is sound at the level claimed (bounded support): BlockT1 supplies single-mode Grassmann constraint; U2 supplies per-site Pauli realization with omega central pseudoscalar; bipartite-graph parity on Z^3 is admissible standard graph theory; the Pauli-algebra calculation yielding (6) is closed at exact arithmetic. Uniqueness of T(x) is asserted up to gauge (global U(1) + boundary + axis permutation) but the runner only verifies the existence direction at the fundamental cell; uniqueness modulo gauge is argued in prose (Step 6) via standard linear algebra on the four (x_1 mod 2, x_2 mod 2) sublattices, not exhibited by the runner. This is acceptable for bounded_theorem scope.
 - **rationale:** Bounded theorem with explicit conditional scope; all load-bearing cited authorities now audit-clean or A1-only retained: Block 02 Grassmann forcing landed audited_clean today (2026-05-10) under the A1-only U2+U3 restructure (per task statement and Block 02 note's restructure section); per-site uniqueness note is at A1-only U1-U3 retained scope (per the note's 2026-05-08 narrowing). Runner is Class C, sympy exact arithmetic, PASS=24/24. The Pauli-algebra forcing of K-S phases from T(x) = sigma_1^{x_1} sigma_2^{x_2} sigma_3^{x_3} is mechanically verified at every site of the fundamental cell, and the central-pseudoscalar identity used in Step 2/3 is cross-checked. The note honestly disclaims retained-grade closure and seeds as bounded_theorem; the explicit conditional packaging matches what the runner+chain support. The note's own outstanding 'inherits S2 re-audit dependency' disclaimer (Status block) is now stale because Block 02 restructured to A1-only on 2026-05-10 dropping the S2 dependency, but this is at most a documentation-lag issue, not a load-bearing flaw. F1 (fermion_parity_z2_grading, audited_conditional per task) is cited in Step 4 to back the single-mode fermion operator identification (a = sigma_+, n = (I-sigma_3)/2) but is contextual/supportive: the K-S phase forcing in Steps 1-6 runs through BlockT1's single-mode Grassmann constraint + U2's Pauli realization + standard Pauli algebra; F1 is not used in the diagonalization derivation itself. Tie-break therefore does not force audited_conditional. NR (no-rooting) is cited for C^8 irreducibility commentary in Step 6 but is contextual to uniqueness, not to the existence/forcing of (6).
+- **auditor confidence:** high
+
+### `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+
+- **Note:** [`STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md`](../../docs/STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded algebraic support: the hw=1 BZ-corner triplet of the staggered-Dirac realization on Z^3 APBC gives three quantum-mechanically distinct states inside one RP-OS-reconstructed H_phys, characterized by (a) distinct joint translation eigenvalues, (b) connected by the C_3[111] lattice-symmetry unitary, (c) carrying M_3(C) algebraically with no proper quotient, (d) all in the same superselection sector under RS+CD single-sector framing. The note explicitly disclaims closure of the physical-species / SM-generation identification bridge.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `claude-opus-fresh-context-phaseB-2026-05-10-8b372234`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Step 5 algebraic three-state separation: hw=1 BZ-corner triplet has distinct simultaneous T_x/T_y/T_z eigenvalues -> pairwise orthogonal in single H_phys, with C_3[111] connecting them and M_3(C) acting irreducibly inside the unique-vacuum sector established by RP+RS+CD. Theorem 4-revised packages this as bounded algebraic support without claiming the species-identification bridge.  _(class `A`)_
+- **chain closes:** True — Within the bounded algebraic support scope the chain closes: each cited premise is retained or audited (BlockT3 from THREE_GENERATION_OBSERVABLE_THEOREM_NOTE, NQ from THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW, RP/RS/CD/LR/LN/SC from the axiom-first foundations notes) and the runner verifies all 15 internal checks (PASS=15, FAIL=0). The narrow species-identification bridge that the note explicitly does NOT claim is correctly excluded from the load-bearing surface. The parent open_gate (STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03) remains open, which constrains the upgrade to positive_theorem but is consistent with the bounded_theorem self-typing.
+- **rationale:** The note self-types as bounded support and explicitly disclaims retained-grade closure of the species-identification bridge. The load-bearing algebraic content (Steps 1-5: single-sector H_phys, three orthogonal hw=1 corner states, M_3(C) irreducible action, C_3 cyclic connection) is class-A algebraic and runner-verified at exact arithmetic, but the chain inherits the parent open_gate (staggered_dirac_realization_gate_note_2026-05-03 still open_gate) and three retained primitive citations (RP, three-generation observable, no-proper-quotient narrow) are themselves audited_conditional / awaiting independent audit. Per tie-break preference, audited_conditional is the correct verdict: the bounded algebraic surface is sound conditional on its declared upstream chain, and the note is honest about the species-identification bridge remaining open.
+- **open / conditional deps cited:**
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate parent)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `three_generation_observable_theorem_note (audited_conditional, bounded_theorem retag)`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02 (audited_conditional, bounded_theorem retag)`
+  - `staggered_dirac_realization_gate_note_2026-05-03 (open_gate)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `axiom_first_reflection_positivity_theorem_note_2026-04-29 (audited_conditional; staggered+Wilson det positivity runner-supported only)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `axiom_first_reeh_schlieder_theorem_note_2026-05-01 (audited_conditional)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `axiom_first_cluster_decomposition_theorem_note_2026-04-29 (audited_conditional)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01 (audited_conditional)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `axiom_first_lattice_noether_theorem_note_2026-04-29 (audited_conditional; (2Z)^3 sublattice scope)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03 (audited_conditional)`
+  - `staggered_dirac_physical_species_direct_theorem_note_2026-05-07`
+  - `narrow_species_identification_bridge (explicitly open per note's own statement; not load-bearing here)`
 - **auditor confidence:** high
 
 ### `staggered_dirac_realization_gate_note_2026-05-03`
