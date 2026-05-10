@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 225 |
 | open_gate | 11 |
-| unaudited | 1164 |
+| unaudited | 1163 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 223 |
+| ~~audited_conditional~~ | 224 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 374 |
-| `audited_conditional` | 223 |
+| `audited_conditional` | 224 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1232 |
+| `unaudited` | 1231 |
 
 | claim_type | count |
 |---|---:|
@@ -497,6 +497,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_lane6_theorem_plan_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `chiral_walk_synthesis_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1396,6 +1397,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_output_empty`
   - `archived_session_log_or_named_numeric_output_missing`
   - `seed_strength_and_geometry_independence_sweeps_not_reproducible`
+- **auditor confidence:** high
+
+### `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26`
+
+- **Note:** [`CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md`](../../docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go that one-Higgs charged-lepton gauge selection leaves Y_e arbitrary and that the direct top-Ward color-isospin normalization does not by itself determine y_tau.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1286-c806-7513-b55a-5a1414e563b8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Because the charged-lepton monomial is colorless, its direct gauge-index normalization options are 1 or 2, neither the top Ward Q_L value 6; adding generation averaging would be a new primitive.  _(class `A`)_
+- **chain closes:** False — The internal arithmetic establishes a conditional algebraic obstruction: the stated charges select bar L_L H e_R, reject bar L_L tilde H e_R, leave generation entries gauge-blind, and give lepton normalization dimensions 1 or 2 rather than 6. The full retained no-go chain does not close from this restricted packet because the note and runner rely on named one-Higgs and top-Ward authorities that are not supplied as one-hop dependencies.
+- **rationale:** Issue: the no-go imports the retained one-Higgs gauge-selection theorem and top-Ward Q_L normalization while the restricted packet lists no one-hop authorities. Why this blocks: the algebraic mismatch is plausible, but retained-grade closure cannot rest on unlisted notes or runner string checks of unprovided files. Repair target: add direct dependency edges for the one-Higgs gauge-selection note and top-Ward identity note, with retained-grade status, or rewrite this note as a fully self-contained lemma over explicit assumptions. Claim boundary until fixed: conditional algebraic no-go for the direct lift, not a retained no-go.
 - **auditor confidence:** high
 
 ### `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27`
