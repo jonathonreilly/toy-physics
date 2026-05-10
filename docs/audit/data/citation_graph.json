@@ -34241,11 +34241,11 @@
     },
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24": {
       "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
-      "claim_type_author_hint": "decoration",
-      "claim_type_author_hint_raw": "decoration",
-      "claim_type_seed_hint": "decoration",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "415945f8cbff37778594b3dc8c8efddd567c64ac63bbacf3f3fba0a15b13ae60",
+      "note_hash": "4077a58e77dc5f929ca7e66960f1b8997958b45d95e3e917caa71ae87bb80606",
       "path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "title": "alpha_LM Geometric-Mean Identity Theorem"
@@ -65370,21 +65370,19 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 226,
-      "decoration": 1,
       "meta": 40,
       "no_go": 15,
       "none": 1644,
       "open_gate": 22,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 717,
-      "decoration": 1,
       "meta": 40,
       "no_go": 122,
       "none": 451,
       "open_gate": 111,
-      "positive_theorem": 596
+      "positive_theorem": 597
     },
     "edge_count": 8181,
     "leaf_count": 528,
