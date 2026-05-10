@@ -12597,6 +12597,22 @@
       "to": "quark_cp_carrier_completion_note_2026-04-18"
     },
     {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_note_2026-04-19"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_ray_phase_completion_note_2026-04-18"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_cp_carrier_completion_note_2026-04-18"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
       "from": "quark_projector_ray_phase_completion_note_2026-04-18",
       "to": "quark_cp_carrier_completion_note_2026-04-18"
     },
@@ -49177,6 +49193,22 @@
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "title": "Quark Projector-Parameter Audit"
     },
+    "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10": {
+      "claim_id": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_note_2026-04-19",
+        "quark_projector_ray_phase_completion_note_2026-04-18",
+        "quark_cp_carrier_completion_note_2026-04-18",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02"
+      ],
+      "note_hash": "7a1471e894021427ea96d1d6e1b4f1efdaa9d1d58f02b9fa929d328ec9262bd1",
+      "path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_TERMINAL_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_quark_projector_parameter_audit_terminal_synthesis.py",
+      "title": "Quark Projector Parameter Audit Terminal Synthesis Meta Note"
+    },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
       "claim_id": "quark_projector_ray_phase_completion_note_2026-04-18",
       "claim_type_author_hint": null,
@@ -57788,7 +57820,7 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 116,
-      "meta": 10,
+      "meta": 11,
       "no_go": 14,
       "none": 1703,
       "open_gate": 13,
@@ -57796,16 +57828,16 @@
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 619,
-      "meta": 10,
+      "meta": 11,
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
       "positive_theorem": 623
     },
-    "edge_count": 6883,
+    "edge_count": 6887,
     "leaf_count": 554,
-    "node_count": 1947,
+    "node_count": 1948,
     "root_count": 838,
-    "runners_with_path": 1526
+    "runners_with_path": 1527
   }
 }

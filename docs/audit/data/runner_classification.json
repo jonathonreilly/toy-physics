@@ -13212,6 +13212,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_quark_projector_parameter_audit.py"
     },
+    "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_quark_projector_parameter_audit_terminal_synthesis.py"
+    },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
       "assert_count": 2,
       "counts": {
@@ -31573,6 +31585,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_quark_projector_parameter_audit_terminal_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_quark_projector_ray_phase_completion.py": {
       "assert_count": 2,
       "claims": [
@@ -40018,15 +40045,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 120,
+    "decoration_candidates": 121,
     "dominant_class_distribution": {
       "A": 14,
-      "B": 168,
+      "B": 169,
       "C": 607,
       "D": 213,
       "none": 427
     },
-    "runners_classified": 1429,
+    "runners_classified": 1430,
     "runners_with_C": 719,
     "runners_with_D": 352
   }
