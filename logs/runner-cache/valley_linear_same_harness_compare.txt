@@ -1,11 +1,31 @@
 ===== runner cache v1 =====
 runner: scripts/valley_linear_same_harness_compare.py
-runner_sha256: 69000c618c0231dbd7103afcd466e313298a03e00f1df5164dee56053eff4893
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 5c4963909ccbed0fe2437a8e3ae7ee782b2f5c12b91f56617cf6c29f75a723e0
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 334.26
+status: ok
 ----- stdout -----
+========================================================================================
+SAME-HARNESS ACTION COMPARISON: spent-delay vs valley-linear
+  fixed family: 3D ordered dense lattice, 1/L^2 kernel, h^2 measure
+  h=0.25, W=10, L=12, max_d=12, nodes=321,489
+========================================================================================
+
+spent_delay: done in 159.7s
+valley_linear: done in 173.8s
+
+action                 Born        k=0      F~M    gravity   TOWARD                   tail
+------------------------------------------------------------------------------------------------------------
+spent-delay        4.20e-15  +0.00e+00     0.50  +0.045346      8/8 z>=4: -0.52 (R²=0.951)
+valley-linear      4.20e-15  +0.00e+00     1.00  +0.000224      8/8 z>=4: -0.93 (R²=0.983)
+
+READ:
+  - This is a bounded same-family action-fork comparison.
+  - If valley-linear wins here, that does not preserve any spent-delay flagship claim automatically.
+  - Convergence under refinement still needs its own frozen artifact chain.
+
+Total time: 333.8s
 
 ----- stderr -----
 

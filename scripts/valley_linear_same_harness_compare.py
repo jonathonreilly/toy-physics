@@ -26,6 +26,13 @@ card scripts and are not replayed here.
 
 from __future__ import annotations
 
+# Heavy compute / lattice-sweep runner: exceeds the 120s default audit
+# timeout. Review-loop reproduction on 2026-05-10 exceeded 300s on this
+# machine, so use a bounded 600s budget rather than caching a timeout.
+# Without this declaration the audit lane caches an empty stdout under
+# `status: timeout`, blocking the audit verdict.
+AUDIT_TIMEOUT_SEC = 600
+
 import math
 import time
 from dataclasses import dataclass
