@@ -13128,6 +13128,18 @@
       "dominant_class": null,
       "runner": "scripts/ordered_lattice_quasi_persistent_relaunch.py"
     },
+    "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_primitive_p_lh_order_one_2026_05_10_pPlh_order_one.py"
+    },
     "packet_memory_note": {
       "assert_count": 0,
       "counts": {
@@ -22913,6 +22925,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_primitive_p_lh_order_one_2026_05_10_pPlh_order_one.py": {
+      "assert_count": 1,
+      "claims": [
+        "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_quark_antiquark_color_singlet_check.py": {
@@ -43889,12 +43916,12 @@
     "dominant_class_distribution": {
       "A": 112,
       "B": 160,
-      "C": 645,
+      "C": 646,
       "D": 242,
       "none": 406
     },
-    "runners_classified": 1565,
-    "runners_with_C": 810,
+    "runners_classified": 1566,
+    "runners_with_C": 811,
     "runners_with_D": 434
   }
 }

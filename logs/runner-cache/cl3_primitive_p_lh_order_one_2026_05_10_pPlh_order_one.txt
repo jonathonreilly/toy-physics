@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/cl3_primitive_p_lh_order_one_2026_05_10_pPlh_order_one.py
+runner_sha256: fc61103bdc78ff524e29bce3b9ba8a627b48489fd05c3e5b23f63e5a8365967d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+==============================================================================
+P-LH ORDER-ONE / STAGGERED-DIRAC OPEN-GATE DIAGNOSTIC
+==============================================================================
+Finite algebra and toy-model checks only; no primitive admission.
+
+==============================================================================
+SECTION 1: R[omega] COPY OF C
+==============================================================================
+  [PASS] omega equals i I in this Pauli representation
+  [PASS] omega^2 = -I
+  [PASS] omega commutes with gamma_1
+  [PASS] omega commutes with gamma_2
+  [PASS] omega commutes with gamma_3
+  [PASS] R[omega] has real dimension two  (rank=2)
+  [PASS] R[omega] multiplication matches complex multiplication  ((a+b omega)(c+d omega))
+
+==============================================================================
+SECTION 2: Cl+(3) QUATERNION RELATIONS
+==============================================================================
+  [PASS] i^2 = -I
+  [PASS] j^2 = -I
+  [PASS] k^2 = -I
+  [PASS] i j = k
+  [PASS] j k = i
+  [PASS] k i = j
+  [PASS] i j k = -I
+  [PASS] Cl+(3) basis has real dimension four  (rank=4)
+
+==============================================================================
+SECTION 3: PROJECTORS PLUS C3 GENERATE M_3(C) MATRIX UNITS
+==============================================================================
+  [PASS] projectors are idempotent
+  [PASS] projectors are mutually orthogonal
+  [PASS] projectors sum to I_3
+  [PASS] cycle has order three
+  [PASS] generated units span nine real matrix-unit directions  (rank=9)
+  [PASS] target matrix-unit span has rank nine  (rank=9)
+
+==============================================================================
+SECTION 4: CARRIER-SECTOR ASSEMBLY GATE
+==============================================================================
+  [PASS] per-site carrier dimension is four in this inventory
+  [PASS] hw=1 carrier dimension is three in this inventory
+  [PASS] the two located carriers are not the same dimension
+  [PASS] naive direct sum has dimension seven
+  [PASS] naive direct sum is not the 96-dimensional Connes-style H_F  (4+3=7, H_F=96)
+
+==============================================================================
+SECTION 5: TOY ORDER-ONE SELECTION TEST
+==============================================================================
+  [PASS] toy A_F basis has 15 tested generators  (count=15)
+  [PASS] D=0 satisfies toy order-one vacuously  (max=0.000e+00)
+  [PASS] block-scalar D satisfies toy order-one vacuously  (max=0.000e+00)
+  [PASS] Yukawa-like off-diagonal D violates toy order-one  (max=5.000e-01)
+  [PASS] toy direct-sum algebra shape does not force order-one  (selection depends on D_F choice)
+
+==============================================================================
+P-LH ORDER-ONE OPEN-GATE DIAGNOSTIC: PASS=31 FAIL=0
+==============================================================================
+
+----- stderr -----
+

@@ -17101,6 +17101,30 @@
       "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
     },
     {
+      "from": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "to": "primitive_p_lh_content_proposal_note_2026-05-10_pplh"
+    },
+    {
+      "from": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "to": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
+    },
+    {
+      "from": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
       "from": "qcd_low_energy_running_bridge_note_2026-05-01",
       "to": "plaquette_self_consistency_note"
     },
@@ -52428,6 +52452,24 @@
       "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch Note"
     },
+    "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one": {
+      "claim_id": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
+        "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native",
+        "cl3_sm_embedding_theorem",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "staggered_dirac_realization_gate_note_2026-05-03"
+      ],
+      "note_hash": "743acb447c7a23c1058cbb7053d319c566f4ff23d09630a0484542c2cc0055ac",
+      "path": "docs/P_LH_ORDER_ONE_STAGGERED_DIRAC_OPEN_GATE_NOTE_2026-05-10_pPlh_order_one.md",
+      "runner_path": "scripts/cl3_primitive_p_lh_order_one_2026_05_10_pPlh_order_one.py",
+      "title": "P-LH Order-One and Staggered-Dirac Open Gate"
+    },
     "packet_memory_note": {
       "claim_id": "packet_memory_note",
       "claim_type_author_hint": null,
@@ -66092,7 +66134,7 @@
       "meta": 59,
       "no_go": 19,
       "none": 1626,
-      "open_gate": 25,
+      "open_gate": 26,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -66101,13 +66143,13 @@
       "meta": 59,
       "no_go": 126,
       "none": 449,
-      "open_gate": 113,
+      "open_gate": 114,
       "positive_theorem": 592
     },
-    "edge_count": 8267,
+    "edge_count": 8273,
     "leaf_count": 534,
-    "node_count": 2062,
+    "node_count": 2063,
     "root_count": 768,
-    "runners_with_path": 1677
+    "runners_with_path": 1678
   }
 }
