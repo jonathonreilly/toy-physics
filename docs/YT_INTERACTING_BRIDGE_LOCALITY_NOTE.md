@@ -92,3 +92,36 @@ After this scan, the residual is sharper:
   lattice correction near the UV endpoint”
 
 That is a smaller and more testable target.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the runner appears to compute the stated
+grid scan, but the conclusion depends on imported endpoint data, the
+accepted target value, one-loop transport choices, and the chosen
+bridge family. The restricted packet does not close the operator-level
+interacting bridge theorem or derive the endpoints from retained first
+principles. The note already states above that the result is a bounded
+support proxy, not the final bridge theorem.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+profile-family scan numerics or the UV-localization conclusion's
+bounded scope.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream notes the locality
+scan and endpoint data depend on. It does not promote this note or
+change the audited claim scope.
+
+- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
+  for the v boundary used as the IR endpoint reference.
+- [YT_EW_COUPLING_BRIDGE_NOTE.md](YT_EW_COUPLING_BRIDGE_NOTE.md)
+  for the EW-coupling inputs that fix the scan's endpoint data.
+- [YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md](YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md)
+  for the EW-window proxy that excludes diffuse rescues, complementary
+  to the locality scan.
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+  for the QFP-stability bound on the SM-like transport over most of the
+  interval.

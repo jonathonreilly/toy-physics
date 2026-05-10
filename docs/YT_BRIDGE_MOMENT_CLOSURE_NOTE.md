@@ -83,3 +83,37 @@ class, not yet from a full microscopic operator theorem.
 
 But it means the residual gap is now a moment-selection rule rather than a
 profile-selection problem.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_numerical_match` with
+the substantive observation that the runner performs real computation
+but uses a calibrated proxy scan with hard-coded physical inputs, target
+value, accepted logistic bridge, UV window, and pass thresholds. The
+load-bearing claim is a numerical proxy match on the selected inputs
+rather than a closed first-principles theorem; the note already calls
+itself bounded support above. The honest read is that the moment-band
+collapse `J_aff` is verified within the scanned family, not derived from
+the axiom.
+
+This addendum is graph-bookkeeping only. It does not change the
+numerical match status, does not promote the row, and does not modify
+the moment-band fit results or their bounded scope.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream notes the
+moment-closure result reuses. It does not promote this note or change
+the audited claim scope.
+
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV-localized class premise.
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the constructive UV-localized bridge family the kernel reuses.
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+  for the rearrangement derivation of the endpoint-response kernel.
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+  for the dominant `I_2` invariant the moment closure refines into a
+  two-moment system `(I_2, c_2)`.
+- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
+  for the v boundary used as the IR endpoint reference.

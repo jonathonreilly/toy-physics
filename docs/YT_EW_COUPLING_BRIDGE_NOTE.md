@@ -278,3 +278,43 @@ alpha_s(v) [DERIVED] and the Ward BC [DERIVED].
 The backward Ward prediction carries a ~3% systematic from using the
 SM RGE as the interpolation above v. This is bounded by the QFP
 insensitivity theorem and is comparable to the 2-loop truncation error.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_numerical_match` with
+the substantive observation that the runner computes a taste-threshold
+scan, but the decisive parameter `taste_weight` is selected by
+minimizing error against the observed `sin^2(theta_W)(M_Z)`, and several
+PASS checks are comparator checks against observed `sin^2`, `alpha_EM`,
+and `alpha_s` rather than independent computations. The note itself
+acknowledges remaining imported or open pieces above (`g_2(v)`,
+`lambda(v)`, `kappa_EW`, and a rigorous SM-RGE surrogate theorem). The
+honest read is that the EW coupling bridge and SM-RGE surrogate used in
+the `y_t` chain are a numerical match on tuned inputs against observed
+EW comparators, not a first-principles closure from the restricted
+packet alone.
+
+This addendum is graph-bookkeeping only. It does not change the
+numerical match status, does not promote the row, and does not modify
+the Import Status Table, the QFP sensitivity budget, or the closure
+arguments above.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream notes the EW
+coupling bridge and SM-RGE surrogate argument depend on. It does not
+promote this note or change the audited claim scope.
+
+- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
+  for the boundary selection of v as the physical EFT crossover endpoint.
+- [YT_EFT_BRIDGE_THEOREM.md](YT_EFT_BRIDGE_THEOREM.md)
+  for the backward Ward bridge construction the EW couplings feed into.
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+  for the QFP-stability sensitivity budget bounding the SM-RGE surrogate
+  error at O(3%).
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV-localized class that constrains the bridge shape on
+  which the EW comparator runs.
+- [YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md](YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md)
+  for the EW-window proxy scan that excludes diffuse rescues at the
+  bridge level.
