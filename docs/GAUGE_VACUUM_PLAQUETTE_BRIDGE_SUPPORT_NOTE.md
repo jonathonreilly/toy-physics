@@ -563,3 +563,14 @@ Expected summary:
 - spatial-environment tensor-transfer runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - Perron/Jacobi underdetermination runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - tensor-transfer Perron solve runner: `THEOREM PASS=6 SUPPORT=3 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+The conditional verdict flagged two named gaps:
+
+1. The bounded normalized single-link Wilson boundary coefficients `rho_(p,q)(6)` had not been computed; the residual source-sector environment was carried only as an abstract operator. That bounded computation has since landed in [gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md) (`audited_clean` / `retained_bounded`), which evaluates `c_(p,q)(6) = int chi_(p,q)(U) exp((6/3) Re tr U) dU` on the finite weight box `0 <= p,q <= 4` by the Schur-Weyl Bessel-determinant identity and direct Weyl integration on the SU(3) Cartan torus, with cross-method agreement of `~4e-15` absolute. This bounded coefficient table is now the canonical normalized single-link Wilson boundary input on that finite box; it does **not** by itself supply the all-weight or full unmarked spatial Wilson tensor-transfer Perron solve, which remains the open theorem-grade target named by this note.
+2. The note also cites the `tensor_transfer_perron_solve` runner; that note remains `unaudited` in the ledger and is consumed here only as a structural reference under explicit `rho`-input hypotheses (per the explicit out-of-scope disclaimer of this note's load-bearing claim). No promotion is asserted here.
+
+This bookkeeping does not change the load-bearing scope of this note; the still-open piece (the explicit physical 3D unmarked spatial Wilson environment / full nonperturbative reduction at `beta = 6`) is unchanged.

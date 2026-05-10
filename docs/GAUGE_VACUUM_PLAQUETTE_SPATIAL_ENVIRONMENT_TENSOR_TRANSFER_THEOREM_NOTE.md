@@ -225,3 +225,15 @@ intertwiners) and the finite truncated support packet that exhibits
 their consistency under one tensor word. Theorems that depend on the
 full untruncated construction at `beta = 6` are out of scope here and
 must cite the unresolved open object directly.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note, change the audited claim scope, or close the open positive-theorem bridge.
+
+The conditional verdict named the load-bearing gap as the bridge from local character/fusion ingredients to the actual spatial-environment boundary amplitudes. That gap remains the explicit out-of-scope open object of this note (full untruncated tensor-transfer at `beta = 6`, multi-tensor-word generalization, explicit `beta = 6` Perron solve).
+
+A bounded partial input now exists on the single-link side:
+
+- [gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md) (`audited_clean` / `retained_bounded`) computes the bounded normalized single-link Wilson boundary coefficients `rho_(p,q)(6) = c_(p,q)(6) / (d_(p,q) c_(0,0)(6))` on the finite weight box `0 <= p,q <= 4` by two independent integrators (Schur-Weyl Bessel-determinant and Weyl-Cartan torus integration). This is bounded support for the single-link factor `c_lambda(6)` referenced in Theorem 1 above, on the finite box only.
+
+This bounded input does **not** supply: the all-weight closed form, the full untruncated tensor-transfer operator at `beta = 6`, multi-tensor-word generalization, or the `beta = 6` Perron state of the full spatial environment. Those gaps remain the open positive-theorem target stated in the existing "What this does not close" and "Out of scope" sections of this note. The conditional-audit verdict is unchanged by this graph-bookkeeping pointer.
