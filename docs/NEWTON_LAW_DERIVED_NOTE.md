@@ -1,42 +1,89 @@
 # Newton's Law Derived from Cl(3) on Z^3
 
-**Status:** support - structural or confirmatory support note
-## Status
+**Date:** 2026-04 (audit-narrowing refresh 2026-05-10)
+**Claim type:** bounded_theorem
+**Status authority:** source-note proposal only; audit verdict and
+effective status are set by the independent audit lane. The
+`bounded_theorem` label is a source-side claim-boundary declaration,
+not an audit verdict; the 2026-05-10 audit verdict on the prior
+unconditional framing recorded `audited_conditional` (chain_closes
+False because the load-bearing Poisson equation was supported only by
+a cited authority itself conditional on a stipulated `L^{-1}=G_0`
+closure identity). This scope narrowing implements the verdict's
+named repair-target option (b) "narrow this note to a bounded theorem
+conditional on the Poisson equation".
 
-**Closed** on the retained framework surface.
+## Bounded admissions
 
-Newton's inverse-square law F = G M1 M2 / r^2 follows from the Poisson
-equation on Z^3 without additional assumptions.
+The load-bearing claim is **conditional on the two bounded admissions**
+below. Neither is derived in this note; each is admitted as a named
+input. The chain closes class-A algebraically from (BA-1) plus (BA-2)
+plus elementary calculus on `Z^3`.
 
-## Theorem / Claim
+(BA-1) **Lattice Poisson equation as equation of motion.** The
+staggered scalar field obeys
 
-**Theorem.** Let (-Delta_lat) be the lattice Laplacian on Z^3. Then:
+```text
+(-Delta_lat) phi = rho                                                    (BA-1)
+```
+
+on `Z^3`, derived from the canonical staggered scalar action. This
+identification is currently bounded by the `L^{-1} = G_0`
+self-consistency closure supplied in
+[`GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md);
+the present note admits (BA-1) and does not re-derive it.
+
+(BA-2) **Maradudin et al. 1971 lattice Green's function asymptotic.**
+The Green's function of the lattice Laplacian on `Z^3` satisfies
+
+```text
+G(r) = (-Delta_lat)^{-1}(r)  ->  1 / (4 pi |r|)    as |r| -> infinity.   (BA-2)
+```
+
+Standard result of lattice potential theory (Maradudin, Montroll,
+Weiss, *Theory of Lattice Dynamics in the Harmonic Approximation*,
+1971); admitted as a textbook math input rather than derived in this
+note.
+
+(BA-1) and (BA-2) are the only bounded admissions. The chain to
+Newton's inverse-square law closes class-A from (BA-1) and (BA-2)
+without any further import.
+
+## Theorem / Claim (conditional on BA-1 and BA-2)
+
+**Theorem.** Given (BA-1) and (BA-2), let `(-Delta_lat)` be the lattice
+Laplacian on `Z^3`. Then:
 
 1. The Green's function G(r) of (-Delta_lat) satisfies
-   G(r) -> 1 / (4 pi |r|) as |r| -> infinity (Maradudin et al. 1971).
+   G(r) -> 1 / (4 pi |r|) as |r| -> infinity, by (BA-2).
 
-2. A point source of strength M produces potential phi(r) = M * G(r) -> M / (4 pi r).
+2. A point source of strength M produces potential
+   phi(r) = M * G(r) -> M / (4 pi r), by linearity of (BA-1).
 
 3. The force on a test mass M_test is F = -M_test * grad(phi) = M * M_test / (4 pi r^2),
-   which is Newton's law with G_N = 1/(4 pi) in lattice units.
+   which is Newton's inverse-square law with G_N = 1/(4 pi) in lattice
+   units.
 
-4. The product M1 * M2 arises from two independent Poisson solves with cross-coupling.
-   It is MEASURED from Poisson linearity, not imposed as a bilinear ansatz.
+4. The product M1 * M2 arises from two independent Poisson solves with
+   cross-coupling. It is MEASURED from Poisson linearity (BA-1), not
+   imposed as a bilinear ansatz.
 
 5. The exponent 2 in 1/r^2 equals d - 1 = 3 - 1, where d = 3 is
-   the spatial dimension from Cl(3). In general d dimensions, the Poisson
-   Green's function gives F ~ 1/r^{d-1}.
+   the spatial dimension from Cl(3). In general d dimensions, the
+   Poisson Green's function gives F ~ 1/r^{d-1}.
 
 ## Assumptions
 
-1. Cl(3) on Z^3 (the framework axiom).
-2. The staggered scalar field obeys the lattice Poisson equation
-   (-Delta_lat) phi = rho (equation of motion from the action).
-3. The asymptotic theorem for the lattice Green's function
-   (standard lattice potential theory, not a framework-specific claim).
+1. **Framework axiom:** Cl(3) on Z^3 (the framework axiom).
+2. **(BA-1):** The staggered scalar field obeys the lattice Poisson
+   equation `(-Delta_lat) phi = rho` (admitted; not derived here; see
+   §"Bounded admissions" above).
+3. **(BA-2):** Maradudin asymptotic theorem for the lattice Green's
+   function (admitted as textbook math input; not derived here).
 
-No additional physics is imported. The coupling constant G_N, the product
-law, the inverse-square exponent, and the distance dependence all follow.
+No additional physics is imported. Under (BA-1) and (BA-2), the
+coupling constant G_N, the product law, the inverse-square exponent,
+and the distance dependence all follow as class-A consequences.
 
 ## What Is Actually Proved
 
