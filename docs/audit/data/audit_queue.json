@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 666,
+    "critical": 667,
     "high": 22,
     "leaf": 264,
     "medium": 146
@@ -6183,6 +6183,29 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.145,
+      "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 282
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "poisson_self_gravity_born_audit_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -6517,29 +6540,6 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_koide_q_readout_factorization_theorem.py",
-      "transitive_descendants": 278
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.624,
-      "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 278
     },
     {
@@ -14239,6 +14239,31 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_dm_dple_theorem.py",
+      "transitive_descendants": 281
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "pmns_selector_three_identity_support_note_2026-04-21",
+        "scalar_selector_remaining_open_imports_2026-04-20",
+        "koide_cl3_selector_gap_note_2026-04-19"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.64,
+      "note_path": "docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_koide_higgs_dressed_resolvent_root_theorem.py",
       "transitive_descendants": 281
     },
     {
@@ -34838,5 +34863,5 @@
     }
   ],
   "ready_count": 119,
-  "total_pending": 1098
+  "total_pending": 1099
 }

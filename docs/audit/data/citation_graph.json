@@ -11881,6 +11881,22 @@
       "to": "koide_microscopic_scalar_selector_target_note_2026-04-18"
     },
     {
+      "from": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
+      "to": "koide_closure_atlas_issues_flagged"
+    },
+    {
+      "from": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
+      "to": "pmns_selector_three_identity_support_note_2026-04-21"
+    },
+    {
+      "from": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
+      "to": "scalar_selector_remaining_open_imports_2026-04-20"
+    },
+    {
+      "from": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
+      "to": "koide_cl3_selector_gap_note_2026-04-19"
+    },
+    {
       "from": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
       "to": "koide_moment_ratio_uniformity_theorem_note_2026-04-19"
     },
@@ -45631,8 +45647,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "4d8ae150c04492ac60721c03d63fcb6e05114014b6906d3cf0d29e05721bfd7c",
+      "deps": [
+        "koide_closure_atlas_issues_flagged",
+        "pmns_selector_three_identity_support_note_2026-04-21",
+        "scalar_selector_remaining_open_imports_2026-04-20",
+        "koide_cl3_selector_gap_note_2026-04-19"
+      ],
+      "note_hash": "6158449dec10dc292a4d09d4f96cb49ba349cd81aae6a7893e40a37de9c8c68d",
       "path": "docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_koide_higgs_dressed_resolvent_root_theorem.py",
       "title": "Koide Higgs-Dressed Resolvent Root Theorem"
@@ -62791,7 +62812,6 @@
     "koide_dweh_cyclic_compression_note_2026-04-18",
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
     "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-    "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
     "koide_hostile_review_guard_note_2026-04-24",
     "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
     "koide_kappa_two_orbit_dimension_factorization_note_2026-04-19",
@@ -63199,10 +63219,10 @@
       "open_gate": 112,
       "positive_theorem": 609
     },
-    "edge_count": 7806,
+    "edge_count": 7810,
     "leaf_count": 527,
     "node_count": 2012,
-    "root_count": 796,
+    "root_count": 795,
     "runners_with_path": 1621
   }
 }
