@@ -1704,6 +1704,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py"
     },
+    "charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10": {
+      "assert_count": 4,
+      "counts": {
+        "A": 16,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_charged_lepton_y_tau_ward_combined_no_go.py"
+    },
     "chiral_3plus1d_boundary_phase_note": {
       "assert_count": 0,
       "counts": {
@@ -23847,6 +23859,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_charged_lepton_y_tau_ward_combined_no_go.py": {
+      "assert_count": 4,
+      "claims": [
+        "charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 16,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_charged_lepton_z3_source_response_crosscheck.py": {
       "assert_count": 0,
       "claims": [
@@ -42969,14 +42996,14 @@
   "stats": {
     "decoration_candidates": 135,
     "dominant_class_distribution": {
-      "A": 24,
+      "A": 25,
       "B": 176,
       "C": 654,
       "D": 249,
       "none": 428
     },
-    "runners_classified": 1531,
+    "runners_classified": 1532,
     "runners_with_C": 792,
-    "runners_with_D": 411
+    "runners_with_D": 412
   }
 }

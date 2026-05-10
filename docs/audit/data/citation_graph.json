@@ -36106,6 +36106,17 @@
       "runner_path": null,
       "title": "`y_\u03c4` Identity Mechanism \u2014 Stuck Fan-Out"
     },
+    "charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10": {
+      "claim_id": "charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "2c25965e46e7104a893c6930a3ec8b5ff2755363c7c06f382496988a6092776e",
+      "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_COMBINED_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_charged_lepton_y_tau_ward_combined_no_go.py",
+      "title": "Charged-Lepton `y_\u03c4` Ward Identity Combined No-Go (2026-05-10)"
+    },
     "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28": {
       "claim_id": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
       "claim_type_author_hint": "open_gate",
@@ -64133,6 +64144,7 @@
     "charged_lepton_two_higgs_canonical_reduction_note",
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
     "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
+    "charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10",
     "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
     "chiral_3plus1d_boundary_phase_note",
     "chiral_3plus1d_coupled_coin_note",
@@ -64768,7 +64780,7 @@
       "decoration": 1,
       "meta": 29,
       "no_go": 15,
-      "none": 1651,
+      "none": 1652,
       "open_gate": 23,
       "positive_theorem": 90
     },
@@ -64776,15 +64788,15 @@
       "bounded_theorem": 713,
       "decoration": 1,
       "meta": 29,
-      "no_go": 123,
+      "no_go": 124,
       "none": 451,
       "open_gate": 113,
       "positive_theorem": 598
     },
     "edge_count": 8084,
-    "leaf_count": 530,
-    "node_count": 2028,
-    "root_count": 769,
-    "runners_with_path": 1643
+    "leaf_count": 531,
+    "node_count": 2029,
+    "root_count": 770,
+    "runners_with_path": 1644
   }
 }
