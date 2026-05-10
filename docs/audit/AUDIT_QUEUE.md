@@ -17,7 +17,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | unaudited | critical | 376 | 17.06 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_alpha_lm_geometric_mean_identity.py` |
 | 2 | `bell_inequality_derived_note` | bounded_theorem | unaudited | critical | 365 | 11.52 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bell_inequality.py` |
-| 3 | `lensing_deflection_note` | bounded_theorem | unaudited | critical | 345 | 9.94 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_deflection_h025_slope_fit_certificate.py` |
+| 3 | `lensing_deflection_note` | bounded_theorem | audit_in_progress | critical | 345 | 9.94 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_deflection_h025_slope_fit_certificate.py` |
 | 4 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | unaudited | critical | 345 | 9.94 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/poisson_self_gravity_loop_v3.py` |
 | 5 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | unaudited | critical | 344 | 11.43 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_gamma_orbit_selector_bridge.py` |
 | 6 | `newton_law_derived_note` | positive_theorem | unaudited | critical | 342 | 13.42 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_distance_law_definitive.py` |
