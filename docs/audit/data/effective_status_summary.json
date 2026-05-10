@@ -55,7 +55,7 @@
   "cycles_detected": 303,
   "effective_status_counts": {
     "audited_conditional": 229,
-    "audited_failed": 9,
+    "audited_failed": 10,
     "audited_numerical_match": 18,
     "audited_renaming": 17,
     "decoration_under_cl3_color_automorphism_theorem": 4,
@@ -68,7 +68,7 @@
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 68,
     "open_gate": 11,
-    "retained": 65,
+    "retained": 64,
     "retained_bounded": 227,
     "retained_no_go": 119,
     "unaudited": 1152

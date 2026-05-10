@@ -18,7 +18,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 65 |
+| **retained** | 64 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
@@ -27,7 +27,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 229 |
-| ~~audited_failed~~ | 9 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -39,11 +39,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
+| `audit_in_progress` | 1 |
 | `audited_clean` | 376 |
 | `audited_conditional` | 229 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
 | `unaudited` | 1220 |
@@ -111,7 +111,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -733,6 +732,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -1593,6 +1593,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing chiral-walk synthesis and its numerical table are not tied to a primary runner, parsed dependency edges, or explicit cited artifact logs in this row. Why this blocks: the audit can read the caveats, but cannot verify the overnight closure-card numbers, gauge checks, distance-law fits, or narrowed 3+1D basin claims from the restricted inputs. Repair target: register the chiral-walk synthesis runner or split the synthesis into explicit dependencies on the relevant audited closure-card, gauge, distance-law, convergence, and carrier-k rows, with current replay logs for the exact numbers quoted. Claim boundary until fixed: the note can serve as a bounded orientation summary and warning against universal 3+1D/chromaticity overclaiming, not as a clean audited synthesis of the chiral transport evidence.
 - **open / conditional deps cited:**
   - `chiral_walk_synthesis_2026-04-09 -> missing registered runner or explicit audited artifact dependencies for the quoted chiral-walk numerical table`
+- **auditor confidence:** high
+
+### `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`CIRCULANT_PARITY_CP_TENSOR_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CIRCULANT_PARITY_CP_TENSOR_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone 3x3 circulant parity identities and the sign of Im[(K_01)^2] for the stated S and P23 conventions.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-judicial-019e1297-2535-75b3-a7e0-cdbe0558ac35`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** So K_{01} = c_even + i c_odd. Hence Im[(K_{01})^2] = 2 c_even c_odd.  _(class `A`)_
+- **chain closes:** False — The source note states S e_k = e_{k+1 mod 3}, which under standard left matrix action on column basis vectors gives S_{01}=0 and (S^2)_{01}=1, hence K_{01}=c_even - i c_odd and Im[(K_{01})^2] = -2 c_even c_odd. The runner and proof use the opposite matrix orientation, so the advertised plus-sign CP-tensor formula is not closed as written even though the parity identities and vanishing/nonvanishing up to sign remain algebraic.
+- **rationale:** The source note states S e_k = e_{k+1 mod 3}, which under standard left matrix action on column basis vectors gives S_{01}=0 and (S^2)_{01}=1, hence K_{01}=c_even - i c_odd and Im[(K_{01})^2] = -2 c_even c_odd. The runner and proof use the opposite matrix orientation, so the advertised plus-sign CP-tensor formula is not closed as written even though the parity identities and vanishing/nonvanishing up to sign remain algebraic.
 - **auditor confidence:** high
 
 ### `circulant_response_master_identity_narrow_theorem_note_2026-05-02`
