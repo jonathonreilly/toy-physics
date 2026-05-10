@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1131 |
+| unaudited | 1130 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
 | ~~audited_conditional~~ | 218 |
-| ~~audited_failed~~ | 16 |
+| ~~audited_failed~~ | 17 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 383 |
 | `audited_conditional` | 218 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 60 |
+| `audited_failed` | 61 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1229 |
+| `unaudited` | 1228 |
 
 | claim_type | count |
 |---|---:|
@@ -723,6 +723,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wide_lattice_h2t_skeptic_audit_note` | decoration | ~~audited_decoration~~ | `decoration_under_wide_lattice_h2t_distance_law_note` | cross_family | codex-gpt-5.5 | B | `wide_lattice_h2t_distance_law_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | cross_family | codex-gpt-5.5 | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `asymmetry_persistence_collapse_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -1057,6 +1058,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The corrected Sorkin |I3|/P magnitudes in the table are reproducible from the registered runner at the narrow N=100, npl=60, 2 seeds, 4 realizations configuration.  _(class `B`)_
 - **chain closes:** False — The restricted packet has no one-hop cited authorities, while the runner relies on unprovided infrastructure for graph construction, persistence pruning, layernorm propagation, and collapse. The live stdout also times out before the load-bearing N=100 threshold rows, so the supplied packet does not certify the table.
 - **rationale:** Issue: the claimed finite Born-clean table depends on unlisted runner imports and a completed or cached narrow-run artifact that is not supplied in the restricted packet. Why this blocks: the source note's own table and prose cannot substitute for an audited dependency or completed reproducible runner output. Repair target: wire the needed infrastructure as direct audited dependencies or inline/supply their source, and provide a completed sliced N=100, npl=60, 2-seed, 4-realization runner log or certificate. Claim boundary until fixed: the note may be treated only as a density-limited attempted calibration, not a closed Born-clean result.
+- **auditor confidence:** high
+
+### `asymmetry_persistence_collapse_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_COLLAPSE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite computational sweep claim for dense generated 3D graphs at the stated N, thresholds, seeds, collapse probability, and normalization lanes, asserting unitary persistence benefit, no generic collapse rescue, and one narrow layernorm-assisted N=100 collapse pocket.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1300-e9d8-74b3-97f4-71752dd6c083`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note's load-bearing step is that the Strongest retained rows tables are deterministic stdout of the registered runner and that the narrow conclusion is supported directly by those rows.  _(class `C`)_
+- **chain closes:** False — The supplied runner source/stdout do not match the note's stated configuration or tables: the runner defaults/stdout use 12 realizations while the note states 10, and completed N=80 collapse entries already differ numerically. The asserted N=100 threshold 0.10 pocket is not present in the supplied stdout because the run timed out, and the imported generator/propagator infrastructure is not supplied as a one-hop authority.
+- **rationale:** Issue: the note's bounded tables are stale relative to the supplied runner source/stdout, and the runner depends on unlisted imported infrastructure for graph generation, propagation, layernorm, and pruning. Why this blocks: the conclusion depends on exact finite rows, especially the N=100 layernorm collapse pocket, but the current packet neither reproduces those rows nor supplies the imported closure authority. Repair target: align the runner/note configuration, provide a completed cached log or sliced deterministic runner for the stated sweep, and cite/audit the imported infrastructure. Claim boundary until fixed: the packet only supports partial qualitative observations from the completed N=80 stdout, not the full bounded claim.
 - **auditor confidence:** high
 
 ### `asymmetry_persistence_mass_window_note`
