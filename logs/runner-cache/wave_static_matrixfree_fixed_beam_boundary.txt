@@ -1,11 +1,42 @@
 ===== runner cache v1 =====
 runner: scripts/wave_static_matrixfree_fixed_beam_boundary.py
-runner_sha256: 163e1164f038bfbe44e819f6a50fec79344e708574f9ad2e7bc7e8d5b122490d
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: d4e8745aaeabf70d259e40c40d4c9e3dc9bff2d7e3cccbdb1819a8d715110958
+timeout_sec: 250
+exit_code: 0
+elapsed_sec: 165.32
+status: ok
 ----- stdout -----
+================================================================================================================
+WAVE STATIC MATRIX-FREE FIXED-BEAM BOUNDARY PROBE
+================================================================================================================
+Shared H = 0.250
+Frozen source z_phys = 3.000
+Fixed beam PW = 6.000
+Field PW values = 6.000, 9.000
+
+[run 1] field_PW_phys=6.000 -> field_PW=6.000
+  beam_PW=6.000  NL=60  src_layer=20  source_z_real=3.000
+  dM      = +0.005859
+  dS      = +0.015456
+  rel_MS  = 62.09%
+  matrix-free residual = 1.830e-10
+  matrix-free iters    = 115
+
+[run 2] field_PW_phys=9.000 -> field_PW=9.000
+  beam_PW=6.000  NL=60  src_layer=20  source_z_real=3.000
+  dM      = +0.005859
+  dS      = +0.019042
+  rel_MS  = 69.23%
+  matrix-free residual = 1.785e-10
+  matrix-free iters    = 175
+
+----------------------------------------------------------------------------------------------------------------
+FIELD-BOX MOVE
+----------------------------------------------------------------------------------------------------------------
+  dS move      = 18.83%
+  rel_MS move  = 10.31%
+  dM move      = 0.00%
+  Verdict: matrix-free fixed-beam boundary sensitivity is still material at this H.
 
 ----- stderr -----
 

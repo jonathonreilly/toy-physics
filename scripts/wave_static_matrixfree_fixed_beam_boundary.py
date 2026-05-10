@@ -21,6 +21,14 @@ comparator lane is very unlikely to be rescued by box refinement alone.
 
 from __future__ import annotations
 
+# Heavy compute / lattice-sweep runner — exceeds the 120s default audit
+# timeout. Measured wall-clock at 2026-05-10: ~166s on the canonical
+# Python 3.12 machine; declaring 250s here gives ~50% margin while
+# keeping the audit-cache budget bounded. Without this declaration the
+# audit lane caches an empty stdout under `status: timeout`, blocking
+# the audit verdict (the cited row was UNAUDITED on origin/main).
+AUDIT_TIMEOUT_SEC = 250
+
 import argparse
 import math
 from pathlib import Path
