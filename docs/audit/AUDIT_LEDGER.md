@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1098 |
+| unaudited | 1097 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 244 |
+| ~~audited_conditional~~ | 245 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 244 |
+| `audited_conditional` | 245 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1196 |
+| `unaudited` | 1195 |
 
 | claim_type | count |
 |---|---:|
@@ -594,6 +594,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `dm_pns_attack_cascade_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -3651,6 +3652,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the exact chamber root set, the upper-octant survivors have source-cubic signs I_src(Basin 1)>0 while I_src(Basin 2)<0 and I_src(Basin X)<0, so I_src(H)>0 selects Basin 1 uniquely.  _(class `B`)_
 - **chain closes:** False — The restricted packet provides no retained upstream authorities, while the proof relies on previously established chamber-threshold, chamber-completeness, and source-cubic parity-reduction theorems. The runner also imports boundary_distance, H_mat, pmns_for_permutation, and jarlskog_sin_dcp from unprovided modules and hard-codes the chamber-root coordinates.
 - **rationale:** The runner does perform nontrivial sign and PMNS checks, but it does so using hard-coded chamber roots and imported upstream machinery that is not included in the restricted packet. The note explicitly leans on prior chamber and parity-reduction theorems despite the cited-authorities section containing none. Therefore the selector is verified conditionally on those missing authorities and root data, not derived from the axiom in this audit packet.
+- **auditor confidence:** high
+
+### `dm_pns_attack_cascade_note_2026-04-19`
+
+- **Note:** [`DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md`](../../docs/DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional PNS sigma-chain claim: measurement inputs plus named upstream chamber, sigma, CP-phase, and P3 Sylvester results identify Basin 1 and prove nonsingularity on its linear path.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1369-8799-77d3-9777-8a41b05fb669`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Chamber + chi^2=0 + sigma=(2,1,0) + T2K sin(delta_CP)<0 imply J_phys = Basin 1 uniquely, and P3 Sylvester then gives det(H_base + t J_phys) > 0 for all t in [0,1].  _(class `B`)_
+- **chain closes:** False — The source note's conclusion depends on named upstream authorities for sigma-hier uniqueness, chamber validity, ABCC_CP_PHASE/T2K exclusion, and P3 Sylvester, but the restricted one-hop authority set is empty. The runner numerically checks hard-coded basins and scans, but it does not derive those upstream bridges or prove uniqueness from supplied inputs.
+- **rationale:** Issue: the load-bearing sigma-chain imports several named retained/on-main theorems and observational premises that are not present as one-hop dependencies. Why this blocks: with no cited authorities supplied, a hostile audit cannot verify the chamber, sigma uniqueness, T2K basin exclusion, or exact P3 Sylvester proof; the runner only performs finite hard-coded numerical consistency checks and its PASS count also disagrees with the note's PASS=47 claim. Repair target: add/audit the direct dependency edges for the named upstream theorems and fix the stale runner accounting. Claim boundary until fixed: the note supports only a conditional numerical consistency check of the stated basin data, not retained-grade PNS closure.
 - **auditor confidence:** high
 
 ### `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20`
