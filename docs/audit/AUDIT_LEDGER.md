@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 118 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1112 |
+| unaudited | 1111 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 248 |
+| ~~audited_conditional~~ | 249 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 377 |
-| `audited_conditional` | 248 |
+| `audited_conditional` | 249 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 22 |
-| `unaudited` | 1179 |
+| `unaudited` | 1178 |
 
 | claim_type | count |
 |---|---:|
@@ -83,7 +83,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 571 | 40.66 | `unaudited` | unaudited |
 | 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 799 | 39.14 | `audited_clean` | open_gate |
 | 4 | `graph_first_su3_integration_note` | bounded_theorem | critical | 788 | 38.12 | `audited_clean` | **retained_bounded** |
-| 5 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 659 | 37.87 | `unaudited` | unaudited |
+| 5 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 659 | 37.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `minimal_axioms_2026-04-11` | meta | critical | 709 | 33.97 | `unaudited` | meta |
 | 7 | `alpha_s_derived_note` | bounded_theorem | critical | 565 | 33.65 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 318 | 30.82 | `unaudited` | unaudited |
@@ -652,6 +652,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -6730,6 +6731,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The Born rule and attractive Newtonian gravity are both consequences of linear amplitude superposition, so nonlinear propagators that give I_3 != 0 also flip the gravitational force sign.  _(class `G`)_
 - **chain closes:** False — The runner demonstrates behavior for two selected nonlinear update rules on a chosen finite 2D lattice with chosen normalization and analytic 1/r phase prescription. It does not derive the broad theorem that amplitude nonlinearity generally determines the Born rule and attractive Newtonian gravity.
 - **rationale:** The numerical runner is not a first-principles derivation from the stated framework axiom; it is a toy simulation at chosen lattice sizes, propagation kernels, nonlinearities, normalizations, and field coupling. Its stdout also overstates the mass-law claim: beta remains near 1 for the nonlinear cases, while the asserted gravity failure is mainly the selected sign response. The source note’s universal conclusion does not follow from the restricted packet even if the reported runner values are accepted.
+- **auditor confidence:** high
+
+### `observable_principle_from_axiom_note`
+
+- **Note:** [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](../../docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional finite-block algebra for the Ls=2 APBC hierarchy block: assuming the scalar-observable selection premise and normalization/source conventions, log|det(D+J)| yields local source derivatives, the Matsubara curvature kernel, and the Lt=4 Klein-four selector; the v readout is out of scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1204-f3a6-73d0-b74b-94a4e86b88a3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given scalar additivity, CPT-even phase blindness, continuity/minimal regularity, and normalization, W must solve W(r1 r2)=W(r1)+W(r2), so W=log|det(D+J)| up to the stated convention.  _(class `A`)_
+- **chain closes:** False — The runner supports the finite algebra for the chosen candidate generator, but the physical selection of that generator still rests on an admitted scalar-additivity premise and an unproved normalization/source bridge. No one-hop authority is supplied to close those premises, and the claimed runner-local retirement of P2/P4 does not derive the physical phase-blind generator or multiplicative scale choice from retained inputs.
+- **rationale:** Issue: the exact log-det algebra is verified only after selecting the physical scalar generator by admitted additivity/CPT-even/regularity/normalization premises, with P1 still explicitly open and the multiplicative normalization c=1 conventional. Why this blocks: the restricted packet has no retained one-hop theorem deriving that physical observable bridge, and the runner mainly checks consistency of the chosen W rather than forcing the observable class from the axiom alone. Repair target: add a bridge theorem deriving scalar additivity and the normalization/source scale from retained primitives, or keep all downstream citations explicitly conditional on those premises. Claim boundary until fixed: the finite algebra for the selected log|det| generator on the runner block is supported; unconditional axiom-to-observable closure is not.
 - **auditor confidence:** high
 
 ### `oh_schur_boundary_action_note`
