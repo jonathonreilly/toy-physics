@@ -45925,6 +45925,17 @@
       "runner_path": "scripts/hard_geometry_local_support_pilot.py",
       "title": "Hard Geometry Local Support Note"
     },
+    "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10": {
+      "claim_id": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "2895b825126663d1165fddd9fdbdbd60bfcc14f5bad8663156149e5c348f2194",
+      "path": "docs/HIERARCHY_BBS_STAGGERED_TASTE_BLOCKING_BRIDGE_NARROW_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_narrow.py",
+      "title": "Hierarchy BBS Staggered Taste Blocking Bridge \u2014 Narrow No-Go"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "claim_id": "hierarchy_bosonic_bilinear_selector_note",
       "claim_type_author_hint": null,
@@ -66298,6 +66309,7 @@
     "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
+    "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
@@ -66719,7 +66731,7 @@
       "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
-      "no_go": 23,
+      "no_go": 24,
       "none": 1626,
       "open_gate": 29,
       "positive_theorem": 94
@@ -66728,15 +66740,15 @@
       "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
-      "no_go": 130,
+      "no_go": 131,
       "none": 449,
       "open_gate": 117,
       "positive_theorem": 594
     },
     "edge_count": 8352,
-    "leaf_count": 538,
-    "node_count": 2079,
-    "root_count": 770,
-    "runners_with_path": 1694
+    "leaf_count": 539,
+    "node_count": 2080,
+    "root_count": 771,
+    "runners_with_path": 1695
   }
 }
