@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1114 |
+| unaudited | 1113 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
 | ~~audited_conditional~~ | 231 |
-| ~~audited_failed~~ | 20 |
+| ~~audited_failed~~ | 21 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 389 |
 | `audited_conditional` | 231 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 64 |
+| `audited_failed` | 65 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1212 |
+| `unaudited` | 1211 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 792 |
+| `bounded_theorem` | 793 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 100 |
-| `positive_theorem` | 735 |
+| `positive_theorem` | 734 |
 
 | criticality | count |
 |---|---:|
@@ -748,6 +748,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `central_band_collapse_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_collapse_strength_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `central_band_dense_boundary_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_mass_window_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -1639,6 +1640,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** All of the `LN + |y| + collapse` rows remain Born-clean at machine precision, with lower `p` marginally cleaner than `p = 0.2`.  _(class `C`)_
 - **chain closes:** False — The supplied stdout confirms machine-precision PASS for the six LN+|y|+collapse rows, but the note's table and p-ordering are stale relative to that stdout. In particular, N=60 p=0.20 has the smallest mean in stdout, not a worse value than p=0.05 or p=0.10, and N=40 reports ok=4 rather than six matched seeds.
 - **rationale:** Issue: the source table and qualitative lower-p trend disagree with the supplied completed runner stdout. Why this blocks: this bounded theorem is a runner-backed calibration, so the exact row values, seed accounting, and p-ordering are load-bearing evidence. Repair target: regenerate the note from the current runner artifact, update the table and seed accounting, and narrow the interpretation to what the stdout actually supports. Claim boundary until fixed: the supplied stdout supports only that all six LN+|y|+collapse rows are below the 1e-10 machine-precision threshold.
+- **auditor confidence:** high
+
+### `central_band_dense_boundary_note`
+
+- **Note:** [`CENTRAL_BAND_DENSE_BOUNDARY_NOTE.md`](../../docs/CENTRAL_BAND_DENSE_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite computational boundary sweep for the dense central-band pocket at N = 80,100, npl = 60, y_cut = 2.0, and connect_radius = 2.8..3.4.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e133f-3008-77d2-aad7-9a1646d328fa`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The boundary is sharp rather than smoothly extendable" based on the tabulated finite sweep over N = 80, 100 and connect_radius = 2.8..3.4.  _(class `C`)_
+- **chain closes:** False — The current completed runner stdout does not match the source note's stated sample sizes or several load-bearing numerical rows. The missing step is a synchronized or pinned run artifact plus explicit boundary criteria for the claimed sharp rollover.
+- **rationale:** Issue: the note is stale relative to the supplied runner stdout, including seeds/realizations and key gravity/purity values at N=80 r=3.0,3.2,3.4 and N=100 r=3.2,3.4. Why this blocks: the claimed sharp boundary and Born-stability conclusions rest on those numerical rows, so the source note does not close from the current artifact. Repair target: update the note from the completed runner or attach the exact cached old run, and add quantitative pass/fail criteria for boundary sharpness. Claim boundary until fixed: the packet supports only that the current runner produced a small finite exploratory sweep with mixed and noisy behavior, not the stated numerical claim.
 - **auditor confidence:** high
 
 ### `central_band_dense_joint_note`
