@@ -43363,6 +43363,17 @@
       "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
       "title": "g_bare = 1 Dynamical Fixation Obstruction \u2014 Path 3 Scan"
     },
+    "g_bare_forced_by_ward_rep_b_independence_abstract_narrow_theorem_note_2026-05-10": {
+      "claim_id": "g_bare_forced_by_ward_rep_b_independence_abstract_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "c1327b62efd6decc89eb5309afa385316624d880744c4901c043672deb242359",
+      "path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_ABSTRACT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_g_bare_forced_by_ward_rep_b_abstract_narrow.py",
+      "title": "g_bare Forced by Ward Rep-B-Independence Abstract Narrow Theorem"
+    },
     "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09": {
       "claim_id": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09",
       "claim_type_author_hint": "bounded_theorem",
@@ -65885,6 +65896,7 @@
     "fourth_family_complex_boundary_note",
     "fourth_family_quadrant_note",
     "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
+    "g_bare_forced_by_ward_rep_b_independence_abstract_narrow_theorem_note_2026-05-10",
     "gap_physics_note",
     "gate_b_connectivity_tolerance_note",
     "gate_b_farfield_note",
@@ -66379,7 +66391,7 @@
       "no_go": 19,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 728,
@@ -66388,12 +66400,12 @@
       "no_go": 126,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8305,
-    "leaf_count": 535,
-    "node_count": 2070,
-    "root_count": 768,
-    "runners_with_path": 1685
+    "leaf_count": 536,
+    "node_count": 2071,
+    "root_count": 769,
+    "runners_with_path": 1686
   }
 }
