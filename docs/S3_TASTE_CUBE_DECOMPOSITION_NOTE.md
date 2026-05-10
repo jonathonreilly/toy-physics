@@ -1,16 +1,54 @@
 # S_3 Taste-Cube Decomposition Note
 
-**Date:** 2026-04-17
+**Date:** 2026-04-17 (audit-narrowing refresh: 2026-05-10)
 **Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
-**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)).
-**Status:** proposed_retained exact structural theorem on the full taste cube;
-audit pending
-**Script:** `scripts/frontier_s3_action_taste_cube_decomposition.py`
+**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md), `claim_type: open_gate`, `audit_status: audited_clean` as a meta-parent identity, not as a derivation closure).
+**Status:** bounded class-A representation-theoretic theorem on the eight-state
+taste cube `C^8 = (C^2)^{\otimes 3}` under tensor-position permutations.
+**Status authority:** independent audit lane only.
+**Script:** `scripts/frontier_s3_action_taste_cube_decomposition.py` (PASS=57)
 **Authority role:** canonical representation-theoretic theorem for
-axis-permutation symmetry on `C^8 = (C^2)^{\otimes 3}`; not a standalone
-physical-flavor theorem
+axis-permutation symmetry on `C^8 = (C^2)^{\otimes 3}`; **not** a standalone
+physical-flavor, generation, mass-hierarchy, or framework-carrier theorem.
 
-## Safe statement
+## Audit boundary
+
+This note proves a single class-A finite-group representation theorem:
+
+> Under tensor-position permutations of `S_3` on `C^8 = (C^2)^{\otimes 3}`,
+> the class character is `chi(e) = 8`, `chi(2-cycle) = 4`, `chi(3-cycle) = 2`,
+> giving `C^8 ~= 4 A_1 + 2 E` with no `A_2` summand.
+
+That statement is closed in-note from finite-group character theory and is
+verified by the runner (PASS=57) on the explicit `S_3` permutation matrices.
+
+The earlier framing in this note also identified the eight-state cube as the
+**framework's** taste cube and identified the `S_3` action as the **framework's**
+axis-permutation symmetry. That framework-carrier identification is **not**
+closed in this note. It depends on the staggered-Dirac realization derivation
+target, which is the canonical open gate
+[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md).
+This row's load-bearing claim is therefore narrowed to the abstract
+representation-theoretic theorem; the framework-carrier reading is recorded
+only as an admitted-context label, not as a load-bearing conclusion of this row.
+
+**Cited authorities (one-hop deps):**
+
+- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+  (`claim_type: open_gate`) — canonical parent for the framework-carrier
+  identification of `C^8 = (C^2)^{\otimes 3}` as the staggered-Dirac BZ-corner
+  taste cube. Cited but **not closed** by this note.
+- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) (meta) —
+  records that the staggered-Dirac realization is currently an open gate, not
+  an axiom; this note inherits that open status for any framework-carrier
+  reading.
+
+**Admitted-context literature input:** standard finite-group character theory
+for `S_3` (permutation-character formula `chi(pi) = |Fix(pi)|`, decomposition
+of the 3-point permutation representation as `A_1 + E`) — this is universal
+mathematics input, not framework-derived.
+
+## Safe statement (scope-bounded)
 
 Let `S_3` act on `C^8 = (C^2)^{\otimes 3}` by permuting tensor positions. Then:
 
@@ -25,12 +63,15 @@ Let `S_3` act on `C^8 = (C^2)^{\otimes 3}` by permuting tensor positions. Then:
 C^8 ~= 4 A_1 + 2 E
 ```
 
-and the sign irrep `A_2` does not occur
+and the sign irrep `A_2` does not occur.
 
-This is a full-cube structural theorem. It does not by itself prove any flavor
-or mass-hierarchy claim. Its safe retained-grade role is narrower: it fixes the
-exact `S_3` carrier content that later generation and flavor tools are allowed
-to use as an input.
+This is an abstract finite-dimensional representation-theoretic theorem. It
+does not by itself prove any flavor, generation, or mass-hierarchy claim,
+and it does not by itself identify `C^8` as the framework's taste cube.
+Its safe role is narrower: it fixes the exact abstract `S_3` carrier content
+on `C^8 = (C^2)^{\otimes 3}` that later framework tools — *conditional on the
+staggered-Dirac realization gate closing* — are allowed to import as an
+abstract structural input.
 
 ## Classical results applied
 
@@ -46,10 +87,13 @@ to use as an input.
 
 ## Why it matters on `main`
 
-This theorem sharpens the repo's axis-symmetry language into an exact
-representation statement. It supplies a canonical structural input for the
-retained three-generation lane and for future bounded flavor work built on the
-full taste cube rather than only on the retained `hw=1` triplet.
+This theorem sharpens an abstract `S_3`-on-`C^8` representation-theoretic
+identity into an exact bounded statement. It supplies an abstract structural
+input that the three-generation lane and future bounded flavor work *may
+import as an abstract input*, conditional on the framework-carrier
+identification (staggered-Dirac realization gate) closing.
+
+This row is not a physical-flavor closure on its own.
 
 ## Verification
 

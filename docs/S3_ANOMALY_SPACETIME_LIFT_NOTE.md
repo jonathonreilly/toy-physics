@@ -1,38 +1,90 @@
 # `S^3` + Anomaly-Forced Time: Axiom-First Spacetime Lift
 
-**Status:** open - kinematic route with missing dynamic theorem
-**Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
-**Purpose:** route-2 assessment from `FULL_GR_AXIOM_FIRST_PATHS_NOTE.md`
+**Status:** open route survey — kinematic background candidate with explicitly
+named missing dynamics theorem. **Not** a full-GR closure.
+**Date:** 2026-04-14 (audit-narrowing refresh: 2026-05-10)
+**Branch:** `codex/review-active`
+**Purpose:** route-2 assessment from
+[`FULL_GR_AXIOM_FIRST_PATHS_NOTE.md`](FULL_GR_AXIOM_FIRST_PATHS_NOTE.md)
+**Type:** open_gate (route-survey)
+**Status authority:** independent audit lane only.
+**Authority role:** identifies, but does not close, a candidate axiom-first
+GR-lift architecture. Names the missing dynamics-bridge primitive as the
+single open theorem target for this route.
 
-## Verdict
+## Audit boundary
 
-**Kinematically promising, dynamically blocked.**
+This note is an open-route survey. It does two things:
 
-The current atlas supports a clean axiom-first background candidate:
+1. **Records the kinematic background candidate** `PL S^3 x R` as the unique
+   target obtained by composing two existing upstream authorities:
+   - the `PL S^3` compactification family (cited; not closed in this note);
+   - the anomaly-forced time-direction theorem (cited; not closed in this
+     note).
+   The composition `PL S^3 x R` itself is a kinematic statement at the level
+   of background topology, not a dynamics derivation.
+2. **Names the missing dynamics bridge** as the single open theorem target
+   needed to lift this route to a full-GR closure. No such bridge is
+   constructed inside this note.
 
-- `S^3` topology is already closed as a retained `PL S^3` compactification
-- anomaly-forced time is already closed as an exact `d_t = 1` result
+Under the rubric, this row is therefore an `open_gate` route survey, not a
+positive- or bounded-theorem closure. It is **not** a GR closure on `main`
+and it does **not** propose retained or positive-theorem promotion.
 
-Together, these give the unique clean background candidate
+**Cited authorities (one-hop deps; cited but not closed in this note):**
 
-    PL S^3 x R
+- [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
+  (`claim_type: bounded_theorem`) — anomaly-forced single-time-direction
+  result. This note imports its `d_t = 1` conclusion as a kinematic input
+  to the background candidate.
+- [`S3_BOUNDARY_LINK_THEOREM_NOTE.md`](S3_BOUNDARY_LINK_THEOREM_NOTE.md)
+  (`claim_type: positive_theorem`, `audit_status: audited_conditional`) —
+  PL boundary-link disk theorem on `B_R`, supports the `PL S^3` compactification
+  family.
+- [`S3_CAP_UNIQUENESS_NOTE.md`](S3_CAP_UNIQUENESS_NOTE.md)
+  (`claim_type: bounded_theorem`, `audit_status: audited_conditional`) —
+  PL cap-uniqueness, supports the `PL S^3` compactification family.
 
-for a spacetime lift.
+**Admitted-context derivation gap (real, not import-redirect):**
 
-That is a real architecture. It is cleaner than the shell/tensor-boundary
-route in one sense: it starts from topology + chirality/time and tries to
-build the spacetime background first.
+This note explicitly admits there is no in-atlas theorem that turns the
+kinematic background `PL S^3 x R` into tensor/metric dynamics. The route is
+blocked by the absence of any one of:
 
-But the current atlas still does **not** contain an exact theorem that turns
-that background into the required tensor/metric dynamics. In particular:
+1. an exact spacetime-lift observable from the `S^3` + anomaly stack;
+2. an exact action whose Euler-Lagrange equations give the GR field law on
+   the lifted background;
+3. a uniqueness theorem saying the only compatible dynamical lift is the GR
+   one.
 
-- no exact `S^3`-to-curvature law is present
-- no exact anomaly-to-Einstein-field-equation derivation is present
-- no exact discrete variational action is present for this route
+This is a **real derivation gap**, not a dependency-citation issue. No
+retained, bounded, or proposed theorem on the current atlas closes any of
+(1)-(3) for this route.
 
-So route 2 is not a full-GR proof path yet. It is a clean kinematic path
-with a precise dynamical gap.
+## Verdict (scope-bounded)
+
+**Kinematically clean, dynamically unclosed.**
+
+The current atlas supports a clean axiom-first kinematic background candidate:
+
+- `S^3` topology is supported by the cited PL boundary-link / cap-uniqueness
+  theorems, which themselves are `audited_conditional` (not retained-grade);
+- anomaly-forced time is supported by the cited `ANOMALY_FORCES_TIME_THEOREM`
+  (bounded_theorem).
+
+Their composition gives the kinematic background candidate
+
+    PL S^3 x R.
+
+The atlas does **not** contain an exact theorem that turns that background
+into tensor/metric dynamics. In particular:
+
+- no exact `S^3`-to-curvature law is present;
+- no exact anomaly-to-Einstein-field-equation derivation is present;
+- no exact discrete variational action is present for this route.
+
+So route 2 is not a full-GR proof path yet. It is a clean kinematic
+background candidate with a precise, named, currently-open dynamics theorem.
 
 ## What the route would need
 
@@ -83,17 +135,24 @@ The current ranking still stands:
 
 ## Runner result
 
-The companion runner checks the route ingredients directly on `main`:
+This row has no registered runner. The route ingredients live on the cited
+upstream authorities and are individually audited there:
 
-- `S^3` compactification theorem is closed
-- anomaly-forced time theorem is exact
-- the atlas contains both as reusable tools
-- the atlas does not yet contain an exact dynamics bridge for this route
+- PL `S^3` compactification — cited from
+  [`S3_BOUNDARY_LINK_THEOREM_NOTE.md`](S3_BOUNDARY_LINK_THEOREM_NOTE.md) and
+  [`S3_CAP_UNIQUENESS_NOTE.md`](S3_CAP_UNIQUENESS_NOTE.md) (both
+  `audited_conditional`).
+- Anomaly-forced time — cited from
+  [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
+  (`bounded_theorem`).
+- The atlas does not yet contain an exact dynamics bridge for this route;
+  this is the sharp, currently-open blocker.
 
-That is the sharp blocker.
+This row claims **no** runner result of its own.
 
 ## Bottom line
 
-Route 2 is **not** a GR closure yet.
-It is a clean axiom-first **kinematic** route with a well-defined missing
-dynamic theorem.
+Route 2 is **not** a GR closure on `main`. It is a clean axiom-first
+**kinematic** background candidate with a precise, currently-open dynamics
+theorem. This row is `open_gate` and remains so until one of the named
+dynamics-bridge primitives is constructed and audited on a separate row.
