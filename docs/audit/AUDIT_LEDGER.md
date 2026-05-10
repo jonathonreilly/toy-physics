@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1101 |
+| unaudited | 1100 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 240 |
+| ~~audited_conditional~~ | 241 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 240 |
+| `audited_conditional` | 241 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1199 |
+| `unaudited` | 1198 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 804 |
+| `bounded_theorem` | 805 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 725 |
+| `positive_theorem` | 724 |
 
 | criticality | count |
 |---|---:|
@@ -561,6 +561,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dispersion_high_p_tiebreaker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
+| `dm_abcc_basin_finite_search_support_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -2819,6 +2820,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`
   - `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md`
   - `DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `dm_abcc_basin_finite_search_support_note_2026-04-30`
+
+- **Note:** [`DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md`](../../docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-search provenance note asserting that an archived A-BCC bounded scan recorded five named representatives and chamber/signature bookkeeping, with no exhaustion theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1364-1c2c-73e2-b282-f359c36095c1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The archived wrapper still records useful finite-search data, including a runner scan with 30 PASS stamps, five named chart representatives, Basin 2 as a bookkeeping correction, and the printed active-chamber classification.  _(class `B`)_
+- **chain closes:** False — The finite-search observations are imported from an archived wrapper or completed runner artifact that is not supplied as a one-hop authority. The current runner stdout contains only a timeout, which is not disproof, but leaves the claimed 30 PASS stamps and recovered representatives unverifiable in this restricted packet.
+- **rationale:** Issue: the note's load-bearing finite-search record depends on an archived wrapper/log outside the supplied dependency set, while the supplied runner did not complete. Why this blocks: with no cited authority and no completed stdout, the audit cannot verify the claimed PASS stamps, basin recovery, or chamber bookkeeping from the allowed inputs. Repair target: add the archived wrapper or a completed cached/sliced runner certificate as a direct dependency and re-audit the bounded finite-search observations. Claim boundary until fixed: conditional provenance for a finite scan only, not an audited bounded theorem or exhaustion result.
 - **auditor confidence:** high
 
 ### `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
