@@ -13524,6 +13524,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_4d_mc_support_2026_05_04.py"
     },
+    "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_plaquette_alpha_s_chain_audit_map_synthesis.py"
+    },
     "plaquette_bootstrap_framework_integration_note_2026-05-03": {
       "assert_count": 0,
       "counts": {
@@ -33508,6 +33520,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_plaquette_alpha_s_chain_audit_map_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_plaquette_bootstrap_framework_integration.py": {
       "assert_count": 0,
       "claims": [
@@ -43268,12 +43295,12 @@
     "dominant_class_distribution": {
       "A": 109,
       "B": 159,
-      "C": 639,
+      "C": 640,
       "D": 231,
       "none": 404
     },
-    "runners_classified": 1542,
-    "runners_with_C": 799,
+    "runners_classified": 1543,
+    "runners_with_C": 800,
     "runners_with_D": 419
   }
 }

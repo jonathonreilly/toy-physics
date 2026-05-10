@@ -16109,6 +16109,62 @@
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_perron_reduction_theorem_note"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note"
+    },
+    {
+      "from": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note"
+    },
+    {
       "from": "plaquette_bootstrap_framework_integration_note_2026-05-03",
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
@@ -52657,6 +52713,32 @@
       "runner_path": "scripts/frontier_su3_4d_mc_support_2026_05_04.py",
       "title": "Plaquette 3+1D Wilson MC Support Note"
     },
+    "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "claim_id": "plaquette_alpha_s_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "alpha_s_derived_note",
+        "plaquette_self_consistency_note",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "yukawa_color_projection_theorem",
+        "gauge_vacuum_plaquette_perron_reduction_theorem_note",
+        "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note"
+      ],
+      "note_hash": "875fae7d6c50e16ea65cbd0b94735250c2f9d0cfce28e468983abc500f606a6c",
+      "path": "docs/PLAQUETTE_ALPHA_S_CHAIN_AUDIT_MAP_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_plaquette_alpha_s_chain_audit_map_synthesis.py",
+      "title": "Plaquette / alpha_s Chain Audit Map Synthesis Meta Note"
+    },
     "plaquette_bootstrap_framework_integration_note_2026-05-03": {
       "claim_id": "plaquette_bootstrap_framework_integration_note_2026-05-03",
       "claim_type_author_hint": null,
@@ -65398,7 +65480,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 227,
       "decoration": 1,
-      "meta": 58,
+      "meta": 59,
       "no_go": 15,
       "none": 1629,
       "open_gate": 19,
@@ -65407,16 +65489,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 710,
       "decoration": 1,
-      "meta": 58,
+      "meta": 59,
       "no_go": 122,
       "none": 450,
       "open_gate": 107,
       "positive_theorem": 591
     },
-    "edge_count": 8184,
-    "leaf_count": 529,
-    "node_count": 2039,
+    "edge_count": 8198,
+    "leaf_count": 528,
+    "node_count": 2040,
     "root_count": 762,
-    "runners_with_path": 1654
+    "runners_with_path": 1655
   }
 }
