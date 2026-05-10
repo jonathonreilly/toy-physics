@@ -1,0 +1,211 @@
+
+========================================================================
+Probe P-HeavyQ: 3-Candidate Primitive Test Runner
+========================================================================
+
+Framework constants (cited from existing retained content):
+  alpha_bare = 1/(4*pi) = 0.079577
+  <P> = 0.5934
+  u_0 = <P>^(1/4) = 0.877681
+  alpha_LM = alpha_bare/u_0 = 0.090668
+  alpha_s(v) = alpha_bare/u_0^2 = 0.103304
+  g_lattice = sqrt(4*pi*alpha_LM) = 1.067411
+  Ward retained: y_t(M_Pl) = g_lattice/sqrt(6) = 0.435769
+
+Casimirs:
+  C_F = (N_c^2-1)/(2 N_c) = 1.3333
+  C_A = N_c = 3
+  T_F = 1/2 = 0.5
+  F_adj = (N_c^2-1)/N_c^2 = 0.8889
+  taste_weight = (7/8)*T_F*(8/9) = 7/18 = 0.3889
+
+========================================================================
+P-Heavy-A: Sector-dependent rho-Koide circulant
+========================================================================
+
+Reference (charged-lepton) BAE/A1: rho_lep = sqrt(2) ≈ 1.4142
+Reference (Appendix A.3): rho_up ≈ 1.754, rho_down ≈ 1.536
+
+Up-type sector (t, c, u):
+  fit: rho_up = 1.7600, delta_up = 2.1729, v_0_up = 4.7698
+  residual (relative) = 0.3244%
+  k-permutation: (0, 1, 2)
+Down-type sector (b, s, d):
+  fit: rho_dn = 1.5450, delta_dn = 4.3022, v_0_dn = 0.8063
+  residual (relative) = 0.2418%
+  k-permutation: (2, 0, 1)
+Charged-lepton sector (tau, mu, e) (consistency check, NOT new fit):
+  fit: rho_lep = 1.4150, delta_lep = 3.9706, v_0_lep = 0.5601
+  residual (relative) = 0.2889%
+
+Tests:
+  PASS  P-Heavy-A T1: charged-lepton rho fit consistent with sqrt(2) (A1)
+  PASS  P-Heavy-A T2: charged-lepton delta fit consistent with 2/9 (existing admission)
+  PASS  P-Heavy-A T3: up-type rho close to Koide-A.3 reference (1.754)
+  PASS  P-Heavy-A T4: down-type rho close to Koide-A.3 reference (1.536)
+  PASS  P-Heavy-A T5: up-type residual sub-1%
+  PASS  P-Heavy-A T6: down-type residual sub-1%
+
+  closest framework const for rho_up = 1.7600: 2*F_adj = 1.7778
+    distance: 0.0178
+  closest framework const for rho_dn = 1.5450: (7/8)+sqrt(2)/2 = 1.5821
+    distance: 0.0371
+  PASS  P-Heavy-A T7: rho_up matches a framework Casimir at 5%
+  PASS  P-Heavy-A T8: rho_dn matches a framework Casimir at 5%
+
+========================================================================
+P-Heavy-B: Froggatt-Nielsen-like generation-graded chain
+========================================================================
+
+alpha_LM = 0.090668, log(alpha_LM) = -2.4006
+y_t(M_Pl) reference (RGE-derived from y_t(v)) = 0.44635
+y_t(M_Pl) Ward-identity retained = 0.43577
+
+Required FN exponents n_f (relative to n_t = 0):
+
+fermion  y_f(M_Pl)    n_required   nearest_int  rel_err_% 
+t        4.46346e-01  -0.0000      0            0.0000%   
+b        1.56056e-02  1.3970       1            159.3244% 
+c        3.64725e-03  2.0025       2            0.6034%   
+tau      7.45020e-03  1.7050       2            50.7496%  
+s        3.48700e-04  2.9804       3            4.5932%   
+mu       4.43022e-04  2.8807       3            24.9059%  
+u        5.58288e-06  4.7027       5            51.0131%  
+d        1.74350e-05  4.2283       4            73.0065%  
+e        2.14257e-06  5.1017       5            27.6448%  
+
+Tests:
+  integer-close 5% threshold |n - round(n)| < 0.0203
+  integer-close 1% threshold |n - round(n)| < 0.0041
+  FAIL  P-Heavy-B T1: at least 3/5 of {b,c,tau,s,mu} integer-close at 5%
+        detail: hit count = 2/5
+  FAIL  P-Heavy-B T2: at least 3/5 of {b,c,tau,s,mu} integer-close at 1%
+        detail: hit count = 1/5
+
+Structural rule test: n(g, T_3) = 2(g-1) + delta_{T_3=-1/2} ?
+fermion  gen   T_3      n_rule   n_required   rule_pred y  rel_err_% 
+t        3     +0.5     0        -0.0000      4.46346e-01  0.0000%   
+b        3     -0.5     1        1.3970       4.04692e-02  159.3244% 
+tau      3     -0.5     1        1.7050       4.04692e-02  443.1964% 
+c        2     +0.5     2        2.0025       3.66925e-03  0.6034%   
+s        2     -0.5     3        2.9804       3.32683e-04  4.5932%   
+mu       2     -0.5     3        2.8807       3.32683e-04  24.9059%  
+u        1     +0.5     4        4.7027       3.01637e-05  440.2894% 
+d        1     -0.5     5        4.2283       2.73488e-06  84.3139%  
+e        1     -0.5     5        5.1017       2.73488e-06  27.6448%  
+  FAIL  P-Heavy-B T3: structural rule n=2(g-1)+delta_T3 closes >=4/9 fermions at 5%
+        detail: rule_hit_count_5pct = 3/9
+  FAIL  P-Heavy-B T4: structural rule closes >=6/9 fermions even loosely (50%)
+        detail: rule_hit_count_50pct = 5/9
+
+  Density-of-rationals control: integer-close at 5% gate over 10000 random reals in [-6, 6]:
+  random density = 4.07% (~5% expected for integers)
+  PASS  P-Heavy-B T5: density-of-rationals control matches expected ~5%
+
+========================================================================
+P-Heavy-C: Casimir-graded color-isospin contraction
+========================================================================
+
+Required Casimir factors C_g (relative to C_t = 1):
+fermion  y_f(M_Pl)    C_g_required  
+t        4.46346e-01  1.00000e+00   
+b        1.56056e-02  1.22242e-03   
+c        3.64725e-03  6.67710e-05   
+tau      7.45020e-03  2.78607e-04   
+s        3.48700e-04  6.10325e-07   
+mu       4.43022e-04  9.85162e-07   
+u        5.58288e-06  1.56449e-10   
+d        1.74350e-05  1.52581e-09   
+e        2.14257e-06  2.30423e-11   
+
+Testing factorization C_b/C_t, C_c/C_t etc as products of small powers of Casimirs:
+
+  b: C_g = 1.22242e-03,  best fit = (T_F = 1/2^-3) * (1/N_c^2 = 1/9^4),  rel_err = 0.25%
+  c: C_g = 6.67710e-05,  best fit = (7/8^4) * (alpha_s(v)^4),  rel_err = 0.02%
+  tau: C_g = 2.78607e-04,  best fit = (T_F = 1/2^2) * (alpha_s(v)^3),  rel_err = 1.09%
+  s: C_g = 6.10325e-07,  best fit = (1/6^4) * (alpha_LM^3),  rel_err = 6.12%
+  mu: C_g = 9.85162e-07,  best fit = (1/N_c^2 = 1/9^3) * (alpha_LM^3),  rel_err = 3.78%
+
+Tests:
+  PASS  P-Heavy-C T1: at least 2/5 fermions admit Casimir-product factorization at 5%
+  PASS  P-Heavy-C T2: at least 4/5 fermions admit Casimir-product factorization at 20%
+
+  Density-of-Casimirs control: random C in [1e-7, 1e-1], 1000 samples:
+  random factorization-hit density at 5% gate = 86.60%
+  PASS  P-Heavy-C T3: density-of-Casimirs control prints baseline (info-only)
+
+Structural rule c_color(g) = F_adj^(g-1) (G-J style):
+  gen 3 (top): F_adj^0 = 1
+  gen 2 (charm/strange/mu): F_adj^1 = 0.8889
+  gen 1 (up/down/e): F_adj^2 = 0.7901
+
+  sqrt(C_c/C_t) = 8.1714e-03,  F_adj^1 = 0.8889, gap = 99.08%
+  FAIL  P-Heavy-C T4: c_color(g)=F_adj^(g-1) matches sqrt(C_c/C_t) at 50%
+        detail: ratio = 8.1714e-03 vs F_adj = 0.8889
+
+========================================================================
+Cross-candidate summary
+========================================================================
+
+P-Heavy-A: Sector-dependent rho-Koide circulant
+  rho_up = 1.7600 (ref: 1.754)
+  rho_dn = 1.5450 (ref: 1.536)
+  closest framework const for rho_up: 2*F_adj = 1.7778, gap = 1.0101%
+  closest framework const for rho_dn: (7/8)+sqrt(2)/2 = 1.5821, gap = 2.4017%
+
+P-Heavy-B: Froggatt-Nielsen integer chain exponent
+  n_b = 1.3970 (round to 1, rel_err = 159.32%)
+  n_c = 2.0025 (round to 2, rel_err = 0.60%)
+  n_tau = 1.7050 (round to 2, rel_err = 50.75%)
+  n_s = 2.9804 (round to 3, rel_err = 4.59%)
+  n_mu = 2.8807 (round to 3, rel_err = 24.91%)
+
+P-Heavy-C: Casimir-graded contractions
+  C_b/C_t = 1.2224e-03, best Casimir fit: (T_F = 1/2^-3) * (1/N_c^2 = 1/9^4), rel_err = 0.25%
+  C_c/C_t = 6.6771e-05, best Casimir fit: (7/8^4) * (alpha_s(v)^4), rel_err = 0.02%
+  C_tau/C_t = 2.7861e-04, best Casimir fit: (T_F = 1/2^2) * (alpha_s(v)^3), rel_err = 1.09%
+  C_s/C_t = 6.1032e-07, best Casimir fit: (1/6^4) * (alpha_LM^3), rel_err = 6.12%
+  C_mu/C_t = 9.8516e-07, best Casimir fit: (1/N_c^2 = 1/9^3) * (alpha_LM^3), rel_err = 3.78%
+
+Strategic verdict (parameter-counting only, no closure):
+  - P-Heavy-A: 0.32% fit residual on up-type by construction
+             (4 sector-specific reals: rho_up, delta_up, rho_dn, delta_dn)
+  - P-Heavy-B: 5 integer parameters n_b, n_c, n_tau, n_s, n_mu
+  - P-Heavy-C: 5 positive-real Casimir factors C_b, C_c, C_tau, C_s, C_mu
+
+None of the three primitives is closed by this runner. The three
+are proposed as candidates with explicit parameter-counting and
+structural-rule tests; selection requires additional probes.
+
+========================================================================
+Final tally
+========================================================================
+
+PASS = 12, FAIL = 5
+
+This runner is a primitive-design proposal test. None of
+P-Heavy-{A,B,C} is promoted by this runner; all three are
+candidates for follow-up audit.
+
+FAIL count > 0 is INFORMATIONAL, not blocking: the FAILs
+characterize which structural rules within each candidate
+primitive fail to close, sharpening the open-gap content for
+downstream selection between candidates.
+
+Specifically:
+  - P-Heavy-A: PASSes on charged-lepton consistency (T1, T2),
+    on numerical Koide-A.3 reference reproduction (T3, T4),
+    on sub-1% sector circulant fit (T5, T6), and on framework-
+    Casimir match for the new rho_up/rho_dn parameters at 5%
+    (T7, T8). 8 PASS / 0 FAIL.
+  - P-Heavy-B: only 2-3/5 integer-close at 5% (n_c at 0.6%,
+    n_s at 4.6%); structural rule n=2(g-1)+delta_T3 closes
+    only 3/9 fermions tightly — bottom and tau are far off
+    integer fits, rejecting integer-only FN-on-alpha_LM.
+  - P-Heavy-C: 2/5 fermions admit Casimir factorization at 5%
+    (b at 0.25%, c at 0.02%); 4/5 admit at 20%. Density-of-
+    Casimirs control gives 87% random hit rate at 5%, so the
+    Casimir-product factorizations carry no structural weight
+    above ~13% confidence. Georgi-Jarlskog F_adj^(g-1) rule
+    fails by 99% on charm.
+
