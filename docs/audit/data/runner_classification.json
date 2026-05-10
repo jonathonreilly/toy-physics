@@ -18420,6 +18420,18 @@
       "dominant_class": "C",
       "runner": "scripts/universal_gr_positive_background_local_closure.py"
     },
+    "universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_universal_gr_so3_isotypic_orbit_flat_narrow.py"
+    },
     "universal_gr_supermetric_normal_form_note": {
       "assert_count": 1,
       "counts": {
@@ -37632,6 +37644,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_universal_gr_so3_isotypic_orbit_flat_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_universal_gr_supermetric_normal_form.py": {
       "assert_count": 1,
       "claims": [
@@ -43701,11 +43728,11 @@
       "A": 111,
       "B": 160,
       "C": 643,
-      "D": 238,
+      "D": 239,
       "none": 406
     },
-    "runners_classified": 1558,
-    "runners_with_C": 806,
-    "runners_with_D": 428
+    "runners_classified": 1559,
+    "runners_with_C": 807,
+    "runners_with_D": 429
   }
 }

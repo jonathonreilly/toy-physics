@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_so3_isotypic_orbit_flat_narrow.py
+runner_sha256: b13a8419e7aade2468e59580105b188a44d7e357607e02c5e17b607cacdebc2c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 92.24
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'SO(3) Isotypic Orbit-Flat Narrow Theorem on `Sym^2(R^4)`'  ()
+  [PASS (A)] contains: 'Claim type:** positive_theorem'  ()
+  [PASS (A)] contains: 'R = 1 ⊕ R_3'  ()
+  [PASS (A)] contains: "Pi_A1(h')"  ()
+  [PASS (A)] contains: "||Pi_perp(h')||^2_d"  ()
+  [PASS (A)] contains: 'MINIMAL_AXIOMS_2026-05-03'  ()
+  [PASS (A)] contains: 'class (A)'  ()
+  [PASS (A)] contains: 'isotropic spatial weight'  ()
+  [PASS (A)] contains: 'zero load-bearing dependencies'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'no-go for the universal GR route as a whole'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'the quadratic functional E is the physical Einstein-Hilbert action'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'closes the full universal-GR route'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: symbolic (T1) — Pi_A1 is pointwise SO(3)-invariant
+----------------------------------------------------------------------------------------
+  [PASS (A)] R3 is orthogonal (R3^T R3 = I) symbolically  (Z-Y-X Euler-angle parameterization)
+  [PASS (A)] det(R3) = 1 symbolically  (orientation preserving)
+  [PASS (A)] (T1) Pi_A1(R^T h R) - Pi_A1(h) ≡ 0 symbolically  (rank-2 SO(3)-trivial block is pointwise invariant)
+  [PASS (A)] tr(h_ij)' = tr(h_ij) symbolically (spatial trace invariant)  ()
+  [PASS (A)] h'_{00} = h_{00} symbolically (lapse invariant)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: symbolic (T2) — complement energy is orbit-flat
+----------------------------------------------------------------------------------------
+  [PASS (A)] ||h'||^2_d = ||h||^2_d symbolically (isotropic weight, total)  (spatial SO(3) preserves diagonal weight diag(1/d_0, 1/d_s, 1/d_s, 1/d_s))
+  [PASS (A)] ||Pi_A1(h')||^2_d = ||Pi_A1(h)||^2_d symbolically  ()
+  [PASS (A)] (T2) ||Pi_perp(h')||^2_d = ||Pi_perp(h)||^2_d symbolically  (orbit-flat under isotropic spatial weight)
+
+----------------------------------------------------------------------------------------
+Part 4: symbolic anisotropic control — premise is load-bearing
+----------------------------------------------------------------------------------------
+  [PASS (A)] anisotropic-control: concrete h has only h_13 = h_31 = 1  ()
+  [PASS (A)] anisotropic control: complement energy NOT invariant when d_1 ≠ d_3  (delta(d=(1,2,3,5)) = -0.09000000000)
+  [PASS (A)] anisotropic control: complement energy IS invariant when d_1 = d_2 = d_3  (confirms isotropy is the load-bearing premise)
+
+----------------------------------------------------------------------------------------
+Part 5: shift sector covariance and spatial-traceless mixing
+----------------------------------------------------------------------------------------
+  [PASS (A)] R_z(90°) is in SO(3) (orthogonal, det=+1)  ()
+  [PASS (A)] concrete witness: h_01=1 + R_z(90°) gives h'_01=0 and |h'_02|=1 (vector covariance)  (h'_01=0, h'_02=-1, h'_03=0)
+  [PASS (A)] concrete witness: complement energy preserved at shift example  (E(orig)=2/(d_0*d_s), E(rot)=2/(d_0*d_s), expected=2/(d_0*d_s))
+  [PASS (A)] concrete witness: shift example has expected energy 2/(d_0 d_s)  ()
+
+----------------------------------------------------------------------------------------
+Part 6: numerical (T1, T2, T3) on random samples
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T1) numerical: max |Pi_A1(h') - Pi_A1(h)| < 1e-12 over 200 samples  (observed max_A1_delta = 7.772e-16)
+  [PASS (A)] (T2) numerical: max |E_perp(h') - E_perp(h)| < 1e-12 over 200 samples  (observed max_perp_energy_delta = 1.776e-15)
+  [PASS (A)] total energy invariant: max |E(h') - E(h)| < 1e-12 over 200 samples  (observed max_total_energy_delta = 1.332e-15)
+  [PASS (A)] (T3) numerical: complement coordinates move on >50% of samples  (observed moved_count = 200/200, max_perp_coord_delta = 4.014e+00)
+
+----------------------------------------------------------------------------------------
+Part 7: corollary on quadratic energy class
+----------------------------------------------------------------------------------------
+  [PASS (A)] corollary: E_{α,β}[h'] = E_{α,β}[h] for 200 random (α, β, h, R)  (max |E_α,β delta| = 1.554e-15)
+
+----------------------------------------------------------------------------------------
+Part 8: context references exist
+----------------------------------------------------------------------------------------
+  [PASS (A)] MINIMAL_AXIOMS_2026-05-03.md exists  (framework baseline memo for physical Cl(3) local algebra and Z^3 spatial substrate)
+  [PASS (A)] baseline memo names the canonical Cl(3) and Z^3 framework  ()
+  [PASS (A)] cross-ref note exists: UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md  ()
+  [PASS (A)] cross-ref note exists: UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md  ()
+
+========================================================================================
+  TOTAL: PASS=36, FAIL=0
+========================================================================================
+
+----- stderr -----
+
