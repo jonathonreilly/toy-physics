@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 124 |
-| **retained_bounded** | 234 |
+| **retained_bounded** | 235 |
 | open_gate | 12 |
-| unaudited | 1095 |
+| unaudited | 1094 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 392 |
+| `audited_clean` | 393 |
 | `audited_conditional` | 246 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1193 |
+| `unaudited` | 1192 |
 
 | claim_type | count |
 |---|---:|
@@ -191,6 +191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electric_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electrostatics_card_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `electrostatics_superposition_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
+| `em_gravity_coexistence_2x2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `equivalence_principle_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `eta_188_structural_origin_partial_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -3865,6 +3866,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The provided runner constructs the lattice, sums source fields linearly, propagates a test charge, and computes centroid shifts rather than printing fixed expected constants. The audited conclusion is limited to this proxy harness and does not establish Maxwell theory or full electromagnetism.
 - **rationale:** The note's load-bearing claims are qualitative consequences of the completed runner output and the runner source shows actual computation of the tested cases. There are no cited upstream authorities to propagate, and no external comparator or calibrated input is used for the contested conclusion. The result is clean only at the explicitly narrow proxy scope: linear field summation inside the imported retained weak-field propagator harness.
 - **auditor confidence:** medium
+
+### `em_gravity_coexistence_2x2_note`
+
+- **Note:** [`EM_GRAVITY_COEXISTENCE_2X2_NOTE.md`](../../docs/EM_GRAVITY_COEXISTENCE_2X2_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the explicitly defined finite path-sum ray propagator with additive gravity and EM action terms, the 2x2 mixed residual and charge-sign cancellations vanish to floating-point tolerance.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1372-176a-7531-8f49-25b16dbf0418`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By linearity of action accumulation, S(Hg+Hem) = k(1-f) + qV and S(Hg) + S(Hem) - S(H0) = k(1-f) + qV, so R_GE = 0 exactly.  _(class `A`)_
+- **chain closes:** True — The four-cell action definitions are supplied in the note, and accumulated phase plus finite-difference deflection are linear operations, so the mixed residual cancels identically. No broader Hamiltonian, gauge, magnetic-sector, or backreaction coexistence claim is needed for this bounded scope.
+- **rationale:** The load-bearing claim is an algebraic closure inside the defined ray-sum model, and the runner computes the four cells before checking the mixed residual and charge-sign cancellations rather than importing an external target. The clean result is bounded to additive kinematic action accumulation only; the source note explicitly excludes dynamical wave-packet, gauge-invariant, magnetic-sector, and nonlinear/backreaction coexistence.
+- **auditor confidence:** high
 
 ### `emergent_geometry_growth_note_2026-04-10`
 
