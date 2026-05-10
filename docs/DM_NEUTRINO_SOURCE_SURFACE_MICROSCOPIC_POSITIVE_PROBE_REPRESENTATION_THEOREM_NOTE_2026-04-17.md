@@ -5,6 +5,22 @@
 microscopic positive-probe grammar; not flagship closure  
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py`
 
+## Inputs
+
+This note depends on:
+
+- [DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md)
+- [DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md)
+- [DM_SELECTOR_BRANCH_CONCLUSION_NOTE_2026-04-17.md](./DM_SELECTOR_BRANCH_CONCLUSION_NOTE_2026-04-17.md)
+
+These supply the intrinsic singlet-doublet slot structure on the source-
+oriented `H`-side bundle, the exact `N_e` charged source-response reduction
+that fixes `dW_e^H = Schur_Ee(D_-)` as the singleton microscopic response,
+the conditional Schur scalar-baseline lemma that pins the recovered-carrier
+soft-mode specialization, and the selector-branch conclusion that hosts the
+positive-probe grammar this representation theorem compresses.
+
 ## Question
 
 Can the positive-probe candidate stack be compressed into one cleaner

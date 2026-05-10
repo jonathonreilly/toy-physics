@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_endpoint_window_bundle_domin
 runner_sha256: 166033060f1a406985f3804fbbcddb0f742c6ecb0e25133dc38949a133e3bf7e
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 16.27
+elapsed_sec: 5.05
 status: ok
 ----- stdout -----
 ========================================================================================

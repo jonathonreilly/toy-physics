@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_r
 runner_sha256: ace13435235d1acb814d0c2026a75eacee1530d0f63a0fdf671317ecdcb38dc9
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 0.59
+elapsed_sec: 0.34
 status: ok
 ----- stdout -----
 ========================================================================================

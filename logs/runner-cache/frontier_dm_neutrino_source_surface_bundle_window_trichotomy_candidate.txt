@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_bundle_window_trichotomy_can
 runner_sha256: e567856b083af032c0a351987103d55766e462b9cd378537c6d96768d1dc5984
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 1.55
+elapsed_sec: 0.66
 status: ok
 ----- stdout -----
 ========================================================================================
