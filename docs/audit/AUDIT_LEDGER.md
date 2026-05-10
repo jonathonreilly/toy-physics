@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1137 |
+| unaudited | 1136 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 212 |
+| ~~audited_conditional~~ | 213 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 212 |
+| `audited_conditional` | 213 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1234 |
+| `unaudited` | 1233 |
 
 | claim_type | count |
 |---|---:|
@@ -563,6 +563,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3205,6 +3206,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The provided runner constructs the lattice, sums source fields linearly, propagates a test charge, and computes centroid shifts rather than printing fixed expected constants. The audited conclusion is limited to this proxy harness and does not establish Maxwell theory or full electromagnetism.
 - **rationale:** The note's load-bearing claims are qualitative consequences of the completed runner output and the runner source shows actual computation of the tested cases. There are no cited upstream authorities to propagate, and no external comparator or calibrated input is used for the contested conclusion. The result is clean only at the explicitly narrow proxy scope: linear field summation inside the imported retained weak-field propagator harness.
 - **auditor confidence:** medium
+
+### `emergent_geometry_growth_note_2026-04-10`
+
+- **Note:** [`EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md`](../../docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical graph-growth claim that matter-biased k=4 growth changes coarse shell-volume and density geometry relative to a matter-blind control, including claimed multi-seed G-sweep robustness.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12f0-dd6c-7b32-9bb3-f7121d07289b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The qualitative finding survives: the matter-coupled grown graph has a higher effective dimension and a denser peak shell than the uniform control, with hardened k=4 multi-seed G-sweep support claimed for robustness.  _(class `C`)_
+- **chain closes:** False — The supplied primary runner closes only a single-seed qualitative comparison and has no PASS-classified checks. The note's broader robustness and alternative-control claims rely on companion runners/caches that are named but not supplied in the restricted packet.
+- **rationale:** Issue: the note's retained-strength statements depend on unsupplied companion G-sweep, multi-seed, and alternative-control runner artifacts, while the supplied runner only shows one seed against a uniform-in-box control. Why this blocks: a hostile reviewer cannot verify seed robustness, the k=4 retained operating point, or that the geometry difference is isolated from control-design differences. Repair target: provide and audit the companion runner sources/stdout or split this into a narrow single-seed runner claim. Claim boundary until fixed: the supplied runner supports only that this seed and control produce a higher fitted d_eff and peak radial density for the matter-coupled case.
+- **auditor confidence:** high
 
 ### `emergent_product_law_note`
 
