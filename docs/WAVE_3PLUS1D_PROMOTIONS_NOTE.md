@@ -3,6 +3,26 @@
 **Date:** 2026-04-07
 **Status:** proposed_retained positive — strict (3+1)D lightcone certified to r=8 via delta pulse; retarded ≠ instantaneous on (3+1)D wave equation by 26–31% on three families
 
+**Audit-conditional perimeter (2026-04-26):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, `claim_type =
+positive_theorem`, and load-bearing step class `C`. The audit
+chain-closure explanation is exact: "The live runner reproduces the
+finite lightcone and M-vs-I tables, but the literal
+instantaneous/c=infinity interpretation does not close: the I branch
+is a stitched finite-time frozen c=1 wave-solve comparator, not a
+derived elliptic Poisson or c->infinity solution." The audit-stated
+repair target is exact: `runner_artifact_issue` — "replace the I
+branch with an actual layerwise elliptic/Poisson instantaneous
+solve, or prove and numerically bound convergence of the
+frozen-wave late-time slice to the c->infinity comparator; then add
+hard assertions for the lightcone and gap gates and audit the Lane
+8 radiation lane separately for the combined three-signature
+statement." This rigorization edit only sharpens the boundary of the
+conditional perimeter; nothing here promotes audit status. The
+strict (3+1)D lightcone result is independent of the I-branch
+comparator interpretation and is unaffected.
+
 ## Artifact chain
 
 - [`scripts/wave_3plus1d_promotions.py`](../scripts/wave_3plus1d_promotions.py)
@@ -91,3 +111,39 @@ artifact chain on the same operator.
 - Single source, no backreaction
 - The (3+1)D solver is pure-Python and slow (~30 s per full run);
   caching the static comparator per visited iz is the main optimization
+
+## Cited authority chain (2026-05-10)
+
+The active runner is
+[`scripts/wave_3plus1d_promotions.py`](../scripts/wave_3plus1d_promotions.py)
+(audit-lane runner cache: `status: ok`, elapsed ~26 s, exit 0,
+unmodified runner SHA pinned by the cache). The frozen output is
+[`logs/2026-04-07-wave-3plus1d-promotions.txt`](../logs/2026-04-07-wave-3plus1d-promotions.txt).
+The runner reproduces both retained tables verbatim:
+the strict-lightcone `first_dt = r` table out to r=8 (Section A) and
+the three-family Fam1/Fam2/Fam3 M-vs-I gap table (Section B,
+26.47%/30.44%/30.72%).
+
+The audit verdict makes a precise scope distinction that this note
+already mirrors but is now made explicit:
+
+- **Section A (strict lightcone)** is independent of the I-branch
+  comparator interpretation. The strict `first_dt = r` certification
+  to r=8 on the (3+1)D operator is closed by the runner alone.
+- **Section B (M-vs-I gap)** is the row the audit verdict flags. The
+  M branch is the standard retarded (3+1)D evolution; the I branch is
+  the layer-by-layer-stitched late-time frozen `c=1` wave-solve
+  comparator described in Section B above and in the runner. The
+  audit verdict's exact wording is that this stitched I branch is not
+  yet a derived elliptic/Poisson `c->infinity` solution. The retained
+  reading of Section B until the repair target lands is therefore:
+  the (3+1)D wave evolution disagrees with the layerwise stitched
+  late-time-frozen comparator by 26-31% across three grown families,
+  with sign opposite to the (2+1)D Lane 6 result.
+
+A future Section-B rigorization may either replace the I branch with
+a layerwise elliptic/Poisson solve or prove convergence of the
+frozen-wave late-time slice to the `c->infinity` limit with a
+runner-asserted bound; until that repair target lands, the
+combined three-signature statement (lightcone + retardation +
+radiation falloff) remains audit-conditional on the M-vs-I row.
