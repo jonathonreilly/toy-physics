@@ -276,3 +276,10 @@ Cycle 4 = stuck fan-out before any honest stop, per Deep Work
 Rules.
 
 A runner is not authored.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28](CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
+- [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)

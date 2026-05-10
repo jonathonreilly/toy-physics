@@ -141,3 +141,12 @@ are either supplied as cited authorities (each retained-grade) or replaced
 by a single self-contained restricted-packet derivation. Registering the
 runner here does not move that verdict; it only documents that the
 numerical invariant-family check is reproducible.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [s3_anomaly_spacetime_lift_note](S3_ANOMALY_SPACETIME_LIFT_NOTE.md)
+- [universal_gr_isotropic_glue_operator_note](UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
+- [discrete_einstein_regge_lift_note](DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md)

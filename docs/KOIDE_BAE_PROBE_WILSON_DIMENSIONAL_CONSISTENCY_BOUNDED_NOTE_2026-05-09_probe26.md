@@ -477,3 +477,14 @@ result does not depend on PDG / fitted / unaudited content.
 
 The audit lane derives any effective status after independent review. This source note does not set or recommend an effective status target.
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [complete_prediction_chain_2026_04_15](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07](STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md)
+- [koide_circulant_character_derivation_note_2026-04-18](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
+- [koide_circulant_wilson_target_note_2026-04-18](KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+- [koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6](KOIDE_A1_PROBE_OPERATOR_CLASS_BOUNDED_NOTE_2026-05-08_probe6.md)
+- [koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14](KOIDE_A1_PROBE_RETAINED_U1_HUNT_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe14.md)

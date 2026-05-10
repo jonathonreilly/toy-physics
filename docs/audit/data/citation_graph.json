@@ -3069,6 +3069,14 @@
       "to": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28"
     },
     {
+      "from": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
+      "to": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28"
+    },
+    {
+      "from": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
       "from": "chiral_walk_synthesis_2026-04-10_addendum",
       "to": "chiral_3plus1d_recurrence_note"
     },
@@ -11537,6 +11545,30 @@
       "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
     },
     {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "koide_circulant_wilson_target_note_2026-04-18"
+    },
+    {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6"
+    },
+    {
+      "from": "koide_bae_probe_wilson_dimensional_consistency_bounded_note_2026-05-09_probe26",
+      "to": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
+    },
+    {
       "from": "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
       "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
     },
@@ -14019,6 +14051,14 @@
     {
       "from": "neutrino_mass_reduction_to_dirac_note",
       "to": "charged_lepton_two_higgs_canonical_reduction_note"
+    },
+    {
+      "from": "neutrino_mass_reduction_to_dirac_note",
+      "to": "publication.ci3_z3.derivation_atlas"
+    },
+    {
+      "from": "neutrino_mass_reduction_to_dirac_note",
+      "to": "publication.ci3_z3.publication_matrix"
     },
     {
       "from": "neutrino_retained_lanes_review_packet_2026-04-16",
@@ -16877,6 +16917,14 @@
       "to": "tensor_source_map_eta_note"
     },
     {
+      "from": "sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09",
+      "to": "second_grown_family_sign_note"
+    },
+    {
+      "from": "sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09",
+      "to": "sign_portability_invariant_note"
+    },
+    {
       "from": "sign_portability_invariant_note",
       "to": "sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09"
     },
@@ -18323,6 +18371,22 @@
     {
       "from": "universal_gr_discrete_global_closure_note",
       "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "universal_gr_invariant_nonlinear_completion_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "universal_gr_invariant_nonlinear_completion_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
+      "from": "universal_gr_invariant_nonlinear_completion_note",
+      "to": "universal_gr_isotropic_glue_operator_note"
+    },
+    {
+      "from": "universal_gr_invariant_nonlinear_completion_note",
+      "to": "discrete_einstein_regge_lift_note"
     },
     {
       "from": "universal_gr_lorentzian_signature_extension_note",
@@ -34817,8 +34881,11 @@
       "claim_type_author_hint": "open_gate",
       "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "e93096324f70505d0da7a5cca1ede7bef2fd550c722a928ea69443e69bb099e3",
+      "deps": [
+        "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+        "yt_ward_identity_derivation_theorem"
+      ],
+      "note_hash": "45996e10a1d1418fe10d172a18076fb3beaaa4f5285b55d78364c631c376fa48",
       "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "`y_\u03c4` Ward Identity from `U(1)_Y` Anchor \u2014 Stretch Attempt (SA-B)"
@@ -44987,9 +45054,15 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "complete_prediction_chain_2026_04_15",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_circulant_wilson_target_note_2026-04-18",
+        "koide_a1_probe_operator_class_bounded_note_2026-05-08_probe6",
+        "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14"
       ],
-      "note_hash": "43a638f77eba5f17beba553e2f5aafc472f95037ccf8a2d358172cd401977113",
+      "note_hash": "a8a173e721e9ac1719a6671918ea9e320c9ef2c3f6e7f237207ea4a43d2d1b11",
       "path": "docs/KOIDE_BAE_PROBE_WILSON_DIMENSIONAL_CONSISTENCY_BOUNDED_NOTE_2026-05-09_probe26.md",
       "runner_path": "scripts/cl3_koide_bae_probe_wilson_dimensional_consistency_2026_05_09_probe26.py",
       "title": "Koide BAE Probe 26 \u2014 Wilson-Chain Dimensional Consistency Bounded Obstruction"
@@ -49270,9 +49343,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "charged_lepton_two_higgs_canonical_reduction_note"
+        "charged_lepton_two_higgs_canonical_reduction_note",
+        "publication.ci3_z3.derivation_atlas",
+        "publication.ci3_z3.publication_matrix"
       ],
-      "note_hash": "84bb8a9024f86858f7b1a9bd37c45bdee0fa1db9018b76faef214c6c8254048d",
+      "note_hash": "513e40b8aaa7c32689adf8bebd2b669355bcd35ab3de7b77a962b0865c41036a",
       "path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
       "title": "Neutrino Mass Reduction To The Dirac Lane"
@@ -55664,8 +55739,11 @@
       "claim_type_author_hint": "bounded_theorem",
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "ce3823eac47f28f1fd16c39ae3f9fe7565dc67fe3d2545f2b66c891080d2b5e0",
+      "deps": [
+        "second_grown_family_sign_note",
+        "sign_portability_invariant_note"
+      ],
+      "note_hash": "e649024ef33ca5331aa8eebb57d4d5b75aedbc7f0e5ef7386a8b22c1a50943b1",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md",
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "title": "Sign Portability Invariant: First-Principles Derivation Within the Second Grown Family"
@@ -58850,8 +58928,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "de3da83bf7916cb4cc5a49dd753716982b9559474ce3135edd03af11ccdec81a",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "s3_anomaly_spacetime_lift_note",
+        "universal_gr_isotropic_glue_operator_note",
+        "discrete_einstein_regge_lift_note"
+      ],
+      "note_hash": "ed38374d0abb90220f20f4b149c10310060c352e0be092ab9c36c9ac7fce33c0",
       "path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
       "runner_path": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py",
       "title": "Universal GR Invariant Nonlinear Completion on `PL S^3 x R`"
@@ -62340,7 +62423,6 @@
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
     "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
     "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
-    "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
     "chiral_3plus1d_boundary_phase_note",
     "chiral_3plus1d_coupled_coin_note",
     "chiral_3plus1d_mixing_period_note",
@@ -62809,7 +62891,6 @@
     "seventh_family_diagonal_note",
     "shapiro_static_discriminator_note",
     "sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28",
-    "sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09",
     "signed_gravity_response_lane_status_note_2026-04-26",
     "single_axiom_hilbert_note",
     "single_axiom_information_note",
@@ -62920,7 +63001,6 @@
     "universal_gr_canonical_projector_connection_note",
     "universal_gr_complement_canonical_note",
     "universal_gr_invariant_frame_obstruction_note",
-    "universal_gr_invariant_nonlinear_completion_note",
     "universal_gr_isotropic_glue_operator_note",
     "universal_gr_isotropic_schur_localization_note",
     "universal_gr_lambda_bypass_note",
@@ -63017,10 +63097,10 @@
       "open_gate": 112,
       "positive_theorem": 609
     },
-    "edge_count": 7772,
-    "leaf_count": 531,
+    "edge_count": 7788,
+    "leaf_count": 530,
     "node_count": 2011,
-    "root_count": 799,
+    "root_count": 796,
     "runners_with_path": 1620
   }
 }

@@ -352,3 +352,10 @@ The leading-order proofs above predict that G3 and G4 residuals scale
 as `eps` and `eps`, so a stricter tolerance can be obtained by reducing
 `SOURCE_STRENGTH`. The runner exposes that scaling check as an optional
 diagnostic but does not change the bounded-theorem claim.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [second_grown_family_sign_note](SECOND_GROWN_FAMILY_SIGN_NOTE.md)
+- [sign_portability_invariant_note](SIGN_PORTABILITY_INVARIANT_NOTE.md)
