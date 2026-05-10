@@ -535,10 +535,58 @@ surface were not visible from `(N1)`-`(N9)` alone.
   currently available; the deviation `R̄ - 1/2 ≈ 3 × 10⁻⁵` is below
   current sensitivity but a theoretical target.
 
+## Exact-symbolic verification
+
+The algebraic-substitution content of `(C1)`-`(C4)` and `(C7)` is
+certified at exact-symbolic precision via `sympy` in
+`scripts/audit_companion_ckm_barred_circumradius_exact_closed_form_exact.py`.
+The companion runner treats `alpha_s(v)` as a free positive real symbol,
+imports the upstream retained inputs `(N1)`, `(N2)`, `(N3)`, `(N4)`,
+`(N5)`, `(N6)` verbatim, and checks each identity by computing
+`sympy.simplify(lhs - rhs)` and asserting the residual equals `0`
+exactly. The cited inputs themselves (`rho_bar = (4-alpha_s)/24`,
+`eta_bar = sqrt(5)(4-alpha_s)/24`, `R_b_bar^2 = (4-alpha_s)^2/96`,
+`tan(gamma_bar) = sqrt(5)`, `tan(beta_bar) = sqrt(5)(4-alpha_s)/(20+alpha_s)`,
+and the angle-sum `(N6)`) are imported from upstream authority notes
+and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `tan(alpha_bar)` | `tan(alpha_bar) == -4 sqrt(5)/alpha_s` (from N5, N4, N6) | `sympy.simplify` residual `= 0` |
+| `sin^2(alpha_bar)` | `sin^2(alpha_bar) == 80/(80 + alpha_s^2)` | `sympy.simplify` residual `= 0` |
+| `cos^2(alpha_bar)` | `cos^2(alpha_bar) == alpha_s^2/(80 + alpha_s^2)` | `sympy.simplify` residual `= 0` |
+| `(C1)` | `R_bar^2 == 1/4 + alpha_s^2/320` | `sympy.simplify` residual `= 0` |
+| `(C1)` structural | `R_bar^2 == 1/N_pair^2 + alpha_s^2/[N_pair^6 (N_quark-1)]` at `(2,6)` | `sympy.simplify` residual `= 0` |
+| `(C1)` polynomial | `R_bar^2` is degree-2 in `alpha_s` (no `alpha_s^3+`) | `sympy.Poly(...).degree() == 2` |
+| `(C2)` | `[(1/2) sqrt(1 + alpha_s^2/80)]^2 == R_bar^2` | `sympy.simplify` residual `= 0` |
+| `(C3)` `x_cc` | `x_cc == 1/N_pair == 1/2` (alpha_s-independent) | exact rational |
+| `(C3)` `y_cc` | `y_cc == (R_b_bar^2 - rho_bar)/(2 eta_bar) == -alpha_s sqrt(5)/40` | `sympy.simplify` residual `= 0` |
+| `(C3)` structural | `y_cc == -alpha_s/[N_pair^3 sqrt(N_quark-1)]` at `(2,6)` | `sympy.simplify` residual `= 0` |
+| `(C4)` | `R_bar^2 == x_cc^2 + y_cc^2` (Pythagorean) | `sympy.simplify` residual `= 0` |
+| `(C7)` | `R_bar cos(alpha_bar) == y_cc` (signed chord-distance) | `sympy.simplify` residual `= 0` |
+| chord length | `[2 R_bar sin(alpha_bar)]^2 == 1` (unit base) | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes confirm the load-bearing role of the retained
+inputs:
+
+- dropping the `(4 - alpha_s)` factor from `eta_bar` breaks the linear
+  cancellation that gives `y_cc = -alpha_s sqrt(5)/40`;
+- replacing `tan(gamma_bar) = sqrt(5)` with `1` (no protection) breaks
+  the cancellation that gives `tan(alpha_bar) = -4 sqrt(5)/alpha_s` as
+  a single-monomial closed form.
+
+The structural relations are therefore exact-symbolic over the retained
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section of the companion runner, which is not load-bearing
+for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_barred_circumradius_exact_closed_form.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_barred_circumradius_exact_closed_form_exact.py
 ```
 
 Expected result:

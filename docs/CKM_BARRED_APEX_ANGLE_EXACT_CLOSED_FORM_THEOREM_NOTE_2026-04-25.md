@@ -500,10 +500,58 @@ protected-γ̄ surface that were not visible from `(N7)` alone.
   series is currently below experimental sensitivity (it is
   `~3 × 10⁻⁵ degrees`).
 
+## Exact-symbolic verification
+
+The algebraic-substitution content of `(A1)`-`(A11)` is certified at
+exact-symbolic precision via `sympy` in
+`scripts/audit_companion_ckm_barred_apex_angle_exact_closed_form_exact.py`.
+The companion runner treats `alpha_s(v)` as a free positive real symbol,
+imports the upstream retained tangents `tan(beta_bar) = sqrt(5)(4-alpha_s)/(20+alpha_s)`
+and `tan(gamma_bar) = sqrt(5)` and the angle sum `(N6)` verbatim, and
+checks each closed-form identity by computing
+`sympy.simplify(lhs - rhs)` and asserting the residual equals `0`
+exactly. The cited inputs themselves (retained `(N4)`, `(N5)`, `(N6)`,
+`(N1)`, `(N2)`, structural counts `N_pair = 2`, `N_quark = 6`) are
+imported from upstream authority notes and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `(A1)` | `tan(alpha_bar) == -4 sqrt(5)/alpha_s` (from N5, N4, N6) | `sympy.simplify` residual `= 0` |
+| `(A1)` numerator | `tan(beta_bar) + tan(gamma_bar) == 24 sqrt(5)/(20 + alpha_s)` | `sympy.simplify` residual `= 0` |
+| `(A1)` denominator | `1 - tan(beta_bar) tan(gamma_bar) == 6 alpha_s/(20 + alpha_s)` | `sympy.simplify` residual `= 0` |
+| `(A2)` | `cot(alpha_bar) == -(sqrt(5)/20) alpha_s` | `sympy.simplify` residual `= 0` |
+| `(A3)` | `tan(alpha_bar - pi/2) == +(sqrt(5)/20) alpha_s` | `sympy.simplify` residual `= 0` |
+| `(A5)` | `sin^2(alpha_bar) == 80/(80 + alpha_s^2)` | `sympy.simplify` residual `= 0` |
+| `(A6)` | `cos^2(alpha_bar) == alpha_s^2/(80 + alpha_s^2)` | `sympy.simplify` residual `= 0` |
+| `(A7)` | `sin(2 alpha_bar) == -8 sqrt(5) alpha_s/(80 + alpha_s^2)` | `sympy.simplify` residual `= 0` |
+| `(A8)` | `cos(2 alpha_bar) == -(80 - alpha_s^2)/(80 + alpha_s^2)` | `sympy.simplify` residual `= 0` |
+| `(A9)` | `80 + alpha_s^2 == 96 R_t_bar^2` | `sympy.simplify` residual `= 0` |
+| `(A10)` even coeffs | `[alpha_s^0, alpha_s^2, alpha_s^4, alpha_s^6, alpha_s^8]` of `(alpha_bar - pi/2)` Taylor are `0` | `sympy.series` + coefficient extraction `= 0` |
+| `(A10)` linear | linear coefficient is `sqrt(5)/20` (matches retained `N7`) | `sympy.simplify` residual `= 0` |
+| `(A10)` cubic | cubic coefficient is `-5 sqrt(5)/24000 = -(sqrt(5)/20)^3 / 3` | `sympy.simplify` residual `= 0` |
+| `(A11)` | `tan(alpha_bar) == -N_pair^2 sqrt(N_quark - 1)/alpha_s` at `(2, 6)` | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes confirm the load-bearing role of the retained
+inputs:
+
+- replacing `tan(gamma_bar) = sqrt(5)` with `1` (no protection) breaks
+  the `(20 + alpha_s)` cancellation that gives the single-monomial
+  `(A1)` form;
+- dropping the `(20 + alpha_s)` denominator from `tan(beta_bar)` (i.e.
+  treating it as `sqrt(5)(4 - alpha_s)`) likewise breaks `(A1)`.
+
+The structural relations are therefore exact-symbolic over the retained
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section of the companion runner, which is not load-bearing
+for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_barred_apex_angle_exact_closed_form.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_barred_apex_angle_exact_closed_form_exact.py
 ```
 
 Expected result:
