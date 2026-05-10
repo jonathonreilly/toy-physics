@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_naive_lattice_fermion_two_power_d_species_count_narrow.py
+runner_sha256: 1888430bec5fe705b4c497eff1e9ed4da313cc31cdeb0c357e7182cddcd3e5fb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+# Naive lattice fermion 2^d species-count runner
+# Source note: docs/NAIVE_LATTICE_FERMION_TWO_POWER_D_SPECIES_COUNT_NARROW_THEOREM_NOTE_2026-05-10.md
+
+==============================================================================
+T1: d=4 naive Brillouin-zone corners
+==============================================================================
+  [PASS] all 16 corners {0, pi}^4 are zeros of sum_mu sin^2(k_mu a)
+         zero corners=16/16
+
+==============================================================================
+T2: 2^d corner counts
+==============================================================================
+  [PASS] corner count equals 2^d for d=1..6
+         counts={1: 2, 2: 4, 3: 8, 4: 16, 5: 32, 6: 64}
+
+==============================================================================
+T3: gamma algebra zero condition
+==============================================================================
+  [PASS] sum_mu sin^2(k_mu a) vanishes at corners and not at non-corner samples
+         corner zeros=16, non-corner nonzeros=3
+
+==============================================================================
+T4: d=4 species count
+==============================================================================
+  [PASS] 2^4 equals 16
+         d=4 naive count=16
+
+==============================================================================
+T5: Wilson regulator context
+==============================================================================
+  [PASS] Wilson term leaves one corner and lifts 15 naive doublers at d=4
+         unlifted=1, lifted=15
+
+==============================================================================
+T6: staggered regulator context
+==============================================================================
+  [PASS] Kogut-Susskind count identity 2^d = 2^(d/2) * 2^(d/2) at even d
+         rows={2: (4, 2, 2), 4: (16, 4, 4), 6: (64, 8, 8)}
+
+==============================================================================
+T7: regulator dependence disclosure
+==============================================================================
+  [PASS] non-naive regulators are explicitly different from the naive 16 count
+         regulator_counts={'naive_d4': 16, 'wilson': 1, 'twisted_mass': 2, 'domain_wall': 1, 'overlap': 1, 'staggered_d4': 4}
+
+==============================================================================
+T8: source-note boundary
+==============================================================================
+  [PASS] source note declares positive_theorem and avoids bridge overclaims
+         claim type present; overclaim phrases absent
+
+=== TOTAL: PASS=8, FAIL=0 ===
+
+----- stderr -----
+

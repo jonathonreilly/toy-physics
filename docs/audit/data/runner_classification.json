@@ -12288,6 +12288,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_n_f_v3_normalization_check_2026_05_07_w2norm.py"
     },
+    "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_naive_lattice_fermion_two_power_d_species_count_narrow.py"
+    },
     "native_gauge_closure_note": {
       "assert_count": 2,
       "counts": {
@@ -33210,6 +33222,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_naive_lattice_fermion_two_power_d_species_count_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py": {
       "assert_count": 1,
       "claims": [
@@ -44317,15 +44344,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 162,
+    "decoration_candidates": 163,
     "dominant_class_distribution": {
       "A": 112,
-      "B": 161,
+      "B": 162,
       "C": 652,
       "D": 250,
       "none": 406
     },
-    "runners_classified": 1581,
+    "runners_classified": 1582,
     "runners_with_C": 817,
     "runners_with_D": 445
   }

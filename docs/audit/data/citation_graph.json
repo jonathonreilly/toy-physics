@@ -51489,6 +51489,17 @@
       "runner_path": "scripts/cl3_n_f_v3_normalization_check_2026_05_07_w2norm.py",
       "title": "N_F = 1/2 V_3 Normalization \u2014 Bounded Theorem"
     },
+    "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10": {
+      "claim_id": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "c6e5764f245539c5f1a1beb5689bdb4e714c052716491731d1f1f70e05b3c4b6",
+      "path": "docs/NAIVE_LATTICE_FERMION_TWO_POWER_D_SPECIES_COUNT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_naive_lattice_fermion_two_power_d_species_count_narrow.py",
+      "title": "Naive Lattice Fermion 2^d Species Count \u2014 Narrow Theorem"
+    },
     "native_gauge_closure_note": {
       "claim_id": "native_gauge_closure_note",
       "claim_type_author_hint": null,
@@ -66406,6 +66417,7 @@
     "moonshot_top20_frontiers",
     "moving_source_retarded_portability_note",
     "multipole_tidal_response_note",
+    "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10",
     "nature_discovery_directions_2026-04-11",
     "nature_ranked_directions_2026-04-11",
     "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28",
@@ -66710,7 +66722,7 @@
       "no_go": 23,
       "none": 1626,
       "open_gate": 29,
-      "positive_theorem": 93
+      "positive_theorem": 94
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66719,12 +66731,12 @@
       "no_go": 130,
       "none": 449,
       "open_gate": 117,
-      "positive_theorem": 593
+      "positive_theorem": 594
     },
     "edge_count": 8352,
-    "leaf_count": 537,
-    "node_count": 2078,
-    "root_count": 769,
-    "runners_with_path": 1693
+    "leaf_count": 538,
+    "node_count": 2079,
+    "root_count": 770,
+    "runners_with_path": 1694
   }
 }
