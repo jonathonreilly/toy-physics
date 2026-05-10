@@ -8685,6 +8685,10 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+    },
+    {
       "from": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
       "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
     },
@@ -44614,6 +44618,19 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
       "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem"
     },
+    "gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10": {
+      "claim_id": "gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "note_hash": "d99cf678a0084716136fa60e8e0aba6ce986d05d8fe3943831de69c861e22f8f",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_FINITE_BOX_BOUNDED_COEFFICIENT_NARROW_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow.py",
+      "title": "Gauge-Vacuum Plaquette Residual-Environment Finite-Box Bounded-Coefficient Narrow Note"
+    },
     "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
       "claim_type_author_hint": "open_gate",
@@ -66395,7 +66412,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 246,
+      "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
       "no_go": 20,
@@ -66404,7 +66421,7 @@
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 728,
+      "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
       "no_go": 127,
@@ -66412,10 +66429,10 @@
       "open_gate": 115,
       "positive_theorem": 592
     },
-    "edge_count": 8307,
-    "leaf_count": 536,
-    "node_count": 2071,
+    "edge_count": 8308,
+    "leaf_count": 537,
+    "node_count": 2072,
     "root_count": 768,
-    "runners_with_path": 1686
+    "runners_with_path": 1687
   }
 }

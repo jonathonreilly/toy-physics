@@ -7788,6 +7788,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py"
     },
+    "gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow.py"
+    },
     "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
       "assert_count": 1,
       "counts": {
@@ -30105,6 +30117,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py": {
       "assert_count": 1,
       "claims": [
@@ -44132,12 +44159,12 @@
     "dominant_class_distribution": {
       "A": 112,
       "B": 160,
-      "C": 647,
+      "C": 648,
       "D": 249,
       "none": 406
     },
-    "runners_classified": 1574,
-    "runners_with_C": 812,
+    "runners_classified": 1575,
+    "runners_with_C": 813,
     "runners_with_D": 441
   }
 }
