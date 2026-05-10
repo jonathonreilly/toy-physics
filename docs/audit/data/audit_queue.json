@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 25,
     "leaf": 281,
-    "medium": 145
+    "medium": 144
   },
   "cycle_break_target_count": 305,
   "cycle_break_targets": [
@@ -27296,27 +27296,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gravity_observable_hierarchy_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
-      "note_path": "docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/gravity_observable_hierarchy.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_3d_l2_numpy_h0125_bridge_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -32641,6 +32620,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lattice_gravity_resolution_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gravity_observable_hierarchy_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_3d_dense_10prop.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lattice_nn_mass_response_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -36392,29 +36394,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lattice_gravity_resolution_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gravity_observable_hierarchy_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_3d_dense_10prop.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_keff_continuum_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -38393,5 +38372,5 @@
     }
   ],
   "ready_count": 80,
-  "total_pending": 1146
+  "total_pending": 1145
 }

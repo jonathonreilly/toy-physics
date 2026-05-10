@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 229 |
+| **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1140 |
+| unaudited | 1139 |
 | meta | 79 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 382 |
+| `audited_clean` | 383 |
 | `audited_conditional` | 227 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1219 |
+| `unaudited` | 1218 |
 
 | claim_type | count |
 |---|---:|
@@ -236,6 +236,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_true_kg_vs_cn_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `gravity_full_self_consistency_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `gravity_observable_hierarchy_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `growing_graph_dynamic_propagation_replacement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4627,6 +4628,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The no-power-law/null part closes from the runner output: the observed maximum is at b=12 and there are no falling-tail points. The stronger wording that the signal is statistically real and peaked does not close, because the selected maximum is at the endpoint of a searched window and no predeclared or multiplicity-adjusted significance criterion is supplied.
 - **rationale:** Issue: the runner supports raw positive means at b=10 and b=12 plus no review-safe falling-tail fit, but not a Nature-grade claim of a real peak or statistically real signal after searching the b window. Why this blocks: the source note's safe null-result is mixed with an overstrong significance/peak inference. Repair target: either narrow the wording to the raw cached rows and absence of a tail fit, or add a prespecified significance procedure and extended sweep demonstrating a true peak/falling tail. Claim boundary until fixed: exact force-law scaling remains unresolved and only the cached nominal response curve is supported.
 - **auditor confidence:** high
+
+### `gravity_observable_hierarchy_note`
+
+- **Note:** [`GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](../../docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded sign-classification hierarchy for the supplied runner-computed rows: 2D ultra-weak, 2D strong-field depletion, 3D power-action barrier, and 3D dense spent-delay z=3 and z=5 only.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e12e4-6fd1-77c1-90b0-eef6c721671b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The second row is the only case where a negative centroid should be treated as something other than ordinary "away" behavior, with the current retained 3D dense scope narrowed to runner-computed z=3 and z=5 rows.  _(class `A`)_
+- **chain closes:** True — Within the narrowed scope, the runner stdout matches the note's signs and classifications for every ratified row. The z=2, z=4, z=6, and z=7 dense rows are explicitly outside the audited scope and are not ratified here.
+- **rationale:** The scoped claim is an algebraic sign-interpretation over runner-computed observables, and the supplied runner computes the relevant rows rather than printing fixed classifications. No one-hop authorities are listed, so no dependency-retention blocker is available inside the restricted packet. Clean status applies only to the narrowed z=3 and z=5 dense rows plus the other printed runner rows; the broader z=2..6 dense table is not part of this verdict.
+- **auditor confidence:** medium
 
 ### `gravity_sign_audit_2026-04-10`
 
