@@ -1,9 +1,51 @@
 # Area-Law Primitive Parity-Gate Carrier Theorem Note
 
 **Date:** 2026-04-25
-**Status:** positive Target 2 carrier theorem conditional on the primitive
-two-orbital Gaussian/CAR edge carrier
+**Status:** audited_conditional positive Target 2 carrier theorem conditional on
+the primitive two-orbital Gaussian/CAR edge carrier
 **Runner:** `scripts/frontier_area_law_primitive_parity_gate_carrier.py`
+
+## Cited authorities (one-hop deps)
+
+- [`AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`](AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+  — support / conditional bridge. Pushes the carrier-identification premise one
+  step deeper: under minimal local complex-CAR edge axioms on the rank-four
+  primitive packet, the two-orbital normal-plus-self-dual-tangent carrier is
+  forced. This is the audited authority for the carrier identification used
+  here.
+- [`AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md`](AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md)
+  — `audited_conditional`. The simple-fiber-class Widom no-go this carrier
+  evades by leaving the simple-fiber class with a self-dual primitive
+  half-zone selector (average crossing count exactly 3, not 2).
+- [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  — `audited_conditional`. Source of the action-side primitive coefficient
+  `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4` and the rank-four primitive
+  boundary block `P_A H_cell` with which this carrier identifies.
+- [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+  — `audited_conditional`. Records the additive finite-boundary extension of
+  the action-side `c_cell = 1/4` and the conditional carrier-share matching
+  with `A/(4 G_Newton,lat)`. This is the action-side counterpart that this
+  carrier theorem matches on the entanglement side under the carrier
+  identification.
+- [`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+  — sufficient coframe-response route for the carrier identification: if the
+  metric-compatible primitive Clifford response is supplied on the rank-four
+  active block, then that block is the irreducible `Cl_4(C)`/two-mode CAR
+  module used here.
+
+## Admitted-context literature input
+
+As in the cited
+[`AREA_LAW_QUARTER_BROADER_NO_GO_NOTE`](AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md),
+this note imports the Widom-Gioev-Klich leading-log coefficient formula
+
+```text
+c_Widom = I_x / (12 (2*pi)^(d-1))
+```
+
+(Gioev-Klich 2006; Helling-Leschke-Spitzer 2011) as universal physics input
+on the asymptotic-entropy side. The note does not re-derive that formula; it
+applies it to the constructed two-orbital free-fermion edge carrier.
 
 ## Purpose
 
@@ -238,6 +280,59 @@ entanglement side: average crossing count 3 gives 3/12 = 1/4.
 The bridge is the carrier identification of `P_A H_cell` with the two-orbital
 self-dual Laplacian-gated edge algebra. That is the precise point requiring
 review.
+
+### Authority-chain provenance (conditional)
+
+The action-side `c_cell = 1/4` referenced in the relation above is no longer
+asserted in this note. It is imported, with all its conditional surface, from
+the cited
+[`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+and its
+[`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+extension. The carrier-identification premise (CIP) for this entanglement
+match has the explicit form:
+
+```text
+(CIP)  P_A H_cell ≅ F(C^2), with
+       (a) one orbital realising the simple-fiber normal channel,
+       (b) one orbital active exactly on the self-dual primitive
+           low-transverse-Laplacian sheet Δ_perp < 1.
+```
+
+Granted (CIP), the chain that closes is purely combinatorial:
+
+```text
+                                                    cited authority
+average crossing count <N_x> = 2 + 2*(1/2) = 3      (this note, §primitive
+                                                    half-zone selector lemma)
+c_Widom = <N_x> / 12 = 1/4                          (Widom-Gioev-Klich,
+                                                    admitted physics input)
+c_cell = Tr((I_16/16) P_A) = 1/4                    (cited primitive-coframe
+                                                    theorem)
+=> c_Widom = c_cell = 1/4                           (matching at (CIP))
+```
+
+The matching is forced by `<N_x> = 3`, which is itself forced by the self-dual
+half-period involution `tau(q) = q + π·(1,...,1)` sending
+`Δ_perp → 2 - Δ_perp`. The only adjustable input is (CIP) itself, and the
+cited primitive-CAR edge identification theorem reduces (CIP) further to a
+local complex-CAR edge axiom on the rank-four primitive packet.
+
+## What this PR is NOT
+
+This rigorization does **not**:
+
+- derive (CIP) from `A_min` alone. (CIP) remains the explicit named open
+  premise, audited as the load-bearing step of the row.
+- close `area_law_primitive_car_edge_identification_theorem_note_2026-04-25`,
+  which is the audited authority for (CIP). That row's audit verdict is
+  inherited here verbatim and the bridge premise (CIP) remains conditional on
+  it.
+- promote audit status. The audit ledger is not modified; the status descriptor
+  alignment to `audited_conditional` matches the live audit ledger entry.
+- duplicate the action-side `c_cell = 1/4` derivation; that derivation now
+  lives in the cited primitive-coframe theorem and its boundary-density
+  extension.
 
 ## Verification
 

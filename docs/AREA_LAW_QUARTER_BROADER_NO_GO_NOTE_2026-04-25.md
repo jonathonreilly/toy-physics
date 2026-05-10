@@ -1,8 +1,48 @@
 # Area-Law Quarter Broader No-Go Note
 
 **Date:** 2026-04-25
-**Status:** proposed_retained no-go support theorem for Planck Target 2
+**Status:** audited_conditional no-go support theorem for Planck Target 2
 **Runner:** `scripts/frontier_area_law_quarter_broader_no_go.py`
+
+## Cited authorities (one-hop deps)
+
+- [`BH_ENTROPY_DERIVED_NOTE.md`](BH_ENTROPY_DERIVED_NOTE.md) — `audited_conditional`.
+  Records the bounded RT bond-dimension companion identification on the existing
+  `Cl(3)/Z^3` free-fermion carrier; this no-go bounds the asymptotic Widom
+  coefficient that companion approaches.
+- [`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md)
+  — `audited_conditional`. The single-carrier no-go that this note generalizes
+  from one diamond / one cubic Fermi surface to the full simple-fiber Widom
+  class.
+- [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  — `audited_conditional`. Derives the action-side primitive coefficient
+  `c_cell = Tr((I_16/16) P_A) = 1/4` on the primitive event cell. This is the
+  Planck-side `1/4` that this no-go shows the simple-fiber Widom class cannot
+  match by entanglement.
+- [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+  — `audited_conditional`. Records the additive finite-boundary extension of
+  the action-side `c_cell = 1/4` carrier and the conditional carrier-share
+  identity matching `S_BH = A/(4 G_Newton,lat)` at `G_Newton,lat = 1`.
+
+These citations make the no-go's gap structure explicit: the Planck-side
+`c_cell = 1/4` is now derived (conditional on the bridge premise) from the
+cited primitive-coframe theorem, while this note shows the simple-fiber Widom
+class cannot match it on the entanglement side.
+
+## Admitted-context literature input
+
+The Widom-Gioev-Klich leading-log coefficient formula
+
+```text
+c_Widom(Gamma, e_x) = I_x(Gamma) / (12 (2*pi)^(d-1)),
+I_x(Gamma) = integral_{partial Gamma} |n_k . e_x| dS_k
+```
+
+is admitted as universal physics input from the rigorous Widom-Sobolev line
+(Gioev-Klich 2006; Helling-Leschke-Spitzer 2011), as already used by the cited
+single-carrier no-go. This note does not re-derive the Widom-Gioev-Klich
+asymptotic theorem; it imports it and uses purely combinatorial coarea/fiber
+counting on top of it.
 
 ## Purpose
 
@@ -189,6 +229,44 @@ identification is accepted. This note shows that the simple-fiber Widom
 entanglement class cannot be identified with that coefficient. The two `1/4`
 surfaces remain structurally different unless a new entropy carrier theorem
 bridges them.
+
+### Authority-chain provenance
+
+The action-side `c_cell = 1/4` is no longer asserted in this note: it is
+imported from the cited
+[`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+where it is derived (conditional on first-order coframe locality and unit
+primitive response normalization, both also cited there) as the unique
+source-free, additive, coframe-slot-symmetric, unit-normalized first-order
+coframe boundary carrier coefficient. The cited
+[`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+then extends this single-cell coefficient to finite boundary patches and
+records the conditional carrier-share matching with `A/(4 G_Newton,lat)`.
+
+What this no-go adds, on top of that derived action-side `1/4`, is purely the
+entanglement-side bound: under the simple-fiber hypothesis,
+
+```text
+c_Widom <= 1/6 < 1/4.
+```
+
+The no-go therefore does not depend on whether the action-side `1/4` is
+ultimately retained or not. It is a clean class statement about which
+entanglement carriers can match any putative `1/4` action-side target, and is
+agnostic to the bridge premise the cited Planck notes carry.
+
+## What this PR is NOT
+
+This rigorization does **not**:
+
+- derive the Widom-Gioev-Klich coefficient formula from `A_min`. That formula
+  remains an admitted universal physics input on the same footing as in the
+  cited single-carrier no-go.
+- close the upstream `BH_ENTROPY_DERIVED_NOTE` / `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE`
+  conditional statuses. Those remain `audited_conditional` and this note
+  inherits their conditional surface.
+- promote audit status. The audit ledger is not modified; status descriptor
+  alignment to `audited_conditional` matches the live audit ledger entry.
 
 ## Literature anchor
 
