@@ -16985,6 +16985,34 @@
       "to": "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03"
     },
     {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic"
+    },
+    {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological"
+    },
+    {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
       "from": "propagator_family_unification_note",
       "to": "source_resolved_wavefield_mechanism_note"
     },
@@ -53983,6 +54011,25 @@
       "runner_path": "scripts/cl3_primitive_p_heavyq_2026_05_10_pPheavyq.py",
       "title": "Primitive P-HeavyQ Species Differentiation \u2014 Open-Gate Candidate Inventory"
     },
+    "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1": {
+      "claim_id": "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+        "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "minimal_axioms_2026-04-11",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "su3_adjoint_casimir_theorem_note_2026-05-02"
+      ],
+      "note_hash": "643218aa87a1d83346e8a54cfab8f615a4fbe3e9378ebfa42617ce55441e7a8a",
+      "path": "docs/PRIMITIVE_P_L1_CHANNEL_WEIGHT_PROPOSAL_NOTE_2026-05-10_pPl1.md",
+      "runner_path": "scripts/cl3_primitive_p_l1_2026_05_10_pPl1.py",
+      "title": "L1 Channel-Weight Open Gate \u2014 Negative Candidate-Primitive Probe for QCD \u03b2_2/\u03b2_3 Scalar Weights"
+    },
     "primordial_spectrum_note": {
       "claim_id": "primordial_spectrum_note",
       "claim_type_author_hint": null,
@@ -65890,7 +65937,7 @@
       "meta": 59,
       "no_go": 18,
       "none": 1626,
-      "open_gate": 20,
+      "open_gate": 21,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -65899,13 +65946,13 @@
       "meta": 59,
       "no_go": 125,
       "none": 449,
-      "open_gate": 108,
+      "open_gate": 109,
       "positive_theorem": 592
     },
-    "edge_count": 8241,
-    "leaf_count": 535,
-    "node_count": 2056,
+    "edge_count": 8248,
+    "leaf_count": 534,
+    "node_count": 2057,
     "root_count": 767,
-    "runners_with_path": 1671
+    "runners_with_path": 1672
   }
 }

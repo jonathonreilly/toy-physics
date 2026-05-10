@@ -14388,6 +14388,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_primitive_p_heavyq_2026_05_10_pPheavyq.py"
     },
+    "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_primitive_p_l1_2026_05_10_pPl1.py"
+    },
     "primordial_spectrum_note": {
       "assert_count": 0,
       "counts": {
@@ -22766,6 +22778,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_primitive_p_l1_2026_05_10_pPl1.py": {
+      "assert_count": 0,
+      "claims": [
+        "primitive_p_l1_channel_weight_proposal_note_2026-05-10_ppl1"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_quark_antiquark_color_singlet_check.py": {
@@ -43727,12 +43754,12 @@
     "dominant_class_distribution": {
       "A": 111,
       "B": 160,
-      "C": 643,
+      "C": 644,
       "D": 239,
       "none": 406
     },
-    "runners_classified": 1559,
-    "runners_with_C": 807,
-    "runners_with_D": 429
+    "runners_classified": 1560,
+    "runners_with_C": 808,
+    "runners_with_D": 430
   }
 }
