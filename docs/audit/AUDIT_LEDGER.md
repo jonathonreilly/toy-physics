@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1145 |
+| unaudited | 1144 |
 | meta | 77 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 226 |
+| ~~audited_conditional~~ | 227 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 226 |
+| `audited_conditional` | 227 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1222 |
+| `unaudited` | 1221 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 775 |
+| `bounded_theorem` | 776 |
 | `decoration` | 13 |
 | `meta` | 84 |
 | `no_go` | 192 |
 | `open_gate` | 103 |
-| `positive_theorem` | 762 |
+| `positive_theorem` | 761 |
 
 | criticality | count |
 |---|---:|
@@ -523,6 +523,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
+| `complex_selectivity_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -2020,6 +2021,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The action is S = L(1 - f) + i * gamma * L * f, giving a kernel exp(i*k*L*(1-f)) * exp(-k*gamma*L*f).  _(class `E`)_
 - **chain closes:** False — The restricted packet supports the internal conditional-kernel behavior in the listed finite setup. It does not derive gamma or a physical horizon observable bridge, and the current runner stdout does not reproduce the note's weak-field exponent table.
 - **rationale:** Issue: the load-bearing imaginary action term is an introduced free-gamma ansatz, and absorption-biased centroid/escape behavior is labeled horizon-like without a derived gamma or horizon-specific observable. Why this blocks: no cited authority derives the imaginary term from retained primitives, and the runner checks only finite model behavior with no photon-sphere, Schwarzschild, Hawking, causal-horizon, or external comparator test. Repair target: derive gamma or the imaginary action term and add deterministic horizon-observable plus resolution/geometry checks, with runner output matching the note's numerical claims. Claim boundary until fixed: a conditional one-parameter complex-kernel model where gamma=0 reduces to the real-action propagator, linearity keeps I3 near machine zero in sampled tests, and positive gamma produces absorption-biased escape/centroid behavior in the listed setup.
+- **auditor confidence:** high
+
+### `complex_selectivity_compare_note`
+
+- **Note:** [`COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded comparison that the listed signed-source family slices are more portable than the listed complex-action slices.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12c7-3efe-7d62-b787-b49f3e644bec`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "signed-source transfer is the portable feature: exact zero / neutral controls survive on several distinct structured families" while "complex action is more selective" and fails or narrows on the compared slices.  _(class `B`)_
+- **chain closes:** False — The supplied one-hop authorities support second-family complex retention and signed-source positives for the alt, third, and fourth families, but they do not supply the original grown-basin row, the alt complex-action failure, the alt F~M transfer value, or the second-family boundary tightening. Those missing inputs are load-bearing for the selectivity split.
+- **rationale:** Issue: the comparison imports several named but unsupplied dependency results, and the runner only renders hard-coded comparison rows. Why this blocks: the claimed selectivity split cannot be derived from the restricted packet because key failure and boundary facts are outside the one-hop authorities. Repair target: add direct dependency edges and retained-grade authorities for the original grown-basin sign/complex results, alt complex failure/F~M transfer, and second-family boundary note, or narrow the claim to the supplied authorities. Claim boundary until fixed: only a partial comparison over the supplied retained family notes is supported.
 - **auditor confidence:** high
 
 ### `continuum_limit_note`

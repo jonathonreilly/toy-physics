@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 25,
     "leaf": 279,
-    "medium": 152
+    "medium": 151
   },
   "cycle_break_target_count": 304,
   "cycle_break_targets": [
@@ -27282,32 +27282,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "complex_selectivity_compare_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "second_grown_family_complex_note",
-        "alt_connectivity_family_sign_note",
-        "third_grown_family_sign_note",
-        "fourth_family_quadrant_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.748,
-      "note_path": "docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/COMPLEX_SELECTIVITY_COMPARE.py",
-      "transitive_descendants": 18
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "complex_selectivity_predictor_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -38475,6 +38449,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 89,
-  "total_pending": 1151
+  "ready_count": 88,
+  "total_pending": 1150
 }
