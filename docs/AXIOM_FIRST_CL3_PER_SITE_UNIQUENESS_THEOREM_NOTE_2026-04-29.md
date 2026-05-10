@@ -17,14 +17,16 @@ has dimension exactly 2 on `A_min`") has been **moved out of scope of
 this note** because its bridge from the abstract 2-dim Cl(3) chirality
 module to the physical per-site Hilbert space depends on A3
 (staggered-fermion canonical normalisation). That A3 bridge is
-carried by the staggered-Dirac realization gate,
-specifically substep 1
+in-flight under the staggered-Dirac realization gate
+(`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`, currently
+`open_gate`), specifically substep 1
 (`STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md`).
 
-The 2026-05-08 review separated the U1–U3 A1-only classification from
-the A3-dependent U4 realization step. Narrowing to U1–U3 makes this row
-auditable without the staggered-Dirac gate cycle and lets the substep 1
-note carry the A3-dependent U4 conclusion separately.
+The 2026-05-08 fresh-context audit confirmed U1–U3 close cleanly on A1
+alone and that bundling U4 into this note's scope made the whole row
+conditional on the open gate. Narrowing to U1–U3 makes the row
+audit-clean on its own terms and lets the substep 1 note carry the
+A3-dependent U4 conclusion separately.
 
 The narrowed claim_scope is therefore:
 
@@ -88,15 +90,18 @@ U4's "one-Grassmann-pair staggered-fermion normalization" used to
 identify the abstract 2-dim Cl(3) chirality module with the physical
 per-site Hilbert space chains through A3, but the current canonical
 minimal-input surface
-[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+`MINIMAL_AXIOMS_2026-05-03.md`
 places the staggered/Grassmann realization outside the A1+A2 primitive
 kernel.
 
 The repair: cite the **open-gate** authority for the staggered-Dirac
 realization rather than treat A3 as a primitive input.
 
-**Cited authority:**
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+**Cited authority (forward-pointer only, not load-bearing on the
+narrowed U1–U3 scope; written as plain text in backticks per the
+PR #306 cleanup pattern so the citation-graph builder does not
+parse it as an upstream dep edge):**
+`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 is the open-gate authority for the staggered-Dirac/Grassmann
 realization on A1+A2. It explicitly enumerates the closure routes
 that, when one lands as a positive theorem and clears the independent
@@ -396,7 +401,7 @@ carried by substep 1 of the staggered-Dirac realization gate.
 
 ## Load-bearing Dependencies
 
-- A_min: [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+- A_min: `MINIMAL_AXIOMS_2026-04-11.md` (superseded; current axiom-set memo is `MINIMAL_AXIOMS_2026-05-03.md`)
 
 ## Citations
 
