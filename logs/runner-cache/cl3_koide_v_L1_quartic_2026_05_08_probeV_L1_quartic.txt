@@ -1,0 +1,132 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py
+runner_sha256: 48995e34e9c3586e8357aaf073f6acbc6339527c07d0f2f78c10aaa6e3c33a58
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================
+Probe V-L1-Quartic — Quartic Casimirs and beta_2/beta_3 channel weights
+Date: 2026-05-10
+Source-note authority:
+  docs/KOIDE_V_L1_QUARTIC_CASIMIR_BETA2_NOTE_2026-05-08_probeV_L1_quartic.md
+========================================================================
+
+Section 1 — POSITIVE NARROW: SU(3) quartic Casimirs are retained
+  [PASS] d_F^abcd d_F^abcd / N_F = 5/12 (SU(3) fundamental⊗fundamental) | = 5/12
+  [PASS] d_F^abcd d_A^abcd / N_F = 5/2 (SU(3) fundamental⊗adjoint) | = 5/2
+  [PASS] d_A^abcd d_A^abcd / N_A = 135/8 (SU(3) adjoint⊗adjoint) | = 135/8
+    -> Quartic Casimir invariants are pure group-theoretic numbers.
+    -> Derivable on retained Cl(3) ⊗ Cl(3) tensor algebra.
+    -> RETAINED narrow result, consistent with X-L1-MSbar Section 4.
+
+Section 2 — NEGATIVE STRUCTURAL: beta_2 has NO quartic-Casimir channels
+  [PASS] beta_2 channel 'C_A^3' is built from quadratic Casimirs only | cubic gauge; no quartic-Casimir factor
+  [PASS] beta_2 channel 'C_A^2 (T_F n_f)' is built from quadratic Casimirs only | mixed gauge-matter; no quartic-Casimir factor
+  [PASS] beta_2 channel 'C_F C_A (T_F n_f)' is built from quadratic Casimirs only | mixed gauge-matter; no quartic-Casimir factor
+  [PASS] beta_2 channel 'C_A (T_F n_f)^2' is built from quadratic Casimirs only | matter quadratic; no quartic-Casimir factor
+  [PASS] beta_2 channel 'C_F (T_F n_f)^2' is built from quadratic Casimirs only | matter quadratic; no quartic-Casimir factor
+  [PASS] beta_2 channel 'C_F^2 (T_F n_f)' is built from quadratic Casimirs only | matter linear; no quartic-Casimir factor
+  [PASS] beta_2 contains exactly 0 quartic-Casimir channels | counted 0 (target 0); the conjecture's framing for beta_2 is structurally unavailable
+    -> beta_2 has NO d_F d_F, d_F d_A, or d_A d_A channels.
+    -> The conjecture as framed for beta_2 is structurally unavailable.
+    -> Quartic Casimirs first appear at 4-loop (beta_3).
+
+Section 3 — NUMERICAL: beta_2(N_f=6) = -65/2 from TVZ closed form
+  [PASS] beta_2 = 2857/2 − (5033/18) N_f + (325/54) N_f^2 at N_f=6 = -65/2 | = -65/2 (target -65/2 = -32.5)
+  [PASS] beta_2 polynomial in n_f has degree 2 (no n_f^3 or higher) | structure: n_f^0 (C_A^3) + n_f^1 (mixed) + n_f^2 (matter); consistent with cubic-Casimir decomposition only
+  [PASS] absence of n_f^3 or higher in beta_2 closed form rules out quartic Casimirs | TVZ 1980 polynomial has degree 2 in n_f; no room for d_F d_F or d_F d_A channels
+    -> beta_2 = -65/2 from TVZ closed form at N_f=6.
+    -> Polynomial degree 2 in n_f rules out quartic-Casimir channels.
+    -> The 6 SCALAR channel weights are TVZ 1980 literature imports,
+       NOT framework-derived; this matches X-L1-MSbar bounded admission.
+
+Section 4 — NEGATIVE STRUCTURAL: beta_3 quartic channels need 4-loop integrals
+  [PASS] beta_3 channel 'd_F^abcd d_F^abcd / N_F' Casimir value = 5/12 retained | value = 5/12 (0.4167) is retained group theory
+  [ADMITTED] beta_3 channel weight w(d_F^abcd d_F^abcd / N_F) | weight is rational + zeta_3 from 4-loop master integrals; NOT framework-retained
+  [PASS] beta_3 channel 'd_F^abcd d_A^abcd / N_F' Casimir value = 5/2 retained | value = 5/2 (2.5000) is retained group theory
+  [ADMITTED] beta_3 channel weight w(d_F^abcd d_A^abcd / N_F) | weight is rational + zeta_3 from 4-loop master integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A^4) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A^3 (T_F n_f)) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A^2 C_F (T_F n_f)) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A C_F^2 (T_F n_f)) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_F^3 (T_F n_f)) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A^2 (T_F n_f)^2) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A C_F (T_F n_f)^2) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_F^2 (T_F n_f)^2) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_A (T_F n_f)^3) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+  [ADMITTED] beta_3 channel weight w(C_F (T_F n_f)^3) | weight is rational + zeta_3 from 4-loop integrals; NOT framework-retained
+    -> beta_3 has 2 quartic-Casimir channels with retained VALUES
+       (5/12, 5/2) but NON-retained scalar WEIGHTS (4-loop integrals).
+    -> beta_3 has 10+ quadratic-Casimir-product channels;
+       all weights are 4-loop integrals, NOT retained.
+    -> Quartic-Casimir bridge does NOT close beta_3.
+
+Section 5 — UNDERSPECIFICATION: quartic Casimir VALUES don't fix WEIGHTS
+  [PASS] quartic Casimir VALUES (3) are insufficient to fix beta_3 channel WEIGHTS (>=12) | VALUES retained: 3; WEIGHTS needed: >= 12
+  [PASS] beta_2 channel WEIGHTS (6) cannot be fixed by quartic VALUES (irrelevant) | WEIGHTS needed: 6; quartic channels in beta_2: 0
+  [PASS] underspecification is generic: channel WEIGHTS are loop integrals at all orders >= 3 | retained Cl(3) ⊗ Cl(3) tensor algebra gives VALUES, not WEIGHTS
+    -> Knowing 3 quartic Casimir VALUES does NOT determine 12 beta_3 WEIGHTS.
+    -> System is underspecified: VALUES != WEIGHTS at orders >= 3.
+    -> The conjecture is foreclosed: quartic-Casimir bridge fails.
+
+Section 6 — HOSTILE REVIEW: cubic Casimir products parallel obstruction at 3-loop
+  [PASS] cubic Casimir product 'C_A^3' VALUE retained at SU(3) | = 27 (target 27)
+  [PASS] cubic Casimir product 'C_F C_A^2' VALUE retained at SU(3) | = 12 (target 12)
+  [PASS] cubic Casimir product 'C_F^2 C_A' VALUE retained at SU(3) | = 16/3 (target 16/3)
+  [PASS] cubic Casimir product 'C_F^3' VALUE retained at SU(3) | = 64/27 (target 64/27)
+  [ADMITTED] 3-loop channel weight 2857/54 (multiplying C_A^3) | from TVZ 1980 dim-reg 3-loop master integrals; not group-theoretic
+  [ADMITTED] 3-loop channel weight -1415/54 (multiplying C_A^2 T_F n_f) | from TVZ 1980 dim-reg 3-loop master integrals; not group-theoretic
+    -> Cubic Casimir VALUES retained at all orders.
+    -> Channel WEIGHTS are 3-loop integrals (TVZ 1980 dim-reg).
+    -> Generalizes: VALUES != WEIGHTS at every loop order >= 3.
+
+Section 7 — INHERITED BOUNDED ADMISSION (X-L1-MSbar unchanged)
+  [ADMITTED] beta_2 channel weights in any scheme | scalar weights require 3-loop integral primitives (X-L1-MSbar bounded)
+  [ADMITTED] beta_3 channel weights in any scheme | scalar weights require 4-loop integral primitives (X-L1-MSbar bounded)
+  [ADMITTED] quartic-Casimir bridge for beta_2 | structurally unavailable (beta_2 has no quartic channels); X-L1-MSbar bounded admission stands
+  [ADMITTED] quartic-Casimir bridge for beta_3 | channel VALUES retained but WEIGHTS not; X-L1-MSbar bounded admission stands
+    -> X-L1-MSbar terminal status on Lane 1 beta_2/beta_3 imports STANDS.
+    -> Quartic-Casimir conjecture foreclosed.
+
+========================================================================
+PROBE V-L1-Quartic VERDICT
+========================================================================
+
+Claim type: bounded_theorem (NEGATIVE on the conjecture; POSITIVE
+            narrow on Casimir-value retention; inherits X-L1-MSbar
+            bounded admission on channel weights)
+
+POSITIVE narrow result:
+  + SU(3) quartic Casimir invariants retained from
+    Cl(3) ⊗ Cl(3) tensor algebra:
+      d_F^abcd d_F^abcd / N_F = 5/12
+      d_F^abcd d_A^abcd / N_F = 5/2
+      d_A^abcd d_A^abcd / N_A = 135/8
+
+NEGATIVE on the conjecture:
+  - beta_2 has NO quartic-Casimir channels (3-loop is all quadratic
+    products); the conjecture's framing for beta_2 is structurally
+    unavailable.
+  - beta_3 has 2 quartic-Casimir channels but their scalar WEIGHTS
+    require 4-loop master integrals; quartic Casimir VALUES alone
+    do not fix WEIGHTS.
+
+BOUNDED admissions (inherited from X-L1-MSbar):
+  ! beta_2 channel weights: NOT derivable in any scheme
+  ! beta_3 channel weights: NOT derivable in any scheme
+
+Net contribution to Lane 1:
+  - Sharpens the X-L1-MSbar negative result: not only are channel
+    weights not derivable in any scheme, but the quartic-Casimir
+    bridge CANNOT relax this — beta_2 has no quartic channels
+    and beta_3 quartic channels still need 4-loop integrals.
+  - Audit-grade record of which Casimir invariants ARE retained
+    (cubic products at 3-loop; quartic invariants at 4-loop) and
+    which channel weights are NOT (the loop-integral coefficients).
+  - Does NOT change current Lane 1 admission status; X-L1-MSbar
+    terminal status on beta_2/beta_3 imports STANDS.
+
+
+SUMMARY: PASS=22 FAIL=0 ADMITTED=18
