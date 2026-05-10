@@ -15545,6 +15545,22 @@
       "to": "lattice_nn_deterministic_rescale_note"
     },
     {
+      "from": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "to": "lattice_nn_high_precision_note"
+    },
+    {
+      "from": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "to": "lattice_nn_deterministic_rescale_note"
+    },
+    {
+      "from": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "to": "lattice_nn_rg_gravity_note"
+    },
+    {
+      "from": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "to": "lattice_nn_continuum_note"
+    },
+    {
       "from": "nonlabel_grown_drift_basin_note",
       "to": "nonlabel_grown_basin_note"
     },
@@ -51977,6 +51993,22 @@
       "runner_path": "scripts/lattice_nn_rescaled_kernel_identification.py",
       "title": "NN Lattice Rescaled-Lane Kernel Identification"
     },
+    "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10": {
+      "claim_id": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "lattice_nn_high_precision_note",
+        "lattice_nn_deterministic_rescale_note",
+        "lattice_nn_rg_gravity_note",
+        "lattice_nn_continuum_note"
+      ],
+      "note_hash": "d55b936582aec609451cdf084879cd37a0308cff67ace79e5a487555d06f18d6",
+      "path": "docs/NN_LATTICE_RESCALED_RG_GRAVITY_SATURATION_NOTE_2026-05-10.md",
+      "runner_path": "scripts/lattice_nn_rescaled_response_exponents.py",
+      "title": "NN Lattice Rescaled-Lane RG Gravity Saturation Note"
+    },
     "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
       "claim_id": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -65721,7 +65753,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 237,
+      "bounded_theorem": 238,
       "decoration": 1,
       "meta": 59,
       "no_go": 17,
@@ -65730,7 +65762,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 719,
+      "bounded_theorem": 720,
       "decoration": 1,
       "meta": 59,
       "no_go": 124,
@@ -65738,10 +65770,10 @@
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8225,
-    "leaf_count": 532,
-    "node_count": 2049,
+    "edge_count": 8229,
+    "leaf_count": 533,
+    "node_count": 2050,
     "root_count": 764,
-    "runners_with_path": 1664
+    "runners_with_path": 1665
   }
 }

@@ -12876,6 +12876,18 @@
       "dominant_class": "C",
       "runner": "scripts/lattice_nn_rescaled_kernel_identification.py"
     },
+    "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/lattice_nn_rescaled_response_exponents.py"
+    },
     "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -40217,6 +40229,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/lattice_nn_rescaled_response_exponents.py": {
+      "assert_count": 0,
+      "claims": [
+        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/lattice_nn_rg_alpha_sweep.py": {
       "assert_count": 0,
       "claims": [
@@ -43540,9 +43567,9 @@
       "B": 160,
       "C": 642,
       "D": 235,
-      "none": 404
+      "none": 405
     },
-    "runners_classified": 1552,
+    "runners_classified": 1553,
     "runners_with_C": 804,
     "runners_with_D": 425
   }
