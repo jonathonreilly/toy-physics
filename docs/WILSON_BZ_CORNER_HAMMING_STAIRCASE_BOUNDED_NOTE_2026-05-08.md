@@ -98,7 +98,7 @@ arithmetic.
 
 ## Dependencies
 
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   for the staggered Dirac realization context.
 - [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
   for the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`) and the
