@@ -38315,6 +38315,17 @@
       "runner_path": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py",
       "title": "Cross-Sector A^2-Q_l-|V_cb| Bridge Support Note"
     },
+    "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "3c7262571a064c33839e09013c1dad6d9574bba1d8473d17b525ea5990f9e392",
+      "path": "docs/CUBIC_COXETER_REGGE_DEFICIT_VANISHING_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py",
+      "title": "Cubic-Coxeter Regge Deficit Vanishing Narrow Theorem"
+    },
     "cycle_battery_note_2026-04-10": {
       "claim_id": "cycle_battery_note_2026-04-10",
       "claim_type_author_hint": null,
@@ -65148,6 +65159,7 @@
     "cosmology_scale_identification_and_reduction_note",
     "coupled_field_generated_family_probe_note",
     "cross_family_universality_note",
+    "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
     "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
@@ -65759,7 +65771,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
@@ -65768,12 +65780,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
     "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
-    "root_count": 764,
-    "runners_with_path": 1665
+    "leaf_count": 534,
+    "node_count": 2051,
+    "root_count": 765,
+    "runners_with_path": 1666
   }
 }

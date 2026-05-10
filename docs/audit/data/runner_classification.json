@@ -2916,6 +2916,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py"
     },
+    "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py"
+    },
     "cycle_battery_note_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -25409,6 +25421,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_cyclic_projector_compression_narrow.py": {
       "assert_count": 1,
       "claims": [
@@ -43565,12 +43592,12 @@
     "dominant_class_distribution": {
       "A": 111,
       "B": 160,
-      "C": 642,
+      "C": 643,
       "D": 235,
       "none": 405
     },
-    "runners_classified": 1553,
-    "runners_with_C": 804,
-    "runners_with_D": 425
+    "runners_classified": 1554,
+    "runners_with_C": 805,
+    "runners_with_D": 426
   }
 }

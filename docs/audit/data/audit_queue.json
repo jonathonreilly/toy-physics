@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 25,
-    "leaf": 243,
+    "leaf": 244,
     "medium": 144
   },
   "cycle_break_target_count": 305,
@@ -31188,6 +31188,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CUBIC_COXETER_REGGE_DEFICIT_VANISHING_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "dispersion_high_p_tiebreaker_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37606,6 +37627,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 36,
-  "total_pending": 1107
+  "ready_count": 37,
+  "total_pending": 1108
 }
