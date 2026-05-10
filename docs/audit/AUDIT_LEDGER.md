@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 231 |
+| **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1122 |
+| unaudited | 1121 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 385 |
+| `audited_clean` | 386 |
 | `audited_conditional` | 225 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1220 |
+| `unaudited` | 1219 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 784 |
+| `bounded_theorem` | 785 |
 | `decoration` | 13 |
 | `meta` | 105 |
 | `no_go` | 194 |
 | `open_gate` | 100 |
-| `positive_theorem` | 741 |
+| `positive_theorem` | 740 |
 
 | criticality | count |
 |---|---:|
@@ -125,6 +125,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_fm_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `architecture_portability_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -1095,6 +1096,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At mu2 = 0.001, the unscreened corrected periodic phase-map replay strengthens the boundary-law separation and changes the interpretation qualitatively.  _(class `C`)_
 - **chain closes:** True — Yes. The claim is a bounded companion replay on a fixed corrected harness, and the registered runner completed successfully for that finite phase-map check.
 - **rationale:** The note makes a bounded finite-harness claim, not a universal theorem. The current runner completed successfully and supports the replay surface classified as {'A': 0, 'B': 0, 'C': 6, 'D': 0, 'total_pass': 6}. Residual risk is generalization outside the stated mu2 and periodic-torus setup.
+- **auditor confidence:** high
+
+### `architecture_portability_sweep_note`
+
+- **Note:** [`ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md`](../../docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-runner portability check: the supplied script computes beta near 1, toward-source displacement, and measured I_3 below 1e-6 for the listed small lattices and fixed protocol.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1326-3f30-7652-bf74-5eaf63487ae8`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "It demonstrates architecture portability of source-mass scaling and attraction sign across ordered 3D cubic, staggered 3D cubic, Wilson 3D cubic, and a 2D random geometric control row."  _(class `C`)_
+- **chain closes:** True — Within the stated finite simulation boundary, the conclusion follows from the supplied runner and stdout with no one-hop dependencies. The closure does not extend to a standalone Newton law, a distance-law theorem, or an independently derived gravitational sign convention.
+- **rationale:** The runner constructs the finite lattice operators, solves the screened Poisson systems, evolves test packets, fits the mass exponent, and computes I_3 where claimed; the source note's pass/fail conclusion is consistent with the completed stdout. The clean result is bounded to the implemented architectures, parameters, potential-coupling signs, and displacement readout. Residual risk is interpretive only: the packet does not prove full Newton closure or that the Wilson/random rows represent broader physical architecture classes beyond the implemented finite models.
 - **auditor confidence:** high
 
 ### `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25`

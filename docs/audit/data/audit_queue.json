@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 25,
-    "leaf": 264,
+    "leaf": 263,
     "medium": 144
   },
   "cycle_break_target_count": 305,
@@ -31188,27 +31188,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "architecture_portability_sweep_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ARCHITECTURE_PORTABILITY_SWEEP_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_architecture_portability_sweep.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -38029,6 +38008,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 60,
-  "total_pending": 1128
+  "ready_count": 59,
+  "total_pending": 1127
 }
