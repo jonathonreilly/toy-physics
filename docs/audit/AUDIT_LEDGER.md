@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 223 |
 | open_gate | 11 |
-| unaudited | 1169 |
+| unaudited | 1168 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 220 |
+| ~~audited_conditional~~ | 221 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 372 |
-| `audited_conditional` | 220 |
+| `audited_conditional` | 221 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1237 |
+| `unaudited` | 1236 |
 
 | claim_type | count |
 |---|---:|
@@ -580,6 +580,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | F | - |
+| `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gravity_sign_audit_2026-04-10` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `h0125_wider_replay_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `h0125_wider_w4_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -4448,6 +4449,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** By class-A inversion of A2: `L = G_0^{-1} = H = -Delta_lat`.  _(class `A`)_
 - **chain closes:** True — Within the stated conditional scope, the conclusion follows by inversion of the stipulated identity together with the definition `G_0 = H^{-1}`. The note does not claim, and this audit does not validate, a derivation of `L^{-1} = G_0` from the Cl(3)-on-Z^3 axiom.
 - **rationale:** The audited claim is explicitly bounded to the conditional implication under the stipulated closure identity. The load-bearing step is a genuine class-A algebraic inversion over the stated hypotheses, so the scoped conclusion closes. No runner stdout or runner source was supplied, so the numerical checks described inside the note are not credited; they are also not necessary for the scoped algebraic implication. The bridge theorem deriving A2 from A1 remains outside this row's clean scope.
+- **auditor confidence:** high
+
+### `gravity_law_cleanup_note`
+
+- **Note:** [`GRAVITY_LAW_CLEANUP_NOTE.md`](../../docs/GRAVITY_LAW_CLEANUP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited whether the supplied fixed-geometry runner/stdout supports a positive generated-DAG distance response on b={2,4,6,8,10,12} and no promoted distance or mass force-law.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1273-7c33-7760-9aff-834c0157e93c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The bounded null-result holds from the primary-runner cache alone: a peaked positive distance response with no review-safe falling-tail fit on the cached b window.  _(class `C`)_
+- **chain closes:** False — The no-power-law/null part closes from the runner output: the observed maximum is at b=12 and there are no falling-tail points. The stronger wording that the signal is statistically real and peaked does not close, because the selected maximum is at the endpoint of a searched window and no predeclared or multiplicity-adjusted significance criterion is supplied.
+- **rationale:** Issue: the runner supports raw positive means at b=10 and b=12 plus no review-safe falling-tail fit, but not a Nature-grade claim of a real peak or statistically real signal after searching the b window. Why this blocks: the source note's safe null-result is mixed with an overstrong significance/peak inference. Repair target: either narrow the wording to the raw cached rows and absence of a tail fit, or add a prespecified significance procedure and extended sweep demonstrating a true peak/falling tail. Claim boundary until fixed: exact force-law scaling remains unresolved and only the cached nominal response curve is supported.
 - **auditor confidence:** high
 
 ### `gravity_sign_audit_2026-04-10`
