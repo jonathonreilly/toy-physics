@@ -19,11 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| **retained_no_go** | 118 |
+| **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
 | unaudited | 1108 |
-| audit_in_progress | 1 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 22 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 377 |
+| `audited_clean` | 378 |
 | `audited_conditional` | 251 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `gate_b_poisson_self_gravity_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -212,6 +209,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `gate_b_no_restore_joint_package_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `gate_b_poisson_self_gravity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -4167,6 +4165,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The runner encodes and evaluates the narrowed numerical experiment, but the note does not close the bridge from those checks to the stronger interpretation that the old architecture genuinely transfers; the retained grown-row authority and transfer success criterion are implicit rather than derived in the provided source packet.
 - **rationale:** Issue: the load-bearing step turns a seed-0 numerical sanity replay into an architecture-transfer positive without a retained theorem defining the transfer criterion or deriving the grown-row/source/readout bridge from the provided inputs. Why this blocks: the frozen outputs may show nonzero sign-linear response under the script's selected construction, but they do not by themselves prove that the old non-label architecture genuinely applies rather than passing a chosen bounded diagnostic. Repair target: cite or derive the retained grown-row construction and an explicit transfer theorem whose runner checks pass/fail criteria rather than only printing replay values. Claim boundary until fixed: the note may safely report a bounded seed-0 computational sanity check for the specified geometry-sector candidate and fixed source law.
 - **auditor confidence:** medium
+
+### `gate_b_poisson_self_gravity_note`
+
+- **Note:** [`GATE_B_POISSON_SELF_GRAVITY_NOTE.md`](../../docs/GATE_B_POISSON_SELF_GRAVITY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the supplied one-seed minimal one-loop Poisson-like backreaction probe on the drift=0.2, restore=0.7 grown row.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1211-1a74-7563-99b3-2b43adde3c09`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The weak-field mass law collapses as soon as the backreaction is turned on at the tested coupling, with eps=0.10 giving F~M exponent = -0.60 instead of near 1.  _(class `C`)_
+- **chain closes:** True — The runner directly computes the zero-coupling reduction, centroid shifts, escape ratios, and weak-field exponent for the stated finite sweep. Within that bounded scope, the no-go conclusion follows from the completed output: eps=0 reduction is exact, but the weak-field exponent collapses when backreaction is enabled.
+- **rationale:** The note does not claim a positive self-gravity bridge; it claims the minimal tested loop fails. The runner source computes the propagated amplitudes and backreaction field rather than printing constants, and stdout matches the note's decisive failure signal: eps=0.10 has exponent -0.60. The clean scope is bounded to this exact finite runner setup, not a general theorem about all Poisson-like backreaction schemes.
+- **auditor confidence:** high
 
 ### `gate_b_v6_nearfield_comparator_note`
 
