@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1123 |
+| unaudited | 1122 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 243 |
+| ~~audited_conditional~~ | 244 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 243 |
+| `audited_conditional` | 244 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1190 |
+| `unaudited` | 1189 |
 
 | claim_type | count |
 |---|---:|
@@ -559,6 +559,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2996,6 +2997,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** This note synthesises all derived results for dark matter candidates and  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 9 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional bosonic normalization algebra for the direct neutrino bridge on C^16: Y is nilpotent, Gamma_1 is the Hermitian completion with nonzero log-det response, and the full-space trace ratio is 1/sqrt(2) once the W-source observable premise is assumed.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e122e-2e48-76c0-ab86-a5a1e4a010f7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Physical local scalar observables must be source-response coefficients of the unique additive CPT-even generator W[J] = log|det(D+J)| - log|det D|.  _(class `F`)_
+- **chain closes:** False — The finite-dimensional algebra checked by the runner closes, but the physical selection rule identifying local scalar observables with W[J] source-response coefficients is not supplied by any cited authority. Therefore the inadmissibility of the active-space ratio and uniqueness of the physical 1/sqrt(2) normalization do not follow from the restricted packet.
+- **rationale:** Issue: the note's selection of Gamma_1 over the active chiral bridge depends on the unproved observable-principle premise that physical local scalar observables are exactly W[J] source-response coefficients. Why this blocks: the runner verifies A-class matrix identities and determinant responses after that premise is accepted, but it does not derive the physical observable/readout map or prove the active-space ratio is inadmissible. Repair target: register and audit a retained upstream theorem deriving the W-source observable selection for the retained local Higgs family. Claim boundary until fixed: conditional algebra supports 1/sqrt(2) only under the observable-principle premise.
 - **auditor confidence:** high
 
 ### `dm_neutrino_cascade_geometry_note_2026-04-14`
