@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 125 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1087 |
+| unaudited | 1086 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 251 |
+| ~~audited_conditional~~ | 252 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 251 |
+| `audited_conditional` | 252 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1185 |
+| `unaudited` | 1184 |
 
 | claim_type | count |
 |---|---:|
@@ -638,6 +638,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gravity_sign_audit_2026-04-10` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `growing_graph_expansion_skeptic_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `h0125_wider_replay_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `h0125_wider_w4_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -5391,6 +5392,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The runner applies the stated frontier-growing graph rule for 16 steps and computes that node count, frontier size, mean radius, and max radius grow strongly while the static control remains fixed.  _(class `C`)_
 - **chain closes:** True — The note makes only a bounded analog-proxy claim, and the runner directly constructs the seed, applies the growth rule, computes the reported graph statistics, and compares them to the static control. No external physical bridge or cosmology derivation is required for this narrowed scope.
 - **rationale:** The load-bearing result is an internal computation from the specified toy growth rule, not an imported comparator or a symbolic relabeling. The source explicitly limits the claim to a de Sitter-like spreading proxy and disclaims proof of de Sitter spacetime, inflation, or real cosmological data. Within that boundary, the runner source actually grows the graph and recomputes the reported counts, radii, slopes, and static-control quantities.
+- **auditor confidence:** high
+
+### `growing_graph_expansion_skeptic_audit_note`
+
+- **Note:** [`GROWING_GRAPH_EXPANSION_SKEPTIC_AUDIT_NOTE.md`](../../docs/GROWING_GRAPH_EXPANSION_SKEPTIC_AUDIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded retention of a growing-graph distance/frontier-delay expansion proxy relative to a static control, with dynamic-propagation and de Sitter-like transport wording demoted.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1382-a016-72c0-9f15-7ce4e79fce13`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The audit concludes that the graph-growth proxy is retained as bounded while dynamic propagation and de Sitter-like wording should not be promoted.  _(class `B`)_
+- **chain closes:** False — The retained dependencies support the core frontier-delay/static-control result and the dynamic-propagation no-go. The source note also imports RMS delay, width, node-count, and mean-delay diagnostics not present in the one-hop authorities, and its node-count endpoint 1395 is not supported by the provided expansion-card authority's 1369 endpoint.
+- **rationale:** Issue: the note relies on diagnostic values not available in the supplied one-hop authorities or runner packet. Why this blocks: the broader evidence package cannot be verified from the restricted inputs, even though the narrower frontier-delay/static-control and dynamic no-go claims are supported. Repair target: add the diagnostic log/runner or an audited note carrying those values as a direct dependency, or narrow the claim to values present in the two retained authorities. Claim boundary until fixed: bounded frontier-delay graph expansion is supported, and dynamic/de Sitter transport promotion remains unsupported.
 - **auditor confidence:** high
 
 ### `growing_graph_frontier_expansion_proxy_note`
