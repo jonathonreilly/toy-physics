@@ -1,0 +1,140 @@
+
+============================================================================
+Probe W-Substrate-Chirality
+Cl(3) Z_2 grading does NOT force SM LH/RH split
+Source-note: KOIDE_W_SUBSTRATE_CHIRALITY_CL3_Z2_NOTE_2026-05-10_probeW_substrate_chirality.md
+============================================================================
+
+============================================================================
+SECTION 1: W-Pos-1 — Cl⁺(3) ≅ H exact-algebra reading
+============================================================================
+  [PASS (W-Pos-1)] e_{12}² = -I -- (γ_1γ_2)² = -I exactly
+  [PASS (W-Pos-1)] e_{13}² = -I -- (γ_1γ_3)² = -I exactly
+  [PASS (W-Pos-1)] e_{23}² = -I -- (γ_2γ_3)² = -I exactly
+  [PASS (W-Pos-1)] Quaternion identity: i*j = k -- with i=e_{23}, j=e_{13}, k=e_{12}
+  [PASS (W-Pos-1)] Quaternion identity: j*k = i
+  [PASS (W-Pos-1)] Quaternion identity: k*i = j
+  [PASS (W-Pos-1)] [J_1, J_2] = i J_3 (SU(2) commutator) -- Cl⁺(3) unit-group is SU(2)
+  [PASS (W-Pos-1)] Casimir J² = 3/4 (spin-1/2)
+  [PASS (W-Pos-1)] dim_R(Cl⁺(3)) = 4 (1 + 3 = scalar + bivectors) -- matches H ≅ R⊕R³ as vector space
+
+============================================================================
+SECTION 2: W-Pos-2 — Two chirality irreps ρ_± of Cl(3)
+============================================================================
+  [PASS (W-Pos-2)] ρ_+ satisfies {γ_i, γ_j} = 2δ_{ij} -- positive-chirality faithful
+  [PASS (W-Pos-2)] ρ_- satisfies {γ_i, γ_j} = 2δ_{ij} -- negative-chirality faithful
+  [PASS (W-Pos-2)] ρ_+(ω) = +i·I (positive chirality) -- ω → +i in positive-chirality summand
+  [PASS (W-Pos-2)] ρ_-(ω) = -i·I (negative chirality) -- ω → -i in negative-chirality summand
+  [PASS (W-Pos-2)] ρ_+ and ρ_- are NOT unitarily equivalent -- different central pseudoscalar value (+i vs -i)
+  [PASS (W-Pos-2)] Cl(3) ⊗_R C has real dim 16 = 2 × M_2(C) -- two simple summands (W-Pos-2)
+
+============================================================================
+SECTION 3: W-Neg-A — Cl⁺(3) identical in ρ_± (NEGATIVE)
+============================================================================
+  [PASS (W-Neg-A)] ρ_+(e_{12}) = ρ_-(e_{12}) -- (-σ_1)(-σ_2) = σ_1σ_2
+  [PASS (W-Neg-A)] ρ_+(e_{13}) = ρ_-(e_{13}) -- (-σ_1)(-σ_3) = σ_1σ_3
+  [PASS (W-Neg-A)] ρ_+(e_{23}) = ρ_-(e_{23}) -- (-σ_2)(-σ_3) = σ_2σ_3
+  [PASS (W-Neg-A)] ρ_+(I) = ρ_-(I) -- scalar grade-0 trivially identical
+  [PASS (W-Neg-A)] α(e_{12}) = e_{12} (grade involution fixes Cl⁺(3)) -- α(γ_iγ_j) = γ_iγ_j on Cl⁺(3)
+  [PASS (W-Neg-A)] Cl⁺(3) SU(2) acts identically on ρ_+ and ρ_- -- no Z_2 mechanism asymmetric in chirality
+
+============================================================================
+SECTION 4: W-Neg-B — Pati-Salam SU(2)_L × SU(2)_R Z_2-consistent (NEG)
+============================================================================
+  [PASS (W-Neg-B)] [J^L_1, J^L_2] = i J^L_3 -- SU(2)_L on ρ_+
+  [PASS (W-Neg-B)] [J^R_1, J^R_2] = i J^R_3 -- SU(2)_R on ρ_-
+  [PASS (W-Neg-B)] [J^L_a, J^R_b] = 0 (SU(2)_L × SU(2)_R commutes) -- independent gauging on each chirality summand
+  [PASS (W-Neg-B)] Pati-Salam has SU(2)_L × SU(2)_R = 3 + 3 = 6 generators -- vs SM SU(2)_L = 3 — but Z_2 grading admits both
+  [PASS (W-Neg-B)] Cl(3) Z_2 grading does NOT exclude SU(2)_R -- Pati-Salam is Z_2-consistent (NEGATIVE for SM forcing)
+
+============================================================================
+SECTION 5: W-Neg-C — RH-singlet is a separate admission (NEG)
+============================================================================
+  [PASS (W-Neg-C)] SM LH fields are SU(2) doublets (dim 2) -- LH dims = {2}
+  [PASS (W-Neg-C)] SM RH fields are SU(2) singlets (dim 1) -- RH dims = {1}
+  [PASS (W-Neg-C)] Choice 'RH is SU(2)-singlet' is gauge-content admission -- external to Cl(3) Z_2 grading
+  [PASS (W-Neg-C)] Pati-Salam: LH SU(2)_L doublet AND RH SU(2)_R doublet -- alternative content choice, Z_2-consistent
+  [PASS (W-Neg-C)] Cl(3) Z_2 grading admits both SM and PS RH-content choices -- RH-singlet vs RH-doublet not distinguished by Z_2
+
+============================================================================
+SECTION 6: W-Neg-D — No per-site γ_5 in M_2(C) (NEG, cited)
+============================================================================
+  [PASS (W-Neg-D)] ω = σ_1σ_2σ_3 = i·I_2 (central in M_2(C)) -- Cl(3) volume element is scalar in Pauli rep
+  [PASS (W-Neg-D)] [ω, σ_1] = 0 -- ω central, no chirality projector
+  [PASS (W-Neg-D)] [ω, σ_2] = 0 -- ω central, no chirality projector
+  [PASS (W-Neg-D)] [ω, σ_3] = 0 -- ω central, no chirality projector
+  [PASS (W-Neg-D)] Only M ∈ M_2(C) with {M, σ_i} = 0 ∀i is M = 0 -- M = 0 fails γ_5² = +I — no candidate
+  [PASS (W-Neg-D)] M = I fails {M, σ_i} = 0 ∀i -- no per-site γ_5 candidate
+  [PASS (W-Neg-D)] M = σ_1 fails {M, σ_i} = 0 ∀i -- no per-site γ_5 candidate
+  [PASS (W-Neg-D)] M = σ_2 fails {M, σ_i} = 0 ∀i -- no per-site γ_5 candidate
+  [PASS (W-Neg-D)] M = σ_3 fails {M, σ_i} = 0 ∀i -- no per-site γ_5 candidate
+  [PASS (W-Neg-D)] M = ω = i·I fails {M, σ_i} = 0 ∀i -- no per-site γ_5 candidate
+  [PASS (W-Neg-D)] M = σ_1 + σ_2 fails {M, σ_i} = 0 ∀i -- no per-site γ_5 candidate
+  [PASS (W-Neg-D)] Z_2 grading is invisible inside single chirality summand -- manifests only as ρ_+ vs ρ_- choice, not as γ_5 projector
+
+============================================================================
+SECTION 7: W-Neg-E — Multiple LH-content embeddings Z_2-consistent (NEG)
+============================================================================
+  [PASS (W-Neg-E)] SM (Q_L, L_L + RH singlets): anomaly-free -- gauge group SU(3) × SU(2)_L × U(1)_Y
+  [PASS (W-Neg-E)] Pati-Salam SU(4) × SU(2)_L × SU(2)_R: anomaly-free -- gauge group SU(4) × SU(2)_L × SU(2)_R
+  [PASS (W-Neg-E)] Vectorlike (R + R̄): anomaly-free -- gauge group SU(3) × SU(2) × U(1)
+  [PASS (W-Neg-E)] Trinification SU(3)³: anomaly-free -- gauge group SU(3)_L × SU(3)_R × SU(3)_C
+  [PASS (W-Neg-E)] B-L + mirror SU(2)_R: anomaly-free -- gauge group SU(3) × SU(2)_L × SU(2)_R × U(1)_{B-L}
+  [PASS (W-Neg-E)] SU(5) 5̄ + 10: anomaly-free -- gauge group SU(5) GUT
+  [PASS (W-Neg-E)] All 6 alternatives are Z_2-graded admissibly -- ρ_+ for LH, ρ_- for RH (or vacuous) — Z_2 grading respected
+  [PASS (W-Neg-E)] At least 5 non-SM Z_2-consistent LH choices exist -- 5 alternatives (PS, vectorlike, trinif, B-L+mirror, SU(5))
+  [PASS (W-Neg-E)] Z_2 grading does NOT add forcing power on top of anomaly cancellation -- both Probe Y (anomaly) and Probe W (Z_2) leave LH content unforced
+
+============================================================================
+SECTION 8: Tier classification and honest scope
+============================================================================
+  [PASS (tier)] Probe W proposed claim type is bounded_theorem -- tier = bounded_theorem
+  [PASS (tier)] Negative findings outnumber positive (mostly-negative bounded) -- 5 negative vs 2 positive (already-retained)
+  [PASS (tier)] No new repo-wide axioms introduced -- Cl(3)/Z^3 baseline + textbook grade-involution structure only
+  [PASS (tier)] No PDG observed values used as derivation input -- exact-algebra arithmetic + retained chirality irrep content only
+  [PASS (tier)] Existing positive sub-rows are cited, not strengthened -- CL3_SM_EMBEDDING_THEOREM, AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS, NO_PER_SITE_CHIRALITY_THEOREM all retained
+  [PASS (tier)] Verdict is CONSISTENCY, not incompatibility — bounded not positive -- Cl(3) Z_2 grading is CONSISTENT with PS/vectorlike/etc., not incompatible — hence bounded negative, not positive
+
+============================================================================
+VERDICT SUMMARY
+============================================================================
+
+Probe W hypothesis: Cl(3)'s real Z_2 grading Cl⁺(3) ⊕ Cl⁻(3)
+                    forces SM LH/RH split (LH ↔ Cl⁺(3) SU(2),
+                    RH ↔ SU(2)-singlet).
+
+Result: NOT SUPPORTED. Bounded mostly-negative.
+
+POSITIVE retentions (cited, already retained):
+  W-Pos-1: Cl⁺(3) ≅ H exact-algebra reading
+           [CL3_SM_EMBEDDING_THEOREM]
+  W-Pos-2: Two non-isomorphic chirality irreps ρ_± (ω → ±i)
+           [AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM, U2/U3]
+
+NEGATIVE obstructions (boundary identification):
+  W-Neg-A: Cl⁺(3) embeds IDENTICALLY in both ρ_± summands;
+           grade involution α fixes Cl⁺(3) pointwise
+  W-Neg-B: Pati-Salam SU(2)_L × SU(2)_R is Z_2-consistent
+           (independent gauging on each summand)
+  W-Neg-C: SM choice 'RH is SU(2)-singlet' is gauge-content
+           admission, NOT derivable from Z_2 grading alone
+  W-Neg-D: No per-site γ_5 projector in M_2(C) Pauli rep
+           [cited NO_PER_SITE_CHIRALITY_THEOREM]
+  W-Neg-E: 5 alternative Z_2-consistent LH-content embeddings
+           (PS, vectorlike, trinification, B-L+mirror, SU(5))
+
+Substrate-side machinery REQUIRED to close LH-content gap:
+  Z_2 grading: NEGATIVE — does not force SM choice (Probe W)
+  Anomaly cancellation: NEGATIVE — does not force SM choice
+                        (cited Probe Y-Neg-C)
+  ⇒ A non-Z_2, non-anomaly substrate mechanism would be needed
+    OR LH-content choice remains a retained admission.
+
+Net contribution to substrate-to-carrier path:
+  - Sharpens Probe Y-Neg-C by ruling out Z_2-grading candidate
+  - Establishes structural reason: Cl⁺(3) symmetric in LH/RH
+  - Distinguishes mere CONSISTENCY (Z_2 admits PS/SM/etc.)
+    from INCOMPATIBILITY (Z_2 forces SM only) — verdict is
+    consistency, hence bounded NEGATIVE, not positive
+
+=== TOTAL: PASS=58, FAIL=0 ===
