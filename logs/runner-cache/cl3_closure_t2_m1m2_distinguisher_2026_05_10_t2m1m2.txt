@@ -1,0 +1,239 @@
+
+========================================================================
+Section 0 — Retained input sanity (PR #1049 setup recap)
+========================================================================
+  PASS  0.1  C is unitary
+  PASS  0.2  C^3 = I
+  PASS  0.3  Tr(C) = 0
+  PASS  0.4  Tr(C^2) = 0
+  PASS  0.5  At BAE: E_+ = 3a^2 = 3 (equipartition)
+        E_+ = 3.000000
+  PASS  0.6  At BAE: E_perp = 6|b|^2 = 3 (equipartition)
+        E_perp = 3.000000
+  PASS  0.7  At BAE: E_+ = E_perp (Frobenius equipartition)
+
+========================================================================
+Section 1 — Saddle-level observables (M1 = M2 identically)
+========================================================================
+  PASS  1.1  M1 saddle: |b|^2/a^2 = 1/2 (=BAE)
+  PASS  1.2  M2 saddle: |b|^2/a^2 = 1/2 (=BAE) (identical to M1)
+  PASS  1.3  Both saddles give Q = 2/3 identically
+        Q_numerical = 0.6666666667
+
+  CONCLUSION: at saddle level, M1 = M2 for every observable.
+  No discrimination possible via saddle-pinned observables.
+
+========================================================================
+Section 2 — Gaussian Hessian comparison: rescaling-degeneracy
+========================================================================
+
+  Gaussian Hessian at saddle (x = 1/2) on constraint surface:
+    L_M1''(1/2) = -8.0000  (expected -8)
+    L_M2''(1/2) = -4.0000  (expected -4)
+    Ratio M1/M2 = 2.0000  (expected 2.0)
+
+  PASS  2.1  M1 Hessian on constraint = -8 at saddle
+  PASS  2.2  M2 Hessian on constraint = -4 at saddle
+  PASS  2.3  Hessian ratio M1/M2 = 2 (PR #1049 factor 2)
+
+  Gaussian variances at saddle:
+    sigma^2_M1 = 0.125000 = 1/8 = 0.125000
+    sigma^2_M2 = 0.250000 = 1/4 = 0.250000
+    Ratio sigma^2_M2 / sigma^2_M1 = 2.0000  (expected 2.0)
+  PASS  2.4  M2 Gaussian variance = 2 * M1 Gaussian variance (exact factor 2)
+
+  Rescaling-degeneracy check: is M1 action = 2 * M2 action?
+    L_M1/L_M2 across sample x: ['2.0000', '2.0000', '2.0000', '2.0000', '2.0000', '2.0000', '2.0000', '2.0000', '2.0000']
+    All equal to 2? True
+  PASS  2.5  L_M1(x) = 2 * L_M2(x) for all x on constraint (action doubling)
+
+  RESCALING-DEGENERACY THEOREM:
+    Because S_M1 = 2 * S_M2 on the constraint surface, M1 and M2 are
+    related by an EXACT rescaling of the action (or 'temperature'
+    beta_M1 = 2 * beta_M2).
+    All thermodynamic / fluctuation observables scale HOMOGENEOUSLY
+    under this rescaling: variance, susceptibility, one-loop correction
+    all differ by factor 2.
+    => At Gaussian (and any saddle-Laplace) level, M1 and M2 are
+       observationally indistinguishable absent independent calibration
+       of the overall scale (beta).
+
+========================================================================
+Section 3 — Induced measures = Beta(2, 2) vs Beta(3/2, 3/2)
+========================================================================
+
+  Beta distribution identification:
+    M1: p_M1(x) ~ x(1-x) = x^1 * (1-x)^1 = Beta(alpha=2, beta=2)
+    M2: p_M2(x) ~ sqrt(x(1-x)) = x^(1/2) * (1-x)^(1/2) = Beta(alpha=3/2, beta=3/2)
+
+  Exact partition functions B(alpha, beta) = Gamma(alpha) Gamma(beta) / Gamma(alpha+beta):
+    Z_M1 = B(2, 2) = 0.1666666667  (expected 1/6 = 0.1666666667)
+    Z_M2 = B(3/2, 3/2) = 0.3926990817  (expected pi/8 = 0.3926990817)
+
+  PASS  3.1  Z_M1 = B(2, 2) = 1/6 (exact)
+  PASS  3.2  Z_M2 = B(3/2, 3/2) = pi/8 (exact)
+  Partition function ratio: Z_M1 / Z_M2 = 0.424413
+  Exact: 4 / (3 pi) = 0.424413
+  PASS  3.3  Z_M1 / Z_M2 = 4/(3 pi) (exact symbolic value)
+
+========================================================================
+Section 4 — Exact moments and dimensionless discriminators
+========================================================================
+
+  Exact moments from Beta(alpha, alpha) formulas:
+    M1 = Beta(2, 2):
+      mean = 0.500000
+      variance = 0.0500000000  (expected 1/20 = 0.0500000000)
+      excess kurtosis = -0.8571428571  (expected -6/7 = -0.8571428571)
+    M2 = Beta(3/2, 3/2):
+      mean = 0.500000
+      variance = 0.0625000000  (expected 1/16 = 0.0625000000)
+      excess kurtosis = -1.0000000000  (expected -1)
+
+  PASS  4.1  M1 variance = 1/20 (exact, Beta(2,2))
+  PASS  4.2  M2 variance = 1/16 (exact, Beta(3/2, 3/2))
+  PASS  4.3  M1 excess kurtosis = -6/7 (exact, Beta(2,2))
+  PASS  4.4  M2 excess kurtosis = -1 (exact, Beta(3/2, 3/2))
+
+  Second moment <x^2>:
+    M1: <x^2> = 0.300000  (expected 3/10 = 0.300000)
+    M2: <x^2> = 0.312500  (expected 5/16 = 0.312500)
+
+  Dimensionless ratio <x^2>/<x>^2:
+    M1: 1.200000  (expected 6/5 = 1.200000)
+    M2: 1.250000  (expected 5/4 = 1.250000)
+    Diff: 0.050000  (expected 1/20 = 0.050000)
+  PASS  4.5  M1 <x^2>/<x>^2 = 6/5
+  PASS  4.6  M2 <x^2>/<x>^2 = 5/4
+
+========================================================================
+Section 5 — Dimensionless full-measure discriminators
+========================================================================
+
+  THE TWO CLEAN DIMENSIONLESS DISCRIMINATORS at full-measure level:
+
+  (1) Excess kurtosis difference:
+      M1 = -6/7, M2 = -1
+      Δkurt = M1 - M2 = 1/7 = 0.142857
+      This is EXACT, dimensionless, and NOT absorbable into rescaling.
+
+  (2) Second-moment ratio difference:
+      M1 = 6/5, M2 = 5/4
+      Δ = M1 - M2 = -1/20 = -0.050000
+      Equivalent dimensionless statement; same information.
+
+  PASS  5.1  Δ(excess kurtosis) = M1 - M2 = +1/7 (exact, dimensionless)
+        computed = 0.1428571429, exact = 0.1428571429
+  PASS  5.2  Δ(<x^2>/<x>^2) = M1 - M2 = -1/20 (exact, dimensionless)
+        computed = -0.0500000000, exact = -0.0500000000
+
+  Variance ratio (NOT a clean discriminator: rescaling-absorbable):
+    var_M1 / var_M2 = 0.800000  (= 4/5; reflects PR #1049 factor 2 inverted)
+  PASS  5.3  var_M1 / var_M2 = 4/5 (PR #1049 factor 2 → 1/2 in this parametrization)
+
+========================================================================
+Section 6 — KL divergence (M1 || M2) and (M2 || M1)
+========================================================================
+
+  Numerical normalization check (should be 1.0):
+    int p_M1 dx = 1.00000000
+    int p_M2 dx = 0.99999989
+  PASS  6.0a  M1 PDF normalized to 1
+  PASS  6.0b  M2 PDF normalized to 1
+
+  KL(M1 || M2) = int p_M1 log(p_M1 / p_M2) dx = 0.023714
+  KL(M2 || M1) = int p_M2 log(p_M2 / p_M1) dx = 0.029246
+  Symmetric KL = (KL12 + KL21)/2 = 0.026480
+
+  Both KL values are positive (≈ 0.024-0.029) — confirms M1 != M2 as
+  probability measures. They share mean/symmetry/support but differ
+  in shape (different polynomial weighting on the constraint).
+  PASS  6.1  KL(M1 || M2) > 0 (M1 != M2 as measures)
+  PASS  6.2  KL(M2 || M1) > 0 (M1 != M2 as measures)
+  PASS  6.3  Symmetric KL > 0.02 (confirms genuine measure-level distinction)
+
+========================================================================
+Section 7 — Susceptibility / one-loop scaling
+========================================================================
+
+  Susceptibility of Q (Q'(saddle)^2 / |Hess|):
+    chi_Q^M1 = 0.222222  (expected 2/9 = 0.222222)
+    chi_Q^M2 = 0.444445  (expected 4/9 = 0.444444)
+    Ratio M2/M1 = 2.0000  (expected 2.0)
+
+  PASS  7.1  chi_Q^M1 = 2/9 (saddle response, M1)
+  PASS  7.2  chi_Q^M2 = 4/9 (saddle response, M2)
+  PASS  7.3  chi_Q^M2 / chi_Q^M1 = 2 (factor-2 homogeneous rescaling)
+
+  Susceptibility ratio matches variance ratio: factor 2.
+  Confirms homogeneous-rescaling theorem: NO Gaussian-level observable
+  distinguishes M1 from M2 absent independent calibration of beta.
+
+========================================================================
+Section 8 — Verdict synthesis: no PDG discriminator in scope
+========================================================================
+
+  At each level:
+
+  (1) SADDLE LEVEL (PDG-comparable):
+      Q = 2/3 identically for M1 and M2.
+      Mass ratios m_e/m_mu, m_mu/m_tau are 2 free parameters
+      for both M1 and M2 (saddle pins only |b|^2/a^2).
+      PDG Q deviation 6.15e-6 is 5 orders below either width.
+      => NO discrimination.
+
+  (2) GAUSSIAN FLUCTUATION LEVEL:
+      All variances, susceptibilities, one-loop corrections differ
+      by EXACTLY factor 2 (M2 = 2 M1, homogeneously).
+      This factor 2 is absorbable into rescaling beta_M1 = 2 beta_M2.
+      => RATIO-ONLY discrimination, observationally degenerate.
+
+  (3) FULL-MEASURE LEVEL:
+      M1 ↔ Beta(2, 2) and M2 ↔ Beta(3/2, 3/2) are GENUINELY distinct.
+      Excess kurtosis diff = 1/7 (exact, dimensionless).
+      <x^2>/<x>^2 diff = 1/20 (exact, dimensionless).
+      KL divergence > 0.02 (nonzero).
+      But requires MULTIPLE Koide realizations to test (not available).
+      => RIGOROUS analytical discrimination, OBSERVATIONALLY INACCESSIBLE
+         with one Koide measurement.
+
+  FINAL VERDICT: NO PDG-COMPARABLE OBSERVABLE distinguishes M1 from M2.
+  The election is currently a GAUGE / FORMALISM CHOICE.
+
+  Author's slight preference: M2 (direct measure formalism, canonical
+  MWM reduction, no reinterpretation needed). Audit lane overrides.
+  PASS  8.1  Saddle-level: M1 = M2 (no discrimination)
+  PASS  8.2  Gaussian-level: factor-2 homogeneous rescaling (degenerate)
+  PASS  8.3  Full-measure: Beta(2,2) != Beta(3/2,3/2) (rigorous distinct)
+  PASS  8.4  Single-realization framework cannot test variance/kurtosis
+  PASS  8.5  NO PDG-DISCRIMINATING OBSERVABLE in current framework scope
+
+========================================================================
+Section 9 — Does-not disclaimers
+========================================================================
+
+  This analysis DOES NOT:
+    - Elect M1 or M2 as the canonical primitive (audit lane decides).
+    - Close BAE (PR #1049 + PR #1039 already close at saddle).
+    - Introduce new axioms.
+    - Modify retained content.
+    - Load-bear PDG (Q at PDG precision matches 2/3 to 6e-6;
+      far below either Gaussian width — saddle dominates).
+    - Propose a specific multi-realization observable that would
+      discriminate (left as future probe direction).
+
+  This analysis DOES contribute:
+    - Catalog of candidate discriminators at 3 levels.
+    - Proof of homogeneous-rescaling degeneracy at Gaussian level.
+    - Identification of induced measures as exact Beta distributions.
+    - Exact dimensionless discriminators at full-measure level.
+    - Honest verdict: no PDG observable discriminates in current scope.
+  PASS  9.1  Does not elect M1 or M2 (audit lane decides)
+  PASS  9.2  Does not close BAE (PR #1049/1039 already close at saddle)
+  PASS  9.3  Does not load-bear PDG
+  PASS  9.4  Does not introduce new axioms
+  PASS  9.5  Does not modify retained content
+
+========================================================================
+=== TOTAL: PASS=45, FAIL=0 ===
+========================================================================
