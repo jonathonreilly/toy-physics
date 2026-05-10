@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 121 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1119 |
+| unaudited | 1118 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 227 |
+| ~~audited_conditional~~ | 228 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 387 |
-| `audited_conditional` | 227 |
+| `audited_conditional` | 228 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1217 |
+| `unaudited` | 1216 |
 
 | claim_type | count |
 |---|---:|
@@ -513,6 +513,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `beyond_lattice_qcd_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_dense_joint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -1444,6 +1445,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note demotes the standalone GHZ-like runner and bases the support claim on the robustness harness: 25/25 configurations are W or W-asym with tau_3 = 0 for the fixed two-branch protocol.  _(class `C`)_
 - **chain closes:** True — The source is support-tier and explicitly bounded to externally imposed two-branch tripartite entanglement. The current robustness runner recomputes the source/coupling surface and prints tau_3 = 0, W/W-asym classification in 25/25 configurations, and positive bipartite entropies.
 - **rationale:** The load-bearing support claim closes because the note clearly makes the later robustness harness, not the historical standalone heuristic runner, the canonical interpretation surface. That canonical runner reproduces the stated W-type result and the note keeps the boundary narrow: fixed adjacency, externally imposed branch, not a full three-body BMV witness or topology-superposition claim. The historical runner's GHZ-like rows are not a contradiction because both the source note and that runner label them as non-canonical heuristic output.
+- **auditor confidence:** high
+
+### `born_lane_comparison_note`
+
+- **Note:** [`BORN_LANE_COMPARISON_NOTE.md`](../../docs/BORN_LANE_COMPARISON_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the finite-run comparison reported for N=25,40,60, npl=25, seeds=8, gap=2.0, y_cut=2.0, using the supplied runner stdout and visible wrapper source.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e132b-f279-7a80-b740-2cfd1f012710`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Both best LN lanes are Born-clean on the corrected harness at machine precision; modular is marginally more stable on the corrected Sorkin metric here, while central-band keeps the better bounded joint-decoherence story at larger N.  _(class `B`)_
+- **chain closes:** False — The note's numeric rows match the supplied stdout, but the runner's load-bearing propagation and graph-generation routines are imported from unprovided scripts. With no cited authorities listed, the restricted packet does not close the corrected-harness implementation or the decoherence/purity interpretation behind pur_min.
+- **rationale:** Issue: the note's comparison depends on unlisted runner dependencies for DAG generation, field construction, and LN propagation. Why this blocks: the supplied wrapper computes the table shape and corrected I3 formula, but cannot independently establish that propagate_ln, compute_field, generate_causal_dag, and generate_modular_dag implement the claimed corrected Sorkin harness and lane geometries. Repair target: add direct dependency edges or inline/cite audited authorities for those helper implementations and the joint-decoherence meaning of pur_min. Claim boundary until fixed: the stdout-table transcription and within-run comparison are supported, but not retained-grade Born cleanliness of the physical lanes.
 - **auditor confidence:** high
 
 ### `born_rule_analysis_2026-04-11`
