@@ -3300,6 +3300,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py"
     },
+    "dm_abcc_basin_finite_search_support_note_2026-04-30": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py"
+    },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
       "assert_count": 2,
       "counts": {
@@ -6493,6 +6505,18 @@
       "runner": "scripts/frontier_fractional_charge_denominator_from_n_c.py"
     },
     "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py"
+    },
+    "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30": {
       "assert_count": 1,
       "counts": {
         "A": 0,
@@ -11423,6 +11447,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/matter_self_focusing.py"
+    },
+    "memory_decay_diagnosis_2026-04-11": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_memory_mu2_size_sweep.py"
     },
     "memory_mu2_geometry_sweep_note_2026-04-11": {
       "assert_count": 0,
@@ -17879,6 +17915,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py"
+    },
+    "universal_gr_polarization_frame_bundle_attempt": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_universal_gr_polarization_frame_bundle.py"
     },
     "universal_gr_polarization_frame_bundle_blocker_note": {
       "assert_count": 1,
@@ -24863,7 +24911,8 @@
     "scripts/frontier_dm_abcc_basin_enumeration_completeness.py": {
       "assert_count": 1,
       "claims": [
-        "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20"
+        "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20",
+        "dm_abcc_basin_finite_search_support_note_2026-04-30"
       ],
       "counts": {
         "A": 0,
@@ -28243,7 +28292,8 @@
     "scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py": {
       "assert_count": 1,
       "claims": [
-        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25"
+        "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
+        "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30"
       ],
       "counts": {
         "A": 0,
@@ -31724,6 +31774,7 @@
     "scripts/frontier_memory_mu2_size_sweep.py": {
       "assert_count": 0,
       "claims": [
+        "memory_decay_diagnosis_2026-04-11",
         "memory_mu2_geometry_sweep_note_2026-04-11"
       ],
       "counts": {
@@ -36632,6 +36683,7 @@
     "scripts/frontier_universal_gr_polarization_frame_bundle.py": {
       "assert_count": 1,
       "claims": [
+        "universal_gr_polarization_frame_bundle_attempt",
         "universal_gr_polarization_frame_bundle_blocker_note"
       ],
       "counts": {

@@ -8,6 +8,8 @@
 canonical covariant `3+1` polarization-frame / projector bundle before
 curvature localization
 
+**Primary runner:** scripts/frontier_universal_gr_polarization_frame_bundle.py
+
 ## Verdict
 
 The current universal stack does **not** derive a canonical polarization-frame

@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1124 |
+| unaudited | 1128 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 243 |
+| ~~audited_conditional~~ | 239 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 243 |
+| `audited_conditional` | 239 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1191 |
+| `unaudited` | 1195 |
 
 | claim_type | count |
 |---|---:|
@@ -535,7 +535,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -578,7 +577,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `gap_physics_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -637,7 +635,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `local_zsym_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `matched_2d_4d_decoherence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `memory_decay_diagnosis_2026-04-11` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `minimal_absorbing_horizon_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `minimal_bidirectional_trapping_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_gravity_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -715,7 +712,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_isotropic_glue_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -2438,19 +2434,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`
 - **auditor confidence:** high
 
-### `dm_abcc_basin_finite_search_support_note_2026-04-30`
-
-- **Note:** [`DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md`](../../docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** after the A-BCC basin-enumeration completeness wrapper failed audit.  _(class `B`)_
-- **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
-- **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
-- **auditor confidence:** medium
-
 ### `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
 
 - **Note:** [`DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md)
@@ -3794,19 +3777,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_EW_bare_coupling_bookkeeping_not_registered_one_hop_dependency`
   - `Cl3_to_SM_dimension_count_d_plus_1_d_plus_2_support_packet_not_registered_one_hop_dependency`
 - **auditor confidence:** high
-
-### `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30`
-
-- **Note:** [`FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md`](../../docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** the dimension-fixed bare-coupling wrapper failed audit.  _(class `B`)_
-- **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
-- **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
-- **auditor confidence:** medium
 
 ### `g_bare_derivation_note`
 
@@ -6245,21 +6215,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The runner source actually constructs the grown DAG, Gaussian sources, two-pass density self-field propagator, slope fits, null test, and family portability checks, rather than printing fixed expected values. Its completed stdout supports the note's negative conclusion, with only small rounding differences.
 - **rationale:** The cited upstream authority is retained_no_go and is used only as the prior failed Gaussian-packet baseline. The new load-bearing result is produced by a completed first-principles numerical harness over the specified model and not by a definition, renaming, external comparator, or tuned numerical match. The conclusion is appropriately scoped as a no-go for this two-pass self-focusing Gaussian route, not as a proof that all matter closure is impossible.
 - **auditor confidence:** high
-
-### `memory_decay_diagnosis_2026-04-11`
-
-- **Note:** [`MEMORY_DECAY_DIAGNOSIS_2026-04-11.md`](../../docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Memory is quadratic in Phi, so it decays as exp(-2 mu d). The observed 7-order-of-magnitude drop from N=41 to N=101 matches this scaling.  _(class `B`)_
-- **chain closes:** False — The Yukawa scaling explanation is plausible, but the memory data, quadratic dependence, and finite-size-artifact diagnosis are not backed by a registered runner or audited source row.
-- **rationale:** Issue: the note diagnoses memory decay as Yukawa-screening finite-size artifact, but the listed N=41..101 memory values and the claim that memory is quadratic in Phi have no registered runner or explicit audited dependency in this row. Why this blocks: the audit can verify the algebraic form exp(-2 mu d) once the premises are granted, but cannot verify the measured memory decay or that this is the unique root cause from the restricted inputs. Repair target: register the memory-screening runner/log and include the mu=0 comparison or a proof that the observable is quadratic in Phi over this setup. Claim boundary until fixed: the row may be cited as conditional diagnostic support for a Yukawa-screening finite-size explanation, not as a clean audited root-cause theorem.
-- **open / conditional deps cited:**
-  - `memory_decay_diagnosis_2026-04-11 -> missing memory-screening runner/log and quadratic-Phi proof`
-- **auditor confidence:** medium
 
 ### `memory_mu2_geometry_sweep_note_2026-04-11`
 
@@ -10109,19 +10064,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Under an invertible chart/frame change S, D' = S^T D S, h' = S^T h S, k' = S^T k S, and therefore B_{D'}(h',k') = B_D(h,k).  _(class `A`)_
 - **chain closes:** False — The trace congruence identity closes in-note as algebra. The global stationary patching conclusion imports finite-atlas, transition-cocycle, local nondegeneracy, and source/field-pairing covariance hypotheses, but the restricted packet contains no one-hop authorities for them.
 - **rationale:** Issue: the algebraic trace identity is closed, but the global finite-atlas stationary section statement depends on named imports that are not supplied as cited retained-grade authorities. Why this blocks: with no one-hop authorities, the atlas/cocycle, K_GR(D) nondegeneracy, and source/field-pairing covariance are unsupported premises. Repair target: add direct retained-grade dependency edges proving those inputs, or split the pure trace identity into a separate clean algebraic row. Claim boundary until fixed: exact congruence invariance of B_D is the safe in-note core.
-- **auditor confidence:** high
-
-### `universal_gr_polarization_frame_bundle_attempt`
-
-- **Note:** [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md`](../../docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Two valid 3+1 polarization frames related by a spatial rotation yield different localized channel coefficients for the same kernel, with frame_delta = 6.767e-02, so the complement is not canonical.  _(class `C`)_
-- **chain closes:** False — The note's obstruction depends on a frame-dependence computation and on upstream exact-stack inputs, but the ledger has no registered runner and no cited one-hop authorities for those ingredients. The conclusion is therefore not auditable as a closed derivation from the provided inputs.
-- **rationale:** Issue: the load-bearing complement-frame ambiguity is asserted from an unregistered runner and unprovided upstream exact-stack inputs. Why this blocks: without the runner output or cited authorities, the audit cannot verify that the quotient kernel is held fixed while only the polarization frame changes. Repair target: register the frame-dependence runner and cite the exact scalar generator, 3+1 lift, and symmetric quotient-kernel authorities used as inputs. Claim boundary until fixed: the note may stand as an open route/obstruction inventory, not as an audited derivation of the polarization-bundle obstruction.
 - **auditor confidence:** high
 
 ### `universal_gr_polarization_frame_bundle_blocker_note`

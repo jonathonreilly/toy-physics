@@ -37507,9 +37507,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "94edf556047aada8528e25f85d3def7f85c333b2ff0d77c8d3dda6277e7e0d7d",
+      "note_hash": "422c21701f3aaa9202cd84d0f261f17e7220c6b12e83dc29055485fe7a1402f7",
       "path": "docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py",
       "title": "DM A-BCC Basin Finite-Search Support Note"
     },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
@@ -41400,9 +41400,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "ea1071a99b1bd0e8ffd357cba35232305a5f4f8768fed872509db053a1d8d11d",
+      "note_hash": "2bf633005b6ed433074fcb72ce77d2dff9b9c8b55969879eca45626b501a9aa0",
       "path": "docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py",
       "title": "Framework Bare Alpha Ratio Assumed-Input Identity Support Note"
     },
     "frontier_extension_lane_opening_note_2026-04-25": {
@@ -48395,9 +48395,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "b2051980eba2d6711d32782c8791e604e5903a44c13de4987ba745b73fbc99bb",
+      "note_hash": "f8f850dd2ff018193247eaaab42079f8c4c7f05c473075df9673cd91ce580d0f",
       "path": "docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_memory_mu2_size_sweep.py",
       "title": "Memory Signal Decay \u2014 Root Cause: Yukawa Screening"
     },
     "memory_mu2_geometry_sweep_note_2026-04-11": {
@@ -59722,9 +59722,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "12fff61cac271d01633940d9c88438880238347b2696a34bbaacc9d153a414b7",
+      "note_hash": "2628e6d9acccc6a2e65957ef175a60617224b0dea275779f3e45f5d4328aedf8",
       "path": "docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_polarization_frame_bundle.py",
       "title": "Universal GR Polarization-Frame Bundle Attempt on `PL S^3 x R`"
     },
     "universal_gr_polarization_frame_bundle_blocker_note": {
@@ -63832,6 +63832,6 @@
     "leaf_count": 529,
     "node_count": 2019,
     "root_count": 785,
-    "runners_with_path": 1628
+    "runners_with_path": 1632
   }
 }

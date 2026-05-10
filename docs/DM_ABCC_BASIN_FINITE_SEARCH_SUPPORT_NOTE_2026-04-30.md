@@ -1,5 +1,7 @@
 # DM A-BCC Basin Finite-Search Support Note
 
+**Primary runner:** scripts/frontier_dm_abcc_basin_enumeration_completeness.py
+
 **Date:** 2026-04-30
 **Status:** support. Salvage note for finite-search observations preserved
 after the A-BCC basin-enumeration completeness wrapper failed audit.
