@@ -194,3 +194,40 @@ derivation. In particular, `ALPHA_S_DERIVED_NOTE.md` is the primary
 downstream consumer; that note cites this one as its registered
 v -> M_Z bridge so that its quoted `alpha_s(M_Z) = 0.1181` has a
 documented one-hop running-bridge dependency.
+
+## Bridge-support progress 2026-05-09 (upstream plaquette boundary)
+
+The 2026-05-05 audit pass on this row recorded the explicit repair
+target:
+
+> dependency_not_retained: retain or replace
+> docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md with a retained-grade
+> boundary authority for alpha_s(v), and separately register the
+> imported SM RGE/threshold infrastructure as an explicit bounded
+> retained dependency.
+
+A first concrete piece of the upstream plaquette boundary repair
+target landed audited_clean on 2026-05-09 in
+[`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md).
+That delivery is a bounded finite-box computation of the normalized
+single-link SU(3) Wilson boundary character coefficients
+`rho_(p,q)(6)` for `0 <= p,q <= 4` by two independent methods.
+
+That audited_clean coefficient table does not by itself close either
+the upstream analytic `beta = 6` insertion or the SM RGE / threshold
+infrastructure imports of this bridge note. The honest read remains:
+
+- this row is correctly carried as `bounded`;
+- the load-bearing step is class `(G)` (numerical match at an
+  imported `alpha_s(v)`); that classification is not affected by the
+  rho_(p,q)(6) audited_clean delivery, which is upstream of the
+  plaquette evaluation rather than at the bridge step;
+- the SM RGE / quark-mass threshold imports remain explicit
+  standard-infrastructure references that this note does not derive;
+- effective-status propagation continues to cap this row at
+  `audited_conditional` until both the upstream plaquette analytic
+  insertion gap is closed and the SM RGE / threshold infrastructure
+  is registered with retained-grade audit cover.
+
+This subsection is informational reuse-discipline only; it does not
+promote the audit verdict and does not amend the load-bearing step.
