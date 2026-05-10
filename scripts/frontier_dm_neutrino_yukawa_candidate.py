@@ -3,7 +3,18 @@
 Neutrino Yukawa Cascade Candidate
 =================================
 
-STATUS: HISTORICAL BOUNDED PRECURSOR
+STATUS: HISTORICAL BOUNDED PRECURSOR (SUPERSEDED)
+SUPERSEDED BY: docs/DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md
+               scripts/frontier_dm_neutrino_schur_suppression_theorem.py
+
+This runner is preserved as a historical-reference numerical match. It is no
+longer the live authority for the Dirac coefficient on the DM neutrino lane;
+the local Schur identity `y_nu^eff = g_weak^2 / 64` (giving
+`k_eff ~ 8.01`) is the downstream successor surface in the Schur
+suppression theorem runner. That theorem is currently conditional on its
+declared upstream inputs. Cite this artifact only as a bounded numerical
+candidate that anticipated the correct scale, never as a closed positive
+theorem for the `k_B = 8` Dirac Yukawa.
 
 Purpose:
   Quantify the strongest currently defensible mechanism behind the
@@ -24,7 +35,7 @@ Purpose:
   This explains why `k_B = 8` is structurally attractive.
 
   Historical note:
-    the exact retained local coefficient is now fixed downstream by
+    the local Schur coefficient is now the downstream successor surface in
     `frontier_dm_neutrino_schur_suppression_theorem.py`. So this script is no
     longer the live authority for the Dirac coefficient; it is the bounded
     precursor that anticipated the correct scale.
@@ -221,9 +232,9 @@ def main() -> int:
     print("     comparator stays in the same ballpark.")
     print("  4. A one-step cascade points too low in k_B; the attraction to k_B=8")
     print("     is specifically a two-step effect.")
-    print("  5. This script is no longer the live blocker surface: the exact")
-    print("     retained local second-order coefficient is now fixed by the")
-    print("     downstream Schur theorem. The live unresolved object is the")
+    print("  5. This script is no longer the live blocker surface: the local")
+    print("     Schur coefficient is now the downstream successor surface.")
+    print("     The live unresolved object is the")
     print("     Majorana / Z3 activation law.")
     print()
     print("=" * 78)

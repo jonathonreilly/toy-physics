@@ -6330,6 +6330,10 @@
     },
     {
       "from": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
+      "to": "dm_neutrino_schur_suppression_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
       "to": "dm_neutrino_cascade_geometry_note_2026-04-14"
     },
     {
@@ -39238,10 +39242,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "dm_neutrino_schur_suppression_theorem_note_2026-04-15",
         "dm_neutrino_cascade_geometry_note_2026-04-14",
         "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
       ],
-      "note_hash": "4cdf7112c60bdd3cc4c1b3c09b2b8bc36df14b8ebf8d4129570e533a1f0c6204",
+      "note_hash": "5d18405ee91b37e4255109cf8b808fc64a91c11fb8cd53eed12e8e363614dd09",
       "path": "docs/DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md",
       "runner_path": "scripts/frontier_dm_neutrino_yukawa_candidate.py",
       "title": "DM Neutrino Yukawa Cascade Candidate"
@@ -63214,7 +63219,7 @@
       "open_gate": 112,
       "positive_theorem": 608
     },
-    "edge_count": 7809,
+    "edge_count": 7810,
     "leaf_count": 527,
     "node_count": 2012,
     "root_count": 795,

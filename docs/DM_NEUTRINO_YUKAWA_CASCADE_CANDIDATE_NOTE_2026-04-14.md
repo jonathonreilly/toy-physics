@@ -1,15 +1,17 @@
 # DM Neutrino Yukawa Cascade Candidate
 
-**Status:** support - structural or confirmatory support note
+**Status:** superseded_by [`DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md) — historical precursor only
 **Date:** 2026-04-14
 **Branch:** `codex/dm-main-derived`
 **Script:** `scripts/frontier_dm_neutrino_yukawa_candidate.py`
+
+**SUPERSEDED BY:** [`docs/DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md). The local Schur identity `y_nu^eff = g_weak^2 / 64` (giving `k_eff ~ 8.01` on the DM staircase) replaces this numerical-match candidate as the live Dirac-coefficient successor surface. The Schur theorem itself is currently `audited_conditional` on its declared upstream inputs (selector curvature, `Gamma_1` bridge, bosonic normalization, staircase conversion); see that note for the live status.
 
 ---
 
 ## Status
 
-**HISTORICAL BOUNDED PRECURSOR**
+**HISTORICAL BOUNDED PRECURSOR (SUPERSEDED)**
 
 This note remains useful as the pre-theorem intuition for why `k_B = 8` kept
 reappearing. It is no longer the live authority note for the Dirac coefficient.
@@ -47,9 +49,9 @@ That theorem closes the direct local operator-selection step:
 the post-EWSB chiral surface is `Gamma_1`, not `Xi_5`. It also proves that
 the first exact closed action on `T_1` is second order.
 
-That coefficient/base-coupling gap is now closed by the later Schur theorem.
+That coefficient/base-coupling role is now carried by the later Schur theorem.
 So this note should be read as the bounded precursor that correctly guessed the
-right scale and mechanism before the exact retained local derivation existed.
+right scale and mechanism before the Schur-identity successor was packaged.
 
 ---
 
@@ -118,8 +120,9 @@ That is materially stronger than saying "`alpha_LM^2` happens to be close."
 The live Nature-bar objection has moved downstream.
 
 This note is **bounded** because it is only the historical candidate surface.
-The exact local Dirac-lane coefficient is now fixed by the Schur theorem, so
-the branch no longer needs this note to defend the second-order mechanism.
+The local Dirac-lane coefficient is now carried by the downstream Schur
+successor surface, so the branch no longer needs this numerical-match note to
+defend the second-order mechanism.
 
 What still prevents full closure is not the Dirac return coefficient. It is
 the Majorana side:

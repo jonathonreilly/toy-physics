@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_neutrino_yukawa_candidate.py
-runner_sha256: a602060f007a2d5dbac555a1a4eebfa7e6b1d605c337630b23b22120cf21344f
+runner_sha256: 1580ae0408836cac3f424c2035305d18bbe9094ca2f5e0be700370cda1ea4a9b
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.03
+elapsed_sec: 0.05
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -58,9 +58,9 @@ Honest read:
      comparator stays in the same ballpark.
   4. A one-step cascade points too low in k_B; the attraction to k_B=8
      is specifically a two-step effect.
-  5. This script is no longer the live blocker surface: the exact
-     retained local second-order coefficient is now fixed by the
-     downstream Schur theorem. The live unresolved object is the
+  5. This script is no longer the live blocker surface: the local
+     Schur coefficient is now the downstream successor surface.
+     The live unresolved object is the
      Majorana / Z3 activation law.
 
 ==============================================================================

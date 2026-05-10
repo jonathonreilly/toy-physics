@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 665,
+    "critical": 666,
     "high": 22,
     "leaf": 264,
     "medium": 146
@@ -15956,6 +15956,31 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_yt_bridge_variational_selector.py",
+      "transitive_descendants": 279
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "dm_neutrino_schur_suppression_theorem_note_2026-04-15",
+        "dm_neutrino_cascade_geometry_note_2026-04-14",
+        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.629,
+      "note_path": "docs/DM_NEUTRINO_YUKAWA_CASCADE_CANDIDATE_NOTE_2026-04-14.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_dm_neutrino_yukawa_candidate.py",
       "transitive_descendants": 279
     },
     {
@@ -34819,5 +34844,5 @@
     }
   ],
   "ready_count": 117,
-  "total_pending": 1097
+  "total_pending": 1098
 }
