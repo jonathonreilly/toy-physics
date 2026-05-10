@@ -1,12 +1,78 @@
-# Route 2 Exact Bilinear Tensor Primitive
+# Route 2 Bilinear Tensor Carrier (Definition-Only)
 
-**Date:** 2026-04-14 (originally); 2026-05-04 (audited_renaming scope-narrow)
+**Date:** 2026-04-14 (originally); 2026-05-04 (first audit-narrowing as
+`audited_renaming`); 2026-05-10 (audit-narrowing refresh: explicit
+class-A definition framing under named admitted inputs).
 **Branch:** `codex/review-active`
-**Status:** **definition-only** of a new bilinear microscopic carrier `K_R(q)` from named coordinates `(delta_A1, u_E, u_T)`. The decoupling fact, the exact aligned-bright property, and the tensor-primitive interpretation are **conditional on upstream derivations/certificates** that this note does not provide; see "Audit-driven scope narrowing" below.
+**Status:** class-A definition only — the bilinear microscopic carrier
+`K_R(q)` is **defined** as a 2x2 matrix of polynomial expressions in the
+named admitted-context inputs `(delta_A1, u_E, u_T)` and a runner-verified
+algebraic identity follows mechanically. This note **does not** derive
+the named inputs themselves, the `delta_A1`-decoupling fact, the aligned-
+bright coordinate identification, or any "physical tensor primitive"
+interpretation of `K_R`. The 2026-05-04 audit verdict was
+`audited_renaming` and the 2026-05-10 audit-narrowing refresh below
+keeps this scope.
 **Claim type:** open_gate
+**Status authority:** independent audit lane only.
+**Authority role:** records a class-A bilinear definition under named
+admitted inputs; explicitly **does not** propose retained, bounded, or
+positive-theorem promotion. Names the three upstream gaps as the open
+theorem targets.
 **Primary runner:** [`scripts/frontier_s3_time_bilinear_tensor_primitive.py`](../scripts/frontier_s3_time_bilinear_tensor_primitive.py) (PASS=4/0)
 
-## Audit-driven scope narrowing (2026-05-04)
+## Audit boundary
+
+The 2026-05-04 audit recorded the verdict `audited_renaming`, classifying
+the load-bearing step as a definitional substitution under named inputs.
+The 2026-05-10 audit-narrowing refresh confirms there is **no upstream
+retained-grade derivation** of the named inputs on `main`, and adopts
+the explicit class-A definition framing.
+
+**Cited authorities (one-hop deps; cited, not closed in this note):**
+
+- [`S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md`](S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md)
+  (`claim_type: bounded_theorem`, `intrinsic_status: unaudited`) — the
+  related Route-2 tensor-primitive surface this note identified as a
+  conceptual sibling. Cited as related, not as authority closure.
+- [`S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md`](S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md)
+  (`claim_type: bounded_theorem`, `audit_status: audited_conditional`,
+  `effective_status: audited_conditional`) — the Route-2 transfer-matrix
+  bridge sibling row in this same cluster. Cited as related, not as
+  authority closure.
+- [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+  (`claim_type: bounded_theorem`, `effective_status: retained_bounded`) —
+  the canonical Schur-boundary-action surface. Cited as the namesake of
+  the support-side decomposition, not as the source of the
+  `delta_A1`-decoupling derivation in this note.
+- [`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`](S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md)
+  (`claim_type: open_gate`, `intrinsic_status: unaudited`) — Wave-1
+  sibling note treating a related discrete bilinear-tensor action.
+  Cited as a sibling open-gate row, not as an authority closure.
+
+**Admitted-context derivation gap (real, not import-redirect):**
+
+This note explicitly admits the following three upstream gaps. None of
+the four cited authorities, and no other current atlas surface, supplies
+a retained-grade derivation of any of them; there is therefore **no**
+upstream authority closure for the named inputs.
+
+1. A retained-grade derivation of the `delta_A1`-decoupling property
+   `delta_A1 ⊥ {E_x, T1x, E_perp, T1y, T1z}` from the support-side
+   Green / Schur machinery on the seven-site star support.
+2. A retained-grade derivation of the aligned-bright coordinate
+   identification `u_E ↔ <E_x, ·>`, `u_T ↔ <T1x, ·>` from a canonical
+   bright/dark decomposition.
+3. A bridge theorem identifying the bilinear carrier `K_R(q)` with any
+   physical tensor primitive in the GR-readout chain (rather than as a
+   definitional bilinear object whose physical meaning is asserted).
+
+These are **real derivation gaps**, not dependency-citation issues. The
+note's name "tensor primitive" is a label only; the in-note content is
+restricted to the class-A definition of `K_R` under the named admitted
+inputs.
+
+## Audit-driven scope narrowing (2026-05-04, refreshed 2026-05-10)
 
 The 2026-05-04 audit verdict was `audited_renaming`. The runner verifies
 the algebraic shape of `K_R(q)` once the input coordinates
@@ -18,47 +84,48 @@ first principles.
 The renaming criterion (from the audit): *"A second audit should re-check
 whether an upstream retained derivation exists for the exact decoupling
 fact and the tensor-primitive identification, since none is included in
-this restricted packet."* This note now adopts the definition-only scope
-and records the upstream dependencies the closure would need.
+this restricted packet."* The 2026-05-10 refresh re-checks and confirms
+**no such upstream retained-grade derivation exists on `main`**; the
+class-A definition framing is therefore preserved.
 
-## Statement (scope-narrowed)
+## Statement (class-A definition only)
 
-**Definition (scope-narrowed).** Given input coordinates and the decoupling
-fact below as assumed upstream inputs, the bilinear microscopic tensor
-carrier `K_R(q)` on the seven-site star support is well-defined and the
-algebraic shape stated below holds.
+**Class-A definition (scope-bounded).** Given the named admitted-context
+input symbols `delta_A1, u_E, u_T : R^k -> R` and the decoupling fact
+of section "Named ingredients under upstream assumptions" as upstream
+admitted inputs, the bilinear microscopic carrier `K_R(q)` on the
+seven-site star support is **defined** as a 2x2 matrix of polynomial
+expressions in `(delta_A1(q), u_E(q), u_T(q))` and the runner verifies
+the corresponding endpoint-column identities to numerical zero.
 
-This note **does not derive**:
+This note's load-bearing step is the definitional substitution
 
-- The decoupling fact `delta_A1 ⊥ {E_x, T1x, E_perp, T1y, T1z}`
-- The exact aligned-bright coordinates `u_E(q) = <E_x, q>`, `u_T(q) = <T1x, q>`
+> `K_R(q) := [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]]`,
+
+evaluated at the canonical `A1` background and at unit aligned
+perturbations. This is class-A polynomial algebra in the named admitted
+inputs.
+
+This note **does not derive** any of the following, which are the three
+upstream gaps already named in the audit boundary above and re-listed
+here for in-section visibility:
+
+- The decoupling fact `delta_A1 ⊥ {E_x, T1x, E_perp, T1y, T1z}`.
+- The exact aligned-bright coordinates `u_E(q) = <E_x, q>`,
+  `u_T(q) = <T1x, q>`.
 - The interpretation of `K_R(q)` as a **physical** tensor primitive
-  (rather than a definitional bilinear object)
+  (rather than a definitional bilinear object).
 
-These are the three load-bearing upstream dependencies flagged by the
-2026-05-04 audit. To close this lane to retained-grade, a separate
-retained-grade theorem must supply:
-
-1. A retained derivation of the `delta_A1`-decoupling property from the
-   support-side Green / Schur machinery on the star support.
-2. A retained derivation of the aligned-bright coordinate identification
-   `u_E ↔ <E_x, ·>`, `u_T ↔ <T1x, ·>` from the canonical bright/dark
-   decomposition of the support block.
-3. A bridge theorem identifying the bilinear carrier `K_R(q)` with the
-   physical tensor primitive used in the GR-readout chain (rather than as
-   a constructed object whose physical meaning is asserted).
-
-Until those three dependencies are on the retained-grade surface, the corollary
-"`K_R(q)` is the **physical** microscopic tensor primitive on the support
-block" is **conditional on the bridges**, not a direct consequence of this
-note.
+The note's name "tensor primitive" is a label for the definitional
+bilinear carrier under named inputs; it is **not** a positive theorem
+that `K_R` is a physical tensor primitive on the support block.
 
 Related current surfaces include
 [`S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md`](S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md),
 [`S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md`](S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md),
 and [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md).
 This note does not treat those surfaces as retained-grade closure for the
-three dependencies above.
+three upstream dependencies above; see "Audit boundary".
 
 ## Named ingredients under upstream assumptions
 
@@ -151,11 +218,24 @@ What remains open is narrower:
 > identify the exact bilinear carrier `K_R` with the final Einstein/Regge
 > tensor dynamics law on the current restricted class.
 
-## Bottom line
+## Bottom line (scope-bounded)
 
-The definition-only microscopic tensor carrier is:
+The class-A definition under named admitted inputs is:
 
-`K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`.
+`K_R(q) := (u_E(q), u_T(q), delta_A1(q) u_E(q), delta_A1(q) u_T(q))`.
 
-The missing theorem is not a written carrier formula; it is the upstream
-derivation and final dynamics identification of that carrier.
+The runner verifies the endpoint-column identities follow from this
+definition by polynomial-identity arithmetic, conditional on the named
+admitted inputs.
+
+The three open theorem targets are upstream of this note and are listed
+explicitly in the "Audit boundary" section above:
+
+1. retained-grade derivation of the `delta_A1`-decoupling fact;
+2. retained-grade derivation of the aligned-bright coordinate
+   identification;
+3. retained-grade bridge theorem identifying `K_R` with a physical
+   tensor primitive in the GR-readout chain.
+
+None of these is closed in this note. The note's contribution is the
+class-A definition only.

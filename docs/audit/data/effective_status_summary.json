@@ -1,11 +1,11 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 760,
+    "bounded_theorem": 763,
     "decoration": 12,
     "meta": 74,
     "no_go": 192,
     "open_gate": 105,
-    "positive_theorem": 769
+    "positive_theorem": 770
   },
   "cycle_examples": [
     [
@@ -52,12 +52,12 @@
       "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     ]
   ],
-  "cycles_detected": 242,
+  "cycles_detected": 271,
   "effective_status_counts": {
-    "audited_conditional": 245,
-    "audited_failed": 9,
+    "audited_conditional": 232,
+    "audited_failed": 8,
     "audited_numerical_match": 17,
-    "audited_renaming": 21,
+    "audited_renaming": 17,
     "decoration_under_cl3_color_automorphism_theorem": 3,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": 1,
@@ -71,7 +71,7 @@
     "retained": 61,
     "retained_bounded": 231,
     "retained_no_go": 119,
-    "unaudited": 1121
+    "unaudited": 1143
   },
   "retained_pending_chain_count": 0,
   "retained_pending_chain_examples": []

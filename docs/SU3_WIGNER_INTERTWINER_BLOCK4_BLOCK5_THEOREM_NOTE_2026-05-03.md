@@ -356,3 +356,129 @@ This graph-bookkeeping section records explicit dependency links named by a prio
   cross-reference — body explicitly disclaims this as a load-bearing
   dependency at section 6; backticked to avoid length-3 cycle through
   the gauge-vacuum-plaquette tensor-transfer Perron-solve note)
+
+## Audit-conditional scope narrowing 2026-05-10
+
+The 2026-05-08 audit pass on this row recorded
+`audited_conditional` (verdict by
+`codex-audit-loop-gpt55-xhigh-019e056f-ff7e-78b0-bbfe-9ff7a3d79555`,
+load-bearing step class B) with the explicit repair target:
+
+> `missing_dependency_edge`: provide the Block 5 runner source/stdout
+> and retained packet entries for the L_s=2 candidate ansatz plus
+> bridge target/epsilon witness, or **narrow this claim to Block 4
+> staging only**.
+
+This subsection takes the second branch of the auditor's repair
+directive — narrowing the audited scope — without modifying the
+audit JSON or the load-bearing step class. It is additive
+cite-chain hygiene only.
+
+### Imported numerics declared (Block 5 runner)
+
+The Block 5 runner
+`scripts/frontier_su3_wigner_l2_cube_orientation_verification.py`
+declares these numerical constants at module scope (lines 39-43):
+
+- `EPSILON_WITNESS = 3.03e-4`
+- `BRIDGE_SUPPORT_TARGET = 0.5935306800`
+- `P_CANDIDATE_REPORTED = 0.4291049969`
+- `P_TRIV_REFERENCE = 0.4225317396`
+- `P_LOC_REFERENCE = 0.4524071590`
+
+None of these values is computed inside the Block 5 runner. They are
+imported from the unaudited `open_gate` row
+`su3_cube_index_graph_shortcut_open_gate_note_2026-05-03` (current
+ledger `intrinsic_status: unaudited`,
+`note_path: docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md`).
+The L_s=2 candidate ansatz `T_lambda = d_lambda^(-16)` and the
+all-forward index-graph component count `N_components = 8` ARE
+recomputed by the Block 5 runner; the numerical bridge target
+`0.5935...`, the witness threshold `epsilon_witness = 3.03e-4`, and
+the reported candidate Perron value `0.4291049969` are all imported.
+
+### Audit-conditional core (retained for re-audit)
+
+For the next re-audit cycle, the load-bearing scope of this row is
+narrowed to the following finite combinatorial / algebraic claims,
+which are independently checkable from the Blocks 1-3 retained
+packet plus pure `numpy + scipy.special`:
+
+**Block 4 staging core (retained for re-audit):**
+
+1. The trivial-sector exact identity
+   `Z_(0,0)(L=3 cube, beta=6) = c_(0,0)(6)^81` for the L_s=3 PBC
+   cube, with `c_(0,0)(6) = 3.4414403550` computed from the Wilson
+   character coefficient Bessel-determinant evaluation.
+
+2. The single-irrep coefficient `c_(1,1)(6) = 4.4672593754` and the
+   sector ratio `c_(1,1)(6) / c_(0,0)(6) = 1.298`, computed by the
+   same Bessel-determinant scheme.
+
+3. The 4-fold Haar singlet basis of `V_(1,1)^4 = C^4096` rebuilt by
+   Block 2's Casimir simultaneous-diagonalization algorithm to rank
+   8, with `singlet_basis.shape == (4096, 8)`, sum of column norms =
+   8.000000, rank = 8.
+
+4. The per-plaquette `(1,1)` cyclical-trace tensor structure as a
+   `(8, 8, 8, 8)`-shape leg tensor with the documented Frobenius
+   norm `sqrt(8)`.
+
+5. The L_s=3 contraction-scope analysis: `81` plaquettes x `81`
+   directed links, worst intermediate `8^9 = 134M` complex entries
+   (~2 GB), expected runtime 10-180 minutes with a memory-aware
+   contraction-order optimizer. The full L_s=3 cube contraction is
+   explicitly deferred and out of audited scope.
+
+**Block 5 orientation diagnostics core (retained for re-audit):**
+
+6. The all-forward L_s=2 PBC plaquette enumeration: 12 unique
+   unordered plaquettes, 24 unique directed links, each link in
+   exactly 2 plaquettes, index graph (48 nodes, 48 edges, 8
+   connected components).
+
+7. The structural finding that the standard Wilson `+d1+d2-d1-d2`
+   plaquette traversal at L_s=2 PBC has degenerate link
+   multiplicities `{1: 4, 2: 8, 3: 4, 4: 4}` (24 forward leg
+   occurrences and 24 backward leg occurrences), preventing direct
+   application of the source-sector factorization that assumes
+   uniform multiplicity.
+
+### Audit-conditional limb (carries through with explicit conditional)
+
+The following inferences carry through the run only conditionally on
+the unaudited open-gate row
+`su3_cube_index_graph_shortcut_open_gate_note_2026-05-03`. They are
+NOT in the narrowed re-audit scope above:
+
+- The numerical equality
+  `P_all-forward(L=2) = 0.4291049969` (the runner re-uses the
+  imported `P_CANDIDATE_REPORTED`; an independent computation of the
+  Perron value is in the open-gate row's runner, not in the Block 5
+  runner).
+
+- The bridge-gap inequality
+  `|P_all-forward(L=2) - 0.5935306800| = 0.16 = 543 x 3.03e-4`,
+  because both the bridge-support target and the witness threshold
+  are imported.
+
+- The closing verdict that "no L_s=2 PBC convention closes the
+  bridge gap" (this carries the same conditional, since it relies on
+  the imported bridge target and witness).
+
+### Effective-status read
+
+Until the open-gate row
+`su3_cube_index_graph_shortcut_open_gate_note_2026-05-03` is itself
+audited (or replaced by a retained authority for the L_s=2
+all-forward Perron value plus a retained authority for
+`BRIDGE_SUPPORT_TARGET` and `EPSILON_WITNESS`), the effective status
+of this row remains `audited_conditional`. The narrowed Block 4
+staging + Block 5 orientation-diagnostics core (claims 1-7 above) is
+checkable from the retained Blocks 1-3 packet plus the supplied
+runners; the bridge-gap limb carries the open-gate conditional.
+
+This subsection is informational reuse-discipline only; it does not
+promote the audit verdict, does not alter the recorded
+`load_bearing_step_class: B`, and does not amend the audit JSON
+ledger.

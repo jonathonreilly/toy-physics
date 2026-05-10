@@ -1,37 +1,130 @@
-# R_conn Derivation from the 1/N_c Expansion
+# R_conn from the SU(N_c) Fierz Channel-Count Identity, with 1/N_c Dynamical-Correction Estimate
 
-**Date:** 2026-04-14
-**Status:** proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c⁴)` correction; MC-verified
-**Depends on:** Cl(3) axiom (N_c = 3), SU(N_c) gauge theory
-**Cross-refs:**
+**Date:** 2026-04-14 (originally); 2026-05-10 (audit-narrowing refresh).
+**Status:** scope-narrowed bounded note. The exact `(N_c^2 − 1)/N_c^2`
+adjoint-channel **representation-dimension fraction** is **imported**
+from the already-retained Fierz authority below; this note adds a
+1/N_c-expansion **estimate** for the channel-population dynamics and
+records an MC cross-check. The promotion of the channel-count fraction
+to the connected-trace dynamical observable is **not** derived in this
+note; it inherits the named matching gap from the Fierz authority.
+**Type:** bounded_theorem (estimate + MC cross-check), open dynamical
+bridge.
+**Status authority:** independent audit lane only.
+**Authority role:** records, but does not close, the dynamical bridge
+from the exact Fierz channel-count fraction to the lattice connected-
+trace ratio. Names that bridge as a real upstream gap inherited from
+the Fierz authority's matching rule.
+**Depends on:** Cl(3) axiom (N_c = 3), SU(N_c) gauge theory.
+
+**Primary authority for the exact `(N_c^2 − 1)/N_c^2` ratio (one-hop dep,
+cited here, not closed in this note):**
+
+- [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+  (`claim_type: bounded_theorem`, `audit_status: audited_clean`,
+  `effective_status: retained_bounded`) — exact group-theory derivation
+  of the q-qbar Hilbert-space adjoint-channel dimension fraction
+  `(N_c^2 − 1)/N_c^2` from the SU(N_c) Fierz completeness identity
+  applied to the q-qbar two-point function, valid at every gauge
+  configuration and at any finite N_c (no expansion). This is the
+  cycle-breaking authority on `main`. **This note imports the channel-
+  count fraction from there**; it does **not** re-derive it.
+
+**Other cross-refs (cited as related, not as authority closure):**
 `YT_EW_COLOR_PROJECTION_THEOREM.md` (plain text),
-[YUKAWA_COLOR_PROJECTION_THEOREM.md](YUKAWA_COLOR_PROJECTION_THEOREM.md),
-`EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md` (plain text)
-**Sibling exact derivation:**
-[EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
-— independent representation-theoretic derivation of the same
-`(N_c^2 − 1)/N_c^2` ratio via the SU(N_c) Fierz completeness identity.
-The Fierz route is exact at any finite N_c (no `O(1/N_c⁴)` correction);
-this 1/N_c-expansion route is the complementary dynamical-correction
-estimate.
-**Primary runner:** `scripts/frontier_color_projection_mc.py` (MC verification)
+[YUKAWA_COLOR_PROJECTION_THEOREM.md](YUKAWA_COLOR_PROJECTION_THEOREM.md)
+(`claim_type: decoration` under the Fierz authority),
+`EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md`
+(plain text).
+
+**Primary runner:** `scripts/frontier_color_projection_mc.py` (MC
+cross-check; the runner computes the analytic 8/9 explicitly as its
+expected target — the MC value is a numerical agreement check, not an
+independent derivation of the dynamical-bridge identification).
 
 ---
 
-## Statement
+## Audit boundary
 
-**Theorem (R_conn at leading order in 1/N_c).**
-In SU(N_c) gauge theory on the lattice, the connected color trace
-ratio of the quark-antiquark propagator satisfies:
+The 2026-05-10 audit verdict was `audited_renaming`: the load-bearing
+in-note step "the connected/adjoint propagator fraction equals the
+representation-dimension fraction" was classified as a definitional
+substitution from group-theory channel counts to a dynamical observable.
+That substitution is the **dynamical-population bridge** between the
+exact Fierz channel-count and the lattice connected-trace ratio.
 
-    R_conn = (N_c^2 - 1) / N_c^2 + O(1/N_c^4)
+This note does **not** derive that bridge. It does the following four
+things, all explicitly under their cited or admitted-context authority:
 
-For N_c = 3 (from Cl(3)):
+1. **Imports** the exact `(N_c^2 − 1)/N_c^2` adjoint-channel
+   representation-dimension fraction from the cited Fierz authority
+   (no in-note re-derivation; the Fierz note is `audited_clean`,
+   retained-bounded).
+2. **Records** a standard 't Hooft-1974 1/N_c topological argument for
+   why planar diagrams dominate non-planar diagrams by `1/N_c^2` at
+   leading order. This argument is a textbook large-N_c structural
+   estimate cited as admitted-context literature input ('t Hooft 1974,
+   Witten 1979, Coleman 1985, Manohar 1998); it is **not** an in-atlas
+   theorem.
+3. **States** the **assumption** (from the cited Fierz note's matching
+   rule (M)) that the lattice connected-trace observable inherits the
+   adjoint-channel projection coefficient. This is the dynamical-
+   population bridge; it is the renaming step flagged by the audit
+   verdict and is **not** derived here.
+4. **Reports** an MC cross-check on a 4^4 lattice that the measured
+   `R_conn(MC) = 0.887 ± 0.008` agrees with the analytic target 8/9 to
+   0.2%. The runner's "expected" value is hard-coded as 8/9 from the
+   imported Fierz fraction; the MC is a numerical consistency test, not
+   an independent derivation.
 
-    R_conn = 8/9 + O(1/81) = 0.8889 + O(0.012)
+**Admitted-context derivation gap (real, not import-redirect):**
 
-The correction is O(1/N_c^4) ~ 1.2%, bounded by the genus-2 contribution
-to the diagrammatic expansion.
+The promotion from the imported Fierz channel-count fraction
+`(N_c^2 − 1)/N_c^2` to the lattice connected-trace ratio `R_conn`
+requires a structural matching rule: that the lattice connected color
+trace `<Tr_color[G(0,x) G(x,0)]_connected>` projects onto the adjoint
+channel `C(x,y)` of the Fierz decomposition rather than onto the total
+`Tr_color[G(x,y) G(y,x)]`. The cited Fierz note records this matching
+rule as a **named structural input from the framework's lattice gauge
+surface, not derived in that note** (see Fierz note section 5,
+"matching rule (M)"). This row inherits that gap without bypass; no
+retained, bounded, or proposed theorem on the current atlas closes the
+matching rule.
+
+This is a **real derivation gap**, not a dependency-citation issue.
+
+## Statement (scope-bounded)
+
+**Imported representation-theoretic fact (from the cited Fierz
+authority, not re-derived here).** In SU(N_c) gauge theory, the
+adjoint-channel dimension fraction of the q-qbar Hilbert space is
+exactly:
+
+    dim(adj) / dim(N_c ⊗ N_c-bar) = (N_c^2 − 1) / N_c^2,
+
+which equals 8/9 at N_c = 3 (fixed by Cl(3)). This is a pure group-
+theory invariant; it carries no expansion correction. Source:
+[`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md).
+
+**1/N_c estimate (this note, conditional on the named matching rule).**
+*Assuming* the matching rule (M) of the cited Fierz authority — that
+the lattice connected color trace projects onto the adjoint channel —
+the leading-order 't Hooft topological dominance of planar over non-
+planar diagrams gives the estimate
+
+    R_conn = (N_c^2 − 1) / N_c^2 + O(1/N_c^4),
+
+with the `O(1/N_c^4) ~ 1.2%` correction at `N_c = 3` bounded by genus-2
+contributions in the standard topological expansion. The matching rule
+(M) is a named structural input, not derived in this note or in the
+cited Fierz note.
+
+For `N_c = 3`:
+
+    R_conn ~ 8/9 + O(1/81)  conditional on (M)
+
+with the MC cross-check `R_conn(MC) = 0.887 ± 0.008` agreeing to 0.2%
+under the same assumption.
 
 ---
 
@@ -187,33 +280,38 @@ This gives:
 
     R_conn = 1 - 1/N_c^2 + O(1/N_c^4) = (N_c^2 - 1)/N_c^2 + O(1/N_c^4)
 
-### 2.4 Why the leading term is exact (not just approximate)
+### 2.4 What is "exact" and what is conditional (audit-narrowed 2026-05-10)
 
-The result R_conn = (N_c^2 - 1)/N_c^2 at leading order is EXACT in
-the 1/N_c expansion, not an approximation within the leading order.
-The reason:
+The exact-at-finite-N_c content is the **representation-dimension
+fraction** `(N_c^2 − 1)/N_c^2`, imported from the cited Fierz authority.
+That fraction is a pure SU(N_c) group-theory invariant; it carries no
+expansion correction.
 
-1. The Fierz identity is an algebraic identity of SU(N_c). It gives
-   EXACT dimensions for the singlet (1) and adjoint (N_c^2 - 1)
-   channels.
+The leading-order **dynamical** statement that the lattice connected-
+trace observable saturates that fraction is **conditional**:
 
-2. At leading order in 1/N_c, the planar diagrams populate the adjoint
-   channel uniformly across all N_c^2 - 1 generators. This is because
-   planar gluon exchange generates color rotations in the fundamental
-   representation, which span the full Lie algebra su(N_c).
+1. The Fierz identity is an algebraic identity of SU(N_c) — that part
+   is exact and imported; this note does not re-derive it.
 
-3. The singlet channel receives contributions ONLY from non-planar
-   diagrams (genus >= 1), which are suppressed by 1/N_c^2.
+2. The assertion that *planar dynamics populates all `N_c^2 − 1` adjoint
+   generators uniformly* at leading order in 1/N_c is **not derived in
+   this note**. It is the standard textbook large-N_c heuristic
+   ('t Hooft 1974) and is part of the admitted-context literature
+   input. It is also the renaming step flagged by the audit verdict.
 
-4. Therefore, the leading-order decomposition is:
-   - Adjoint: (N_c^2 - 1)/N_c^2 of the total
-   - Singlet: 1/N_c^2 of the total
+3. The assertion that *the singlet channel receives contributions ONLY
+   from non-planar diagrams (genus >= 1)* uses the same 't Hooft
+   topological classification under the same heuristic.
 
-   with corrections of O(1/N_c^4) from genus-2 surfaces.
+4. Under (2)-(3), the leading-order channel decomposition matches the
+   imported representation-dimension fraction with corrections of
+   `O(1/N_c^4)` from genus-2 surfaces.
 
-The result is "exact at leading order" in the same sense that the
-planarity of large-N_c QCD is exact: it is a rigorous consequence
-of the topological classification, with controlled corrections.
+The leading-order match is therefore "leading-order in the 't Hooft
+topological-dominance heuristic plus the matching rule (M) of the
+cited Fierz note". Calling it "exact" overstates the in-atlas
+derivation status; the previous version of this section did exactly
+that and is corrected here.
 
 ---
 
@@ -403,108 +501,89 @@ group-theory factor to sub-percent precision.
 
 ---
 
-## Part 6: Axiom Trace
+## Part 6: Axiom and Authority Trace
 
-The derivation of R_conn = 8/9 traces to the Cl(3) axiom through
-the following chain:
+The dependency chain has two parts: an axiom trace for `N_c = 3`, and a
+mixed in-atlas / admitted-context literature trace for the
+`(N_c^2 − 1)/N_c^2` channel-count value:
 
-    Cl(3) --> Z_3 clock-shift --> SU(3) gauge group --> N_c = 3
+    Cl(3) --> Z_3 clock-shift --> SU(3) gauge group --> N_c = 3       (in-atlas axiom trace)
           |
-          +--> SU(N_c) gauge theory on Z^4 lattice
-          |
-          +--> 't Hooft 1/N_c expansion (property of SU(N_c))
-          |
-          +--> Topological classification: planar (g=0) vs non-planar (g>=1)
-          |
-          +--> Planar dominance: non-planar suppressed by 1/N_c^2
-          |
-          +--> Fierz identity: N_c x N_c-bar = 1 + (N_c^2-1)
-          |
-          +--> R_conn = (N_c^2-1)/N_c^2 at leading order
-          |
-          +--> N_c = 3: R_conn = 8/9
+          +--> SU(N_c) gauge theory on Z^4 lattice                    (in-atlas axiom trace)
 
-Zero imports. The 1/N_c expansion is a PROPERTY of SU(N_c) gauge
-theory. It is not imported from experiment -- it is derived from the
-gauge group, which itself descends from Cl(3).
+    SU(N_c) gauge theory                                              (in-atlas)
+          |
+          +--> Fierz completeness identity                            (cited Fierz authority, audited_clean)
+          |
+          +--> Hilbert-space dimension fraction (N_c^2 - 1)/N_c^2     (cited Fierz authority, audited_clean)
+          |
+          +--> matching rule (M): connected-trace projects on adjoint (open structural input
+          |                                                            inherited from Fierz note;
+          |                                                            not derived on `main`)
+          |
+          +--> conditional 8/9 R_conn estimate at N_c = 3              (this note, conditional on (M))
 
-The 't Hooft expansion requires no additional assumptions beyond the
-existence of the SU(N_c) gauge theory with fundamental-representation
-quarks. Both of these are present in the Cl(3)/Z^3 framework by
-construction.
+    't Hooft 1/N_c topological classification                         (admitted-context literature input)
+          |
+          +--> O(1/N_c^4) correction estimate                          (admitted-context literature input)
+
+This note's in-note content is a class-A read of the imported Fierz
+fraction (no re-derivation), conditional on the matching rule (M),
+plus an admitted-context literature input from 't Hooft for the
+correction-size estimate, plus an MC numerical cross-check.
 
 ---
 
-## Part 7: Status Assessment
+## Part 7: Status Assessment (audit-narrowed 2026-05-10)
 
-### 7.1 Qualification as DERIVED
+### 7.1 Scope of the in-note claim
 
-R_conn = 8/9 meets the DERIVED standard because:
+This note's in-note content is restricted to:
 
-1. **Analytical derivation exists.** The 1/N_c expansion provides an
-   explicit analytical argument, not just numerical evidence. The
-   argument is standard ('t Hooft 1974) and textbook-level.
+1. an **import** of the exact `(N_c^2 − 1)/N_c^2` adjoint-channel
+   dimension fraction from the cited
+   [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+   authority (`audited_clean`, retained-bounded);
+2. a **conditional** 1/N_c-expansion estimate that, *assuming the
+   matching rule (M) of the Fierz note*, gives `R_conn = (N_c^2 − 1)/N_c^2
+   + O(1/N_c^4)`;
+3. an **MC cross-check** on a 4^4 lattice that agrees with the
+   target 8/9 to 0.2%, under the same assumption (the runner uses 8/9
+   as its expected target).
 
-2. **Controlled error.** The correction is O(1/N_c^4) = O(1/81) ~ 1.2%,
-   which is parametrically small and bounded by the MC measurement
-   to |c_2| < 0.8.
+### 7.2 What is **not** derived in this note
 
-3. **No free parameters.** N_c = 3 is fixed by Cl(3). The 't Hooft
-   coupling lambda = g^2 N_c = 3 is fixed by g^2 = 1. The result
-   8/9 follows without adjustable parameters.
+The dynamical-population bridge — i.e. the structural assertion that the
+lattice connected color trace projects onto the adjoint channel of the
+Fierz decomposition — is **not** derived in this note. It inherits the
+matching rule (M) from the cited Fierz authority, where it is itself
+recorded as a named structural input that is not derived inside the
+Fierz note either. This is the renaming step flagged by the
+2026-05-10 audit verdict.
 
-4. **Multiple cross-checks.** Three independent observables (g_1, g_2,
-   m_t) confirm R_conn = 8/9 to sub-percent precision.
+The 't Hooft 1974 topological dominance argument is admitted-context
+literature input; it is **not** an in-atlas theorem on `main`.
 
-### 7.2 Why DERIVED and not THEOREM
+### 7.3 Status table for downstream consumers
 
-The distinction:
-
-- **THEOREM** would require an EXACT result: R_conn = 8/9 with zero
-  correction, provable from the lattice partition function alone.
-  This would need a non-perturbative proof that genus >= 1 contributions
-  to the connected color trace vanish identically, which is not
-  available.
-
-- **DERIVED** means: analytically obtained from a controlled expansion
-  (1/N_c) with bounded, small corrections (O(1/81)), and verified
-  by independent numerical and observational evidence.
-
-The 1/N_c expansion at N_c = 3 is analogous to the chiral expansion
-at N_f = 3: the expansion parameter (1/9 or m_s/Lambda) is not
-asymptotically small, but the leading-order result is reliable to
-~1% and confirmed by data.
-
-### 7.3 What changes from BOUNDED to DERIVED
-
-Previously (YT_EW_COLOR_PROJECTION_THEOREM.md, YUKAWA_COLOR_PROJECTION_THEOREM.md),
-R_conn = 8/9 was labeled BOUNDED because it relied on:
-- Fierz channel counting (heuristic)
-- Numerical MC measurement (empirical)
-- Absence of a systematic analytical derivation
-
-Now, the 1/N_c expansion provides the missing analytical derivation.
-The Fierz channel counting is no longer heuristic -- it is the
-LEADING-ORDER result of a systematic expansion with controlled
-corrections.
-
-The promotion from BOUNDED to DERIVED propagates to:
-- sqrt(Z_phi) = sqrt(8/9): BOUNDED --> DERIVED
-- y_t(phys) = y_t(Ward) * sqrt(8/9): BOUNDED --> DERIVED
-- g_EW(phys) = g_EW(lattice) / sqrt(8/9): BOUNDED --> DERIVED
-- m_t(pole) = 172.57 GeV: BOUNDED --> DERIVED
+The downstream observables that depend on `R_conn = 8/9` (`sqrt(Z_phi)`,
+`y_t(phys)`, `g_EW(phys)`, `m_t(pole)`) inherit the same status as the
+matching rule (M): conditional on the named structural input. This row
+explicitly **does not** propose retained or positive-theorem promotion
+for those downstream observables.
 
 ---
 
-## Import Status Table
+## Import Status Table (audit-narrowed 2026-05-10)
 
-| Element                          | Value      | Status   | Source                             |
-|----------------------------------|------------|----------|------------------------------------|
-| N_c = 3                         | 3          | AXIOM    | Cl(3) Z_3 clock-shift              |
-| SU(N_c) gauge theory            | --         | AXIOM    | Cl(3) framework                    |
-| 1/N_c expansion                 | --         | DERIVED  | Property of SU(N_c) ('t Hooft 74)  |
-| Planar dominance (genus 0)      | N_c^{chi}  | DERIVED  | Topological classification         |
-| Fierz identity                  | exact      | DERIVED  | SU(N_c) completeness relation      |
-| R_conn = (N_c^2-1)/N_c^2        | 8/9        | DERIVED  | Leading order in 1/N_c             |
-| Correction bound                | O(1/81)    | BOUNDED  | MC: |c_2| < 0.8 (2-sigma)          |
-| R_conn(MC) = 0.887 +/- 0.008    | 0.887(8)   | VERIFIED | frontier_color_projection_mc.py    |
+| Element                          | Value      | Status      | Source                                                                                              |
+|----------------------------------|------------|-------------|-----------------------------------------------------------------------------------------------------|
+| N_c = 3                          | 3          | AXIOM       | Cl(3) Z_3 clock-shift (axiom)                                                                       |
+| SU(N_c) gauge theory             | --         | AXIOM       | Cl(3) framework (axiom)                                                                             |
+| 1/N_c topological classification | --         | LITERATURE  | 't Hooft 1974 (admitted-context literature input; not in-atlas theorem)                             |
+| Planar dominance (genus 0)       | N_c^{chi}  | LITERATURE  | Topological classification (admitted-context literature input)                                      |
+| Fierz identity                   | exact      | IMPORTED    | Cited Fierz note (`audited_clean`, retained_bounded)                                                |
+| `(N_c^2-1)/N_c^2`                | 8/9        | IMPORTED    | Cited Fierz note (representation-dimension fraction; not re-derived here)                           |
+| Matching rule (M)                | --         | OPEN GAP    | Inherited from cited Fierz note as a named structural input; not derived on the current atlas      |
+| R_conn estimate                  | 8/9 + O(1/81) | CONDITIONAL | This note, conditional on matching rule (M) and 't Hooft topological-dominance literature input |
+| R_conn(MC) = 0.887 +/- 0.008     | 0.887(8)   | NUMERICAL   | `scripts/frontier_color_projection_mc.py`; runner uses 8/9 as the explicit target value              |

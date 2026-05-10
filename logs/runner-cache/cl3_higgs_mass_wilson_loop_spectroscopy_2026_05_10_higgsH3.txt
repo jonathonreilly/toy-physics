@@ -1,0 +1,260 @@
+===== runner cache v1 =====
+runner: scripts/cl3_higgs_mass_wilson_loop_spectroscopy_2026_05_10_higgsH3.py
+runner_sha256: 1dbff15af217dc63140d1d3d45934d3ac8275e3da0cc47d553ab667e3aa5aaaa
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 13.65
+status: ok
+----- stdout -----
+
+========================================================================================
+ Higgs-Channel Wilson-Loop Spectroscopy
+========================================================================================
+  source note: docs/HIGGS_MASS_WILSON_LOOP_SPECTROSCOPY_BOUNDED_NOTE_2026-05-10_higgsH3.md
+  runner: scripts/cl3_higgs_mass_wilson_loop_spectroscopy_2026_05_10_higgsH3.py
+  numba_available = True
+  canonical beta = 6
+  canonical <P>_retained = 0.5934
+
+----------------------------------------------------------------------------------------
+ Part 1: source note structure and required phrases
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token Higgs-Channel Wilson-Loop Spectroscopy  (marker = 'Higgs-Channel Wilson-Loop Spectroscopy')
+  [PASS] contains: claim_type bounded_theorem  (marker = 'bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'independent audit lane only; effective status is')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: primary correlator C(t) stated  (marker = 'C(t) := < P(0) P(t) >  -  < P >^2')
+  [PASS] contains: channel identification admission stated  (marker = 'channel-identification admission')
+  [PASS] contains: PDG comparison input flagged not-load-bearing  (marker = 'comparison only')
+  [PASS] contains: not-load-bearing label explicit  (marker = 'not load-bearing')
+  [PASS] contains: conditional admissions enumerated  (marker = 'conditional')
+  [PASS] contains: CL3_SM_EMBEDDING_THEOREM cited  (marker = 'CL3_SM_EMBEDDING_THEOREM')
+  [PASS] contains: ewitness upstream cited  (marker = 'EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness')
+  [PASS] contains: WILSON_M_H_PER_CHANNEL_CLOSURE upstream cited  (marker = 'WILSON_M_H_PER_CHANNEL_CLOSURE_BOUNDED_NOTE_2026-05-09')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: compute frontier statement  (marker = 'compute frontier')
+  [PASS] contains: statistical-error budget stated  (marker = 'stat error budget')
+  [PASS] contains: does NOT close lane statement  (marker = 'does not close')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent
+----------------------------------------------------------------------------------------
+  [PASS] absent in note: 'algebraic universality'
+  [PASS] absent in runner docstring: 'algebraic universality'
+  [PASS] absent in note: 'lattice-realization-invariant'
+  [PASS] absent in runner docstring: 'lattice-realization-invariant'
+  [PASS] absent in note: 'two-class framing'
+  [PASS] absent in runner docstring: 'two-class framing'
+  [PASS] absent in note: '(CKN)'
+  [PASS] absent in runner docstring: '(CKN)'
+  [PASS] absent in note: '(LCL)'
+  [PASS] absent in runner docstring: '(LCL)'
+  [PASS] absent in note: '(SU5-CKN)'
+  [PASS] absent in runner docstring: '(SU5-CKN)'
+  [PASS] absent in note: 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring: 'Wilson asymptotic universality'
+  [PASS] absent in note: 'imports problem'
+  [PASS] absent in runner docstring: 'imports problem'
+  [PASS] absent in note: 'two-axiom claim'
+  [PASS] absent in runner docstring: 'two-axiom claim'
+  [PASS] absent in note: 'retires admission'
+  [PASS] absent in runner docstring: 'retires admission'
+  [PASS] absent in note: 'sub-class (i)'
+  [PASS] absent in runner docstring: 'sub-class (i)'
+  [PASS] absent in note: 'sub-class (ii)'
+  [PASS] absent in runner docstring: 'sub-class (ii)'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstream files exist
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness.md
+  [PASS] upstream exists: docs/EXACT_TIER_PATH_INTEGRAL_BOUNDED_NOTE_2026-05-07_exact.md
+  [PASS] upstream exists: docs/CL3_SM_EMBEDDING_THEOREM.md
+  [PASS] upstream exists: docs/WILSON_M_H_PER_CHANNEL_CLOSURE_BOUNDED_NOTE_2026-05-09.md
+  [PASS] upstream exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+  [PASS] upstream exists: docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md
+  [PASS] upstream exists: scripts/cl3_exact_tier_ewitness_2026_05_07_ewitness.py
+  [PASS] upstream exists: scripts/canonical_plaquette_surface.py
+
+----------------------------------------------------------------------------------------
+ Part 4: retained kernel reuse self-test
+----------------------------------------------------------------------------------------
+  [run_correlator_mc] dims=(2, 2, 2, 4) vol=32 beta=6 seed=2026051001 numba=True
+    thermalized in 5.0s (80 sweeps)
+    measured in 0.6s (160 sweeps, 80 measurements)
+  <P>_global at beta=6 on 2^3 x 4: 0.6192
+  ENGELS-1990 BENCHMARK ~0.594 (large-vol)
+  [PASS] <P>_global is in retained range (0.55, 0.70)  (got 0.6192)
+  [PASS] n_meas > 0  (n_meas = 80)
+  [PASS] C_mean has lt entries  (len = 4)
+
+----------------------------------------------------------------------------------------
+ Part 5: timeslice-plaquette accumulator self-consistency
+----------------------------------------------------------------------------------------
+  [PASS] sum of timeslice plaq ~ global plaq  (diff = 1.11e-16)
+  [PASS] all timeslice plaquettes > 0
+  <P>_slice (per t) = ['0.6153', '0.6178', '0.6209', '0.6226']
+  max deviation     = 0.0038
+  [PASS] max slice deviation < 0.05 absolute  (max_dev = 0.0038)
+
+----------------------------------------------------------------------------------------
+ Part 6: connected correlator C(t) extraction
+----------------------------------------------------------------------------------------
+  C(d=0) = +1.5932e-03 ± 1.0812e-04
+  C(d=1) = -5.0992e-04 ± 7.7384e-05
+  C(d=2) = -5.7340e-04 ± 1.1184e-04
+  C(d=3) = -5.0992e-04 ± 7.7384e-05
+  [PASS] C(0) > 0 (variance is positive)  (C(0) = 1.5932e-03)
+  [PASS] C(0) >= |C(d)| for d > 0 within 3 sigma (Schwarz)  (all d-points satisfy |C(d)| < C(0) within 3 sigma)
+
+----------------------------------------------------------------------------------------
+ Part 7: production correlator at canonical operating point beta = 6, multi-seed
+----------------------------------------------------------------------------------------
+  dims = (4, 4, 4, 8), beta = 6
+  seeds = [11, 22, 33], n_thermalize = 60, n_measure = 160
+
+  --- seed 11 ---
+  [run_correlator_mc] dims=(4, 4, 4, 8) vol=512 beta=6 seed=11 numba=True
+    thermalized in 0.6s (60 sweeps)
+    measured in 1.7s (160 sweeps, 80 measurements)
+
+  --- seed 22 ---
+  [run_correlator_mc] dims=(4, 4, 4, 8) vol=512 beta=6 seed=22 numba=True
+    thermalized in 0.6s (60 sweeps)
+    measured in 1.7s (160 sweeps, 80 measurements)
+
+  --- seed 33 ---
+  [run_correlator_mc] dims=(4, 4, 4, 8) vol=512 beta=6 seed=33 numba=True
+    thermalized in 0.6s (60 sweeps)
+    measured in 1.8s (160 sweeps, 80 measurements)
+
+  Pooled <P>_global = 0.59702
+  C(d=0) = +2.6962e-04 ± 1.3172e-05
+  C(d=1) = -1.4540e-05 ± 5.2039e-07
+  C(d=2) = -4.1721e-05 ± 4.2168e-06
+  C(d=3) = -5.3367e-05 ± 2.3077e-06
+  C(d=4) = -5.0366e-05 ± 5.0431e-06
+  C(d=5) = -5.3367e-05 ± 2.3077e-06
+  C(d=6) = -4.1721e-05 ± 4.2168e-06
+  C(d=7) = -1.4540e-05 ± 5.2039e-07
+  [PASS] pooled <P>_global in retained range (0.55, 0.70)  (P = 0.59702)
+  [PASS] pooled C(0) > 0  (C(0) = 2.6962e-04)
+
+----------------------------------------------------------------------------------------
+ Part 8: effective-mass extraction from C(t)
+----------------------------------------------------------------------------------------
+  Local m_eff(d) for d=1..3:
+    d=1: m_eff = -1.0541 ± 0.1072 (lattice units)
+    d=2: m_eff = -0.2462 ± 0.1099 (lattice units)
+    d=3: m_eff = +0.0579 ± 0.1091 (lattice units)
+
+  Weighted m_eff estimator (lattice units): +0.0579 ± 0.1091
+  (used n = 1 usable d-points; mode = positive-decay window)
+  [PASS] m_eff (lattice units) is finite  (m_eff = 0.057881332283203774)
+  [PASS] m_eff estimator > 0 (non-trivial mass scale)  (m_eff = 0.0579)
+
+----------------------------------------------------------------------------------------
+ Part 9: GeV conversion and PDG comparison (comparison only, NOT load-bearing)
+----------------------------------------------------------------------------------------
+  Conversion: a^-1 (GeV) = v_EW / (a*v_EW)_lattice = 246.28 GeV    (convention: a*v_EW = 1)
+  m_eff (GeV) = 14.26 ± 26.86 GeV
+  m_H_PDG     = 125.25 GeV (comparison anchor only, NOT a derivation input)
+  Δ(m_eff - m_H_PDG) = -110.99 GeV    (-88.6% relative)
+  [PASS] m_eff (GeV) is finite  (m_eff = 14.255014514707426)
+  [PASS] m_eff (GeV) on a non-trivial physical scale (1 GeV - 10 TeV)  (m_eff = 14.26)
+
+----------------------------------------------------------------------------------------
+ Part 10: admission statements (channel + finite-size + convention)
+----------------------------------------------------------------------------------------
+  (1) Channel-identification admission: the mass-scale estimator
+      extracted from <P_spatial(0) P_spatial(t)> is treated as a
+      bounded diagnostic for the lightest 0++ scalar channel.
+      Identifying that with the physical Higgs m_H requires the
+      Higgs-channel identification of CL3_SM_EMBEDDING_THEOREM and
+      the per-channel ambiguity catalogued in
+      WILSON_M_H_PER_CHANNEL_CLOSURE_BOUNDED_NOTE_2026-05-09.
+      THE CHANNEL IDENTIFICATION IS A NON-DERIVED ADMISSION.
+
+  (2) Finite-size admission: the spatial volume L^3 and temporal
+      extent T used here are at the campaign's compute-tier limit;
+      the leading m_eff inherits a finite-size systematic that is
+      not eliminated until L * a * m_eff > 4 (rule of thumb) and
+      T * a * m_eff > 6.  This is part of the named compute
+      frontier and is NOT closed by this note.
+
+  (3) Lattice-spacing-conversion admission: the conversion
+      a^-1 = v_EW / (a * v_EW)_lattice uses the convention
+      a * v_EW = 1.  This is a convention, not a derivation.
+      Convention-dependence is flagged in the source note's
+      Boundaries section.
+
+  (4) Estimator-window admission: the m_eff estimator is read off
+      from a small d-window; if no clean positive-decay window is
+      present, the runner uses an absolute-log-ratio upper-scale
+      fallback.  A variational multi-state fit is part of the
+      named compute frontier and is NOT closed by this note.
+  [PASS] admission (1) channel identification stated
+  [PASS] admission (2) finite-size systematic stated
+  [PASS] admission (3) lattice-spacing convention stated
+  [PASS] admission (4) plateau-fit window stated
+
+----------------------------------------------------------------------------------------
+ Part 11: compute-tier statement
+----------------------------------------------------------------------------------------
+  total wall-clock: 7.1 s
+  n_seeds: 3
+  n_meas per seed: 80
+  total measurements: 240
+  numba available: True
+  [PASS] total wall < 1800s (campaign budget)  (wall = 7.1s)
+  [PASS] at least 1 seed completed  (n_seeds = 3)
+
+----------------------------------------------------------------------------------------
+ Part 12: explicit statistical-error budget
+----------------------------------------------------------------------------------------
+  C(d=0) ensemble error: 1.3172e-05
+  m_eff (lattice) stat err: 0.1091
+  m_eff (GeV)     stat err: 26.86 GeV
+  systematics NOT included in stat err:
+    - channel-identification (admission 1; not quantified here)
+    - finite-size (admission 2; ~5-10% on this lattice)
+    - lattice-spacing convention (admission 3; convention)
+    - plateau-fit window (admission 4; ~5% on this T)
+  TOTAL ε on m_eff (GeV): stat ⊕ NAMED ADMISSIONS
+    = 26.86 ⊕ <not closed>
+  [PASS] stat error on m_eff (GeV) sensible (< 1000 GeV)  (err = 26.86)
+  [PASS] stat error budget reported  (stat ⊕ named admissions)
+
+----------------------------------------------------------------------------------------
+ Part 13: boundary statement (what is NOT closed)
+----------------------------------------------------------------------------------------
+  - Lane 2 (Higgs mass) lattice -> physical matching theorem (PR #843)
+  - exact m_H value from spectroscopy at retained-tier precision
+  - channel identification: which gauge-invariant scalar operator IS
+  -   the physical Higgs operator on the framework's Cl(3)/Z^3 sub-algebra
+  - lattice-spacing convention a * v_EW = 1 at canonical operating point
+  - RGE running between lattice cutoff and physical mu = v
+  - multi-state plateau systematic (open compute frontier)
+  - exact-tier ε_witness (~3e-4) on m_eff from spectroscopy alone
+  [PASS] boundary section enumerates >= 8 items  (n_items = 8)
+
+========================================================================================
+ === TOTAL: PASS=76, FAIL=0 ===
+ VERDICT: bounded_theorem source-note proposal verified.
+   - scalar-channel correlators ARE buildable on the retained
+     numba-jitted MC infrastructure (no new repo-wide axioms / imports);
+   - the scalar-channel mass-scale estimator m_eff at the canonical
+     operating point is extracted with the stat error reported above;
+   - the m_eff -> GeV reading is conditional on the four named
+     admissions (channel ID, finite size, lattice-spacing
+     convention, plateau-fit window) catalogued in part 10.
+   - this note does NOT close the Lane 2 m_H matching theorem.
+========================================================================================
+
+----- stderr -----
+

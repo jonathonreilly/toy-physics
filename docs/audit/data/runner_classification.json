@@ -6684,6 +6684,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_g_bare_two_ward_closure.py"
     },
+    "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_g_newton_self_consistency_2026_05_10_planckP4.py"
+    },
     "g_weak_from_framework_stretch_attempt_note_2026-05-03": {
       "assert_count": 0,
       "counts": {
@@ -8543,6 +8555,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/cl3_higgs_mass_wilson_chain_2026_05_10_higgsH1.py"
+    },
+    "higgs_mass_wilson_loop_spectroscopy_bounded_note_2026-05-10_higgsh3": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 24,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_higgs_mass_wilson_loop_spectroscopy_2026_05_10_higgsH3.py"
     },
     "higgs_mechanism_note": {
       "assert_count": 0,
@@ -13152,6 +13176,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_planck_finite_response_nogo.py"
     },
+    "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_planck_hidden_character_delta_zero_2026_05_10_planckP2.py"
+    },
     "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 1,
       "counts": {
@@ -13163,6 +13199,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py"
+    },
+    "planck_orientation_principle_bounded_note_2026-05-10_planckp3": {
+      "assert_count": 3,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_planck_orientation_principle_2026_05_10_planckP3.py"
     },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
       "assert_count": 0,
@@ -21380,6 +21428,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_g_newton_self_consistency_2026_05_10_planckP4.py": {
+      "assert_count": 1,
+      "claims": [
+        "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/cl3_higgs_mass_wilson_chain_2026_05_10_higgsH1.py": {
       "assert_count": 1,
       "claims": [
@@ -21393,6 +21456,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_higgs_mass_wilson_loop_spectroscopy_2026_05_10_higgsH3.py": {
+      "assert_count": 2,
+      "claims": [
+        "higgs_mass_wilson_loop_spectroscopy_bounded_note_2026-05-10_higgsh3"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 24,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py": {
@@ -21991,6 +22069,36 @@
         "B": 0,
         "C": 7,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_planck_hidden_character_delta_zero_2026_05_10_planckP2.py": {
+      "assert_count": 1,
+      "claims": [
+        "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_planck_orientation_principle_2026_05_10_planckP3.py": {
+      "assert_count": 3,
+      "claims": [
+        "planck_orientation_principle_bounded_note_2026-05-10_planckp3"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -42622,12 +42730,12 @@
     "dominant_class_distribution": {
       "A": 24,
       "B": 176,
-      "C": 647,
-      "D": 245,
+      "C": 650,
+      "D": 246,
       "none": 428
     },
-    "runners_classified": 1520,
-    "runners_with_C": 785,
-    "runners_with_D": 403
+    "runners_classified": 1524,
+    "runners_with_C": 788,
+    "runners_with_D": 406
   }
 }

@@ -118,6 +118,53 @@ So this is an exact transfer-class theorem, not full coefficient closure.
 The downstream odd-normalization theorem now closes `c_odd`; the live
 remaining coefficient blocker is `M_even`.
 
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authorities
+the runner reads when checking the asserted `1+2` source bundle and
+`1+2` target bundle, in response to the 2026-05-10 audit verdict's
+`missing_dependency_edge` repair target. It does not promote the note
+or change the audited claim scope, which remains a conditional
+algebraic classification of parity-compatible maps.
+
+The runner
+[`scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py`](../scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py)
+reads the following five notes via the local `read("docs/...")` helper
+when verifying the source/target bundle premises (Part 1, checks 1-5):
+
+- [`PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`](PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
+  — provides the single exact real selector amplitude slot `a_sel`.
+  Currently `unaudited`.
+- [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+  — provides the strong-CP / CKM tensor-slot lane and its two-channel
+  weak tensor carrier `(tau_E, tau_T)`. Currently `unaudited`.
+- [`DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md`](DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md)
+  — records the prior boundary that what is missing is a transfer law,
+  not a new carrier. Currently `unaudited`.
+- [`DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md)
+  — records the target odd source `gamma`. Currently `unaudited`.
+- [`DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md)
+  — records the target even response pair `(E1, E2)`. Currently
+  `unaudited`.
+
+None of the five carriers carries `audited_clean` retained status, so
+effective-status propagation correctly caps this row at
+`audited_conditional`. The audit-clean parts of this note are: (Part 2)
+the algebraic block-form classification of parity-compatible linear
+transfers, and (Part 3) the reduction of the missing law to one real
+odd scalar plus one real `2 x 2` even matrix on the imported bundle.
+
+## Honest auditor read
+
+The 2026-05-10 audit recorded this row as `audited_conditional` with
+the substantive observation that the parity-compatible block-diagonal
+algebra is class-A on the imported `1+2` source bundle and `1+2` target
+bundle, but those carrier/readout premises are not closed by any cited
+retained authority in the packet. The five external notes the runner
+reads when verifying the bundle premises are now explicitly cited in
+the section above. The note's audit status is unchanged by this
+addendum.
+
 ## Command
 
 ```bash

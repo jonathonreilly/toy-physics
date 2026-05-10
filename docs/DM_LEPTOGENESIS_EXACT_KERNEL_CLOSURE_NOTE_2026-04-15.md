@@ -119,6 +119,62 @@ percent-level closure is **not** retained; the runner's classified-pass
 output confirms `eta/eta_obs ≈ 0.558`. The note no longer claims percent-
 level eta closure on this benchmark.
 
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authorities
+that the load-bearing step relies on, in response to the 2026-05-05
+audit's `audited_renaming` verdict (the runner imports the exact source
+package values `gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3, K00 = 2`
+from [`scripts/dm_leptogenesis_exact_common.py`](../scripts/dm_leptogenesis_exact_common.py)
+rather than deriving them inside the restricted packet). This addendum
+does not promote the note or change the conditional scope.
+
+Candidate one-hop authorities for the imported source package
+(currently registered with mixed audit status; this section makes the
+dependency edges explicit so the citation graph can track them):
+
+- [`DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+  — upstream candidate for the odd-source coefficient `c_odd = +1` and
+  by extension `gamma = 1/2`. Currently `unaudited`.
+- [`DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+  — upstream candidate for the even-response pair
+  `(E1, E2) = (sqrt(8/3), sqrt(8)/3)`. Currently `audited_conditional`.
+- [`DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+  — upstream candidate for the heavy-basis diagonal `K00 = 2`.
+  Currently `audited_renaming`.
+- The retained washout / staircase benchmark (`k_A = 7`, `k_B = 8`,
+  `eps/B = alpha_LM / 2`) used in Part 3 of the runner currently has no
+  separate retained-grade authority registered as a one-hop dependency.
+  It is included here as an open registration target.
+
+None of these upstream candidates carries `audited_clean` retained
+status, so effective-status propagation correctly caps this note at
+`audited_renaming`. The path to lifting the verdict is upstream closure
+of the source-package candidates above, not local edits to this note.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_renaming` with the
+substantive observation that the runner hard-codes the exact-package
+values rather than deriving them from `Cl(3)` on `Z^3`, so the bounded
+scope is conditional arithmetic on the imported source package and
+benchmark. This addendum makes the dependency edges explicit but does
+not change the verdict. The honest classification of this note remains:
+
+- The arithmetic identities (`epsilon_1 / epsilon_DI = 0.928`,
+  `eta / eta_obs = 0.558`) are runner-confirmed conditional outputs
+  given the imported source package. The runner's `[D]` classified-pass
+  output records this honestly.
+- The exact source-and-CP-channel package and its derivation from the
+  framework axiom are not closed by this note's restricted packet. The
+  upstream `_codd_bosonic`, `_veven_bosonic`, and `_k00_bosonic` rows
+  are the candidate authorities; this note inherits their conditional
+  effective status until those rows reach `audited_clean`.
+
+This addendum is graph-bookkeeping only. It does not promote the note,
+does not modify the runner numerics, and does not introduce any new
+vocabulary.
+
 ## Command
 
 ```bash

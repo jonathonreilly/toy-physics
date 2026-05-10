@@ -395,3 +395,78 @@ admitted-context items that depend on separate authority rows.
 | m_t(pole, 2-loop) = 172.57 GeV   | 172.57     | out-of-scope (numerical readout)| MSbar-to-pole conversion           |
 | m_H(2-loop) = 119.8 GeV          | 119.77     | out-of-scope (numerical readout)| lambda(M_Pl) = 0 stability        |
 | alpha_s(M_Z) = 0.1181            | 0.1181     | out-of-scope (numerical readout)| 2-loop QCD running                 |
+
+---
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_renaming`. The
+auditor's verdict separates two parts of the load-bearing step:
+
+1. The SU(3) Fierz/channel-counting identity `R_conn = (N_c^2-1)/N_c^2 = 8/9`
+   closes algebraically as a pure group-theoretic statement.
+2. The identification of the physical color-singlet scalar wave-function
+   factor with the connected/adjoint fraction `R_conn`, used to cross from
+   `R_conn` to the `sqrt(R_conn)` Yukawa-vertex correction, is treated as
+   a renaming under the restricted packet rather than a derived physical
+   bridge. The auditor's repair target requests an explicit derivation
+   from the scalar/taste-condensate operator and the SU(3) lattice
+   two-point function, showing the physical singlet scalar uses
+   `R_conn` rather than the singlet-dimension fraction or another
+   normalization.
+
+The note already declares this bridge **explicitly out of scope** in
+the "Out of scope" subsection above, in the "Status authority"
+disclaimer, and in row "R_conn bridge to scalar Z_phi" of the import-status
+table. The runner reflects the same boundary: it hard-codes
+`SQRT_R_CONN` as the Yukawa vertex correction and then checks downstream
+numerical/comparator consistency rather than deriving the singlet-channel
+identification.
+
+This addendum is graph-bookkeeping only. It does not reopen the audited
+renaming verdict, does not promote the row, and does not change the
+in-scope class-A/C content. The named retained algebraic upstream and
+the named missing bridge target are recorded for the audit citation
+graph in the next section.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authorities
+the in-scope Fierz/channel-counting identity relies on, and the named
+out-of-scope bridge target the audit verdict depends on. It does not
+promote this note or change the audited claim scope.
+
+Retained algebraic upstream (in-scope core):
+
+- [EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+  — `audited_clean / retained_bounded` exact SU(N_c) Fierz/channel-count
+  derivation of the adjoint q-qbar fraction `(N_c^2 - 1)/N_c^2`, with
+  `N_c = 3` giving `8/9`. Supplies the algebraic core of `R_conn` used
+  by this note's in-scope class-A statement.
+- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) for the existing
+  in-repo `R_conn = (N_c^2-1)/N_c^2` derivation cited in the Import
+  Status Table above.
+
+In-repo channel-counting siblings (cross-channel consistency):
+
+- [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+  for the EW vacuum-polarization adjoint-channel application of the
+  same `R_conn` factor (the `9/8` direction on the EW couplings;
+  `sqrt(8/9)` is the opposite direction on the Yukawa vertex).
+- [YUKAWA_COLOR_PROJECTION_THEOREM.md](YUKAWA_COLOR_PROJECTION_THEOREM.md)
+  for the existing in-repo Yukawa color-projection theorem the present
+  note's `sqrt(R_conn)` step refines.
+
+Out-of-scope bridge target named by the audit verdict (not closed here):
+
+- The auditor's repair target is a derivation from the scalar/taste-
+  condensate operator and the SU(3) lattice two-point function showing
+  that the physical color-singlet scalar wave-function factor equals
+  `R_conn` rather than the singlet-dimension fraction or another
+  normalization. That bridge is the one the note's "Out of scope"
+  subsection and Import Status Table row "R_conn bridge to scalar Z_phi"
+  already declare admitted-context. It is **not** closed by this note
+  or by this addendum; it would require a separate retained scalar
+  self-energy projection theorem and a runner that computes
+  `Z_phi = R_conn` from framework operators rather than hard-coding
+  `SQRT_R_CONN`.

@@ -102,6 +102,67 @@ or else
 
 - prove a sharper exact no-go on the current PMNS branch.
 
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authorities
+the runner imports when constructing the projected Hermitian response
+pack `(R11, R22, R33, S12, A12, S13, A13, S23, A23)` and the canonical
+`dW_e^H` triplet read, in response to the 2026-05-05 audit verdict's
+`missing_bridge_theorem` repair target. It does not promote the note or
+change the audited claim scope, which remains the linear translation
+from the projected response pack to `(gamma, E1, E2)` conditional on
+the imported endpoint definitions.
+
+The runner
+[`scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py`](../scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py)
+imports three helper symbols from sibling runners:
+
+- `hermitian_linear_responses` from
+  [`scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py`](../scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py)
+  with source note
+  [`DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md)
+  — defines the projected Hermitian response pack on the charged
+  support `E_e`. Currently `unaudited`.
+- `breaking_triplet_coordinates` from
+  [`scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`](../scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py)
+  with source note
+  [`DM_LEPTOGENESIS_PMNS_CP_BRIDGE_BOUNDARY_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_CP_BRIDGE_BOUNDARY_NOTE_2026-04-16.md)
+  — defines the breaking-triplet coordinates `(gamma, E1, E2)` on the
+  PMNS-side endpoint. Currently `unaudited`.
+- `canonical_h` from
+  [`scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`](../scripts/frontier_dm_leptogenesis_pmns_projector_interface.py)
+  with source note
+  [`DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md)
+  — provides the canonical near-closing PMNS Hermitian sample used in
+  the comparator read. Currently `audited_conditional`.
+
+None of the three upstream helpers carries `audited_clean` retained
+status, so effective-status propagation correctly caps this row at
+`audited_conditional`. The audit-clean part of this note is the
+projected-source linear functional identity:
+
+- `gamma = A13 / 2`
+- `E1 = (R22 - R33) / 2 + (S12 - S13) / 4`
+- `E2 = R11 + (S12 + S13) / 4 - (R22 + R33) / 2 - S23 / 2`
+
+verified by the runner against the imported helper definitions.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with
+the substantive observation that the load-bearing linear formulas are
+class-A algebra once the response-pack coordinates and breaking-triplet
+coordinates are accepted, but those definitions are imported from
+sibling runner modules whose source notes are not closed in the audit
+ledger. The three imported helper surfaces are now explicitly cited in
+the section above. The note's audit status is unchanged by this
+addendum.
+
+The runner's classified output continues to read PASS=12 / FAIL=0; the
+canonical comparator read `gamma > 0, E1 < 0, E2 < 0` continues to
+miss the constructive baryogenesis sheet on both real interference
+channels, exactly as recorded by the runner.
+
 ## Command
 
 ```bash

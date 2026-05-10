@@ -107,3 +107,48 @@ What it does prove is narrower and useful:
 That means the remaining `y_t` gap is no longer normal-form ambiguity. It is
 the microscopic theorem that the exact interacting bridge belongs to this
 already-unique Schur class.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with two
+substantive observations:
+
+1. The exact Schur coarse-operator setup and the intrinsic package-scale
+   remainder budgets are imported from upstream rows rather than closed
+   in this packet.
+2. The runner samples a finite deterministic perturbation grid; the
+   universal quantifier over every admissible exact coarse operator
+   would also need an analytic or certified covering argument from the
+   sampled grid to the full admissible class.
+
+The note already states both qualifications in the "Setup" and "Honest
+boundary" sections above. This addendum makes the upstream citations
+explicit so the audit citation graph can track them, and acknowledges
+the finite-sampling boundary on the runner's universal claim.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+theorem statement, the perturbation class, or the remainder budgets.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream
+authorities the exact-Schur-class normal-form argument relies on. It
+does not promote this note or change the audited claim scope.
+
+- [YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md](YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md)
+  for the exact Schur coarse-grained bridge operator on the forced UV
+  window that supplies the reference operator and the affine
+  normal-form coordinate.
+- [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+  for the higher-order local scale `7.123842e-3` that bounds the local
+  diagonal perturbation amplitude in the runner's admissible class.
+- [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+  for the nonlocal operator scale `5.023669e-3` that bounds the
+  quasi-local symmetric tail amplitude in the runner's admissible class.
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+  for the leading-order Hessian selector that picks out the affine
+  normal-form coordinate the runner checks across the perturbed class.
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+  for the rearrangement step that pushes admissible perturbation mass
+  toward the UV window where the affine normal form is checked.

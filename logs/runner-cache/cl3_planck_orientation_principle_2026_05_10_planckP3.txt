@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/cl3_planck_orientation_principle_2026_05_10_planckP3.py
+runner_sha256: d94fb5aa2a2bc32f9bfc38a468f0eda4e1c03fb9740da053568ecbd4f2834574
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+==============================================================================
+CL(3)/Z^3 PLANCK ORIENTATION PRINCIPLE FROM CITED 3+1 SUPPORT
+==============================================================================
+
+Question: does the cited action-level temporal-axis sign rule of
+the staggered-Dirac RP factorisation (single-clock theorem Step 4)
+break the Hodge P_1 <-> P_3 degeneracy and uniquely select first-order P_1?
+
+[PASS] 1. construct oriented Hodge star (replicates no-go surface): unitarity=0.00e+00; star^2 law=0.00e+00
+[PASS] 2. Hodge star exchanges P_1 and P_3 (replicates no-go): ||*P1*-P3||=0.00e+00; ||*P3*-P1||=0.00e+00
+[PASS] 3. Theta_RP is Hermitian, unitary, involutive (Z_2 grading): unitarity=0.00e+00; involution=0.00e+00; hermiticity=0.00e+00
+[PASS] 4. Theta_RP decomposes P_1 as (1 minus) + (3 plus), P_3 as (3 minus) + (1 plus): P_1: (1-,3+); P_3: (3-,1+)
+[PASS] 5. Hodge star anticommutes with Theta_RP (degeneracy-breaker): ||{*,Theta_RP}||=0.00e+00; ||[*,Theta_RP]||=8.00e+00
+[PASS] 6. e^t is in P_1 and is the unique (-1)-Theta_RP eigenvector of P_1: ||Theta_RP e^t + e^t||=0.00e+00; ||P_1 e^t - e^t||=0.00e+00; dim(P_1 cap E_-)=1
+[PASS] 7. *e^t is in P_3 but lives in (+1)-Theta_RP eigenspace (NOT the time direction): |<e^x^e^y^e^z, *e^t>|=1: True; ||Theta_RP *e^t - *e^t||=0.00e+00; ||P_3 *e^t - *e^t||=0.00e+00
+[PASS] 8. (-1)-eigenspace of P_3 is the rank-3 time-mixed 3-form sector, contains no e^t: all in P_3: True; all (-1)-eig: True; max |<e^t, .>|=0.00e+00
+[PASS] 9. (+1)-eigenspace of P_1 is the rank-3 spatial 1-form sector, contains no e^t: all in P_1: True; all (+1)-eig: True; max |<e^t, .>|=0.00e+00
+[PASS] 10. orientation principle: P_1 uniquely encodes the time direction as a 1-d (-1)-Theta_RP eigenvector: dim(P_1 cap E_-)=1, dim(P_3 cap E_-)=3, e^t in P_1 cap E_-: confirmed
+[PASS] 11. forbidden-input boundary: no PDG, no fitted coefficients, no new repo-wide axioms, no MC inputs, no observable-principle / YT Ward / alpha_LM decoration used
+
+------------------------------------------------------------------------------
+ORIENTATION PRINCIPLE SUMMARY
+------------------------------------------------------------------------------
+
+Cited support inputs (chain):
+  - AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29
+    (action-level temporal-axis sign rule eta_t(theta x) = - eta_t(x))
+  - AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03
+    (Step 4: temporal direction is unique RP-admissible reflection axis)
+  - AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01
+    (forward-time alpha_t = exp(itH) with finite v_LR)
+  - ANOMALY_FORCES_TIME_THEOREM (definite 3+1 time direction)
+
+Output: action-level Z_2 grading Theta_RP = (-1)^{n_t} on Lambda^* W
+        breaks the Hodge P_1 <-> P_3 degeneracy by giving
+        ASYMMETRIC (-1)-eigenspace dimensions:
+            dim(P_1 cap E_-) = 1   (just e^t = the time direction)
+            dim(P_3 cap E_-) = 3   (time-mixed 3-forms, no e^t)
+
+Hodge star anticommutes with Theta_RP — it is NOT a symmetry of the
+cited action-level temporal-axis sign rule.
+
+Orientation principle: pick the rank-four carrier whose unique
+(-1)-Theta_RP eigenvector is the infinitesimal time direction.
+UNIQUELY satisfied by P_1.
+
+Verdict: bounded_theorem proposal — orientation principle supplies
+a bounded proposed closure from cited 3+1 single-clock support. The bounded label
+reflects that the action-level identification of Theta_RP with the
+exterior 1-form temporal-axis sign is a conditional bridge from
+the staggered-Dirac action surface to Lambda^* W.
+
+=== TOTAL: PASS=11, FAIL=0 ===
+
+----- stderr -----
+
