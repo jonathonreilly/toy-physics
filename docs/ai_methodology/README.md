@@ -62,6 +62,15 @@ Use it to answer:
     lane building, claim review, review loops, backpressure integration, and
     methodology synthesis.
 
+13. [`ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md`](./ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md)
+    Reproducible technique for converting ostensibly-blocked audit-graph
+    rows into retainable narrow `positive_theorem` source notes via a
+    four-exercise protocol (assumptions, first-principles, literature,
+    math). Empirically validated by a 100% retainable-artifact rate
+    across 23 attempts in the 2026-05-10 parallel-agent campaign.
+    Tactical agent-facing doctrine companion at
+    [`skills/physics-loop/references/abstract-algebraic-core-extraction.md`](./skills/physics-loop/references/abstract-algebraic-core-extraction.md).
+
 ## Core Workflow Surfaces Elsewhere In The Repo
 
 - review workflow:

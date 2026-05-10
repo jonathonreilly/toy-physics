@@ -314,6 +314,15 @@ For publication-facing or quantitative work, also inspect
 5. **Generate route portfolio.** Produce several independent routes and score
    them by likely claim-state movement. See
    [`references/route-patterns.md`](references/route-patterns.md).
+   When the target is a stuck audit-graph row
+   (`audited_conditional`, `unaudited critical` blocked by
+   `missing_bridge_theorem` / `scope_too_broad` /
+   `missing_dependency_edge` / `runner_artifact_issue`), prefer the
+   abstract-algebraic core extraction protocol over multi-day new
+   derivation work — see
+   [`references/abstract-algebraic-core-extraction.md`](references/abstract-algebraic-core-extraction.md).
+   That protocol has a 100% retainable-artifact rate across 23
+   attempts in the 2026-05-10 parallel-agent campaign.
 6. **Build the opportunity queue.** In campaign mode or unattended runs longer
    than one major cycle, create `OPPORTUNITY_QUEUE.md` and keep at least three
    ranked science opportunities unless the repo has fewer viable open targets.

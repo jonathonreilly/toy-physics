@@ -23001,6 +23001,42 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "ai_methodology.methodology_case_studies_2026-04-25"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "ai_methodology.skills.physics-loop.references.route-patterns"
+    },
+    {
+      "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
+    },
+    {
       "from": "ai_methodology.canonical_framing_paragraph_2026-04-25",
       "to": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25"
     },
@@ -23131,6 +23167,14 @@
     {
       "from": "ai_methodology.readme",
       "to": "ai_methodology.llm_skill_pack_2026-04-25"
+    },
+    {
+      "from": "ai_methodology.readme",
+      "to": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10"
+    },
+    {
+      "from": "ai_methodology.readme",
+      "to": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction"
     },
     {
       "from": "ai_methodology.readme",
@@ -23502,10 +23546,38 @@
     },
     {
       "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.skill",
       "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
     },
     {
       "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.physics-loop.references.long-running-execution"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "ai_methodology.skills.physics-loop.references.route-patterns"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
       "to": "ai_methodology.skills.physics-loop.references.long-running-execution"
     },
     {
@@ -33827,6 +33899,27 @@
       "runner_path": "scripts/frontier_affine_imaginary_slot_invariance_narrow.py",
       "title": "Affine Imaginary-Slot Invariance Narrow Theorem on Herm(3)"
     },
+    "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10": {
+      "claim_id": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+        "minimal_axioms_2026-05-03",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
+        "ai_methodology.methodology_case_studies_2026-04-25",
+        "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+        "ai_methodology.skills.physics-loop.references.route-patterns",
+        "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
+      ],
+      "note_hash": "fc779d1d8cf58a25a89a86532f070d53d6f543984473dc17a1e989b5965b8389",
+      "path": "docs/ai_methodology/ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md",
+      "runner_path": null,
+      "title": "Abstract-Algebraic Core Extraction Technique"
+    },
     "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25": {
       "claim_id": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
       "claim_type_author_hint": "meta",
@@ -34722,6 +34815,8 @@
         "ai_methodology.methodology_synthesis_review_2026-04-25",
         "ai_methodology.repo_trajectory_and_governance_evidence_2026-04-25",
         "ai_methodology.llm_skill_pack_2026-04-25",
+        "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+        "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
         "repo.review_feedback_workflow",
         "repo.active_review_queue",
         "claude_branch_retainability_note",
@@ -34734,7 +34829,7 @@
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "1a919b45a87967273975d67b3812ce6a9612a7f715a80605828f75dfe38c4492",
+      "note_hash": "66d30c4ef0e2b7a46a009278b6e886b7d600d1f723aed835f6c090c943d8eb1f",
       "path": "docs/ai_methodology/README.md",
       "runner_path": null,
       "title": "AI Methodology Lane"
@@ -34805,6 +34900,24 @@
       "runner_path": null,
       "title": "Physics Claim Reviewer"
     },
+    "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction": {
+      "claim_id": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+        "minimal_axioms_2026-05-03",
+        "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+        "ai_methodology.skills.physics-loop.references.route-patterns",
+        "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
+        "ai_methodology.skills.physics-loop.references.long-running-execution"
+      ],
+      "note_hash": "25b14fee833d5194d452bd226d7a9ee3bdf664a217854abac93f5f6d2a85d834",
+      "path": "docs/ai_methodology/skills/physics-loop/references/abstract-algebraic-core-extraction.md",
+      "runner_path": null,
+      "title": "Abstract-Algebraic Core Extraction"
+    },
     "ai_methodology.skills.physics-loop.references.assumption-import-audit": {
       "claim_id": "ai_methodology.skills.physics-loop.references.assumption-import-audit",
       "claim_type_author_hint": null,
@@ -34857,10 +34970,11 @@
       "deps": [
         "ai_methodology.skills.physics-loop.references.assumption-import-audit",
         "ai_methodology.skills.physics-loop.references.route-patterns",
+        "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "8d4cd101507aef395dbc185de665abf7144a38412c2f8797432d52392230b8b9",
+      "note_hash": "06fe97288028eabb655e5b390c35e184d062685cfb85990ca0c7c048a01359e1",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -66666,7 +66780,7 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 23,
-      "none": 1626,
+      "none": 1628,
       "open_gate": 28,
       "positive_theorem": 93
     },
@@ -66675,13 +66789,13 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 130,
-      "none": 449,
+      "none": 450,
       "open_gate": 116,
-      "positive_theorem": 593
+      "positive_theorem": 594
     },
-    "edge_count": 8346,
-    "leaf_count": 537,
-    "node_count": 2077,
+    "edge_count": 8364,
+    "leaf_count": 536,
+    "node_count": 2079,
     "root_count": 769,
     "runners_with_path": 1692
   }

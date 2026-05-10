@@ -1,5 +1,5 @@
 {
-  "cycle_count": 305,
+  "cycle_count": 306,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -58171,6 +58171,43 @@
       "decision": null,
       "edges": [
         {
+          "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+          "to": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10"
+        },
+        {
+          "from": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+          "to": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 0,
+      "nodes": [
+        {
+          "audit_status": null,
+          "claim_id": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+          "claim_type": null,
+          "effective_status": null,
+          "note_path": "docs/ai_methodology/skills/physics-loop/references/abstract-algebraic-core-extraction.md",
+          "title": "Abstract-Algebraic Core Extraction",
+          "transitive_descendants": null
+        },
+        {
+          "audit_status": null,
+          "claim_id": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+          "claim_type": null,
+          "effective_status": null,
+          "note_path": "docs/ai_methodology/ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md",
+          "title": "Abstract-Algebraic Core Extraction Technique",
+          "transitive_descendants": null
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0306",
+      "decision": null,
+      "edges": [
+        {
           "from": "repo.active_review_queue",
           "to": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
         },
@@ -58215,7 +58252,7 @@
     "17": 5,
     "18": 2,
     "19": 4,
-    "2": 41,
+    "2": 42,
     "20": 2,
     "21": 4,
     "22": 2,

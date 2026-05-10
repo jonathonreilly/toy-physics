@@ -5,7 +5,7 @@
     "leaf": 227,
     "medium": 151
   },
-  "cycle_break_target_count": 305,
+  "cycle_break_target_count": 306,
   "cycle_break_targets": [
     {
       "all_cycle_nodes": [
@@ -7874,10 +7874,24 @@
     },
     {
       "all_cycle_nodes": [
+        "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+        "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10"
+      ],
+      "cycle_id": "cycle-0305",
+      "cycle_length": 2,
+      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
+      "max_transitive_descendants": 0,
+      "primary_break_target": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
+      "primary_break_target_audit_status": null,
+      "primary_break_target_criticality": "leaf",
+      "repair_class": "cycle_break_required"
+    },
+    {
+      "all_cycle_nodes": [
         "repo.active_review_queue",
         "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
       ],
-      "cycle_id": "cycle-0305",
+      "cycle_id": "cycle-0306",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 0,

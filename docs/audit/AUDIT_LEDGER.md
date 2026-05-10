@@ -60,8 +60,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 1027 |
 | `high` | 51 |
-| `medium` | 249 |
-| `leaf` | 643 |
+| `medium` | 250 |
+| `leaf` | 642 |
 
 - **Retained pending chain closure:** 0
 - **Citation cycles detected:** 304
@@ -79,7 +79,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 901 | 78.32 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 906 | 79.33 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 658 | 41.86 | `unaudited` | unaudited |
 | 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 875 | 41.27 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 731 | 38.52 | `audited_conditional` | ~~audited_conditional~~ |
