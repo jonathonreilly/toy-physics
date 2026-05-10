@@ -9565,6 +9565,42 @@
       "to": "higgs_mass_hierarchy_correction_note"
     },
     {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "hierarchy_bosonic_bilinear_selector_note"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "hierarchy_dimensional_compression_note"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "axiom_first_stefan_boltzmann_theorem_note_2026-05-01"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "hierarchy_effective_potential_endpoint_note"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "axiom_first_kms_condition_theorem_note_2026-05-01"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
       "from": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
       "to": "hierarchy_matsubara_decomposition_note"
     },
@@ -45168,6 +45204,27 @@
       "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
       "title": "Hierarchy Effective-Potential Endpoint Note"
     },
+    "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10": {
+      "claim_id": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_bosonic_bilinear_selector_note",
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "hierarchy_dimensional_compression_note",
+        "axiom_first_stefan_boltzmann_theorem_note_2026-05-01",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "hierarchy_effective_potential_endpoint_note",
+        "axiom_first_kms_condition_theorem_note_2026-05-01",
+        "minimal_axioms_2026-05-03",
+        "complete_prediction_chain_2026_04_15"
+      ],
+      "note_hash": "5b608d3476b843966ebe4a22ff9e24d8fbe44cb5e48321e34b2f9debdc1b02bb",
+      "path": "docs/HIERARCHY_HEAT_KERNEL_D4_COMPRESSION_BOUNDED_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_heat_kernel_d4_compression.py",
+      "title": "Hierarchy Heat-Kernel D=4 Compression \u2014 Bounded Theorem Note"
+    },
     "hierarchy_matsubara_decomposition_note": {
       "claim_id": "hierarchy_matsubara_decomposition_note",
       "claim_type_author_hint": null,
@@ -65475,7 +65532,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 231,
+      "bounded_theorem": 232,
       "decoration": 1,
       "meta": 59,
       "no_go": 15,
@@ -65484,7 +65541,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 713,
+      "bounded_theorem": 714,
       "decoration": 1,
       "meta": 59,
       "no_go": 122,
@@ -65492,10 +65549,10 @@
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8195,
-    "leaf_count": 529,
-    "node_count": 2041,
+    "edge_count": 8204,
+    "leaf_count": 530,
+    "node_count": 2042,
     "root_count": 762,
-    "runners_with_path": 1656
+    "runners_with_path": 1657
   }
 }

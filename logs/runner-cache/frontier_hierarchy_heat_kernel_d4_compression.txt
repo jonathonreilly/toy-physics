@@ -1,0 +1,141 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_heat_kernel_d4_compression.py
+runner_sha256: 0bed141e0dbc4ece1c187bfd42bd141ec5d5a68259cc7aa6ede2b3acafebad1f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+======================================================================
+Heat-Kernel D=4 Compression Bounded Theorem — verification runner
+======================================================================
+
+[Section 1] Note structure and scope discipline
+----------------------------------------------------------------------
+  [PASS] note contains 'Heat-Kernel D=4 Compression'
+  [PASS] note contains 'bounded_theorem'
+  [PASS] note contains 'Source-note proposal disclaimer'
+  [PASS] note contains '(7/8)^(1/4)'
+  [PASS] note contains 'ζ_{D†D, L_t}'(0)'
+  [PASS] note contains '1/D = 1/4'
+  [PASS] note contains 'Weyl asymptotic'
+  [PASS] note contains 'Stefan-Boltzmann'
+  [PASS] note contains 'Vassilevich'
+  [PASS] note contains 'Counterfactual Pass record'
+  [PASS] note contains 'audit_required_before_effective_status_change: true'
+  [PASS] note contains 'proposed_load_bearing_step_class: B'
+  [PASS] note cites parent narrow source note
+  [PASS] note cites Stefan-Boltzmann source note
+  [PASS] note cites parent dimensional compression note
+  [PASS] note cites bosonic bilinear selector
+  [PASS] note cites realization gate (open admission)
+  [PASS] note declares NO PDG observed values used
+  [PASS] note declares Weyl-regime caveat (bounded)
+  [PASS] note declares does NOT close v derivation from primitives
+
+[Section 2] Zeta-regularized log-det representation
+----------------------------------------------------------------------
+  [PASS] zeta representation log|det(D†D, L_t=2)| = -ζ'(0) (numerical)
+         log|det| direct = 18.002650; -ζ'(0) = 18.002650
+  [PASS] zeta representation log|det(D†D, L_t=4)| = -ζ'(0) (numerical)
+         log|det| direct = 31.732295; -ζ'(0) = 31.732295
+  [PASS] closed-form |det(D†D, L_t=2)|² matches parent narrow source note
+         symbolic equality verified
+  [PASS] closed-form |det(D†D, L_t=4)|² matches parent narrow source note
+         symbolic equality verified
+
+[Section 3] Weyl asymptotic counting in D=4
+----------------------------------------------------------------------
+  [PASS] L_t=2: D†D spectrum is positive (Weyl-applicable form)
+         min eigenvalue = 3.080727, max = 3.080727
+  [PASS] L_t=2: counting function reaches n_total = 16 at lam_max
+         V_4 = 16, modes per lambda = 8, total = 16
+  [PASS] L_t=4: D†D spectrum is positive (Weyl-applicable form)
+         min eigenvalue = 2.695636, max = 2.695636
+  [PASS] L_t=4: counting function reaches n_total = 32 at lam_max
+         V_4 = 32, modes per lambda = 8, total = 32
+
+  Weyl-regime applicability at L_s=2 is BOUNDED (finite spectrum);
+  the dimensional-analysis content of (1/4) is a bounded consistency check because it
+  reflects the admitted D=4 taste-count identity 1/D = 4/2^D.
+
+[Section 4] Dimensional consistency and (1/D) power
+----------------------------------------------------------------------
+  [PASS] D=4 dimensional analysis: v ~ f^(1/D) with D=4 gives 1/4
+         1/D = 1/4
+  [PASS] D=2: 4/2^D = 1 ≠ 1/D = 1/2 (D=4-specific)
+         as expected: identity FAILS at D=2, confirming (1/4) is D=4-specific
+  [PASS] D=3: 4/2^D = 1/2 ≠ 1/D = 1/3 (D=4-specific)
+         as expected: identity FAILS at D=3, confirming (1/4) is D=4-specific
+  [PASS] D=4: 4/2^D = 4/16 = 1/4 EQUALS 1/D = 1/4
+         identity 1/D = 4/2^D HOLDS at D=4
+  [PASS] D=5: 4/2^D = 1/8 ≠ 1/D = 1/5 (D=4-specific)
+         as expected: identity FAILS at D=5, confirming (1/4) is D=4-specific
+  [PASS] Stefan-Boltzmann inversion T ~ u^(1/4) is consistent (round-trip)
+         u(T(u)) = u verified symbolically
+  [PASS] Stefan-Boltzmann constant σ_SB = π²/60 in natural units (k_B = ℏ = c = 1)
+         σ_SB = 0.1644934067
+
+[Section 5] Cross-endpoint ratio (7/8)^(1/4) — exact arithmetic
+----------------------------------------------------------------------
+  [PASS] (7/2)^16 / 4^16 = (7/8)^16 (parent narrow source note)
+         = 33232930569601/281474976710656
+  [PASS] power index 1/(N_taste·L_t) = 1/(16·4) = 1/64
+         = 1/64
+  [PASS] final exponent in cross-endpoint ratio: 16 · (1/64) = 1/4
+         = 1/4
+  [PASS] numerical (7/8)^(1/4) ≈ 0.96716821
+         = 0.96716821013383
+
+  Direct numerical staggered Dirac cross-check:
+    L_t=2: |det(D)| = 8.113827e+03, log|det(D)| = 9.001325
+    L_t=4: |det(D)| = 7.772852e+06, log|det(D)| = 15.866148
+  [PASS] log(|det(L_t=4)| / |det(L_t=2)|²) = 16 log(7/8)
+         diff = 1.776e-15
+  [PASS] v(L_t=4)/v(L_t=2) = (ratio)^(1/64) = (7/8)^(1/4)
+         diff = 0.000e+00
+
+[Section 6] D=4 specificity under the admitted determinant readout
+----------------------------------------------------------------------
+  Algebraic identity 1/D = 4/2^D = 4/N_taste:
+  D | 2^D | 4/2^D     | 1/D       | match
+  --|-----|-----------|-----------|------
+  1 |   2 | 2         | 1         | ✗
+  2 |   4 | 1         | 1/2       | ✗
+  3 |   8 | 1/2       | 1/3       | ✗
+  4 |  16 | 1/4       | 1/4       | ✓
+  5 |  32 | 1/8       | 1/5       | ✗
+  6 |  64 | 1/16      | 1/6       | ✗
+  [PASS] 1/D = 4/2^D holds at D=4 and fails at the checked non-D=4 values
+         bounded D=4 consistency identity confirmed
+
+[Section 7] Stefan-Boltzmann source lineage
+----------------------------------------------------------------------
+  [PASS] Stefan-Boltzmann source note exists
+         AXIOM_FIRST_STEFAN_BOLTZMANN_THEOREM_NOTE_2026-05-01.md
+  [PASS] SB source note includes T^4 dependence
+  [PASS] SB source note includes (π²/15) prefactor
+  [PASS] Stefan-Boltzmann round-trip T ↔ u^(1/4) at T=1
+         T_back = 1.000000000000
+  [PASS] (1/4) used in v compression matches (1/4) in T ~ u^(1/4) Stefan-Boltzmann
+         both are the D=4 mass-dim-1 readout from a D=4 dimensional density
+
+[Section 8] Bounded regime caveats (audit transparency)
+----------------------------------------------------------------------
+  [PASS] Weyl-asymptotic regime applicability at L_s=2 is bounded
+  [PASS] Sub-leading Seeley-DeWitt coefficients caveat
+  [PASS] Reinterpretation, not derivation from primitives
+  [PASS] Per-determinant geometric-mean readout admission inherited
+  [PASS] Counterfactual Pass record
+
+======================================================================
+TOTAL: PASS=52 FAIL=0
+======================================================================
+VERDICT: Heat-kernel D=4 compression bounded support verified.
+(1/4) is D=4-consistent under the admitted determinant readout:
+  (a) v ~ f^(1/4) via Stefan-Boltzmann source lineage;
+  (b) 1/D = 4/2^D = 4/N_taste algebraic identity at D=4.
+(7/8) is the exact rational identity from the parent narrow source note.
+
+----- stderr -----
+
