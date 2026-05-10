@@ -1,11 +1,11 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 820,
+    "bounded_theorem": 819,
     "decoration": 13,
     "meta": 106,
     "no_go": 199,
     "open_gate": 110,
-    "positive_theorem": 715
+    "positive_theorem": 716
   },
   "cycle_examples": [
     [
@@ -52,7 +52,7 @@
       "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     ]
   ],
-  "cycles_detected": 304,
+  "cycles_detected": 303,
   "effective_status_counts": {
     "audited_conditional": 259,
     "audited_failed": 26,

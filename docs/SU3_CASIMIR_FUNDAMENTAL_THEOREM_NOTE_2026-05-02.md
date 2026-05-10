@@ -218,27 +218,34 @@ the algebraic computation itself. Promoting the verdict requires either
   physical-quark corollaries to a separate downstream note keyed on
   that bridge.
 
-## Companion narrow proof-walk 2026-05-10
+## Companion narrow theorem 2026-05-10 (informational)
 
-The audit-recommended scope-narrowing branch lives in the companion
-note
-[`SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md`](SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md).
-That companion records a narrow proof-walk that scopes the audited
-claim explicitly to the algebraic K1-K3 statement (centrality of
-`C_2`, Schur scalar property, value `4/3`) on the cited 3-dim
-symmetric base subspace `V_3`, with **no** physical-quark color
+The audit-recommended scope-narrowing branch is recorded in the
+companion narrow theorem at file path
+`docs/SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md`
+(plain-text reference; not a load-bearing citation from this parent
+note). That companion records a standalone positive_theorem that
+scopes the audited claim explicitly to the algebraic K1-K3 statement
+(centrality of `C_2`, Schur scalar property, value `4/3`) on the cited
+3-dim symmetric base subspace `V_3`, with **no** physical-quark color
 identification load-bearing in the audited chain.
 
-The companion does not change the parent note's load-bearing step
-or claim scope; this parent note continues to carry the broader
-claim including K4 / C1-C5 physical-quark readouts, and continues
-to inherit the `audited_conditional` upstream bound on physical SM
-color identification. The companion is purely a scope-narrowing
-proof-walk on the audited K1-K3 portion, not a status promotion.
+This cross-reference is **informational only**, not a load-bearing
+citation: the companion note depends downstream of `cl3_color_automorphism_theorem`,
+not on this parent note. It is recorded here as a "see also" pointer
+for readers; the citation graph back-edge from this parent to the
+companion has been removed (cycle-0016 repair).
+
+The companion does not change this parent note's load-bearing step or
+claim scope; this parent note continues to carry the broader claim
+including K4 / C1-C5 physical-quark readouts, and continues to inherit
+the `audited_conditional` upstream bound on physical SM color
+identification. The companion is purely a scope-narrowing positive
+theorem on the audited K1-K3 portion, not a status promotion.
 
 The companion runner is the same `scripts/su3_casimir_fundamental_check.py`
 already cited above; the new content is the explicit scope-narrowing
-in source-note text recording the audit-recommended split.
+in companion-note text recording the audit-recommended split.
 
 ```yaml
 claim_type_author_hint: positive_theorem

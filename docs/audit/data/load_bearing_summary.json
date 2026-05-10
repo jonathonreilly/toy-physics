@@ -1,8 +1,8 @@
 {
   "criticality_counts": {
-    "critical": 1034,
+    "critical": 1033,
     "high": 52,
-    "leaf": 707,
+    "leaf": 708,
     "medium": 277
   },
   "flagship_signal_used": false,
