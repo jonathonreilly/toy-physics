@@ -23558,6 +23558,14 @@
     },
     {
       "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+      "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
       "to": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10"
     },
     {
@@ -23566,15 +23574,7 @@
     },
     {
       "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
-      "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
-    },
-    {
-      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
       "to": "ai_methodology.skills.physics-loop.references.route-patterns"
-    },
-    {
-      "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
-      "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
     },
     {
       "from": "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
@@ -33903,7 +33903,7 @@
       "claim_id": "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
         "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
         "minimal_axioms_2026-05-03",
@@ -33915,7 +33915,7 @@
         "ai_methodology.skills.physics-loop.references.route-patterns",
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
       ],
-      "note_hash": "fc779d1d8cf58a25a89a86532f070d53d6f543984473dc17a1e989b5965b8389",
+      "note_hash": "3dc5a50e58fa019721a399e0e74c88801a41e5213301ac917a25ef32d36deca1",
       "path": "docs/ai_methodology/ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md",
       "runner_path": null,
       "title": "Abstract-Algebraic Core Extraction Technique"
@@ -34829,7 +34829,7 @@
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "66d30c4ef0e2b7a46a009278b6e886b7d600d1f723aed835f6c090c943d8eb1f",
+      "note_hash": "de1513852567c4fc1ae82984b47604bfbb32ad8789b2f06d77c9a5cc7427ab6a",
       "path": "docs/ai_methodology/README.md",
       "runner_path": null,
       "title": "AI Methodology Lane"
@@ -34906,14 +34906,14 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
+        "ai_methodology.skills.physics-loop.references.assumption-import-audit",
+        "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.abstract_algebraic_core_extraction_technique_2026-05-10",
         "minimal_axioms_2026-05-03",
-        "ai_methodology.skills.physics-loop.references.assumption-import-audit",
         "ai_methodology.skills.physics-loop.references.route-patterns",
-        "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "25b14fee833d5194d452bd226d7a9ee3bdf664a217854abac93f5f6d2a85d834",
+      "note_hash": "69dc333772941cc5d43b2fd78cbfeb2a4be7899204a6a05626f4431edf7990b2",
       "path": "docs/ai_methodology/skills/physics-loop/references/abstract-algebraic-core-extraction.md",
       "runner_path": null,
       "title": "Abstract-Algebraic Core Extraction"
@@ -34974,7 +34974,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "06fe97288028eabb655e5b390c35e184d062685cfb85990ca0c7c048a01359e1",
+      "note_hash": "d2c3fa0e2b8f18ebfaeec70c31d4d461cd61f92494e5f4c312f5d0e6f5d4c250",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -66789,9 +66789,9 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 130,
-      "none": 450,
+      "none": 451,
       "open_gate": 116,
-      "positive_theorem": 594
+      "positive_theorem": 593
     },
     "edge_count": 8364,
     "leaf_count": 536,

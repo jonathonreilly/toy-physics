@@ -63,11 +63,15 @@ Use it to answer:
     methodology synthesis.
 
 13. [`ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md`](./ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md)
-    Reproducible technique for converting ostensibly-blocked audit-graph
-    rows into retainable narrow `positive_theorem` source notes via a
-    four-exercise protocol (assumptions, first-principles, literature,
-    math). Empirically validated by a 100% retainable-artifact rate
-    across 23 attempts in the 2026-05-10 parallel-agent campaign.
+    Universal pre-engineering doctrine for ALL theoretical-physics
+    derivation work in the framework — the four-exercise protocol
+    (assumptions, first-principles, literature, math) run before any
+    source note + companion runner is written, producing narrow
+    theorems whose proofs are the abstract-algebraic core the
+    framework axioms (or less) genuinely force. Applies in two
+    contexts: fresh derivation work (proactive) and stuck audit-row
+    recovery (reactive). First validated by a 100% retainable-artifact
+    rate across 23 attempts in the 2026-05-10 parallel-agent campaign.
     Tactical agent-facing doctrine companion at
     [`skills/physics-loop/references/abstract-algebraic-core-extraction.md`](./skills/physics-loop/references/abstract-algebraic-core-extraction.md).
 

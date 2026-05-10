@@ -1,32 +1,54 @@
 # Abstract-Algebraic Core Extraction Technique
 
 **Date:** 2026-05-10
-**Status:** AI-methodology doctrine derived from a 27-PR parallel-agent
-campaign on 2026-05-10. Documents a reproducible technique for converting
-ostensibly-blocked critical audit-graph rows into retainable narrow
-`positive_theorem` source notes.
+**Status:** Universal AI-methodology doctrine for all theoretical-physics
+derivation work in the framework — applied as the default protocol for
+producing any new `positive_theorem` / `bounded_theorem` source note +
+companion runner. Discovered empirically and first validated on a 27-PR
+parallel-agent campaign attacking stuck audit-graph rows; subsequently
+generalised to all `/physics-loop` cycles regardless of whether the
+target is fresh derivation work or audit-row recovery.
 **Companion reference for agents:**
 [`skills/physics-loop/references/abstract-algebraic-core-extraction.md`](skills/physics-loop/references/abstract-algebraic-core-extraction.md)
 
 ## What this is
 
-A reproducible protocol for taking a "stuck" audit-graph row
-(`audited_conditional`, `unaudited critical`, `missing_bridge_theorem`,
-`scope_too_broad`) and shipping a standalone narrow theorem that audits
-clean and retains. The technique was discovered empirically during a
-2026-05-10 parallel-agent campaign (Rounds 1+2, 27 deliverables) and is
-validated by a 100% retainable-artifact rate across 23 attempts.
+A reproducible protocol that applies to **any** theoretical-physics
+derivation cycle in this framework. It produces a standalone narrow
+theorem whose proof is the abstract-algebraic core that the framework
+axioms (or less) genuinely force, separated cleanly from physical /
+conceptual imports that belong elsewhere. The result audits clean and
+retains.
 
-The technique is not a new physics result. It is a packaging discipline.
-The audit lane already classifies claim_type and resolves dependency
-chains; this technique exploits the fact that most stuck rows mix
-purely-algebraic skeletons with heavy physical imports, and the
-audit-lane verdicts (`notes_for_re_audit_if_any`) tell you exactly where
-the carve-out boundary is.
+The technique applies in two main contexts:
+
+- **Fresh derivation work (Application A, proactive).** The cycle is
+  attacking a physics question; no audit verdict yet exists. The 4
+  exercises run before any source-note text is written, and the
+  resulting source note enters the audit lane already in
+  narrow-theorem shape.
+- **Stuck audit-row recovery (Application B, reactive).** The target
+  is `audited_conditional` / `unaudited critical` / `audited_renaming`
+  / `audited_numerical_match` with an audit verdict whose `repair_class`
+  names where the carve-out boundary lives. The 4 exercises use the
+  audit verdict as a diagnostic and produce a parallel narrow theorem
+  that retains cleanly while the parent's audit status remains
+  unchanged.
+
+In both contexts the protocol is the same. The discovery context was
+Application B (the 2026-05-10 27-PR campaign), but the doctrine itself
+is general — every new source note + companion runner produced by
+`/physics-loop` should follow it.
+
+The technique is not a new physics result. It is a packaging discipline
+that exploits the audit-lane's existing claim_type + dependency-chain
+resolution to make the narrowest provable piece of any derivation
+retain cleanly.
 
 ## Why it works
 
-Most stuck source notes mix three layers in the same claim:
+Every theoretical-physics claim in this framework decomposes into three
+layers:
 
 1. **Abstract-algebraic skeleton.** Forced by `MINIMAL_AXIOMS_2026-05-03`
    (Cl(3) on Z^3) alone — sometimes by even less (standard
@@ -38,20 +60,30 @@ Most stuck source notes mix three layers in the same claim:
 3. **Numerical evaluations.** Retained values cited as sanity checks but
    not load-bearing for the proof.
 
-The mixing prevents clean retention. The implicit imports are either
-not cited as one-hop deps (so the chain never closes), or are cited but
-the upstream is itself unaudited / conditional / structurally blocked
-(so the row sits in `retained_pending_chain` indefinitely). The
-audit-lane policy in [`docs/audit/README.md`](../audit/README.md) calls
-this pattern "definition-as-derivation" or "conditional-on-open-work"
-and is built precisely to detect it.
+A source note that mixes the three layers in one claim cannot retain
+cleanly. The implicit imports are either not cited as one-hop deps
+(so the chain never closes), or are cited but the upstream is itself
+unaudited / conditional / structurally blocked (so the row sits in
+`retained_pending_chain` indefinitely). The audit-lane policy in
+[`docs/audit/README.md`](../audit/README.md) calls this pattern
+"definition-as-derivation" or "conditional-on-open-work" and is built
+precisely to detect it.
 
-The technique decomposes the three layers, ships the algebraic skeleton
-as a standalone narrow theorem with `deps=[]` (or only retained-grade
-deps), and explicitly declares the implicit imports out of scope in a
-mandatory "What this does NOT claim" section. The result is a
-`positive_theorem` that audits clean and resolves to
-`effective_status: retained`.
+The technique decomposes the three layers up-front. It ships the
+algebraic skeleton as a standalone narrow theorem with `deps=[]` (or
+only retained-grade deps); the implicit imports are explicitly declared
+out of scope in a mandatory "What this does NOT claim" section; the
+numerical evaluations live in a clearly-marked "illustrative sanity
+check" subsection. The result is a `positive_theorem` that audits
+clean and resolves to `effective_status: retained`.
+
+Because every claim decomposes this way, the technique applies to all
+science work — proactively for fresh derivations (Application A) and
+reactively for stuck rows (Application B). The proactive case is the
+intended default: produce the narrow theorem first time around. The
+reactive case uses the existing audit verdict's `repair_class` as a
+diagnostic to identify the same carve-out boundary the proactive case
+would have found on its own.
 
 ## The 4 mandatory exercises (in order, BEFORE engineering)
 
@@ -246,10 +278,13 @@ Required sections (in order):
   mandatory. Without it, the parent's heavy content leaks back into
   the narrow theorem and breaks the retention chain.
 
-## Empirical evidence
+## Empirical evidence (first validation: 2026-05-10 campaign)
 
-The technique was applied 23 times across two parallel-agent campaigns
-on 2026-05-10. Outcomes:
+The technique was first applied at scale across two parallel-agent
+campaigns on 2026-05-10, both targeting Application B (stuck audit-row
+recovery — the most adversarial test of the protocol, since these rows
+had already received conditional verdicts naming a specific blocker).
+Outcomes:
 
 - 21 `positive_theorem` closures (deps=[] or retained-grade only).
 - 2 `bounded_theorem` carve-outs with retained-grade deps.
@@ -265,6 +300,12 @@ the audit verdict's own `OR-narrow` clause had already named.
 Two cycles in the audit graph were actually broken: cycle-0003 (#1033
 3d_correction_master reclassification) and cycle-0016 (#1081 su3_casimir
 proof-walk standalone). Net cycle count 305 → 303.
+
+Application A (proactive use on fresh derivation work) is the
+intended steady-state mode and is expected to maintain or exceed the
+~91% positive_theorem rate seen in Application B. Every new
+`/physics-loop` cycle that produces a source note + companion runner
+should run the protocol by default.
 
 ## Relation to other AI methodology lanes
 

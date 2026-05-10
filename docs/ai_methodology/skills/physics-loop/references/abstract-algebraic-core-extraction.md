@@ -1,55 +1,91 @@
 # Abstract-Algebraic Core Extraction
 
-Tactical doctrine for converting a "stuck" audit-graph row
-(`audited_conditional`, `unaudited critical`, `missing_bridge_theorem`,
-`scope_too_broad`, `missing_dependency_edge`) into a standalone narrow
-`positive_theorem` that audits clean and retains.
+**Universal pre-engineering doctrine for `/physics-loop` work.** Every
+new source note + companion runner should be produced by this protocol,
+whether the target is fresh derivation work or recovery of a stuck
+audit-graph row. The protocol is the integration layer that pulls
+together [`assumption-import-audit.md`](assumption-import-audit.md) +
+[`literature-bridge-protocol.md`](literature-bridge-protocol.md) and
+adds first-principles and math-verification steps with explicit
+output-shape discipline.
 
-Use when a `/physics-loop` campaign needs to ship a retainable artifact
-on a stuck row but does NOT need a Nature-grade new derivation. Per the
-2026-05-10 27-PR campaign, the technique has a 100% retainable-artifact
-rate across 23 attempts at ostensibly-blocked targets.
+The technique's name describes what it produces: a narrow theorem whose
+proof is the abstract-algebraic core that the framework axioms (or
+less) genuinely force, separated from physical/conceptual imports that
+belong elsewhere. The same technique applies whether you start from a
+fresh physics question or from an already-stuck row.
 
 For full rationale and case-study evidence see
 [`../../../ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md`](../../../ABSTRACT_ALGEBRAIC_CORE_EXTRACTION_TECHNIQUE_2026-05-10.md).
 
 ## Premise
 
-Most stuck source notes mix three layers in one claim:
+Every theoretical-physics claim in this framework decomposes into three
+layers:
 
 1. **Abstract-algebraic skeleton** — forced by `MINIMAL_AXIOMS_2026-05-03`
-   alone (sometimes by less).
-2. **Implicit physical/conceptual imports** — Wilson action specifics,
-   plaquette numerics, named open gates, governance conventions.
-3. **Numerical evaluations** — sanity checks, not load-bearing.
+   alone (sometimes by less; sometimes by pure polynomial algebra or
+   standard representation theory).
+2. **Implicit physical/conceptual imports** — specific Wilson action,
+   plaquette numerics, named open gates, governance conventions
+   (`Q_e = -1`, quark/lepton labelling), unit conventions.
+3. **Numerical evaluations** — retained values cited as sanity checks
+   but not load-bearing for the proof.
 
-The mixing prevents clean retention. The technique separates the layers
-and ships the algebraic skeleton as a standalone narrow theorem with
-`deps=[]` (or only retained-grade deps).
+A source note that mixes the three layers in one claim cannot retain
+cleanly because the implicit imports either are not cited as one-hop
+deps (so the chain never closes), or are cited but the upstream is
+itself unaudited / conditional (so the row sits in
+`retained_pending_chain` indefinitely). The audit-lane policy in
+`docs/audit/README.md` §1 calls this the "definition-as-derivation" /
+"conditional-on-open-work" pattern.
+
+The technique separates the three layers up-front. It ships the
+algebraic skeleton as a standalone narrow theorem with `deps=[]` (or
+only retained-grade deps); the implicit imports are explicitly declared
+out of scope in a mandatory "What this does NOT claim" section; the
+numerical evaluations live in a clearly-marked "illustrative sanity
+check" subsection.
 
 ## When to use this protocol
 
-Use when ALL of the following hold:
+Use as the **default** for any `/physics-loop` cycle that intends to
+produce a new source note + runner, in two main application contexts:
 
-- Target is `audited_conditional` OR `unaudited critical` OR `unaudited`
-  with retained-grade deps but a stuck parent claim.
-- The audit verdict's `notes_for_re_audit_if_any` names one of the
-  repair classes in the carve-out table below.
-- A narrow `positive_theorem` or `bounded_theorem` carve-out is feasible
-  inside the bounded-source-note scope (not multi-day theorem work).
-- The /physics-loop campaign has runtime budget for the 4 exercises
-  plus PR engineering (typically 30-90 min per agent).
+### Application A — fresh derivation work (proactive)
 
-Do NOT use this protocol when:
+The cycle is attacking a physics question, no audit verdict exists yet.
+Run the 4 exercises before writing any source-note text. Aim for the
+narrowest theorem the framework axioms (or less) force. Get the
+claim_type right the first time (`positive_theorem` with `deps=[]` is
+the strongest tier; reach for it).
 
-- The target is in `archive_unlanded/` (already retired).
-- The target's parent is genuinely a new physics derivation requiring
-  multi-day work (e.g., the plaquette frontier's FULL bridge
-  derivations, distinct from their narrow carve-outs).
+### Application B — stuck audit-graph row recovery (reactive)
+
+The target row is `audited_conditional` / `unaudited critical` /
+`audited_renaming` / `audited_numerical_match` and has an audit verdict
+that names a `repair_class`. The verdict's
+`notes_for_re_audit_if_any` IS the diagnostic — it tells you where the
+carve-out boundary lives. Map the `repair_class` to one of the
+narrow-theorem output shapes in the carve-out table below.
+
+### When NOT to use this protocol
+
+- The target is in `archive_unlanded/` (already retired as
+  ratified negative result).
 - The audit lane has already cleared the row (`audited_clean` or any
-  `retained*` effective_status).
+  `retained*` effective_status) and nothing about the source note has
+  drifted.
+- The target requires multi-day open-derivation work that genuinely
+  cannot fit a bounded source note even after the 4 exercises (rare;
+  do the 4 exercises first to confirm).
 
 ## Carve-out table (repair_class → narrow output)
+
+Use this table in Application B (stuck audit-graph row recovery). For
+Application A (fresh derivation), there is no `repair_class` yet — the
+4 exercises produce the carve-out boundary directly without needing
+an auditor diagnostic.
 
 | repair_class | Carve-out shape |
 |---|---|
