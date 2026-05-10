@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1129 |
+| unaudited | 1128 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 221 |
+| ~~audited_conditional~~ | 222 |
 | ~~audited_failed~~ | 17 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 382 |
-| `audited_conditional` | 221 |
+| `audited_conditional` | 222 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1227 |
+| `unaudited` | 1226 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 780 |
+| `bounded_theorem` | 781 |
 | `decoration` | 13 |
 | `meta` | 105 |
 | `no_go` | 193 |
 | `open_gate` | 99 |
-| `positive_theorem` | 745 |
+| `positive_theorem` | 744 |
 
 | criticality | count |
 |---|---:|
@@ -530,6 +530,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
@@ -2212,6 +2213,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Both actions reduce to S = L × const at zero field, so the amplitude magnitudes entering the decoherence observables are shared by both actions.  _(class `A`)_
 - **chain closes:** False — The packet does not provide retained definitions of the two action laws or the imported propagation harness needed to verify the zero-field reduction. The runner also has no completed stdout, but the timeout is not used as the terminal reason.
 - **rationale:** Issue: the claimed equality rests on an unsupported assertion that both action laws reduce to the same zero-field action and therefore give identical propagated magnitudes. Why this blocks: without the action-law definitions or completed replay artifact, a hostile reviewer cannot verify that action-dependent phases cannot alter interference magnitudes. Repair target: cite/audit the action-law and propagation-harness definitions and provide a completed deterministic replay or cached certificate for the stated h values. Claim boundary until fixed: the note may report an asserted bounded replay observation, not retained action-independence.
+- **auditor confidence:** high
+
+### `dense_prune_guard_seed_note`
+
+- **Note:** [`DENSE_PRUNE_GUARD_SEED_NOTE.md`](../../docs/DENSE_PRUNE_GUARD_SEED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite diagnostic claim about the listed N=80 and N=100 flip-prone seeds under q=0.10 channel-count guarded pruning.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1314-172d-7312-91aa-4e5f28d8b4c5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The guard fixes specific seeds when it preserves eff_ch and leaves other seeds vulnerable when eff_ch still drops, so it is a seed-selective channel-preservation mechanism rather than a pure averaging fix.  _(class `A`)_
+- **chain closes:** False — The internal readout follows from the displayed table, but the table's historical flip-seed inputs and current per-seed guard numerics are not certified by any cited authority or completed runner output in the restricted packet.
+- **rationale:** Issue: The note imports historical replay seed IDs and per-seed guard measurements, but no replay authority is cited and the supplied runner timed out; its main path also prints aggregate summaries rather than the displayed per-seed table. Why this blocks: The seed-selective conclusion is only as strong as those uncertified finite-run rows. Repair target: add the replay dependency and provide a completed sliced per-seed runner log or cached certificate for the six seeds and both modes. Claim boundary until fixed: the displayed table, if independently certified, would support a finite diagnostic pattern, not a general guard theorem.
 - **auditor confidence:** high
 
 ### `diamond_signal_budget_hardening_note`
