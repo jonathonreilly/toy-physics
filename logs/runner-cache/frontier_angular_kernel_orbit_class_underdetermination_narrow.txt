@@ -1,0 +1,121 @@
+===== runner cache v1 =====
+runner: scripts/frontier_angular_kernel_orbit_class_underdetermination_narrow.py
+runner_sha256: f2d84a83f9ada918cfdf7232bfac194087eb925b70aac0a1ecc68aa974f37c84
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.64
+status: ok
+----- stdout -----
+==============================================================================
+Angular-Kernel Orbit-Class Underdetermination Narrow Theorem
+==============================================================================
+
+NARROW SCOPE: cubic-symmetric weight functions on the forward-cone
+layer-step neighbour set of Z^3; orbit-class polynomial-algebra fact
+
+
+=== Part A: D_4 orbit-class enumeration on R(d_max) ===
+
+  d_max = 1: |R| =   9, |O(d_max)| =   3
+  d_max = 2: |R| =  25, |O(d_max)| =   6
+  d_max = 3: |R| =  49, |O(d_max)| =  10
+  d_max = 4: |R| =  81, |O(d_max)| =  15
+  d_max = 5: |R| = 121, |O(d_max)| =  21
+  [PASS] |O(d_max=1)| >= 2  (got 3 orbit classes)
+  [PASS] |O(d_max=2)| >= 2  (got 6 orbit classes)
+  [PASS] |O(d_max=3)| >= 2  (got 10 orbit classes)
+  [PASS] |O(d_max=4)| >= 2  (got 15 orbit classes)
+  [PASS] |O(d_max=5)| >= 2  (got 21 orbit classes)
+  [PASS] |O(d_max=1)| matches combinatorial bound (d_max+1)(d_max+2)/2 = 3  (|O| = 3, expected 3)
+  [PASS] |O(d_max=2)| matches combinatorial bound (d_max+1)(d_max+2)/2 = 6  (|O| = 6, expected 6)
+  [PASS] |O(d_max=3)| matches combinatorial bound (d_max+1)(d_max+2)/2 = 10  (|O| = 10, expected 10)
+  [PASS] |O(d_max=4)| matches combinatorial bound (d_max+1)(d_max+2)/2 = 15  (|O| = 15, expected 15)
+  [PASS] |O(d_max=5)| matches combinatorial bound (d_max+1)(d_max+2)/2 = 21  (|O| = 21, expected 21)
+  [PASS] |O(2)| > |O(1)|  (6 > 3)
+  [PASS] |O(3)| > |O(2)|  (10 > 6)
+  [PASS] |O(4)| > |O(3)|  (15 > 10)
+  [PASS] |O(5)| > |O(4)|  (21 > 15)
+
+=== Part B: Free-parameter count of cubic-symmetric weight family ===
+
+  d_max = 3: 10 orbit classes: [(0, 0), (0, 1), (0, 2), (0, 3), (1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)]
+  Symbolic total mass (sum over R of orbit-weighted): degree-1 polynomial in 10 symbols.
+  [PASS] Symbolic total mass is degree-1 in the orbit-class symbols  (degree = 1)
+  [PASS] Orbit (0, 0) contributes 1 terms to total  (coeff of k0 = 1, expected 1)
+  [PASS] Orbit (0, 1) contributes 4 terms to total  (coeff of k1 = 4, expected 4)
+  [PASS] Orbit (0, 2) contributes 4 terms to total  (coeff of k2 = 4, expected 4)
+  [PASS] Orbit (0, 3) contributes 4 terms to total  (coeff of k3 = 4, expected 4)
+  [PASS] Orbit (1, 1) contributes 4 terms to total  (coeff of k4 = 4, expected 4)
+  [PASS] Orbit (1, 2) contributes 8 terms to total  (coeff of k5 = 8, expected 8)
+  [PASS] Orbit (1, 3) contributes 8 terms to total  (coeff of k6 = 8, expected 8)
+  [PASS] Orbit (2, 2) contributes 4 terms to total  (coeff of k7 = 4, expected 4)
+  [PASS] Orbit (2, 3) contributes 8 terms to total  (coeff of k8 = 8, expected 8)
+  [PASS] Orbit (3, 3) contributes 4 terms to total  (coeff of k9 = 4, expected 4)
+  [PASS] Free-parameter dimension = |O(d_max=3)| - 1 = 9  (affine kernel-parameter dim = 9)
+
+=== Part C: Seven cubic-symmetric witnesses give distinct I_4 ===
+
+  [PASS] Witness 'uniform' is cubic-symmetric (orbit-only weight)
+  [PASS] Witness 'cos' is cubic-symmetric (orbit-only weight)
+  [PASS] Witness 'cos^2' is cubic-symmetric (orbit-only weight)
+  [PASS] Witness 'gaussian_0_4' is cubic-symmetric (orbit-only weight)
+  [PASS] Witness 'gaussian_0_8' is cubic-symmetric (orbit-only weight)
+  [PASS] Witness 'gaussian_1_6' is cubic-symmetric (orbit-only weight)
+  [PASS] Witness 'linear_falloff' is cubic-symmetric (orbit-only weight)
+
+  witness            I_4 (dy^4+dz^4)   <r_perp^2>   <(r_perp^2)^2>
+  ----------------------------------------------------------------------
+  uniform               56.000000      8.0000       88.0000
+  cos                   41.049518      6.3045       62.8284
+  cos^2                 26.747924      4.5553       39.8874
+  gaussian_0_4          49.887882      7.3003       77.7665
+  gaussian_0_8          43.298228      6.5190       66.9448
+  gaussian_1_6          29.410324      4.7708       44.7162
+  linear_falloff        39.044598      6.0286       59.7090
+  [PASS] Seven witnesses give seven pairwise-distinct I_4 values  (distinct |{I_4(k_i)}| = 7)
+  [PASS] I_4 max / min >= 1.5 across the seven witnesses  (max/min = 2.094, span = 29.2521)
+
+=== Part D: Q(k) := I_4 / <(r_perp^2)^2> separates the witnesses ===
+
+  witness            Q(k)
+  -----------------------------------
+  uniform            0.636364
+  cos                0.653359
+  cos^2              0.670586
+  gaussian_0_4       0.641509
+  gaussian_0_8       0.646775
+  gaussian_1_6       0.657710
+  linear_falloff     0.653914
+  [PASS] Q(k) takes seven pairwise-distinct values across witnesses  (distinct |{Q(k_i)}| = 7)
+  [PASS] Axial-only orbit witness gives Q = 1 (exact)  (Q_axial = 1.0000000000)
+  [PASS] Diagonal orbit (1,1) witness gives Q = 1/2 (exact)  (Q_diag = 0.5000000000)
+  [PASS] Cubic-symmetric Q-range is at least [1/2, 1] (non-degenerate)  (axial-only: Q=1; diagonal-(1,1)-only: Q=1/2; mixtures fill interval)
+
+=== Part E: Four primitive constraints satisfied by every witness ===
+
+  [PASS] Witness 'uniform': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=4.0000, <dz^2>=4.0000, <dy*dz>=0.00e+00)
+  [PASS] Witness 'uniform': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+  [PASS] Witness 'cos': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=3.1523, <dz^2>=3.1523, <dy*dz>=0.00e+00)
+  [PASS] Witness 'cos': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+  [PASS] Witness 'cos^2': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=2.2777, <dz^2>=2.2777, <dy*dz>=0.00e+00)
+  [PASS] Witness 'cos^2': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+  [PASS] Witness 'gaussian_0_4': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=3.6502, <dz^2>=3.6502, <dy*dz>=0.00e+00)
+  [PASS] Witness 'gaussian_0_4': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+  [PASS] Witness 'gaussian_0_8': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=3.2595, <dz^2>=3.2595, <dy*dz>=0.00e+00)
+  [PASS] Witness 'gaussian_0_8': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+  [PASS] Witness 'gaussian_1_6': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=2.3854, <dz^2>=2.3854, <dy*dz>=0.00e+00)
+  [PASS] Witness 'gaussian_1_6': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+  [PASS] Witness 'linear_falloff': transverse isotropy <dy^2>=<dz^2>, <dy*dz>=0  (<dy^2>=3.0143, <dz^2>=3.0143, <dy*dz>=0.00e+00)
+  [PASS] Witness 'linear_falloff': total mass = 1 (probability)  (sum_R w = 1.0000000000)
+
+==============================================================================
+SUMMARY: PASS=53  FAIL=0
+==============================================================================
+
+All checks passed.
+Cubic-orbit-class structure does not pin a unique cubic-symmetric
+forward-cone weight function: the parameter space has at least
+|O(d_max)| - 1 = 9 free non-negative real parameters at d_max = 3.
+
+----- stderr -----
+
