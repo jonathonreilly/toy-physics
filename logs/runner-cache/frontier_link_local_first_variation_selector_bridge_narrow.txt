@@ -1,0 +1,102 @@
+
+----------------------------------------------------------------------------------------
+Part 1: Boolean event-cell H_cell construction (16 basis states)
+----------------------------------------------------------------------------------------
+  [PASS (A)] dim(H_cell) = 16 (basis index 0..15 via subset bitmasks)  (DIM = 16)
+  [PASS (A)] 16 subset-indexed basis states enumerated  (len(SUBSETS) = 16)
+
+----------------------------------------------------------------------------------------
+Part 2: Hamming-weight projector classes P_0, P_1, P_2, P_3, P_4
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_0 is a projector of rank C(4,0) = 1  (rank = 1, projector check = True)
+  [PASS (A)] P_1 is a projector of rank C(4,1) = 4  (rank = 4, projector check = True)
+  [PASS (A)] P_2 is a projector of rank C(4,2) = 6  (rank = 6, projector check = True)
+  [PASS (A)] P_3 is a projector of rank C(4,3) = 4  (rank = 4, projector check = True)
+  [PASS (A)] P_4 is a projector of rank C(4,4) = 1  (rank = 1, projector check = True)
+
+----------------------------------------------------------------------------------------
+Part 3: hypothesis (ii) — four basis source images J_a with support(J_a) = {a}
+----------------------------------------------------------------------------------------
+  [PASS (A)] J_t support is exactly the one-axis basis state |{t}|  (support indices: [1], mask 1 has weight 1)
+  [PASS (A)] J_x support is exactly the one-axis basis state |{x}|  (support indices: [2], mask 2 has weight 1)
+  [PASS (A)] J_y support is exactly the one-axis basis state |{y}|  (support indices: [4], mask 4 has weight 1)
+  [PASS (A)] J_z support is exactly the one-axis basis state |{z}|  (support indices: [8], mask 8 has weight 1)
+
+----------------------------------------------------------------------------------------
+Part 4: differential dS_link and support projector (Step 2 of proof)
+----------------------------------------------------------------------------------------
+  [PASS (A)] rank(proj_{span(image(dS_link))}) = 4  (trace = 4)
+  [PASS (A)] proj_{span(image(dS_link))} is a projector (P^2 = P, P^T = P)  ()
+  [PASS (A)] proj_{span(image(dS_link))} = P_1 (Boolean Hamming-weight-one projector)  (max abs diff = 0.00e+00)
+
+----------------------------------------------------------------------------------------
+Part 5: (C1) bridge premise (iii) forces P_A = P_1 = P_A
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) hypothesis (iii) + Step 2 ==> P_A = P_1  (P_A - P_1 max abs = 0.00e+00)
+  [PASS (A)] P_1 = sum_{a in E} P_{{a}} (axis-additivity sanity check)  ()
+
+----------------------------------------------------------------------------------------
+Part 6: (C2) P_3 is excluded as support projector of dS_link
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2) P_3 * proj_{span(image(dS_link))} = 0 (J_a orthogonal to weight-3 states)  (max abs entry = 0.00e+00)
+  [PASS (A)] (C2) P_3 != proj_{span(image(dS_link))} (P_3 != P_1)  (P_3 vs P_image diff max = 1.00e+00)
+
+----------------------------------------------------------------------------------------
+Part 7: Step 5 — P_1 is unique rank-four Hamming-weight match
+----------------------------------------------------------------------------------------
+  [PASS (A)] exactly two rank-four Hamming-weight classes: P_1 and P_3  (rank-four classes = [1, 3])
+  [PASS (A)] P_1 is the unique rank-four Hamming-weight class consistent with (ii) and (iii)  ()
+
+----------------------------------------------------------------------------------------
+Part 8: Hodge-complement degeneracy consistency check (no-go respected)
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_1 != P_3 as projectors on H_cell (consistency with retained no-go)  (substrate symmetries alone cannot distinguish; (i)+(iii) does)
+  [PASS (A)] rank(P_1) == rank(P_3) == 4 (Hodge-isomorphic in rank)  ()
+
+----------------------------------------------------------------------------------------
+Part 9: parent broad row context (no ledger modification)
+----------------------------------------------------------------------------------------
+
+  Parent broad row state on origin/main:
+    claim_id: planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30
+    claim_type: positive_theorem
+    effective_status: unaudited
+    intrinsic_status: unaudited
+    previous_audits count: 2
+  [PASS (A)] parent broad row exists in audit ledger  (claim_type = positive_theorem)
+  [PASS (A)] parent broad row is positive_theorem (matches narrow rescope target)  ()
+  [PASS (A)] parent broad row carries prior audit verdicts (at least 1)  (prior audit count = 2)
+  [PASS (A)] at least one prior verdict is audited_conditional  (audited_conditional prior verdicts = 2)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESES (input, NOT derived here):
+      (ii) S_link : U -> H_cell, U = span(u_t, u_x, u_y, u_z),
+           S_link(u) = sum_a u_a J_a, support(J_a) = {a} for each a in E.
+     (iii) P_A = proj_{span(image(dS_link))}.
+
+  CONCLUSION (algebraic-substitution forced):
+      (C1) P_A = P_1 = sum_{a in E} P_{{a}}.
+      (C2) P_3 != proj_{span(image(dS_link))}; P_3 is excluded as a
+           fundamental first variation of S_link under (ii).
+
+  Audit-lane class:
+    (A) — pure algebraic substitution on the explicit Boolean event-cell
+    algebra H_cell ~= (C^2)^4. No external observed/fitted/literature
+    input. No new axiom proposed. Hypothesis (ii) (one-link source domain)
+    and hypothesis (iii) (bridge premise) are stated abstractly; their
+    audit-grade derivation is the responsibility of the parent broad row
+    and its upstream authorities.
+
+  The narrow theorem drops the parent row's dependencies on
+  staggered-Dirac realization / anomaly-time / CPT / observable-principle
+  by stating (ii) and (iii) as input hypotheses.
+
+
+========================================================================================
+  TOTAL: PASS=26, FAIL=0
+========================================================================================
