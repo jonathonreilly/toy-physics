@@ -1,0 +1,129 @@
+==============================================================================
+Probe Y-S4b-RGE — RGE Lambda Running Closes the +12% Higgs Gap
+Loop: probe-y-s4b-rge-lambda-running-20260508-probeY_S4b_rge
+Date: 2026-05-08 (compute date 2026-05-10)
+==============================================================================
+
+==============================================================================
+K1: β_λ retention check (no new content; uses retained runner)
+==============================================================================
+
+  Retained framework constants (from canonical_plaquette_surface):
+    <P> = 0.5934
+    u_0 = 0.877681
+    α_bare = 0.079577
+    α_LM   = 0.090668
+    α_s(v) = 0.103304
+    M_Pl   = 1.2209e+19 GeV
+    v_EW   = 246.2828 GeV (hierarchy theorem)
+    y_t(v) = 0.9176 (retained YT central)
+
+  β_λ(M_Pl, λ=0) at framework couplings:
+    1-loop:  -2.543038e-02
+    2-loop:  -2.587396e-02
+    3-loop:  -2.504059e-02
+  All three loop orders implemented in retained runner.
+  [PASS] k1-beta-lambda-retained: β_λ at 1/2/3-loop and λ(M_Pl)=0 BC are retained content
+
+==============================================================================
+K2: Probe X-S4b-Combined symmetric-point prediction (baseline)
+==============================================================================
+
+  Probe X-S4b-Combined: m_H = v_EW/(2 u_0)
+    v_EW = 246.2828 GeV
+    u_0  = 0.877681
+    m_H_sym = 140.3031 GeV
+    PDG comparator: 125.25 GeV
+    Gap: +12.02% (Probe X verdict: BOUNDED, structurally inaccessible)
+  [PASS] k2-symmetric-point-shortcut: Reproduces Probe X m_H_sym = 140.30 GeV (got 140.3031); +12.04% gap
+
+==============================================================================
+K3: RGE running from M_Pl to v_EW with λ(M_Pl) = 0
+==============================================================================
+
+  Framework-derived couplings at v_EW = 246.2828 GeV:
+    g_1(v) = 0.4640  [GUT normalized]
+    g_2(v) = 0.6480
+    g_3(v) = 1.1394  [from α_s(v) = 0.1033]
+    y_t(v) = 0.9176  [retained YT central]
+
+  RGE results at each loop order:
+   loop    λ(M_Pl)         λ(v)    m_H (GeV)    gap_PDG
+  ----- ---------- ------------ ------------ ----------
+      1   0.000000     0.140609       130.60      +4.27%
+      2   0.000000     0.128882       125.04      -0.17%
+      3   0.000000     0.129087       125.14      -0.09%
+
+  3-loop RGE result:
+    m_H(RGE, 3-loop) = 125.14 GeV
+    PDG comparator   = 125.25 GeV
+    Relative gap     = -0.09%
+    Positive tier (<=5%)? True
+  [PASS] k3-rge-running-3loop: 3-loop m_H = 125.14 GeV (-0.09% from PDG); positive: True
+
+==============================================================================
+K4: Gap closure quantification (Probe X baseline → RGE prediction)
+==============================================================================
+
+  Probe X-S4b-Combined (symmetric-point):  m_H = 140.30 GeV  (+12.02%)
+  Probe Y-S4b-RGE     (3-loop running):     m_H = 125.14 GeV  (-0.09%)
+  ----
+  Gap closure:     +15.16 GeV  (+12.11% percentage-points)
+  Closure ratio:   99.3% of original gap eliminated
+  [PASS] k4-gap-closure: RGE running closes 15.16 GeV of the +12% gap
+
+==============================================================================
+K5: Structural distinction RGE-running ≠ symmetric-point identification
+==============================================================================
+
+  (a) Log-scale integration span: M_Pl/v_EW ≈ 10^16.70
+      β_λ integrates over 16.7 decades of log-scale.
+      The symmetric-point identification has NO log-scale content.
+  [PASS] k5a-log-scale-span: RGE integrates 16.7 decades, distinct from sym-point readout
+
+  (b) Boundary condition distinction:
+      Symmetric-point: (m_H/v)² = 1/(4 u_0²) → λ_sym(v) = 0.162269
+      Classicality BC: λ(M_Pl) = 0 → λ_RGE(v)_3loop = 0.129087
+      Ratio: λ_RGE/λ_sym = 0.7955
+      Independent BCs at independent scales (M_Pl vs v).
+  [PASS] k5b-bc-distinct: λ(M_Pl)=0 BC distinct from sym-point (m_H/v)²=1/(4u_0²)
+
+  (c) Top Yukawa dominance:
+      β_λ^(1) ⊃ -6 y_t^4 / (16π²)
+      At M_Pl: y_t = 0.3858, g_3 = 0.4871
+      -6 y_t^4 / (16π²) = -8.420189e-04
+      Top Yukawa drives λ via the y_t² → y_t⁴ feedback.
+      y_t input from YT chain (separate retained content), NOT taste-sector.
+  [PASS] k5c-top-yukawa-driver: β_λ^(1) -6y_t^4 term = -8.4202e-04 (drives running)
+
+==============================================================================
+K6: Consistency with retained band m_H = 125.04 ± 3.17 GeV (1σ)
+==============================================================================
+
+  Retained authority: m_H = 125.04 ± 3.17 GeV (1σ quadrature)
+  Probe Y prediction:  m_H = 125.14 GeV (3-loop RGE)
+  Distance from central: +0.10 GeV = +0.03σ
+  Within 1σ retained band? True
+  [PASS] k6-retained-band-consistency: Probe Y m_H = 125.14 GeV at +0.03σ from retained 125.04
+
+==============================================================================
+K7: Tier verdict per probe brief
+==============================================================================
+
+  Verdict: POSITIVE
+  RGE running of λ from λ(M_Pl)=0 to v_EW via retained 3-loop SM β_λ gives m_H = 125.14 GeV, deviation -0.09% from PDG 125.25 GeV. Closes the +12.04% gap from Probe X-S4b-Combined within the ~5% threshold. Tier: POSITIVE THEOREM.
+  [PASS] k7-tier-verdict: Tier: POSITIVE (m_H = 125.14 GeV, -0.09% from PDG)
+
+==============================================================================
+Summary
+==============================================================================
+  PASS = 9, FAIL = 0
+  Tier: POSITIVE
+  Verdict: RGE running of λ from λ(M_Pl)=0 to v_EW via retained 3-loop SM β_λ gives m_H = 125.14 GeV, deviation -0.09% from PDG 125.25 GeV. Closes the +12.04% gap from Probe X-S4b-Combined within the ~5% threshold. Tier: POSITIVE THEOREM.
+
+  Probe X-S4b-Combined (sym-point):  m_H = 140.30 GeV  (+12.02%)
+  Probe Y-S4b-RGE     (3-loop):     m_H = 125.14 GeV  (-0.09%)
+  Gap closure: +15.16 GeV (99.3% of original gap)
+
+  ALL CHECKS PASSED (9/9).
+  Probe Y-S4b-RGE: POSITIVE THEOREM.
