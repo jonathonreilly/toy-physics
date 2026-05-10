@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/frontier_discrete_einstein_regge_lift.py
+runner_sha256: ad5d91b3fe748bfc2b15ba37fb3c19e07a9281c1108790c7d7ffb5fc9477a9cf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.25
+status: ok
+----- stdout -----
+Discrete Einstein/Regge lift on the current strong-field bridge
+========================================================================
+[PASS (A)] [EXACT] Lambda_R built from the lattice Laplacian exterior block is symmetric positive definite on the trace ring
+    trace count=1052, bulk count=888, symmetry error=3.331e-16, min eigenvalue=1.148587e+00, condition number=8.601e+00
+[PASS (A)] [EXACT] the sourced boundary functional I_R(f; j) is exactly stationary at the O_h shell trace
+    max |Lambda_R f_* - j| = 7.633e-17, I_R(f_*; j) = -9.649741e-02
+[PASS (A)] [EXACT] the sourced boundary functional I_R(f; j) is exactly stationary at the finite-rank shell trace
+    max |Lambda_R f_* - j| = 3.608e-16, I_R(f_*; j) = -1.373264e+00
+[PASS (A)] [EXACT] the boundary functional excess identity I_R(f; j) - I_R(f_*; j) = 1/2 (f-f_*)^T Lambda_R (f-f_*) holds exactly
+    max excess identity error = 3.553e-15, min sampled excess = 3.050e-03
+[PASS (A)] [BOUNDED] every sampled perturbation strictly increases I_R, certifying the shell trace is the unique global minimum
+    min sampled excess = 3.050e-03 (positive)
+[PASS (A)] [EXACT] on the O_h family the shell trace lifts to bridge fields satisfying H_0 psi = 2 pi psi^5 rho exactly
+    max residual = 1.788e-15
+[PASS (A)] [EXACT] on the O_h family the shell trace lifts to bridge fields satisfying H_0 chi = -2 pi alpha psi^5 (rho + 2 S) exactly
+    max residual = 1.547e-15
+[PASS (A)] [EXACT] the broader finite-rank class satisfies both static-conformal constraint equations to lattice precision
+    max residuals = (psi 2.533e-15, chi 1.554e-15)
+[PASS (A)] [BOUNDED] delta I_R = 0  <=>  Lambda_R f_* = j is the discrete shell-trace equation that drives the static-conformal 3+1 lift on the O_h bridge surface
+    stationarity of the boundary functional reproduces the same shell trace whose lift solves the conformal constraint pair
+[PASS (A)] [BOUNDED] the note states the bounded scope (restricted static-conformal class, boundary functional stationarity, not full nonlinear GR)
+    scope keywords present = True, full-GR disclaimer present = True
+
+Verdict:
+On the current restricted strong-field class, the exact shell law and current same-charge bridge ARE the stationary point of one local discrete boundary functional. Stationarity of I_R reproduces the shell-trace equation whose conformal lift satisfies the static constraint pair to lattice precision. This is bounded to the cited Schur DtN authority and the cited static-conformal bridge authority.
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=10 FAIL=0 TOTAL=10
+
+----- stderr -----
+

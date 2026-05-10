@@ -1,7 +1,50 @@
 # Area-Law Coefficient Gap Audit
 
 **Date:** 2026-04-25
-**Status:** Planck Target 2 audit / support note
+**Status:** audited_conditional Planck Target 2 audit / support note
+
+## Cited authorities (one-hop deps)
+
+This note synthesizes the coefficient-gap status across a fixed set of live
+authorities. Citations are made explicit per cluster:
+
+### Action-side `c_cell = 1/4` chain
+
+- [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  — `audited_conditional`. Derives the action-side primitive coefficient
+  `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4` from first-order coframe locality
+  and unit primitive response normalization (both cited there, derived from
+  link-local first variation).
+- [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+  — `audited_conditional`. Extends `c_cell = 1/4` additively to finite
+  boundary patches and records the conditional carrier-share matching
+  `n · c_cell = A/(4 G_Newton,lat)` at `G_Newton,lat = 1`.
+
+### Entanglement-side carrier no-go and conditional positive carrier
+
+- [`AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md`](AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md)
+  — `audited_conditional`. The simple-fiber-class Widom no-go bounding any
+  carrier in that class by `c_Widom <= 1/6 < 1/4`.
+- [`AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`](AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  — `audited_conditional`. The conditional positive carrier reaching
+  `c_Widom = 1/4` via average crossing count exactly 3, conditional on the
+  carrier-identification premise (CIP).
+- [`AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`](AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+  — support / conditional. Reduces (CIP) to local complex-CAR edge axioms on
+  the rank-four primitive packet.
+
+### Bounded entropy companions
+
+- [`BH_ENTROPY_DERIVED_NOTE.md`](BH_ENTROPY_DERIVED_NOTE.md) — `audited_conditional`.
+- [`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md) — `audited_conditional`.
+- [`BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`](BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md) — `audited_conditional`.
+- [`HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md) — `retained_bounded`.
+
+These are the live audit-ledger statuses at the time of this rigorization.
+The synthesis below makes the coefficient-gap structure explicit on this
+authority chain rather than asserting the no-go and positive carrier as
+implicit; status remains `audited_conditional` because the load-bearing
+carrier-identification premise (CIP) is not derived from `A_min` alone.
 
 ## Purpose
 
@@ -181,3 +224,52 @@ Laplacian-gated channel. Inside those primitive-CAR edge axioms, the positive
 reduces the premise to irreducible Clifford-Majorana edge statistics. This is
 native to the fermionic/Clifford response language, but it is not forced by
 rank four alone.
+
+## Authority-chain provenance
+
+The coefficient-gap structure on the live authority chain is now:
+
+| Side          | Coefficient    | Authority                                                                                       | Status              |
+| ------------- | -------------- | ----------------------------------------------------------------------------------------------- | ------------------- |
+| Action        | `c_cell = 1/4` | [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md) | audited_conditional |
+| Action (ext.) | `n · c_cell = A/(4 G_N)` | [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM`](PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md) | audited_conditional |
+| Entangle. (-)  | `c_Widom <= 1/6` (simple-fiber class) | [`AREA_LAW_QUARTER_BROADER_NO_GO_NOTE`](AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md) | audited_conditional |
+| Entangle. (+) | `c_Widom = 1/4` (CIP)             | [`AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM`](AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md) | audited_conditional |
+| Bridge        | (CIP) ← local complex-CAR        | [`AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM`](AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md) | support/conditional |
+
+The synthesis is therefore structurally the same as before, but the
+load-bearing components are no longer implicit. The action-side `1/4` is
+imported, with conditional surface, from the cited primitive-coframe theorem;
+the boundary extension is imported from its boundary-density extension; the
+positive entanglement-side `1/4` carrier is imported from the cited
+parity-gate carrier theorem; and the open premise is named verbatim:
+
+```text
+(CIP)  P_A H_cell ≅ F(C^2), with one orbital realising the simple-fiber
+       normal channel and the other active exactly on the self-dual primitive
+       low-transverse-Laplacian sheet Δ_perp < 1.
+```
+
+The audit verdict on this row reads, verbatim: "the note's conclusion depends
+on the statement that the existing free-fermion / Dirac-sea diagnostics do
+not derive the Planck `1/4` coefficient, while the post-audit positive route
+closes only if the rank-four primitive boundary block is accepted as a
+two-orbital CAR / Laplacian-gated edge carrier." The two halves of that
+statement are now made explicit as imports, not assertions, and they trace to
+the named live authorities tabulated above.
+
+## What this PR is NOT
+
+This rigorization does **not**:
+
+- derive the action-side `c_cell = 1/4` here; that derivation lives in the
+  cited primitive-coframe theorem and is imported with its conditional
+  surface.
+- derive (CIP) from `A_min` alone. (CIP) remains the explicit named open
+  premise inherited from the cited parity-gate carrier theorem and reduced
+  one step deeper by the cited primitive-CAR edge identification theorem.
+- close any of the cited audit_conditional rows. This synthesis inherits the
+  conditional surface of every cited authority and remains
+  `audited_conditional` itself.
+- promote audit status. The audit ledger is not modified; the status
+  descriptor alignment matches the live audit ledger entry.

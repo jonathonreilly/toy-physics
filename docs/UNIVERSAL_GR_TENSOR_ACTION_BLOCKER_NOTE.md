@@ -1,29 +1,49 @@
 # Universal GR Tensor Action Blocker Note
 
-**Status:** bounded - bounded or caveated result note
-**Date:** 2026-04-14  
+**Status:** bounded blocker note. The note records, as a bounded blocker
+statement (not as a derivation), that the direct universal GR route is
+incomplete because no retained-grade tensor-valued localization primitive
+yet identifies the scalar-generator Hessian with Einstein/Regge dynamics on
+the full metric space. The "missing primitive" is named here as a label for
+the blocker; the note does **not** derive its existence, non-existence, or
+uniqueness.
+**Date:** 2026-04-14 (audit-narrowing refresh: 2026-05-10)  
 **Branch:** `codex/review-active`  
-**Role:** direct universal route / blocker note  
-**Purpose:** identify the minimal missing primitive on the straight-to-full-GR path
+**Role:** direct universal route / bounded blocker label  
+**Claim type:** bounded_blocker_label
+**Status authority:** independent audit lane only.
+**Purpose:** name the blocker so downstream notes can target a sharp object;
+this is not a uniqueness or non-existence theorem.
 
-## Verdict
+## Audit boundary
 
-The direct universal GR route is still **blocked**.
+This note classifies the direct universal route as blocked. The classification
+rests on inventorying retained-grade objects on the current branch:
 
-The current axiom-first stack gives:
+- **What is imported here as already-exact (not re-derived in this note):**
+  the scalar observable generator, the `3+1` kinematic lift on `PL S^3 x R`,
+  the tensor-valued variational candidate, the symmetric quotient kernel,
+  and the exact rank-2 `A1` invariant projector `Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)`.
 
-- an exact scalar observable generator from the axiom-side observable principle
-- an exact `3+1` kinematic lift on `PL S^3 x R`
-- an exact tensor-valued variational candidate on that lifted background
+- **What is named (not derived) as the blocker label:**
+  a covariant `3+1` polarization-frame / projector bundle with a distinguished
+  connection extending `Pi_A1` to the complementary `E ⊕ T1` channels, plus
+  the induced curvature-localization map `Pi_curv`. This note **introduces
+  the name** for the missing primitive and stops there. It does not prove
+  existence, non-existence, or uniqueness of such a primitive.
 
-It does **not** yet give:
+If a future packet supplies a retained projector-bundle/localization theorem
+or runner that independently derives the Einstein/Regge identification, this
+row becomes obsolete and should be re-audited. Until then the row remains a
+blocker label.
 
-- an exact tensor-valued `3+1` action identified with Einstein/Regge dynamics
-  at the full metric level
-- an exact tensor-valued uniqueness theorem forcing that identification
+## Verdict (scope-bounded)
 
-So the current theorem step is not a closure claim. It is the exact minimal
-missing localization primitive for the direct universal route.
+The direct universal GR route is recorded here as **blocked** because no
+retained-grade object on the current branch identifies the scalar-generator
+Hessian with full Einstein/Regge metric dynamics. This is a structural-
+inventory statement at the route level; it is **not** a uniqueness or
+non-existence result.
 
 ## What is exact already
 
@@ -113,27 +133,36 @@ What the survey now makes explicit is the failure mode:
 So the universal route is not wrong. It is incomplete at exactly one
 localization primitive.
 
-## Minimal missing primitive
+## Blocker label (named, not derived)
 
-The smallest honest missing object is now:
+The smallest honest missing object is **labelled here**, for downstream
+targeting, as:
 
 > a covariant `3+1` polarization-frame / projector bundle with a
 > distinguished connection, together with the induced curvature-localization
 > map `Pi_curv` on `PL S^3 x R`
 
-This is the thing that must be derived or axiomatized next.
+This name is a **target label**, not a derivation. The note does not prove
+that any object satisfying this label exists, is unique if it exists, or
+that no other primitive could discharge the same blocker. Whether this label
+is the right shape for a future retained derivation is an independent
+question.
 
-If that primitive lands, the direct universal route can advance from scalar
-observable principle plus `3+1` kinematics to a genuine metric dynamics law.
-
-If it does not, the route remains a clean blocker rather than a closure claim.
+If a future packet derives or axiomatizes a primitive answering this label
+(or a different but route-discharging primitive), the direct universal route
+can advance from scalar observable principle plus `3+1` kinematics to a
+genuine metric dynamics law. Until that happens, this row records only the
+inventory-level blocker classification.
 
 ## Honest status
 
 The current direct universal route is:
 
-- exact at the scalar observable level
-- exact at the `3+1` kinematic lift level
-- blocked at the tensor-valued action / uniqueness level
+- imported as exact at the scalar observable level
+- imported as exact at the `3+1` kinematic lift level
+- recorded here as **blocked at the tensor-valued action / uniqueness level**,
+  in the bounded inventory sense above (no derivation, no uniqueness or
+  non-existence claim about the named missing primitive).
 
-That is the sharpest disciplined statement available on the current atlas.
+This is a structural-inventory blocker statement on the current atlas, not a
+theorem about the missing primitive itself.

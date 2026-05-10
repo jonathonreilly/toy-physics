@@ -1344,6 +1344,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_c_iso_su3_nlo_2026_05_08_su3nlo.py"
     },
+    "c_iso_su3_nnlo_closure_bounded_note_2026-05-10_su3nnlo": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_c_iso_su3_nnlo_2026_05_10_su3nnlo.py"
+    },
     "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -3157,16 +3169,16 @@
       "runner": "scripts/directional_b_geometry_normalized_overlap_map.py"
     },
     "discrete_einstein_regge_lift_note": {
-      "assert_count": 2,
+      "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 4,
-        "C": 9,
+        "B": 2,
+        "C": 1,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_universal_gr_isotropic_glue_operator.py"
+      "dominant_class": "B",
+      "runner": "scripts/frontier_discrete_einstein_regge_lift.py"
     },
     "dispersion_high_p_tiebreaker_note": {
       "assert_count": 0,
@@ -11100,6 +11112,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_lh_anomaly_trace_catalog.py"
     },
+    "lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 7,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence.py"
+    },
     "lh_doublet_su2_squared_hypercharge_anomaly_cancellation_note_2026-05-01": {
       "assert_count": 3,
       "counts": {
@@ -12569,7 +12593,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 15,
+        "C": 24,
         "D": 0
       },
       "decoration_candidate": false,
@@ -21263,6 +21287,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_c_iso_su3_nnlo_2026_05_10_su3nnlo.py": {
+      "assert_count": 2,
+      "claims": [
+        "c_iso_su3_nnlo_closure_bounded_note_2026-05-10_su3nnlo"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/cl3_exact_tier_ewitness_2026_05_07_ewitness.py": {
       "assert_count": 0,
       "claims": [
@@ -24695,6 +24734,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_discrete_einstein_regge_lift.py": {
+      "assert_count": 1,
+      "claims": [
+        "discrete_einstein_regge_lift_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_distance_law_definitive.py": {
@@ -29453,7 +29507,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 15,
+        "C": 24,
         "D": 0
       },
       "decoration_candidate": false,
@@ -31362,6 +31416,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 7,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_lh_doublet_su2_squared_hypercharge_anomaly.py": {
@@ -36461,21 +36530,6 @@
         "A": 0,
         "B": 3,
         "C": 4,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
-    "scripts/frontier_universal_gr_isotropic_glue_operator.py": {
-      "assert_count": 2,
-      "claims": [
-        "discrete_einstein_regge_lift_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 4,
-        "C": 9,
         "D": 0
       },
       "decoration_candidate": false,
@@ -42473,13 +42527,13 @@
     "decoration_candidates": 135,
     "dominant_class_distribution": {
       "A": 24,
-      "B": 175,
-      "C": 645,
+      "B": 176,
+      "C": 646,
       "D": 243,
       "none": 428
     },
-    "runners_classified": 1515,
-    "runners_with_C": 780,
-    "runners_with_D": 400
+    "runners_classified": 1517,
+    "runners_with_C": 782,
+    "runners_with_D": 401
   }
 }

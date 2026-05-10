@@ -1,11 +1,11 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 751,
+    "bounded_theorem": 756,
     "decoration": 12,
     "meta": 74,
     "no_go": 192,
-    "open_gate": 105,
-    "positive_theorem": 772
+    "open_gate": 104,
+    "positive_theorem": 770
   },
   "cycle_examples": [
     [
@@ -44,17 +44,17 @@
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
-      "bh_entropy_rt_ratio_widom_no_go_note",
-      "bh_entropy_derived_note"
+      "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+      "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     ]
   ],
-  "cycles_detected": 231,
+  "cycles_detected": 236,
   "effective_status_counts": {
     "audit_in_progress": 1,
-    "audited_conditional": 264,
+    "audited_conditional": 248,
     "audited_failed": 8,
     "audited_numerical_match": 20,
-    "audited_renaming": 24,
+    "audited_renaming": 22,
     "decoration_under_cl3_color_automorphism_theorem": 3,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": 1,
@@ -66,9 +66,9 @@
     "meta": 67,
     "open_gate": 11,
     "retained": 61,
-    "retained_bounded": 233,
-    "retained_no_go": 119,
-    "unaudited": 1088
+    "retained_bounded": 231,
+    "retained_no_go": 117,
+    "unaudited": 1112
   },
   "retained_pending_chain_count": 0,
   "retained_pending_chain_examples": []

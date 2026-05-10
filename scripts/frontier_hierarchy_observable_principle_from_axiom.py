@@ -514,6 +514,228 @@ def test_conditional_scope_shape():
     )
 
 
+def test_premise_internal_derivations():
+    """Part 7 -- runner-local derivations of P2, P3, P4.
+
+    Per the 2026-05-09 narrowing recorded in
+    `docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md` §"Runner-local
+    derivation of P2/P3/P4", three of the
+    four admitted bridge premises in Part 6 retire to runner-internal
+    consequences once the registered `CPT_EXACT_NOTE` construction is
+    admitted:
+
+      * P2 (CPT-even phase blindness) follows from D being real
+        anti-Hermitian (a retained property of the staggered axiom): for
+        any real-Hermitian source `J`, `det(D + J)` and `det(D - J)`
+        are complex conjugates, so `|det(D + J)| = |det(D - J)|` is
+        forced. Thus `W` is automatically even in `J` without needing a
+        separate physical-principle premise.
+
+      * P3 (continuity / minimal regularity) follows from the finite
+        Grassmann-block structure: `j -> det(D + jI)` is a polynomial
+        in `j` of degree `dim(D)`, so `j -> log|det(D + jI)|` is real-
+        analytic on every neighborhood of `j` where the polynomial is
+        nonzero. The runner verifies analyticity directly via finite-
+        difference / Taylor-coefficient stability of the small-source
+        expansion.
+
+      * P4 (normalization convention) is not an independent premise but
+        the unique additive convention setting `W(0) = 0`. The runner
+        verifies the convention is enforced (zero-source baseline
+        subtraction) and confirms that any other normalization choice
+        differs from this one by an additive constant only and so does
+        not change the source-derivative observables.
+
+    P1 (scalar additivity on independent subsystems) remains an admitted
+    physical-principle premise: it is the criterion that selects the
+    additive class of generators for "physical scalar bosonic
+    observable" in the first place. The runner checks the conditional
+    shape: P1 + (now-derived) P2/P3/P4 jointly force `W = log|det(D+J)|`
+    up to the conventional constant.
+
+    This part therefore reduces the admitted-premise set on the
+    physical-premise surface from {P1, P2, P3, P4} to P1 plus the cited
+    staggered-block/CPT structure. It does NOT derive P1, and it does not
+    promote `CPT_EXACT_NOTE`; those remain audit-governed inputs.
+    """
+    print("\n" + "=" * 78)
+    print("PART 7: RUNNER-LOCAL DERIVATIONS OF P2, P3, P4")
+    print("=" * 78)
+
+    u0 = 0.9
+
+    # P2 derivation: D is real anti-Hermitian on the staggered block.
+    print("\n  P2 derivation: D is real anti-Hermitian on the runner block.")
+    real_d_imag_norm_max = 0.0
+    anti_herm_residual_max = 0.0
+    re_eig_max = 0.0
+    for ls, lt in [(2, 2), (2, 4)]:
+        d = build_dirac_4d_apbc(ls, lt, u0)
+        real_d_imag_norm_max = max(real_d_imag_norm_max, float(np.linalg.norm(d.imag)))
+        anti_herm_residual_max = max(
+            anti_herm_residual_max, float(np.linalg.norm(d + d.conj().T))
+        )
+        eigs = np.linalg.eigvals(d)
+        re_eig_max = max(re_eig_max, float(np.max(np.abs(eigs.real))))
+
+    check(
+        "D has identically zero imaginary part on the staggered block",
+        real_d_imag_norm_max < 1e-12,
+        f"max ||Im(D)||_F = {real_d_imag_norm_max:.2e}",
+    )
+    check(
+        "D + D^dagger = 0 (anti-Hermitian) on the staggered block",
+        anti_herm_residual_max < 1e-12,
+        f"max ||D + D^dagger||_F = {anti_herm_residual_max:.2e}",
+    )
+    check(
+        "Re(spec(D)) = 0 (purely imaginary spectrum) on the staggered block",
+        re_eig_max < 1e-10,
+        f"max |Re(eigenvalue(D))| = {re_eig_max:.2e}",
+    )
+
+    # P2 derivation step: |det(D+J)| = |det(D-J)| forced by realness of D.
+    p2_derived_err = 0.0
+    for ls, lt in [(2, 2), (2, 4)]:
+        d = build_dirac_4d_apbc(ls, lt, u0)
+        n = d.shape[0]
+        for j in [1e-3, 1e-2, 5e-2, 1e-1]:
+            jp = j * np.eye(n, dtype=complex)
+            zp = abs(np.linalg.det(d + jp))
+            zm = abs(np.linalg.det(d - jp))
+            p2_derived_err = max(p2_derived_err, abs(zp - zm))
+
+    check(
+        "P2 derived: |det(D + jI)| = |det(D - jI)| from real anti-Hermitian D",
+        p2_derived_err < 1e-12,
+        f"max |zp - zm| = {p2_derived_err:.2e}",
+    )
+
+    # Stronger statement: det(D + J) and det(D - J) are complex conjugates
+    # for real-Hermitian J (here J = jI is real-symmetric).
+    p2_conj_err = 0.0
+    for ls, lt in [(2, 2), (2, 4)]:
+        d = build_dirac_4d_apbc(ls, lt, u0)
+        n = d.shape[0]
+        for j in [1e-3, 1e-2, 5e-2]:
+            jp = j * np.eye(n, dtype=complex)
+            det_p = complex(np.linalg.det(d + jp))
+            det_m = complex(np.linalg.det(d - jp))
+            # det(D+J) = (det(D-J)).conj() when D is real anti-Hermitian and
+            # J is real symmetric, since (D+J)^* = -D + J = -(D - J), and
+            # det(-(D-J)) = (-1)^n det(D-J); on the runner blocks dim(D) = n
+            # is even, so (-1)^n = 1.
+            p2_conj_err = max(p2_conj_err, abs(det_p - det_m.conjugate()))
+
+    check(
+        "P2 derived (stronger): det(D + jI) = conj(det(D - jI)) on even-dim staggered block",
+        p2_conj_err < 1e-9,
+        f"max |det(D+J) - conj(det(D-J))| = {p2_conj_err:.2e}",
+    )
+
+    # P3 derivation: j -> det(D + jI) is a polynomial in j of degree n;
+    # log|det(D + jI)| is real-analytic on j-neighborhoods where the polynomial
+    # is nonzero. The runner verifies via Taylor-coefficient stability and
+    # via D being invertible (so j=0 is in the analyticity neighborhood).
+    print("\n  P3 derivation: finite-block analyticity of log|det(D + jI)|.")
+    p3_d_invertible_err = 0.0
+    for ls, lt in [(2, 2), (2, 4)]:
+        d = build_dirac_4d_apbc(ls, lt, u0)
+        # Smallest singular value bounds invertibility.
+        smin = float(np.linalg.svd(d, compute_uv=False)[-1])
+        p3_d_invertible_err = max(p3_d_invertible_err, 1.0 / max(smin, 1e-30))
+        # Cap to avoid logging huge floats; we only need finiteness.
+    check(
+        "P3 derived: D is invertible on the runner block (smin > 0, so log|det D| is finite)",
+        p3_d_invertible_err < 1e3,
+        f"max 1/sigma_min(D) = {p3_d_invertible_err:.2e}",
+    )
+
+    # Quadratic stability of W(j) ~ A j^2 + O(j^4): verified by checking
+    # the small-j ratio W(j) / j^2 converges to A as j -> 0. Analyticity of
+    # j -> log|det(D + jI)| (in any neighborhood where det is nonzero) is
+    # established structurally from det(D + jI) being a degree-n polynomial
+    # in j; the Taylor-coefficient stability check below is a numerical
+    # consistency probe (relative tolerance), not the analyticity proof
+    # itself.
+    p3_quadratic_stab_err = 0.0
+    for lt in [2, 4]:
+        d = build_dirac_4d_apbc(2, lt, u0)
+        n = d.shape[0]
+        a_exact = exact_uniform_coefficient_total(lt, u0)
+        for j in [1e-3, 1e-2]:
+            src = j * np.eye(n, dtype=complex)
+            w = observable_generator(d, src)
+            ratio = w / j**2
+            rel = abs(ratio - a_exact) / max(abs(a_exact), 1e-30)
+            p3_quadratic_stab_err = max(p3_quadratic_stab_err, rel)
+
+    check(
+        "P3 derived: small-j Taylor ratio W(j)/j^2 converges to A(L_t) (analytic stability)",
+        p3_quadratic_stab_err < 5e-3,
+        f"max relative |W(j)/j^2 - A_exact| / A_exact = {p3_quadratic_stab_err:.2e}",
+    )
+
+    # P4 derivation: zero-source baseline is the unique additive convention
+    # setting W(0) = 0; any other choice differs by an additive constant.
+    print("\n  P4 derivation: zero-source baseline as the additive normalization convention.")
+    p4_baseline_zero_err = 0.0
+    p4_constant_invariance_err = 0.0
+    for ls, lt in [(2, 2), (2, 4)]:
+        d = build_dirac_4d_apbc(ls, lt, u0)
+        n = d.shape[0]
+        # W(0) = 0 by construction.
+        p4_baseline_zero_err = max(
+            p4_baseline_zero_err,
+            abs(observable_generator(d, np.zeros((n, n), dtype=complex))),
+        )
+        # Source-derivative observables are invariant under an additive
+        # constant shift in W (i.e., the convention does not propagate to
+        # local observables): d/dj of a constant is zero.
+        for j in [1e-3, 1e-2]:
+            src = j * np.eye(n, dtype=complex)
+            w_native = observable_generator(d, src)
+            # Add an arbitrary global constant: simulate by reading W via
+            # log|det(D+J)| - log|det D| + C for any C, then derivative
+            # in j is unaffected. Numerically verify by finite-difference:
+            eps = 1e-5
+            src_plus = (j + eps) * np.eye(n, dtype=complex)
+            src_minus = (j - eps) * np.eye(n, dtype=complex)
+            deriv_native = (
+                observable_generator(d, src_plus) - observable_generator(d, src_minus)
+            ) / (2 * eps)
+            # Add an arbitrary constant C to W via a different baseline subtraction.
+            c_alt = 17.5
+            deriv_alt = (
+                (logabs_det(d + src_plus) - logabs_det(d) + c_alt)
+                - (logabs_det(d + src_minus) - logabs_det(d) + c_alt)
+            ) / (2 * eps)
+            p4_constant_invariance_err = max(
+                p4_constant_invariance_err, abs(deriv_native - deriv_alt)
+            )
+
+    check(
+        "P4 derived: W(0) = 0 enforced by zero-source baseline subtraction",
+        p4_baseline_zero_err < 1e-12,
+        f"max |W(0)| = {p4_baseline_zero_err:.2e}",
+    )
+    check(
+        "P4 derived: source-derivative observables invariant under additive constant in W",
+        p4_constant_invariance_err < 1e-9,
+        f"max |dW_native - dW_alt| = {p4_constant_invariance_err:.2e}",
+    )
+
+    # Summary: with P2, P3, P4 derived, the only remaining admitted premise
+    # is P1 (additivity on independent subsystems). The runner already
+    # verifies P1 in Part 6.
+    print(
+        "\n  Summary: P2 follows from real anti-Hermitian D in the registered CPT_EXACT_NOTE construction,\n"
+        "  P3 follows from finite-block polynomial analyticity + D invertibility,\n"
+        "  P4 follows from the zero-source baseline convention. This narrows the\n"
+        "  physical-premise list but does not promote the cited upstream row."
+    )
+
+
 def main():
     print("Hierarchy observable principle from the lattice axiom")
     print("=" * 78)
@@ -523,6 +745,7 @@ def main():
     test_orbit_kernel_and_selector()
     test_hierarchy_value_from_internal_observable_principle()
     test_conditional_scope_shape()
+    test_premise_internal_derivations()
     print("\n" + "=" * 78)
     print(f"SCORECARD: {PASS_COUNT} pass, {FAIL_COUNT} fail out of {PASS_COUNT + FAIL_COUNT}")
     print("=" * 78)

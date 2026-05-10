@@ -1,9 +1,81 @@
 # Staggered Fermion + Parity-Coupled Gravity — Complete Card
 
-**Status:** bounded - bounded or caveated result note
-**Date:** 2026-04-11 (parity coupling rewrite)
+**Status:** bounded - bounded or caveated result note (audited_conditional;
+2026-05-02 fresh-context audit)
+**Date:** 2026-04-11 (parity coupling rewrite); 2026-05-10 conditional-hypotheses
+bookkeeping repair
 **Coupling:** `H_diag = (m + Phi) * epsilon(x)` — scalar 1x1 in spin-taste
 **Reference:** Zache et al. (Quantum 2020), Dempsey et al. (arXiv:2501.10862)
+
+## Claim Boundary (audit response)
+
+This card is a **conditional finite-harness numerical/card result for the
+registered parity-coupled runner outputs, not an audited-clean bounded
+theorem/card**. The 2026-05-02 fresh-context audit
+(`fresh-staggered-fermion-card-auditor`, codex-fresh, fresh_context, class B)
+landed `audited_conditional` because attraction and force-direction closure
+require **importing** the screened-Poisson bridge `(L + mu^2) Phi = G rho`
+together with fixed `G > 0`, free `mu`, positive source `rho = |psi|^2`,
+static lattice, and selected graph families. The runner verifies finite-card
+consequences under those premises; it does not derive them.
+
+This 2026-05-10 repair makes the conditional hypotheses explicit at the head
+of the note (rather than only restating them under "What is still assumed"
+near the tail), restates the load-bearing claim as a conditional bounded
+card, and points the staggered-Dirac structure at its `A_min` anchor in
+[`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) (A3) so that
+the card no longer reads as deriving Dirac structure from inside itself.
+Numeric content of the card is unchanged.
+
+## Conditional Hypotheses (admitted_context_inputs)
+
+The bounded card claim closes **only under** the following admitted/imported
+premises. Each is an external input on the harness side, not derived inside
+this note from `A_min`:
+
+- **(H1) Screened-Poisson bridge.** The gravitational potential `Phi` is
+  determined by `(L + mu^2) Phi = G * rho` with `L` the graph Laplacian on
+  the chosen family, `mu^2 > 0` a fixed screening mass, and `G > 0` a fixed
+  positive coupling. This equation is **not derived** from the framework and
+  is treated as a harness import on the same footing as standard
+  Newton-style screened gravity.
+- **(H2) Positive source.** The matter source is `rho = |psi|^2 >= 0` so
+  that `Phi >= 0` follows mathematically from positivity of the resolvent
+  `(L + mu^2)^{-1}` against a non-negative source.
+- **(H3) Free positive coupling `G`.** `G` is a free positive parameter of
+  the harness; the reported strengths `G in {8.0, 50.0, ...}` are operating
+  points, not predicted couplings.
+- **(H4) Free screening mass `mu`.** `mu^2 > 0` is a free parameter; the
+  reported `mu^2 = 0.22` is an operating point.
+- **(H5) Static lattice.** The graph (sites and edges) is fixed in time;
+  there is no dynamical metric or graph evolution alongside `psi`.
+- **(H6) Enumerated graph families.** Closure is reported only on the
+  registered families (1D `n=61`, 3D `n in {9, 11, 13}`, `random_geo s10`,
+  `growing n=48`, `layered_cycle 8x8`, `causal_dag 10x6`, `causal_dag 8x8`,
+  and the explicit cycle/wave/portability variants below). The card does
+  not claim universality across arbitrary graphs.
+- **(H7) Eigensolve / family-coverage gate.** The 3D card runs energy
+  projections at `n=9`; at `n in {11, 13}` only `4/6` families are tested
+  because `N_sites > 1000` (frozen `n=9` eigensolve gate).
+- **(H8) Sign convention for `Phi`.** Positive-definite `(L + mu^2)` and
+  positive `rho` give `Phi >= 0`. Inverting `Phi -> -Phi` inverts the
+  measured force; the sign-test column below documents that this inversion
+  has been exercised on the canonical cubic card.
+- **(H9) Staggered-Dirac structure cited from A_min surface.** The
+  Kogut–Susskind staggered Hamiltonian (the staggering phases `eta_mu(x)`,
+  `epsilon(x)`, and the diagonal mass term used in `H_diag`) is the same
+  staggered-Dirac structure carried by the framework's
+  `Cl(3) / Z^3` minimal stack as recorded in
+  [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) (item A3:
+  "the finite local Grassmann / staggered-Dirac partition and the lattice
+  operators built on that surface"). This card cites that staggered-Dirac
+  structure but does not itself derive or ratify it.
+
+The bounded claim of this card is therefore: **conditional on (H1)–(H9),
+the registered parity-coupled runner outputs reproduce the score surface
+tabulated below on the enumerated finite cards**. Promotion to an
+unconditional bounded theorem requires either ratifying (H1)–(H9) inside
+the note or retaining a separate derivation that closes them.
 
 ## Coupling Structure
 
@@ -211,31 +283,51 @@ H.setdiag((mass + phi) * parity)         # parity (scalar 1x1) coupling
 | Physical mechanism | Uniform energy shift | Mass-gap modulation | Correct Dirac coupling |
 | Force direction (exact lattice) | Tautological (prescribed) | Sign-sensitive (well/hill split) | Only on canonical cubic card so far |
 
-### What is derived (not assumed)
+### What is verified by the runner (conditional on H1–H9)
 
-1. **Dirac dispersion** E^2 = m^2 + sin^2(k) — from staggering phases
-2. **Born rule** I3 at machine zero — from CN linearity
+The items below are runner-verified consequences of the parity-coupled
+staggered-Dirac structure **once (H1)–(H9) are admitted**. They are not
+unconditional derivations from `A_min`.
+
+1. **Dirac dispersion** E^2 = m^2 + sin^2(k) — from the staggering phases
+   eta_mu(x) once the staggered-Dirac realization (H9) is admitted
+2. **Born rule** I3 at machine zero — from CN linearity on the registered
+   finite card
 3. **Force direction on exact lattice** — well/hill sign test splits cleanly
-   under parity coupling on the canonical cubic card (only)
-4. **Achromatic force** CV=0.000 — F = -<dV/dz> has no k-dependence
-5. **Equivalence** a = F/m mass-independent — CV=0.000
-6. **Gauge invariance** persistent current J(A) — from Hamiltonian structure
+   under parity coupling on the canonical cubic card (conditional on the
+   imported `Phi >= 0` chain (H1)+(H2) plus sign convention (H8); not a
+   direction-from-axioms derivation)
+4. **Achromatic force** CV=0.000 — F = -<dV/dz> has no k-dependence on the
+   registered card
+5. **Equivalence** a = F/m mass-independent — CV=0.000 on the registered card
+6. **Gauge invariance** persistent current J(A) — from the parity-coupled
+   Hamiltonian structure on the registered finite card
 7. **Self-gravity contraction** w_f/w_0 < 1 — from iterated backreaction
+   under the imported screened-Poisson bridge (H1) with fixed `G`, `mu`
 8. **Norm conservation** ~1e-15 — from CN unitarity
 
-NOTE: "Force direction derived" applies only to the exact-lattice canonical
-card. On irregular graph families, the retained shell/edge-radial proxies are
-strong structural interacting-field results but do not yet constitute a clean
-directional-gravity claim. One frozen graph-native directional observable is
-still needed for full irregular-graph sign closure.
+NOTE: "Force direction" applies only to the exact-lattice canonical card and
+is conditional on the imported sign chain (H1)+(H2)+(H8). On irregular graph
+families, the retained shell/edge-radial proxies are structural
+interacting-field results but do not yet constitute a clean directional-gravity
+claim. One frozen graph-native directional observable is still needed for
+irregular-graph sign closure.
 
-### What is still assumed
+### What is admitted (and currently not derived)
 
-1. **Screened Poisson equation** (L + mu^2)Phi = G*rho — not derived from the model
-2. **Coupling constant G** — free parameter
-3. **Screening mass mu** — free parameter
-4. **Static lattice** — graph is fixed, not dynamically grown
-5. **The specific graph families** — bipartite structure is required, but which graph is not predicted
+These restate (H1)–(H9) in the legacy "what is still assumed" position so
+that downstream readers cross-checking the original tail catch the same set:
+
+1. **Screened Poisson equation** (L + mu^2)Phi = G*rho — admitted as (H1);
+   not derived from the framework
+2. **Coupling constant G** — admitted as (H3); free positive parameter
+3. **Screening mass mu** — admitted as (H4); free parameter
+4. **Static lattice** — admitted as (H5); graph is fixed, not dynamically grown
+5. **The specific graph families** — admitted as (H6); bipartite structure is
+   required by the staggering, but which graph is not predicted
+6. **Staggered-Dirac structure** — admitted as (H9); cited from the
+   `Cl(3) / Z^3` `A_min` surface per `MINIMAL_AXIOMS_2026-04-11.md` (A3),
+   not derived inside this card
 
 ## Caveats
 

@@ -1,17 +1,48 @@
 # Universal GR Positive-Background Local Closure on `PL S^3 x R`
 
-**Status:** support - structural or confirmatory support note
-**Date:** 2026-04-14 (sign character corrected 2026-05-01)
+**Status:** bounded local linear-algebra closure, conditional on the imported
+isotropic-glue authority and the SPD-background `B_D`/`Lambda_R` bridge being
+independently retained. Within those imports, this note proves a class-A
+algebraic closure: `K_GR(D) = H_D ⊗ Lambda_R` is symmetric negative-definite,
+hence invertible with a unique stationary boundary field and an exact quadratic
+completion identity. It is **not** a route-level closure of full universal GR.
+**Date:** 2026-04-14 (sign character corrected 2026-05-01; audit-narrowing
+refresh 2026-05-10)
 **Branch:** `codex/review-active`
-**Role:** direct universal route / strongest local closure theorem
+**Role:** direct universal route / bounded local algebraic closure
+**Claim type:** bounded_theorem
+**Status authority:** independent audit lane only.
 **Runner:** scripts/universal_gr_positive_background_local_closure.py
 
-## Verdict
+## Audit boundary
 
-The direct-universal route closes as an exact **definite-background local
-Einstein/Regge boundary-action family** on `PL S^3 x R` with a unique exact
-stationary boundary field for every real positive-symmetric background `D`
-and source `J`.
+The runner numerically validates the algebraic sign, invertibility, stationary
+equation, and completion identity for sampled dense finite-dimensional
+instances. Those sampled checks support the class-A algebraic content of this
+note. They do **not** independently retain the upstream isotropic-glue
+authority or the SPD-background `B_D`/`Lambda_R` bridge.
+
+**Admitted authority inputs (cited but not derived in this note):**
+
+- the exact isotropic glue assembly
+  [`UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`](UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
+  — which itself is bounded structural assembly conditional on its own
+  imports, not retained-grade. So the universal SPD-background `B_D` family
+  used in this note is also conditional on those upstream imports.
+- the slice generator `Lambda_R` symmetric-positivity, taken from the Route-2
+  slice-generator construction (not re-derived here).
+
+If the upstream isotropic-glue / `Lambda_R` chain is later promoted to
+retained-grade, the bounded algebraic closure recorded here propagates
+forward without further repair on this row.
+
+## Verdict (scope-bounded)
+
+Conditional on the imports above, the direct-universal route admits an exact
+**definite-background local algebraic closure** on `PL S^3 x R`: for every
+real positive-symmetric background `D` and source `J`, there is a unique
+exact stationary boundary field `F_*(D, J) = K_GR(D)^{-1} J` and an exact
+quadratic completion identity around it.
 
 The earlier draft of this note labelled the resulting kinetic operator
 `K_GR(D)` as symmetric positive-definite. That polarity claim was wrong:
@@ -116,19 +147,23 @@ positive-definite backgrounds.
 
 ## Honest status
 
-Current direct-universal route:
+At this bounded scope, the direct-universal route assembles:
 
-- exact scalar observable level
-- exact `3+1` lift level
-- exact tensor variational level
-- exact canonical block / constraint level
-- exact isotropic glue level
-- exact invariant-family nonlinear level
-- exact positive-background extension level
-- exact **definite-background** (negative-definite `K_GR`) local closure level
+- a scalar observable level (imported)
+- a `3+1` lift level (imported)
+- a tensor variational level (imported)
+- a canonical block / constraint level (imported)
+- an isotropic glue level (imported, bounded structural assembly)
+- an invariant-family nonlinear level (imported)
+- a positive-background extension level (imported)
+- a **definite-background** local algebraic closure level (this note,
+  bounded; class-A algebra conditional on the imports above).
 
-This is the furthest disciplined gravity claim the current branch can
-honestly support, with the operator polarity now stated correctly.
+This is the furthest disciplined definite-background local algebraic claim
+the current branch supports given the imported chain. It is **not** a route-
+level closure of full universal GR — the residual gap to a Lorentzian /
+unrestricted-GR action remains global and interpretive, and the upstream
+authorities themselves are not yet retained-grade.
 
 ## Audit dependency repair links
 

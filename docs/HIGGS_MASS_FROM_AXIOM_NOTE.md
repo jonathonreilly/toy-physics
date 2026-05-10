@@ -293,9 +293,9 @@ The narrative paragraph above ("The remaining +12% gap") attributes the
 sister authorities that actually carry each derivation. This step
 upgrades the cross-reference to an audit-compatible authority inventory
 without attempting any new derivation. Each row is a pointer; this note
-does not change any sibling claim boundary or pipeline-derived status. The
+does not change any sibling claim boundary or effective status (the pipeline-derived status field in the audit ledger). The
 audit ledger remains the only authority for current audit and
-pipeline-derived status.
+effective status (the pipeline-derived status field in the audit ledger).
 
 | Gap correction | Sister authority | Status authority | Closes the gap from / to | Open content |
 |---|---|---|---|---|

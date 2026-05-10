@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_hierarchy_observable_principle_from_axiom.py
-runner_sha256: 98dd83213670a297d4821ac7ecd8ed49d0e6c41c8694b74534d24bb1578874fe
+runner_sha256: a357e44de644977d882f595a2874fbcbf9fa1d38acd06f78e792c6e7f8bf370c
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.13
+elapsed_sec: 0.25
 status: ok
 ----- stdout -----
 Hierarchy observable principle from the lattice axiom
@@ -105,7 +105,40 @@ PART 6: CONDITIONAL-SHAPE VERIFICATION (2026-05-07 SCOPE NARROWING)
   Note: this part verifies the CONDITIONAL SHAPE only (premises P1-P4 hold on the candidate W). It does NOT derive P1-P4 from retained-grade primitives; that path is explicitly out of scope per the audit-named conditional scope (see docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md §'Audit-named conditional scope').
 
 ==============================================================================
-SCORECARD: 18 pass, 0 fail out of 18
+PART 7: RUNNER-LOCAL DERIVATIONS OF P2, P3, P4
+==============================================================================
+
+  P2 derivation: D is real anti-Hermitian on the runner block.
+  [PASS] D has identically zero imaginary part on the staggered block
+         max ||Im(D)||_F = 0.00e+00
+  [PASS] D + D^dagger = 0 (anti-Hermitian) on the staggered block
+         max ||D + D^dagger||_F = 0.00e+00
+  [PASS] Re(spec(D)) = 0 (purely imaginary spectrum) on the staggered block
+         max |Re(eigenvalue(D))| = 4.44e-16
+  [PASS] P2 derived: |det(D + jI)| = |det(D - jI)| from real anti-Hermitian D
+         max |zp - zm| = 0.00e+00
+  [PASS] P2 derived (stronger): det(D + jI) = conj(det(D - jI)) on even-dim staggered block
+         max |det(D+J) - conj(det(D-J))| = 0.00e+00
+
+  P3 derivation: finite-block analyticity of log|det(D + jI)|.
+  [PASS] P3 derived: D is invertible on the runner block (smin > 0, so log|det D| is finite)
+         max 1/sigma_min(D) = 5.94e-01
+  [PASS] P3 derived: small-j Taylor ratio W(j)/j^2 converges to A(L_t) (analytic stability)
+         max relative |W(j)/j^2 - A_exact| / A_exact = 1.76e-05
+
+  P4 derivation: zero-source baseline as the additive normalization convention.
+  [PASS] P4 derived: W(0) = 0 enforced by zero-source baseline subtraction
+         max |W(0)| = 0.00e+00
+  [PASS] P4 derived: source-derivative observables invariant under additive constant in W
+         max |dW_native - dW_alt| = 8.88e-11
+
+  Summary: P2 follows from real anti-Hermitian D in the registered CPT_EXACT_NOTE construction,
+  P3 follows from finite-block polynomial analyticity + D invertibility,
+  P4 follows from the zero-source baseline convention. This narrows the
+  physical-premise list but does not promote the cited upstream row.
+
+==============================================================================
+SCORECARD: 27 pass, 0 fail out of 27
 ==============================================================================
 
 ----- stderr -----

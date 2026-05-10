@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence.py
+runner_sha256: 4fa918b73fb5481ed83e3ec926a2c9077406f0ebceb17b8457c7dcae3468029b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+frontier_lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: does not use staggered-Dirac realization machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Arithmetic Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM
+  [PASS] contains marker: GRAPH_FIRST_SU3_INTEGRATION_NOTE
+  [PASS] contains marker: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE
+  [PASS] contains marker: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03
+  [PASS] contains marker: MINIMAL_AXIOMS_2026-05-03
+  [PASS] contains marker: tracelessness
+  [PASS] contains marker: exact rational arithmetic
+  [PASS] contains marker: 1 : (-3)
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md
+  [PASS] dependency exists: docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md
+  [PASS] dependency exists: docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] dependency exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+multiplicities from graph-first integration note (retained-bounded)
+----------------------------------------------------------------------------------------
+  [PASS] Sym² multiplicity = 6 (3*2 = 6)
+  [PASS] Anti² multiplicity = 2 (1*2 = 2)
+  [PASS] LH-doublet sector dim = 8 (6+2 = 8)
+
+----------------------------------------------------------------------------------------
+tracelessness solve forces β = -3α uniquely
+----------------------------------------------------------------------------------------
+  [PASS] for arbitrary nonzero α, tracelessness forces β = -3α (scale-independent) (tested α ∈ ['1', '2', '-5', '7/11', '-3/17', '100'])
+  [PASS] ratio β/α = -3 exactly (Fraction equality) (β/α = -3)
+  [PASS] Sym² : Anti² eigenvalue ratio = 1 : (-3) (1 : -3)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] forbidden input named only as excluded: Kawamoto-Smit phase form
+  [PASS] forbidden input named only as excluded: BZ-corner doublers
+  [PASS] forbidden input named only as excluded: hw=1 corner triplet
+  [PASS] forbidden input named only as excluded: fermion-number operators
+  [PASS] forbidden input named only as excluded: fermion correlators
+  [PASS] forbidden input named only as excluded: fermion bilinears
+  [PASS] allowed input named: graph-first integration note
+  [PASS] allowed input named: tracelessness
+  [PASS] allowed input named: exact rational arithmetic
+  [PASS] boundary names non-closed item: specific eigenvalues `+1/3` and `−1`
+  [PASS] boundary names non-closed item: the staggered-Dirac realization gate
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+  [PASS] boundary names non-closed item: anomaly-cancellation
+
+----------------------------------------------------------------------------------------
+proof-walk table coverage
+----------------------------------------------------------------------------------------
+  [PASS] proof-walk row present: Sym² multiplicity = 6
+  [PASS] proof-walk row present: Anti² multiplicity = 2
+  [PASS] proof-walk row present: Tracelessness `6α + 2β = 0`
+  [PASS] proof-walk row present: Linear solve `β = -3α`
+  [PASS] proof-walk row present: Ratio `1 : (-3)`
+  [PASS] proof-walk table has 5 rows with both columns marked 'no' (found 5 rows)
+
+----------------------------------------------------------------------------------------
+cited authority effective_status
+----------------------------------------------------------------------------------------
+  [PASS] graph_first_su3_integration_note effective_status is retained-grade (observed = 'retained_bounded')
+  [PASS] graph_first_selector_derivation_note effective_status is retained-grade (observed = 'retained_bounded')
+  [PASS] parent narrow theorem note is in ledger (observed = 'audited_conditional')
+
+TOTAL: PASS=61 FAIL=0
+VERDICT: bounded proof-walk passes; LH-doublet 1:(-3) ratio uses no
+lattice-action or staggered-Dirac realization quantity as a
+load-bearing input.
+
+----- stderr -----
+

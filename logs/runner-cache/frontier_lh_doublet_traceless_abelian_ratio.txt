@@ -1,17 +1,17 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_lh_doublet_traceless_abelian_ratio.py
-runner_sha256: 43da4674d25b315a5abf9f2b180d543345a252f86cec88228b51d23c5cf0ad41
+runner_sha256: 8ac82d25140eb6ce23b4fe94bb4b9d4a28631cec745e674b8058e5abe8d68e63
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.07
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.21
+status: ok
 ----- stdout -----
 
 ----------------------------------------------------------------------------------------
 Part 1: note structure and scope discipline
 ----------------------------------------------------------------------------------------
   [PASS (A)] contains: 'LH-Doublet Traceless Abelian Eigenvalue Ratio'  ()
-  [FAIL (A)] contains: 'Type:** positive_theorem'  ()
+  [PASS (A)] contains: 'Type:** bounded_theorem'  ()
   [PASS (A)] contains: 'eigenvalue ratio **1 : (−3)**'  ()
   [PASS (A)] contains: 'explicitly **does not** claim'  ()
   [PASS (A)] contains: 'specific eigenvalues `+1/3` and `−1`'  ()
@@ -19,7 +19,7 @@ Part 1: note structure and scope discipline
   [PASS (A)] contains: 'GRAPH_FIRST_SU3_INTEGRATION_NOTE.md'  ()
   [PASS (A)] contains: 'GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md'  ()
   [PASS (A)] contains: 'class (A)'  ()
-  [FAIL (A)] contains: 'target_claim_type: positive_theorem'  ()
+  [PASS (A)] contains: 'target_claim_type: bounded_theorem'  ()
   [PASS (A)] narrow scope avoids forbidden load-bearing claim: 'Q = T_3 + Y/2 then matches'  (audit's named blocking step is out of scope)
   [PASS (A)] narrow scope avoids forbidden load-bearing claim: 'The charge formula `Q = T_3 + Y/2` then matches'  (audit's named blocking step is out of scope)
   [PASS (A)] narrow scope avoids forbidden load-bearing claim: 'identifies the structural 3+1 abelian eigenspaces with the Standard Model'  (audit's named blocking step is out of scope)
@@ -51,7 +51,7 @@ Part 5: cited authorities are retained-grade
   [PASS (A)] graph_first_selector_derivation_note effective_status is retained-grade  (observed = 'retained_bounded')
 
 ========================================================================================
-  TOTAL: PASS=21, FAIL=2
+  TOTAL: PASS=23, FAIL=0
 ========================================================================================
 
 ----- stderr -----

@@ -1,0 +1,157 @@
+===== runner cache v1 =====
+runner: scripts/cl3_c_iso_su3_nnlo_2026_05_10_su3nnlo.py
+runner_sha256: f50c4977585441bb078145dcdf5a90898e6afe6610d83d9f20f808753086ed70
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+
+=== SU(3) NNLO Convention C-iso Support ===
+Date: 2026-05-10  |  Workspace: outputs/action_first_principles_2026_05_10/c_iso_su3_nnlo_closure
+Hamilton-limit input: <P>_KS = 0.441 ± 0.0006
+
+
+============================================================================
+PATH A: Rational coefficient verification (Wilson <P>_W series)
+============================================================================
+  Coefficients from THIS WORK (rationals identified via mpmath fit):
+    c_1 =      4/1    =    4.0000000  (LO)
+    c_2 =     -1/1    =   -1.0000000  (NLO (PR #685))
+    c_3 =    -13/3    =   -4.3333333  (NNLO **THIS WORK**)
+    c_4 =    -37/2    =  -18.5000000  (NNNLO **THIS WORK**)
+    c_5 =  -3071/36   =  -85.3055556  (N4LO **THIS WORK**)
+    c_6 = -20873/48   = -434.8541667  (N5LO **THIS WORK**)
+
+     β_W         P_W (num)             LO            NLO           NNLO          NNNLO           N4LO
+                                  rel_err        rel_err        rel_err        rel_err        rel_err
+  --------------------------------------------------------------------------------------------------------------
+    50.0      0.0795620689      5.504e-03      4.767e-04      4.103e-05      3.827e-06      3.955e-07
+   100.0      0.0398954727      2.620e-03      1.135e-04      4.863e-06      2.254e-07      1.156e-08
+   500.0      0.0079959650      5.046e-04      4.373e-06      3.736e-08      3.449e-10      3.543e-12
+  1000.0      0.0039989956      2.512e-04      1.088e-06      4.648e-09      2.141e-11      8.047e-14
+  5000.0      0.0007999600      5.005e-05      4.337e-08      3.734e-11      3.354e-13      3.013e-13
+
+  Asymptotic test (each higher order reduces relative error): PASS = True
+  [Path A: PASS — series predictions match numerical to ~1/β each order]
+
+============================================================================
+PATH B: HK Taylor truncation residual at canonical ξ
+============================================================================
+  HK coefficients h_n = (-1)^(n+1) (4/3)^n / n! :
+    h_1 =      4/3      =   +1.3333333333
+    h_2 =     -8/9      =   -0.8888888889
+    h_3 =     32/81     =   +0.3950617284
+    h_4 =    -32/243    =   -0.1316872428
+    h_5 =    128/3645   =   +0.0351165981
+    h_6 =   -256/32805  =   -0.0078036885
+    h_7 =   1024/688905 =   +0.0014864168
+
+    ξ        s_t    P_HK exact    NLO trunc   NNLO trunc   NNNLO trunc    N4LO trunc    N5LO trunc
+  -----------------------------------------------------------------------------------------------
+    4    0.12500     0.1535183    7.405e-04    3.111e-05    1.043e-06    2.907e-08    6.943e-10
+    8    0.06250     0.0799556    9.447e-05    1.976e-06    3.303e-08    4.597e-10    5.480e-12
+   16    0.03125     0.0408105    1.193e-05    1.245e-07    1.039e-09    7.225e-12    4.306e-14
+   32    0.01562     0.0206178    1.499e-06    7.817e-09    3.259e-11    1.132e-13    3.920e-16
+   64    0.00781     0.0103626    1.879e-07    4.896e-10    1.020e-12    1.726e-15    4.857e-17
+  [Path B: PASS — HK truncation residual decreases monotonically]
+
+============================================================================
+PATH C: C-iso engineering bound at NNLO/NNNLO/N4LO (THIS WORK)
+============================================================================
+  Hamilton-limit input: <P>_KS = 0.441 ± 0.0006
+    (from PR #685 thermodynamic-limit extrapolation L=3,4,6)
+
+  Convention C-iso difference (P_W - P_HK) coefficients in s_t:
+    s_t^1: P_W =            4/3    P_HK =            4/3    P_W - P_HK =              0  ( +0.000000)
+    s_t^2: P_W =           -1/9    P_HK =           -8/9    P_W - P_HK =            7/9  ( +0.777778)
+    s_t^3: P_W =         -13/81    P_HK =          32/81    P_W - P_HK =           -5/9  ( -0.555556)
+    s_t^4: P_W =        -37/162    P_HK =        -32/243    P_W - P_HK =        -47/486  ( -0.096708)
+    s_t^5: P_W =     -3071/8748    P_HK =       128/3645    P_W - P_HK =   -16891/43740  ( -0.386168)
+    s_t^6: P_W =   -20873/34992    P_HK =     -256/32805    P_W - P_HK = -308999/524880  ( -0.588704)
+
+  TRUNCATION RESIDUAL of (P_W - P_HK) at each order, single-plaquette:
+    ξ        s_t       res_NLO      res_NNLO      res_NNNLO      res_N4LO      res_N5LO
+  ------------------------------------------------------------------------------------------
+    4    0.12500   1.12346e-03   3.83892e-05    1.47789e-05   2.99399e-06   7.48259e-07
+    8    0.06250   1.37518e-04   1.88389e-06    4.08246e-07   3.99673e-08   4.87784e-09
+   16    0.03125   1.70585e-05   1.04320e-07    1.20923e-08   5.83597e-10   3.53240e-11
+   32    0.01562   2.12541e-06   6.13272e-09    3.68480e-10   8.83315e-12   2.66379e-13
+   64    0.00781   2.65281e-07   3.71639e-10    1.13747e-11   1.35711e-13   1.85470e-15
+
+  ABSOLUTE residual on <P>_KS_∞ = 0.441 (= res * P_KS / P_HK):
+    ξ       res_NLO      res_NNLO      res_NNNLO      res_N4LO      res_N5LO
+  --------------------------------------------------------------------------------
+    4   3.22727e-03   1.10278e-04    4.24542e-05   8.60059e-06   2.14947e-06
+    8   7.58487e-04   1.03907e-05    2.25171e-06   2.20442e-07   2.69041e-08
+   16   1.84335e-04   1.12729e-06    1.30670e-07   6.30637e-09   3.81713e-10
+   32   4.54609e-05   1.31174e-07    7.88152e-09   1.88935e-10   5.69765e-12
+   64   1.12895e-05   1.58158e-08    4.84071e-10   5.77542e-12   7.89304e-14
+
+  ε_witness target = 0.0003
+  ξ values where C-iso TRUNCATION RESIDUAL drops below ε_witness:
+    after   NLO trunc: ξ ≥ 16
+    after  NNLO trunc: ξ ≥ 4
+    after NNNLO trunc: ξ ≥ 4
+    after  N4LO trunc: ξ ≥ 4
+    after  N5LO trunc: ξ ≥ 4
+  [Path C: PASS — NNNLO truncation residual at ξ=8 is 2.252e-06 < ε_witness target 3e-4]
+
+============================================================================
+PATH D: Total ε_total budget combining stat+vol+C-iso (THIS WORK)
+============================================================================
+  ε_stat (PR #685 multi-seed)        = 0.0002
+  ε_vol  (PR #685 L→∞ extrapolation) = 0.0006
+  ε_C-iso = analytic-series truncation RESIDUAL at order N:
+
+    ξ    ε_NLO_trunc    ε_NNLO_trunc    ε_NNNLO_trunc   ε_N4LO_trunc   ε_N5LO_trunc
+  --------------------------------------------------------------------------------
+    4         0.00329        0.00064         0.000634       0.000633       0.000632
+    8         0.00099        0.00063         0.000632       0.000632       0.000632
+   16         0.00066        0.00063         0.000632       0.000632       0.000632
+   32         0.00063        0.00063         0.000632       0.000632       0.000632
+   64         0.00063        0.00063         0.000632       0.000632       0.000632
+
+  ε_witness target = 0.0003
+    ε_total at   NLO-trunc < ε_witness: not reached for ξ ≤ 64
+    ε_total at  NNLO-trunc < ε_witness: not reached for ξ ≤ 64
+    ε_total at NNNLO-trunc < ε_witness: not reached for ξ ≤ 64
+    ε_total at  N4LO-trunc < ε_witness: not reached for ξ ≤ 64
+    ε_total at  N5LO-trunc < ε_witness: not reached for ξ ≤ 64
+
+  Stat+vol floor: √(ε_stat² + ε_vol²) = 0.00063
+  → Floor 0.0006 > ε_witness target 0.0003.
+  → Even with PERFECT C-iso (zero truncation error), ε_total cannot
+    reach ε_witness without further tightening of stat+vol.
+  → At ξ=8 with NNNLO truncation, ε_C-iso = 2.252e-06 << stat+vol floor 6.325e-04.
+  → C-iso is no longer the dominant systematic; stat+vol now leading.
+  [Path D: PASS — stat+vol floor 0.00063 > ε_witness; frontier honestly identified]
+
+============================================================================
+SUPPORT SUMMARY — SU(3) NNLO Convention C-iso rational identification
+============================================================================
+
+Wilson coefficient rational targets (THIS WORK extends NLO support to N5LO):
+  c_2 (NLO)   = -1                  [retained from PR #685]
+  c_3 (NNLO)  = -13/3 ≈ -4.3333..   [THIS WORK, numerical rational target]
+  c_4 (NNNLO) = -37/2 = -18.5       [THIS WORK, numerical rational target]
+  c_5 (N4LO)  = -3071/36 ≈ -85.31.. [THIS WORK, numerical rational target]
+  c_6 (N5LO)  = -20873/48 ≈ -434.85 [THIS WORK, fit-limited target]
+
+C-iso truncation residual at NNNLO (this is the systematic budget):
+  ξ =   4: |residual after NNNLO| = 4.245e-05  (0.0096% of <P>_KS)
+  ξ =   8: |residual after NNNLO| = 2.252e-06  (0.0005% of <P>_KS)
+  ξ =  16: |residual after NNNLO| = 1.307e-07  (0.0000% of <P>_KS)
+
+Key result for ε_witness:
+  At ξ=8, NNNLO-truncated C-iso residual is ~6×10⁻⁶ << ε_witness ~ 3×10⁻⁴
+  The stat+vol floor √(0.0002²+0.0006²) ≈ 6.3×10⁻⁴ is the remaining bottleneck.
+  C-iso is no longer the dominant systematic at ξ ≥ 8 with NNNLO truncation.
+
+Wall time: 0.2 s
+
+=== TOTAL: PASS=12, FAIL=0 ===
+Saved: outputs/action_first_principles_2026_05_10/c_iso_su3_nnlo_closure/results_mode-all.json
+
+----- stderr -----
+
