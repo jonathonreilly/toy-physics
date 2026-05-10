@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1136 |
+| unaudited | 1135 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
 | ~~audited_conditional~~ | 214 |
-| ~~audited_failed~~ | 15 |
+| ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 383 |
 | `audited_conditional` | 214 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 59 |
+| `audited_failed` | 60 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1233 |
+| `unaudited` | 1232 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 774 |
+| `bounded_theorem` | 775 |
 | `decoration` | 13 |
 | `meta` | 103 |
 | `no_go` | 193 |
 | `open_gate` | 99 |
-| `positive_theorem` | 751 |
+| `positive_theorem` | 750 |
 
 | criticality | count |
 |---|---:|
@@ -722,6 +722,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `central_band_mass_window_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
@@ -1376,6 +1377,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** “N=60 is the retained same-graph joint row: LN + |y| keeps gravity positive; LN + |y| + collapse lowers purity further while keeping gravity positive.”  _(class `C`)_
 - **chain closes:** False — The runner supports a bounded finite computation for the N=60 rows, but the note does not close the stated machine-precision Born claim because the runner prints rounded mean±SE rather than a high-precision max |I3|/P threshold check. The note is also stale relative to the supplied stdout for the N=40 collapse row.
 - **rationale:** Issue: the note claims machine-precision Born cleanliness and records an N=40 collapse row of 0.587±0.065 purity and -0.554±0.493 gravity, while the supplied runner stdout gives 0.568±0.054 and -0.520±0.521. Why this blocks: rounded 0.000±0.000 mean/SE output is not a max |I3|/P < 1e-10 certificate, and stale table values prevent the note from being the audited numerical certificate it claims to be. Repair target: update the note to the current stdout and revise the runner/log to print or assert high-precision max |I3|/P per row. Claim boundary until fixed: the packet supports only a bounded finite sample in which the printed N=60 LN rows have positive mean gravity and rounded Born metric zero.
+- **auditor confidence:** high
+
+### `central_band_mass_window_note`
+
+- **Note:** [`CENTRAL_BAND_MASS_WINDOW_NOTE.md`](../../docs/CENTRAL_BAND_MASS_WINDOW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded computational comparison of baseline versus central-band pruned gravity mass-response fits for the supplied runner settings.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12f5-d73f-77e2-8b8e-8a7755a890de`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "the central-band hard-geometry row does improve the mass-response window relative to the plain baseline on the densest slice we tested"  _(class `C`)_
+- **chain closes:** False — The current runner stdout does support a qualitative N=100 R^2 improvement for pruned rows, but the source note's stated run configuration and fitted numerical values are stale relative to the supplied stdout. The audited note therefore does not close as written.
+- **rationale:** Issue: the note claims an 8-seed N=60/N=100 sweep over M=1,2,3,5,8 with specific fit coefficients and R^2 values, while the supplied runner stdout is a 16-seed N=60/80/100 sweep over M=1,2,3,5,8,12 with materially different fit results. Why this blocks: the load-bearing evidence in the note is the numerical summary, and it no longer matches the completed runner artifact. Repair target: update the note to the current runner configuration and stdout-derived fit table, or archive the old log that exactly produced the note's numbers. Claim boundary until fixed: at most the current stdout shows a bounded qualitative N=100 improvement for pruned rows, not the note's stated quantitative summary.
 - **auditor confidence:** high
 
 ### `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26`
