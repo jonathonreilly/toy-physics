@@ -1,0 +1,84 @@
+==============================================================================
+Diagnostic runner for Higgs lambda(M_Pl) bounded-interval theorem
+Source: docs/HIGGS_LAMBDA_M_PL_BOUNDED_INTERVAL_THEOREM_NOTE_2026-05-10.md
+==============================================================================
+
+==============================================================================
+Block 1: Retained slope sanity check
+==============================================================================
+  [PASS] slope:lam=-0.010: linear m_H = 121.92 GeV vs table 121.70 GeV (delta = +0.22 GeV)
+  [PASS] slope:lam=-0.005: linear m_H = 123.48 GeV vs table 123.43 GeV (delta = +0.05 GeV)
+  [PASS] slope:lam=+0.000: linear m_H = 125.04 GeV vs table 125.04 GeV (delta = +0.00 GeV)
+  [PASS] slope:lam=+0.005: linear m_H = 126.60 GeV vs table 126.54 GeV (delta = +0.06 GeV)
+  [PASS] slope:lam=+0.010: linear m_H = 128.16 GeV vs table 127.94 GeV (delta = +0.22 GeV)
+
+==============================================================================
+Block 2: Bounded-interval m_H consistency
+==============================================================================
+
+  Inherited retained 1-sigma systematic: +/- 3.17 GeV
+  Observed m_H (PDG): 125.25 GeV
+  m_H(lambda=0): 125.04 GeV (deviation -0.21 GeV)
+
+  label                              lambda(M_Pl)    m_H (GeV)   dev vs PDG   consistent
+  -------------------------------- -------------- ------------ ------------ ------------
+  SM literature (Buttazzo)              -0.013000       120.98        -4.27           NO
+  SM literature -1sigma                 -0.020000       118.80        -6.45           NO
+  SM literature +1sigma                 -0.006000       123.17        -2.08          YES
+  intermediate -0.005                   -0.005000       123.48        -1.77          YES
+  framework lower edge (0)              +0.000000       125.04        -0.21          YES
+  framework retained central            +0.000100       125.07        -0.18          YES
+  framework retained central B5         +0.000400       125.16        -0.09          YES
+  framework upper edge (B-4)            +0.001000       125.35        +0.10          YES
+  [PASS] bounded-interval:lower-edge: lambda = +0e+00 gives m_H = 125.04 GeV (consistent with PDG within 3.17 GeV)
+  [PASS] bounded-interval:retained-central: lambda = +4e-04 gives m_H = 125.16 GeV
+  [PASS] bounded-interval:upper-edge: lambda = +1e-03 gives m_H = 125.35 GeV
+  [PASS] framework-positive-side-better-than-sm-literature: framework retained central lambda = +4e-04 gives m_H = 125.16 GeV (closer to PDG than literature lambda = -0.013 giving m_H = 120.98 GeV)
+  [INFO] SM literature point alone (without inherited systematic widening): m_H = 120.98 GeV, outside +/-3.17 GeV of PDG
+
+==============================================================================
+Block 3: Directional discriminator (sign of lambda(M_Pl))
+==============================================================================
+
+  SM literature interval (Buttazzo +/-1sigma): [-0.0200, -0.0060]
+  Framework bounded interval: [+0.0000, +0.0010]
+  Gap (framework lower edge - literature upper edge): +0.0060
+  [PASS] directional-discriminator:intervals-disjoint: framework interval [0, +1e-3] is disjoint from literature [-0.020, -0.006] at the +/-1sigma level (gap = +0.0060)
+
+  Framework lower edge (lambda=0) is +1.86 sigma above the literature central
+  [PASS] directional-discriminator:sigma-separation: framework lower edge sits +1.86 literature-sigma above central; >1sigma directional separation
+
+==============================================================================
+Block 4: Vacuum-stability sign flip across the directional band
+==============================================================================
+
+  SM literature: lambda(M_Pl) ~ -0.013 -> metastable vacuum
+  Framework:     lambda(M_Pl) in [0, +1e-3] -> absolutely stable vacuum
+  Discrimination is BINARY on the sign of lambda(M_Pl).
+
+  Future precision falsifier:
+    (a) precision pinning lambda(M_Pl) below 0 with 5sigma upper edge
+        < 0 falsifies the framework's stable-vacuum claim;
+    (b) precision requiring |lambda(M_Pl)| > 1e-3 falsifies the
+        bounded-interval claim regardless of sign.
+  [PASS] vacuum-stability:framework-positive-side-stable: framework interval [0, +1e-3] is positive-side -> stable
+  [PASS] vacuum-stability:literature-negative-side-metastable: SM literature central -0.013 is negative-side -> metastable
+
+==============================================================================
+Block 5: m_H attribution sanity (per feedback_higgs_mass_split_across_notes)
+==============================================================================
+
+  This note attaches to the 125.1 GeV chain in HIGGS_MASS_DERIVED_NOTE.md
+  (full 3-loop SM RGE runner with lambda(M_Pl) = 0 boundary input).
+  It does NOT touch the 140.3 GeV tree-level chain in
+  HIGGS_MASS_FROM_AXIOM_NOTE.md (which does not consume lambda(M_Pl)).
+  It does NOT touch the intermediate 119.93 GeV corrected-y_t RGE
+  diagnostic in HIGGS_VACUUM_STABILITY_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.md.
+  [PASS] m_H-attribution:125_1-chain: bounded-interval claim attaches to 125.1 GeV chain (retained 3-loop output 125.04 GeV)
+
+==============================================================================
+TOTAL: PASS=14 FAIL=0
+VERDICT: bounded-interval [0, +1e-3] reproduces m_H = 125.1 GeV within
+the inherited 3.17 GeV systematic; directional discriminator vs SM
+literature -0.013 +/- 0.007 framing established.
+==============================================================================
