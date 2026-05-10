@@ -12,17 +12,23 @@ Triggers (any of):
      time. (A dep getting stronger is fine; getting weaker means the
      audit may have relied on a now-questionable input.)
   4. This claim's criticality tier increased since audit time AND the
-     existing audit does not already satisfy the independence /
-     cross-confirmation requirements of the new tier per
-     `docs/audit/FRESH_LOOK_REQUIREMENTS.md` §4. A claim audited at
-     criticality=medium that is now criticality=critical needs re-audit
-     under the stricter cross-confirmation rule, but a claim that was
-     already audited under cross-confirmation (e.g. because the same
-     auditor pair handled it as cross_family + confirmed) survives the
-     bump without re-audit. Concretely: bumps to `medium` are no-ops
-     (no new requirement), bumps to `high` require non-weak
-     independence, bumps to `critical` require recorded
-     cross-confirmation.
+     existing audit does not already satisfy the requirements of the new
+     tier per `docs/audit/FRESH_LOOK_REQUIREMENTS.md` §4. The behavior is:
+
+       - Bumps to `medium` / `leaf`: no-op (no new requirement).
+       - Bumps to `high`: invalidate only when the existing audit's
+         `independence == "weak"`. Non-weak audits stay live.
+       - Bumps to `critical`: if the existing audit is `audited_clean`
+         with non-weak independence but no cross-confirmation, the row
+         is **soft-reset** to `audit_status = audit_in_progress` with
+         `blocker = awaiting_cross_confirmation`, mirroring
+         `apply_audit.py`'s first-pass flow (the clean evidence stays
+         live as `cross_confirmation.first_audit`, the lane just waits
+         for an independent second auditor). Audits with
+         `independence == "weak"` are hard-invalidated. Audits already
+         cross-confirmed are no-ops. Terminal non-clean verdicts
+         (audited_conditional, audited_numerical_match, etc.) are also
+         no-ops — cross-confirmation does not apply to them.
   5. The audited runner hash changed since audit time, or an
      audited_conditional `runner_artifact_issue` row that asked for a current
      runner/log now has a fresh OK cache matching the current runner source.
@@ -199,39 +205,72 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     snap_crit = snap.get("criticality") or "leaf"
     cur_crit = row.get("criticality") or "leaf"
     if CRITICALITY_RANK.get(cur_crit, 0) > CRITICALITY_RANK.get(snap_crit, 0):
-        if not _audit_meets_criticality_requirements(row, cur_crit):
+        action = _categorize_criticality_bump(row, cur_crit)
+        if action == "soft_reset":
+            return f"criticality_soft_reset:{snap_crit}->{cur_crit}"
+        if action == "invalidate":
             return f"criticality_increased:{snap_crit}->{cur_crit}"
+        # action == "noop": fall through
 
     return None
 
 
-def _audit_meets_criticality_requirements(row: dict, target_criticality: str) -> bool:
-    """True iff the existing audit row already satisfies the independence /
-    cross-confirmation requirements of `target_criticality` per
-    `docs/audit/FRESH_LOOK_REQUIREMENTS.md` §4.
+def _categorize_criticality_bump(row: dict, target_criticality: str) -> str:
+    """Decide what to do with an existing audit row when the row's
+    criticality bumps to `target_criticality`.
 
-    Mapping:
-      - `leaf` / `medium`: no special requirement.
-      - `high`: `independence != weak`.
-      - `critical`: cross-confirmation present
-        (`cross_confirmation.status` in {confirmed, third_confirmed_first,
-         third_confirmed_second}).
-
-    A criticality bump that lands in a tier the existing audit already
-    meets does not invalidate the audit. Returning True from here means
-    "no re-audit forced by this bump alone" — other invalidation triggers
-    (hash drift, dep changes, runner drift) still apply.
+    Returns one of:
+      - `"noop"`: the existing audit already satisfies the new tier, OR
+        the verdict is terminal-non-clean (the criticality bump cannot
+        change a non-clean verdict, and these rows are already in their
+        final audit state).
+      - `"soft_reset"`: only `audited_clean` rows that bump to `critical`
+        with non-weak independence but no recorded cross-confirmation.
+        Per `FRESH_LOOK_REQUIREMENTS.md` §4, the first-pass clean evidence
+        is sound at the new tier; only the second-auditor cross-confirmation
+        is missing. The row should mirror `apply_audit.py`'s first-pass
+        flow: `audit_status = audit_in_progress`, `blocker =
+        awaiting_cross_confirmation`, audit fields preserved as
+        `cross_confirmation.first_audit`. The clean evidence stays standing
+        while the audit lane requests the second pass.
+      - `"invalidate"`: the existing audit fundamentally does not qualify
+        at the new tier (e.g. `audited_clean` with `independence: weak`
+        bumping to `high`/`critical` — the independence floor of §4 is
+        not met). Full reset to `unaudited` is the only honest path.
     """
     if target_criticality in ("leaf", "medium"):
-        return True
+        return "noop"  # no new requirement at these tiers
+
+    audit_status = row.get("audit_status")
     indep = row.get("independence")
+
+    # Terminal non-clean verdicts (audited_conditional, audited_numerical_match,
+    # audited_renaming, audited_decoration, audited_failed) are already in
+    # their final state. Cross-confirmation does not apply to them
+    # (`apply_audit.py`'s cross-confirmation flow only fires for
+    # `verdict == "audited_clean"`). A criticality bump does not change
+    # whether the chain closed, so leave them alone — re-auditing under a
+    # stricter rule will produce the same terminal verdict.
+    if audit_status != "audited_clean":
+        return "noop"
+
+    # audited_clean from here. Independence floor applies at high+.
     if indep is None or indep == "weak":
-        return False
+        return "invalidate"
+
     if target_criticality == "high":
-        return True
+        return "noop"  # non-weak independence is enough at high
+
+    # target_criticality == "critical"
     cc = row.get("cross_confirmation") or {}
     cc_status = cc.get("status") if isinstance(cc, dict) else None
-    return cc_status in {"confirmed", "third_confirmed_first", "third_confirmed_second"}
+    if cc_status in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
+        return "noop"  # already cross-confirmed
+
+    # audited_clean + non-weak indep + bumped to critical without
+    # cross-confirmation → mirror the first-pass flow rather than
+    # blowing away the clean evidence.
+    return "soft_reset"
 
 
 def runner_artifact_issue_resolved(row: dict) -> str | None:
@@ -297,6 +336,52 @@ def archive_and_reset(row: dict, reason: str) -> dict:
     return new_row
 
 
+def soft_reset_to_cross_confirmation_pending(row: dict, reason: str) -> dict:
+    """Transition `audited_clean` -> `audit_in_progress` + `awaiting_cross_confirmation`
+    when a criticality bump newly requires cross-confirmation but the
+    existing audit's evidence is otherwise sound (non-weak independence,
+    clean verdict).
+
+    Mirrors `apply_audit.py`'s first-pass flow at
+    `audit_status = "audit_in_progress"` (lines around 770-784): the live
+    audit fields stay in place as `cross_confirmation.first_audit`, and
+    the row waits for an independent second auditor. The clean evidence is
+    NOT archived to `previous_audits` — it is still the live first audit;
+    only the lane's expectation has changed (the new tier requires a
+    second pass).
+    """
+    new_row = dict(row)
+    # Build the first_audit summary mirroring
+    # apply_audit.audit_summary_from_row exactly.
+    new_row["cross_confirmation"] = {
+        "first_audit": {
+            "auditor": row.get("auditor"),
+            "auditor_family": row.get("auditor_family"),
+            "auditor_model": row.get("auditor_model"),
+            "auditor_reasoning_effort": row.get("auditor_reasoning_effort"),
+            "independence": row.get("independence"),
+            "audit_date": row.get("audit_date"),
+            "claim_type": row.get("claim_type"),
+            "claim_scope": row.get("claim_scope"),
+            "load_bearing_step_class": row.get("load_bearing_step_class"),
+            "verdict": row.get("audit_status"),
+        },
+        "second_audit": None,
+        "status": "awaiting_second",
+    }
+    new_row["audit_status"] = "audit_in_progress"
+    new_row["blocker"] = "awaiting_cross_confirmation"
+    new_row["claim_type_provenance"] = "audited_pending_cross_confirmation_after_criticality_bump"
+    new_row["claim_type_last_reviewed"] = datetime.now(timezone.utc).isoformat()
+    new_row["notes_for_re_audit_if_any"] = (
+        f"awaiting_cross_confirmation_after_{reason}: first-pass audit "
+        f"(auditor={row.get('auditor')}, family={row.get('auditor_family')}, "
+        f"independence={row.get('independence')}) was clean at the prior "
+        f"criticality tier; new tier requires an independent second auditor."
+    )
+    return new_row
+
+
 def main() -> int:
     if not LEDGER_PATH.exists():
         raise SystemExit("audit_ledger.json missing; run seed_audit_ledger.py first")
@@ -304,24 +389,39 @@ def main() -> int:
     rows = ledger.get("rows", {})
 
     invalidated: list[tuple[str, str]] = []
+    soft_reset: list[tuple[str, str]] = []
     for cid, row in rows.items():
         if row.get("audit_status", "unaudited") in {"unaudited", "audit_in_progress"}:
             continue
         reason = detect_invalidation(row, rows)
         if reason is None:
             continue
-        rows[cid] = archive_and_reset(row, reason)
-        invalidated.append((cid, reason))
+        if reason.startswith("criticality_soft_reset:"):
+            rows[cid] = soft_reset_to_cross_confirmation_pending(row, reason)
+            soft_reset.append((cid, reason))
+        else:
+            rows[cid] = archive_and_reset(row, reason)
+            invalidated.append((cid, reason))
 
     ledger["rows"] = rows
-    ledger["last_invalidations"] = [{"claim_id": c, "reason": r} for c, r in invalidated]
+    # `last_invalidations` includes both hard invalidations and soft resets so
+    # `run_pipeline.sh`'s loop re-runs `compute_effective_status.py` until
+    # the ledger reaches a fixed point.
+    ledger["last_invalidations"] = [
+        {"claim_id": c, "reason": r}
+        for c, r in (invalidated + soft_reset)
+    ]
 
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n")
 
     print(f"invalidate_stale_audits: scanned {len(rows)} rows")
-    print(f"  invalidated: {len(invalidated)}")
+    print(f"  invalidated (hard reset): {len(invalidated)}")
     for cid, reason in invalidated[:10]:
         print(f"    {cid}: {reason}")
+    if soft_reset:
+        print(f"  soft reset (audit_in_progress + awaiting_cross_confirmation): {len(soft_reset)}")
+        for cid, reason in soft_reset[:10]:
+            print(f"    {cid}: {reason}")
     if len(invalidated) > 10:
         print(f"    ... and {len(invalidated) - 10} more")
     return 0
