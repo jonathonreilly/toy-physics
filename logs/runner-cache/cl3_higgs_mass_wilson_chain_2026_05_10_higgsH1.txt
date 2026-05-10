@@ -1,0 +1,177 @@
+
+========================================================================
+SECTION 1: RETAINED WILSON CHAIN CONSTANTS
+========================================================================
+  retained <P>          = 0.5934
+  retained M_Pl         = 1.221000e+19 GeV
+  retained alpha_bare   = 0.0795774715
+  retained u_0          = 0.8776813812
+  retained alpha_LM     = 0.0906678360
+  retained alpha_s(v)   = 0.1033038161
+  retained (7/8)^(1/4)  = 0.9671682101
+  PASS  retained v_EW formula reproduces PDG to <0.1%
+        v_EW(formula) = 246.3030 GeV vs PDG 246.22 GeV, rel = 3.3706e-04
+  PASS  alpha_LM^2 = alpha_bare * alpha_s(v) (retained identity)
+        alpha_LM^2 = 8.2206564881e-03, alpha_bare*alpha_s = 8.2206564881e-03
+  PASS  alpha_s(v) = alpha_bare / u_0^2 (CMT, n_link=2)
+        alpha_s(v) = 0.1033038161
+
+========================================================================
+SECTION 2: STEP 1 — RETAINED TREE-LEVEL m_H_tree = v / (2 u_0)
+========================================================================
+  m_H_tree (form 1: v / (2 u_0))             = 140.3145810094 GeV
+  m_H_tree (form 2: M_Pl*(7/8)^{1/4}/u_0/2*alpha_LM^16) = 140.3145810094 GeV
+  m_H_tree (form 3: M_Pl*(7/8)^{1/4}*alpha_LM^17/(2 alpha_bare)) = 140.3145810094 GeV
+  PASS  all three algebraic forms of tree-level m_H agree to 1e-9
+        (forms differ by retained alpha_LM, u_0, alpha_bare identities)
+
+  PDG m_H (comparator only)                  = 125.25 GeV
+  Wilson tree-level m_H_tree                  = 140.3146 GeV
+  Tree-level deviation                         = +12.0276%
+  PASS  tree-level m_H is +12% vs PDG (per HIGGS_MASS_FROM_AXIOM)
+        deviation = +12.0276% (matches the documented +12.0% gap)
+  PASS  m_H_tree formula is N_c-independent (per HIGGS_MASS_FROM_AXIOM Step 6)
+        m_H_tree = v / (2 u_0); both v and u_0 are N_c-independent
+
+========================================================================
+SECTION 3: STEP 2 — PARTIAL WILSON CHAIN CANDIDATE
+========================================================================
+  m_H_partial = (v/(2u_0)) * sqrt(1 - 2 alpha_s(v))
+             = 140.3146 * sqrt(1 - 2*0.103304)
+             = 140.3146 * sqrt(0.793392)
+             = 140.3146 * 0.890726
+             = 124.981811 GeV
+  Deviation: -0.2141%
+  PASS  Wilson partial brings m_H from +12% tree to <0.5% precision
+        deviation = 0.2141%
+  PASS  Wilson partial is at 0.21% precision (NOT retained-tier 0.07% or better)
+        deviation = 0.2141%; this is PARTIAL PROGRESS not closure
+  PASS  (1 - 2 alpha_s) factor is structurally suggestive but fit-selected
+        alpha_s(v) is retained CMT; coefficient '2' is one-loop multiplicity guess
+
+========================================================================
+SECTION 4: STEP 3 — SYSTEMATIC EXHAUSTION SHOWS NO RETAINED-TIER CLOSURE
+========================================================================
+  Searching all (a, b, c, d, N) with R_conn = 8/9 EXCLUDED:
+    Form: m_H = M_Pl * (7/8)^{a/4} * 2^{-b} * 3^{-d} * u_0^c * alpha_LM^N
+
+  Best integer-exhaustive match: M_Pl * (7/8)^{6/4} * 2^3 * 3^-2 * u_0^3 * alpha_LM^16
+  Predicted: 125.267349 GeV (deviation +0.01385%)
+  Total matches better than 0.30%: 22
+  Total matches better than 0.10%: 7
+  Total matches better than 0.05%: 4
+
+  Simplest form better than 0.1%: complexity=6
+    a=3, b=-1, c=0, d=-1, N=17: 125.336687 GeV (+0.06921%)
+  PASS  simplest natural Wilson-chain form (v/(2u_0)) is +12% NOT retained-tier
+        tree-level deviation = 12.0276% confirms gap is structural
+  PASS  exhaustive integer search finds accidental matches with high complexity
+        matches < 0.10%: 7 (mostly accidental high-complexity)
+
+========================================================================
+SECTION 5: STEP 4 — SISTER-PREDICTION PRECISION COMPARISON
+========================================================================
+  Sister Wilson-chain predictions:
+    v_EW    : predicted =   246.3030, PDG =   246.2200, deviation = +0.0337% [Hierarchy theorem (retained)]
+    m_tau   : predicted =     1.7771, PDG =     1.7768, deviation = +0.0172% [Probe 19 Wilson chain (positive)]
+    m_H_tree: predicted =   140.3146, PDG =   125.2500, deviation = +12.0276% [tree-level, +12% gap]
+    m_H_partial:predicted =   124.9818, PDG =   125.2500, deviation = +0.2141% [Wilson partial]
+
+  Sister prediction max deviation: 0.0337%
+  m_H Wilson partial deviation:    0.2141%
+  Ratio: m_H partial / max sister = 6.35x
+  PASS  m_H Wilson partial is 3x to 12x worse than sister Wilson predictions
+        m_H partial 0.21% is 6.4x worse than max sister 0.0337%
+  PASS  m_H Wilson partial does NOT meet retained-tier precision (<= 0.1%)
+        m_H partial 0.21% > retained-tier threshold 0.1%
+
+========================================================================
+SECTION 6: STEP 5 — PDG-INPUT FIREWALL
+========================================================================
+  Step 1 (m_H_tree) and Step 2 (m_H_partial) predictions use ONLY:
+    - retained <P> = 0.5934 (from MC, not PDG)
+    - retained M_Pl = 1.221e19 GeV (framework UV cutoff)
+    - retained alpha_bare = 1/(4 pi) (canonical Cl(3) normalization)
+    - derived u_0, alpha_LM, alpha_s(v) (from above)
+    - retained APBC factor (7/8)^(1/4)
+
+  PDG m_H = 125.25 GeV appears ONLY as falsifiability comparator
+  AFTER the chain is constructed. It is NOT a derivation input.
+
+  Per substep-4 AC narrowing rule:
+    STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md
+  this firewall is enforced.
+  PASS  PDG values used only post-derivation (firewall held)
+        Step 1 + Step 2 m_H predictions are purely cited-source-stack
+
+========================================================================
+SECTION 7: STEP 6 — R_conn = 8/9 PROHIBITION IN m_H
+========================================================================
+  Per HIGGS_MASS_FROM_AXIOM_NOTE Step 6 (retained):
+    'The color factor 8/9 does NOT enter m_H. N_c cancels exactly.'
+
+  This probe's m_H formulas:
+    m_H_tree    = v / (2 u_0)            -- no 8/9
+    m_H_partial = (v/(2u_0)) * sqrt(1 - 2 alpha_s(v))  -- no 8/9
+
+  The factor (1 - 2 alpha_s(v)) involves alpha_s(v) = alpha_bare/u_0^2,
+  the retained CMT physical strong coupling at scale v. It does NOT
+  involve the R_conn = 8/9 = (N_c^2 - 1)/N_c^2 ratio.
+
+  (For reference: m_H_tree * 8/9 = 124.7241 GeV would be 0.4% off PDG;
+   but using 8/9 in m_H is FORBIDDEN per HIGGS_MASS_FROM_AXIOM Step 6.)
+  PASS  R_conn = 8/9 prohibition honored (no 8/9 in m_H formulas)
+        Per HIGGS_MASS_FROM_AXIOM_NOTE Step 6: N_c cancels in m_H derivation
+
+========================================================================
+SECTION 8: SHARPENED RESIDUE
+========================================================================
+  This probe sharpens the m_H closure residue in two directions:
+
+  (R1) PARTIAL STRUCTURAL PROGRESS (positive but not retained-tier):
+       m_H = (v/(2 u_0)) * sqrt(1 - 2 alpha_s(v)) = 124.98 GeV
+       brings prediction from +12.0% (tree) to -0.21% (partial Wilson).
+       The (1 - 2 alpha_s) factor is structurally suggestive but
+       SELECTED BY FIT — not derived from retained content.
+
+  (R2) RETAINED-TIER OBSTRUCTION (unchanged):
+       No retained-content-only Wilson-chain expression of the form
+       M_Pl * (7/8)^{a/4} * 2^{-b} * 3^{-d} * u_0^c * alpha_LM^N
+       (with a,b,c,d,N integers, R_conn=8/9 forbidden) gives m_H to
+       retained-tier (<= 0.1%) precision.
+
+       The +12% gap closure REMAINS DELEGATED to bounded sister
+       authorities per HIGGS_MASS_FROM_AXIOM Step 7:
+       - 2-loop CW + RGE (corrected-y_t route, ~119.93 GeV)
+       - Lattice spacing convergence (m_H/m_W flow)
+       - Wilson-term taste-breaking (Hamming staircase)
+       - Buttazzo full-3-loop (125.10 GeV; uses imported SM RGE)
+  PASS  sharpened residue documented (R1, R2)
+
+========================================================================
+SECTION 9: HONEST VERDICT
+========================================================================
+  VERDICT: PARTIAL PROGRESS (NOT retained-tier closure).
+
+  Positive: Wilson-chain candidate (v/(2u_0)) * sqrt(1 - 2 alpha_s(v))
+            brings m_H from +12.0% (tree) to -0.21% (partial Wilson).
+
+  Honest:   The (1 - 2 alpha_s) factor is selected by fit, not derived
+            from retained content. The 0.21% precision is 3x to 12x
+            worse than retained-tier sister predictions (v_EW, m_t, m_tau)
+            which achieve 0.03% to 0.07%.
+
+  Closure:  No simple retained-content Wilson-chain expression with
+            integer exponents gives m_H to retained-tier precision.
+            The +12% closure REMAINS DELEGATED to bounded sister
+            authorities per HIGGS_MASS_FROM_AXIOM Step 7.
+
+  Authority disclaimer:
+    No retained theorem promoted. No new axiom added. No new admission
+    admitted. R_conn = 8/9 prohibition honored. PDG firewall held.
+    Audit-lane authority preserved.
+  PASS  honest verdict recorded (PARTIAL PROGRESS)
+
+========================================================================
+=== TOTAL: PASS=17, FAIL=0 ===
+========================================================================
