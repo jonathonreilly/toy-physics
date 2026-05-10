@@ -2952,6 +2952,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py"
     },
+    "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_cubic_orbit_reynolds_projector_narrow.py"
+    },
     "cycle_battery_note_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -25799,6 +25811,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_cubic_orbit_reynolds_projector_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_cyclic_projector_compression_narrow.py": {
       "assert_count": 1,
       "claims": [
@@ -44103,14 +44130,14 @@
   "stats": {
     "decoration_candidates": 162,
     "dominant_class_distribution": {
-      "A": 112,
+      "A": 113,
       "B": 160,
       "C": 647,
       "D": 248,
       "none": 406
     },
-    "runners_classified": 1573,
-    "runners_with_C": 812,
+    "runners_classified": 1574,
+    "runners_with_C": 813,
     "runners_with_D": 440
   }
 }

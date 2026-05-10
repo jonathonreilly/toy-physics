@@ -1,0 +1,197 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cubic_orbit_reynolds_projector_narrow.py
+runner_sha256: 7ef5eeb7913c11a836405a25e1daadbd97c858ac91a60339fef4869ac665d1ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.25
+status: ok
+----- stdout -----
+==============================================================================
+Cubic-Orbit Reynolds Projector Narrow Positive Theorem
+==============================================================================
+
+NARROW SCOPE: Reynolds-operator theory for the D_4 action on the
+forward-cone single-step layer of Z^3.
+
+
+=== Part A: D_4 action on R(d_max) and orbit-class consistency ===
+
+  [PASS] R(d_max=1) is D_4-invariant (full orbits stay in R)
+  [PASS] R(d_max=2) is D_4-invariant (full orbits stay in R)
+  [PASS] R(d_max=3) is D_4-invariant (full orbits stay in R)
+  [PASS] R(d_max=4) is D_4-invariant (full orbits stay in R)
+
+  Orbit classes for d_max=3: [(0, 0), (0, 1), (0, 2), (0, 3), (1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)]
+  [PASS] |O(d_max=3)| = 10  (|O| = 10)
+  [PASS] Every (dy, dz) in R(3) maps to an orbit class
+  [PASS] All D_4 orbit members share the same orbit_class label
+
+=== Part B (T1): Idempotence  P (P k) = P k ===
+
+  [PASS] Trial 00: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 01: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 02: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 03: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 04: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 05: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 06: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 07: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 08: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 09: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 10: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 11: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 12: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 13: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 14: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 15: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 16: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 17: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 18: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+  [PASS] Trial 19: |P(P k) - P k|_inf < 1e-13  (max diff = 0.00e+00)
+
+=== Part C (T2): Image characterization  P k = k  iff  k cubic-sym ===
+
+  [PASS] Trial 0: constructed orbit-only k is cubic-symmetric
+  [PASS] Trial 0: cubic-sym k satisfies P k = k  (max diff = 0.00e+00)
+  [PASS] Trial 1: constructed orbit-only k is cubic-symmetric
+  [PASS] Trial 1: cubic-sym k satisfies P k = k  (max diff = 0.00e+00)
+  [PASS] Trial 2: constructed orbit-only k is cubic-symmetric
+  [PASS] Trial 2: cubic-sym k satisfies P k = k  (max diff = 0.00e+00)
+  [PASS] Trial 3: constructed orbit-only k is cubic-symmetric
+  [PASS] Trial 3: cubic-sym k satisfies P k = k  (max diff = 0.00e+00)
+  [PASS] Trial 4: constructed orbit-only k is cubic-symmetric
+  [PASS] Trial 4: cubic-sym k satisfies P k = k  (max diff = 0.00e+00)
+  [PASS] Trial 0: P k is cubic-symmetric for any input k
+  [PASS] Trial 1: P k is cubic-symmetric for any input k
+  [PASS] Trial 2: P k is cubic-symmetric for any input k
+  [PASS] Trial 3: P k is cubic-symmetric for any input k
+  [PASS] Trial 4: P k is cubic-symmetric for any input k
+  [PASS] Non-cubic-symmetric k (k = dy) has P k != k  (max diff = 3.0000)
+
+=== Part D (T3): Equivariance  P(g . k) = P k ===
+
+  [PASS] Trial 0, g=(+1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(+1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(+1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(+1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(-1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(-1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(-1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 0, g=(-1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(+1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(+1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(+1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(+1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(-1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(-1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(-1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 1, g=(-1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(+1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(+1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(+1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(+1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(-1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(-1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(-1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 2, g=(-1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(+1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(+1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(+1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(+1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(-1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(-1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(-1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 3, g=(-1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(+1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(+1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(+1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(+1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(-1,+1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(-1,+1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(-1,-1,swap=False): P(g . k) = P k  (max diff = 0.00e+00)
+  [PASS] Trial 4, g=(-1,-1,swap=True): P(g . k) = P k  (max diff = 0.00e+00)
+
+=== Part E (T4): Linearity, mass-preservation, positivity ===
+
+  [PASS] Trial 0: P(a k1 + b k2) = a P k1 + b P k2  (max diff = 1.11e-16)
+  [PASS] Trial 1: P(a k1 + b k2) = a P k1 + b P k2  (max diff = 5.55e-17)
+  [PASS] Trial 2: P(a k1 + b k2) = a P k1 + b P k2  (max diff = 4.44e-16)
+  [PASS] Trial 3: P(a k1 + b k2) = a P k1 + b P k2  (max diff = 2.22e-16)
+  [PASS] Trial 4: P(a k1 + b k2) = a P k1 + b P k2  (max diff = 1.11e-16)
+  [PASS] Trial 0: sum_R(P k) = sum_R k  (diff = 0.00e+00)
+  [PASS] Trial 1: sum_R(P k) = sum_R k  (diff = 4.44e-16)
+  [PASS] Trial 2: sum_R(P k) = sum_R k  (diff = 8.88e-16)
+  [PASS] Trial 3: sum_R(P k) = sum_R k  (diff = 0.00e+00)
+  [PASS] Trial 4: sum_R(P k) = sum_R k  (diff = 0.00e+00)
+  [PASS] Trial 0: k >= 0 implies P k >= 0
+  [PASS] Trial 1: k >= 0 implies P k >= 0
+  [PASS] Trial 2: k >= 0 implies P k >= 0
+  [PASS] Trial 3: k >= 0 implies P k >= 0
+  [PASS] Trial 4: k >= 0 implies P k >= 0
+
+=== Part F (T5): Orbit-class basis  dim V_sym = |O(d_max)| ===
+
+  [PASS] Indicator e_(0, 0) is cubic-symmetric
+  [PASS] Indicator e_(0, 0) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(0, 1) is cubic-symmetric
+  [PASS] Indicator e_(0, 1) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(0, 2) is cubic-symmetric
+  [PASS] Indicator e_(0, 2) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(0, 3) is cubic-symmetric
+  [PASS] Indicator e_(0, 3) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(1, 1) is cubic-symmetric
+  [PASS] Indicator e_(1, 1) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(1, 2) is cubic-symmetric
+  [PASS] Indicator e_(1, 2) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(1, 3) is cubic-symmetric
+  [PASS] Indicator e_(1, 3) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(2, 2) is cubic-symmetric
+  [PASS] Indicator e_(2, 2) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(2, 3) is cubic-symmetric
+  [PASS] Indicator e_(2, 3) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator e_(3, 3) is cubic-symmetric
+  [PASS] Indicator e_(3, 3) is fixed by P  (max diff = 0.00e+00)
+  [PASS] Indicator basis has rank = |O(d_max=3)| = 10  (rank = 10)
+  [PASS] Trial 0: cubic-sym k expanded exactly in indicator basis  (max diff = 0.00e+00)
+  [PASS] Trial 1: cubic-sym k expanded exactly in indicator basis  (max diff = 0.00e+00)
+  [PASS] Trial 2: cubic-sym k expanded exactly in indicator basis  (max diff = 0.00e+00)
+  [PASS] Trial 3: cubic-sym k expanded exactly in indicator basis  (max diff = 0.00e+00)
+  [PASS] Trial 4: cubic-sym k expanded exactly in indicator basis  (max diff = 0.00e+00)
+
+=== Part G (T6): P is the unique equivariant projection onto V_sym ===
+
+  [PASS] P^2 = P (matrix-level idempotence)  (|P^2 - P|_max = 0.00e+00)
+  [PASS] rank(P) = dim V_sym = 10  (rank = 10)
+  [PASS] P is D_4-equivariant (g P = P g for all g)
+  [PASS] P = (1/|D_4|) sum_{g in D_4} g (Reynolds-operator formula)  (|P - <g>|_max = 0.00e+00)
+  [PASS] P has 10 eigenvalues = 1 (the V_sym dimension)  (got 10)
+  [PASS] P has 39 eigenvalues = 0 (the V_sym^perp dimension)  (got 39)
+  [PASS] P g = P for g=(1, 1, False) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(1, 1, True) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(1, -1, False) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(1, -1, True) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(-1, 1, False) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(-1, 1, True) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(-1, -1, False) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+  [PASS] P g = P for g=(-1, -1, True) (invariant projection absorption)  (|P g - P|_max = 0.00e+00)
+
+=== Part H: Symbolic (sympy) confirmation on d_max = 1 ===
+
+  [PASS] Symbolic: P (P k) = P k on d_max = 1 (sympy-exact)
+  [PASS] Symbolic: indicator e_(0, 0) is fixed by P (sympy-exact)
+  [PASS] Symbolic: indicator e_(0, 1) is fixed by P (sympy-exact)
+  [PASS] Symbolic: indicator e_(1, 1) is fixed by P (sympy-exact)
+  [PASS] Symbolic: sum_R(P k) = sum_R k on d_max = 1 (sympy-exact)  (diff = 0)
+
+==============================================================================
+SUMMARY: PASS=143  FAIL=0
+==============================================================================
+
+All checks passed.
+The orbit-averaging map P is the canonical Reynolds projector
+from V to V_sym for the D_4 action restricted to a Z^3 forward layer.
+It is idempotent, equivariant, linear, mass-preserving, positivity-
+preserving, and unique up to the standard Reynolds-operator formula.
+
+----- stderr -----
+
