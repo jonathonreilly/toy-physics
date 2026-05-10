@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1096 |
+| unaudited | 1095 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
 | ~~audited_conditional~~ | 246 |
-| ~~audited_failed~~ | 24 |
+| ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 392 |
 | `audited_conditional` | 246 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 68 |
+| `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1194 |
+| `unaudited` | 1193 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 807 |
+| `bounded_theorem` | 808 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 197 |
 | `open_gate` | 101 |
-| `positive_theorem` | 721 |
+| `positive_theorem` | 720 |
 
 | criticality | count |
 |---|---:|
@@ -780,6 +780,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | B | - |
+| `edge_deletion_boundary_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `equivalence_principle_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `evolving_network_prototype_v2_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -3770,6 +3771,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_NORMALIZED_SCHUR_DETERMINANT_SELECTOR_NOTE_2026-04-19.md`
   - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md`
   - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_OBSERVABLE_AFFINE_NO_GO_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `edge_deletion_boundary_note`
+
+- **Note:** [`EDGE_DELETION_BOUNDARY_NOTE.md`](../../docs/EDGE_DELETION_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite edge-retention sweep on the tested 3D valley-linear lattice family with h=0.5, W=8, L=12, max_d=3, and seeds 20260404-20260415.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1370-e976-7a33-8ef5-1bea87a4557b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The gravity sign flips between 90% and 80% edge retention, with 80% coin-flip and lower retention predominantly AWAY.  _(class `C`)_
+- **chain closes:** False — The supplied current runner stdout contradicts the note: it reports 12/12 TOWARD and positive mean deltas at every tested keep fraction from 1.00 through 0.75. Therefore the claimed 90%-80% sign flip and ~85% threshold do not follow from the restricted packet.
+- **rationale:** Issue: the note's table and headline claim are stale relative to the supplied runner stdout. Why this blocks: the current completed sweep shows no sign flip, no 80% coin-flip behavior, and no AWAY-dominated region down to 75% retention. Repair target: regenerate the note from the current runner or supply and reconcile the exact runner/log that produced the note's table. Claim boundary until fixed: the restricted packet supports only that this current sweep found TOWARD behavior for all listed keep fractions.
 - **auditor confidence:** high
 
 ### `edge_deletion_boundary_sweep_note`
