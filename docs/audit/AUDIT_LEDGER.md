@@ -19,10 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 66 |
-| **retained_no_go** | 124 |
+| **retained_no_go** | 125 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1090 |
+| unaudited | 1089 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 395 |
+| `audited_clean` | 396 |
 | `audited_conditional` | 249 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1188 |
+| `unaudited` | 1187 |
 
 | claim_type | count |
 |---|---:|
@@ -126,6 +126,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_operator_cauchy_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `architecture_portability_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -1150,6 +1151,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At mu2 = 0.001, the unscreened corrected periodic phase-map replay strengthens the boundary-law separation and changes the interpretation qualitatively.  _(class `C`)_
 - **chain closes:** True — Yes. The claim is a bounded companion replay on a fixed corrected harness, and the registered runner completed successfully for that finite phase-map check.
 - **rationale:** The note makes a bounded finite-harness claim, not a universal theorem. The current runner completed successfully and supports the replay surface classified as {'A': 0, 'B': 0, 'C': 6, 'D': 0, 'total_pass': 6}. Residual risk is generalization outside the stated mu2 and periodic-torus setup.
+- **auditor confidence:** high
+
+### `angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10`
+
+- **Note:** [`ANGULAR_KERNEL_ORBIT_CLASS_UNDERDETERMINATION_NARROW_NO_GO_NOTE_2026-05-10.md`](../../docs/ANGULAR_KERNEL_ORBIT_CLASS_UNDERDETERMINATION_NARROW_NO_GO_NOTE_2026-05-10.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Finite-set orbit-counting and moment-separation no-go showing cubic-orbit symmetry, forward-layer support, transverse quadratic isotropy, and unit mass do not uniquely determine a cubic-symmetric nonnegative weight on R(d_max), with explicit d_max=3 witnesses.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e137d-b56e-7ba1-9998-58e7be878c3e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** D4 orbit classes on R(d_max) are indexed by unordered multisets {|dy|, |dz|}, giving |O(d_max)|=(d_max+1)(d_max+2)/2, and unit mass is one linear equation in the orbit weights so the cubic-symmetric probability simplex has dimension |O(d_max)|-1.  _(class `A`)_
+- **chain closes:** True — The claim is a self-contained algebraic/combinatorial statement with no cited dependencies. The D4 orbit enumeration, simplex dimension, automatic quadratic isotropy under D4 symmetry, and finite witness moment computations close from the supplied definitions and runner source/stdout.
+- **rationale:** The load-bearing work is finite orbit enumeration and polynomial moment evaluation on a specified lattice layer, not a physics bridge, external comparator, tuned numerical match, or definition substitution. The runner actually constructs the finite set, orbit classes, symbolic mass functional, witnesses, and moment ratios rather than merely printing constants. Minor notation in the prose axial-only support omits negative axial points, but the intended D4-invariant axial-orbit witness is explicit in the runner and the interval claim remains algebraically valid.
 - **auditor confidence:** high
 
 ### `architecture_portability_sweep_note`
