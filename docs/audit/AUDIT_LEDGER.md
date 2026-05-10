@@ -19,11 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| **retained_no_go** | 117 |
+| **retained_no_go** | 118 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
 | unaudited | 1112 |
-| audit_in_progress | 1 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 22 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 376 |
+| `audited_clean` | 377 |
 | `audited_conditional` | 248 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `shapiro_static_discriminator_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -362,6 +359,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_born_hardening_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `self_gravity_scaling_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `seventh_family_diagonal_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `shapiro_static_discriminator_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | weak | claude-opus | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | C | - |
 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -8192,6 +8190,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `SHAPIRO_EXPERIMENTAL_CARD.md`
   - `SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_static_discriminator_note`
+
+- **Note:** [`SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`](../../docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Within the supplied runner's discrete Shapiro model, detector-line phase lag is not a unique causal-propagation discriminator because the static cone proxy uses the same field construction as the causal cone for each c.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1203-c75e-7520-bae4-988ed8f0db4e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The frozen cone-shape proxy reproduces the full c-dependent causal phase curve to numerical precision on all three families."  _(class `A`)_
+- **chain closes:** True — The runner source defines _causal_field and _static_cone_field with the same support and strength formula for the same c, and then propagates those fields through the same baseline comparison. Equality of the causal and static-cone phase curves follows from the code-level identity, so the no-go witness does not depend on the timed-out stdout.
+- **rationale:** The scoped no-go closes because the supplied runner contains an explicit static-cone construction that is identical to the purported causal cone field for matching c, defeating uniqueness of the detector-line phase lag within this model. No cited upstream authority is needed for that equality. The timeout prevents validating the displayed numeric table and the static-scheduling near-flat values, but it is not needed for the static-cone mimic boundary that carries the no-go.
 - **auditor confidence:** high
 
 ### `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28`
