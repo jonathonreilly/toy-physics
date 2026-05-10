@@ -1,8 +1,105 @@
 # Minimal Tensor Matching/Completion Theorem on the Retained Gravity Stack
 
-**Date:** 2026-04-14  
-**Script:** `scripts/frontier_tensor_matching_completion_theorem.py`  
+**Date:** 2026-04-14 (audit-prep cite-chain rigorize 2026-05-10)
+**Script:** `scripts/frontier_tensor_matching_completion_theorem.py`
 **Status:** support - structural or confirmatory support note
+**Claim type:** bounded_theorem
+**Claim scope:** restricted-probe-family theorem that scalar Schur data does
+not distinguish vector and traceless-shear channel activations, and that the
+tested mixed probe is locally additive in those two channels on the
+currently audited restricted class.
+
+## Audit-driven dependency-edge rigorization (2026-05-10)
+
+The 2026-05-05 audit verdict on this row was `audited_conditional` (critical,
+load-bearing 9.267) with rationale: "The runner checks imported frontier
+modules and imported probe grids rather than deriving the retained scalar
+bridge, Schur action, Einstein channels, or restricted classes from the
+axiom within the packet. With no cited authorities provided, those upstream
+bridge and normalization assumptions remain open dependencies." The named
+repair target was: "missing_dependency_edge: provide retained-grade packets
+for the imported scalar bridge/Schur action, Einstein-channel readouts,
+O_h class, and finite-rank class, or include an axiom-level derivation of
+those objects in this audit packet."
+
+This rigorize pass makes the one-hop dependency status explicit so the audit
+graph can route directly to the upstream authority surfaces. It does not
+derive any of the imported objects within this packet, does not promote any
+sibling claim, and does not change this row's `audited_conditional` status.
+
+**Cited authorities (one-hop deps):**
+
+- [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](./OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+  — `claim_type: bounded_theorem`, current ledger
+  `effective_status: retained_bounded`. Canonical surface for the exact
+  scalar Schur boundary action on the local `O_h` class. Strongest leg of
+  the input chain; supplies the `I_scalar(f; j)` term whose invariance
+  across the four probes is checked by the runner.
+- [`SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md`](./SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+  — `claim_type: positive_theorem`, current ledger
+  `effective_status: retained`. Canonical surface for Schur-class block
+  covariance; supplies the structural framework for inheriting scalar Schur
+  invariance across the restricted probe family.
+- [`BLOCK_GAUSSIAN_SCHUR_MARGINALIZATION_NARROW_THEOREM_NOTE_2026-05-02.md`](./BLOCK_GAUSSIAN_SCHUR_MARGINALIZATION_NARROW_THEOREM_NOTE_2026-05-02.md)
+  — `claim_type: positive_theorem`, current ledger
+  `effective_status: retained`. Canonical surface for the block-Gaussian
+  Schur marginalization identity; underlies the additivity of channel deltas
+  in the bounded local sufficiency result.
+- [`DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md`](./DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md)
+  — `claim_type: bounded_theorem`, current ledger
+  `effective_status: unaudited` (recently `audited_conditional` per
+  commit 8cfce7da3). Canonical surface for the restricted discrete
+  Einstein/Regge lift; supplies the Einstein-channel readouts `G_{0i}` and
+  traceless-shear `G_{ij}` whose independent activation by vector and
+  tensor probes is checked by the runner. This is the weakest leg of the
+  input chain.
+- [`FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`](./FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md)
+  — `claim_type: bounded_theorem`, current ledger
+  `effective_status: audited_conditional`. Canonical surface for the
+  finite-rank class; supplies the broader probe class on which the same
+  additivity persists with `dG_0i = 6.85e-08, dG_TF = 6.19e-11`.
+- [`GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md`](./GR_CLASS_EXPANSION_FINITE_RANK_TARGET_NOTE.md)
+  — `claim_type: bounded_theorem`, current ledger
+  `effective_status: unaudited`. Sister surface for the finite-rank class
+  expansion target; sister-status only, not a derivation closure for this
+  row.
+- [`MINIMAL_AXIOMS_2026-04-11.md`](./MINIMAL_AXIOMS_2026-04-11.md) — `meta`,
+  axiom-set authority; supplies the Cl(3) on Z^3 working axiom and the
+  3+1 anomaly/selector closure organization referenced in the Purpose
+  section. Meta authority only.
+
+**Runner-imported frontier modules (script-level deps):**
+
+The runner consumes three frontier modules via `_frontier_loader`:
+
+- `frontier_tensorial_einstein_regge_completion.py` — supplies the
+  `probe_family` Einstein-channel readouts `(dG_0i, dG_TF)` for each probe
+  type (base/vector/tensor/mixed). The discrete Einstein/Regge lift
+  authority surface is `DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md` (cited above).
+- `frontier_same_source_metric_ansatz_scan.py` — supplies the
+  `build_best_phi_grid()` exact local `O_h` probe family. The `O_h` class
+  authority surface is `OH_SCHUR_BOUNDARY_ACTION_NOTE.md` (cited above).
+- `frontier_coarse_grained_exterior_law.py` — supplies the
+  `build_finite_rank_phi_grid()` finite-rank probe family. The finite-rank
+  class authority surface is `FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`
+  (cited above).
+
+**What the cite-chain does NOT close.** Two of the upstream authorities
+remain `unaudited` (`discrete_einstein_regge_lift_note`,
+`gr_class_expansion_finite_rank_target_note`); one remains
+`audited_conditional` (`finite_rank_source_to_metric_theorem_note`). The
+"missing_dependency_edge" repair target is therefore not directly satisfied
+by this rigorize pass; the chain remains conditional on those parent audits
+being upgraded. The runner's PASS=7/0 verifies the load-bearing scalar
+invariance and additivity claims on the currently imported probe grids;
+this is the bounded scope on which the row stands.
+
+**What this rigorize pass NEVER claims.** It does not derive any of the
+imported objects from `Cl(3)` on `Z^3`. It does not close the Schur action,
+the Einstein channels, the `O_h` class, or the finite-rank class
+within this packet. It does not promote `tensor_matching_completion_theorem_note`
+to retained or remove any of the four bullets in the existing
+`What remains open` section.
 
 ## Purpose
 
