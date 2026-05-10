@@ -42795,7 +42795,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a7f3d6cff784135a2fa1c68e7a994e1da4781da71f6009ad13f3ac2e8d704417",
+      "note_hash": "efa9de30c111f106b2932cbdd18ee5c8744d4b9d01b06bcda5b73f83f07a2058",
       "path": "docs/GRAVITY_LAW_CLEANUP_NOTE.md",
       "runner_path": "scripts/gravity_distance_fixed_geometry.py",
       "title": "Gravity Law Cleanup Note"
