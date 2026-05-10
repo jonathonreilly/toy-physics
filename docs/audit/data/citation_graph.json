@@ -1377,6 +1377,26 @@
       "to": "bh_entropy_derived_note"
     },
     {
+      "from": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
+    },
+    {
+      "from": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+    },
+    {
+      "from": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
+    },
+    {
+      "from": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
       "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
     },
@@ -35528,6 +35548,23 @@
       "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
       "title": "BH Entropy RT-Ratio Widom No-Go Theorem"
     },
+    "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10": {
+      "claim_id": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+        "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+        "universal_gr_discrete_global_closure_note",
+        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "a5836d75ab991067c6a872454c78bff1bfd47946b6cc3ab30b1d98892157635e",
+      "path": "docs/BH_QUARTER_WALD_NEWTON_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bh_quarter_wald_newton_coefficient_narrow.py",
+      "title": "BH Quarter Wald-Newton Coefficient Narrow Theorem"
+    },
     "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29": {
       "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
       "claim_type_author_hint": null,
@@ -65830,7 +65867,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 91
+      "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 722,
@@ -65839,12 +65876,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 591
+      "positive_theorem": 592
     },
-    "edge_count": 8236,
-    "leaf_count": 534,
-    "node_count": 2053,
+    "edge_count": 8241,
+    "leaf_count": 535,
+    "node_count": 2054,
     "root_count": 765,
-    "runners_with_path": 1668
+    "runners_with_path": 1669
   }
 }
