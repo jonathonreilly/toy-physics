@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 232 |
 | open_gate | 11 |
-| unaudited | 1137 |
+| unaudited | 1136 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 237 |
+| ~~audited_conditional~~ | 238 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 237 |
+| `audited_conditional` | 238 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1204 |
+| `unaudited` | 1203 |
 
 | claim_type | count |
 |---|---:|
@@ -662,6 +662,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7113,6 +7114,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The strongest bounded statement is that the exact epsilon=0 reduction survives, the terminal frozen field remains Born-linear to machine precision, the weak-field sign survives, and the weak-field mass-law read stays essentially linear.  _(class `C`)_
 - **chain closes:** False — The numerical conclusion is load-bearing, but the supplied runner stdout is only a timeout and the runner imports the lattice implementation and K from scripts.minimal_source_driven_field_probe, which is not supplied. Under the restricted packet, the table values, convergence claims, and exact-lattice implementation cannot be verified.
 - **rationale:** Issue: the claim rests on finite runner results, but no completed stdout or cached certificate is supplied, and the runner's core lattice implementation is imported from an unprovided module. Why this blocks: the audit cannot verify the reported zero-epsilon reduction, Born residuals, sign, or mass-law exponents from the restricted inputs. Repair target: provide a completed or sliced deterministic run plus the imported runner dependency needed to inspect the exact-lattice construction. Claim boundary until fixed: this remains a described bounded harness, not an audited numerical theorem.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_v3_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the supplied Poisson-like lattice runner claiming exact zero-coupling control, small nonzero-coupling shifts, failed nonzero convergence, step-local Born closure, and no retained self-gravity lane.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e124b-7e6e-7b62-9178-1f967e41d45f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The strongest retained statement is that exact null identity is solid and a small centroid/phase-ramp shift appears under backreaction, but the shift and nonconverged nonlinear loop do not promote a new exact-lattice self-gravity mechanism.  _(class `C`)_
+- **chain closes:** False — The raw stdout supports small nonzero-coupling shifts and nonconvergence, but the advertised exact same-loop zero-coupling control is not actually tested through the same loop. The runner special-cases epsilon == 0.0 and returns free propagation with converged=True, zero iterations, and zero residual.
+- **rationale:** Issue: the key identity-control claim says the epsilon=0 reduction survives on the same loop machinery, while _run_loop bypasses the nonlinear update for epsilon == 0.0. Why this blocks: the exact null and convergence result are therefore a coded limit branch, not evidence that the matched-null update pipeline closes under the stated strict control. Repair target: run zero coupling through the same iterative machinery, or explicitly split the trivial zero-field branch from the claimed loop-control theorem. Claim boundary until fixed: the supplied packet only supports a raw nonconverged finite-harness no-promotion observation, not the stronger same-loop bounded theorem.
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`
