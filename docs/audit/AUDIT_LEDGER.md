@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1080 |
+| unaudited | 1079 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 256 |
+| ~~audited_conditional~~ | 257 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 398 |
-| `audited_conditional` | 256 |
+| `audited_conditional` | 257 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1178 |
+| `unaudited` | 1177 |
 
 | claim_type | count |
 |---|---:|
@@ -667,6 +667,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `kubo_continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -6586,6 +6587,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the ordered 3D dense spent-delay family, the live sweep shows z = 2 through 6 remain attractive, z = 7 is mixed/signal-free, detector-window widening preserves z = 6's sign, and wider slit thresholds do not extend the window further.  _(class `C`)_
 - **chain closes:** True — The live script reproduces the source table and decision on the same declared family, action, geometry, slit threshold, detector-window scan, and z range; the source keeps the conclusion bounded and does not promote an all-distance or new-action theorem.
 - **rationale:** The source claim is a bounded computational extension, and the live artifact reproduces the canonical z sweep, detector-window sensitivity rows, slit-threshold spot checks, Born companion value, MI/decoherence values, and final bounded-extension decision. The conclusion is limited to the ordered 3D dense spent-delay family with the declared geometry and explicitly excludes all-distance, 4D, NN, and action-law claims, so the runner checks the load-bearing step without hidden promotion. Residual risk is only ordinary finite-sweep scope: this clean audit does not say anything beyond the tested family and parameter grid.
+- **auditor confidence:** high
+
+### `lattice_3d_l2_numpy_h0125_audit_note`
+
+- **Note:** [`LATTICE_3D_L2_NUMPY_H0125_AUDIT_NOTE.md`](../../docs/LATTICE_3D_L2_NUMPY_H0125_AUDIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the fixed reduced 3D dense 1/L^2 + h^2 numpy family over h = 1.0, 0.5, 0.25, 0.125, with reported Born cleanliness at h <= 0.5 and failed weak-field gravity recovery.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1395-2a22-7ab2-98c2-c1321ac04999`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The reduced 3D 1/L^2 + h^2 numpy lane completes numerically through h = 0.125, preserves Born, and does not preserve the retained weak-field gravity class on this audit family.  _(class `C`)_
+- **chain closes:** False — The note's numerical table matches the supplied stdout, and the wrapper fixes the h ladder and family parameters. The load-bearing physics computation is delegated to scripts.lattice_3d_l2_numpy.run_card, whose source is not supplied, so the restricted packet cannot verify the claimed kernel, measure, observables, or sign readout.
+- **rationale:** Issue: the wrapper imports the opaque run_card implementation for the actual dense-lattice computation, while only the wrapper source and stdout are supplied. Why this blocks: stdout alone is not authoritative under the audit rubric, so the chain cannot establish that the reported Born and gravity rows come from the claimed 3D 1/L^2 + h^2 construction. Repair target: provide and audit the full scripts/lattice_3d_l2_numpy.py run_card implementation or an equivalent deterministic computation certificate. Claim boundary until fixed: the supplied log reports numerical completion and weak-field gravity failure for the named wrapper, but the bounded theorem is not closed from the restricted packet.
 - **auditor confidence:** high
 
 ### `lattice_3d_l2_tail_stats_note`
