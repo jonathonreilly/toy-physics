@@ -44125,6 +44125,17 @@
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "title": "Gauge-Scalar Temporal Observable Bridge Stretch Attempt"
     },
+    "gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow_theorem_note_2026-05-10": {
+      "claim_id": "gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "abe6a7484775e8ce98e68c67f286988104b78aafd86ac01dc845b16643b51e4e",
+      "path": "docs/GAUGE_TEMPORAL_GAUGE_MIXED_KERNEL_SPATIAL_LINK_FACTORIZATION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow.py",
+      "title": "Gauge Temporal-Gauge Mixed-Kernel Spatial-Link Factorization Narrow Theorem"
+    },
     "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17": {
       "claim_id": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
       "claim_type_author_hint": "positive_theorem",
@@ -65943,6 +65954,7 @@
     "gate_b_v6_nearfield_comparator_note",
     "gauge_scalar_temporal_completion_theorem_note",
     "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
+    "gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow_theorem_note_2026-05-10",
     "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
     "gauge_vacuum_plaquette_constant_lift_obstruction_note",
@@ -66418,7 +66430,7 @@
       "no_go": 20,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66427,12 +66439,12 @@
       "no_go": 127,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8308,
-    "leaf_count": 537,
-    "node_count": 2072,
-    "root_count": 768,
-    "runners_with_path": 1687
+    "leaf_count": 538,
+    "node_count": 2073,
+    "root_count": 769,
+    "runners_with_path": 1688
   }
 }
