@@ -84,3 +84,88 @@ After this note, the remaining gravity blocker is sharper again:
   surface is no longer open
 - the live remaining gap is the extension beyond the current static conformal
   bridge, and then any wider support-class generalization
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream dependencies
+the runner imports, in response to the 2026-05-05 audit verdict's
+`missing_dependency_edge` repair target (audit row:
+`star_supported_bridge_class_note`). It does not promote this note or
+change the audited claim scope, which remains conditional class-extension
+algebra given the upstream Schur boundary action and the imported
+operator implementations.
+
+One-hop authority cited:
+
+- [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+  — currently `audited_clean` / `retained_bounded` (audit row:
+  `oh_schur_boundary_action_note`). This is the upstream retained
+  authority for the microscopic Schur-complement boundary action on
+  `Gamma_R` whose stationary point the present note's class-extension
+  identifies with the exact shell trace. The present note's runner
+  imports its load-bearing operator construction via
+  `_frontier_loader.load_frontier("oh_schur_boundary_action",
+  "frontier_oh_schur_boundary_action.py")`.
+
+Open class D registration targets named by the 2026-05-05 audit verdict
+as `missing_dependency_edge`:
+
+- `frontier_finite_rank_gravity_residual` — the helper module the runner
+  imports for `build_neg_laplacian_sparse`, `flat_idx`, and
+  `solve_columns` operations on the current Dirichlet box. There is no
+  dedicated retained audit-clean source note registered as a one-hop
+  authority for this helper module's lattice identities.
+- `frontier_oh_static_constraint_lift` — the helper module the runner
+  imports for the local static conformal constraint pair on the
+  same-charge bridge `psi = 1 + phi_ext`, `chi = 1 - phi_ext`. There is
+  no dedicated retained audit-clean source note registered as a one-hop
+  authority for this helper module.
+- An extension argument from sampled seeds to the full star-supported
+  finite-rank class. The present runner samples five seeds (3, 7, 11,
+  19, 23) and reports machine-precision agreement, but the universal
+  class-extension argument is stated in the note's "Numerical sanity
+  across random class members" prose rather than registered as a runner
+  check or upstream theorem. Closing it would require a retained
+  source note proving that the same lattice identities used in the
+  closure package universally extend across the full
+  star-supported finite-rank source class on the current Dirichlet box.
+
+The three open class D items together match the 2026-05-05 audit
+verdict's `notes_for_re_audit_if_any` field:
+"provide the retained lattice-identity derivation or the upstream
+notes/scripts defining H0, Pi_R^ext, the static bridge, and the Schur
+boundary action, plus the argument extending from sampled seeds to the
+full star-supported finite-rank class."
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+observation that the supplied runner performs nontrivial numerical
+identity checks on five random class-member seeds (4 EXACT PASS plus 1
+BOUNDED PASS = 5/5) but imports the actual operator implementations
+from the three frontier helper scripts above and cannot by itself prove
+the stated full-class closure. The runner output verifies machine-precision
+agreement of the shell band `[3.162278, 5.000000]`, the two static
+conformal constraints (`psi` residual at most 2.45e-15, `chi` residual
+at most 2.01e-15), and the Schur boundary action stationarity (rebuild
+and gradient errors at most 9.71e-17) across the five seeds. The
+cite chain above wires `OH_SCHUR_BOUNDARY_ACTION_NOTE` as the one
+retained one-hop authority for the microscopic boundary action and
+explicitly registers the other two helper modules and the seed-to-class
+extension argument as open class D registration targets. Effective
+status remains `audited_conditional` because the upstream lattice-identity
+helper modules are not registered as retained source notes. The note's
+`audit_status` is unchanged by this addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) plus class D
+(open-target registration). It does not change any algebraic content,
+runner output, or load-bearing step classification. It records the
+upstream authority the audit verdict expected and explicitly registers
+the helper modules and the seed-to-class extension argument as open
+class D registration targets named by the verdict's
+`notes_for_re_audit_if_any` field. It mirrors the live cite-chain
+pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` cluster
+(commit `8e84f0c23`).
