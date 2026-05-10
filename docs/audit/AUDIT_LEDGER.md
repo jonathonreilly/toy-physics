@@ -19,10 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 66 |
-| **retained_no_go** | 125 |
+| **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1087 |
+| unaudited | 1086 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 396 |
+| `audited_clean` | 397 |
 | `audited_conditional` | 252 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1185 |
+| `unaudited` | 1184 |
 
 | claim_type | count |
 |---|---:|
@@ -254,6 +254,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `growing_graph_frontier_expansion_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | D | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | B | - |
@@ -5451,6 +5452,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md`
   - `GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md`
 - **auditor confidence:** high
+
+### `grown_wavefield_companion_note`
+
+- **Note:** [`GROWN_WAVEFIELD_COMPANION_NOTE.md`](../../docs/GROWN_WAVEFIELD_COMPANION_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Fixed-field grown-row replay at drift=0.2, restore=0.7, seeds 0 and 1, source layers 2 and 4, showing zero-source reduction but no review-safe phase-ramp transfer.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1386-bd52-79e0-a2bf-31f58f565415`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** the detector-line phase-ramp observable is too weak and too low-R2 to count as a review-safe grown-row transfer of the exact-lattice wavefield mechanism  _(class `C`)_
+- **chain closes:** True — The source note's numerical table matches the completed runner stdout, and the runner source computes the phase-ramp metrics and zero-source reduction rather than printing hard-coded verdict constants. The closure is only for the stated finite replay configuration and does not imply a geometry-generic no-go.
+- **rationale:** Clean for the bounded no-go scope: the runner computes the fixed-field replay, reports exact zero-source spans of zero, and returns low phase-ramp R2 values around 0.30, which supports the note's refusal to promote a grown-row transfer claim. No cited authorities are required for the limited negative conclusion as written. Residual risk is confined to the unprovided grow helper and the qualitative threshold for 'review-safe,' so the claim must remain bounded to the printed finite configuration.
+- **auditor confidence:** medium
 
 ### `h0125_failure_derivation`
 
