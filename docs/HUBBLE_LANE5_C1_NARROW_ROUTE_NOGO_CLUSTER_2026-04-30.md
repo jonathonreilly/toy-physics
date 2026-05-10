@@ -1,10 +1,72 @@
 # Hubble Lane 5 C1 Narrow Route No-Go Cluster
 
+---
+
+**This is a route-local salvage / observation-cluster note. It does not establish any retained claim.**
+For retained claims on Lane 5 (C1) gate status, see the per-claim
+notes referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-30
-**Status:** support. Salvage note for the five route-local Cycle 6
-no-go observations whose wrapper exhaustion claim failed audit. This
-note does not claim route exhaustion, Axiom* minimality, or `(G1)` /
-`(C1)` closure status.
+**Status:** support / historical observation-cluster only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / historical observation-cluster only — does not propagate retained-grade
+**Audit status:** audited_conditional (per audit ledger)
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+Salvage note for the five route-local Cycle 6 no-go observations
+whose wrapper exhaustion claim failed audit. This note does not
+claim route exhaustion, Axiom* minimality, or `(G1)` / `(C1)`
+closure status.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **route-local observation-cluster salvage note** for
+five Cycle 6 sub-route observations on the Lane 5 C1 narrow program.
+It is **not** a single retained theorem and **must not** be audited
+as one. The audit ledger row for
+`hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30` classified
+this source as conditional/positive_theorem with auditor's repair
+target:
+
+> runner_artifact_issue: attach explicit proof notes or audited
+> dependencies for the S4 permutation-unitary, Hamming-weight
+> Clifford obstruction, information-theoretic indistinguishability,
+> Stinespring projection, and finite type-I cyclicity claims.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a route-local observation-cluster salvage note rather than to
+attach the missing per-route proof notes here. Authoring those
+proofs belongs in dedicated review-loop or per-route audit passes.
+Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The five sub-route observations (S_4 / cobordism-spin /
+  Holevo / Stinespring / Reeh-Schlieder) below are **route-local
+  historical observations only**.
+- The retained-status surface for the C1 gate, the (G1)
+  edge-statistics premise, the (G2) action-unit premise, or any
+  no-go on a coupled (G1+G2) sub-route is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-route / per-gate
+  notes, **not** this salvage cluster.
+- Retained-grade does **NOT** propagate from this salvage cluster
+  to any sub-route observation, no-go theorem, or successor C1
+  audit.
+
+### Per-claim pointers
+
+The five route-local observations in §1 each await a dedicated proof
+note or audited dependency, per the auditor's repair target. Until
+those land, the observations are recorded here as historical route-
+local memory only. For any retained claim about route exhaustion,
+forced Axiom* minimality, or C1 closure, consult the live (C1) gate
+audit notes (e.g.
+`HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`,
+`HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md`)
+and audit the relevant proof surface separately — not this salvage
+note.
 
 ---
 

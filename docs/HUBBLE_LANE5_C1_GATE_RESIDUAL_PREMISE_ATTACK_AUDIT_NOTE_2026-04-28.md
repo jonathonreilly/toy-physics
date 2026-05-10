@@ -1,7 +1,23 @@
 # Lane 5 `(C1)` Absolute-Scale Gate — Residual-Premise Attack Audit
 
+---
+
+**This is a branch-local attack-frame inventory / planning note. It does not establish any retained claim.**
+For retained claims on Lane 5 (C1) gate status or on any (G1+G2)
+attack frame, see the per-claim notes referenced from the
+`## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-28
-**Status:** open branch-local **attack-audit** note on
+**Status:** support / planning record (open-gate inventory) only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / planning record (open-gate inventory) only — does not propagate retained-grade
+**Audit status:** audited_conditional (per audit ledger)
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+Branch-local **attack-audit** note on
 `frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 1 of the
 (C1) gate loop. Builds on the 2026-04-26 `(C1)` gate audit which
 isolated the single residual premise (metric-compatible primitive
@@ -10,8 +26,71 @@ coupled (G1 edge-statistics principle + G2 action-unit metrology)).
 This audit enumerates surviving research-level attack candidates
 on (G1+G2) on the current `A_min` framework surface and identifies
 which would be single-cycle attemptable vs. research-level distant.
+
 **Lane:** 5 — Hubble constant `H_0` derivation
 **Loop:** `hubble-c1-absolute-scale-gate-20260428`
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **branch-local attack-frame inventory / planning
+note** for the Lane 5 (C1) gate loop. It is **not** a single retained
+theorem and **must not** be audited as one. The audit ledger row for
+`hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28`
+classified this source as conditional/open_gate with auditor's repair
+target:
+
+> missing_dependency_edge: provide one-hop retained authorities for
+> the 2026-04-26 C1 audit, A_min, CAR semantics, parity-gate carrier,
+> primitive-CAR edge identification, and conditional Clifford phase
+> bridge, or narrow the claim to a non-retained local inventory.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a branch-local non-retained attack-frame inventory rather than to
+materialize the missing one-hop authority edges here. Those steps
+belong in dedicated review-loop or per-attack-frame audit passes.
+Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The six attack-candidate frames (A1-A6), promise rankings,
+  single-cycle attemptability assessments, phase-2 fallback
+  ordering, and recommended Cycle 2/3 sequencing below are
+  **historical planning memory only**.
+- The retained-status surface for the (C1) gate, the (G1)
+  edge-statistics premise, the (G2) action-unit metrology, or any
+  A1-A6 attack frame is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-attack-frame notes
+  cited under §5 cross-references, **not** this attack-audit
+  inventory.
+- Retained-grade does **NOT** propagate from this inventory to the
+  (C1) gate, (G1), (G2), any A1-A6 attack frame, or any successor
+  cycle pivot.
+
+### Per-claim pointers
+
+The six attack-frame premises and the cross-referenced authorities in
+§5 each have dedicated notes where the live audit-clean status, if
+any, lives:
+
+- 2026-04-26 (C1) gate audit:
+  `HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`
+- A_min foundation:
+  `MINIMAL_AXIOMS_2026-04-11.md`
+- 2026-04-25 area-law CAR semantics tightening:
+  `AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md`
+- 2026-04-25 primitive parity-gate carrier (A4 anchor):
+  `AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md`
+- 2026-04-25 primitive-CAR edge identification:
+  `AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`
+- Conditional Clifford phase bridge:
+  `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
+
+The live status of each cited authority is whatever the audit-ledger
+row for the linked note says today, not what this inventory records.
+
+For any retained claim on (C1) closure, on (G1)/(G2) premise
+closure, or on any A1-A6 attack frame's success or failure, audit the
+corresponding dedicated note (or future stretch-attempt note) as a
+separate scoped claim — not this attack-frame inventory.
 
 ---
 

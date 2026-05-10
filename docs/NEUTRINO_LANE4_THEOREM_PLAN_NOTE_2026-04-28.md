@@ -1,13 +1,71 @@
 # Lane 4 Neutrino Theorem Plan: Closure Roadmap with Phase Ordering
 
+---
+
+**This is a planning / roadmap note. It does not establish any retained claim.**
+For retained claims on Lane 4 components, see the per-claim notes
+referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-28
-**Status:** open Lane 4 theorem-plan note; roadmap only, no claim promotion.
-Reduces Lane 4 (neutrino quantitative closure) to a sharp closure roadmap
-using current PMNS/Majorana/Dirac content, `N_eff`, and the DM-closed-package
-`delta_CP`/`theta_23` forecast. Identifies Phase-1 priorities and the cleanest
-stretch-attempt entry.
+**Status:** support / planning record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / planning record only — does not propagate retained-grade
+**Audit status:** audited_conditional (per audit ledger)
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+Roadmap only, no claim promotion. Reduces Lane 4 (neutrino
+quantitative closure) to a sharp closure roadmap using current
+PMNS/Majorana/Dirac content, `N_eff`, and the DM-closed-package
+`delta_CP`/`theta_23` forecast. Identifies Phase-1 priorities and the
+cleanest stretch-attempt entry.
+
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **planning / closure-roadmap note** for Lane 4
+(neutrino quantitative closure). It is **not** a single retained
+theorem and **must not** be audited as one. The audit ledger row for
+`neutrino_lane4_theorem_plan_note_2026-04-28` classified this source
+as conditional/open_gate with auditor's repair target:
+
+> missing_dependency_edge: register the actual one-hop authorities and
+> separately audit the 4D globalization, 4E mass mechanism, and
+> downstream arithmetic targets.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a planning record rather than to materialize the missing one-hop
+authority edges or to separately audit the 4D/4E/downstream targets
+here. Those steps belong in dedicated review-loop or per-target
+audit passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The seven derivation targets (4A-4G), tier classifications,
+  approachability assessments, phase ordering, and stretch-attempt
+  candidate lists below are **historical planning memory only**.
+- The retained-status surface for any Lane 4 sub-claim is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes
+  cited under "Retained framework structure used" in §1, **not** this
+  plan.
+- Retained-grade does **NOT** propagate from this plan to any 4A-4G
+  sub-target, theorem object, or successor cycle.
+
+### Per-claim pointers
+
+The framework-structure inputs cited under §1 each have dedicated
+notes where the live audit-clean status, if any, lives. The plan
+quotes those notes by filename; the live status is whatever the
+audit-ledger row for each linked note says today, not what this plan
+records.
+
+For any retained claim on Lane 4 closure status, audit the
+corresponding dedicated note (e.g. `NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`,
+`NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md`, etc.) and its
+runner as a separate scoped claim — not this roadmap plan.
 
 ---
 

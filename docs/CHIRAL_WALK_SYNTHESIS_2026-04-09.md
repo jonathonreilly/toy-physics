@@ -1,12 +1,79 @@
 # Chiral Walk Architecture — Complete Synthesis
 
+---
+
+**This is a synthesis/overview note. It does not establish any retained claim.**
+For retained claims, see the per-claim notes referenced from the
+`## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-09
-**Status:** bounded - bounded or caveated result note
+**Status:** support / historical synthesis only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / historical synthesis only — does not propagate retained-grade
+**Audit status:** audited_conditional (per audit ledger)
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 
 > Update 2026-04-10: the overnight 1+1D and 2+1D results still stand, and the
 > 3+1D closure card at its tested operating point still stands, but the later
 > like-for-like 3+1D periodic sweep shows a TOWARD basin with genuine sign
 > windows, not a universal sign-stable 3+1D gravity law.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **overview / mechanism synthesis** of the chiral-walk
+architecture program at 2026-04-09. It is **not** a single retained
+theorem and **must not** be audited as one. The audit ledger row for
+`chiral_walk_synthesis_2026-04-09` classified this source as
+conditional/bounded with auditor's repair target:
+
+> missing_dependency_edge: register the chiral-walk synthesis runner or
+> split the synthesis into explicit dependencies on the relevant
+> audited closure-card, gauge, distance-law, convergence, and
+> carrier-k rows, with current replay logs for the exact numbers
+> quoted.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an overview/mechanism synthesis rather than to physically split it
+into atomic retained-claim files. Splitting is editorial work that
+belongs in a dedicated review-loop pass. Until that split is performed:
+
+- This file makes **no** retained-claim assertions of its own.
+- Every quantitative readout, table, closure-card number, Born value,
+  F~M coefficient, gauge fidelity, distance-law exponent, and
+  convergence statement below is **historical program memory only**.
+- The retained-status surface is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes, **not**
+  this file.
+- Retained-grade does **NOT** propagate from this synthesis note to
+  any sub-claim, successor card, or successor runner.
+
+### Per-claim pointers
+
+The list below pairs the thematic sub-claims mentioned in this file
+with the dedicated note(s) where the live audit-clean status, if any,
+lives. Inclusion in this index is **not** a status assertion: the
+live status is whatever the audit-ledger row for the linked note says
+today.
+
+- **3+1D operating-point closure-card and TOWARD basin** — see
+  [`CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md`](CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md),
+  [`CHIRAL_3PLUS1D_RECURRENCE_NOTE.md`](CHIRAL_3PLUS1D_RECURRENCE_NOTE.md),
+  [`CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`](CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md).
+- **Carrier-k chromaticity / achromatic-deflection narrowing** — see
+  the addendum cross-reference above; treat this synthesis's
+  "achromatic gravity" rollups as historical only.
+- **1+1D / 2+1D Klein-Gordon, Born, F~M, gauge, distance** — no
+  separate audit-clean retained-claim note for the synthesis-level
+  rollup tracked here yet; treat as historical program memory and
+  consult the chiral-walk runner inventory plus per-runner logs for
+  current numbers.
+
+For any retained claim about chiral-walk physics, audit the
+corresponding dedicated note and its runner as a separate scoped
+claim — not this overview synthesis.
 
 ## The Architecture
 

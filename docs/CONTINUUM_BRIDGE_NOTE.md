@@ -1,9 +1,85 @@
 # Continuum / Asymptotic Bridge Note
 
-**Status:** bounded - bounded or caveated result note
+---
+
+**This is a synthesis/overview note. It does not establish any retained claim.**
+For retained claims, see the per-claim notes referenced from the
+`## Audit scope` block below.
+
+---
+
+**Status:** support / historical synthesis only — does not propagate retained-grade
 **Date:** 2026-04-01
+**Claim type:** meta
+**Claim scope:** support / historical synthesis only — does not propagate retained-grade
+**Audit status:** audited_conditional (per audit ledger)
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Purpose:** Separate finite-size artifacts from potentially retained
 discrete structure. Gate C of the review-hardening backlog.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **overview / classification synthesis** of which DAG
+and lattice results survive scaling/refinement. It is **not** a
+single retained theorem and **must not** be audited as one. The audit
+ledger row for `continuum_bridge_note` classified this source as
+conditional/bounded with auditor's repair target:
+
+> missing_dependency_edge: add one-hop retained authorities or a
+> primary cached runner for the DAG large-N and lattice h-refinement
+> tables, then re-audit the narrowed survival/retraction claims.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an overview/classification synthesis rather than to materialize
+the missing one-hop authorities or cached runners here. Those steps
+belong in dedicated review-loop or per-claim audit passes. Until
+that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "what survives" / "what weakens" / "what is a discrete-family
+  artifact" classifications, lattice-continuum-limit tables, RG
+  scaling readouts, distance-law refinement narrative, and
+  retained/provisional/retracted summary tables below are
+  **historical program memory only**.
+- The retained-status surface for any DAG-survival or lattice-
+  refinement claim is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes for each
+  underlying gravity, Born, decoherence, mass-scaling, distance-law,
+  and emergence sub-claim, **not** this synthesis.
+- Retained-grade does **NOT** propagate from this synthesis note to
+  any sub-claim, classification verdict, or successor runner.
+
+### Per-claim pointers
+
+The classification verdicts in this file map to dedicated per-claim
+notes where the live audit-clean status, if any, lives:
+
+- **Phase-valley gravity (DAG + lattice)** — consult per-claim
+  gravity notes (e.g. `GRAVITY_LAW_CLEANUP_NOTE.md`,
+  `GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`).
+- **Born rule (linear path-sum chokepoint)** — consult per-claim
+  Born notes.
+- **CL-bath decoherence floor** — consult per-claim decoherence
+  notes (e.g. `DECOHERENCE_DECISION_NOTE.md`).
+- **Mass scaling (3D vs 4D)** — consult per-claim mass-scaling
+  notes.
+- **Lattice continuum limit (MI / decoherence / d_TV)** — consult
+  per-claim lattice-refinement notes.
+- **Distance-law (DAG vs lattice)** — consult per-claim distance-
+  law notes for the current matched-width replay status.
+- **Asymptotic emergence (gap dynamics)** — consult per-claim
+  emergence / dense+prune notes.
+- **Strict visibility gain (vanishing artifact)** — consult per-
+  claim visibility-gain notes.
+
+The live status of each sub-claim is whatever the audit-ledger row
+for the corresponding linked note says today, not what this
+synthesis records.
+
+For any retained claim about continuum / scaling / refinement
+survival, audit the corresponding dedicated note as a separate scoped
+claim — not this overview synthesis.
 
 ## What survives size growth
 
