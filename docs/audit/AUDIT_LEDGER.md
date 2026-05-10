@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1128 |
+| unaudited | 1127 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
 | ~~audited_conditional~~ | 222 |
-| ~~audited_failed~~ | 17 |
+| ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 382 |
 | `audited_conditional` | 222 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 61 |
+| `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1226 |
+| `unaudited` | 1225 |
 
 | claim_type | count |
 |---|---:|
@@ -761,6 +761,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `memory_decay_diagnosis_2026-04-11` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `portable_card_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -6182,6 +6183,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The runner-computed best case at λ=1 reduces equivalence rel dev only to about 44%, while family portability is 163% and Newton linearity collapses with R²≈0.09–0.18, so the self-focusing route remains a failed matter closure.  _(class `C`)_
 - **chain closes:** True — The runner source actually constructs the grown DAG, Gaussian sources, two-pass density self-field propagator, slope fits, null test, and family portability checks, rather than printing fixed expected values. Its completed stdout supports the note's negative conclusion, with only small rounding differences.
 - **rationale:** The cited upstream authority is retained_no_go and is used only as the prior failed Gaussian-packet baseline. The new load-bearing result is produced by a completed first-principles numerical harness over the specified model and not by a definition, renaming, external comparator, or tuned numerical match. The conclusion is appropriately scoped as a no-go for this two-pass self-focusing Gaussian route, not as a proof that all matter closure is impossible.
+- **auditor confidence:** high
+
+### `memory_decay_diagnosis_2026-04-11`
+
+- **Note:** [`MEMORY_DECAY_DIAGNOSIS_2026-04-11.md`](../../docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audit of the claimed Yukawa-screening diagnosis for decay of the retained ring memory signal with increasing lattice size.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1315-b45b-7970-b9f4-2f542c90bbc2`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Memory is quadratic in Phi, so it decays as exp(-2 mu d), and the observed 7-order-of-magnitude drop from N=41 to N=101 matches this scaling.  _(class `G`)_
+- **chain closes:** False — The note's load-bearing numerical evidence is stale relative to the supplied runner: the runner has no N=41 case and reports N=81 and N=101 memories of 0.007071 and 0.002722 at mu2=0.22, not about 1e-5 and 1e-7. The note also treats 0.22 as mu with screening length 1/mu approximately 4.5, while the runner sweeps mu2=0.22 and uses ell=1/sqrt(mu2)=2.132.
+- **rationale:** Issue: the claimed exp(-2 mu d) numerical match is contradicted by the supplied runner stdout and by the runner's mu2 convention. Why this blocks: the core diagnosis depends on a 7-order decay and on mu=0 making memory N-independent, but the current runner shows no such 7-order drop and the massless relative-geometry slice still decays from 0.020854 at N=61 to 0.001767 at N=121. Repair target: reconcile the source note with a completed runner that includes the historical N=41 datum, uses a single mu versus mu2 convention, and explicitly tests the claimed scaling. Claim boundary until fixed: this packet supports only that this toy runner's measured memory depends strongly on geometry and lattice size, not that Yukawa screening is the established root cause.
 - **auditor confidence:** high
 
 ### `memory_mu2_geometry_sweep_note_2026-04-11`
