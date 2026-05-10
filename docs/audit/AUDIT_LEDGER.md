@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 69 |
 | **retained_no_go** | 122 |
-| **retained_bounded** | 237 |
+| **retained_bounded** | 238 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 858 |
+| unaudited | 857 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 395 |
+| `audited_clean` | 396 |
 | `audited_conditional` | 419 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 907 |
+| `unaudited` | 906 |
 
 | claim_type | count |
 |---|---:|
@@ -149,6 +149,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -3045,6 +3046,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** SU(3) is embedded as Gell-Mann generators on the 3D symmetric base subspace, giving the Fierz channel-count fraction R_conn = (N_c^2 - 1) / N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
 - **chain closes:** True — Within the narrowed algebraic scope, the construction closes: a chosen 3D carrier supports the standard SU(3) generators and the Fierz identity gives the adjoint fraction 8/9. The physical identification of this carrier with SM color remains outside the audited claim.
 - **rationale:** The source note has narrowed the claim to an algebraic embedding/channel-count theorem and explicitly removes the physical SM color bridge from the load-bearing scope. The runner source constructs the symmetric/antisymmetric base split, embeds standard Gell-Mann generators, checks commutators, trace normalization, and the Fierz identity rather than merely printing constants. The remaining assertions about physical color and EW correction are stated as conditional/deferred, so they do not block the bounded algebraic theorem.
+- **auditor confidence:** high
+
+### `cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02`
+
+- **Note:** [`CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional on H_x being a faithful complex Cl(3) module: H_x decomposes as a direct sum of 2-dim chirality irreps with even complex dim ≥ 2; the minimal (irreducible) case has dim_C H_x = 2 with canonical Pauli realization (D2); for finite Λ ⊂ Z^3 with each H_x minimal, ⊗_{x∈Λ} H_x has dim_C = 2^|Λ| (D3). The unconditional D1 (physical per-site dim = 2) is explicitly out of scope and delegated to the staggered-Dirac substep 1.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `claude-opus-fresh-context-phaseB-2026-05-10-a49a25e0`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Step 2 — apply U2+U3 of the cited cl3_per_site_uniqueness theorem (now retained at A1-only U1-U3 scope) to the per-site space H_x under the explicit faithful-Cl(3)-module admission to obtain D2 (chirality-irrep decomposition with even complex dim, minimal case dim_C H_x = 2 with canonical Pauli realization) and Step 4 tensor-product to obtain D3 (dim_C = 2^|Λ| on the minimal-irrep finite block).  _(class `A`)_
+- **chain closes:** True — The narrowed claim cites exactly one one-hop authority (axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29) which is now audited_clean / positive_theorem / retained at A1-only U1-U3 scope — precisely the U2+U3 content the note load-bears on. The substrate-bridge content (former U4 / D1) that previously made this row depend on the open staggered-Dirac gate has been correctly excised and explicitly delegated to staggered_dirac_grassmann_forcing substep 1; only D2 (chirality-decomposition) and D3 (tensor-product) remain, both flowing directly from U2+U3 plus elementary tensor-product dimensionality. The faithful-Cl(3)-module premise is admitted as structural/A1, not load-bearing on any open authority. Runner exhibits all five load-bearing facts (Cl(3) anticommutation; dim 2; scalar commutant / irreducibility; tensor-product 2^|Λ| arithmetic; unitary-equivalence preservation), 5/5 PASS, exit 0.
+- **rationale:** The 2026-05-08 narrowing aligns the claim's load-bearing content (D2 chirality decomposition + D3 tensor-product) exactly with the cited authority's now-retained A1-only U2+U3 scope. The faithful-Cl(3)-module assumption is stated as an explicit conditional admission, the unconditional D1 substrate-bridge content is properly delegated to staggered-Dirac substep 1 and removed from this note's scope, and the runner verifies the load-bearing algebraic facts (anticommutation, dim=2, irreducibility via scalar commutant, tensor-product formula, unitary-equivalence robustness) all PASS. The single one-hop citation is to a retained positive_theorem at the matching scope, so the tie-break does not push to audited_conditional — the conditional language inside the claim itself is a scoping device, not an unresolved upstream dependency.
 - **auditor confidence:** high
 
 ### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
