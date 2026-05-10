@@ -7872,6 +7872,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py"
     },
+    "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge.py"
+    },
     "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note": {
       "assert_count": 1,
       "counts": {
@@ -29931,6 +29943,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py": {
       "assert_count": 1,
       "claims": [
@@ -43700,12 +43727,12 @@
     "dominant_class_distribution": {
       "A": 111,
       "B": 160,
-      "C": 643,
+      "C": 644,
       "D": 238,
       "none": 406
     },
-    "runners_classified": 1558,
-    "runners_with_C": 806,
+    "runners_classified": 1559,
+    "runners_with_C": 807,
     "runners_with_D": 428
   }
 }

@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 1092
+**Total pending:** 1094
 **Ready (all deps already at retained-grade or metadata tiers):** 18
 
 By criticality:
-- `critical`: 695
+- `critical`: 697
 - `high`: 25
 - `medium`: 145
 - `leaf`: 227
@@ -68,7 +68,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 ## Citation cycle break targets
 
-305 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
+306 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
 
 | # | cycle_id | length | max_desc | primary break target | criticality | audit_status |
 |---:|---|---:|---:|---|---|---|
@@ -87,14 +87,14 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 13 | `cycle-0013` | 7 | 698 | `area_law_native_car_semantics_tightening_note_2026-04-25` | critical | unaudited |
 | 14 | `cycle-0014` | 13 | 698 | `anomaly_forces_time_theorem` | critical | unaudited |
 | 15 | `cycle-0015` | 14 | 698 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
-| 16 | `cycle-0016` | 2 | 645 | `su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10` | critical | unaudited |
-| 17 | `cycle-0017` | 2 | 642 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
-| 18 | `cycle-0018` | 2 | 642 | `g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09` | critical | unaudited |
-| 19 | `cycle-0019` | 2 | 642 | `gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10` | critical | unaudited |
-| 20 | `cycle-0020` | 3 | 642 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
-| 21 | `cycle-0021` | 6 | 642 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
-| 22 | `cycle-0022` | 7 | 642 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
-| 23 | `cycle-0023` | 8 | 642 | `alpha_s_derived_note` | critical | unaudited |
+| 16 | `cycle-0016` | 2 | 653 | `su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10` | critical | unaudited |
+| 17 | `cycle-0017` | 2 | 650 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | critical | unaudited |
+| 18 | `cycle-0018` | 2 | 642 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
+| 19 | `cycle-0019` | 2 | 642 | `g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09` | critical | unaudited |
+| 20 | `cycle-0020` | 2 | 642 | `gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10` | critical | unaudited |
+| 21 | `cycle-0021` | 3 | 642 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
+| 22 | `cycle-0022` | 6 | 642 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
+| 23 | `cycle-0023` | 7 | 642 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
 | 24 | `cycle-0024` | 8 | 642 | `alpha_s_derived_note` | critical | unaudited |
 | 25 | `cycle-0025` | 8 | 642 | `alpha_s_derived_note` | critical | unaudited |
 

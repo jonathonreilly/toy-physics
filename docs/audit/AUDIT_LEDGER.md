@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1086 |
+| unaudited | 1088 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 252 |
+| ~~audited_conditional~~ | 251 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,16 +40,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 397 |
-| `audited_conditional` | 252 |
+| `audited_conditional` | 251 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1184 |
+| `unaudited` | 1186 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 811 |
+| `bounded_theorem` | 812 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 198 |
@@ -58,18 +58,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 1027 |
+| `critical` | 1028 |
 | `high` | 48 |
 | `medium` | 241 |
 | `leaf` | 632 |
 
 - **Retained pending chain closure:** 0
-- **Citation cycles detected:** 304
+- **Citation cycles detected:** 305
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1558
-- runners with (C) first-principles compute hits: 806
+- runners classified: 1559
+- runners with (C) first-principles compute hits: 807
 - runners with (D) external comparator hits: 428
 - decoration candidates (no C, no D): 161
 
@@ -79,17 +79,17 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 891 | 76.80 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 899 | 77.31 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 648 | 41.84 | `unaudited` | unaudited |
 | 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 865 | 40.76 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 723 | 38.50 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 854 | 38.24 | `audited_clean` | **retained_bounded** |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 862 | 38.25 | `audited_clean` | **retained_bounded** |
 | 6 | `alpha_s_derived_note` | bounded_theorem | critical | 642 | 35.33 | `unaudited` | unaudited |
 | 7 | `minimal_axioms_2026-04-11` | meta | critical | 757 | 35.07 | `unaudited` | meta |
 | 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 362 | 32.50 | `unaudited` | unaudited |
 | 9 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 455 | 31.33 | `unaudited` | unaudited |
 | 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 642 | 31.33 | `unaudited` | unaudited |
-| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 843 | 31.22 | `audited_clean` | **retained_bounded** |
+| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 851 | 31.23 | `audited_clean` | **retained_bounded** |
 | 12 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 455 | 30.83 | `unaudited` | unaudited |
 | 13 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 698 | 30.45 | `unaudited` | unaudited |
 | 14 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 645 | 29.34 | `audited_clean` | **retained_bounded** |
@@ -101,7 +101,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 20 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 362 | 26.50 | `unaudited` | unaudited |
 | 21 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 486 | 25.93 | `unaudited` | unaudited |
 | 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 485 | 25.93 | `unaudited` | unaudited |
-| 23 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 652 | 24.85 | `audited_clean` | **retained_bounded** |
+| 23 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 660 | 24.87 | `audited_clean` | **retained_bounded** |
 | 24 | `one_generation_matter_closure_note` | bounded_theorem | critical | 523 | 24.53 | `unaudited` | unaudited |
 | 25 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | critical | 709 | 23.97 | `unaudited` | unaudited |
 
@@ -624,7 +624,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -4863,19 +4862,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The full-slice local rim lift is declared to be the exact slice-space boundary function B_beta(W)(U) = integral_(Omega^rim(U)) dmu_H(Xi^rim) exp[(beta / 3) A^rim(U, Xi^rim; W)].  _(class `E`)_
 - **chain closes:** False — No cited authority or derivation from axioms is provided for the equality between the full-slice lift and the displayed rim integral. The note introduces the integral expression as the object rather than deriving that it is the unique/load-bearing boundary input.
 - **rationale:** The load-bearing move is a definition-style identification of B_beta(W) with a named local Wilson/Haar rim integral, followed by eta_beta(W)=P_cls B_beta(W). The supplied runner does not verify this theorem: it computes a separate first-three-sample positive-cone obstruction and only string-checks that the rim-lift note says explicit B_6 remains open. With no cited upstream authority and no first-principles derivation in the restricted packet, the theorem-grade conclusion reduces to introducing a symbol for the proposed boundary integral.
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded claim that the normalized Wilson mixed-kernel compression on the marked-plaquette character sector is exactly the four marked-link local factor a_(p,q)(beta)^4, with non-marked links contributing only trivial-channel scalars.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e121c-0aca-7ab0-b5e4-6f569c4748f4`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** Each marked-link factor contributes the normalized irrep eigenvalue a_(p,q)(beta), while every non-marked mixed-link factor contributes only a rep-independent scalar, hence D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
-- **chain closes:** False — The algebra from an independent product of normalized one-link Wilson convolution factors to a_(p,q)(beta)^4 is clear. The supplied one-hop authorities do not explicitly establish the load-bearing temporal-gauge mixed-kernel factorization into independent one-link convolutions on the marked source sector, and the runner hard-codes that structure rather than deriving it from the transfer kernel.
-- **rationale:** Issue: the note imports the temporal-gauge mixed-kernel linkwise factorization and its exact compression to one-link Wilson convolution eigenvalues without a supplied retained bridge theorem. Why this blocks: the cited transfer and source-sector notes establish the transfer setup and a central diagonal residual compression, but not the specific marked-link/non-marked-link decomposition that identifies the normalized diagonal sequence as a_(p,q)^4. Repair target: add or cite a retained theorem deriving the linkwise mixed-kernel factorization and compression map from the exact Wilson transfer kernel on the accepted 3+1 source surface. Claim boundary until fixed: conditional algebraic consequence that if the normalized mixed kernel is the stated product of one-link Wilson convolutions, then the marked sector factor is exactly a_(p,q)(beta)^4.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`

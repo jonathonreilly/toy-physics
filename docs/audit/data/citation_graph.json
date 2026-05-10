@@ -8593,6 +8593,10 @@
       "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
     },
     {
+      "from": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+      "to": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10"
+    },
+    {
       "from": "gauge_vacuum_plaquette_perron_reduction_theorem_note",
       "to": "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note"
     },
@@ -8659,6 +8663,38 @@
     {
       "from": "gauge_vacuum_plaquette_susceptibility_flow_theorem_note",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
     },
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
@@ -44238,9 +44274,10 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
-        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10"
       ],
-      "note_hash": "2302477e6ecfc7280dfb5d37239436fe1c315e9a0527b60a0afef7646855b700",
+      "note_hash": "51633c964347544a2975ca82fd4a45acd701797871ad14b0dfc7bb941e147786",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
       "title": "Gauge-Vacuum Plaquette Local / Environment Factorization Theorem"
@@ -44424,6 +44461,26 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem"
+    },
+    "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10": {
+      "claim_id": "gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
+        "minimal_axioms_2026-05-03",
+        "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10",
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09",
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+      ],
+      "note_hash": "bff68fcd81b405f977cd0946481ed7acf1b3365f6d24430acf84e0b4217c930e",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_TEMPORAL_GAUGE_MIXED_KERNEL_FACTORIZATION_BRIDGE_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_temporal_gauge_mixed_kernel_factorization_bridge.py",
+      "title": "Plaquette Temporal-Gauge Mixed-Kernel Factorization Bridge Theorem"
     },
     "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note": {
       "claim_id": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
@@ -65873,7 +65930,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 240,
+      "bounded_theorem": 241,
       "decoration": 1,
       "meta": 59,
       "no_go": 18,
@@ -65882,7 +65939,7 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 722,
+      "bounded_theorem": 723,
       "decoration": 1,
       "meta": 59,
       "no_go": 125,
@@ -65890,10 +65947,10 @@
       "open_gate": 108,
       "positive_theorem": 591
     },
-    "edge_count": 8241,
+    "edge_count": 8250,
     "leaf_count": 534,
-    "node_count": 2055,
+    "node_count": 2056,
     "root_count": 766,
-    "runners_with_path": 1670
+    "runners_with_path": 1671
   }
 }
