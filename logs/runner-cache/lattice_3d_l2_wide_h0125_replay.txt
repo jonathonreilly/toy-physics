@@ -1,11 +1,63 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_3d_l2_wide_h0125_replay.py
-runner_sha256: d7ac3b47bacb400869a9c7e1ac20edb4303f34e379d0a665255af7674c7c1062
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.03
-status: timeout
+runner_sha256: 7085e6797f95ef837bd86bd16ac61c91ffea9d84ca1eefde14a8e42709e80ac9
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 1188.10
+status: ok
 ----- stdout -----
+============================================================================================
+WIDE-FAMILY H=0.125 CONTINUUM BRIDGE DIAGNOSTIC
+  goal: test whether widening the retained family rescues F~M, or whether
+  the fixed-family alpha~0.5 limit persists as a bounded negative.
+============================================================================================
+
+  widths= 3,4  windows= full,radial1p5,central_strip  z_mass= 1.5,2.0,3.0
+
+============================================================================================
+WIDER H=0.125 REPLAY: phys_w=3, phys_l=6
+  nodes=117649, layers=49, nodes/layer=2401, dense_edges=276710448
+  Born=6.60e-15
+  k=0 check=+0.000000
+  gravity(z=3, s=5e-06)=+0.009417  P_det=9.377e+221
+
+WINDOW full  p_free=8.908e+221
+  z=1.5: count=6 alpha=0.500 delta_max=0.006618
+  z=2.0: count=6 alpha=0.500 delta_max=0.008366
+  z=3.0: count=6 alpha=0.500 delta_max=0.009417
+
+WINDOW r<=1.5  p_free=1.434e+221
+  z=1.5: count=6 alpha=0.504 delta_max=0.001452
+  z=2.0: count=6 alpha=0.513 delta_max=0.000894
+  z=3.0: count=3 alpha=1.620 delta_max=0.000028
+
+WINDOW |y|<=0.5  p_free=1.418e+221
+  z=1.5: count=6 alpha=0.498 delta_max=0.013077
+  z=2.0: count=6 alpha=0.499 delta_max=0.017787
+  z=3.0: count=6 alpha=0.500 delta_max=0.021491
+
+============================================================================================
+WIDER H=0.125 REPLAY: phys_w=4, phys_l=6
+  nodes=207025, layers=49, nodes/layer=4225, dense_edges=856830000
+  Born=8.01e-15
+  k=0 check=-0.000000
+  gravity(z=3, s=5e-06)=+0.010955  P_det=1.444e+222
+
+WINDOW full  p_free=1.369e+222
+  z=1.5: count=6 alpha=0.499 delta_max=0.007455
+  z=2.0: count=6 alpha=0.499 delta_max=0.009013
+  z=3.0: count=6 alpha=0.499 delta_max=0.010955
+
+WINDOW r<=1.5  p_free=1.034e+221
+  z=1.5: count=6 alpha=0.498 delta_max=0.005379
+  z=2.0: count=6 alpha=0.496 delta_max=0.004594
+  z=3.0: count=6 alpha=0.493 delta_max=0.003486
+
+WINDOW |y|<=0.5  p_free=1.377e+221
+  z=1.5: count=6 alpha=0.498 delta_max=0.012691
+  z=2.0: count=6 alpha=0.498 delta_max=0.012532
+  z=3.0: count=6 alpha=0.499 delta_max=0.014918
+
 
 ----- stderr -----
 

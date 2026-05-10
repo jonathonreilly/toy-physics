@@ -9,6 +9,17 @@ alpha ~ 0.5 limit persists as a genuine bounded negative.
 
 from __future__ import annotations
 
+# Heavy compute / wider-family lattice replay — far exceeds the 120s
+# default audit timeout. Measured wall-clock at 2026-05-10: ~1254s on
+# the canonical Python 3.12 machine (most time in numpy linear-algebra
+# work on the wider physical box); declaring 1800s here gives ~44%
+# margin while keeping the audit-cache budget bounded. Without this
+# declaration the audit lane caches an empty stdout under
+# `status: timeout`, blocking the audit verdict (the cited row was
+# audited_conditional on origin/main with timeout-cache cited in the
+# rationale).
+AUDIT_TIMEOUT_SEC = 1800
+
 import argparse
 import math
 import os

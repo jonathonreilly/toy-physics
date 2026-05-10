@@ -1,11 +1,38 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_3d_l2_wide_h0125_w4.py
-runner_sha256: aead4e9b3924cec344d8a7881769bab44ce5f1ec80e70b3fabc9ab0687798c48
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 6b189e535870bd8b6d799a1f31a17c51885405836778ef0dd0c6be7f7120fb59
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 927.50
+status: ok
 ----- stdout -----
+============================================================================================
+WIDER H=0.125 W=4 DIAGNOSTIC
+  goal: test whether a genuinely wider retained family rescues F~M
+============================================================================================
+  family: phys_l=6, phys_w=4, h=0.125
+  strengths: 1e-07, 2e-07, 5e-07, 1e-06, 2e-06, 5e-06
+
+nodes=207025 layers=49 nodes/layer=4225 dense_edges=856830000
+Born=8.01e-15
+k=0 check=-0.000000
+gravity(z=3, s=5e-06)=+0.010955  P_det=1.444e+222
+
+WINDOW full  p_free=1.369e+222
+  z=1.5: count=6 alpha=0.499 delta_max=0.007455
+  z=2.0: count=6 alpha=0.499 delta_max=0.009013
+  z=3.0: count=6 alpha=0.499 delta_max=0.010955
+
+WINDOW r<=1.5  p_free=1.034e+221
+  z=1.5: count=6 alpha=0.498 delta_max=0.005379
+  z=2.0: count=6 alpha=0.496 delta_max=0.004594
+  z=3.0: count=6 alpha=0.493 delta_max=0.003486
+
+WINDOW |y|<=0.5  p_free=1.377e+221
+  z=1.5: count=6 alpha=0.498 delta_max=0.012691
+  z=2.0: count=6 alpha=0.498 delta_max=0.012532
+  z=3.0: count=6 alpha=0.499 delta_max=0.014918
+
 
 ----- stderr -----
 
