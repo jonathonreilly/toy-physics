@@ -20,10 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 230 |
+| **retained_bounded** | 231 |
 | open_gate | 11 |
 | unaudited | 1096 |
-| audit_in_progress | 1 |
 | meta | 65 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 25 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 377 |
+| `audited_clean` | 378 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -149,6 +146,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2158,6 +2156,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note states that the ray-saturation theorem is a proposed target, no theorem is proven, no runner derives STRC-LO, and no retention is claimed.  _(class `E`)_
 - **chain closes:** False — The theorem chain does not close because the note explicitly supplies no proof or runner deriving STRC-LO from the stated bimodule inputs. As open-gate metadata, it is correctly scoped as future work rather than retained science.
 - **rationale:** Issue: the load-bearing content is an explicit future-target definition of a theorem to be proven later, not a derivation. Why this blocks: STRC-LO is not derived from the Clifford bimodule inputs in the restricted packet, and there is no runner or proof closing the linear amplitude completeness relation. Repair target: provide a theorem note or runner deriving STRC-LO from retained bimodule unitarity, supp = 6/7, and delta_A1 = 1/42 without importing STRC. Claim boundary until fixed: this remains open-gate metadata naming a future research target only.
+- **auditor confidence:** high
+
+### `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09`
+
+- **Note:** [`CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md`](../../docs/CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-dimensional temporal transfer-matrix clustering lemma conditional on a positive Hermitian transfer matrix with a nondegenerate top eigenvalue, Delta_T > 0.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e11d1-9411-7f33-8c57-677cd24b7c63`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using the spectral decomposition of T/M_T and Cauchy-Schwarz, the connected ground-state correlator is bounded by ||A|| ||B|| exp(-n Delta_T), with the thermal bound obtained by adding a 6 q_beta trace-distance correction.  _(class `A`)_
+- **chain closes:** True — Within the stated finite-block conditional scope, the proof reduces to spectral decomposition, Cauchy-Schwarz, and trace-distance control. It does not derive the transfer-matrix gap or spatial cluster decomposition, but those are explicitly outside the audited claim boundary.
+- **rationale:** The audited claim is only the bounded finite-dimensional implication from an assumed transfer-matrix gap to temporal decay, and that implication closes by standard spectral algebra. The runner constructs random positive Hermitian transfer matrices, checks the spectral identity, ground-state bound, thermal trace-distance bound, and a no-gap counterexample; it does not hard-code a disputed physical gap. The clean boundary is narrow: this does not prove Delta_T > 0 on A_min and does not prove spatial cluster decomposition.
 - **auditor confidence:** high
 
 ### `continuum_bridge_note`

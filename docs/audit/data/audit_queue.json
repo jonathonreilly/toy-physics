@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 671,
+    "critical": 670,
     "high": 22,
     "leaf": 264,
     "medium": 146
@@ -5885,24 +5885,26 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
-      "claim_scope": "Finite-block temporal transfer-matrix clustering bound conditional on a positive transfer-matrix gap \u0394_T > 0 and explicit excited-state thermal weight q_beta; no derivation of the gap or spatial cluster decomposition was audited.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.797,
-      "note_path": "docs/CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md",
-      "queue_reason": "audit_in_progress",
+      "cross_confirmation_status": null,
+      "deps": [
+        "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09"
+      ],
+      "direct_in_degree": 14,
+      "effective_status": "unaudited",
+      "load_bearing_score": 16.295,
+      "note_path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/cluster_decomposition_mass_gap_bridge_check.py",
-      "transitive_descendants": 628
+      "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
+      "transitive_descendants": 627
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7085,29 +7087,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
-      "transitive_descendants": 627
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09"
-      ],
-      "direct_in_degree": 14,
-      "effective_status": "unaudited",
-      "load_bearing_score": 16.295,
-      "note_path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
       "transitive_descendants": 627
     },
     {
@@ -34951,5 +34930,5 @@
     }
   ],
   "ready_count": 121,
-  "total_pending": 1103
+  "total_pending": 1102
 }
