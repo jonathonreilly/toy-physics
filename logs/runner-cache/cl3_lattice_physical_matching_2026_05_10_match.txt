@@ -1,0 +1,124 @@
+
+----------------------------------------------------------------------------------------
+Part 1: source note structural shape
+----------------------------------------------------------------------------------------
+  [PASS] contains: 'Lattice-Curvature → Physical (m_H/v)² Matching Theorem'  ()
+  [PASS] contains: 'bounded_theorem'  ()
+  [PASS] contains: 'Per-Step Obstruction'  ()
+  [PASS] contains: 'Authority disclaimer'  ()
+  [PASS] contains: 'Source-note proposal'  ()
+  [PASS] contains: 'MINIMAL_AXIOMS_2026-05-03'  ()
+  [PASS] contains: 'Forbidden imports'  ()
+  [PASS] contains: 'NO PDG observed values'  ()
+  [PASS] contains: 'NO new axioms or imports'  ()
+  [PASS] contains: 'Honest scope'  ()
+  [PASS] contains: 'Verification'  ()
+  [PASS] contains: 'Honest verdict'  ()
+  [PASS] contains: 'STRUCTURAL OBSTRUCTION'  ()
+  [PASS] per-step row: **S1**  ()
+  [PASS] per-step row: **S2**  ()
+  [PASS] per-step row: **S3**  ()
+  [PASS] per-step row: **S4**  ()
+  [PASS] per-step row: **S5**  ()
+  [PASS] per-step row: **S6**  ()
+  [PASS] per-step row: **S7**  ()
+  [PASS] theorem label: **(T1)  ()
+  [PASS] theorem label: **(T2)  ()
+  [PASS] theorem label: **(T3)  ()
+  [PASS] theorem label: **(T4)  ()
+  [PASS] theorem label: **(T5)  ()
+  [PASS] theorem label: **(T6)  ()
+  [PASS] sister/parent cite: YT_EW_MATCHING_RULE_M_STRETCH_ATTEMPT_NOTE_2026-05-02  ()
+  [PASS] sister/parent cite: GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03  ()
+  [PASS] sister/parent cite: GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03  ()
+  [PASS] sister/parent cite: LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02  ()
+  [PASS] sister/parent cite: BRIDGE_LANES_PROMOTION_PROPOSAL_NOTE_2026-05-10_lanes  ()
+  [PASS] sister/parent cite: HIGGS_MASS_FROM_AXIOM_NOTE  ()
+  [PASS] sister/parent cite: HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02  ()
+  [PASS] sister/parent cite: HIGGS_MASS_HIERARCHY_CORRECTION_NOTE  ()
+  [PASS] sister/parent cite: C_ISO_SU3_NLO_CLOSURE_BOUNDED_NOTE_2026-05-08_su3nlo  ()
+  [PASS] sister/parent cite: EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness  ()
+  [PASS] sister/parent cite: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac  ()
+  [PASS] sister/parent cite: COMPLETE_PREDICTION_CHAIN_2026_04_15  ()
+  [PASS] audit-readable scope: proposed_claim_type: bounded_theorem  ()
+  [PASS] audit-readable scope: lattice_curvature_to_physical_m_h_v_squared_matching_theorem  ()
+  [PASS] audit-readable scope: tree_level_mean_field_readout_to_post_ewsb_mass_identification  ()
+  [PASS] audit-readable scope: twelve_percent_gap_closure_functional_delta_squared  ()
+  [PASS] audit-readable scope: n_taste_16_uniform_channel  ()
+  [PASS] audit-readable scope: g_bare_canonical_normalization  ()
+  [PASS] audit-readable scope: staggered_dirac_realization_gate  ()
+  [PASS] audit-readable scope: audit_required_before_effective_status_change: true  ()
+
+----------------------------------------------------------------------------------------
+Part 2: retained framework values (quoted, not derived here)
+----------------------------------------------------------------------------------------
+  [PASS] P_iso retained value sourced (Engels 1990: 0.594)  (P_iso=0.5934)
+  [PASS] v retained from hierarchy theorem  (v=246.28 GeV)
+  [PASS] N_taste = 16 from BZ corner count (uniform channel)  (open: staggered-Dirac realization gate)
+  [PASS] Hamilton-limit P_sigma retained value  (P_sigma_HamLim=0.441)
+  [PASS] C-iso engineering frontier xi >= 430 to reach epsilon_witness  (named in PR #843)
+
+----------------------------------------------------------------------------------------
+Part 3: per-step decomposition (S1-S7) consistency
+----------------------------------------------------------------------------------------
+  [PASS] S1 retained: <P>_iso(beta=6) = 0.5934 (single MC datum)  (named C-iso engineering frontier on this step)
+  [PASS] S2 algebraic: u_0 = <P>^(1/4)  (u_0 = 0.8777)
+  [PASS] S2 sanity: u_0 ~= 0.8776 (matches COMPLETE_PREDICTION_CHAIN_2026_04_15)  (u_0 = 0.877681 vs 0.8776)
+  [PASS] S3 structural: V''_lat(m=0) = -N_taste/(4 u_0^2) = -4/u_0^2  (V''(0) = -5.1926)
+  [PASS] S4 readout (load-bearing residual): (m_H_tree/v)^2 = 1/(4 u_0^2)  (this is asserted, not derived (matching-core))
+  [PASS] S5 retained: v = M_Pl * (7/8)^(1/4) * alpha_LM^16 = 246.28 GeV  (+0.03% vs PDG 246.22 (anchor only))
+  [PASS] S6 composition: m_H_tree = v/(2 u_0)  (m_H_tree = 140.3015 GeV)
+  [PASS] S6 sanity: m_H_tree ~= 140.3 GeV (matches HIGGS_MASS_FROM_AXIOM_NOTE)  (m_H_tree = 140.3015 GeV)
+  [PASS] S7 open: +12% gap to PDG (gap-closure functional Delta^2 not closed)  (gap = 12.02% (PDG anchor; not derivation input))
+
+----------------------------------------------------------------------------------------
+Part 4: theorem T5 -- C-iso engineering propagation on m_H_tree
+----------------------------------------------------------------------------------------
+  [PASS] C-iso propagation at xi=4: delta(m_H_tree)/m_H_tree = epsilon_C_iso/(4 P) ~ 0.55%  (delta = 0.5477% (~0.7684 GeV))
+  [PASS] C-iso propagation at epsilon_witness: delta(m_H_tree)/m_H_tree ~ 1.3e-4  (delta = 0.01264% (~0.01773 GeV))
+  [PASS] T5: at epsilon_witness, eng./gap < 5e-3 (cannot bridge the +12% gap)  (ratio = 1.18e-03; gap = 15.05 GeV)
+  [PASS] T5: engineering shift more than 700x smaller than gap  (gap/eng = 848.8x)
+
+----------------------------------------------------------------------------------------
+Part 5: theorem T6 / wrong-direction proof using Hamilton-limit retained <P>
+----------------------------------------------------------------------------------------
+  [PASS] Hamilton-limit retained <P>_sigma = 0.4410 yields m_H_tree = 151.0 GeV  (m_H_HamLim = 151.1087 GeV)
+  [PASS] Wrong-direction proof: Hamilton-limit gives +20.6% vs PDG (worse than +12%)  (HamLim=20.65% vs iso=12.02%)
+  [PASS] C-iso engineering on <P> moves m_H_tree FURTHER from PDG, not closer  (151.11 > 140.30)
+
+----------------------------------------------------------------------------------------
+Part 6: forbidden-import audit (no PDG values as derivation inputs)
+----------------------------------------------------------------------------------------
+  [PASS] m_H_tree derivable from {P_iso, v_GeV} alone (no PDG input)  (140.301484 GeV (no PDG))
+  [PASS] u_0 derivable from P_iso alone (no PDG input)  (0.877681)
+  [PASS] V''_lat derivable from u_0 and N_taste alone (no PDG input)  (V''_lat = -5.192616)
+
+----------------------------------------------------------------------------------------
+Part 7: per-step status classification (audit-readable)
+----------------------------------------------------------------------------------------
+  [PASS] step S1 classified as retained_bounded  (per-step accounting)
+  [PASS] step S2 classified as retained  (per-step accounting)
+  [PASS] step S3 classified as retained_bounded  (per-step accounting)
+  [PASS] step S4 classified as load_bearing_residual  (per-step accounting)
+  [PASS] step S5 classified as retained_bounded  (per-step accounting)
+  [PASS] step S6 classified as retained_bounded  (per-step accounting)
+  [PASS] step S7 classified as open  (per-step accounting)
+  [PASS] S4 + S7 conjunction is the matching residual M_residual  (tree-level readout + +12% gap-closure)
+  [PASS] M_residual reduces to single named functional (not three separate residuals)  (sharpened cluster obstruction)
+
+----------------------------------------------------------------------------------------
+Part 8: honest verdict summary
+----------------------------------------------------------------------------------------
+  [PASS] verdict marker present: STRUCTURAL OBSTRUCTION  ()
+  [PASS] verdict marker present: matching theorem requires content fundamentally outside retained scope  ()
+  [PASS] verdict marker present: Step S4  ()
+  [PASS] verdict marker present: Step S7  ()
+  [PASS] verdict marker present: Nature-grade  ()
+  [PASS] verdict marker present: Nature-grade  ()
+  [PASS] resolution-route language: Nature-grade  ()
+  [PASS] resolution-route language: governance  ()
+  [PASS] resolution-route language: engineering  ()
+
+========================================================================================
+  TOTAL: PASS=88, FAIL=0
+========================================================================================
