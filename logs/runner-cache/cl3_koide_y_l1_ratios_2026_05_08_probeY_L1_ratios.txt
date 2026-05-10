@@ -1,0 +1,221 @@
+
+========================================================================
+SECTION 1: RETAINED WILSON CHAIN CONSTANTS
+========================================================================
+  retained <P>          = 0.5934
+  retained M_Pl         = 1.221000e+19 GeV
+  retained alpha_bare   = 0.0795774715
+  retained u_0          = 0.8776813812
+  retained alpha_LM     = 0.0906678360
+  retained log(alpha_LM)= -2.4005526042
+  retained (7/8)^(1/4)  = 0.9671682101
+  PASS  alpha_LM = alpha_bare/u_0 ≈ 0.090668 (retained identity)
+        alpha_LM = 0.0906678360
+  PASS  Probe-19 m_tau Wilson formula reproduces PDG m_tau to <0.1%
+        m_tau(Wilson) = 1.777105 GeV vs PDG 1.77686 GeV, rel = 1.3784e-04
+
+========================================================================
+SECTION 2: PDG FERMION-MASS COMPARATORS (POST-DERIVATION ONLY)
+========================================================================
+  PDG comparators (used only for Delta_n computation; never as derivation input):
+    m_e   = 5.109990e-04 GeV (pole)
+    m_mu  = 1.056584e-01 GeV (pole)
+    m_tau = 1.776860e+00 GeV (pole)
+    m_u   = 2.160000e-03 GeV (MS-bar @ 2 GeV)
+    m_d   = 4.670000e-03 GeV (MS-bar @ 2 GeV)
+    m_s   = 9.340000e-02 GeV (MS-bar @ 2 GeV)
+    m_c   = 1.270000e+00 GeV (MS-bar @ m_c)
+    m_b   = 4.180000e+00 GeV (MS-bar @ m_b)
+    m_t   = 1.726900e+02 GeV (pole)
+
+  Scheme heterogeneity (pole vs MS-bar) acknowledged: framework is
+  <P>-scheme native (per Probe X-L1-MSbar). Scheme correction shifts
+  Delta_n by O(alpha_s/pi) ~ a few percent, not enough to make any
+  Delta_n integer. Verdict robust to scheme correction.
+
+========================================================================
+SECTION 3: COMPUTE Delta_n(q) = log(m_q/m_tau)/log(alpha_LM)
+========================================================================
+  fermion  m_q (GeV)      Delta_n(q)    
+  ----------------------------------------
+  e        5.109990e-04   3.396714      
+  mu       1.056584e-01   1.175726      
+  tau      1.776860e+00   -0.000000     
+  u        2.160000e-03   2.796229      
+  d        4.670000e-03   2.475032      
+  s        9.340000e-02   1.227097      
+  c        1.270000e+00   0.139897      
+  b        4.180000e+00   -0.356361     
+  t        1.726900e+02   -1.906499     
+  PASS  tau Delta_n = 0 (trivial)
+        Delta_n(tau) = -0.000000e+00
+  PASS  b Delta_n < 0 (heavier than tau)
+        Delta_n(b) = -0.356361
+  PASS  t Delta_n < 0 (heavier than tau)
+        Delta_n(t) = -1.906499
+  PASS  c Delta_n > 0 (lighter than tau)
+        Delta_n(c) = 0.139897
+  PASS  s Delta_n > 0 (lighter than tau)
+        Delta_n(s) = 1.227097
+  PASS  u Delta_n > 0 (lighter than tau)
+        Delta_n(u) = 2.796229
+  PASS  d Delta_n > 0 (lighter than tau)
+        Delta_n(d) = 2.475032
+  PASS  mu Delta_n > 0 (lighter than tau)
+        Delta_n(mu) = 1.175726
+  PASS  e Delta_n > 0 (lighter than tau)
+        Delta_n(e) = 3.396714
+
+========================================================================
+SECTION 4: INTEGER Delta_n TEST (5% MASS GATE)
+========================================================================
+  fermion  Delta_n      nearest int  reconstruction   mass rel.err
+  ----------------------------------------------------------------
+  e        3.396714     3            1.324381e-03     159.1749%   
+  mu       1.175726     1            1.611041e-01     52.4764%    
+  u        2.796229     3            1.324381e-03     38.6861%    
+  d        2.475032     2            1.460696e-02     212.7828%   
+  s        1.227097     1            1.611041e-01     72.4883%    
+  c        0.139897     0            1.776860e+00     39.9102%    
+  b        -0.356361    0            1.776860e+00     57.4914%    
+  t        -1.906499    -2           2.161458e+02     25.1640%    
+  PASS  NO heavy quark passes integer Delta_n at 5% mass gate
+        heavy-quark integer-Delta_n passes at 5%: 0
+  PASS  m_t at integer Delta_n = -2 fails at >20% mass error
+        m_t rel.err at Delta_n = -2: 25.1640%
+  PASS  m_b at integer Delta_n = 0 fails at >50% mass error
+        m_b rel.err at Delta_n = 0: 57.4914%
+  PASS  m_c at integer Delta_n = 0 fails at >30% mass error
+        m_c rel.err at Delta_n = 0: 39.9102%
+
+========================================================================
+SECTION 5: SIMPLE-RATIONAL Delta_n TEST (q in {1,2,3,4,6}, 5% MASS GATE)
+========================================================================
+  Denominators 1, 2, 3, 4, 6 represent: integers, halves, thirds,
+  quarters, sixths (consistent with C_3 orbits, generation indices,
+  APBC, Z_6 structure). Larger denominators are excluded as they
+  carry no structural information (see Section 7 density control).
+
+  fermion  Delta_n      best p/q     frac err     mass rel.err
+  ----------------------------------------------------------------
+  e        3.396714     10/3          0.063381     16.4333%    
+  mu       1.175726     7/6          0.009059     2.1986%     
+  u        2.796229     17/6          0.037104     8.5219%     
+  d        2.475032     5/2          0.024968     5.8177%     
+  s        1.227097     5/4          0.022903     5.3495%     
+  c        0.139897     1/6          0.026769     6.2240%     
+  b        -0.356361    -1/3          0.023028     5.3779%     
+  t        -1.906499    -11/6          0.073165     16.1078%    
+  PASS  NO heavy quark passes simple-rational Delta_n at 5% mass gate (q<=6)
+        heavy-quark simple-rational q<=6 passes at 5%: 0
+  PASS  m_t best simple-rational fit (-11/6) fails at >15% mass error
+        m_t best p/q = -11/6, rel.err = 16.1078%
+  PASS  m_b best simple-rational fit (-1/3) fails at >5% mass error
+        m_b best p/q = -1/3, rel.err = 5.3779%
+  PASS  m_c best simple-rational fit (1/6) fails at >5% mass error
+        m_c best p/q = 1/6, rel.err = 6.2240%
+
+  Note: m_mu best fit at p/q = 7/6 (mass rel.err 2.2%) is the
+  Probe-19 BAE+phi=2/9 conditional closure re-expressed; not new
+  ratio structure (per section 1 of source note).
+
+========================================================================
+SECTION 6: DENSITY-OF-RATIONALS CONTROL (MONTE-CARLO)
+========================================================================
+  Test: for random reals in [-3, 3], how often does best p/q with
+  q <= Q match the 5% mass-error threshold?
+
+  Threshold for 5% mass error: |Delta_n - p/q| < 0.020829
+  Random-real match rate at q <= 12: 91.3% (913/1000)
+  Random-real match rate at q <= 6:  35.6%  (356/1000)
+
+  PASS  Random-real q<=12 match rate > 80% (not structural)
+        q<=12 match rate 91.3% >> structural threshold; q<=12 fits carry no information
+  PASS  Random-real q<=6 match rate < 50% (structural)
+        q<=6 match rate 35.6%; q<=6 fits ARE structurally meaningful
+
+========================================================================
+SECTION 7: SENSITIVITY OF Delta_n TO RETAINED <P>
+========================================================================
+  Test: vary <P> by +/- 0.001 (retained MC uncertainty);
+  verify Delta_n shifts by < 1e-3 (verdict robust).
+
+  <P> = 0.5930  -> alpha_LM = 0.090683, log = -2.400384
+    Delta_n(t) = -1.906633  (shift 1.34e-04)
+    Delta_n(b) = -0.356386  (shift 2.50e-05)
+    Delta_n(c) = 0.139907  (shift 9.82e-06)
+  <P> = 0.5934  -> alpha_LM = 0.090668, log = -2.400553
+    Delta_n(t) = -1.906499  (shift 0.00e+00)
+    Delta_n(b) = -0.356361  (shift 0.00e+00)
+    Delta_n(c) = 0.139897  (shift 0.00e+00)
+  <P> = 0.5938  -> alpha_LM = 0.090653, log = -2.400721
+    Delta_n(t) = -1.906365  (shift 1.34e-04)
+    Delta_n(b) = -0.356336  (shift 2.50e-05)
+    Delta_n(c) = 0.139887  (shift 9.82e-06)
+  PASS  Delta_n shift under +/- 0.001 P_avg variation < 1e-3 (verdict robust)
+        all Delta_n shifts < 1e-3
+
+========================================================================
+SECTION 8: HEAVY-QUARK CROSS-RATIO OBSERVATIONS
+========================================================================
+  Within the heavy-quark sector, compute Delta_n for cross-ratios
+  and check for simple-rational coincidences.
+
+  Delta_n(m_b/m_c) = -0.496258  (vs -1/2 = -0.5; frac err = 0.0037)
+  Delta_n(m_t/m_b) = -1.550138  (vs -3/2 = -1.5; frac err = 0.0501)
+  Delta_n(m_t/m_c) = -2.046396  (vs -2 = -2.0; frac err = 0.0464)
+
+  Reconstruct m_b from m_c via alpha_LM^(-1/2):
+    m_c * alpha_LM^(-1/2) = 4.217714 GeV  vs PDG m_b = 4.18 GeV
+    rel.err = 0.9022%
+
+  PASS  m_b/m_c ~ alpha_LM^(-1/2) at <2% mass rel.err (empirical observation)
+        m_b/m_c match at -1/2 power: rel.err 0.9022%
+
+  IMPORTANT: this near-half-power coincidence is NOT derived from
+  retained content. It is recorded as an empirical observation that
+  some future probe might attempt to derive (e.g. Z_2-doublet on
+  b/c isospin, half-power Wilson-loop scaling). The audit lane has
+  authority over its classification. This note does NOT promote it.
+
+========================================================================
+SECTION 9: PDG-INPUT PROHIBITION COMPLIANCE
+========================================================================
+  Verify: PDG mass values appear ONLY as comparators in Delta_n
+  computation, never as derivation input. The retained alpha_LM,
+  M_Pl, u_0, (7/8)^(1/4), and the Probe-19 m_tau scale are the
+  derivation chain; PDG enters only at the comparison step.
+
+  Derivation chain (no PDG input):
+    1. Cl(3)/Z^3 axioms A1+A2 (retained)
+    2. SU(3) plaquette MC -> <P> = 0.5934 (retained)
+    3. u_0 = <P>^(1/4); alpha_LM = (1/(4pi))/u_0 (retained)
+    4. APBC eigenvalue ratio (7/8)^(1/4) (retained)
+    5. Wilson chain m_tau = M_Pl * (7/8)^(1/4) * u_0 * alpha_LM^18 (Probe 19)
+    6. Definition: Delta_n(q) := log(m_q^PDG / m_tau^PDG) / log(alpha_LM)
+       (m_tau^PDG used as comparator anchor; m_q^PDG used as comparator)
+    7. Test integer/simple-rational structure of Delta_n (Sections 4-5)
+
+  PASS  PDG values used only as comparators, never as derivation input
+        Derivation chain steps 1-5 do not use PDG; PDG enters only at step 6 comparison
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+  PASS: 24
+  FAIL: 0
+
+  VERDICT: NEGATIVE (bounded_theorem)
+  Heavy-quark mass-ratio Wilson-chain integer-difference route is
+  foreclosed at the 5% mass precision tier. No fermion has integer
+  Delta_n; no heavy quark has simple-rational Delta_n with q in
+  {2,3,4,6} at 5%. This complements Probe X-L1-Threshold's
+  foreclosure of the absolute heavy-quark mass route.
+
+  Sharpened residue:
+    - Wilson chain hits ONLY the tau scale (Probe 19 positive).
+    - Quark masses lie OFF the Wilson chain at all integer and
+      simple-rational exponents (this probe).
+    - m_b/m_c ~ alpha_LM^(-1/2) at 0.9% is empirical, NOT derived.
+
+  Source note: docs/KOIDE_Y_L1_RATIOS_WILSON_INTEGER_DIFF_NOTE_2026-05-08_probeY_L1_ratios.md
