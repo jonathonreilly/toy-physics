@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1098 |
+| unaudited | 1097 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 243 |
+| ~~audited_conditional~~ | 244 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 243 |
+| `audited_conditional` | 244 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1196 |
+| `unaudited` | 1195 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 805 |
 | `decoration` | 13 |
 | `meta` | 106 |
-| `no_go` | 196 |
+| `no_go` | 197 |
 | `open_gate` | 101 |
-| `positive_theorem` | 723 |
+| `positive_theorem` | 722 |
 
 | criticality | count |
 |---|---:|
@@ -589,6 +589,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_triplet_normalization_target_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -3514,6 +3515,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "Exactly two even response channels: E1 = delta + rho; E2 = A + b - c - d" with "cp1 = -2 gamma E1 / 3" and "cp2 = 2 gamma E2 / 3."  _(class `A`)_
 - **chain closes:** False — The runner checks the formulas at one fixed numerical point and under phi sign flip, but it does not prove the universal exact theorem or the exclusivity of exactly two channels. The source note supplies no derivation that rules out additional even-sector components.
 - **rationale:** Issue: the note states an exact two-channel theorem, but the supplied evidence is a single-instance algebraic/numerical check plus one tautological PASS. Why this blocks: a point check cannot establish the universal factorization or the word "exactly" for the even sector. Repair target: provide a symbolic derivation or exhaustive parameter-level algebra showing cp1/cp2 reduce identically to gamma times only E1/E2 and that no other even channel enters. Claim boundary until fixed: one worked canonical example satisfies the advertised formulas.
+- **auditor confidence:** high
+
+### `dm_neutrino_triplet_normalization_target_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_TRIPLET_NORMALIZATION_TARGET_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_TRIPLET_NORMALIZATION_TARGET_NOTE_2026-04-15.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional algebraic no-go that phase-only transfer cannot close the stated benchmark gap, given epsilon/epsilon_DI=0.277428, eta_obs/eta_DI=0.935780, and phi=2pi/3.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1367-71ce-7dc1-a74f-9af895f910a9`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The needed 3.37x enhancement is much larger than the phase-only ceiling 1/sin(2pi/3)=1.155, so the missing law cannot be mainly a phase-fixing theorem.  _(class `A`)_
+- **chain closes:** False — The arithmetic inequality closes from the stated constants, but the restricted packet provides no one-hop authority for the current kernel value, eta_DI normalization, source phase, or fixed-M1/washout proportionality. The stronger amplitude/response-channel conclusion therefore imports unclosed benchmark and carrier premises.
+- **rationale:** Issue: the runner hard-codes ETA_DI, EPS_OVER_DI_CURRENT, and PHASE_SOURCE and checks only downstream arithmetic. Why this blocks: with no cited authorities, the benchmark constants and eta-to-epsilon normalization are imported premises, so the no-go does not close as retained-grade physics. Repair target: add retained direct dependencies or a bridge theorem deriving the benchmark kernel, DI target, source phase, and fixed-washout proportionality. Claim boundary until fixed: only the conditional arithmetic statement is supported.
 - **auditor confidence:** high
 
 ### `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15`
